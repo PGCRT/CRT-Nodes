@@ -24,10 +24,8 @@ CRT-Nodes is a collection of custom nodes for ComfyUI.
 5. **Video duration calculator**:
    - Calculate video duration (in seconds) with fps and frame_count
 
-5. **CRT Post Process Node**:
+5. **CRT Post Process Node**: https://www.youtube.com/watch?v=vZ8tgiSDf9Y
    - Complete AIO Post Process solution
-
-https://www.youtube.com/watch?v=vZ8tgiSDf9Y
 
 ![Capture d'écran 2025-05-30 195430](https://github.com/user-attachments/assets/cbc6fa7b-1fd8-4196-8b17-fee9391f94c1)
 
