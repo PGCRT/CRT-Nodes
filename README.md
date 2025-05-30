@@ -1,7 +1,6 @@
 # CRT-Nodes 
 
 CRT-Nodes is a collection of custom nodes for ComfyUI. 
-This set includes toggle nodes for Lora Unet blocks and a node to remove trailing comma from string end. 
 
 ## Features
 
