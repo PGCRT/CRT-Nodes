@@ -27,6 +27,10 @@ CRT-Nodes is a collection of custom nodes for ComfyUI.
 5. **CRT Post Process Node**:
    - Complete AIO Post Process solution
 
+https://www.youtube.com/watch?v=vZ8tgiSDf9Y
+
+![Capture d'écran 2025-05-30 195430](https://github.com/user-attachments/assets/cbc6fa7b-1fd8-4196-8b17-fee9391f94c1)
+
 
 Easy LoRA Trainer - https://civitai.com/models/743615/easy-lora-trainer
 ![2024-09-27 11_57_58-_Unsaved Workflow](https://github.com/user-attachments/assets/9c753b6c-c3f0-4c25-8a0c-656152e0ab6b)
