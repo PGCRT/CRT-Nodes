@@ -1048,7 +1048,7 @@ class ProfessionalPostProcessUI {
                 select.className = 'dropdown-select';
                 let options = [];
                 if (paramName === 'glare_type') {
-                    options = ["star_4", "star_6", "star_8", "anamorphic_h", "anamorphic_v", "cross", "ring", "bloom"];
+                    options = ["star_4", "star_6", "star_8", "anamorphic_h"];
                 } else if (paramName === 'upscale_model_path') {
                     options = widget.options?.values || [];
                     if (options.length === 0) {
@@ -1100,10 +1100,10 @@ class ProfessionalPostProcessUI {
                     step = 0.05;
                 } else if (paramName === 'glare_intensity') {
                     min = 0.0;
-                    max = 4.0;
+                    max = 100.0;
                 } else if (paramName === 'glare_length') {
                     min = 0.1;
-                    max = 10.0;
+                    max = 100.0;
                 } else if (paramName === 'glare_angle') {
                     min = -180.0;
                     max = 180.0;
