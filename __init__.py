@@ -1,7 +1,7 @@
 """
 @author: CRT
 @title: CRT-Nodes
-@version: 1.2.0
+@version: 1.1.4
 @project: "https://github.com/plugcrypt/CRT-Nodes",
 @description: Single Blocks Arguments for LoRA Training + Professional Post-Processing + Flux Guidance Scheduling
 https://discord.gg/8wYS9MBQqp
@@ -14,7 +14,6 @@ from .lora_loader_str import LoraLoaderStr
 from .video_duration_calculator import VideoDurationCalculator
 from .crt_post_process_node import CRTPostProcessNode
 from .FluxTiledSamplerCustom import FluxTiledSamplerCustomAdvanced
-from .FancySeed import FancySeed
 from .FancyNoteNode import FancyNoteNode
 
 NODE_CLASS_MAPPINGS = {
@@ -26,7 +25,6 @@ NODE_CLASS_MAPPINGS = {
     "Video Duration Calculator": VideoDurationCalculator,
     "CRT Post-Process Suite": CRTPostProcessNode,
     "FluxTiledSamplerCustomAdvanced": FluxTiledSamplerCustomAdvanced,
-    "FancySeed": FancySeed,
     "FancyNoteNode": FancyNoteNode,
 }
 
@@ -39,7 +37,6 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "Video Duration Calculator": "Video Duration Calculator",
     "CRT Post-Process Suite": "CRT Post-Process Suite",
     "FluxTiledSamplerCustomAdvanced": "Flux Tiled Sampler (Advanced)",
-    "FancySeed": "FancySeed",
     "FancyNoteNode": "Fancy Note",
 }
 
