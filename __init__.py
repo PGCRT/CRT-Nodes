@@ -1,7 +1,7 @@
 """
 @author: CRT
 @title: CRT-Nodes
-@version: 1.1.4
+@version: 1.1.6
 @project: "https://github.com/plugcrypt/CRT-Nodes",
 @description: Single Blocks Arguments for LoRA Training + Professional Post-Processing + Flux Guidance Scheduling
 https://discord.gg/8wYS9MBQqp

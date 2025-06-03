@@ -1,4 +1,3 @@
-from comfy import ui
 class FancyNoteNode:
     @classmethod
     def INPUT_TYPES(cls):
@@ -19,7 +18,7 @@ class FancyNoteNode:
     RETURN_TYPES = ()
     FUNCTION = "execute"
     OUTPUT_NODE = True
-    CATEGORY = "CRT"
+    CATEGORY = "utils/UI"
     
     def execute(self, text, ui_font_size, ui_text_color, ui_glow_color, ui_accent_color, **kwargs):
         return {}

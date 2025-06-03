@@ -11,6 +11,7 @@ import logging
 
 print("Loading crt-nodes module")
 
+# Set up logging
 logging.basicConfig(level=logging.INFO) 
 logger = logging.getLogger(__name__)
 
@@ -39,6 +40,7 @@ class CRTPostProcessNode:
                 "image": ("IMAGE",),
             },
             "optional": {
+                # ... (all previous inputs remain the same) ...
                 "enable_upscale": ("BOOLEAN", {"default": False, "label_on": "On", "label_off": "Off"}),
                 "upscale_model_path": (folder_paths.get_filename_list("upscale_models"), {"default": "None"}),
                 "downscale_by": ("FLOAT", {"default": 0.5, "min": 0.25, "max": 1.0, "step": 0.05}),
@@ -92,11 +94,12 @@ class CRTPostProcessNode:
                 "glare_quality": ("INT", {"default": 16, "min": 4, "max": 32, "step": 4, "decimals": 0}), 
                 "glare_ray_width": ("FLOAT", {"default": 1.0, "min": 0.1, "max": 5.0, "step": 0.1, "decimals": 2}), 
 
+                # === CHROMATIC ABERRATION ===
                 "enable_chromatic_aberration": ("BOOLEAN", {"default": False, "label_on": "On", "label_off": "Off"}),
                 "ca_strength": ("FLOAT", {"default": 0.005, "min": 0.0, "max": 0.1, "step": 0.001, "decimals": 3}),
                 "ca_edge_falloff": ("FLOAT", {"default": 2.0, "min": 0.0, "max": 2.0, "step": 0.01, "decimals": 3}),
-                "enable_ca_hue_shift": ("BOOLEAN", {"default": False, "label_on": "On", "label_off": "Off"}),
-                "ca_hue_shift_degrees": ("FLOAT", {"default": 0.0, "min": -180.0, "max": 180.0, "step": 1.0, "decimals": 0}),
+                "enable_ca_hue_shift": ("BOOLEAN", {"default": False, "label_on": "On", "label_off": "Off"}), # New
+                "ca_hue_shift_degrees": ("FLOAT", {"default": 0.0, "min": -180.0, "max": 180.0, "step": 1.0, "decimals": 0}), # New
                 
                 "enable_vignette": ("BOOLEAN", {"default": False, "label_on": "On", "label_off": "Off"}),
                 "vignette_strength": ("FLOAT", {"default": 0.5, "min": 0.0, "max": 2.0, "step": 0.01, "decimals": 3}),
@@ -123,7 +126,7 @@ class CRTPostProcessNode:
     
     RETURN_TYPES = ("IMAGE",)
     FUNCTION = "process"
-    CATEGORY = "CRT"
+    CATEGORY = "image/postprocessing"
 
     DEFAULTS = {
         "downscale_by": 0.5,
@@ -170,33 +173,42 @@ class CRTPostProcessNode:
         self.current_model_path = None
 
     def _hue_shift_rgb_color_vector(self, rgb_color_tensor, hue_shift_degrees):
+        # rgb_color_tensor is a 3-element tensor (e.g., [1.0, 0.0, 0.0])
+        # hue_shift_degrees is a float
         if hue_shift_degrees == 0.0:
-            return rgb_color_tensor.clone()
+            return rgb_color_tensor.clone() # Return a clone to avoid modifying the input if it's passed around
 
+        # Ensure input is on the correct device and dtype for calculations
+        # Calculations below use .item() so they are done in Python floats, then converted back to tensor
         r, g, b = rgb_color_tensor[0].item(), rgb_color_tensor[1].item(), rgb_color_tensor[2].item()
 
+        # RGB to HSV (H [0-360], S [0-1], V [0-1])
         max_val = max(r, g, b)
         min_val = min(r, g, b)
         delta = max_val - min_val
         
         v = max_val
         s = 0.0
-        if max_val > 1e-6:
+        if max_val > 1e-6: # Avoid division by zero for black color
             s = delta / max_val
         
         h = 0.0
-        if delta > 1e-6:
+        if delta > 1e-6: # Avoid division by zero if r=g=b
             if r == max_val: h = (g - b) / delta
             elif g == max_val: h = 2.0 + (b - r) / delta
-            else: h = 4.0 + (r - g) / delta
+            else: h = 4.0 + (r - g) / delta # b == max_val
         h *= 60.0
         if h < 0: h += 360.0
         
+        # Shift Hue
         h = (h + hue_shift_degrees) % 360.0
         
+        # HSV to RGB
         c = v * s
-        h_prime = h / 60.0
+        h_prime = h / 60.0 # h_prime is in [0, 6)
         
+        # floating point modulo can be slightly off, e.g. 6.0 % 2.0 can be ~2.0 or ~0.0.
+        # For robustness with h_prime % 2.0, ensure h_prime is slightly less than 6 if it's very close.
         if abs(h_prime - 6.0) < 1e-6: h_prime = 0.0 
 
         x = c * (1.0 - abs(h_prime % 2.0 - 1.0))
@@ -209,11 +221,14 @@ class CRTPostProcessNode:
         elif 3 <= h_prime < 4: r_out, g_out, b_out = 0, x, c
         elif 4 <= h_prime < 5: r_out, g_out, b_out = x, 0, c
         elif 5 <= h_prime < 6: r_out, g_out, b_out = c, 0, x
+        # else: # Should not happen if h_prime is in [0,6)
+            # r_out, g_out, b_out = c, x, 0 # Default to first case, or handle error
 
         final_r = r_out + m
         final_g = g_out + m
         final_b = b_out + m
         
+        # Create new tensor on the original device and dtype
         return torch.tensor([final_r, final_g, final_b], device=rgb_color_tensor.device, dtype=rgb_color_tensor.dtype)
 
 
@@ -740,7 +755,7 @@ class CRTPostProcessNode:
         
         if c != 3 and enable_hue_shift:
             logger.warning("Chromatic aberration hue shift is designed for RGB images. Input image has {} channels.".format(c))
-            enable_hue_shift = False
+            enable_hue_shift = False # Disable hue shift for non-RGB
 
         y_coords_1d = torch.linspace(-1, 1, h, device=device, dtype=dtype)
         x_coords_1d = torch.linspace(-1, 1, w, device=device, dtype=dtype)
@@ -774,8 +789,13 @@ class CRTPostProcessNode:
             base_blue_color_vec = torch.tensor([0.0, 0.0, 1.0], device=device, dtype=dtype)
 
             shifted_r_fringe_color = self._hue_shift_rgb_color_vector(base_red_color_vec, hue_shift_degrees)
-            shifted_b_fringe_color = self._hue_shift_rgb_color_vector(base_blue_color_vec, -hue_shift_degrees)
+            shifted_b_fringe_color = self._hue_shift_rgb_color_vector(base_blue_color_vec, -hue_shift_degrees) # Opposite hue for blue
 
+            # Reconstruct with tinted fringes
+            # Final_R = R_s * Tint_R.r + G_o * 0         + B_s * Tint_B.r
+            # Final_G = R_s * Tint_R.g + G_o * 1         + B_s * Tint_B.g
+            # Final_B = R_s * Tint_R.b + G_o * 0 (typo, G_o * 0) + B_s * Tint_B.b
+            
             final_r_channel = r_channel_shifted * shifted_r_fringe_color[0] + \
                               b_channel_shifted * shifted_b_fringe_color[0]
             
