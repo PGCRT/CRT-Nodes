@@ -26,8 +26,16 @@ CRT-Nodes is a collection of custom nodes for ComfyUI.
 
 5. **CRT Post Process Node**: https://www.youtube.com/watch?v=vZ8tgiSDf9Y
    - Complete AIO Post Process solution
+  
+   - ![Capture d'écran 2025-05-30 195430](https://github.com/user-attachments/assets/cbc6fa7b-1fd8-4196-8b17-fee9391f94c1)
 
-![Capture d'écran 2025-05-30 195430](https://github.com/user-attachments/assets/cbc6fa7b-1fd8-4196-8b17-fee9391f94c1)
+6. **FluxTiledSamplerCustom**: Similar to UltimateSDUpscaler but with Advanced Inputs and better tile size handling 
+
+7. **FancyNote**: A simple fancy Note with nice visual effects, a Text size slider and color picker to chose the theme
+
+![Capture d'écran 2025-06-04 004532](https://github.com/user-attachments/assets/3eb1dbda-d092-463e-8f0e-97431b426080)
+
+
 
 
 Easy LoRA Trainer - https://civitai.com/models/743615/easy-lora-trainer
