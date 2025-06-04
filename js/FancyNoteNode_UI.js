@@ -190,6 +190,9 @@ const FancyNoteNodeExtension = {
                     return; // Or handle error more gracefully
                 }
 
+                // Ensure text widget is serializable
+                textWidget.serialize = true;
+
                 node.properties = node.properties || {};
                 node.properties.ui_font_size = node.properties.ui_font_size || 80;
                 node.properties.ui_text_color = node.properties.ui_text_color || "#7300ff";
@@ -198,11 +201,9 @@ const FancyNoteNodeExtension = {
                 // For the text glow animation
                 node.properties.ui_glow_color_intensified = LightenDarkenColor(node.properties.ui_glow_color, 30);
 
-
                 if (node.widgets) { // Ensure node.widgets exists before forEach
                     node.widgets.forEach((w) => (w.hidden = true));
                 }
-
 
                 const container = document.createElement("div");
                 container.className = "fancy-note-container"; // Preserved original
@@ -249,7 +250,6 @@ const FancyNoteNodeExtension = {
                     return (usePound?"#":"") + newColor;
                 }
 
-
                 const updateTheme = (color) => {
                     const intensifiedGlow = LightenDarkenColor(color, 40);
 
@@ -268,7 +268,6 @@ const FancyNoteNodeExtension = {
                     node.setDirtyCanvas(true);
                 };
                 updateTheme(node.properties.ui_text_color);
-
 
                 fontSizeSlider.addEventListener("input", () => {
                     textarea.style.fontSize = `${fontSizeSlider.value}px`; // CSS transition handles smoothness
@@ -297,9 +296,10 @@ const FancyNoteNodeExtension = {
                 controls.appendChild(colorInput);
                 container.appendChild(controls);
                 container.appendChild(textarea);
+                node.container = container;
 
                 node.addDOMWidget("fancyNote", "Fancy Note", container, {
-                    serialize: true, // Preserved original
+                    serialize: false, // Preserved original
                     computeSize: () => { // Preserved original computeSize
                         const width = Math.max(node.size[0] || 300, 200);
                         const height = Math.max(node.size[1] || 150, 200);
@@ -320,7 +320,95 @@ const FancyNoteNodeExtension = {
                     // CSS transition on .fancy-note-controls will handle the animation
                 }, 50); // Small delay for render then animate
 
-                // console.log("FancyNoteNode UI initialized successfully");
+                // Sync UI with state after creation
+                node.syncUIWithState();
+            };
+
+            // Sync UI with node state
+            nodeType.prototype.syncUIWithState = function () {
+                if (!this.container) {
+                    console.warn("Container not found for UI sync");
+                    return;
+                }
+
+                const textWidget = this.widgets?.find((w) => w.name === "text");
+                if (!textWidget) {
+                    console.error("Text widget not found for UI sync");
+                    return;
+                }
+
+                const textarea = this.container.querySelector(".fancy-note-textarea");
+                const fontSizeSlider = this.container.querySelector(".fancy-note-slider");
+                const colorInput = this.container.querySelector(".fancy-note-color-input");
+                const colorButton = this.container.querySelector(".fancy-note-color-button");
+
+                if (textarea) {
+                    textarea.value = textWidget.value || this.properties.text || "";
+                }
+
+                if (fontSizeSlider) {
+                    fontSizeSlider.value = this.properties.ui_font_size || 80;
+                    if (textarea) {
+                        textarea.style.fontSize = `${this.properties.ui_font_size}px`;
+                    }
+                }
+
+                if (colorInput && colorButton) {
+                    const color = this.properties.ui_text_color || "#7300ff";
+                    const intensifiedGlow = this.properties.ui_glow_color_intensified || LightenDarkenColor(color, 40);
+                    this.container.style.setProperty("--text-color", color);
+                    this.container.style.setProperty("--glow-color", this.properties.ui_glow_color || color);
+                    this.container.style.setProperty("--glow-color-intensified", intensifiedGlow);
+                    this.container.style.setProperty("--accent-color", this.properties.ui_accent_color || color);
+                    colorInput.value = color;
+                    colorButton.style.background = color;
+                }
+
+                this.setDirtyCanvas(true);
+            };
+
+            // Serialize node state
+            nodeType.prototype.onSerialize = function (info) {
+                info.properties = {
+                    ui_font_size: this.properties.ui_font_size || 80,
+                    ui_text_color: this.properties.ui_text_color || "#7300ff",
+                    ui_glow_color: this.properties.ui_glow_color || "#7300ff",
+                    ui_accent_color: this.properties.ui_accent_color || "#7300ff",
+                    ui_glow_color_intensified: this.properties.ui_glow_color_intensified || LightenDarkenColor(this.properties.ui_glow_color || "#7300ff", 40),
+                    text: this.properties.text || ""
+                };
+
+                const textWidget = this.widgets?.find((w) => w.name === "text");
+                if (textWidget) {
+                    textWidget.value = this.properties.text || "";
+                    info.widgets_values = [textWidget.value];
+                } else {
+                    info.widgets_values = [this.properties.text || ""];
+                }
+            };
+
+            // Deserialize node state
+            nodeType.prototype.onConfigure = function (info) {
+                this.properties = this.properties || {};
+
+                if (info.properties) {
+                    this.properties.ui_font_size = info.properties.ui_font_size || 80;
+                    this.properties.ui_text_color = info.properties.ui_text_color || "#7300ff";
+                    this.properties.ui_glow_color = info.properties.ui_glow_color || "#7300ff";
+                    this.properties.ui_accent_color = info.properties.ui_accent_color || "#7300ff";
+                    this.properties.ui_glow_color_intensified = info.properties.ui_glow_color_intensified || LightenDarkenColor(this.properties.ui_glow_color || "#7300ff", 40);
+                    this.properties.text = info.properties.text || "";
+                }
+
+                const textWidget = this.widgets?.find((w) => w.name === "text");
+                if (textWidget) {
+                    textWidget.value = info.widgets_values?.[0] || this.properties.text || "";
+                    this.properties.text = textWidget.value;
+                }
+
+                if (this.container) {
+                    this.syncUIWithState();
+                }
             };
         }
     },
