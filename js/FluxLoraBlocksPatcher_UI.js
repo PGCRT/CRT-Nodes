@@ -27,6 +27,9 @@ const CSS_STYLES_FLUX_LORA_ENHANCED = `
 }
 
 .flux-lora-patcher-node-custom-widget { 
+	box-sizing: content-box;
+	position: relative;
+	top: -15px;
     width: 100%;
     padding: 0; 
     margin: 0;

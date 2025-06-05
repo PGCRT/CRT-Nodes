@@ -21,11 +21,13 @@ const CSS_STYLES = `
 .postprocess-container {
     background: #000000;
     border-radius: 12px;
+	position: relative;
+    width: 100%;
+	top: -22px;
     padding: 15px;
     margin: 10px 0;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
     border: 0px;
-    width: 600px;
     box-sizing: border-box;
     min-height: 220px;
     overflow: hidden; /* Prevent any overflow */
