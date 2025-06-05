@@ -37,6 +37,7 @@ CRT-Nodes is a collection of custom nodes for ComfyUI.
 ![Capture d'écran 2025-06-04 004532](https://github.com/user-attachments/assets/3eb1dbda-d092-463e-8f0e-97431b426080)
 
 9. **Flux LoRA Blocks Patcher**: https://www.youtube.com/watch?v=uHIoEnLX38Q
+   - Patch your Flux model whit LoRA applyed, works with multiple LoRA. Full Single/Double Blocks range, Presets, Randomizer.
 
 ![Capture d'écran 2025-06-06 012706](https://github.com/user-attachments/assets/84ee53c0-fda3-4983-8f2f-c851217b4bd9)
 
