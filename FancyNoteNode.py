@@ -1,4 +1,7 @@
 class FancyNoteNode:
+    def __init__(self):
+        self.properties = {}
+
     @classmethod
     def INPUT_TYPES(cls):
         return {
@@ -6,10 +9,10 @@ class FancyNoteNode:
                 "text": ("STRING", {"multiline": True, "default": ""}),
             },
             "hidden": {
-                "ui_font_size": ("INT", {"default": 16, "min": 10, "max": 30, "step": 1}),
-                "ui_text_color": ("STRING", {"default": "#D8BFD8"}),
-                "ui_glow_color": ("STRING", {"default": "#D8BFD8"}),
-                "ui_accent_color": ("STRING", {"default": "#E6E6FA"}),
+                "ui_font_size": ("INT", {"default": 80, "min": 8, "max": 250, "step": 1}),
+                "ui_text_color": ("STRING", {"default": "#7300ff"}),
+                "ui_glow_color": ("STRING", {"default": "#7300ff"}),
+                "ui_accent_color": ("STRING", {"default": "#7300ff"}),
                 "unique_id": "UNIQUE_ID",
                 "prompt": "PROMPT"
             }
@@ -18,7 +21,7 @@ class FancyNoteNode:
     RETURN_TYPES = ()
     FUNCTION = "execute"
     OUTPUT_NODE = True
-    CATEGORY = "utils/UI"
+    CATEGORY = "CRT"
     
-    def execute(self, text, ui_font_size, ui_text_color, ui_glow_color, ui_accent_color, **kwargs):
+    def execute(self, text, **kwargs):
         return {}

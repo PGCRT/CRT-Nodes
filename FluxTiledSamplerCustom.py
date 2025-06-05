@@ -1,12 +1,12 @@
 import logging
 import torch
-import comfy.utils  # For ProgressBar
-import comfy.model_management  # For device management, InterruptProcessingException
-import comfy.samplers  # For SCHEDULER_NAMES, SAMPLER_NAMES, calculate_sigmas etc.
-import latent_preview  # For prepare_callback
-from nodes import VAEEncode, VAEDecode  # Standard ComfyUI nodes
+import comfy.utils
+import comfy.model_management
+import comfy.samplers
+import latent_preview
+from nodes import VAEEncode, VAEDecode
 import numpy as np
-import typing  # Import typing for Any
+import typing
 
 def prepare_inputs(required: list, optional: list = None):
     inputs = {}
@@ -54,7 +54,7 @@ class FluxTiledSamplerCustomAdvanced:
     RETURN_TYPES = ("LATENT", "IMAGE")
     RETURN_NAMES = ("output_latent", "output_image")
     FUNCTION = "process_tiled_advanced"
-    CATEGORY = "sampling/tiled_advanced"
+    CATEGORY = "CRT"
 
     def _calculate_sigmas_internal(self, model_patcher, scheduler_name, steps, denoise_strength):
         if denoise_strength <= 0.0:
@@ -91,16 +91,16 @@ class FluxTiledSamplerCustomAdvanced:
             feather = max(1, blur_radius_latent)
             if tile_latent_h > 0:
                 v_ramp = torch.linspace(0.0, 1.0, steps=feather, device=device, dtype=torch.float32)
-                top_len = min(feather, tile_latent_h) if r_idx > 0 else 0  # Skip top edge for first row
-                bottom_len = min(feather, tile_latent_h - top_len) if r_idx < rows - 1 else 0  # Skip bottom edge for last row
+                top_len = min(feather, tile_latent_h) if r_idx > 0 else 0
+                bottom_len = min(feather, tile_latent_h - top_len) if r_idx < rows - 1 else 0
                 if top_len > 0:
                     mask[:, :, :top_len, :] *= v_ramp[:top_len].view(1, 1, top_len, 1)
                 if bottom_len > 0:
                     mask[:, :, tile_latent_h - bottom_len:, :] *= torch.flip(v_ramp[:bottom_len], dims=[0]).view(1, 1, bottom_len, 1)
             if tile_latent_w > 0:
                 h_ramp = torch.linspace(0.0, 1.0, steps=feather, device=device, dtype=torch.float32)
-                left_len = min(feather, tile_latent_w) if c_idx > 0 else 0  # Skip left edge for first column
-                right_len = min(feather, tile_latent_w - left_len) if c_idx < columns - 1 else 0  # Skip right edge for last column
+                left_len = min(feather, tile_latent_w) if c_idx > 0 else 0
+                right_len = min(feather, tile_latent_w - left_len) if c_idx < columns - 1 else 0
                 if left_len > 0:
                     mask[:, :, :, :left_len] *= h_ramp[:left_len].view(1, 1, 1, left_len)
                 if right_len > 0:
@@ -186,8 +186,8 @@ class FluxTiledSamplerCustomAdvanced:
 
                 if is_custom_random_noise:
                     current_tile_noise_seed_for_sampler = original_noise_obj_seed_attr + tile_seed_offset
-                    noise.seed = current_tile_noise_seed_for_sampler  # Set the seed directly on the noise object
-                    tile_noise_tensor = noise.generate_noise(tile_latent_dict_for_noise)  # Generate noise without seed_offset
+                    noise.seed = current_tile_noise_seed_for_sampler
+                    tile_noise_tensor = noise.generate_noise(tile_latent_dict_for_noise)
                 elif noise_class_name == 'Noise_EmptyNoise':
                     tile_noise_tensor = noise.generate_noise(tile_latent_dict_for_noise)
                 else:
@@ -224,7 +224,7 @@ class FluxTiledSamplerCustomAdvanced:
                 pbar.update(1)
 
         if is_custom_random_noise and original_noise_obj_seed_attr is not None:
-            noise.seed = original_noise_obj_seed_attr  # Restore original seed
+            noise.seed = original_noise_obj_seed_attr
 
         output_latent_full /= blend_weights_full.clamp(min=1e-6)
         output_latent_full = torch.nan_to_num(output_latent_full)
@@ -257,7 +257,7 @@ NODE_DISPLAY_NAME_MAPPINGS = {
 }
 NODE_STYLING = {
     "FluxTiledSamplerCustomAdvanced": {
-        "background_color": "#000000",  # Pure black (RGB: 0, 0, 0)
-        "header_color": "#5600BE"       # RGB: 86, 0, 90 converted to hex
+        "background_color": "#000000",
+        "header_color": "#5600BE"
     }
 }

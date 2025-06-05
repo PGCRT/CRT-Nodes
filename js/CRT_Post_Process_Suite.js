@@ -3,15 +3,28 @@ import { api } from "../../scripts/api.js";
 
 console.log("Loading CRT_Post_Process_Suite.js");
 
-// CSS Styles with preset controls styling
 const CSS_STYLES = `
+@font-face {
+    font-family: 'Orbitron';
+    src: url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap') format('woff2'),
+         local('Orbitron');
+}
+
+/* Define key colors from Flux for consistency, prefixed with pps- */
+:root {
+    --pps-primary-accent: #7700ff;
+    --pps-primary-accent-light: #9a70ff;
+    --pps-active-green: #2ecc71;
+    /* Other colors like text-white, background-black are common and can be used directly or redefined if needed */
+}
+
 .postprocess-container {
     background: #000000;
     border-radius: 12px;
     padding: 15px;
     margin: 10px 0;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 0px;
     width: 600px;
     box-sizing: border-box;
     min-height: 220px;
@@ -33,23 +46,31 @@ const CSS_STYLES = `
     max-width: 100%;
 }
 
-.parameter-slider {
-    max-width: 95%;
-}
+/* .parameter-slider max-width is applied inline in its creation or via other rules */
 
-@keyframes breathe {
-    0%, 100% { transform: scale(1); text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8), 0 0 50px #7700ff, 0 0 10px #9a70ff; opacity: 1; }
-    50% { transform: scale(0.97); text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8), 0 0 6px #9a70ff, 0 0 20px #5500cc; color: #7700ff; }
+@keyframes pps-breathe-title { /* Renamed to avoid conflict if 'breathe' is global */
+    0%, 100% { 
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8), 0 0 25px var(--pps-primary-accent), 0 0 5px var(--pps-primary-accent-light); 
+        transform: scale(1); 
+        opacity: 1; 
+    }
+    50% { 
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8), 0 0 35px var(--pps-primary-accent-light), 0 0 10px var(--pps-primary-accent); 
+        transform: scale(0.97); 
+        color: var(--pps-primary-accent-light); 
+    }
 }
 
 .postprocess-title {
-    color: #7700ff;
-    font-size: 25px;
-    font-weight: bold;
+    color: var(--pps-primary-accent); /* Flux style */
+    font-family: 'Orbitron', sans-serif; /* Flux font */
+    font-size: 20px; /* Adjusted from original 25px for balance with Orbitron */
+    font-weight: 700; /* Flux style */
     text-align: center;
     margin-bottom: 15px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8), 0 0 25px #7700ff, 0 0 5px #9a70ff;
-    animation: breathe 4s ease-in-out infinite;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8), 0 0 25px var(--pps-primary-accent), 0 0 5px var(--pps-primary-accent-light); /* Flux style */
+    animation: pps-breathe-title 4s ease-in-out infinite; /* Use renamed animation */
+    user-select: none; /* Flux style */
 }
 
 .preset-controls {
@@ -61,9 +82,8 @@ const CSS_STYLES = `
 }
 
 .preset-select {
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 6px;
+    background: #000000; /* Original Style */
+    border: 0px; /* Original Style, consistent with Flux */
     color: #ffffff;
     padding: 4px 8px;
     font-size: 11px;
@@ -73,13 +93,12 @@ const CSS_STYLES = `
 
 .preset-select:focus {
     outline: none;
-    border-color: #4a90e2;
-    box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+    border-color: #000000; /* Original Style */
 }
 
 .preset-input {
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: #000000; /* Original Style */
+    border: 0px; /* Original Style, consistent with Flux */
     border-radius: 6px;
     color: #ffffff;
     padding: 4px 8px;
@@ -90,14 +109,14 @@ const CSS_STYLES = `
 
 .preset-input:focus {
     outline: none;
-    border-color: #4a90e2;
-    box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+    border-color: #4a90e2; /* Original Style */
+    box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2); /* Original Style */
 }
 
 .preset-button {
-    background: linear-gradient(45deg, #000000 0%, #7700ff 100%);
+    background: #000000; /* Original Style */
     color: white;
-    border: none;
+    border: none; /* Original Style, consistent with Flux */
     padding: 6px 12px;
     border-radius: 15px;
     cursor: pointer;
@@ -109,14 +128,14 @@ const CSS_STYLES = `
 }
 
 .preset-button.load-button,
-.preset-button.save-button,
+.preset-button.save-button, /* Note: Original save-button was transparent, might need adjustment if specific look is desired */
 .preset-button.delete-button {
-    background: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: transparent; /* Original Style */
+    border: 0px; /* Original Style, consistent with Flux */
 }
 
 .preset-button:hover {
-    transform: scale(1.1);
+    transform: scale(1.1); /* Original Style */
 }
 
 .postprocess-tabs {
@@ -124,60 +143,60 @@ const CSS_STYLES = `
     flex-wrap: wrap;
     gap: 8px;
     margin-bottom: 15px;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 0px; /* Original Style */
     padding: 10px 0;
     justify-content: center;
-    overflow-x: auto; /* Allow horizontal scrolling if needed */
+    overflow-x: auto; 
 }
 
 .postprocess-tab {
-    background: linear-gradient(45deg, #000000 0%, #000000 100%);
+    background: #000000; /* Original Style */
     color: #cccccc;
-    border: none;
+    border: none; /* Original Style, consistent with Flux */
     padding: 6px 12px;
     border-radius: 20px;
     cursor: pointer;
     font-size: 12px;
     font-weight: 500;
     transition: all 0.3s ease, transform 0.2s ease-out;
-    border: 1px solid transparent;
+    border: 1px solid transparent; /* Original Style */
     white-space: nowrap;
     position: relative;
     overflow: hidden;
-    flex: 0 0 auto; /* Ensure tabs don't stretch */
+    flex: 0 0 auto; 
 }
 
-@keyframes tab-glow {
+@keyframes tab-glow { /* Original Style */
     0%, 100% { box-shadow: 0 0 0 0 rgba(119, 0, 255, 0.4); }
     50% { box-shadow: 0 0 10px 5px rgba(119, 0, 255, 0.4); }
 }
 
 .postprocess-tab:hover {
-    background: linear-gradient(45deg, #000000 0%, #7700ff 100%);
-    color: #ffffff;
+    background: linear-gradient(45deg, #000000 0%, #7700ff 100%); /* Original Style */
+    color: #000000; /* Original Style text color on hover */
     transform: translateY(-2px) scale(1.05);
     animation: tab-glow 1.5s infinite;
 }
 
 .postprocess-tab.active {
-    background: linear-gradient(45deg, #000000 0%, #7700ff 100%);
-    color: #7700ff;
+    background: linear-gradient(45deg, #000000 0%, #7700ff 100%); /* Original Style */
+    color: #7700ff; /* Original Style text color on active */
     transform: translateY(-2px) scale(1.1);
     animation: tab-glow 1.5s infinite;
 }
 
 .postprocess-tab.enabled {
-    background: linear-gradient(45deg, #000000 0%, #2ecc71 100%);
+    background: linear-gradient(45deg, #000000 0%, #2ecc71 100%); /* Original Style */
     color: #ffffff;
-    border-color: rgba(255, 255, 255, 0.2);
-    box-shadow: 0 6px 18px rgba(46, 204, 113, 0.4);
+    border-color: rgba(255, 255, 255, 0.2); /* Original Style */
+    box-shadow: 0 6px 18px rgba(46, 204, 113, 0.4); /* Original Style */
 }
 
 .postprocess-tab.disabled {
-    background: linear-gradient(45deg, #000000 0%, #000000 100%);
+    background: linear-gradient(45deg, #000000 0%, #000000 100%); /* Original Style */
     color: #ffffff;
-    border-color: rgba(255, 255, 255, 0.2);
-    box-shadow: 0 6px 18px rgba(119, 0, 255, 0.4);
+    border-color: rgba(255, 255, 255, 0.2); /* Original Style */
+    box-shadow: 0 6px 18px rgba(119, 0, 255, 0.4); /* Original Style */
 }
 
 .postprocess-section {
@@ -194,7 +213,7 @@ const CSS_STYLES = `
     animation: bounceIn 0.5s ease-out;
 }
 
-@keyframes bounceIn {
+@keyframes bounceIn { /* Original Style */
     0% { transform: translateY(20px); opacity: 0; }
     60% { transform: translateY(-5px); opacity: 1; }
     100% { transform: translateY(0); }
@@ -206,16 +225,13 @@ const CSS_STYLES = `
     align-items: center;
     margin-bottom: 15px;
     padding: 10px;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 8px;
-    border-left: 4px solid #4a90e2;
+    background: #000000; /* Original Style */
+    border-radius: 0px; /* Original Style */
+    border-left: 0; /* Original Style */
     cursor: pointer;
     transition: background 0.3s ease;
 }
 
-.section-header:hover {
-    background: rgba(255, 255, 255, 0.1);
-}
 
 .section-title {
     color: #ffffff;
@@ -225,7 +241,7 @@ const CSS_STYLES = `
 }
 
 .section-toggle {
-    background: linear-gradient(45deg, #000000 0%, #2ecc71 100%);
+    background: linear-gradient(45deg, #000000 0%, #2ecc71 100%); /* Original Style */
     color: white;
     border: none;
     padding: 6px 12px;
@@ -240,27 +256,27 @@ const CSS_STYLES = `
 }
 
 .section-toggle:hover {
-    transform: scale(1.1);
-    box-shadow: 0 6px 18px rgba(46, 204, 113, 0.6);
-    animation: toggle-glow 1.5s infinite;
+    transform: scale(1.1); /* Original Style */
+    box-shadow: 0 6px 18px rgba(46, 204, 113, 0.6); /* Original Style */
+    animation: toggle-glow 1.5s infinite; /* Original Style */
 }
 
-@keyframes toggle-glow {
+@keyframes toggle-glow { /* Original Style */
     0%, 100% { box-shadow: 0 0 0 0 rgba(46, 204, 113, 0.6); }
     50% { box-shadow: 0 0 10px 3px rgba(46, 204, 113, 0.6); }
 }
 
 .section-toggle.disabled {
-    background: linear-gradient(45deg, #000000 0%, #000000 100%);
+    background: linear-gradient(45deg, #000000 0%, #000000 100%); /* Original Style */
 }
 
 .section-toggle.disabled:hover {
-    box-shadow: none;
-    transform: none;
+    box-shadow: none; /* Original Style */
+    transform: none; /* Original Style */
 }
 
 .reset-button {
-    background: linear-gradient(45deg, #000000 0%, #d11d0a 100%);
+    background: linear-gradient(45deg, #000000 0%, #d11d0a 100%); /* Original Style */
     color: white;
     border: none;
     padding: 6px 12px;
@@ -275,12 +291,12 @@ const CSS_STYLES = `
 }
 
 .reset-button:hover {
-    transform: scale(1.1);
-    box-shadow: 0 6px 18px rgba(209, 29, 10, 0.6);
-    animation: reset-glow 1.5s infinite;
+    transform: scale(1.1); /* Original Style */
+    box-shadow: 0 6px 18px rgba(209, 29, 10, 0.6); /* Original Style */
+    animation: reset-glow 1.5s infinite; /* Original Style */
 }
 
-@keyframes reset-glow {
+@keyframes reset-glow { /* Original Style */
     0%, 100% { box-shadow: 0 0 0 0 rgba(209, 29, 10, 0.6); }
     50% { box-shadow: 0 0 10px 3px rgba(209, 29, 10, 0.6); }
 }
@@ -296,7 +312,7 @@ const CSS_STYLES = `
 }
 
 .collapse-button:hover {
-    color: #7700ff;
+    color: #7700ff; /* Original Style */
 }
 
 .parameters-grid {
@@ -304,19 +320,19 @@ const CSS_STYLES = `
     grid-template-columns: 1fr;
     gap: 10px;
     margin-top: 10px;
-    overflow-y: hidden; /* Remove vertical scroll bar */
+    overflow-y: hidden; 
 }
 
 .parameter-group {
-    background: rgba(255, 255, 255, 0.03);
+    background: #000000; /* Original Style */
     padding: 10px;
     border-radius: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 0px; /* Original Style */
     width: 100%;
     animation: fadeIn 0.5s ease-out;
 }
 
-@keyframes fadeIn {
+@keyframes fadeIn { /* Original Style */
     0% { opacity: 0; transform: translateY(10px); }
     100% { opacity: 1; transform: translateY(0); }
 }
@@ -327,7 +343,7 @@ const CSS_STYLES = `
     font-weight: 600;
     margin-bottom: 8px;
     padding-left: 4px;
-    border-left: 2px solid #7700ff;
+    border-left: 2px solid #7700ff; /* Original Style */
 }
 
 .parameter-row {
@@ -343,12 +359,12 @@ const CSS_STYLES = `
 }
 
 .parameter-row.modified .parameter-label {
-    color: #2ecc71;
-    border-left: 2px solid #2ecc71;
-    padding-left: 4px;
+    color: #2ecc71; /* Original Style */
+    border-left: 2px solid #2ecc71; /* Original Style */
+    padding-left: 4px; /* Original Style */
 }
 
-@keyframes rowFadeIn {
+@keyframes rowFadeIn { /* Original Style */
     0% { opacity: 0; transform: translateX(20px); }
     100% { opacity: 1; transform: translateX(0); }
 }
@@ -374,8 +390,8 @@ const CSS_STYLES = `
 }
 
 .parameter-input {
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: #000000; /* Original Style */
+    border: 0px; /* Original Style */
     border-radius: 6px;
     color: #ffffff;
     padding: 4px;
@@ -387,24 +403,94 @@ const CSS_STYLES = `
 
 .parameter-input:focus {
     outline: none;
-    border-color: #4a90e2;
-    box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+    border-color: #4a90e2; /* Original Style */
+    box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2); /* Original Style */
 }
 
+/* === FANCY SLIDER STYLES START === */
 .parameter-slider {
+    -webkit-appearance: none;
+    appearance: none;
     flex: 1;
-    max-width: 500px;
+    max-width: 500px; /* Or original max-width: 95%; */
     margin: 0 5px;
-    transition: background 0.3s ease;
+    height: 4px; 
+    background: linear-gradient(90deg, rgba(119, 0, 255, 0.3), rgba(119, 0, 255, 0.1));
+    border-radius: 2px;
+    box-shadow: 0 0 8px var(--pps-primary-accent);
+    outline: none;
+    transition: box-shadow 0.2s ease-in-out, background 0.3s ease;
 }
 
 .parameter-slider:hover {
-    background: linear-gradient(to right, #000000, #7700ff);
+    background: linear-gradient(90deg, rgba(119, 0, 255, 0.5), rgba(119, 0, 255, 0.2));
+    box-shadow: 0 0 12px var(--pps-primary-accent-light);
 }
 
+/* Style for modified slider track using existing .parameter-row.modified class */
+.parameter-row.modified .parameter-slider {
+    background: linear-gradient(90deg, var(--pps-active-green), rgba(46, 204, 113, 0.5));
+    box-shadow: 0 0 12px var(--pps-active-green);
+}
+
+.parameter-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    background: var(--pps-primary-accent);
+    border-radius: 50%;
+    box-shadow: 0 0 8px var(--pps-primary-accent);
+    cursor: grab;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s ease;
+}
+.parameter-slider::-moz-range-thumb { /* Firefox */
+    width: 12px;
+    height: 12px;
+    background: var(--pps-primary-accent);
+    border-radius: 50%;
+    box-shadow: 0 0 8px var(--pps-primary-accent);
+    cursor: grab;
+    border: 0px; /* Important for Firefox */
+}
+
+.parameter-slider:active::-webkit-slider-thumb {
+    cursor: grabbing;
+}
+.parameter-slider:active::-moz-range-thumb {
+    cursor: grabbing;
+}
+
+.parameter-slider::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 12px var(--pps-primary-accent-light);
+}
+.parameter-slider::-moz-range-thumb:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 12px var(--pps-primary-accent-light);
+}
+
+/* Style for modified slider thumb */
+.parameter-row.modified .parameter-slider::-webkit-slider-thumb {
+    background: var(--pps-active-green);
+    box-shadow: 0 0 8px var(--pps-active-green);
+}
+.parameter-row.modified .parameter-slider::-moz-range-thumb {
+    background: var(--pps-active-green);
+    box-shadow: 0 0 8px var(--pps-active-green);
+}
+
+.parameter-row.modified .parameter-slider::-webkit-slider-thumb:hover {
+    box-shadow: 0 0 12px var(--pps-active-green);
+}
+.parameter-row.modified .parameter-slider::-moz-range-thumb:hover {
+    box-shadow: 0 0 12px var(--pps-active-green);
+}
+/* === FANCY SLIDER STYLES END === */
+
 .dropdown-select {
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: #000000; /* Original Style */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Original Style */
     border-radius: 6px;
     color: #ffffff;
     padding: 4px 8px;
@@ -415,8 +501,8 @@ const CSS_STYLES = `
 
 .dropdown-select:focus {
     outline: none;
-    border-color: #4a90e2;
-    box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+    border-color: #7700ff; /* Original Style */
+    box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2); /* Original Style */
 }
 
 .disabled-section {
@@ -425,20 +511,26 @@ const CSS_STYLES = `
 }
 `;
 
-// Inject CSS styles once during setup
 function injectStyles() {
-    if (!document.getElementById('postprocess-styles')) {
+    if (!document.getElementById('postprocess-styles-orbitron-sliders')) { 
         const styleSheet = document.createElement('style');
-        styleSheet.id = 'postprocess-styles';
+        styleSheet.id = 'postprocess-styles-orbitron-sliders';
         styleSheet.textContent = CSS_STYLES;
         document.head.appendChild(styleSheet);
-        console.log("CSS styles injected successfully");
+        console.log("CSS styles (Orbitron Title & Fancy Sliders) injected successfully");
+        
+        if (!document.querySelector('link[href*="Orbitron"]')) {
+            const fontLink = document.createElement("link");
+            fontLink.href = "https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap";
+            fontLink.rel = "stylesheet";
+            document.head.appendChild(fontLink);
+        }
+
     } else {
-        console.log("CSS styles already injected");
+        console.log("CSS styles (Orbitron Title & Fancy Sliders) already injected");
     }
 }
 
-// Operation groups with subgroups
 const OPERATION_GROUPS = {
     "UPSCALE": {
         icon: "🍆",
@@ -509,7 +601,6 @@ const OPERATION_GROUPS = {
     }
 };
 
-// Default values synchronized with Python
 const DEFAULTS = {
     "downscale_by": 0.5,
     "batch_size": 1,
@@ -561,7 +652,6 @@ const DEFAULTS = {
     "barrel_distortion": 0.0
 };
 
-// Parameter labels
 const PARAM_LABELS = {
     "upscale_model_path": "Model Path",
     "downscale_by": "Downscale By",
@@ -628,18 +718,15 @@ class ProfessionalPostProcessUI {
         this.setupUI();
     }
 
-    // Load presets from localStorage
     loadPresets() {
         const presets = localStorage.getItem('crtPostProcessPresets');
         return presets ? JSON.parse(presets) : {};
     }
 
-    // Save presets to localStorage
     savePresets() {
         localStorage.setItem('crtPostProcessPresets', JSON.stringify(this.presets));
     }
 
-    // Update the preset dropdown options
     updatePresetDropdown() {
         if (!this.presetSelect) return;
         this.presetSelect.innerHTML = '';
@@ -656,7 +743,6 @@ class ProfessionalPostProcessUI {
         });
     }
 
-    // Utility method to sanitize group names for CSS IDs
     sanitizeId(groupName) {
         return groupName.replace(/[^a-zA-Z0-9-]/g, '-').replace(/-+/g, '-').toLowerCase();
     }
@@ -674,7 +760,6 @@ class ProfessionalPostProcessUI {
             return;
         }
 
-        // Check all widgets
         let allWidgetsReady = true;
         Object.keys(OPERATION_GROUPS).forEach(groupName => {
             const group = OPERATION_GROUPS[groupName];
@@ -715,7 +800,6 @@ class ProfessionalPostProcessUI {
         this.node.setSize([650, 220]);
         console.log("Node size set to 650x220");
 
-        // Delay tab switch and sync to ensure DOM and widgets are ready
         setTimeout(() => {
             console.log("Triggering initial tab switch to:", this.activeTab);
             this.syncUIWithWidgets();
@@ -773,7 +857,6 @@ class ProfessionalPostProcessUI {
         this.createTabs();
         this.createSections();
 
-        // Add the custom UI to the node
         if (this.node.addDOMWidget) {
             try {
                 this.node.addDOMWidget('postprocess_ui', 'div', this.container);
@@ -785,7 +868,6 @@ class ProfessionalPostProcessUI {
             console.error("addDOMWidget method not available on node");
         }
 
-        // Force a redraw
         this.node.setDirtyCanvas(true, true);
     }
 
@@ -793,27 +875,23 @@ class ProfessionalPostProcessUI {
         const presetControls = document.createElement('div');
         presetControls.className = 'preset-controls';
 
-        // Preset dropdown
         this.presetSelect = document.createElement('select');
         this.presetSelect.className = 'preset-select';
         this.updatePresetDropdown();
         presetControls.appendChild(this.presetSelect);
 
-        // Load preset button
         const loadButton = document.createElement('button');
         loadButton.className = 'preset-button load-button';
         loadButton.textContent = 'Load';
         loadButton.addEventListener('click', () => this.loadPreset());
         presetControls.appendChild(loadButton);
 
-        // Preset name input
         const presetInput = document.createElement('input');
         presetInput.className = 'preset-input';
         presetInput.type = 'text';
         presetInput.placeholder = 'Preset Name';
         presetControls.appendChild(presetInput);
 
-        // Save preset button
         const saveButton = document.createElement('button');
         saveButton.className = 'preset-button';
         saveButton.textContent = '💜';
@@ -864,7 +942,6 @@ class ProfessionalPostProcessUI {
             const widget = this.findWidget(paramName);
             if (widget) {
                 if (paramName === 'upscale_model_path' && widget.options?.values) {
-                    // Ensure the preset value is valid
                     if (!widget.options.values.includes(preset[paramName])) {
                         console.warn(`Preset value '${preset[paramName]}' for upscale_model_path is invalid, using first valid option`);
                         widget.value = widget.options.values[0];
@@ -1062,7 +1139,6 @@ class ProfessionalPostProcessUI {
                     options = ["zoom", "spin"];
                 }
 
-                // Set default if current value is invalid
                 if (!options.includes(widget.value) && options.length > 0) {
                     console.log(`Setting default value for ${paramName}: ${options[0]}`);
                     widget.value = options[0];
@@ -1301,7 +1377,7 @@ class ProfessionalPostProcessUI {
 			const enableLargeGlowWidget = this.findWidget("enable_large_glow");
 			if (enableLargeGlowWidget) {
 				enableLargeGlowWidget.value = isEnabled;
-				enableLargeGlowWidget.serialize = true;
+				enableLargeGlowWidget.serialize = true; // ensure this is serialized
 				console.log(`Set enable_large_glow to ${isEnabled} for GLOWS group`);
 			} else {
 				console.error("enable_large_glow widget not found; large glow will not be enabled/disabled");

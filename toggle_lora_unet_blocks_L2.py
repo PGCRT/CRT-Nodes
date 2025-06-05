@@ -41,7 +41,7 @@ class ToggleLoraUnetBlocksNodeL2:
                 "Block_35_L2": ("BOOLEAN", {"default": False}),
                 "Block_36_L2": ("BOOLEAN", {"default": False}),
                 "Block_37_L2": ("BOOLEAN", {"default": False}),
-                "input_string": ("STRING", {"default": ""}),  # String input to join
+                "input_string": ("STRING", {"default": ""}),
             }
         }
 
@@ -55,15 +55,12 @@ class ToggleLoraUnetBlocksNodeL2:
                         Block_20_L2, Block_21_L2, Block_22_L2, Block_23_L2, Block_24_L2, Block_25_L2,
                         Block_26_L2, Block_27_L2, Block_28_L2, Block_29_L2, Block_30_L2, Block_31_L2,
                         Block_32_L2, Block_33_L2, Block_34_L2, Block_35_L2, Block_36_L2, Block_37_L2,
-                        input_string):  # Added input_string parameter
-        # Define the strings for active blocks
+                        input_string):
         active_blocks = []
-        for i in range(38):  # Loop through all blocks
-            if locals()[f"Block_{i}_L2"]:  # Check if the block is active
+        for i in range(38):
+            if locals()[f"Block_{i}_L2"]:
                 active_blocks.append(f"lora_unet_single_blocks_{i}_linear2,")
 
-        # Combine active blocks and input string
         result = "".join(active_blocks) + ("" + input_string if input_string else "")
         
-        # Return the result as a tuple
         return (result,)

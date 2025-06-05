@@ -1,5 +1,3 @@
-# video_duration_calculator.py
-
 class VideoDurationCalculator:
     @classmethod
     def INPUT_TYPES(cls):
@@ -10,12 +8,12 @@ class VideoDurationCalculator:
             }
         }
 
-    RETURN_TYPES = ("FLOAT",)  # Change output type to FLOAT
+    RETURN_TYPES = ("FLOAT",)
     RETURN_NAMES = ("duration_seconds",)
     FUNCTION = "calculate_duration"
-    CATEGORY = "Video/Utilities"
+    CATEGORY = "CRT"
 
     def calculate_duration(self, fps, frame_count):
         duration = frame_count / fps
-        duration_rounded = round(duration, 2)  # round to 2 decimals
+        duration_rounded = round(duration, 2)
         return (duration_rounded,)

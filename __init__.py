@@ -1,9 +1,9 @@
 """
 @author: CRT
 @title: CRT-Nodes
-@version: 1.1.8
+@version: 1.2.0 
 @project: "https://github.com/plugcrypt/CRT-Nodes",
-@description: Single Blocks Arguments for LoRA Training + Professional Post-Processing + Flux Guidance Scheduling
+@description: Set of nodes for ComfyUI
 https://discord.gg/8wYS9MBQqp
 """
 from .toggle_lora_unet_blocks_L1 import ToggleLoraUnetBlocksNodeL1
@@ -13,6 +13,7 @@ from .boolean_transform_node import BooleanTransformNode
 from .lora_loader_str import LoraLoaderStr
 from .video_duration_calculator import VideoDurationCalculator
 from .crt_post_process_node import CRTPostProcessNode
+from .FluxLoraBlocksPatcher import FluxLoraBlocksPatcher
 from .FluxTiledSamplerCustom import FluxTiledSamplerCustomAdvanced
 from .FancyNoteNode import FancyNoteNode
 
@@ -24,6 +25,7 @@ NODE_CLASS_MAPPINGS = {
     "Lora Loader Str": LoraLoaderStr,
     "Video Duration Calculator": VideoDurationCalculator,
     "CRT Post-Process Suite": CRTPostProcessNode,
+    "FluxLoraBlocksPatcher": FluxLoraBlocksPatcher, 
     "FluxTiledSamplerCustomAdvanced": FluxTiledSamplerCustomAdvanced,
     "FancyNoteNode": FancyNoteNode,
 }
@@ -36,6 +38,7 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "Lora Loader Str": "Lora Loader Str",
     "Video Duration Calculator": "Video Duration Calculator",
     "CRT Post-Process Suite": "CRT Post-Process Suite",
+    "FluxLoraBlocksPatcher": "Flux LoRA Blocks Patcher",
     "FluxTiledSamplerCustomAdvanced": "Flux Tiled Sampler (Advanced)",
     "FancyNoteNode": "Fancy Note",
 }

@@ -1,11 +1,9 @@
 import { app } from "/scripts/app.js";
-// import { ComfyWidgets } from "/scripts/widgets.js"; // Not strictly needed for this version
 
 const FancyNoteNodeExtension = {
     name: "FancyNoteNode",
     async beforeRegisterNodeDef(nodeType, nodeData, app) {
         if (nodeData.name === "FancyNoteNode") {
-            // Inject CSS for styling
             const style = document.createElement("style");
             style.innerText = `
                 @keyframes fancy-text-glow-pulse {
@@ -167,30 +165,19 @@ const FancyNoteNodeExtension = {
             `;
             document.head.appendChild(style);
 
-            // Node creation hook
             nodeType.prototype.onNodeCreated = function () {
                 const node = this;
-
-                // console.log("Node widgets:", node.widgets);
-                // console.log("Node properties:", node.properties);
-
-                node.bgcolor = "#000000";
+               node.bgcolor = "#000000";
                 node.color = "#000000";
-                node.title_style = "color: #000000 ;"; // Preserved original (with space)
-                // node.setDirtyCanvas(true); // Will be called by updateTheme
+                node.title_style = "color: #000000 ;";
 
                 const textWidget = node.widgets?.find((w) => w.name === "text");
                 if (!textWidget) {
                     console.error("Text widget not found");
-                    // Fallback to ensure textWidget.value doesn't error later
-                    // This part is important for robustness if the node definition might lack the widget
                     node.widgets = node.widgets || [];
-                    // textWidget = { name: "text", value: node.properties.text || "" }; // Create a dummy
-                    // node.widgets.push(textWidget); 
-                    return; // Or handle error more gracefully
+                    return;
                 }
 
-                // Ensure text widget is serializable
                 textWidget.serialize = true;
 
                 node.properties = node.properties || {};
@@ -198,18 +185,17 @@ const FancyNoteNodeExtension = {
                 node.properties.ui_text_color = node.properties.ui_text_color || "#7300ff";
                 node.properties.ui_glow_color = node.properties.ui_glow_color || "#7300ff";
                 node.properties.ui_accent_color = node.properties.ui_accent_color || "#7300ff";
-                // For the text glow animation
                 node.properties.ui_glow_color_intensified = LightenDarkenColor(node.properties.ui_glow_color, 30);
 
-                if (node.widgets) { // Ensure node.widgets exists before forEach
+                if (node.widgets) {
                     node.widgets.forEach((w) => (w.hidden = true));
                 }
 
                 const container = document.createElement("div");
-                container.className = "fancy-note-container"; // Preserved original
+                container.className = "fancy-note-container";
 
                 const controls = document.createElement("div");
-                controls.className = "fancy-note-controls fnc-hidden-initial"; // Start hidden for animation
+                controls.className = "fancy-note-controls fnc-hidden-initial";
 
                 const fontSizeSlider = document.createElement("input");
                 fontSizeSlider.type = "range";
@@ -220,24 +206,21 @@ const FancyNoteNodeExtension = {
 
                 const colorButton = document.createElement("button");
                 colorButton.className = "fancy-note-color-button";
-                // colorButton.style.background = node.properties.ui_text_color; // Set by updateTheme
                 colorButton.title = "Change color";
 
                 const colorInput = document.createElement("input");
                 colorInput.type = "color";
                 colorInput.className = "fancy-note-color-input";
-                // colorInput.value = node.properties.ui_text_color; // Set by updateTheme
 
                 const textarea = document.createElement("textarea");
                 textarea.className = "fancy-note-textarea";
-                textarea.value = textWidget.value || ""; // Use textWidget safely
+                textarea.value = textWidget.value || "";
                 textarea.style.fontSize = `${node.properties.ui_font_size}px`;
                 textarea.spellcheck = false;
                 textarea.setAttribute("autocorrect", "off");
                 textarea.setAttribute("autocapitalize", "off");
-                textarea.placeholder = "XXX"; // Preserved original placeholder
+                textarea.placeholder = "XXX";
 
-                // Helper function to lighten/darken colors (kept from previous)
                 function LightenDarkenColor(col, amt) {
                     col = col.startsWith('#') ? col.substring(1) : col;
                     let usePound = col.length === 6 || col.length === 3;
@@ -260,19 +243,18 @@ const FancyNoteNodeExtension = {
                     
                     node.properties.ui_text_color = color;
                     node.properties.ui_glow_color = color;
-                    node.properties.ui_glow_color_intensified = intensifiedGlow; // Store for consistency
+                    node.properties.ui_glow_color_intensified = intensifiedGlow;
                     node.properties.ui_accent_color = color;
                     
-                    colorButton.style.background = color; // CSS transition handles smoothness
-                    colorInput.value = color; // Keep input value synced
+                    colorButton.style.background = color;
+                    colorInput.value = color;
                     node.setDirtyCanvas(true);
                 };
                 updateTheme(node.properties.ui_text_color);
 
                 fontSizeSlider.addEventListener("input", () => {
-                    textarea.style.fontSize = `${fontSizeSlider.value}px`; // CSS transition handles smoothness
+                    textarea.style.fontSize = `${fontSizeSlider.value}px`;
                     node.properties.ui_font_size = parseInt(fontSizeSlider.value);
-                    // node.setDirtyCanvas(true); // Only if font size change affects node bounds calculation
                 });
 
                 colorButton.addEventListener("click", (e) => {
@@ -285,8 +267,7 @@ const FancyNoteNodeExtension = {
 
                 textarea.addEventListener("input", () => {
                     textWidget.value = textarea.value;
-                    node.properties.text = textarea.value; // Persist text content
-                    // node.setDirtyCanvas(true); // Usually not needed for text input
+                    node.properties.text = textarea.value;
                 });
 
                 textarea.addEventListener("mousedown", (e) => e.stopPropagation());
@@ -299,8 +280,8 @@ const FancyNoteNodeExtension = {
                 node.container = container;
 
                 node.addDOMWidget("fancyNote", "Fancy Note", container, {
-                    serialize: false, // Preserved original
-                    computeSize: () => { // Preserved original computeSize
+                    serialize: false,
+                    computeSize: () => {
                         const width = Math.max(node.size[0] || 300, 200);
                         const height = Math.max(node.size[1] || 150, 200);
                         return [width, height];
@@ -314,17 +295,13 @@ const FancyNoteNodeExtension = {
                     document.head.appendChild(fontLink);
                 }
                 
-                // Animate controls into view
                 setTimeout(() => {
                     controls.classList.remove("fnc-hidden-initial");
-                    // CSS transition on .fancy-note-controls will handle the animation
-                }, 50); // Small delay for render then animate
+                }, 50);
 
-                // Sync UI with state after creation
                 node.syncUIWithState();
             };
 
-            // Sync UI with node state
             nodeType.prototype.syncUIWithState = function () {
                 if (!this.container) {
                     console.warn("Container not found for UI sync");
@@ -367,7 +344,6 @@ const FancyNoteNodeExtension = {
                 this.setDirtyCanvas(true);
             };
 
-            // Serialize node state
             nodeType.prototype.onSerialize = function (info) {
                 info.properties = {
                     ui_font_size: this.properties.ui_font_size || 80,
@@ -387,7 +363,6 @@ const FancyNoteNodeExtension = {
                 }
             };
 
-            // Deserialize node state
             nodeType.prototype.onConfigure = function (info) {
                 this.properties = this.properties || {};
 
