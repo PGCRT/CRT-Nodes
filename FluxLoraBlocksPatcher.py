@@ -9,8 +9,6 @@ MAX_DOUBLE_BLOCKS_COUNT = 19
 
 class FluxLoraBlocksPatcher:
     CATEGORY = "CRT"
-    NODE_CLASS_MAPPINGS = {"FluxLoraBlocksPatcher": "FluxLoraBlocksPatcher"}
-    NODE_DISPLAY_NAME_MAPPINGS = {"FluxLoraBlocksPatcher": "Flux LoRA Blocks Patcher"}
 
     @classmethod
     def INPUT_TYPES(cls):
@@ -24,7 +22,7 @@ class FluxLoraBlocksPatcher:
                 "default": 1.0, "min": 0.0, "max": 2.0, "step": 0.01,
             })
         for i in range(MAX_DOUBLE_BLOCKS_COUNT):
-            inputs["required"][f"lora_block_{i}_double_weight"] = ("FLOAT",
+            inputs["required"][f"lora_block_{i}_double_weight"] = ("FLOAT", {
                 "default": 1.0, "min": 0.0, "max": 2.0, "step": 0.01,
             })
         return inputs
@@ -40,9 +38,9 @@ class FluxLoraBlocksPatcher:
         double_block_scales = {i: kwargs.get(f"lora_block_{i}_double_weight", 1.0) for i in range(MAX_DOUBLE_BLOCKS_COUNT)}
 
         active_lora_processing_needed = any(abs(s - 1.0) > 1e-5 for s in single_block_scales.values()) or \
-                                        any(abs(s) < 1e-5 for s in single_block_scales.values()) or \
-                                        any(abs(s - 1.0) > 1e-5 for s in double_block_scales.values()) or \
-                                        any(abs(s) < 1e-5 for s in double_block_scales.values())
+                                       any(abs(s) < 1e-5 for s in single_block_scales.values()) or \
+                                       any(abs(s - 1.0) > 1e-5 for s in double_block_scales.values()) or \
+                                       any(abs(s) < 1e-5 for s in double_block_scales.values())
 
         if not active_lora_processing_needed:
             return (m,)
@@ -83,7 +81,7 @@ class FluxLoraBlocksPatcher:
                             continue
 
                         needs_modification = abs(lora_scale_for_this_block - 1.0) > 1e-5 or \
-                                             abs(lora_scale_for_this_block) < 1e-5
+                                            abs(lora_scale_for_this_block) < 1e-5
 
                         if not needs_modification:
                             continue
@@ -145,3 +143,7 @@ class FluxLoraBlocksPatcher:
     @classmethod
     def IS_CHANGED(cls, **kwargs):
         return float("nan")
+
+# Define mappings after the class
+NODE_CLASS_MAPPINGS = {"FluxLoraBlocksPatcher": FluxLoraBlocksPatcher}
+NODE_DISPLAY_NAME_MAPPINGS = {"FluxLoraBlocksPatcher": "Flux LoRA Blocks Patcher"}
