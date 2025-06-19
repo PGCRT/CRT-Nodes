@@ -1,31 +1,29 @@
-// --- START OF FILE simple_knob_widget.js ---
-
 import { app } from "../../scripts/app.js";
 
 const SimpleKnobExtension = {
     name: "CRT.SimpleKnob.UI",
 
-    // This is the correct hook, just like in FancyNoteNode
+    
     async beforeRegisterNodeDef(nodeType, nodeData, app) {
         if (nodeData.name === "SimpleKnobNode") {
             const onNodeCreated = nodeType.prototype.onNodeCreated;
 
-            // This function runs when a new "SimpleKnobNode" is created
+            
             nodeType.prototype.onNodeCreated = function () {
                 onNodeCreated?.apply(this, arguments);
 
-                // Make node background and title transparent
+                
                 this.bgcolor = "transparent";
                 this.color = "transparent";
                 this.title = "";
 
-                // Find the original float widget so we can read/write its value
+                
                 const valueWidget = this.widgets.find(w => w.name === "value");
 
-                // Hide the original widget. We are replacing it with our own UI.
+                
                 valueWidget.hidden = true;
 
-                // Initialize properties on the node itself. This is how settings are saved.
+                
 				this.properties = this.properties || {};
 				this.properties.title = this.properties.title || "Knob";
 				this.properties.color = this.properties.color || "#7700ff";
@@ -33,7 +31,7 @@ const SimpleKnobExtension = {
 				this.properties.max = this.properties.max ?? valueWidget.options.max ?? 1.0;
 				this.properties.step = 0.01;
 				this.properties.precision = this.properties.precision ?? 2;
-                // --- UI Construction ---
+                
                 const wrapper = document.createElement("div");
                 wrapper.className = "simple-knob-wrapper";
                 
@@ -58,7 +56,7 @@ const SimpleKnobExtension = {
                         max-height: 200px;
                         font-family: 'Orbitron', monospace;
                         user-select: none;
-                        pointer-events: none; /* Allow events to pass through wrapper */
+                        pointer-events: none; 
                     }
                     .simple-knob-header { 
                         display: flex; 
@@ -69,7 +67,7 @@ const SimpleKnobExtension = {
                         top: 0; 
                         padding: 0px; 
                         box-sizing: border-box; 
-                        pointer-events: none; /* Allow events to pass through header */
+                        pointer-events: none; 
                     }
                     .simple-knob-btn { 
 						position: relative;
@@ -87,7 +85,7 @@ const SimpleKnobExtension = {
                         display: flex;
                         align-items: center;
                         justify-content: center;
-                        pointer-events: auto; /* Re-enable events for the button */
+                        pointer-events: auto; 
                     }
                     .simple-knob-btn:hover { 
                         background: var(--knob-color, #7700ff); 
@@ -104,7 +102,7 @@ const SimpleKnobExtension = {
                         position: absolute; 
                         bottom: -5px; 
                         text-shadow: 0 0 8px var(--knob-color, #7700ff);
-                        pointer-events: none; /* Allow events to pass through title */
+                        pointer-events: none; 
                     }
                     .simple-knob-body { 
                         width: 140px; 
@@ -122,7 +120,7 @@ const SimpleKnobExtension = {
                         justify-content: center; 
                         transition: all 0.3s ease;
                         overflow: hidden;
-                        pointer-events: auto; /* Re-enable events for the knob body */
+                        pointer-events: auto; 
                     }
                     .simple-knob-body:hover {
                         transform: scale(1.02);
@@ -162,7 +160,7 @@ const SimpleKnobExtension = {
                         border-radius: 3px; 
                         box-shadow: 0 0 10px var(--knob-color, #7700ff);
                         z-index: 2;
-                        pointer-events: none; /* Indicator doesn't need events */
+                        pointer-events: none; 
                     }
                     .simple-knob-center-display {
                         position: absolute;
@@ -178,7 +176,7 @@ const SimpleKnobExtension = {
                         justify-content: center;
                         border: 2px solid var(--knob-color, #7700ff);
                         z-index: 3;
-                        pointer-events: none; /* Center display doesn't need events */
+                        pointer-events: none; 
                     }
                     .simple-knob-value { 
                         color: var(--knob-color, #7700ff); 
@@ -188,7 +186,7 @@ const SimpleKnobExtension = {
                         text-shadow: 0 0 8px var(--knob-color, #7700ff);
                         font-family: 'Orbitron', monospace;
                         user-select: none; 
-                        pointer-events: none; /* Value display doesn't need events */
+                        pointer-events: none; 
                     }
                     .simple-knob-modal-overlay { 
                         position: fixed; 
@@ -312,24 +310,24 @@ const SimpleKnobExtension = {
                 wrapper.appendChild(knobBody);
                 wrapper.appendChild(titleDisplay);
                 
-                // Add the custom UI as a DOMWidget. This is the key step.
+                
                 const domWidget = this.addDOMWidget("simple_knob_ui", "div", wrapper, {
                     serialize: false,
-                    computeSize: () => [200, 0] // Define the size of our widget
+                    computeSize: () => [200, 0] 
                 });
-                domWidget.wrapper = wrapper; // Attach the wrapper for easy access
+                domWidget.wrapper = wrapper; 
 
-                // Force fixed size
+                
                 this.size = [200, 0];
                 this.resizable = false;
 
-                // --- Modal for Settings ---
+                
                 const modalOverlay = document.createElement("div");
                 modalOverlay.className = "simple-knob-modal-overlay";
                 const modal = this.buildModal(modalOverlay);
                 document.body.appendChild(modalOverlay);
 
-                // --- Logic and Event Handling ---
+                
                 let isDragging = false;
                 let lastY = 0;
 
@@ -361,26 +359,26 @@ const SimpleKnobExtension = {
                     updateKnobVisuals();
                 };
                 
-                // Mouse interaction - only handle left click drag on knob body
+                
                 knobBody.addEventListener("mousedown", (e) => {
-                    if (e.button === 0) { // Left click only
+                    if (e.button === 0) { 
                         isDragging = true;
                         lastY = e.clientY;
                         knobBody.classList.add('dragging');
                         e.preventDefault();
                         e.stopPropagation();
                     }
-                    // Allow all other mouse events (middle click, right click) to bubble up
+                    
                 });
                 
                 document.addEventListener("mousemove", (e) => {
                     if (!isDragging) return;
                     
-                    const deltaY = lastY - e.clientY; // Up = positive, Down = negative
-                    lastY = e.clientY; // Update for next movement
+                    const deltaY = lastY - e.clientY; 
+                    lastY = e.clientY; 
                     
                     const range = this.properties.max - this.properties.min;
-                    const sensitivity = range / 300; // Adjust sensitivity here
+                    const sensitivity = range / 300; 
                     
                     const newValue = valueWidget.value + (deltaY * sensitivity);
                     applyValue(newValue);
@@ -396,8 +394,23 @@ const SimpleKnobExtension = {
                     }
                 });
 
-                // Remove wheel event listener entirely - let ComfyUI handle all wheel events
-                // knobBody.addEventListener("wheel", ...) // REMOVED
+                
+                knobBody.addEventListener("wheel", (e) => {
+                    
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    
+                    const range = this.properties.max - this.properties.min;
+                    const wheelSensitivity = range / 100; 
+                    
+                    
+                    
+                    const deltaValue = -e.deltaY > 0 ? wheelSensitivity : -wheelSensitivity;
+                    
+                    const newValue = valueWidget.value + deltaValue;
+                    applyValue(newValue);
+                });
 
                 settingsBtn.addEventListener("click", (e) => {
                     modal.show();
@@ -406,18 +419,18 @@ const SimpleKnobExtension = {
                     e.stopPropagation();
                 });
 
-                // Prevent context menu on knob body only
+                
                 knobBody.addEventListener("contextmenu", (e) => {
                     e.preventDefault();
                 });
 
-                updateAllVisuals(); // Initial setup
+                updateAllVisuals(); 
 
-                // Store a reference to our update function so we can call it on configure
+                
                 this.syncKnobUI = updateAllVisuals; 
             };
             
-            // --- Helper to build the modal ---
+            
             nodeType.prototype.buildModal = function(overlay) {
                 const modal = document.createElement("div");
                 modal.className = "simple-knob-modal";
@@ -481,7 +494,7 @@ const SimpleKnobExtension = {
                 return { show, hide };
             };
             
-            // --- Serialization Hooks ---
+            
             const onConfigure = nodeType.prototype.onConfigure;
             nodeType.prototype.onConfigure = function(info) {
                 onConfigure?.apply(this, arguments);
