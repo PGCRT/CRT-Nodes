@@ -1,0 +1,9 @@
+torch>=2.0.0
+torchvision
+numpy
+scipy>=1.13.1
+opencv-python
+Pillow>=9.0.0
+color-matcher
+spandrel
+safetensors
