@@ -48,6 +48,8 @@ if 'CRT_NODES_INITIALIZED' not in globals():
     from .py.smart_style_model_apply import SmartStyleModelApply, ClearStyleModelCache
     from .py.smart_style_model_apply_dual import SmartStyleModelApplyDual, ClearStyleModelDualCache
     from .py.CLIPTextEncodeFluxMerged import CLIPTextEncodeFluxMerged
+    from .py.load_image_resize import LoadImageResize
+    from .py.autoprompt_processor import AutopromptProcessor
 
     print("[CRT-Nodes __init__] Registering custom model paths...")
     try:
@@ -106,7 +108,9 @@ NODE_CLASS_MAPPINGS = {
     "SmartStyleModelApplyDual": SmartStyleModelApplyDual,
     "ClearStyleModelDualCache": ClearStyleModelDualCache,
     "ClearStyleModelCache": ClearStyleModelCache,
-    "CLIPTextEncodeFluxMerged": CLIPTextEncodeFluxMerged
+    "CLIPTextEncodeFluxMerged": CLIPTextEncodeFluxMerged,
+    "LoadImageResize": LoadImageResize,
+    "AutopromptProcessor": AutopromptProcessor
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
@@ -145,7 +149,9 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "SmartStyleModelApplyDual": "Smart Style Model Apply DUAL (CRT)",
     "ClearStyleModelDualCache": "Clear Dual Style Cache (CRT)",
     "ClearStyleModelCache": "Clear Style Model Cache (CRT)",
-    "CLIPTextEncodeFluxMerged": "CLIP Text Encode FLUX Merged (CRT)"
+    "CLIPTextEncodeFluxMerged": "CLIP Text Encode FLUX Merged (CRT)",
+    "LoadImageResize": "Load Image Resize (CRT)",
+    "AutopromptProcessor": "Autoprompt Processor (CRT)"
 }
 
 WEB_DIRECTORY = "./js"

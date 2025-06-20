@@ -7,13 +7,78 @@ import time
 import hashlib
 import weakref
 from pathlib import Path
+
+# Comprehensive list of all known preprocessors
+ALL_PREPROCESSORS = [
+    "none",
+    "CannyEdgePreprocessor",
+    "DepthAnythingV2Preprocessor",
+    "DepthAnythingPreprocessor", 
+    "MiDaS-DepthMapPreprocessor",
+    "MiDaS-NormalMapPreprocessor",
+    "LeReS-DepthMapPreprocessor",
+    "Zoe-DepthMapPreprocessor",
+    "BAE-NormalMapPreprocessor",
+    "DSINE-NormalMapPreprocessor",
+    "LineArtPreprocessor",
+    "LineartStandardPreprocessor",
+    "Manga2Anime_LineArt_Preprocessor",
+    "M-LSDPreprocessor",
+    "OpenposePreprocessor",
+    "DWPreprocessor",
+    "AnimalPosePreprocessor",
+    "FacialPartColoringFromPoseKps",
+    "UpperBodyTrackingFromPoseKps",
+    "RenderPeopleKps",
+    "RenderAnimalKps",
+    "MLSDPreprocessor",
+    "HEDPreprocessor",
+    "FakeScribblePreprocessor",
+    "ScribblePreprocessor",
+    "PiDiNetPreprocessor",
+    "NormalBAEPreprocessor",
+    "SAMPreprocessor",
+    "ColorPreprocessor",
+    "MediaPipe-FaceMeshPreprocessor",
+    "MediaPipe-HandPosePreprocessor",
+    "DensePosePreprocessor",
+    "OpenPosePreprocessor",
+    "TilePreprocessor",
+    "SegmentAnythingPreprocessor",
+    "SemSegPreprocessor",
+    "UniFormer-SemSegPreprocessor",
+    "OneFormer-COCO-SemSegPreprocessor",
+    "OneFormer-ADE20K-SemSegPreprocessor",
+    "BinaryPreprocessor",
+    "InpaintPreprocessor",
+    "ShufflePreprocessor",
+    "ContentShufflePreprocessor",
+    "ColorizePreprocessor",
+    "RecolorPreprocessor",
+    "ImageLuminanceDetector",
+    "ImageIntensityDetector",
+    "TEED_Preprocessor",
+    "Metric3D-DepthMapPreprocessor",
+    "Metric3D-NormalMapPreprocessor",
+    "DepthAnything-DepthMapPreprocessor",
+    "DepthAnythingV2-DepthMapPreprocessor"
+]
+
+# Try to import ControlNet Aux
 try:
     from comfyui_controlnet_aux import AUX_NODE_MAPPINGS, PREPROCESSOR_OPTIONS
     CONTROLNET_AUX_AVAILABLE = True
-except ImportError:
+    # Use the actual available preprocessors from the aux package
+    AVAILABLE_PREPROCESSORS = PREPROCESSOR_OPTIONS
+    print(f"✅ ControlNet Aux loaded with {len(PREPROCESSOR_OPTIONS)} preprocessors")
+except ImportError as e:
+    print(f"⚠️ ControlNet Aux not available: {e}")
     CONTROLNET_AUX_AVAILABLE = False
     AUX_NODE_MAPPINGS = {}
-    PREPROCESSOR_OPTIONS = ["none"]
+    # Use comprehensive list so all preprocessors show up in the UI
+    AVAILABLE_PREPROCESSORS = ALL_PREPROCESSORS
+    print(f"🔄 Using comprehensive preprocessor list: {len(ALL_PREPROCESSORS)} options")
+
 class Colors:
     HEADER = '\033[95m'
     BLUE = '\033[94m'
@@ -27,6 +92,7 @@ class Colors:
 
 def colored_print(text, color=Colors.ENDC):
     print(f"{color}{text}{Colors.ENDC}")
+
 class PreprocessorCache:
     def __init__(self, max_size=50):
         self.cache = {}
@@ -86,6 +152,7 @@ class PreprocessorCache:
                 del self.cache[oldest_key]
             if oldest_key in self._strong_refs:
                 del self._strong_refs[oldest_key]
+        
         self.cache[key] = weakref.ref(result)
         self._strong_refs[key] = result.clone() if hasattr(result, 'clone') else result
         self.access_order.append(key)
@@ -98,6 +165,7 @@ class PreprocessorCache:
         self.access_order.clear()
         self._strong_refs.clear()
         colored_print("   💾 Cache cleared", Colors.BLUE)
+
 _preprocessor_cache = PreprocessorCache()
 
 class SmartControlNetApply:
@@ -117,7 +185,7 @@ class SmartControlNetApply:
                 "control_net": ("CONTROL_NET",),
                 "strength": ("FLOAT", {"default": 1.0, "min": 0.0, "max": 10.0, "step": 0.01}),
                 "end_percent": ("FLOAT", {"default": 1.0, "min": 0.0, "max": 1.0, "step": 0.001}),
-                "preprocessor": (PREPROCESSOR_OPTIONS, {"default": "none"}),
+                "preprocessor": (AVAILABLE_PREPROCESSORS, {"default": "none"}),
                 "resolution": ("INT", {"default": 512, "min": 64, "max": 2048, "step": 8}),
                 "union_type": (["auto"] + list(getattr(__import__('comfy.cldm.control_types', fromlist=['UNION_CONTROLNET_TYPES']), 'UNION_CONTROLNET_TYPES', {}).keys()), {"default": "auto"}),
             },
@@ -158,11 +226,13 @@ class SmartControlNetApply:
             return image
         
         if not CONTROLNET_AUX_AVAILABLE:
-            colored_print("   ❌ ControlNet Aux not available, skipping preprocessing", Colors.RED)
+            colored_print(f"   ⚠️ ControlNet Aux not available, cannot run '{preprocessor}' - returning original image", Colors.YELLOW)
             return image
         
         if preprocessor not in AUX_NODE_MAPPINGS:
-            colored_print(f"   ❌ Preprocessor '{preprocessor}' not found", Colors.RED)
+            colored_print(f"   ❌ Preprocessor '{preprocessor}' not found in AUX_NODE_MAPPINGS", Colors.RED)
+            available_list = list(AUX_NODE_MAPPINGS.keys())[:10]  # Show first 10
+            colored_print(f"   Available preprocessors: {available_list}{'...' if len(AUX_NODE_MAPPINGS) > 10 else ''}", Colors.BLUE)
             return image
         
         start_time = time.time()
@@ -195,15 +265,22 @@ class SmartControlNetApply:
                     params[name] = default_value
                     if name not in ["image", "resolution"]:
                         preprocessor_params[name] = default_value
+            
+            # Check cache first
             cached_result = _preprocessor_cache.get(image, preprocessor, resolution, **preprocessor_params)
             if cached_result is not None:
                 return cached_result
+            
+            # Run preprocessor
             instance = aux_class()
             result = getattr(instance, aux_class.FUNCTION)(**params)
+            
             if isinstance(result, tuple) and len(result) > 0:
                 processed_image = result[0]
             else:
                 processed_image = result
+            
+            # Cache result
             _preprocessor_cache.put(image, preprocessor, resolution, processed_image, **preprocessor_params)
             
             processing_time = time.time() - start_time
@@ -212,13 +289,15 @@ class SmartControlNetApply:
             return processed_image
             
         except Exception as e:
-            colored_print(f"   ❌ Preprocessing failed: {str(e)}", Colors.RED)
+            colored_print(f"   ❌ Preprocessing failed for '{preprocessor}': {str(e)}", Colors.RED)
+            colored_print(f"   🔄 Returning original image instead", Colors.YELLOW)
             return image
     
     def _handle_inpainting_controlnet(self, control_net, image, mask, vae):
         """Handle inpainting ControlNet if mask is provided."""
         if mask is None or not hasattr(control_net, 'concat_mask') or not control_net.concat_mask:
             return image, []
+            
         mask = 1.0 - mask.reshape((-1, 1, mask.shape[-2], mask.shape[-1]))
         mask_apply = comfy.utils.common_upscale(mask, image.shape[2], image.shape[1], "bilinear", "center").round()
         masked_image = image * mask_apply.movedim(1, -1).repeat(1, 1, 1, image.shape[3])
@@ -234,19 +313,35 @@ class SmartControlNetApply:
         colored_print(f"\n🎨 Smart ControlNet Processing", Colors.HEADER)
         colored_print(f"   📊 Strength: {strength:.3f} | End: {end_percent:.3f} | Preprocessor: {preprocessor}", Colors.BLUE)
         
+        # Check if preprocessor is available and warn if not
+        if not CONTROLNET_AUX_AVAILABLE and preprocessor != "none":
+            colored_print(f"   ⚠️ ControlNet Aux not installed - '{preprocessor}' will be skipped", Colors.YELLOW)
+        elif CONTROLNET_AUX_AVAILABLE and preprocessor not in AUX_NODE_MAPPINGS and preprocessor != "none":
+            colored_print(f"   ⚠️ Preprocessor '{preprocessor}' not available in current installation", Colors.YELLOW)
+        
         start_time = time.time()
+        
+        # Early exit if strength is 0
         if strength == 0.0:
             colored_print(f"   ⚡ BYPASSED - Strength is 0, skipping all processing", Colors.YELLOW)
             return (positive, negative, image)
+        
+        # Set union type
         control_net = self._set_union_controlnet_type(control_net, union_type)
         if union_type != "auto":
             colored_print(f"   🔗 Union type: {union_type}", Colors.CYAN)
+        
+        # Run preprocessing
         processed_image = self._run_preprocessor(image, preprocessor, resolution)
+        
+        # Handle inpainting
         extra_concat = []
         if mask is not None:
             processed_image, extra_concat = self._handle_inpainting_controlnet(
                 control_net, processed_image, mask, vae
             )
+        
+        # Apply ControlNet
         colored_print(f"   🎮 Applying ControlNet...", Colors.GREEN)
         try:
             if extra_concat:
@@ -283,10 +378,21 @@ class ClearPreprocessorCache:
     RETURN_TYPES = ("STRING",)
     RETURN_NAMES = ("status",)
     FUNCTION = "clear_cache"
-    CATEGORY = "🎨 CRT Nodes/Utilities"
+    CATEGORY = "CRT"
     
     def clear_cache(self, clear_cache):
         if clear_cache:
             _preprocessor_cache.clear()
             return ("Cache cleared successfully",)
         return ("Cache not cleared",)
+
+# Register the node mappings
+NODE_CLASS_MAPPINGS = {
+    "SmartControlNetApply": SmartControlNetApply,
+    "ClearPreprocessorCache": ClearPreprocessorCache,
+}
+
+NODE_DISPLAY_NAME_MAPPINGS = {
+    "SmartControlNetApply": "🎨 Smart ControlNet Apply",
+    "ClearPreprocessorCache": "🗑️ Clear Preprocessor Cache",
+}
