@@ -1,7 +1,7 @@
 """
 @author: CRT
 @title: CRT-Nodes
-@version: 1.3.7
+@version: 1.3.8
 @project: "https://github.com/plugcrypt/CRT-Nodes",
 @description: Set of nodes for ComfyUI
 https://discord.gg/8wYS9MBQqp
