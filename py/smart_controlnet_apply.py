@@ -94,10 +94,12 @@ def colored_print(text, color=Colors.ENDC):
     print(f"{color}{text}{Colors.ENDC}")
 
 class PreprocessorCache:
-    def __init__(self, max_size=50):
+    def __init__(self, max_size=10, max_memory_mb=512):
         self.cache = {}
         self.access_order = []
-        self.max_size = max_size
+        self.max_size = max_size  # Reduced from 50 to 10
+        self.max_memory_mb = max_memory_mb
+        self.current_memory_mb = 0
         self._strong_refs = {}
     
     def _generate_key(self, image, preprocessor, resolution, **kwargs):
