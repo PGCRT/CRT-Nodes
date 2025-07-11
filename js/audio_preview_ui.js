@@ -34,7 +34,7 @@ const CSS_STYLES_ENHANCED_AUDIO = `
 .enhanced-audio-preview-node-widget {
     position: relative !important;
     box-sizing: border-box !important;
-    width: 100% !important;
+    width: 600px !important;
     min-height: 400px !important;
     padding: 0px !important;
     margin: 0 !important;
@@ -280,7 +280,6 @@ const CSS_STYLES_ENHANCED_AUDIO = `
     border-color: var(--audio-primary);
     box-shadow: 0 0 8px rgba(0, 255, 136, 0.4);
 }
-
 
 /* Time display */
 .audio-time-container {
@@ -560,7 +559,7 @@ class EnhancedAudioPreviewUI {
         this.handleVolumeChange = this.handleVolumeChange.bind(this);
         this.handleLoopButton = this.handleLoopButton.bind(this);
 		
-		this.node.title = "";
+        this.node.title = "";
         this.node.bgcolor = "transparent";
         this.node.color = "transparent";
 
