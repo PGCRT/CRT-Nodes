@@ -1,0 +1,2 @@
+face_yolov8m-seg_60.pt
+face_yolov8m.pt
