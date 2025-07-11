@@ -2,6 +2,7 @@ import { app } from "../../scripts/app.js";
 
 console.log("pro_q_ui.js: Professional Parametric EQ UI loading...");
 
+// ... (Your entire CSS string remains unchanged here) ...
 const CSS_STYLES_PARAMETRIC_EQ = `
 @font-face {
     font-family: 'Orbitron';
@@ -379,8 +380,9 @@ const CSS_STYLES_PARAMETRIC_EQ = `
     50% { opacity: 0.6; transform: scale(1.2); }
 }
 `;
-
 class ParametricEQUI {
+    // ... (constructor and all other methods remain the same as the previous corrected version) ...
+    // ... The only change is in app.registerExtension at the very end of the file ...
     constructor(node) {
         this.node = node;
         this.container = null;
@@ -599,6 +601,7 @@ class ParametricEQUI {
 
         const typeSelect = document.createElement('select');
         typeSelect.className = 'band-type-select';
+        typeSelect.dataset.bandNum = bandNum; 
 
         const filterTypes = ['bell', 'low_pass', 'high_pass', 'band_pass', 'low_shelf', 'high_shelf'];
         filterTypes.forEach(type => {
@@ -824,6 +827,7 @@ class ParametricEQUI {
         const preset = this.presets[presetName];
         if (!preset || !preset.eqBands) return;
 
+        // 1. Update the internal state array
         this.eqBands = preset.eqBands.map(bandData => ({
             enabled: bandData.enabled !== undefined ? bandData.enabled : true,
             type: bandData.type || 'bell',
@@ -832,11 +836,17 @@ class ParametricEQUI {
             q: bandData.q || 1
         }));
 
+        // 2. Push the new state to the hidden ComfyUI widgets
         this.eqBands.forEach((band, index) => {
-            this.updateWidgetFromBand(index, true); // Update all widgets for this band
+            this.updateWidgetFromBand(index, true, true);
         });
 
-        this.syncStateFromWidgets(); // This will handle all UI updates
+        // 3. Directly update the UI from the new internal state
+        this.updateAllBandTypeSelects();
+        this.drawEQCanvas();
+        this.updateStatusDisplay();
+        
+        // 4. Save state
         this.saveState();
         console.log(`[ParametricEQUI] Preset "${presetName}" loaded.`);
     }
@@ -999,7 +1009,6 @@ class ParametricEQUI {
         }, 0);
     }
     
-    // **FIX: Reverted to simpler, more visually correct UI calculation**
     calculateBandGain(frequency, band) {
         const { frequency: centerFreq, gain, q, type } = band;
 
@@ -1112,7 +1121,7 @@ class ParametricEQUI {
         if (this.presetSelect) this.presetSelect.value = '';
     }
 
-    updateWidgetFromBand(bandIndex, updateType = false) {
+    updateWidgetFromBand(bandIndex, updateType = false, updateEnabled = false) {
         const band = this.eqBands[bandIndex];
         const bandNum = bandIndex + 1;
         
@@ -1120,17 +1129,19 @@ class ParametricEQUI {
         const gainWidget = this.node.widgets?.find(w => w.name === `band_${bandNum}_gain`);
         const qWidget = this.node.widgets?.find(w => w.name === `band_${bandNum}_q`);
         const typeWidget = this.node.widgets?.find(w => w.name === `band_${bandNum}_type`);
+        const enabledWidget = this.node.widgets?.find(w => w.name === `band_${bandNum}_enabled`);
 
         if (freqWidget) { freqWidget.value = band.frequency; freqWidget.callback?.(band.frequency); }
         if (gainWidget) { gainWidget.value = band.gain; gainWidget.callback?.(band.gain); }
         if (qWidget) { qWidget.value = band.q; qWidget.callback?.(band.q); }
         if (updateType && typeWidget) { typeWidget.value = band.type; typeWidget.callback?.(band.type); }
+        if (updateEnabled && enabledWidget) { enabledWidget.value = band.enabled; enabledWidget.callback?.(band.enabled); }
     }
 
     saveState() { try { localStorage.setItem(this.stateKey, JSON.stringify(this.serialize())); } catch (e) {} }
     loadState() { try { const state = JSON.parse(localStorage.getItem(this.stateKey)); if(state) { this.deserialize(state); return true; } } catch(e) {} return false; }
     setNodeSizeOptimal() { this.node.setSize([920, 10]); }
-    setupResizeObserver() { if (this.resizeObserver) this.resizeObserver.disconnect(); this.resizeObserver = new ResizeObserver(() => this.handleResize()); this.resizeObserver.observe(this.container); }
+    setupResizeObserver() { if (this.resizeObserver) this.resizeObserver.disconnect(); if (this.container) { this.resizeObserver = new ResizeObserver(() => this.handleResize()); this.resizeObserver.observe(this.container); } }
     handleResize() { requestAnimationFrame(() => { if(this.canvas) { this.drawEQCanvas(); this.updateStatusDisplay(); } }); }
 
     syncStateFromWidgets() {
@@ -1142,10 +1153,20 @@ class ParametricEQUI {
             band.frequency = this.node.widgets.find(w => w.name === `band_${bandNum}_frequency`)?.value ?? band.frequency;
             band.gain = this.node.widgets.find(w => w.name === `band_${bandNum}_gain`)?.value ?? band.gain;
             band.q = this.node.widgets.find(w => w.name === `band_${bandNum}_q`)?.value ?? band.q;
-            const typeSelect = this.container.querySelector(`.band-type-select[data-band-num="${bandNum}"]`);
-            if (typeSelect) typeSelect.value = band.type;
         });
+        this.updateAllBandTypeSelects();
         requestAnimationFrame(() => { this.drawEQCanvas(); this.updateStatusDisplay(); });
+    }
+
+    updateAllBandTypeSelects() {
+        if (!this.container) return;
+        this.eqBands.forEach((band, index) => {
+            const bandNum = index + 1;
+            const typeSelect = this.container.querySelector(`.band-type-select[data-band-num="${bandNum}"]`);
+            if (typeSelect && typeSelect.value !== band.type) {
+                typeSelect.value = band.type;
+            }
+        });
     }
 
     serialize() { return { eqBands: this.eqBands.map(band => ({ ...band })) }; }
@@ -1156,8 +1177,9 @@ class ParametricEQUI {
 app.registerExtension({
     name: "Comfy.ParametricEQ.UI",
     async nodeCreated(node) {
-        // --- THIS IS THE FIX ---
-        // Match the class name from the Python file's NODE_CLASS_MAPPINGS
+        // --- FIX ---
+        // Reverted to the original class name check, which is what the UI was
+        // expecting all along. The Python code has been updated to match this.
         if (node.comfyClass === "ParametricEQNode") {
             node.bgcolor = "transparent";
             node.color = "transparent";
@@ -1174,7 +1196,10 @@ app.registerExtension({
             const onRemove = node.onRemove;
             node.onRemove = function() { this.parametricEQUIInstance?.destroy(); onRemove?.apply(this, arguments); };
             const onWidgetChanged = node.onWidgetChanged;
-            node.onWidgetChanged = function(name, value, old) { onWidgetChanged?.apply(this, arguments); this.parametricEQUIInstance?.syncStateFromWidgets(); };
+            node.onWidgetChanged = function(name, value, old) { 
+                onWidgetChanged?.apply(this, arguments); 
+                this.parametricEQUIInstance?.syncStateFromWidgets(); 
+            };
         }
     }
 });

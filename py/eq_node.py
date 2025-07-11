@@ -28,8 +28,13 @@ class EQBand:
 
     def set_parameters(self, enabled, filter_type, frequency, gain_db, q_factor):
         self.enabled = enabled
-        if not self.enabled: return
+        if not self.enabled: 
+            self.coeffs = (1.0, 0.0, 0.0, 0.0, 0.0)
+            return
 
+        frequency = max(1.0, min(frequency, self.sample_rate / 2 - 1.0))
+        q_factor = max(0.01, q_factor)
+        
         try:
             if filter_type == "bell": self.coeffs = EQFilterDesigner.calculate_peaking_eq(frequency, gain_db, q_factor, self.sample_rate)
             elif filter_type == "low_pass": self.coeffs = EQFilterDesigner.calculate_low_pass(frequency, q_factor, self.sample_rate)
@@ -43,7 +48,6 @@ class EQBand:
             self.coeffs = (1.0, 0.0, 0.0, 0.0, 0.0)
 
     def process(self, audio_channel):
-        # This is now fast and efficient!
         b = np.array([self.coeffs[0], self.coeffs[1], self.coeffs[2]])
         a = np.array([1, self.coeffs[3], self.coeffs[4]])
         return lfilter(b, a, audio_channel)
@@ -57,7 +61,7 @@ class ParametricEQNode:
                 "output_gain": ("FLOAT", {"default": 0.0, "min": -30.0, "max": 30.0, "step": 0.1}),
                 "bypass": ("BOOLEAN", {"default": False}),
             **{f"band_{i}_{p}": v for i in range(1, 9) for p, v in {
-                "enabled": ("BOOLEAN", {"default": False}),
+                "enabled": ("BOOLEAN", {"default": True}),
                 "type": (["bell", "low_pass", "high_pass", "low_shelf", "high_shelf", "band_pass", "notch"],),
                 "frequency": ("FLOAT", {"default": 1000.0, "min": 20.0, "max": 20000.0}),
                 "gain": ("FLOAT", {"default": 0.0, "min": -30.0, "max": 30.0}),
@@ -73,26 +77,25 @@ class ParametricEQNode:
         self.current_sample_rate = 0
 
     def _initialize_bands(self, sample_rate):
-        if self.current_sample_rate != sample_rate:
+        if self.current_sample_rate != sample_rate or not self.eq_bands:
             self.eq_bands = [EQBand(sample_rate) for _ in range(8)]
             self.current_sample_rate = sample_rate
             
     def process_parametric_eq(self, audio, sample_rate, output_gain, bypass, **kwargs):
-        # 1. Extract and Validate Input
         if "waveform" not in audio or "sample_rate" not in audio:
-            return (audio,) # Pass through if not a valid audio object
+            return (audio,)
             
         waveform = audio["waveform"].clone()
         sr = audio["sample_rate"]
         
         if bypass:
+            return ({"waveform": waveform, "sample_rate": sr},)
+
+        if waveform.dim() == 1:
+            waveform = waveform.unsqueeze(0)
+        if waveform.shape[-1] == 0:
             return (audio,)
 
-        # 2. Ensure Correct Tensor Shape: [channels, samples]
-        if waveform.dim() == 1:
-            waveform = waveform.unsqueeze(0) # [samples] -> [1, samples]
-        
-        # 3. Initialize and Configure Bands
         self._initialize_bands(sr)
         for i, band in enumerate(self.eq_bands):
             band.set_parameters(
@@ -103,8 +106,7 @@ class ParametricEQNode:
                 kwargs.get(f"band_{i+1}_q", 1.0)
             )
 
-        # 4. Process Audio
-        processed_waveform = waveform.cpu().numpy().astype(np.float32)
+        processed_waveform = waveform.cpu().numpy().astype(np.float64)
         num_channels = processed_waveform.shape[0]
         
         for i in range(num_channels):
@@ -114,16 +116,25 @@ class ParametricEQNode:
                     channel_data = band.process(channel_data)
             processed_waveform[i, :] = channel_data
 
-        # 5. Apply Output Gain
         if abs(output_gain) > 1e-6:
             linear_gain = 10.0**(output_gain / 20.0)
             processed_waveform *= linear_gain
         
-        # 6. Convert back to Tensor and return
         final_waveform = torch.from_numpy(processed_waveform.astype(np.float32))
 
-        # This check is the direct fix for the error.
         if final_waveform.dim() == 1:
             final_waveform = final_waveform.unsqueeze(0)
 
         return ({"waveform": final_waveform, "sample_rate": sr},)
+
+# --- FIX ---
+# Explicitly register the node using its Python class name as the key.
+# This makes the node load correctly while keeping the ID the JavaScript expects.
+NODE_CLASS_MAPPINGS = {
+    "ParametricEQNode": ParametricEQNode
+}
+
+# Also map the display name for a clean title in the UI.
+NODE_DISPLAY_NAME_MAPPINGS = {
+    "ParametricEQNode": "Parametric EQ (CRT)"
+}
