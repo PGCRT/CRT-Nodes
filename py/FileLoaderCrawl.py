@@ -1,8 +1,11 @@
 import os
-import random
 from pathlib import Path
 
 class FileLoaderCrawl:
+    def __init__(self):
+        # Instance-level cache to store file lists and folder modification times.
+        self.cache = {}
+
     @classmethod
     def INPUT_TYPES(cls):
         return {
@@ -19,7 +22,6 @@ class FileLoaderCrawl:
     RETURN_NAMES = ("text_output", "file_name")
     FUNCTION = "load_text_file"
     CATEGORY = "CRT/Load"
-    DESCRIPTION = "Crawls a folder (optionally including subfolders) and loads the content of a text file selected deterministically using a seed, with optional word count limit."
 
     def limit_words(self, text, max_words):
         """Limit the text to a specified number of words."""
@@ -29,30 +31,59 @@ class FileLoaderCrawl:
         return ' '.join(words[:max_words])
 
     def load_text_file(self, folder_path, seed, file_extension, max_words, crawl_subfolders):
-        folder = Path(folder_path.strip())
-        if not folder.exists():
-            return (f"Error: Folder '{folder}' does not exist", "")
-        if not folder.is_dir():
-            return (f"Error: '{folder}' is not a directory", "")
-        file_extension = file_extension.strip().lower()
-        if not file_extension.startswith('.'):
-            file_extension = f".{file_extension}"
-        try:
-            if crawl_subfolders:
-                files = sorted([f for f in folder.rglob(f'*{file_extension}') if f.is_file()])
-            else:
-                files = sorted([f for f in folder.iterdir() if f.is_file() and f.suffix.lower() == file_extension])
-        except Exception as e:
-            return (f"Error accessing folder: {str(e)}", "")
+        # Define a safe, empty return value for error cases
+        safe_return = ("", "")
 
-        if not files:
-            return (f"Error: No files with extension '{file_extension}' found in '{folder}'", "")
-        random.seed(seed)
-        selected_file = random.choice(files)
+        if not folder_path or not folder_path.strip():
+            print("❌ Error: Folder path is empty.")
+            return safe_return
+
+        folder = Path(folder_path.strip())
+        if not folder.is_dir():
+            print(f"❌ Error: Folder '{folder}' not found or is not a directory.")
+            return safe_return
+
+        file_extension = file_extension.strip().lower()
+        if file_extension and not file_extension.startswith('.'):
+            file_extension = f".{file_extension}"
+
         try:
-            with open(selected_file, 'r', encoding='utf-8') as file:
+            # --- Smart Caching Logic ---
+            cache_key = f"{str(folder.resolve())}_{crawl_subfolders}_{file_extension}"
+            current_mtime = folder.stat().st_mtime
+
+            if cache_key not in self.cache or self.cache[cache_key]['mtime'] != current_mtime:
+                print(f"🔎 Folder changed or not cached. Scanning '{folder}' for '{file_extension}' files...")
+                if crawl_subfolders:
+                    files = sorted([f for f in folder.rglob(f'*{file_extension}') if f.is_file()])
+                else:
+                    # Use glob for simpler filtering
+                    files = sorted([f for f in folder.glob(f'*{file_extension}') if f.is_file()])
+                
+                self.cache[cache_key] = {'files': files, 'mtime': current_mtime}
+                print(f"✅ Cached {len(files)} files.")
+
+            files = self.cache[cache_key]['files']
+            # --- End Caching Logic ---
+
+            if not files:
+                print(f"❌ Warning: No files with extension '{file_extension}' found in '{folder}'.")
+                return safe_return
+
+            # --- Deterministic and Safe Selection ---
+            num_files = len(files)
+            selected_index = seed % num_files
+            selected_file = files[selected_index]
+            # --- End Selection ---
+
+            print(f"✅ Seed {seed} → File {selected_index + 1}/{num_files}: '{selected_file.name}'")
+            
+            with open(selected_file, 'r', encoding='utf-8', errors='ignore') as file:
                 content = file.read()
+            
             limited_content = self.limit_words(content, max_words)
             return (limited_content, selected_file.name)
+
         except Exception as e:
-            return (f"Error reading file '{selected_file.name}': {str(e)}", selected_file.name)
+            print(f"❌ An unexpected error occurred in FileLoaderCrawl: {str(e)}")
+            return safe_return

@@ -1,29 +1,34 @@
 import os
+from pathlib import Path
 import cv2
 import torch
 import numpy as np
 
 # A list of common video file extensions
-VIDEO_EXTENSIONS = ('.mp4', '.mov', '.avi', '.mkv', '.webm', '.flv', '.mpeg')
+VIDEO_EXTENSIONS = {'.mp4', '.mov', '.avi', '.mkv', '.webm', '.flv', '.mpeg'}
 
 class LoadVideoForVCaptioning:
     """
-    An optimized node to load videos from a directory sequentially.
+    An optimized and safe node to load videos from a directory sequentially.
+    It caches the file list and automatically rescans if the folder changes.
     It can load all frames or a specified number of evenly-spaced frames efficiently.
     """
+    def __init__(self):
+        # Instance-level cache for file lists and modification times.
+        self.cache = {}
+
     @classmethod
-    def INPUT_TYPES(s):
+    def INPUT_TYPES(cls):
         return {
             "required": {
                 "directory": ("STRING", {"default": "C:/videos"}),
                 "index": ("INT", {"default": 0, "min": 0, "max": 99999, "step": 1}),
-                # Renamed for clarity
                 "num_evenly_spaced_frames": ("INT", {
-                    "default": 0, 
-                    "min": -1, 
+                    "default": 16, 
+                    "min": 0, 
                     "max": 256, 
                     "step": 1,
-                    "display": "integer" 
+                    "tooltip": "Number of evenly spaced frames to load. 0 or -1 loads all frames."
                 }),
             }
         }
@@ -34,39 +39,54 @@ class LoadVideoForVCaptioning:
     CATEGORY = "CRT/Load"
 
     def load_video_optimized(self, directory: str, index: int, num_evenly_spaced_frames: int):
-        if not os.path.isdir(directory):
-            raise FileNotFoundError(f"Directory not found: {directory}")
+        # Helper to return a blank tensor on error, preventing crashes.
+        def create_blank_output():
+            blank_frame = torch.zeros((1, 64, 64, 3), dtype=torch.float32)
+            return (blank_frame, "Error: See console", 0)
 
         try:
-            files = sorted([f for f in os.listdir(directory) if f.lower().endswith(VIDEO_EXTENSIONS)])
+            folder = Path(directory)
+            if not folder.is_dir():
+                print(f"❌ Error: Directory not found: {directory}")
+                return create_blank_output()
+
+            # --- Smart Caching Logic ---
+            cache_key = str(folder.resolve())
+            current_mtime = folder.stat().st_mtime
+            
+            if cache_key not in self.cache or self.cache[cache_key]['mtime'] != current_mtime:
+                print(f"🔎 Folder changed or not cached. Scanning '{folder}' for videos...")
+                files = sorted([p for p in folder.iterdir() if p.is_file() and p.suffix.lower() in VIDEO_EXTENSIONS])
+                self.cache[cache_key] = {'files': files, 'mtime': current_mtime}
+                print(f"✅ Cached {len(files)} video files.")
+            
+            files = self.cache[cache_key]['files']
+            # --- End Caching Logic ---
+
             if not files:
-                raise FileNotFoundError(f"No video files with extensions {VIDEO_EXTENSIONS} found in {directory}")
-        except Exception as e:
-            raise IOError(f"Error reading directory {directory}: {e}")
+                print(f"❌ Warning: No video files found in {directory}")
+                return create_blank_output()
 
-        video_filename = files[index % len(files)]
-        video_path = os.path.join(directory, video_filename)
-        filename_without_ext = os.path.splitext(video_filename)[0]
+            video_path = files[index % len(files)]
+            filename_without_ext = video_path.stem
 
-        try:
-            cap = cv2.VideoCapture(video_path)
+            cap = cv2.VideoCapture(str(video_path))
             if not cap.isOpened():
-                raise IOError(f"Cannot open video file: {video_path}")
+                print(f"❌ Error: Cannot open video file: {video_path}")
+                return create_blank_output()
 
             total_frames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
             if total_frames <= 0:
-                raise ValueError(f"Video file seems empty or corrupted: {video_path}")
-
-            # --- OPTIMIZATION & FEATURE LOGIC ---
+                print(f"❌ Warning: Video file seems empty or corrupted: {video_path}")
+                cap.release()
+                return create_blank_output()
             
+            # --- Frame Selection Logic ---
             indices_to_load = set()
             if num_evenly_spaced_frames <= 0:
-                # Load all frames - create a set of all indices
                 indices_to_load = set(range(total_frames))
             else:
-                # Load a specific number of evenly spaced frames
                 num_to_pick = min(total_frames, num_evenly_spaced_frames)
-                # Use np.linspace to get indices, ensuring the first and last are included.
                 indices = np.linspace(0, total_frames - 1, num=num_to_pick, dtype=int)
                 indices_to_load = set(indices)
 
@@ -74,27 +94,31 @@ class LoadVideoForVCaptioning:
             frame_count = 0
             ret = True
             
-            # Read sequentially through the video ONCE
+            # This method is accurate but can be slow for large videos as it decodes every frame.
+            # An alternative is using cap.set() to seek, which is faster but can be inaccurate.
             while ret and len(frames) < len(indices_to_load):
                 ret, frame = cap.read()
                 if ret:
-                    # If the current frame number is one we want, process and store it
                     if frame_count in indices_to_load:
                         frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-                        frame_np = np.float32(frame_rgb) / 255.0
-                        frame_tensor = torch.from_numpy(frame_np)
+                        frame_tensor = torch.from_numpy(frame_rgb.astype(np.float32) / 255.0)
                         frames.append(frame_tensor)
                     frame_count += 1
             
-            # --- END OF OPTIMIZATION ---
+            cap.release()
+            # --- End Frame Selection ---
 
             if not frames:
-                raise ValueError(f"Could not read any frames from the video: {video_path}")
+                print(f"❌ Error: Could not read any frames from the video: {video_path}")
+                return create_blank_output()
 
             batch_tensor = torch.stack(frames)
-            # Add a frame_count output for convenience
+            print(f"✅ Loaded {len(frames)} frames from '{video_path.name}'")
             return (batch_tensor, filename_without_ext, len(frames))
 
-        finally:
+        except Exception as e:
+            print(f"An unexpected error occurred in LoadVideo: {e}")
+            # Ensure cap is released even on unexpected error
             if 'cap' in locals() and cap.isOpened():
                 cap.release()
+            return create_blank_output()

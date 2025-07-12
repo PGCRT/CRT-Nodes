@@ -7,7 +7,9 @@ class AutopromptProcessor:
         return {
             "required": {
                 "autoprompt": ("STRING", {"forceInput": True, "tooltip": "Connect a string input containing the autoprompt text to process"}),
-                "Custom Prompt Prefix / LoRA TriggerWord": ("STRING", {"multiline": True, "default": "", "tooltip": "Text to add before the processed autoprompt. Leave empty to skip prefix."}),
+                # CORRECTED LINE: The key must be a valid Python identifier
+                # and match the function parameter name 'custom_prefix'.
+                "custom_prefix": ("STRING", {"multiline": True, "default": "", "tooltip": "Custom Prompt Prefix / LoRA TriggerWord: Text to add before the processed autoprompt. Leave empty to skip prefix."}),
                 "replacements": ("STRING", {"multiline": True, "default": "old_word|new_word\nanother_word|replacement", "tooltip": "Word replacements, one per line using format: old_word|new_word"}),
             }
         }
