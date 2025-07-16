@@ -2,7 +2,7 @@
   "id": "6be6e38a-5fe6-465c-9e5c-a35e6c3d6c25",
   "revision": 0,
   "last_node_id": 784,
-  "last_link_id": 33850,
+  "last_link_id": 33851,
   "nodes": [
     {
       "id": 44,
@@ -126,7 +126,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 94,
+      "order": 93,
       "mode": 0,
       "inputs": [
         {
@@ -188,7 +188,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 95,
+      "order": 94,
       "mode": 0,
       "inputs": [
         {
@@ -288,7 +288,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 99,
+      "order": 98,
       "mode": 0,
       "inputs": [
         {
@@ -463,7 +463,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 116,
+      "order": 115,
       "mode": 0,
       "inputs": [
         {
@@ -499,7 +499,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 101,
+      "order": 100,
       "mode": 0,
       "inputs": [
         {
@@ -581,7 +581,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 96,
+      "order": 95,
       "mode": 0,
       "inputs": [
         {
@@ -638,7 +638,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 93,
+      "order": 92,
       "mode": 0,
       "inputs": [
         {
@@ -876,7 +876,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 104,
+      "order": 103,
       "mode": 0,
       "inputs": [
         {
@@ -1157,7 +1157,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 108,
+      "order": 107,
       "mode": 0,
       "inputs": [
         {
@@ -1245,7 +1245,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 111,
+      "order": 110,
       "mode": 0,
       "inputs": [
         {
@@ -1357,7 +1357,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 98,
+      "order": 97,
       "mode": 0,
       "inputs": [
         {
@@ -1412,7 +1412,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 115,
+      "order": 114,
       "mode": 0,
       "inputs": [
         {
@@ -1812,7 +1812,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 109,
+      "order": 108,
       "mode": 0,
       "inputs": [
         {
@@ -2197,7 +2197,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 105,
+      "order": 104,
       "mode": 0,
       "inputs": [
         {
@@ -2310,7 +2310,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 117,
+      "order": 116,
       "mode": 0,
       "inputs": [
         {
@@ -2444,7 +2444,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 112,
+      "order": 111,
       "mode": 0,
       "inputs": [
         {
@@ -2485,7 +2485,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 110,
+      "order": 109,
       "mode": 0,
       "inputs": [
         {
@@ -2754,7 +2754,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 113,
+      "order": 112,
       "mode": 0,
       "inputs": [
         {
@@ -2913,7 +2913,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 107,
+      "order": 106,
       "mode": 0,
       "inputs": [
         {
@@ -3158,7 +3158,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 103,
+      "order": 102,
       "mode": 0,
       "inputs": [
         {
@@ -3858,7 +3858,7 @@
         970
       ],
       "flags": {},
-      "order": 97,
+      "order": 96,
       "mode": 0,
       "inputs": [
         {
@@ -4104,7 +4104,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 100,
+      "order": 99,
       "mode": 0,
       "inputs": [
         {
@@ -4407,7 +4407,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 106,
+      "order": 105,
       "mode": 0,
       "inputs": [
         {
@@ -4556,7 +4556,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 102,
+      "order": 101,
       "mode": 0,
       "inputs": [
         {
@@ -4637,109 +4637,6 @@
       },
       "widgets_values": [
         3.5
-      ],
-      "color": "#000000",
-      "bgcolor": "#000000"
-    },
-    {
-      "id": 741,
-      "type": "FluxControlnetSamplerWithInjection",
-      "pos": [
-        830,
-        1800
-      ],
-      "size": [
-        310,
-        780
-      ],
-      "flags": {
-        "collapsed": false
-      },
-      "order": 84,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 19352
-        },
-        {
-          "name": "positive",
-          "type": "CONDITIONING",
-          "link": 33093
-        },
-        {
-          "name": "vae",
-          "type": "VAE",
-          "link": null
-        },
-        {
-          "name": "control_net",
-          "type": "CONTROL_NET",
-          "link": 19354
-        },
-        {
-          "name": "seed",
-          "type": "INT",
-          "link": null
-        },
-        {
-          "name": "sampler_name",
-          "type": "STRING",
-          "link": null
-        },
-        {
-          "name": "scheduler",
-          "type": "STRING",
-          "link": null
-        },
-        {
-          "name": "image",
-          "shape": 7,
-          "type": "IMAGE",
-          "link": 19355
-        },
-        {
-          "name": "latent",
-          "shape": 7,
-          "type": "LATENT",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "image",
-          "type": "IMAGE",
-          "links": [
-            19356,
-            20509
-          ]
-        },
-        {
-          "name": "latent",
-          "type": "LATENT",
-          "links": null
-        }
-      ],
-      "title": "Controlnet Sampler Injection (CRT)",
-      "properties": {
-        "cnr_id": "crt-nodes",
-        "ver": "1.2.2",
-        "Node name for S&R": "FluxControlnetSamplerWithInjection",
-        "widget_ue_connectable": {}
-      },
-      "widgets_values": [
-        1,
-        24,
-        1.5,
-        1.0000000000000002,
-        0.7500000000000001,
-        "enable",
-        0.7500000000000001,
-        1,
-        0.5000000000000001,
-        "disable",
-        1
       ],
       "color": "#000000",
       "bgcolor": "#000000"
@@ -4876,7 +4773,7 @@
             3401,
             3400,
             3399,
-            17998
+            33851
           ]
         },
         {
@@ -4922,7 +4819,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 119,
+      "order": 118,
       "mode": 0,
       "inputs": [
         {
@@ -4966,7 +4863,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 114,
+      "order": 113,
       "mode": 0,
       "inputs": [
         {
@@ -5512,82 +5409,6 @@
       "bgcolor": "#000000"
     },
     {
-      "id": 781,
-      "type": "SmartStyleModelApplyDual",
-      "pos": [
-        3430,
-        -110
-      ],
-      "size": [
-        276.1499938964844,
-        210
-      ],
-      "flags": {
-        "collapsed": true
-      },
-      "order": 118,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "conditioning",
-          "type": "CONDITIONING",
-          "link": 33665
-        },
-        {
-          "name": "style_model",
-          "type": "STYLE_MODEL",
-          "link": null
-        },
-        {
-          "name": "clip_vision",
-          "type": "CLIP_VISION",
-          "link": null
-        },
-        {
-          "name": "image_1",
-          "type": "IMAGE",
-          "link": 33667
-        },
-        {
-          "name": "image_2",
-          "shape": 7,
-          "type": "IMAGE",
-          "link": null
-        },
-        {
-          "name": "strength_1",
-          "type": "FLOAT",
-          "widget": {
-            "name": "strength_1"
-          },
-          "link": 33668
-        }
-      ],
-      "outputs": [
-        {
-          "name": "conditioning",
-          "type": "CONDITIONING",
-          "links": [
-            33666
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "crt-nodes",
-        "ver": "1.4.3",
-        "Node name for S&R": "SmartStyleModelApplyDual",
-        "widget_ue_connectable": {}
-      },
-      "widgets_values": [
-        1,
-        1,
-        "multiply",
-        "center"
-      ],
-      "color": "#000000",
-      "bgcolor": "#000000"
-    },
-    {
       "id": 776,
       "type": "SmartPreprocessor",
       "pos": [
@@ -5710,11 +5531,87 @@
       "bgcolor": "#000000"
     },
     {
+      "id": 781,
+      "type": "SmartStyleModelApplyDual",
+      "pos": [
+        3430,
+        -110
+      ],
+      "size": [
+        276.1499938964844,
+        210
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 117,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "link": 33665
+        },
+        {
+          "name": "style_model",
+          "type": "STYLE_MODEL",
+          "link": null
+        },
+        {
+          "name": "clip_vision",
+          "type": "CLIP_VISION",
+          "link": null
+        },
+        {
+          "name": "image_1",
+          "type": "IMAGE",
+          "link": 33667
+        },
+        {
+          "name": "image_2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "strength_1",
+          "type": "FLOAT",
+          "widget": {
+            "name": "strength_1"
+          },
+          "link": 33668
+        }
+      ],
+      "outputs": [
+        {
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "links": [
+            33666
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "crt-nodes",
+        "ver": "1.4.3",
+        "Node name for S&R": "SmartStyleModelApplyDual",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        1,
+        0,
+        "multiply",
+        "center"
+      ],
+      "color": "#000000",
+      "bgcolor": "#000000"
+    },
+    {
       "id": 638,
       "type": "SetNode",
       "pos": [
-        1850,
-        1280
+        1510,
+        1460
       ],
       "size": [
         211.10000610351562,
@@ -5723,13 +5620,13 @@
       "flags": {
         "collapsed": true
       },
-      "order": 92,
+      "order": 73,
       "mode": 0,
       "inputs": [
         {
           "name": "MODEL",
           "type": "MODEL",
-          "link": 17999
+          "link": 33851
         }
       ],
       "outputs": [
@@ -5751,104 +5648,106 @@
       "bgcolor": "#335"
     },
     {
-      "id": 719,
-      "type": "FluxLoraBlocksPatcher",
+      "id": 741,
+      "type": "FluxControlnetSamplerWithInjection",
       "pos": [
-        1510,
-        1280
+        830,
+        1800
       ],
       "size": [
-        500,
-        360
+        310,
+        780
       ],
       "flags": {
-        "collapsed": true
+        "collapsed": false
       },
-      "order": 73,
+      "order": 84,
       "mode": 0,
       "inputs": [
         {
-          "name": "flux_model",
+          "name": "model",
           "type": "MODEL",
-          "link": 17998
+          "link": 19352
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 33093
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": null
+        },
+        {
+          "name": "control_net",
+          "type": "CONTROL_NET",
+          "link": 19354
+        },
+        {
+          "name": "seed",
+          "type": "INT",
+          "link": null
+        },
+        {
+          "name": "sampler_name",
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "name": "scheduler",
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "name": "image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 19355
+        },
+        {
+          "name": "latent",
+          "shape": 7,
+          "type": "LATENT",
+          "link": null
         }
       ],
       "outputs": [
         {
-          "name": "patched_model",
-          "type": "MODEL",
+          "name": "image",
+          "type": "IMAGE",
           "links": [
-            17999
+            19356,
+            20509
           ]
+        },
+        {
+          "name": "latent",
+          "type": "LATENT",
+          "links": null
         }
       ],
+      "title": "Controlnet Sampler Injection (CRT)",
       "properties": {
         "cnr_id": "crt-nodes",
         "ver": "1.2.2",
-        "Node name for S&R": "FluxLoraBlocksPatcher",
+        "Node name for S&R": "FluxControlnetSamplerWithInjection",
         "widget_ue_connectable": {}
       },
       "widgets_values": [
         1,
+        24,
+        1.2500000000000002,
+        1.0000000000000002,
+        0.7500000000000001,
+        "enable",
+        0.7500000000000001,
         1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        0,
-        0,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        0,
-        ""
+        0.5000000000000001,
+        "disable",
+        1
       ],
-      "color": "#6c00eb",
+      "color": "#000000",
       "bgcolor": "#000000"
     }
   ],
@@ -6382,22 +6281,6 @@
       "IMAGE"
     ],
     [
-      17998,
-      85,
-      0,
-      719,
-      0,
-      "MODEL"
-    ],
-    [
-      17999,
-      719,
-      0,
-      638,
-      0,
-      "MODEL"
-    ],
-    [
       18927,
       92,
       2,
@@ -6692,6 +6575,14 @@
       781,
       5,
       "FLOAT"
+    ],
+    [
+      33851,
+      85,
+      0,
+      638,
+      0,
+      "MODEL"
     ]
   ],
   "groups": [
@@ -6842,10 +6733,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.6209213230591553,
+      "scale": 0.35049389948139237,
       "offset": [
-        -487.8123779296875,
-        312.82923889160156
+        822.7069391646748,
+        435.67933427209323
       ]
     },
     "frontendVersion": "1.23.4",
@@ -6979,38 +6870,6 @@
         "type": "STRING"
       },
       {
-        "downstream": 741,
-        "downstream_slot": 2,
-        "upstream": "712",
-        "upstream_slot": 0,
-        "controller": 635,
-        "type": "VAE"
-      },
-      {
-        "downstream": 741,
-        "downstream_slot": 4,
-        "upstream": "624",
-        "upstream_slot": 0,
-        "controller": 628,
-        "type": "INT"
-      },
-      {
-        "downstream": 741,
-        "downstream_slot": 5,
-        "upstream": "551",
-        "upstream_slot": 0,
-        "controller": 640,
-        "type": "STRING"
-      },
-      {
-        "downstream": 741,
-        "downstream_slot": 6,
-        "upstream": "551",
-        "upstream_slot": 1,
-        "controller": 641,
-        "type": "STRING"
-      },
-      {
         "downstream": 757,
         "downstream_slot": 0,
         "upstream": "711",
@@ -7057,6 +6916,38 @@
         "upstream_slot": 0,
         "controller": 637,
         "type": "CLIP_VISION"
+      },
+      {
+        "downstream": 741,
+        "downstream_slot": 2,
+        "upstream": "712",
+        "upstream_slot": 0,
+        "controller": 635,
+        "type": "VAE"
+      },
+      {
+        "downstream": 741,
+        "downstream_slot": 4,
+        "upstream": "624",
+        "upstream_slot": 0,
+        "controller": 628,
+        "type": "INT"
+      },
+      {
+        "downstream": 741,
+        "downstream_slot": 5,
+        "upstream": "551",
+        "upstream_slot": 0,
+        "controller": 640,
+        "type": "STRING"
+      },
+      {
+        "downstream": 741,
+        "downstream_slot": 6,
+        "upstream": "551",
+        "upstream_slot": 1,
+        "controller": 641,
+        "type": "STRING"
       }
     ],
     "links_added_by_ue": [
