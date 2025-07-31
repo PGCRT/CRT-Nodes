@@ -1,7 +1,7 @@
 """
 @author: CRT
 @title: CRT-Nodes
-@version: 1.5.0
+@version: 1.5.1
 @project: "https://github.com/plugcrypt/CRT-Nodes",
 @description: Set of nodes for ComfyUI
 https://discord.gg/8wYS9MBQqp
@@ -66,6 +66,10 @@ if 'CRT_NODES_INITIALIZED' not in globals():
     from .py.SaveTextWithPath import SaveTextWithPath
     from .py.VideoLoaderCrawl import VideoLoaderCrawl
     from .py.SaveVideoWithPath import SaveVideoWithPath
+    from .py.SaveLatentWithPath import SaveLatentWithPath
+    from .py.LoadLastLatent import LoadLastLatent
+    from .py.EnableLatent import EnableLatent
+    from .py.BooleanInvert import BooleanInvert
 
     print("[CRT-Nodes __init__] Registering custom model paths...")
     try:
@@ -138,6 +142,10 @@ NODE_CLASS_MAPPINGS = {
     "SaveTextWithPath": SaveTextWithPath,
     "VideoLoaderCrawl": VideoLoaderCrawl,
     "SaveVideoWithPath": SaveVideoWithPath,
+    "SaveLatentWithPath": SaveLatentWithPath,
+    "LoadLastLatent": LoadLastLatent,
+    "EnableLatent": EnableLatent,
+    "BooleanInvert": BooleanInvert,
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
@@ -174,7 +182,7 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "SmartStyleModelApplyDual": "Smart Style Model Apply DUAL (CRT)",
     "CLIPTextEncodeFluxMerged": "CLIP Text Encode FLUX Merged (CRT)",
     "LoadImageResize": "Load Image Resize (CRT)",
-    "AutopromptProcessor": "Autoprompt Processor (CRT)",
+    "AutopromptProcessor": "AutopromptProcessor (CRT)",
     "SmartPreprocessor": "Smart Preprocessor (CRT)",
     "CRTChromaKeyOverlay": "Chroma Key Overlay (CRT)",
     "CRTFirstLastFrameSelector": "Get First & Last Frame (CRT)",
@@ -191,8 +199,11 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "SaveTextWithPath": "Save Text With Path (CRT)",
     "VideoLoaderCrawl": "Video Loader Crawl (CRT)",
     "SaveVideoWithPath": "Save Video With Path (CRT)",
+    "SaveLatentWithPath": "Save Latent With Path (CRT)",
+    "LoadLastLatent": "Load Last Latent (CRT)",
+    "EnableLatent": "Enable Latent (CRT)",
+    "BooleanInvert": "Boolean Invert (CRT)",
 }
 
 WEB_DIRECTORY = "./js"
 __all__ = ["NODE_CLASS_MAPPINGS", "NODE_DISPLAY_NAME_MAPPINGS", "WEB_DIRECTORY"]
-

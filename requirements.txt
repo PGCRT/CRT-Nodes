@@ -10,3 +10,5 @@ spandrel
 safetensors
 pedalboard
 transformers
+wordcloud
+librosa
