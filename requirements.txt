@@ -12,3 +12,4 @@ pedalboard
 transformers
 wordcloud
 librosa
+imageio-ffmpeg
