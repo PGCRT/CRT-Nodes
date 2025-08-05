@@ -1,7 +1,7 @@
 """
 @author: CRT
 @title: CRT-Nodes
-@version: 1.5.2
+@version: 1.5.3
 @project: "https://github.com/plugcrypt/CRT-Nodes",
 @description: Set of nodes for ComfyUI
 https://discord.gg/8wYS9MBQqp
@@ -70,6 +70,7 @@ if 'CRT_NODES_INITIALIZED' not in globals():
     from .py.LoadLastLatent import LoadLastLatent
     from .py.EnableLatent import EnableLatent
     from .py.BooleanInvert import BooleanInvert
+    from .py.StrengthToStepsNode import StrengthToStepsNode
 
     print("[CRT-Nodes __init__] Registering custom model paths...")
     try:
@@ -146,6 +147,7 @@ NODE_CLASS_MAPPINGS = {
     "LoadLastLatent": LoadLastLatent,
     "EnableLatent": EnableLatent,
     "BooleanInvert": BooleanInvert,
+    "Strength To Steps": StrengthToStepsNode,
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
@@ -203,6 +205,7 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "LoadLastLatent": "Load Last Latent (CRT)",
     "EnableLatent": "Enable Latent (CRT)",
     "BooleanInvert": "Boolean Invert (CRT)",
+    "Strength To Steps": "Strength to Steps (CRT)",
 }
 
 WEB_DIRECTORY = "./js"
