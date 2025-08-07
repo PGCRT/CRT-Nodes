@@ -1,7 +1,7 @@
 """
 @author: CRT
 @title: CRT-Nodes
-@version: 1.5.3
+@version: 1.5.4
 @project: "https://github.com/plugcrypt/CRT-Nodes",
 @description: Set of nodes for ComfyUI
 https://discord.gg/8wYS9MBQqp
@@ -71,6 +71,17 @@ if 'CRT_NODES_INITIALIZED' not in globals():
     from .py.EnableLatent import EnableLatent
     from .py.BooleanInvert import BooleanInvert
     from .py.StrengthToStepsNode import StrengthToStepsNode
+    from .py.ClarityFX import ClarityFX
+    from .py.ColourfulnessFX import ColourfulnessFX
+    from .py.FilmGrainFX import FilmGrainFX
+    from .py.Technicolor2FX import Technicolor2FX
+    from .py.AdvancedBloomFX import AdvancedBloomFX
+    from .py.LensFX import LensFX
+    from .py.ContourFX import ContourFX
+    from .py.ColorIsolationFX import ColorIsolationFX
+    from .py.LensDistortFX import LensDistortFX
+    from .py.SmartDeNoiseFX import SmartDeNoiseFX
+    from .py.ArcaneBloomFX import ArcaneBloomFX
 
     print("[CRT-Nodes __init__] Registering custom model paths...")
     try:
@@ -148,6 +159,17 @@ NODE_CLASS_MAPPINGS = {
     "EnableLatent": EnableLatent,
     "BooleanInvert": BooleanInvert,
     "Strength To Steps": StrengthToStepsNode,
+    "ClarityFX": ClarityFX,
+    "ColourfulnessFX": ColourfulnessFX,
+    "FilmGrainFX": FilmGrainFX,
+    "Technicolor2FX": Technicolor2FX,
+    "AdvancedBloomFX": AdvancedBloomFX,
+    "LensFX": LensFX,
+    "ContourFX": ContourFX,
+    "ColorIsolationFX": ColorIsolationFX,
+    "LensDistortFX": LensDistortFX,
+    "SmartDeNoiseFX": SmartDeNoiseFX,
+    "ArcaneBloomFX": ArcaneBloomFX,
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
@@ -206,6 +228,17 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "EnableLatent": "Enable Latent (CRT)",
     "BooleanInvert": "Boolean Invert (CRT)",
     "Strength To Steps": "Strength to Steps (CRT)",
+    "ClarityFX": "Clarity FX (CRT)",
+    "ColourfulnessFX": "Colourfulness FX (CRT)",
+    "FilmGrainFX": "Film Grain FX (CRT)",
+    "Technicolor2FX": "Technicolor 2 FX (CRT)",
+    "AdvancedBloomFX": "Advanced Bloom FX (CRT)",
+    "LensFX": "Lens FX (CRT)",
+    "ContourFX": "Contour FX (CRT)",
+    "ColorIsolationFX": "Color Isolation FX (CRT)",
+    "LensDistortFX": "Lens Distort FX (CRT)",
+    "SmartDeNoiseFX": "Smart DeNoise FX (CRT)",
+    "ArcaneBloomFX": "Arcane Bloom FX (CRT)",
 }
 
 WEB_DIRECTORY = "./js"

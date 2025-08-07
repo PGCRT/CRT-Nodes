@@ -43,12 +43,30 @@ class CRT_UpscaleModelAdv:
                 "upscale_model_name": (upscale_models, {
                     "tooltip": "Select upscale model from models/upscale_models folder"
                 }),
+                "use_fixed_resolution": ("BOOLEAN", {
+                    "default": False,
+                    "tooltip": "Enable to use fixed width/height instead of a multiplier"
+                }),
                 "output_multiplier": ("FLOAT", {
                     "default": 1.0,
                     "min": 0.25,
                     "max": 8.0,
                     "step": 0.25,
                     "tooltip": "Final output size multiplier relative to input (1.0=same as input, 2.0=double input size)"
+                }),
+                "fixed_width": ("INT", {
+                    "default": 1024,
+                    "min": 64,
+                    "max": 8192,
+                    "step": 8,
+                    "tooltip": "Target width for the upscaled image"
+                }),
+                "fixed_height": ("INT", {
+                    "default": 1024,
+                    "min": 64,
+                    "max": 8192,
+                    "step": 8,
+                    "tooltip": "Target height for the upscaled image"
                 }),
                 "tile_count": (cls.tile_count_options, {
                     "default": "1",
@@ -72,13 +90,14 @@ class CRT_UpscaleModelAdv:
             }
         }
     
-    RETURN_TYPES = ("IMAGE",)
+    RETURN_TYPES = ("IMAGE", "INT", "INT")
+    RETURN_NAMES = ("IMAGE", "width", "height")
     FUNCTION = "upscale_advanced"
     CATEGORY = "CRT/Image"
     DESCRIPTION = "Advanced upscaling with tiling, smart memory management, and precise output control"
     
     @staticmethod
-    def _create_cache_key(image, upscale_model_name, output_multiplier, tile_count, precision, batch_size):
+    def _create_cache_key(image, upscale_model_name, use_fixed_resolution, output_multiplier, fixed_width, fixed_height, tile_count, precision, batch_size):
         """Create cache key from parameters (excluding image tensor for efficiency)."""
         img_signature = {
             "shape": list(image.shape),
@@ -90,7 +109,10 @@ class CRT_UpscaleModelAdv:
         cache_dict = {
             "image_signature": img_signature,
             "upscale_model_name": upscale_model_name,
+            "use_fixed_resolution": use_fixed_resolution,
             "output_multiplier": output_multiplier,
+            "fixed_width": fixed_width,
+            "fixed_height": fixed_height,
             "tile_count": tile_count,
             "precision": precision,
             "batch_size": batch_size
@@ -203,15 +225,19 @@ class CRT_UpscaleModelAdv:
         
         return result
     
-    def upscale_advanced(self, image, upscale_model_name, output_multiplier, tile_count, precision, batch_size, offload_model):
+    def upscale_advanced(self, image, upscale_model_name, use_fixed_resolution, output_multiplier, fixed_width, fixed_height, tile_count, precision, batch_size, offload_model):
         """Advanced upscaling with all features."""
-        cache_key = self._create_cache_key(image, upscale_model_name, output_multiplier, tile_count, precision, batch_size)
+        cache_key = self._create_cache_key(image, upscale_model_name, use_fixed_resolution, output_multiplier, fixed_width, fixed_height, tile_count, precision, batch_size)
         
         if cache_key in self._cache:
             colored_print(f"🚀 [Cache Hit] Reusing cached upscale result", Colors.GREEN)
+            cached_result = self._cache[cache_key]
+            cached_width = cached_result.shape[2]
+            cached_height = cached_result.shape[1]
             colored_print(f"  📁 Model: {upscale_model_name}", Colors.BLUE)
-            colored_print(f"  📐 Cached resolution: {self._cache[cache_key].shape[2]}x{self._cache[cache_key].shape[1]}", Colors.BLUE)
-            return (self._cache[cache_key],)
+            colored_print(f"  📐 Cached resolution: {cached_width}x{cached_height}", Colors.BLUE)
+            return (cached_result, cached_width, cached_height)
+            
         colored_print(f"🔧 [Cache Miss] Processing upscale", Colors.YELLOW)
         
         device = mm.get_torch_device()
@@ -220,19 +246,26 @@ class CRT_UpscaleModelAdv:
         colored_print(f"🚀 [CRT Upscale Advanced] Starting upscale process", Colors.HEADER)
         colored_print(f"  📁 Model: {upscale_model_name}", Colors.BLUE)
         colored_print(f"  📐 Input resolution: {image.shape[2]}x{image.shape[1]}", Colors.BLUE)
-        colored_print(f"  🎯 Output multiplier: {output_multiplier}x", Colors.CYAN)
         try:
             upscale_model = self.upscale_loader.load_model(upscale_model_name)[0]
             colored_print(f"  ✅ Model loaded successfully", Colors.GREEN)
         except Exception as e:
             colored_print(f"  ❌ Failed to load model: {e}", Colors.RED)
             raise
+            
         model_scale = self._get_model_scale_factor(upscale_model_name)
         colored_print(f"  🔍 Detected model scale: {model_scale}x", Colors.CYAN)
+        
         input_h, input_w = image.shape[1], image.shape[2]
-        target_h = int(input_h * output_multiplier)
-        target_w = int(input_w * output_multiplier)
-        colored_print(f"  🎯 Target resolution: {target_w}x{target_h}", Colors.CYAN)
+        
+        if use_fixed_resolution:
+            target_h, target_w = fixed_height, fixed_width
+            colored_print(f"  🎯 Target resolution (fixed): {target_w}x{target_h}", Colors.CYAN)
+        else:
+            target_h = int(input_h * output_multiplier)
+            target_w = int(input_w * output_multiplier)
+            colored_print(f"  🎯 Target resolution (multiplier {output_multiplier}x): {target_w}x{target_h}", Colors.CYAN)
+            
         tile_count_int = int(tile_count)
         tile_size_px = max(input_h, input_w) // tile_count_int  # Calculate tile size based on image and count
         
@@ -287,21 +320,26 @@ class CRT_UpscaleModelAdv:
                 target_w, 
                 target_h
             ).permute(0, 2, 3, 1)
+            
         final_result = torch.clamp(full_upscaled, 0, 1).to(image.dtype).to(image.device)
         self._cache[cache_key] = final_result.clone()
         self._manage_cache_size()
         
-        colored_print(f"  ✅ Upscaling complete! Output: {final_result.shape[2]}x{final_result.shape[1]}", Colors.GREEN)
+        final_width = final_result.shape[2]
+        final_height = final_result.shape[1]
+        
+        colored_print(f"  ✅ Upscaling complete! Output: {final_width}x{final_height}", Colors.GREEN)
         colored_print(f"  💾 Result cached for future use", Colors.CYAN)
         
         if offload_model:
             colored_print(f"  💾 Model offloaded to save VRAM", Colors.BLUE)
         
-        return (final_result,)
+        return (final_result, final_width, final_height)
     
     @classmethod
     def IS_CHANGED(cls, **kwargs):
         return float("NaN")
+        
 NODE_CLASS_MAPPINGS = {
     "CRT_UpscaleModelAdv": CRT_UpscaleModelAdv
 }

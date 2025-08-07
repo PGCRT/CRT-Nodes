@@ -123,7 +123,7 @@ class CRTPostProcessNode:
     
     RETURN_TYPES = ("IMAGE",)
     FUNCTION = "process"
-    CATEGORY = "CRT/Image"
+    CATEGORY = "CRT/FX"
 
     DEFAULTS = {
         "downscale_by": 0.5,

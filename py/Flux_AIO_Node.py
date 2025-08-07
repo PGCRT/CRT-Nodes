@@ -1299,7 +1299,7 @@ class TiledSampler:
 
 class FluxAIO_CRT:
     FUNCTION = "execute"
-    CATEGORY = "CRT"
+    CATEGORY = "CRT/WIP"
     OUTPUT_NODE = True
     RETURN_TYPES = ("IMAGE",)
     RETURN_NAMES = ("image",)

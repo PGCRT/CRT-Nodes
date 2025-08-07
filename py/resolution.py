@@ -13,6 +13,7 @@ class Resolution:
                     "3:2 (Landscape)", "4:3 (Landscape)", "5:3 (Landscape)", "5:4 (Landscape)", "7:5 (Landscape)", "8:5 (Landscape)",
                     "9:7 (Landscape)", "16:9 (Landscape)", "19:9 (Landscape)", "21:9 (Landscape)"
                 ], {"default": "3:2 (Landscape)"}),
+                "divisible_by": ("INT", {"default": 8, "min": 1, "max": 256, "step": 1}),
             }
         }
 
@@ -21,7 +22,7 @@ class Resolution:
     FUNCTION = "calculate_dimensions"
     CATEGORY = "CRT/Utils/Logic & Values"
 
-    def calculate_dimensions(self, longer_side, aspect_ratio):
+    def calculate_dimensions(self, longer_side, aspect_ratio, divisible_by):
         ratio_str = aspect_ratio.split(' ')[0]
         
         try:
@@ -39,8 +40,16 @@ class Resolution:
             width = longer_side
             height = longer_side
 
-        final_width = int(round(width))
-        final_height = int(round(height))
+        # Quantize the width and height to the nearest multiple of divisible_by
+        if divisible_by > 0:
+            quantized_width = round(width / divisible_by) * divisible_by
+            quantized_height = round(height / divisible_by) * divisible_by
+        else:
+            quantized_width = width
+            quantized_height = height
+
+        final_width = int(quantized_width)
+        final_height = int(quantized_height)
         
         return (final_width, final_height, longer_side)
 
