@@ -119,6 +119,8 @@ const FancyTimerNodeExtension = {
         `;
         document.head.appendChild(style);
 
+        // This line can optionally be removed if you don't want to load the Orbitron font at all,
+        // but leaving it in doesn't hurt.
         if (!document.querySelector('link[href*="Orbitron"]')) {
             const fontLink = document.createElement("link");
             fontLink.href = "https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap";
@@ -126,6 +128,7 @@ const FancyTimerNodeExtension = {
             document.head.appendChild(fontLink);
         }
         
+        // Your robust WebSocket event handling solution
         if (api.socket) {
             const originalOnMessage = api.socket.onmessage;
             api.socket.onmessage = function(event) {

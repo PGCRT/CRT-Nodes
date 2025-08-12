@@ -1,7 +1,7 @@
 """
 @author: CRT
 @title: CRT-Nodes
-@version: 1.5.5
+@version: 1.5.6
 @project: "https://github.com/plugcrypt/CRT-Nodes",
 @description: Set of nodes for ComfyUI
 https://discord.gg/8wYS9MBQqp
@@ -82,6 +82,7 @@ if 'CRT_NODES_INITIALIZED' not in globals():
     from .py.LensDistortFX import LensDistortFX
     from .py.SmartDeNoiseFX import SmartDeNoiseFX
     from .py.ArcaneBloomFX import ArcaneBloomFX
+    from .py.FancyTimerNode import FancyTimerNode
 
     print("[CRT-Nodes __init__] Registering custom model paths...")
     try:
@@ -170,6 +171,7 @@ NODE_CLASS_MAPPINGS = {
     "LensDistortFX": LensDistortFX,
     "SmartDeNoiseFX": SmartDeNoiseFX,
     "ArcaneBloomFX": ArcaneBloomFX,
+    "FancyTimerNode": FancyTimerNode,
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
@@ -239,6 +241,7 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "LensDistortFX": "Lens Distort FX (CRT)",
     "SmartDeNoiseFX": "Smart DeNoise FX (CRT)",
     "ArcaneBloomFX": "Arcane Bloom FX (CRT)",
+    "FancyTimerNode": "Fancy Timer Node",
 }
 
 WEB_DIRECTORY = "./js"
