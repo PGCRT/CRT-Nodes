@@ -1,7 +1,7 @@
 """
 @author: CRT
 @title: CRT-Nodes
-@version: 1.5.6
+@version: 1.5.7
 @project: "https://github.com/plugcrypt/CRT-Nodes",
 @description: Set of nodes for ComfyUI
 https://discord.gg/8wYS9MBQqp
@@ -83,6 +83,8 @@ if 'CRT_NODES_INITIALIZED' not in globals():
     from .py.SmartDeNoiseFX import SmartDeNoiseFX
     from .py.ArcaneBloomFX import ArcaneBloomFX
     from .py.FancyTimerNode import FancyTimerNode
+    from .py.wan_compare_sampler_crt import WAN2_2LoraCompareSampler
+    from .py.Add_Settings_and_Prompt import CRT_AddSettingsAndPrompt
 
     print("[CRT-Nodes __init__] Registering custom model paths...")
     try:
@@ -172,6 +174,9 @@ NODE_CLASS_MAPPINGS = {
     "SmartDeNoiseFX": SmartDeNoiseFX,
     "ArcaneBloomFX": ArcaneBloomFX,
     "FancyTimerNode": FancyTimerNode,
+    "WAN2.2 LoRA Compare Sampler": WAN2_2LoraCompareSampler,
+    "CRT_AddSettingsAndPrompt": CRT_AddSettingsAndPrompt,
+
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
@@ -242,6 +247,8 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "SmartDeNoiseFX": "Smart DeNoise FX (CRT)",
     "ArcaneBloomFX": "Arcane Bloom FX (CRT)",
     "FancyTimerNode": "Fancy Timer Node",
+    "WAN2.2 LoRA Compare Sampler": "WAN 2.2 LoRA Compare Sampler (CRT)",
+    "CRT_AddSettingsAndPrompt": "Add Settings and Prompt (CRT)",
 }
 
 WEB_DIRECTORY = "./js"
