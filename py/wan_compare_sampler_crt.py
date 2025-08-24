@@ -12,7 +12,6 @@ import os
 import sys
 from PIL import Image, ImageDraw, ImageFont
 
-# --- UTILITY FOR CLEAR, COLORED LOGGING ---
 class Log:
     HEADER = '\033[95m'
     CYAN = '\033[96m'
@@ -31,12 +30,9 @@ class Log:
     def header(message): print(f"\n{Log.HEADER}{Log.BOLD}{message}{Log.ENDC}")
 
 def find_lora_path_by_name(lora_name):
-    """
-    Fixed LoRA path finding to handle subdirectories properly
-    """
+
     all_loras = folder_paths.get_filename_list("loras")
     
-    # First try exact match (for subdirectory paths like "WAN2.2\SS_14_HighNoise\SS_14_HighNoise-000005.safetensors")
     if lora_name in all_loras:
         return folder_paths.get_full_path("loras", lora_name)
     
@@ -420,11 +416,6 @@ class WAN2_2LoraCompareSampler:
         Log.success(f"\nAll configurations processed. Final image batch shape: {final_images_batch.shape if final_images_batch is not None else 'No images decoded'}")
         Log.info(f"To select config N, use batch_index={frame_count}*N and length={frame_count} in ImageFromBatch")
         
-        settings_string = (
-            f"Dimensions: {width}x{height} | Frames: {frame_count}\n"
-            f"Seed: {seed} | Steps: {steps} | Boundary: {boundary}\n"
-            f"Sampler: {sampler_name} | Scheduler: {scheduler}\n"
-            f"Sigma Shift: {sigma_shift}"
-        )
+        settings_string = f"Dimensions: {width}x{height} | Frames: {frame_count} | Seed: {seed} | Steps: {steps} | Boundary: {boundary} | Sampler: {sampler_name} | Scheduler: {scheduler} | Sigma Shift: {sigma_shift}"
 
         return ({"samples": high_noise_batch["samples"]}, {"samples": final_latent_batch["samples"]}, final_images_batch, comparison_grid, settings_string)
