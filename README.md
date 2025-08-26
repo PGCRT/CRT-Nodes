@@ -158,3 +158,5 @@ A simplified text encoder for FLUX models. It takes a single prompt and guidance
 A monolithic "mega-node" that encapsulates an entire, complex generation workflow for FLUX models. It integrates model loading, conditioning, LoRA stacking, multi-pass generation (with upscaling and optional ControlNet), face enhancement, and a full suite of post-processing effects into a single, highly configurable unit. It also includes advanced performance optimizations like SageAttention patching and a custom TeaCache system to accelerate the sampling process.
 
 ![Capture d'écran 2025-06-19 101420](https://github.com/user-attachments/assets/b1c49938-5229-4472-a20e-05621a482d55)
+
+And more (this list is already too long)..
