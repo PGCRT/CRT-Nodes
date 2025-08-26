@@ -1,7 +1,7 @@
 """
 @author: CRT
 @title: CRT-Nodes
-@version: 1.6.0
+@version: 1.6.1
 @project: "https://github.com/plugcrypt/CRT-Nodes",
 @description: Set of nodes for ComfyUI
 https://discord.gg/8wYS9MBQqp
@@ -10,10 +10,12 @@ https://discord.gg/8wYS9MBQqp
 import folder_paths
 import os
 
+# Prevent double initialization
 if 'CRT_NODES_INITIALIZED' not in globals():
     globals()['CRT_NODES_INITIALIZED'] = True
     
     print("[CRT-Nodes __init__] Importing node classes...")
+    # Existing Imports
     from .py.toggle_lora_unet_blocks_L1 import ToggleLoraUnetBlocksNodeL1
     from .py.toggle_lora_unet_blocks_L2 import ToggleLoraUnetBlocksNodeL2
     from .py.remove_trailing_comma_node import RemoveTrailingCommaNode
@@ -85,6 +87,9 @@ if 'CRT_NODES_INITIALIZED' not in globals():
     from .py.Add_Settings_and_Prompt import CRT_AddSettingsAndPrompt
     from .py.crt_wan_batch_sampler import CRT_WAN_BatchSampler
     from .py.crt_dynamic_prompt_scheduler import CRT_DynamicPromptScheduler
+    from .py.crt_file_batch_prompt_scheduler import CRT_FileBatchPromptScheduler
+    from .py.FileLoaderCrawlBatch import FileLoaderCrawlBatch
+
 
     print("[CRT-Nodes __init__] Registering custom model paths...")
     try:
@@ -178,7 +183,8 @@ NODE_CLASS_MAPPINGS = {
     "CRT_AddSettingsAndPrompt": CRT_AddSettingsAndPrompt,
     "CRT_WAN_BatchSampler": CRT_WAN_BatchSampler,
     "CRT_DynamicPromptScheduler": CRT_DynamicPromptScheduler,
-
+    "CRT_FileBatchPromptScheduler": CRT_FileBatchPromptScheduler,
+    "FileLoaderCrawlBatch": FileLoaderCrawlBatch,
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
@@ -253,6 +259,8 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "CRT_AddSettingsAndPrompt": "Add Settings and Prompt (CRT)",
     "CRT_WAN_BatchSampler": "WAN 2.2 Batch Sampler (CRT)",
     "CRT_DynamicPromptScheduler": "Dynamic Prompt Scheduler (CRT)",
+    "CRT_FileBatchPromptScheduler": "File Batch Prompt Scheduler (CRT)",
+    "FileLoaderCrawlBatch": "File Loader Crawl Batch (CRT)",
 }
 
 WEB_DIRECTORY = "./js"
