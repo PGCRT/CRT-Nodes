@@ -8,55 +8,94 @@ app.registerExtension({
 			nodeType.prototype.onNodeCreated = function () {
 				onNodeCreated?.apply(this, arguments);
 
-				// --- Defensive Cleanup ---
-				// Keep only the essential "clip" input and remove any old widgets/inputs from cache.
-                // This is a robust way to ensure old, broken states don't persist.
-				if (this.inputs && this.inputs.length > 1) {
-					for (let i = this.inputs.length - 1; i > 0; i--) {
-						this.removeInput(i);
+				// --- ROBUST INITIALIZATION ---
+				// We will rebuild the widgets and initialize the internal state based on
+				// the inputs that ComfyUI has already loaded from the workflow.
+
+				// 1. Clear any old widgets to prevent button duplication on reload.
+				this.widgets = [];
+
+				// 2. Find the highest existing prompt number to correctly set our counter.
+				let max_prompt_id = 0;
+				if (this.inputs) {
+					for (const input of this.inputs) {
+						// Defensive check: Ensure the input and its name are valid before processing.
+						if (input && typeof input.name === "string" && input.name.startsWith("prompt_")) {
+							const id = parseInt(input.name.split('_')[1], 10);
+							// Check if 'id' is a valid number before comparing.
+							if (!isNaN(id) && id > max_prompt_id) {
+								max_prompt_id = id;
+							}
+						}
 					}
 				}
-				this.widgets = []; // Clear all widgets
+				this.prompt_count = max_prompt_id;
 
-				this.prompt_count = 0;
-
+				// --- DEFINE NODE ACTIONS ---
 				const addPrompt = () => {
 					this.prompt_count++;
-					
-                    // --- THE KEY CHANGE ---
-					// Create an INPUT, not a widget. ComfyUI will automatically provide a
-                    // textbox for it when nothing is connected.
 					this.addInput(
-						`prompt_${this.prompt_count}`, // The unique name the backend expects
+						`prompt_${this.prompt_count}`,
 						"STRING",
-						{
-							multiline: true,
-							default: "",
-						}
+						{ multiline: true, default: "" }
 					);
-
 					this.size = this.computeSize();
 					this.setDirtyCanvas(true, true);
 				};
 
 				const removePrompt = () => {
-					// Enforce a minimum of 1 prompt
-					if (this.prompt_count > 1) {
-                        // The last input is always at the end of the array
-						this.removeInput(this.inputs.length - 1);
-						this.prompt_count--;
-						
+					// Count how many actual prompt inputs we currently have.
+					const promptInputs = this.inputs ? this.inputs.filter(i => i && typeof i.name === "string" && i.name.startsWith("prompt_")) : [];
+
+					if (promptInputs.length > 1) {
+						// Find the input with the highest ID number to remove it. This is more reliable
+						// than just removing the last one in the array, as order isn't guaranteed.
+						let highest_id = -1;
+						let input_to_remove_index = -1;
+
+						for (let i = 0; i < this.inputs.length; i++) {
+							const input = this.inputs[i];
+							if (input && typeof input.name === "string" && input.name.startsWith("prompt_")) {
+								const id = parseInt(input.name.split('_')[1], 10);
+								if (!isNaN(id) && id > highest_id) {
+									highest_id = id;
+									input_to_remove_index = i;
+								}
+							}
+						}
+
+						if (input_to_remove_index > -1) {
+							this.removeInput(input_to_remove_index);
+
+							// After removing, we must recalculate the new highest ID for our counter.
+							let new_max_id = 0;
+							if (this.inputs) {
+								for (const input of this.inputs) {
+									if (input && typeof input.name === "string" && input.name.startsWith("prompt_")) {
+										const id = parseInt(input.name.split('_')[1], 10);
+										if (!isNaN(id) && id > new_max_id) {
+											new_max_id = id;
+										}
+									}
+								}
+							}
+							this.prompt_count = new_max_id;
+						}
+
 						this.size = this.computeSize();
 						this.setDirtyCanvas(true, true);
 					}
 				};
 
-				// --- Add Control Buttons ---
+				// --- ADD CONTROLS ---
 				this.addWidget("BUTTON", "Add Prompt", null, addPrompt);
 				this.addWidget("BUTTON", "Remove Last Prompt", null, removePrompt);
 
-				// Add the first prompt input automatically
-				addPrompt();
+				// --- FINAL CHECK ---
+				// If after initialization we have no prompts (i.e., it's a new node), add the first one.
+				if (this.prompt_count === 0) {
+					addPrompt();
+				}
 			};
 		}
 	},
