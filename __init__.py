@@ -1,7 +1,7 @@
 """
 @author: CRT
 @title: CRT-Nodes
-@version: 1.6.5
+@version: 1.6.7
 @project: "https://github.com/plugcrypt/CRT-Nodes",
 @description: Set of nodes for ComfyUI
 https://discord.gg/8wYS9MBQqp
@@ -30,6 +30,7 @@ if 'CRT_NODES_INITIALIZED' not in globals():
     from .py.Flux_AIO_Node import FluxAIO_CRT
     from .py.FileLoaderCrawl import FileLoaderCrawl
     from .py.ImageLoaderCrawl import ImageLoaderCrawl
+    from .py.AudioLoaderCrawl import AudioLoaderCrawl
     from .py.MaskEmptyFloatNode import MaskEmptyFloatNode
     from .py.MaskPassOrPlaceholder import MaskPassOrPlaceholder
     from .py.latent_injection_sampler import LatentNoiseInjectionSampler
@@ -64,6 +65,7 @@ if 'CRT_NODES_INITIALIZED' not in globals():
     from .py.load_last_video import CRTLoadLastVideo
     from .py.SaveImageWithPath import SaveImageWithPath
     from .py.SaveTextWithPath import SaveTextWithPath
+    from .py.SaveAudioWithPath import SaveAudioWithPath
     from .py.VideoLoaderCrawl import VideoLoaderCrawl
     from .py.SaveVideoWithPath import SaveVideoWithPath
     from .py.SaveLatentWithPath import SaveLatentWithPath
@@ -89,6 +91,7 @@ if 'CRT_NODES_INITIALIZED' not in globals():
     from .py.crt_dynamic_prompt_scheduler import CRT_DynamicPromptScheduler
     from .py.crt_file_batch_prompt_scheduler import CRT_FileBatchPromptScheduler
     from .py.FileLoaderCrawlBatch import FileLoaderCrawlBatch
+    from .py.AudioDataToFrameCount import AudioOrManualFrameCount
 
 
     print("[CRT-Nodes __init__] Registering custom model paths...")
@@ -126,6 +129,7 @@ NODE_CLASS_MAPPINGS = {
     "FluxAIO_CRT": FluxAIO_CRT,
     "FileLoaderCrawl": FileLoaderCrawl,
     "ImageLoaderCrawl": ImageLoaderCrawl,
+    "AudioLoaderCrawl": AudioLoaderCrawl,
     "MaskEmptyFloatNode": MaskEmptyFloatNode,
     "MaskPassOrPlaceholder": MaskPassOrPlaceholder,
     "LatentNoiseInjectionSampler": LatentNoiseInjectionSampler,
@@ -160,6 +164,7 @@ NODE_CLASS_MAPPINGS = {
     "CRTLoadLastVideo": CRTLoadLastVideo,
     "SaveImageWithPath": SaveImageWithPath,
     "SaveTextWithPath": SaveTextWithPath,
+    "SaveAudioWithPath": SaveAudioWithPath,
     "VideoLoaderCrawl": VideoLoaderCrawl,
     "SaveVideoWithPath": SaveVideoWithPath,
     "SaveLatentWithPath": SaveLatentWithPath,
@@ -185,6 +190,7 @@ NODE_CLASS_MAPPINGS = {
     "CRT_DynamicPromptScheduler": CRT_DynamicPromptScheduler,
     "CRT_FileBatchPromptScheduler": CRT_FileBatchPromptScheduler,
     "FileLoaderCrawlBatch": FileLoaderCrawlBatch,
+    "AudioOrManualFrameCount": AudioOrManualFrameCount,
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
@@ -202,6 +208,7 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "FluxAIO_CRT": "FLUX All-In-One (CRT)",
     "FileLoaderCrawl": "File Loader Crawl (CRT)",
     "ImageLoaderCrawl": "Image Loader Crawl (CRT)",
+    "AudioLoaderCrawl": "Audio Loader Crawl (CRT)",
     "MaskEmptyFloatNode": "Mask Empty Float (CRT)",
     "MaskPassOrPlaceholder": "Mask Pass or Placeholder (CRT)",
     "LatentNoiseInjectionSampler": "Latent Noise Injection Sampler (CRT)",
@@ -236,6 +243,7 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "CRTLoadLastVideo": "Load Last Video (CRT)",
     "SaveImageWithPath": "Save Image With Path (CRT)",
     "SaveTextWithPath": "Save Text With Path (CRT)",
+    "SaveAudioWithPath": "Save Audio With Path (CRT)",
     "VideoLoaderCrawl": "Video Loader Crawl (CRT)",
     "SaveVideoWithPath": "Save Video With Path (CRT)",
     "SaveLatentWithPath": "Save Latent With Path (CRT)",
@@ -261,6 +269,7 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "CRT_DynamicPromptScheduler": "Dynamic Prompt Scheduler (CRT)",
     "CRT_FileBatchPromptScheduler": "File Batch Prompt Scheduler (CRT)",
     "FileLoaderCrawlBatch": "File Loader Crawl Batch (CRT)",
+    "AudioOrManualFrameCount": "Frame Count (Audio or Manual) (CRT)",
 }
 
 WEB_DIRECTORY = "./js"
