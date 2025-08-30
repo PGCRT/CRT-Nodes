@@ -15,21 +15,22 @@ class SaveImageWithPath:
                 "image": ("IMAGE",),
                 "folder_path": ("STRING", {"default": output_dir, "tooltip": "Base folder path. Defaults to ComfyUI's output folder."}),
                 "subfolder_name": ("STRING", {"default": "images", "tooltip": "Subfolder name to create within the base folder."}),
-                "filename": ("STRING", {"default": "output", "tooltip": "File name without extension."}),
+                "filename": ("STRING", {"default": "output", "tooltip": "Base file name without extension. A suffix will be added for each image in a batch."}),
                 "extension": (["png", "jpg", "jpeg"], {"default": "png", "tooltip": "Image file extension."}),
             }
         }
 
     RETURN_TYPES = ()
-    FUNCTION = "save_image"
+    FUNCTION = "save_images"
     CATEGORY = "CRT/Save"
-    DESCRIPTION = "Saves an image to a specified folder path with a subfolder and chosen extension."
+    DESCRIPTION = "Saves all images from a batch to a specified folder, adding a numerical suffix to each."
 
-    def save_image(self, image, folder_path, subfolder_name, filename, extension):
+    def save_images(self, image, folder_path, subfolder_name, filename, extension):
         if image is None:
             return ()
             
         try:
+            # --- Initial Setup and Cleaning ---
             subfolder_clean = subfolder_name.strip().lstrip('/\\')
             filename_clean = filename.strip().lstrip('/\\')
 
@@ -38,15 +39,36 @@ class SaveImageWithPath:
 
             final_dir = os.path.join(folder_path, subfolder_clean)
             os.makedirs(final_dir, exist_ok=True)
-            final_filepath = os.path.join(final_dir, f"{filename_clean}.{extension}")
 
-            # Convert tensor to PIL Image
-            # image[0] takes the first image from the batch
-            pil_img = Image.fromarray((image[0].cpu().numpy() * 255).astype(np.uint8))
+            # --- BATCH PROCESSING LOGIC ---
+            batch_size = image.shape[0]
+            
+            for i in range(batch_size):
+                # Determine the base filename for this specific image in the batch
+                if batch_size > 1:
+                    # If it's a batch, append a suffix like _1, _2, _3
+                    base_filename = f"{filename_clean}_{i+1}"
+                else:
+                    # If it's a single image, just use the provided filename
+                    base_filename = filename_clean
+                
+                # --- Overwrite Prevention Logic ---
+                # Check if a file with this name already exists and add a counter if it does
+                filepath_to_check = os.path.join(final_dir, f"{base_filename}.{extension}")
+                final_filepath = filepath_to_check
+                counter = 1
+                while os.path.exists(final_filepath):
+                    # If "output_1.png" exists, the next one will be "output_1_1.png"
+                    final_filepath = os.path.join(final_dir, f"{base_filename}_{counter}.{extension}")
+                    counter += 1
 
-            # Save the image
-            pil_img.save(final_filepath)
-            print(f"✅ Saved image to: {final_filepath}")
+                # Convert the i-th tensor from the batch to a PIL Image
+                # image[i] selects the current image from the batch
+                pil_img = Image.fromarray((image[i].cpu().numpy() * 255).astype(np.uint8))
+
+                # Save the image
+                pil_img.save(final_filepath)
+                print(f"✅ Saved image to: {final_filepath}")
 
             return ()
             
