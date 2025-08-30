@@ -1,7 +1,7 @@
 """
 @author: CRT
 @title: CRT-Nodes
-@version: 1.6.7
+@version: 1.6.8
 @project: "https://github.com/plugcrypt/CRT-Nodes",
 @description: Set of nodes for ComfyUI
 https://discord.gg/8wYS9MBQqp
@@ -15,7 +15,6 @@ if 'CRT_NODES_INITIALIZED' not in globals():
     globals()['CRT_NODES_INITIALIZED'] = True
     
     print("[CRT-Nodes __init__] Importing node classes...")
-    # Existing Imports
     from .py.toggle_lora_unet_blocks_L1 import ToggleLoraUnetBlocksNodeL1
     from .py.toggle_lora_unet_blocks_L2 import ToggleLoraUnetBlocksNodeL2
     from .py.remove_trailing_comma_node import RemoveTrailingCommaNode
@@ -92,6 +91,7 @@ if 'CRT_NODES_INITIALIZED' not in globals():
     from .py.crt_file_batch_prompt_scheduler import CRT_FileBatchPromptScheduler
     from .py.FileLoaderCrawlBatch import FileLoaderCrawlBatch
     from .py.AudioDataToFrameCount import AudioOrManualFrameCount
+    from .py.EmptyContext import EmptyContext
 
 
     print("[CRT-Nodes __init__] Registering custom model paths...")
@@ -191,6 +191,7 @@ NODE_CLASS_MAPPINGS = {
     "CRT_FileBatchPromptScheduler": CRT_FileBatchPromptScheduler,
     "FileLoaderCrawlBatch": FileLoaderCrawlBatch,
     "AudioOrManualFrameCount": AudioOrManualFrameCount,
+    "EmptyContext": EmptyContext,
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
@@ -270,6 +271,7 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "CRT_FileBatchPromptScheduler": "File Batch Prompt Scheduler (CRT)",
     "FileLoaderCrawlBatch": "File Loader Crawl Batch (CRT)",
     "AudioOrManualFrameCount": "Frame Count (Audio or Manual) (CRT)",
+    "EmptyContext": "Empty Context (CRT)",
 }
 
 WEB_DIRECTORY = "./js"
