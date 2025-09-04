@@ -1,0 +1,5 @@
+yolov8m-face.pt 		https://github.com/akanametov/yolo-face?tab=readme-ov-file#models
+face_yolov8n-seg2_60.pt 	https://huggingface.co/jags/yolov8_model_segmentation-set/blob/main/face_yolov8n-seg2_60.pt
+sigclip_vision_384 		https://huggingface.co/Comfy-Org/sigclip_vision_384/blob/main/sigclip_vision_patch14_384.safetensors
+FLUX.1-dev-ControlNet-Union-Pro https://huggingface.co/Shakker-Labs/FLUX.1-dev-ControlNet-Union-Pro/tree/main
+Flux.1-dev-Controlnet-Upscaler 	https://huggingface.co/jasperai/Flux.1-dev-Controlnet-Upscaler/tree/main
