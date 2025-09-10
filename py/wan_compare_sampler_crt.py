@@ -66,9 +66,9 @@ def parse_label_configs(label_string: str):
     if not label_string.strip(): return []
     return [line.strip() for line in label_string.strip().split('\n') if line.strip()]
 
-def get_fallback_label(low_lora_name):
-    if not low_lora_name: return "No LoRA"
-    label = os.path.basename(low_lora_name)
+def get_fallback_label(lora_name):
+    if not lora_name: return "No LoRA"
+    label = os.path.basename(lora_name)
     if label.endswith('.safetensors'): label = label[:-12]
     elif label.endswith('.ckpt'): label = label[:-5]
     return label
@@ -166,17 +166,26 @@ class WAN2_2LoraCompareSampler:
         
         Log.info(f"Boundary {boundary} on scheduler '{scheduler}' corresponds to a switch AT step {switching_step}/{steps}.")
 
-        Log.header("=== PHASE 1: HIGH-NOISE PROCESSING ===")
+        Log.header("=== PHASE 1: HIGH-NOISE PROCESSING (WITH CACHING) ===")
         high_noise_latents = []
+        high_noise_cache = {}
         current_high_lora = None
-        current_high_strength = None # --- FIX: Add strength tracking
+        current_high_strength = None
         mh_clone = None
         
         try:
             for i, config in enumerate(lora_configs):
                 Log.info(f"--- HIGH-NOISE CONFIG {i+1}/{len(lora_configs)} ---")
                 
-                # --- FIX: Check for changes in name OR strength ---
+                cache_key = (config["high_name"], config["high_strength"])
+
+                if cache_key in high_noise_cache:
+                    Log.success(f"Found cached high-noise latent for '{str(cache_key[0])}' @ strength {cache_key[1]}. Reusing.")
+                    high_noise_latents.append(high_noise_cache[cache_key])
+                    continue
+
+                Log.info(f"No cache entry for '{str(cache_key[0])}' @ strength {cache_key[1]}. Computing new latent.")
+                
                 if config["high_name"] != current_high_lora or config["high_strength"] != current_high_strength:
                     if mh_clone is not None:
                         del mh_clone
@@ -195,7 +204,6 @@ class WAN2_2LoraCompareSampler:
                     else:
                         Log.info("No HIGH-NOISE LoRA for this config.")
                     
-                    # --- FIX: Update both state variables ---
                     current_high_lora = config["high_name"]
                     current_high_strength = config["high_strength"]
 
@@ -204,69 +212,86 @@ class WAN2_2LoraCompareSampler:
                 noise = comfy.sample.prepare_noise(base_latent, seed)
                 latent_for_handoff = comfy.sample.sample(mh_clone, noise, steps, cfg_high_noise, sampler_name, scheduler, positive, negative, base_latent, denoise=denoise, start_step=0, last_step=switching_step, force_full_denoise=True, disable_noise=(switching_step < steps), callback=latent_preview.prepare_callback(mh_clone, steps), seed=seed)
                 
-                high_noise_latents.append({'latent': latent_for_handoff.clone(), 'noise': noise.clone(), 'seed': seed})
-                Log.success(f"Cached high-noise latent for config {i+1}")
+                computed_data = {'latent': latent_for_handoff.clone(), 'noise': noise.clone(), 'seed': seed}
+                high_noise_cache[cache_key] = computed_data
+                high_noise_latents.append(computed_data)
+                Log.success(f"Computed and cached high-noise latent for config {i+1}")
         finally:
             if mh_clone is not None:
                 del mh_clone
                 comfy.model_management.soft_empty_cache()
-
-        Log.header("=== PHASE 2: LOW-NOISE PROCESSING ===")
+        
         final_latents_for_output = []
         decoded_images_for_output = []
-        current_low_lora = None
-        current_low_strength = None # --- FIX: Add strength tracking
-        ml_clone = None
-        
-        try:
-            for i, config in enumerate(lora_configs):
-                Log.info(f"--- LOW-NOISE CONFIG {i+1}/{len(lora_configs)} ---")
-                
-                # --- FIX: Check for changes in name OR strength ---
-                if config["low_name"] != current_low_lora or config["low_strength"] != current_low_strength:
-                    if ml_clone is not None:
-                        del ml_clone
-                        comfy.model_management.soft_empty_cache()
-                    
-                    ml_clone = set_shift(model_low_noise.clone(), sigma_shift)
-                    
-                    if config["low_name"]:
-                        lora_path = find_lora_path_by_name(config["low_name"])
-                        if lora_path:
-                            lora_data = comfy.utils.load_torch_file(lora_path, safe_load=True)
-                            ml_clone, _ = comfy.sd.load_lora_for_models(ml_clone, None, lora_data, config["low_strength"], config["low_strength"])
-                            Log.success(f"Applied LOW-NOISE LoRA '{config['low_name']}' with strength {config['low_strength']}")
-                        else: 
-                            Log.fail(f"Could not find LOW-NOISE LoRA: {config['low_name']}")
-                    else:
-                        Log.info("No LOW-NOISE LoRA for this config.")
-                    
-                    # --- FIX: Update both state variables ---
-                    current_low_lora = config["low_name"]
-                    current_low_strength = config["low_strength"]
 
-                if ml_clone is None: ml_clone = set_shift(model_low_noise.clone(), sigma_shift)
+        # <<< MODIFICATION: Check if low-noise pass should be skipped
+        if cfg_low_noise == 0:
+            Log.header("=== LOW-NOISE CFG is 0: SKIPPING PHASE 2 ===")
+            Log.info("Decoding high-noise latents directly.")
+            final_latents_for_output = [cached['latent'] for cached in high_noise_latents]
 
-                cached_data = high_noise_latents[i]
-                latent_for_handoff, noise, current_seed = cached_data['latent'], cached_data['noise'], cached_data['seed']
-                
-                if switching_step < steps:
-                    final_latent = comfy.sample.sample(ml_clone, noise, steps, cfg_low_noise, sampler_name, scheduler, positive, negative, latent_for_handoff, denoise=denoise, start_step=switching_step, last_step=steps, disable_noise=False, force_full_denoise=True, callback=latent_preview.prepare_callback(ml_clone, steps), seed=current_seed)
-                else: 
-                    final_latent = latent_for_handoff
-
-                final_latents_for_output.append(final_latent)
-
-                if enable_vae_decode and vae:
-                    images = vae.decode(final_latent.to(vae.device))
+            if enable_vae_decode and vae:
+                for i, latent in enumerate(final_latents_for_output):
+                    Log.info(f"--- Decoding high-noise latent for config {i+1}/{len(lora_configs)} ---")
+                    images = vae.decode(latent.to(vae.device))
                     if len(images.shape) == 5: images = images.reshape(-1, *images.shape[-3:])
                     decoded_images_for_output.append(images.to(torch.device('cpu')))
-                elif enable_vae_decode: Log.fail("VAE Decode enabled, but no VAE connected.")
-                Log.success(f"--- CONFIG {i+1} PROCESSED SUCCESSFULLY ---")
-        finally:
-            if ml_clone is not None:
-                del ml_clone
-                comfy.model_management.soft_empty_cache()
+                    Log.success(f"--- HIGH-NOISE CONFIG {i+1} DECODED SUCCESSFULLY ---")
+            elif enable_vae_decode:
+                 Log.fail("VAE Decode enabled, but no VAE connected.")
+        else:
+            Log.header("=== PHASE 2: LOW-NOISE PROCESSING ===")
+            current_low_lora = None
+            current_low_strength = None
+            ml_clone = None
+            
+            try:
+                for i, config in enumerate(lora_configs):
+                    Log.info(f"--- LOW-NOISE CONFIG {i+1}/{len(lora_configs)} ---")
+                    
+                    if config["low_name"] != current_low_lora or config["low_strength"] != current_low_strength:
+                        if ml_clone is not None:
+                            del ml_clone
+                            comfy.model_management.soft_empty_cache()
+                        
+                        ml_clone = set_shift(model_low_noise.clone(), sigma_shift)
+                        
+                        if config["low_name"]:
+                            lora_path = find_lora_path_by_name(config["low_name"])
+                            if lora_path:
+                                lora_data = comfy.utils.load_torch_file(lora_path, safe_load=True)
+                                ml_clone, _ = comfy.sd.load_lora_for_models(ml_clone, None, lora_data, config["low_strength"], config["low_strength"])
+                                Log.success(f"Applied LOW-NOISE LoRA '{config['low_name']}' with strength {config['low_strength']}")
+                            else: 
+                                Log.fail(f"Could not find LOW-NOISE LoRA: {config['low_name']}")
+                        else:
+                            Log.info("No LOW-NOISE LoRA for this config.")
+                        
+                        current_low_lora = config["low_name"]
+                        current_low_strength = config["low_strength"]
+
+                    if ml_clone is None: ml_clone = set_shift(model_low_noise.clone(), sigma_shift)
+
+                    cached_data = high_noise_latents[i]
+                    latent_for_handoff, noise, current_seed = cached_data['latent'], cached_data['noise'], cached_data['seed']
+                    
+                    if switching_step < steps:
+                        final_latent = comfy.sample.sample(ml_clone, noise, steps, cfg_low_noise, sampler_name, scheduler, positive, negative, latent_for_handoff, denoise=denoise, start_step=switching_step, last_step=steps, disable_noise=False, force_full_denoise=True, callback=latent_preview.prepare_callback(ml_clone, steps), seed=current_seed)
+                    else: 
+                        final_latent = latent_for_handoff
+
+                    final_latents_for_output.append(final_latent)
+
+                    if enable_vae_decode and vae:
+                        images = vae.decode(final_latent.to(vae.device))
+                        if len(images.shape) == 5: images = images.reshape(-1, *images.shape[-3:])
+                        decoded_images_for_output.append(images.to(torch.device('cpu')))
+                    elif enable_vae_decode: Log.fail("VAE Decode enabled, but no VAE connected.")
+                    Log.success(f"--- CONFIG {i+1} PROCESSED SUCCESSFULLY ---")
+            finally:
+                if ml_clone is not None:
+                    del ml_clone
+                    comfy.model_management.soft_empty_cache()
 
         high_noise_batch = {"samples": torch.cat([cached['latent'] for cached in high_noise_latents], dim=0)}
         final_latent_batch = {"samples": torch.cat(final_latents_for_output, dim=0)}
@@ -276,7 +301,13 @@ class WAN2_2LoraCompareSampler:
         if decoded_images_for_output:
             final_images_batch = torch.cat(decoded_images_for_output, dim=0)
             if create_comparison_grid:
-                config_labels = [custom_label_list[i] if i < len(custom_label_list) and custom_label_list[i] else get_fallback_label(config["low_name"]) for i, config in enumerate(lora_configs)]
+                # <<< MODIFICATION: Adjust labels based on whether low-noise pass was skipped
+                if cfg_low_noise == 0:
+                    Log.info("Using HIGH-NOISE LoRA names for grid labels as low-noise pass was skipped.")
+                    config_labels = [custom_label_list[i] if i < len(custom_label_list) and custom_label_list[i] else get_fallback_label(config["high_name"]) for i, config in enumerate(lora_configs)]
+                else:
+                    config_labels = [custom_label_list[i] if i < len(custom_label_list) and custom_label_list[i] else get_fallback_label(config["low_name"]) for i, config in enumerate(lora_configs)]
+                
                 comparison_frames = []
                 for frame_idx in range(frame_count):
                     frame_row = []
