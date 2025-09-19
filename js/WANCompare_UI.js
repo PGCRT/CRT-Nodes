@@ -62,12 +62,14 @@ class WANCompareUI {
             .wan-compare-subtitle { font-size: 13px; color: var(--wan-text-med); }
             .wan-compare-section { background: var(--wan-bg-section); border-radius: var(--wan-radius-md); padding: 15px 20px; margin-bottom: 15px; position: relative; }
             .wan-compare-section-title { font-family: 'Orbitron', monospace; font-size: 16px; font-weight: 700; color: var(--wan-accent-purple-light); margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
-            .wan-lora-header { display: grid; grid-template-columns: 2fr 1fr 2fr 1fr 2fr 60px; gap: 12px; padding: 0 10px 8px 10px; font-family: 'Orbitron', monospace; font-size: 11px; color: var(--wan-text-med); text-transform: uppercase; text-align: center; }
+            .wan-lora-header { display: grid; grid-template-columns: 2fr 1fr 2fr 1fr 2fr 120px; gap: 12px; padding: 0 10px 8px 10px; font-family: 'Orbitron', monospace; font-size: 11px; color: var(--wan-text-med); text-transform: uppercase; text-align: center; }
             .wan-lora-rows { display: flex; flex-direction: column; gap: 8px; padding: 8px; background: rgba(0,0,0,0.2); border-radius: var(--wan-radius-sm); margin-bottom: 12px; min-height: 50px; }
-            .wan-lora-row { display: grid; grid-template-columns: 2fr 1fr 2fr 1fr 2fr 60px; gap: 12px; align-items: center; padding: 8px; background: var(--wan-bg-element); border-radius: var(--wan-radius-sm); border: 1px solid var(--wan-border-color); position: relative; }
+            .wan-lora-row { display: grid; grid-template-columns: 2fr 1fr 2fr 1fr 2fr 120px; gap: 12px; align-items: center; padding: 8px; background: var(--wan-bg-element); border-radius: var(--wan-radius-sm); border: 1px solid var(--wan-border-color); position: relative; transition: opacity 0.3s ease; }
+            .wan-lora-row.disabled { opacity: 0.5; background: #222; }
+            .wan-lora-actions { display: flex; align-items: center; justify-content: center; gap: 8px; }
             .wan-btn { background: var(--wan-accent-purple); color: var(--wan-text-light); border: none; border-radius: var(--wan-radius-md); padding: 10px 20px; font-family: 'Orbitron', monospace; font-size: 13px; cursor: pointer; transition: all 0.2s ease; display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; }
             .wan-btn:hover { background: var(--wan-accent-purple-light); box-shadow: 0 0 15px var(--wan-accent-purple-light); }
-            .wan-lora-remove-btn { background: var(--wan-accent-red); color: white; border: none; border-radius: 50%; width: 28px; height: 28px; font-size: 16px; font-weight: bold; cursor: pointer; transition: all 0.2s ease; margin: 0 auto; }
+            .wan-lora-remove-btn { background: var(--wan-accent-red); color: white; border: none; border-radius: 50%; width: 28px; height: 28px; font-size: 16px; font-weight: bold; cursor: pointer; transition: all 0.2s ease; flex-shrink: 0; }
             .wan-lora-remove-btn:hover { transform: scale(1.1); }
             .wan-control-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
             .wan-control-group { display: flex; flex-direction: column; gap: 6px; }
@@ -75,8 +77,10 @@ class WANCompareUI {
             .wan-input, .wan-select { background: var(--wan-bg-element); border: 1px solid var(--wan-border-color); border-radius: var(--wan-radius-sm); color: var(--wan-text-light); padding: 8px 12px; font-family: 'Inter', sans-serif; font-size: 13px; transition: all 0.2s ease; width: 100%; box-sizing: border-box; -webkit-user-select: text; user-select: text; }
             .wan-input:focus, .wan-select:focus { outline: none; border-color: var(--wan-accent-purple); box-shadow: 0 0 8px rgba(125, 38, 205, 0.7); }
             .wan-on-off-button { background: var(--wan-bg-element); border: 2px solid var(--wan-border-color); border-radius: var(--wan-radius-sm); padding: 8px 15px; font-family: 'Orbitron', monospace; font-size: 12px; font-weight: bold; text-transform: uppercase; color: var(--wan-text-med); cursor: pointer; transition: all 0.3s ease; text-align: center; height: 38px; }
+            .wan-on-off-button.wan-row-toggle { height: 28px; padding: 5px 10px; font-size: 11px; flex-grow: 1; }
             .wan-on-off-button:hover { border-color: var(--wan-accent-purple-light); }
             .wan-on-off-button.active { background: var(--wan-accent-green); border-color: var(--wan-accent-green); color: var(--wan-bg-main); box-shadow: 0 0 10px var(--wan-accent-green); }
+            .wan-on-off-button.wan-row-toggle:not(.active) { background: var(--wan-text-dark); border-color: var(--wan-text-dark); }
             .wan-lora-select-container { position: relative; width: 100%; }
             .wan-lora-search { width: 100%; background: var(--wan-bg-element); border: 1px solid var(--wan-border-color); border-radius: var(--wan-radius-sm); color: var(--wan-text-light); padding: 8px 12px; font-family: 'Inter', sans-serif; font-size: 13px; }
             .wan-lora-search:focus { outline: none; border-color: var(--wan-accent-purple); box-shadow: 0 0 8px rgba(125, 38, 205, 0.7); }
@@ -112,7 +116,7 @@ class WANCompareUI {
         addBtn.className = 'wan-btn';
         addBtn.innerHTML = '<span>➕</span> Add Comparison';
         addBtn.onclick = () => {
-            this.loraRows.push({ high_lora: '', low_lora: '', high_strength: 0.0, low_strength: 0.0, label: '' });
+            this.loraRows.push({ high_lora: '', low_lora: '', high_strength: 0.0, low_strength: 0.0, label: '', enabled: true });
             this.renderLoRaRows();
             this.syncConfigToWidget();
         };
@@ -138,7 +142,7 @@ class WANCompareUI {
             this.createNumberInput('boundary', 'Boundary', { min: 0, max: 1, step: 0.001, default: 0.875 }),
             this.createNumberInput('steps', 'Steps', { min: 1, max: 10000, step: 1, default: 8 }),
             this.createNumberInput('cfg_high_noise', 'CFG High', { min: 0, max: 100, step: 0.1, default: 1.0 }),
-            this.createNumberInput('cfg_low_noise', 'CFG Low', { min: 0, max: 100, step: 0.1, default: 1.0 }),
+            this.createNumberInput('cfg_low_noise', 'CFG Low (Set "0" to bypass)', { min: 0, max: 100, step: 0.1, default: 1.0 }),
             this.createNumberInput('sigma_shift', 'Sigma Shift', { min: 0, max: 100, step: 0.01, default: 8.0 }),
             this.createSelect('sampler_name', 'Sampler', SAMPLERS, 'euler'),
             this.createSelect('scheduler', 'Scheduler', SCHEDULERS, 'normal')
@@ -172,21 +176,18 @@ class WANCompareUI {
             console.log('[WANCompareUI] Starting robust LoRA fetch...');
             let finalLoras = [];
             
-            // Primary method: /loras endpoint
             try {
                 const response = await fetch('/loras');
                 if (response.ok) {
                     const data = await response.json();
                     if (Array.isArray(data) && data.length > 0) {
                         finalLoras = data;
-                        console.log(`[WANCompareUI] Fetched ${finalLoras.length} LoRAs from /loras.`);
                     }
                 }
             } catch (e) {
                 console.warn('[WANCompareUI] /loras endpoint failed, trying deep search...', e.message);
             }
 
-            // Fallback method: Deep search through /object_info
             if (finalLoras.length === 0) {
                 try {
                     const response = await fetch('/object_info');
@@ -213,7 +214,6 @@ class WANCompareUI {
                         }
                         if (loraSet.size > 0) {
                             finalLoras = Array.from(loraSet);
-                            console.log(`[WANCompareUI] Found ${finalLoras.length} LoRAs via deep search.`);
                         }
                     }
                 } catch (e) {
@@ -221,35 +221,21 @@ class WANCompareUI {
                 }
             }
             
-            // CRITICAL CLEANING AND PATH NORMALIZATION
             if (finalLoras.length > 0) {
-                // Filter to only .safetensors files, normalize paths, and sort
                 const cleanedLoras = finalLoras
                     .filter(lora => lora && typeof lora === 'string' && lora.toLowerCase().endsWith('.safetensors'))
-                    .map(lora => {
-                        // Normalize path separators - keep original format as ComfyUI expects it
-                        // Don't convert backslashes to forward slashes, preserve the original format
-                        return lora.trim();
-                    })
+                    .map(lora => lora.trim())
                     .sort((a, b) => {
-                        // Sort by filename first, then by path for better organization
                         const aFileName = a.split(/[\\/]/).pop().toLowerCase();
                         const bFileName = b.split(/[\\/]/).pop().toLowerCase();
-                        const aPath = a.toLowerCase();
-                        const bPath = b.toLowerCase();
-                        
-                        // If filenames are the same, sort by full path
                         if (aFileName === bFileName) {
-                            return aPath.localeCompare(bPath);
+                            return a.toLowerCase().localeCompare(b.toLowerCase());
                         }
                         return aFileName.localeCompare(bFileName);
                     });
                 
                 this.loraList = cleanedLoras;
-                console.log(`[WANCompareUI] Final list cleaned and normalized. Total LoRAs: ${cleanedLoras.length}`);
-                console.log('[WANCompareUI] Sample LoRA paths:', cleanedLoras.slice(0, 5));
             } else {
-                console.warn('[WANCompareUI] No LoRAs found after all methods.');
                 this.loraList = [];
             }
 
@@ -275,6 +261,7 @@ class WANCompareUI {
         this.loraRows.forEach((rowData, index) => {
             const row = document.createElement('div');
             row.className = 'wan-lora-row';
+            row.classList.toggle('disabled', !rowData.enabled);
 
             const createHandler = (prop, isFloat = false) => e => {
                 this.loraRows[index][prop] = isFloat ? (parseFloat(e.target.value) || 0) : e.target.value;
@@ -297,6 +284,22 @@ class WANCompareUI {
             labelInput.value = rowData.label || '';
             labelInput.oninput = createHandler('label');
 
+            const actionsContainer = document.createElement('div');
+            actionsContainer.className = 'wan-lora-actions';
+            
+            const toggleBtn = document.createElement('button');
+            toggleBtn.className = 'wan-on-off-button wan-row-toggle';
+            const updateToggleVisual = () => {
+                toggleBtn.classList.toggle('active', !!rowData.enabled);
+                toggleBtn.textContent = rowData.enabled ? 'On' : 'Off';
+            };
+            toggleBtn.onclick = () => {
+                this.loraRows[index].enabled = !this.loraRows[index].enabled;
+                row.classList.toggle('disabled', !this.loraRows[index].enabled);
+                updateToggleVisual();
+                this.syncConfigToWidget();
+            };
+            
             const removeBtn = document.createElement('button');
             removeBtn.className = 'wan-lora-remove-btn';
             removeBtn.innerHTML = '×';
@@ -305,9 +308,11 @@ class WANCompareUI {
                 this.renderLoRaRows();
                 this.syncConfigToWidget();
             };
-
-            row.append(highLoraSelect, highStrengthInput, lowLoraSelect, lowStrengthInput, labelInput, removeBtn);
+            
+            actionsContainer.append(toggleBtn, removeBtn);
+            row.append(highLoraSelect, highStrengthInput, lowLoraSelect, lowStrengthInput, labelInput, actionsContainer);
             this.rowsContainer.appendChild(row);
+            updateToggleVisual();
         });
     }
 
@@ -332,13 +337,11 @@ class WANCompareUI {
         select.className = 'wan-select';
         select.style.display = 'none';
         
-        // Add empty option first
         const emptyOpt = document.createElement('option');
         emptyOpt.value = '';
         emptyOpt.textContent = '';
         select.appendChild(emptyOpt);
         
-        // Add empty option to dropdown
         const emptyDropdownOption = document.createElement('div');
         emptyDropdownOption.className = 'wan-lora-option empty-option';
         emptyDropdownOption.textContent = '(No LoRA)';
@@ -352,7 +355,6 @@ class WANCompareUI {
         };
         dropdown.appendChild(emptyDropdownOption);
         
-        // Add LoRA options
         this.loraList.forEach(option => {
             const opt = document.createElement('option');
             opt.value = option;
@@ -374,7 +376,6 @@ class WANCompareUI {
         
         select.value = selectedValue || '';
         
-        // Set display value based on selection
         if (selectedValue && selectedValue.trim()) {
             const matchingLora = this.loraList.find(opt => opt === selectedValue);
             searchInput.value = matchingLora ? matchingLora.split(/[\\/]/).pop() : '';
@@ -386,7 +387,6 @@ class WANCompareUI {
             const term = searchInput.value.toLowerCase();
             dropdown.querySelectorAll('.wan-lora-option').forEach(opt => {
                 if (opt.classList.contains('empty-option')) {
-                    // Always show empty option if search is empty or matches
                     opt.style.display = (!term || '(no lora)'.includes(term)) ? 'block' : 'none';
                 } else {
                     opt.style.display = opt.textContent.toLowerCase().includes(term) ? 'block' : 'none';
@@ -498,7 +498,7 @@ class WANCompareUI {
             .map(r => {
                 const highLora = r.high_lora.trim() || 'none';
                 const lowLora = r.low_lora.trim() || 'none';
-                return `${highLora},${lowLora},${r.high_strength},${r.low_strength}`;
+                return `${highLora},${lowLora},${r.high_strength},${r.low_strength},${r.enabled}`;
             })
             .join('\n');
         this.setWidgetValue('lora_batch_config', configString);
@@ -517,12 +517,13 @@ class WANCompareUI {
         } else {
             this.loraRows = configString.split('\n').map((line, index) => {
                 const parts = line.split(',').map(item => item.trim());
-                if (parts.length === 4) {
+                if (parts.length >= 4) {
                     return { 
                         high_lora: parts[0] === 'none' ? '' : parts[0], 
                         low_lora: parts[1] === 'none' ? '' : parts[1], 
                         high_strength: parseFloat(parts[2]), 
                         low_strength: parseFloat(parts[3]),
+                        enabled: parts.length > 4 ? parts[4] === 'true' : true,
                         label: labels[index] || ''
                     };
                 }
@@ -531,7 +532,7 @@ class WANCompareUI {
         }
 
         if (this.loraRows.length === 0) {
-            this.loraRows.push({ high_lora: '', low_lora: '', high_strength: 0.0, low_strength: 0.0, label: '' });
+            this.loraRows.push({ high_lora: '', low_lora: '', high_strength: 0.0, low_strength: 0.0, label: '', enabled: true });
             this.syncConfigToWidget();
         }
     }
