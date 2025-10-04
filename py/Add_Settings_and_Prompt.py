@@ -39,6 +39,7 @@ class CRT_AddSettingsAndPrompt:
                 "image": ("IMAGE",),
                 "settings": ("STRING", {"multiline": True, "default": "Settings..."}),
                 "prompt": ("STRING", {"multiline": True, "default": "A beautiful landscape..."}),
+                "orientation": (["horizontal", "vertical"],),
                 "font": (FONT_LIST, ),
                 "font_size": ("INT", {"default": 24, "min": 8, "max": 256, "step": 1}),
                 "font_color": ("STRING", {"default": "white"}),
@@ -51,17 +52,15 @@ class CRT_AddSettingsAndPrompt:
     FUNCTION = "add_text_block"
     CATEGORY = "CRT/Text"
     DESCRIPTION = """
-Adds a text block with settings and a prompt to the
-bottom of an image. The block's height is dynamically
-adjusted to fit the text content without clipping.
+Adds a text block with settings and a prompt to an image,
+either horizontally at the bottom or vertically on the right.
+The block's size is dynamically adjusted to fit the text.
 Fonts are loaded from: ComfyUI/custom_nodes/CRT-Nodes/Fonts
 """
 
     def _get_font(self, font_name, font_size):
         """Loads a font, falling back to a default if necessary."""
         if font_name == "Default":
-            # In a portable install, fonts might not be in system paths.
-            # We bundle a failsafe font or use Pillow's default.
             try:
                 return ImageFont.truetype("arial.ttf", font_size)
             except IOError:
@@ -77,73 +76,93 @@ Fonts are loaded from: ComfyUI/custom_nodes/CRT-Nodes/Fonts
     def _wrap_text(self, text, font, max_width):
         """Wraps text to fit within a specified width."""
         lines = []
-        # Split text into paragraphs to preserve user-made newlines
         paragraphs = text.split('\n')
         
         for para in paragraphs:
-            if not para:  # Handle empty lines
+            if not para:
                 lines.append('')
                 continue
                 
             words = para.split(' ')
             current_line = ''
             for word in words:
-                # Check width of the current line with the new word
                 if font.getbbox(current_line + word)[2] <= max_width:
                     current_line += word + ' '
                 else:
-                    # If the line is full, push it and start a new one
                     lines.append(current_line.rstrip())
                     current_line = word + ' '
-            lines.append(current_line.rstrip()) # Add the last line
+            lines.append(current_line.rstrip())
             
         return lines
 
-    def add_text_block(self, image, settings, prompt, font, font_size, font_color, background_color, margin):
+    def add_text_block(self, image, settings, prompt, orientation, font, font_size, font_color, background_color, margin):
         # Prepare inputs and dimensions
         batch_size, original_height, original_width, _ = image.shape
         full_text = f"{settings.strip()}\n\nPrompt: {prompt.strip()}"
         
-        # Load font
+        # Load font and calculate line height
         pil_font = self._get_font(font, font_size)
-        
-        # --- Dynamic Height Calculation ---
-        # Calculate the maximum width available for text
-        text_area_width = original_width - (2 * margin)
-        
-        # Wrap the text and get all lines
-        wrapped_lines = self._wrap_text(full_text, pil_font, text_area_width)
-        
-        # Calculate the height needed for the text block
-        line_height = pil_font.getbbox("A")[3] - pil_font.getbbox("A")[1] # Height of a capital letter
-        line_spacing_factor = 1.4 # Multiplier for spacing between lines
-        total_text_height = int(len(wrapped_lines) * line_height * line_spacing_factor)
-        label_height = total_text_height + (2 * margin)
+        line_height = pil_font.getbbox("A")[3] - pil_font.getbbox("A")[1]
+        line_spacing_factor = 1.4
+        y_step = int(line_height * line_spacing_factor)
 
-        # --- Image Creation and Drawing ---
-        # Create the label image using PIL
-        label_pil = Image.new("RGB", (original_width, label_height), background_color)
-        draw = ImageDraw.Draw(label_pil)
+        # --- Logic for Horizontal Orientation ---
+        if orientation == "horizontal":
+            text_area_width = original_width - (2 * margin)
+            wrapped_lines = self._wrap_text(full_text, pil_font, text_area_width)
+            
+            total_text_height = len(wrapped_lines) * y_step
+            label_height = total_text_height + (2 * margin)
 
-        # Draw each line of text
-        y_pos = margin
-        for line in wrapped_lines:
-            draw.text((margin, y_pos), line, font=pil_font, fill=font_color)
-            y_pos += int(line_height * line_spacing_factor)
+            label_pil = Image.new("RGB", (original_width, label_height), background_color)
+            draw = ImageDraw.Draw(label_pil)
 
-        # Convert the PIL image to a PyTorch tensor
-        label_np = np.array(label_pil).astype(np.float32) / 255.0
-        label_tensor = torch.from_numpy(label_np).unsqueeze(0)
+            y_pos = margin
+            for line in wrapped_lines:
+                draw.text((margin, y_pos), line, font=pil_font, fill=font_color)
+                y_pos += y_step
+            
+            label_np = np.array(label_pil).astype(np.float32) / 255.0
+            label_tensor = torch.from_numpy(label_np).unsqueeze(0)
+            label_tensor_batch = label_tensor.expand(batch_size, -1, -1, -1).to(image.device)
+            
+            combined_image = torch.cat((image, label_tensor_batch), dim=1)
 
-        # Expand the single label tensor to match the batch size of the input images
-        # This is more efficient than creating a label for each image individually
-        label_tensor_batch = label_tensor.expand(batch_size, -1, -1, -1)
-        
-        # Move tensor to the same device as the input image tensor
-        label_tensor_batch = label_tensor_batch.to(image.device)
-        
-        # Concatenate the original images with the new label block at the bottom
-        # dim=1 corresponds to the height dimension (B, H, W, C)
-        combined_image = torch.cat((image, label_tensor_batch), dim=1)
-        
+        # --- Logic for Vertical Orientation ---
+        else: # "vertical"
+            max_text_height = original_height - (2 * margin)
+            
+            # Iteratively find the necessary width to fit the text vertically
+            text_area_width = 256 # Start with a minimum width
+            while True:
+                wrapped_lines = self._wrap_text(full_text, pil_font, text_area_width)
+                total_text_height = len(wrapped_lines) * y_step
+                if total_text_height <= max_text_height:
+                    break
+                text_area_width += 64 # Increase width and try again
+            
+            # Calculate the final block width based on the longest line of text
+            max_line_width = 0
+            for line in wrapped_lines:
+                line_width = pil_font.getbbox(line)[2]
+                if line_width > max_line_width:
+                    max_line_width = line_width
+            
+            label_width = int(max_line_width) + (2 * margin)
+            
+            label_pil = Image.new("RGB", (label_width, original_height), background_color)
+            draw = ImageDraw.Draw(label_pil)
+
+            y_pos = margin
+            for line in wrapped_lines:
+                draw.text((margin, y_pos), line, font=pil_font, fill=font_color)
+                y_pos += y_step
+
+            label_np = np.array(label_pil).astype(np.float32) / 255.0
+            label_tensor = torch.from_numpy(label_np).unsqueeze(0)
+            label_tensor_batch = label_tensor.expand(batch_size, -1, -1, -1).to(image.device)
+            
+            # Concatenate along the width dimension (dim=2)
+            combined_image = torch.cat((image, label_tensor_batch), dim=2)
+            
         return (combined_image,)

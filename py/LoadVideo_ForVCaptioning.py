@@ -14,7 +14,6 @@ class LoadVideoForVCaptioning:
     It can load all frames or a specified number of evenly-spaced frames efficiently.
     """
     def __init__(self):
-        # Instance-level cache for file lists and modification times.
         self.cache = {}
 
     @classmethod
@@ -33,16 +32,17 @@ class LoadVideoForVCaptioning:
             }
         }
 
-    RETURN_TYPES = ("IMAGE", "STRING", "INT")
-    RETURN_NAMES = ("image", "filename", "frame_count")
+    # The corrected return types and names
+    RETURN_TYPES = ("IMAGE", "STRING", "INT", "VIDEO_PATH")
+    RETURN_NAMES = ("image", "filename", "frame_count", "video_path")
+    
     FUNCTION = "load_video_optimized"
     CATEGORY = "CRT/Load"
 
     def load_video_optimized(self, directory: str, index: int, num_evenly_spaced_frames: int):
-        # Helper to return a blank tensor on error, preventing crashes.
         def create_blank_output():
             blank_frame = torch.zeros((1, 64, 64, 3), dtype=torch.float32)
-            return (blank_frame, "Error: See console", 0)
+            return (blank_frame, "Error: See console", 0, "")
 
         try:
             folder = Path(directory)
@@ -50,7 +50,6 @@ class LoadVideoForVCaptioning:
                 print(f"❌ Error: Directory not found: {directory}")
                 return create_blank_output()
 
-            # --- Smart Caching Logic ---
             cache_key = str(folder.resolve())
             current_mtime = folder.stat().st_mtime
             
@@ -61,7 +60,6 @@ class LoadVideoForVCaptioning:
                 print(f"✅ Cached {len(files)} video files.")
             
             files = self.cache[cache_key]['files']
-            # --- End Caching Logic ---
 
             if not files:
                 print(f"❌ Warning: No video files found in {directory}")
@@ -81,7 +79,6 @@ class LoadVideoForVCaptioning:
                 cap.release()
                 return create_blank_output()
             
-            # --- Frame Selection Logic ---
             indices_to_load = set()
             if num_evenly_spaced_frames <= 0:
                 indices_to_load = set(range(total_frames))
@@ -94,8 +91,6 @@ class LoadVideoForVCaptioning:
             frame_count = 0
             ret = True
             
-            # This method is accurate but can be slow for large videos as it decodes every frame.
-            # An alternative is using cap.set() to seek, which is faster but can be inaccurate.
             while ret and len(frames) < len(indices_to_load):
                 ret, frame = cap.read()
                 if ret:
@@ -106,7 +101,6 @@ class LoadVideoForVCaptioning:
                     frame_count += 1
             
             cap.release()
-            # --- End Frame Selection ---
 
             if not frames:
                 print(f"❌ Error: Could not read any frames from the video: {video_path}")
@@ -114,11 +108,11 @@ class LoadVideoForVCaptioning:
 
             batch_tensor = torch.stack(frames)
             print(f"✅ Loaded {len(frames)} frames from '{video_path.name}'")
-            return (batch_tensor, filename_without_ext, len(frames))
+            
+            return (batch_tensor, filename_without_ext, len(frames), str(video_path))
 
         except Exception as e:
             print(f"An unexpected error occurred in LoadVideo: {e}")
-            # Ensure cap is released even on unexpected error
             if 'cap' in locals() and cap.isOpened():
                 cap.release()
             return create_blank_output()
