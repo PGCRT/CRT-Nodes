@@ -87,7 +87,7 @@ def get_fallback_label(lora_rows, is_bypassed):
     def format_name(name):
         if not name: return "None"
         label = os.path.basename(name)
-        if label.endswith('.safetensors'): label = label[:-12]
+        if label.endswith('.safensors'): label = label[:-12]
         return label
 
     high_loras_in_stack = [lora for lora in lora_rows if lora.get("high_name") and lora.get("enabled")]
@@ -113,6 +113,8 @@ def apply_lora_stack(model, lora_list):
         if lora_path:
             lora_data = comfy.utils.load_torch_file(lora_path, safe_load=True)
             model_clone, _ = comfy.sd.load_lora_for_models(model_clone, None, lora_data, lora['strength'], lora['strength'])
+            # --- LOGGING RESTORED ---
+            Log.success(f"Applied LoRA '{lora['name']}' @ {lora['strength']}")
     return model_clone
 
 def tensor_to_pil(tensor_image):
@@ -238,6 +240,7 @@ class WAN2_2LoraCompareSampler:
         lora_groups = [g for g in all_lora_groups if g.get("enabled", True)]
 
         if not lora_groups:
+            Log.fail("All LoRA groups are disabled. Nothing to sample.")
             return ({"samples": torch.zeros([0, 4, 1, 1])}, {"samples": torch.zeros([0, 4, 1, 1])}, torch.zeros([0, 1, 1, 3]), None, "All LoRA groups disabled.")
 
         positive_hash = get_conditioning_hash(positive)
@@ -255,17 +258,25 @@ class WAN2_2LoraCompareSampler:
                 switching_step = j
                 break
         del temp_model
+        # --- LOGGING RESTORED ---
+        Log.info(f"Boundary {boundary} on scheduler '{scheduler}' corresponds to a switch AT step {switching_step}/{steps}.")
         
+        # --- LOGGING RESTORED ---
+        Log.header("=== PHASE 1: HIGH-NOISE PROCESSING ===")
         high_noise_latents = []
         high_noise_cache = {}
         cache_dir = os.path.join(folder_paths.get_temp_directory(), "wan_high_noise_cache")
         os.makedirs(cache_dir, exist_ok=True)
 
         for i, group in enumerate(lora_groups):
+            # --- LOGGING RESTORED ---
+            Log.info(f"--- High-Noise Group {i+1}/{len(lora_groups)} ---")
             high_lora_stack = [{'name': r['high_name'], 'strength': r['high_strength'], 'enabled': r['enabled']} for r in group['rows'] if r['high_name'] and r['enabled']]
             cache_key = tuple((l['name'], l['strength']) for l in high_lora_stack)
             
             if cache_key in high_noise_cache:
+                # --- LOGGING RESTORED ---
+                Log.success("Found in-memory cached high-noise latent for this stack. Reusing.")
                 high_noise_latents.append(high_noise_cache[cache_key])
                 continue
 
@@ -276,11 +287,17 @@ class WAN2_2LoraCompareSampler:
             if os.path.exists(cache_file):
                 try:
                     cached_data = torch.load(cache_file, map_location=comfy.model_management.intermediate_device())
+                    # --- LOGGING RESTORED ---
+                    Log.success(f"Loaded persistent cache from {cache_file}")
                     high_noise_latents.append((cached_data, config_hash))
                     high_noise_cache[cache_key] = (cached_data, config_hash)
                     continue
-                except Exception: pass
+                except Exception as e:
+                    # --- LOGGING RESTORED ---
+                    Log.fail(f"Failed to load persistent cache: {e}. Recomputing.")
             
+            # --- LOGGING RESTORED ---
+            Log.info("No cache entry found. Computing new high-noise latent.")
             comfy.model_management.load_model_gpu(model_high_noise)
             mh_clone = apply_lora_stack(model_high_noise, high_lora_stack)
             mh_clone = set_shift(mh_clone, sigma_shift)
@@ -291,10 +308,18 @@ class WAN2_2LoraCompareSampler:
             computed_data = {'latent': latent_for_handoff.clone(), 'noise': noise.clone()}
             high_noise_cache[cache_key] = (computed_data, config_hash)
             high_noise_latents.append((computed_data, config_hash))
-            torch.save(computed_data, cache_file)
+            try:
+                torch.save(computed_data, cache_file)
+                # --- LOGGING RESTORED ---
+                Log.success(f"Saved persistent cache to {cache_file}")
+            except Exception as e:
+                # --- LOGGING RESTORED ---
+                Log.fail(f"Failed to save persistent cache: {e}")
             del mh_clone
             comfy.model_management.soft_empty_cache()
 
+        # --- LOGGING RESTORED ---
+        Log.header("=== PHASE 2: LOW-NOISE PROCESSING ===")
         final_latents_for_output = []
         low_noise_cache = {}
         low_noise_cache_dir = os.path.join(folder_paths.get_temp_directory(), "wan_low_noise_cache")
@@ -302,6 +327,8 @@ class WAN2_2LoraCompareSampler:
         decoded_images_for_output = []
 
         is_bypassed = cfg_low_noise == 0
+        if is_bypassed: Log.info("Low-noise CFG is 0. Bypassing low-noise pass for all groups.")
+        
         if not is_bypassed and switching_step < steps:
             comfy.model_management.unload_all_models()
             comfy.model_management.soft_empty_cache()
@@ -315,6 +342,8 @@ class WAN2_2LoraCompareSampler:
             final_latent = None
             if not is_bypassed and switching_step < steps:
                 if in_mem_low_cache_key in low_noise_cache:
+                    # --- LOGGING RESTORED ---
+                    Log.success(f"Found in-memory cached low-noise latent for group {i+1}/{len(lora_groups)}. Reusing.")
                     final_latent = low_noise_cache[in_mem_low_cache_key]['latent']
                 else:
                     low_full_config = {'low_lora_stack': low_lora_tuple, 'cfg_low_noise': cfg_low_noise, 'sampler_name': sampler_name, 'scheduler': scheduler, 'sigma_shift': sigma_shift, 'positive_hash': positive_hash, 'negative_hash': negative_hash, 'high_noise_hash': high_noise_hash}
@@ -324,18 +353,30 @@ class WAN2_2LoraCompareSampler:
                     if os.path.exists(low_cache_file):
                         try:
                             cached_low_data = torch.load(low_cache_file, map_location=comfy.model_management.intermediate_device())
+                            # --- LOGGING RESTORED ---
+                            Log.success(f"Loaded persistent cache for low-noise pass from {low_cache_file}")
                             final_latent = cached_low_data['latent']
                             low_noise_cache[in_mem_low_cache_key] = cached_low_data
-                        except Exception: pass
+                        except Exception as e:
+                            # --- LOGGING RESTORED ---
+                            Log.fail(f"Failed to load persistent low-noise cache: {e}. Recomputing.")
                     
                     if final_latent is None:
+                        # --- LOGGING RESTORED ---
+                        Log.info(f"--- Low-Noise Group {i+1}/{len(lora_groups)} ---")
                         comfy.model_management.load_model_gpu(model_low_noise)
                         ml_clone = apply_lora_stack(model_low_noise, low_lora_stack)
                         ml_clone = set_shift(ml_clone, sigma_shift)
                         final_latent = comfy.sample.sample(ml_clone, cached_data['noise'], steps, cfg_low_noise, sampler_name, scheduler, positive, negative, cached_data['latent'], denoise=1.0, start_step=switching_step, last_step=steps, force_full_denoise=True, seed=seed)
                         computed_low_data = {'latent': final_latent.clone()}
                         low_noise_cache[in_mem_low_cache_key] = computed_low_data
-                        torch.save(computed_low_data, low_cache_file)
+                        try:
+                            torch.save(computed_low_data, low_cache_file)
+                            # --- LOGGING RESTORED ---
+                            Log.success(f"Saved persistent cache for low-noise pass to {low_cache_file}")
+                        except Exception as e:
+                            # --- LOGGING RESTORED ---
+                            Log.fail(f"Failed to save persistent low-noise cache: {e}")
                         del ml_clone
                         comfy.model_management.soft_empty_cache()
             else:
@@ -349,8 +390,10 @@ class WAN2_2LoraCompareSampler:
                         if len(images.shape) == 5: images = images.reshape(-1, *images.shape[-3:])
                         decoded_images_for_output.append(images.to(torch.device('cpu')))
                     else:
+                        Log.fail(f"VAE decode returned None for group {i+1}/{len(lora_groups)}")
                         decoded_images_for_output.append(torch.zeros([frame_count, height, width, 3], device='cpu'))
-                except Exception:
+                except Exception as e:
+                    Log.fail(f"VAE decode failed for group {i+1}/{len(lora_groups)}: {e}")
                     decoded_images_for_output.append(torch.zeros([frame_count, height, width, 3], device='cpu'))
 
         high_noise_batch = {"samples": torch.cat([cached[0]['latent'] for cached in high_noise_latents], dim=0)}
