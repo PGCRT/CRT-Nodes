@@ -1,7 +1,7 @@
 [project]
 name = "crt-nodes"
 description = "CRT-Nodes is a collection of custom nodes for ComfyUI"
-version = "1.7.9"
+version = "1.8.0"
 license = {file = "LICENSE"}
 
 [project.urls]
