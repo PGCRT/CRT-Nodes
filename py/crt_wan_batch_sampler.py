@@ -31,61 +31,6 @@ class Log:
     @staticmethod
     def header(message): print(f"\n{Log.HEADER}{Log.BOLD}--- {message} ---{Log.ENDC}")
 
-# --- FETA implementation ---
-def feta_score(query_image, key_image, head_dim, num_frames, enhance_weight):
-    scale = head_dim**-0.5
-    query_image = query_image * scale
-    attn_temp = query_image @ key_image.transpose(-2, -1)
-    attn_temp = attn_temp.to(torch.float32)
-    attn_temp = attn_temp.softmax(dim=-1)
-    attn_temp = attn_temp.reshape(-1, num_frames, num_frames)
-    diag_mask = torch.eye(num_frames, device=attn_temp.device).bool().unsqueeze(0).expand(attn_temp.shape[0], -1, -1)
-    attn_wo_diag = attn_temp.masked_fill(diag_mask, 0)
-    num_off_diag = num_frames * num_frames - num_frames
-    mean_scores = attn_wo_diag.sum(dim=(1, 2)) / num_off_diag
-    enhance_scores = mean_scores.mean() * (num_frames + enhance_weight)
-    enhance_scores = enhance_scores.clamp(min=1)
-    return enhance_scores
-
-def get_feta_scores(query, key, num_frames, enhance_weight):
-    img_q, img_k = query, key
-    _, ST, num_heads, head_dim = img_q.shape
-    spatial_dim = ST // num_frames
-    query_image = rearrange(img_q, "B (T S) N C -> (B S) N T C", T=num_frames, S=spatial_dim)
-    key_image = rearrange(img_k, "B (T S) N C -> (B S) N T C", T=num_frames, S=spatial_dim)
-    return feta_score(query_image, key_image, head_dim, num_frames, enhance_weight)
-
-def modified_wan_self_attention_forward(self, x, freqs):
-    b, s, n, d = *x.shape[:2], self.num_heads, self.head_dim
-    def qkv_fn(x):
-        q = self.norm_q(self.q(x)).view(b, s, n, d)
-        k = self.norm_k(self.k(x)).view(b, s, n, d)
-        v = self.v(x).view(b, s, n * d)
-        return q, k, v
-    q, k, v = qkv_fn(x)
-    
-    if freqs is not None and hasattr(comfy.ldm.flux.math, 'apply_rope'):
-        q, k = comfy.ldm.flux.math.apply_rope(q, k, freqs)
-    
-    feta_scores = get_feta_scores(q, k, self.num_frames, self.enhance_weight)
-    
-    x = comfy.ldm.modules.attention.optimized_attention(q.view(b, s, n * d), k.view(b, s, n * d), v, heads=self.num_heads)
-    x = self.o(x)
-    x *= feta_scores
-    return x
-
-class WanAttentionPatch:
-    def __init__(self, num_frames, weight):
-        self.num_frames = num_frames
-        self.enhance_weight = weight
-        
-    def __get__(self, obj, objtype=None):
-        def wrapped_attention(self_module, *args, **kwargs):
-            self_module.num_frames = self.num_frames
-            self_module.enhance_weight = self.enhance_weight
-            return modified_wan_self_attention_forward(self_module, *args, **kwargs)
-        return types.MethodType(wrapped_attention, obj)
-
 def set_shift(model, sigma_shift):
     model_sampling = model.get_model_object("model_sampling")
     if not model_sampling:
@@ -117,7 +62,6 @@ class CRT_WAN_BatchSampler:
                 "sampler_name": (comfy.samplers.KSampler.SAMPLERS, {"default": "euler"}),
                 "scheduler": (comfy.samplers.KSampler.SCHEDULERS, {"default": "simple"}),
                 "sigma_shift": ("FLOAT", {"default": 8.0, "min": 0.0, "max": 100.0, "step":0.01}),
-                "enhance_weight": ("FLOAT", {"default": 2.0, "min": 0.0, "max": 10.0, "step": 0.01}),
                 "enable_vae_decode": ("BOOLEAN", {"default": True}),
                 "enable_vae_tiled_decode": ("BOOLEAN", {"default": False}),
                 "tile_size": ("INT", {"default": 512, "min": 64, "max": 4096, "step": 32}),
@@ -142,15 +86,6 @@ class CRT_WAN_BatchSampler:
     RETURN_NAMES = ("high_noise_latent_batch", "final_latent_batch", "final_images_batch", "comparison_grid", "settings_string")
     FUNCTION = "sample"
     CATEGORY = "CRT/Sampling"
-
-    def _apply_enhancement(self, model, weight, latent_temporal_depth):
-        Log.info(f"Applying FETA (Enhance-A-Video) patch with weight: {weight} and latent temporal depth: {latent_temporal_depth}")
-        model_clone = model.clone()
-        diffusion_model = model_clone.get_model_object("diffusion_model")
-        for idx, block in enumerate(diffusion_model.blocks):
-            patched_attn = WanAttentionPatch(latent_temporal_depth, weight).__get__(block.self_attn, block.__class__)
-            model_clone.add_object_patch(f"diffusion_model.blocks.{idx}.self_attn.forward", patched_attn)
-        return model_clone
 
     def save_single_image(self, image_tensor, folder_path, subfolder_name, filename_prefix, seed, prompt=None, extra_pnginfo=None):
         try:
@@ -253,7 +188,7 @@ class CRT_WAN_BatchSampler:
                     extras_slice[key] = val
         return [[cond_tensor, extras_slice]]
 
-    def sample(self, model_high_noise, model_low_noise, positive, negative, width, height, frame_count, batch_count, seed, increment_seed, steps, boundary, cfg_high_noise, cfg_low_noise, sampler_name, scheduler, sigma_shift, enhance_weight, enable_vae_decode, enable_vae_tiled_decode, tile_size, tile_overlap, temporal_tile_size, temporal_tile_overlap, create_comparison_grid, save_videos_images, save_folder_path, save_subfolder_name, save_filename_prefix, fps, low_vram_mode, vae=None, prompt=None, extra_pnginfo=None):
+    def sample(self, model_high_noise, model_low_noise, positive, negative, width, height, frame_count, batch_count, seed, increment_seed, steps, boundary, cfg_high_noise, cfg_low_noise, sampler_name, scheduler, sigma_shift, enable_vae_decode, enable_vae_tiled_decode, tile_size, tile_overlap, temporal_tile_size, temporal_tile_overlap, create_comparison_grid, save_videos_images, save_folder_path, save_subfolder_name, save_filename_prefix, fps, low_vram_mode, vae=None, prompt=None, extra_pnginfo=None):
         
         actual_batch_size = batch_count
         Log.info(f"Batch count set to: {actual_batch_size}.")
@@ -262,17 +197,8 @@ class CRT_WAN_BatchSampler:
         if quantized_width != width or quantized_height != height:
             Log.info(f"Adjusting dimensions to be multiples of 16: {width}x{height} -> {quantized_width}x{quantized_height}")
         
-        # FIX: If frame_count is 1, force enhance_weight to 0 to prevent errors and useless processing.
-        if frame_count == 1 and enhance_weight > 0.0:
-            Log.info(f"Frame count is 1. FETA enhance weight automatically set to 0 (was {enhance_weight}).")
-            enhance_weight = 0.0
-        
         latent_temporal_depth = ((frame_count - 1) // 4) + 1
         
-        if enhance_weight > 0.0:
-            model_high_noise = self._apply_enhancement(model_high_noise, enhance_weight, latent_temporal_depth)
-            model_low_noise = self._apply_enhancement(model_low_noise, enhance_weight, latent_temporal_depth)
-
         base_latent = torch.zeros([1, 16, latent_temporal_depth, quantized_height // 8, quantized_width // 8], device=comfy.model_management.intermediate_device())
         seeds = [seed + i if increment_seed else seed for i in range(actual_batch_size)]
         
