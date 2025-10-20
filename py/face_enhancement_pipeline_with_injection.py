@@ -32,17 +32,30 @@ def colored_print(message, color=Colors.ENDC):
 def load_yolo(model_path: str):
     colored_print(f"🔄 Loading YOLO model from: {model_path}", Colors.CYAN)
     from ultralytics import YOLO
-    import ultralytics.nn.tasks as nn_tasks
-    original_torch_safe_load = nn_tasks.torch_safe_load
-    def unsafe_pt_loader(weight, map_location="cpu"):
-        ckpt = torch.load(weight, map_location=map_location, weights_only=False)
-        return ckpt, weight
+    # Fixed: Compatibility layer for ultralytics 8.x
     try:
-        nn_tasks.torch_safe_load = unsafe_pt_loader
+        # Try modern ultralytics approach first
         model = YOLO(model_path)
         colored_print("✅ YOLO model loaded successfully!", Colors.GREEN)
-    finally:
-        nn_tasks.torch_safe_load = original_torch_safe_load
+    except Exception as e:
+        colored_print(f"⚠️ Modern YOLO loading failed, trying legacy approach: {e}", Colors.YELLOW)
+        # Fallback for older ultralytics versions if nn.tasks exists
+        try:
+            import ultralytics.nn.tasks as nn_tasks
+            original_torch_safe_load = nn_tasks.torch_safe_load
+            def unsafe_pt_loader(weight, map_location="cpu"):
+                ckpt = torch.load(weight, map_location=map_location, weights_only=False)
+                return ckpt, weight
+            try:
+                nn_tasks.torch_safe_load = unsafe_pt_loader
+                model = YOLO(model_path)
+                colored_print("✅ YOLO model loaded successfully with legacy method!", Colors.GREEN)
+            finally:
+                nn_tasks.torch_safe_load = original_torch_safe_load
+        except ImportError:
+            # Final fallback - direct loading
+            model = YOLO(model_path)
+            colored_print("✅ YOLO model loaded with direct method!", Colors.GREEN)
     return model
 
 def tensor2pil(image: torch.Tensor) -> Image.Image:
