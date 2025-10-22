@@ -1,7 +1,7 @@
 """
 @author: CRT
 @title: CRT-Nodes
-@version: 1.8.3
+@version: 1.8.4
 @project: "https://github.com/plugcrypt/CRT-Nodes",
 @description: Set of nodes for ComfyUI
 https://discord.gg/8wYS9MBQqp
@@ -93,6 +93,8 @@ if 'CRT_NODES_INITIALIZED' not in globals():
     from .py.AudioDataToFrameCount import AudioOrManualFrameCount
     from .py.EmptyContext import EmptyContext
     from .py.crt_quantize_and_crop import CRT_QuantizeAndCropImage
+    from .py.crt_string_batcher import CRT_StringBatcher
+    from .py.crt_string_splitter import CRT_StringSplitter
 
 
     print("[CRT-Nodes __init__] Registering custom model paths...")
@@ -194,6 +196,8 @@ NODE_CLASS_MAPPINGS = {
     "AudioOrManualFrameCount": AudioOrManualFrameCount,
     "EmptyContext": EmptyContext,
     "CRT_QuantizeAndCropImage": CRT_QuantizeAndCropImage,
+    "CRT_StringBatcher": CRT_StringBatcher,
+    "CRT_StringSplitter": CRT_StringSplitter,
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
@@ -275,6 +279,8 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "AudioOrManualFrameCount": "Frame Count (Audio or Manual) (CRT)",
     "EmptyContext": "Empty Context (CRT)",
     "CRT_QuantizeAndCropImage": "Quantize and Crop Image (CRT)",
+    "CRT_StringBatcher": "String Batcher (CRT)",
+    "CRT_StringSplitter": "String Splitter (CRT)",
 }
 
 WEB_DIRECTORY = "./js"

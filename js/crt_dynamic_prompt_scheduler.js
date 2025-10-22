@@ -8,94 +8,81 @@ app.registerExtension({
 			nodeType.prototype.onNodeCreated = function () {
 				onNodeCreated?.apply(this, arguments);
 
-				// --- ROBUST INITIALIZATION ---
-				// We will rebuild the widgets and initialize the internal state based on
-				// the inputs that ComfyUI has already loaded from the workflow.
+                const synchronizeInputs = () => {
+                    const targetCount = this.batch_count;
+                    const imagesEnabled = this.images_enabled;
 
-				// 1. Clear any old widgets to prevent button duplication on reload.
-				this.widgets = [];
+                    // --- Step 1: Remove all existing dynamic inputs ---
+                    // This is the only guaranteed way to ensure a correct final order.
+                    // We create a copy of the array to iterate over, as removing items while iterating can cause issues.
+                    const inputsToRemove = [...(this.inputs || [])];
+                    for (const input of inputsToRemove) {
+                        if (input.name.startsWith("prompt_") || input.name.startsWith("image_")) {
+                            this.removeInput(this.findInputSlot(input.name));
+                        }
+                    }
 
-				// 2. Find the highest existing prompt number to correctly set our counter.
-				let max_prompt_id = 0;
-				if (this.inputs) {
-					for (const input of this.inputs) {
-						// Defensive check: Ensure the input and its name are valid before processing.
-						if (input && typeof input.name === "string" && input.name.startsWith("prompt_")) {
-							const id = parseInt(input.name.split('_')[1], 10);
-							// Check if 'id' is a valid number before comparing.
-							if (!isNaN(id) && id > max_prompt_id) {
-								max_prompt_id = id;
-							}
-						}
-					}
-				}
-				this.prompt_count = max_prompt_id;
+                    // --- Step 2: Re-add all inputs in the correct interleaved order ---
+                    for (let i = 1; i <= targetCount; i++) {
+                        // Add the prompt input first
+                        this.addInput(`prompt_${i}`, "STRING", { multiline: true, default: "" });
 
-				// --- DEFINE NODE ACTIONS ---
-				const addPrompt = () => {
-					this.prompt_count++;
-					this.addInput(
-						`prompt_${this.prompt_count}`,
-						"STRING",
-						{ multiline: true, default: "" }
-					);
-					this.size = this.computeSize();
-					this.setDirtyCanvas(true, true);
-				};
+                        // If images are enabled, add the corresponding image input immediately after
+                        if (imagesEnabled) {
+                            this.addInput(`image_${i}`, "IMAGE");
+                        }
+                    }
 
-				const removePrompt = () => {
-					// Count how many actual prompt inputs we currently have.
-					const promptInputs = this.inputs ? this.inputs.filter(i => i && typeof i.name === "string" && i.name.startsWith("prompt_")) : [];
+                    this.size = this.computeSize();
+                    this.setDirtyCanvas(true, true);
+                };
 
-					if (promptInputs.length > 1) {
-						// Find the input with the highest ID number to remove it. This is more reliable
-						// than just removing the last one in the array, as order isn't guaranteed.
-						let highest_id = -1;
-						let input_to_remove_index = -1;
+                // --- Find or Create Widgets ---
+                let batchCountWidget = this.widgets?.find(w => w.name === "batch_count");
+                if (!batchCountWidget) {
+                     batchCountWidget = this.addWidget(
+                        "number", "batch_count", 1, () => {},
+                        { min: 1, max: 128, step: 1, precision: 0 }
+                    );
+                }
 
-						for (let i = 0; i < this.inputs.length; i++) {
-							const input = this.inputs[i];
-							if (input && typeof input.name === "string" && input.name.startsWith("prompt_")) {
-								const id = parseInt(input.name.split('_')[1], 10);
-								if (!isNaN(id) && id > highest_id) {
-									highest_id = id;
-									input_to_remove_index = i;
-								}
-							}
-						}
+                let imageToggleWidget = this.widgets?.find(w => w.name === "batch_images");
+                if (!imageToggleWidget) {
+                    imageToggleWidget = this.addWidget(
+                        "toggle", "batch_images", false, () => {},
+                        { on: "Enabled", off: "Disabled" }
+                    );
+                }
 
-						if (input_to_remove_index > -1) {
-							this.removeInput(input_to_remove_index);
+                // --- Initialize State ---
+                const initialPromptCount = this.inputs?.filter(i => i.name.startsWith("prompt_")).length || 1;
+                const initialImageState = this.inputs?.some(i => i.name.startsWith("image_")) || false;
 
-							// After removing, we must recalculate the new highest ID for our counter.
-							let new_max_id = 0;
-							if (this.inputs) {
-								for (const input of this.inputs) {
-									if (input && typeof input.name === "string" && input.name.startsWith("prompt_")) {
-										const id = parseInt(input.name.split('_')[1], 10);
-										if (!isNaN(id) && id > new_max_id) {
-											new_max_id = id;
-										}
-									}
-								}
-							}
-							this.prompt_count = new_max_id;
-						}
+                this.batch_count = batchCountWidget.value ?? initialPromptCount;
+                this.images_enabled = imageToggleWidget.value ?? initialImageState;
 
-						this.size = this.computeSize();
-						this.setDirtyCanvas(true, true);
-					}
-				};
+                batchCountWidget.value = this.batch_count;
+                imageToggleWidget.value = this.images_enabled;
 
-				// --- ADD CONTROLS ---
-				this.addWidget("BUTTON", "Add Prompt", null, addPrompt);
-				this.addWidget("BUTTON", "Remove Last Prompt", null, removePrompt);
+                // --- Assign Callbacks ---
+                batchCountWidget.callback = (v) => {
+                    const newCount = Math.max(1, Math.round(v));
+                    if (this.batch_count !== newCount) {
+                        this.batch_count = newCount;
+                        batchCountWidget.value = this.batch_count;
+                        synchronizeInputs();
+                    }
+                };
 
-				// --- FINAL CHECK ---
-				// If after initialization we have no prompts (i.e., it's a new node), add the first one.
-				if (this.prompt_count === 0) {
-					addPrompt();
-				}
+                imageToggleWidget.callback = (v) => {
+                    if (this.images_enabled !== v) {
+                        this.images_enabled = v;
+                        synchronizeInputs();
+                    }
+                };
+
+                // --- Initial Build ---
+                synchronizeInputs();
 			};
 		}
 	},
