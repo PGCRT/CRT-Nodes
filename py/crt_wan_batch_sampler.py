@@ -115,10 +115,14 @@ class CRT_WAN_BatchSampler:
 
     def _save_image(self, image_tensor, folder_path, subfolder_name, filename_prefix, seed, prompt=None, extra_pnginfo=None):
         try:
-            final_dir = os.path.join(folder_path, subfolder_name.strip().lstrip('/\\'))
+            # FIX: Clean the subfolder name before joining the path
+            cleaned_subfolder = subfolder_name.strip().lstrip('/\\')
+            final_dir = os.path.join(folder_path, cleaned_subfolder)
             os.makedirs(final_dir, exist_ok=True)
             
-            base_filename = f"{filename_prefix.strip().lstrip('/\\')}_{seed}"
+            # FIX: Clean the filename prefix before using it in the f-string
+            cleaned_prefix = filename_prefix.strip().lstrip('/\\')
+            base_filename = f"{cleaned_prefix}_{seed}"
             image_filepath = os.path.join(final_dir, f"{base_filename}.png")
             counter = 1
             while os.path.exists(image_filepath):
@@ -139,10 +143,14 @@ class CRT_WAN_BatchSampler:
 
     def _save_video(self, images, folder_path, subfolder_name, filename_prefix, seed, fps, prompt=None, extra_pnginfo=None):
         try:
-            final_dir = os.path.join(folder_path, subfolder_name.strip().lstrip('/\\'))
+            # FIX: Clean the subfolder name before joining the path
+            cleaned_subfolder = subfolder_name.strip().lstrip('/\\')
+            final_dir = os.path.join(folder_path, cleaned_subfolder)
             os.makedirs(final_dir, exist_ok=True)
             
-            base_filename = f"{filename_prefix.strip().lstrip('/\\')}_{seed}"
+            # FIX: Clean the filename prefix before using it in the f-string
+            cleaned_prefix = filename_prefix.strip().lstrip('/\\')
+            base_filename = f"{cleaned_prefix}_{seed}"
             video_filepath = os.path.join(final_dir, f"{base_filename}.mp4")
             counter = 1
             while os.path.exists(video_filepath):
