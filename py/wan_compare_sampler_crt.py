@@ -204,18 +204,26 @@ class WAN2_2LoraCompareSampler:
                 "start_image": ("IMAGE",),
             }
         }
+    
+    # MODIFICATION START: Added MODEL outputs to return types and names
+    RETURN_TYPES = ("LATENT", "LATENT", "IMAGE", "IMAGE", "STRING", "MODEL", "MODEL")
+    RETURN_NAMES = ("high_noise_latent_batch", "final_latent_batch", "final_images_batch", "comparison_grid", "settings_string", "model_high_noise_out", "model_low_noise_out")
+    # MODIFICATION END
 
-    RETURN_TYPES = ("LATENT", "LATENT", "IMAGE", "IMAGE", "STRING")
-    RETURN_NAMES = ("high_noise_latent_batch", "final_latent_batch", "final_images_batch", "comparison_grid", "settings_string")
     FUNCTION = "sample"
     CATEGORY = "CRT/Sampling"
 
     def sample(self, model_high_noise, model_low_noise, positive, negative, seed, width, height, frame_count, lora_batch_config, steps, boundary, cfg_high_noise, cfg_low_noise, sampler_name, scheduler, sigma_shift, enable_vae_decode, create_comparison_grid, add_labels, custom_labels, label_font_size, vae=None, start_image=None):
         
+        # MODIFICATION START: Initialize variables to hold the last used models
+        last_mh_clone = model_high_noise
+        last_ml_clone = model_low_noise
+        # MODIFICATION END
+        
         if start_image is not None:
             if vae is None:
                 Log.fail("A VAE is required for Image-to-Video mode but was not provided.")
-                return ({"samples": torch.zeros([0, 16, 1, 1, 1])}, {"samples": torch.zeros([0, 16, 1, 1, 1])}, torch.zeros([0, 1, 1, 3]), None, "VAE required for I2V mode.")
+                return ({"samples": torch.zeros([0, 16, 1, 1, 1])}, {"samples": torch.zeros([0, 16, 1, 1, 1])}, torch.zeros([0, 1, 1, 3]), None, "VAE required for I2V mode.", model_high_noise, model_low_noise)
 
             Log.info("Start image provided. Switching to Image-to-Video mode.")
             _, img_height, img_width, _ = start_image.shape
@@ -241,7 +249,7 @@ class WAN2_2LoraCompareSampler:
 
         if not lora_groups:
             Log.fail("All LoRA groups are disabled. Nothing to sample.")
-            return ({"samples": torch.zeros([0, 4, 1, 1])}, {"samples": torch.zeros([0, 4, 1, 1])}, torch.zeros([0, 1, 1, 3]), None, "All LoRA groups disabled.")
+            return ({"samples": torch.zeros([0, 4, 1, 1])}, {"samples": torch.zeros([0, 4, 1, 1])}, torch.zeros([0, 1, 1, 3]), None, "All LoRA groups disabled.", model_high_noise, model_low_noise)
 
         positive_hash = get_conditioning_hash(positive)
         negative_hash = get_conditioning_hash(negative)
@@ -300,6 +308,11 @@ class WAN2_2LoraCompareSampler:
             Log.info("No cache entry found. Computing new high-noise latent.")
             comfy.model_management.load_model_gpu(model_high_noise)
             mh_clone = apply_lora_stack(model_high_noise, high_lora_stack)
+            
+            # MODIFICATION START: Keep track of the last modified high-noise model
+            last_mh_clone = mh_clone
+            # MODIFICATION END
+
             mh_clone = set_shift(mh_clone, sigma_shift)
             
             noise = comfy.sample.prepare_noise(base_latent, seed)
@@ -328,6 +341,9 @@ class WAN2_2LoraCompareSampler:
 
         is_bypassed = cfg_low_noise == 0
         if is_bypassed: Log.info("Low-noise CFG is 0. Bypassing low-noise pass for all groups.")
+        
+        # MODIFICATION: Initialize last_ml_clone to prevent undefined variable error when bypassed
+        last_ml_clone = model_low_noise
         
         if not is_bypassed and switching_step < steps:
             comfy.model_management.unload_all_models()
@@ -366,6 +382,11 @@ class WAN2_2LoraCompareSampler:
                         Log.info(f"--- Low-Noise Group {i+1}/{len(lora_groups)} ---")
                         comfy.model_management.load_model_gpu(model_low_noise)
                         ml_clone = apply_lora_stack(model_low_noise, low_lora_stack)
+
+                        # MODIFICATION START: Keep track of the last modified low-noise model
+                        last_ml_clone = ml_clone
+                        # MODIFICATION END
+                        
                         ml_clone = set_shift(ml_clone, sigma_shift)
                         final_latent = comfy.sample.sample(ml_clone, cached_data['noise'], steps, cfg_low_noise, sampler_name, scheduler, positive, negative, cached_data['latent'], denoise=1.0, start_step=switching_step, last_step=steps, force_full_denoise=True, seed=seed)
                         computed_low_data = {'latent': final_latent.clone()}
@@ -428,4 +449,5 @@ class WAN2_2LoraCompareSampler:
                 comparison_grid = torch.cat(comparison_frames, dim=0)
         
         settings_string = f"Dimensions: {width}x{height} | Frames: {frame_count} | Seed: {seed} | Steps: {steps} | Boundary: {boundary}"
-        return (high_noise_batch, final_latent_batch, final_images_batch, comparison_grid, settings_string)
+        
+        return (high_noise_batch, final_latent_batch, final_images_batch, comparison_grid, settings_string, last_mh_clone, last_ml_clone)

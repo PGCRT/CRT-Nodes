@@ -1,7 +1,7 @@
 """
 @author: CRT
 @title: CRT-Nodes
-@version: 1.8.5
+@version: 1.8.6
 @project: "https://github.com/plugcrypt/CRT-Nodes",
 @description: Set of nodes for ComfyUI
 https://discord.gg/8wYS9MBQqp
@@ -91,7 +91,6 @@ if 'CRT_NODES_INITIALIZED' not in globals():
     from .py.crt_file_batch_prompt_scheduler import CRT_FileBatchPromptScheduler
     from .py.FileLoaderCrawlBatch import FileLoaderCrawlBatch
     from .py.AudioDataToFrameCount import AudioOrManualFrameCount
-    from .py.EmptyContext import EmptyContext
     from .py.crt_quantize_and_crop import CRT_QuantizeAndCropImage
     from .py.crt_string_batcher import CRT_StringBatcher
     from .py.crt_string_splitter import CRT_StringSplitter
@@ -194,7 +193,6 @@ NODE_CLASS_MAPPINGS = {
     "CRT_FileBatchPromptScheduler": CRT_FileBatchPromptScheduler,
     "FileLoaderCrawlBatch": FileLoaderCrawlBatch,
     "AudioOrManualFrameCount": AudioOrManualFrameCount,
-    "EmptyContext": EmptyContext,
     "CRT_QuantizeAndCropImage": CRT_QuantizeAndCropImage,
     "CRT_StringBatcher": CRT_StringBatcher,
     "CRT_StringSplitter": CRT_StringSplitter,
@@ -277,7 +275,6 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "CRT_FileBatchPromptScheduler": "File Batch Prompt Scheduler (CRT)",
     "FileLoaderCrawlBatch": "File Loader Crawl Batch (CRT)",
     "AudioOrManualFrameCount": "Frame Count (Audio or Manual) (CRT)",
-    "EmptyContext": "Empty Context (CRT)",
     "CRT_QuantizeAndCropImage": "Quantize and Crop Image (CRT)",
     "CRT_StringBatcher": "String Batcher (CRT)",
     "CRT_StringSplitter": "String Splitter (CRT)",

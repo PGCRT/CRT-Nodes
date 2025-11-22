@@ -12,8 +12,8 @@ const WANCompareExtension = {
                 this.onDrawBackground = function() {};
                 this.title = "";
                 this.color = "transparent";
-                
-                // Initialize UI asynchronously to ensure proper setup
+                this.nodeData = nodeData;
+
                 setTimeout(() => {
                     this.WANCompareUIInstance = new WANCompareUI(this);
                 }, 10);
@@ -36,7 +36,6 @@ const WANCompareExtension = {
                     return [MINIMUM_WIDTH, MINIMUM_HEIGHT]; 
                 };
 
-                // Override setSize to ensure proper sizing
                 const originalSetSize = this.setSize;
                 this.setSize = function(size) {
                     if (originalSetSize) {
@@ -45,16 +44,15 @@ const WANCompareExtension = {
                     this.size = size;
                 };
 
-                // Force initial size
                 this.size = [1900, 300];
             };
 
-            // Add onConfigure to handle node loading from saved workflows
             const onConfigure = nodeType.prototype.onConfigure;
             nodeType.prototype.onConfigure = function(info) {
                 onConfigure?.apply(this, arguments);
                 
-                // Reinitialize UI when loading from saved workflow
+                this.nodeData = nodeData;
+
                 setTimeout(() => {
                     if (!this.WANCompareUIInstance) {
                         this.WANCompareUIInstance = new WANCompareUI(this);
@@ -71,7 +69,8 @@ class WANCompareUI {
         this.loraGroups = [];
         this.loraList = [];
         this.activeDropdown = null;
-        this.presets = new Map(); // For storing presets
+        this.presets = new Map();
+        this.draggedItem = null;
         this.initialize();
     }
 
@@ -82,13 +81,12 @@ class WANCompareUI {
             await this.fetchLoRAList();
             this.createCustomDOM();
             this.loadPresets();
-            this.renderPresets(); // Render presets after loading
+            this.renderPresets();
             this.parseConfigFromWidget();
             this.render();
             
             console.log('[WANCompareUI] UI initialized successfully');
             
-            // Multiple attempts to force node size recalculation
             setTimeout(() => this.forceNodeResize(), 100);
             setTimeout(() => this.forceNodeResize(), 500);
             setTimeout(() => this.forceNodeResize(), 1000);
@@ -193,7 +191,7 @@ class WANCompareUI {
             return;
         }
         console.log('[WANCompareUI] Saving preset:', name, config);
-        this.presets.set(name, JSON.parse(JSON.stringify(config))); // Deep copy
+        this.presets.set(name, JSON.parse(JSON.stringify(config)));
         this.savePresets();
         this.renderPresets();
     }
@@ -206,7 +204,7 @@ class WANCompareUI {
         console.log('[WANCompareUI] Loading preset:', name);
         const config = this.presets.get(name);
         if (config) {
-            this.applyPreset(JSON.parse(JSON.stringify(config))); // Deep copy
+            this.applyPreset(JSON.parse(JSON.stringify(config)));
             console.log('[WANCompareUI] Preset loaded:', config);
         } else {
             console.warn('[WANCompareUI] Preset not found:', name);
@@ -302,8 +300,8 @@ class WANCompareUI {
             .wan-lora-groups-container { display: flex; flex-direction: column; gap: 15px; margin-bottom: 15px; }
             .wan-lora-stack-group { background: rgba(0,0,0,0.2); border: 1px solid var(--wan-accent-purple-light); border-radius: var(--wan-radius-md); padding: 10px; display: flex; flex-direction: column; gap: 8px; transition: opacity 0.3s ease; }
             .wan-lora-stack-group.disabled { opacity: 0.5; border-color: var(--wan-text-dark); }
-            .wan-lora-header { display: grid; grid-template-columns: 2.2fr 1fr 2.2fr 1fr auto; gap: 12px; padding: 0 10px 8px; font-family: 'Orbitron', monospace; font-size: 11px; color: var(--wan-text-med); text-transform: uppercase; text-align: center; }
-            .wan-lora-row { display: grid; grid-template-columns: 2.2fr 1fr 2.2fr 1fr auto; gap: 12px; align-items: center; }
+            .wan-lora-header { display: grid; grid-template-columns: 30px 2.2fr 1fr 2.2fr 1fr auto; gap: 12px; padding: 0 10px 8px; font-family: 'Orbitron', monospace; font-size: 11px; color: var(--wan-text-med); text-transform: uppercase; text-align: center; }
+            .wan-lora-row { display: grid; grid-template-columns: 30px 2.2fr 1fr 2.2fr 1fr auto; gap: 12px; align-items: center; }
             .wan-lora-row.disabled { opacity: 0.5; }
             .wan-row-actions { display: flex; align-items: center; justify-content: flex-end; gap: 8px; width: 120px; }
             .wan-group-footer { display: flex; align-items: center; gap: 12px; margin-top: 5px; padding: 0 10px; }
@@ -340,12 +338,17 @@ class WANCompareUI {
             .wan-lora-dropdown-portal::-webkit-scrollbar-thumb { background: var(--wan-accent-purple); border-radius: 3px; }
             .wan-error-message { color: var(--wan-accent-red); font-family: 'Inter', sans-serif; font-size: 13px; text-align: center; margin-top: 10px; }
             .wan-label-input { font-size: calc(12px + 0.5vw); max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+            /* MODIFICATION START: Styles for drag and drop */
+            .wan-drag-handle { cursor: grab; text-align: center; color: var(--wan-text-med); font-size: 18px; line-height: 1; }
+            .wan-drag-handle:active { cursor: grabbing; }
+            .dragging { opacity: 0.4; }
+            .wan-drop-target { border-top: 2px solid var(--wan-accent-purple-light) !important; }
+            /* MODIFICATION END */
         `;
         document.head.appendChild(style);
     }
 
     createCustomDOM() {
-        // Ensure we don't create duplicate DOM elements
         if (this.container) {
             console.log('[WANCompareUI] DOM already exists, skipping creation');
             return;
@@ -353,7 +356,6 @@ class WANCompareUI {
 
         console.log('[WANCompareUI] Creating custom DOM...');
 
-        // Hide all existing widgets to avoid size issues
         if (this.node.widgets) {
             this.node.widgets.forEach(w => { 
                 if (w.name) {
@@ -361,7 +363,6 @@ class WANCompareUI {
                     w.type = "hidden";
                     w.hidden = true;
                     
-                    // Force hide for stubborn widgets
                     Object.defineProperty(w, 'computeSize', {
                         value: () => [0, -4],
                         writable: false
@@ -385,7 +386,6 @@ class WANCompareUI {
         presetSection.appendChild(this.presetsContainer);
         this.container.appendChild(presetSection);
 
-        // Add preset UI elements
         this.presetSelect = document.createElement('select');
         this.presetSelect.className = 'wan-select';
         this.presetsContainer.appendChild(this.presetSelect);
@@ -475,8 +475,10 @@ class WANCompareUI {
 
         const samplerGrid = document.createElement('div');
         samplerGrid.className = 'wan-control-grid';
-        const SAMPLERS = ["euler", "euler_ancestral", "heun", "heunpp2", "dpm_2", "dpm_2_ancestral", "lms", "dpm_fast", "dpm_adaptive", "dpmpp_2s_ancestral", "dpmpp_sde", "dpmpp_sde_gpu", "dpmpp_2m", "dpmpp_2m_sde", "dpmpp_2m_sde_gpu", "dpmpp_3m_sde", "dpmpp_3m_sde_gpu", "ddpm", "lcm", "ddim", "uni_pc", "uni_pc_bh2", "deis"];
-        const SCHEDULERS = ["normal", "karras", "exponential", "sgm_uniform", "simple", "ddim_uniform"];
+
+        const SAMPLERS = this.node.nodeData?.input?.required?.sampler_name?.[0] || ["euler"];
+        const SCHEDULERS = this.node.nodeData?.input?.required?.scheduler?.[0] || ["normal"];
+        
         samplerGrid.append(
             this.createNumberInput('boundary', 'Boundary', { min: 0, max: 1, step: 0.001, default: 0.875 }),
             this.createNumberInput('steps', 'Steps', { min: 1, max: 10000, step: 1, default: 8 }),
@@ -484,7 +486,7 @@ class WANCompareUI {
             this.createNumberInput('cfg_low_noise', 'CFG Low', { min: 0, max: 100, step: 0.1, default: 1.0 }),
             this.createNumberInput('sigma_shift', 'Sigma Shift', { min: 0, max: 100, step: 0.01, default: 8.0 }),
             this.createSelect('sampler_name', 'Sampler', SAMPLERS, 'euler'),
-            this.createSelect('scheduler', 'Scheduler', SCHEDULERS, 'simple') // Changed default to "simple"
+            this.createSelect('scheduler', 'Scheduler', SCHEDULERS, 'simple')
         );
         samplerSection.appendChild(samplerGrid);
 
@@ -502,7 +504,6 @@ class WANCompareUI {
         this.container.append(loraSection, dimensionsSection, samplerSection, outputSection);
         
         try {
-            // Add the DOM widget
             const domWidget = this.node.addDOMWidget('wan_compare_ui', 'div', this.container, { serialize: false });
             console.log('[WANCompareUI] DOM widget added successfully');
         } catch (error) {
@@ -540,8 +541,8 @@ class WANCompareUI {
         input.min = min;
         input.max = max;
         input.step = step;
-        input.value = defaultValue;
-        this.setWidgetValue(name, defaultValue); // FIX: Ensure initial value is set
+        input.value = this.getWidgetValue(name) ?? defaultValue;
+        this.setWidgetValue(name, input.value); 
         input.onchange = () => {
             this.setWidgetValue(name, parseFloat(input.value));
             this.updateNodeSize();
@@ -564,8 +565,8 @@ class WANCompareUI {
             option.textContent = opt;
             select.appendChild(option);
         });
-        select.value = defaultValue;
-        this.setWidgetValue(name, defaultValue); // FIX: Ensure initial value is set
+        select.value = this.getWidgetValue(name) ?? defaultValue;
+        this.setWidgetValue(name, select.value);
         select.onchange = () => {
             this.setWidgetValue(name, select.value);
             this.updateNodeSize();
@@ -581,9 +582,10 @@ class WANCompareUI {
         labelEl.className = 'wan-control-label';
         labelEl.textContent = label;
         const toggle = document.createElement('button');
-        this.setWidgetValue(name, defaultValue); // FIX: Ensure initial value is set
-        toggle.className = `wan-on-off-button ${defaultValue ? 'active' : ''}`;
-        toggle.textContent = defaultValue ? 'ON' : 'OFF';
+        const currentValue = this.getWidgetValue(name) ?? defaultValue;
+        this.setWidgetValue(name, currentValue); 
+        toggle.className = `wan-on-off-button ${currentValue ? 'active' : ''}`;
+        toggle.textContent = currentValue ? 'ON' : 'OFF';
         toggle.onclick = () => {
             const newValue = !this.getWidgetValue(name);
             toggle.classList.toggle('active', newValue);
@@ -596,21 +598,18 @@ class WANCompareUI {
     }
 
     updateNodeSize() {
-        // Force node size recalculation with better error handling
         setTimeout(() => {
             this.forceNodeResize();
         }, 10);
     }
 
     setWidgetValue(name, value) {
-        // Skip creating preset_data widget since we use node properties instead
         if (name === 'preset_data') {
-            return; // Don't create this widget, we handle presets differently
+            return;
         }
         
         let widget = this.node.widgets.find(w => w.name === name);
         if (!widget) {
-            // Create widget if it doesn't exist
             widget = this.node.addWidget('number', name, value, () => {}, { serialize: true });
             widget.type = "hidden";
             widget.computeSize = () => [0, -4];
@@ -668,26 +667,95 @@ class WANCompareUI {
     createGroupElement(group, groupIdx) {
         const groupEl = document.createElement('div');
         groupEl.className = `wan-lora-stack-group ${!group.enabled ? 'disabled' : ''}`;
+        
+        groupEl.draggable = true;
+        groupEl.addEventListener('dragstart', (e) => {
+            if (!e.target.classList.contains('wan-drag-handle')) {
+                e.preventDefault();
+                return;
+            }
+            this.draggedItem = { type: 'group', index: groupIdx };
+            e.dataTransfer.effectAllowed = 'move';
+            setTimeout(() => e.target.closest('.wan-lora-stack-group').classList.add('dragging'), 0);
+        });
+        groupEl.addEventListener('dragend', (e) => {
+            e.target.closest('.wan-lora-stack-group').classList.remove('dragging');
+        });
+        groupEl.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            if (this.draggedItem?.type === 'group') {
+                groupEl.classList.add('wan-drop-target');
+            }
+        });
+        groupEl.addEventListener('dragleave', () => {
+            groupEl.classList.remove('wan-drop-target');
+        });
+        groupEl.addEventListener('drop', (e) => {
+            e.preventDefault();
+            groupEl.classList.remove('wan-drop-target');
+            if (this.draggedItem?.type === 'group' && this.draggedItem.index !== groupIdx) {
+                const [movedGroup] = this.loraGroups.splice(this.draggedItem.index, 1);
+                this.loraGroups.splice(groupIdx, 0, movedGroup);
+                this.render();
+            }
+            this.draggedItem = null;
+        });
+
         const header = document.createElement('div');
         header.className = 'wan-lora-header';
-        header.innerHTML = '<span>High LoRA</span><span>Strength</span><span>Low LoRA</span><span>Strength</span><span>Actions</span>';
+        header.innerHTML = '<span>⠿</span><span>High LoRA</span><span>Strength</span><span>Low LoRA</span><span>Strength</span><span>Actions</span>';
         groupEl.appendChild(header);
 
         group.rows.forEach((row, rowIdx) => {
             const rowEl = document.createElement('div');
             rowEl.className = `wan-lora-row ${!row.enabled ? 'disabled' : ''}`;
             rowEl.innerHTML = `
+                <div class="wan-drag-handle">⠿</div>
                 <div class="wan-lora-select-container"><input type="text" class="wan-lora-search" placeholder="Select LoRA" value="${row.high_lora || ''}"></div>
-                <input type="number" class="wan-input" value="${row.high_strength}" min="0" max="2" step="0.01">
+                <input type="number" class="wan-input" value="${row.high_strength}" min="-2" max="2" step="0.01">
                 <div class="wan-lora-select-container"><input type="text" class="wan-lora-search" placeholder="Select LoRA" value="${row.low_lora || ''}"></div>
-                <input type="number" class="wan-input" value="${row.low_strength}" min="0" max="2" step="0.01">
+                <input type="number" class="wan-input" value="${row.low_strength}" min="-2" max="2" step="0.01">
                 <div class="wan-row-actions">
                     <button class="wan-lora-action-btn wan-row-toggle ${row.enabled ? 'active' : ''}">✓</button>
                     <button class="wan-lora-action-btn">+</button>
                     <button class="wan-lora-action-btn wan-delete-btn">✖</button>
                 </div>
             `;
-            const [highInputContainer, highStrengthInput, lowInputContainer, lowStrengthInput, actions] = rowEl.children;
+
+            const dragHandle = rowEl.querySelector('.wan-drag-handle');
+            dragHandle.draggable = true;
+            dragHandle.addEventListener('dragstart', (e) => {
+                e.stopPropagation();
+                this.draggedItem = { type: 'row', groupIdx, rowIdx };
+                e.dataTransfer.effectAllowed = 'move';
+                setTimeout(() => rowEl.classList.add('dragging'), 0);
+            });
+            dragHandle.addEventListener('dragend', () => {
+                rowEl.classList.remove('dragging');
+            });
+            rowEl.addEventListener('dragover', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                if (this.draggedItem?.type === 'row' && this.draggedItem.groupIdx === groupIdx) {
+                    rowEl.classList.add('wan-drop-target');
+                }
+            });
+            rowEl.addEventListener('dragleave', () => {
+                rowEl.classList.remove('wan-drop-target');
+            });
+            rowEl.addEventListener('drop', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                rowEl.classList.remove('wan-drop-target');
+                if (this.draggedItem?.type === 'row' && this.draggedItem.groupIdx === groupIdx && this.draggedItem.rowIdx !== rowIdx) {
+                    const [movedRow] = group.rows.splice(this.draggedItem.rowIdx, 1);
+                    group.rows.splice(rowIdx, 0, movedRow);
+                    this.render();
+                }
+                this.draggedItem = null;
+            });
+            
+            const [_, highInputContainer, highStrengthInput, lowInputContainer, lowStrengthInput, actions] = rowEl.children;
             const [toggleBtn, addBtn, deleteBtn] = actions.children;
             
             const highSearchInput = highInputContainer.querySelector('.wan-lora-search');
@@ -741,6 +809,11 @@ class WANCompareUI {
 
         const footer = document.createElement('div');
         footer.className = 'wan-group-footer';
+        
+        const groupDragHandle = document.createElement('div');
+        groupDragHandle.className = 'wan-drag-handle';
+        groupDragHandle.innerHTML = '⠿';
+        
         const labelInput = document.createElement('input');
         labelInput.type = 'text';
         labelInput.className = 'wan-input wan-label-input';
@@ -763,9 +836,8 @@ class WANCompareUI {
         duplicateGroupBtn.className = 'wan-btn wan-duplicate-btn';
         duplicateGroupBtn.textContent = 'Duplicate Group';
         duplicateGroupBtn.onclick = () => {
-            // Perform a deep copy to prevent shared references
             const duplicatedGroup = JSON.parse(JSON.stringify(group));
-            duplicatedGroup.label = ''; // Keep label empty for duplicated group
+            duplicatedGroup.label = '';
             this.loraGroups.splice(groupIdx + 1, 0, duplicatedGroup);
             this.render();
         };
@@ -778,7 +850,7 @@ class WANCompareUI {
         };
         actions.appendChild(duplicateGroupBtn);
         actions.appendChild(deleteGroupBtn);
-        footer.append(labelInput, toggleGroupBtn, actions);
+        footer.append(groupDragHandle, labelInput, toggleGroupBtn, actions);
         groupEl.appendChild(footer);
 
         return groupEl;
@@ -816,7 +888,7 @@ class WANCompareUI {
             this.closeActiveDropdown();
             this.syncConfigToWidget();
         };
-        this.activeDropdown.prepend(emptyOption); // Add 'None' at the top
+        this.activeDropdown.prepend(emptyOption);
         
         document.body.appendChild(this.activeDropdown);
         const rect = container.getBoundingClientRect();
@@ -846,7 +918,7 @@ class WANCompareUI {
     }
 
     syncConfigToWidget() {
-        const hasEnabledGroups = this.loraGroups.some(group => group.enabled);  // Allow enabled groups even with disabled rows
+        const hasEnabledGroups = this.loraGroups.some(group => group.enabled);
         if (!hasEnabledGroups && this.loraGroups.length > 0) {
             this.errorMessage.style.display = 'block';
             this.errorMessage.textContent = 'Error: At least one group must be enabled to start inference.';
