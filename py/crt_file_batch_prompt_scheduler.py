@@ -96,6 +96,21 @@ class CRT_FileBatchPromptScheduler:
             if pooled is None: has_pooled_output = False
             pooled_list.append(pooled)
 
+        # --- PAD TENSORS TO MATCH LONGEST SEQUENCE ---
+        if cond_list:
+            # Find the maximum sequence length in the batch (dim 1)
+            max_seq_len = max(c.shape[1] for c in cond_list)
+            
+            for i, c in enumerate(cond_list):
+                current_len = c.shape[1]
+                if current_len < max_seq_len:
+                    # Calculate padding needed
+                    pad_len = max_seq_len - current_len
+                    # Create zero padding tensor: [Batch, PadLen, EmbedDim]
+                    padding = torch.zeros((c.shape[0], pad_len, c.shape[2]), dtype=c.dtype, device=c.device)
+                    # Concatenate along sequence dimension
+                    cond_list[i] = torch.cat([c, padding], dim=1)
+
         final_cond = torch.cat(cond_list, dim=0)
         conditioning_extras = {}
 

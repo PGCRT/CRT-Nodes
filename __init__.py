@@ -1,7 +1,7 @@
 """
 @author: CRT
 @title: CRT-Nodes
-@version: 1.8.6
+@version: 1.8.7
 @project: "https://github.com/plugcrypt/CRT-Nodes",
 @description: Set of nodes for ComfyUI
 https://discord.gg/8wYS9MBQqp
@@ -10,7 +10,6 @@ https://discord.gg/8wYS9MBQqp
 import folder_paths
 import os
 
-# Prevent double initialization
 if 'CRT_NODES_INITIALIZED' not in globals():
     globals()['CRT_NODES_INITIALIZED'] = True
     
@@ -91,9 +90,13 @@ if 'CRT_NODES_INITIALIZED' not in globals():
     from .py.crt_file_batch_prompt_scheduler import CRT_FileBatchPromptScheduler
     from .py.FileLoaderCrawlBatch import FileLoaderCrawlBatch
     from .py.AudioDataToFrameCount import AudioOrManualFrameCount
+    from .py.EmptyContext import EmptyContext
     from .py.crt_quantize_and_crop import CRT_QuantizeAndCropImage
     from .py.crt_string_batcher import CRT_StringBatcher
     from .py.crt_string_splitter import CRT_StringSplitter
+    from .py.image_dimensions_from_mp import ImageDimensionsFromMegaPixels
+    from .py.WanVideoLoraSelectMultiImproved import WanVideoLoraSelectMultiImproved
+    from .py.crt_ksampler_batch import CRT_KSamplerBatch
 
 
     print("[CRT-Nodes __init__] Registering custom model paths...")
@@ -193,9 +196,13 @@ NODE_CLASS_MAPPINGS = {
     "CRT_FileBatchPromptScheduler": CRT_FileBatchPromptScheduler,
     "FileLoaderCrawlBatch": FileLoaderCrawlBatch,
     "AudioOrManualFrameCount": AudioOrManualFrameCount,
+    "EmptyContext": EmptyContext,
     "CRT_QuantizeAndCropImage": CRT_QuantizeAndCropImage,
     "CRT_StringBatcher": CRT_StringBatcher,
     "CRT_StringSplitter": CRT_StringSplitter,
+    "ImageDimensionsFromMegaPixels": ImageDimensionsFromMegaPixels,
+    "WanVideoLoraSelectMultiImproved": WanVideoLoraSelectMultiImproved,
+    "CRT_KSamplerBatch": CRT_KSamplerBatch,
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
@@ -275,9 +282,13 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "CRT_FileBatchPromptScheduler": "File Batch Prompt Scheduler (CRT)",
     "FileLoaderCrawlBatch": "File Loader Crawl Batch (CRT)",
     "AudioOrManualFrameCount": "Frame Count (Audio or Manual) (CRT)",
+    "EmptyContext": "Empty Context (CRT)",
     "CRT_QuantizeAndCropImage": "Quantize and Crop Image (CRT)",
     "CRT_StringBatcher": "String Batcher (CRT)",
     "CRT_StringSplitter": "String Splitter (CRT)",
+    "ImageDimensionsFromMegaPixels": "Image Dimensions From Megapixels (CRT)",
+    "WanVideoLoraSelectMultiImproved": "Wan Video Multi-LoRA Select (CRT)",
+    "CRT_KSamplerBatch": "KSampler Batch (CRT)",
 }
 
 WEB_DIRECTORY = "./js"
