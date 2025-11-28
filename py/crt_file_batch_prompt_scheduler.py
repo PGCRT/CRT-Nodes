@@ -22,11 +22,12 @@ class CRT_FileBatchPromptScheduler:
                 "file_extension": ("STRING", {"default": ".txt", "tooltip": "The file extension to look for (e.g., .txt)"}),
                 "max_words": ("INT", {"default": 0, "min": 0, "tooltip": "Maximum number of words per prompt (0 for no limit)"}),
                 "crawl_subfolders": ("BOOLEAN", {"default": False, "tooltip": "Whether to include files in subfolders"}),
+                "print_index": ("BOOLEAN", {"default": True, "tooltip": "If True, prefixes lines with 'Prompt X : ' in the string output"}),
             }
         }
 
-    RETURN_TYPES = ("CONDITIONING", "INT")
-    RETURN_NAMES = ("conditioning", "batch_count")
+    RETURN_TYPES = ("CONDITIONING", "INT", "STRING")
+    RETURN_NAMES = ("conditioning", "batch_count", "prompts_text")
     FUNCTION = "schedule_from_files"
     CATEGORY = "CRT/Conditioning"
 
@@ -34,7 +35,7 @@ class CRT_FileBatchPromptScheduler:
         if max_words <= 0: return text
         return ' '.join(text.split()[:max_words])
 
-    def schedule_from_files(self, clip, folder_path, batch_count, seed, file_extension, max_words, crawl_subfolders):
+    def schedule_from_files(self, clip, folder_path, batch_count, seed, file_extension, max_words, crawl_subfolders, print_index):
         prompts = [""] # Default return value
         
         if not folder_path or not Path(folder_path).is_dir():
@@ -82,6 +83,17 @@ class CRT_FileBatchPromptScheduler:
             except Exception as e:
                 print(f"❌ An unexpected error occurred during file loading: {e}. Using a single empty prompt.")
         
+        # --- Generate Output String ---
+        text_output_lines = []
+        for i, prompt_text in enumerate(prompts):
+            if print_index:
+                text_output_lines.append(f"Prompt {i + 1} : {prompt_text}")
+            else:
+                text_output_lines.append(prompt_text)
+        
+        # Join with double newline to create an empty row between prompts
+        final_prompts_text = "\n\n".join(text_output_lines)
+
         # --- Conditioning Logic ---
         final_batch_count = len(prompts)
         print(f"✅ Encoding {final_batch_count} prompts...")
@@ -124,4 +136,4 @@ class CRT_FileBatchPromptScheduler:
             except Exception as e:
                 print(f"[Warning] Could not concatenate pooled_outputs: {e}")
 
-        return ([[final_cond, conditioning_extras]], final_batch_count)
+        return ([[final_cond, conditioning_extras]], final_batch_count, final_prompts_text)
