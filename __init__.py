@@ -1,7 +1,7 @@
 """
 @author: CRT
 @title: CRT-Nodes
-@version: 1.8.9
+@version: 1.9.0
 @project: "https://github.com/plugcrypt/CRT-Nodes",
 @description: Set of nodes for ComfyUI
 https://discord.gg/8wYS9MBQqp
@@ -97,6 +97,7 @@ if 'CRT_NODES_INITIALIZED' not in globals():
     from .py.image_dimensions_from_mp import ImageDimensionsFromMegaPixels
     from .py.WanVideoLoraSelectMultiImproved import WanVideoLoraSelectMultiImproved
     from .py.crt_ksampler_batch import CRT_KSamplerBatch
+    from .py.LoraLoaderZImage import LoraLoaderZImage
 
 
     print("[CRT-Nodes __init__] Registering custom model paths...")
@@ -203,6 +204,7 @@ NODE_CLASS_MAPPINGS = {
     "ImageDimensionsFromMegaPixels": ImageDimensionsFromMegaPixels,
     "WanVideoLoraSelectMultiImproved": WanVideoLoraSelectMultiImproved,
     "CRT_KSamplerBatch": CRT_KSamplerBatch,
+    "LoraLoaderZImage": LoraLoaderZImage,
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
@@ -289,6 +291,7 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "ImageDimensionsFromMegaPixels": "Image Dimensions From Megapixels (CRT)",
     "WanVideoLoraSelectMultiImproved": "Wan Video Multi-LoRA Select (CRT)",
     "CRT_KSamplerBatch": "KSampler Batch (CRT)",
+    "LoraLoaderZImage": "LoRA Loader (Z-Image) (CRT)",
 }
 
 WEB_DIRECTORY = "./js"
