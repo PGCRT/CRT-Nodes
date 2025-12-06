@@ -23,7 +23,7 @@ const SimpleToggleExtension = {
 
                 // Initialize properties on the node itself. This is how settings are saved.
                 this.properties = this.properties || {};
-                this.properties.title = this.properties.title || "Toggle";
+                this.properties.title = this.properties.title || "";
                 this.properties.color_on = this.properties.color_on || "#00ff88";
                 this.properties.color_off = this.properties.color_off || "#ff4444";
                 this.properties.style = this.properties.style || "switch"; // switch, button, checkbox
@@ -46,12 +46,12 @@ const SimpleToggleExtension = {
                         width: 200px; 
                         height: 120px; 
                         position: relative; 
-                        top: -85px;
-						left: -5px;
+                        top: -65px;
+						left: -10px;
                         background: transparent;
-                        min-width: 200px;
+                        min-width: 220px;
                         min-height: 120px;
-                        max-width: 200px;
+                        max-width: 220px;
                         max-height: 120px;
                         font-family: 'Orbitron', monospace;
                         user-select: none;
@@ -70,18 +70,19 @@ const SimpleToggleExtension = {
                         pointer-events: none;
                     }
                     
+                    /* UPDATED SETTINGS BUTTON STYLE TO MATCH KNOB */
                     .simple-toggle-settings-btn { 
                         position: absolute;
                         top: 45px; 
                         left: 5px;
                         background: rgba(255, 255, 255, 0.1); 
-                        color: #888; 
-                        border: 1px solid #888; 
-                        border-radius: 6px; 
-                        width: 24px; 
-                        height: 24px; 
+                        color: var(--toggle-color, #888); 
+                        border: 1px solid var(--toggle-color, #888); 
+                        border-radius: 8px; 
+                        width: 28px; 
+                        height: 28px; 
                         cursor: pointer; 
-                        font-size: 12px; 
+                        font-size: 16px; 
                         transition: all 0.3s ease;
                         display: flex;
                         align-items: center;
@@ -90,9 +91,10 @@ const SimpleToggleExtension = {
                     }
                     
                     .simple-toggle-settings-btn:hover { 
-                        background: #888; 
+                        background: var(--toggle-color, #888); 
                         color: white; 
                         transform: scale(1.1);
+                        box-shadow: 0 0 15px var(--toggle-color, #888);
                     }
                     
                     .simple-toggle-title { 
@@ -378,12 +380,12 @@ const SimpleToggleExtension = {
                 // Add the custom UI as a DOMWidget
                 const domWidget = this.addDOMWidget("simple_toggle_ui", "div", wrapper, {
                     serialize: false,
-                    computeSize: () => [120, 50]
+                    computeSize: () => [220, 10]
                 });
                 domWidget.wrapper = wrapper;
 
                 // Force fixed size
-                this.size = [120, 50];
+                this.size = [220, 10];
                 this.resizable = false;
 
                 // --- Modal for Settings ---

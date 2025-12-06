@@ -1,7 +1,7 @@
 """
 @author: CRT
 @title: CRT-Nodes
-@version: 1.9.0
+@version: 1.9.1
 @project: "https://github.com/plugcrypt/CRT-Nodes",
 @description: Set of nodes for ComfyUI
 https://discord.gg/8wYS9MBQqp
@@ -97,7 +97,6 @@ if 'CRT_NODES_INITIALIZED' not in globals():
     from .py.image_dimensions_from_mp import ImageDimensionsFromMegaPixels
     from .py.WanVideoLoraSelectMultiImproved import WanVideoLoraSelectMultiImproved
     from .py.crt_ksampler_batch import CRT_KSamplerBatch
-    from .py.LoraLoaderZImage import LoraLoaderZImage
 
 
     print("[CRT-Nodes __init__] Registering custom model paths...")

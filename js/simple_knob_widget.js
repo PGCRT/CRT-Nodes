@@ -25,7 +25,7 @@ const SimpleKnobExtension = {
 
                 
 				this.properties = this.properties || {};
-				this.properties.title = this.properties.title || "Knob";
+				this.properties.title = this.properties.title || "";
 				this.properties.color = this.properties.color || "#7700ff";
 				this.properties.min = this.properties.min ?? valueWidget.options.min ?? 0.0;
 				this.properties.max = this.properties.max ?? valueWidget.options.max ?? 1.0;
@@ -47,8 +47,8 @@ const SimpleKnobExtension = {
                         width: 240px; 
                         height: 200px; 
                         position: absolute;
-                        top: -125px;
-						left: -23px;
+                        top: -105px;
+						left: -17px;
                         background: transparent;
                         min-width: 240px;
                         min-height: 200px;
@@ -313,12 +313,12 @@ const SimpleKnobExtension = {
                 
                 const domWidget = this.addDOMWidget("simple_knob_ui", "div", wrapper, {
                     serialize: false,
-                    computeSize: () => [200, 0] 
+                    computeSize: () => [220, 60] 
                 });
                 domWidget.wrapper = wrapper; 
 
                 
-                this.size = [200, 0];
+                this.size = [220, 60];
                 this.resizable = false;
 
                 
