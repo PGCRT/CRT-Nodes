@@ -1,7 +1,7 @@
 """
 @author: CRT
 @title: CRT-Nodes
-@version: 1.9.2
+@version: 1.9.3
 @project: "https://github.com/plugcrypt/CRT-Nodes",
 @description: Set of nodes for ComfyUI
 https://discord.gg/8wYS9MBQqp
@@ -203,7 +203,6 @@ NODE_CLASS_MAPPINGS = {
     "ImageDimensionsFromMegaPixels": ImageDimensionsFromMegaPixels,
     "WanVideoLoraSelectMultiImproved": WanVideoLoraSelectMultiImproved,
     "CRT_KSamplerBatch": CRT_KSamplerBatch,
-    "LoraLoaderZImage": LoraLoaderZImage,
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
@@ -290,7 +289,6 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "ImageDimensionsFromMegaPixels": "Image Dimensions From Megapixels (CRT)",
     "WanVideoLoraSelectMultiImproved": "Wan Video Multi-LoRA Select (CRT)",
     "CRT_KSamplerBatch": "KSampler Batch (CRT)",
-    "LoraLoaderZImage": "LoRA Loader (Z-Image) (CRT)",
 }
 
 WEB_DIRECTORY = "./js"
