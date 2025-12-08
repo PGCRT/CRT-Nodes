@@ -226,8 +226,8 @@ class ColorMatch:
         return (torch.stack(out, dim=0).to(torch.float32).clamp_(0, 1),)
 
 class GrowMaskWithBlur:
-    def expand_mask(self, mask, expand, tapered_corners, blur_radius):
-        colored_print(f"🎭 Processing mask (expand: {expand}, blur: {blur_radius})...", Colors.CYAN)
+    def expand_mask(self, mask, expand, tapered_corners, blur_radius, taper_radius=0):
+        colored_print(f"🎭 Processing mask (expand: {expand}, blur: {blur_radius}, taper: {taper_radius})...", Colors.CYAN)
         
         c, out = (0 if tapered_corners else 1), []
         kernel = np.array([[c, 1, c], [1, 1, 1], [c, 1, c]])
@@ -248,7 +248,26 @@ class GrowMaskWithBlur:
             out.append(torch.from_numpy(output))
         
         final_mask = torch.stack(out, dim=0)
-        
+
+        # Apply Border Taper
+        if taper_radius > 0:
+            h, w = final_mask.shape[-2], final_mask.shape[-1]
+            t = min(int(taper_radius), h // 2, w // 2)
+            
+            if t > 0:
+                colored_print(f"   🖼️ Applying border taper fade (radius: {t}px)", Colors.BLUE)
+                
+                v_fade = torch.ones((h, 1), dtype=torch.float32)
+                v_fade[:t, 0] = torch.linspace(0, 1, t)
+                v_fade[-t:, 0] = torch.linspace(1, 0, t)
+                
+                h_fade = torch.ones((1, w), dtype=torch.float32)
+                h_fade[0, :t] = torch.linspace(0, 1, t)
+                h_fade[0, -t:] = torch.linspace(1, 0, t)
+                
+                border_mask = v_fade * h_fade
+                final_mask = final_mask * border_mask.to(final_mask.device)
+
         if blur_radius > 0:
             colored_print(f"   🌫️ Applying Gaussian blur (radius: {blur_radius})", Colors.BLUE)
             pil_img = to_pil_image(final_mask)
@@ -366,6 +385,8 @@ class FaceEnhancementPipelineWithInjection:
                 "padding": ("INT", {"default": 32, "min": 0, "max": 256, "step": 8}),
                 "mask_expand": ("INT", {"default": 10, "min": -64, "max": 64, "step": 1}),
                 "mask_blur": ("FLOAT", {"default": 12.0, "min": 0.0, "max": 64.0, "step": 0.5}),
+                "mask_taper_borders": ("INT", {"default": 0, "min": 0, "max": 128, "step": 1, "tooltip": "Fades the mask edges to black to prevent hard clipping lines"}),
+
                 "steps": ("INT", {"default": 24, "min": 1, "max": 100}),
                 "sampler_name": ("STRING", {"default": "dpmpp_2m_sde", "forceInput": True}),
                 "scheduler": ("STRING", {"default": "karras", "forceInput": True}),
@@ -392,7 +413,7 @@ class FaceEnhancementPipelineWithInjection:
 
     def execute(self, image, model, positive, vae, control_net, face_bbox_model, face_segm_model, 
                 bbox_threshold, segm_threshold, initial_upscale_resolution, upscale_resolution, 
-                resize_back_to_original, padding, mask_expand, mask_blur, 
+                resize_back_to_original, padding, mask_expand, mask_blur, mask_taper_borders,
                 steps, sampler_name, scheduler, seed, seed_shift, controlnet_strength, control_end, enhancement_mix,
                 enable_noise_injection, injection_point, injection_seed_offset, injection_strength, 
                 normalize_injected_noise, color_match_strength):
@@ -580,9 +601,19 @@ class FaceEnhancementPipelineWithInjection:
         else:
             colored_print("🚫 Color matching disabled (strength = 0)", Colors.YELLOW)
             color_matched_face = enhanced_face_image
+        
         colored_print("🎭 Creating final composite mask...", Colors.HEADER)
         precise_face_mask = segm_detector.detect_combined(color_matched_face, segm_threshold, 0)
-        feathered_mask, _ = GrowMaskWithBlur().expand_mask(precise_face_mask.unsqueeze(0), expand=mask_expand, tapered_corners=True, blur_radius=mask_blur)
+        
+        # Modified to include mask taper
+        feathered_mask, _ = GrowMaskWithBlur().expand_mask(
+            precise_face_mask.unsqueeze(0), 
+            expand=mask_expand, 
+            tapered_corners=True, 
+            blur_radius=mask_blur, 
+            taper_radius=mask_taper_borders
+        )
+        
         colored_print("🖼️ Compositing final image...", Colors.HEADER)
         
         if resized_image.dim() == 4:
@@ -633,6 +664,7 @@ class FaceEnhancementPipelineWithInjection:
         colored_print(f"     Enhancement Mix: {enhancement_mix*100:.1f}%", Colors.GREEN)
         colored_print(f"     💉 Noise Injection: {'Applied' if enable_noise_injection == 'enable' else 'Skipped'}", Colors.GREEN)
         colored_print(f"     Color Match Strength: {color_match_strength:.2f}", Colors.GREEN)
+        colored_print(f"     Mask Border Taper: {mask_taper_borders}px", Colors.GREEN)
         colored_print(f"     Seed Used: {actual_seed}", Colors.GREEN)
         
         colored_print(f"   📊 Output Details:", Colors.BLUE)

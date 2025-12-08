@@ -1,7 +1,7 @@
 """
 @author: CRT
 @title: CRT-Nodes
-@version: 1.9.3
+@version: 1.9.4
 @project: "https://github.com/plugcrypt/CRT-Nodes",
 @description: Set of nodes for ComfyUI
 https://discord.gg/8wYS9MBQqp
@@ -32,13 +32,13 @@ if 'CRT_NODES_INITIALIZED' not in globals():
     from .py.MaskEmptyFloatNode import MaskEmptyFloatNode
     from .py.MaskPassOrPlaceholder import MaskPassOrPlaceholder
     from .py.latent_injection_sampler import LatentNoiseInjectionSampler
-    from .py.face_enhancement_pipeline import FaceEnhancementPipeline
     from .py.face_enhancement_pipeline_with_injection import FaceEnhancementPipelineWithInjection
     from .py.flux_controlnet_sampler import FluxControlnetSampler
     from .py.flux_controlnet_sampler_with_injection import FluxControlnetSamplerWithInjection
     from .py.pony_upscale_sampler_with_injection import PonyUpscaleSamplerWithInjection
     from .py.pony_face_enhancement_pipeline_with_injection import PonyFaceEnhancementPipelineWithInjection
     from .py.SamplerSchedulerSelector import SamplerSchedulerSelector
+    from .py.SamplerSchedulerCrawler import SamplerSchedulerCrawler
     from .py.resolution import Resolution
     from .py.simple_knob import SimpleKnobNode
     from .py.simple_toggle import SimpleToggleNode
@@ -138,13 +138,13 @@ NODE_CLASS_MAPPINGS = {
     "MaskEmptyFloatNode": MaskEmptyFloatNode,
     "MaskPassOrPlaceholder": MaskPassOrPlaceholder,
     "LatentNoiseInjectionSampler": LatentNoiseInjectionSampler,
-    "FaceEnhancementPipeline": FaceEnhancementPipeline,
     "FaceEnhancementPipelineWithInjection": FaceEnhancementPipelineWithInjection,
     "FluxControlnetSampler": FluxControlnetSampler,
     "FluxControlnetSamplerWithInjection": FluxControlnetSamplerWithInjection,
     "PonyUpscaleSamplerWithInjection": PonyUpscaleSamplerWithInjection,
     "PonyFaceEnhancementPipelineWithInjection": PonyFaceEnhancementPipelineWithInjection,
     "SamplerSchedulerSelector": SamplerSchedulerSelector,
+    "SamplerSchedulerCrawler": SamplerSchedulerCrawler,
     "Resolution": Resolution,
     "SimpleKnobNode": SimpleKnobNode,
     "SimpleToggleNode": SimpleToggleNode,
@@ -224,13 +224,13 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "MaskEmptyFloatNode": "Mask Empty Float (CRT)",
     "MaskPassOrPlaceholder": "Mask Pass or Placeholder (CRT)",
     "LatentNoiseInjectionSampler": "Latent Noise Injection Sampler (CRT)",
-    "FaceEnhancementPipeline": "Face Enhancement Pipeline (CRT)",
     "FaceEnhancementPipelineWithInjection": "Face Enhancement Pipeline with Injection (CRT)",
     "FluxControlnetSampler": "Flux Controlnet Sampler (CRT)",
     "FluxControlnetSamplerWithInjection": "Flux Controlnet Sampler with Injection (CRT)",
     "PonyUpscaleSamplerWithInjection": "Pony Upscale Sampler with Injection & Tiling (CRT)",
     "PonyFaceEnhancementPipelineWithInjection": "Pony Face Enhancement Pipeline with Injection (CRT)",
     "SamplerSchedulerSelector": "Sampler & Scheduler Selector (CRT)",
+    "SamplerSchedulerCrawler": "Sampler & Scheduler Crawler (CRT)",
     "Resolution": "Resolution (CRT)",
     "SimpleKnobNode": "K",
     "SimpleToggleNode": "T",
