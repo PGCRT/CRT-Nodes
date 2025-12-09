@@ -17,6 +17,7 @@ class CRT_DynamicPromptScheduler:
     def schedule(self, clip, **kwargs):
         prompt_image_pairs = []
         
+        # Sort keys to ensure deterministic order based on prompt ID
         prompt_keys = sorted([key for key in kwargs.keys() if key.startswith('prompt_')])
         
         for prompt_key in prompt_keys:
@@ -37,19 +38,22 @@ class CRT_DynamicPromptScheduler:
         pooled_list = []
         image_list = []
         
-        has_pooled_output = True
-
         for idx, (prompt, image) in enumerate(prompt_image_pairs):
             tokens = clip.tokenize(prompt)
             cond, pooled = clip.encode_from_tokens(tokens, return_pooled=True)
             
             cond_list.append(cond)
             
+            # --- FIX: Ensure pooled_output is always present ---
             if pooled is None:
-                has_pooled_output = False
+                # Create zero tensor if CLIP didn't return one
+                # cond shape: [Batch, Seq, Dim]. We want [Batch, Dim]
+                dim = cond.shape[-1]
+                pooled = torch.zeros(cond.shape[0], dim, device=cond.device, dtype=cond.dtype)
             
             pooled_list.append(pooled)
             
+            # --- Image handling ---
             if image is not None:
                 if image.shape[0] > 0:
                     image_list.append(image[0:1])
@@ -57,12 +61,12 @@ class CRT_DynamicPromptScheduler:
                     blank = torch.zeros((1, 64, 64, 3), dtype=image.dtype, device=image.device)
                     image_list.append(blank)
             else:
+                # Default blank image if missing
                 blank = torch.zeros((1, 64, 64, 3))
                 image_list.append(blank)
 
-        # --- FIX START: Pad conditioning tensors to match the maximum sequence length ---
+        # --- Padding logic to match longest sequence ---
         if cond_list:
-            # cond shape is [Batch, Seq_Len, Embed_Dim]
             max_seq_len = max(c.shape[1] for c in cond_list)
             
             padded_cond_list = []
@@ -70,25 +74,19 @@ class CRT_DynamicPromptScheduler:
                 current_len = c.shape[1]
                 if current_len < max_seq_len:
                     pad_amount = max_seq_len - current_len
-                    # F.pad arguments are reversed: (last_dim_left, last_dim_right, 2nd_last_left, 2nd_last_right)
-                    # We pad the sequence length dimension (2nd to last)
+                    # Pad sequence dim (2nd to last): (dim_last_left, dim_last_right, dim_seq_left, dim_seq_right)
                     c = torch.nn.functional.pad(c, (0, 0, 0, pad_amount))
                 padded_cond_list.append(c)
             
             final_cond = torch.cat(padded_cond_list, dim=0)
         else:
-            # Fallback if list is empty (though prompt_image_pairs checks prevent this usually)
             final_cond = torch.tensor([])
-        # --- FIX END ---
 
-        conditioning_extras = {}
-
-        if has_pooled_output:
-            try:
-                final_pooled = torch.cat(pooled_list, dim=0)
-                conditioning_extras["pooled_output"] = final_pooled
-            except Exception as e:
-                print(f"[CRT Dynamic Prompt Scheduler] Warning: Could not concatenate pooled_outputs, skipping. Error: {e}")
+        # --- Construct Final Dictionary ---
+        final_pooled = torch.cat(pooled_list, dim=0)
+        
+        # Always inject pooled_output
+        conditioning_extras = {"pooled_output": final_pooled}
 
         conditioning_batch = [[final_cond, conditioning_extras]]
 
