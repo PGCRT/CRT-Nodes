@@ -5,6 +5,7 @@ import comfy.samplers
 import comfy.utils
 import comfy.model_sampling
 import comfy.sd
+import comfy.latent_formats
 import folder_paths
 import comfy.model_management
 import latent_preview
@@ -221,7 +222,7 @@ class WAN2_2LoraCompareSampler:
             },
             "optional": { 
                 "vae": ("VAE",),
-                "start_image": ("IMAGE",),
+                "i2v_image": ("IMAGE",),
                 "clip": ("CLIP",),
             }
         }
@@ -232,34 +233,33 @@ class WAN2_2LoraCompareSampler:
     FUNCTION = "sample"
     CATEGORY = "CRT/Sampling"
 
-    def sample(self, model_high_noise, model_low_noise, positive, negative, seed, width, height, frame_count, lora_batch_config, steps, boundary, sampler_name, scheduler, sigma_shift, enable_vae_decode, create_comparison_grid, add_labels, custom_labels, label_font_size, vae=None, start_image=None, clip=None):
+    def sample(self, model_high_noise, model_low_noise, positive, negative, seed, width, height, frame_count, lora_batch_config, steps, boundary, sampler_name, scheduler, sigma_shift, enable_vae_decode, create_comparison_grid, add_labels, custom_labels, label_font_size, vae=None, i2v_image=None, clip=None):
         
         last_mh_clone = model_high_noise
         last_ml_clone = model_low_noise
         
-        if start_image is not None:
+        # 1. Handle I2V Image Overrides FIRST (Global Dimension Update)
+        if i2v_image is not None:
             if vae is None:
-                Log.fail("A VAE is required for Image-to-Video mode but was not provided.")
+                Log.fail("A VAE is required for I2V mode but was not provided.")
                 return ({"samples": torch.zeros([0, 16, 1, 1, 1])}, {"samples": torch.zeros([0, 16, 1, 1, 1])}, torch.zeros([0, 1, 1, 3]), None, "VAE required for I2V mode.", model_high_noise, model_low_noise)
-
-            Log.info("Start image provided. Switching to Image-to-Video mode.")
-            _, img_height, img_width, _ = start_image.shape
+            Log.info("I2V Image provided. Image mode enabled.")
+            _, img_height, img_width, _ = i2v_image.shape
             width, height = img_width, img_height
-            Log.info(f"Overriding dimensions to {width}x{height} based on start image.")
-
-            s_image = comfy.utils.common_upscale(start_image[:frame_count].movedim(-1, 1), width, height, "bilinear", "center").movedim(1, -1)
-            image_padded = torch.ones((frame_count, height, width, s_image.shape[-1]), device=s_image.device, dtype=s_image.dtype) * 0.5
-            image_padded[:s_image.shape[0]] = s_image
+            Log.info(f"Overriding dimensions to {width}x{height} based on image.")
+        
+        # Determine latent channels and scale factor using updated dimensions
+        latent_channels = 16
+        if vae is not None:
+            latent_channels = vae.latent_channels
+        
+        scale_factor = 8
+        if latent_channels == 48:
+            scale_factor = 16
             
-            concat_latent_image = vae.encode(image_padded[:, :, :, :3])
-            
-            latent_length = ((frame_count - 1) // 4) + 1
-            mask = torch.ones((1, 1, latent_length, concat_latent_image.shape[-2], concat_latent_image.shape[-1]), device=s_image.device, dtype=s_image.dtype)
-            mask[:, :, :((s_image.shape[0] - 1) // 4) + 1] = 0.0
-
-            cond_values = {"concat_latent_image": concat_latent_image, "concat_mask": mask}
-            positive = conditioning_set_values(positive, cond_values)
-            negative = conditioning_set_values(negative, cond_values)
+        latent_h = height // scale_factor
+        latent_w = width // scale_factor
+        latent_t = ((frame_count - 1) // 4) + 1
         
         all_lora_groups = parse_lora_configs(lora_batch_config)
         lora_groups = [g for g in all_lora_groups if g.get("enabled", True)]
@@ -271,8 +271,8 @@ class WAN2_2LoraCompareSampler:
         global_positive_hash = get_conditioning_hash(positive)
         negative_hash = get_conditioning_hash(negative)
         custom_label_list = [label for i, label in enumerate(parse_label_configs(custom_labels)) if i < len(all_lora_groups) and all_lora_groups[i].get("enabled", True)]
-        base_latent = torch.zeros([1, 16, ((frame_count - 1) // 4) + 1, height // 8, width // 8], device=comfy.model_management.intermediate_device())
         
+        # Temp model for sigmas calculation
         temp_model = set_shift(model_high_noise.clone(), sigma_shift)
         sampling = temp_model.get_model_object("model_sampling")
         sigmas = comfy.samplers.calculate_sigmas(sampling, scheduler, steps)
@@ -296,9 +296,59 @@ class WAN2_2LoraCompareSampler:
             seed_offset = group.get("seed_offset", 0)
             current_seed = seed + seed_offset
             
-            # Handle Prompt Override
+            # --- Per-Group Latent & Conditioning Setup ---
+            base_latent = torch.zeros([1, latent_channels, latent_t, latent_h, latent_w], device=comfy.model_management.intermediate_device())
+            noise_mask = None
+            
+            # Start with global conditioning
             group_positive = positive
-            group_positive_hash = global_positive_hash
+            group_negative = negative
+
+            if i2v_image is not None:
+                # Upscale image to target resolution
+                s_image_upscaled = comfy.utils.common_upscale(i2v_image[:frame_count].movedim(-1, 1), width, height, "bilinear", "center").movedim(1, -1)
+                
+                # IMPORTANT: Pad the pixels to the full frame count first.
+                pixel_video = torch.ones((frame_count, height, width, 3), device=s_image_upscaled.device, dtype=s_image_upscaled.dtype) * 0.5
+                input_frames = s_image_upscaled.shape[0]
+                
+                # Always start image
+                pixel_video[:input_frames] = s_image_upscaled
+                
+                # Encode the FULL video tensor
+                encoded_full = vae.encode(pixel_video[:, :, :, :3])
+                
+                if encoded_full.ndim == 4:
+                    encoded_full = encoded_full.permute(1, 0, 2, 3).unsqueeze(0)
+                
+                # --- Wan 2.1 Concat Conditioning ---
+                concat_latent_image = encoded_full
+                mask_cond = torch.ones((1, 1, latent_t, latent_h, latent_w), device=base_latent.device, dtype=base_latent.dtype)
+                
+                # Mask out the frames corresponding to the image (Start)
+                frames_in_latent = ((input_frames - 1) // 4) + 1
+                mask_cond[:, :, :frames_in_latent] = 0.0
+
+                cond_values = {"concat_latent_image": concat_latent_image, "concat_mask": mask_cond}
+                group_positive = conditioning_set_values(group_positive, cond_values)
+                group_negative = conditioning_set_values(group_negative, cond_values)
+                
+                # --- Wan 2.2 / Latent Inpainting Logic ---
+                base_latent = encoded_full
+                noise_mask = mask_cond # Re-use the same mask (0=keep, 1=noise)
+
+                latent_format = None
+                if hasattr(model_high_noise, "model") and hasattr(model_high_noise.model, "latent_format"):
+                    latent_format = model_high_noise.model.latent_format
+                elif latent_channels == 48:
+                    latent_format = comfy.latent_formats.Wan22()
+                
+                if latent_format is not None:
+                    processed_latent = latent_format.process_out(base_latent)
+                    base_latent = processed_latent * noise_mask + base_latent * (1.0 - noise_mask)
+
+            # Handle Prompt Override
+            group_positive_hash = get_conditioning_hash(group_positive)
             prompt_override = group.get("prompt_override", "")
             
             if prompt_override.strip():
@@ -306,7 +356,12 @@ class WAN2_2LoraCompareSampler:
                     Log.info(f"Applying prompt override for group {i+1}: '{prompt_override[:30]}...'")
                     tokens = clip.tokenize(prompt_override)
                     cond, pooled = clip.encode_from_tokens(tokens, return_pooled=True)
-                    group_positive = [[cond, {"pooled_output": pooled}]]
+                    override_cond = [[cond, {"pooled_output": pooled}]]
+                    
+                    if i2v_image is not None:
+                        override_cond = conditioning_set_values(override_cond, cond_values)
+                    
+                    group_positive = override_cond
                     group_positive_hash = get_conditioning_hash(group_positive)
                 else:
                     Log.fail(f"Group {i+1} has prompt override but no CLIP model connected! Using global prompt.")
@@ -314,7 +369,6 @@ class WAN2_2LoraCompareSampler:
             Log.info(f"--- High-Noise Group {i+1}/{len(lora_groups)} (CFG: {cfg_high_noise}, Seed: {current_seed}) ---")
             high_lora_stack = [{'name': r['high_name'], 'strength': r['high_strength'], 'enabled': r['enabled']} for r in group['rows'] if r['high_name'] and r['enabled']]
             
-            # Cache Key includes Seed and Prompt Hash
             cache_key = tuple((l['name'], l['strength']) for l in high_lora_stack) + (cfg_high_noise, current_seed, group_positive_hash)
             
             if cache_key in high_noise_cache:
@@ -357,9 +411,15 @@ class WAN2_2LoraCompareSampler:
             mh_clone = set_shift(mh_clone, sigma_shift)
             
             noise = comfy.sample.prepare_noise(base_latent, current_seed)
-            latent_for_handoff = comfy.sample.sample(mh_clone, noise, steps, cfg_high_noise, sampler_name, scheduler, group_positive, negative, base_latent, denoise=1.0, start_step=0, last_step=switching_step, force_full_denoise=True, seed=current_seed)
             
-            computed_data = {'latent': latent_for_handoff.clone(), 'noise': noise.clone(), 'group_positive': group_positive} # Save pos cond just in case
+            latent_for_handoff = comfy.sample.sample(
+                mh_clone, noise, steps, cfg_high_noise, sampler_name, scheduler, 
+                group_positive, group_negative, base_latent, 
+                denoise=1.0, start_step=0, last_step=switching_step, 
+                force_full_denoise=True, seed=current_seed, noise_mask=noise_mask
+            )
+            
+            computed_data = {'latent': latent_for_handoff.clone(), 'noise': noise.clone(), 'group_positive': group_positive, 'group_negative': group_negative}
             high_noise_cache[cache_key] = (computed_data, config_hash)
             high_noise_latents.append((computed_data, config_hash))
             try:
@@ -387,24 +447,39 @@ class WAN2_2LoraCompareSampler:
             seed_offset = group.get("seed_offset", 0)
             current_seed = seed + seed_offset
             
-            # Reconstruct positive for this group if overridden (or just grab from global/cache)
-            # We already computed the prompt in Phase 1 and used it in high_noise_hash, 
-            # so high_noise_hash uniquely identifies the conditioning used.
-            # However, sample() needs the actual tensor.
-            # We stored it in cached_data temporarily in memory, or we can re-generate.
-            # For robustness, let's re-generate or pull from `cached_data` if available.
-            
             if 'group_positive' in cached_data:
                 group_positive = cached_data['group_positive']
+                group_negative = cached_data['group_negative']
             else:
-                # Fallback for old cache files or if memory cleared hard
                 prompt_override = group.get("prompt_override", "")
+                group_positive = positive
+                group_negative = negative
+
+                if i2v_image is not None:
+                     s_image_upscaled = comfy.utils.common_upscale(i2v_image[:frame_count].movedim(-1, 1), width, height, "bilinear", "center").movedim(1, -1)
+                     pixel_video = torch.ones((frame_count, height, width, 3), device=s_image_upscaled.device, dtype=s_image_upscaled.dtype) * 0.5
+                     input_frames = s_image_upscaled.shape[0]
+                     pixel_video[:input_frames] = s_image_upscaled
+                     
+                     encoded_full = vae.encode(pixel_video[:, :, :, :3])
+                     if encoded_full.ndim == 4: encoded_full = encoded_full.permute(1, 0, 2, 3).unsqueeze(0)
+                     
+                     concat_latent_image = encoded_full
+                     frames_in_latent = ((input_frames - 1) // 4) + 1
+                     mask_cond = torch.ones((1, 1, latent_t, latent_h, latent_w), device=s_image_upscaled.device, dtype=s_image_upscaled.dtype)
+                     mask_cond[:, :, :frames_in_latent] = 0.0
+                     
+                     cond_values = {"concat_latent_image": concat_latent_image, "concat_mask": mask_cond}
+                     group_positive = conditioning_set_values(group_positive, cond_values)
+                     group_negative = conditioning_set_values(group_negative, cond_values)
+
                 if prompt_override.strip() and clip:
                     tokens = clip.tokenize(prompt_override)
                     cond, pooled = clip.encode_from_tokens(tokens, return_pooled=True)
-                    group_positive = [[cond, {"pooled_output": pooled}]]
-                else:
-                    group_positive = positive
+                    override_cond = [[cond, {"pooled_output": pooled}]]
+                    if i2v_image is not None:
+                        override_cond = conditioning_set_values(override_cond, cond_values)
+                    group_positive = override_cond
 
             is_bypassed = bypass_low or (cfg_low_noise == 0)
 
@@ -417,8 +492,6 @@ class WAN2_2LoraCompareSampler:
                 low_lora_stack = [{'name': r['low_name'], 'strength': r['low_strength'], 'enabled': r['enabled']} for r in group['rows'] if r['low_name'] and r['enabled']]
                 low_lora_tuple = tuple((l['name'], l['strength']) for l in low_lora_stack)
                 
-                # Cache key must include high_noise_hash (which covers seed/prompt changes from phase 1)
-                # and cfg_low.
                 in_mem_low_cache_key = low_lora_tuple + (cfg_low_noise, high_noise_hash)
                 
                 if in_mem_low_cache_key in low_noise_cache:
@@ -431,7 +504,7 @@ class WAN2_2LoraCompareSampler:
                         'sampler_name': sampler_name, 
                         'scheduler': scheduler, 
                         'sigma_shift': sigma_shift, 
-                        'positive_hash': get_conditioning_hash(group_positive), # Explicit check
+                        'positive_hash': get_conditioning_hash(group_positive),
                         'negative_hash': negative_hash, 
                         'high_noise_hash': high_noise_hash
                     }
@@ -454,7 +527,20 @@ class WAN2_2LoraCompareSampler:
                         last_ml_clone = ml_clone
                         
                         ml_clone = set_shift(ml_clone, sigma_shift)
-                        final_latent = comfy.sample.sample(ml_clone, cached_data['noise'], steps, cfg_low_noise, sampler_name, scheduler, group_positive, negative, cached_data['latent'], denoise=1.0, start_step=switching_step, last_step=steps, force_full_denoise=True, seed=current_seed)
+                        
+                        # Re-calculate noise mask for Low Noise pass
+                        low_noise_mask = None
+                        if i2v_image is not None:
+                             frames_in_latent = ((i2v_image.shape[0] - 1) // 4) + 1
+                             low_noise_mask = torch.ones((1, 1, latent_t, latent_h, latent_w), device=comfy.model_management.intermediate_device(), dtype=torch.float32)
+                             low_noise_mask[:, :, :frames_in_latent] = 0.0
+
+                        final_latent = comfy.sample.sample(
+                            ml_clone, cached_data['noise'], steps, cfg_low_noise, sampler_name, scheduler, 
+                            group_positive, group_negative, cached_data['latent'], 
+                            denoise=1.0, start_step=switching_step, last_step=steps, 
+                            force_full_denoise=True, seed=current_seed, noise_mask=low_noise_mask
+                        )
                         
                         computed_low_data = {'latent': final_latent.clone()}
                         low_noise_cache[in_mem_low_cache_key] = computed_low_data

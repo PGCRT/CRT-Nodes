@@ -92,7 +92,6 @@ class WANCompareUI {
             setTimeout(() => this.forceNodeResize(), 500);
             setTimeout(() => this.forceNodeResize(), 1000);
             
-            // Global click listener to close popups
             document.addEventListener('mousedown', (e) => {
                 if (this.activePromptPopup && 
                     !this.activePromptPopup.contains(e.target) && 
@@ -229,7 +228,6 @@ class WANCompareUI {
 
     applyPreset(config) {
         this.loraGroups = config.loraGroups || [];
-        // Compatibility defaults
         this.loraGroups.forEach(group => {
             if (group.cfg_high === undefined) group.cfg_high = 1.0;
             if (group.cfg_low === undefined) group.cfg_low = 1.0;
@@ -297,7 +295,7 @@ class WANCompareUI {
         style.innerHTML = `
             @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
             @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
-            :root { --wan-bg-main: #111113; --wan-bg-section: #1E1E22; --wan-bg-element: #2A2A2E; --wan-accent-purple: #7D26CD; --wan-accent-purple-light: #A158E2; --wan-accent-green: #2ECC71; --wan-accent-red: #E74C3C; --wan-accent-orange: #E67E22; --wan-text-light: #F0F0F0; --wan-text-med: #A0A0A0; --wan-text-dark: #666666; --wan-border-color: #333333; --wan-radius-lg: 16px; --wan-radius-md: 10px; --wan-radius-sm: 6px; }
+            :root { --wan-bg-main: #111113; --wan-bg-section: #1E1E22; --wan-bg-element: #2A2A2E; --wan-accent-purple: #7D26CD; --wan-accent-purple-light: #A158E2; --wan-accent-green: #2ECC71; --wan-accent-red: #E74C3C; --wan-accent-orange: #E67E22; --wan-accent-blue: #3498db; --wan-text-light: #F0F0F0; --wan-text-med: #A0A0A0; --wan-text-dark: #666666; --wan-border-color: #333333; --wan-radius-lg: 16px; --wan-radius-md: 10px; --wan-radius-sm: 6px; }
             .wan-compare-container { background: var(--wan-bg-main); border: 2px solid var(--wan-accent-purple); border-radius: var(--wan-radius-lg); padding: 20px; margin-top: -10px; width: 1900px !important; font-family: 'Inter', sans-serif; color: var(--wan-text-light); box-shadow: 0 0 35px rgba(125, 38, 205, 0.6); position: relative; top: 0px; left: -10px; z-index: 1; user-select: none; box-sizing: border-box; }
             .wan-compare-header { text-align: center; margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px solid var(--wan-border-color); }
             .wan-compare-title { font-family: 'Orbitron', monospace; font-size: 22px; font-weight: 700; color: var(--wan-accent-purple); text-shadow: 0 0 10px var(--wan-accent-purple-light); margin-bottom: 4px; }
@@ -314,7 +312,6 @@ class WANCompareUI {
             .wan-group-setting-input { width: 60px; height: 28px; background: var(--wan-bg-element); border: 1px solid var(--wan-border-color); color: var(--wan-text-light); border-radius: var(--wan-radius-sm); padding-left: 5px; }
             .wan-group-bypass-btn { font-size: 11px; padding: 4px 10px; height: 28px; }
             
-            /* Prompt Button & Popup */
             .wan-prompt-btn { background: var(--wan-bg-element); border: 1px solid var(--wan-border-color); color: var(--wan-text-med); width: 30px; height: 30px; border-radius: 5px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s; font-size: 16px; }
             .wan-prompt-btn:hover { background: var(--wan-accent-purple); color: white; border-color: var(--wan-accent-purple); }
             .wan-prompt-btn.active { background: rgba(230, 126, 34, 0.2); border-color: var(--wan-accent-orange); color: var(--wan-accent-orange); box-shadow: 0 0 8px rgba(230, 126, 34, 0.4); }
@@ -638,7 +635,6 @@ class WANCompareUI {
             const rowStr = parts[0];
             const enabledStr = parts[1];
             
-            // Backward compatibility
             const cfgHighStr = parts.length > 2 ? parts[2] : "1.0";
             const cfgLowStr = parts.length > 3 ? parts[3] : "1.0";
             const bypassStr = parts.length > 4 ? parts[4] : "false";
@@ -973,7 +969,6 @@ class WANCompareUI {
         textarea.placeholder = "Enter custom positive prompt for this group...";
         textarea.value = group.prompt_override || "";
         
-        // Auto-save on input
         textarea.addEventListener('input', () => {
             group.prompt_override = textarea.value;
             if (textarea.value.trim().length > 0) {
@@ -991,7 +986,6 @@ class WANCompareUI {
         popup.style.left = `${rect.left}px`;
         popup.style.top = `${rect.bottom + 5 + window.scrollY}px`;
         
-        // Adjust if off-screen
         const popupRect = popup.getBoundingClientRect();
         if (popupRect.right > window.innerWidth) {
             popup.style.left = `${window.innerWidth - popupRect.width - 20}px`;
@@ -1079,7 +1073,7 @@ class WANCompareUI {
         }
         
         const serializeRow = r => `${r.high_lora || 'none'},${r.high_strength},${r.low_lora || 'none'},${r.low_strength},${r.enabled ? 'true' : 'false'}`;
-        // Append cfg_high, cfg_low, bypass, seed_offset, encoded_prompt
+        // Append cfg_high, cfg_low, bypass, seed_offset, encoded_prompt (IMG_POS removed)
         const configString = this.loraGroups.map(g => 
             `${g.rows.map(serializeRow).join('|')}§${g.enabled}§${g.cfg_high}§${g.cfg_low}§${g.bypass_low}§${g.seed_offset}§${encodeURIComponent(g.prompt_override || "")}`
         ).join('\n');
