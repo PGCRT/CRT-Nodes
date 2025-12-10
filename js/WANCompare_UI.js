@@ -69,6 +69,7 @@ class WANCompareUI {
         this.loraGroups = [];
         this.loraList = [];
         this.activeDropdown = null;
+        this.activePromptPopup = null;
         this.presets = new Map();
         this.draggedItem = null;
         this.initialize();
@@ -90,6 +91,15 @@ class WANCompareUI {
             setTimeout(() => this.forceNodeResize(), 100);
             setTimeout(() => this.forceNodeResize(), 500);
             setTimeout(() => this.forceNodeResize(), 1000);
+            
+            // Global click listener to close popups
+            document.addEventListener('mousedown', (e) => {
+                if (this.activePromptPopup && 
+                    !this.activePromptPopup.contains(e.target) && 
+                    !e.target.classList.contains('wan-prompt-btn')) {
+                    this.closePromptPopup();
+                }
+            });
         } catch (error) {
             console.error('[WANCompareUI] Failed to initialize:', error);
         }
@@ -161,7 +171,6 @@ class WANCompareUI {
                 this.loraList = ['No LoRAs found'];
                 console.warn('[WANCompareUI] No LoRAs detected, using placeholder.');
             }
-            console.log('[WANCompareUI] LoRA list fetched:', this.loraList);
         } catch (error) {
             console.error('[WANCompareUI] Fatal error fetching LoRA list:', error);
             this.loraList = ['Error fetching LoRAs'];
@@ -172,17 +181,14 @@ class WANCompareUI {
         const savedPresets = localStorage.getItem('wanComparePresets');
         if (savedPresets) {
             this.presets = new Map(JSON.parse(savedPresets));
-            console.log('[WANCompareUI] Presets loaded from localStorage:', Array.from(this.presets.keys()));
         } else {
             this.presets = new Map();
-            console.log('[WANCompareUI] No presets found in localStorage');
         }
     }
 
     savePresets() {
         const presetData = JSON.stringify(Array.from(this.presets.entries()));
         localStorage.setItem('wanComparePresets', presetData);
-        console.log('[WANCompareUI] Presets saved to localStorage:', Array.from(this.presets.keys()));
     }
 
     savePreset(name, config) {
@@ -190,7 +196,6 @@ class WANCompareUI {
             console.warn('[WANCompareUI] Preset name is required.');
             return;
         }
-        console.log('[WANCompareUI] Saving preset:', name, config);
         this.presets.set(name, JSON.parse(JSON.stringify(config)));
         this.savePresets();
         this.renderPresets();
@@ -201,11 +206,9 @@ class WANCompareUI {
             console.warn('[WANCompareUI] Preset name is required.');
             return;
         }
-        console.log('[WANCompareUI] Loading preset:', name);
         const config = this.presets.get(name);
         if (config) {
             this.applyPreset(JSON.parse(JSON.stringify(config)));
-            console.log('[WANCompareUI] Preset loaded:', config);
         } else {
             console.warn('[WANCompareUI] Preset not found:', name);
         }
@@ -216,11 +219,9 @@ class WANCompareUI {
             console.warn('[WANCompareUI] Preset name is required.');
             return;
         }
-        console.log('[WANCompareUI] Deleting preset:', name);
         if (this.presets.delete(name)) {
             this.savePresets();
             this.renderPresets();
-            console.log('[WANCompareUI] Preset deleted successfully');
         } else {
             console.warn('[WANCompareUI] Preset not found:', name);
         }
@@ -228,8 +229,19 @@ class WANCompareUI {
 
     applyPreset(config) {
         this.loraGroups = config.loraGroups || [];
+        // Compatibility defaults
+        this.loraGroups.forEach(group => {
+            if (group.cfg_high === undefined) group.cfg_high = 1.0;
+            if (group.cfg_low === undefined) group.cfg_low = 1.0;
+            if (group.bypass_low === undefined) group.bypass_low = false;
+            if (group.seed_offset === undefined) group.seed_offset = 0;
+            if (group.prompt_override === undefined) group.prompt_override = "";
+        });
+
         Object.entries(config.widgets || {}).forEach(([name, value]) => {
-            this.setWidgetValue(name, value);
+            if (name !== 'cfg_high_noise' && name !== 'cfg_low_noise') {
+                this.setWidgetValue(name, value);
+            }
         });
         this.render();
     }
@@ -259,9 +271,6 @@ class WANCompareUI {
             option.textContent = name;
             this.presetSelect.appendChild(option);
         }
-        if (this.presets.size === 0) {
-            console.warn('[WANCompareUI] No presets available to render');
-        }
     }
 
     forceNodeResize() {
@@ -272,11 +281,9 @@ class WANCompareUI {
                 if (this.node.setSize) {
                     this.node.setSize(size);
                 }
-                // Force a redraw
                 if (window.app && window.app.graph && window.app.graph.setDirtyCanvas) {
                     window.app.graph.setDirtyCanvas(true, true);
                 }
-                console.log('[WANCompareUI] Node size forced to:', size);
             }
         } catch (e) {
             console.warn('[WANCompareUI] Error forcing resize:', e);
@@ -290,7 +297,7 @@ class WANCompareUI {
         style.innerHTML = `
             @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
             @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
-            :root { --wan-bg-main: #111113; --wan-bg-section: #1E1E22; --wan-bg-element: #2A2A2E; --wan-accent-purple: #7D26CD; --wan-accent-purple-light: #A158E2; --wan-accent-green: #2ECC71; --wan-accent-red: #E74C3C; --wan-text-light: #F0F0F0; --wan-text-med: #A0A0A0; --wan-text-dark: #666666; --wan-border-color: #333333; --wan-radius-lg: 16px; --wan-radius-md: 10px; --wan-radius-sm: 6px; }
+            :root { --wan-bg-main: #111113; --wan-bg-section: #1E1E22; --wan-bg-element: #2A2A2E; --wan-accent-purple: #7D26CD; --wan-accent-purple-light: #A158E2; --wan-accent-green: #2ECC71; --wan-accent-red: #E74C3C; --wan-accent-orange: #E67E22; --wan-text-light: #F0F0F0; --wan-text-med: #A0A0A0; --wan-text-dark: #666666; --wan-border-color: #333333; --wan-radius-lg: 16px; --wan-radius-md: 10px; --wan-radius-sm: 6px; }
             .wan-compare-container { background: var(--wan-bg-main); border: 2px solid var(--wan-accent-purple); border-radius: var(--wan-radius-lg); padding: 20px; margin-top: -10px; width: 1900px !important; font-family: 'Inter', sans-serif; color: var(--wan-text-light); box-shadow: 0 0 35px rgba(125, 38, 205, 0.6); position: relative; top: 0px; left: -10px; z-index: 1; user-select: none; box-sizing: border-box; }
             .wan-compare-header { text-align: center; margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px solid var(--wan-border-color); }
             .wan-compare-title { font-family: 'Orbitron', monospace; font-size: 22px; font-weight: 700; color: var(--wan-accent-purple); text-shadow: 0 0 10px var(--wan-accent-purple-light); margin-bottom: 4px; }
@@ -300,6 +307,23 @@ class WANCompareUI {
             .wan-lora-groups-container { display: flex; flex-direction: column; gap: 15px; margin-bottom: 15px; }
             .wan-lora-stack-group { background: rgba(0,0,0,0.2); border: 1px solid var(--wan-accent-purple-light); border-radius: var(--wan-radius-md); padding: 10px; display: flex; flex-direction: column; gap: 8px; transition: opacity 0.3s ease; }
             .wan-lora-stack-group.disabled { opacity: 0.5; border-color: var(--wan-text-dark); }
+            
+            /* Group Settings Bar */
+            .wan-group-settings-bar { display: flex; align-items: center; gap: 15px; padding: 5px 10px 10px 10px; border-bottom: 1px solid rgba(255,255,255,0.1); margin-bottom: 5px; background: rgba(0,0,0,0.1); border-radius: var(--wan-radius-sm); }
+            .wan-group-setting-item { display: flex; align-items: center; gap: 8px; font-size: 12px; font-family: 'Orbitron', monospace; color: var(--wan-text-med); }
+            .wan-group-setting-input { width: 60px; height: 28px; background: var(--wan-bg-element); border: 1px solid var(--wan-border-color); color: var(--wan-text-light); border-radius: var(--wan-radius-sm); padding-left: 5px; }
+            .wan-group-bypass-btn { font-size: 11px; padding: 4px 10px; height: 28px; }
+            
+            /* Prompt Button & Popup */
+            .wan-prompt-btn { background: var(--wan-bg-element); border: 1px solid var(--wan-border-color); color: var(--wan-text-med); width: 30px; height: 30px; border-radius: 5px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s; font-size: 16px; }
+            .wan-prompt-btn:hover { background: var(--wan-accent-purple); color: white; border-color: var(--wan-accent-purple); }
+            .wan-prompt-btn.active { background: rgba(230, 126, 34, 0.2); border-color: var(--wan-accent-orange); color: var(--wan-accent-orange); box-shadow: 0 0 8px rgba(230, 126, 34, 0.4); }
+            .wan-prompt-popup { position: absolute; width: 400px; background: var(--wan-bg-section); border: 2px solid var(--wan-accent-purple); border-radius: var(--wan-radius-md); padding: 15px; box-shadow: 0 10px 40px rgba(0,0,0,0.8); z-index: 999999; display: flex; flex-direction: column; gap: 10px; }
+            .wan-prompt-textarea { width: 100%; height: 150px; background: var(--wan-bg-main); border: 1px solid var(--wan-border-color); color: var(--wan-text-light); padding: 10px; border-radius: var(--wan-radius-sm); resize: vertical; font-family: 'Inter', sans-serif; font-size: 13px; box-sizing: border-box; }
+            .wan-prompt-textarea:focus { outline: none; border-color: var(--wan-accent-purple); }
+            .wan-popup-label { font-family: 'Orbitron', monospace; font-size: 12px; color: var(--wan-accent-purple-light); }
+            .wan-popup-hint { font-size: 11px; color: var(--wan-text-dark); margin-top: -5px; }
+
             .wan-lora-header { display: grid; grid-template-columns: 30px 2.2fr 1fr 2.2fr 1fr auto; gap: 12px; padding: 0 10px 8px; font-family: 'Orbitron', monospace; font-size: 11px; color: var(--wan-text-med); text-transform: uppercase; text-align: center; }
             .wan-lora-row { display: grid; grid-template-columns: 30px 2.2fr 1fr 2.2fr 1fr auto; gap: 12px; align-items: center; }
             .wan-lora-row.disabled { opacity: 0.5; }
@@ -338,21 +362,16 @@ class WANCompareUI {
             .wan-lora-dropdown-portal::-webkit-scrollbar-thumb { background: var(--wan-accent-purple); border-radius: 3px; }
             .wan-error-message { color: var(--wan-accent-red); font-family: 'Inter', sans-serif; font-size: 13px; text-align: center; margin-top: 10px; }
             .wan-label-input { font-size: calc(12px + 0.5vw); max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-            /* MODIFICATION START: Styles for drag and drop */
             .wan-drag-handle { cursor: grab; text-align: center; color: var(--wan-text-med); font-size: 18px; line-height: 1; }
             .wan-drag-handle:active { cursor: grabbing; }
             .dragging { opacity: 0.4; }
             .wan-drop-target { border-top: 2px solid var(--wan-accent-purple-light) !important; }
-            /* MODIFICATION END */
         `;
         document.head.appendChild(style);
     }
 
     createCustomDOM() {
-        if (this.container) {
-            console.log('[WANCompareUI] DOM already exists, skipping creation');
-            return;
-        }
+        if (this.container) return;
 
         console.log('[WANCompareUI] Creating custom DOM...');
 
@@ -362,14 +381,8 @@ class WANCompareUI {
                     w.computeSize = () => [0, -4]; 
                     w.type = "hidden";
                     w.hidden = true;
-                    
-                    Object.defineProperty(w, 'computeSize', {
-                        value: () => [0, -4],
-                        writable: false
-                    });
                 }
             });
-            console.log('[WANCompareUI] All existing widgets hidden');
         }
 
         this.container = document.createElement('div');
@@ -403,8 +416,6 @@ class WANCompareUI {
             if (name) {
                 this.savePreset(name, this.getCurrentConfig());
                 this.presetNameInput.value = '';
-            } else {
-                console.warn('[WANCompareUI] Preset name is required.');
             }
         };
         this.presetsContainer.appendChild(saveBtn);
@@ -413,12 +424,7 @@ class WANCompareUI {
         loadBtn.className = 'wan-btn';
         loadBtn.textContent = 'Load Preset';
         loadBtn.onclick = () => {
-            const name = this.presetSelect.value;
-            if (name) {
-                this.loadPreset(name);
-            } else {
-                console.warn('[WANCompareUI] Select a preset to load.');
-            }
+            if (this.presetSelect.value) this.loadPreset(this.presetSelect.value);
         };
         this.presetsContainer.appendChild(loadBtn);
 
@@ -426,12 +432,7 @@ class WANCompareUI {
         deleteBtn.className = 'wan-btn wan-delete-btn';
         deleteBtn.textContent = 'Delete Preset';
         deleteBtn.onclick = () => {
-            const name = this.presetSelect.value;
-            if (name) {
-                this.deletePreset(name);
-            } else {
-                console.warn('[WANCompareUI] Select a preset to delete.');
-            }
+            if (this.presetSelect.value) this.deletePreset(this.presetSelect.value);
         };
         this.presetsContainer.appendChild(deleteBtn);
 
@@ -448,7 +449,12 @@ class WANCompareUI {
             this.loraGroups.push({
                 rows: [{ high_lora: '', high_strength: 1.0, low_lora: '', low_strength: 1.0, enabled: true }],
                 label: '',
-                enabled: true
+                enabled: true,
+                cfg_high: 1.0,
+                cfg_low: 1.0,
+                bypass_low: false,
+                seed_offset: 0,
+                prompt_override: ""
             });
             this.render();
         };
@@ -482,8 +488,6 @@ class WANCompareUI {
         samplerGrid.append(
             this.createNumberInput('boundary', 'Boundary', { min: 0, max: 1, step: 0.001, default: 0.875 }),
             this.createNumberInput('steps', 'Steps', { min: 1, max: 10000, step: 1, default: 8 }),
-            this.createNumberInput('cfg_high_noise', 'CFG High', { min: 0, max: 100, step: 0.1, default: 1.0 }),
-            this.createNumberInput('cfg_low_noise', 'CFG Low', { min: 0, max: 100, step: 0.1, default: 1.0 }),
             this.createNumberInput('sigma_shift', 'Sigma Shift', { min: 0, max: 100, step: 0.01, default: 8.0 }),
             this.createSelect('sampler_name', 'Sampler', SAMPLERS, 'euler'),
             this.createSelect('scheduler', 'Scheduler', SCHEDULERS, 'simple')
@@ -504,8 +508,7 @@ class WANCompareUI {
         this.container.append(loraSection, dimensionsSection, samplerSection, outputSection);
         
         try {
-            const domWidget = this.node.addDOMWidget('wan_compare_ui', 'div', this.container, { serialize: false });
-            console.log('[WANCompareUI] DOM widget added successfully');
+            this.node.addDOMWidget('wan_compare_ui', 'div', this.container, { serialize: false });
         } catch (error) {
             console.error('[WANCompareUI] Error adding widgets:', error);
         }
@@ -515,8 +518,6 @@ class WANCompareUI {
                 this.closeActiveDropdown();
             }
         });
-
-        console.log('[WANCompareUI] DOM created successfully');
     }
 
     createSection(title, icon) {
@@ -604,9 +605,7 @@ class WANCompareUI {
     }
 
     setWidgetValue(name, value) {
-        if (name === 'preset_data') {
-            return;
-        }
+        if (name === 'preset_data') return;
         
         let widget = this.node.widgets.find(w => w.name === name);
         if (!widget) {
@@ -632,8 +631,20 @@ class WANCompareUI {
         this.loraGroups = [];
         const rows = configString.trim().split('\n').filter(line => line.trim());
         const labels = labelString.trim().split('\n');
+        
         rows.forEach((line, idx) => {
-            const [rowStr, enabledStr] = line.split('§');
+            // Format: rows§enabled§cfg_h§cfg_l§bypass§seed_offset§encoded_prompt
+            const parts = line.split('§');
+            const rowStr = parts[0];
+            const enabledStr = parts[1];
+            
+            // Backward compatibility
+            const cfgHighStr = parts.length > 2 ? parts[2] : "1.0";
+            const cfgLowStr = parts.length > 3 ? parts[3] : "1.0";
+            const bypassStr = parts.length > 4 ? parts[4] : "false";
+            const seedOffsetStr = parts.length > 5 ? parts[5] : "0";
+            const encodedPrompt = parts.length > 6 ? parts[6] : "";
+
             if (rowStr && enabledStr !== undefined) {
                 const group = {
                     rows: rowStr.split('|').map(r => {
@@ -647,7 +658,12 @@ class WANCompareUI {
                         };
                     }),
                     label: labels[idx] || '',
-                    enabled: enabledStr === 'true'
+                    enabled: enabledStr === 'true',
+                    cfg_high: parseFloat(cfgHighStr) || 1.0,
+                    cfg_low: parseFloat(cfgLowStr) || 1.0,
+                    bypass_low: bypassStr === 'true',
+                    seed_offset: parseInt(seedOffsetStr) || 0,
+                    prompt_override: decodeURIComponent(encodedPrompt)
                 };
                 this.loraGroups.push(group);
             }
@@ -700,6 +716,88 @@ class WANCompareUI {
             }
             this.draggedItem = null;
         });
+
+        // Group Settings Bar
+        const settingsBar = document.createElement('div');
+        settingsBar.className = 'wan-group-settings-bar';
+        
+        // CFG High
+        const cfgHighItem = document.createElement('div');
+        cfgHighItem.className = 'wan-group-setting-item';
+        cfgHighItem.innerHTML = 'CFG H:';
+        const cfgHighInput = document.createElement('input');
+        cfgHighInput.type = 'number';
+        cfgHighInput.className = 'wan-group-setting-input';
+        cfgHighInput.step = 0.1;
+        cfgHighInput.min = 0;
+        cfgHighInput.value = group.cfg_high;
+        cfgHighInput.onchange = () => {
+            group.cfg_high = parseFloat(cfgHighInput.value) || 1.0;
+            this.syncConfigToWidget();
+        };
+        cfgHighItem.appendChild(cfgHighInput);
+
+        // CFG Low
+        const cfgLowItem = document.createElement('div');
+        cfgLowItem.className = 'wan-group-setting-item';
+        cfgLowItem.innerHTML = 'CFG L:';
+        const cfgLowInput = document.createElement('input');
+        cfgLowInput.type = 'number';
+        cfgLowInput.className = 'wan-group-setting-input';
+        cfgLowInput.step = 0.1;
+        cfgLowInput.min = 0;
+        cfgLowInput.value = group.cfg_low;
+        cfgLowInput.onchange = () => {
+            group.cfg_low = parseFloat(cfgLowInput.value) || 1.0;
+            this.syncConfigToWidget();
+        };
+        cfgLowItem.appendChild(cfgLowInput);
+
+        // Seed Offset
+        const seedItem = document.createElement('div');
+        seedItem.className = 'wan-group-setting-item';
+        seedItem.innerHTML = 'SEED OFF:';
+        const seedInput = document.createElement('input');
+        seedInput.type = 'number';
+        seedInput.className = 'wan-group-setting-input';
+        seedInput.step = 1;
+        seedInput.value = group.seed_offset;
+        seedInput.onchange = () => {
+            group.seed_offset = parseInt(seedInput.value) || 0;
+            this.syncConfigToWidget();
+        };
+        seedItem.appendChild(seedInput);
+
+        // Prompt Override Button
+        const promptItem = document.createElement('div');
+        promptItem.className = 'wan-group-setting-item';
+        const promptBtn = document.createElement('div');
+        promptBtn.className = `wan-prompt-btn ${group.prompt_override ? 'active' : ''}`;
+        promptBtn.innerHTML = '📝';
+        promptBtn.title = "Override Positive Prompt";
+        promptBtn.onclick = (e) => {
+            e.stopPropagation();
+            this.openPromptPopup(promptBtn, group);
+        };
+        promptItem.appendChild(promptBtn);
+
+        // Bypass Toggle
+        const bypassItem = document.createElement('div');
+        bypassItem.className = 'wan-group-setting-item';
+        bypassItem.style.marginLeft = 'auto'; 
+        const bypassBtn = document.createElement('button');
+        bypassBtn.className = `wan-on-off-button wan-group-bypass-btn ${group.bypass_low ? 'active' : ''}`;
+        bypassBtn.textContent = group.bypass_low ? 'BYPASS LOW: ON' : 'BYPASS LOW: OFF';
+        bypassBtn.onclick = () => {
+            group.bypass_low = !group.bypass_low;
+            bypassBtn.className = `wan-on-off-button wan-group-bypass-btn ${group.bypass_low ? 'active' : ''}`;
+            bypassBtn.textContent = group.bypass_low ? 'BYPASS LOW: ON' : 'BYPASS LOW: OFF';
+            this.syncConfigToWidget();
+        };
+        bypassItem.appendChild(bypassBtn);
+
+        settingsBar.append(cfgHighItem, cfgLowItem, seedItem, promptItem, bypassItem);
+        groupEl.appendChild(settingsBar);
 
         const header = document.createElement('div');
         header.className = 'wan-lora-header';
@@ -856,6 +954,60 @@ class WANCompareUI {
         return groupEl;
     }
 
+    openPromptPopup(button, group) {
+        this.closePromptPopup();
+        
+        const popup = document.createElement('div');
+        popup.className = 'wan-prompt-popup';
+        
+        const label = document.createElement('div');
+        label.className = 'wan-popup-label';
+        label.textContent = "Positive Prompt Override";
+        
+        const hint = document.createElement('div');
+        hint.className = 'wan-popup-hint';
+        hint.textContent = "Leave empty to use global positive prompt. Requires CLIP input.";
+
+        const textarea = document.createElement('textarea');
+        textarea.className = 'wan-prompt-textarea';
+        textarea.placeholder = "Enter custom positive prompt for this group...";
+        textarea.value = group.prompt_override || "";
+        
+        // Auto-save on input
+        textarea.addEventListener('input', () => {
+            group.prompt_override = textarea.value;
+            if (textarea.value.trim().length > 0) {
+                button.classList.add('active');
+            } else {
+                button.classList.remove('active');
+            }
+            this.syncConfigToWidget();
+        });
+
+        popup.append(label, hint, textarea);
+        document.body.appendChild(popup);
+        
+        const rect = button.getBoundingClientRect();
+        popup.style.left = `${rect.left}px`;
+        popup.style.top = `${rect.bottom + 5 + window.scrollY}px`;
+        
+        // Adjust if off-screen
+        const popupRect = popup.getBoundingClientRect();
+        if (popupRect.right > window.innerWidth) {
+            popup.style.left = `${window.innerWidth - popupRect.width - 20}px`;
+        }
+
+        this.activePromptPopup = popup;
+        textarea.focus();
+    }
+
+    closePromptPopup() {
+        if (this.activePromptPopup) {
+            this.activePromptPopup.remove();
+            this.activePromptPopup = null;
+        }
+    }
+
     openDropdown(container, row, field) {
         if (this.activeDropdown) this.closeActiveDropdown();
         this.activeDropdown = document.createElement('div');
@@ -927,7 +1079,11 @@ class WANCompareUI {
         }
         
         const serializeRow = r => `${r.high_lora || 'none'},${r.high_strength},${r.low_lora || 'none'},${r.low_strength},${r.enabled ? 'true' : 'false'}`;
-        const configString = this.loraGroups.map(g => `${g.rows.map(serializeRow).join('|')}§${g.enabled}`).join('\n');
+        // Append cfg_high, cfg_low, bypass, seed_offset, encoded_prompt
+        const configString = this.loraGroups.map(g => 
+            `${g.rows.map(serializeRow).join('|')}§${g.enabled}§${g.cfg_high}§${g.cfg_low}§${g.bypass_low}§${g.seed_offset}§${encodeURIComponent(g.prompt_override || "")}`
+        ).join('\n');
+        
         this.setWidgetValue('lora_batch_config', configString);
         this.setWidgetValue('custom_labels', this.loraGroups.map(g => g.label || '').join('\n'));
     }
