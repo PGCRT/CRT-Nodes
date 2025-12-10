@@ -40,7 +40,7 @@ Nodes focused on image grading, effects, and restoration. The suite includes a p
 | **Chroma Key Overlay** | Basic green screen removal with spill suppression and background compositing. |
 
 ### GenAI Tools
-Workflows and samplers optimized for FLUX and WanVideo models.
+Workflows and samplers optimized for diffusion models.
 
 | Node Name | Description |
 | :--- | :--- |
