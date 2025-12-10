@@ -39,7 +39,7 @@ Nodes focused on image grading, effects, and restoration. The suite includes a p
 | **Technicolor 2 FX** | Emulates the 2-strip Technicolor process for vintage color grading. |
 | **Chroma Key Overlay** | Basic green screen removal with spill suppression and background compositing. |
 
-### FLUX & GenAI Tools
+### GenAI Tools
 Workflows and samplers optimized for FLUX and WanVideo models.
 
 | Node Name | Description |
