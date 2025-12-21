@@ -119,36 +119,22 @@ const FancyTimerNodeExtension = {
         `;
         document.head.appendChild(style);
 
-        // This line can optionally be removed if you don't want to load the Orbitron font at all,
-        // but leaving it in doesn't hurt.
+        // Load Orbitron font (optional)
         if (!document.querySelector('link[href*="Orbitron"]')) {
             const fontLink = document.createElement("link");
             fontLink.href = "https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap";
             fontLink.rel = "stylesheet";
             document.head.appendChild(fontLink);
         }
-        
-        // Your robust WebSocket event handling solution
-        if (api.socket) {
-            const originalOnMessage = api.socket.onmessage;
-            api.socket.onmessage = function(event) {
-                try {
-                    const msg = JSON.parse(event.data);
-                    
-                    if (msg.type === "execution_start" || (msg.type === "executing" && msg.data?.node !== null)) {
-                        GlobalTimer.start();
-                    } else if (msg.type === "execution_cached" || msg.type === "execution_error" || (msg.type === "executing" && msg.data?.node === null)) {
-                        GlobalTimer.stop();
-                    }
-                } catch (e) { /* Ignore non-JSON messages */ }
-                
-                if (originalOnMessage) {
-                    originalOnMessage.call(this, event);
-                }
-            };
-        } else {
-            console.warn("FancyTimerNode: WebSocket not found on api object. Timer may not function.");
-        }
+
+        // Modern ComfyUI event API (replaces deprecated WebSocket approach)
+        api.addEventListener("execution_start", () => GlobalTimer.start());
+        api.addEventListener("executing", ({ detail }) => {
+            // detail is null when execution completes
+            if (detail === null) GlobalTimer.stop();
+        });
+        api.addEventListener("execution_error", () => GlobalTimer.stop());
+        api.addEventListener("execution_interrupted", () => GlobalTimer.stop());
     }
 };
 
