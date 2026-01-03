@@ -1,7 +1,7 @@
 """
 @author: CRT
 @title: CRT-Nodes
-@version: 1.9.9
+@version: 1.2.0
 @project: "https://github.com/plugcrypt/CRT-Nodes",
 @description: Set of nodes for ComfyUI
 https://discord.gg/8wYS9MBQqp
@@ -98,7 +98,7 @@ if 'CRT_NODES_INITIALIZED' not in globals():
     from .py.WanVideoLoraSelectMultiImproved import WanVideoLoraSelectMultiImproved
     from .py.crt_ksampler_batch import CRT_KSamplerBatch
     from .py.crt_string_line_counter import CRT_StringLineCounter
-    from .py.line_spot import CRT_LineSpot
+    from .py.text_box_line_spot import CRT_LineSpot
 
 
     print("[CRT-Nodes __init__] Registering custom model paths...")
