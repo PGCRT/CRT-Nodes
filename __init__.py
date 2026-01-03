@@ -1,7 +1,7 @@
 """
 @author: CRT
 @title: CRT-Nodes
-@version: 1.9.8
+@version: 1.9.9
 @project: "https://github.com/plugcrypt/CRT-Nodes",
 @description: Set of nodes for ComfyUI
 https://discord.gg/8wYS9MBQqp
@@ -97,6 +97,8 @@ if 'CRT_NODES_INITIALIZED' not in globals():
     from .py.image_dimensions_from_mp import ImageDimensionsFromMegaPixels
     from .py.WanVideoLoraSelectMultiImproved import WanVideoLoraSelectMultiImproved
     from .py.crt_ksampler_batch import CRT_KSamplerBatch
+    from .py.crt_string_line_counter import CRT_StringLineCounter
+    from .py.line_spot import CRT_LineSpot
 
 
     print("[CRT-Nodes __init__] Registering custom model paths...")
@@ -203,6 +205,8 @@ NODE_CLASS_MAPPINGS = {
     "ImageDimensionsFromMegaPixels": ImageDimensionsFromMegaPixels,
     "WanVideoLoraSelectMultiImproved": WanVideoLoraSelectMultiImproved,
     "CRT_KSamplerBatch": CRT_KSamplerBatch,
+    "CRT_StringLineCounter": CRT_StringLineCounter,
+    "Text Box line spot": CRT_LineSpot,
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
@@ -289,6 +293,8 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "ImageDimensionsFromMegaPixels": "Image Dimensions From Megapixels (CRT)",
     "WanVideoLoraSelectMultiImproved": "Wan Video Multi-LoRA Select (CRT)",
     "CRT_KSamplerBatch": "KSampler Batch (CRT)",
+    "CRT_StringLineCounter": "String Line Counter (CRT)",
+    "Text Box line spot": "Text Box line spot (CRT)",
 }
 
 WEB_DIRECTORY = "./js"
