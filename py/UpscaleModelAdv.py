@@ -87,6 +87,10 @@ class CRT_UpscaleModelAdv:
                     "default": True,
                     "tooltip": "Offload model to CPU after processing to save VRAM"
                 }),
+                "disable_cache": ("BOOLEAN", {
+                    "default": False,
+                    "tooltip": "Disable caching to always reprocess images (useful for testing or varying results)"
+                }),
             }
         }
     
@@ -225,26 +229,30 @@ class CRT_UpscaleModelAdv:
         
         return result
     
-    def upscale_advanced(self, image, upscale_model_name, use_fixed_resolution, output_multiplier, fixed_width, fixed_height, tile_count, precision, batch_size, offload_model):
+    def upscale_advanced(self, image, upscale_model_name, use_fixed_resolution, output_multiplier, fixed_width, fixed_height, tile_count, precision, batch_size, offload_model, disable_cache):
         """Advanced upscaling with all features."""
         cache_key = self._create_cache_key(image, upscale_model_name, use_fixed_resolution, output_multiplier, fixed_width, fixed_height, tile_count, precision, batch_size)
         
-        if cache_key in self._cache:
+        # Check cache only if caching is enabled
+        if not disable_cache and cache_key in self._cache:
             colored_print(f"🚀 [Cache Hit] Reusing cached upscale result", Colors.GREEN)
             cached_result = self._cache[cache_key]
             cached_width = cached_result.shape[2]
             cached_height = cached_result.shape[1]
-            colored_print(f"  📁 Model: {upscale_model_name}", Colors.BLUE)
+            colored_print(f"  📄 Model: {upscale_model_name}", Colors.BLUE)
             colored_print(f"  📐 Cached resolution: {cached_width}x{cached_height}", Colors.BLUE)
             return (cached_result, cached_width, cached_height)
-            
-        colored_print(f"🔧 [Cache Miss] Processing upscale", Colors.YELLOW)
+        
+        if disable_cache:
+            colored_print(f"🔧 [Cache Disabled] Processing upscale without caching", Colors.YELLOW)
+        else:
+            colored_print(f"🔧 [Cache Miss] Processing upscale", Colors.YELLOW)
         
         device = mm.get_torch_device()
         offload_device = mm.unet_offload_device() if offload_model else device
         
         colored_print(f"🚀 [CRT Upscale Advanced] Starting upscale process", Colors.HEADER)
-        colored_print(f"  📁 Model: {upscale_model_name}", Colors.BLUE)
+        colored_print(f"  📄 Model: {upscale_model_name}", Colors.BLUE)
         colored_print(f"  📐 Input resolution: {image.shape[2]}x{image.shape[1]}", Colors.BLUE)
         try:
             upscale_model = self.upscale_loader.load_model(upscale_model_name)[0]
@@ -322,14 +330,21 @@ class CRT_UpscaleModelAdv:
             ).permute(0, 2, 3, 1)
             
         final_result = torch.clamp(full_upscaled, 0, 1).to(image.dtype).to(image.device)
-        self._cache[cache_key] = final_result.clone()
-        self._manage_cache_size()
+        
+        # Only cache if caching is enabled
+        if not disable_cache:
+            self._cache[cache_key] = final_result.clone()
+            self._manage_cache_size()
         
         final_width = final_result.shape[2]
         final_height = final_result.shape[1]
         
         colored_print(f"  ✅ Upscaling complete! Output: {final_width}x{final_height}", Colors.GREEN)
-        colored_print(f"  💾 Result cached for future use", Colors.CYAN)
+        
+        if not disable_cache:
+            colored_print(f"  💾 Result cached for future use", Colors.CYAN)
+        else:
+            colored_print(f"  🚫 Caching disabled - result not stored", Colors.YELLOW)
         
         if offload_model:
             colored_print(f"  💾 Model offloaded to save VRAM", Colors.BLUE)
