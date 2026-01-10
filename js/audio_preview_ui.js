@@ -1,4 +1,5 @@
 import { app } from "/scripts/app.js";
+import { api } from "/scripts/api.js";
 
 const CSS_STYLES_ENHANCED_AUDIO = `
 @font-face {
@@ -22,7 +23,6 @@ const CSS_STYLES_ENHANCED_AUDIO = `
     --audio-grid: rgba(0, 255, 136, 0.2);
 }
 
-/* Make all text non-selectable */
 .enhanced-audio-preview-container * {
     user-select: none !important;
     -webkit-user-select: none !important;
@@ -30,12 +30,11 @@ const CSS_STYLES_ENHANCED_AUDIO = `
     -ms-user-select: none !important;
 }
 
-/* Main container */
 .enhanced-audio-preview-node-widget {
     position: relative !important;
     box-sizing: border-box !important;
     width: 600px !important;
-    min-height: 400px !important;
+    min-height: 450px !important;
     padding: 0px !important;
     margin: 0 !important;
     overflow: visible !important;
@@ -54,7 +53,7 @@ const CSS_STYLES_ENHANCED_AUDIO = `
     width: 100%;
     max-width: 600px;
     box-sizing: border-box;
-    min-height: 380px;
+    min-height: 400px; /* Slightly reduced height since VU bars are gone */
     box-shadow: 
         0 12px 40px rgba(0, 255, 136, 0.4),
         inset 0 2px 0 rgba(255, 255, 255, 0.1),
@@ -84,7 +83,6 @@ const CSS_STYLES_ENHANCED_AUDIO = `
     z-index: 1;
 }
 
-/* Title */
 .enhanced-audio-title {
     color: var(--audio-primary);
     font-family: 'Orbitron', monospace;
@@ -127,7 +125,6 @@ const CSS_STYLES_ENHANCED_AUDIO = `
     }
 }
 
-/* Main audio section */
 .audio-main-section {
     display: flex;
     flex-direction: column;
@@ -135,7 +132,65 @@ const CSS_STYLES_ENHANCED_AUDIO = `
     margin-bottom: 20px;
 }
 
-/* Waveform display */
+.audio-import-section {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--audio-border);
+    border-radius: 12px;
+}
+
+.audio-import-button {
+    background: linear-gradient(45deg, var(--audio-accent), #00a8cc);
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    cursor: pointer;
+    color: var(--audio-background);
+    font-family: 'Orbitron', monospace;
+    font-size: 12px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 212, 255, 0.3);
+}
+
+.audio-import-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 212, 255, 0.5);
+}
+
+.audio-unload-button {
+    background: linear-gradient(45deg, var(--audio-danger), #ff6666);
+    border: none;
+    border-radius: 8px;
+    padding: 10px 14px;
+    cursor: pointer;
+    color: var(--audio-background);
+    font-family: 'Orbitron', monospace;
+    font-size: 14px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(255, 68, 68, 0.3);
+    display: none;
+}
+
+.audio-unload-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(255, 68, 68, 0.5);
+}
+
+.audio-import-filename {
+    font-family: 'Orbitron', monospace;
+    font-size: 11px;
+    color: var(--audio-text-dim);
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
 .audio-waveform-container {
     background: rgba(0, 0, 0, 0.4);
     border: 2px solid var(--audio-border);
@@ -177,7 +232,79 @@ const CSS_STYLES_ENHANCED_AUDIO = `
     width: 0%;
 }
 
-/* Control panel */
+.audio-trim-handle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: var(--audio-warning);
+    cursor: ew-resize;
+    z-index: 10;
+    box-shadow: 0 0 8px rgba(255, 170, 0, 0.6);
+}
+
+.audio-trim-handle::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 40px;
+    background: var(--audio-warning);
+    border-radius: 6px;
+    left: -4px;
+}
+
+.audio-trim-handle.start {
+    left: 0;
+}
+
+.audio-trim-handle.end {
+    right: 0;
+}
+
+.audio-trim-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    pointer-events: none;
+    z-index: 5;
+}
+
+.audio-trim-overlay.start {
+    left: 0;
+}
+
+.audio-trim-overlay.end {
+    right: 0;
+}
+
+.audio-trim-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 12px;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--audio-border);
+    border-radius: 8px;
+    font-family: 'Orbitron', monospace;
+    font-size: 11px;
+    color: var(--audio-text-dim);
+}
+
+.audio-trim-info-item {
+    display: flex;
+    gap: 6px;
+}
+
+.audio-trim-info-label {
+    color: var(--audio-accent);
+}
+
+.audio-trim-info-value {
+    color: var(--audio-primary);
+}
+
 .audio-control-panel {
     background: rgba(0, 0, 0, 0.3);
     border: 1px solid var(--audio-border);
@@ -188,7 +315,6 @@ const CSS_STYLES_ENHANCED_AUDIO = `
     gap: 16px;
 }
 
-/* Transport controls */
 .audio-transport-controls {
     display: flex;
     align-items: center;
@@ -281,7 +407,6 @@ const CSS_STYLES_ENHANCED_AUDIO = `
     box-shadow: 0 0 8px rgba(0, 255, 136, 0.4);
 }
 
-/* Time display */
 .audio-time-container {
     display: flex;
     flex-direction: column;
@@ -326,73 +451,6 @@ const CSS_STYLES_ENHANCED_AUDIO = `
     box-shadow: 0 0 8px rgba(0, 212, 255, 0.5);
 }
 
-/* VU Meters */
-.audio-vu-section {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.2);
-    border-radius: 12px;
-    border: 1px solid var(--audio-border);
-}
-
-.audio-vu-meter {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-}
-
-.audio-vu-label {
-    font-family: 'Orbitron', monospace;
-    font-size: 12px;
-    font-weight: 600;
-    color: var(--audio-text-dim);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.audio-vu-bar-container {
-    width: 30px;
-    height: 180px;
-    background: var(--audio-background);
-    border: 2px solid var(--audio-border);
-    border-radius: 15px;
-    position: relative;
-    overflow: hidden;
-    box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.6);
-}
-
-.audio-vu-bar {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(to top, 
-        var(--audio-primary) 0%, 
-        var(--audio-primary) 60%, 
-        var(--audio-warning) 80%, 
-        var(--audio-danger) 100%);
-    border-radius: 13px;
-    transition: height 0.05s ease-out;
-    height: 0%;
-    box-shadow: 0 0 12px rgba(0, 255, 136, 0.5);
-}
-
-.audio-vu-peak-indicator {
-    position: absolute;
-    left: 0;
-    right: 0;
-    height: 3px;
-    background: var(--audio-text);
-    border-radius: 2px;
-    transition: top 0.05s ease-out;
-    top: 100%;
-    box-shadow: 0 0 6px rgba(255, 255, 255, 0.8);
-}
-
-/* Metrics display */
 .audio-metrics-section {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -443,7 +501,6 @@ const CSS_STYLES_ENHANCED_AUDIO = `
     text-shadow: 0 0 8px var(--audio-warning);
 }
 
-/* Volume control */
 .audio-volume-section {
     display: flex;
     align-items: center;
@@ -452,6 +509,19 @@ const CSS_STYLES_ENHANCED_AUDIO = `
     background: rgba(0, 0, 0, 0.2);
     border-radius: 12px;
     border: 1px solid var(--audio-border);
+}
+
+/* New LED Style */
+.audio-signal-led {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #333;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.5);
+    transition: background-color 0.05s ease-out, box-shadow 0.05s ease-out;
+    margin-right: 4px;
+    flex-shrink: 0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .audio-volume-label {
@@ -499,7 +569,6 @@ const CSS_STYLES_ENHANCED_AUDIO = `
     text-align: right;
 }
 
-/* Status indicators */
 .audio-status-indicators {
     display: flex;
     gap: 8px;
@@ -539,7 +608,7 @@ class EnhancedAudioPreviewUI {
         this.isInitialized = false;
         this.isPlaying = false;
         this.isDraggingProgress = false;
-        this.isLooping = false;
+        this.isLooping = false; // Disabled by default
         this.audioContext = null;
         this.audioBuffer = null;
         this.sourceNode = null;
@@ -551,13 +620,21 @@ class EnhancedAudioPreviewUI {
         this.startTime = 0;
         this.duration = 0;
         this.volume = 0.8;
-        this.peakL = 0; this.peakR = 0;
+        this.peakL = 0; 
+        this.peakR = 0;
+        this.importedAudioBuffer = null;
+        this.trimStart = 0;
+        this.trimEnd = 0;
+        this.playbackTrimStart = 0;
+        this.isDraggingTrimStart = false;
+        this.isDraggingTrimEnd = false;
 
         this.updateVisualization = this.updateVisualization.bind(this);
         this.handlePlayButton = this.handlePlayButton.bind(this);
         this.handleStopButton = this.handleStopButton.bind(this);
         this.handleVolumeChange = this.handleVolumeChange.bind(this);
         this.handleLoopButton = this.handleLoopButton.bind(this);
+        this.handleUnload = this.handleUnload.bind(this);
 		
         this.node.title = "";
         this.node.bgcolor = "transparent";
@@ -599,13 +676,42 @@ class EnhancedAudioPreviewUI {
         this.container = document.createElement('div');
         this.container.className = 'enhanced-audio-preview-container';
         
+        // Changed structure: Removed audio-vu-section, added audio-signal-led in volume section
         this.container.innerHTML = `
-            <div class="enhanced-audio-title">Audio Preview Pro</div>
+            <div class="enhanced-audio-title">Audio Preview</div>
             <div class="audio-status-indicators"><div class="audio-status-led"></div></div>
             <div class="audio-main-section">
+                <div class="audio-import-section">
+                    <button class="audio-import-button">Import Audio</button>
+                    <button class="audio-unload-button">×</button>
+                    <input type="file" accept="audio/*" style="display: none;" class="audio-file-input">
+                    <div class="audio-import-filename">No file imported</div>
+                </div>
                 <div class="audio-waveform-container">
+                    <div class="audio-trim-overlay start"></div>
+                    <div class="audio-trim-overlay end"></div>
+                    <div class="audio-trim-handle start"></div>
+                    <div class="audio-trim-handle end"></div>
                     <div class="audio-waveform-progress"></div>
                     <canvas class="audio-waveform-canvas"></canvas>
+                </div>
+                <div class="audio-trim-info">
+                    <div class="audio-trim-info-item">
+                        <span class="audio-trim-info-label">Original:</span>
+                        <span class="audio-trim-info-value trim-original">0.00s</span>
+                    </div>
+                    <div class="audio-trim-info-item">
+                        <span class="audio-trim-info-label">Trimmed:</span>
+                        <span class="audio-trim-info-value trim-duration">0.00s</span>
+                    </div>
+                    <div class="audio-trim-info-item">
+                        <span class="audio-trim-info-label">Start:</span>
+                        <span class="audio-trim-info-value trim-start">0.00s</span>
+                    </div>
+                    <div class="audio-trim-info-item">
+                        <span class="audio-trim-info-label">End:</span>
+                        <span class="audio-trim-info-value trim-end">0.00s</span>
+                    </div>
                 </div>
                 <div class="audio-control-panel">
                     <div class="audio-transport-controls">
@@ -626,16 +732,13 @@ class EnhancedAudioPreviewUI {
                         </div>
                     </div>
                 </div>
-                <div class="audio-vu-section">
-                    <div class="audio-vu-meter"><div class="audio-vu-label">Left</div><div class="audio-vu-bar-container"><div class="audio-vu-bar"></div><div class="audio-vu-peak-indicator"></div></div></div>
-                    <div class="audio-vu-meter"><div class="audio-vu-label">Right</div><div class="audio-vu-bar-container"><div class="audio-vu-bar"></div><div class="audio-vu-peak-indicator"></div></div></div>
-                </div>
                 <div class="audio-metrics-section">
                     <div class="audio-metric-item"><div class="audio-metric-label">Peak</div><div class="audio-metric-value" data-id="peak">--</div></div>
                     <div class="audio-metric-item"><div class="audio-metric-label">RMS</div><div class="audio-metric-value" data-id="rms">--</div></div>
                     <div class="audio-metric-item"><div class="audio-metric-label">LUFS</div><div class="audio-metric-value" data-id="lufs">--</div></div>
                 </div>
                 <div class="audio-volume-section">
+                    <div class="audio-signal-led"></div>
                     <div class="audio-volume-label">Volume</div><input type="range" class="audio-volume-slider" min="0" max="1" step="0.01"><div class="audio-volume-value">80%</div>
                 </div>
             </div>`;
@@ -645,6 +748,11 @@ class EnhancedAudioPreviewUI {
 
         const q = (sel) => this.container.querySelector(sel);
         const qa = (sel) => this.container.querySelectorAll(sel);
+        
+        this.importButton = q('.audio-import-button');
+        this.unloadButton = q('.audio-unload-button');
+        this.fileInput = q('.audio-file-input');
+        this.importFilename = q('.audio-import-filename');
         this.playButton = q('.audio-play-button');
         this.stopButton = q('.audio-stop-button');
         this.loopButton = q('.audio-loop-button');
@@ -654,8 +762,18 @@ class EnhancedAudioPreviewUI {
         this.waveformContainer = q('.audio-waveform-container');
         this.waveformCanvas = q('.audio-waveform-canvas');
         this.waveformProgress = q('.audio-waveform-progress');
-        [this.vuBarL, this.vuBarR] = qa('.audio-vu-bar');
-        [this.vuPeakL, this.vuPeakR] = qa('.audio-vu-peak-indicator');
+        this.trimHandleStart = q('.audio-trim-handle.start');
+        this.trimHandleEnd = q('.audio-trim-handle.end');
+        this.trimOverlayStart = q('.audio-trim-overlay.start');
+        this.trimOverlayEnd = q('.audio-trim-overlay.end');
+        this.trimOriginal = q('.trim-original');
+        this.trimDuration = q('.trim-duration');
+        this.trimStartDisplay = q('.trim-start');
+        this.trimEndDisplay = q('.trim-end');
+        
+        // Removed VU Bar elements, added Signal LED
+        this.signalLed = q('.audio-signal-led');
+
         this.peakValueEl = q('[data-id="peak"]');
         this.rmsValueEl = q('[data-id="rms"]');
         this.lufsValueEl = q('[data-id="lufs"]');
@@ -668,19 +786,215 @@ class EnhancedAudioPreviewUI {
         
         this.waveformCtx = this.waveformCanvas.getContext('2d');
         
+        this.importButton.addEventListener('click', () => this.fileInput.click());
+        this.unloadButton.addEventListener('click', this.handleUnload);
+        this.fileInput.addEventListener('change', (e) => this.handleFileImport(e));
         this.playButton.addEventListener('click', this.handlePlayButton);
         this.stopButton.addEventListener('click', this.handleStopButton);
         this.loopButton.addEventListener('click', this.handleLoopButton);
         this.volumeSlider.addEventListener('input', this.handleVolumeChange);
         this.setupProgressBarInteraction();
+        this.setupTrimHandles();
         this.setupAutoPreviewToggle();
         
         this.volumeSlider.value = this.volume;
         this.setStatus('ready');
+
+        // Check if a file was previously loaded
+        const loadedFileWidget = this.node.widgets && this.node.widgets.find(w => w.name === 'loaded_file');
+        if (loadedFileWidget && loadedFileWidget.value) {
+            this.importFilename.textContent = loadedFileWidget.value;
+            this.unloadButton.style.display = "block";
+        }
+    }
+
+    async handleFileImport(event) {
+        const file = event.target.files[0];
+        if (!file) return;
+        
+        try {
+            this.setStatus('loading');
+            this.stopPlayback();
+            
+            // First decode locally for preview
+            const arrayBuffer = await file.arrayBuffer();
+            if (this.audioContext.state === 'suspended') await this.audioContext.resume();
+            
+            this.importedAudioBuffer = await this.audioContext.decodeAudioData(arrayBuffer);
+            this.audioBuffer = this.importedAudioBuffer;
+            this.duration = this.audioBuffer.duration;
+            this.trimStart = 0;
+            this.trimEnd = 0;
+            
+            // Upload to server
+            const formData = new FormData();
+            formData.append("image", file);
+            formData.append("overwrite", "true");
+            formData.append("type", "input");
+            
+            this.importFilename.textContent = "Uploading...";
+            
+            try {
+                const resp = await api.fetchApi("/upload/image", {
+                    method: "POST",
+                    body: formData,
+                });
+                
+                if (resp.status === 200) {
+                    const data = await resp.json();
+                    this.updateLoadedFileWidget(data.name);
+                    this.importFilename.textContent = file.name;
+                    this.unloadButton.style.display = "block";
+                } else {
+                    this.importFilename.textContent = "Upload failed";
+                    console.error("Upload failed", resp.statusText);
+                }
+            } catch (uploadErr) {
+                console.error("Upload error:", uploadErr);
+                this.importFilename.textContent = "Upload failed";
+            }
+            
+            this.updateTimeDisplay();
+            this.updateProgress();
+            this.updateWaveform();
+            this.updateTrimDisplay();
+            this.updateNodeWidgets();
+            
+            this.setStatus('ready');
+        } catch (error) {
+            console.error('Error importing audio:', error);
+            this.setStatus('error');
+            this.importFilename.textContent = 'Import failed';
+        }
+    }
+
+    handleUnload() {
+        this.stopPlayback();
+        this.audioBuffer = null;
+        this.importedAudioBuffer = null;
+        this.duration = 0;
+        this.trimStart = 0;
+        this.trimEnd = 0;
+        
+        this.updateLoadedFileWidget("");
+        this.importFilename.textContent = "No file imported";
+        this.unloadButton.style.display = "none";
+        
+        // Clear visualization
+        if (this.waveformCtx) {
+            const { width, height } = this.waveformCanvas;
+            this.waveformCtx.clearRect(0, 0, width, height);
+        }
+        this.updateTimeDisplay();
+        this.updateProgress();
+        this.updateTrimDisplay();
+        this.updateNodeWidgets();
+    }
+
+    updateLoadedFileWidget(filename) {
+        if (!this.node.widgets) return;
+        const widget = this.node.widgets.find(w => w.name === 'loaded_file');
+        if (widget) {
+            widget.value = filename;
+        }
+    }
+
+    setupTrimHandles() {
+        this.trimHandleStart.addEventListener('mousedown', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            this.isDraggingTrimStart = true;
+            
+            const onMove = (moveEvent) => this.handleTrimDrag(moveEvent, 'start');
+            const onUp = () => {
+                document.removeEventListener('mousemove', onMove);
+                document.removeEventListener('mouseup', onUp);
+                this.isDraggingTrimStart = false;
+                this.updateNodeWidgets();
+            };
+            
+            document.addEventListener('mousemove', onMove);
+            document.addEventListener('mouseup', onUp);
+        });
+
+        this.trimHandleEnd.addEventListener('mousedown', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            this.isDraggingTrimEnd = true;
+            
+            const onMove = (moveEvent) => this.handleTrimDrag(moveEvent, 'end');
+            const onUp = () => {
+                document.removeEventListener('mousemove', onMove);
+                document.removeEventListener('mouseup', onUp);
+                this.isDraggingTrimEnd = false;
+                this.updateNodeWidgets();
+            };
+            
+            document.addEventListener('mousemove', onMove);
+            document.addEventListener('mouseup', onUp);
+        });
+    }
+
+    handleTrimDrag(e, side) {
+        if (!this.audioBuffer) return;
+        
+        const rect = this.waveformContainer.getBoundingClientRect();
+        const relativeX = e.clientX - rect.left;
+        const progress = Math.max(0, Math.min(1, relativeX / rect.width));
+        const timeValue = this.duration * progress;
+        
+        if (side === 'start') {
+            this.trimStart = Math.min(timeValue, this.duration - this.trimEnd - 0.1);
+            this.trimStart = Math.max(0, this.trimStart);
+        } else {
+            this.trimEnd = Math.min(this.duration - timeValue, this.duration - this.trimStart - 0.1);
+            this.trimEnd = Math.max(0, this.trimEnd);
+        }
+        
+        this.updateTrimDisplay();
+    }
+
+    updateTrimDisplay() {
+        if (!this.audioBuffer) {
+            // Reset trim display if no audio
+            this.trimHandleStart.style.left = `0%`;
+            this.trimHandleEnd.style.right = `0%`;
+            this.trimOverlayStart.style.width = `0%`;
+            this.trimOverlayEnd.style.width = `0%`;
+            this.trimOriginal.textContent = `0.00s`;
+            this.trimDuration.textContent = `0.00s`;
+            this.trimStartDisplay.textContent = `0.00s`;
+            this.trimEndDisplay.textContent = `0.00s`;
+            return;
+        }
+        
+        const startPercent = (this.trimStart / this.duration) * 100;
+        const endPercent = (this.trimEnd / this.duration) * 100;
+        const trimmedDuration = this.duration - this.trimStart - this.trimEnd;
+        
+        this.trimHandleStart.style.left = `${startPercent}%`;
+        this.trimHandleEnd.style.right = `${endPercent}%`;
+        this.trimOverlayStart.style.width = `${startPercent}%`;
+        this.trimOverlayEnd.style.width = `${endPercent}%`;
+        
+        this.trimOriginal.textContent = `${this.duration.toFixed(2)}s`;
+        this.trimDuration.textContent = `${trimmedDuration.toFixed(2)}s`;
+        this.trimStartDisplay.textContent = `${this.trimStart.toFixed(2)}s`;
+        this.trimEndDisplay.textContent = `${this.trimEnd.toFixed(2)}s`;
+    }
+
+    updateNodeWidgets() {
+        if (!this.node.widgets) return;
+        
+        const trimStartWidget = this.node.widgets.find(w => w.name === 'trim_start');
+        const trimEndWidget = this.node.widgets.find(w => w.name === 'trim_end');
+        
+        if (trimStartWidget) trimStartWidget.value = this.trimStart;
+        if (trimEndWidget) trimEndWidget.value = this.trimEnd;
     }
     
     setupAutoPreviewToggle() {
-        this.autoPreviewEnabled = true;
+        this.autoPreviewEnabled = false; // Changed default to false
         this.updateAutoPreviewToggleVisuals();
         const toggleContainer = this.container.querySelector('.audio-autopreview-container');
         toggleContainer.addEventListener('click', () => {
@@ -709,12 +1023,14 @@ class EnhancedAudioPreviewUI {
                 if (!this.audioBuffer) return;
                 const rect = container.getBoundingClientRect();
                 const progress = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
-                this.currentTime = this.duration * progress;
+                const trimmedDuration = this.duration - this.trimStart - this.trimEnd;
+                this.currentTime = this.trimStart + (trimmedDuration * progress);
                 this.updateTimeDisplay();
                 this.updateProgress();
             };
     
             container.addEventListener('mousedown', (e) => {
+                if (e.target.classList.contains('audio-trim-handle')) return;
                 e.preventDefault();
                 this.isDraggingProgress = true;
                 wasPlayingBeforeSeek = this.isPlaying;
@@ -766,7 +1082,7 @@ class EnhancedAudioPreviewUI {
     handleLoopButton() {
         this.isLooping = !this.isLooping;
         this.loopButton.classList.toggle('active', this.isLooping);
-        if (this.sourceNode) this.sourceNode.loop = this.isLooping;
+        // Note: We don't set this.sourceNode.loop here because we rely on manual looping in updateVisualization
     }
 
     startPlayback() {
@@ -776,7 +1092,9 @@ class EnhancedAudioPreviewUI {
         this.sourceNode = this.audioContext.createBufferSource();
         this.sourceNode.buffer = this.audioBuffer;
         
-        this.sourceNode.loop = this.isLooping; // Apply loop state
+        // Disable native looping. We handle looping manually in updateVisualization
+        // to correctly support the trimStart and trimEnd points.
+        this.sourceNode.loop = false;
         
         this.gainNode = this.audioContext.createGain();
         this.gainNode.gain.value = this.volume;
@@ -801,22 +1119,28 @@ class EnhancedAudioPreviewUI {
         this.sourceNode.connect(this.gainNode);
         this.gainNode.connect(this.audioContext.destination);
         
-        this.sourceNode.start(0, this.currentTime % this.duration);
+        this.playbackTrimStart = this.trimStart;
+        const offset = Math.max(this.trimStart, this.currentTime);
+        this.sourceNode.start(0, offset);
         this.isPlaying = true;
         this.playButton.innerHTML = '⏸';
         this.playButton.classList.add('playing');
         this.setStatus('playing');
         
-        this.startTime = this.audioContext.currentTime - this.currentTime;
+        this.startTime = this.audioContext.currentTime - (this.currentTime - this.playbackTrimStart);
         
-        this.sourceNode.onended = () => { if (this.isPlaying && !this.isLooping) this.stopPlayback(); };
+        this.sourceNode.onended = () => { 
+            // If we are looping, do not stop playback when the source ends naturally.
+            // The visualization loop will handle the restart logic.
+            if (this.isPlaying && !this.isLooping) this.stopPlayback(); 
+        };
         
         this.updateVisualization();
     }
 
     pausePlayback() {
         if (!this.isPlaying) return;
-        this.currentTime = this.audioContext.currentTime - this.startTime;
+        this.currentTime = Math.min(this.duration - this.trimEnd, this.audioContext.currentTime - this.startTime + this.playbackTrimStart);
         this.stopAudioNodes();
         this.isPlaying = false;
         this.playButton.innerHTML = '▶';
@@ -829,7 +1153,7 @@ class EnhancedAudioPreviewUI {
     stopPlayback() {
         this.stopAudioNodes();
         this.isPlaying = false;
-        this.currentTime = 0;
+        this.currentTime = this.trimStart;
         this.playButton.innerHTML = '▶';
         this.playButton.classList.remove('playing');
         this.setStatus('ready');
@@ -837,7 +1161,7 @@ class EnhancedAudioPreviewUI {
         this.animationFrameId = null;
         this.updateTimeDisplay();
         this.updateProgress();
-        this.resetVUMeters();
+        this.resetSignalLed();
     }
 
     stopAudioNodes() {
@@ -855,35 +1179,49 @@ class EnhancedAudioPreviewUI {
         
         if (!this.isDraggingProgress) {
             let elapsed = this.audioContext.currentTime - this.startTime;
-            if (this.isLooping && this.duration > 0) {
-                this.currentTime = elapsed % this.duration;
-            } else {
-                this.currentTime = elapsed;
-            }
-            if (!this.isLooping && this.currentTime >= this.duration) {
+            
+            this.currentTime = this.playbackTrimStart + elapsed;
+            
+            const trimmedEnd = this.duration - this.trimEnd;
+            if (!this.isLooping && this.currentTime >= trimmedEnd) {
                 this.stopPlayback();
                 return;
             }
+            
+            if (this.isLooping && this.currentTime >= trimmedEnd) {
+                this.currentTime = this.trimStart;
+                this.stopAudioNodes();
+                this.isPlaying = false; // Reset flag so startPlayback accepts the call
+                this.startPlayback();
+                return;
+            }
+            
             this.updateTimeDisplay();
             this.updateProgress();
         }
         
-        this.updateVUMeters();
+        this.updateSignalLed();
         
         this.animationFrameId = requestAnimationFrame(this.updateVisualization);
     }
 
     updateTimeDisplay() {
-        this.timeDisplay.textContent = `${this.formatTime(this.currentTime)} / ${this.formatTime(this.duration)}`;
+        const trimmedDuration = Math.max(0, this.duration - this.trimStart - this.trimEnd);
+        const currentInTrimmed = Math.max(0, this.currentTime - this.trimStart);
+        this.timeDisplay.textContent = `${this.formatTime(currentInTrimmed)} / ${this.formatTime(trimmedDuration)}`;
     }
 
     updateProgress() {
-        const percentage = this.duration > 0 ? (this.currentTime / this.duration) * 100 : 0;
+        const trimmedDuration = Math.max(0, this.duration - this.trimStart - this.trimEnd);
+        const currentInTrimmed = Math.max(0, this.currentTime - this.trimStart);
+        const percentage = trimmedDuration > 0 ? (currentInTrimmed / trimmedDuration) * 100 : 0;
         this.progressFill.style.width = `${Math.max(0, Math.min(100, percentage))}%`;
-        this.waveformProgress.style.width = `${Math.max(0, Math.min(100, percentage))}%`;
+        
+        const totalPercentage = this.duration > 0 ? (this.currentTime / this.duration) * 100 : 0;
+        this.waveformProgress.style.width = `${Math.max(0, Math.min(100, totalPercentage))}%`;
     }
 
-    updateVUMeters() {
+    updateSignalLed() {
         if (!this.analyserL) return;
         
         const dataArrayL = new Float32Array(this.analyserL.fftSize);
@@ -903,7 +1241,7 @@ class EnhancedAudioPreviewUI {
         const peakDbL = this.peakL > 0 ? 20 * Math.log10(this.peakL) : -60;
 
         let rmsR = rmsL, peakDbR = peakDbL;
-        if (this.analyserR) {
+        if (this.analyserR && this.analyserR !== this.analyserL) {
             const dataArrayR = new Float32Array(this.analyserR.fftSize);
             this.analyserR.getFloatTimeDomainData(dataArrayR);
             let sumSquaresR = 0, currentPeakR = 0;
@@ -918,24 +1256,39 @@ class EnhancedAudioPreviewUI {
             peakDbR = this.peakR > 0 ? 20 * Math.log10(this.peakR) : -60;
         }
 
-        const vuPercentL = Math.max(0, Math.min(100, (dbL + 60) / 60 * 100));
-        const vuPercentR = Math.max(0, Math.min(100, (20 * Math.log10(rmsR) + 60) / 60 * 100));
-        this.vuBarL.style.height = `${vuPercentL}%`;
-        this.vuBarR.style.height = `${vuPercentR}%`;
-        
-        const peakPercentL = Math.max(0, Math.min(100, (peakDbL + 60) / 60 * 100));
-        const peakPercentR = Math.max(0, Math.min(100, (peakDbR + 60) / 60 * 100));
-        this.vuPeakL.style.top = `${100 - peakPercentL}%`;
-        this.vuPeakR.style.top = `${100 - peakPercentR}%`;
-        
+        // Calculate max peak DB from both channels for the LED
         const overallPeakDB = Math.max(peakDbL, peakDbR);
         const overallRMSDB = 20 * Math.log10((rmsL + rmsR) / 2);
+
+        // Update Text Metrics
         this.peakValueEl.textContent = overallPeakDB > -Infinity ? `${overallPeakDB.toFixed(1)} dBFS` : "-∞";
         this.rmsValueEl.textContent = overallRMSDB > -Infinity ? `${overallRMSDB.toFixed(1)} dBFS` : "-∞";
-        
         this.peakValueEl.className = 'audio-metric-value';
         if (overallPeakDB > -3) this.peakValueEl.classList.add('danger');
         else if (overallPeakDB > -6) this.peakValueEl.classList.add('warning');
+
+        // Update LED Color and Glow based on Heat Map
+        let ledColor = '#333'; // Default/Off
+        let ledBoxShadow = 'inset 0 1px 2px rgba(0,0,0,0.5)';
+
+        if (overallPeakDB > -60) {
+            if (overallPeakDB >= -2) {
+                // Clipping / Red
+                ledColor = 'var(--audio-danger)';
+                ledBoxShadow = '0 0 10px var(--audio-danger), inset 0 0 2px rgba(255,255,255,0.8)';
+            } else if (overallPeakDB >= -10) {
+                // Warning / Yellow
+                ledColor = 'var(--audio-warning)';
+                ledBoxShadow = '0 0 8px var(--audio-warning), inset 0 0 2px rgba(255,255,255,0.5)';
+            } else {
+                // Good / Green
+                ledColor = 'var(--audio-primary)';
+                ledBoxShadow = '0 0 6px var(--audio-primary), inset 0 0 2px rgba(255,255,255,0.5)';
+            }
+        }
+
+        this.signalLed.style.backgroundColor = ledColor;
+        this.signalLed.style.boxShadow = ledBoxShadow;
     }
 
     updateWaveform() {
@@ -965,11 +1318,9 @@ class EnhancedAudioPreviewUI {
         this.waveformCtx.stroke();
     }
 
-    resetVUMeters() {
-        this.vuBarL.style.height = '0%';
-        this.vuBarR.style.height = '0%';
-        this.vuPeakL.style.top = '100%';
-        this.vuPeakR.style.top = '100%';
+    resetSignalLed() {
+        this.signalLed.style.backgroundColor = '#333';
+        this.signalLed.style.boxShadow = 'inset 0 1px 2px rgba(0,0,0,0.5)';
         this.peakL = 0; this.peakR = 0;
     }
 
@@ -984,6 +1335,17 @@ class EnhancedAudioPreviewUI {
     }
 
     async loadAudio(audioInfo, metricsInfo, autoplay) {
+        if (this.importedAudioBuffer) {
+            this.audioBuffer = this.importedAudioBuffer;
+            this.duration = this.audioBuffer.duration;
+            this.updateWaveform();
+            this.updateTrimDisplay();
+            if (autoplay && this.autoPreviewEnabled) {
+                setTimeout(() => this.startPlayback(), 100);
+            }
+            return;
+        }
+        
         try {
             this.setStatus('loading');
             this.stopPlayback();
@@ -1003,6 +1365,7 @@ class EnhancedAudioPreviewUI {
             this.updateTimeDisplay();
             this.updateProgress();
             this.updateWaveform();
+            this.updateTrimDisplay();
             
             if (metricsInfo) {
                 this.peakValueEl.textContent = `${metricsInfo.peak} dBFS`;
