@@ -1,7 +1,7 @@
 """
 @author: CRT
 @title: CRT-Nodes
-@version: 2.0.6
+@version: 2.0.7
 @project: "https://github.com/plugcrypt/CRT-Nodes",
 @description: Set of nodes for ComfyUI
 https://discord.gg/8wYS9MBQqp
@@ -101,6 +101,7 @@ if 'CRT_NODES_INITIALIZED' not in globals():
     from .py.crt_string_line_counter import CRT_StringLineCounter
     from .py.text_box_line_spot import CRT_LineSpot
     from .py.remove_lines import CRT_RemoveLines
+    from .py.MonoToStereoConverter import MonoToStereoConverter
 
 
     print("[CRT-Nodes __init__] Registering custom model paths...")
@@ -211,6 +212,7 @@ NODE_CLASS_MAPPINGS = {
     "CRT_StringLineCounter": CRT_StringLineCounter,
     "Text Box line spot": CRT_LineSpot,
     "CRT_RemoveLines": CRT_RemoveLines,
+    "MonoToStereoConverter": MonoToStereoConverter,
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
@@ -301,6 +303,7 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "CRT_StringLineCounter": "String Line Counter (CRT)",
     "Text Box line spot": "Text Box line spot (CRT)",
     "CRT_RemoveLines": "Remove Lines (CRT)",
+    "MonoToStereoConverter": "Mono to Stereo Converter (CRT)",
 }
 
 WEB_DIRECTORY = "./js"
