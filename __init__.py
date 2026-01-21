@@ -1,7 +1,7 @@
 """
 @author: CRT
 @title: CRT-Nodes
-@version: 2.0.7
+@version: 2.0.8
 @project: "https://github.com/plugcrypt/CRT-Nodes",
 @description: Set of nodes for ComfyUI
 https://discord.gg/8wYS9MBQqp
@@ -102,6 +102,10 @@ if 'CRT_NODES_INITIALIZED' not in globals():
     from .py.text_box_line_spot import CRT_LineSpot
     from .py.remove_lines import CRT_RemoveLines
     from .py.MonoToStereoConverter import MonoToStereoConverter
+    from .py.any_trigger import AnyTrigger
+    from .py.DepthAnythingTensorrtFormat import DepthAnythingTensorrtFormat
+    from .py.AudioFrameAdjuster import AudioFrameAdjuster
+    from .py.LTXVAutoGuideSpacing import LTXVAutoGuideSpacing
 
 
     print("[CRT-Nodes __init__] Registering custom model paths...")
@@ -213,6 +217,10 @@ NODE_CLASS_MAPPINGS = {
     "Text Box line spot": CRT_LineSpot,
     "CRT_RemoveLines": CRT_RemoveLines,
     "MonoToStereoConverter": MonoToStereoConverter,
+    "AnyTrigger": AnyTrigger,
+    "DepthAnythingTensorrtFormat": DepthAnythingTensorrtFormat,
+    "AudioFrameAdjuster": AudioFrameAdjuster,
+    "LTXVAutoGuideSpacing": LTXVAutoGuideSpacing,
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
@@ -304,6 +312,10 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "Text Box line spot": "Text Box line spot (CRT)",
     "CRT_RemoveLines": "Remove Lines (CRT)",
     "MonoToStereoConverter": "Mono to Stereo Converter (CRT)",
+    "AnyTrigger": "Any Trigger (CRT)",
+    "DepthAnythingTensorrtFormat": "Depth Anything Tensorrt Format (CRT)",
+    "AudioFrameAdjuster": "Audio Frame Adjuster (CRT)",
+    "LTXVAutoGuideSpacing": "LTXV Auto Guide Spacing (CRT)",
 }
 
 WEB_DIRECTORY = "./js"
