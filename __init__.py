@@ -1,7 +1,7 @@
 """
 @author: CRT
 @title: CRT-Nodes
-@version: 2.0.9
+@version: 2.1.1
 @project: "https://github.com/plugcrypt/CRT-Nodes",
 @description: Set of nodes for ComfyUI
 https://discord.gg/8wYS9MBQqp
@@ -106,6 +106,7 @@ if 'CRT_NODES_INITIALIZED' not in globals():
     from .py.DepthAnythingTensorrtFormat import DepthAnythingTensorrtFormat
     from .py.AudioFrameAdjuster import AudioFrameAdjuster
     from .py.LTXVAutoGuideSpacing import LTXVAutoGuideSpacing
+    from .py.BatchBrightnessCurve import BatchBrightnessCurve
 
 
     print("[CRT-Nodes __init__] Registering custom model paths...")
@@ -221,6 +222,7 @@ NODE_CLASS_MAPPINGS = {
     "DepthAnythingTensorrtFormat": DepthAnythingTensorrtFormat,
     "AudioFrameAdjuster": AudioFrameAdjuster,
     "LTXVAutoGuideSpacing": LTXVAutoGuideSpacing,
+    "BatchBrightnessCurve": BatchBrightnessCurve,
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
@@ -316,6 +318,7 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "DepthAnythingTensorrtFormat": "Depth Anything Tensorrt Format (CRT)",
     "AudioFrameAdjuster": "Audio Frame Adjuster (CRT)",
     "LTXVAutoGuideSpacing": "LTXV Auto Guide Spacing (CRT)",
+    "BatchBrightnessCurve": "Batch Brightness Curve (U-Shape) (CRT)",
 }
 
 WEB_DIRECTORY = "./js"
