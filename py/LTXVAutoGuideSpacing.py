@@ -5,27 +5,13 @@ import math
 
 class LTXVAutoGuideSpacing(LTXVAddGuide):
     """
-    Automatically distributes guide frames evenly across an image batch
-    with easing curve support for strength interpolation.
+    Automatically distributes guide frames evenly across an image batch.
+    Applies a symmetrical "U-Shape" strength curve (High -> Low -> High) 
+    controlled by a Q-factor.
     """
-
-    EASING_FUNCTIONS = {
-        "linear": lambda t: t,
-        "ease_in_quad": lambda t: t * t,
-        "ease_out_quad": lambda t: t * (2 - t),
-        "ease_in_out_quad": lambda t: 2 * t * t if t < 0.5 else -1 + (4 - 2 * t) * t,
-        "ease_in_cubic": lambda t: t * t * t,
-        "ease_out_cubic": lambda t: (t - 1) * (t - 1) * (t - 1) + 1,
-        "ease_in_out_cubic": lambda t: 4 * t * t * t if t < 0.5 else (t - 1) * (2 * t - 2) * (2 * t - 2) + 1,
-        "ease_in_sine": lambda t: 1 - math.cos((t * math.pi) / 2),
-        "ease_out_sine": lambda t: math.sin((t * math.pi) / 2),
-        "ease_in_out_sine": lambda t: -(math.cos(math.pi * t) - 1) / 2,
-    }
 
     @classmethod
     def define_schema(cls):
-        easing_options = list(cls.EASING_FUNCTIONS.keys())
-        
         return io.Schema(
             node_id="LTXVAutoGuideSpacing",
             category="CRT/Conditioning",
@@ -55,7 +41,7 @@ class LTXVAutoGuideSpacing(LTXVAddGuide):
                     min=0.0,
                     max=1.0,
                     step=0.01,
-                    tooltip="Strength for the first frame (0 = disabled, 1 = full strength)",
+                    tooltip="Strength for the very first frame (Start of video)",
                 ),
                 io.Float.Input(
                     "last_frame_strength",
@@ -63,15 +49,7 @@ class LTXVAutoGuideSpacing(LTXVAddGuide):
                     min=0.0,
                     max=1.0,
                     step=0.01,
-                    tooltip="Strength for the last frame (0 = disabled, 1 = full strength)",
-                ),
-                io.Float.Input(
-                    "min_strength",
-                    default=0.3,
-                    min=0.0,
-                    max=1.0,
-                    step=0.01,
-                    tooltip="Minimum strength for middle frames (start of easing curve)",
+                    tooltip="Strength for the very last frame (End of video)",
                 ),
                 io.Float.Input(
                     "max_strength",
@@ -79,13 +57,23 @@ class LTXVAutoGuideSpacing(LTXVAddGuide):
                     min=0.0,
                     max=1.0,
                     step=0.01,
-                    tooltip="Maximum strength for middle frames (end of easing curve)",
+                    tooltip="Strength at the edges of the middle sequence (Connecting to first/last)",
                 ),
-                io.Combo.Input(
-                    "easing_curve",
-                    options=easing_options,
-                    default="linear",
-                    tooltip="Easing curve for strength interpolation across middle frames",
+                io.Float.Input(
+                    "min_strength",
+                    default=0.0,
+                    min=0.0,
+                    max=1.0,
+                    step=0.01,
+                    tooltip="Strength at the center of the video (Bottom of the U-shape)",
+                ),
+                io.Float.Input(
+                    "q_factor",
+                    default=2.0,
+                    min=0.1,
+                    max=10.0,
+                    step=0.1,
+                    tooltip="Curve Shape. 1.0=Linear(V), 2.0=Parabolic(U). Lower values = Narrow Dip. Higher values = Wide Dip.",
                 ),
             ],
             outputs=[
@@ -94,15 +82,6 @@ class LTXVAutoGuideSpacing(LTXVAddGuide):
                 io.Latent.Output(display_name="latent"),
             ],
         )
-
-    @classmethod
-    def calculate_strength(cls, index, total_middle_frames, min_strength, max_strength, easing_name):
-        if total_middle_frames <= 1:
-            return max_strength
-        t = index / (total_middle_frames - 1)
-        easing_func = cls.EASING_FUNCTIONS.get(easing_name, cls.EASING_FUNCTIONS["linear"])
-        eased_t = easing_func(t)
-        return min_strength + (max_strength - min_strength) * eased_t
 
     @classmethod
     def execute(
@@ -116,15 +95,15 @@ class LTXVAutoGuideSpacing(LTXVAddGuide):
         max_frames,
         first_frame_strength,
         last_frame_strength,
-        min_strength,
         max_strength,
-        easing_curve,
+        min_strength,
+        q_factor,
     ) -> io.NodeOutput:
         scale_factors = vae.downscale_index_formula
         latent_image = latent["samples"]
         noise_mask = get_noise_mask(latent)
 
-        # Standard LTXV temporal compression is roughly 8x, but we rely on max_frames for spacing
+        # Standard LTXV temporal compression
         TEMPORAL_COMPRESSION = 8
 
         _, _, actual_latent_length, latent_height, latent_width = latent_image.shape
@@ -134,7 +113,6 @@ class LTXVAutoGuideSpacing(LTXVAddGuide):
         if max_frames > 0:
             timeline_frames = max_frames
         else:
-            # Fallback: Convert latent length back to approximate video frames
             timeline_frames = actual_latent_length * TEMPORAL_COMPRESSION
             print(f"[LTXVAutoGuideSpacing] max_frames=0. Inferred timeline: {timeline_frames} frames from latent length {actual_latent_length}.")
 
@@ -151,7 +129,6 @@ class LTXVAutoGuideSpacing(LTXVAddGuide):
             frame_mappings.append((0, 0, "single"))
         elif num_guides == 2:
             frame_mappings.append((0, 0, "first"))
-            # For the last frame, we usually want the very end of the video sequence
             frame_mappings.append((batch_size - 1, timeline_frames - 1, "last"))
         else:
             for i in range(num_guides):
@@ -182,33 +159,47 @@ class LTXVAutoGuideSpacing(LTXVAddGuide):
             elif frame_type == "single":
                 strength = max_strength
             else:
-                strength = cls.calculate_strength(
-                    middle_frame_counter,
-                    total_middle_frames,
-                    min_strength,
-                    max_strength,
-                    easing_curve
-                )
+                # --- U-SHAPE CALCULATION ---
+                # 1. Normalize position in middle sequence (0.0 to 1.0)
+                if total_middle_frames <= 1:
+                    t = 0.5
+                else:
+                    t = middle_frame_counter / (total_middle_frames - 1)
+                
+                # 2. Calculate Distance from Center (1.0 = Edge, 0.0 = Center)
+                # t=0.0 -> dist=1.0 | t=0.5 -> dist=0.0 | t=1.0 -> dist=1.0
+                dist_from_center = abs(t - 0.5) * 2
+                
+                # 3. Apply Q-Factor (Power Curve)
+                # Curve = Distance ^ Q
+                curve_value = math.pow(dist_from_center, q_factor)
+                
+                # 4. Map to Strength
+                # If curve_value is 1 (Edges), we get max_strength
+                # If curve_value is 0 (Center), we get min_strength
+                strength = min_strength + (max_strength - min_strength) * curve_value
+                
                 middle_frame_counter += 1
             
-            if strength == 0.0:
+            # Skip if strength is effectively zero
+            if strength < 0.001:
+                processed_frames.append({
+                    'batch_idx': batch_idx, 'target_frame': target_frame_idx, 'strength': 0.0, 'type': 'SKIPPED'
+                })
                 continue
 
             # Encode the image
             img = image_batch[batch_idx].unsqueeze(0)
-            image_encoded, t = cls.encode(vae, latent_width, latent_height, img, scale_factors)
+            image_encoded, t_enc = cls.encode(vae, latent_width, latent_height, img, scale_factors)
             
-            # FIX: Pass the VIDEO Frame Index (target_frame_idx) directly to get_latent_index.
-            # The base class handles the division/compression.
-            # We pass actual_latent_length to allow it to check bounds against the real tensor.
+            # Get Latent Index
             frame_idx, latent_idx = cls.get_latent_index(
                 positive, actual_latent_length, len(image_encoded), target_frame_idx, scale_factors
             )
             
-            # If the calculated latent index is out of bounds (because actual latent is shorter than max_frames implies),
-            # we warn and skip to prevent a crash.
-            if latent_idx + t.shape[2] > actual_latent_length:
-                print(f"[LTXVAutoGuideSpacing] SKIP: Guide for frame {target_frame_idx} maps to latent index {latent_idx}, which exceeds input latent size ({actual_latent_length}).")
+            # Safety Check
+            if latent_idx + t_enc.shape[2] > actual_latent_length:
+                print(f"[LTXVAutoGuideSpacing] SKIP: Frame {target_frame_idx} (Latent {latent_idx}) exceeds bounds.")
                 continue
             
             # Append keyframe
@@ -218,7 +209,7 @@ class LTXVAutoGuideSpacing(LTXVAddGuide):
                 frame_idx,
                 latent_image,
                 noise_mask,
-                t,
+                t_enc,
                 strength,
                 scale_factors,
             )
@@ -231,12 +222,17 @@ class LTXVAutoGuideSpacing(LTXVAddGuide):
                 'frame_type': frame_type
             })
 
-        print(f"[LTXVAutoGuideSpacing] Processed {len(processed_frames)} guide frames (Max Video Frames: {timeline_frames}).")
-        for info in processed_frames:
-            print(f"  {info['frame_type'].upper()}: Batch {info['batch_idx']} -> Frame {info['target_frame']} (Latent {info['latent_idx']}) | Str: {info['strength']:.2f}")
+        print(f"[LTXVAutoGuideSpacing] Processed {len(processed_frames)} guide frames. Mode: U-Shape (Q={q_factor})")
+        # Optional: Print summary of first few, middle, and last for verification
+        if len(processed_frames) > 0:
+            print(f"  Start: Str {processed_frames[0]['strength']:.2f}")
+            mid = len(processed_frames)//2
+            print(f"  Mid:   Str {processed_frames[mid]['strength']:.2f}")
+            print(f"  End:   Str {processed_frames[-1]['strength']:.2f}")
 
         return io.NodeOutput(
             positive, 
             negative, 
             {"samples": latent_image, "noise_mask": noise_mask}
         )
+        

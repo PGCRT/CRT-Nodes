@@ -1,7 +1,7 @@
 import torch
 import numpy as np
 import folder_paths
-import torchaudio
+import soundfile as sf          # ← this is already present in ComfyUI embedded Python
 import random
 import os
 
@@ -25,8 +25,9 @@ class AudioPreviewer:
             "optional": {
                 "audio": ("AUDIO",),
                 "trim_start": ("FLOAT", {"default": 0.0, "min": 0.0, "max": 999999.0, "step": 0.01}),
-                "trim_end": ("FLOAT", {"default": 0.0, "min": 0.0, "max": 999999.0, "step": 0.01}),
+                "trim_end":   ("FLOAT", {"default": 0.0, "min": 0.0, "max": 999999.0, "step": 0.01}),
                 "loaded_file": ("STRING", {"default": "", "forceInput": False}),
+                "volume":      ("FLOAT",  {"default": 1.0, "min": 0.0, "max": 3.0, "step": 0.01}),
             }
         }
 
@@ -35,47 +36,55 @@ class AudioPreviewer:
     FUNCTION = "process"
     CATEGORY = "CRT/Audio"
 
-    def process(self, preview_on_finish, trim_start=0.0, trim_end=0.0, audio=None, loaded_file=""):
+    def process(self, preview_on_finish, trim_start=0.0, trim_end=0.0, audio=None, loaded_file="", volume=1.0):
         # Determine source audio
         if audio is None:
             if loaded_file and loaded_file.strip():
                 try:
                     file_path = folder_paths.get_annotated_filepath(loaded_file)
-                    waveform, sample_rate = torchaudio.load(file_path)
-                    audio = {"waveform": waveform.unsqueeze(0), "sample_rate": sample_rate}
+                    # ──────────────── CHANGE: use soundfile instead of torchaudio ────────────────
+                    data, sample_rate = sf.read(file_path, dtype='float32')
+                    # Convert to torch tensor in correct shape (channels, samples)
+                    waveform = torch.from_numpy(data.T) if data.ndim == 2 else torch.from_numpy(data).unsqueeze(0)
+                    audio = {"waveform": waveform, "sample_rate": sample_rate}
                 except Exception as e:
                     raise ValueError(f"Failed to load audio file '{loaded_file}': {e}")
             else:
                 raise ValueError("No audio input provided and no file loaded.")
 
-        filename_prefix = self.prefix_append
-        full_output_folder, filename, counter, subfolder, _ = folder_paths.get_save_image_path(filename_prefix, self.output_dir)
-        
-        waveform_to_save = audio["waveform"][0] 
+        waveform = audio["waveform"]
         sample_rate = audio["sample_rate"]
+
+        # Apply volume
+        if abs(volume - 1.0) > 1e-6:
+            waveform = waveform * volume
+
+        filename_prefix = self.prefix_append
+        full_output_folder, filename, counter, subfolder, _ = folder_paths.get_save_image_path(
+            filename_prefix, self.output_dir
+        )
+        
+        waveform_to_save = waveform if waveform.dim() == 2 else waveform.squeeze(0)
         
         # Apply trimming if specified
         original_duration = waveform_to_save.shape[1] / sample_rate
         
-        # Calculate trim in samples
         start_sample = int(trim_start * sample_rate)
         end_sample = int((original_duration - trim_end) * sample_rate)
         
-        # Ensure valid range
         start_sample = max(0, start_sample)
         end_sample = min(waveform_to_save.shape[1], end_sample)
-        # Prevent extending beyond the actual waveform length
         if end_sample < start_sample:
-             end_sample = start_sample
+            end_sample = start_sample
         
-        # Trim the waveform
         trimmed_waveform = waveform_to_save[:, start_sample:end_sample]
         trimmed_duration = trimmed_waveform.shape[1] / sample_rate
         
         file = f"{filename}_{counter:05}_.wav"
         path = os.path.join(full_output_folder, file)
         
-        torchaudio.save(path, trimmed_waveform.cpu(), sample_rate)
+        # Save with soundfile (native format)
+        sf.write(path, trimmed_waveform.T.cpu().numpy(), sample_rate)
 
         saved_audio_info = { "filename": file, "subfolder": subfolder, "type": self.type }
         
@@ -85,7 +94,6 @@ class AudioPreviewer:
         rms_dbfs = -np.inf
         lufs = -np.inf
 
-        # Only calculate metrics if audio is not empty
         if audio_np.size > 0:
             if np.max(np.abs(audio_np)) > 0:
                 peak_dbfs = 20 * np.log10(np.max(np.abs(audio_np)))
@@ -114,9 +122,8 @@ class AudioPreviewer:
             "trim_end": f"{trim_end:.2f}"
         }
         
-        # Output trimmed audio for chaining
         output_audio = {
-            "waveform": trimmed_waveform.unsqueeze(0),
+            "waveform": trimmed_waveform.unsqueeze(0) if trimmed_waveform.dim() == 2 else trimmed_waveform,
             "sample_rate": sample_rate
         }
         

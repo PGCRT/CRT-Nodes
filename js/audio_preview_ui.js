@@ -676,7 +676,6 @@ class EnhancedAudioPreviewUI {
         this.container = document.createElement('div');
         this.container.className = 'enhanced-audio-preview-container';
         
-        // Changed structure: Removed audio-vu-section, added audio-signal-led in volume section
         this.container.innerHTML = `
             <div class="enhanced-audio-title">Audio Preview</div>
             <div class="audio-status-indicators"><div class="audio-status-led"></div></div>
@@ -684,7 +683,7 @@ class EnhancedAudioPreviewUI {
                 <div class="audio-import-section">
                     <button class="audio-import-button">Import Audio</button>
                     <button class="audio-unload-button">×</button>
-                    <input type="file" accept="audio/*" style="display: none;" class="audio-file-input">
+                    <input type="file" accept=".wav,.mp3,.ogg,.flac,.m4a,.aac,.aiff,.aif,.aifc,.webm,.opus,.wma,.amr,.caf" style="display: none;" class="audio-file-input">
                     <div class="audio-import-filename">No file imported</div>
                 </div>
                 <div class="audio-waveform-container">
@@ -739,16 +738,17 @@ class EnhancedAudioPreviewUI {
                 </div>
                 <div class="audio-volume-section">
                     <div class="audio-signal-led"></div>
-                    <div class="audio-volume-label">Volume</div><input type="range" class="audio-volume-slider" min="0" max="1" step="0.01"><div class="audio-volume-value">80%</div>
+                    <div class="audio-volume-label">Volume</div>
+                    <input type="range" class="audio-volume-slider" min="0" max="2" step="0.01">
+                    <div class="audio-volume-value">80%</div>
                 </div>
             </div>`;
-        
+
         widgetWrapper.appendChild(this.container);
         this.node.addDOMWidget('enhanced_audio_preview_ui', 'div', widgetWrapper, { serialize: false });
 
         const q = (sel) => this.container.querySelector(sel);
-        const qa = (sel) => this.container.querySelectorAll(sel);
-        
+
         this.importButton = q('.audio-import-button');
         this.unloadButton = q('.audio-unload-button');
         this.fileInput = q('.audio-file-input');
@@ -770,10 +770,7 @@ class EnhancedAudioPreviewUI {
         this.trimDuration = q('.trim-duration');
         this.trimStartDisplay = q('.trim-start');
         this.trimEndDisplay = q('.trim-end');
-        
-        // Removed VU Bar elements, added Signal LED
         this.signalLed = q('.audio-signal-led');
-
         this.peakValueEl = q('[data-id="peak"]');
         this.rmsValueEl = q('[data-id="rms"]');
         this.lufsValueEl = q('[data-id="lufs"]');
@@ -785,7 +782,10 @@ class EnhancedAudioPreviewUI {
         this.autoPreviewLabel = q('.audio-autopreview-label');
         
         this.waveformCtx = this.waveformCanvas.getContext('2d');
-        
+
+        // Allow volume up to 200%
+        this.volumeSlider.max = 2.0;
+
         this.importButton.addEventListener('click', () => this.fileInput.click());
         this.unloadButton.addEventListener('click', this.handleUnload);
         this.fileInput.addEventListener('change', (e) => this.handleFileImport(e));
@@ -798,13 +798,20 @@ class EnhancedAudioPreviewUI {
         this.setupAutoPreviewToggle();
         
         this.volumeSlider.value = this.volume;
+        this.volumeValue.textContent = Math.round(this.volume * 100) + '%';
         this.setStatus('ready');
 
-        // Check if a file was previously loaded
-        const loadedFileWidget = this.node.widgets && this.node.widgets.find(w => w.name === 'loaded_file');
-        if (loadedFileWidget && loadedFileWidget.value) {
+        const loadedFileWidget = this.node.widgets?.find(w => w.name === 'loaded_file');
+        if (loadedFileWidget?.value) {
             this.importFilename.textContent = loadedFileWidget.value;
             this.unloadButton.style.display = "block";
+        }
+
+        const volumeWidget = this.node.widgets?.find(w => w.name === 'volume');
+        if (volumeWidget) {
+            this.volume = volumeWidget.value;
+            this.volumeSlider.value = this.volume;
+            this.volumeValue.textContent = Math.round(this.volume * 100) + '%';
         }
     }
 
@@ -816,7 +823,6 @@ class EnhancedAudioPreviewUI {
             this.setStatus('loading');
             this.stopPlayback();
             
-            // First decode locally for preview
             const arrayBuffer = await file.arrayBuffer();
             if (this.audioContext.state === 'suspended') await this.audioContext.resume();
             
@@ -826,32 +832,27 @@ class EnhancedAudioPreviewUI {
             this.trimStart = 0;
             this.trimEnd = 0;
             
-            // Upload to server
             const formData = new FormData();
             formData.append("image", file);
             formData.append("overwrite", "true");
             formData.append("type", "input");
-            
+            formData.append("volume", this.volume.toString());
+
             this.importFilename.textContent = "Uploading...";
             
-            try {
-                const resp = await api.fetchApi("/upload/image", {
-                    method: "POST",
-                    body: formData,
-                });
-                
-                if (resp.status === 200) {
-                    const data = await resp.json();
-                    this.updateLoadedFileWidget(data.name);
-                    this.importFilename.textContent = file.name;
-                    this.unloadButton.style.display = "block";
-                } else {
-                    this.importFilename.textContent = "Upload failed";
-                    console.error("Upload failed", resp.statusText);
-                }
-            } catch (uploadErr) {
-                console.error("Upload error:", uploadErr);
+            const resp = await api.fetchApi("/upload/image", {
+                method: "POST",
+                body: formData,
+            });
+            
+            if (resp.status === 200) {
+                const data = await resp.json();
+                this.updateLoadedFileWidget(data.name);
+                this.importFilename.textContent = file.name;
+                this.unloadButton.style.display = "block";
+            } else {
                 this.importFilename.textContent = "Upload failed";
+                console.error("Upload failed", resp.statusText);
             }
             
             this.updateTimeDisplay();
@@ -880,7 +881,6 @@ class EnhancedAudioPreviewUI {
         this.importFilename.textContent = "No file imported";
         this.unloadButton.style.display = "none";
         
-        // Clear visualization
         if (this.waveformCtx) {
             const { width, height } = this.waveformCanvas;
             this.waveformCtx.clearRect(0, 0, width, height);
@@ -956,7 +956,6 @@ class EnhancedAudioPreviewUI {
 
     updateTrimDisplay() {
         if (!this.audioBuffer) {
-            // Reset trim display if no audio
             this.trimHandleStart.style.left = `0%`;
             this.trimHandleEnd.style.right = `0%`;
             this.trimOverlayStart.style.width = `0%`;
@@ -1077,12 +1076,16 @@ class EnhancedAudioPreviewUI {
         this.volume = parseFloat(this.volumeSlider.value);
         this.volumeValue.textContent = Math.round(this.volume * 100) + '%';
         if (this.gainNode) this.gainNode.gain.setValueAtTime(this.volume, this.audioContext.currentTime);
+
+        const volumeWidget = this.node.widgets.find(w => w.name === 'volume');
+        if (volumeWidget) {
+            volumeWidget.value = this.volume;
+        }
     }
 
     handleLoopButton() {
         this.isLooping = !this.isLooping;
         this.loopButton.classList.toggle('active', this.isLooping);
-        // Note: We don't set this.sourceNode.loop here because we rely on manual looping in updateVisualization
     }
 
     startPlayback() {
@@ -1092,8 +1095,6 @@ class EnhancedAudioPreviewUI {
         this.sourceNode = this.audioContext.createBufferSource();
         this.sourceNode.buffer = this.audioBuffer;
         
-        // Disable native looping. We handle looping manually in updateVisualization
-        // to correctly support the trimStart and trimEnd points.
         this.sourceNode.loop = false;
         
         this.gainNode = this.audioContext.createGain();
@@ -1130,8 +1131,6 @@ class EnhancedAudioPreviewUI {
         this.startTime = this.audioContext.currentTime - (this.currentTime - this.playbackTrimStart);
         
         this.sourceNode.onended = () => { 
-            // If we are looping, do not stop playback when the source ends naturally.
-            // The visualization loop will handle the restart logic.
             if (this.isPlaying && !this.isLooping) this.stopPlayback(); 
         };
         
@@ -1191,7 +1190,7 @@ class EnhancedAudioPreviewUI {
             if (this.isLooping && this.currentTime >= trimmedEnd) {
                 this.currentTime = this.trimStart;
                 this.stopAudioNodes();
-                this.isPlaying = false; // Reset flag so startPlayback accepts the call
+                this.isPlaying = false;
                 this.startPlayback();
                 return;
             }
@@ -1256,32 +1255,26 @@ class EnhancedAudioPreviewUI {
             peakDbR = this.peakR > 0 ? 20 * Math.log10(this.peakR) : -60;
         }
 
-        // Calculate max peak DB from both channels for the LED
         const overallPeakDB = Math.max(peakDbL, peakDbR);
         const overallRMSDB = 20 * Math.log10((rmsL + rmsR) / 2);
 
-        // Update Text Metrics
         this.peakValueEl.textContent = overallPeakDB > -Infinity ? `${overallPeakDB.toFixed(1)} dBFS` : "-∞";
         this.rmsValueEl.textContent = overallRMSDB > -Infinity ? `${overallRMSDB.toFixed(1)} dBFS` : "-∞";
         this.peakValueEl.className = 'audio-metric-value';
         if (overallPeakDB > -3) this.peakValueEl.classList.add('danger');
         else if (overallPeakDB > -6) this.peakValueEl.classList.add('warning');
 
-        // Update LED Color and Glow based on Heat Map
-        let ledColor = '#333'; // Default/Off
+        let ledColor = '#333';
         let ledBoxShadow = 'inset 0 1px 2px rgba(0,0,0,0.5)';
 
         if (overallPeakDB > -60) {
             if (overallPeakDB >= -2) {
-                // Clipping / Red
                 ledColor = 'var(--audio-danger)';
                 ledBoxShadow = '0 0 10px var(--audio-danger), inset 0 0 2px rgba(255,255,255,0.8)';
             } else if (overallPeakDB >= -10) {
-                // Warning / Yellow
                 ledColor = 'var(--audio-warning)';
                 ledBoxShadow = '0 0 8px var(--audio-warning), inset 0 0 2px rgba(255,255,255,0.5)';
             } else {
-                // Good / Green
                 ledColor = 'var(--audio-primary)';
                 ledBoxShadow = '0 0 6px var(--audio-primary), inset 0 0 2px rgba(255,255,255,0.5)';
             }
