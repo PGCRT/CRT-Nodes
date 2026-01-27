@@ -1,7 +1,7 @@
+numpy<2.0
 Pillow>=9.0.0
 opencv-contrib-python
 scipy
-ultralytics
 color-matcher
 spandrel
 safetensors
