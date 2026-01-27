@@ -1,10 +1,8 @@
 numpy<2.0
-torch>=2.0.0
-torchvision
 Pillow>=9.0.0
 opencv-contrib-python
 scipy
-ultralytics
+ultralytics --no-deps
 color-matcher
 spandrel
 safetensors
