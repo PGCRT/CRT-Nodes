@@ -4,10 +4,12 @@ from PIL import Image
 import numpy as np
 import torch
 
+
 def natural_sort_key(filename):
     # Split filename into parts, converting numeric parts to integers for natural sorting
     parts = re.split(r'(\d+)', filename)
     return [int(part) if part.isdigit() else part.lower() for part in parts]
+
 
 class CRTLoadLastMedia:
     @classmethod
@@ -35,9 +37,9 @@ class CRTLoadLastMedia:
 
         # Get all image files
         image_files = [
-            f for f in os.listdir(folder_path)
-            if os.path.isfile(os.path.join(folder_path, f))
-            and f.lower().endswith(image_extensions)
+            f
+            for f in os.listdir(folder_path)
+            if os.path.isfile(os.path.join(folder_path, f)) and f.lower().endswith(image_extensions)
         ]
 
         if not image_files:
@@ -45,10 +47,7 @@ class CRTLoadLastMedia:
 
         # Sort files
         if sort_by == "date":
-            image_files.sort(
-                key=lambda x: os.path.getmtime(os.path.join(folder_path, x)),
-                reverse=invert_order
-            )
+            image_files.sort(key=lambda x: os.path.getmtime(os.path.join(folder_path, x)), reverse=invert_order)
         else:  # alphabetical with natural sorting
             image_files.sort(key=natural_sort_key, reverse=invert_order)
 
@@ -68,9 +67,9 @@ class CRTLoadLastMedia:
             return 0
         image_extensions = ('.png', '.jpg', '.jpeg', '.bmp', '.tiff')
         image_files = [
-            f for f in os.listdir(folder_path)
-            if os.path.isfile(os.path.join(folder_path, f))
-            and f.lower().endswith(image_extensions)
+            f
+            for f in os.listdir(folder_path)
+            if os.path.isfile(os.path.join(folder_path, f)) and f.lower().endswith(image_extensions)
         ]
         if not image_files:
             return 0
@@ -88,10 +87,7 @@ class CRTLoadLastMedia:
             return f"Invalid folder path: {folder_path}"
         return True
 
-NODE_CLASS_MAPPINGS = {
-    "CRTLoadLastMedia": CRTLoadLastMedia
-}
 
-NODE_DISPLAY_NAME_MAPPINGS = {
-    "CRTLoadLastMedia": "Load Last Image (CRT)"
-}
+NODE_CLASS_MAPPINGS = {"CRTLoadLastMedia": CRTLoadLastMedia}
+
+NODE_DISPLAY_NAME_MAPPINGS = {"CRTLoadLastMedia": "Load Last Image (CRT)"}

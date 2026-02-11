@@ -11,11 +11,13 @@ DEFAULT_EXCLUDE_WORDS = (
     "mr mrs ms dr prof etc ie eg"
 )
 
+
 class AdvancedStringReplace:
     """
     An advanced string replacement node that can find multiple words from a given string
     and replace them, while also normalizing whitespace and allowing for an exclusion list.
     """
+
     @classmethod
     def INPUT_TYPES(s):
         return {
@@ -41,7 +43,7 @@ class AdvancedStringReplace:
 
         # 2. Split the source string into words to process them one by one.
         source_words = source.split()
-        
+
         # 3. Build the new list of words based on the replacement and exclusion logic.
         result_words = []
         for word in source_words:

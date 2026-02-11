@@ -1,10 +1,11 @@
 import math
 
+
 class ImageDimensionsFromMegaPixelsAlt:
     @classmethod
     def INPUT_TYPES(cls):
         megapixel_options = [f"{i/10:.1f}" for i in range(1, 26)]
-        
+
         return {
             "required": {
                 "image": ("IMAGE",),
@@ -21,7 +22,7 @@ class ImageDimensionsFromMegaPixelsAlt:
     def calculate(self, image, megapixels, multiple_of):
         _, h, w, _ = image.shape
         aspect_ratio = w / h
-        
+
         megapixel = float(megapixels)
         target_pixels = megapixel * 1000000
 

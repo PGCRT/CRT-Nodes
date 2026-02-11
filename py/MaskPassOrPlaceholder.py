@@ -1,6 +1,7 @@
 import torch
 import comfy
 
+
 class MaskPassOrPlaceholder:
     @classmethod
     def INPUT_TYPES(s):

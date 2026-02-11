@@ -1,6 +1,7 @@
 import folder_paths
 import comfy.utils
 
+
 class LoraLoaderStr:
 
     def __init__(self):
@@ -14,11 +15,11 @@ class LoraLoaderStr:
             "required": {
                 "model": ("MODEL",),
                 "clip": ("CLIP",),
-                "switch": (["Off", "On"],),
+                "switch": (["Of", "On"],),
                 "lora_name": (file_list,),
                 "strength_model": ("FLOAT", {"default": 1.0, "min": -10.0, "max": 10.0, "step": 0.1}),
                 "strength_clip": ("FLOAT", {"default": 1.0, "min": -10.0, "max": 10.0, "step": 0.1}),
-                "include_strength": (["Yes", "No"],)
+                "include_strength": (["Yes", "No"],),
             }
         }
 
@@ -30,7 +31,7 @@ class LoraLoaderStr:
         if strength_model == 0 and strength_clip == 0:
             return (model, clip, "No LoRA Loaded")
 
-        if switch == "Off" or lora_name == "None":
+        if switch == "Of" or lora_name == "None":
             return (model, clip, "No LoRA Loaded")
 
         lora_path = folder_paths.get_full_path("loras", lora_name)

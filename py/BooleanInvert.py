@@ -28,10 +28,7 @@ class BooleanInvert:
         # Boolean input is always valid
         return True
 
-NODE_CLASS_MAPPINGS = {
-    "BooleanInvert": BooleanInvert
-}
 
-NODE_DISPLAY_NAME_MAPPINGS = {
-    "BooleanInvert": "Boolean Invert (CRT)"
-}
+NODE_CLASS_MAPPINGS = {"BooleanInvert": BooleanInvert}
+
+NODE_DISPLAY_NAME_MAPPINGS = {"BooleanInvert": "Boolean Invert (CRT)"}

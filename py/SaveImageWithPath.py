@@ -4,6 +4,7 @@ import numpy as np
 from PIL import Image
 import folder_paths
 
+
 class SaveImageWithPath:
     OUTPUT_NODE = True
 
@@ -13,9 +14,21 @@ class SaveImageWithPath:
         return {
             "required": {
                 "image": ("IMAGE",),
-                "folder_path": ("STRING", {"default": output_dir, "tooltip": "Base folder path. Defaults to ComfyUI's output folder."}),
-                "subfolder_name": ("STRING", {"default": "images", "tooltip": "Subfolder name to create within the base folder."}),
-                "filename": ("STRING", {"default": "output", "tooltip": "Base file name without extension. A suffix will be added for each image in a batch."}),
+                "folder_path": (
+                    "STRING",
+                    {"default": output_dir, "tooltip": "Base folder path. Defaults to ComfyUI's output folder."},
+                ),
+                "subfolder_name": (
+                    "STRING",
+                    {"default": "images", "tooltip": "Subfolder name to create within the base folder."},
+                ),
+                "filename": (
+                    "STRING",
+                    {
+                        "default": "output",
+                        "tooltip": "Base file name without extension. A suffix will be added for each image in a batch.",
+                    },
+                ),
                 "extension": (["png", "jpg", "jpeg"], {"default": "png", "tooltip": "Image file extension."}),
             }
         }
@@ -28,7 +41,7 @@ class SaveImageWithPath:
     def save_images(self, image, folder_path, subfolder_name, filename, extension):
         if image is None:
             return ()
-            
+
         try:
             # --- Initial Setup and Cleaning ---
             subfolder_clean = subfolder_name.strip().lstrip('/\\')
@@ -42,7 +55,7 @@ class SaveImageWithPath:
 
             # --- BATCH PROCESSING LOGIC ---
             batch_size = image.shape[0]
-            
+
             for i in range(batch_size):
                 # Determine the base filename for this specific image in the batch
                 if batch_size > 1:
@@ -51,7 +64,7 @@ class SaveImageWithPath:
                 else:
                     # If it's a single image, just use the provided filename
                     base_filename = filename_clean
-                
+
                 # --- Overwrite Prevention Logic ---
                 # Check if a file with this name already exists and add a counter if it does
                 filepath_to_check = os.path.join(final_dir, f"{base_filename}.{extension}")
@@ -71,16 +84,13 @@ class SaveImageWithPath:
                 print(f"✅ Saved image to: {final_filepath}")
 
             return ()
-            
+
         except Exception as e:
             print(f"❌ ERROR in SaveImageWithPath: {str(e)}")
             raise e
 
-# ComfyUI Node Mappings
-NODE_CLASS_MAPPINGS = {
-    "SaveImageWithPath": SaveImageWithPath
-}
 
-NODE_DISPLAY_NAME_MAPPINGS = {
-    "SaveImageWithPath": "Save Image With Path (CRT)"
-}
+# ComfyUI Node Mappings
+NODE_CLASS_MAPPINGS = {"SaveImageWithPath": SaveImageWithPath}
+
+NODE_DISPLAY_NAME_MAPPINGS = {"SaveImageWithPath": "Save Image With Path (CRT)"}

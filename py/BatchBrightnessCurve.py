@@ -1,15 +1,16 @@
 import torch
 import math
 
+
 class BatchBrightnessCurve:
     """
     Adjusts the brightness of an image batch using a continuous gradient curve.
-    
+
     It interpolates between:
     - Start Level (Frame 0)
     - Mid Level (Center of batch)
     - End Level (Last Frame)
-    
+
     The Q-Factor controls how "fat" or "sharp" the curve is.
     """
 
@@ -18,34 +19,46 @@ class BatchBrightnessCurve:
         return {
             "required": {
                 "images": ("IMAGE",),
-                "start_level": ("FLOAT", {
-                    "default": 0.0, 
-                    "min": 0.0, 
-                    "max": 5.0, 
-                    "step": 0.01,
-                    "tooltip": "Brightness at the very first frame."
-                }),
-                "mid_level": ("FLOAT", {
-                    "default": 1.0, 
-                    "min": 0.0, 
-                    "max": 5.0, 
-                    "step": 0.01,
-                    "tooltip": "Brightness at the exact center of the video."
-                }),
-                "end_level": ("FLOAT", {
-                    "default": 0.0, 
-                    "min": 0.0, 
-                    "max": 5.0, 
-                    "step": 0.01,
-                    "tooltip": "Brightness at the very last frame."
-                }),
-                "q_factor": ("FLOAT", {
-                    "default": 2.0, 
-                    "min": 0.1, 
-                    "max": 10.0, 
-                    "step": 0.1,
-                    "tooltip": "Curve Shape. 1.0=Linear, 2.0=Parabolic (Smooth). Higher values = Stays closer to Mid Level longer."
-                }),
+                "start_level": (
+                    "FLOAT",
+                    {
+                        "default": 0.0,
+                        "min": 0.0,
+                        "max": 5.0,
+                        "step": 0.01,
+                        "tooltip": "Brightness at the very first frame.",
+                    },
+                ),
+                "mid_level": (
+                    "FLOAT",
+                    {
+                        "default": 1.0,
+                        "min": 0.0,
+                        "max": 5.0,
+                        "step": 0.01,
+                        "tooltip": "Brightness at the exact center of the video.",
+                    },
+                ),
+                "end_level": (
+                    "FLOAT",
+                    {
+                        "default": 0.0,
+                        "min": 0.0,
+                        "max": 5.0,
+                        "step": 0.01,
+                        "tooltip": "Brightness at the very last frame.",
+                    },
+                ),
+                "q_factor": (
+                    "FLOAT",
+                    {
+                        "default": 2.0,
+                        "min": 0.1,
+                        "max": 10.0,
+                        "step": 0.1,
+                        "tooltip": "Curve Shape. 1.0=Linear, 2.0=Parabolic (Smooth). Higher values = Stays closer to Mid Level longer.",
+                    },
+                ),
             }
         }
 
@@ -55,17 +68,17 @@ class BatchBrightnessCurve:
 
     def apply_curve(self, images, start_level, mid_level, end_level, q_factor):
         batch_size = images.shape[0]
-        
+
         if batch_size == 0:
             return (images,)
 
         # Prepare a list of multipliers
         multipliers = []
-        
+
         for i in range(batch_size):
             # Calculate normalized position t (0.0 to 1.0)
             if batch_size <= 1:
-                t = 0.5 # Single image is considered center
+                t = 0.5  # Single image is considered center
             else:
                 t = i / (batch_size - 1)
 
@@ -101,10 +114,7 @@ class BatchBrightnessCurve:
 
         return (output_images,)
 
-NODE_CLASS_MAPPINGS = {
-    "BatchBrightnessCurve": BatchBrightnessCurve
-}
 
-NODE_DISPLAY_NAME_MAPPINGS = {
-    "BatchBrightnessCurve": "Batch Brightness Curve (CRT)"
-}
+NODE_CLASS_MAPPINGS = {"BatchBrightnessCurve": BatchBrightnessCurve}
+
+NODE_DISPLAY_NAME_MAPPINGS = {"BatchBrightnessCurve": "Batch Brightness Curve (CRT)"}

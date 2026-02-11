@@ -3,6 +3,7 @@ class FancyTimerNode:
     A UI node that displays a real-time timer for the execution pipeline.
     This version is a display-only node with no outputs.
     """
+
     def __init__(self):
         pass
 
@@ -18,7 +19,7 @@ class FancyTimerNode:
 
     RETURN_TYPES = ()
     FUNCTION = "execute"
-    
+
     OUTPUT_NODE = True
     CATEGORY = "CRT/Utils/UI"
 

@@ -1,11 +1,12 @@
 import comfy.samplers
 
+
 class SamplerSchedulerSelector:
 
     CATEGORY = "CRT/Utils/Logic & Values"
     RETURN_TYPES = ("STRING", "STRING")
     RETURN_NAMES = ("sampler_name", "scheduler")
-    
+
     FUNCTION = "get_selections"
 
     @classmethod
@@ -13,7 +14,7 @@ class SamplerSchedulerSelector:
         return {
             "required": {
                 "sampler_name": (comfy.samplers.KSampler.SAMPLERS,),
-                "scheduler": (comfy.samplers.KSampler.SCHEDULERS,)
+                "scheduler": (comfy.samplers.KSampler.SCHEDULERS,),
             }
         }
 

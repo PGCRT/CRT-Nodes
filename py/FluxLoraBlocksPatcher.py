@@ -7,6 +7,7 @@ import re
 MAX_SINGLE_BLOCKS_COUNT = 38
 MAX_DOUBLE_BLOCKS_COUNT = 19
 
+
 class FluxLoraBlocksPatcher:
     CATEGORY = "CRT/LoRA"
 
@@ -18,13 +19,25 @@ class FluxLoraBlocksPatcher:
             }
         }
         for i in range(MAX_SINGLE_BLOCKS_COUNT):
-            inputs["required"][f"lora_block_{i}_weight"] = ("FLOAT", {
-                "default": 1.0, "min": 0.0, "max": 2.0, "step": 0.01,
-            })
+            inputs["required"][f"lora_block_{i}_weight"] = (
+                "FLOAT",
+                {
+                    "default": 1.0,
+                    "min": 0.0,
+                    "max": 2.0,
+                    "step": 0.01,
+                },
+            )
         for i in range(MAX_DOUBLE_BLOCKS_COUNT):
-            inputs["required"][f"lora_block_{i}_double_weight"] = ("FLOAT", {
-                "default": 1.0, "min": 0.0, "max": 2.0, "step": 0.01,
-            })
+            inputs["required"][f"lora_block_{i}_double_weight"] = (
+                "FLOAT",
+                {
+                    "default": 1.0,
+                    "min": 0.0,
+                    "max": 2.0,
+                    "step": 0.01,
+                },
+            )
         return inputs
 
     RETURN_TYPES = ("MODEL",)
@@ -35,12 +48,16 @@ class FluxLoraBlocksPatcher:
         m = flux_model.clone()
 
         single_block_scales = {i: kwargs.get(f"lora_block_{i}_weight", 1.0) for i in range(MAX_SINGLE_BLOCKS_COUNT)}
-        double_block_scales = {i: kwargs.get(f"lora_block_{i}_double_weight", 1.0) for i in range(MAX_DOUBLE_BLOCKS_COUNT)}
+        double_block_scales = {
+            i: kwargs.get(f"lora_block_{i}_double_weight", 1.0) for i in range(MAX_DOUBLE_BLOCKS_COUNT)
+        }
 
-        active_lora_processing_needed = any(abs(s - 1.0) > 1e-5 for s in single_block_scales.values()) or \
-                                       any(abs(s) < 1e-5 for s in single_block_scales.values()) or \
-                                       any(abs(s - 1.0) > 1e-5 for s in double_block_scales.values()) or \
-                                       any(abs(s) < 1e-5 for s in double_block_scales.values())
+        active_lora_processing_needed = (
+            any(abs(s - 1.0) > 1e-5 for s in single_block_scales.values())
+            or any(abs(s) < 1e-5 for s in single_block_scales.values())
+            or any(abs(s - 1.0) > 1e-5 for s in double_block_scales.values())
+            or any(abs(s) < 1e-5 for s in double_block_scales.values())
+        )
 
         if not active_lora_processing_needed:
             return (m,)
@@ -80,20 +97,24 @@ class FluxLoraBlocksPatcher:
                         else:
                             continue
 
-                        needs_modification = abs(lora_scale_for_this_block - 1.0) > 1e-5 or \
-                                            abs(lora_scale_for_this_block) < 1e-5
+                        needs_modification = (
+                            abs(lora_scale_for_this_block - 1.0) > 1e-5 or abs(lora_scale_for_this_block) < 1e-5
+                        )
 
                         if not needs_modification:
                             continue
-                        
+
                         lora_patches_were_actually_modified_in_loop = True
 
                         new_patch_ops_for_this_key = []
                         for patch_op in original_patch_list_for_key:
                             processed_op = patch_op
 
-                            if isinstance(patch_op, tuple) and len(patch_op) == 5 and \
-                               isinstance(patch_op[1], comfy.weight_adapter.LoRAAdapter):
+                            if (
+                                isinstance(patch_op, tuple)
+                                and len(patch_op) == 5
+                                and isinstance(patch_op[1], comfy.weight_adapter.LoRAAdapter)
+                            ):
                                 original_lora_strength_mult = float(patch_op[0])
                                 adapter_obj = patch_op[1]
                                 preserved_elements = patch_op[2:]
@@ -101,9 +122,13 @@ class FluxLoraBlocksPatcher:
                                 if abs(lora_scale_for_this_block) < 1e-7:
                                     processed_op = None
                                 else:
-                                    effective_new_strength_mult = original_lora_strength_mult * lora_scale_for_this_block
+                                    effective_new_strength_mult = (
+                                        original_lora_strength_mult * lora_scale_for_this_block
+                                    )
                                     if abs(effective_new_strength_mult) > 1e-7:
-                                        processed_op = tuple([effective_new_strength_mult, adapter_obj] + list(preserved_elements))
+                                        processed_op = tuple(
+                                            [effective_new_strength_mult, adapter_obj] + list(preserved_elements)
+                                        )
                                     else:
                                         processed_op = None
 
@@ -139,5 +164,7 @@ class FluxLoraBlocksPatcher:
                 print(f"[FluxLoraBlocksPatcher WARNING] Nudge attempt m.add_patches failed: {e}")
 
         return (m,)
+
+
 NODE_CLASS_MAPPINGS = {"FluxLoraBlocksPatcher": FluxLoraBlocksPatcher}
 NODE_DISPLAY_NAME_MAPPINGS = {"FluxLoraBlocksPatcher": "Flux LoRA Blocks Patcher"}

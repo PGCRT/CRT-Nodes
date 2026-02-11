@@ -16,5 +16,5 @@ class RemoveTrailingCommaNode:
             trimmed_string = input_string[:-1]
         else:
             trimmed_string = input_string
-        
+
         return (trimmed_string,)

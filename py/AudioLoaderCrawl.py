@@ -3,6 +3,7 @@ from pathlib import Path
 import torch
 import torchaudio
 
+
 class AudioLoaderCrawl:
     def __init__(self):
         # Instance-level cache to store file lists and folder modification times.
@@ -13,12 +14,42 @@ class AudioLoaderCrawl:
         return {
             "required": {
                 "folder_path": ("STRING", {"default": "", "tooltip": "Path to the folder containing audio files"}),
-                "seed": ("INT", {"default": 0, "min": 0, "max": 0xffffffffffffffff, "tooltip": "Seed for deterministic file selection"}),
-                "file_extension": (["wav", "mp3", "flac", "ogg"], {"default": "wav", "tooltip": "File extension to filter for"}),
+                "seed": (
+                    "INT",
+                    {
+                        "default": 0,
+                        "min": 0,
+                        "max": 0xFFFFFFFFFFFFFFFF,
+                        "tooltip": "Seed for deterministic file selection",
+                    },
+                ),
+                "file_extension": (
+                    ["wav", "mp3", "flac", "ogg"],
+                    {"default": "wav", "tooltip": "File extension to filter for"},
+                ),
                 "crawl_subfolders": ("BOOLEAN", {"default": False, "tooltip": "If true, include files in subfolders"}),
-                "max_length_seconds": ("FLOAT", {"default": 0.0, "min": 0.0, "step": 0.1, "tooltip": "Maximum length of the audio in seconds (0 for no limit)"}),
-                "start_offset_seconds": ("FLOAT", {"default": 0.0, "min": 0.0, "step": 0.1, "tooltip": "Start loading the audio from this offset in seconds"}),
-                "gain_db": ("FLOAT", {"default": 0.0, "min": -120.0, "max": 120.0, "step": 0.1, "tooltip": "Gain in decibels (dB)"}),
+                "max_length_seconds": (
+                    "FLOAT",
+                    {
+                        "default": 0.0,
+                        "min": 0.0,
+                        "step": 0.1,
+                        "tooltip": "Maximum length of the audio in seconds (0 for no limit)",
+                    },
+                ),
+                "start_offset_seconds": (
+                    "FLOAT",
+                    {
+                        "default": 0.0,
+                        "min": 0.0,
+                        "step": 0.1,
+                        "tooltip": "Start loading the audio from this offset in seconds",
+                    },
+                ),
+                "gain_db": (
+                    "FLOAT",
+                    {"default": 0.0, "min": -120.0, "max": 120.0, "step": 0.1, "tooltip": "Gain in decibels (dB)"},
+                ),
             }
         }
 
@@ -27,11 +58,13 @@ class AudioLoaderCrawl:
     FUNCTION = "load_audio"
     CATEGORY = "CRT/Load"
 
-    def load_audio(self, folder_path, seed, file_extension, crawl_subfolders, max_length_seconds, start_offset_seconds, gain_db):
+    def load_audio(
+        self, folder_path, seed, file_extension, crawl_subfolders, max_length_seconds, start_offset_seconds, gain_db
+    ):
         # Create a single sample of silence for safe returns.
         # This prevents crashes in downstream nodes that cannot handle zero-length tensors.
-        silent_waveform = torch.zeros(1, 1, 1) # [batch, channels, samples]
-        silent_audio = {"waveform": silent_waveform, "sample_rate": 44100} # Use a common default sample rate
+        silent_waveform = torch.zeros(1, 1, 1)  # [batch, channels, samples]
+        silent_audio = {"waveform": silent_waveform, "sample_rate": 44100}  # Use a common default sample rate
         safe_return = (silent_audio, "", "")
 
         if not folder_path or not folder_path.strip():
@@ -59,7 +92,7 @@ class AudioLoaderCrawl:
                     files = sorted([f for f in folder.rglob(pattern) if f.is_file()])
                 else:
                     files = sorted([f for f in folder.glob(pattern) if f.is_file()])
-                
+
                 self.cache[cache_key] = {'files': files, 'mtime': current_mtime}
                 print(f"✅ Cached {len(files)} files.")
 
@@ -77,7 +110,7 @@ class AudioLoaderCrawl:
             # --- End Selection ---
 
             print(f"✅ Seed {seed} → File {selected_index + 1}/{num_files}: '{selected_file.name}'")
-            
+
             # --- Load and Process Audio ---
             waveform, sample_rate = torchaudio.load(str(selected_file))
 
@@ -87,7 +120,7 @@ class AudioLoaderCrawl:
                 if offset_samples < waveform.shape[1]:
                     waveform = waveform[:, offset_samples:]
                 else:
-                    print(f"⚠️ Warning: Start offset is beyond the audio duration. Returning silent audio.")
+                    print("⚠️ Warning: Start offset is beyond the audio duration. Returning silent audio.")
                     return safe_return
 
             # Apply max length
@@ -104,12 +137,9 @@ class AudioLoaderCrawl:
 
             # --- Format for ComfyUI ---
             waveform = waveform.unsqueeze(0)
-            
-            audio_out = {
-                "waveform": waveform,
-                "sample_rate": sample_rate
-            }
-            
+
+            audio_out = {"waveform": waveform, "sample_rate": sample_rate}
+
             filename_no_ext = selected_file.stem
             file_path_str = str(selected_file.resolve())
 
@@ -119,11 +149,8 @@ class AudioLoaderCrawl:
             print(f"❌ An unexpected error occurred in AudioLoaderCrawl: {str(e)}")
             return safe_return
 
-# Node mappings for ComfyUI
-NODE_CLASS_MAPPINGS = {
-    "AudioLoaderCrawl": AudioLoaderCrawl
-}
 
-NODE_DISPLAY_NAME_MAPPINGS = {
-    "AudioLoaderCrawl": "Audio Loader Crawl (CRT)"
-}
+# Node mappings for ComfyUI
+NODE_CLASS_MAPPINGS = {"AudioLoaderCrawl": AudioLoaderCrawl}
+
+NODE_DISPLAY_NAME_MAPPINGS = {"AudioLoaderCrawl": "Audio Loader Crawl (CRT)"}

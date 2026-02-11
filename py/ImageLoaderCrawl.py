@@ -4,6 +4,7 @@ import torch
 from PIL import Image
 import numpy as np
 
+
 class ImageLoaderCrawl:
     def __init__(self):
         # Instance-level cache to store file lists and folder modification times.
@@ -14,7 +15,7 @@ class ImageLoaderCrawl:
         return {
             "required": {
                 "folder_path": ("STRING", {"default": ""}),
-                "seed": ("INT", {"default": 0, "min": 0, "max": 0xffffffffffffffff}),
+                "seed": ("INT", {"default": 0, "min": 0, "max": 0xFFFFFFFFFFFFFFFF}),
                 "crawl_subfolders": ("BOOLEAN", {"default": False}),
                 "remove_extension": ("BOOLEAN", {"default": False}),
             }
@@ -46,16 +47,13 @@ class ImageLoaderCrawl:
         # Check if cache is invalid (key doesn't exist or modification time has changed)
         if cache_key not in self.cache or self.cache[cache_key]['mtime'] != current_mtime:
             print(f"🔎 Folder changed or not cached. Scanning '{folder}'...")
-            valid_extensions = {'.png', '.jpg', '.jpeg', '.bmp', '.tiff', '.tif', '.gif', '.webp'}
+            valid_extensions = {'.png', '.jpg', '.jpeg', '.bmp', '.tif', '.ti', '.gi', '.webp'}
             try:
                 path_iterator = folder.rglob('*') if crawl_subfolders else folder.glob('*')
                 files = sorted([p for p in path_iterator if p.is_file() and p.suffix.lower() in valid_extensions])
-                
+
                 # Update the cache with the new file list and the current modification time
-                self.cache[cache_key] = {
-                    'files': files,
-                    'mtime': current_mtime
-                }
+                self.cache[cache_key] = {'files': files, 'mtime': current_mtime}
                 print(f"✅ Cached {len(files)} files from '{folder}'")
             except Exception as e:
                 print(f"❌ Error accessing folder '{folder}': {str(e)}")
@@ -63,10 +61,10 @@ class ImageLoaderCrawl:
                 if cache_key in self.cache:
                     del self.cache[cache_key]
                 return (create_blank_image(), "Error accessing folder", 0)
-        
+
         # Retrieve the list of files from the (now guaranteed to be up-to-date) cache
         files = self.cache[cache_key]['files']
-        
+
         if not files:
             print(f"❌ Warning: No valid image files found in '{folder}'.")
             return (create_blank_image(), "No images found", 0)
@@ -74,34 +72,33 @@ class ImageLoaderCrawl:
         num_files = len(files)
         selected_index = seed % num_files
         selected_file = files[selected_index]
-        
+
         try:
             with Image.open(selected_file) as img:
                 if img.mode != 'RGB':
                     img = img.convert('RGB')
                 img_array = np.array(img).astype(np.float32) / 255.0
                 img_tensor = torch.from_numpy(img_array)[None,]
-            
+
             base_name = selected_file.stem if remove_extension else selected_file.name
             print(f"✅ Seed {seed} → Image {selected_index + 1}/{num_files}: '{base_name}' from '{selected_file.name}'")
-            
+
             return (img_tensor, base_name, num_files)
         # Self-healing: If a file is in the cache but was deleted just before loading, this will catch it.
         except FileNotFoundError:
-             print(f"❌ Error: File '{selected_file}' was in cache but not found on disk. Invalidating cache for next run.")
-             # Forcing a rescan on the next execution by removing the invalid cache entry.
-             if cache_key in self.cache:
+            print(
+                f"❌ Error: File '{selected_file}' was in cache but not found on disk. Invalidating cache for next run."
+            )
+            # Forcing a rescan on the next execution by removing the invalid cache entry.
+            if cache_key in self.cache:
                 del self.cache[cache_key]
-             return (create_blank_image(), "Error: Cached file not found", 0)
+            return (create_blank_image(), "Error: Cached file not found", 0)
         except Exception as e:
             print(f"❌ Error loading image '{selected_file}': {str(e)}")
             return (create_blank_image(), "Error loading image", 0)
 
-# Node mappings
-NODE_CLASS_MAPPINGS = {
-    "ImageLoaderCrawl": ImageLoaderCrawl
-}
 
-NODE_DISPLAY_NAME_MAPPINGS = {
-    "ImageLoaderCrawl": "Image Loader Crawl (Smart)"
-}
+# Node mappings
+NODE_CLASS_MAPPINGS = {"ImageLoaderCrawl": ImageLoaderCrawl}
+
+NODE_DISPLAY_NAME_MAPPINGS = {"ImageLoaderCrawl": "Image Loader Crawl (Smart)"}

@@ -2,6 +2,7 @@ import os
 import torch
 from safetensors.torch import save_file
 
+
 class SaveLatentWithPath:
     @classmethod
     def INPUT_TYPES(cls):
@@ -20,12 +21,12 @@ class SaveLatentWithPath:
     CATEGORY = "CRT/Save"
 
     def save_latent(self, latent, folder_path, filename, subfolder_name):
-        print(f"📌 SaveLatentWithPath: Starting execution")
+        print("📌 SaveLatentWithPath: Starting execution")
         print(f"📌 Input parameters: folder_path={folder_path}, filename={filename}, subfolder_name={subfolder_name}")
 
         # Validate latent input
         if latent is None:
-            print(f"⚠️ Received None as latent input. Skipping save and returning None.")
+            print("⚠️ Received None as latent input. Skipping save and returning None.")
             return (None,)
 
         latent_tensor = None
@@ -34,7 +35,9 @@ class SaveLatentWithPath:
         elif isinstance(latent, torch.Tensor):
             latent_tensor = latent
         else:
-            print(f"❌ Invalid latent input type: {type(latent)}. Expected dict with 'samples' or torch.Tensor. Skipping save.")
+            print(
+                f"❌ Invalid latent input type: {type(latent)}. Expected dict with 'samples' or torch.Tensor. Skipping save."
+            )
             return (None,)
 
         print(f"📌 Latent tensor shape: {latent_tensor.shape}")
@@ -43,7 +46,7 @@ class SaveLatentWithPath:
         full_output_folder = folder_path
         if subfolder_name:
             full_output_folder = os.path.join(folder_path, subfolder_name)
-        
+
         try:
             os.makedirs(full_output_folder, exist_ok=True)
         except Exception as e:
@@ -86,7 +89,7 @@ class SaveLatentWithPath:
             final_filepath += ".safetensors"
         try:
             return os.path.getmtime(final_filepath)
-        except:
+        except Exception:
             return 0
 
     @classmethod
@@ -108,10 +111,7 @@ class SaveLatentWithPath:
             return f"Cannot access or create directory {full_output_folder}: {str(e)}"
         return True
 
-NODE_CLASS_MAPPINGS = {
-    "SaveLatentWithPath": SaveLatentWithPath
-}
 
-NODE_DISPLAY_NAME_MAPPINGS = {
-    "SaveLatentWithPath": "Save Latent With Path (CRT)"
-}
+NODE_CLASS_MAPPINGS = {"SaveLatentWithPath": SaveLatentWithPath}
+
+NODE_DISPLAY_NAME_MAPPINGS = {"SaveLatentWithPath": "Save Latent With Path (CRT)"}

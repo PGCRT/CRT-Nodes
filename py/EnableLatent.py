@@ -1,5 +1,6 @@
 import torch
 
+
 class EnableLatent:
     @classmethod
     def INPUT_TYPES(cls):
@@ -20,12 +21,12 @@ class EnableLatent:
 
         # If enable is False, return None
         if not enable:
-            print(f"⚠️ enable is False. Returning None.")
+            print("⚠️ enable is False. Returning None.")
             return (None,)
 
         # Validate latent input
         if latent is None:
-            print(f"⚠️ Received None as latent input. Returning None.")
+            print("⚠️ Received None as latent input. Returning None.")
             return (None,)
 
         # Ensure latent is in the correct format (dict with samples or tensor)
@@ -36,7 +37,9 @@ class EnableLatent:
             print(f"📌 Passing through raw tensor latent with shape: {latent.shape}")
             return ({"samples": latent},)
         else:
-            print(f"❌ Invalid latent input type: {type(latent)}. Expected dict with 'samples' or torch.Tensor. Returning None.")
+            print(
+                f"❌ Invalid latent input type: {type(latent)}. Expected dict with 'samples' or torch.Tensor. Returning None."
+            )
             return (None,)
 
     @classmethod
@@ -49,10 +52,7 @@ class EnableLatent:
         # No specific validation needed for boolean enable
         return True
 
-NODE_CLASS_MAPPINGS = {
-    "EnableLatent": EnableLatent
-}
 
-NODE_DISPLAY_NAME_MAPPINGS = {
-    "EnableLatent": "Enable Latent (CRT)"
-}
+NODE_CLASS_MAPPINGS = {"EnableLatent": EnableLatent}
+
+NODE_DISPLAY_NAME_MAPPINGS = {"EnableLatent": "Enable Latent (CRT)"}

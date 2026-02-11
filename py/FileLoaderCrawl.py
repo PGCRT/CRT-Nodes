@@ -1,6 +1,7 @@
 import os
 from pathlib import Path
 
+
 class FileLoaderCrawl:
     def __init__(self):
         # Instance-level cache to store file lists and folder modification times.
@@ -11,9 +12,23 @@ class FileLoaderCrawl:
         return {
             "required": {
                 "folder_path": ("STRING", {"default": "", "tooltip": "Path to the folder containing text files"}),
-                "seed": ("INT", {"default": 0, "min": 0, "max": 0xffffffffffffffff, "tooltip": "Seed for deterministic file selection"}),
-                "file_extension": ("STRING", {"default": ".txt", "tooltip": "File extension to filter (e.g., .txt, .md)"}),
-                "max_words": ("INT", {"default": 0, "min": 0, "tooltip": "Maximum number of words in output (0 for no limit)"}),
+                "seed": (
+                    "INT",
+                    {
+                        "default": 0,
+                        "min": 0,
+                        "max": 0xFFFFFFFFFFFFFFFF,
+                        "tooltip": "Seed for deterministic file selection",
+                    },
+                ),
+                "file_extension": (
+                    "STRING",
+                    {"default": ".txt", "tooltip": "File extension to filter (e.g., .txt, .md)"},
+                ),
+                "max_words": (
+                    "INT",
+                    {"default": 0, "min": 0, "tooltip": "Maximum number of words in output (0 for no limit)"},
+                ),
                 "crawl_subfolders": ("BOOLEAN", {"default": False, "tooltip": "If true, include files in subfolders"}),
             }
         }
@@ -59,7 +74,7 @@ class FileLoaderCrawl:
                 else:
                     # Use glob for simpler filtering
                     files = sorted([f for f in folder.glob(f'*{file_extension}') if f.is_file()])
-                
+
                 self.cache[cache_key] = {'files': files, 'mtime': current_mtime}
                 print(f"✅ Cached {len(files)} files.")
 
@@ -77,10 +92,10 @@ class FileLoaderCrawl:
             # --- End Selection ---
 
             print(f"✅ Seed {seed} → File {selected_index + 1}/{num_files}: '{selected_file.name}'")
-            
+
             with open(selected_file, 'r', encoding='utf-8', errors='ignore') as file:
                 content = file.read()
-            
+
             limited_content = self.limit_words(content, max_words)
             return (limited_content, selected_file.name)
 

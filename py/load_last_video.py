@@ -4,10 +4,12 @@ import torch
 import numpy as np
 import re
 
+
 def natural_sort_key(filename):
     # Split filename into parts, converting numeric parts to integers for natural sorting
     parts = re.split(r'(\d+)', filename)
     return [int(part) if part.isdigit() else part.lower() for part in parts]
+
 
 class CRTLoadLastVideo:
     @classmethod
@@ -41,7 +43,7 @@ class CRTLoadLastVideo:
         text_x = (width - text_size[0]) // 2
         text_y = (height + text_size[1]) // 2
         cv2.putText(dummy_frame, text, (text_x, text_y), font, font_scale, font_color, thickness, cv2.LINE_AA)
-        
+
         # Convert to RGB, float32, and normalize to [0, 1]
         dummy_frame = cv2.cvtColor(dummy_frame, cv2.COLOR_BGR2RGB)
         dummy_frame = np.array(dummy_frame, dtype=np.float32) / 255.0
@@ -55,12 +57,12 @@ class CRTLoadLastVideo:
             return self._create_dummy_image()
 
         # Supported video extensions
-        video_extensions = ['webm', 'mp4', 'mkv', 'gif', 'mov']
-        
+        video_extensions = ['webm', 'mp4', 'mkv', 'gi', 'mov']
+
         video_files = [
-            f for f in os.listdir(folder_path)
-            if os.path.isfile(os.path.join(folder_path, f))
-            and f.lower().endswith(tuple(video_extensions))
+            f
+            for f in os.listdir(folder_path)
+            if os.path.isfile(os.path.join(folder_path, f)) and f.lower().endswith(tuple(video_extensions))
         ]
 
         # Fallback if no video files are found in the folder
@@ -69,10 +71,7 @@ class CRTLoadLastVideo:
             return self._create_dummy_image()
 
         if sort_by == "date":
-            video_files.sort(
-                key=lambda x: os.path.getmtime(os.path.join(folder_path, x)),
-                reverse=not invert_order
-            )
+            video_files.sort(key=lambda x: os.path.getmtime(os.path.join(folder_path, x)), reverse=not invert_order)
         else:
             video_files.sort(key=natural_sort_key, reverse=invert_order)
 
@@ -87,7 +86,7 @@ class CRTLoadLastVideo:
 
             total_frame_count = 0
             frames_added = 0
-            
+
             while video_cap.isOpened():
                 ret, frame = video_cap.read()
                 if not ret:
@@ -96,7 +95,7 @@ class CRTLoadLastVideo:
                 total_frame_count += 1
                 if total_frame_count <= skip_first_frames:
                     continue
-                
+
                 if (total_frame_count - skip_first_frames - 1) % select_every_nth == 0:
                     frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
                     frame = np.array(frame, dtype=np.float32) / 255.0
@@ -123,10 +122,10 @@ class CRTLoadLastVideo:
     def IS_CHANGED(cls, folder_path, **kwargs):
         if not folder_path or not os.path.isdir(folder_path):
             return float("NaN")
-            
-        video_extensions = ['webm', 'mp4', 'mkv', 'gif', 'mov']
+
+        video_extensions = ['webm', 'mp4', 'mkv', 'gi', 'mov']
         files = [f for f in os.listdir(folder_path) if f.lower().endswith(tuple(video_extensions))]
-        
+
         if not files:
             return float("NaN")
 
@@ -137,10 +136,7 @@ class CRTLoadLastVideo:
     def VALIDATE_INPUTS(cls, folder_path, **kwargs):
         return True
 
-NODE_CLASS_MAPPINGS = {
-    "CRTLoadLastVideo": CRTLoadLastVideo
-}
 
-NODE_DISPLAY_NAME_MAPPINGS = {
-    "CRTLoadLastVideo": "Load Last Video (CRT)"
-}
+NODE_CLASS_MAPPINGS = {"CRTLoadLastVideo": CRTLoadLastVideo}
+
+NODE_DISPLAY_NAME_MAPPINGS = {"CRTLoadLastVideo": "Load Last Video (CRT)"}

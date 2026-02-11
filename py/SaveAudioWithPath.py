@@ -4,6 +4,7 @@ import numpy as np
 import folder_paths
 from scipy.io.wavfile import write as write_wav
 
+
 class SaveAudioWithPath:
     OUTPUT_NODE = True
 
@@ -12,13 +13,39 @@ class SaveAudioWithPath:
         output_dir = folder_paths.get_output_directory()
         return {
             "required": {
-                "audio": ("AUDIO", ),
-                "folder_path": ("STRING", {"default": output_dir, "tooltip": "Base folder (or a full file path to get the folder from). Defaults to ComfyUI's output folder."}),
-                "subfolder_name": ("STRING", {"default": "audio", "tooltip": "Subfolder to create within the base folder."}),
-                "filename": ("STRING", {"default": "output", "tooltip": "File name for the audio file (without extension)."}),
+                "audio": ("AUDIO",),
+                "folder_path": (
+                    "STRING",
+                    {
+                        "default": output_dir,
+                        "tooltip": "Base folder (or a full file path to get the folder from). Defaults to ComfyUI's output folder.",
+                    },
+                ),
+                "subfolder_name": (
+                    "STRING",
+                    {"default": "audio", "tooltip": "Subfolder to create within the base folder."},
+                ),
+                "filename": (
+                    "STRING",
+                    {"default": "output", "tooltip": "File name for the audio file (without extension)."},
+                ),
                 "suffix": ("STRING", {"default": "", "tooltip": "Optional suffix to append to the filename."}),
-                "sample_rate": ("INT", {"default": 44100, "min": 1, "max": 192000, "tooltip": "Fallback audio sample rate in Hz if not in audio data."}),
-                "overwrite": ("BOOLEAN", {"default": True, "tooltip": "If enabled, existing files will be overwritten. If disabled, a numbered suffix is added."}),
+                "sample_rate": (
+                    "INT",
+                    {
+                        "default": 44100,
+                        "min": 1,
+                        "max": 192000,
+                        "tooltip": "Fallback audio sample rate in Hz if not in audio data.",
+                    },
+                ),
+                "overwrite": (
+                    "BOOLEAN",
+                    {
+                        "default": True,
+                        "tooltip": "If enabled, existing files will be overwritten. If disabled, a numbered suffix is added.",
+                    },
+                ),
             }
         }
 
@@ -42,7 +69,7 @@ class SaveAudioWithPath:
                 # Otherwise, use the input path as is
                 base_path = folder_path
             # --- END NEW ---
-            
+
             # Clean up folder, file, and suffix names
             subfolder_clean = subfolder_name.strip().lstrip('/\\')
             filename_clean = filename.strip().lstrip('/\\')
@@ -70,8 +97,10 @@ class SaveAudioWithPath:
 
             # Correctly handle the AUDIO data type
             if not isinstance(audio, dict) or 'waveform' not in audio:
-                raise TypeError("Input 'audio' is not in the expected format. It must be a dictionary with a 'waveform' key.")
-                
+                raise TypeError(
+                    "Input 'audio' is not in the expected format. It must be a dictionary with a 'waveform' key."
+                )
+
             waveform_tensor = audio['waveform']
             sr_to_use = audio.get('sample_rate', sample_rate)
 
@@ -96,6 +125,7 @@ class SaveAudioWithPath:
             print(f"❌ ERROR in SaveAudioWithPath: {str(e)}")
             raise e
 
+
 # Dictionary mappings for ComfyUI
-NODE_CLASS_MAPPINGS = { "SaveAudioWithPath": SaveAudioWithPath }
-NODE_DISPLAY_NAME_MAPPINGS = { "SaveAudioWithPath": "Save Audio With Path (CRT)" }
+NODE_CLASS_MAPPINGS = {"SaveAudioWithPath": SaveAudioWithPath}
+NODE_DISPLAY_NAME_MAPPINGS = {"SaveAudioWithPath": "Save Audio With Path (CRT)"}

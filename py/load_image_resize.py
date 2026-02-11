@@ -8,7 +8,6 @@ import folder_paths
 import node_helpers
 import comfy.utils
 
-
 MAX_RESOLUTION = 16384
 
 
@@ -22,7 +21,7 @@ class LoadImageResize:
             "required": {
                 "image": (sorted(files), {"image_upload": True}),
                 "size": ("INT", {"default": 512, "min": 64, "max": MAX_RESOLUTION, "step": 1}),
-                "multiple_of": ("INT", {"default": 0, "min": 0, "max": 512, "step": 1}),
+                "multiple_o": ("INT", {"default": 0, "min": 0, "max": 512, "step": 1}),
             }
         }
 
@@ -58,16 +57,16 @@ class LoadImageResize:
 
             loaded_image = np.array(loaded_image).astype(np.float32) / 255.0
             loaded_image = torch.from_numpy(loaded_image)[None,]
-            
+
             if 'A' in i.getbands():
                 mask = np.array(i.getchannel('A')).astype(np.float32) / 255.0
-                mask = 1. - torch.from_numpy(mask)
+                mask = 1.0 - torch.from_numpy(mask)
             elif i.mode == 'P' and 'transparency' in i.info:
                 mask = np.array(i.convert('RGBA').getchannel('A')).astype(np.float32) / 255.0
-                mask = 1. - torch.from_numpy(mask)
+                mask = 1.0 - torch.from_numpy(mask)
             else:
-                mask = torch.zeros((64,64), dtype=torch.float32, device="cpu")
-            
+                mask = torch.zeros((64, 64), dtype=torch.float32, device="cpu")
+
             output_images.append(loaded_image)
             output_masks.append(mask.unsqueeze(0))
 

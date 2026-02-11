@@ -7,6 +7,7 @@ from nodes import VAEEncode, VAEDecode
 import numpy as np
 import typing
 
+
 def prepare_inputs(required: list, optional: list = None):
     inputs = {}
     if required:
@@ -18,6 +19,7 @@ def prepare_inputs(required: list, optional: list = None):
         for name, type_info in optional:
             inputs["optional"][name] = type_info
     return inputs
+
 
 class FluxTiledSamplerCustomAdvanced:
     @classmethod
@@ -70,21 +72,29 @@ class FluxTiledSamplerCustomAdvanced:
         elif hasattr(model_patcher, 'model_sampling'):
             model_sampling_obj = model_patcher.model_sampling
         else:
-            raise AttributeError("Could not find 'model_sampling' attribute on the provided model object needed for sigma calculation.")
+            raise AttributeError(
+                "Could not find 'model_sampling' attribute on the provided model object needed for sigma calculation."
+            )
 
         calculated_sigmas = comfy.samplers.calculate_sigmas(model_sampling_obj, scheduler_name, total_steps).cpu()
 
         if denoise_strength < 1.0:
             if len(calculated_sigmas) > steps + 1:
-                calculated_sigmas = calculated_sigmas[-(steps + 1):]
+                calculated_sigmas = calculated_sigmas[-(steps + 1) :]
             elif len(calculated_sigmas) <= steps and len(calculated_sigmas) > 0:
-                logging.warning(f"Calculated sigmas ({len(calculated_sigmas)}) less than or equal to target steps ({steps}). Using all calculated sigmas.")
+                logging.warning(
+                    f"Calculated sigmas ({len(calculated_sigmas)}) less than or equal to target steps ({steps}). Using all calculated sigmas."
+                )
             elif len(calculated_sigmas) == 0:
-                logging.error(f"Sigma calculation resulted in empty tensor for scheduler {scheduler_name}, steps {total_steps}")
+                logging.error(
+                    f"Sigma calculation resulted in empty tensor for scheduler {scheduler_name}, steps {total_steps}"
+                )
                 return torch.FloatTensor([])
         return calculated_sigmas
 
-    def _create_tile_mask(self, tile_latent_w, tile_latent_h, padding_latent, blur_radius_latent, device, r_idx, c_idx, rows, columns):
+    def _create_tile_mask(
+        self, tile_latent_w, tile_latent_h, padding_latent, blur_radius_latent, device, r_idx, c_idx, rows, columns
+    ):
         mask = torch.ones((1, 1, tile_latent_h, tile_latent_w), device=device, dtype=torch.float32)
         if padding_latent > 0 and blur_radius_latent > 0:
             feather = max(1, blur_radius_latent)
@@ -95,7 +105,9 @@ class FluxTiledSamplerCustomAdvanced:
                 if top_len > 0:
                     mask[:, :, :top_len, :] *= v_ramp[:top_len].view(1, 1, top_len, 1)
                 if bottom_len > 0:
-                    mask[:, :, tile_latent_h - bottom_len:, :] *= torch.flip(v_ramp[:bottom_len], dims=[0]).view(1, 1, bottom_len, 1)
+                    mask[:, :, tile_latent_h - bottom_len :, :] *= torch.flip(v_ramp[:bottom_len], dims=[0]).view(
+                        1, 1, bottom_len, 1
+                    )
             if tile_latent_w > 0:
                 h_ramp = torch.linspace(0.0, 1.0, steps=feather, device=device, dtype=torch.float32)
                 left_len = min(feather, tile_latent_w) if c_idx > 0 else 0
@@ -103,14 +115,29 @@ class FluxTiledSamplerCustomAdvanced:
                 if left_len > 0:
                     mask[:, :, :, :left_len] *= h_ramp[:left_len].view(1, 1, 1, left_len)
                 if right_len > 0:
-                    mask[:, :, :, tile_latent_w - right_len:] *= torch.flip(h_ramp[:right_len], dims=[0]).view(1, 1, 1, right_len)
+                    mask[:, :, :, tile_latent_w - right_len :] *= torch.flip(h_ramp[:right_len], dims=[0]).view(
+                        1, 1, 1, right_len
+                    )
         return mask.clamp(0.0, 1.0)
 
-    def process_tiled_advanced(self, input_type: str, noise: typing.Any,
-                              guider: typing.Any, sampler: typing.Any,
-                              vae, columns, rows, tile_padding, mask_blur,
-                              tiled_vae_decode, steps=20, denoise=1.0, scheduler="normal",
-                              image_input=None, latent_input=None):
+    def process_tiled_advanced(
+        self,
+        input_type: str,
+        noise: typing.Any,
+        guider: typing.Any,
+        sampler: typing.Any,
+        vae,
+        columns,
+        rows,
+        tile_padding,
+        mask_blur,
+        tiled_vae_decode,
+        steps=20,
+        denoise=1.0,
+        scheduler="normal",
+        image_input=None,
+        latent_input=None,
+    ):
 
         pbar = comfy.utils.ProgressBar(rows * columns)
 
@@ -121,7 +148,9 @@ class FluxTiledSamplerCustomAdvanced:
         logging.info(f"Calculating sigmas internally: scheduler={scheduler}, steps={steps}, denoise={denoise}")
         sigmas = self._calculate_sigmas_internal(guider.model_patcher, scheduler, steps, denoise)
         if sigmas.numel() == 0:
-            raise ValueError("Sigma calculation failed or resulted in empty sigmas. Check scheduler/steps/denoise inputs.")
+            raise ValueError(
+                "Sigma calculation failed or resulted in empty sigmas. Check scheduler/steps/denoise inputs."
+            )
         sigmas = sigmas.to(device)
 
         if input_type == "image":
@@ -156,7 +185,9 @@ class FluxTiledSamplerCustomAdvanced:
 
         original_noise_obj_seed_attr = None
         noise_class_name = type(noise).__name__
-        is_custom_random_noise = hasattr(noise, 'seed') and isinstance(noise.seed, int) and noise_class_name == 'Noise_RandomNoise'
+        is_custom_random_noise = (
+            hasattr(noise, 'seed') and isinstance(noise.seed, int) and noise_class_name == 'Noise_RandomNoise'
+        )
         if is_custom_random_noise:
             original_noise_obj_seed_attr = noise.seed
 
@@ -178,7 +209,9 @@ class FluxTiledSamplerCustomAdvanced:
                     pbar.update(1)
                     continue
 
-                current_tile_latent_slice = latent_samples[:, :, padded_y_start:padded_y_end, padded_x_start:padded_x_end].clone()
+                current_tile_latent_slice = latent_samples[
+                    :, :, padded_y_start:padded_y_end, padded_x_start:padded_x_end
+                ].clone()
                 tile_latent_dict_for_noise = {"samples": current_tile_latent_slice, "batch_index": None}
 
                 current_tile_noise_seed_for_sampler = 0
@@ -209,11 +242,23 @@ class FluxTiledSamplerCustomAdvanced:
                     denoise_mask=None,
                     callback=None,  # Removed callback to disable backend preview
                     disable_pbar=disable_pbar_for_tile,
-                    seed=current_tile_noise_seed_for_sampler
+                    seed=current_tile_noise_seed_for_sampler,
                 )
 
-                tile_blend_mask = self._create_tile_mask(tile_process_w, tile_process_h, padding_latent, blur_radius_latent, device, r_idx, c_idx, rows, columns)
-                output_latent_full[:, :, padded_y_start:padded_y_end, padded_x_start:padded_x_end] += processed_tile_latent.to(output_latent_full.dtype) * tile_blend_mask.to(output_latent_full.dtype)
+                tile_blend_mask = self._create_tile_mask(
+                    tile_process_w,
+                    tile_process_h,
+                    padding_latent,
+                    blur_radius_latent,
+                    device,
+                    r_idx,
+                    c_idx,
+                    rows,
+                    columns,
+                )
+                output_latent_full[
+                    :, :, padded_y_start:padded_y_end, padded_x_start:padded_x_end
+                ] += processed_tile_latent.to(output_latent_full.dtype) * tile_blend_mask.to(output_latent_full.dtype)
                 blend_weights_full[:, :, padded_y_start:padded_y_end, padded_x_start:padded_x_end] += tile_blend_mask
 
                 pbar.update(1)
@@ -232,7 +277,9 @@ class FluxTiledSamplerCustomAdvanced:
                 vae_decode_tile_size_pixels = 512
                 vae_decode_tile_latent = vae_decode_tile_size_pixels // 8
                 if hasattr(vae, 'decode_tiled') and callable(vae.decode_tiled):
-                    final_image_tensor = vae.decode_tiled(output_latent_full, tile_x=vae_decode_tile_latent, tile_y=vae_decode_tile_latent)
+                    final_image_tensor = vae.decode_tiled(
+                        output_latent_full, tile_x=vae_decode_tile_latent, tile_y=vae_decode_tile_latent
+                    )
                 else:
                     logging.warning("vae.decode_tiled not found or incompatible, using full decode via VAEDecode node.")
                     final_image_tensor = VAEDecode().decode(vae, output_latent_for_decode)[0]
@@ -244,15 +291,7 @@ class FluxTiledSamplerCustomAdvanced:
 
         return (output_latent_for_decode, final_image_tensor)
 
-NODE_CLASS_MAPPINGS = {
-    "FluxTiledSamplerCustomAdvanced": FluxTiledSamplerCustomAdvanced
-}
-NODE_DISPLAY_NAME_MAPPINGS = {
-    "FluxTiledSamplerCustomAdvanced": "Flux Tiled Sampler (Advanced)"
-}
-NODE_STYLING = {
-    "FluxTiledSamplerCustomAdvanced": {
-        "background_color": "#000000",
-        "header_color": "#5600BE"
-    }
-}
+
+NODE_CLASS_MAPPINGS = {"FluxTiledSamplerCustomAdvanced": FluxTiledSamplerCustomAdvanced}
+NODE_DISPLAY_NAME_MAPPINGS = {"FluxTiledSamplerCustomAdvanced": "Flux Tiled Sampler (Advanced)"}
+NODE_STYLING = {"FluxTiledSamplerCustomAdvanced": {"background_color": "#000000", "header_color": "#5600BE"}}

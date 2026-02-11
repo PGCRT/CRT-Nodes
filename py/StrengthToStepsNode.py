@@ -4,12 +4,7 @@ class StrengthToStepsNode:
         return {
             "required": {
                 "desired_steps": ("INT", {"default": 6, "min": 1}),
-                "strength_percent": ("FLOAT", {
-                    "default": 40.0,
-                    "min": 1.0,
-                    "max": 100.0,
-                    "step": 1.0
-                }),
+                "strength_percent": ("FLOAT", {"default": 40.0, "min": 1.0, "max": 100.0, "step": 1.0}),
             }
         }
 

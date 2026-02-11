@@ -1,5 +1,6 @@
 import os
 
+
 class SaveTextWithPath:
     @classmethod
     def INPUT_TYPES(cls):
@@ -11,7 +12,10 @@ class SaveTextWithPath:
                 "text": ("STRING", {"forceInput": True}),
                 "folder_path": ("STRING", {"default": "", "tooltip": "Base folder path to save the text file"}),
                 "subfolder_name": ("STRING", {"default": "", "tooltip": "Subfolder name within the base folder"}),
-                "filename": ("STRING", {"default": "output", "tooltip": "File name for the text file (without extension)"}),
+                "filename": (
+                    "STRING",
+                    {"default": "output", "tooltip": "File name for the text file (without extension)"},
+                ),
             }
         }
 
@@ -48,11 +52,8 @@ class SaveTextWithPath:
 
         return ()
 
-# Node mappings for ComfyUI
-NODE_CLASS_MAPPINGS = {
-    "SaveTextWithPath": SaveTextWithPath
-}
 
-NODE_DISPLAY_NAME_MAPPINGS = {
-    "SaveTextWithPath": "Save Text With Path (CRT)"
-}
+# Node mappings for ComfyUI
+NODE_CLASS_MAPPINGS = {"SaveTextWithPath": SaveTextWithPath}
+
+NODE_DISPLAY_NAME_MAPPINGS = {"SaveTextWithPath": "Save Text With Path (CRT)"}

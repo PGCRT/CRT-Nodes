@@ -2,6 +2,7 @@ import re
 from pathlib import Path
 import torch
 
+
 class CRT_FileBatchPromptScheduler:
     @staticmethod
     def natural_sort_key(s):
@@ -15,7 +16,7 @@ class CRT_FileBatchPromptScheduler:
                 "clip": ("CLIP",),
                 "folder_path": ("STRING", {"default": ""}),
                 "batch_count": ("INT", {"default": 1, "min": 1, "max": 64}),
-                "seed": ("INT", {"default": 0, "min": 0, "max": 0xffffffffffffffff}),
+                "seed": ("INT", {"default": 0, "min": 0, "max": 0xFFFFFFFFFFFFFFFF}),
                 "file_extension": ("STRING", {"default": ".txt"}),
                 "max_words": ("INT", {"default": 0, "min": 0}),
                 "crawl_subfolders": ("BOOLEAN", {"default": False}),
@@ -33,7 +34,9 @@ class CRT_FileBatchPromptScheduler:
             return text.strip()
         return ' '.join(text.split()[:max_words])
 
-    def schedule_from_files(self, clip, folder_path, batch_count, seed, file_extension, max_words, crawl_subfolders, print_index):
+    def schedule_from_files(
+        self, clip, folder_path, batch_count, seed, file_extension, max_words, crawl_subfolders, print_index
+    ):
         prompts = [""]
 
         if folder_path and Path(folder_path).is_dir():
@@ -52,7 +55,7 @@ class CRT_FileBatchPromptScheduler:
                         try:
                             text = f.read_text(encoding="utf-8", errors="ignore").strip()
                             prompts.append(self.limit_words(text, max_words))
-                        except:
+                        except Exception:
                             prompts.append("")
                     prompts = [p for p in prompts if p] or [""]
             except Exception as e:
@@ -82,8 +85,7 @@ class CRT_FileBatchPromptScheduler:
             max_len = max(c.shape[1] for c in cond_list)
             for i, c in enumerate(cond_list):
                 if c.shape[1] < max_len:
-                    pad = torch.zeros(c.shape[0], max_len - c.shape[1], c.shape[2],
-                                      device=c.device, dtype=c.dtype)
+                    pad = torch.zeros(c.shape[0], max_len - c.shape[1], c.shape[2], device=c.device, dtype=c.dtype)
                     cond_list[i] = torch.cat([c, pad], dim=1)
 
         final_cond = torch.cat(cond_list, dim=0)

@@ -1,5 +1,6 @@
 import math
 
+
 class ImageDimensionsFromMegaPixels:
     @classmethod
     def INPUT_TYPES(s):

@@ -14,14 +14,14 @@ class FancyNoteNode:
                 "ui_glow_color": ("STRING", {"default": "#7300ff"}),
                 "ui_accent_color": ("STRING", {"default": "#7300ff"}),
                 "unique_id": "UNIQUE_ID",
-                "prompt": "PROMPT"
-            }
+                "prompt": "PROMPT",
+            },
         }
-    
+
     RETURN_TYPES = ()
     FUNCTION = "execute"
     OUTPUT_NODE = True
     CATEGORY = "CRT/Utils/UI"
-    
+
     def execute(self, text, **kwargs):
         return {}

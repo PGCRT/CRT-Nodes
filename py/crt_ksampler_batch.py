@@ -4,13 +4,14 @@ import comfy.samplers
 import comfy.utils
 import nodes
 
+
 class CRT_KSamplerBatch:
     @classmethod
     def INPUT_TYPES(cls):
         return {
             "required": {
                 "model": ("MODEL",),
-                "seed": ("INT", {"default": 0, "min": 0, "max": 0xffffffffffffffff, "control_after_generate": True}),
+                "seed": ("INT", {"default": 0, "min": 0, "max": 0xFFFFFFFFFFFFFFFF, "control_after_generate": True}),
                 "steps": ("INT", {"default": 20, "min": 1, "max": 10000}),
                 "cfg": ("FLOAT", {"default": 8.0, "min": 0.0, "max": 100.0, "step": 0.1}),
                 "sampler_name": (comfy.samplers.KSampler.SAMPLERS,),
@@ -21,7 +22,9 @@ class CRT_KSamplerBatch:
                 "mode": (["Batch (Parallel)", "Sequential"], {"default": "Batch (Parallel)"}),
                 "use_same_seed": ("BOOLEAN", {"default": False}),
             },
-            "optional": {"negative": ("CONDITIONING",),}
+            "optional": {
+                "negative": ("CONDITIONING",),
+            },
         }
 
     RETURN_TYPES = ("LATENT",)
@@ -53,8 +56,21 @@ class CRT_KSamplerBatch:
             fixed.append([cond_tensor, new_dict])
         return fixed
 
-    def sample_batch(self, model, seed, steps, cfg, sampler_name, scheduler, positive,
-                     latent_image, denoise=1.0, mode="Batch (Parallel)", use_same_seed=False, negative=None):
+    def sample_batch(
+        self,
+        model,
+        seed,
+        steps,
+        cfg,
+        sampler_name,
+        scheduler,
+        positive,
+        latent_image,
+        denoise=1.0,
+        mode="Batch (Parallel)",
+        use_same_seed=False,
+        negative=None,
+    ):
 
         target_batch = positive[0][0].shape[0] if positive else 1
 
@@ -93,23 +109,47 @@ class CRT_KSamplerBatch:
         if mode == "Sequential":
             latents = []
             for i in range(target_batch):
-                pos = [[positive[j][0][i:i+1], positive[j][1]] for j in range(len(positive))]
-                neg = [[negative[j][0][i:i+1], negative[j][1]] for j in range(len(negative))]
-                latent = samples[i:i+1]
+                pos = [[positive[j][0][i : i + 1], positive[j][1]] for j in range(len(positive))]
+                neg = [[negative[j][0][i : i + 1], negative[j][1]] for j in range(len(negative))]
+                latent = samples[i : i + 1]
                 cur_seed = seed if use_same_seed else seed + i
                 noise_i = comfy.sample.prepare_noise(latent, cur_seed, None)
-                
+
                 # Pass callback and disable_pbar
-                out = comfy.sample.sample(model, noise_i, steps, cfg, sampler_name, scheduler,
-                                          pos, neg, latent, denoise=denoise, seed=cur_seed,
-                                          callback=callback, disable_pbar=disable_pbar)
+                out = comfy.sample.sample(
+                    model,
+                    noise_i,
+                    steps,
+                    cfg,
+                    sampler_name,
+                    scheduler,
+                    pos,
+                    neg,
+                    latent,
+                    denoise=denoise,
+                    seed=cur_seed,
+                    callback=callback,
+                    disable_pbar=disable_pbar,
+                )
                 latents.append(out)
             samples = torch.cat(latents, dim=0)
         else:
             # Pass callback and disable_pbar
-            samples = comfy.sample.sample(model, noise, steps, cfg, sampler_name, scheduler,
-                                          positive, negative, samples, denoise=denoise, seed=seed,
-                                          callback=callback, disable_pbar=disable_pbar)
+            samples = comfy.sample.sample(
+                model,
+                noise,
+                steps,
+                cfg,
+                sampler_name,
+                scheduler,
+                positive,
+                negative,
+                samples,
+                denoise=denoise,
+                seed=seed,
+                callback=callback,
+                disable_pbar=disable_pbar,
+            )
 
         result = latent_image.copy()
         result["samples"] = samples

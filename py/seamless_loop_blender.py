@@ -1,11 +1,13 @@
 import torch
 
+
 class SeamlessLoopBlender:
     """
     A node to create a seamless loop. It follows the "boomerang" blending
     method where the end of the sequence is blended with a reversed copy
     of the beginning, ensuring the last frame is identical to the first.
     """
+
     @classmethod
     def INPUT_TYPES(cls):
         return {
@@ -29,16 +31,18 @@ class SeamlessLoopBlender:
         # We need at least blend_frames + 1 frames to have a section to blend
         # and a frame preceding it.
         if blend_frames <= 0 or num_frames <= blend_frames:
-            print(f"[SeamlessLoopBlender] Warning: Not enough frames ({num_frames}) to perform a blend of {blend_frames} frames. Skipping.")
+            print(
+                f"[SeamlessLoopBlender] Warning: Not enough frames ({num_frames}) to perform a blend of {blend_frames} frames. Skipping."
+            )
             return (images,)
 
-        print(f"[SeamlessLoopBlender] Applying boomerang blend. Final frame will match the first frame.")
+        print("[SeamlessLoopBlender] Applying boomerang blend. Final frame will match the first frame.")
 
         # --- This implements the logic you described ---
 
         # 1. The frames at the end of the video that we will be modifying.
         # This is the "tail" that will be faded out.
-        tail_section = images[num_frames - blend_frames:]
+        tail_section = images[num_frames - blend_frames :]
 
         # 2. The frames at the beginning of the video that we will fade in.
         head_section = images[:blend_frames]
@@ -51,7 +55,7 @@ class SeamlessLoopBlender:
         # 4. Create the alpha weights for the transition.
         # This goes from transparent (0.0) to fully opaque (1.0), as you said.
         alphas = torch.linspace(0.0, 1.0, steps=blend_frames, device=images.device, dtype=images.dtype)
-        
+
         # Reshape for broadcasting with the image tensors.
         alphas = alphas.view(-1, 1, 1, 1)
 
@@ -67,6 +71,6 @@ class SeamlessLoopBlender:
 
         # Clone the original tensor and replace the tail with our new blended section.
         output_images = images.clone()
-        output_images[num_frames - blend_frames:] = blended_section
+        output_images[num_frames - blend_frames :] = blended_section
 
         return (output_images,)

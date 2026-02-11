@@ -1,7 +1,7 @@
 """
 @author: CRT
 @title: CRT-Nodes
-@version: 2.1.2
+@version: 2.1.7
 @project: "https://github.com/plugcrypt/CRT-Nodes",
 @description: Set of nodes for ComfyUI
 https://discord.gg/8wYS9MBQqp
@@ -14,8 +14,6 @@ if 'CRT_NODES_INITIALIZED' not in globals():
     globals()['CRT_NODES_INITIALIZED'] = True
     
     print("[CRT-Nodes __init__] Importing node classes...")
-    from .py.toggle_lora_unet_blocks_L1 import ToggleLoraUnetBlocksNodeL1
-    from .py.toggle_lora_unet_blocks_L2 import ToggleLoraUnetBlocksNodeL2
     from .py.remove_trailing_comma_node import RemoveTrailingCommaNode
     from .py.boolean_transform_node import BooleanTransformNode
     from .py.lora_loader_str import LoraLoaderStr
@@ -24,8 +22,6 @@ if 'CRT_NODES_INITIALIZED' not in globals():
     from .py.FluxLoraBlocksPatcher import FluxLoraBlocksPatcher
     from .py.FluxTiledSamplerCustom import FluxTiledSamplerCustomAdvanced
     from .py.FancyNoteNode import FancyNoteNode
-    from .py.Semantic_EQ_COND import FluxSemanticEncoder
-    from .py.Flux_AIO_Node import FluxAIO_CRT
     from .py.FileLoaderCrawl import FileLoaderCrawl
     from .py.ImageLoaderCrawl import ImageLoaderCrawl
     from .py.AudioLoaderCrawl import AudioLoaderCrawl
@@ -105,7 +101,6 @@ if 'CRT_NODES_INITIALIZED' not in globals():
     from .py.any_trigger import AnyTrigger
     from .py.DepthAnythingTensorrtFormat import DepthAnythingTensorrtFormat
     from .py.AudioFrameAdjuster import AudioFrameAdjuster
-    from .py.LTXVAutoGuideSpacing import LTXVAutoGuideSpacing
     from .py.BatchBrightnessCurve import BatchBrightnessCurve
 
 
@@ -130,8 +125,6 @@ else:
     print("[CRT-Nodes __init__] Already initialized, skipping...")
 
 NODE_CLASS_MAPPINGS = {
-    "Toggle Lora Unet Blocks L1": ToggleLoraUnetBlocksNodeL1,
-    "Toggle Lora Unet Blocks L2": ToggleLoraUnetBlocksNodeL2,
     "Remove Trailing Comma": RemoveTrailingCommaNode,
     "Boolean Transform": BooleanTransformNode,
     "Lora Loader Str": LoraLoaderStr,
@@ -140,8 +133,6 @@ NODE_CLASS_MAPPINGS = {
     "FluxLoraBlocksPatcher": FluxLoraBlocksPatcher,
     "FluxTiledSamplerCustomAdvanced": FluxTiledSamplerCustomAdvanced,
     "FancyNoteNode": FancyNoteNode,
-    "FluxSemanticEncoder": FluxSemanticEncoder,
-    "FluxAIO_CRT": FluxAIO_CRT,
     "FileLoaderCrawl": FileLoaderCrawl,
     "ImageLoaderCrawl": ImageLoaderCrawl,
     "AudioLoaderCrawl": AudioLoaderCrawl,
@@ -221,13 +212,10 @@ NODE_CLASS_MAPPINGS = {
     "AnyTrigger": AnyTrigger,
     "DepthAnythingTensorrtFormat": DepthAnythingTensorrtFormat,
     "AudioFrameAdjuster": AudioFrameAdjuster,
-    "LTXVAutoGuideSpacing": LTXVAutoGuideSpacing,
     "BatchBrightnessCurve": BatchBrightnessCurve,
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
-    "Toggle Lora Unet Blocks L1": "Toggle Lora Unet Blocks L1 (CRT)",
-    "Toggle Lora Unet Blocks L2": "Toggle Lora Unet Blocks L2 (CRT)",
     "Remove Trailing Comma": "Remove Trailing Comma (CRT)",
     "Boolean Transform": "Boolean Transform (CRT)",
     "Lora Loader Str": "Lora Loader Str (CRT)",
@@ -236,8 +224,6 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "FluxLoraBlocksPatcher": "Flux LoRA Blocks Patcher (CRT)",
     "FluxTiledSamplerCustomAdvanced": "Flux Tiled Sampler Advanced (CRT)",
     "FancyNoteNode": "Fancy Note (CRT)",
-    "FluxSemanticEncoder": "FLUX Semantic Encoder (CRT)",
-    "FluxAIO_CRT": "FLUX All-In-One (CRT)",
     "FileLoaderCrawl": "File Loader Crawl (CRT)",
     "ImageLoaderCrawl": "Image Loader Crawl (CRT)",
     "AudioLoaderCrawl": "Audio Loader Crawl (CRT)",
@@ -317,7 +303,6 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "AnyTrigger": "Any Trigger (CRT)",
     "DepthAnythingTensorrtFormat": "Depth Anything Tensorrt Format (CRT)",
     "AudioFrameAdjuster": "Audio Frame Adjuster (CRT)",
-    "LTXVAutoGuideSpacing": "LTXV Auto Guide Spacing (CRT)",
     "BatchBrightnessCurve": "Batch Brightness Curve (U-Shape) (CRT)",
 }
 

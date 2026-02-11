@@ -3,13 +3,15 @@ import torch
 import re
 from safetensors.torch import load_file
 
+
 def natural_sort_key(filename):
     """Sort strings with numbers in a natural, human-friendly order."""
     parts = re.split(r'(\d+)', filename)
     return [int(part) if part.isdigit() else part.lower() for part in parts]
 
+
 class LoadLastLatent:
-    
+
     @classmethod
     def INPUT_TYPES(cls):
         return {
@@ -52,13 +54,13 @@ class LoadLastLatent:
 
         # Supported latent extension
         latent_extension = 'safetensors'
-        
+
         # Get all latent files from the validated folder
         try:
             latent_files = [
-                f for f in os.listdir(folder_path)
-                if os.path.isfile(os.path.join(folder_path, f))
-                and f.lower().endswith(latent_extension)
+                f
+                for f in os.listdir(folder_path)
+                if os.path.isfile(os.path.join(folder_path, f)) and f.lower().endswith(latent_extension)
             ]
         except Exception as e:
             print(f"LoadLastLatent: Error reading directory '{folder_path}': {e}. Returning None.")
@@ -74,7 +76,7 @@ class LoadLastLatent:
             # Sort by modification time
             latent_files.sort(
                 key=lambda f: os.path.getmtime(os.path.join(folder_path, f)),
-                reverse=not invert_order # Sort descending by default for date
+                reverse=not invert_order,  # Sort descending by default for date
             )
         else:
             # Sort alphabetically with natural sorting
@@ -93,10 +95,10 @@ class LoadLastLatent:
             if latent_tensor is None:
                 print(f"LoadLastLatent: ERROR - No 'latent' key found in safetensors file '{latent_filename}'.")
                 return (None,)
-            
+
             # Prepare the latent for ComfyUI
             latent_output = {"samples": latent_tensor.detach().clone()}
-            
+
             print(f"LoadLastLatent: Successfully loaded latent from '{latent_filename}'.")
             return (latent_output,)
 
@@ -111,23 +113,25 @@ class LoadLastLatent:
         This check is also designed to fail gracefully.
         """
         if not folder_path or not os.path.isdir(folder_path):
-            return float("NaN") # Return a value that is always different
+            return float("NaN")  # Return a value that is always different
 
         # This part of the logic can remain similar, as it doesn't halt the queue
         try:
             latent_files = [f for f in os.listdir(folder_path) if f.lower().endswith('.safetensors')]
             if not latent_files:
                 return float("NaN")
-            
+
             sort_by = kwargs.get("sort_by", "date")
             invert_order = kwargs.get("invert_order", False)
 
             if sort_by == "date":
-                latent_files.sort(key=lambda f: os.path.getmtime(os.path.join(folder_path, f)), reverse=not invert_order)
+                latent_files.sort(
+                    key=lambda f: os.path.getmtime(os.path.join(folder_path, f)), reverse=not invert_order
+                )
             else:
                 latent_files.sort(key=natural_sort_key, reverse=invert_order)
 
             latest_file_path = os.path.join(folder_path, latent_files[0])
             return os.path.getmtime(latest_file_path)
-        except:
+        except Exception:
             return float("NaN")
