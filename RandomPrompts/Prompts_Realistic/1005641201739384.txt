@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark, wavy hair sitting on a rough seaside rock, body slightly tilted, hands clasped between her knees, eyes looking directly at the camera with a soft, natural smile. She wears a black bikini top and black shorts; the fabric is slightly wrinkled from the motion of sitting. Her left arm is bent, revealing a detailed floral‑rose tattoo that runs from shoulder to wrist, and a small heart tattoo on her upper chest. A second heart tattoo sits just above her left breast, and a swan‑tattoo adorns her right upper arm. The tattoos are in a traditional ink style with muted colors—deep pinks, greens, and browns—with slight shading that catches the light.
+
+- **Lighting & Exposure**  
+  Ambient daylight from a low‑angle, late‑afternoon sun creates a warm, slightly overexposed highlight on her face and upper body. The exposure is uneven: the foreground is brighter than the background, giving a raw, unprocessed look. No auto‑HDR or beauty filters—just natural contrast.
+
+- **Camera & Lens Settings**  
+  Wide‑angle lens (24–35 mm), f/4.0 aperture, 1/125 s shutter speed, ISO 400. Slight handheld shake produces a subtle motion blur on the subject’s hands and the rock, while the background remains fully sharp—no bokeh or depth‑of‑field blur. Everything is in focus from foreground to background.
+
+- **Environment**  
+  The scene is set on a sandy beach with a calm ocean behind the woman. The sand is light brown with small pebbles; the ocean surface shows gentle ripples and a faint horizon line. The time of day is late afternoon, around 5 pm, giving a warm golden hue. Weather is mild, with a light breeze that creates slight motion on the woman’s hair and clothing.
+
+- **Composition & Framing**  
+  The shot is intentionally off‑center: the woman’s left side is slightly cut off by the frame edge, creating a casual, candid feel. No rule‑of‑thirds—just spontaneous framing. The composition captures the woman’s full upper body, her legs, and the rock she sits on, with the ocean and sand extending beyond the top and bottom of the frame.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, partial crop of the woman’s right shoulder, natural imperfections in focus and sharpness. The image has a raw, unposed, spontaneous vibe—like a snapshot taken mid‑action. No post‑processing color grading or filters; only natural contrast and slight overexposure.
+
+- **Final Prompt**  
+  “A young woman with long dark wavy hair sits on a rough seaside rock in late afternoon sunlight, wearing a black bikini top and shorts, hands clasped between her knees, eyes locked to the camera with a soft smile. Her left arm displays a detailed floral‑rose tattoo from shoulder to wrist, a small heart tattoo on her chest, and a swan tattoo on her right upper arm. The lighting is warm and slightly overexposed, creating a raw, unprocessed look. Shot on a wide‑angle 35 mm lens at f/4.0, 1/125 s, ISO 400, with slight handheld shake producing motion blur on the hands while the background remains fully sharp. The scene is a sandy beach with a calm ocean behind her; the time of day is 5 pm. The composition is off‑center and partially cropped, capturing the woman’s full upper body, legs, and rock, with the ocean and sand extending beyond the frame. No filters or color grading—just natural, candid realism.”

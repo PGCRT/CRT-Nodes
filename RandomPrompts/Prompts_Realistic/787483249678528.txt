@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A young woman with a high bun, wearing a black short‑sleeved tee and loose grey joggers, sits on a simple white chair in a bright, sunlit living room. She is mid‑action, pulling a light‑grey sheer bikini bottom toward her waist with both hands, eyes focused downward on the fabric. Her hair is loosely tied, a few strands framing her face; her expression is concentrated, almost contemplative.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the woman appears unaware of the camera, caught in a natural moment. Slight tilt and off‑center framing give an accidental, handheld feel. The shot is a partial crop that doesn’t follow the rule‑of‑thirds; the composition feels organic and informal.
+
+- **Motion & Exposure**  
+  A subtle motion blur conveys the sense of movement as she adjusts the garment. Slight overexposure from the ambient daylight gives a raw, unprocessed look—no auto‑beauty or filter enhancement. The exposure is slightly warm, with a hint of brightness around the window’s natural light.
+
+- **Environment**  
+  The setting is a modern apartment living room: a white TV on a low cabinet to the right, a tall window on the left letting in bright morning sunlight, and a light‑colored wall that keeps the background clean. The time of day is early afternoon, when the sun is high but still warm, creating soft shadows. The weather outside is clear, with a faint blue sky visible through the window.
+
+- **Lens & Technical**  
+  Use a short focal length (e.g., 24‑35 mm) wide‑angle lens to capture a broad view of the scene. Everything is in focus—no bokeh or depth‑of‑field blur; the background remains sharp. No portrait‑mode subject isolation; the frame includes the woman, her clothing, and part of the room’s interior. The image has a natural, raw aesthetic with no post‑processing color grading.
+
+- **Final Prompt**  
+  “A young woman with a high bun, wearing a black short‑sleeved tee and loose grey joggers, sits on a white chair in a bright living room, pulling a light‑grey sheer bikini bottom toward her waist. Candid, unposed moment captured with a wide‑angle lens, slight motion blur and accidental framing. The scene includes a TV on a low cabinet to the right and a tall window on the left letting in early afternoon sunlight. Everything is fully sharp, no filters or color grading—raw, natural aesthetic.”

@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A young woman with a high ponytail and sunglasses perched on her head, captured mid‑stride as she walks along a sunlit park pathway. She wears an oversized white cotton tee and light‑wash denim jeans that sit high on the waist; her left hand holds a brown paper tote, while her right hand is slightly bent as if she’s about to grab something from a nearby bench. Her hair flips backward with a faint motion blur, suggesting movement.
+
+- **Pose & Composition**  
+  The shot is taken from a slightly low angle, with the camera tilted a little to the right, creating an off‑center, accidental framing that doesn’t follow the rule of thirds. The composition is a wide‑angle, handheld capture: everything—from the woman’s back to the distant trees—is in focus, no portrait‑mode blur. The background is fully sharp, but it has a subtle natural depth because of the wide lens.
+
+- **Lighting & Exposure**  
+  Ambient daylight from a high‑mid‑afternoon sun creates a slight overexposure on the woman’s back and a warm glow on the grass. The exposure is raw, with no auto‑HDR or beauty filters applied; the image retains a natural, unprocessed look. A faint halo of light surrounds her hair, and the shadows are soft but distinct.
+
+- **Motion & Focus**  
+  Slight motion blur is present on the woman’s hair and the background leaves, indicating a handheld shot at a relatively low shutter speed. The focus is uniform across the frame—no depth‑of‑field blur or bokeh. The background includes a second person walking in the distance, a brown tote in hand, and a “no‑parking” sign on a pole; all are sharply rendered.
+
+- **Environment**  
+  The scene is set in a lush green park with tall trees lining a paved walkway. The time of day is late afternoon, as the sun casts long shadows and a warm golden hue across the scene. The weather is clear, with a light breeze that ruffles the leaves and the woman’s hair.
+
+- **Lens & Technical**  
+  A short focal length (approximately 24‑35 mm) wide‑angle lens is used, giving a broad field of view that keeps the entire scene in focus. No bokeh or subject isolation is applied; everything—from the foreground to the background—is crisp. The image has a natural, unfiltered look with zero post‑processing aesthetic.
+
+- **Candid & Spontaneous**  
+  The shot feels spontaneous and unposed: the woman appears unaware of the camera, mid‑step, with a slight tilt that gives the image a casual, documentary vibe. Imperfections—such as the slight crop that cuts off part of her left hand—are intentional, adding authenticity.
+
+- **Final Prompt**  
+  “A young woman in a white tee and light denim jeans, captured mid‑stride on a sunlit park pathway, with a high ponytail and sunglasses perched on her head. Her left hand holds a brown tote; her right hand is bent as if reaching for something. The shot is taken from a low, slightly tilted angle with a wide‑angle lens, all in focus, raw exposure, slight motion blur on the hair and background leaves. The background shows another walker and a ‘no‑parking’ sign, all sharply rendered. Late afternoon sunlight casts warm shadows; the scene is fully sharp, no filters, no auto‑HDR, handheld, spontaneous, imperfect framing.”

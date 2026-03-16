@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A plus‑size woman with long, wavy brown hair and gold hoop earrings, wearing a sheer white mesh bodysuit with off‑the‑shoulder straps and three‑quarter sleeves. She stands with one hand on her hip, slight turn to the side, head tilted a little to the left, eyes looking directly at the camera with a soft, confident expression. Her pose is candid—mid‑action, as if she just finished a step in a dance or a walk—and has a slight tilt and off‑center framing that gives an accidental, spontaneous feel.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle, midday sun; the light is slightly overexposed on the upper body, creating a warm, golden hue with subtle halo around her shoulders. No auto‑HDR or beauty filters—just raw, unprocessed lighting that retains a little grain and imperfection. The background is a plain, neutral beige wall that is fully sharp, no bokeh, no depth‑of‑field blur.
+
+- **Lens & Technical**  
+  24‑mm wide‑angle lens (short focal length), handheld shot with slight instability that produces a gentle motion blur on the edges. Everything in focus—no portrait mode or subject isolation. The composition is not rule‑of‑thirds; the subject occupies the central‑left portion of the frame, with her left arm extending toward the right edge, creating a dynamic diagonal line.
+
+- **Environment**  
+  Location: a simple indoor studio space with a plain beige backdrop, no props, no additional décor. Time of day: mid‑afternoon, bright but not harsh. Weather/ambient conditions: clear, warm, slightly hazy—this adds to the soft overexposure effect.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Imperfections encouraged: slight tilt, off‑center framing, partial crop. No rule‑of‑thirds intentionality—accidental framing. Natural motion freeze or slight blur from handheld instability.
+
+- **Prompt Summary for AI Image Generation**  
+  “A plus‑size woman with long wavy brown hair and gold hoop earrings, wearing a sheer white mesh bodysuit with off‑the‑shoulder straps and three‑quarter sleeves, standing in a midday natural light indoor studio with a plain beige backdrop. She has one hand on her hip, turned slightly to the side, head tilted left, looking directly at the camera. The shot is taken with a 24‑mm wide‑angle lens, handheld with slight motion blur, fully sharp background, no bokeh, no filters—raw, unprocessed look with a little overexposure. The composition is off‑center and accidental, capturing a candid, spontaneous moment.”

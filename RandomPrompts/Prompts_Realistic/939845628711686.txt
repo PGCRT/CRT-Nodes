@@ -1,0 +1,30 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, curvy woman with long, wavy brown hair that falls past her shoulders, wearing dark sunglasses and a delicate gold necklace. She stands bare‑headed, mid‑step in a casual, unposed stance, one hand lightly touching her hip, the other near her thigh. Her posture is slightly tilted to the left, giving an off‑center, spontaneous feel.
+
+- **Attire & Accessories**  
+  Thin gold bracelets on each wrist, a thin gold chain around her neck, and a single gold ring on her right ring finger. She wears black, cat‑eye sunglasses that sit low on her nose, adding a cool, fashion‑forward touch. Her skin is unretouched, with natural texture and subtle imperfections.
+
+- **Lighting & Exposure**  
+  Natural daylight from the west, mid‑afternoon, creating a warm, slightly overexposed highlight on her chest and face. The light hits her front‑side, producing soft shadows under her arms and behind her hair. No auto‑HDR or beauty filters—just raw, unprocessed contrast.
+
+- **Camera Settings**  
+  35 mm wide‑angle lens (short focal length), f/4.0 aperture, 1/125 s shutter speed, handheld. Slight motion blur on the subject’s hands and the background, indicating a casual, in‑motion capture. Everything is fully sharp—no bokeh or depth‑of‑field blur.
+
+- **Environment**  
+  A sunlit urban alleyway in a modern city, with a concrete wall and a glass storefront in the background. The time of day is late afternoon, giving a golden hue. The weather is clear, with a light breeze that ruffles her hair. The background is fully sharp, no selective focus.
+
+- **Composition & Framing**  
+  No rule‑of‑thirds intentionality—framing is accidental, with the subject’s head near the upper third but slightly off‑center. The crop is partial; the left side of her hip cuts off at the edge of the frame. The shot is wide, capturing her full figure from head to toe, including a portion of the alley wall behind her.
+
+- **Technical Details**  
+  - Lens: 35 mm, wide‑angle, short focal length  
+  - Aperture: f/4.0  
+  - Shutter speed: 1/125 s  
+  - ISO: 400  
+  - Handheld, slight motion blur on the subject’s hands and background  
+  - No bokeh, no depth‑of‑field blur—everything in focus  
+
+- **Prompt Summary**  
+  “A tall, curvy woman with long wavy brown hair, dark sunglasses, gold necklace, and gold bracelets stands mid‑step in a sunlit urban alleyway. Natural daylight from the west overexposes her chest and face. Shot on a 35 mm wide‑angle lens at f/4.0, 1/125 s, handheld, with slight motion blur on the hands and background. The framing is accidental, off‑center, partial crop, fully sharp background, no bokeh. Capture style: candid, unposed, spontaneous, raw, unprocessed, zero studio lighting, zero professional composition, zero editorial tone.”

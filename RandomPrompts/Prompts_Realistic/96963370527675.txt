@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair standing in a bright, sunlit bedroom. She’s wearing a sheer purple lace bra and black lace panties, paired with patterned thigh-high stockings. Her left hand rests lightly on her hip, right arm bent at the elbow, fingers slightly curled. She’s mid‑step, one foot forward, as if caught in a casual, spontaneous pose.
+
+- **Motion & Focus**  
+  Slight motion blur on the lower legs and feet to suggest movement. Everything is fully sharp—no bokeh, no depth‑of‑field blur. The image has a raw, unprocessed look: no filters, no color grading, no post‑processing aesthetic. A hint of overexposure in the upper left corner from natural daylight.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24‑35 mm), short focal length. Handheld shot with a slight tilt and off‑center framing—no rule‑of‑thirds intentionality. All elements in focus, background fully sharp. Auto‑HDR or auto‑beauty mode off.
+
+- **Environment**  
+  Location: A cozy bedroom with a black iron bed frame, white pillows, and a small bedside table with a lamp. The time of day is late morning; the sun is high, casting warm, soft light. Ambient conditions are mild, with a faint breeze suggesting a cool evening.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Imperfections encouraged: slight tilt, off‑center framing, partial crop. Zero studio lighting, zero professional composition, zero editorial tone. Natural motion freeze or slight blur from handheld instability.
+
+- **Composition Notes**  
+  The frame captures the woman from the knees up, with a portion of the bed and bedside table visible. The left side of the image is slightly overexposed, giving a natural glow. The right side shows a small portion of a dark blanket on the bed. The background is fully sharp, no portrait‑mode isolation.
+
+- **Prompt Summary**  
+  “A young woman in a purple lace bra and black lace panties, wearing patterned thigh‑high stockings, stands mid‑step in a sunlit bedroom. Capture with a wide‑angle lens, slight motion blur on the legs, full sharpness everywhere, handheld tilt, candid pose, raw unprocessed look, late‑morning natural light, all in focus, no filters.”

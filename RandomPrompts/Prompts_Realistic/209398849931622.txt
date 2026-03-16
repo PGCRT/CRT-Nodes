@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman in a navy‑polka‑dot bikini with white ruffled straps, leaning casually against a concrete railing. Her sunglasses rest on top of her head, slightly askew. She’s mid‑step, one foot planted, the other bent, as if she just finished a dance move or is about to pick something up. Her hair is loose, a few strands blowing in the wind. The shot captures a natural “mid‑action” candid feel.
+
+- **Motion & Focus**  
+  Slight motion blur on the subject’s hands and the railing, indicating handheld instability. Everything remains fully sharp—no portrait‑mode depth of field. A wide‑angle lens (24–35 mm) captures a broad view of the scene.
+
+- **Lighting & Exposure**  
+  Auto‑HDR or auto‑beauty mode off. The sun is low on the horizon, creating a warm, golden overexposure that slightly bleeds into the background. The exposure is a little high, giving a bright, airy feel. No color grading or filters—raw, unprocessed look.
+
+- **Environment**  
+  A rooftop terrace in a modern residential complex. Behind the subject, a multi‑story building with balconies, a palm tree swaying overhead, and a distant city skyline. The time of day is late afternoon, just before sunset. The weather is clear, with a light breeze.
+
+- **Composition & Framing**  
+  No rule‑of‑thirds intentionality—accidental framing that places the subject slightly off‑center. The composition is spontaneous, as if the photographer caught her in a natural moment. The background is fully sharp, no bokeh.
+
+- **Lens & Technical**  
+  Short focal length (24–35 mm), wide‑angle. All elements—subject, railing, building, palm tree, skyline—are in focus. No portrait mode or subject isolation. Slight tilt to the camera adds a candid feel.
+
+- **Post‑Processing**  
+  Zero studio lighting, zero professional composition, zero editorial tone. The image is raw, with only minimal adjustments for exposure and cropping.  
+
+**Prompt Summary:**  
+“Candid photo of a woman in a navy polka‑dot bikini leaning on a concrete railing on a rooftop terrace at sunset. Slight motion blur on her hands and the railing, wide‑angle lens (24–35 mm), everything fully sharp. The sun is low, creating warm overexposure. Background includes a modern building, a palm tree, and a distant skyline. Raw, unprocessed look, no filters. Spontaneous, off‑center framing with accidental composition.”

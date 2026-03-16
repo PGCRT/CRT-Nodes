@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail, wearing a bright yellow triangle‑style bikini, standing mid‑step on a sunlit park lawn. Her left hand rests lightly on her hip, right arm relaxed by her side, face turned toward the camera with a natural, unposed smile. Slight handheld shake gives a subtle motion blur around her edges.
+
+- **Lighting & Exposure**  
+  Ambient daylight from a slightly overcast mid‑afternoon; the light hits the front of the subject with a soft, even glow. A mild overexposure on the highlights gives a warm, raw feel—no auto‑HDR or beauty filters, just a natural, unprocessed look.
+
+- **Lens & Technical**  
+  24 mm wide‑angle lens, f/4.0 aperture, 1/60 s shutter speed, ISO 400. Everything in focus from foreground to background; no bokeh or depth‑of‑field blur—background fully sharp. Slight tilt and off‑center framing create a candid, spontaneous feel.
+
+- **Environment**  
+  A lush green park with scattered trees, a paved pathway, and a few distant park‑goers in the background. The scene is captured at mid‑afternoon, with gentle shade and warm sunlight filtering through the leaves. Weather is lightly cloudy but bright, giving a natural, unedited atmosphere.
+
+- **Composition & Framing**  
+  No rule‑of‑thirds intentionality—framing is accidental, with the subject slightly off‑center and a partial crop that includes a portion of the pathway and a tree trunk on the left. The background remains fully sharp, preserving the detail of the park and distant figures.
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, zero studio lighting, zero editorial tone. Raw, in‑camera capture with only basic white‑balance adjustment. Slight motion blur from handheld instability adds realism.

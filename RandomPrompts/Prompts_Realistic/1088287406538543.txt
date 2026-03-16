@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A fit woman with long, wavy dark hair, wearing a black sports bra with red trim and matching high‑waist leggings that feature a vertical red stripe. She’s captured mid‑turn, holding a red towel in her right hand, body angled toward the camera but face turned away, giving a casual “unposed” vibe. Her left arm is slightly bent, elbow flexed, as if she just finished a workout or is about to start a new move.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. Slight tilt and off‑center framing; the composition is accidental, not rule‑of‑thirds. The shot has a raw, unprocessed look: no filters, no color grading, no post‑processing aesthetic. A hint of slight overexposure from ambient daylight gives a natural warmth.
+
+- **Motion & Focus**  
+  Slight motion blur from handheld instability, but everything remains fully sharp — no bokeh, no depth‑of‑field blur. The background is in focus, preserving every detail.
+
+- **Lens & Technical**  
+  Wide‑angle lens (short focal length, ~24 mm). Auto‑HDR or auto‑beauty mode off. No studio lighting; all light comes from natural daylight. All elements are in focus, no subject isolation.
+
+- **Environment**  
+  Specific real‑world location: an outdoor sports field with a metal bleacher backdrop. The time of day is late afternoon, with warm, golden sunlight casting soft shadows. Weather is clear, with a light breeze. In the background, a few spectators sit on the bleachers, blurred but visible, adding to the candid feel.
+
+- **Details**  
+  The woman’s left shoulder is slightly exposed, revealing a small zipper detail on the back of her sports bra. Her right hand grips a red towel that drapes slightly out of frame. The metal railings behind her form a subtle geometric pattern. The overall tone is natural, with a hint of slight overexposure that gives the image an authentic, raw feel.
+
+**Prompt:**  
+“Candid, unposed photo of a fit woman with long wavy dark hair, wearing a black sports bra with red trim and high‑waist leggings with a vertical red stripe, holding a red towel in her right hand while mid‑turn. Slight motion blur from handheld instability, everything fully sharp, wide‑angle short focal length lens, natural daylight late afternoon, outdoor sports field with metal bleacher backdrop, spectators in background, raw unprocessed look, no filters or color grading, slight overexposure, accidental off‑center framing.”

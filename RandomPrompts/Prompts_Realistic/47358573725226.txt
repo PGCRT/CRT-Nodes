@@ -1,0 +1,27 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark hair, wearing a white off‑shoulder crop top and black thong‑style bikini bottoms, standing on a stone patio. She’s mid‑step, left leg bent, right foot planted, hand near her ear as if she’s about to speak or adjust a headset. Her expression is bright, casual, slightly smirking.  
+
+- **Motion & Focus**  
+  Slight motion blur at the knees and hands to convey candid movement. Everything in focus—no portrait‑mode bokeh. Handheld shot with a wide‑angle lens (24–35 mm).  
+
+- **Lighting & Exposure**  
+  Natural daylight, mid‑afternoon, soft but warm ambient light. Slight overexposure on the face and upper body to keep the scene lively. No auto‑HDR or beauty filters—raw, unprocessed look.  
+
+- **Environment**  
+  Location: a sunlit patio with blue tiled wall and stone columns, surrounded by tall agave plants and palm fronds. The background is fully sharp, no depth‑of‑field blur.  
+
+- **Lens & Technical**  
+  Short focal length (24–35 mm), wide‑angle. No bokeh, no portrait isolation. All elements—subject, background, details—fully sharp.  
+
+- **Composition**  
+  Candid, unposed, spontaneous framing. Slight tilt and off‑center crop; no rule‑of‑thirds intentionality. The shot feels “in the moment.”  
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, zero studio lighting. Raw, natural look with only minimal white‑balance adjustment.
+
+**Prompt:**
+```
+Candid photography of a young woman in a white off‑shoulder crop top and black thong bikini bottoms, standing on a stone patio with blue tiled wall and stone columns, surrounded by tall agave plants and palm fronds. She’s mid‑step, left leg bent, right foot planted, hand near her ear, bright smirking expression. Slight motion blur at knees and hands, everything in focus, wide‑angle 24–35 mm lens, natural mid‑afternoon daylight with slight overexposure on the face. Raw, unprocessed look, no filters or color grading. Slight tilt, off‑center framing, fully sharp background.
+```

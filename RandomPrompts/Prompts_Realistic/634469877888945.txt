@@ -1,0 +1,16 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with shoulder‑length blonde hair, wearing a sheer, long‑sleeved gray henley that shows subtle texture and a faint sparkly sheen. She stands in a bright, airy bedroom, facing the camera with a relaxed, slightly surprised expression. Her hands rest lightly on her hips, and her body is angled at a casual 15° tilt, giving an off‑center, spontaneous feel.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject appears unaware of the camera, mid‑action. The shot has slight motion blur from handheld instability, with a narrow depth of field that keeps the entire frame sharp (no portrait‑mode blur). No filters, no color grading, no post‑processing; the image retains raw, auto‑HDR or “auto‑beauty” off, with a natural overexposure that highlights ambient light.
+
+- **Environment**  
+  Location: A bright, modern bedroom with white furniture and a small side table. A vase of pink and green flowers sits on a white dresser to the left, while a potted green plant rests on a wooden desk to the right. The time of day is late morning, with soft natural daylight coming from the west, creating gentle highlights and slight overexposure. The weather is clear, with a light breeze that adds subtle motion to the subject’s hair.
+
+- **Lens & Technical**  
+  Use a short focal‑length wide‑angle lens (e.g., 24 mm). Capture everything in focus — no bokeh, no subject isolation. The background is fully sharp, and the composition is accidental: no rule‑of‑thirds intentionality, just a casual, spontaneous framing that slightly tilts left to right.
+
+- **Prompt Summary**  
+  “A candid, unposed photo of a young woman in a gray henley, captured with a wide‑angle lens in a bright bedroom at late morning. The shot features slight motion blur and natural overexposure, with a vase of flowers on a white dresser and a green plant on a wooden desk in the background. All elements are fully sharp, creating a raw, auto‑HDR look without filters or post‑processing.”

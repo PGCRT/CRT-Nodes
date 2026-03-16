@@ -1,0 +1,16 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Appearance**  
+  A young woman with long, wavy brown hair that catches the light as she walks down a city street. She wears a black leather motorcycle jacket over a crisp white button‑down shirt, accessorized with thin gold hoop earrings and a delicate gold chain necklace. Her face is slightly turned toward the camera, mid‑smile, with a natural, unposed expression. The shot should retain a slight motion blur at the edges to suggest movement, while keeping the entire frame fully sharp—no portrait‑mode softening.
+
+- **Capture Style**  
+  Candid, spontaneous, “in‑motion” snapshot taken by a handheld camera. The framing is intentionally off‑center and slightly tilted, giving a raw, unedited feel. No rule‑of‑thirds; the composition is accidental, as if she were walking and the photographer caught her in a fleeting moment. A brief overexposure on the highlights gives the image an auto‑HDR vibe without any post‑processing filters or color grading.
+
+- **Environment**  
+  The scene is a bustling urban alleyway in a downtown area—brick buildings line both sides of a narrow street, with a few parked cars and a trash bin visible in the background. It’s late afternoon, the sun low on the horizon, casting warm, golden light that slightly overexposes the upper part of the frame. The weather is mild, with a light breeze that ruffles her hair.
+
+- **Lens & Technical**  
+  Use a short focal‑length wide‑angle lens (e.g., 24 mm or 35 mm). Capture everything in focus—no depth‑of‑field blur; the background should be fully sharp, with no bokeh. The lens should produce a slight motion blur from handheld instability, but keep the overall image crisp. Aim for an auto‑HDR effect by exposing the shot to capture both bright highlights and darker shadows naturally.
+
+- **Post‑Processing**  
+  Keep it minimal—no filters, no color grading, no aesthetic manipulation. Slight overexposure on the top of the frame is intentional, giving a raw, candid feel. The final image should look like an authentic, spontaneous photograph taken in real life.

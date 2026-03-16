@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, auburn hair tied in a loose braid, sitting on a neatly made bed in a bright, lived‑in bedroom. She’s wearing simple white underwear, knees bent, hands resting on the mattress, body slightly turned toward the camera, mid‑smile, as if caught in a spontaneous moment. Her posture is casual and unposed; her left hand rests on the bed near the pillow, right hand on the mattress, creating a natural, off‑center composition.
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window on the left, slightly overexposed to give a warm, soft glow. The exposure is a little high, letting the whites of the bedding and skin shine, with a subtle halo around her face. No auto‑beauty or filter enhancement—just raw, unprocessed light.
+
+- **Camera Settings**  
+  Wide‑angle lens (24‑35 mm), short focal length, handheld. Slight motion blur from the camera’s instability, giving a natural “in‑motion” feel. Everything in focus—from her face to the bookshelf behind—no portrait‑mode depth of field blur; background stays sharp.
+
+- **Environment**  
+  A cozy bedroom with a large window, a wooden bookshelf filled with colorful books, a framed photo, and a small decorative object. The bed has white sheets and a patterned pillow. The time of day is mid‑morning, the sun high but not directly overhead, creating soft shadows. The room feels lived‑in, with slight dust motes in the light, a faint scent of fresh laundry.
+
+- **Composition & Framing**  
+  No rule‑of‑thirds intentionality—framing is accidental, slightly tilted. The shot captures her from the waist up to the knees, with her legs bent and feet tucked underneath. The camera is positioned at eye level, capturing a wide view that includes the bed, the window, and part of the bookshelf. The composition is centered but not symmetrical; her body occupies the left‑center of the frame, leaving a small negative space on the right.
+
+- **Details & Imperfections**  
+  Slight tilt in the camera, a tiny off‑center crop that gives a candid feel. A faint motion blur around her hands and hair, as if she just moved into position. The texture of the bed sheets is visible, with subtle wrinkles. Her skin has a natural, unretouched look—no auto‑beauty mode. The lighting creates a soft highlight on her cheek and shoulder, with a slight overexposure in the window area.
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, no post‑processing aesthetic. Only raw, in‑camera data. Slight overexposure in the window area gives a warm, natural tone. The image is captured on a DSLR or mirrorless with a wide‑angle prime lens.
+
+- **Final Prompt**  
+  “A young woman with auburn braid sitting on a white bed in a bright bedroom, wearing white underwear, hands on mattress, mid‑smile, captured with a 35 mm wide‑angle lens, handheld slight motion blur, natural daylight from left window, slightly overexposed, everything in focus, accidental off‑center framing, no filters—raw candid photography.”

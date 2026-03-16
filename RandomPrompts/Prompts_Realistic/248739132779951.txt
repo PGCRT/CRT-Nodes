@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail and loose curls at the sides, wearing a black leather moto jacket over a white bodycon dress. She’s mid‑step on a city street, left foot slightly ahead, head turned to the side with a subtle smile. Her hands are relaxed by her sides, one finger lightly touching the zipper of her jacket.  
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — she’s unaware of the camera, caught in a natural moment. Slight tilt and off‑center framing; the shot is partially cropped on the left edge. No rule‑of‑thirds intentionality—just accidental, handheld composition.  
+
+- **Motion & Focus**  
+  Slight motion blur from a handheld, wide‑angle shot; the subject’s movement is frozen with a natural “in‑motion” feel. Everything in focus—no portrait‑mode depth‑of‑field blur, background fully sharp.  
+
+- **Environment**  
+  Specific real‑world location: a brick‑faced building with large windows on the left, a paved road stretching into the distance, and a small patch of green grass on the right. Time of day: late morning, soft golden light from the east casting gentle shadows. Weather: clear, mild breeze, slight overexposure in the highlights to keep the ambient light raw.  
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm), wide‑angle lens. No bokeh—background fully sharp. Auto‑HDR or auto‑beauty mode off. No filters, no color grading, no post‑processing aesthetic. Slight overexposure in the highlights to preserve the raw feel.  
+
+- **Final Prompt**  
+  “A young woman with a high ponytail and loose curls, wearing a black leather moto jacket over a white bodycon dress, mid‑step on a city street, left foot ahead, head turned to the side with a subtle smile, hands relaxed by her sides, one finger touching the zipper. Candid, unposed, spontaneous capture with slight tilt and off‑center framing, partially cropped on the left. Slight motion blur from handheld, wide‑angle lens (24‑35 mm). Background: brick building with large windows, paved road, patch of green grass. Late morning golden light, clear weather, slight overexposure in highlights. Everything in focus—no bokeh, no filters, raw, unprocessed look.”

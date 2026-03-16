@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  Two women standing side‑by‑side on a bustling city sidewalk, mid‑conversation, one holding a beer mug and the other a black handbag. The woman on the left wears a white off‑shoulder top with ruffled sleeves, blue jeans, white sneakers; the woman on the right wears a brown blazer over a black dress, black heels, and a wristwatch. Their heads are slightly tilted toward each other, creating a casual, spontaneous feel.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subjects unaware of camera or mid‑action. Slight tilt and off‑center framing; partial crop that cuts off the edges of the sidewalk. No rule‑of‑thirds intentionality—accidental composition. Natural motion freeze or slight blur from handheld instability.
+
+- **Environment**  
+  Specific real‑world location: a busy downtown street in an American city (e.g., New York or Boston). Time of day: late afternoon, around 5 pm, with warm ambient light that creates a subtle overexposure on the subjects’ faces. Weather: clear, mild humidity, light wind. Background includes storefronts, pedestrians, and a green “OPEN” sign on a building facade.
+
+- **Lens & Technical**  
+  Short focal length (24–35 mm), wide‑angle lens. No bokeh—background fully sharp, everything in focus. No portrait mode or subject isolation. Slight auto‑HDR or auto‑beauty mode off for raw, unprocessed look. No filters, no color grading, no post‑processing aesthetic. Slight overexposure on the subjects’ faces to capture the ambient warmth.
+
+- **Composition Details**  
+  Wide lens captures the full width of the sidewalk, including the two main subjects and a few background pedestrians. The composition is slightly off‑center: the left side of the frame shows a man in a gray shirt walking past, while the right side reveals a woman in a floral skirt. The camera is held at eye level, with a slight downward angle to keep the ground plane visible.
+
+- **Lighting & Exposure**  
+  Natural daylight with a slight overexposure on the subjects’ faces; the background remains fully sharp. No studio lighting, no professional composition, no editorial tone.
+
+- **Final Prompt**  
+  “Two women posing casually on a busy downtown sidewalk at late afternoon, one in a white off‑shoulder top and jeans holding a beer mug, the other in a brown blazer and black dress holding a handbag. Capture with a 35 mm wide‑angle lens, slight handheld blur, accidental off‑center framing, natural daylight overexposure on the subjects, background fully sharp. Include background pedestrians and storefronts, keep everything in focus, no filters or post‑processing.”

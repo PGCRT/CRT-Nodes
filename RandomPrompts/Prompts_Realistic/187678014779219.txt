@@ -1,0 +1,36 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with shoulder‑length brown hair, wearing a dark gray sports bra, standing mid‑step on a wooden desk in a casual office‑style room. Her left hand rests on a stack of thick textbooks (red and blue spines) while her right hand holds a white mug; she’s looking slightly off‑camera with a relaxed, candid expression.  
+
+- **Lighting & Exposure**  
+  Natural daylight from a western‑facing window, mid‑afternoon (≈ 4 pm). Slight overexposure on the upper body to keep the background bright but not washed out; ambient light creates soft highlights on her skin and subtle shadows in the crevices of her bra.  
+
+- **Camera Settings**  
+  - Lens: 24‑mm wide‑angle, short focal length (wide‑angle “low‑angle” for a dynamic perspective).  
+  - Aperture: f/5.6 (mid‑range) – everything from foreground to background stays sharp.  
+  - Shutter speed: 1/125 s – enough to freeze the motion but leave a hint of handheld shake.  
+  - ISO: 400 – for clean detail without noise.  
+
+- **Composition & Framing**  
+  - No rule‑of‑thirds intentionality; the frame is slightly tilted (≈ 3°) and off‑center, capturing the subject’s left side more prominently.  
+  - The shot is a “mid‑action” candid capture: she’s caught in a natural, unposed stance, as if she just finished a conversation or is about to pick up a pen.  
+  - Background: a plain beige wall with a small framed picture on the right; a white pillow and a black chair are visible behind her, all in focus.  
+
+- **Details & Imperfections**  
+  - Slight motion blur at the lower legs (hand‑held instability).  
+  - Minor overexposure on the upper torso, giving a warm, raw feel.  
+  - No filters, no color grading, no post‑processing – just the raw image as captured.  
+
+- **Environment**  
+  - Location: a casual home office or studio with a wooden desk, a stack of books, a mug, and a white pillow; a black chair and a framed picture on the wall.  
+  - Time of day: mid‑afternoon (≈ 4 pm).  
+  - Weather/ambient conditions: clear, bright daylight with soft shadows.  
+
+- **Technical Notes**  
+  - Wide‑angle lens gives a slight distortion that adds energy to the image.  
+  - No bokeh; background is fully sharp.  
+  - Everything in focus – from the books to the wall – captured with a handheld camera.  
+
+**Prompt Summary (for AI image generator)**  
+> “A young woman with shoulder‑length brown hair, wearing a dark gray sports bra, stands mid‑step on a wooden desk in a casual office‑style room. Her left hand rests on a stack of thick textbooks (red and blue spines) while her right hand holds a white mug; she’s looking slightly off‑camera with a relaxed, candid expression. Natural daylight from a western‑facing window, mid‑afternoon, slight overexposure on the upper body. 24‑mm wide‑angle lens, f/5.6, 1/125 s shutter speed, ISO 400. Slight tilt and off‑center framing, no rule‑of‑thirds. Background: beige wall with a small framed picture, white pillow, black chair – all in focus. Capture candid, unposed, spontaneous moment with slight motion blur on the lower legs. No filters, no color grading, raw look.”

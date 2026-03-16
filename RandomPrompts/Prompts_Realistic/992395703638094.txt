@@ -1,0 +1,28 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman in a bright red bikini sitting on a sun‑kissed beach, leaning back on her left hand with her right leg bent and toes pointing toward the water. Her hair is blown lightly by the sea breeze, a few strands falling over her ear. She’s mid‑smile, eyes cast slightly upward toward the sky, capturing an unposed, spontaneous moment.
+
+- **Clothing & Accessories**  
+  Red triangle bikini top with thin straps, matching bottom; a thin gold necklace hangs around her neck. A small earring glints in her left ear. No sunglasses or other accessories—just the natural simplicity of a beach look.
+
+- **Physical Details**  
+  Her skin has a warm, sun‑tanned tone with subtle texture and tiny freckles across her collarbone. The bikini’s fabric shows a slight wrinkle where it meets her shoulder, adding realism. Her left foot is partially buried in the sand, toes curled, while her right foot rests flat, leaving a faint imprint of her shoe.
+
+- **Environment**  
+  The setting is a tropical beach with soft white sand, gentle waves lapping at the shore, and a few scattered beach umbrellas in the background. A thatched palm umbrella sits to the left, slightly tilted. In the distance, a small island with green foliage is visible across the water. The sky is a bright azure with fluffy white clouds drifting overhead.
+
+- **Time of Day & Lighting**  
+  Mid‑afternoon, around 3 pm, when the sun is high but not directly overhead, creating a warm, slightly overexposed glow on the subject’s face and body. Ambient light is natural, with no artificial lighting or color grading. The scene has a slight overexposure in the sky, giving it an airy, raw feel.
+
+- **Lens & Technical**  
+  Use a wide‑angle lens (24 mm or 35 mm) with a short focal length to capture a broad view of the beach and the subject. Shoot at a low angle, almost on the ground, to emphasize the sand texture and the subject’s lower body. Keep everything in focus—no bokeh or depth‑of‑field blur; background remains sharp. Slight handheld shake is allowed, giving a natural motion blur to the final image.
+
+- **Composition & Framing**  
+  The framing is accidental and off‑center: the subject’s left side is slightly cut off by the edge of the frame, and the top of the image is not perfectly centered on her head. No rule‑of‑thirds intentionality—just a candid snapshot. The composition includes the beach umbrella, the woman, the sea, and the distant island in one wide shot.
+
+- **Post‑Processing & Aesthetic**  
+  No filters or color grading; keep the look raw and unprocessed. Slight auto‑HDR may be applied to brighten the sky and water, but keep it subtle. The final image should feel like a genuine, spontaneous photograph taken by an amateur with a handheld camera.
+
+- **Final Prompt Summary**  
+  “A woman in a red bikini sits on a tropical beach, leaning back on her left hand while her right leg bends toward the water. She wears a thin gold necklace and a small earring, with a few strands of hair blowing across her ear. The scene includes a thatched palm umbrella to the left, gentle waves, and a distant green island under a bright azure sky with fluffy clouds. Shot with a 35 mm wide‑angle lens at low angle, everything is in focus with slight handheld blur. The image has a raw, auto‑HDR feel, no filters, captured mid‑action with accidental off‑center framing.”

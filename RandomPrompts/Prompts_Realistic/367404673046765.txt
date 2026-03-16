@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman with light brown hair tied in a loose, messy bun, wearing a tight black one‑piece swimsuit, standing in a bright kitchen. Her hands are raised to the back of her head as if she’s just finished a workout or is adjusting her hair. She’s mid‑smile, eyes slightly tilted toward the camera, body angled at a casual 30° angle.  
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. Slight tilt and off‑center framing; partial crop that cuts off a bit of the left side of her torso. No rule‑of‑thirds intentionality.  
+
+- **Environment**  
+  Specific real‑world location: a modern kitchen with white cabinets, a wooden countertop, a small dining table in the background, a potted monstera plant on the counter, a kettle and a mug on the table, a red storage bin underneath. Time of day: late morning, natural daylight coming from a large window on the right, slight overexposure in the upper right corner. Weather or ambient conditions: clear, warm, slightly hazy.  
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm), wide‑angle lens. No bokeh — background fully sharp, everything in focus. No portrait mode, no subject isolation. Slight motion blur from handheld instability, auto‑HDR or auto‑beauty mode off. No filters, no color grading, no post‑processing aesthetic.  
+
+- **Composition Details**  
+  The shot is taken with a wide lens, capturing the entire figure and a good portion of the kitchen. The background includes a small dining table with a kettle, mug, apple, and a red storage bin underneath; a potted monstera plant sits on the counter; a white cabinet and a wooden drawer are visible on the right. A window on the right lets in natural light that slightly overexposes the upper right corner of the frame.  
+
+- **Imperfections & Raw Look**  
+  Slight tilt, off‑center framing, partial crop. No rule‑of‑thirds intentionality — accidental framing. Natural motion freeze or slight blur from handheld instability. Zero studio lighting, zero professional composition, zero editorial tone.  
+
+- **Prompt Summary for Generation**  
+  “A woman in a black one‑piece swimsuit stands mid‑pose in a bright kitchen, hands on the back of her head, smiling slightly. The shot is taken with a wide‑angle lens at 30 mm, capturing her full figure and a portion of the kitchen’s background including a table, kettle, mug, apple, red bin, and a monstera plant. Late morning natural light comes from a window on the right, creating slight overexposure in the upper right corner. The image has a raw, unprocessed look with slight motion blur and accidental framing, no filters or color grading.”

@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with shoulder‑length brown hair, wearing a bright red triangle bikini, sitting on a metal staircase. She is mid‑smile, leaning slightly forward with one hand on the railing and the other on a step, creating a casual, spontaneous feel. Her body is angled toward the camera but not perfectly centered— a small tilt gives an authentic, handheld vibe.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. Slight motion blur at the edges from a handheld shot, no filters, no color grading, no post‑processing aesthetic. A tiny overexposure in the highlights to capture ambient daylight. The composition is accidental: off‑center framing, partial crop, no rule‑of‑thirds intentionality.
+
+- **Environment**  
+  Location: an outdoor concrete staircase on a sunny terrace, with a potted plant perched on the upper step and a concrete wall behind. Time of day: late morning, soft golden light from the west, creating warm highlights and subtle shadows. Weather: clear, breezy, with a faint haze that adds depth.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm), wide‑angle lens. Everything in focus — no bokeh, no depth‑of‑field blur; background fully sharp. No portrait mode or subject isolation. Slight overexposure or underexposure depending on ambient light, captured with a wide‑angle, handheld camera.
+
+- **Post‑Processing**  
+  Auto‑HDR or auto‑beauty mode off — raw, unprocessed look. Zero studio lighting, zero professional composition, zero editorial tone. Natural motion freeze or slight blur from instability.  
+
+**Prompt**:  
+"young woman in red bikini sitting on outdoor concrete staircase, mid‑smile, leaning forward, one hand on railing, other on step, casual candid pose, slight tilt and off‑center framing, handheld motion blur, late morning sunlight, clear weather, 24‑35 mm wide‑angle lens, everything in focus, raw unprocessed look, accidental composition, no filters."

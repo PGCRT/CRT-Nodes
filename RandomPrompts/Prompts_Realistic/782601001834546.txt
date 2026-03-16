@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, straight brown hair, wearing a black ribbed tank top and matching shorts, standing mid‑step on a grassy hill. Her hands are lightly clasped in front of her thighs, a watch on her left wrist catching the light. She’s smiling softly, eyes bright, as if caught in an unplanned moment.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. Slight tilt and off‑center framing; partial crop that gives a raw, handheld feel. No rule‑of‑thirds intentionality — the composition is accidental, but the focus is crisp across the frame.
+
+- **Environment**  
+  Specific real‑world location: a sunlit meadow on a gentle slope, scattered with fallen autumn leaves. Time of day: late afternoon, golden hour giving a warm, slightly overexposed glow. Weather: clear, breezy, with a light wind ruffling the grass.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm), wide‑angle lens. All elements in focus — no bokeh, no depth‑of‑field blur; background fully sharp. Slight motion blur from handheld instability freezes the subject’s movement. Auto‑HDR or auto‑beauty mode off — raw, unprocessed look. No filters, no color grading, no post‑processing aesthetic.
+
+- **Lighting & Exposure**  
+  Natural lighting from the sun’s low angle creates a slight overexposure on the subject’s face and a subtle highlight on her watch. Slight underexposure in the shadows to keep contrast natural. Wide lens captures the entire scene without cropping too tightly.
+
+- **Post‑Processing**  
+  Zero studio lighting, zero professional composition, zero editorial tone. Keep it organic: slight color cast from the ambient light, minimal noise, and a natural grain that enhances realism.
+
+**Prompt Summary**  
+> “A young woman with long brown hair, in a black tank top and shorts, stands mid‑step on a grassy hill scattered with fallen leaves, hands clasped in front of her thighs, watch glinting on her left wrist. She smiles softly as if caught in an unplanned moment. The shot is candid, slightly tilted, off‑center, partially cropped, all in focus with no bokeh. Shot on a 24‑35 mm wide‑angle lens, late afternoon golden hour lighting creates a slight overexposure on the subject and underexposure in the shadows. Slight motion blur from handheld instability adds life. No filters or post‑processing — raw, natural, unprocessed look.”

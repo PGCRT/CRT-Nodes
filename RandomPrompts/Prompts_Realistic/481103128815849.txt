@@ -1,0 +1,29 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a short, layered brown haircut, standing in a bright, modern hallway. She is bare‑headed, turned slightly to her left, smiling at the camera while placing one hand on her hip and the other near her waist. Her body is captured mid‑movement, with a subtle motion blur around the edges that suggests a handheld shot.
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window casts a warm, slightly overexposed glow on her back and shoulders. The lighting is uneven—soft on the left side of her face, warmer on her rear—creating a raw, unprocessed look. No auto‑beauty or filter enhancements; just ambient light with a hint of slight underexposure in the lower part of the frame.
+
+- **Camera Settings**  
+  - Lens: 24 mm wide‑angle, short focal length.  
+  - Aperture: f/4.0 (wide opening).  
+  - Shutter speed: 1/60 s (producing a slight motion blur).  
+  - ISO: 400 (for natural grain).  
+  - Focus: everything in focus—background and subject—no portrait‑mode depth of field blur.
+
+- **Composition & Framing**  
+  The shot is intentionally off‑center, with the subject’s left side cutting close to the left edge of the frame. The composition is spontaneous and candid; the camera is held at a slightly low angle, giving an intimate, casual feel. The background shows a white door frame on the left, a wooden staircase rising on the right, and a black spherical chandelier hanging from the ceiling—everything sharply in focus.
+
+- **Environment**  
+  Location: A bright, contemporary home hallway with a white door, wooden stairs, and a black chandelier. Time of day: late morning, when natural light is strong but still soft. Weather: clear, no wind, ambient temperature comfortable for indoor shooting.
+
+- **Technical Details**  
+  - No bokeh; background remains fully sharp.  
+  - Slight tilt in the camera to capture the subject’s pose and the surrounding environment.  
+  - Partial crop: the left side of the frame cuts off a bit of the door frame, adding a raw, imperfect feel.  
+  - No rule‑of‑thirds intentionality—framing is accidental, as if captured mid‑action.
+
+- **Final Prompt**  
+  “A young woman with a short brown haircut stands candidly in a bright hallway, bare‑headed and smiling, one hand on her hip, the other near her waist. Natural daylight from a large window creates a warm, slightly overexposed glow on her back and shoulders. Shot on a 24 mm wide‑angle lens at f/4.0 and 1/60 s, with everything in focus—subject and background. The composition is off‑center and accidental, capturing the white door frame on the left, wooden stairs on the right, and a black spherical chandelier above. Slight motion blur adds a handheld feel, while a partial crop gives a raw, unprocessed look. No filters or post‑processing—just a realistic, spontaneous photograph.”

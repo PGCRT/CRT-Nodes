@@ -1,0 +1,28 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with shoulder‑length blonde hair, wearing gold hoop earrings, captured mid‑gesture in a natural, unposed stance. Her face is slightly tilted, her shoulders relaxed, and her arms hanging loosely at her sides. The shot focuses on her upper body, emphasizing the natural contours of her chest and the subtle texture of her skin.
+
+- **Lighting & Exposure**  
+  Ambient daylight from a high‑angle source creates a soft, natural overexposure that gives the image a raw, unprocessed look. Slight warmth in the tones, with a gentle haze that suggests an early‑afternoon sun. No color grading or filters—just the original exposure.
+
+- **Camera & Lens Settings**  
+  - Lens: 24 mm wide‑angle, short focal length, handheld.  
+  - Aperture: f/5.6 (mid‑range) for a fully sharp background with no bokeh.  
+  - Shutter speed: 1/125 s, producing a faint motion blur that conveys spontaneous movement.  
+  - ISO: 400 – balanced for the ambient light.
+
+- **Composition & Framing**  
+  The frame is intentionally off‑center; the subject’s left side leans slightly to the right, creating a casual, candid feel. The crop is partial—her lower torso is cut off at the bottom, adding to the spontaneous vibe. Background is a textured, light‑colored wall with faint plant leaves peeking from the lower right corner. No rule‑of‑thirds intentionality—just natural, accidental framing.
+
+- **Environment**  
+  Location: A bright, unadorned interior space with a subtle, stucco‑like wall. The time of day is mid‑morning, when the sun is high but not directly overhead, casting soft shadows. Ambient air is still, yet the subject’s hair moves slightly, adding a natural motion blur.
+
+- **Technical Details**  
+  - Everything in focus: depth of field covers the entire frame from foreground to background.  
+  - No portrait‑mode isolation—no bokeh or subject‑isolation effect.  
+  - Slight tilt and partial crop give the image a raw, candid feel.  
+  - Auto‑HDR or auto‑beauty mode off; no post‑processing aesthetic.
+
+- **Final Prompt**  
+  “A young woman with shoulder‑length blonde hair and gold hoop earrings, captured mid‑gesture in a natural, unposed stance, upper body focused, slight tilt, partial crop, raw ambient daylight overexposure, 24 mm wide‑angle handheld shot at f/5.6 and 1/125 s, fully sharp background, subtle motion blur, textured wall behind, early‑morning sun, small plant leaf peeking from lower right, no filters, no color grading—candid, spontaneous, zero studio lighting, zero professional composition.”

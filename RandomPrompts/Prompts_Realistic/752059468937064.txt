@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman with long, dark hair standing on an industrial rooftop, body slightly turned to the side, head tilted upward as if gazing at the sky. Her left arm hangs naturally by her side, a small tattoo visible on her upper left arm. She is nude, with a subtle, raw aesthetic—no auto‑beauty or filter enhancements.  
+
+- **Lighting & Exposure**  
+  Capture in late afternoon (or early evening) ambient light; slight overexposure on the right side of the frame to highlight the warm tones of the sky. Use a wide‑angle lens (24–35 mm) with a short focal length to keep the entire scene in focus—no bokeh, no depth‑of‑field blur.  
+
+- **Motion & Focus**  
+  Slight motion blur from handheld instability; natural freeze or slight blur on the subject’s body and background. Everything—in‑focus subject, rooftop railing, distant buildings, and sky—is fully sharp with no portrait‑mode isolation.  
+
+- **Framing & Composition**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Slight tilt and off‑center framing; partial crop that does not follow the rule of thirds. The composition is accidental: the woman’s left side is partially cut off by the frame edge, and the background includes a concrete building, a tall chimney, and a cloudy sky with warm sunset hues.  
+
+- **Environment**  
+  Specific real‑world location: an urban rooftop with concrete railings, a nearby industrial building, and a tall smokestack. Time of day: late afternoon (or early evening), with the sun low on the horizon casting warm golden light. Weather: clear with scattered clouds; ambient light creates slight overexposure on the right side.  
+
+- **Lens & Technical**  
+  Short focal length (24–35 mm), wide‑angle, no bokeh, background fully sharp—everything in focus. No portrait mode or subject isolation.  
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, zero post‑processing aesthetic. Raw, unprocessed look with auto‑HDR off.  
+
+- **Final Prompt**  
+  “A nude woman with long dark hair standing on a concrete rooftop at late afternoon, slightly turned to the side with head tilted upward, left arm hanging by her side, small tattoo on upper left arm. Capture with a 24–35 mm wide‑angle lens, slight motion blur from handheld instability, everything in focus—subject, railing, industrial building, chimney, and cloudy sky—all sharp. Slight overexposure on the right side, accidental off‑center framing with partial crop. Raw, unprocessed, no filters or color grading.”

@@ -1,0 +1,29 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail, wearing a glossy black zip‑front bodysuit and fishnet stockings, captured mid‑step on a sunlit beach. Her left hand is slightly bent at the wrist, her right arm relaxed by her side, and her head tilted a few degrees to the left as if she’s just noticed the camera. The bodysuit’s zipper runs vertically down the center of her torso, catching the light; a subtle motion blur around her knees suggests movement.
+
+- **Lighting & Exposure**  
+  Natural mid‑afternoon sunlight from the west creates a warm, slightly overexposed highlight on her chest and shoulder. The exposure is a little high, giving a soft glow to the entire scene, with a slight halo around her hair. No auto‑beauty or filter processing—just raw, unedited capture.
+
+- **Camera Settings**  
+  - Lens: 24 mm wide‑angle, short focal length, handheld.  
+  - Focal depth: everything from foreground to background fully sharp (no bokeh).  
+  - Shutter speed: 1/60 s (slight motion blur on the subject’s knees).  
+  - Aperture: f/5.6 (wide opening for ambient light).  
+  - ISO: 400 (mid‑range for noise control).
+
+- **Composition & Framing**  
+  The frame is intentionally off‑center; the left side of the image cuts slightly past her hip, and the right edge truncates her thigh, giving a casual, spontaneous feel. The background shows a pink and yellow star‑shaped mural on a concrete wall, with scattered pink petals floating in the air. No rule‑of‑thirds—just accidental, candid framing.
+
+- **Environment**  
+  Beach setting at mid‑afternoon, with a slightly windy breeze indicated by the slight blur of the subject’s hair and the floating petals. The ground is sandy with small pebbles, and the background wall has a faint shadow cast by the sun. The weather is clear, with a bright blue sky peeking through the top of the frame.
+
+- **Technical Details**  
+  - No portrait‑mode depth‑of‑field blur; everything from the foreground sand to the background mural is in focus.  
+  - Slight tilt of the camera (3° left) adds a natural, unposed feel.  
+  - Slight overexposure on the subject’s chest creates a subtle halo effect.  
+  - No post‑processing color grading—just raw capture.
+
+- **Final Prompt**  
+  “A young woman in a glossy black zip‑front bodysuit and fishnet stockings mid‑step on a sunlit beach, captured with a 24 mm wide‑angle lens at 1/60 s and f/5.6, natural mid‑afternoon sunlight creating a warm overexposed highlight, slight motion blur on her knees, off‑center framing that cuts past her hip and truncates her thigh, background of a pink and yellow star‑shaped mural with scattered pink petals floating in the air, everything fully sharp, no filters or color grading—raw, candid, spontaneous photography.”

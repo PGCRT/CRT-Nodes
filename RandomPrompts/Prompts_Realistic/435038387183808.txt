@@ -1,0 +1,21 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair sits casually on a fluffy white fur‑covered chair in an outdoor park setting. She wears a black lace bra and matching panties, her legs slightly crossed, one hand resting on the chair’s armrest, the other on her thigh. Her face is turned toward the camera but not directly at it—she appears to be mid‑smile, as if she’s just caught in a spontaneous moment.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. The shot has slight motion blur from handheld instability, giving it a raw, unprocessed look. No filters, no color grading, no post‑processing aesthetic. A mild overexposure is present because of the ambient daylight.
+
+- **Environment**  
+  Specific real‑world location: a sunlit park with scattered fallen leaves on the grass, a few colorful flowers in the background, and a tree line that creates a natural backdrop. Time of day: late afternoon, around 4 pm, with warm golden light. Weather: clear, slightly breezy.
+
+- **Lens & Technical**  
+  Short focal length (20–35 mm), wide‑angle lens. No bokeh; the background is fully sharp—everything in focus. No portrait mode or subject isolation. The framing is accidental: slight tilt and off‑center composition, no rule‑of‑thirds intentionality. The shot captures a full body view with a wide crop that includes the chair, the woman, and part of the park behind her.
+
+- **Lighting & Exposure**  
+  Zero studio lighting; all light comes from natural daylight. Slight overexposure in the highlights gives the image a warm, organic feel. The exposure is set to capture the full range of tones—from the bright white fur to the darker lace—without any post‑processing.
+
+- **Prompt for Text‑to‑Image Generation**  
+  “A young woman with long wavy brown hair sits on a fluffy white fur chair in a sunlit park, wearing a black lace bra and matching panties. She is mid‑smile, one hand on the armrest, the other on her thigh, legs slightly crossed. The scene includes scattered fallen leaves on the grass, colorful flowers, and a tree line backdrop. Late afternoon light, clear weather, slight motion blur from handheld shot. Wide‑angle lens, 20–35 mm focal length, everything in focus, no bokeh, accidental off‑center framing, slight tilt. Raw, unprocessed look with mild overexposure; no filters or color grading.”
+
+Provide only the structured prompt.

@@ -1,0 +1,16 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, sun‑kissed hair tied in a loose high ponytail stands mid‑pose in an office space, arms crossed over a beige tailored suit. She leans slightly against a wooden desk, one foot on the edge of a black rolling chair, her body angled toward the camera but not perfectly centered. Her expression is relaxed, a subtle smile curling at the corner of her mouth as if she’s just finished a conversation or is about to. The fabric of her suit shows a soft, natural crease that catches the light, and her shoes peek out from beneath the cuff of her trousers, revealing a casual sneaker underneath for a modern, everyday look.
+
+- **Lighting & Exposure**  
+  Capture with a wide‑angle lens (24–35 mm) at a slightly high angle to emphasize the subject’s presence. Use auto‑HDR or “auto‑beauty” off; let the camera’s natural dynamic range do the work. Allow a mild overexposure on the bright, sunlit interior, letting the ambient daylight create a warm, slightly hazy glow. Keep everything in focus—no portrait‑mode blur, no depth‑of‑field isolation—so the background remains crisp from foreground to back.
+
+- **Motion & Framing**  
+  Shoot with handheld stability, letting a slight motion blur hint at movement. The frame should feel spontaneous and unposed: a tiny tilt to the left, an off‑center crop that cuts off a bit of the desk’s edge, and no intentional rule‑of‑thirds placement. The composition is accidental, as if the photographer caught her in a candid moment.
+
+- **Environment**  
+  The setting is a bright, modern office or co‑working space with visible elements: a wooden desk cluttered with stacks of papers, pens, and a small plant; a black office chair; a white pillar; and a red sign that reads “Dalkilux” on the wall. In the background, other people are working—some are standing, some are walking—adding to the candid feel. A small yellow nameplate (“SEVI”) lies on the floor near her foot, along with a fringed rug, adding texture and detail. The time of day is mid‑afternoon, as indicated by the warm, high‑angle sunlight streaming through the windows, casting soft shadows across the carpeted floor.
+
+- **Lens & Technical**  
+  Use a short focal length (24–35 mm) for a wide‑angle view that captures both subject and environment in full detail. Keep the background fully sharp—no bokeh. The lens should produce a natural, raw look with no filters or heavy color grading. Slight overexposure gives the image an airy, natural feel; slight underexposure could be applied if the ambient light is dimmer. The final shot should feel like a genuine, spontaneous snapshot of everyday life, captured with a handheld camera in a real‑world setting.

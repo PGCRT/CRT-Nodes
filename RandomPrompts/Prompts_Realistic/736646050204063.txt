@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair tied back with a black clip, wearing an off‑white hooded sweatshirt and ripped blue jeans. She is seated on a concrete sidewalk, leaning forward slightly while holding a smartphone in both hands, her face turned toward the phone’s screen as if she’s texting or taking a photo. Her expression is mid‑smile, eyes focused on the device, giving a spontaneous, “in‑the‑moment” feel.
+
+- **Motion & Focus**  
+  Slight motion blur at the fingertips and hair, indicating handheld instability. Everything in the frame — subject, phone, background — is fully sharp with no portrait‑mode blur. The blur is subtle, a gentle “breathing” effect that keeps the image raw and unprocessed.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle, mid‑afternoon sun. A slight overexposure on the subject’s face, with a warm, golden hue that suggests the sun is slightly above the horizon. No color grading or filters — just the raw tones of the scene.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm), short focal length, no bokeh. The background is fully sharp, with no depth‑of‑field blur. The composition is accidental: a slight tilt to the left, off‑center framing that captures the woman and part of the street behind her.
+
+- **Environment**  
+  A busy city sidewalk in an urban neighborhood. A silver sedan is parked on the street behind her, a black motorcycle is partially visible further back, and a passerby in a black jacket walks by on the right. The scene includes a concrete curb, a metal trash can, a blue soda can lying on the ground near the woman’s right foot, and a white piece of paper or napkin next to her left knee. The time of day is late afternoon, with long shadows cast across the sidewalk.
+
+- **Details & Imperfections**  
+  The prompt emphasizes candidness: the woman’s hands are slightly curled around the phone, her fingers barely touching the screen. A faint tilt in the frame gives a natural, unposed feel. The background includes a traffic light and a green tree, adding depth without any intentional rule‑of‑thirds placement.
+
+- **Final Prompt**  
+  “A young woman with long wavy brown hair tied back by a black clip, wearing an off‑white hooded sweatshirt and ripped blue jeans, sits on a concrete sidewalk in a busy city street. She leans forward, holding a smartphone in both hands, mid‑smile, as if texting or photographing something. Slight motion blur at her fingertips and hair conveys handheld instability, while the entire frame — subject, phone, background — remains fully sharp. Natural daylight from a high‑angle mid‑afternoon sun creates a warm overexposed glow on her face. Shot on a 24–35 mm wide‑angle lens, the composition is accidental: a slight left tilt and off‑center framing capture the woman and part of the street behind her. In the background, a silver sedan is parked, a black motorcycle is partially visible, a passerby in a black jacket walks by, a blue soda can lies on the ground near her right foot, and a white piece of paper or napkin rests next to her left knee. The scene includes a traffic light and a green tree, casting long shadows across the sidewalk. All elements are in focus with no bokeh, no filters, raw and unprocessed.”

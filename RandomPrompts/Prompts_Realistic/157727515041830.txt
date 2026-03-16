@@ -1,0 +1,26 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman with long, wavy chest‑brown hair, wearing a strapless black top and high‑waisted cargo shorts, captured mid‑turn as she steps away from a wooden desk. Her left hand rests on her hip, right arm slightly bent, body angled toward the camera with a subtle side‑to‑side motion blur.
+
+- **Lighting & Exposure**  
+  Warm, natural sunlight from a large window creates a slight overexposure on the upper torso and a gentle halo effect on the hair. The exposure is slightly uneven—brighter at the top, softer at the bottom—to mimic ambient daylight. No auto‑HDR or beauty filters; raw, unprocessed look.
+
+- **Camera Settings**  
+  - Lens: 24 mm wide‑angle, short focal length.  
+  - Aperture: f/5.6 (wide opening).  
+  - Shutter speed: 1/60 s (handheld, slight motion blur).  
+  - ISO: 400 (mid‑range for natural grain).  
+  Everything in focus—no portrait‑mode depth of field blur; background fully sharp.
+
+- **Composition & Framing**  
+  Candid, unposed framing with accidental tilt and off‑center crop. The subject occupies the right‑hand side of the frame, leaving a small empty space on the left for visual balance. No rule‑of‑thirds intentionality—just a spontaneous, handheld shot.
+
+- **Environment**  
+  A modern office space with a large window, a wooden desk, a laptop, and a filing cabinet in the background. A potted plant sits on a side table near the window. The time of day is late morning, around 10:30 AM, with bright, warm sunlight streaming in from the west.
+
+- **Details & Imperfections**  
+  Slight motion blur at the edges of the torso and hair, indicating handheld instability. Minor dust particles float in the air, adding texture. The background is fully sharp, no bokeh. No color grading or post‑processing—just raw, natural imagery.
+
+- **Final Prompt**  
+  “A woman with long wavy chest‑brown hair, wearing a strapless black top and high‑waisted cargo shorts, captured mid‑turn as she steps away from a wooden desk in a modern office. Warm sunlight from a large window creates a slight overexposure on her torso and a halo on her hair. Shot on a 24 mm wide‑angle lens at f/5.6, 1/60 s shutter speed, ISO 400—everything in focus with no bokeh. Candid, unposed framing with accidental tilt and off‑center crop; background includes a laptop, desk, and a potted plant near a side table. Late morning, 10:30 AM, natural daylight. Slight motion blur on the torso and hair from handheld instability, raw, unprocessed look.”

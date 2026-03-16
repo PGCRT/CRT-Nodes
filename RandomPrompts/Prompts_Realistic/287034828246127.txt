@@ -1,0 +1,23 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark brown hair, wearing a soft pink tank top and khaki shorts, standing in a sunlit meadow. She carries a dark green backpack on her back, a black watch on her left wrist, and a subtle smile. Her pose is casual and candid—slightly tilted to the left, as if she just finished a hike or is about to start one.  
+
+- **Motion & Focus**  
+  Slight motion blur at the edges from handheld shake; everything in focus—no bokeh, no depth‑of‑field blur. The image has an auto‑HDR feel but without post‑processing filters: raw, natural look with a hint of slight overexposure to capture the ambient daylight.  
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm), short focal length, all elements sharp. No rule‑of‑thirds intentionality—framing is accidental, off‑center, and partially cropped at the top and right edges.  
+
+- **Environment**  
+  Location: a grassy field with scattered wildflowers, a line of tall reeds on the right, and a cluster of green trees in the background. Time of day: late afternoon, golden hour, with warm sunlight coming from the left, creating soft highlights on the subject’s face and clothing. Weather: clear, breezy, with a faint haze that adds a natural glow.  
+
+- **Lighting & Color**  
+  Natural daylight, slight overexposure in the upper right quadrant to emphasize the ambient light. Colors are muted but vivid—soft pink, earthy khaki, dark green, and warm golds. No color grading or filters; the look is raw and spontaneous.  
+
+- **Composition Notes**  
+  The shot is a wide, handheld capture with a slight tilt to the left, creating an off‑center composition that feels candid and unposed. The background is fully sharp, giving a sense of depth without any portrait‑mode isolation. The frame cuts off slightly at the top right, adding a casual, imperfect touch.  
+
+**Prompt:**
+
+> “A young woman with long dark brown hair, wearing a pink tank top and khaki shorts, standing in a sunlit meadow. She carries a green backpack and a black watch on her left wrist, smiling casually. Slight motion blur from handheld shake, everything in focus—raw auto‑HDR look with a hint of overexposure. Shot on a 24–35 mm wide‑angle lens, all elements sharp. The scene is a grassy field with tall reeds on the right and green trees in the background, captured at late afternoon golden hour. Natural daylight from the left creates soft highlights. The framing is accidental and off‑center, slightly tilted to the left, partially cropped at the top right, no rule‑of‑thirds. No filters or post‑processing—just a candid, spontaneous, unposed photograph.”

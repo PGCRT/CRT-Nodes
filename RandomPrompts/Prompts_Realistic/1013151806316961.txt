@@ -1,0 +1,33 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail, wearing an off‑the‑shoulder white bra with gold leaf embroidery and black lace panties, sitting on a bed. Her hands rest gently on her thighs, fingers slightly curled, as if she’s about to adjust her clothing or simply be in mid‑movement. She smiles softly at the camera, eyes bright, with a natural, unposed candid feel.
+
+- **Lighting & Exposure**  
+  Natural daylight from a western window, slightly overexposed on the right side to give a warm, airy glow. No auto‑beauty or filter enhancement—raw, unprocessed look. The exposure is a mild overexposure that keeps the whole scene bright but not blown out.
+
+- **Camera & Lens Settings**  
+  - Lens: 24 mm wide‑angle (short focal length) for a broad field of view.  
+  - Aperture: f/5.6 – enough to keep the background fully sharp with no bokeh.  
+  - Shutter speed: 1/125 s, producing a slight motion blur on the subject’s hands and hair, indicating handheld instability.  
+  - ISO: 400 – for balanced noise and detail.
+
+- **Composition & Framing**  
+  - The shot is intentionally off‑center; the subject’s left side leans slightly to the right of the frame’s center.  
+  - Slight tilt (5°) gives a casual, spontaneous vibe.  
+  - No rule‑of‑thirds intentionality—framing is accidental, as if the photographer was in the middle of a conversation or a quick snap.  
+  - Background: a tufted beige headboard with two pillows (one white, one beige) and a white duvet, all in focus. The bed’s fabric shows subtle texture, and the pillows are slightly rumpled for realism.
+
+- **Environment & Time**  
+  - Location: a cozy bedroom in an apartment building, morning time (around 10 am).  
+  - Ambient light: soft natural sunlight with a hint of warm haze from the window, creating slight overexposure on the right side.  
+  - Weather: clear, mild—no wind, but the photographer’s handheld shake is visible in the slight blur.
+
+- **Technical Details**  
+  - Everything is fully sharp—no depth‑of‑field blur; background and foreground are in focus.  
+  - No portrait mode or subject isolation.  
+  - Slight motion blur on the hands and hair, indicating a handheld shot captured at a moderate shutter speed.  
+  - Raw image with no color grading or post‑processing, just an auto‑HDR feel for dynamic range.
+
+- **Final Prompt**  
+  “A young woman with a high ponytail, wearing an off‑the‑shoulder white bra with gold leaf embroidery and black lace panties, sitting on a bed in a cozy bedroom. Her hands rest gently on her thighs, fingers slightly curled, as if she’s about to adjust her clothing or simply be in mid‑movement. She smiles softly at the camera, eyes bright, with a natural, unposed candid feel. Natural daylight from a western window creates a slight overexposure on the right side, giving a warm, airy glow. Shot on a 24 mm wide‑angle lens at f/5.6 and 1/125 s, producing a subtle motion blur on the hands and hair. The frame is intentionally off‑center with a slight tilt, capturing an accidental, spontaneous composition. The background features a tufted beige headboard with two pillows (one white, one beige) and a white duvet, all in focus. The scene is fully sharp, raw, and unprocessed, with no filters or color grading—just a genuine, candid moment frozen in time.”

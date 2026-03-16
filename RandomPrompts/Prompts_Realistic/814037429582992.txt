@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark brown hair that falls loosely over her shoulders, standing bare‑shouldered in a casual denim skirt. Her head is slightly tilted to the left, eyes half‑closed as if she’s mid‑conversation or just caught in a candid moment. She’s positioned at an off‑center angle in a natural setting, with her body angled toward the camera but not perfectly centered—creating a spontaneous, “in‑the‑moment” feel.
+
+- **Lighting & Exposure**  
+  Warm, golden hour sunlight coming from the upper left, creating a slight overexposure on the subject’s face and shoulders while keeping the background softly lit. The exposure is slightly uneven, giving a raw, unprocessed look. No auto‑beauty or filter enhancements—just natural contrast and subtle highlights.
+
+- **Environment**  
+  A lush garden or backyard setting with a large tree directly behind her, its branches forming a natural canopy. The time of day is late afternoon, around sunset, which gives the scene a warm, amber tone. The weather is clear with a light breeze, as indicated by the gentle movement in the woman’s hair and the slight motion blur on the background foliage.
+
+- **Lens & Technical Settings**  
+  Use a wide‑angle lens (24–35 mm) with a short focal length to capture a broad view of the scene. Shoot everything in focus—no portrait‑mode depth‑of‑field blur; the background, tree branches, and foliage are all sharp. Capture a slight motion blur on the subject’s hair and the background leaves to emphasize handheld instability.
+
+- **Composition & Framing**  
+  The framing is accidental and imperfect: the shot is slightly tilted, the subject is off‑center, and the crop is partial—leaving a small portion of her left shoulder cut off by the frame edge. No rule‑of‑thirds intentionality; the composition feels spontaneous and natural.
+
+- **Post‑Processing**  
+  Keep it raw: no filters, no color grading, no post‑processing aesthetic. Only minimal auto‑HDR to balance the exposure, preserving the natural look. The final image should feel like a genuine, unposed snapshot captured with a handheld camera in a real‑world setting.

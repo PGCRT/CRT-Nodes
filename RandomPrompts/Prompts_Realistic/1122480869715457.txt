@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A young woman with long blonde hair, mid‑adjustment of a denim skirt, captured in a spontaneous, unposed moment. She’s wearing a dark, patterned knit crop top with red and white geometric motifs, the fabric slightly rumpled as she pulls her skirt up. Her left hand grips the waistband of her light‑blue denim skirt, fingers curled around the button, while her right hand runs through her hair, creating a casual, dynamic pose.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. Slight tilt and off‑center framing; partial crop that cuts off the top of her head and the lower part of her legs. No rule‑of‑thirds intentionality — accidental composition. Natural motion blur from handheld instability, a faint trail around her hands and hair.
+
+- **Environment**  
+  A bright, sunlit kitchen in the late afternoon. The background shows a wooden cabinet with a framed picture and a small bowl on a counter, a window letting in warm natural light. The time of day is roughly 4:30 pm, with soft, diffused sunlight creating slight overexposure on the subject’s torso. Ambient humidity gives a subtle grain to the image.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm), wide‑angle lens. Everything in focus — background fully sharp, no bokeh. No portrait mode or subject isolation. Slight overexposure on the subject’s midsection due to ambient light. Auto‑HDR off; raw, unprocessed look. No filters, no color grading, no post‑processing aesthetic.
+
+- **Details & Imperfections**  
+  The image has a slight handheld shake, with a faint motion blur around the hands and hair. The crop is imperfect — the top of her head is partially cut off, and the bottom of her skirt extends beyond the frame. The lighting is natural, with a warm, slightly hazy quality. The color palette is muted: dark navy top with red accents, light blue denim, warm wood tones in the background.
+
+- **Prompt Summary**  
+  “A young woman with long blonde hair, wearing a dark patterned knit crop top and light‑blue denim skirt, mid‑adjustment of her skirt in a bright kitchen at late afternoon. Candid, unposed, accidental framing with slight tilt and partial crop. Short focal length wide‑angle lens, everything in focus, natural motion blur, slight overexposure, raw unprocessed look.”

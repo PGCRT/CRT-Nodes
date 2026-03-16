@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark, wavy hair, wearing a black short‑sleeved crop top and black thong bikini bottom, kneeling on a white‑sheeted bed. She is turned slightly to the side, leaning forward with one hand on the mattress for balance, her left knee bent and her right leg extended, creating a dynamic, off‑center composition. Her face is turned toward the camera with a subtle, candid expression, eyes half‑closed as if she’s mid‑movement.
+
+- **Motion & Focus**  
+  Slight motion blur at the knees and hands to suggest handheld shake; everything in focus from foreground to background. No portrait‑mode bokeh—background (a light‑colored wall and a wooden headboard) is fully sharp.
+
+- **Lighting & Exposure**  
+  Natural daylight from a side window, slightly overexposed on the right side of the frame, giving a warm, soft glow. No auto‑beauty or filter processing—raw, unprocessed look.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24‑35 mm), short focal length, no depth‑of‑field blur. All elements from subject to background are in focus. Slight tilt and partial crop for a spontaneous feel.
+
+- **Environment**  
+  A modern bedroom with a light‑wood headboard, white bedding, and a neutral wall. The time of day is late morning, with soft natural light. A small bedside table is visible on the right.
+
+- **Composition Notes**  
+  No rule‑of‑thirds intentionality—framing is accidental, slightly off‑center. The shot captures a candid moment as if the subject was mid‑action when the photo was taken.
+
+- **Prompt for AI Image Generation**  
+  “A young woman with long dark wavy hair, wearing a black short‑sleeved crop top and black thong bikini bottom, kneeling on a white‑sheeted bed in a modern bedroom. She leans forward with one hand on the mattress, her left knee bent and right leg extended, turning her face toward the camera with a candid expression. Slight motion blur at the knees and hands, everything in focus from subject to background, natural daylight from a side window with slight overexposure on the right. Wide‑angle lens (24‑35 mm), short focal length, no bokeh. The background shows a light‑wood headboard and a neutral wall; a small bedside table is visible on the right. Capture a spontaneous, off‑center frame with accidental tilt and partial crop, raw unprocessed look, natural motion freeze or slight blur from handheld instability.”

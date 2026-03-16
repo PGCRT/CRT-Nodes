@@ -1,0 +1,30 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, sun‑kissed brown hair, wearing a black triangle bikini, captured mid‑walk on a beach‑pool edge. Her left arm is slightly bent, her right hand relaxed by her side, and she’s looking directly at the camera with a subtle, confident smile. The pose should feel spontaneous—like she’s just finished a lap in the pool and is about to step onto the sand.
+
+- **Motion & Focus**  
+  Slight motion blur on the subject’s legs and the background to convey handheld movement. Everything remains fully sharp—no portrait‑mode bokeh. Use a wide‑angle lens (24–35 mm) with a short focal length to keep the entire scene in frame.
+
+- **Lighting & Exposure**  
+  Natural daylight from late afternoon, with the sun low on the horizon creating warm, golden tones and a mild overexposure on the subject’s face. No auto‑HDR or beauty filters—raw, unprocessed look. The exposure should be slightly bright, letting the sand and water reflect the ambient light.
+
+- **Environment**  
+  Location: a tropical beach with a small swimming pool in the foreground. Palm trees line the background, a white lounge chair sits to the left, and a blue‑tiled edge of the pool runs along the bottom of the frame. The sea is visible in the distance, with gentle waves breaking near the shore. Weather is clear, with a light breeze creating subtle ripples on the water.
+
+- **Time of Day & Ambient Conditions**  
+  Late afternoon (around 5 pm), giving a warm, soft glow. The sky is a pale orange‑blue gradient, and the wind has left a faint trail of motion blur on the woman’s hair.
+
+- **Lens & Technical Settings**  
+  - Focal length: 30 mm (wide‑angle, short)
+  - Aperture: f/4–f/5.6 (wide opening for sharp background)
+  - Shutter speed: 1/60–1/100 s (to capture slight motion blur)
+  - ISO: 400–800 (for clean detail without noise)
+  - No bokeh—background fully sharp.
+  - Handheld shot with slight tilt and off‑center framing; no rule‑of‑thirds intentionality.
+
+- **Composition Notes**  
+  Frame the subject slightly off‑center, with her left side near the middle of the frame and the pool edge cutting across the lower third. The white lounge chair should appear in the upper left corner, and a palm tree should be visible on the right side. Keep the entire scene in focus, from foreground to background.
+
+- **Final Prompt**  
+  “A young woman with long, sun‑kissed brown hair, wearing a black triangle bikini, captured mid‑walk on a beach‑pool edge. Her left arm is slightly bent, her right hand relaxed by her side, and she’s looking directly at the camera with a subtle, confident smile. Slight motion blur on the subject’s legs and the background to convey handheld movement. Everything remains fully sharp—no portrait‑mode bokeh. Use a wide‑angle lens (24–35 mm) with a short focal length. Natural daylight from late afternoon, with the sun low on the horizon creating warm, golden tones and a mild overexposure on the subject’s face. The exposure should be slightly bright, letting the sand and water reflect the ambient light. Location: a tropical beach with a small swimming pool in the foreground. Palm trees line the background, a white lounge chair sits to the left, and a blue‑tiled edge of the pool runs along the bottom of the frame. The sea is visible in the distance, with gentle waves breaking near the shore. Weather is clear, with a light breeze creating subtle ripples on the water. Late afternoon (around 5 pm), giving a warm, soft glow. Use a 30 mm lens at f/5, 1/80 s shutter speed, ISO 600. Handheld shot with slight tilt and off‑center framing; no rule‑of‑thirds intentionality. Frame the subject slightly off‑center, with her left side near the middle of the frame and the pool edge cutting across the lower third. The white lounge chair should appear in the upper left corner, and a palm tree should be visible on the right side. Keep the entire scene in focus, from foreground to background.”

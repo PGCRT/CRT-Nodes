@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with shoulder‑length light brown hair, wearing a white ribbed tank top and pink athletic shorts, standing in a casual, unposed stance with arms crossed. Her face is slightly turned toward the camera, a subtle smile on her lips, as if she’s mid‑conversation or just finished a gesture. The pose has a slight tilt and off‑center framing, giving an accidental, spontaneous feel.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. Slight motion blur at the wrists and arms to suggest handheld shake. No filters, no color grading, no post‑processing aesthetic; raw, natural look with a hint of slight overexposure in the sky. Everything is fully sharp, no portrait‑mode depth‑of‑field blur.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm), short focal length. No bokeh — background fully sharp. All elements in focus, including the subject and the surrounding environment.
+
+- **Environment**  
+  Outdoor setting on a residential lawn or backyard. A wooden bench sits to the left, a second bench and a small umbrella are visible in the background, along with a white vehicle and a palm tree. The sky is overcast with soft, diffused light, suggesting late morning or early afternoon. The scene has a natural, everyday feel, no staged composition.
+
+- **Lighting & Exposure**  
+  Natural daylight, slightly overexposed in the sky but the subject remains crisp. No studio lighting, no professional composition. Slight handheld shake gives a subtle motion blur to the arms and shoulders.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, partial crop that cuts off a bit of the bench on the left. The image retains a raw, unprocessed look with natural color tones: the white tank top has a faint rib texture, the pink shorts show a subtle crease at the waist. The background foliage and umbrella have natural shadows and highlights.
+
+- **Prompt Summary**  
+  “A young woman in a white ribbed tank top and pink athletic shorts stands casually with crossed arms on a residential lawn, next to a wooden bench and an umbrella, under a slightly overexposed sky. Capture with a wide‑angle, short focal length lens, all elements in focus, slight motion blur from handheld shake, no filters or post‑processing, raw natural look.”

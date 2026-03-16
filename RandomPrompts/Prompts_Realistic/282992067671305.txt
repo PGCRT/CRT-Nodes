@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail and sunglasses, wearing a white backless tank top and denim shorts, captured mid‑turn at an indoor market stall. Her hands are slightly blurred as she reaches for a phone or a product on the table, suggesting spontaneous motion. The shot is taken from behind her, with a partial crop that leaves a little space on the left side for another person’s arm to be visible.
+
+- **Candid Capture Style**  
+  The image is unposed and spontaneous – the subject is unaware of the camera. Slight tilt and off‑center framing give it an accidental, handheld feel. No rule‑of‑thirds intentionality; the composition is natural and imperfect. The focus is on the back of the woman, but the background remains fully sharp – no portrait‑mode blur.
+
+- **Environment**  
+  Location: a bustling indoor market or food fair inside a large warehouse or convention hall. A wooden table laden with jars, bottles, and a green box sits in front of a red tent, with other shoppers and vendors visible in the background. Time of day: late afternoon, ambient light is warm and slightly overexposed, creating soft highlights on the subject’s back and the table’s surface. Weather or ambient conditions: indoor, no wind, but the lighting has a slight haze from the ceiling fluorescents.
+
+- **Lens & Technical**  
+  Use a short focal length wide‑angle lens (e.g., 24‑35 mm). Capture everything in focus – background and foreground – with no bokeh. The exposure is slightly overexposed to keep the ambient light bright, but the look remains raw and unprocessed: no auto‑HDR or beauty filters, no color grading, no post‑processing aesthetic. The image should feel like a snapshot taken with a handheld camera, with natural motion blur from slight instability.
+
+- **Composition Notes**  
+  Keep the framing wide, letting the table, the red tent, and the background crowd create a sense of depth. Ensure that all elements – the woman’s back, her hair, the items on the table, the nearby person’s arm – are in focus. The shot should feel spontaneous and candid, as if captured in the moment of a shopper browsing or a vendor checking inventory.
+
+**Prompt Summary**  
+“Candid, unposed snapshot of a young woman in a white backless tank top and denim shorts, seen from behind at an indoor market stall, with a slight motion blur and accidental framing. The scene includes a wooden table with jars and a green box, a red tent in the background, and other shoppers around. Capture everything in focus using a short focal length wide‑angle lens, with a slightly overexposed, raw, unprocessed look, no filters or color grading, and maintain a natural, handheld feel.”

@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy blonde hair, wearing a pink ribbed tank top and a delicate gold necklace, captured mid‑smile in a casual, spontaneous pose. Her head is slightly tilted to the left, her face partially cropped by the frame’s edge, giving an informal, “in‑the‑moment” feel.
+
+- **Motion & Focus**  
+  Slight motion blur at the edges from handheld instability; everything in the frame—subject and background—is fully sharp with no portrait‑mode depth‑of‑field blur. The exposure is mildly overexposed, letting warm ambient daylight bleed through the scene.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24 mm) with a short focal length, no bokeh. The shot uses a raw, auto‑HDR look without color grading or post‑processing filters—just natural lighting and a slight tilt.
+
+- **Environment**  
+  Indoor living room, mid‑afternoon, natural daylight coming from a window on the left. A beige sofa, a wooden coffee table with a bowl of fruit, a water bottle, and a framed painting on the wall are visible in the background. A lamp sits in the corner, adding a subtle highlight.
+
+- **Composition**  
+  No rule‑of‑thirds intentionality—framing is accidental, with the subject’s left ear near the top edge and her right shoulder cutting close to the bottom edge. The composition feels candid and unposed, as if she was caught mid‑conversation.
+
+- **Lighting**  
+  Zero studio lighting; all light is natural, with a slight overexposure that gives the image a warm, lively tone. The background remains fully sharp, preserving every detail from the sofa’s fabric to the fruit’s glossy surface.
+
+- **Final Prompt**  
+  “A candid, wide‑angle shot of a smiling woman in a pink tank top, captured with a 24 mm lens, slight motion blur and mild overexposure, raw auto‑HDR look, no filters—subject slightly tilted and partially cropped, background showing a beige sofa, wooden coffee table with fruit, a water bottle, and a framed painting, all in focus, natural daylight from a window, mid‑afternoon, indoor living room.”

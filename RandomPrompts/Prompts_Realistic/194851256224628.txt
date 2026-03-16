@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, flowing brown hair walking confidently toward the camera on a city crosswalk. She wears a black‑and‑white striped bikini top and matching bottom with side ties, paired with tall gold boots that catch the light. Her left leg is slightly bent, mid‑step, and her right hand rests near her hip. The camera captures her from a low, wide‑angle perspective that includes her full figure and the background building.
+
+- **Motion & Focus**  
+  Slight motion blur on the subject’s legs and boots to convey movement, while the background remains fully sharp. Handheld instability gives a subtle tilt and off‑center framing; the composition is intentionally “accidental” – no rule‑of‑thirds. Everything in focus, no portrait‑mode depth‑of‑field blur.
+
+- **Lighting & Exposure**  
+  Raw, unprocessed look with auto‑HDR off. The scene is lit by late‑afternoon sunlight that creates a mild overexposure on the subject’s boots and a slight warm glow on the building. Streetlights are on, adding a soft amber hue to the sky. No color grading or filters – just natural tones.
+
+- **Environment**  
+  The setting is a wide, paved intersection in an urban area, with a grand neoclassical city hall (or municipal building) directly behind the crosswalk. The building has a prominent dome and columns, illuminated by street lamps that are turned on. Several cars are parked or moving on the side streets; traffic lights show red on the left. Trees line the right side of the intersection, and a lamppost stands on the left. The sky is a pale blue‑gray, indicating dusk or early evening.
+
+- **Lens & Technical**  
+  Short focal length (≈20 mm) wide‑angle lens. No bokeh – the background is fully sharp. The lens captures a broad view that includes the crosswalk markings, the building’s façade, and the street traffic. The image has a natural, candid feel as if the subject was mid‑action when the photo was taken.
+
+- **Post‑Processing**  
+  Zero studio lighting, zero professional composition, zero editorial tone. Only raw capture data with slight auto‑HDR correction for dynamic range. No filters or color grading applied – just the raw, unprocessed look of a real‑world scene.
+
+**Prompt Summary (structured)**  
+“Candid photo of a woman in a striped bikini and gold boots walking on a city crosswalk, captured with a short focal length wide‑angle lens. Slight motion blur on her legs, fully sharp background, low‑angle wide shot that includes a neoclassical city hall behind her. Late‑afternoon sunlight with mild overexposure, raw unprocessed look, no filters. The scene shows parked cars, traffic lights, and trees, all in focus, with accidental tilt and off‑center framing.”

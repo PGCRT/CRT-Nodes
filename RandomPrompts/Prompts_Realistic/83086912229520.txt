@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, athletic woman with long, straight blonde hair, wearing a thin neon‑yellow string bikini, captured mid‑kneel on a tiled pool deck. Her back is to the camera, left leg bent and right leg extended, one arm raised above her head, the other resting on her hip. She wears a gold bracelet on her right wrist; a faint, natural sweat sheen is visible on her skin.  
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle, mid‑afternoon sun creates a slight overexposure on the upper back and a subtle warm glow. The exposure is raw—no auto‑HDR or beauty filters, just a handheld shot with a wide‑angle lens. A tiny hint of motion blur at the edges suggests a quick, spontaneous capture.  
+
+- **Environment**  
+  Location: an outdoor swimming pool with a concrete edge and a light blue wall in the background. The time of day is late morning, with the sun high but not directly overhead, casting soft shadows. Ambient weather is mild, with a gentle breeze ruffling her hair.  
+
+- **Lens & Technical**  
+  24‑mm wide‑angle lens (short focal length), f/3.5 aperture, 1/125 s shutter speed, ISO 400. Everything is in focus—no portrait‑mode depth of field blur. The framing is accidental: slightly tilted, off‑center, and partially cropped at the top and right edges.  
+
+- **Composition Notes**  
+  No rule‑of‑thirds intentionality; the subject’s hips and buttocks occupy the lower right quadrant, while her raised arm reaches toward the upper left corner. The background wall is a muted gray‑blue, providing contrast to the neon yellow bikini.  
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, no post‑processing aesthetic—just a raw, unposed, spontaneous snapshot that feels like a real, candid moment captured with a DSLR or mirrorless camera.  
+
+**Prompt Summary:**  
+“Candid, unposed photo of a tall woman in a neon‑yellow bikini kneeling on a tiled pool deck, back to the camera, one arm raised, captured with a 24‑mm wide‑angle lens at mid‑afternoon daylight. Raw exposure with slight motion blur, accidental framing, everything in focus, no filters—raw, spontaneous, handheld style.”

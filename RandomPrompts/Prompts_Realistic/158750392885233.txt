@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with deep‑brown, wavy hair tied in a loose, casual ponytail, seen from the back. She’s wearing a sleek, silver satin strap top that clings to her shoulders and a black high‑waist skirt. Her left arm is slightly bent, hand resting on her hip, as if she’re about to adjust her scarf or pick up a coffee cup. The pose feels spontaneous—mid‑movement, with a subtle motion blur around the edges that hints at a handheld shot.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. Slight tilt and off‑center framing give the image an accidental, raw feel. No rule‑of‑thirds intentionality; the composition is guided by the natural flow of the scene. The shot has a slight overexposure in the background, letting the ambient light bleed softly into the frame.
+
+- **Auto‑HDR or auto‑beauty mode off — raw, unprocessed look**  
+  No filters, no color grading, no post‑processing aesthetic. The exposure is slightly uneven, with a warm, natural tone that keeps the image feeling genuine. The background is fully sharp—no bokeh or depth‑of‑field blur. Everything in focus, from the texture of the satin to the subtle sheen on the hair.
+
+- **Wide lens**  
+  Short focal length (20–35 mm) wide‑angle lens, capturing a broad view of the scene. The background is a concrete‑textured wall with a faint, blurred city skyline at dusk. No rule‑of‑thirds intentionality — accidental framing that gives the image a candid vibe.
+
+- **Environment**  
+  Specific real‑world location: an urban alleyway in a modern residential complex. Time of day: late afternoon, just before sunset. Weather or ambient conditions: mild humidity, a light breeze that ruffles the hair slightly. The background shows a concrete wall with a faint, blurred city skyline at dusk, and a small potted plant on a balcony railing.
+
+- **Lens & Technical**  
+  Short focal length, wide angle (24–35 mm). No bokeh, no depth‑of‑field blur — background fully sharp. Everything in focus. No portrait mode, no subject isolation. Slight motion blur around the edges from handheld instability. The image has a natural, raw feel with zero studio lighting and zero professional composition.
+
+- **Final Prompt**  
+  “A young woman with deep‑brown wavy hair in a loose ponytail, seen from behind, wearing a silver satin strap top and black high‑waist skirt, mid‑movement with slight motion blur. Candid, unposed, spontaneous shot captured on a wide‑angle short focal length lens (24–35 mm). Raw, unprocessed look with no filters or color grading, slight overexposure, everything in focus, background fully sharp. Setting: urban alleyway at late afternoon dusk, mild humidity, light breeze. Background shows a concrete wall and faint city skyline. No rule‑of‑thirds intentionality—accidental framing, slight tilt, off‑center composition.”

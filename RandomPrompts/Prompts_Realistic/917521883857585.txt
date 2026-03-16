@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, slender woman with long, dark wavy hair standing back-to-back against a plain white wall. Her back is slightly arched, arms raised above her head holding a sheer, translucent chiffon shawl that drapes elegantly across her shoulders and back. The shawl’s edges are softly frayed, catching the light in subtle, shifting highlights. She wears thin, sheer stockings that peek above her heels, adding a delicate touch to the composition.
+
+- **Motion & Focus**  
+  Slight motion blur on the shawl and hair, indicating a handheld shot captured mid‑movement. The entire frame is fully sharp—no bokeh or depth‑of‑field blur; everything from foreground to background remains in focus. A tiny amount of overexposure at the top of the frame gives a warm, natural glow.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24 mm) with a short focal length, no bokeh, no portrait‑mode isolation. The shot is taken at eye level, slightly tilted to the left for an off‑center, accidental framing. No rule‑of‑thirds intentionality—just a spontaneous, candid composition.
+
+- **Environment**  
+  Location: A bright, minimalist studio with a plain white wall and a small window on the right side. Time of day: late afternoon, soft natural light from the window creates a gentle backlight that slightly overexposes the upper part of the frame. Weather: clear, no wind, but the subject’s hair and shawl are caught in a slight motion.
+
+- **Lighting & Color**  
+  Natural ambient lighting with a hint of warm daylight. No filters, no color grading, no post‑processing aesthetic. The light hits the subject from above and slightly from the right, creating soft shadows on her back and the shawl’s folds.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Slight tilt and partial crop give an informal feel. Zero studio lighting, zero professional composition, zero editorial tone. Natural motion freeze or slight blur from handheld instability.
+
+- **Prompt for Text‑to‑Image Generation**  
+  “A tall woman with long dark wavy hair standing back‑to‑back against a plain white wall, arms raised holding a sheer chiffon shawl that drapes across her shoulders and back, wearing thin stockings. Capture with a wide‑angle short focal length lens at eye level, slightly tilted left. Slight motion blur on the shawl and hair, full sharpness throughout the frame, small overexposure at the top. Late afternoon natural light from a window on the right creates soft backlight. Candid, unposed, spontaneous shot, zero filters, no post‑processing, handheld instability.”

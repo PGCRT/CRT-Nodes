@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, sun‑kissed blonde hair sitting on a weathered wooden park bench. She wears a light‑colored, floral‑print halter dress that drapes softly over her shoulders, paired with a thin gold necklace and a classic wristwatch. Her left hand rests on the bench’s rail, while her right hand touches her cheek in a casual, mid‑gesture pose. A subtle smile plays on her lips; her eyes are slightly focused toward the camera but not directly at it, giving a candid, “in‑the‑moment” feel.
+
+- **Lighting & Exposure**  
+  Warm, golden‑hour sunlight from the west casts a gentle overexposure on the subject’s face and upper body, creating a slight halo effect. The exposure is intentionally uneven—the background is a bit brighter than the foreground, giving an auto‑HDR‑free, raw look. No color grading or filters; the image retains natural contrast and subtle grain.
+
+- **Lens & Technical**  
+  24 mm wide‑angle lens, short focal length, handheld. Everything is in focus—no bokeh or depth‑of‑field blur. The composition is accidental: a slight tilt to the left, off‑center framing that doesn’t follow the rule of thirds, and a partial crop that cuts off the top of the bench, enhancing spontaneity.
+
+- **Environment**  
+  A sunny mid‑afternoon in an urban park. White daisies line the bench’s side, and a cluster of green leaves peeks from behind the woman’s left shoulder. The background shows a soft, out‑of‑focus line of trees and a hint of a distant building, but all elements are sharp. The sky is a pale blue with a few wispy clouds.
+
+- **Mood & Details**  
+  Slight motion blur on the woman’s right hand, indicating a handheld shot captured mid‑action. The bench shows natural wear—cracks and faded varnish—adding authenticity. The woman’s watch has a silver face and a leather strap; her necklace’s pendant catches the light. The overall tone is warm, natural, and unpolished, as if the photo was taken spontaneously during a casual stroll.
+
+**Prompt:**  
+“Candid photograph of a blonde woman in a floral halter dress sitting on an old park bench at golden hour, with slight motion blur on her hand, warm overexposed lighting, 24 mm wide‑angle lens, everything in focus, accidental off‑center framing, white daisies beside the bench, green leaves behind her, natural park setting, raw unprocessed look.”

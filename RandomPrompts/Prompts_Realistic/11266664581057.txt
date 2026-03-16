@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman with wet, shoulder‑length brown hair, wearing a light‑turquoise halter‑style bikini, is kneeling in a white bathtub filled with frothy bubbles. Her back is to the camera; her left hand rests on the side of the tub, while her right hand is partially out of frame. A small, cursive tattoo (“Good Luck”) sits just above the left hip. She appears mid‑movement, as if she’s just finished a bath or is about to stand.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject is unaware of the camera, captured in a natural, “in‑the‑moment” moment. Slight tilt and off‑center framing give an accidental, handheld feel. The composition is not intentionally rule‑of‑thirds; it’s a raw, imperfect snapshot.
+
+- **Motion & Exposure**  
+  Slight motion blur from handheld instability, with a narrow aperture that keeps the entire scene sharp (no bokeh). The exposure is slightly overexposed, letting ambient daylight bleed through the sheer curtains, creating a soft, hazy glow.
+
+- **Environment**  
+  Location: A bright, modern bathroom with a large window behind the tub. The time of day is late morning, when the sun is high but not directly overhead, casting warm, natural light. Light curtains hang beside the window, diffusing the sunlight and adding subtle texture. The bathtub is white, glossy, and filled with thick bubbles that cling to the woman’s skin. A few stray droplets of water cling to her back, emphasizing moisture.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm) wide‑angle lens, no bokeh, everything in focus. The depth of field is shallow but uniform; background and foreground are both sharp. No portrait‑mode “subject isolation” — the entire scene, from the bubbles to the curtains, remains crisp.
+
+- **Post‑Processing**  
+  Raw, unprocessed look: no filters, no color grading, no auto‑beauty mode. Slight overexposure is intentional, giving a natural, candid feel. The image retains the slight imperfections of a real‑life snapshot: minor dust specks, faint scratches on the lens, and a tiny hint of vibration blur.
+
+**Prompt Summary (structured)**  
+`Candid, unposed woman in turquoise bikini kneeling in a bubble‑filled bathtub, back to camera, wet hair, small tattoo on hip, slight motion blur, handheld tilt, wide‑angle lens, natural daylight from behind sheer curtains, late morning, raw unprocessed, everything sharp.`

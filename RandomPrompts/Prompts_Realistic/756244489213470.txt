@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A curvy woman with a high ponytail, wearing a black-and-white triangle bikini, walking barefoot down a sunlit outdoor market aisle. She carries a clear plastic bag filled with red and green apples in her right hand, mid‑step, slightly leaning forward as if she’s about to pick something up or just finished a purchase. Her left arm is relaxed by her side, her face turned toward the camera with a subtle, confident smile.
+
+- **Pose & Movement**  
+  Slight motion blur at the feet and hands to suggest movement; the body is slightly off‑center, tilted to the right, giving an informal, candid feel. The shot is captured with a handheld camera, so there’s a tiny wobble in the frame and a natural “in‑action” vibe.
+
+- **Lighting & Exposure**  
+  Auto‑HDR or auto‑beauty mode turned off. The exposure is slightly overexposed on the bright midday sun, creating soft highlights on her skin and the apples, with a faint halo around her head. No color grading or filters—just raw, natural tones.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm), short focal length, everything in focus from foreground to background; no bokeh or depth‑of‑field blur. The background is fully sharp, showing the market stalls, a few other shoppers, and a street lined with fruit vendors.
+
+- **Environment**  
+  A bustling outdoor fruit market on a bright, sunny afternoon (around 2 pm). The aisle is paved with concrete, flanked by tables laden with apples, oranges, and other produce. Colorful awnings in red, blue, and yellow hang overhead. A few men and women are shopping, some are talking, others are browsing. The scene has a casual, spontaneous vibe—no staged composition.
+
+- **Framing & Composition**  
+  No rule‑of‑thirds intentionality; the subject is placed slightly to the right of the center, with the camera tilted a little, creating an accidental, candid framing. The crop is partial—only a portion of the market aisle is visible, giving a “cut‑in” feel.
+
+- **Details & Imperfections**  
+  Slight tilt and off‑center framing; partial crop that cuts off part of the background on the left side. Tiny imperfections: a faint smudge on the plastic bag, a slight shadow cast by the subject’s feet, a small blur at the edges from handheld shake.
+
+- **Post‑Processing**  
+  Zero studio lighting, zero professional composition, zero editorial tone. The image is a raw, real‑world snapshot with natural motion freeze or slight blur from handheld instability. All elements—subject, background, lighting—are fully sharp, giving an authentic, documentary feel.

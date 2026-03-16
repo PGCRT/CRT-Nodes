@@ -1,0 +1,29 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark brown hair that falls loosely over her shoulders, wearing a simple gold necklace and denim shorts. She is standing in a casual, unposed stance, hands gently clasped near her thighs, body slightly angled toward the camera, with a subtle, natural tilt that gives the shot an accidental, candid feel.
+
+- **Facial Features & Expression**  
+  Her face shows a soft, relaxed expression, eyes gently focused on the lens, with a slight smile that conveys confidence and ease. The lighting is natural, slightly overexposed on the upper body, giving a warm, ambient glow that hints at mid‑afternoon sunlight.
+
+- **Lighting & Exposure**  
+  Capture with a wide‑angle lens (24–35 mm) set to a short focal length for a spacious feel. Use natural daylight from the west, mid‑afternoon, creating a slight overexposure on the subject’s upper body while keeping the background fully sharp—no bokeh, no depth‑of‑field blur. The exposure is slightly warm, with a subtle haze that suggests a raw, unprocessed look.
+
+- **Environment**  
+  Location: A quiet, sunlit corner of an urban park, with a concrete bench and a tall, slender tree in the background. Time of day: mid‑afternoon, about 4 pm, when the sun is high but not directly overhead, casting soft shadows. Weather: light breeze, clear sky, a faint cloud covering the horizon that diffuses the sunlight.
+
+- **Lens & Technical Settings**  
+  - Focal length: 35 mm (wide‑angle)
+  - Aperture: f/4.0 (for a sharp background)
+  - Shutter speed: 1/125 s (to capture slight motion blur from handheld instability)
+  - ISO: 400 (for natural grain and depth)
+  - Focus: manual, everything in focus—no portrait‑mode isolation.
+
+- **Composition & Framing**  
+  No rule‑of‑thirds intentionality—frame the subject slightly off‑center, with a partial crop that cuts off a bit of her left shoulder, adding to the candid feel. The background is fully sharp, no bokeh, just a clean, real‑world setting.
+
+- **Post‑Processing**  
+  No filters, no color grading, no auto‑beauty mode—just raw, unprocessed imagery. Slight motion blur from handheld shake, natural overexposure on the subject’s upper body, and a faint, warm tone that keeps the image feeling spontaneous and authentic.
+
+- **Final Prompt Summary**  
+  “A young woman with long dark hair, gold necklace, and denim shorts stands casually by a concrete bench in an urban park at mid‑afternoon. Capture with a 35 mm wide‑angle lens at f/4.0, 1/125 s shutter speed, ISO 400, natural daylight from the west. The shot is slightly overexposed on the subject’s upper body, handheld blur present, background fully sharp, framed off‑center for a candid, spontaneous feel. No filters or post‑processing—raw, unprocessed realism.”

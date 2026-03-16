@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman with long, wavy brown hair, seen from behind, wearing a delicate pink lace lingerie set (back‑lace bra and high‑waist panties) and a floral‑patterned silk robe that is slightly open at the sides. Her left hand holds a small, gold‑tasselled clutch. She stands in a rustic wooden cabin interior, facing a window with horizontal blinds; her body is turned 30° to the right, creating a dynamic, off‑center composition.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the woman appears mid‑movement, as if she just finished tying her robe and is about to adjust her clutch. Slight handheld shake gives a natural motion blur around the edges. The shot has a raw, auto‑HDR feel: no color grading or filters, only a mild overexposure that lets the warm wood tones pop.
+
+- **Environment**  
+  Location: A cozy, unfinished wooden cabin with exposed beams and a floral‑patterned sofa on the left. The window behind her has white horizontal blinds, letting in soft daylight that creates a subtle halo around her hair. It’s late morning; the light is warm but not harsh, with a slight haze from the outside humidity.
+
+- **Lens & Technical**  
+  Use a short focal‑length wide‑angle lens (24 mm). Everything is fully sharp — no bokeh or depth‑of‑field blur. The framing is accidental: the subject is slightly tilted, the crop cuts off part of the sofa and the window frame, giving an unposed, spontaneous feel. No rule‑of‑thirds; the composition is driven by the subject’s line and the verticality of the blinds.
+
+- **Lighting**  
+  Natural daylight from the window, with a slight overexposure that brightens the background while keeping the foreground in focus. The lighting is uneven — the left side of the image is a bit brighter than the right, adding to the candid vibe.
+
+- **Post‑Processing**  
+  Auto‑HDR on, but no color grading or filters. A tiny amount of contrast boost and vibrancy increase to enhance the pink lace and floral motifs. Slight motion blur from handheld shake is present, especially around the edges of the robe and clutch.
+
+**Prompt Summary**  
+“Candid back‑view photo of a woman in pink lace lingerie and floral silk robe, holding a gold tasselled clutch, standing in a rustic wooden cabin near a window with horizontal blinds. Late‑morning daylight creates a warm overexposed look. Shot on a 24 mm wide‑angle lens, everything in focus, slight handheld blur, accidental off‑center framing, raw auto‑HDR, no filters.”

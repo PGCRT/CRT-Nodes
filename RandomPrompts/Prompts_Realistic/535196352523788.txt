@@ -1,0 +1,26 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark hair tied loosely, wearing a bright yellow bikini with blue trim, walking casually on a sunny city sidewalk while checking her phone. Her head is slightly tilted downward, eyes focused on the screen, giving a candid, mid‑action feel. She’s in motion—soft blur at the edges to suggest movement, but the background remains fully sharp.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—an “in‑the‑moment” snapshot where the subject is unaware of the camera. Slight tilt and off‑center framing create a natural, imperfect composition. The shot is a wide‑angle capture with a short focal length (≈20 mm), no bokeh, everything in focus, no portrait‑mode isolation.
+
+- **Environment**  
+  Location: A bustling downtown street in Los Angeles, near a cinema entrance and a coffee shop. Time of day: mid‑afternoon, around 3:30 pm, with warm, high‑angle sunlight casting soft shadows. Weather: clear, slightly hazy, ambient light with a faint overexposure that gives a raw, unprocessed look.
+
+- **Lens & Technical**  
+  - Lens: 20 mm wide‑angle, handheld.  
+  - Focal length: Short, wide‑angle for a broad field of view.  
+  - Focus: Everything in focus—no depth‑of‑field blur.  
+  - Exposure: Slight overexposure to keep the ambient light warm and natural.  
+  - Settings: ISO 400, aperture f/2.8, shutter speed 1/125 s (for motion blur).  
+  - Post‑processing: None—raw, no filters, no color grading, auto‑HDR off.
+
+- **Composition Notes**  
+  - No rule‑of‑thirds intentionality; framing is accidental and organic.  
+  - Slight crop on the edges to keep the subject slightly off‑center.  
+  - Background includes a cinema sign, a coffee shop logo, a street pole, and a passing car—adds context without distracting.
+
+- **Final Prompt**  
+  “A young woman with long dark hair, wearing a yellow bikini with blue trim, walks casually on a sunny Los Angeles sidewalk while checking her phone. The shot is captured on a 20 mm wide‑angle lens, handheld, with slight motion blur and a small overexposure for a raw, natural look. Everything is in focus, no bokeh. The background shows a cinema sign, a coffee shop logo, and a street pole, all sharply rendered. The composition is accidental and off‑center, slightly cropped, with no rule‑of‑thirds intentionality. Mid‑afternoon sunlight casts soft shadows, creating a candid, spontaneous photograph.”

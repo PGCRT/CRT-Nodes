@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail and round glasses, wearing an off‑white ribbed tank top and dark denim jeans, captured mid‑turn at a bright kitchen table. Her hands rest on the back of her chair, head tilted to the side, mouth open in a candid laugh, as if she’s just finished a conversation or is about to serve food. The camera is positioned slightly above eye level, creating a wide‑angle, handheld feel.
+
+- **Motion & Focus**  
+  Slight motion blur on the subject’s hair and hands, indicating a quick shutter speed and handheld shake. Everything in the frame—from the woman’s face to the kitchen cabinets—remains fully sharp; no portrait‑mode bokeh. The focus is intentional but accidental, with a slight tilt that gives the image a spontaneous, unposed vibe.
+
+- **Lighting & Exposure**  
+  Natural daylight coming from a large window on the right side of the room creates a soft overexposure on the woman’s left shoulder and a subtle highlight on the table’s surface. The exposure is slightly uneven—warm tones dominate the foreground while the background remains bright but not blown out. No auto‑HDR or beauty filters; the look is raw, unprocessed.
+
+- **Environment**  
+  A modern kitchen with white cabinets, a stainless‑steel kettle, and a wooden dining table set with ceramic bowls, mugs, and a pink cup. A small potted plant sits on the windowsill, and a striped cloth hangs from a chair back. The time of day is late morning, with sunlight streaming through the window, casting gentle shadows and creating a warm, inviting atmosphere.
+
+- **Lens & Technical**  
+  24‑mm wide‑angle lens, short focal length, no bokeh. All elements—subject, furniture, background—are in focus. The composition is not rule‑of‑thirds; it’s an accidental, off‑center frame that captures the scene as it was, with a slight crop that keeps the edges tight.
+
+- **Style & Tone**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Imperfections are encouraged: slight tilt, off‑center framing, partial crop. Zero studio lighting, zero professional composition, zero editorial tone. The final image feels like a snapshot taken in a real kitchen, with natural motion freeze or slight blur from handheld instability.

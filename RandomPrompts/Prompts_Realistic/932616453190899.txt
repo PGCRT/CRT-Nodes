@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework – “Red‑Dipped Coastal Portrait”**
+
+- **Subject & Pose**  
+  A woman with long, dark, wet hair standing in shallow sea water, facing away from the camera and slightly turned to the right. She wears a bright red, off‑shoulder, long‑sleeved bodysuit that clings to her body, emphasizing the curve of her hips and the slight tension in her thighs. Her left hand hangs loosely by her side, while her right hand is partially submerged in the water, creating a small ripple.  
+
+- **Motion & Focus**  
+  Slight motion blur on the lower legs and water ripples, indicating handheld instability. Everything remains fully sharp – no bokeh, no depth‑of‑field blur. The image has an auto‑HDR feel but without post‑processing filters; it looks raw and spontaneous.  
+
+- **Framing & Composition**  
+  Wide‑angle lens (24 mm or 35 mm) capturing a broad view of the scene. The frame is intentionally off‑center, with the subject’s left side cutting close to the right edge, giving an accidental, candid feel. No rule‑of‑thirds intentionality – the composition is guided by the natural line of the water and the subject’s posture.  
+
+- **Lighting & Exposure**  
+  Natural daylight, mid‑morning, with a slight overexposure on the upper body and a gentle underexposure on the lower legs, creating contrast between the bright red outfit and the muted sea. The exposure is uneven, as if the camera’s meter was slightly off, adding to the raw aesthetic.  
+
+- **Environment**  
+  A calm, slightly misty coastal beach at mid‑morning. The sea surface is gentle with small waves, and a few scattered shells float near the water’s edge. The background shows a faint horizon line where the sea meets a pale sky, giving a sense of openness and spaciousness.  
+
+- **Lens & Technical**  
+  Short focal length (24–35 mm), wide‑angle, no bokeh, everything in focus. No portrait‑mode subject isolation – the background remains fully sharp. The image has a slight tilt, as if the photographer was moving while shooting.  
+
+- **Cinematic Touches**  
+  A faint auto‑beauty mode is off; the colors are natural, with the red outfit popping against the muted gray‑blue sea. Slight overexposure on the upper body gives a bright highlight, while the lower legs appear slightly darker, adding depth. The overall look is raw, unprocessed, and candid – as if captured in a spontaneous moment.  
+
+**Prompt Summary (for AI image generator)**  
+> “A woman with long dark wet hair, wearing a red off‑shoulder long‑sleeved bodysuit, standing in shallow sea water at mid‑morning on a calm beach. She faces away from the camera, slightly turned to the right, left hand hanging by her side, right hand creating a ripple in the water. Slight motion blur on the lower legs and water ripples, everything fully sharp, wide‑angle 24–35 mm lens, accidental off‑center framing, slight tilt, natural daylight with slight overexposure on the upper body and underexposure on the lower legs, raw unprocessed look, no filters, no post‑processing.”

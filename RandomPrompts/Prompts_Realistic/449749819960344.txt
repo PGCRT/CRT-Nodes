@@ -1,0 +1,27 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail and large hoop earrings, wearing an off‑the‑shoulder white lace bra with gold leaf motifs and black lace panties, sitting on a bed. Her hair is slightly messy, her face turned toward the camera but not directly posed—her head is tilted a little to the left, giving a natural, spontaneous feel. She’s mid‑gesture, one hand resting on the mattress, the other near her hip, as if she just finished adjusting her outfit.
+
+- **Lighting & Exposure**  
+  Natural daylight from a western window, mid‑afternoon, soft but warm. Slight overexposure on the upper body to keep the scene bright and airy; the exposure is uneven, with a subtle vignette that fades into the background. No auto‑HDR or beauty filters—just raw, unprocessed light.
+
+- **Camera & Lens**  
+  35 mm wide‑angle lens, f/4.0, handheld. The shot is taken with a DSLR or mirrorless camera in “handheld” mode, giving a slight motion blur on the subject’s shoulders and a tiny shake in the background. Everything remains in focus—no portrait‑mode depth of field blur; the bed, pillows, and headboard are all sharp.
+
+- **Composition & Framing**  
+  The frame is intentionally off‑center: the subject’s left side is slightly cut off by the right edge of the image, creating a casual, candid feel. No rule‑of‑thirds—just accidental framing that captures the full body and a portion of the headboard behind her. The background shows a tufted beige headboard, white pillows, and a faint hint of a window, all in focus.
+
+- **Environment**  
+  A cozy bedroom at mid‑afternoon, with natural light coming from the left side of the room. The time of day gives a warm, golden hue. The weather outside is mild, with a slight breeze that creates a gentle motion blur on the subject’s hair. The room is uncluttered, except for a single decorative vase on a side table in the far corner.
+
+- **Technical Details**  
+  - Focal length: 35 mm (wide‑angle)  
+  - Aperture: f/4.0  
+  - Shutter speed: 1/60 s (slight motion blur)  
+  - ISO: 400  
+  - No bokeh; background fully sharp  
+  - No portrait mode or subject isolation
+
+- **Style Notes**  
+  Capture a candid, unposed moment that feels spontaneous and natural. Encourage slight tilt and partial crop. Keep the image raw—no filters, no color grading, no post‑processing aesthetic. The final photo should look like a real, in‑the‑moment snapshot taken with a handheld camera in a real-world setting.

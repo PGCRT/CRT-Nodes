@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A young woman in a light‑beige long‑sleeve top and high‑waisted light‑blue jeans, carrying a brown leather tote, is mid‑conversation on a bustling city street. Her hands are clasped together near her chest, head tilted slightly to the right, eyes focused on a man beside her. She’s wearing white sneakers; a subtle motion blur conveys movement.
+
+- **Pose & Composition**  
+  Candid, unposed, spontaneous — the woman is unaware of the camera, caught in an instant of natural interaction. Slight tilt and off‑center framing give an accidental, handheld feel. The shot uses a wide‑angle lens (24–35 mm) to capture a broad view of the scene; everything from foreground to background stays fully sharp, no bokeh or depth‑of‑field blur.
+
+- **Lighting & Exposure**  
+  Raw, unprocessed look: no filters, no color grading, no post‑processing aesthetic. A mild overexposure on the bright midday sun creates a slight halo around the subjects, with natural ambient light casting soft shadows. The exposure is uneven—some parts slightly brighter than others—to preserve authenticity.
+
+- **Environment**  
+  Specific real‑world location: a narrow commercial street lined with brick buildings, small shops, and a blue “open” sign on a storefront. A red “no entry” traffic sign is visible on the right side. The street is paved, with a concrete curb and a faint line of white paint marking the lane. The time of day is late afternoon, around 4 pm, when the sun is high but not directly overhead, producing warm, golden light.
+
+- **Weather & Ambient Conditions**  
+  Light wind, mild temperature, clear sky. A few pedestrians are walking in the background, some blurred due to motion. The ambient noise is low, allowing the main subject’s conversation to be the focal point.
+
+- **Lens & Technical Settings**  
+  Short focal length (24–35 mm), wide‑angle, handheld. Aperture set to f/5.6–f/8 for moderate sharpness across the frame. Shutter speed around 1/125 s to capture slight motion blur. ISO 400–600 for clean detail. No portrait mode or subject isolation—everything from foreground to background is in focus.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, partial crop that cuts off a bit of the left side of the street. The woman’s hair has a slight stray strand, and her sneakers show a faint scuff. The background shop signs include a blue “open” sign and a red “no entry” sign, both in focus. The scene has zero studio lighting, zero professional composition, zero editorial tone—just an authentic, spontaneous snapshot.
+
+- **Final Prompt**  
+  “A young woman in a light‑beige long‑sleeve top and high‑waisted light‑blue jeans, carrying a brown leather tote, is mid‑conversation on a bustling city street. Her hands are clasped near her chest, head tilted to the right, eyes focused on a man beside her. The shot uses a wide‑angle lens (24–35 mm) to capture a broad view of the scene; everything from foreground to background stays fully sharp. Raw, unprocessed look with mild overexposure from late afternoon sun. Slight tilt and off‑center framing give an accidental, handheld feel. The street is lined with brick buildings, small shops, and a blue ‘open’ sign on a storefront, with a red ‘no entry’ traffic sign on the right. Late afternoon, clear sky, light wind. All subjects in focus, no bokeh. Capture candid, unposed, spontaneous moment with slight motion blur from handheld instability.”

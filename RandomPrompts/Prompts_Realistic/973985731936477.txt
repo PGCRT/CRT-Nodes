@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high bun, wearing a black halter‑style bikini top and matching bottoms, sits on a light‑wood chair in a sunlit apartment. Her left leg is bent, foot in a glossy black stiletto, while her right leg rests on the chair’s seat. She turns her head slightly toward the camera, a casual, unposed expression.
+
+- **Motion & Focus**  
+  Slight motion blur from handheld shake; everything in focus—no bokeh, no portrait‑mode isolation. The image has an auto‑HDR feel but no color grading or filters—raw, natural look with a hint of overexposure from the window’s daylight.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm), short focal length. All elements sharp: subject, chair, radiator, window, and floor. No rule‑of‑thirds intentionality—framing is accidental, slightly tilted, off‑center.
+
+- **Environment**  
+  Location: a modern apartment with blue walls, a white radiator on the left, a large window that lets in warm daylight, and a light‑wood floor. Time of day: late morning, soft natural light. Weather: clear, mild.
+
+- **Capture Style**  
+  Candid, spontaneous—subject unaware or mid‑action. Imperfections encouraged: slight tilt, partial crop, raw aesthetic. Zero studio lighting, zero professional composition, zero editorial tone. Natural freeze with a hint of blur from handheld instability.
+
+- **Prompt for Generation**  
+  “A young woman in a black halter bikini sits on a light‑wood chair in a blue‑walled apartment, late morning daylight through a large window. She wears glossy black stilettos, one leg bent, the other on the seat, turning her head casually toward the camera. Capture with a wide‑angle short focal length lens, everything sharp, slight motion blur from handheld shake, accidental off‑center framing, raw auto‑HDR look without filters. The scene includes a white radiator and wooden floor; all elements in focus. No bokeh, no portrait mode—pure candid realism.”

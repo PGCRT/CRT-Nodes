@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman with long, dark hair standing on a large, weathered boulder in a sunlit meadow. She’s wearing a black lace bra and matching fishnet stockings with leather boots; one hand is raised to the back of her head, the other hanging by her side. Her left thigh shows a rose tattoo. She’s mid‑step, as if just having taken a pace, with a natural, unposed stance that feels spontaneous and candid.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. Slight tilt and off‑center framing; the composition is accidental, not rule‑of‑thirds. The shot has a raw, unprocessed look: no filters, no color grading, no post‑processing aesthetic. A hint of slight overexposure from ambient daylight gives it a natural warmth.
+
+- **Motion & Focus**  
+  Slight motion blur from handheld instability, but everything remains fully sharp — no bokeh, no depth‑of‑field blur. The background is completely in focus, giving a wide‑angle, short‑focal‑length feel.
+
+- **Environment**  
+  Specific real‑world location: a rocky outcrop in a dry, grassy field with scattered shrubs. Time of day: mid‑afternoon, with bright, high‑angle sunlight and a few fluffy white clouds drifting across a blue sky. Ambient conditions: warm, slightly breezy, with natural light that casts soft shadows.
+
+- **Lens & Technical**  
+  Short focal length (≈20 mm), wide‑angle lens. No studio lighting, no professional composition. All elements — subject, rocks, vegetation, sky — are in focus. Auto‑HDR or auto‑beauty mode off. The image retains a natural, raw aesthetic with slight overexposure or underexposure depending on ambient light.
+
+**Prompt for Text‑to‑Image Generation**  
+> “A woman with long dark hair standing on a large weathered boulder in a sunlit meadow, wearing a black lace bra, fishnet stockings, and leather boots; one hand raised to the back of her head, the other by her side, left thigh rose tattoo visible. Candid, spontaneous pose mid‑step, slight tilt and off‑center framing, accidental composition. Slight motion blur from handheld instability but everything fully sharp — no bokeh, wide‑angle short focal length. Background: rocky outcrop, scattered shrubs, blue sky with fluffy white clouds. Mid‑afternoon sunlight, natural overexposure. Raw, unprocessed look, no filters or color grading.”

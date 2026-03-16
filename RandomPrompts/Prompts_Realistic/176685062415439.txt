@@ -1,0 +1,27 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair, wearing a plain white t‑shirt and distressed blue jeans, standing casually in front of a rustic log cabin. She is mid‑smile, slightly turned toward the camera, with one hand resting on her hip and the other hanging loosely by her side. Her pose is natural and unposed, as if she just finished a conversation or is about to do a little dance.
+
+- **Cinematic Capture Style**  
+  • Slight motion blur on the subject’s hands and hair, indicating handheld shake.  
+  • Auto‑HDR or auto‑beauty mode off – raw, unprocessed look.  
+  • No filters, no color grading, no post‑processing aesthetic.  
+  • Slight overexposure in the highlights to keep the warm sunlight visible.  
+  • Wide‑angle lens (24‑35 mm) for a broad field of view.
+
+- **Environment**  
+  The cabin is a rough‑hewn log structure with a thatched roof, a small fireplace lit inside, and a wooden fence in front. Tall pine trees line the background, with a patch of fallen pine needles on the ground. The scene is set in late afternoon, with the sun low on the horizon casting long, golden shadows. A few wildflowers grow near the fence, adding a touch of green to the earthy tones.
+
+- **Lens & Technical**  
+  • Short focal length (24‑35 mm), wide angle.  
+  • No bokeh – background fully sharp, everything in focus.  
+  • No portrait mode or subject isolation.  
+  • Slight tilt and off‑center framing; the composition is accidental, not intentional.  
+  • The shot is captured with a handheld camera, giving it a natural, spontaneous feel.
+
+- **Lighting & Exposure**  
+  Natural daylight from the west, creating warm, soft lighting. Slight overexposure in the highlights gives the image a bright, airy feel. The exposure is set to keep all details visible, from the texture of the log walls to the fine hairs on the woman’s hair.
+
+- **Final Prompt**  
+  “A young woman with long wavy brown hair, wearing a plain white t‑shirt and distressed blue jeans, stands casually in front of a rustic log cabin with a thatched roof and a lit fireplace. Tall pine trees frame the background, a wooden fence runs along the foreground, and wildflowers peek near the fence. The scene is set in late afternoon, with golden sunlight casting long shadows on the ground covered in pine needles. Capture with a 24‑35 mm wide‑angle lens, slight motion blur on the subject’s hands and hair, no filters or auto‑HDR, slight overexposure for bright highlights, everything fully sharp. The framing is accidental – slightly tilted and off‑center – giving the image a candid, spontaneous feel.”

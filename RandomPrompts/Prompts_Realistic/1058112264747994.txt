@@ -1,0 +1,24 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with shoulder‑length light brown hair, wearing a sheer gray long‑sleeve V‑neck top and dark leggings. She is captured mid‑step, slightly turned to the left, with her head tilted upward and to the right as if she’s just noticed something in the distance. Her expression is natural, unposed, with a subtle smile and a hint of curiosity.  
+
+- **Motion & Focus**  
+  Slight motion blur at the wrists and feet to convey movement, while the rest of the frame stays fully sharp. No bokeh—every element from foreground to background is in focus.  
+
+- **Lighting & Exposure**  
+  Raw, auto‑HDR off, no color grading or post‑processing. The exposure is mildly overexposed on the face and torso, letting the ambient daylight punch through the fabric’s texture.  
+
+- **Lens & Technical**  
+  Wide‑angle lens (24 mm), short focal length, handheld shot with a slight tilt. No rule‑of‑thirds intentionality—framing is accidental, off‑center, and partially cropped at the edges.  
+
+- **Environment**  
+  Location: A concrete warehouse floor in an industrial district; the background shows a rough, unpolished wall and a faint outline of a metal railing. Time of day: late afternoon, with warm, diffused sunlight coming from the west, casting soft shadows. Weather: lightly breezy, with a hint of dust particles floating in the air.  
+
+- **Composition & Details**  
+  The shot is candid and spontaneous—the subject appears unaware of the camera. Slight imperfections are encouraged: a tiny tilt to the left, a partial crop that cuts off a bit of her left hand. The background remains fully sharp, no depth‑of‑field blur.  
+
+- **Prompt for AI Image Generation**  
+  “A candid, spontaneous photograph of a young woman with shoulder‑length light brown hair, wearing a sheer gray long‑sleeve V‑neck top and dark leggings, captured mid‑step in a warehouse floor at late afternoon. The image has slight motion blur on the wrists and feet, full sharpness throughout, raw auto‑HDR off, mild overexposure on the face and torso. Shot on a 24 mm wide‑angle lens, handheld with a slight tilt, accidental off‑center framing that partially crops the left hand. The background shows a rough concrete wall and a faint metal railing, fully in focus. Natural daylight from the west casts soft shadows, dust particles float in the air, the scene is unposed and real‑life, no filters or post‑processing.”  
+
+Provide only the structured prompt.

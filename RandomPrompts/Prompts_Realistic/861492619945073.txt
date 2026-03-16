@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail, wearing a light‑denim jacket over a white crop‑top and white jogger shorts, sitting on an office chair. She is mid‑gesture, hand near her ear, head tilted slightly to the side, eyes cast downward as if she’s listening or thinking. Her hair has a few loose strands framing her face.  
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. Slight tilt and off‑center framing; partial crop that cuts off a bit of the chair back. No rule‑of‑thirds intentionality. The shot is taken with a handheld camera, producing a natural motion blur on the subject’s hand and a slight shake in the frame.  
+
+- **Environment**  
+  Specific real‑world location: a bright office space with large windows, a desk cluttered with coffee mugs, a black speaker, and a gray office chair. Time of day: late afternoon, warm sunlight streaming through the window, creating soft highlights on the subject’s jacket. Weather or ambient conditions: clear, slightly hazy daylight.  
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm), wide‑angle lens. No bokeh; background fully sharp — everything in focus, from the subject to the desk and window. No depth‑of‑field blur or portrait mode. Slight overexposure on the face to capture the ambient light. Auto‑HDR or auto‑beauty mode off — raw, unprocessed look. No filters, no color grading, no post‑processing aesthetic.  
+
+- **Composition Notes**  
+  The frame is slightly crooked, with the subject’s left shoulder near the top‑right corner and her right hand near the center‑left. A portion of the chair back is cut off by the right edge. The window’s reflection is visible on the jacket, adding a subtle glare.  
+
+- **Final Prompt**  
+  “A young woman with a high ponytail, wearing a light‑denim jacket over a white crop‑top and white jogger shorts, sitting on an office chair in a bright late‑afternoon office space. She gestures with her hand near her ear, head tilted downward, eyes cast low. Candid, unposed, slight tilt and off‑center framing, partial crop. Shot on a 24‑35 mm wide‑angle lens, everything in focus, no bokeh, raw, unprocessed look with slight overexposure. Background includes a desk with coffee mugs, a black speaker, and a gray chair. Warm sunlight streams through a large window, creating soft highlights. Capture the natural motion blur from handheld instability, maintain sharpness across the frame.”

@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, athletic woman with long, wavy brown hair walking confidently toward the camera on a tropical beach. She wears a turquoise bikini with gold embroidery on the top, tied at the sides. Her left foot is mid‑step, toes slightly turned, and her right hand hangs loosely by her side. She’s barefoot, leaving shallow footprints in the sand that trail behind her.
+
+- **Motion & Focus**  
+  Slight motion blur on the feet and lower body to suggest movement, while the upper body remains crisp. The entire scene is fully sharp—no bokeh or depth‑of‑field blur. Handheld camera with a wide‑angle lens (24–35 mm) captures everything in frame from head to toe.
+
+- **Lighting & Exposure**  
+  Natural mid‑afternoon sunlight, slightly overexposed on the upper body, giving a warm, golden hue. No auto‑HDR or beauty filters—raw, unprocessed look. The light hits the subject’s face and shoulders from the left, creating soft highlights and subtle shadows.
+
+- **Environment**  
+  A lush tropical beach at sunset, with palm trees lining the background and a faint horizon of ocean visible in the distance. The sand is light beige with scattered footprints and small pebbles. The sky is a pale blue‑orange gradient, indicating the late afternoon sun.
+
+- **Lens & Technical**  
+  Short focal length (24–35 mm), wide‑angle, no bokeh. All elements—subject, sand, trees, horizon—are in focus. No portrait‑mode isolation; the background remains fully sharp. Slight tilt and off‑center framing give a candid, spontaneous feel.
+
+- **Composition Notes**  
+  The frame is intentionally imperfect: the subject’s head is slightly above the center line, her left foot is a bit lower than the right, creating a natural diagonal line. The composition does not follow the rule of thirds; instead it feels spontaneous and raw. The shot captures a “mid‑action” moment as she walks, with a hint of motion blur on her feet to emphasize movement.
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, no post‑processing aesthetic. Only natural exposure adjustments—slight overexposure on the subject’s upper body and a gentle warm tone across the entire image.  
+
+**Prompt Summary**:  
+“A tall woman in a turquoise bikini with gold embroidery walks toward the camera on a tropical beach at mid‑afternoon. Her bare feet leave footprints in the sand, slight motion blur on the lower body, fully sharp background, wide‑angle lens, natural sunlight, raw unprocessed look, candid framing with slight tilt and off‑center composition.”

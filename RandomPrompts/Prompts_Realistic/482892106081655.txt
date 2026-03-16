@@ -1,0 +1,24 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman with long dreadlocks tied in a high ponytail, wearing a light‑blue denim jacket and rust‑colored trousers, standing on a city sidewalk. She is mid‑turn, facing away from the camera, her left hand holding a brown leather shoulder bag, right hand gripping a silver laptop on a small metal table. Her head is slightly tilted, as if she’s about to speak or gesture.
+
+- **Motion & Focus**  
+  Slight motion blur at the edges of the subject’s jacket and hair, indicating handheld shake. Everything in the frame—from the woman’s back to the background storefronts—is fully sharp; no portrait‑mode bokeh. The blur is subtle, a natural “in‑motion” feel that gives the image a candid, spontaneous vibe.
+
+- **Lighting & Exposure**  
+  Natural daylight, mid‑afternoon (around 3 pm). A mild overexposure on the upper part of the frame softens the sky and building facades, while the lower part remains slightly underexposed, creating a subtle contrast. No auto‑HDR or beauty filters—just raw, unprocessed light.
+
+- **Lens & Technical**  
+  24 mm wide‑angle lens (short focal length). No depth‑of‑field blur; background is fully sharp. Slight tilt to the camera, off‑center framing that gives an accidental, “in‑the‑moment” composition. The frame cuts off just above the woman’s left elbow and below her right knee, with a partial crop of the sidewalk and street.
+
+- **Environment**  
+  A bustling downtown street in an American city. The background shows a brick building with a green awning, a traffic light, a tree, and a few pedestrians. A coffee shop table is visible to the right; a white plastic bag hangs from a passerby’s hand on the left. The scene is lively but not overcrowded, with a clear view of the street’s crosswalk and a manhole cover near the bottom left corner.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera creates a dynamic angle that isn’t perfectly centered. The woman’s jacket has a faint crease at the left shoulder, and her hair shows a small frizz at the tips—realistic imperfections that add authenticity. The lighting hits the back of her jacket with a slight glare, while the front of her pants is lightly shadowed.
+
+- **Prompt for AI Image Generation**  
+  “A candid, unposed photograph of a woman with dreadlocks in a high ponytail, wearing a light‑blue denim jacket and rust‑colored trousers, standing on a downtown sidewalk. She holds a brown leather bag on her left shoulder and a silver laptop on a metal table to her right. The image has slight motion blur on the jacket and hair, natural daylight mid‑afternoon with mild overexposure on the upper frame, captured on a 24 mm wide‑angle lens. Background includes a brick building with a green awning, a traffic light, a tree, and a coffee shop; pedestrians walk by, one carrying a white plastic bag. Everything is fully sharp, no bokeh. The frame is slightly tilted and off‑center, with accidental partial crop cutting above the left elbow and below the right knee. Raw, unprocessed look, zero filters.”
+
+Provide only the structured prompt.

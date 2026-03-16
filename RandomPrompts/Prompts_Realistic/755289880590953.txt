@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high bun, wearing a backless white top and high‑waisted white jeans, captured mid‑turn as she walks through a bright retail store. Her left hand is lightly gripping the side of a clothing rack, her right hand resting on her hip, creating a casual, spontaneous pose that feels like a natural “in‑action” snapshot.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject appears unaware of the camera, mid‑step, with a slight tilt and off‑center framing that gives an accidental, handheld feel. The shot has a subtle motion blur on the moving hand and background, indicating a short shutter speed and a wide‑angle lens. No rule‑of‑thirds intentionality; the composition is driven by the natural flow of the scene.
+
+- **Imperfections & Aesthetic**  
+  Slight overexposure in the window’s glare, raw auto‑HDR off, no color grading or post‑processing filters. The image retains a natural, unprocessed look with minor vignetting from the wide lens. Background is fully sharp — no portrait‑mode blur — all elements in focus.
+
+- **Environment**  
+  Specific real‑world location: a modern clothing boutique with large glass windows on the left, wooden shelves stocked with folded shirts and hanging garments behind the subject. The time of day is late morning, soft natural light coming from the window, creating gentle highlights on the woman’s back and a slight warm tint. Ambient noise from other shoppers is visible in the background, adding to the candid vibe.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm), wide‑angle lens. No bokeh; depth of field is flat so the entire frame — subject, shelves, window, and floor — stays in focus. No portrait mode or subject isolation. The shot uses a handheld, shaky camera that produces a slight motion blur on the subject’s movement and a minor tilt that gives the image a natural, imperfect feel.
+
+- **Prompt Summary**  
+  “A young woman with a high bun, wearing a backless white top and high‑waisted white jeans, captured mid‑turn as she walks through a bright retail store. Candid, unposed, spontaneous — the subject appears unaware of the camera, mid‑step, with a slight tilt and off‑center framing that gives an accidental, handheld feel. The shot has a subtle motion blur on the moving hand and background, indicating a short shutter speed and a wide‑angle lens. No rule‑of‑thirds intentionality; the composition is driven by the natural flow of the scene. Slight overexposure in the window’s glare, raw auto‑HDR off, no color grading or post‑processing filters. Background is fully sharp — all elements in focus. The time of day is late morning, soft natural light coming from the window, creating gentle highlights on the woman’s back and a slight warm tint. Ambient noise from other shoppers is visible in the background, adding to the candid vibe.”

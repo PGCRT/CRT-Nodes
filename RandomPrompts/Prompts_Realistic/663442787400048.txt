@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, straight brown hair, wearing a light‑colored silk camisole with a subtle floral print, sitting on a beige sofa. She is mid‑gesture: one hand near her chin, the other resting on the couch arm, legs crossed at the knee, body angled slightly toward the camera. Her expression is natural and unposed, as if she’s just finished a conversation or is about to speak.
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window to the right of the frame creates a soft, warm glow on her face and body. Slight overexposure in the highlights gives a raw, unprocessed look. No auto‑HDR or beauty filters—just a straightforward exposure that captures the ambient light’s intensity.
+
+- **Camera Settings**  
+  Wide‑angle lens (24–35 mm) with a short focal length to keep the entire scene in frame. Handheld shot with slight motion blur from the camera’s instability, giving a candid feel. Everything is fully sharp—no bokeh or depth‑of‑field blur; background remains crisp.
+
+- **Composition & Framing**  
+  The composition is accidental: the couch is slightly off‑center, the framing is not rule‑of‑thirds, and the shot has a slight tilt. The bookshelf behind her occupies the left side of the frame, while the window occupies the right, creating a balanced but spontaneous scene.
+
+- **Environment**  
+  Location: A bright, modern living room with a light‑wood bookshelf filled with colorful books, a potted plant on the left, and a large window that lets in natural sunlight. Time of day: late morning, around 10–11 AM, when the sun is high but still warm. Weather: clear, sunny, with no wind.
+
+- **Details & Imperfections**  
+  Slight motion blur on the subject’s hand and legs, indicating a handheld shot. The sofa has a subtle texture, the bookshelf’s spines show a variety of colors, and the plant’s leaves cast soft shadows. The image has zero post‑processing aesthetic—no color grading or filters, just raw, realistic capture.
+
+- **Final Prompt**  
+  “A young woman with long brown hair in a floral silk camisole sits candidly on a beige sofa in a bright living room. Natural daylight from a large window creates a warm glow; the shot is taken with a wide‑angle lens at a short focal length, handheld with slight motion blur. The bookshelf and plant are visible to the left, the window to the right. Everything is fully sharp, no bokeh. The composition is accidental, slightly tilted, off‑center, capturing a spontaneous, unposed moment in late morning sunlight.”

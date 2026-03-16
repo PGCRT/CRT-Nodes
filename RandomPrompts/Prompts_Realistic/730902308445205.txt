@@ -1,0 +1,34 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A woman in a glossy black latex bodysuit, mid‑swing on a rope, hanging from the side of a glass‑faced skyscraper. She holds a knife in her right hand, her left hand gripping the rope, body angled toward the camera as if she’s about to perform a dramatic heist or acrobatic move. Her hair is loose and slightly messy, catching the rain. The shot should feel spontaneous—she’s unaware of the camera, caught in a natural “mid‑action” moment.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action.  
+  Slight tilt and off‑center framing; partial crop that gives a raw, handheld feel.  
+  No rule‑of‑thirds intentionality — accidental framing.  
+  Natural motion freeze or slight blur from handheld instability.
+
+- **Environment**  
+  Specific real‑world location: a modern city street in Tokyo’s Shibuya district at dusk. The building is a tall glass office tower with a reflective façade; behind the woman, a busy intersection is visible with cars and neon signs (blue “Sushi” sign, red “Kyo” sign). Weather is rainy, with light drizzle creating a subtle sheen on the glass and wet pavement. Time of day: late evening, ambient light is dim but the streetlights and signage provide warm glow.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm) wide‑angle lens.  
+  No bokeh — background fully sharp; everything in focus.  
+  Auto‑HDR or auto‑beauty mode off — raw, unprocessed look.  
+  Slight overexposure or underexposure depending on ambient light (choose a slight underexposure to keep the dark tones rich).  
+  Wide lens, handheld, natural motion blur.
+
+- **Composition Notes**  
+  - Frame the woman’s body in a diagonal line that cuts across the vertical glass façade.  
+  - Keep the rope and knife in a dynamic angle; the knife should slightly overhang the edge of the building.  
+  - Capture the reflection of the woman in the glass to add depth.  
+  - Include a few street‑level details (cars, signs, wet pavement) in the background for context.
+
+- **Lighting & Color**  
+  Natural lighting from the city’s neon signs and street lamps; slight underexposure to keep the dark tones rich.  
+  Warm cool‑tone mix: cool blues from the night sky and warm reds from the signage.  
+  No filters, no color grading, no post‑processing aesthetic.
+
+- **Final Prompt**  
+  “A woman in a glossy black latex bodysuit, mid‑swing on a rope, hanging from the side of a glass‑faced skyscraper in Tokyo’s Shibuya district at dusk. She holds a knife in her right hand, her left hand gripping the rope, body angled toward the camera as if she’s about to perform a dramatic heist or acrobatic move. Candid, unposed, spontaneous — subject unaware or mid‑action. Slight tilt and off‑center framing; partial crop. No rule‑of‑thirds intentionality — accidental framing. Natural motion freeze or slight blur from handheld instability. Short focal length (24‑35 mm) wide‑angle lens. No bokeh — background fully sharp. Auto‑HDR or auto‑beauty mode off — raw, unprocessed look. Slight underexposure. Warm cool‑tone mix: cool blues from the night sky and warm reds from the signage. Wide lens, handheld, natural motion blur. Capture the reflection of the woman in the glass to add depth. Include a few street‑level details (cars, signs, wet pavement) in the background for context.”

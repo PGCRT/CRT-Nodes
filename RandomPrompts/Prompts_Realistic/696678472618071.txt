@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with wet, slightly frizzy hair lying on a tiled bathroom floor, head tilted to the left, elbow bent, hand supporting her cheek. Her shoulders are bare, a few droplets of water still clinging to her skin. She looks directly at the camera with a soft, unposed expression, as if caught mid‑moment.
+
+- **Lighting & Exposure**  
+  Natural daylight from a window on the left, creating a gentle side‑light that produces slight overexposure on the right side of the frame. The exposure is slightly uneven—warm highlights on her skin and cool shadows in the background. No auto‑HDR or beauty filters; raw, unprocessed look.
+
+- **Camera Settings**  
+  Wide‑angle lens (24–35 mm), handheld, slight motion blur from a casual shake. Everything is in focus—from her face to the plant in the back—no bokeh, no depth‑of‑field blur. No rule‑of‑thirds; framing is accidental, slightly off‑center.
+
+- **Environment**  
+  A bright, sunlit bathroom with a large window on the left, a potted green plant on a small stand behind her, and a wooden cabinet partially visible on the right. The floor is tiled, the tiles reflect the light. The time of day is mid‑afternoon, with warm, slightly hazy sunlight.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, partial crop that cuts off the top of her head and the lower part of the plant. A few water droplets are frozen on her skin and hair. The background plant’s leaves are sharply in focus. The overall tone is natural, with no color grading or post‑processing.
+
+- **Prompt for Text‑to‑Image Generation**  
+  “A young woman lying on a tiled bathroom floor, head tilted left, elbow bent, hand supporting cheek, wet hair and skin droplets, bare shoulders, soft unposed expression, natural daylight from left window creating slight overexposure on right, wide‑angle handheld shot with slight motion blur, everything in focus, background includes a potted plant on a stand and a wooden cabinet, mid‑afternoon sun, accidental off‑center framing, raw unprocessed look.”

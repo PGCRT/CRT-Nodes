@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A curvy woman with long, dark brown hair, wearing a glossy red halter‑top and matching high‑waist leather‑like pants, standing by a swimming pool. She’s mid‑step, one foot on the pool deck, hand on hip, other hand near thigh, smiling slightly. Her pose is casual, unposed, as if she just finished a dip or is about to.
+
+- **Lighting & Exposure**  
+  Slight overexposure from bright midday sun; ambient light creates soft highlights on her outfit and the water. No auto‑beauty mode—raw, natural look. Slight handheld shake gives a subtle motion blur around the edges.
+
+- **Camera Settings**  
+  Wide‑angle lens (24–35 mm), short focal length. Everything in focus—no bokeh, no depth‑of‑field blur. No portrait‑mode “subject isolation.” Slight tilt and off‑center framing; partial crop that captures a bit of the pool’s edge and a lounge chair in the background.
+
+- **Environment**  
+  Location: A residential backyard with a clear blue swimming pool, a beige umbrella, a wooden lounge chair, and a tiled deck. Palm trees and a small garden are visible behind the pool. Time of day: mid‑afternoon, bright sun high overhead, shadows short. Weather: clear, no wind, slight humidity.
+
+- **Composition Notes**  
+  No rule‑of‑thirds intentionality—framing is accidental, capturing the subject’s full figure from head to toe plus a portion of the pool and deck. Background fully sharp; background elements (umbrella, chair, palm tree) are in focus. The shot feels spontaneous, as if the subject was caught mid‑action.
+
+- **Post‑Processing**  
+  No filters, no color grading, no post‑processing aesthetic. Raw, natural look with only minimal adjustments to exposure and contrast.
+
+**Prompt Summary (structured)**  
+"A curvy woman in a glossy red halter‑top and high‑waist leather pants stands by a swimming pool on a sunny mid‑afternoon. She’s mid‑step, hand on hip, smiling. The shot is taken with a wide‑angle lens (24–35 mm), everything in focus, slight handheld shake producing subtle motion blur. The background shows a beige umbrella, a lounge chair, and palm trees, all sharp. The framing is accidental, off‑center, partial crop, no rule‑of‑thirds. No filters or color grading—raw, natural look."

@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark hair, wearing a fitted brown tank‑style dress and black high‑heeled sandals, sitting casually on a concrete ledge. Her left hand rests on the ledge while her right hand touches her ear, as if she’s mid‑conversation or adjusting headphones. She’s smiling slightly, eyes bright, with a natural, unposed candid feel.
+
+- **Lighting & Exposure**  
+  Slight overexposure in the upper right corner to capture ambient daylight; no auto‑HDR or auto‑beauty filters—raw, unprocessed look. The lighting is natural mid‑afternoon sun, creating soft shadows and a warm tone.
+
+- **Camera Settings**  
+  Wide‑angle lens (24–35 mm), handheld, slight motion blur from instability, everything in focus (no portrait‑mode depth of field). No rule‑of‑thirds—framing is accidental, slightly tilted, off‑center.
+
+- **Environment**  
+  A textured stucco wall on the left, a concrete ledge, and a residential house in the background. The scene is set in a suburban street during mid‑afternoon, with light clouds in the sky. Small details: a gold bracelet on her right wrist, a thin gold chain on her sandal, a small plant visible behind the house.
+
+- **Composition & Details**  
+  Capture a candid, unposed moment; include imperfections such as slight tilt and partial crop. The background is fully sharp—no bokeh. Emulate a natural motion freeze or slight blur from handheld shake.  
+
+- **Prompt for AI Image Generation**  
+  “A young woman with long dark hair, wearing a fitted brown tank‑style dress and black high‑heeled sandals, sitting casually on a concrete ledge. Her left hand rests on the ledge while her right hand touches her ear, as if she’s mid‑conversation or adjusting headphones. She’s smiling slightly, eyes bright, with a natural, unposed candid feel. Slight overexposure in the upper right corner to capture ambient daylight; no auto‑HDR or auto‑beauty filters—raw, unprocessed look. Wide‑angle lens (24–35 mm), handheld, slight motion blur from instability, everything in focus. A textured stucco wall on the left, a concrete ledge, and a residential house in the background. The scene is set in a suburban street during mid‑afternoon, with light clouds in the sky. Small details: a gold bracelet on her right wrist, a thin gold chain on her sandal, a small plant visible behind the house. Capture a candid, unposed moment; include imperfections such as slight tilt and partial crop. The background is fully sharp—no bokeh. Emulate a natural motion freeze or slight blur from handheld shake.”

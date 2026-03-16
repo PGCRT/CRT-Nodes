@@ -1,0 +1,36 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy chestnut‑brown hair, wearing a light pink bikini top and a thin gold hoop earring, stands on a sunlit beach. Her hands gently hold a large palm frond in front of her torso, fingers slightly curled, as if she’s about to lift it. She looks downward with a soft, contemplative expression, eyes closed or half‑closed, giving a candid, mid‑action feel.
+
+- **Lighting & Exposure**  
+  Warm, golden hour sunlight from the east creates a slight overexposure on her face and body, with a natural, raw look. No auto‑HDR or beauty filters—just ambient light with a hint of haze. The exposure is slightly high, letting the background glow.
+
+- **Camera Settings**  
+  - Lens: 24‑35 mm wide‑angle, short focal length, handheld.  
+  - Focal depth: everything in focus—from her face to the sea horizon—no bokeh, no portrait‑mode isolation.  
+  - Shutter speed: 1/60 s (or 1/80 s) to capture a subtle motion blur from slight movement.  
+  - ISO: 400–600 for natural grain.
+
+- **Composition & Framing**  
+  - No rule‑of‑thirds intentionality; the frame is slightly off‑center, with the subject’s left side cutting close to the left edge.  
+  - The palm frond extends across the lower third of the image, partially obscuring her midsection, adding a natural “cover” and depth.  
+  - Background: a broad view of the ocean with gentle waves, the horizon line near the top third, but not sharply defined—everything remains in focus.
+
+- **Environment**  
+  - Location: a sandy beach at sunrise or late afternoon, with the sea stretching to the horizon.  
+  - Time of day: golden hour, low sun casting long shadows and warm tones.  
+  - Weather: light breeze, clear sky, slight haze.
+
+- **Technical Details**  
+  - Wide‑angle lens gives a slight curvature to the edges.  
+  - No depth‑of‑field blur; background fully sharp.  
+  - Slight tilt in the camera to capture a more spontaneous feel.  
+  - Slight motion blur on the hands and palm frond, indicating mid‑movement.
+
+- **Post‑Processing**  
+  - Raw, unprocessed look—no color grading or filters.  
+  - Slight overexposure on the subject’s face, natural contrast.  
+
+**Prompt Summary for AI Image Generation**  
+"Generate a realistic candid photo of a woman with long wavy chestnut hair in a pink bikini top, standing on a beach at golden hour. She holds a palm frond in front of her torso, looking downward with eyes closed. The image should have a 24‑35 mm wide‑angle lens, handheld slight tilt, everything in focus, subtle motion blur on the hands and frond, warm overexposed lighting, raw unprocessed look, no filters. Background shows a broad ocean horizon, all sharp. Composition is off‑center, no rule‑of‑thirds, spontaneous, natural motion freeze."

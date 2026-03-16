@@ -1,0 +1,28 @@
+**Realistic Candid Photography Prompt Framework – “Wet‑Hair Bedroom Shot”**
+
+- **Subject & Pose**  
+  A young woman with dark, slightly wet hair that clings to her forehead and cheeks, hand raised to the side of her head in a casual, mid‑motion gesture. She’s seated on a bed, bare‑shouldered, wearing only a thin black bikini bottom; her torso is open and relaxed, with natural, unposed curvature. Her gaze is direct, almost indifferent, as if she’s just finished a shower or a bath and is now posing spontaneously.
+
+- **Lighting & Exposure**  
+  Natural daylight from a western window, mid‑afternoon (around 4 pm). The light is soft but warm, creating a gentle overexposure on the upper chest and shoulders while leaving a subtle underexposed shadow in the lower abdomen. No auto‑HDR or beauty filters – just raw, unprocessed tones.
+
+- **Camera & Lens**  
+  DSLR or mirrorless with a 24 mm wide‑angle lens (f/3.5). Everything is in focus from head to toe; no bokeh or depth‑of‑field blur. Slight handheld shake gives a natural motion blur on the hair and hand, as if she’s still adjusting her pose.
+
+- **Composition & Framing**  
+  The shot is intentionally off‑center: the subject’s left side leans slightly toward the right edge of the frame, creating a casual, candid feel. The framing is a “partial crop” that cuts off the top of her head and the lower part of her thighs, giving an intimate, spontaneous vibe. No rule‑of‑thirds – it’s a raw, accidental composition.
+
+- **Background & Environment**  
+  A simple bedroom setting: a wooden headboard on the left, a white pillow and a light‑colored blanket behind her. A small potted plant peeks in from the right corner. The background is fully sharp, no portrait‑mode blur.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, a tiny smudge on the lens, a faint overexposed highlight on her left breast. Her skin has natural texture – a few small moles and a slight freckle on the lower abdomen. The hair is wet, with a few strands sticking to her forehead, adding realism.
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, no auto‑beauty mode. Only basic white‑balance correction and a mild contrast boost. The image retains a natural, unpolished look.
+
+---
+
+**Prompt Summary (for a new image generation tool)**  
+
+> “A candid, spontaneous photograph of a young woman with dark wet hair, seated on a bed in a simple bedroom. She’s bare‑shouldered, wearing a black bikini bottom, hand raised to the side of her head. Natural mid‑afternoon daylight from a western window creates soft overexposure on her chest and subtle underexposure in her abdomen. Shot on a 24 mm wide‑angle lens at f/3.5, everything in focus with slight handheld motion blur. The composition is off‑center and partially cropped, no rule‑of‑thirds. Background includes a wooden headboard, white pillow, and a small potted plant. Raw, unprocessed look – no filters or auto‑HDR.”

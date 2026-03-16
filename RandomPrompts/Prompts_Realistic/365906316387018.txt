@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a deep‑faced, warm complexion standing in a sunlit urban alleyway at dusk. Her hair is a dark, glossy ponytail that swings slightly as she shifts her weight onto one leg, creating a subtle diagonal line across the frame. She’s barefoot, her toes gripping the rough concrete, and her hands rest lightly on her hips, fingers curled as if she’re about to adjust a jacket that isn’t there. Her expression is casual, a faint smile playing on her lips, eyes half‑closed as if she’s mid‑conversation or just caught in a moment of quiet confidence.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject appears unaware of the camera, frozen in a natural, “in‑the‑moment” stance. Slight tilt and off‑center framing give the shot an accidental, handheld feel. The composition is not intentionally rule‑of‑thirds; the edges of the frame cut through the scene at a slight angle, leaving a small portion of the alley’s side wall cropped out for raw authenticity.
+
+- **Imperfections & Raw Aesthetic**  
+  Slight motion blur on the subject’s hands and the background’s textures, as if captured with a handheld camera in motion. The exposure is mildly overexposed, letting the ambient daylight bleed through the windows, creating a soft halo around her body. No filters, no color grading, no post‑processing — just the raw, unprocessed look of a real photograph.
+
+- **Environment**  
+  A narrow urban alleyway in an old brick district, with weathered brick walls and a concrete floor that shows faint cracks and patches. The time of day is late afternoon, the sun low on the horizon, casting long, warm shadows that stretch across the ground. A single potted plant leans against a corner, its leaves slightly blurred by the motion. The ambient light is diffused, with a gentle haze from the setting sun, giving the scene a natural, unpolished glow.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm) wide‑angle lens, no bokeh, no depth‑of‑field blur — everything from foreground to background is fully sharp. The focus covers the entire frame: subject, background, and all details are in focus, with a slight natural vibrancy that keeps the image crisp. No portrait‑mode isolation; the scene remains a single, cohesive plane.
+
+- **Final Prompt**  
+  “A young woman with a deep‑faced, warm complexion standing in a sunlit urban alleyway at dusk, barefoot and mid‑pose, hands on hips, slight diagonal stance. Candid, unposed, spontaneous capture with handheld motion blur, accidental tilt, off‑center framing. Slight overexposure from ambient daylight, raw, unprocessed look. Weathered brick walls, concrete floor, a leaning potted plant in the corner. Late afternoon sun casting long shadows. 24‑35 mm wide‑angle lens, everything fully sharp, no bokeh, no depth‑of‑field blur.”

@@ -1,0 +1,24 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair, wearing a fitted beige tank top and matching high‑waist trousers, stands on a city balcony with arms crossed. Her head is slightly tilted, her gaze directed toward the camera but not directly at it, giving a candid, mid‑action feel. She wears a delicate necklace that catches the light.  
+
+- **Lighting & Exposure**  
+  Natural daylight from a low‑angle sunrise or sunset; slight overexposure on the upper part of the frame to keep the ambient glow. No auto‑beauty or filter processing—raw, unprocessed look.  
+
+- **Camera Settings**  
+  Wide‑angle lens (24–35 mm), handheld, slightly shaky. Focal length short, everything in focus—from subject to background—no bokeh, no depth‑of‑field blur. Shutter speed fast enough to freeze the motion but with a hint of slight blur from hand instability.  
+
+- **Composition & Framing**  
+  No rule‑of‑thirds intentionality; the frame is off‑center, slightly tilted, and partially cropped on the right side by a window frame. The balcony railing runs horizontally across the lower third, while the building façade occupies the background.  
+
+- **Environment**  
+  Specific real‑world location: a European city balcony (resembling a Berlin or Vienna street) with classic multi‑story buildings, red‑tiled roofs, and a visible window frame on the right. Time of day: early morning or late afternoon, soft golden light. Weather: clear, mild, with a few bare tree branches in the background.  
+
+- **Technical Details**  
+  Short focal length (30 mm), wide‑angle capture; all elements—subject, railing, building, window—fully sharp. No portrait‑mode subject isolation. Slight motion blur on the subject’s arms and hair to emphasize candidness.  
+
+- **Prompt for Text‑to‑Image Generation**  
+  “A young woman with long wavy brown hair, wearing a fitted beige tank top and high‑waist trousers, stands on a city balcony with arms crossed, slightly tilted frame, handheld shake, natural sunrise light, raw unprocessed look, wide‑angle 30 mm lens, everything in focus, background building façade and window frame fully sharp, candid mid‑action pose, slight motion blur on the subject’s arms and hair, early morning golden glow, clear weather, bare tree branches in background.”  
+
+Provide only the structured prompt.

@@ -1,0 +1,16 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, curvy woman with long, wavy dark hair standing full‑body in a black bikini set (triangular top and high‑cut bottom). She’s wearing black strappy high‑heeled sandals. Her left leg is slightly bent, her right foot planted forward, and her hands hang loosely by her sides. She’s mid‑step, as if just having taken a pace, with a subtle motion blur on the legs to emphasize movement.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject appears unaware of the camera, caught in a natural moment. Slight tilt and off‑center framing; the composition is accidental, not rule‑of‑thirds. The shot has a raw, unprocessed look: no filters, no color grading, no post‑processing aesthetic. A hint of overexposure from ambient daylight gives a warm, slightly hazy tone.
+
+- **Environment**  
+  Location: an indoor studio with a plain gray backdrop; a black lighting stand is visible on the left side. Time of day: late afternoon, soft natural light coming from the west, creating gentle shadows and a slight warm cast. Weather: clear, no wind, ambient temperature about 22 °C.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm) wide‑angle lens. Everything is in focus — background fully sharp, no bokeh. No portrait mode or subject isolation. Slight handheld shake results in a natural motion blur on the lower body. Auto‑HDR or auto‑beauty mode off. The exposure is slightly overexposed, giving a bright, airy feel.
+
+- **Prompt for AI Image Generation**  
+  “A tall woman with long wavy dark hair, wearing a black bikini set and black strappy high‑heeled sandals, standing full‑body in a studio with gray backdrop and a lighting stand on the left. She’s mid‑step with slight motion blur on her legs, hands hanging by her sides, left leg bent, right foot forward. Capture candid, unposed, spontaneous moment with accidental tilt and off‑center framing. Late afternoon natural light from west, clear weather, 22 °C. Use short focal length wide‑angle lens (24‑35 mm), everything in focus, no bokeh, handheld shake blur. Raw, unprocessed look, slight overexposure, auto‑HDR off.”

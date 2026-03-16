@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail, wearing a light gray racerback tank and frayed denim shorts, stands by a large window, holding a glass beer bottle in her right hand. Her back is slightly turned toward the camera, head tilted to the left as if she’s about to say something or look at a reflection in the glass. The tank shows a subtle black strap on the left side, and a faint green lens flare sits near her shoulder.
+
+- **Motion & Focus**  
+  Slight motion blur around the hands and bottle, indicating handheld instability. Everything is fully sharp—no portrait‑mode blur, no depth‑of‑field isolation. The image has a raw, unprocessed look: no filters, no color grading, no post‑processing aesthetic. A tiny overexposure at the top right corner from the window light.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm), short focal length. No bokeh; background is fully sharp. The composition is accidental—no rule‑of‑thirds intentionality, slight tilt and off‑center framing, partial crop that cuts off the left side of the window frame.
+
+- **Environment**  
+  Location: a bright apartment balcony with a large glass window that reflects another woman in a light‑colored dress holding a bottle. The day is mid‑afternoon, the sun high, creating strong natural illumination and a small green flare near the subject’s shoulder. Light is slightly overexposed at the top right. Weather is clear, no wind.
+
+- **Candid Elements**  
+  The woman’s left hand rests on her hip, her right hand gripping the bottle as if she’s about to take a sip. Her hair is tied up in a messy ponytail, a few strands escaping. A small black strap of a tank top peeks from under the back of her shirt. The denim shorts have frayed edges, adding texture.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, off‑center framing that cuts the left side of the window frame. Partial crop at the bottom right corner where a small wooden stool and a pink cloth are visible. A faint green lens flare is present near the subject’s shoulder. The image has natural motion blur from handheld shooting.
+
+- **Prompt**  
+  “A young woman with a high ponytail, wearing a light gray racerback tank and frayed denim shorts, stands by a large window on a bright mid‑afternoon balcony. She holds a glass beer bottle in her right hand, her back slightly turned, head tilted left as if about to speak. Slight motion blur around the hands and bottle, everything fully sharp, wide‑angle lens (24–35 mm), accidental off‑center framing with a tiny green flare near her shoulder. The window reflects another woman in a light‑colored dress holding a bottle. The day is clear, sun high, slight overexposure at the top right. A small wooden stool and pink cloth peek from the bottom right corner. Raw, unprocessed look, no filters, no color grading.”

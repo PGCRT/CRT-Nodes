@@ -1,0 +1,31 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair standing by a swimming pool, wearing a white lace bra top. She is mid‑smile, head tilted slightly to the right, one hand on her hip, body angled toward the camera but not perfectly centered. Her left arm is relaxed along her side, a faint motion blur indicating natural movement.
+
+- **Facial Features & Expression**  
+  Bright, sun‑kissed complexion with subtle highlights on the cheek and nose. Eyes are a warm hazel, slightly squinted from the ambient light. A small earring glints on her left ear. Her teeth are visible in an open smile, showing a natural slight asymmetry that gives candid authenticity.
+
+- **Clothing & Texture**  
+  The white lace bra top features delicate floral motifs and scalloped edges, with thin spaghetti straps. The fabric’s sheen is caught by the ambient daylight, creating subtle reflections on the lace. The top’s lower edge rests just above her mid‑torso, revealing a hint of toned abdomen.
+
+- **Hair & Styling**  
+  Her hair falls in loose, bouncy curls that cascade over her left shoulder and down her back. A few strands frame her face, slightly blown by the breeze, adding a natural motion blur to the top of her head.
+
+- **Background & Environment**  
+  Behind her is a calm pool with a light blue‑green surface, bordered by a concrete deck and a low wall. Palm fronds peek from the right side, blurred slightly due to handheld shake. The sky above is overcast but bright, providing soft, diffused lighting.
+
+- **Time of Day & Ambient Light**  
+  Late afternoon, around 4 pm, when the sun is high but not directly overhead. The light is warm and slightly harsh, creating a mild overexposure on the subject’s face and a gentle shadow under her bra top. The overall exposure is a little bright, with a slight halo around her hair.
+
+- **Lens & Technical Settings**  
+  24 mm wide‑angle lens, f/3.5, 1/125 s shutter speed, ISO 400. Handheld shot with slight instability, resulting in a natural motion blur on the subject’s hair and a subtle tilt in the framing. Everything from foreground to background is fully sharp—no bokeh or depth‑of‑field blur.
+
+- **Composition & Framing**  
+  The frame is intentionally off‑center: the woman’s left side is slightly cut off by the right edge of the image, giving a casual, spontaneous feel. The top of her head does not reach the upper border, leaving a small margin of sky. The bottom of the image cuts just above her hips, keeping the composition tight and intimate.
+
+- **Post‑Processing & Aesthetic**  
+  Raw, unprocessed look with auto‑HDR off. No color grading or filters applied. Slight overexposure on the subject’s face, giving a natural brightness. The image retains all imperfections—slight tilt, partial crop, and motion blur—to preserve candid authenticity.
+
+- **Final Prompt Summary**  
+  “A young woman with long wavy brown hair, wearing a white lace bra top, stands by a pool in late afternoon light. She smiles broadly, slightly tilted to the right, with one hand on her hip. The background shows a concrete deck and palm fronds. Shot on a 24 mm wide‑angle lens at f/3.5, 1/125 s, ISO 400, handheld with slight motion blur, fully sharp background, no filters or color grading, raw auto‑HDR off, slight overexposure, casual off‑center framing.”

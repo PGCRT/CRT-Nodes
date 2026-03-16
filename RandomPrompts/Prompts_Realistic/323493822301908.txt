@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, athletic woman with long blonde hair, wearing a light‑wash denim jacket, black shorts, white crew socks, and black Nike sneakers. She’s leaning casually against a stainless‑steel handrail on an urban bridge, one foot slightly in front of the other, body angled toward the camera but not directly facing it. Her left hand grips the rail, right arm relaxed by her side, head tilted a little to the side, eyes looking just past the lens with a subtle, confident expression.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — she’s mid‑step, as if caught in a casual pose while walking or dancing. Slight tilt and off‑center framing give an accidental, handheld feel. The shot is a partial crop that doesn’t follow the rule of thirds; the subject occupies the central‑right quadrant but spills slightly into the left edge.
+
+- **Motion & Focus**  
+  Slight motion blur at the edges from a handheld camera, but the entire frame stays fully sharp — no portrait‑mode depth‑of‑field blur. The focus is even across the foreground and background.
+
+- **Lighting & Exposure**  
+  Natural daylight from a low‑angle sunset or sunrise; the light hits the subject’s left side, creating soft highlights on her jacket and skin. A hint of overexposure on the upper part of the frame gives a raw, unprocessed look. No auto‑HDR or beauty filters — just a straightforward exposure.
+
+- **Environment**  
+  The setting is an open urban bridge with a concrete deck and metal railings. In the background, a low‑rise residential building and a distant high‑rise are visible on the left, while a clear sky with faint clouds stretches across the top right. The time of day is late afternoon, giving warm golden tones. A few patches of green grass grow through cracks in the concrete near the rail, adding texture.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm) with a short focal length. No bokeh; everything from foreground to background is in focus. The image uses a standard ISO (around 400–800), a fast shutter speed to freeze the motion but allow slight blur, and an aperture of f/5.6–f/8 for decent depth.
+
+- **Composition Notes**  
+  The frame is intentionally imperfect: the rail runs diagonally across the left side, the subject’s legs are slightly asymmetrical, and the top edge cuts off a bit of the sky. This gives a spontaneous, “in‑the‑moment” feel. The background remains fully sharp, so you can see the bridge’s texture, the distant building, and the sky without any blur or depth‑of‑field separation.
+
+- **Post‑Processing**  
+  No filters or color grading — just raw, natural colors. A slight vignette may be present due to the wide‑angle lens, but it’s subtle. The overall look is a realistic candid photograph that feels like a snapshot captured on a busy city bridge at sunset.

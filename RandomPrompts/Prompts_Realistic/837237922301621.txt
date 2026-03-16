@@ -1,0 +1,29 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A young woman with long, dark hair, wearing a plain white t‑shirt and dark jeans, mid‑step on a wooden deck. She is barefoot, leaning slightly forward as if she just dropped or is about to pick up two small toy cars (one blue, one yellow) that rest on the deck planks near her feet. Her gaze is downcast, focused on the toys, giving a spontaneous, unposed feel.
+
+- **Pose & Movement**  
+  Slight motion blur at the feet and toes to indicate movement; the body is tilted a few degrees off‑center, creating an accidental, handheld composition. The camera is held at a low angle, almost at the subject’s eye level, with a wide‑angle lens (24–35 mm) that keeps the entire scene—instrument, background, and foreground—fully sharp.
+
+- **Environment**  
+  Setting: a sunny suburban backyard during late morning; the deck is made of weathered wooden planks, the grass is lush green, a tall tree stands to the left, a wooden fence runs along the back, and a light‑green house with white trim is visible on the right. The sky is bright but slightly hazy, suggesting warm ambient light.
+
+- **Lighting & Exposure**  
+  Natural daylight with a slight overexposure on the upper part of the frame; no auto‑HDR or beauty filters—raw, unprocessed look. The exposure is a little high on the highlights, giving a soft glow to the subject’s shirt and the toy cars.
+
+- **Lens & Technical Settings**  
+  - Focal length: 35 mm (wide‑angle, short).  
+  - Aperture: f/4–f/5.6 (everything in focus, no bokeh).  
+  - Shutter speed: 1/125 s (slight motion blur on the feet).  
+  - ISO: 400–800 (depending on ambient light).  
+  - No portrait‑mode depth‑of‑field blur; background is fully sharp.
+
+- **Composition Notes**  
+  The framing is intentionally imperfect: the subject’s head is slightly above the center of the frame, the deck edge cuts off the lower left corner, and the tree and house create a natural border. The composition follows “no rule‑of‑thirds” principle—everything is captured spontaneously, as if the photographer was in motion.
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, no post‑processing aesthetic. Only raw, natural tones with a hint of slight overexposure to keep the image feeling candid and unposed.
+
+**Prompt Summary (for AI image generator)**  
+"Generate a realistic candid photo of a young woman in a white t‑shirt and dark jeans stepping barefoot on a wooden deck, dropping or picking up two toy cars (blue and yellow). Capture her mid‑motion with slight blur at the feet, body slightly tilted off‑center. The scene should include a tall tree to the left, a wooden fence behind, and a light‑green house with white trim to the right, all in full focus. Use a 35 mm wide‑angle lens, f/4–f/5.6 aperture, 1/125 s shutter speed, natural daylight with slight overexposure. No filters or heavy post‑processing—raw, spontaneous, handheld style."

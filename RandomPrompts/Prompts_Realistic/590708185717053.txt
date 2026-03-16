@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A slender woman with long, straight black hair, bare‑toed, crouching on a gravel surface, back to the camera, head turned over her shoulder toward the lens. Her left hand rests on the ground for balance, right arm bent, fingers spread. She’s wearing a thin, sheer, off‑shoulder top that drapes loosely over her shoulders and hips.  
+
+- **Lighting & Exposure**  
+  Slight overexposure in the upper half of the frame, natural midday sunlight with a warm, golden hue; ambient light creates soft highlights on her back and hips. No auto‑HDR or beauty filters—raw, unprocessed look.  
+
+- **Camera Settings**  
+  Wide‑angle lens (24 mm), short focal length, handheld, slight motion blur from the camera’s instability. Everything in focus—from foreground gravel to background foliage—no bokeh, no depth‑of‑field blur.  
+
+- **Composition & Framing**  
+  Candid, unposed, spontaneous framing; the shot is slightly tilted and off‑center, with a partial crop that cuts off the top of the fence and a few palm fronds. No rule‑of‑thirds intentionality—just accidental, natural composition.  
+
+- **Environment**  
+  A sunny, tropical backyard or side‑park: a chain‑link fence runs horizontally across the mid‑background, behind the woman. Tall palm trees and broad green leaves peek over the fence, a patch of gravel in the foreground, a small patch of grass on the left. Time of day: early afternoon, high sun, soft shadows. Weather: clear, slightly humid, no wind.  
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, minor motion blur on the woman’s back and hands, a faint smudge on her left hand, a tiny crack in the gravel near her right toe. The image has a raw, unpolished feel—no color grading or filters.  
+
+- **Final Prompt**  
+  “A slender woman with long black hair crouches bare‑toed on a gravel surface, back to the camera, head turned over her shoulder. She wears a thin sheer off‑shoulder top. The shot is captured on a 24 mm wide‑angle lens, handheld with slight motion blur, all in focus. Slight overexposure warms the midday sunlight. The background shows a chain‑link fence and palm fronds; the frame is slightly tilted and partially cropped. Raw, unprocessed, candid style.”

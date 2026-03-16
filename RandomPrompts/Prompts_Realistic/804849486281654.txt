@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with deep brown hair styled in two thick braids that drape over her shoulders, wearing a simple white strap‑top tied at the front and denim shorts. She is mid‑smile, head slightly tilted, eyes bright, with a subtle, natural motion blur around her face and upper body as if captured in a spontaneous, candid moment.
+
+- **Lighting & Exposure**  
+  Natural daylight from a western‑facing window, slight overexposure on the upper torso to emphasize skin texture. No auto‑beauty or filter enhancement—raw, unprocessed look. The exposure is slightly warm, with a hint of ambient haze that gives an authentic, handheld feel.
+
+- **Camera & Lens Settings**  
+  Wide‑angle lens (24‑35 mm), short focal length, handheld. Everything in focus—from the subject’s face to the background shelves—no bokeh or depth‑of‑field blur. Slight tilt and off‑center framing; partial crop that cuts off a bit of the left shoulder for a casual, spontaneous feel.
+
+- **Environment**  
+  A bright, modern kitchen with white cabinetry, a small potted plant on the counter, a stack of colorful books on an open shelf, and a stainless‑steel kettle in the background. The time of day is late morning, with soft, diffused sunlight creating gentle shadows. Weather is clear, with a faint mist in the air that adds subtle texture.
+
+- **Composition & Details**  
+  No rule‑of‑thirds intentionality—framing is accidental, capturing the subject’s face and upper chest while leaving a little of the background visible. The background shelves are fully sharp, no portrait‑mode isolation. The prompt includes a slight motion blur on the subject’s hair and shoulders to emphasize movement.
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, zero post‑processing aesthetic. Only raw, natural tones with a hint of auto‑HDR for dynamic range.  
+
+**Prompt Summary:**  
+“Candid, unposed photograph of a smiling woman with braided hair in a bright kitchen, captured on a wide‑angle handheld lens at late morning, slight motion blur and overexposure for a raw, natural look, everything in focus with accidental framing, no filters or color grading.”

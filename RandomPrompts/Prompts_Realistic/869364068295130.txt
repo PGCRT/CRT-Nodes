@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with light brown hair tied in a loose, messy bun sits on a rustic wooden bench in a sunlit kitchen. She wears an oversized white crop‑top and high‑waisted denim shorts; a single drop of honey‑colored liquid drips from her chest onto her thigh, catching the light. Her hands rest on the bench’s edge, one slightly forward, creating a subtle diagonal line that breaks the horizontal composition.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — she is mid‑gesture, unaware of the camera. The shot has a slight handheld shake and a faint motion blur around the edges, as if captured in a quick, instinctive snap. No rule‑of‑thirds: the framing is off‑center, with the bench’s left side cutting off a bit of the background.
+
+- **Environment**  
+  Location: a bright, uncluttered kitchen with a large window on the left, a ceramic mug on the counter, and a folded white towel on the bench’s right side. Time of day: late morning, soft natural light with a warm, golden hue; the window’s glare is slight but noticeable. Weather: clear, no wind, ambient temperature 22 °C.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm), wide‑angle lens. Everything is in focus — background and subject — with no bokeh or depth‑of‑field blur. Slight overexposure on the window’s glass, giving a subtle halo around the subject. Auto‑HDR off; no color grading or post‑processing filters. The image retains raw, unprocessed realism.
+
+- **Composition Notes**  
+  - The bench is angled slightly to the right, creating a diagonal line that leads the eye from the lower left to the upper right.  
+  - The woman’s head is tilted a few degrees to the left, adding a casual, spontaneous feel.  
+  - A small portion of the window’s frame is cut off on the top left, enhancing the “accidental” framing.  
+  - The shot captures a tiny drop of honey‑colored liquid mid‑drip, adding a dynamic element.
+
+- **Final Prompt**  
+  *“A young woman with light brown hair in a loose bun sits on a rustic wooden bench in a sunlit kitchen, wearing an oversized white crop‑top and high‑waisted denim shorts. She is mid‑gesture, hands resting on the bench’s edge, one slightly forward. A drop of honey‑colored liquid drips from her chest onto her thigh. The scene includes a ceramic mug on the counter and a folded white towel on the bench’s right side. Late morning natural light shines through a large window on the left, creating slight overexposure. Shot with a 24‑35 mm wide‑angle lens, everything in focus, no bokeh. Slight handheld motion blur and off‑center framing give a candid, spontaneous feel. No filters or post‑processing — raw, realistic capture.”*

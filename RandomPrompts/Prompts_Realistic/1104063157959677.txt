@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair tied back with a red scrunchie sits on a white quilted mattress in a dimly lit bedroom. She wears an oversized white cotton T‑shirt and frayed denim shorts; her left hand rests on the mattress while her right hand is slightly off the edge of the frame. Her gaze is directed toward the camera but not directly at it, giving a candid, mid‑action feel.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject appears unaware of the camera or caught in a natural moment. Slight tilt and off‑center framing create an accidental composition. The shot has a raw, unprocessed look: no filters, no color grading, no post‑processing aesthetic. A slight overexposure is present due to ambient lighting; the exposure is uneven, with the upper part of the frame slightly brighter than the lower part.
+
+- **Environment**  
+  Location: a simple, unadorned bedroom with a plain beige wall and a visible white electrical outlet on the left. Time of day: late afternoon, soft natural light coming from the west, creating gentle shadows. Weather: clear, mild; no wind, so the only motion blur comes from handheld instability.
+
+- **Lens & Technical**  
+  Short focal length (20‑35 mm) wide‑angle lens. No bokeh — everything is fully sharp, including the background. No depth‑of‑field blur; the entire scene is in focus. No portrait mode or subject isolation. The image exhibits slight motion blur from a handheld shot, giving it a natural, spontaneous feel.
+
+- **Composition Notes**  
+  No rule‑of‑thirds intentionality — the framing is accidental, with the subject’s left side slightly cut off by the edge of the frame. The background is fully sharp, showing the textured mattress and a small portion of a wooden nightstand. The lighting is uneven; the upper half of the image is slightly overexposed, while the lower half has a subtle underexposure.
+
+- **Final Prompt**  
+  “A young woman with long wavy brown hair tied back with a red scrunchie sits on a white quilted mattress in a dimly lit bedroom. She wears an oversized white cotton T‑shirt and frayed denim shorts; her left hand rests on the mattress while her right hand is slightly off the edge of the frame. Candid, unposed, spontaneous — the subject appears unaware of the camera or caught in a natural moment. Slight tilt and off‑center framing create an accidental composition. The shot has a raw, unprocessed look: no filters, no color grading, no post‑processing aesthetic. A slight overexposure is present due to ambient lighting; the exposure is uneven, with the upper part of the frame slightly brighter than the lower part. Location: a simple, unadorned bedroom with a plain beige wall and a visible white electrical outlet on the left. Time of day: late afternoon, soft natural light coming from the west, creating gentle shadows. Weather: clear, mild; no wind, so the only motion blur comes from handheld instability. Short focal length (20‑35 mm) wide‑angle lens. No bokeh — everything is fully sharp, including the background. No depth‑of‑field blur; the entire scene is in focus. No portrait mode or subject isolation. Slight motion blur from a handheld shot gives it a natural, spontaneous feel. The framing is accidental, with the subject’s left side slightly cut off by the edge of the frame. The background is fully sharp, showing the textured mattress and a small portion of a wooden nightstand. The lighting is uneven; the upper half of the image is slightly overexposed, while the lower half has a subtle underexposure.”

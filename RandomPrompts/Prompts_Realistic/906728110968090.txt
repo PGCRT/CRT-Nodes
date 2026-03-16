@@ -1,0 +1,16 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman standing mid‑stride on a quiet suburban street, wearing a black cropped tee and high‑waisted denim shorts. Her hair is a soft, sun‑kissed brown with subtle layers, slightly blowing to the side as if caught in a gentle breeze. She’s smiling casually, head tilted a little to one side, capturing an unposed, spontaneous moment.
+
+- **Cinematic Capture Style**  
+  Slight motion blur on the subject’s hands and feet, indicating handheld instability. Auto‑HDR or auto‑beauty mode off — raw, unprocessed look. No filters, no color grading, no post‑processing aesthetic. A hint of overexposure in the upper right corner to emphasize the ambient sunlight. Wide‑angle lens (24–35 mm) with a short focal length, giving a natural, wide view of the scene.
+
+- **Environment**  
+  Specific real‑world location: a quiet residential street lined with single‑story houses, a wooden fence on the left, and a patch of green lawn. A tall pine tree stands at the back left, a white car is parked further down the road, and a stop sign is visible on the right. Time of day: late afternoon, around 5 pm, with warm golden light hitting the houses and creating soft shadows. Weather: clear, slightly humid, with a faint haze in the air.
+
+- **Lens & Technical**  
+  Short focal length (24–35 mm), wide‑angle, no bokeh, no depth‑of‑field blur — everything from foreground to background is fully sharp. No portrait mode or subject isolation. Slight tilt and off‑center framing; the composition is accidental, not intentional. The prompt should emphasize a natural motion freeze or slight blur from handheld instability.
+
+- **Prompt Summary**  
+  “A young woman in a black cropped tee and denim shorts stands mid‑stride on a quiet suburban street at late afternoon, with a wooden fence and pine tree to her left, a white car and stop sign further down the road. Capture with a wide‑angle lens (24–35 mm), slight motion blur on the subject’s hands and feet, accidental off‑center framing, everything in focus, no filters or auto‑HDR, raw, unprocessed look, subtle overexposure in the upper right corner, natural sunlight casting warm shadows. The scene should feel candid, spontaneous, and fully sharp from foreground to background.”

@@ -1,0 +1,34 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair, wearing a bright orange ribbed tank top and dark gray leggings, lying on her stomach on a plush, shaggy gray rug. Her left hand supports her cheek, fingers curled gently, while her right arm rests along the rug’s edge. She smiles broadly, eyes bright, head tilted slightly to the right, creating a casual, spontaneous feel.
+
+- **Facial Features & Accessories**  
+  She wears thick black-rimmed glasses that sit snugly on her nose. The lenses catch a subtle highlight from the ambient light, adding a realistic touch of gloss. Her expression is candid—mid-laugh, as if she’s just finished a conversation or is about to do a little dance.
+
+- **Body & Clothing Details**  
+  The orange tank top shows a faint vertical rib texture, with a shallow V‑neck that reveals a hint of collarbone. The fabric drapes softly over her shoulders, with a slight crease where her left arm bends. Her leggings are a matte black, fitting snugly at the hips and thighs, with a subtle seam running down the side.
+
+- **Pose & Motion**  
+  She’s in a relaxed “couch” pose: body flat on the rug, elbows bent, one elbow near her ear, the other extended along the rug’s edge. Her left knee is slightly bent, adding a natural curve to the composition. The entire pose feels unposed—like a snapshot captured mid‑movement.
+
+- **Background & Setting**  
+  Behind her, a plain off‑white door with a simple rectangular panel and a silver handle stands in the background. To the left, a portion of a beige sofa is visible, its fabric soft and slightly worn. The wall is a light beige, with a faint vertical line where a baseboard meets the paint. The scene suggests a cozy living room, captured during late afternoon, when the sun casts warm, diffused light through the window.
+
+- **Lighting & Exposure**  
+  The lighting is natural, coming from a window on the left side of the frame. It’s slightly overexposed at the top, giving a soft glow to the wall and door, while the lower part of the image remains a bit darker, creating a subtle contrast. No auto‑HDR or beauty filters are applied—just raw, unprocessed light.
+
+- **Lens & Technical Specs**  
+  A wide‑angle lens (24 mm) is used, capturing a broad view of the scene with a short focal length. Everything—from the rug’s fibers to the door’s panel—is in sharp focus, with no bokeh or depth‑of‑field blur. The image has a slight handheld shake, giving it a natural motion freeze or mild blur that hints at the photographer’s instability.
+
+- **Composition & Framing**  
+  The framing is off‑center and slightly tilted, with the subject’s head near the left edge of the frame and her body extending toward the right. The composition is accidental—no rule‑of‑thirds intentionality. The rug’s texture fills the foreground, while the door and sofa create a simple backdrop that doesn’t compete for attention.
+
+- **Texture & Detail**  
+  The gray rug has a shaggy, plush surface with visible fibers that catch the light. The orange top’s ribbed texture is subtle but present, as is the slight sheen on the woman’s skin. The door’s paint has a matte finish, and the silver handle shows a faint reflection.
+
+- **Color Palette**  
+  Dominant colors are warm neutrals: beige walls, off‑white door, gray rug, and orange top. The black glasses add a contrasting dark element. The overall palette is muted yet vibrant, with a slight yellow tint from the ambient light.
+
+- **Final Prompt**  
+  “A young woman with long wavy brown hair, wearing an orange ribbed tank top and dark gray leggings, lies on her stomach on a plush gray rug in a cozy living room. She smiles broadly while supporting her cheek with one hand, her black‑rimmed glasses catching the ambient light. The background shows a plain off‑white door and a beige sofa. Capture with a 24 mm wide‑angle lens, everything in focus, slight handheld shake, natural overexposure, no filters—raw candid realism.”

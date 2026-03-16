@@ -1,0 +1,24 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with dark, voluminous braids tied into a high ponytail, mid‑turn in a casual white tank top and black jeans. She’s holding a small pink object (a phone or a keychain) between her thumb and index finger, mouth slightly open as if she’s about to speak or laugh. Her head is tilted to the right, capturing a candid, unposed moment.
+
+- **Motion & Focus**  
+  Slight motion blur on the subject’s hair and hand, indicating handheld instability. Everything in the frame — subject, background, and foreground — is fully sharp with no portrait‑mode blur. The blur is subtle, giving a raw, unprocessed look.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle window, slight overexposure on the ceiling lights, creating soft highlights on the subject’s shoulder and hair. No auto‑beauty mode; no filters, no color grading, no post‑processing aesthetic. The exposure is slightly warm, with a hint of ambient warmth from the store’s interior lighting.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24‑35 mm), short focal length, no bokeh. All elements — subject and background — are in focus. The composition is accidental: slight tilt, off‑center framing, partial crop that cuts off a bit of the background on the left side.
+
+- **Environment**  
+  A modern retail store with a tiled floor, a glass ceiling, and a display shelf stocked with t‑shirts and accessories behind the subject. In the background, a man in a gray shirt and jeans walks past, carrying a red backpack, and a woman in a white top and blue jeans is visible on the left. The time of day is mid‑afternoon, with bright natural light coming from the ceiling windows.
+
+- **Capture Style**  
+  Candid, spontaneous — the subject appears unaware of the camera. No rule‑of‑thirds intentionality; the frame is slightly crooked, giving a genuine, “in‑the‑moment” feel. The background is fully sharp, no depth‑of‑field blur.
+
+- **Prompt for Generation**  
+  *“A young woman with dark braids in a high ponytail, wearing a white tank top and black jeans, holding a pink object in her right hand, mid‑turn in a brightly lit retail store. Slight motion blur on the hair and hand, all elements fully sharp, wide‑angle lens, accidental off‑center framing, natural daylight from ceiling windows, slight overexposure. Background shows a man in a gray shirt and jeans with a red backpack walking past, a display shelf with t‑shirts, and a woman in a white top and blue jeans on the left. Mid‑afternoon lighting, raw unprocessed look, no filters.”*
+
+Provide only the structured prompt.

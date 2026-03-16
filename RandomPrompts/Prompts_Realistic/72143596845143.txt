@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a natural, unposed posture, mid‑movement, sitting on a wooden bench in a sunlit living room. Her shoulders are bare, her hands resting on her thighs, fingers slightly curled, nails painted a soft pink. She wears loose, light‑colored denim jeans that drape softly over her hips. Her hair is a warm brown, falling loosely over her shoulders.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject appears unaware of the camera, caught in a natural moment. Slight tilt and off‑center framing give an accidental, handheld feel. The composition is not intentionally rule‑of‑thirds; it’s a raw, imperfect snapshot.
+
+- **Motion & Exposure**  
+  A subtle motion blur from a handheld shot, as if the camera was slightly unsteady. The exposure is a mild overexposure that lets the ambient daylight bleed through the scene, giving a warm, almost hazy glow. No auto‑beauty or filter processing — just a raw, in‑camera look.
+
+- **Lens & Technical**  
+  Wide‑angle lens (20–35 mm) with a short focal length, capturing a broad view of the subject and environment. Everything is fully sharp – no bokeh, no depth‑of‑field blur – the background remains crisp from the bench to the wall. No portrait‑mode subject isolation; the entire frame is in focus.
+
+- **Environment**  
+  A bright, airy living room with a light‑colored couch and a small side table visible in the background. The time of day is late morning, with soft, diffused sunlight streaming through a window, creating gentle highlights on the woman’s skin and clothing. A faint hint of a plant or decorative object is visible on the far right, adding context.
+
+- **Details & Imperfections**  
+  Slight imperfections are encouraged: a tiny smudge on the jeans, a slight wrinkle in the fabric, a small patch of dust on the bench. The hands show natural veins and a faint pinkish tone, with a subtle motion blur around the fingers. The overall look is unpolished yet vivid, as if captured in a spontaneous, everyday moment.
+
+- **Prompt Summary**  
+  *“A young woman in loose denim jeans, sitting on a wooden bench in a sunlit living room, captured with a wide‑angle lens at late morning. The shot is candid and slightly tilted, with subtle motion blur and mild overexposure, all in focus, no filters or post‑processing, raw and natural.”*

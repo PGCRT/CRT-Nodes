@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high, messy bun and loose strands framing her face, walking casually down a sunlit city sidewalk. She wears a mint‑green floral V‑neck top with fringe details, layered under a beige cardigan, paired with tan high‑waist trousers. Her left hand holds a white coffee cup; her right arm is slightly bent as if she’s about to gesture or adjust her jacket. She looks off to the left of the frame, mid‑step, with a relaxed, candid expression.
+
+- **Motion & Focus**  
+  Slight motion blur on the subject’s hands and the background, indicating handheld instability. Everything remains sharply in focus—no portrait‑mode depth‑of‑field blur. The image has an auto‑HDR feel but no color grading or filters; it retains a raw, natural look with a hint of overexposure from the bright midday sun.
+
+- **Framing & Composition**  
+  Wide‑angle lens (24–35 mm) captured in a short focal length that keeps the background fully sharp. The frame is intentionally off‑center and slightly tilted, giving an accidental, spontaneous feel. The composition does not follow the rule of thirds; the subject occupies the central‑left portion of the frame, with a partial crop that cuts off the edge of the sidewalk and a glimpse of a passing man in a brown jacket holding a coffee cup.
+
+- **Environment**  
+  Specific real‑world location: a bustling downtown street with a modern glass‑front storefront on the left, a concrete pavement, and a white building with large windows. The time of day is late morning (around 10:30 AM), with bright, warm sunlight casting soft shadows. Ambient conditions are clear, dry weather with a light breeze that lifts a few strands of hair.
+
+- **Lens & Technical**  
+  Short focal length (24–35 mm) for a wide‑angle view; no bokeh—background is fully sharp. No depth‑of‑field blur, no portrait mode. The image has natural motion freeze or slight blur from handheld instability. Zero studio lighting, zero professional composition, zero editorial tone.
+
+- **Post‑Processing**  
+  Auto‑HDR or auto‑beauty mode off — raw, unprocessed look. Slight overexposure in the highlights to capture the bright sunlight. No filters, no color grading, no post‑processing aesthetic.
+
+**Prompt Summary**  
+"Candid, unposed photograph of a woman with a high messy bun walking on a sunlit downtown sidewalk, wearing a mint‑green floral top with fringe and a beige cardigan over tan trousers, holding a coffee cup in her left hand. Capture with a wide‑angle short focal length lens (24–35 mm), slight motion blur on the subject’s hands and background, everything sharply in focus, accidental off‑center framing with a slight tilt. The scene is set at late morning under bright midday sun, with a glass‑front storefront and a passing man in a brown jacket visible in the background. No filters or color grading—raw auto‑HDR feel, natural overexposure, zero studio lighting."

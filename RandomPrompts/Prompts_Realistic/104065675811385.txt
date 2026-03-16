@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair standing on a sandy beach, wearing a dark, one‑piece swimsuit with a front zipper. She is mid‑step, left foot slightly ahead, arms relaxed at her sides, head tilted a little to the right, eyes focused forward. Her face shows a natural, unposed expression—no studio lighting, just ambient daylight.
+
+- **Motion & Focus**  
+  Slight motion blur on the lower legs and feet, indicating handheld shake. Everything in the frame is fully sharp—no bokeh, no portrait‑mode isolation. The focus covers the entire scene from foreground to background.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24 mm or 35 mm), short focal length. No rule‑of‑thirds intentionality—framing is accidental, slightly off‑center. No auto‑HDR or auto‑beauty mode; raw, unprocessed look. Slight overexposure in the upper left corner to capture ambient light.
+
+- **Environment**  
+  Location: a coastal breakwater made of large, irregular rocks, with the ocean visible beyond. Time of day: late morning, soft golden sunlight coming from the left, casting gentle shadows on the sand. Weather: clear, light wind, a few scattered clouds in the sky.
+
+- **Composition Details**  
+  The shot is candid and spontaneous—subject appears unaware of the camera. Slight tilt in the camera housing gives an informal feel. The background remains fully sharp; no depth‑of‑field blur. The composition includes the subject’s full body, from head to toe, with a partial crop that cuts off a bit of the left side of her leg.
+
+- **Lighting & Color**  
+  Natural daylight, slight overexposure in the upper left, warm tones with a hint of blue in the sky. No color grading or filters—raw, unprocessed aesthetic.
+
+- **Prompt Summary for Text‑to‑Image Generation**  
+  “A young woman with long wavy brown hair, wearing a dark one‑piece swimsuit with a front zipper, stands on a sandy beach near a rock breakwater. She is mid‑step, left foot ahead, arms relaxed, head slightly tilted right. Slight motion blur on the lower legs, everything fully sharp. Wide‑angle lens (24–35 mm), accidental off‑center framing, no rule‑of‑thirds. Late morning sunlight from the left, clear sky with scattered clouds. Raw, unprocessed look, slight overexposure in upper left. Candid, spontaneous, handheld shake.”

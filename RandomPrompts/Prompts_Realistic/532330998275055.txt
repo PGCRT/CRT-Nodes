@@ -1,0 +1,16 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, slender woman with long, straight brown hair standing on a sunlit beach. She wears white lace lingerie that clings to her curves, a thin gold bracelet on her left wrist and a matching ring on her right hand. Her body is slightly turned toward the camera, mid‑step as if she’s about to walk or dance. The shot captures a natural “in‑motion” feel with a subtle handheld shake.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject appears unaware of the lens, caught in a fleeting moment. Slight tilt and off‑center framing give an accidental, organic composition. No rule‑of‑thirds intentionality; the frame is a natural “snapshot” feel with a partial crop that keeps the edges slightly cut off.
+
+- **Environment**  
+  Specific real‑world location: a tropical beach with soft, foamy waves breaking in the background. Palm trees line the shore, a few scattered coconut palms rise above the sand. The time of day is late morning, the sun high but not directly overhead, creating warm, natural lighting. Ambient weather is mild, with a light sea breeze and a faint haze that gives a slight overexposure feel.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm) wide‑angle lens. Everything is fully sharp — no bokeh, no depth‑of‑field blur; the background remains in focus. No portrait‑mode subject isolation. The image has a raw, unprocessed look: no filters, no color grading, no post‑processing aesthetic. Slight overexposure or underexposure depending on ambient light is present, giving an authentic, candid vibe.
+
+- **Post‑Processing**  
+  Auto‑HDR or auto‑beauty mode off — keep it natural. No rule‑of‑thirds intentionality; the composition is accidental and spontaneous. The final image should feel like a real, in‑the‑moment photograph captured with a handheld camera on a bright, breezy beach at late morning.

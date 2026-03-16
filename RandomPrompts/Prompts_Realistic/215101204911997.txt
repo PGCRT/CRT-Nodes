@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with shoulder‑length, wavy brown hair standing mid‑step on a concrete balcony. She’s bare‑chested, wearing light‑blue denim jeans that hang loosely at the hips. Her left hand rests on the railing, her right arm relaxed by her side. She looks directly at the camera with a neutral, slightly smug expression.  
+
+- **Motion & Focus**  
+  Slight motion blur on the subject’s hands and the background, as if captured with a handheld camera in motion. Everything remains sharply in focus—no portrait‑mode depth of field.  
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle, late‑afternoon sun; slight overexposure on the upper torso, subtle warm tones. No auto‑HDR or beauty filters—raw, unprocessed look.  
+
+- **Lens & Technical**  
+  Wide‑angle lens (24‑35 mm), short focal length. No bokeh; background fully sharp. Slight tilt and off‑center framing, no rule‑of‑thirds intentionality.  
+
+- **Environment**  
+  Location: an urban rooftop balcony with a concrete railing and tiled walls. A narrow water channel runs along the back wall, scattered with fallen leaves and a small stone. A white window is visible on the right side of the back wall. The sky is overcast but bright, giving a soft, diffused light.  
+
+- **Composition Notes**  
+  Capture the scene as if it were a spontaneous, candid snapshot—slight tilt, partial crop, no editorial polish. Keep the background fully sharp, no depth‑of‑field blur.  
+
+- **Prompt for Text‑to‑Image Generation**  
+  “A young woman with shoulder‑length wavy brown hair stands mid‑step on a concrete balcony, bare‑chested and wearing light‑blue denim jeans. Her left hand rests on the railing, her right arm relaxed by her side; she looks directly at the camera with a neutral expression. Slight motion blur on the hands and background, everything sharply in focus. Natural daylight from a high‑angle late‑afternoon sun, slight overexposure on the upper torso. Wide‑angle lens (24‑35 mm), short focal length, no bokeh. Background: urban rooftop balcony with concrete railing, tiled walls, narrow water channel along the back wall scattered with fallen leaves and a small stone, white window on the right side. Slight tilt, off‑center framing, partial crop. Raw, unprocessed look, no filters.”

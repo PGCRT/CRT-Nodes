@@ -1,0 +1,31 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy blonde hair standing mid‑stride on a city street. She wears an oversized white long‑sleeve top that clings to her torso and distressed denim shorts with frayed hem. Her arms are crossed over her chest, slightly tilted to the left, as if she’s just finished a conversation or is about to grab a coffee. A delicate silver necklace rests on her collarbone, and a subtle earring glints in her ear.
+
+- **Facial Features & Expression**  
+  Her face is turned toward the camera with a relaxed, confident gaze; slight smirk, lips parted as if she’s about to speak. The lighting catches the softness of her cheek and the gentle curve of her neck. Slight motion blur at the edges suggests handheld shake.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle, midday sun. Slight overexposure on the upper torso, creating a warm, almost hazy glow. No auto‑beauty or filter enhancement—raw, unprocessed look. The background is fully sharp, no bokeh, no depth‑of‑field blur.
+
+- **Camera Settings**  
+  Wide‑angle lens (24‑35 mm), short focal length. Handheld, slightly unstable. All elements in focus: subject, clothing, background details. No portrait‑mode subject isolation.
+
+- **Environment**  
+  A bustling downtown street at midday. Tall brick buildings line both sides of the avenue; a yellow taxi and a white sedan are parked along the curb. Traffic lights glow orange in the distance. The pavement shows a crosswalk with white diagonal lines. A few scattered leaves and a small tree are visible on the left side, adding texture.
+
+- **Composition & Framing**  
+  No rule‑of‑thirds intentionality—accidental framing that places the subject slightly off‑center, with her left side cut off by the edge of the frame. The shot is candid, unposed, spontaneous; she appears unaware of the camera. Slight tilt to the right gives a dynamic feel.
+
+- **Details & Imperfections**  
+  Slight motion blur on the hands and hair, indicating a quick shutter speed. A faint smudge on her left shoulder from a passing wind. The denim shorts show a small tear at the bottom hem. The white top has a subtle wrinkle near the elbow. The background buildings have a slight vignette due to the wide‑angle lens.
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, zero post‑processing aesthetic. Raw, in‑camera look only.
+
+---
+
+**Prompt Summary (for text‑to‑image generation)**  
+
+"A young woman with long wavy blonde hair stands mid‑stride on a downtown city street at midday, wearing an oversized white long‑sleeve top and distressed denim shorts with frayed hem. She has a delicate silver necklace and an earring, arms crossed over her chest in a relaxed, confident pose. Her face is turned toward the camera with a slight smirk. The scene is lit by natural daylight from a high‑angle sun, creating a warm, hazy glow on her torso. Use a wide‑angle lens (24‑35 mm), handheld, all elements in focus, no bokeh. Background shows tall brick buildings, a yellow taxi and a white sedan parked along the curb, traffic lights glowing orange, a small tree on the left. Capture candid, unposed, accidental framing with slight tilt and motion blur. No filters or post‑processing."

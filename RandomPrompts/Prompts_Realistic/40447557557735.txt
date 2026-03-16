@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with dark, slightly frizzy hair, standing in a tiled bathroom. Her hands are raised to the back of her head, fingers curling into her hair as if she’s just finished a shower or is styling her hair. She has a small floral tattoo on the left side of her neck and a thin, dark ink design on her left wrist. Her face is turned toward the camera but not directly at it—there’s a slight tilt that gives a candid feel. Her expression is neutral, almost contemplative, with a hint of softness in her eyes.
+
+- **Lighting & Exposure**  
+  Natural daylight coming from a window on the left side of the frame, creating a mild overexposure on the upper part of her body. The lighting is uneven, with a slight warm tint and a small highlight on her chest. No auto‑beauty mode—raw, unprocessed look. Slight handheld shake gives a subtle motion blur around the edges.
+
+- **Environment**  
+  The background consists of blue ceramic tiles with white decorative borders, arranged in a grid pattern. A portion of a white bathtub edge is visible on the left. The time of day is mid‑afternoon, with soft, diffused sunlight. The bathroom appears slightly cluttered: a small bottle of shampoo sits on the tub edge, and a faint reflection of a mirror can be seen on the tile.
+
+- **Lens & Technical**  
+  24‑mm wide‑angle lens, short focal length. Everything is in focus—no bokeh, no depth‑of‑field blur. The framing is accidental: the subject is slightly off‑center, and the crop cuts off a bit of her left shoulder, giving an imperfect, spontaneous feel. No rule‑of‑thirds intentionality.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Slight tilt and partial crop. Zero studio lighting, zero professional composition, zero editorial tone. Natural motion freeze or slight blur from handheld instability.
+
+- **Post‑Processing**  
+  No filters, no color grading, no post‑processing aesthetic. Only raw capture data, with a faint auto‑HDR effect that lifts the highlights slightly but keeps the image looking natural.
+
+**Prompt Summary**  
+"Mid‑afternoon candid shot of a woman in a tiled bathroom, hands in hair, slight handheld blur, wide‑angle lens, accidental framing, raw unprocessed look, natural daylight overexposure, blue tiles, white bathtub edge, small neck tattoo, wrist tattoo, everything in focus."

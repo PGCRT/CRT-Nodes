@@ -1,0 +1,29 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, curvy woman with deep‑brown, bouncy, shoulder‑length hair standing in a sunlit living room. She’s bare‑chested, wearing only a thin, sheer silk scarf tied loosely at the neck. Her hands rest on her hips, fingers slightly curled, one hand holding a small, silver bracelet and the other a gold watch. A single ring with a red stone adorns her left ring finger. Her expression is relaxed, lips parted, eyes focused forward, as if she’s mid‑conversation or just finished a gesture.
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window to the left, creating a soft, warm glow with a slight overexposure on the upper body. The exposure is slightly uneven—bright highlights on the chest and face, subtle shadows in the hair. No auto‑HDR or beauty filters; raw, unprocessed look.
+
+- **Camera Settings**  
+  - Lens: 24‑mm wide‑angle, short focal length, handheld.  
+  - Aperture: f/4.0 (wide opening).  
+  - Shutter speed: 1/60 s (slight motion blur from hand‑held instability).  
+  - ISO: 400 (mid‑range for natural grain).  
+  - Focus: everything in focus—background and subject, no portrait‑mode depth‑of‑field blur.  
+
+- **Composition**  
+  Candid, unposed, spontaneous framing—slight tilt and off‑center crop. No rule‑of‑thirds intentionality; the composition feels accidental, as if the photographer was capturing a fleeting moment. The background shows a beige wall, a gold‑framed painting on the left, and a glimpse of a wooden side table and a yellow cushion on a sofa to the right.
+
+- **Environment**  
+  Location: A bright, modern living room with light‑wood furniture. Time of day: late morning, around 10:30 a.m., when the sun is high but still casts soft shadows. Weather: clear, mild, with a gentle breeze that ruffles the subject’s hair.
+
+- **Details & Imperfections**  
+  Slight motion blur on the hands and hair, giving a sense of movement. The bracelet and watch have a subtle shine; the ring’s red stone catches the light. The scarf drapes naturally, creating soft folds. A faint, random smudge on the left side of her chest adds realism.
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, no auto‑beauty mode—just raw, in‑camera capture with minimal white‑balance adjustment. Slight vignetting from the wide lens is present but not exaggerated.
+
+**Prompt Summary**  
+“Candid, unposed photo of a tall, curvy woman with deep‑brown, bouncy hair standing bare‑chested in a sunlit living room, wearing a thin silk scarf, silver bracelet, gold watch, and a red‑stone ring. Natural daylight from the left creates a soft warm glow with slight overexposure. Shot on a 24‑mm wide‑angle lens at f/4.0, 1/60 s, ISO 400—handheld with slight motion blur. Everything is in focus, background fully sharp. Composition is accidental, slightly tilted and off‑center, capturing a spontaneous moment in late morning. Raw, unprocessed look, no filters.”

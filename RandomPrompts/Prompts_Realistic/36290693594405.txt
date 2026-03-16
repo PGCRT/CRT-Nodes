@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman with medium‑length brown hair, standing in a bright, tiled bathroom. She is bare‑headed, mid‑gesture, hands raised to the back of her head as if she’s just finished a shower or is styling her hair. Her posture is slightly tilted, off‑center, capturing a spontaneous, unposed moment.
+
+- **Lighting & Exposure**  
+  Natural daylight from a window on the left, creating a soft overexposure on the upper body and a slight warm tint. No auto‑HDR or beauty filters—raw, unprocessed look. The exposure is slightly high, giving a gentle halo around her shoulders and arms.
+
+- **Camera Settings**  
+  Wide‑angle lens (24–35 mm), short focal length, handheld. All elements in focus: subject, sink, towel, mirror, and background tiles. No bokeh; background fully sharp. Slight motion blur on the hands and hair to suggest movement.
+
+- **Environment**  
+  A modern bathroom with white square tiles, a white ceramic sink, a chrome faucet, a small blue shower curtain, and a folded white towel hanging on a rail. The time of day is mid‑afternoon, with warm natural light streaming in from the left side, casting soft shadows.
+
+- **Composition & Framing**  
+  No rule‑of‑thirds intentionality—framing is accidental, slightly cropped on the right side, capturing the subject’s torso, hips, and a portion of the sink. The shot is centered on the woman’s midsection, with her left shoulder slightly cut off to emphasize candidness.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, minor mis‑alignment of the hands, natural motion blur on the hair, a faint overexposed highlight on the chest area. The image retains a raw, unpolished feel with no color grading or filters applied.
+
+- **Final Prompt**  
+  “A woman with medium‑length brown hair standing in a bright tiled bathroom, hands raised to the back of her head mid‑gesture, captured with a wide‑angle handheld lens at 30 mm. Natural daylight from the left creates a soft overexposure on her upper body. The scene includes a white ceramic sink, chrome faucet, blue shower curtain, and a folded white towel on a rail. All elements in focus, slight motion blur on the hands, accidental off‑center framing, no filters or color grading—raw, candid, spontaneous realism.”

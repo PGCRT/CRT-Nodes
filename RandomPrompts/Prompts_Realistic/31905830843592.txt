@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, sun‑kissed blonde hair, wearing a black sports bra and high‑waisted black bikini bottoms, kneeling on a light‑colored rug in a cozy bedroom. She’s mid‑smile, head tilted slightly to the right, left hand resting on the floor for balance, right knee bent, and her left foot partially out of frame. Her expression is candid, as if she’re caught in a spontaneous moment after a workout.
+
+- **Lighting & Exposure**  
+  Natural daylight from a window on the left, creating a soft, warm glow with a slight overexposure on the upper half of the frame. The exposure is uneven—the lower part of the image is a bit darker, giving a raw, unprocessed look. No auto‑HDR or beauty filters; just a straightforward, handheld shot.
+
+- **Camera & Lens Settings**  
+  35 mm wide‑angle lens, f/4.0 aperture, 1/125 s shutter speed, ISO 400. Slight motion blur from a hand‑held camera, giving a natural “in‑motion” feel. Everything in focus—from the subject to the background—no portrait‑mode depth of field blur.
+
+- **Composition & Framing**  
+  Off‑center, accidental framing: the subject’s left side is slightly cut off by the edge of the frame, and the top right corner contains a glimpse of a wooden headboard and a white pillow. The composition has no rule‑of‑thirds intentionality; it feels spontaneous and casual.
+
+- **Environment & Details**  
+  A tidy bedroom with a wooden bed, a small bedside table holding a water bottle, a can of energy drink, a blue thermos, and a pair of white sneakers on the floor. A black trash bin sits near the window, and a crumpled white shirt lies on the rug beside the woman. The window lets in bright daylight, casting soft shadows. The time of day is mid‑afternoon, with warm, slightly hazy light.
+
+- **Post‑Processing & Finish**  
+  No filters or color grading—just raw, unprocessed imagery. Slight tilt and partial crop for a candid feel. The image retains natural imperfections: a faint smudge on the lens, slight vibration blur, and a tiny overexposed highlight near the window.
+
+**Prompt Summary**  
+> “A young woman with long, sun‑kissed blonde hair, wearing a black sports bra and high‑waisted black bikini bottoms, kneeling on a light‑colored rug in a cozy bedroom. She’s mid‑smile, head tilted slightly to the right, left hand resting on the floor for balance, right knee bent, and her left foot partially out of frame. Natural daylight from a window on the left creates a soft, warm glow with a slight overexposure on the upper half of the frame. 35 mm wide‑angle lens, f/4.0 aperture, 1/125 s shutter speed, ISO 400—slight motion blur from a hand‑held camera, everything in focus. Off‑center, accidental framing with a wooden headboard and white pillow in the top right corner. The bedroom features a small bedside table with a water bottle, energy drink can, blue thermos, and a pair of white sneakers on the floor; a black trash bin near the window, a crumpled white shirt on the rug. Mid‑afternoon daylight casts soft shadows. No filters or color grading—raw, unprocessed imagery with slight tilt and partial crop for candid feel.”

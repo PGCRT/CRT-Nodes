@@ -1,0 +1,39 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark, wavy hair sitting on a brown leather couch. She is wearing a black top and a thin gold bracelet on her left wrist. Her right arm shows a detailed portrait tattoo of another woman, surrounded by leaf motifs. She holds her face with both hands, fingers lightly touching her cheeks, eyes slightly downcast, as if mid‑thought or reacting to an unseen stimulus.
+
+- **Facial & Body Details**  
+  - Skin tone: warm, natural complexion with subtle pores and texture.  
+  - Makeup: soft pink lipstick, defined eyeliner, and a hint of shimmer on the cheekbones.  
+  - Expression: contemplative, slightly pensive, with a faint smile.  
+  - Hands: fingers curled gently around the side of her face, slight tension in the knuckles.  
+  - Tattoo: a realistic portrait tattoo on her left upper arm, featuring a stylized face and foliage, rendered in black and gray tones.
+
+- **Lighting & Exposure**  
+  - Lighting: natural daylight from a window to the left, creating soft highlights on the forehead and cheek, with a slight overexposure on the right side of the face.  
+  - Auto‑HDR or auto‑beauty mode off – raw, unprocessed look.  
+  - Slight handheld shake: minor motion blur around the edges, especially in the background.
+
+- **Camera Settings**  
+  - Lens: 24‑mm wide‑angle, short focal length, giving a slightly distorted but natural perspective.  
+  - Focus: everything in focus – subject and background equally sharp.  
+  - Depth of field: no bokeh; background remains crisp.  
+  - Exposure: f/5.6, 1/125 s shutter speed, ISO 400.
+
+- **Composition & Framing**  
+  - Candid, unposed, spontaneous – the subject appears unaware of the camera.  
+  - Slight tilt and off‑center framing; the composition is not intentionally rule‑of‑thirds aligned.  
+  - Partial crop: the top of the couch and part of the wall behind are cut off, giving an intimate, informal feel.
+
+- **Environment**  
+  - Location: a modern living room with a dark gray wall that bears a large white “R” logo (partially visible).  
+  - Time of day: late afternoon, natural light coming from a west‑facing window.  
+  - Weather: clear, mild, with a slight breeze that ruffles the woman’s hair.
+
+- **Post‑Processing**  
+  - No filters, no color grading, no post‑processing aesthetic – raw capture only.  
+  - Slight overexposure on the right side of the face to emphasize ambient light.  
+
+- **Final Prompt**  
+  “A young woman with long dark wavy hair sits on a brown leather couch in a modern living room, wearing a black top and a thin gold bracelet. Her left arm bears a realistic portrait tattoo of another woman surrounded by leaves. She holds her face with both hands, fingers gently cupping her cheeks, eyes slightly downcast as if mid‑thought. Natural daylight from a west‑facing window casts soft highlights on her forehead and cheek, creating a slight overexposure on the right side of her face. Shot on a 24‑mm wide‑angle lens at f/5.6, 1/125 s, ISO 400, everything in focus with no bokeh. The image is candid and unposed, slightly tilted and off‑center, partially cropped, capturing a spontaneous, raw moment without intentional rule‑of‑thirds composition. No filters or color grading – just a clean, raw capture with mild handheld shake.”

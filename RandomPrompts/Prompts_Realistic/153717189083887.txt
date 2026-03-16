@@ -1,0 +1,16 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair, wearing a loose beige button‑up shirt and blue jeans, standing in a sunlit meadow. Her hands are in her pockets, shoulders relaxed, head tilted slightly to the left, eyes focused forward with a subtle smile. The shirt is unbuttoned at the top, revealing a hint of mid‑chest, creating a casual, spontaneous look.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject appears unaware of the camera, mid‑action. Slight tilt and off‑center framing give an accidental, handheld feel. The shot has a mild motion blur from slight instability, as if captured with a shaky hand. No rule‑of‑thirds intentionality; the composition is organic and imperfect.
+
+- **Environment**  
+  Location: A grassy field with scattered wildflowers, a line of tall reeds on the right, and a cluster of green trees in the background. Time of day: late afternoon, golden hour light casting warm, soft shadows. Weather: lightly breezy, with a faint haze that adds depth to the scene.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm), wide‑angle lens. Everything is in focus — background and subject — no bokeh or depth‑of‑field blur. No auto‑HDR or auto‑beauty mode; raw, unprocessed look. Slight overexposure on the subject’s face to emphasize the ambient light. No filters, color grading, or post‑processing aesthetic. The image is captured with a wide‑angle lens that keeps the background fully sharp, giving a natural, documentary feel.
+
+- **Final Prompt**  
+  “A young woman with long wavy brown hair, loose beige shirt and blue jeans, standing in a sunlit meadow at late afternoon. Her hands are in her pockets, shoulders relaxed, head slightly tilted left, eyes forward with a subtle smile. Candid, unposed, spontaneous capture with slight tilt and off‑center framing, mild motion blur from handheld instability. Background of tall reeds and green trees, wildflowers scattered, all in focus. Short focal length 30 mm wide‑angle lens, raw unprocessed look, slight overexposure on subject.”

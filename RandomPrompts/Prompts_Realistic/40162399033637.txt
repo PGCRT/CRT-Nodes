@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail and dark sunglasses, wearing an olive‑green halter dress that shows a subtle “open‑front” detail. She’s mid‑wave, left hand raised in a casual greeting, right hand holding a black DSLR camera with a large lens. A black leather backpack hangs from her left shoulder. Her expression is bright, slightly mischievous, as if she’re caught in an unplanned moment at an outdoor event.
+
+- **Motion & Focus**  
+  Slight motion blur on the subject’s raised hand and background, indicating handheld shake. Everything remains sharply in focus—no portrait‑mode bokeh. The image has a raw, unprocessed look: no auto‑HDR or beauty filters, just natural ambient light with a hint of overexposure in the highlights.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm), short focal length. No depth‑of‑field blur; background is fully sharp. The composition is accidental—no rule‑of‑thirds, slight tilt and off‑center framing, a partial crop that gives a candid feel.
+
+- **Environment**  
+  Outdoor park or garden setting in late afternoon. Trees with dappled shade, green grass, a few bystanders in the background (one woman in a floral shirt holding a phone, a man in a dark t-shirt, another in a pink shirt). The weather is bright but not harsh; the sun is high, creating soft shadows and a slight haze.
+
+- **Lighting & Color**  
+  Natural daylight with a slight overexposure on the subject’s face and upper body. Warm, golden tones from the late‑afternoon sun, cool greens from the trees and grass. No color grading or post‑processing—just raw capture.
+
+- **Details & Imperfections**  
+  The woman’s hair is tied up in a high ponytail with a small frizz. Her sunglasses have a thin frame. A gold watch glints on her left wrist, a black leather backpack adds texture. The camera she holds has a visible brand logo and a large lens. The background people are slightly out of sync, adding to the candid vibe.
+
+- **Prompt Summary**  
+  “A young woman in an olive‑green halter dress, wearing sunglasses and a high ponytail, waves with her left hand while holding a DSLR camera in her right, a black backpack on her shoulder. Captured with a wide‑angle lens at a sunny park in late afternoon, slight motion blur on the subject’s hand, everything sharply in focus, raw natural lighting with a hint of overexposure. Background includes a few bystanders, trees and grass, all in focus. No filters—just a candid, spontaneous snapshot.”

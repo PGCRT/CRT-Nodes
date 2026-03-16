@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair, wearing a delicate pink lace bra and matching panties, crouches low on a polished wooden floor while holding an antique gold telephone to her ear. Her high‑heeled sandals with crystal accents drape elegantly over her toes. She looks slightly upward, eyes bright, mouth open as if mid‑conversation, capturing a spontaneous, “in‑action” moment.
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window casts soft, warm light across the scene; slight overexposure on the left side gives a gentle halo effect. No auto‑HDR or beauty filters—just raw, unprocessed tones. The exposure is slightly uneven, with a subtle vignette from the wide‑angle lens.
+
+- **Camera & Lens Settings**  
+  Wide‑angle lens (24 mm) with a short focal length, set to f/4 for a shallow depth of field that still keeps the background fully sharp. No bokeh; everything—from the subject’s face to the distant chair—is in focus. Slight handheld shake produces a natural motion blur on the edges, adding authenticity.
+
+- **Composition & Framing**  
+  The shot is intentionally off‑center: the woman’s left knee leans toward the bottom right of the frame, creating a dynamic, casual composition. The framing is accidental—no rule‑of‑thirds applied—capturing a candid, unposed moment. A partial crop cuts off a portion of the window’s curtain, enhancing the spontaneous feel.
+
+- **Environment & Details**  
+  The setting is a bright, airy bedroom with pink curtains, a white side table adorned with a vase of pink roses and a gold telephone, and an ornate floral‑upholstered chair in the background. A small white lace doily lies on the floor near her foot, and a brass candlestick sits beside the table. The time of day is late morning, with sunlight streaming through the window, creating soft shadows and highlights.
+
+- **Post‑Processing & Finish**  
+  Zero studio lighting, zero professional composition, zero editorial tone. The image retains a raw, in‑camera look with only minimal white‑balance adjustments. Slight tilt and slight motion blur from a handheld camera add realism. No color grading or filters—just the natural hues of the room and subject.
+
+**Prompt Summary**  
+“Candid, wide‑angle shot of a woman in pink lace lingerie crouching on a wooden floor while talking on an antique gold telephone, captured in late morning natural light with slight overexposure and handheld blur. The scene includes a pink curtain, a white table with roses, and a floral chair, all in focus, framed off‑center for a spontaneous, raw aesthetic.”

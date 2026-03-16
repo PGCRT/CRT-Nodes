@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail, wearing a navy sleeveless top and black shorts, captured mid‑step in a casual back‑view pose. Her left leg is slightly bent, foot planted on a tiled floor, and she’s wearing black knee sleeves and Nike sneakers. A silver watch adorns her left wrist, and she carries a pair of sunglasses hanging from her ear.  
+
+- **Motion & Focus**  
+  Slight motion blur at the feet and knees to convey mid‑movement. Handheld camera instability creates a subtle tilt and off‑center framing. Everything remains in focus—no portrait‑mode bokeh; background is fully sharp.  
+
+- **Lighting & Exposure**  
+  Raw, unprocessed look with auto‑HDR off. The scene is lit by an overhead fluorescent tube that casts a mild overexposure on the ceiling and a slight underexposure on the lower floor, giving a natural, candid feel.  
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm) with a short focal length. No bokeh; depth of field is flat so all elements—from the subject to the background—are crisp.  
+
+- **Environment**  
+  The setting is an indoor storage or office space with a white brick wall, a fluorescent light fixture on the ceiling, and a small filing cabinet, plastic bins, and cardboard boxes along the right side. A clear plastic container sits on a wooden stool, a yellow bag rests in a blue bin, and a green digital timer lies on the floor. The time of day is late afternoon, with ambient daylight mixing with artificial lighting.  
+
+- **Composition Notes**  
+  The frame is intentionally imperfect: the subject is slightly off‑center to the left, the top edge cuts off a bit of her head, and the bottom edge crops the toes. The composition has no rule‑of‑thirds intentionality—just spontaneous, candid framing.  
+
+- **Prompt for Generation**  
+  “A young woman in a navy sleeveless top and black shorts, viewed from behind with her left leg bent mid‑step, wearing black knee sleeves and Nike sneakers, standing on a tiled floor in an indoor storage room with a white brick wall and fluorescent light. Capture the scene with a wide‑angle lens, slight motion blur at the feet, raw unprocessed look, everything in focus, no bokeh. The background includes a filing cabinet, plastic bins, and cardboard boxes; a green digital timer lies on the floor. Light from an overhead fluorescent tube creates mild overexposure on the ceiling. Frame the shot candidly with accidental tilt and off‑center composition.”

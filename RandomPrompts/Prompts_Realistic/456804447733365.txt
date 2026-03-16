@@ -1,0 +1,16 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  Two women standing side‑by‑side on a bustling city sidewalk, mid‑conversation, one holding a beer mug. The woman on the left wears an off‑shoulder white crop top and high‑waisted jeans, white sneakers; the woman on the right is in a black bodycon dress with a brown blazer, black heels. Their heads are slightly tilted, arms linked, capturing a spontaneous, candid moment.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subjects unaware or mid‑action. Slight tilt and off‑center framing; partial crop that gives an accidental, handheld feel. No rule‑of‑thirds intentionality. Natural motion freeze or slight blur from handheld instability.
+
+- **Environment**  
+  Specific real‑world location: a busy downtown street with brick buildings, storefronts, and passersby in the background. Time of day: late afternoon, soft natural light with a warm, slightly overexposed tone. Weather: clear, mild humidity, ambient city noise.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm), wide‑angle lens. No bokeh; background fully sharp — everything in focus. No portrait mode or subject isolation. Slight auto‑HDR or auto‑beauty mode off for a raw, unprocessed look. No filters, no color grading, no post‑processing aesthetic.
+
+- **Composition Notes**  
+  Wide lens captures the full scene: the two subjects, the street, the storefronts, and the passing pedestrians. Background is fully sharp, no depth‑of‑field blur. The framing is slightly off‑center, giving a spontaneous, candid feel. All elements are in focus, creating an immersive, realistic photograph.

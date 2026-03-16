@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A young woman with wet, tousled hair standing at the edge of a calm lake, mid‑bite of an ice‑cream cone. Her body is bare except for a light, sheer skirt that hangs loosely around her hips. She’s slightly turned toward the camera, mouth open as if she just took a lick, and her left hand holds the cone near her chest. The ice‑cream is a creamy vanilla with a hint of caramel drizzle.
+
+- **Appearance & Detail**  
+  Her skin is glistening with a few water droplets, catching the warm light of late afternoon. Her eyebrows are thick and well‑defined; her eyes are bright blue, looking slightly off‑camera. She wears a thin, translucent white skirt that falls to mid‑calf, with a subtle pleated texture. A faint, natural blush is on her cheeks.
+
+- **Pose & Composition**  
+  The shot is handheld, slightly tilted, with an off‑center framing that gives a casual, spontaneous feel. The composition is not rule‑of‑thirds‑based; the subject’s head is a little above the center of the frame, and her left side extends beyond the right edge, creating a partial crop. The background is a sharp, wide‑angle view of a mountain range reflected in the lake, with a line of evergreen trees on the far shore.
+
+- **Environment**  
+  Location: A quiet alpine lake at dusk. The lake’s surface is calm, reflecting the mountains and trees. The time of day is late afternoon, around sunset, giving a warm, golden hue. Weather is mild, with a light breeze that ruffles her hair. The sky is clear, with a faint haze over the peaks.
+
+- **Lens & Technical**  
+  Use a short focal length wide‑angle lens (e.g., 24 mm). Everything is in focus – no bokeh or depth‑of‑field blur. No portrait mode or subject isolation. The image has slight motion blur from handheld instability, and a tiny overexposure on the lake’s reflection.
+
+- **Lighting & Color**  
+  Natural ambient light only; no studio lighting or post‑processing filters. Slight overexposure on the lake’s reflection gives a warm glow. Auto‑HDR is off – the look is raw and unprocessed. The color palette is natural: earthy greens of the trees, cool blues of the lake, and golden hues of the sunset.
+
+- **Post‑Processing**  
+  No filters, no color grading, no aesthetic polish. Keep it simple and realistic. Slight auto‑beauty mode off. The final image should feel like a genuine, candid snapshot captured in the moment.

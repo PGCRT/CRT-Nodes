@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy blonde hair, wearing a black ribbed tank top and bright red shorts, sitting casually on a white leather couch. Her hands rest on her hips, knees bent, and she’s wearing white-and-black garter socks. She’s mid‑smile, eyes bright, looking slightly off‑camera as if caught in an unplanned moment.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject is unaware of the camera or is in a “mid‑action” pose. Slight tilt and off‑center framing give a natural, handheld feel. The shot has a tiny motion blur from a shaky hand, and a slight overexposure that lets the ambient light bleed softly across the frame.
+
+- **Environment**  
+  Location: A bright, modern living room with a white sofa, a small wooden side table to the left, and a tall green potted plant in the corner. Time of day: late afternoon, soft natural daylight coming from the west, creating warm highlights and subtle shadows. Weather: clear, mild, with a gentle breeze that ruffles the woman’s hair.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm) wide‑angle lens, no bokeh — everything from foreground to background is fully sharp. No depth‑of‑field blur; the entire scene is in focus. No portrait‑mode “subject isolation.” The image has a raw, unprocessed look: no filters, no color grading, no post‑processing aesthetic. Slight auto‑HDR or auto‑beauty mode off. The exposure is slightly high, letting a hint of overexposure soften the bright whites and warm tones.
+
+- **Composition Notes**  
+  No rule‑of‑thirds intentionality — the framing is accidental, with the subject slightly off‑center and the couch edge cutting off the lower left corner for a dynamic crop. The background plant and table are fully in focus, adding context without distracting. The shot captures a natural, candid moment as if the woman was just caught mid‑pose during a casual photoshoot.
+
+**Prompt Summary (structured)**  
+`Candid, unposed photo of a young woman with long wavy blonde hair, black ribbed tank top, red shorts, and white‑black garter socks, sitting on a white leather couch in a bright modern living room. She’s mid‑smile, hands on hips, slightly tilted frame, small motion blur, slight overexposure. 24‑35 mm wide‑angle lens, everything sharp, no bokeh, raw unprocessed look, late afternoon natural light, accidental off‑center framing, background plant and side table in focus.`

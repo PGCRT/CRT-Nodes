@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair standing mid‑walk in a casual, unposed stance. She’s wearing high‑waisted denim jeans and a plain white tee that hangs loosely over her torso. Her left hand rests on her hip, right arm relaxed by her side, feet slightly off‑center in the frame. Capture her mid‑step, with a subtle motion blur on the legs to emphasize movement.
+
+- **Capture Style**  
+  Candid, spontaneous — she’s unaware of the camera, caught in a natural moment. Slight tilt and partial crop; the framing is accidental, not rule‑of‑thirds. No filter or color grading—just raw, auto‑HDR “auto‑beauty” off. A hint of overexposure from ambient daylight gives a warm, slightly hazy feel.
+
+- **Environment**  
+  Location: A sunlit corner of an urban park at late afternoon. The background is a mix of green grass, a wooden bench, and a distant building, all in full focus—no bokeh. The time of day is early evening, with soft golden light casting long shadows. Weather is lightly breezy, with a faint mist on the air that adds depth.
+
+- **Lens & Technical**  
+  Use a short focal length (e.g., 24‑35 mm) wide‑angle lens. Shoot at a wide aperture but keep everything sharp—no portrait‑mode isolation. Capture a full‑body shot with a slight handheld shake, giving a natural motion freeze or blur. Ensure the background is fully sharp, no depth‑of‑field blur.
+
+- **Composition Notes**  
+  Keep the composition accidental: the subject’s head is slightly above the center of the frame, her hips lean to the left, and her feet are not perfectly aligned with the horizon. The shot should feel spontaneous, as if she were mid‑conversation or mid‑walk.
+
+- **Post‑Processing**  
+  No filters, no color grading, no post‑processing aesthetic—just raw, auto‑HDR. A slight overexposure in the highlights gives a warm, natural look. Keep the exposure slightly uneven to maintain authenticity.
+
+**Prompt Summary**  
+“Candid, unposed full‑body shot of a woman in denim jeans and a white tee, mid‑step in an urban park at late afternoon. Capture with a short focal length wide‑angle lens, slight motion blur on the legs, accidental framing with a slight tilt, everything in focus, no bokeh. Raw auto‑HDR look, slight overexposure, natural ambient light, no filters.”

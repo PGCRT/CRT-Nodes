@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair lying supine on a rust‑colored bed sheet. She’s wearing a black lace bra and matching panties, plus black leather gloves on both hands. Her eyes are closed, face relaxed, as if mid‑dream or just waking. Hands are placed on her hips, fingers slightly curled, giving a casual, unposed feel.
+
+- **Lighting & Exposure**  
+  Natural daylight from a window at late‑afternoon; slight overexposure in the upper left corner to capture warm ambient glow. No auto‑HDR or beauty filters—raw, unprocessed look. Slight handheld shake gives a natural motion blur around the edges.
+
+- **Camera & Lens Settings**  
+  35 mm wide‑angle lens (short focal length). Aperture f/4.0, shutter speed 1/60 s, ISO 400. Everything in focus—no bokeh, no depth‑of‑field blur; background fully sharp.
+
+- **Composition & Framing**  
+  Off‑center, accidental framing: the bed’s headboard is slightly cut off on the right, the nightstand appears only partially on the left. No rule‑of‑thirds intentionality—just a candid snapshot. Slight tilt to the left gives a dynamic feel.
+
+- **Environment**  
+  A cozy bedroom with a wooden nightstand, a white lamp, and a beige wall. The time of day is early evening; soft sunlight streams from the left, casting gentle shadows. Light fabric texture on the bed sheet, subtle wrinkles around the woman’s hips.
+
+- **Details & Imperfections**  
+  Slight motion blur at the wrists and hair tips. A faint smudge on the lamp shade. The gloves show a tiny crease at the thumb. The overall look is raw, unposed, spontaneous—like a real‑life snapshot captured mid‑action.
+
+- **Prompt for Generation**  
+  *“A young woman with long wavy brown hair lying on a rust‑colored bed sheet in a cozy bedroom, wearing a black lace bra and matching panties with black leather gloves on her hands. Her eyes are closed, face relaxed, hands on hips. Natural daylight from a window at late afternoon creates slight overexposure in the upper left. 35 mm wide‑angle lens, f/4.0, 1/60 s, ISO 400—everything in focus, no bokeh. Off‑center accidental framing with slight tilt. Wooden nightstand and white lamp partially visible on the left, beige wall behind. Raw, unprocessed, candid snapshot with mild motion blur at wrists and hair tips.”*

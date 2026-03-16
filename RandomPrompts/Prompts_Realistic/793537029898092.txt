@@ -1,0 +1,24 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with soft, natural blonde hair, wearing a fitted gray long‑sleeved cardigan that’s buttoned at the front and a pair of light‑wash denim jeans. She stands in a bright, unadorned living room, leaning slightly against a white wall, her body angled toward the camera but not perfectly centered. Her left hand rests on her hip, fingers casually curled, while her right arm hangs relaxed by her side. She’s mid‑step, one foot forward, as if she just finished a conversation or is about to pick something up from a nearby table.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject appears unaware of the camera, caught in a natural moment. Slight tilt and off‑center framing give the shot an accidental, handheld feel. The composition is intentionally imperfect: the frame cuts off just above her waist, cropping the top of her head slightly, and the left side of her face is marginally cut off by the edge of the lens.
+
+- **Environment**  
+  Location: a bright, modern apartment living room with a large window on the right, a plain white wall behind, and a small green plant in a ceramic pot on a side table to the right. Time of day: late morning, soft natural light coming from the window, creating a gentle warm glow on the subject’s face and a slight overexposure on her chest area. Ambient conditions: the room is quiet, the air is still, and the background is fully sharp with no bokeh.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm) wide‑angle lens. Everything is in focus — from the subject’s face to the plant and window — with no depth‑of‑field blur. Slight motion blur on the subject’s hands, indicating a handheld shot captured at a fast shutter speed. Auto‑HDR or auto‑beauty mode off — raw, unprocessed look. No filters, no color grading, no post‑processing aesthetic. The exposure is slightly high on the subject’s chest, giving a natural overexposed highlight that blends with the ambient light.
+
+- **Details & Imperfections**  
+  - Slight tilt of the camera, making the horizon line angle slightly to the right.  
+  - Off‑center framing: the left side of the subject’s face is partially cropped.  
+  - Partial crop at the bottom of the image, where the jeans meet the floor.  
+  - No rule‑of‑thirds intentionality — the composition feels spontaneous and casual.  
+  - Zero studio lighting, zero professional composition, zero editorial tone.  
+  - Natural motion freeze or slight blur from handheld instability on the subject’s hands.
+
+- **Final Prompt**  
+  “A young woman with soft blonde hair, wearing a fitted gray long‑sleeved cardigan and light‑wash denim jeans, stands in a bright modern living room, leaning against a white wall with her left hand on her hip and right arm relaxed. The shot is candid and unposed, slightly tilted and off‑center, capturing a natural moment as she mid‑step. The background shows a large window on the right and a green plant on a side table, all in sharp focus. Shot on a 24‑35 mm wide‑angle lens, with slight motion blur on the hands, raw unprocessed look, no filters or color grading, a small overexposure on the chest area from ambient light. Everything is fully sharp, no bokeh, no depth‑of‑field blur.”

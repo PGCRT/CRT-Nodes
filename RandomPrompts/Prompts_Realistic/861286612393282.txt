@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark hair blowing in the wind, wearing a black ribbed tank top and high‑waist black jeans. She is mid‑step, one foot slightly ahead of the other, hand gently resting on her stomach, smiling softly at the camera. Her pose is candid and spontaneous—she appears unaware that she is being photographed, as if caught in a natural moment of movement.
+
+- **Motion & Focus**  
+  Slight motion blur on the hair and hands to convey movement, but everything remains fully sharp—no portrait‑mode depth‑of‑field blur. The image uses a wide‑angle lens (24–35 mm) with a short focal length, giving a “handheld” feel. No bokeh; background is in focus.
+
+- **Lighting & Exposure**  
+  Raw, unprocessed look—no filters, no color grading, no post‑processing aesthetic. The exposure is slightly overexposed on the bright window side, with natural ambient daylight coming from a large window on the right. The lighting is uneven, giving a slight contrast between the interior and the outside view.
+
+- **Framing & Composition**  
+  No rule‑of‑thirds intentionality—accidental framing with a slight tilt and off‑center crop. The composition captures the subject’s upper body and a portion of the room behind her, including a bed on the left, a wooden side table on the right, a potted plant, a yellow mug, and a window that shows an outdoor green space. The frame is partial; the top of the image cuts off the ceiling corner, adding to the candid feel.
+
+- **Environment**  
+  A lived‑in bedroom in a residential house. The time of day is mid‑afternoon, with bright natural light streaming through a tall window. Weather outside is clear, with a hint of greenery visible through the glass. The room shows everyday clutter: a black bag on the bed, a plastic bag on the floor, a white cloth on the table, and a small yellow mug next to a plant. The scene feels real and unstyled.
+
+- **Lens & Technical**  
+  Short focal length (24–35 mm), wide‑angle, handheld shot. No bokeh; background fully sharp. Auto‑HDR or auto‑beauty mode off—raw, unprocessed look. Slight overexposure on the window side to capture the ambient light. Everything in focus, no portrait‑mode subject isolation.
+
+- **Prompt Summary**  
+  “A candid, spontaneous photograph of a young woman with long dark hair and a black tank top, mid‑step in a cluttered bedroom, captured with a wide‑angle lens at mid‑afternoon. The image shows slight motion blur on the hair and hands, raw exposure, accidental framing with a slight tilt, and a fully sharp background that includes a bed, a side table, a potted plant, and a window overlooking greenery. No filters or post‑processing—just a natural, unposed moment frozen in time.”

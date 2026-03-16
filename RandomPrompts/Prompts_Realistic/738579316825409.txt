@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark hair that’s slightly blown by a gentle breeze, sitting on a beige couch in a living room. She’s wearing a light‑blue fishnet bikini top and matching bottoms, one hand raised to her head as if she just finished a quick hair‑fix. Her face is turned toward the camera but not directly at it—she’s mid‑smile, eyes bright, a natural candid expression.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—an “in‑the‑moment” snapshot where the subject is unaware or mid‑action. The shot has slight motion blur from handheld instability, a tiny overexposure that gives it a raw, unprocessed look. No filters, no color grading, no post‑processing aesthetic—just the natural ambience of the scene.
+
+- **Environment**  
+  Specific real‑world location: a bright, sunlit living room in a modern apartment. Time of day: late afternoon, with warm, golden daylight streaming through a window, creating soft highlights on the subject’s skin and clothing. Weather or ambient conditions: mild, breezy, with a faint haze that adds depth to the background.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm), wide‑angle lens. No bokeh—everything is fully sharp, from foreground to background. Wide‑angle captures the entire couch and a portion of the wall behind it, giving an accidental, off‑center framing that’s not intentionally rule‑of‑thirds. Slight tilt in the camera gives a dynamic, spontaneous feel. The exposure is slightly overexposed, letting a hint of brightness bleed into the corners. No portrait mode or subject isolation—everything stays in focus.
+
+- **Composition Notes**  
+  The frame is slightly tilted, the subject’s left side is a bit off‑center, and the top of her head cuts just above the crown of the couch, creating a partial crop that feels natural and unposed. The background shows a plain wall with a faint texture, a small plant on a side table, and a window that lets in the afternoon light. The entire scene is fully sharp—no depth‑of‑field blur.
+
+- **Final Prompt**  
+  “A young woman with long dark hair, sitting on a beige couch in a bright late‑afternoon living room, wearing a light‑blue fishnet bikini top and matching bottoms, one hand raised to her head as if she just finished a quick hair‑fix. Candid, unposed, spontaneous capture with slight motion blur and a tiny overexposure for a raw, unprocessed look. 24‑35 mm wide‑angle lens, everything fully sharp, slightly tilted frame with off‑center framing that cuts the top of her head just above the couch, partial crop. Background shows a plain wall, a small plant on a side table, and a window letting in golden daylight. No filters, no color grading, no post‑processing—just natural ambient light and a handheld feel.”

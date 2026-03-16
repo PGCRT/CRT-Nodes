@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark hair tied in a high ponytail, wearing round black-rimmed glasses and a tight, black, zip‑front corset that clings to her curves. She’s seated in a black leather office chair, hands gripping the top of the corset as if she’s about to pull it tighter. Her face is lit with a bright, spontaneous smile; her head is slightly tilted, giving an informal, candid feel.
+
+- **Lighting & Exposure**  
+  Natural daylight from a window on the right side of the frame creates a soft overexposure on the subject’s chest and face, while the background remains fully sharp. The exposure is slightly uneven—warm highlights on the skin and cool tones in the background—producing a raw, unprocessed look. No auto‑beauty or filter enhancements; just a straightforward, handheld capture.
+
+- **Environment**  
+  The scene takes place in a bright, modern office or home workspace. A tall green plant stands to the left, a white radiator is visible on the right wall, and a window lets in natural light that casts subtle shadows. The time of day is mid‑afternoon, with warm, slightly hazy sunlight filtering through the window, creating a gentle glare on the subject’s chest.
+
+- **Lens & Technical**  
+  Use a short focal length wide‑angle lens (e.g., 24‑35 mm). Capture everything in focus—no bokeh or depth‑of‑field blur. The composition is accidental: the frame is slightly off‑center, with a mild tilt that gives a spontaneous, candid vibe. Keep the background fully sharp; no portrait‑mode isolation.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—an “in‑the‑moment” snapshot where the subject appears unaware of the camera. Encourage slight motion blur from handheld instability, and allow for minor imperfections: a slight tilt, partial crop, and a raw, unedited aesthetic.
+
+- **Post‑Processing**  
+  No filters, no color grading, no auto‑beauty mode—just a direct, natural capture with minimal post‑processing. A slight overexposure on the subject’s chest adds drama, while the rest of the image stays crisp and realistic.
+
+**Prompt Summary**  
+“Candid, wide‑angle shot of a smiling woman in a black corset, seated in an office chair, captured with a short focal length lens at mid‑afternoon daylight. Natural overexposure on the chest, fully sharp background, slight handheld blur, accidental off‑center framing—raw, unprocessed realism.”

@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A plus‑size woman in a nude‑colored lace‑detailed midi dress with a high slit, wearing a statement necklace and dangling earrings, walking confidently toward the camera while laughing. Her long, wavy hair is partially tied with a thin gold headband. She’s mid‑step, left foot slightly ahead, hands on the hips, capturing an unposed, spontaneous moment.
+
+- **Companions**  
+  Two friends flank her: one in a black mini‑dress to the left, the other in a cream‑colored dress to the right. They’re both laughing and reaching toward the central woman, creating a dynamic group interaction.
+
+- **Setting**  
+  The scene takes place on a sunlit patio of a modern residential house. A tall palm tree stands behind the group, its fronds swaying slightly. A wooden dining table and a glass coffee table are visible in the background, along with a white column and a small potted plant near the left side. The time of day is late afternoon, with warm golden light casting soft shadows.
+
+- **Lighting & Exposure**  
+  Natural daylight from the west, slight overexposure on the right side to emphasize the brightness of the scene. No auto‑HDR or beauty filters—raw, unprocessed look. Slight handheld shake gives a natural motion blur around the edges.
+
+- **Lens & Technical Specs**  
+  24‑mm wide‑angle lens (short focal length), f/4 aperture, 1/125 s shutter speed, ISO 400. Everything in focus—no bokeh, no depth‑of‑field blur; background fully sharp. Slight tilt to the right for an off‑center, accidental framing.
+
+- **Composition Notes**  
+  The shot is slightly cropped on the left and right, with the group occupying the central third of the frame but not strictly following the rule‑of‑thirds. The camera is held at eye level, creating a candid, spontaneous feel. The background includes a glimpse of a green plant and a white column, adding depth without any intentional studio lighting or editorial composition.
+
+- **Post‑Processing**  
+  No filters, no color grading, no post‑processing aesthetic—just raw, natural imagery with slight overexposure to keep the scene bright and lively.

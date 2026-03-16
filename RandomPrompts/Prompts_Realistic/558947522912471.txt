@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wet, platinum‑blonde hair sitting on a rugged sea‑rock, back to the camera, slightly turned toward the ocean. Her body is bare, with a natural, unposed posture as if she’s mid‑movement, one hand resting on the rock and the other supporting her weight. The pose captures a subtle lean to the right, creating a slight tilt and off‑center framing.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle, late‑afternoon sun that produces a soft overexposure on the skin and water, giving a raw, unprocessed look. Slight ambient glare on the wet hair and rock, with no color grading or filters applied. The exposure is slightly warm, with a gentle haze that keeps everything in focus.
+
+- **Environment**  
+  Coastal beach setting at sunset, with the ocean’s surface visible behind the rock. Small white foam from breaking waves is visible near the rock’s base. The background includes a few scattered stones and a hint of seaweed, adding texture. The time of day is late afternoon, creating long shadows and warm tones. Weather is mild, with a light breeze that creates slight motion blur on the hair.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24‑35 mm) with a short focal length, handheld shot with natural instability. No bokeh; background is fully sharp. The image uses a wide‑angle perspective that captures the subject’s full form and the surrounding environment in one frame. Slight motion blur from the subject’s movement and the camera’s slight shake. All elements—subject, rock, water, waves—are in focus.
+
+- **Composition & Style**  
+  Candid, spontaneous capture with no rule‑of‑thirds intentionality. The framing is accidental: the subject is slightly off‑center, the rock is not perfectly centered, and the composition feels natural and unposed. No studio lighting or professional composition—just a raw, in‑the‑moment snapshot.
+
+- **Post‑Processing**  
+  Auto‑HDR or auto‑beauty mode turned off. No filters, no color grading, no post‑processing aesthetic. The final image retains a natural, unedited feel with slight overexposure on the skin and water, preserving the ambient light’s warmth.

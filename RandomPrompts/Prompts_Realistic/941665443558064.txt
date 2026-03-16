@@ -1,0 +1,28 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair tied loosely at the back, standing in a sunlit bedroom. She’s wearing a delicate white lace bra and matching lace thong, both with subtle sequin accents that catch the light. Her left arm is raised, hand tucked behind her head, creating a casual, mid‑motion pose that feels spontaneous and unposed.
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window on the right side of the room creates a warm, slightly overexposed highlight on her torso and face. The exposure is a little bright at the top, giving a soft halo effect, while the lower part remains crisp. No auto‑HDR or beauty filters—just raw, unprocessed light.
+
+- **Camera Settings**  
+  - Lens: 24‑35 mm wide‑angle, short focal length, handheld.  
+  - Focal depth: everything from her face to the back of the room is fully sharp; no bokeh or portrait‑mode blur.  
+  - Shutter speed: 1/60 s (slight motion blur on the arms and hair, indicating a natural freeze).  
+  - Aperture: f/4.5 (wide opening for deep focus).  
+
+- **Composition & Framing**  
+  The shot is intentionally off‑center: the subject’s left side leans slightly to the right of the frame, creating a casual tilt. The composition is not rule‑of‑thirds; the head and shoulders occupy the upper‑left quadrant, while her lower body extends toward the bottom‑right. A small portion of a wooden dresser with a framed photo is visible on the left, and a patterned pillow rests on a sofa to the right. The background includes a bright window, a lamp shade, and a beige wall—everything in focus.
+
+- **Environment & Time**  
+  The scene takes place in a cozy, lived‑in bedroom during late morning. The sun is high but not directly overhead, casting soft shadows. A few stray dust motes float in the air, adding to the candid feel. The room’s decor includes a wooden dresser with a gold‑framed photo of a woman, a small lamp, and a patterned pillow on a sofa; a window lets in natural light that slightly overexposes the upper part of the frame.
+
+- **Technical Details**  
+  - No filters or color grading; raw JPEG with slight contrast.  
+  - Slight motion blur on the arms and hair, indicating handheld shake.  
+  - Wide‑angle capture gives a sense of space, but the background remains fully sharp—no depth‑of‑field blur.  
+  - The image has a natural, unposed feel, as if the subject was caught mid‑action.
+
+- **Prompt for Generation**  
+  “A young woman with long wavy brown hair, wearing a white lace bra and matching lace thong with sequin accents, stands in a sunlit bedroom. Her left arm is raised behind her head, creating a casual, spontaneous pose. Natural daylight from a large window on the right overexposes the upper part of the frame. Shot on a 24‑35 mm wide‑angle lens, handheld at 1/60 s and f/4.5, with everything in focus—no bokeh. The composition is off‑center, slightly tilted, capturing the woman’s face and torso in the upper‑left quadrant and her lower body extending to the bottom‑right. A wooden dresser with a gold‑framed photo sits on the left, a patterned pillow rests on a sofa to the right, and a bright window is visible behind her. The scene is late morning, with soft shadows and dust motes in the air. Raw JPEG, no filters, slight motion blur on the arms and hair, everything sharp—candid, unposed, natural.”

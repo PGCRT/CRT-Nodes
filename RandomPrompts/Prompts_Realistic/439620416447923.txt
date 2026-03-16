@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail and loose strands framing her face, wearing a floral‑patterned strap‑in bra and denim shorts, captured mid‑turn on a city sidewalk. Her head is slightly tilted, mouth open in an expressive laugh, as if she’s just finished a conversation or is reacting to the wind. The shot should feel spontaneous, with the subject unaware of the camera’s presence—mid‑action, natural motion blur at the edges.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject is unaware or mid‑action. Slight tilt and off‑center framing; partial crop that doesn’t follow the rule‑of‑thirds. No rule‑of‑thirds intentionality—accidental framing. The image should have a raw, unprocessed look: no filters, no color grading, no post‑processing aesthetic. A slight overexposure or underexposure depending on ambient light is allowed. All details should be in focus; no portrait‑mode depth‑of‑field blur.
+
+- **Environment**  
+  Specific real‑world location: a downtown street corner with a brick building that has a “ROW” sign and a traffic light on the left, a green awning, a blue recycling bin, a terracotta pot, and a white trash can on the curb. A street lamp and a traffic signal are visible in the background. The time of day is late afternoon, with warm sunlight creating a subtle lens flare and slight overexposure on the subject’s shoulder. Weather is clear, with a light breeze that creates a faint motion blur on the subject’s hair.
+
+- **Lens & Technical**  
+  Short focal length (e.g., 24‑35 mm) wide‑angle lens. No bokeh; background fully sharp—everything in focus. No depth‑of‑field blur, no portrait mode. The image should have a raw, auto‑HDR or auto‑beauty mode off look. Slight handheld instability creates natural motion freeze or slight blur on the subject’s shoulder and hair. The composition is accidental, with a slight tilt that gives the shot a candid feel.
+
+- **Post‑Processing**  
+  Zero studio lighting, zero professional composition, zero editorial tone. Use natural daylight only. No color grading or filters—just raw, in‑camera capture. Slight overexposure or underexposure depending on ambient light is allowed. Keep everything in focus; no portrait mode.
+
+- **Final Prompt Summary**  
+  “A young woman with a high ponytail and loose strands framing her face, wearing a floral‑patterned strap‑in bra and denim shorts, captured mid‑turn on a city sidewalk. The shot should feel spontaneous, with the subject unaware of the camera’s presence—mid‑action, natural motion blur at the edges. Slight tilt and off‑center framing; partial crop that doesn’t follow the rule‑of‑thirds. No rule‑of‑thirds intentionality—accidental framing. The image should have a raw, unprocessed look: no filters, no color grading, no post‑processing aesthetic. A slight overexposure or underexposure depending on ambient light is allowed. All details should be in focus; no portrait‑mode depth‑of‑field blur. The background shows a brick building with a ‘ROW’ sign, a traffic light, a green awning, a blue recycling bin, a terracotta pot, and a white trash can on the curb. The time of day is late afternoon, with warm sunlight creating a subtle lens flare and slight overexposure on the subject’s shoulder. Weather is clear, with a light breeze that creates a faint motion blur on the subject’s hair. Use a short focal length (24‑35 mm) wide‑angle lens. No bokeh; background fully sharp—everything in focus. No depth‑of‑field blur, no portrait mode. The image should have a raw, auto‑HDR or auto‑beauty mode off look. Slight handheld instability creates natural motion freeze or slight blur on the subject’s shoulder and hair. The composition is accidental, with a slight tilt that gives the shot a candid feel.”

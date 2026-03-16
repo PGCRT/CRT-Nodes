@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, straight blonde hair, wearing a fitted dark‑green long‑sleeve top, captured mid‑turn in a natural outdoor setting. Her head is tilted slightly to the left, eyes closed as if she’s feeling the wind or rain, giving a candid, unposed feel. The camera is positioned at a low angle, almost at eye level, with a wide‑angle lens (24–35 mm) that keeps the entire scene in focus—no bokeh or depth‑of‑field blur.
+
+- **Motion & Focus**  
+  Slight motion blur on the subject’s hair and clothing, indicating handheld instability and a natural “in‑motion” capture. Everything from foreground to background is fully sharp; no portrait‑mode isolation. The blur is subtle—just enough to convey spontaneity, not too much to obscure detail.
+
+- **Lighting & Exposure**  
+  Raw, unprocessed look with auto‑HDR off. The exposure is slightly overexposed on the subject’s face and shirt, letting a soft glow hit the green fabric and her skin, while the background remains bright but not washed out. No color grading or filters—just natural ambient light, likely late afternoon or early evening, with a warm, slightly cool tone.
+
+- **Environment**  
+  The setting is a lush park or meadow with tall grass and a line of mature trees in the background. The time of day is “golden hour” but not too late—the sun is low enough to cast soft shadows and create a gentle backlight that highlights the wetness on her shirt. Light rain is falling, visible as faint streaks across the frame, adding texture and a sense of movement.
+
+- **Lens & Technical**  
+  Short focal length (24–35 mm), wide‑angle, no bokeh, background fully sharp. The lens is handheld, giving a slight tilt and off‑center framing that feels accidental and spontaneous. No rule‑of‑thirds intentionality—everything is framed as it naturally appears.
+
+- **Composition & Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Imperfections are encouraged: slight tilt, partial crop, and a natural “mid‑turn” pose. The composition avoids deliberate rule‑of‑thirds; the subject occupies the left‑center of the frame with her hair flowing to the right, creating a dynamic diagonal line.
+
+- **Post‑Processing**  
+  Zero studio lighting, zero professional composition, zero editorial tone. No filters or color grading—just raw, in‑camera capture with a slight overexposure on the subject and a faint motion blur from handheld shooting. The final image should feel like a genuine, spontaneous snapshot taken in a real world setting.

@@ -1,0 +1,16 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman with long, wavy brown hair, wearing a black triangle‑style bikini, standing on a sunlit beach. She’s mid‑gesture—right hand raised to her head, left hand on hip—captured in a spontaneous, unposed moment. Her torso is slightly tilted, and the framing is off‑center, giving an accidental, handheld feel.
+
+- **Appearance & Details**  
+  The subject has a toned abdomen, a small star tattoo near her left thigh, and a second star‑ish design just above it. Her skin shows natural texture, with a hint of slight overexposure from the bright ambient light. No auto‑beauty or filter enhancement—just raw, unprocessed imagery.
+
+- **Environment**  
+  The setting is a sandy beach with soft, blurred dunes in the background; the time of day is late afternoon, giving warm, golden tones. The weather is clear, with a few scattered clouds overhead. The background is fully sharp—no bokeh or depth‑of‑field blur.
+
+- **Lens & Technical**  
+  Use a short focal‑length wide‑angle lens (e.g., 24 mm). Capture everything in focus—no portrait‑mode subject isolation. Shoot with a handheld, slightly unstable motion that produces a subtle freeze‑frame blur around the edges. The exposure is slightly overexposed to let the sunlight bloom.
+
+- **Composition & Style**  
+  No rule‑of‑thirds intentionality—compose as if you’re capturing a fleeting moment. Keep the shot wide, letting the beach and dunes fill the frame. Aim for a candid, spontaneous vibe: slight tilt, partial crop, and no editorial polish. The final image should feel like a genuine, raw snapshot taken in real life.

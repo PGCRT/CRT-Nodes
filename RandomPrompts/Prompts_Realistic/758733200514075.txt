@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  Three women in sheer white bikini sets, standing side‑by‑side against a bright white brick wall. The central woman is slightly forward, hands on hips, smiling at the camera; the two on the sides lean subtly toward the center, creating a casual, overlapping composition. Their hair is long, wavy, and sun‑kissed, with subtle highlights from natural daylight.
+
+- **Lighting & Exposure**  
+  Natural midday sunlight, slightly overexposed on the upper body, giving a warm, soft glow. No auto‑HDR or beauty filters—just raw, unprocessed light. The exposure is a little high on the skin tones, with a faint halo around the subjects.
+
+- **Camera Settings**  
+  Wide‑angle lens (24 mm), handheld, slightly shaky. F‑stop 5.6, shutter speed 1/125 s, ISO 400. Everything in focus—from foreground to background—no portrait‑mode blur. Slight motion blur on the hands and hair to emphasize candid movement.
+
+- **Framing & Composition**  
+  No rule‑of‑thirds intentionality: the group is centered but slightly tilted, creating a casual, spontaneous feel. The frame captures the full height of the women from head to toe, with a partial crop that cuts off a bit of the brick wall on the sides. Background is fully sharp—no bokeh.
+
+- **Environment**  
+  Location: an urban loft with exposed white brick, no furniture, just a clean backdrop. Time of day: early afternoon, when the sun is high, casting soft shadows. Ambient conditions: light breeze, slight dust motes in the air.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, off‑center framing, partial crop that cuts off the top of the brick wall on both sides. The women’s hands are mid‑pose, one hand on hip, the other near the waist, with a natural slight blur from handheld shake. Their nails are painted a soft pink, and they wear simple gold hoop earrings.
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, zero studio lighting. A single, subtle vignette to keep the edges gentle. The final image has a raw, candid feel, as if captured mid‑action.

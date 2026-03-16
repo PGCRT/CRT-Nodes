@@ -1,0 +1,26 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman with voluminous, curly auburn hair, wearing a black leather harness-style bodysuit with multiple buckles and straps. She is kneeling on a bed with light blue sheets, one hand near her face in a casual, mid‑gesture pose, the other resting on her thigh. Her expression is natural, slightly surprised, as if caught mid‑conversation or mid‑dance.
+
+- **Lighting & Exposure**  
+  Natural daylight from a western window, late afternoon, soft but warm. Slight overexposure on the subject’s face and upper body, creating a subtle halo effect. No auto‑beauty mode—raw, unprocessed look. The exposure is uneven, with a slight vignette at the corners.
+
+- **Camera & Lens**  
+  35 mm wide‑angle lens (short focal length), handheld. Everything in focus—from the subject’s face to the bed sheets—no bokeh, no depth‑of‑field blur. Slight motion blur on the hands and hair to convey spontaneous movement.
+
+- **Composition & Framing**  
+  Off‑center, accidental framing: the left side of the frame cuts off a bit of the bed headboard; the right side shows a portion of the wall. The shot is slightly tilted, giving a casual, candid feel. No rule‑of‑thirds intentionality—just a natural, spontaneous crop.
+
+- **Environment**  
+  A simple bedroom with a dark metal bed frame and a muted blue wall. The time of day is early evening, with warm, golden light coming from the west. A faint breeze suggests a relaxed, informal setting.
+
+- **Technical Details**  
+  - Focal length: 35 mm  
+  - Aperture: f/4 (wide, shallow depth but all elements remain sharp)  
+  - Shutter speed: 1/60 s (enough for slight motion blur)  
+  - ISO: 400 (for natural grain and dynamic range)  
+  - No filters or color grading—raw JPEG with auto‑HDR off.
+
+- **Final Prompt**  
+  “A woman with voluminous curly auburn hair, wearing a black leather harness bodysuit, kneeling on a bed with light blue sheets in a bedroom. She is caught mid‑gesture, one hand near her face, the other on her thigh. Natural late‑afternoon daylight from the west creates a slight halo and overexposure on her face. Shot on a 35 mm wide‑angle lens, handheld, everything in focus with a touch of motion blur on the hands and hair. The framing is off‑center and slightly tilted, accidental crop that includes part of the dark metal bed frame and a muted blue wall. No filters or post‑processing—raw, candid, spontaneous.”

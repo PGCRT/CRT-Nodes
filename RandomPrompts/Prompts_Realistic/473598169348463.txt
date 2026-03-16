@@ -1,0 +1,28 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with soft, wavy blonde hair, wearing a light‑blue ribbed tank top and white shorts, captured mid‑crouch on a wooden floor. Her left hand is gently touching her right shoulder, fingers slightly curled, as if she’s about to adjust her shirt or rest her head. Her face is turned toward the camera with a natural, unposed expression, eyes wide and bright, mouth slightly open as if she’s speaking or laughing.
+
+- **Lighting & Exposure**  
+  Slight overexposure on the right side of the frame, giving a warm, ambient glow that suggests late‑afternoon sunlight. The exposure is uneven—soft highlights on her face and shoulder, subtle shadows in the crouch area—creating a raw, unprocessed look. No auto‑beauty mode; no filters, no color grading, no post‑processing aesthetic.
+
+- **Camera & Lens Settings**  
+  Wide‑angle lens (24 mm or 35 mm), short focal length, handheld. Everything in focus—no bokeh, no depth‑of‑field blur. The background is fully sharp, from the beige sofa behind her to the wooden floor and a small potted plant in the far corner.
+
+- **Composition & Framing**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Slight tilt and off‑center framing; partial crop that cuts off the left side of her hair, giving an accidental, informal feel. No rule‑of‑thirds intentionality—just a natural, casual composition.
+
+- **Environment**  
+  A bright, lived‑in living room with a beige sofa, wooden floor, and a small potted plant in the corner. Time of day: late afternoon, warm sunlight streaming from the left, creating soft highlights and subtle shadows. Weather: clear, sunny.
+
+- **Technical Details**  
+  - Focal length: 35 mm (wide‑angle)  
+  - Aperture: f/4.0 (sharp background)  
+  - Shutter speed: 1/60 s (slight motion blur from handheld instability)  
+  - ISO: 400 (natural contrast)  
+  - No portrait mode, no subject isolation.
+
+- **Prompt for Image Generation**  
+  “A young woman with soft wavy blonde hair, wearing a light‑blue ribbed tank top and white shorts, captured mid‑crouch on a wooden floor in a bright living room. Her left hand gently touches her right shoulder, fingers slightly curled. The scene is lit by late‑afternoon sunlight from the left, creating a slight overexposure on the right side of the frame. Use a 35 mm wide‑angle lens, handheld, everything in focus—no bokeh. Capture a candid, unposed moment with a slight tilt and off‑center framing that partially crops the left side of her hair. The background includes a beige sofa and a small potted plant in the corner, fully sharp. Render raw, unprocessed, no filters or color grading.”
+
+Provide only the structured prompt.

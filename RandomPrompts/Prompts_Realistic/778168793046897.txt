@@ -1,0 +1,39 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  - A young woman with long, dark, wavy hair, wearing a simple off‑shoulder white top.  
+  - Her head is slightly tilted, eyes closed or half‑closed, mouth relaxed, as if she’s mid‑smile or about to speak.  
+  - Capture her in a “mid‑action” candid moment—no posed studio portrait, just a natural, spontaneous snapshot.
+
+- **Camera & Lens**  
+  - Use a wide‑angle lens (e.g., 24 mm or 35 mm) for a short focal length, keeping everything in focus—no bokeh or depth‑of‑field blur.  
+  - Shoot at a slightly high angle to emphasize the shoulder and neck line.  
+
+- **Lighting & Exposure**  
+  - Natural daylight, late‑afternoon (golden hour) with soft, warm ambient light.  
+  - Slight overexposure on the face to give a raw, unprocessed look; avoid auto‑HDR or beauty filters.  
+  - Keep the exposure handheld—tiny vibration may produce a subtle motion blur on the subject’s hair and shoulders.
+
+- **Composition & Framing**  
+  - No rule‑of‑thirds intentionality: frame the shot “accidentally” with a slight off‑center crop.  
+  - Capture a close‑up of the face and upper chest, keeping the background fully sharp (no portrait‑mode isolation).  
+  - Include a portion of the background foliage or a blurred cityscape to give context, but keep it in focus as well.
+
+- **Environment**  
+  - Location: a sunny park or a quiet street with a light green backdrop; the background should appear slightly out of focus only because of the wide‑angle lens, not because of a bokeh effect.  
+  - Time of day: late afternoon, around 5 – 6 pm, giving warm, soft light.  
+  - Weather: clear, mild weather with a gentle breeze; the subject’s hair is slightly blown by the wind.
+
+- **Technical Settings**  
+  - Aperture: f/4 – f/5.6 (wide, but not too wide).  
+  - Shutter speed: 1/60 – 1/125 s (handheld instability creates a slight motion blur).  
+  - ISO: 400 – 800 (depending on ambient light).  
+  - Focus: manual or autofocus on the face—everything in focus, no portrait‑mode subject isolation.  
+
+- **Post‑Processing**  
+  - No filters, no color grading, no auto‑HDR.  
+  - Slight overexposure on the face to keep the look raw and natural.  
+  - Minimal editing—only basic exposure adjustment and a tiny crop if needed.
+
+- **Final Prompt Summary**  
+  “A candid, wide‑angle shot of a young woman with long dark wavy hair in an off‑shoulder white top, captured at a late‑afternoon sunny park. The image uses a 24 mm lens, handheld shutter speed of 1/80 s, f/5 aperture, ISO 600, natural daylight with slight overexposure. The framing is off‑center and slightly tilted, everything in focus from the face to the background, no bokeh. The subject’s head is tilted, eyes half‑closed, mouth relaxed, as if mid‑smile. Background foliage is fully sharp. Slight motion blur from handheld instability adds realism. No filters or auto‑HDR—raw, unprocessed look.”

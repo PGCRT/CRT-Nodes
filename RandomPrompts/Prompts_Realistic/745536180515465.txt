@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman with wet, dark hair cascading over her shoulders, captured mid‑crouch by a swimming pool. She’s wearing high‑heeled sandals, her back turned to the camera, knees bent, hands resting on her thighs. Her skin glistens with water droplets, catching the sunlight.  
+
+- **Motion & Focus**  
+  Slight motion blur from handheld shake; everything in focus—no portrait‑mode bokeh. The image has a raw, unprocessed look: no filters, no color grading, just natural exposure (slight overexposure on the bright sky).  
+
+- **Lens & Technical**  
+  Wide‑angle lens (20–35 mm), short focal length. No depth‑of‑field blur—background fully sharp.  
+
+- **Environment**  
+  A sunny afternoon in a lush garden beside a rectangular pool. Tall cypress trees, a hedge, and a terracotta pot with pink flowers are visible in the background. The pool’s water reflects the sky, and the deck is made of wooden planks.  
+
+- **Candid Elements**  
+  The shot feels spontaneous: the subject is unaware of the camera, slightly tilted framing, off‑center composition. A few stray droplets hang from her hair, a faint shadow falls on the deck, and the background foliage is fully sharp.  
+
+- **Lighting & Exposure**  
+  Natural daylight, midday sun with slight overexposure on the sky; the light hits the subject’s back and creates subtle highlights.  
+
+- **Prompt Summary**  
+  “A woman in high‑heeled sandals crouches by a pool on a sunny afternoon, her wet hair and skin glistening. Capture with a wide‑angle lens, slight motion blur, full sharpness, raw exposure, no filters. The background shows tall cypress trees, a hedge, and a terracotta pot with pink flowers. The scene is candid, slightly tilted, off‑center, with everything in focus.”

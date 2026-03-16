@@ -1,0 +1,24 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, athletic woman with long, wavy blonde hair and blue nail polish stands in a bright, modern living room. She’s wearing a delicate white lace lingerie set (transparent bra and high‑waisted panties) that features floral motifs and scalloped edges. Her hands hang loosely by her sides, fingers slightly curled, as if she just finished a gentle stretch or is about to pick up a cup from the kitchen counter. A subtle, natural smile curves her lips; her eyes are focused slightly off-camera, giving a candid, mid‑action feel.
+
+- **Lighting & Exposure**  
+  Soft, natural daylight comes from a large glass door on the left, creating a slight overexposure on the upper body while keeping the background fully sharp. The exposure is slightly uneven—warm highlights on the face and cool tones in the background—producing a raw, unprocessed look. No auto‑HDR or beauty filters; just a handheld shot with a wide‑angle lens.
+
+- **Camera & Lens Settings**  
+  24‑mm focal length (wide‑angle), f/4.0 aperture, 1/125 s shutter speed, ISO 400. Slight motion blur from the hand‑held camera adds a natural, spontaneous feel. Everything—from the subject to the background—is in focus; no portrait‑mode depth‑of‑field blur.
+
+- **Composition & Framing**  
+  The frame is intentionally off‑center: the woman’s left side leans slightly toward the center, and the top of the image cuts off just above her head, giving a partial crop. No rule‑of‑thirds intentionality—this is a candid, spontaneous composition. The background shows a bright, uncluttered living room with a white sofa, a potted plant, and a large glass door that reflects the outdoor greenery. A small portion of a wooden floor and a white rug are visible at the bottom.
+
+- **Environment & Time**  
+  The scene is set in a contemporary, minimalist apartment during late morning. The weather outside is clear, with soft sunlight filtering through the glass door, creating gentle shadows and highlights. The ambient light gives a warm‑cool mix that enhances the lace’s translucidity.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera adds realism. The woman’s left hand has a tiny smudge of blue nail polish that’s slightly blurred, indicating motion. A faint reflection on the glass door shows an outdoor tree, adding depth. The lace details are crisp, with subtle shadows that emphasize the texture.
+
+- **Prompt for Text‑to‑Image Generation**  
+  “A tall woman with long wavy blonde hair and blue nail polish stands in a bright modern living room, wearing a white lace lingerie set with floral motifs and scalloped edges. She’s mid‑pose, hands loosely by her sides, a subtle smile on her face, as if she just finished a stretch. Soft natural daylight from a large glass door creates slight overexposure on the upper body while keeping the background fully sharp. Shot on a 24‑mm wide‑angle lens at f/4.0, 1/125 s, ISO 400, with slight motion blur from handheld camera. Composition is off‑center and partially cropped, no rule‑of‑thirds, everything in focus. The background shows a white sofa, a potted plant, and a reflection of an outdoor tree on the glass door. Late morning sunlight gives warm‑cool highlights. Raw, unprocessed look, no filters, no auto‑HDR.”  
+
+Provide only the structured prompt.

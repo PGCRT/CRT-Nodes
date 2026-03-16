@@ -1,0 +1,28 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark hair kneeling on a large, smooth river rock in a natural outdoor setting. Her left arm displays a small rose tattoo near the shoulder. She is nude, with her hands resting gently on her knees, fingers slightly spread. Her gaze is direct, almost candid, as if she’s just caught mid‑pose.
+
+- **Lighting & Exposure**  
+  Slight overexposure from natural daylight—mid‑afternoon sun casting soft highlights on her skin and the rocks. No auto‑beauty or filter enhancement; raw, unprocessed look. The exposure is a little bright at the top, giving a subtle halo effect to her hair and shoulders.
+
+- **Camera Settings**  
+  Wide‑angle lens (24‑35 mm), short focal length, handheld. All elements in focus—background rocks and foliage fully sharp, no bokeh. Slight motion blur on the subject’s hands from a quick shutter release, giving a natural, spontaneous feel.
+
+- **Composition & Framing**  
+  No intentional rule‑of‑thirds; the frame is slightly tilted, off‑center, capturing the woman and the rock she’s kneeling on as the central focus, with a cluster of rounded stones and a spiky plant (like an agave) in the background. The crop is partial—edges cut off at the left and right, emphasizing candidness.
+
+- **Environment**  
+  Location: A sunny, dry riverbed or canyon floor, scattered with smooth, moss‑covered rocks. Behind her, a tall, spiky plant (agave or yucca) rises, its leaves creating a natural frame. Time of day: mid‑afternoon, with warm, slightly harsh sunlight that creates soft shadows. Weather: clear, no wind, ambient stillness.
+
+- **Technical Details**  
+  - Focal length: 35 mm (wide angle).  
+  - Aperture: f/4–f/5.6 (sharp background).  
+  - Shutter speed: 1/60 s (slight motion blur).  
+  - ISO: 400–800 (depending on ambient light).  
+  - No portrait mode, no depth‑of‑field blur—everything from foreground to background is in focus.
+
+- **Prompt for Image Generation**  
+  *“A nude woman with long dark hair kneeling on a large river rock in a dry canyon, her left shoulder bearing a small rose tattoo. She rests her hands on her knees, fingers slightly spread, gazing directly at the camera. The scene is bathed in mid‑afternoon sunlight with a slight overexposure, creating a soft halo around her hair. Shot on a 35 mm wide‑angle lens, handheld, all elements sharp, slight motion blur on the hands. The background features a cluster of smooth stones and a tall spiky plant (agave) rising behind her. The frame is slightly tilted and off‑center, capturing a candid, spontaneous moment with no intentional rule‑of‑thirds. Render in raw, unprocessed realism, no filters or color grading.”*
+
+Provide only the structured prompt.

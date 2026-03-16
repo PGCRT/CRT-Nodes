@@ -1,0 +1,18 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A fit woman with long, wavy brown hair standing on a sunny beach, wearing a navy blue “bell”‑branded bikini. She’s mid‑gesture: one hand on her hip, the other lightly touching her chest, head tilted slightly to the side, eyes smiling at the camera. Her posture is casual and spontaneous, as if she’re caught in a natural moment of confidence.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. Slight tilt and off‑center framing; partial crop that gives an accidental, handheld feel. No rule‑of‑thirds intentionality. The shot has a raw, unprocessed look: no filters, no color grading, no post‑processing aesthetic. A hint of slight overexposure from the bright ambient light, with a tiny motion blur from handheld instability.
+
+- **Environment**  
+  Specific real‑world location: a coastal cliffside with lush green shrubs in the foreground and the ocean horizon behind. Time of day: late morning, soft golden sunlight casting warm highlights. Weather: clear, breezy, with a light haze on the water. The background is fully sharp — no bokeh, no depth‑of‑field blur.
+
+- **Lens & Technical**  
+  Short focal length (24–35 mm), wide‑angle lens. Everything in focus; no portrait mode or subject isolation. Wide‑angle captures the entire scene: subject, foliage, ocean, and sky. Slight overexposure or underexposure depending on ambient light — a subtle brightness that gives the image an organic feel. No auto‑HDR or auto‑beauty mode — raw, unprocessed look.
+
+- **Composition Notes**  
+  The framing is accidental: the subject’s left hip is slightly cut off by the edge of the frame, giving a dynamic, informal vibe. The background foliage and ocean are fully sharp, emphasizing the wide‑angle capture. The shot feels like a genuine, spontaneous snapshot taken with a handheld camera in natural light.
+
+**Provide only the structured prompt.**

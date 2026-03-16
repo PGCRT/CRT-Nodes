@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy blonde hair, wearing a sheer black tank top and bright red shorts, sitting casually on a cream‑colored sofa. Her hands rest on her hips, one leg bent with a white sock featuring two black stripes peeking out from beneath the shorts. She’s mid‑smile, eyes bright, looking slightly off‑camera as if caught in a spontaneous moment.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject is unaware of the camera or appears to be mid‑action. Slight tilt and off‑center framing give an accidental, handheld feel. The composition is not intentionally rule‑of‑thirds; the frame cuts off the top of the sofa cushion and a portion of a green fiddle‑leaf fig plant in the background.
+
+- **Environment**  
+  A bright, sunlit living room in the late afternoon. Natural daylight comes from a window on the left, creating a soft overexposure on the subject’s face and a gentle warmth across the scene. The ambient light is slightly hazy, as if the weather is mild and the time of day is around 4 pm.
+
+- **Lens & Technical**  
+  Short focal length (20–35 mm) wide‑angle lens, all elements in focus — no bokeh, no depth‑of‑field blur. The image has a raw, unprocessed look: no filters, no color grading, no post‑processing aesthetic. Slight motion blur is present on the subject’s hands and the background plant, indicating handheld instability. Auto‑HDR or auto‑beauty mode is off; the exposure is slightly uneven, with a warm tint from the window light.
+
+- **Details & Imperfections**  
+  The sofa cushion is slightly out of alignment, the plant’s leaves are partially cropped, and the woman’s left hand is blurred as if she just moved. The overall tone is natural, with a slight overexposure on the face and a subtle underexposure on the lower body, giving the image a candid, spontaneous feel.
+
+- **Prompt Summary**  
+  “A young woman with long wavy blonde hair, in a sheer black tank top and red shorts, sitting on a cream sofa in a sunlit living room. She’s mid‑smile, hands on hips, one leg bent showing a white sock with two black stripes. A green fiddle‑leaf fig plant sits behind her. Capture with a 20–35 mm wide‑angle lens, all in focus, slight motion blur, handheld tilt, accidental framing, raw unprocessed look, natural overexposure on the face, late afternoon light from a window on the left.”

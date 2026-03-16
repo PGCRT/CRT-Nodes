@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair, wearing a soft beige sleeveless top and matching high‑waist trousers, walking confidently toward the camera on a cobblestone street. Her left hand is slightly bent at the wrist, her right arm relaxed by her side, capturing a natural mid‑step motion. She’s in the middle of a casual stride, head tilted slightly to the left, eyes focused ahead, giving an unposed, spontaneous feel.
+
+- **Cinematic Details**  
+  Slight motion blur on the legs and background to emphasize movement, while the face remains crisp. The image has an auto‑HDR touch but no color grading or filters—just raw, natural tones. A hint of overexposure in the upper right corner from the ambient sunlight creates a subtle glow.
+
+- **Framing & Composition**  
+  Wide‑angle lens (24 mm) with a short focal length, capturing a broad view of the scene. The frame is intentionally off‑center: the subject’s left side is slightly cut off by the edge, and the camera is tilted a few degrees to the right, giving an accidental, handheld feel. Everything—from the woman’s face to the far end of the street—is in focus; no bokeh or depth‑of‑field blur.
+
+- **Environment**  
+  The setting is a bustling urban alleyway lined with red brick buildings, narrow storefronts, and a wooden bench on the left. A few pedestrians are visible in the background, walking away from the camera. The time of day is late morning, with warm, golden sunlight coming from the right, casting soft shadows on the cobblestones. Light leaves a slight haze, as if the air is still after a gentle breeze.
+
+- **Lens & Technical**  
+  Short focal length (24 mm) for wide coverage; no bokeh—background fully sharp. The image uses a handheld shot with natural motion freeze or slight blur from instability. No portrait‑mode isolation—everything, from the foreground to the background, is crisp.
+
+- **Final Prompt**  
+  “A young woman with long wavy brown hair, wearing a beige sleeveless top and high‑waist trousers, mid‑stride on a cobblestone street in a red‑brick alleyway. The shot is taken with a 24 mm wide‑angle lens, slightly tilted and off‑center, capturing spontaneous motion blur on the legs while keeping the face and background fully sharp. Warm late‑morning sunlight hits from the right, creating a subtle overexposed glow. The scene includes a few pedestrians in the background, a wooden bench on the left, and a railing on the right. No filters or color grading—raw, natural tones with slight handheld instability.”

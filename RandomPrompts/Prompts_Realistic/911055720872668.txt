@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, athletic woman with a muscular build, long brown hair tied back, wearing gray underwear and matching ankle socks. She stands in a relaxed, confident pose with hands on hips, feet slightly apart, body angled toward the camera but not perfectly centered. Her face is turned slightly to the side, giving an informal, candid feel.
+
+- **Motion & Focus**  
+  Slight motion blur at the edges from handheld shake; the subject’s body is mostly sharp but has a subtle dynamic quality. Everything in the frame—from her toes to the back of the chair—is fully in focus, no portrait‑mode depth blur. No auto‑beauty or filter processing—raw, natural look with a hint of slight overexposure to keep ambient light warm.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm), short focal length, no bokeh. Background is completely sharp, no depth‑of‑field blur. The shot uses a slightly tilted, off‑center composition—no rule‑of‑thirds intentionality. Slight partial crop on the sides to enhance spontaneity.
+
+- **Environment**  
+  Location: A bright, modern dining area in a wooden‑furnished home. Light wood table and two chairs behind her, a sheer curtain on the right letting in natural daylight. Time of day: late morning, soft sunlight coming from the left, creating gentle shadows. Weather: clear, mild, no wind.
+
+- **Lighting & Color**  
+  Natural daylight with a slight overexposure that gives a warm, organic tone. No color grading or post‑processing—just raw capture. The lighting is uneven enough to suggest a casual, unposed moment.
+
+- **Composition Notes**  
+  Capture the scene as if you’re handheld: slight tilt and off‑center framing, accidental cropping on the sides. Keep the background fully sharp; no bokeh. Emulate a candid, spontaneous vibe—subject appears unaware of the camera, mid‑action, with natural imperfections that add realism.
+
+- **Prompt Summary**  
+  “A tall, muscular woman in gray underwear and socks stands confidently with hands on hips in a bright, wooden‑furnished dining room. Capture with a wide‑angle, short focal length lens, slight motion blur, full sharpness, raw natural lighting, and a slightly tilted, off‑center composition that feels candid and spontaneous.”

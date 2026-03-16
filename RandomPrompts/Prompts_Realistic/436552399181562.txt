@@ -1,0 +1,37 @@
+**Realistic Candid Photography Prompt Framework – “Forest Bathing in a Mountain Stream”**
+
+- **Subject & Pose**  
+  A young woman with shoulder‑length brown hair, bare‑toed, standing mid‑pose in a shallow mountain stream. Her arms are raised above her head, fingers interlaced, as if she’s about to lift a rock or adjust her hair. She looks directly at the camera with a soft, natural smile. The pose is slightly off‑center, a handheld “mid‑action” feel, with a faint motion blur on the arms to suggest movement.
+
+- **Environment**  
+  Location: A clear, rocky mountain stream in a temperate forest. Tall pine trees line the bank, their trunks and leaves forming a dense, green backdrop. Large, weathered boulders lie along the water’s edge. The stream’s surface is rippled, with small waves reflecting the sky.  
+
+  Time of day: Late morning, around 10:30 AM. The sun is high but not directly overhead, casting a warm, golden‑blue light that slightly overexposes the upper part of the frame while keeping the lower part (the water) in gentle shadow.
+
+  Weather: Light breeze, ambient humidity, no rain. The sky is partly cloudy with a soft, diffused daylight that keeps everything in focus.
+
+- **Lens & Technical**  
+  Lens: 24‑mm wide‑angle prime lens (short focal length).  
+  Focal length: 24 mm – “wide” but not ultra‑wide; the frame captures the subject and a broad section of the environment.  
+  Aperture: f/5.6 – moderate depth of field, everything from the subject to the background stays sharp (no portrait‑mode blur).  
+  Shutter speed: 1/125 s – enough to freeze the motion of the water while leaving a subtle motion blur on the arms.  
+  ISO: 400 – low enough for clean detail without noise.  
+
+- **Composition & Framing**  
+  - The shot is candid and spontaneous; the subject appears unaware of the camera, as if she’s mid‑gesture.  
+  - Slight tilt to the left, a handheld “accidental” angle that gives an organic feel.  
+  - No rule‑of‑thirds intentionality – the subject’s head sits slightly above the center line, and the stream’s edge cuts off the lower right corner for a partial crop.  
+  - Background is fully sharp: trees, rocks, and water all in focus, no bokeh.  
+
+- **Lighting & Color**  
+  - Auto‑HDR or auto‑beauty mode turned off – raw, unprocessed look.  
+  - Slight overexposure on the upper half of the image (the subject’s head and arms) due to the bright sky; the lower half remains a bit darker, creating a natural contrast.  
+  - No filters, no color grading, no post‑processing aesthetic – just the raw capture.  
+
+- **Details & Imperfections**  
+  - Slight motion blur on the raised arms, indicating a handheld shot.  
+  - Minor tilt and off‑center framing give the image a candid, spontaneous vibe.  
+  - The water’s surface shows small ripples; the rocks have natural texture, and the trees’ leaves are fully detailed.  
+
+- **Final Prompt Summary**  
+  “A young woman with shoulder‑length brown hair stands bare‑toed in a shallow mountain stream, arms raised above her head in a mid‑action pose. The scene is set in a dense pine forest with large boulders along the water’s edge, captured at late morning with a 24‑mm wide‑angle lens at f/5.6 and 1/125 s shutter speed. The shot has slight motion blur on the arms, a handheld tilt, and no rule‑of‑thirds intentionality. Everything from the subject to the background is fully sharp, with a slight overexposure on the upper half, producing a raw, unprocessed, realistic candid photograph.”

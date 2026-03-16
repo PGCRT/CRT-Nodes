@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman with long, dark hair and a “The Woman” tattoo on her left breast, wearing a black thong bikini, leaning sideways against a moss‑covered rock formation at a coastal cave entrance. Her left hand rests on her thigh, her right arm supports her weight on the wet sand, and her head is tilted slightly to the side as she looks toward the camera with a soft, natural smile.  
+
+- **Lighting & Exposure**  
+  Slight overexposure from mid‑afternoon sunlight; ambient light creates a warm, golden hue with subtle highlights on the water’s surface. No auto‑beauty mode—raw, unprocessed look.  
+
+- **Camera Settings**  
+  Wide‑angle lens (24–35 mm), handheld, slight motion blur from natural instability. Everything in focus—no portrait‑mode depth of field blur; background fully sharp.  
+
+- **Composition & Framing**  
+  Candid, unposed, spontaneous framing: the shot is slightly off‑center, with a partial crop that cuts off the top left corner of the cave. No rule‑of‑thirds intentionality—just accidental, natural composition.  
+
+- **Environment**  
+  Specific real‑world location: a coastal cave entrance on a sandy beach, with moss‑covered rocks and a small palm frond hanging from the rock’s edge. Time of day: mid‑afternoon, warm sunlight casting soft shadows. Weather: light breeze, gentle waves lapping at the shore.  
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, minor motion blur on the subject’s arm, natural imperfections in the focus (e.g., a small wrinkle on the woman’s forehead). The water reflects the sun’s glare, creating a bright specular highlight near the bottom left of the frame.  
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, zero post‑processing aesthetic—only raw capture.  
+
+**Prompt Summary**  
+“Candid, wide‑angle shot of a woman in a black thong bikini leaning against a mossy rock at a coastal cave entrance, mid‑afternoon sunlight with slight overexposure and handheld motion blur. The frame is slightly off‑center and partially cropped, capturing natural imperfections and a fully sharp background. No filters or post‑processing—raw, unprocessed realism.”

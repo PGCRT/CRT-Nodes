@@ -1,0 +1,24 @@
+**Realistic Candid Photography Prompt Framework – “Summer Afternoon on the Balcony”**
+
+- **Subject & Pose**  
+  A woman in a light, flowing summer dress, captured mid‑turn as she adjusts her scarf. Her face is partially turned toward the camera, a candid, unposed expression with a faint smile. The shot focuses on her upper body and one arm, with her left hand gripping the edge of a wooden balcony railing.  
+
+- **Motion & Focus**  
+  Slight motion blur at the edges from handheld shake; the center of the frame (the woman’s torso) is crisp while the periphery has a soft, natural blur. No portrait‑mode depth‑of‑field blur – everything from foreground to background stays in focus.  
+
+- **Lighting & Exposure**  
+  Auto‑HDR off. The scene is lit by warm, mid‑afternoon sunlight coming from the left, creating a gentle overexposure on the woman’s shoulder and a subtle highlight on the railing. A slight warmth tint keeps the look raw, unprocessed.  
+
+- **Lens & Technical**  
+  24 mm wide‑angle lens (short focal length). No bokeh – the background (a brick wall, a small garden, a distant tree) is fully sharp. The composition is accidental: the frame is slightly tilted, off‑center, and the crop cuts off part of the woman’s head and the railing, giving a spontaneous feel.  
+
+- **Environment**  
+  A wooden balcony in an old apartment building, mid‑summer afternoon. The time of day is late‑afternoon (around 4 pm), with warm, golden light and a faint haze from the sun. A small garden with a few green plants is visible beyond the railing; a brick wall runs along the back of the balcony. The weather is clear, with a light breeze.  
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, a partial crop that cuts off the top of the woman’s head and the lower part of the railing. A few stray hairs cling to her ear, a small smudge on her sleeve, and a faint dust particle on the railing – all adding realism. The woman’s scarf is slightly askew, her left hand is gripping the rail as if she just finished tying it.  
+
+- **Prompt for AI Image Generator**  
+  “A candid, unposed photograph of a woman in a light summer dress turning mid‑action on a wooden balcony, captured with a 24 mm wide‑angle lens. The image shows her upper body and one arm, her left hand gripping the railing, with slight motion blur from handheld shake but everything in focus. Warm mid‑afternoon sunlight comes from the left, creating a soft overexposure on her shoulder. The background is a brick wall and a small garden, fully sharp. The frame is slightly tilted and off‑center, partially cropping the top of her head and the lower railing. Raw, unprocessed look, no filters or color grading.”
+
+Provide only the structured prompt.

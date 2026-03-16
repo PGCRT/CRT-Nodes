@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark brown hair, wearing a black strapless crop top and a matching high‑waist skirt, walking confidently toward the camera in a bustling fashion showroom. Her face is slightly turned to the left, a warm smile on her lips, and she’s mid‑step, capturing a spontaneous, candid moment.
+
+- **Motion & Focus**  
+  Slight motion blur at the wrists and feet to suggest movement, while the entire scene remains fully sharp—no portrait‑mode depth of field. The camera is handheld, with a subtle tilt that gives an off‑center, accidental framing feel.
+
+- **Lighting & Exposure**  
+  Raw, unprocessed look with auto‑HDR turned off. Ambient daylight from a bright, white ceiling lamp combined with natural window light creates a mild overexposure on the upper part of the frame, giving a slightly hazy but natural tone. No color grading or filters applied.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24‑35 mm) with a short focal length, no bokeh. Everything from foreground to background is in focus. Slight vignetting at the corners is allowed for authenticity.
+
+- **Environment**  
+  The setting is a bright, modern fashion showroom with white walls and a high ceiling. A clothing rack filled with various garments lines the right side of the frame; a few other people are visible in the background, some holding cameras or phones. The time of day is mid‑afternoon, with soft natural light mixing with indoor lighting.
+
+- **Composition & Details**  
+  No rule‑of‑thirds intentionality—framing is spontaneous and slightly crooked. The composition captures a wide view that includes the subject’s full body, the clothing rack, and a portion of the ceiling lights. A few imperfections are intentional: a slight blur on the hands, a tiny tilt to the left, and a partial crop that cuts off the top right corner.
+
+- **Final Prompt**  
+  “A young woman with long dark brown hair, wearing a black strapless crop top and high‑waist skirt, walking confidently toward the camera in a bright fashion showroom. Slight motion blur on her wrists and feet, full sharpness across the frame, raw auto‑HDR off, mild overexposure from ambient daylight. Wide‑angle lens (24‑35 mm), handheld tilt, accidental off‑center framing. Background shows a clothing rack and other people with cameras. Mid‑afternoon lighting, white walls, ceiling lights. No filters, no color grading, everything in focus, no bokeh.”

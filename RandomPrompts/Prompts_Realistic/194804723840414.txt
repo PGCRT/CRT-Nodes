@@ -1,0 +1,16 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair standing in a bright, modern living room. She’s wearing a light‑green avocado‑print crop top and matching shorts. Her hands rest on her hips, slightly angled to one side, as if she just finished a playful pose or is mid‑movement. Her expression is neutral but lively, with a subtle smile.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject appears unaware of the camera, caught in a natural moment. Slight tilt and off‑center framing give an accidental, handheld feel. The shot has a tiny motion blur from the camera’s instability, and a hint of overexposure that lets the ambient daylight bleed through the window.
+
+- **Environment**  
+  Location: A sunlit, contemporary apartment with a beige sofa, a tall green plant in a ceramic pot, and a small potted plant by the window. The time of day is mid‑afternoon, with warm, soft sunlight coming from the left side of the frame, creating gentle highlights and subtle shadows. The weather outside the window is clear, with a faint hint of clouds.
+
+- **Lens & Technical**  
+  Use a short focal length wide‑angle lens (e.g., 24‑35 mm). Capture everything in focus — no bokeh or depth‑of‑field blur; the background remains sharp. Shoot in raw mode, with auto‑HDR off, to preserve an unprocessed look. Keep the exposure slightly high to let the ambient light carry a warm glow. No filters, no color grading, no post‑processing aesthetic. The composition is intentionally imperfect: slight crop on the edges, no rule‑of‑thirds intentionality, and the camera is held at a low angle to emphasize the subject’s lower body and the surrounding space.
+
+- **Final Prompt**  
+  “A young woman with long wavy brown hair, wearing a light‑green avocado‑print crop top and matching shorts, stands in a bright modern living room. Her hands rest on her hips, slightly angled, as if mid‑action. The shot is candid, handheld, with slight tilt and motion blur, captured on a 24‑35 mm wide‑angle lens. The background shows a beige sofa, a tall green plant, and a small potted plant by the window. Mid‑afternoon sunlight streams from the left, creating soft highlights and subtle shadows. Everything is in focus, with no bokeh or depth‑of‑field blur, raw and unprocessed, giving an accidental, spontaneous feel.”

@@ -1,0 +1,29 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair and black-rimmed glasses stands confidently on a city street at night. She wears a sleek, black leather mini‑dress with thin straps and a front slit, accessorized with a gold bracelet on her right wrist and a ring on her left hand. Her hands rest on her hips, slightly angled toward the camera, and she offers a warm, engaging smile. The pose is candid—she appears to be mid‑step, as if caught in a spontaneous moment.
+
+- **Lighting & Exposure**  
+  Capture with a wide‑angle lens (24–35 mm) in a “raw” mode: no filters, no color grading, no post‑processing. Use a slightly overexposed setting to let the ambient night lights bloom; keep the exposure natural, as if taken by hand. Aim for a soft, diffused glow from the street lamps and the reflections on the leather dress.
+
+- **Motion & Focus**  
+  Freeze the frame with a handheld shake: a slight motion blur on the background and subject to emphasize spontaneity. Keep everything in focus—no portrait‑mode depth‑of‑field blur; the background, including the parked cars and street markings, should be sharp.
+
+- **Composition & Framing**  
+  Use an accidental, off‑center composition: the subject is slightly tilted, the frame is partially cropped on the left and right, and the rule‑of‑thirds is intentionally ignored. The shot should feel spontaneous, as if captured in a quick “snap” moment.
+
+- **Environment**  
+  Location: a busy urban street at night, with a white car parked on the left and a row of illuminated shop signs in the background. The time of day is late evening (around 9 pm), with the city’s ambient light creating a warm, bokeh‑rich backdrop. Weather is clear, with a gentle breeze that slightly ruffles the woman’s hair.
+
+- **Lens & Technical**  
+  - Focal length: 35 mm (wide‑angle).  
+  - Aperture: f/4–f/5.6 (for natural depth).  
+  - Shutter speed: 1/60–1/100 s (to allow slight motion blur).  
+  - ISO: 800–1200 (for bright night lighting).  
+  - No bokeh or subject isolation—everything from foreground to background is fully sharp.
+
+- **Post‑Processing**  
+  Keep the image raw: no LUTs, no heavy color grading, no filters. A subtle auto‑HDR may be applied to balance the high‑contrast night lights, but keep it minimal. The final look should feel natural, unpolished, and candid.
+
+**Prompt Summary**  
+“Candid night‑time portrait of a woman in a black leather mini‑dress on an urban street, captured with a 35 mm wide‑angle lens, slightly overexposed, handheld shake, all elements in focus, accidental off‑center framing, raw unprocessed look.”

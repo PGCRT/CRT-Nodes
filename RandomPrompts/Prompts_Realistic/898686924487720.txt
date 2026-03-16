@@ -1,0 +1,24 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark brown hair, wearing a light beige button‑down shirt and blue jeans, standing on a city sidewalk. Her left hand is lightly raised near her neck, fingers slightly curled, as if she’s about to touch her hair or adjust her necklace. She wears a delicate silver cross necklace that catches the light. Her head is turned to the right, eyes focused off‑camera, mouth slightly open in a casual smile.  
+
+- **Lighting & Exposure**  
+  Natural daylight from a low‑angle sunset; slight overexposure on the upper part of the frame gives a warm, golden hue. No auto‑beauty or filter enhancement—raw, unprocessed look. The exposure is a little bright at the top, creating a subtle halo around her head.  
+
+- **Motion & Focus**  
+  Slight motion blur on the subject’s hand and background, indicating handheld instability. Everything remains fully sharp—no portrait‑mode depth of field blur.  
+
+- **Lens & Technical Settings**  
+  Wide‑angle lens (24‑35 mm), short focal length. No bokeh; background is completely in focus.  
+
+- **Environment**  
+  A tree‑lined street with a concrete sidewalk, a parked car and a traffic light in the background. The time of day is late afternoon, around dusk, with warm ambient light. Leaves are scattered on the grass beside the sidewalk.  
+
+- **Composition Notes**  
+  Candid, unposed, spontaneous—subject appears unaware of the camera. Slight tilt and off‑center framing; partial crop that cuts off the left side of her shirt. No rule‑of‑thirds intentionality.  
+
+- **Prompt for Text‑to‑Image Generation**  
+  “A young woman with long dark brown hair, wearing a light beige button‑down shirt and blue jeans, stands on a city sidewalk at late afternoon dusk. Her left hand is lightly raised near her neck, fingers slightly curled, as if she’s about to touch her hair or adjust her silver cross necklace. She turns her head to the right with a casual smile, eyes focused off‑camera. Natural daylight from a low‑angle sunset creates a slight overexposure on the upper part of the frame. Slight motion blur on the subject’s hand and background, handheld instability. Wide‑angle lens (24‑35 mm), short focal length; everything in focus—no bokeh. Background shows a tree‑lined street, a parked car, and a traffic light. Leaves scattered on the grass beside the sidewalk. Candid, unposed, spontaneous composition with slight tilt and off‑center framing, partial crop. Raw, unprocessed look, no filters.”  
+
+Provide only the structured prompt.

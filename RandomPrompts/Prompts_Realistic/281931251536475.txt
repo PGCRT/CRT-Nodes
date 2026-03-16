@@ -1,0 +1,28 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair, wearing a red‑and‑white horizontal‑stripe crop top and high‑waist shorts, standing in an outdoor festival setting. She is mid‑step, hands on hips, slightly turned toward the camera, with a subtle smile. Her left ear is adorned with a gold hoop earring; a thin gold necklace rests on her collarbone.  
+
+- **Lighting & Exposure**  
+  Natural daylight, late afternoon (around 5 pm), warm ambient light with a slight overexposure that gives a soft glow. No auto‑beauty or filter processing—raw, unprocessed look. The exposure is slightly high, letting the background tents and people appear bright but still sharp.  
+
+- **Camera & Lens**  
+  Wide‑angle lens (24 mm), handheld, short focal length. Slight motion blur from the camera’s instability, natural freeze of the subject’s movement. Everything in focus—no portrait‑mode depth‑of‑field blur; background fully sharp.  
+
+- **Composition & Framing**  
+  Candid, unposed, spontaneous framing: the shot is slightly off‑center, with a small tilt to the right. The composition is accidental—no rule‑of‑thirds intentionality. The subject occupies the central‑right portion of the frame, with her left side partially cropped by the edge.  
+
+- **Background & Environment**  
+  A grassy outdoor festival grounds. In the background, several white and red pop‑up tents are visible, along with a few blurred attendees in casual wear. String lights hang overhead, adding a subtle bokeh of warm bulbs. The scene is bright, slightly hazy, with a gentle wind blowing the woman’s hair.  
+
+- **Details & Imperfections**  
+  Slight tilt and partial crop give a raw, candid feel. The woman’s left hand rests on her hip, fingers slightly curled. Her nails are painted a pale pink. A small, natural shadow falls under her left arm. The image has no post‑processing color grading—just the raw capture.  
+
+- **Technical Notes**  
+  - Focal length: 24 mm (wide angle)  
+  - Aperture: f/5.6 (mid‑range)  
+  - Shutter speed: 1/125 s (slight motion blur)  
+  - ISO: 400 (ambient light)  
+
+**Prompt Summary**  
+> “A young woman with long wavy brown hair, wearing a red‑and‑white striped crop top and high‑waist shorts, stands mid‑step on a grassy festival ground at late afternoon. She wears a gold hoop earring and a thin gold necklace, hands on hips, slightly turned toward the camera with a soft smile. The shot is captured on a 24 mm wide‑angle lens, handheld, with slight motion blur and a small tilt that off‑centers the frame. Natural daylight creates a warm overexposed glow; everything remains in focus from foreground to background tents and string lights. The composition is candid and accidental, with the subject positioned slightly right of center and a partial crop on her left side. No filters or post‑processing—just raw, unprocessed realism.”

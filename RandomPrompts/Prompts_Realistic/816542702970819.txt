@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair, wearing a pink polka‑dot bikini bottom, sitting on a plush beige sofa. She is turned to the side, facing left, with her back slightly arched and one knee bent, her left hand resting on the couch cushion for balance. Her right leg is extended, foot flat on the couch, creating a dynamic, mid‑motion pose.
+
+- **Cinematic Capture**  
+  Capture the scene with a wide‑angle lens (24–35 mm) at a short focal length, handheld, with slight motion blur from the camera’s instability. Use auto‑HDR or “auto‑beauty” off for a raw, unprocessed look—no filters, no color grading, no post‑processing aesthetic. Allow a mild overexposure or underexposure depending on ambient light.
+
+- **Framing & Composition**  
+  Frame the shot candidly and spontaneously: slight tilt, off‑center framing, partial crop. No intentional rule‑of‑thirds—accidental composition that feels natural and unposed. Keep everything in focus; no bokeh or depth‑of‑field blur—background fully sharp.
+
+- **Environment**  
+  Location: a modern living room with a textured beige wall and a soft, fabric‑covered sofa. Time of day: late afternoon, warm natural light from a large window, creating soft highlights on the subject’s skin and subtle shadows. Weather: clear, mild, with a gentle breeze that slightly ruffles the woman’s hair.
+
+- **Lens & Technical**  
+  Short focal length (24–35 mm), wide‑angle, no bokeh, no depth‑of‑field blur—background fully sharp. Zero studio lighting, zero professional composition, zero editorial tone. Capture a raw, in‑camera look with natural motion freeze or slight blur from handheld instability.
+
+- **Final Prompt**  
+  “A young woman with long wavy brown hair, wearing a pink polka‑dot bikini bottom, sits on a plush beige sofa in a modern living room. She turns left, back slightly arched, one knee bent, left hand on cushion, right foot flat. Capture with a 24–35 mm wide‑angle lens handheld, slight motion blur, auto‑HDR off, raw unprocessed look, mild overexposure. Frame candidly—slight tilt, off‑center, partial crop, no rule‑of‑thirds. Everything in focus, background sharp. Late afternoon natural light, clear weather, gentle breeze. No studio lighting, no professional composition, no editorial tone.”

@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy blonde hair tied in a loose braid, lying supine on a neatly made bed. She’s wearing a black lace bodysuit with thin straps and matching black leather gloves that rest lightly on her chest. Her eyes are closed, face relaxed, as if mid‑dream or just awoken. The camera captures her from a slightly high angle, centering her in the frame but not perfectly centered— a small, intentional off‑center tilt gives a candid feel.
+
+- **Lighting & Exposure**  
+  Natural daylight coming from a western window, mid‑afternoon. The light is soft but has a slight overexposure on the upper body, creating a warm glow and subtle halos around her skin. No auto‑HDR or beauty filters—just raw, unprocessed tones. The exposure is a little bright at the top, giving a gentle halo effect, while the lower part of the image stays slightly darker for contrast.
+
+- **Lens & Technical**  
+  24‑mm wide‑angle lens, short focal length, handheld. Everything is in focus—no bokeh or depth‑of‑field blur. The background (a white pillow and a red cushion) is sharp, but the composition is accidental: a slight tilt and a partial crop that cuts off a bit of the bed’s edge on the left side.
+
+- **Environment**  
+  A bright, airy bedroom with a white bedspread, a single red pillow behind her head, and a white pillow to the left. The time of day is late afternoon, with warm, diffused sunlight streaming in. The room is quiet, no other people or distractions—just the woman and the bedding.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—an “in‑moment” shot as if she’s just woke up or is dreaming. Slight motion blur on her hands and gloves to suggest a natural, handheld shake. No rule‑of‑thirds intentionality—framing is accidental but effective.
+
+- **Details & Imperfections**  
+  Small droplets of water or oil on her skin add realism. The gloves have a slight crease at the fingertips. Her hair spills loosely over the pillow, creating soft, random curls. The red pillow’s seam is slightly askew, adding to the candid feel.
+
+- **Prompt for Generation**  
+  *“A young woman with long wavy blonde hair in a loose braid lies supine on a white bed, wearing a black lace bodysuit and black leather gloves that rest on her chest. She has closed eyes and a relaxed face, as if mid‑dream. The shot is taken with a 24‑mm wide‑angle lens handheld, everything in focus with no bokeh. Natural daylight from a western window gives a slight overexposure on the upper body. The composition is accidental: a small tilt and partial crop that cuts off a bit of the bed’s edge on the left. A red pillow rests behind her head, a white pillow to the left. The scene is a bright bedroom in late afternoon, with soft, diffused light. Capture candid, unposed, spontaneous—subject unaware or mid‑action—with slight motion blur on the hands and gloves. No filters, no color grading, raw, unprocessed look.”*

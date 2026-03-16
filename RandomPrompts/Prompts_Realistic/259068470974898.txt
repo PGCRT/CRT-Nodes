@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, athletic woman with long, wavy blonde hair, wearing a delicate white lace veil and sheer lace tights, sitting on a dark wooden stool. She’s turned away from the camera, her back arched slightly, one hand resting on the stool’s side, legs bent at the knees, toes pointed outward. Her hips are flared, showcasing a smooth, glossy glute that catches the light. The veil drapes over her left shoulder, adding a soft, flowing line that contrasts with the rigid wood behind her.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle, mid‑afternoon sun creates a warm, slightly overexposed highlight on her back and hips. The exposure is uneven—the background is a bit brighter than the subject, giving a raw, unprocessed feel. No auto‑beauty mode; the image retains natural imperfections, including a faint grain and slight color cast.
+
+- **Lens & Technical**  
+  24 mm wide‑angle lens, short focal length, handheld. The shot is fully sharp—no bokeh, no depth‑of‑field blur. Slight motion blur on the subject’s back and hips suggests mid‑movement. The framing is off‑center; the stool sits slightly to the left of the center, and the top of the veil extends beyond the right edge of the frame.
+
+- **Environment**  
+  A rustic wooden wall made of vertical planks, with visible knots and grain, occupies the background. The wood has a warm, medium‑brown tone that complements the subject’s skin. The time of day is late afternoon, with the sun high but not directly overhead, casting soft shadows. The weather is clear, with no wind, but the slight breeze is captured in the gentle movement of the veil.
+
+- **Composition & Style**  
+  Candid, unposed, spontaneous—subject appears unaware of the camera, mid‑action. Slight tilt and partial crop give an accidental, informal feel. No rule‑of‑thirds intentionality; the composition is guided by the subject’s natural posture and the background’s texture. The image has a raw, in‑camera look with no post‑processing filters or color grading.
+
+- **Prompt for Text‑to‑Image Generation**  
+  “A tall, athletic woman with long wavy blonde hair, wearing a white lace veil and sheer lace tights, sitting on a dark wooden stool, back arched, one hand on the stool’s side, legs bent, toes outward, hips flared, glossy glute catching light. Natural daylight from high‑angle mid‑afternoon sun creates warm overexposure on subject and background. 24 mm wide‑angle lens, handheld, slight motion blur on back and hips, fully sharp background. Rustic wooden wall of vertical planks with knots behind. Late afternoon, clear weather. Candid, unposed, accidental off‑center framing, slight tilt, partial crop. No filters, no color grading, raw in‑camera look.”

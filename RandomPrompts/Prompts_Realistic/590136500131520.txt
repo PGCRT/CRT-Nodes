@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair walking forward on a cobblestone plaza. She wears a dark gray crop‑top and high‑waisted light‑wash jeans, accessorized with a thin gold necklace. Her hands are relaxed at her sides, fingers slightly curled; her face is turned toward the camera but not directly posed—mid‑step, natural expression with a subtle smile.  
+
+- **Motion & Focus**  
+  Slight motion blur on the feet and lower body to convey movement, while the upper body remains crisp. Everything in focus—from her face to the background arches—no portrait‑mode depth‑of‑field blur.  
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm), short focal length. No bokeh; background fully sharp. Slight overexposure on the upper body to keep ambient light warm; no auto‑beauty or filters—raw, unprocessed look.  
+
+- **Framing & Composition**  
+  Candid, unposed, spontaneous framing: slight tilt and off‑center crop. No rule‑of‑thirds intentionality—accidental composition that captures the subject’s mid‑walk and the architecture behind her.  
+
+- **Environment**  
+  Specific real‑world location: an old European plaza with stone arches and a beige building in the background. Time of day: late morning, soft sunlight casting gentle shadows. Weather: mild, slightly breezy, with a faint hint of dust particles in the air.  
+
+- **Lighting & Post‑Processing**  
+  Zero studio lighting; natural daylight only. No color grading or post‑processing aesthetic—just raw capture.  
+
+- **Prompt Summary for Generation**  
+  “A young woman with long wavy brown hair, wearing a dark gray crop‑top and high‑waisted light‑wash jeans, walking on a cobblestone plaza in late morning. Capture with a wide‑angle short focal length lens, everything in focus, slight motion blur on the lower body, slight overexposure on the upper body, candid unposed framing with a slight tilt and off‑center crop. Background shows stone arches and a beige building, fully sharp. No filters or color grading—raw, natural look.”

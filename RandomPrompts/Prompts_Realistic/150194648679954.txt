@@ -1,0 +1,27 @@
+**Realistic Candid Photography Prompt Framework – “Summer Evening on the Balcony”**
+
+- **Subject & Pose**  
+  A young woman with a slender, athletic build, wearing a light‑colored, thin‑strap bikini top, standing on a wooden balcony. Her left leg is bent at the knee, foot tucked into a relaxed, mid‑step position, while her right arm hangs naturally by her side. She’s turning slightly toward the camera, capturing a candid, unposed moment as if she’re about to tie a scarf or adjust her hair.
+
+- **Lighting & Exposure**  
+  Warm, golden hour light from the west—slight overexposure on the upper body, giving a soft glow to the skin. The exposure is raw, no auto‑beauty mode: a handheld shot with a slight instability that gives a natural motion blur around the edges.
+
+- **Camera & Lens**  
+  35 mm wide‑angle lens (short focal length), fully sharp background—no bokeh. Everything in focus from foreground to background; no portrait‑mode depth‑of‑field blur. Slight tilt and off‑center framing, accidental composition.
+
+- **Environment**  
+  A rustic wooden balcony with a brick wall on the right side, a sheer white curtain hanging on the left. The time of day is late afternoon (golden hour), with a faint breeze moving the curtains. Ambient noise from the city outside is visible through the window, adding to the candid feel.
+
+- **Details & Imperfections**  
+  Slight motion blur at the knees and feet, indicating a mid‑action freeze. A tiny smudge on her left shoulder strap, a slight tilt of the camera, and a partial crop that cuts off the top of her head—makes it look spontaneous. The background brickwork is fully sharp, no rule‑of‑thirds intentionality.
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, zero studio lighting. Raw, unprocessed look with natural contrast. A subtle auto‑HDR tweak only on the high‑dynamic‑range of the skin tones.
+
+---
+
+**Prompt for Text‑to‑Image Generation**
+
+> “A young woman in a light‑colored thin‑strap bikini top stands on a rustic wooden balcony at golden hour, her left leg bent and foot tucked, right arm hanging naturally. Warm overexposed lighting hits her upper body, slight motion blur around the knees and feet from handheld instability. 35 mm wide‑angle lens, fully sharp background, accidental off‑center framing with a slight tilt. The balcony has a brick wall on the right, a sheer white curtain on the left; faint city noise through the window. Raw, unprocessed look, no filters, natural contrast, subtle auto‑HDR on skin tones. Capture candid, spontaneous moment as if she’s about to tie a scarf.”
+
+Use this prompt in a high‑quality diffusion model (e.g., Stable Diffusion XL, Midjourney v6) with “realistic” and “candid” tags enabled. Set the resolution to 1024×1024, aspect ratio 1:1, and enable “handheld” and “motion blur” in the camera settings.

@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, athletic woman with long, wavy blonde hair standing barefoot on a forest floor covered in fallen autumn leaves. She wears a short, yellow floral dress with a deep V‑neck and thin straps; the dress has delicate pink roses and green foliage motifs. Her hands are raised behind her head, elbows bent, creating a casual, playful pose that suggests mid‑movement. The dress slightly ripples around her hips, indicating a gentle breeze.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle, late‑afternoon sun creates a warm, golden hue. Slight overexposure on the upper body, giving a soft glow to the subject’s face and dress. No auto‑HDR or beauty filters—raw, unprocessed look. The exposure is slightly uneven, with the background a bit brighter than the foreground, adding an authentic, handheld feel.
+
+- **Camera & Lens Settings**  
+  Wide‑angle lens (24–35 mm) with a short focal length. Aperture set to f/8–f/10 for sharpness across the frame; no bokeh—everything from foreground leaves to background trees is in focus. Slight motion blur on the subject’s hands and dress, indicating a handheld shot captured mid‑action. No portrait‑mode depth‑of‑field blur; background trees and foliage are crisp.
+
+- **Composition & Framing**  
+  Candid, unposed framing: the shot is slightly tilted, off‑center, with the subject not directly centered but offset to the right. The composition is accidental—no rule‑of‑thirds intentionality. The frame captures a narrow corridor of trees on either side, with the ground covered in brown and orange leaves. The top of the frame cuts off just above the woman’s head, giving a “cut‑in” effect.
+
+- **Environment**  
+  A quiet forest path in late autumn. Tall pine trees line both sides of a narrow trail; the ground is thick with fallen leaves, creating a textured, natural carpet. The time of day is mid‑afternoon, with the sun high but slightly to the west, casting long, warm shadows. Ambient light is soft, with no direct glare. Weather is clear, dry, and mild.
+
+- **Details & Imperfections**  
+  Slight tilt and partial crop give a spontaneous feel. The woman’s bare feet are visible, with natural foot placement on the leaves. Her dress has a subtle sheen from the wind, and her hair has slight motion blur. The background trees show natural variation in bark texture and leaf color. No post‑processing or color grading—just raw capture.
+
+- **Final Prompt**  
+  “A tall woman with long wavy blonde hair, barefoot on an autumn forest path, wearing a short yellow floral dress with pink roses. She stands slightly off‑center, hands behind her head, mid‑pose with slight motion blur on her dress and hands. Natural late‑afternoon sunlight creates warm overexposure. Wide‑angle 30 mm lens at f/9, everything in focus, handheld shot with slight tilt. Background trees and fallen leaves crisp. Raw, unprocessed, candid style.”

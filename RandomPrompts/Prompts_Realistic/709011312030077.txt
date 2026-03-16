@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with light brown hair, wearing a white tank top that features a cute bunny graphic on the chest, and pink over‑ear headphones. She is mid‑gesture, hands raised to the back of her head, as if she just finished a song or is adjusting her headphones. Her expression is natural, slightly surprised, with a soft gaze toward the camera.
+
+- **Lighting & Exposure**  
+  Slight overexposure on the front side of the subject, giving a warm, ambient glow. The exposure is uneven—brighter on the face and upper body, with a subtle vignette at the edges. No auto‑beauty or filter processing; raw, unedited look.
+
+- **Camera Settings**  
+  Wide‑angle lens (24–35 mm), short focal length. Handheld, slightly shaky, producing a natural motion blur on the subject’s hands and background. Everything is in focus—no portrait‑mode depth of field blur; background remains sharp.
+
+- **Composition & Framing**  
+  Candid, unposed framing: the shot is off‑center, with a slight tilt to the left. The composition is accidental—no rule‑of‑thirds intentionality. The crop is partial, cutting off a bit of the left shoulder and the right side of the background.
+
+- **Environment**  
+  Location: a casual indoor space, likely a home studio or a small apartment. A purple wall serves as the backdrop; a black office chair and a small shelving unit are visible on the left. The time of day is late afternoon, with natural daylight coming from the west, creating soft shadows and a warm tone.
+
+- **Details & Imperfections**  
+  Slight motion blur around the hands and headphones, indicating a handheld snap. Minor imperfections: a faint smudge on the tank top’s bunny graphic, a slight wrinkle in the fabric near the left armpit. The background shows a faint reflection of a window, adding depth.
+
+- **Post‑Processing**  
+  No filters or color grading—just raw capture. A tiny hint of auto‑HDR is applied to brighten the subject’s face, but the overall look remains natural and unpolished.
+
+**Prompt Summary**  
+“Candid shot of a young woman in a white tank top with a bunny graphic, wearing pink headphones, hands on the back of her head, captured with a wide‑angle handheld lens at late afternoon. Slight overexposure and motion blur give a raw, natural feel; background is a purple wall with an office chair and shelf. Everything is in focus, no filters—just a spontaneous, unposed snapshot.”

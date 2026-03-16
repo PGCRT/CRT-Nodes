@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman in a light‑blue, halter‑style mini dress, carrying a black backpack on her left shoulder and a DSLR camera in her right hand. Her hair is tied up in a high ponytail, sunglasses perched on her head, and she’s mid‑wave with her right hand raised, a spontaneous, candid moment captured as if she’s greeting someone or gesturing during a casual gathering.  
+
+- **Appearance & Details**  
+  She wears dark sunglasses, a thin gold necklace, and a subtle smile. The camera has a large telephoto lens attached; the backpack’s strap is visible over her left shoulder. Her left arm is slightly bent, showing a faint motion blur from handheld shake.  
+
+- **Lighting & Exposure**  
+  Natural daylight, mid‑afternoon, with a slight overexposure that gives a warm, raw feel. The lighting comes from the upper left, casting soft shadows on her face and dress. No auto‑HDR or beauty filters—just an unprocessed, genuine look.  
+
+- **Camera Settings**  
+  Wide‑angle lens (24–35 mm), f/4.0 aperture, 1/125 s shutter speed, ISO 400. Slight motion blur on the subject’s hand and camera, background fully sharp with no bokeh.  
+
+- **Composition**  
+  Off‑center framing: the woman is positioned slightly to the right of the center, creating a casual, accidental composition. The shot is a partial crop that cuts off the top of her head and the lower part of her dress, emphasizing spontaneity. No rule‑of‑thirds intentionality—just a natural, handheld capture.  
+
+- **Background & Environment**  
+  A sunlit park or garden setting, with a large tree in the background and a group of people in casual attire scattered around. The ground is grassy, with patches of sunlight and shade. The time of day is late afternoon, about 4 pm, giving warm, golden light.  
+
+- **Technical Notes**  
+  Everything is in focus—no portrait‑mode depth‑of‑field blur. The background remains sharp, preserving the authenticity of a real‑world scene.  
+
+- **Prompt Summary for Generation**  
+  “A candid, wide‑angle shot of a woman in a light‑blue mini dress and sunglasses, carrying a black backpack and holding a DSLR camera, mid‑wave with a slight motion blur on her hand. The image captures a spontaneous moment at a sunny park in late afternoon, with a group of people in the background. Natural daylight creates a warm overexposed look; the composition is off‑center and partially cropped, all elements in focus with no filters or post‑processing.”

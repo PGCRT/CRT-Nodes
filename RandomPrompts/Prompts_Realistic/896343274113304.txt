@@ -1,0 +1,24 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark, slightly frizzy hair leaning casually against a glass storefront window on a busy city sidewalk. She’s wearing an oversized beige cardigan, high‑waisted dark denim jeans, and white sneakers. Her left hand rests on her hip, fingers curled slightly, while her right arm hangs relaxed by her side. She’s mid‑step, one foot planted, the other bent at the knee, as if she just stepped off a bus or is about to move. Her head tilts downward, eyes cast down at her shoes, giving a candid, unposed feel.
+
+- **Motion & Focus**  
+  Slight motion blur on the subject’s hand and the background pedestrians, indicating handheld shake. Everything remains in focus—no portrait‑mode bokeh. The image has a raw, auto‑HDR look with no color grading or filters; a mild overexposure in the highlights to capture the bright daylight.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24‑35 mm), short focal length, no depth‑of‑field blur—every element from foreground to background is sharp. The composition is accidental: slightly off‑center framing, a slight tilt to the left, and a partial crop that cuts off the top of the window frame.
+
+- **Environment**  
+  Location: A bustling downtown street in an American city (e.g., New York or Boston). The background shows a reflective glass storefront, a passing white sedan, a red traffic sign, and a few pedestrians in casual attire. Time of day: late afternoon, around 4:30 pm, with warm, golden sunlight casting long shadows. Weather: clear, slightly humid, with a light breeze.
+
+- **Lighting & Exposure**  
+  Natural daylight from the west, creating a slight overexposure on the subject’s face and clothing. The lighting is uneven—bright highlights on the cardigan’s front, softer shadows behind her. No studio lights; all illumination comes from ambient sunlight.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, off‑center framing that cuts the top of the window frame, a partial crop that leaves a small portion of the sidewalk out of frame. The subject’s hair has a slight messiness, and her jeans have a subtle crease at the thigh. The cardigan’s buttons are slightly unevenly aligned. The background pedestrians are in motion, with one person’s back visible on the right side.
+
+- **Prompt for Text‑to‑Image Generation**  
+  “A candid, unposed photograph of a young woman leaning against a glass storefront window on a busy city sidewalk. She has long dark frizzy hair, wears an oversized beige cardigan, high‑waisted dark denim jeans, and white sneakers. Her left hand rests on her hip, right arm relaxed. Slight motion blur on her hand and background pedestrians, everything in focus, wide‑angle lens (24‑35 mm), raw auto‑HDR look with mild overexposure. Late afternoon sunlight casts long shadows. Background includes a reflective glass storefront, a passing white sedan, a red traffic sign, and a pedestrian in casual attire. Slight tilt and off‑center framing, partial crop, accidental composition, natural daylight, no studio lighting.”
+
+Provide only the structured prompt.

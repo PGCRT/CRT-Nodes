@@ -1,0 +1,31 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, athletic woman with long brown hair, a rose tattoo on her left upper chest, wearing black leather gloves on both hands and fish‑net stockings. She is standing in a casual, unposed stance, holding a glass of red wine in her right hand, slightly tilted as if she just lifted the glass from a wooden table. Her left hand rests on the back of the table, giving a natural, mid‑action feel.
+
+- **Lighting & Exposure**  
+  Natural daylight from a western window, mid‑afternoon (≈ 4 pm). Slight overexposure on the subject’s face and upper body, creating a warm, soft glow; background remains fully sharp with no depth‑of‑field blur. No auto‑HDR or auto‑beauty mode – raw, unprocessed look.
+
+- **Camera & Lens**  
+  35 mm wide‑angle lens (short focal length). Handheld, slight motion blur on the subject’s hands and the wine glass to convey spontaneous movement. Everything in focus – no portrait‑mode bokeh. Background is a plain beige wall with a simple wooden table; no rule‑of‑thirds intentionality – framing is accidental, off‑center.
+
+- **Environment**  
+  Location: a rustic kitchen or dining area with a rough‑finished wooden table and a plain, light‑beige wall. Time of day: mid‑afternoon, soft natural light. Weather: clear, no wind, ambient temperature ~22 °C. The scene is captured in a single shot, no post‑processing filters or color grading.
+
+- **Composition & Details**  
+  - The woman’s body occupies the central‑right portion of the frame; her left side is slightly cut off by the edge of the table, adding a partial‑crop effect.  
+  - Her right hand holds a wine glass at an angle, with a slight tilt that gives a sense of motion.  
+  - The rose tattoo is visible on her left chest, adding a small focal point.  
+  - Black leather gloves contrast with the warm tones of the wood and skin.  
+  - Fish‑net stockings add texture, visible from the knees down to the ankles.  
+  - The wooden table’s legs are partially out of frame on the lower left, reinforcing the casual, spontaneous feel.
+
+- **Technical Settings**  
+  - Aperture: f/4 (wide, shallow depth but fully sharp background).  
+  - Shutter speed: 1/60 s (slight motion blur on moving parts).  
+  - ISO: 400 (for natural brightness).  
+  - Focus: manual, everything in focus.  
+  - No portrait mode or subject isolation.
+
+- **Final Prompt**  
+  “A tall woman with long brown hair, a rose tattoo on her left chest, wearing black leather gloves and fish‑net stockings, stands casually at a rustic wooden table in a beige‑walled kitchen. She holds a glass of red wine in her right hand, slightly tilted, while her left hand rests on the table’s back. Natural mid‑afternoon light creates a soft overexposure on her face and upper body; everything is fully sharp with no bokeh. Shot on a 35 mm wide‑angle lens, handheld with slight motion blur on the hands and glass, capturing a candid, unposed moment with accidental off‑center framing.”

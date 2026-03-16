@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with dark hair tied in a high bun, wearing a navy blue blazer over a white graphic tee and a black hoodie, stands confidently with arms crossed. Her face is turned slightly toward the camera, a warm smile on her lips, as if she’s mid‑conversation or about to do a little model‑style pose. The shot should feel spontaneous—her expression should capture a natural “in‑the‑moment” vibe, with a hint of motion blur from a handheld camera.
+
+- **Lighting & Exposure**  
+  Use a wide‑angle lens (24–35 mm) to keep the entire scene in focus. Shoot at a slightly overexposed setting to let the ambient daylight carry a soft glow; avoid any auto‑HDR or beauty filters—keep the look raw and unprocessed. The exposure should feel natural, as if the camera was left on for a few seconds in bright, warm midday light.
+
+- **Composition & Framing**  
+  Capture a candid, unposed frame that is slightly off‑center and tilted, giving an accidental, spontaneous feel. No rule‑of‑thirds intentionality—let the composition breathe. The background should be fully sharp, with no bokeh or depth‑of‑field blur; everything from foreground to background stays in focus.
+
+- **Environment**  
+  Location: A sunny outdoor street or plaza near a small boutique or café. The background shows a wooden window frame, a rack of clothes, and a few passersby in colorful summer attire. Time of day: mid‑afternoon, with bright, warm sunlight casting soft shadows. Weather: clear, slightly breezy, with a faint haze that adds a subtle ambient glow.
+
+- **Lens & Technical**  
+  Short focal length (24–35 mm) for wide coverage. Handheld stability with slight motion blur to emphasize the “in‑motion” feel. No portrait‑mode subject isolation—keep the entire scene, including the background details, crisp and clear. Use a natural color palette: muted blues, warm neutrals, and a touch of vibrant floral print from a passerby’s dress.
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, zero post‑processing aesthetic. Keep the image as close to the raw capture as possible—only minor adjustments for exposure and contrast if needed. The final result should look like an authentic, unposed snapshot taken with a DSLR or mirrorless camera in natural daylight.

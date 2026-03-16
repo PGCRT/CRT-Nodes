@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a messy, high ponytail and a beige crew‑sweatshirt sits at a bright office desk, hands folded on the surface, head tilted slightly to the left as if mid‑conversation. Her expression is natural and unposed, with a hint of surprise or engagement. The camera captures her from a low, close‑up angle that gives a wide‑angle sense of intimacy.
+
+- **Motion & Focus**  
+  Slight motion blur on the subject’s hands and the background, indicating handheld instability during the snap. Everything remains fully sharp—no portrait‑mode depth‑of‑field blur. The image has an auto‑HDR feel but without post‑processing filters; it looks raw and spontaneous.
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window to the left creates a soft, slightly overexposed highlight on the subject’s face and a gentle warm tone across the scene. The exposure is a little bright at the top, giving an ambient “auto‑beauty” feel but no color grading or filters—just the raw light of the moment.
+
+- **Environment**  
+  Office setting: a modern workspace with a computer monitor, a keyboard, a mouse, a small potted plant, and a whiteboard on the back wall. The time of day is mid‑afternoon, around 3 pm, when the sun is high but not too steep, casting soft shadows. The weather outside the window is clear, with a bright blue sky that adds to the overall brightness.
+
+- **Lens & Technical**  
+  Short focal length (24–35 mm) wide‑angle lens, no bokeh, background fully sharp. No rule‑of‑thirds intentionality—framing is accidental and slightly off‑center. The composition is candid, unposed, and spontaneous; the shot feels like a snapshot captured in a real office environment.
+
+- **Prompt Summary**  
+  “A young woman with a messy ponytail and beige sweatshirt sits at a bright office desk, hands folded, mid‑conversation, captured with a 24–35 mm wide‑angle lens. Slight motion blur on the hands and background, everything fully sharp, natural daylight from a left‑side window creates soft overexposure. The scene includes a computer monitor, keyboard, mouse, and a small potted plant; the shot is candid, unposed, accidental framing, no rule‑of‑thirds, raw, auto‑HDR look, zero filters.”

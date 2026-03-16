@@ -1,0 +1,27 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with dark hair tied in a messy high ponytail, wearing an oversized tie‑dye t-shirt (light blue fading into pink). She is mid‑step, slightly turned to the side, mouth open as if speaking or laughing, capturing a spontaneous, unposed moment. Her shoulders are relaxed, and her left arm hangs naturally by her side, with a slight tilt that gives the shot an accidental, handheld feel.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. The frame is off‑center, with a slight tilt and partial crop that gives a raw, informal vibe. No rule‑of‑thirds intentionality; the composition feels natural and improvised. Slight motion blur on the subject’s movement, indicating a handheld shot taken at a relatively low shutter speed.
+
+- **Auto‑HDR or auto‑beauty mode off** – raw, unprocessed look.  
+  - No filters, no color grading, no post‑processing aesthetic.  
+  - Slight overexposure in the highlights (the ceiling lights and the subject’s skin) or underexposure in the shadows depending on ambient light.  
+  - Wide‑angle lens (24–35 mm) with a short focal length, capturing a broad view of the scene.
+
+- **Environment**  
+  A busy office cubicle area during mid‑afternoon. The background shows other workers at desks, stacks of papers, computer monitors, and a whiteboard with notes. A small potted plant sits on a desk, and a green cup is visible on a nearby surface. The time of day is late afternoon, with warm natural light coming from the west, creating soft shadows and a slight haze. Weather is clear, with a gentle breeze that slightly ruffles the subject’s hair.
+
+- **Lens & Technical**  
+  - Short focal length (24–35 mm), wide‑angle, no bokeh.  
+  - Everything in focus – background fully sharp, no depth‑of‑field blur.  
+  - No portrait mode or subject isolation; the shot is a flat, straightforward capture of the entire scene.  
+  - Slight handheld instability results in a subtle motion blur on the subject’s body and the background elements.
+
+- **Composition Notes**  
+  The camera is positioned at eye level, slightly above the subject’s waist, with the lens centered on her torso but leaving space for the background. The framing captures the subject’s upper body, part of her left arm, and a portion of the office cubicle behind her. The top of the frame includes the ceiling tiles and a fluorescent light fixture, while the bottom cuts off near the desk level, creating a “partial crop” effect.
+
+- **Final Prompt**  
+  *“A young woman with dark hair in a messy high ponytail, wearing an oversized tie‑dye t-shirt (light blue fading into pink), captured mid‑step and slightly turned to the side in a busy office cubicle area during mid‑afternoon. The shot is candid, unposed, spontaneous, with a slight tilt and partial crop, no rule‑of‑thirds intentionality. Auto‑HDR off, raw, unprocessed look, no filters or color grading, slight overexposure in the highlights. Wide‑angle short focal length (24–35 mm), everything in focus, no bokeh, handheld motion blur. Background shows other workers at desks, stacks of papers, computer monitors, a whiteboard with notes, and a small potted plant on a desk. Time of day is late afternoon, warm natural light from the west, clear weather, gentle breeze. Capture style: candid, unposed, spontaneous — subject unaware or mid‑action.”*

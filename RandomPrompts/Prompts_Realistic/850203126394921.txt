@@ -1,0 +1,28 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, straight brown hair, wearing a light‑blue denim jacket left open at the front and white satin gloves. She is mid‑movement, hands clasped in front of her hips, body slightly turned to the right, capturing a natural, unposed moment. Her face is partially out of frame—only the lower half visible—adding a candid, spontaneous feel.
+
+- **Capture Style**  
+  • Slight motion blur on the hands and jacket, indicating handheld shake.  
+  • Raw, unprocessed look: no filters, no color grading, no auto‑beauty mode.  
+  • Slight overexposure in the high‑lights of the jacket, giving a warm, natural glow.  
+  • Wide‑angle lens (24–35 mm) with a short focal length; everything from foreground to background is fully sharp—no bokeh or depth‑of‑field blur.
+
+- **Environment**  
+  Location: A concrete alleyway in an urban district, with a textured gray wall on the left and a faint, blurred storefront on the right.  
+  Time of day: Late afternoon; the sun is low, casting soft, warm light that slightly overexposes the jacket’s front.  
+  Weather: Light breeze, ambient humidity; the air feels crisp, adding a subtle grain to the image.
+
+- **Lens & Technical**  
+  • Focal length: 35 mm (wide‑angle).  
+  • Aperture: f/4.0 – shallow depth of field is avoided; all elements are in focus.  
+  • Shutter speed: 1/60 s – enough to capture slight motion blur.  
+  • ISO: 400 – for natural contrast without excessive noise.  
+  • Composition: No rule‑of‑thirds intentionality—framing is accidental, slightly off‑center, with a partial crop that cuts off the top of her head and the lower part of her legs.
+
+- **Post‑Processing**  
+  Zero studio lighting, zero professional composition, zero editorial tone. The image retains a raw, spontaneous feel, with natural imperfections: slight tilt, minor vibration blur, and a faint hint of ambient dust in the air.  
+
+**Prompt for Text‑to‑Image Generation**  
+"Mid‑afternoon urban alleyway, a young woman with long brown hair wearing an open light‑blue denim jacket and white satin gloves, hands clasped at hip, body turned right, slight motion blur on hands and jacket, raw unprocessed look, slight overexposure, wide‑angle 35 mm lens, everything in focus, accidental off‑center framing, partial crop, natural wind‑blown atmosphere, late‑afternoon warm light."

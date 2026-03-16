@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy blonde hair, wearing a light‑blue button‑down shirt that is slightly unbuttoned at the front. Her hands are pulling the shirt open in a casual, mid‑motion gesture, as if she’s about to tie a scarf or adjust her top. She looks directly at the camera with a soft, natural expression; her face is slightly tilted to the left, giving an off‑center, spontaneous feel.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject appears unaware of the camera, caught mid‑action. The shot has a slight motion blur on the hands and shirt, indicating handheld instability. No filters, no color grading, no post‑processing aesthetic; the image retains a raw, auto‑HDR look with a mild overexposure that lets the ambient light bleed slightly across the foreground.
+
+- **Environment**  
+  Location: A bright, sunlit kitchen in a suburban house. The background shows a light‑wood cabinet and a partially visible doorway on the right, with a faint hint of a green plant on the left. Time of day: late morning, around 10:30 AM, with warm, diffused daylight coming from the west. Weather: clear, slightly humid; the sky is not visible but the ambient light gives a soft glow to the scene.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm) wide‑angle lens. Everything is fully sharp — no bokeh or depth‑of‑field blur; the background remains in focus. The composition is accidental: no rule‑of‑thirds intentionality, a slight tilt and partial crop that gives a raw, candid feel. The exposure is slightly high, letting a hint of overexposure on the subject’s chest area, while the background stays crisp.
+
+- **Details & Imperfections**  
+  Slight motion blur on the hands, a tiny smear on the shirt’s front, and a faint, natural shadow cast by the subject’s head. The shirt’s buttons are slightly uneven, adding to the unposed vibe. The woman’s fingers grip the shirt’s lapels as if she’s in the middle of a gesture. The lighting is natural, coming from the left side of the frame, creating soft highlights on her face and shoulders.
+
+- **Prompt for Generation**  
+  “A candid, wide‑angle shot of a young woman with long wavy blonde hair, wearing a light‑blue button‑down shirt that she’s pulling open with both hands, looking directly at the camera with a slight left tilt. The image captures mid‑motion blur on her hands and shirt, raw auto‑HDR lighting with mild overexposure, taken in a bright suburban kitchen during late morning. All elements are fully sharp, no bokeh, accidental framing with a slight tilt and partial crop, natural daylight from the left, background includes a light‑wood cabinet and doorway on the right and a green plant on the left.”

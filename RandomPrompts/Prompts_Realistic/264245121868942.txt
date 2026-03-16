@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, slender woman with long dark hair, wearing a plain white tank top and beige drawstring trousers, standing mid‑step on a circular marble platform. Her hands are slightly apart at her sides, as if she’s about to grasp or release something invisible. She’s captured in a candid, unposed moment—her face is turned toward the camera but not directly at it, giving a natural, spontaneous feel.
+
+- **Motion & Focus**  
+  Slight motion blur on the subject’s hands and the surrounding platform, indicating handheld instability. Everything remains fully sharp—no portrait‑mode depth of field blur. The image has a raw, unprocessed look: no filters, no color grading, no post‑processing aesthetic. A hint of overexposure in the center highlights the ambient light.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24 mm), short focal length. No bokeh; background is fully sharp. The composition is accidental—no rule‑of‑thirds intentionality, slight tilt and off‑center framing, partial crop that cuts off a bit of the platform’s edge.
+
+- **Environment**  
+  Location: A grand, sunlit marble hall with classical columns on either side, a large metallic disc leaning against a column, and a circle of plush beige cushions surrounding the platform. Time of day: late afternoon, warm golden light filtering through high windows, creating soft shadows. Weather: clear, mild breeze, slight dust motes in the air.
+
+- **Lighting**  
+  Zero studio lighting; all light comes from natural sources. The scene is lit by a broad, diffused daylight that creates subtle highlights on the marble and metal, with a faint halo around the central platform.
+
+- **Details & Imperfections**  
+  The woman’s trousers have a slight wrinkle at the thigh, her shirt has a tiny crease near the shoulder. The platform shows a faint crack on one cushion, adding realism. A small, almost imperceptible blur around her hands conveys movement. The background columns have subtle reflections, and the metallic disc shows a faint glare.
+
+- **Final Prompt**  
+  “A tall woman with long dark hair, wearing a plain white tank top and beige drawstring trousers, standing mid‑step on a circular marble platform in a grand sunlit hall with classical columns and a leaning metallic disc. Her hands are slightly apart at her sides. Slight motion blur on her hands and platform, everything fully sharp, raw unprocessed look, wide‑angle 24 mm lens, accidental off‑center framing, slight tilt. Late afternoon golden light, clear weather, soft shadows, faint dust motes. Zero studio lighting, natural daylight. Raw candid moment with subtle imperfections: wrinkle in trousers, crease in shirt, crack on cushion.”

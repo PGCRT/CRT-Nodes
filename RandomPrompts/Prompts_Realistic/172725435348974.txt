@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, athletic woman with long, wavy brown hair standing in a casual, unposed stance. Her arms are raised above her head, hands clasped together, creating a subtle arc that suggests mid‑movement. She wears sheer white lace underwear that drapes softly over her curves, with delicate floral detailing at the thong. Her skin is warm and unretouched, showing natural texture and slight imperfections.
+
+- **Lighting & Exposure**  
+  Natural daylight from a western window, mid‑afternoon, creating a soft, slightly overexposed glow on her torso and face. The light hits her frontally but with a gentle angle that casts subtle shadows in the crevices of her chest and abdomen. No auto‑beauty or filter enhancement—just raw, handheld capture.
+
+- **Camera & Lens**  
+  35 mm wide‑angle lens, f/4.0, 1/125 s shutter speed, ISO 400. Slight motion blur on the arms and hands to emphasize spontaneity. Everything in the frame is fully sharp—no portrait‑mode depth of field blur. The composition is intentionally off‑center, with a slight tilt that gives a candid feel.
+
+- **Environment**  
+  A simple, uncluttered indoor space: a light blue wall behind her, two white plastic chairs on either side, and a tiled floor. The time of day is late afternoon, giving a warm, slightly hazy ambiance. The weather outside is mild, with a gentle breeze that lifts her hair slightly.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—she appears unaware of the camera, mid‑action as she raises her arms. Slight tilt and partial crop create an accidental framing that feels natural and unstyled. No rule‑of‑thirds intentionality; the frame is a rough, handheld snapshot.
+
+- **Technical Notes**  
+  Short focal length (35 mm) for a wide view of the scene. Background is fully sharp—no bokeh. No post‑processing color grading or auto‑HDR. The image retains a raw, in‑camera look with slight overexposure on the subject’s front side to highlight her skin tone.
+
+**Prompt Summary**  
+"A tall woman with long wavy brown hair stands casually indoors against a light blue wall, wearing sheer white lace underwear. Her arms are raised above her head, hands clasped, creating a subtle arc. Natural mid‑afternoon daylight creates a soft overexposed glow. Shot on 35 mm wide‑angle at f/4, 1/125 s, ISO 400, with slight motion blur on the arms and a handheld tilt. Two white plastic chairs flank her on either side; everything is in focus. The scene captures a candid, unposed moment of spontaneous movement, with accidental off‑center framing and no rule‑of‑thirds intentionality."

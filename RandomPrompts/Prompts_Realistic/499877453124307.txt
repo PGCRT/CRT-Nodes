@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, sun‑kissed blonde hair, wearing a white ribbed crop‑top and matching high‑waist shorts, kneeling on a concrete park pathway. She’s mid‑gesture—right knee bent, left leg extended, hands resting on her thigh, head tilted slightly to the side, smiling softly at the camera. Her black Nike sneakers are slightly askew, adding a casual, unposed feel.
+
+- **Lighting & Exposure**  
+  Warm, golden hour sunlight from the west casts soft shadows and a subtle overexposure on the subject’s face. Slight handheld shake gives a natural motion blur around the edges. No auto‑beauty or filter enhancement—raw, unprocessed look.
+
+- **Environment**  
+  The scene is set in an urban park during late afternoon. Tall trees line the left side of the path, a lamppost stands in the background, and city high‑rises peek through the foliage on the right. The grass is lush, the sky is a pale blue‑white, and the ambient light creates a gentle haze.
+
+- **Lens & Technical**  
+  24 mm wide‑angle lens, f/4.0 aperture, 1/125 s shutter speed, ISO 400. Everything is in focus—from the subject’s face to the distant buildings—no bokeh or depth‑of‑field blur. The framing is off‑center and slightly tilted, capturing a candid, spontaneous moment.
+
+- **Composition Notes**  
+  The shot is a “mid‑action” candid capture: the subject’s pose is not staged, her hands are slightly uneven, and the composition does not follow the rule of thirds—instead it feels accidental and natural. The background is fully sharp, with no portrait‑mode isolation.
+
+- **Post‑Processing**  
+  No color grading or filters applied. Only a minimal auto‑HDR tweak to brighten the scene. The final image retains a raw, documentary feel.

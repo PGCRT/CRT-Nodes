@@ -1,0 +1,30 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy dark hair sitting cross‑legged on a concrete bench in a sunlit park. She wears a soft pink short‑sleeved crop top and light‑wash wide‑fit jeans. Her hands rest gently on her knees, fingers slightly curled, as if she’s about to adjust her shirt or hold a small object. Her face is turned toward the camera but not directly at it—she’s mid‑smile, eyes bright, a natural candid expression.
+
+- **Lighting & Exposure**  
+  Capture in late afternoon golden hour; the sun is low, creating a warm, slightly overexposed highlight on her forehead and a soft glow on her shoulders. The exposure is a little high, giving a raw, unprocessed look. Use a wide‑angle lens (24–35 mm) to keep the entire scene in focus—no bokeh, no depth‑of‑field blur; background remains sharp from foreground to background.
+
+- **Motion & Focus**  
+  Slight motion blur on the subject’s hands and hair, indicating handheld instability. The focus is flat: everything—from her face to the bench to the trees behind—is in focus. No portrait‑mode “subject isolation.”  
+
+- **Framing & Composition**  
+  Use a short focal length (24–35 mm) for a wide, almost “all‑in‑one” view. Frame the shot slightly off‑center; the bench leans a bit to the left, the woman’s body is not perfectly centered but rather casual and spontaneous. No rule‑of‑thirds intentionality—accidental framing that feels natural and unposed.  
+
+- **Environment**  
+  The setting is a sunny, grassy park with a few tall trees in the background. The time of day is early evening, giving a warm, golden hue. The weather is clear, with a light breeze that slightly ruffles her hair.  
+
+- **Lens & Technical Details**  
+  - Lens: 35 mm prime or 24–70 mm zoom (set to 35 mm).  
+  - Aperture: f/8 – f/11 for sharpness across the frame.  
+  - Shutter speed: 1/60 s – 1/100 s for slight motion blur.  
+  - ISO: 400–800 depending on ambient light.  
+  - No auto‑HDR or auto‑beauty mode—raw, unprocessed look.  
+  - No filters, no color grading, no post‑processing aesthetic.  
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Encourage imperfections: slight tilt, off‑center framing, partial crop. Zero studio lighting, zero professional composition, zero editorial tone. Natural motion freeze or slight blur from handheld instability.
+
+- **Output**  
+  Produce a single image that feels like a genuine, everyday snapshot—no staged or edited look. The final photo should feel natural, raw, and vividly realistic, as if captured by a friend with a DSLR or mirrorless camera in a park on a warm afternoon.

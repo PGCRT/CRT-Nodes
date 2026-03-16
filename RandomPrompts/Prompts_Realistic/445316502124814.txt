@@ -1,0 +1,27 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A young woman with long, dark brown hair, wearing a soft pastel‑pink sweatshirt and light denim jeans, is captured mid‑turn in a bustling classroom. She holds a pen in her right hand, poised over a sheet of paper on a wooden desk, as if she’s just finished a question or about to write one. Her left elbow rests on the desk, and her head is tilted slightly to the left, giving a dynamic, off‑center profile view. A small hoop earring glints on her left ear. She sits in a black office chair with a brown leather‑like backrest; the chair’s armrest is visible on the right side of the frame.
+
+- **Pose & Composition**  
+  The shot is taken with a wide‑angle lens (24–35 mm), producing a slightly distorted, “handheld” feel. The framing is accidental: the subject is not centered but offset to the right, and the top of the frame cuts off just above her head, creating a partial crop. Slight motion blur is present on her hair and the pen, indicating a quick shutter speed (1/60–1/100 s) and a handheld shake. The camera is held at eye level, with a slight tilt to the left, giving an informal, candid vibe.
+
+- **Lighting & Exposure**  
+  Natural daylight comes from a large window on the right side of the room, creating a soft, diffused illumination that slightly overexposes the upper part of the image. The lighting is uneven: the left side of the subject’s face is brighter than the right, and there’s a subtle gradient in the background. No auto‑HDR or beauty mode is applied; the look remains raw and unprocessed.
+
+- **Environment & Background**  
+  The setting is a bright, modern classroom with light‑wood desks, black office chairs, and a tiled ceiling with recessed lights. In the background, other students are visible: a boy in a white t‑shirt sits to the right, working on a laptop; a girl in a gray shirt is at a desk further back. A green cup filled with pens and pencils sits on the desk next to the woman, along with a brown coffee cup. A small potted plant is perched on a cabinet in the far right corner. The window lets in natural light that reflects off the white walls, creating a slight glare near the top right of the frame.
+
+- **Lens & Technical Details**  
+  - Focal length: 35 mm (wide‑angle).  
+  - Aperture: f/4.0 (mid‑range).  
+  - Shutter speed: 1/80 s (slight motion blur).  
+  - ISO: 400 (for natural contrast).  
+  - No bokeh; the background is fully sharp, as all elements are in focus.  
+  - No portrait‑mode depth‑of‑field blur; everything from foreground to background remains crisp.
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, zero post‑processing aesthetic. The image retains its raw, unposed feel, with only minimal white‑balance adjustment and a slight crop to tighten the composition.
+
+- **Final Prompt Summary**  
+  “A young woman with long dark brown hair, wearing a pastel‑pink sweatshirt and denim jeans, sits in a black office chair at a wooden desk in a bright classroom. She holds a pen over a sheet of paper, poised to write, while a green cup of pens and a coffee cup sit beside her. The scene includes other students, a laptop, and a potted plant on a cabinet, all captured with a 35 mm wide‑angle lens at f/4.0 and 1/80 s shutter speed, producing slight motion blur and a subtle overexposure from natural daylight. The framing is accidental and off‑center, with a slight left tilt, creating a candid, unposed photograph.”

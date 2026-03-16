@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A fit woman with long, dark brown hair, wearing a white sports bra and matching high‑waist bikini bottoms, standing in a casual, unposed stance. Her hands rest on her hips, head tilted slightly downward, eyes cast to the side as if she’s mid‑conversation or about to move. She wears a thin silver necklace and a wristwatch on her left arm; a subtle bracelet adorns her right wrist.  
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle, late‑afternoon sun creates a warm, slightly overexposed highlight on her torso. The exposure is uneven—soft center brightness with a faint vignette at the edges—giving a raw, unprocessed feel. No auto‑HDR or beauty filters; just a handheld, spontaneous capture.  
+
+- **Motion & Focus**  
+  Slight motion blur around the hands and hips from a shaky handheld shot. Everything—from her skin to the background—is fully sharp, no portrait‑mode depth of field. The focus covers the entire frame, from her toes to the top of her head.  
+
+- **Lens & Technical Settings**  
+  24‑mm wide‑angle lens (short focal length), f/4.0 aperture, 1/125 s shutter speed, ISO 400. No bokeh; background remains crisp.  
+
+- **Environment**  
+  The scene is set in a cluttered outdoor alleyway beside a stucco building with a decorative tile façade. Cardboard boxes, plastic bags, and a white trash bag sit on the ground near a wooden pallet. A green bottle and a yellow cloth peek from behind a box. The time of day is early evening; the sky is a pale blue‑gray with soft clouds.  
+
+- **Composition & Framing**  
+  The shot is intentionally off‑center, with the subject’s left side slightly cut off by the frame edge. No rule‑of‑thirds—just a casual, spontaneous composition that feels like a real‑life snapshot. The background is fully in focus, adding depth without any studio‑style isolation.  
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, no auto‑HDR. A simple, raw capture with natural contrast and a hint of slight overexposure on the subject’s midsection.  
+
+**Prompt Summary:**  
+“Candid, unposed photo of a fit woman in a white sports bra and bikini bottoms, hands on hips, slightly downward gaze, wearing a silver necklace and wristwatch, captured with a 24‑mm wide‑angle lens at f/4, 1/125 s, ISO 400. Natural late‑afternoon light creates soft overexposure. Slight motion blur from handheld shake. Background: cluttered alleyway with cardboard boxes, plastic bags, and a white trash bag near a stucco building with decorative tiles. All elements in focus, no bokeh. Raw, unprocessed look, no filters.”

@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with shoulder‑length, sun‑kissed blonde hair, wearing a plain black short‑sleeved tee and light‑wash denim jeans, sitting cross‑legged on a patch of fallen leaves. Her head is slightly tilted to the left, eyes focused forward, mouth relaxed, as if caught mid‑thought. The pose is casual and unposed; her hands rest on her knees, fingers slightly curled.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle, late‑afternoon sun that creates a soft overexposure on the face and a gentle warmth across the scene. Slight handheld shake gives a subtle motion blur around the edges; the exposure is a little bright on the highlights but still retains detail in the shadows.
+
+- **Lens & Technical**  
+  24 mm wide‑angle lens, f/4.0 aperture, 1/125 s shutter speed, ISO 400. Everything from foreground to background is fully sharp—no bokeh or depth‑of‑field blur. The focus plane covers the entire frame, subject and environment alike.
+
+- **Framing & Composition**  
+  A casual, off‑center crop that does not follow the rule of thirds; the subject’s left side is slightly cut off by the frame edge, giving a spontaneous feel. The composition is accidental: the background tree branches and scattered leaves create a natural, organic border.
+
+- **Environment**  
+  A quiet meadow in late autumn. The ground is covered with brown fallen leaves and green grass, a few thin tree branches rise in the upper left corner, and a patch of wildflowers can be seen in the far right background. The time of day is mid‑afternoon, with the sun high but slightly to the north‑west, casting soft shadows.
+
+- **Mood & Details**  
+  The image has a raw, unprocessed look—no filters or color grading. Slight imperfections are present: a tiny smudge on the subject’s shirt, a slight tilt of the camera, and a faint motion blur that suggests the camera was handheld. The background is fully sharp, giving an immersive sense of being in the scene.
+
+- **Prompt for Text‑to‑Image Generation**  
+  “A candid portrait of a young woman with shoulder‑length blonde hair, wearing a black tee and denim jeans, sitting cross‑legged on fallen leaves in an autumn meadow. The shot is taken with a 24 mm wide‑angle lens at f/4, 1/125 s, ISO 400. Natural late‑afternoon light creates a soft overexposure. The framing is off‑center and slightly cropped, capturing the subject’s left side near the frame edge. Background includes tree branches and scattered grass, fully sharp. Slight handheld motion blur adds realism. No filters or post‑processing—raw, spontaneous, natural look.”

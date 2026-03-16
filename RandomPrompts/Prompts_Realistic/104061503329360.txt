@@ -1,0 +1,28 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a bouncy, twin‑bun hairstyle (colored with yellow and pink hair ties) standing in a brightly lit grocery aisle. She wears a red polka‑dot halter bikini top tied at the front, paired with a matching short skirt that falls just above the knees. Her left hand holds a brown paper shopping bag with blue and pink accents; her right hand rests on her hip. She is mid‑step, one foot slightly ahead of the other, as if she just finished picking up an item from the shelf.
+
+- **Facial Expression & Gaze**  
+  She looks directly at the camera with a soft, confident smile, eyes slightly tilted to the left. The face is captured in a natural, unposed candid moment—no staged pose, no edited look.
+
+- **Lighting & Exposure**  
+  Ambient daylight from a high‑window above the aisle creates a slight overexposure on the upper part of the frame. No auto‑HDR or beauty filters; the image retains raw, unprocessed texture. The exposure is slightly warm, with a gentle haze that suggests a bright midday sun.
+
+- **Camera Settings**  
+  - Lens: 24 mm wide‑angle (short focal length)  
+  - Focal length: 24 mm, handheld, slight instability producing a natural motion blur on the subject’s movement.  
+  - Aperture: f/5.6 – everything from foreground to background is fully sharp, no portrait‑mode depth‑of‑field blur.  
+  - ISO: 400 – for a clean, low‑noise capture.
+
+- **Composition & Framing**  
+  The shot is intentionally off‑center; the subject’s left side leans slightly to the right of the frame’s center. The framing is accidental—no rule‑of‑thirds intentionality. The top of the frame cuts off just above her head, and the bottom cuts off a few inches below her knees, giving a “partial crop” feel.
+
+- **Background & Environment**  
+  The background shows a grocery aisle lined with shelves stocked with condiments, cleaning supplies, and household goods. The shelves extend into the distance, creating a subtle vanishing point. The time of day is mid‑afternoon, with bright natural light coming from above, casting soft shadows on the floor and on the subject’s body.
+
+- **Details & Imperfections**  
+  Slight tilt in the camera’s grip gives a dynamic angle. There is a faint motion blur around the edges that suggests the subject was moving when the shutter was pressed. The image has no post‑processing color grading—just raw, realistic capture.
+
+- **Final Prompt**  
+  “A candid, wide‑angle shot of a woman in a red polka‑dot bikini set, holding a shopping bag, standing in a grocery aisle at midday. She has twin buns with yellow and pink hair ties, a confident smile, and is captured mid‑step. The image uses a 24 mm lens, handheld slight motion blur, natural daylight overexposure, no filters, everything in focus, accidental off‑center framing, partial crop, raw realistic look.”

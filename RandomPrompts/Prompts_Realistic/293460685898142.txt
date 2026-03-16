@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, straight brown hair, pale skin, and a soft, natural complexion. She’s wearing a gray, long‑sleeved, button‑front crop top that ends just above the navel, paired with matching gray leggings. Her hands rest lightly at her sides, slightly angled to one side, as if she’re mid‑step or just finished a movement. Her face is turned toward the camera but not directly aimed—slight off‑center tilt gives a candid feel.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. Slight motion blur on the hands and lower body to hint at movement. No filters, no color grading, no post‑processing aesthetic. A tiny overexposure in the center of the frame to keep the ambient light warm.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm), short focal length. Everything in focus — background fully sharp, no bokeh. Slight handheld shake for a natural, imperfect feel. Auto‑HDR or auto‑beauty mode off. No rule‑of‑thirds intentionality — accidental framing, partial crop.
+
+- **Environment**  
+  Location: A bright, uncluttered living room with a white cabinet on the left and a wooden side table on the right. A small vase of pink roses sits atop the cabinet; a folded blue towel rests on the table. Time of day: late morning, soft natural daylight coming from the west, creating gentle shadows. Weather: clear, slightly humid.
+
+- **Composition Notes**  
+  The frame is slightly tilted to the left, cropping the top of the subject’s head just above her hairline. The background is fully sharp — no depth‑of‑field blur. The subject occupies roughly two‑thirds of the vertical space, with a small margin at the top and bottom. The left side of the image shows a hint of a white dresser; the right side reveals a glimpse of a blue cloth on a wooden table.
+
+- **Lighting**  
+  Natural daylight from the west, slight overexposure in the center, no studio lighting. Soft shadows cast beneath the subject’s arms and belly. The lighting creates subtle highlights on her chest and abdomen, emphasizing the texture of her clothing.
+
+- **Details & Imperfections**  
+  Slight tilt in the camera angle, minor handheld shake, partial crop at the top and bottom. A faint smudge on the left side of her top, a tiny wrinkle in the fabric near the button line. The subject’s left hand is slightly blurred, indicating motion.
+
+- **Final Prompt**  
+  “A candid, wide‑angle shot of a young woman in a gray crop top and leggings, captured mid‑step in a bright living room at late morning. The image has slight motion blur on the hands, accidental off‑center framing, and full sharpness across the background. Natural daylight from the west creates soft shadows and a tiny overexposure in the center. The composition is slightly tilted, with a partial crop at the top and bottom, capturing a white cabinet with a vase of pink roses on the left and a wooden side table with a blue towel on the right. No filters or post‑processing — raw, unprocessed realism.”

@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wet blonde hair standing back-to-back to the camera beside a swimming pool. She wears a thin white bikini bottom that clings to her curvy hips. Her left arm is slightly bent, hand relaxed near her thigh, while her right arm hangs naturally by her side. A small floral tattoo adorns the center of her lower back, and a smaller ink design is visible on each upper arm.
+
+- **Lighting & Exposure**  
+  Slight overexposure from mid‑afternoon sun, creating soft highlights on her skin and a subtle glare on the water surface. No auto‑beauty or filter processing—raw, natural look with a handheld, slightly unstable shake.
+
+- **Motion & Focus**  
+  A faint motion blur on the hair and background, indicating a quick shutter speed and slight hand jitter. Everything—from her body to the pool tiles—is fully sharp; no portrait‑mode depth of field.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24‑35 mm), short focal length. No bokeh—background is completely in focus, from the pool edge to the green hedge behind. The framing is accidental: a slight tilt and off‑center crop that gives a candid feel.
+
+- **Environment**  
+  Location: A public resort pool with a light blue tile floor and a blurred green hedge in the background. Time of day: late afternoon, around 4 pm, with warm, high‑angle sunlight. Weather: lightly breezy, with a few droplets of water on her hair and shoulders.
+
+- **Composition & Details**  
+  The shot captures her rear view, emphasizing the curve of her buttocks and the glossy finish of her skin. A small, delicate tattoo of a lotus flower sits between her glutes. Her left wrist is slightly turned, revealing a thin bracelet. The pool’s edge shows a faint reflection of the sky, adding an extra layer of detail.
+
+- **Prompt for Text‑to‑Image Generation**  
+  “A candid back‑view photo of a curvy woman with long wet blonde hair, wearing a white bikini bottom, standing beside a public resort pool. She has a small floral tattoo on her lower back and smaller ink designs on each upper arm. The image is taken with a wide‑angle short focal length lens, all elements in focus, slight motion blur from handheld shake, mild overexposure from mid‑afternoon sun, no filters or auto‑beauty processing. Background shows a light blue pool tile floor and a green hedge, fully sharp. The composition is accidental, slightly tilted and off‑center, capturing a spontaneous, unposed moment.”

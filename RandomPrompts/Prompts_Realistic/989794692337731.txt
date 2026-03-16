@@ -1,0 +1,27 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with deep brown hair styled in two thick braids, each secured with black elastic. She wears a light beige, tie‑front bikini top that sits snugly on her torso, revealing subtle natural contours. Her face is adorned with a thin gold chain necklace and large gold hoop earrings. She smiles broadly, showing a hint of teeth, with a slight tilt to her head as if she’s mid‑conversation or caught in an unplanned moment.
+
+- **Lighting & Exposure**  
+  Natural daylight from a bright, slightly overcast window—ambient light creates a soft, warm glow on her skin. The exposure is mildly overexposed, giving a subtle halo around her face and shoulders. No auto‑beauty or filter enhancement; the image retains raw, unprocessed fidelity.
+
+- **Camera & Lens Settings**  
+  - Lens: 24 mm wide‑angle (short focal length) for a broad field of view.  
+  - Focal depth: everything from her face to the background is fully sharp—no bokeh or portrait‑mode blur.  
+  - Handheld shot with slight motion blur at the edges, indicating spontaneous capture.  
+
+- **Composition & Framing**  
+  The frame is intentionally off‑center; the subject’s left side leans slightly toward the right edge of the frame. The crop is partial—her shoulders extend beyond the top and side borders, giving a casual, candid feel. No rule‑of‑thirds adherence; the composition feels accidental, as if she was caught mid‑gesture.
+
+- **Background & Environment**  
+  The setting is a modern kitchen: a white shelving unit on the left holds a small potted plant, a stack of books, and a ceramic mug. A stainless‑steel oven is visible on the right. The time of day is late morning, with soft natural light filtering through a large window. The background is fully in focus, no depth‑of‑field blur.
+
+- **Details & Imperfections**  
+  - Slight tilt of the camera, giving a dynamic angle.  
+  - Minor overexposure on her chest area, creating a subtle halo.  
+  - Tiny imperfections: a faint smudge on her left earring, a slight frayed edge on the braids’ elastic.  
+  - The image has no post‑processing color grading; it looks naturally captured.
+
+- **Prompt for Text‑to‑Image Generation**  
+  *“A candid, unposed photograph of a young woman with deep brown hair in two thick braids, wearing a light beige tie‑front bikini top, gold chain necklace, and large gold hoop earrings, smiling broadly mid‑conversation. The shot is taken with a 24 mm wide‑angle lens, everything in focus from foreground to background, slight motion blur at the edges from handheld capture. Natural daylight from a bright window creates a soft warm glow with mild overexposure on the subject’s chest. Background shows a modern kitchen: white shelving unit with a potted plant, books, and a ceramic mug; stainless‑steel oven on the right. The frame is off‑center, partial crop, slight tilt. No filters or auto‑beauty enhancements—raw, unprocessed look.”*

@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair walking confidently down a narrow, rain‑wet garden path. She wears a navy‑blue lace‑trimmed mini dress that falls just above the knee, paired with black strappy sandals. Her left foot is mid‑step, creating a small ripple in the watered pavement; her right foot is slightly behind, giving a natural, unposed motion. She smiles softly, eyes forward, as if unaware of the camera.
+
+- **Capture Style**  
+  Candid, spontaneous, “mid‑action” shot. Slight handheld shake and motion blur on the feet and background to emphasize movement. No rule‑of‑thirds—framing is accidental, slightly off‑center. The composition is wide‑angle, capturing the full length of the subject and a good portion of the path and surrounding flora.
+
+- **Environment**  
+  Location: A narrow garden pathway lined with pink and orange hydrangeas on both sides, a small water channel or rain‑wet pavement in the middle. The path runs straight toward the camera, with a slight tilt to the left. Time of day: late afternoon, soft diffused light with a hint of golden hour warmth. Weather: light rain or just finished rain, droplets visible on the pavement and leaves; ambient humidity gives a slightly overexposed feel.
+
+- **Lens & Technical**  
+  Use a short focal length wide‑angle lens (e.g., 24–35 mm). Everything in focus—no bokeh, no depth‑of‑field blur. No portrait‑mode “subject isolation.” Slight overexposure to keep the whole scene bright and natural. Auto‑HDR or auto‑beauty mode off. No filters, no color grading, no post‑processing aesthetic. Capture raw, unprocessed look with natural lighting.
+
+- **Details & Imperfections**  
+  - Slight tilt of the camera to the left, giving an accidental off‑center framing.  
+  - Partial crop: the edges of the path cut off slightly at the top and bottom.  
+  - Motion blur on the feet and the water ripples, indicating handheld instability.  
+  - Background fully sharp—no bokeh, just a crisp, detailed view of the green foliage and pink flowers.
+
+- **Final Prompt**  
+  “A young woman in a navy‑blue lace mini dress walks down a rain‑wet garden path lined with pink hydrangeas, captured on a wide‑angle lens at late afternoon. The shot is candid and spontaneous, with slight handheld shake and motion blur on her feet and the water ripples. Everything is in focus, no filters or auto‑HDR, raw and unprocessed. The framing is accidental and off‑center, slightly tilted, partially cropped, giving a natural, real‑world feel. The background foliage and path are fully sharp, with a small ripple where her foot strikes the wet pavement.”

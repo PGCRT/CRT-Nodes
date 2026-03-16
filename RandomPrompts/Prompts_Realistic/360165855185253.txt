@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail, wearing gold hoop earrings, captured mid‑gesture as she adjusts her shirt or touches her neck. Her face is slightly tilted, eyes focused on something off‑camera, giving a candid, spontaneous feel. The shot should feel “in the moment,” with a faint handheld shake and a tiny overexposed highlight on her forehead.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle source (mid‑morning, soft sun). Slight overexposure on the subject’s face, creating a warm, natural glow; no auto‑beauty or filter enhancement—just raw, unprocessed light. The background should be a plain, neutral wall with subtle texture, fully sharp, no bokeh.
+
+- **Lens & Technical**  
+  24‑mm wide‑angle lens (short focal length), handheld, all elements in focus—no portrait‑mode depth‑of‑field blur. Keep the framing accidental: off‑center composition, slight tilt, partial crop that cuts off a bit of the shoulder and background.
+
+- **Environment**  
+  Location: a simple office or studio corner with a light gray wall; time of day: early afternoon, diffused sunlight; weather: clear, no wind. The scene should feel real, not staged.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Encourage slight imperfections: a tiny tilt to the camera, a partial crop that cuts off a bit of the shoulder and background, natural motion freeze or slight blur from handheld instability.
+
+- **Post‑Processing**  
+  No filters, no color grading, no post‑processing aesthetic—just raw, natural imagery with auto‑HDR off. Keep everything in focus, wide‑angle, no bokeh.
+
+**Prompt Summary:**
+> “A candid, unposed portrait of a woman with a high ponytail and gold hoop earrings, captured mid‑gesture as she adjusts her shirt or touches her neck. Natural daylight from a high‑angle source (mid‑morning), slight overexposure on the subject’s face, raw and unprocessed. 24‑mm wide‑angle lens, handheld, all elements in focus, accidental off‑center framing with slight tilt and partial crop. Background: plain gray wall, fully sharp, no bokeh. Capture style: candid, spontaneous, natural motion freeze or slight blur. Environment: office corner, early afternoon, clear weather.”

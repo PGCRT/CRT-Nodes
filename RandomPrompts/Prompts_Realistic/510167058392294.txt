@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark, slightly frizzy hair caught mid‑movement, wearing a cropped, color‑blocked hoodie (white body, gray hood, black stripe). She is holding a smartphone in her right hand, capturing a selfie or a quick video. Her face is turned to the side, eyes focused on the screen, lips slightly parted, giving a candid, unposed feel.
+
+- **Motion & Focus**  
+  Slight motion blur on the hair and hands, indicating handheld instability. Everything in the frame — subject, background, and foreground — is fully sharp; no bokeh or portrait‑mode softness. No auto‑HDR or beauty filters; raw, natural look with a hint of overexposure from the bright daylight.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm), short focal length. No depth‑of‑field blur — background is completely in focus. The composition is accidental: slight tilt and off‑center framing, partial crop that cuts off part of the background, no rule‑of‑thirds intentionality.
+
+- **Environment**  
+  Office break‑room or co‑working space during mid‑afternoon. The background shows a white desk with a computer monitor, a stack of papers, a blue mug, and a coffee machine. A window lets in natural sunlight, creating a warm, slightly harsh light that casts soft shadows. Outside the window, a street scene with a red‑sign shop (“MEADOW” or similar) and a dark sedan parked on the road. The weather is clear, the sky is bright, and the time of day is late afternoon (around 4 pm), giving a golden hue to the scene.
+
+- **Lighting & Color**  
+  Natural daylight from the window, slight overexposure on the subject’s face and upper body. No color grading or post‑processing; the image retains the raw tones of the camera’s sensor. The lighting creates subtle highlights on the hoodie’s fabric and a faint reflection in the monitor’s screen.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, the subject’s head is slightly off‑center. The hoodie’s zipper is partially open, revealing a hint of her mid‑section. Her left hand is partially out of frame, holding the phone. A small portion of a white storage bin on the desk is visible in the lower right corner. The background desk has a blue cup, a stack of books, and a computer mouse. The overall vibe is spontaneous, candid, and unposed.
+
+- **Prompt Summary**  
+  “A young woman with long dark hair mid‑motion, wearing a cropped color‑blocked hoodie, holding a phone in an office break‑room during late afternoon. Wide‑angle, short focal length lens captures everything in focus with slight motion blur and accidental framing. Natural daylight from a window creates a warm overexposed look. Background shows a desk with a monitor, papers, mug, and a street scene outside. Raw, unprocessed, candid style.”

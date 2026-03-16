@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair, wearing large hoop earrings and a thin necklace, is leaning her chin on her crossed hands that rest on a fresh palm leaf. Her eyes are gently closed, lips slightly parted, as if she’s mid‑breath or about to speak. She wears a delicate ring on her left ring finger and a subtle bracelet on her right wrist. The hands are positioned in the lower third of the frame, but the composition is intentionally off‑center, with a slight tilt that gives a spontaneous, handheld feel.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle, late‑afternoon sun creates a soft overexposure on the face and background. The exposure is slightly uneven—the foreground is a bit brighter than the background, giving an auto‑HDR‑free, raw look. No color grading or filters are applied; the image retains the true ambient tones of the scene.
+
+- **Lens & Technical**  
+  Shot with a wide‑angle lens (24–35 mm) at a short focal length, ensuring that everything—from the subject’s face to the background—remains fully sharp. No bokeh or depth‑of‑field blur; the background is in focus, capturing the ocean and palm fronds in detail. The focus is set on the hands and face, but the entire frame is crisp.
+
+- **Environment**  
+  The scene is set on a tropical beach at dusk, with the ocean’s gentle waves visible behind the subject. A single palm leaf lies across her hands, adding a natural prop. The sky is a pale, warm blue‑white, suggesting the “golden hour.” The weather is breezy but calm, with a light wind that slightly ruffles the woman’s hair and the palm leaf.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject appears unaware of the camera, mid‑action. Slight motion blur is present on the hands and background, indicating handheld instability. The framing is accidental: no rule‑of‑thirds intentionality, just a natural, off‑center crop that includes a portion of the ocean and a palm frond.
+
+- **Details & Imperfections**  
+  The image has a raw, unprocessed look with slight overexposure on the face, giving it a natural, documentary feel. Minor imperfections—slight tilt, partial crop, and a faint motion blur—add authenticity. No studio lighting or professional composition; the photo feels like a genuine, spontaneous capture.
+
+- **Final Prompt**  
+  “A young woman with long wavy brown hair, hoop earrings, and a thin necklace leans her chin on crossed hands resting on a palm leaf, wearing a ring and bracelet, eyes closed mid‑breath, in a tropical beach setting at dusk. Natural daylight creates soft overexposure; wide‑angle lens keeps everything sharp. Candid, handheld shot with slight motion blur, off‑center framing, no filters—raw, spontaneous realism.”

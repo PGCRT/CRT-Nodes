@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  *A young couple in a spontaneous, mid‑kiss moment on a sunny beach. The woman has long, wet hair that clings to her shoulders; the man is shirtless, wearing dark swim trunks. They’re crouched low, almost at water level, with their hands touching and a splash rising from the sea.*  
+
+- **Pose & Composition**  
+  *Slight motion blur on the hands and splash, indicating handheld shake. The frame is intentionally off‑center, a little tilted, capturing an accidental “in‑the‑moment” feel. No rule‑of‑thirds—just a natural, spontaneous crop that includes a portion of the shoreline, the ocean, and a slice of the bright blue sky.*  
+
+- **Environment**  
+  *Location: A shallow, sunlit beach with gentle waves lapping at the shore. Time of day: mid‑afternoon, with warm, high‑angle sunlight creating slight overexposure on the water’s surface. Weather: clear, with a few scattered clouds; the ambient light is bright but not harsh.*  
+
+- **Lens & Technical**  
+  *Short focal length (20–35 mm), wide‑angle lens. Everything is in focus—no bokeh, no depth‑of‑field blur. No portrait‑mode “subject isolation.” Slight overexposure on the water’s reflection gives a raw, unprocessed look.*  
+
+- **Lighting & Color**  
+  *Auto‑HDR or auto‑beauty mode off. No filters, no color grading, no post‑processing aesthetic. The image retains natural imperfections: slight tilt, partial crop, and a hint of motion blur from the couple’s movement.*  
+
+- **Final Prompt**  
+  *“A young couple kissing on a sunny beach, crouched low at water level with a splash, captured on a wide‑angle lens with slight motion blur and accidental framing. The scene includes shoreline, ocean, and blue sky, shot mid‑afternoon under bright sunlight. Raw, unprocessed look, no filters—just a natural, candid moment frozen in time.”*

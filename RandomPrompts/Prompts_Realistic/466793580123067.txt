@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high bun, wearing an off‑white long‑sleeve sweater, captured mid‑gesture as she points toward her wrist with both hands. Her face is turned slightly to the right, a bright, candid smile on her lips. The shot should feel spontaneous—she’s unaware of the camera, caught in a natural moment.
+
+- **Motion & Focus**  
+  Apply a subtle motion blur to convey slight handheld instability. Keep everything in focus—no depth‑of‑field blur; background must be fully sharp. Avoid any “portrait mode” or subject isolation.
+
+- **Lighting & Exposure**  
+  Use wide‑angle, short‑focal‑length lens (e.g., 24‑35 mm). Capture with a slight overexposure or underexposure depending on ambient light—aim for a raw, unprocessed look. No auto‑HDR or auto‑beauty enhancements; no filters, color grading, or post‑processing aesthetics.
+
+- **Framing & Composition**  
+  Frame the shot casually: slight tilt and off‑center composition, partial crop that doesn’t follow the rule of thirds. The background should be a real office space with a large window, visible fluorescent lights, and a glass partition that reflects the ceiling lights. Keep the background fully sharp—no bokeh.
+
+- **Environment**  
+  Location: A modern office with a large window, visible ceiling fluorescents, and a glass partition that reflects the interior lighting. Time of day: mid‑afternoon, natural daylight with a warm, slightly hazy tone. Weather or ambient conditions: clear, mild, with a light breeze that may be captured in the subject’s hair movement.
+
+- **Lens & Technical**  
+  Short focal length (24–35 mm), wide‑angle lens. No bokeh, no depth‑of‑field blur—everything in focus. Zero studio lighting, zero professional composition, zero editorial tone. Capture a candid, unposed, spontaneous moment with slight tilt, off‑center framing, and partial crop.
+
+- **Final Prompt**  
+  “A young woman with a high bun, wearing an off‑white long‑sleeve sweater, captured mid‑gesture as she points toward her wrist with both hands. Her face is turned slightly to the right, a bright, candid smile on her lips. Apply a subtle motion blur to convey slight handheld instability. Keep everything in focus—no depth‑of‑field blur; background must be fully sharp. Use a wide‑angle, short‑focal‑length lens (24–35 mm). Capture with a slight overexposure or underexposure depending on ambient light—aim for a raw, unprocessed look. No auto‑HDR or auto‑beauty enhancements; no filters, color grading, or post‑processing aesthetics. Frame the shot casually: slight tilt and off‑center composition, partial crop that doesn’t follow the rule of thirds. The background is a modern office with a large window, visible ceiling fluorescents, and a glass partition that reflects the interior lighting. Time of day: mid‑afternoon, natural daylight with a warm, slightly hazy tone. Weather or ambient conditions: clear, mild, with a light breeze that may be captured in the subject’s hair movement.”

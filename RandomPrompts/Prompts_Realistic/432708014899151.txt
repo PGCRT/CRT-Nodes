@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail, wearing an oversized cream‑colored T‑shirt and faded denim shorts, captured mid‑turn as she walks through a dorm‑style room. Her left hand holds a dark blue tote bag, her right arm slightly bent, and she’s smiling faintly while looking over her shoulder. The back of her shirt is slightly wrinkpled, the fabric drapes loosely, and a thin bracelet adorns each wrist.
+
+- **Motion & Focus**  
+  Slight motion blur on the moving subject, as if the camera was handheld and not perfectly steady. Everything remains fully sharp—no bokeh, no portrait‑mode isolation. The focus covers the entire frame from foreground to background.
+
+- **Lighting & Exposure**  
+  Raw, unprocessed look with a mild overexposure in the ceiling light’s reflection; no auto‑beauty or filter enhancements. Ambient daylight from a high‑window illuminates the scene, creating soft highlights on the subject’s hair and shirt.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm), short focal length, no depth‑of‑field blur—background fully sharp. Slight tilt and off‑center framing give a spontaneous, accidental composition. The frame is partially cropped on the left side by a metal bed frame and on the right by a wooden wardrobe.
+
+- **Environment**  
+  A dormitory or shared living space with a double‑bed on the left, a wooden wardrobe on the right, a small closet with hanging clothes, and a ceiling tile light overhead. The floor is a plain concrete slab. The time of day is late afternoon, with warm natural light streaming in from a window out of frame. A few personal items—towels, bottles, and a pink cup—are scattered on the bed and wardrobe, adding to the candid feel.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, partial crop on the left edge, a faint smudge on the shirt’s back, and a tiny wrinkle in the denim shorts’ pocket. The subject’s hair is tied up in a messy ponytail with a few strands escaping. Her wrist bracelets catch the light, and her tote bag’s strap hangs loosely.
+
+- **Prompt for Generation**  
+  “A young woman with a high ponytail, wearing an oversized cream T‑shirt and faded denim shorts, captured mid‑turn as she walks through a dorm‑style room. Her left hand holds a dark blue tote bag, her right arm slightly bent, and she’s smiling faintly while looking over her shoulder. Slight motion blur on the subject, everything fully sharp—raw, unprocessed look with mild overexposure from ceiling light. Wide‑angle lens (24–35 mm), short focal length, slight tilt and off‑center framing, partial crop. Background includes a double‑bed on the left, a wooden wardrobe on the right with hanging clothes, a small closet, and a ceiling tile light. Late afternoon natural light from a window. Raw, candid, spontaneous composition with imperfections: slight wrinkle in shirt, messy ponytail, wrist bracelets, and a loose tote strap.”

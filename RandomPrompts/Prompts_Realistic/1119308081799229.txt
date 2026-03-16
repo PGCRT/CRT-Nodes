@@ -1,0 +1,26 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A fit, sun‑kissed woman in a navy‑blue floral bikini walks confidently through an outdoor farmers’ market. She carries a clear plastic bag brimming with green and red apples in her right hand, a strand of hair slipping over her left shoulder as she steps forward. Her sandals are slightly worn, and she’s mid‑stride, left foot planted, right foot pushing off, capturing a natural motion blur that hints at handheld instability.
+
+- **Pose & Framing**  
+  The shot is taken with a wide‑angle lens (24‑35 mm), giving a short focal length that keeps the entire scene in focus—no bokeh, no depth‑of‑field blur. The framing is accidental: the subject is slightly off‑center, the horizon tilts a few degrees, and the crop is partial, as if the camera was handheld and moved while shooting. No rule‑of‑thirds intentionality; the composition feels spontaneous, candid, unposed.
+
+- **Lighting & Exposure**  
+  Auto‑HDR or auto‑beauty mode off—raw, unprocessed look. The ambient daylight is bright mid‑afternoon, with a slight overexposure on the upper part of the frame that gives a warm, natural glow. Shadows fall to the left, creating subtle contrast on the woman’s skin and the market stalls. No post‑processing aesthetic; just a natural, in‑camera capture.
+
+- **Environment**  
+  The scene is set at a bustling outdoor farmers’ market on a sunny afternoon. Colorful umbrellas (green, red, white) line the background, with wooden tables laden with fresh produce—tomatoes, peppers, and leafy greens. A few other shoppers are visible in the distance, one woman in a black tank top and denim shorts browsing near a crate of apples. The ground is concrete, marked with puddles that reflect the sunlight, adding a slight wet‑sheen.
+
+- **Lens & Technical**  
+  - Focal length: 24–35 mm (wide angle)  
+  - Aperture: f/4–f/5.6 (everything in focus, no portrait mode)  
+  - Shutter speed: 1/125–1/250 s (natural motion freeze or slight blur)  
+  - ISO: 400–800 (depending on ambient light)  
+  - No bokeh, background fully sharp—every element from foreground to background is in focus.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—the subject appears unaware of the camera or mid‑action. Imperfections are encouraged: slight tilt, off‑center framing, partial crop. The image has zero studio lighting, zero professional composition, zero editorial tone—just a raw, real‑world snapshot.
+
+- **Final Prompt**  
+  “A fit woman in a navy floral bikini walks through an outdoor farmers’ market, carrying a bag of apples, captured with a wide‑angle lens at 24–35 mm, mid‑stride with slight motion blur, accidental off‑center framing, bright mid‑afternoon sunlight with a touch of overexposure, raw unprocessed look, all elements in focus, background fully sharp, no bokeh. The scene includes colorful umbrellas, produce tables, and other shoppers, concrete ground with puddles reflecting light. Capture style: candid, spontaneous, imperfect, handheld.”

@@ -1,0 +1,28 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A young woman with a vibrant pink ponytail, wearing faded denim overalls and rugged brown boots, is mid‑step at a bustling coffee shop counter. She’s holding a paper cup, leaning slightly forward as she reaches for a latte, her face turned toward the espresso machine, eyes focused on the pour. Her hair swings a little to the side, catching the sunlight.
+
+- **Pose & Motion**  
+  Slight motion blur around her hands and the cup, indicating a handheld shot captured at a low shutter speed. The blur is subtle—just enough to give a natural, spontaneous feel. Her body is angled at an off‑center angle, not following the rule of thirds; the frame cuts off the left side of her boot, adding a casual, imperfect vibe.
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window on the left creates a warm, slightly overexposed highlight on her back and the stack of brown paper cups. The exposure is a little high in the center, with a soft lens flare trailing across the upper right corner. No auto‑beauty or filter processing—just raw, unedited light.
+
+- **Environment**  
+  The setting is a bright, modern coffee shop with exposed wooden counters, a stainless‑steel espresso machine, and a shelf of stacked cups on the left. A few other patrons are visible in the background: a man in a black t‑shirt and cap is pouring a drink, another customer stands near the window. Outside the window, a sunny afternoon shows a glimpse of a street and a passing car. The weather is clear, with a light breeze that ruffles her hair.
+
+- **Lens & Technical**  
+  Use a wide‑angle lens (24–35 mm) to capture a broad view of the scene. Keep everything in focus—no portrait‑mode blur or depth‑of‑field isolation. The background is fully sharp, from the counter to the window. Shoot at a slightly low angle to emphasize the subject’s posture and the texture of the wooden surface.
+
+- **Composition & Framing**  
+  Capture a candid, unposed moment; the camera is handheld, with a slight tilt that gives an accidental, organic feel. The frame is partially cropped on the right side, cutting off the edge of the espresso machine, which adds to the spontaneous vibe. No intentional rule‑of‑thirds—just a natural, casual composition.
+
+- **Details & Texture**  
+  Emphasize texture: the roughness of the denim, the smooth finish of the wooden counter, the glossy surface of the espresso machine, and the crisp lines of the paper cups. Include subtle imperfections: a slight smudge on the cup, a faint dust particle on the window glass, and a small shadow cast by the woman’s boot.
+
+- **Post‑Processing**  
+  Keep it raw—no color grading or filters. A mild auto‑HDR might be applied to balance the bright window light, but otherwise maintain an unprocessed look. Slight overexposure in the center gives a warm, sunlit feel.
+
+- **Final Prompt Summary**  
+  “A young woman with a pink ponytail, in denim overalls and brown boots, reaches for a latte at a bustling coffee shop counter. She’s mid‑step, slightly blurred, captured on a wide‑angle handheld lens with natural daylight from a large window creating a warm overexposure. The scene includes stacked paper cups, an espresso machine, and other patrons in the background. The composition is off‑center and partially cropped, all in focus, with a raw, unprocessed look—no filters, just a candid, spontaneous snapshot.”

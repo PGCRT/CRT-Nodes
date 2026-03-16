@@ -1,0 +1,23 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy blonde hair standing in a dimly lit bedroom at dusk. She is bare‑shouldered, her left arm bent at the elbow, hand tucked into the crook of her right shoulder, index finger lightly touching her lips as if she’s about to speak or just finished a thought. Her head is slightly tilted to the left, eyes focused forward with a soft, contemplative expression. The camera captures her from a low angle, making her appear taller and more commanding.
+
+- **Lighting & Exposure**  
+  Ambient light from a window on the left creates a warm, slightly overexposed highlight on her face and upper body. The exposure is uneven—her chest is brighter than the background, giving a raw, unprocessed look. No auto‑beauty mode; the image retains natural imperfections: slight grain, minor color cast, and a faint vignette from the wide‑angle lens.
+
+- **Lens & Technical**  
+  24 mm focal length, wide‑angle lens, handheld shot with slight shake. Everything is in focus—no bokeh or depth‑of‑field blur; the background (a white dresser, a potted plant, a mug, a stack of books, and a bed with a striped blanket) remains sharp. The framing is accidental: the subject is slightly off‑center, the top of her head cuts off the ceiling corner, and her left arm extends beyond the frame’s lower edge.
+
+- **Environment**  
+  A modest bedroom in an apartment building. The time of day is late afternoon, just before sunset, giving a soft, golden hue. A small green plant sits on the dresser, next to a pink mug and a stack of blue‑spine books. A white bed with a striped blanket hangs on the right side of the frame. The walls are a muted beige, and a faint ceiling light fixture is visible at the top left.
+
+- **Composition & Style**  
+  Candid, unposed, spontaneous—subject appears unaware of the camera. Slight tilt and partial crop create a raw, documentary feel. No rule‑of‑thirds intentionality; the composition is accidental, as if the photographer was in a hurry. The shot has a slight motion blur on the subject’s arm, indicating handheld instability.
+
+- **Post‑Processing**  
+  No filters, no color grading, no auto‑beauty mode. The image retains its natural texture and minor imperfections, with only basic auto‑HDR applied to lift the highlights.  
+
+**Prompt for Text‑to‑Image Generation**
+
+> “A young woman with long wavy blonde hair standing in a dimly lit bedroom at dusk, bare‑shouldered, left arm bent, hand touching her lips, head slightly tilted, eyes forward. Warm overexposed highlight on her face and chest, raw unprocessed look. 24 mm wide‑angle lens, handheld shot with slight shake, everything in focus—no bokeh. Background includes a white dresser with a potted plant, pink mug, blue books, and a bed with a striped blanket on the right. Late afternoon light from a window on the left. Candid, accidental framing, slight tilt and partial crop, no rule‑of‑thirds. No filters, auto‑HDR only.”

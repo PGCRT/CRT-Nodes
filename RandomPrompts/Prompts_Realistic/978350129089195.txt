@@ -1,0 +1,32 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with short, sun‑kissed blonde hair standing in a sunny park. She is bare‑shouldered, mid‑step, slightly turned toward the camera, mouth open as if speaking or laughing. Her face is angled off‑center, capturing a spontaneous, candid moment.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle, late‑afternoon sun creates a soft overexposure on her skin. Slight ambient glare on the shoulders and chest; no auto‑beauty or filter enhancement—raw, unprocessed look. The exposure is slightly warm, with a hint of golden hue.
+
+- **Camera & Lens Settings**  
+  - Wide‑angle lens (24–35 mm) for a short focal length, capturing a broad view of the scene.  
+  - Handheld, natural motion freeze or slight blur from instability.  
+  - Everything in focus—no bokeh, no depth‑of‑field blur; background fully sharp.  
+  - No portrait‑mode subject isolation; the composition is accidental, not rule‑of‑thirds.
+
+- **Environment**  
+  A sunny park with a wooden shelter on the left, green trees and a concrete path in the background. The time of day is mid‑afternoon, with warm, slightly harsh sunlight. Weather is clear, with a light breeze.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Slight tilt and partial crop give an informal feel. No studio lighting, no professional composition, no editorial tone.
+
+- **Technical Details**  
+  - Short focal length, wide angle.  
+  - No bokeh, no depth of field blur—background fully sharp.  
+  - Everything in focus.  
+  - No portrait mode, no subject isolation.  
+
+- **Post‑Processing**  
+  Slight motion blur on the shoulders and chest; auto‑HDR or auto‑beauty mode off—raw, unprocessed look. No filters, no color grading, no post‑processing aesthetic.
+
+---  
+**Prompt Summary:**  
+"Short focal length wide‑angle candid shot of a bare‑shouldered woman with short blonde hair mid‑step in a sunny park, slight motion blur and overexposure, everything in focus, background sharp, accidental framing, natural daylight, no filters or post‑processing."

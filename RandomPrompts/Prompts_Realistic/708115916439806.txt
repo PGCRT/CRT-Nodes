@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail, wearing a bright yellow long‑sleeved shirt that reads “BOEWORA” above a graphic of a martial artist, and distressed denim shorts. She is mid‑step, head tilted slightly downward, a faint smile on her face, as if she just noticed something interesting on the floor. Her left hand hangs loosely by her side, right hand slightly curled.  
+
+- **Motion & Focus**  
+  Slight motion blur at the wrists and feet to suggest natural movement. Everything in focus—no portrait‑mode bokeh. The image has a raw, unprocessed look: no filters, no color grading, just ambient light with a hint of overexposure on the ceiling lights.  
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm), short focal length. No depth‑of‑field blur; background fully sharp. Handheld shot with minor tilt and off‑center framing—no rule‑of‑thirds intentionality.  
+
+- **Environment**  
+  Location: an industrial warehouse or backstage area, with exposed concrete floor, stacked cardboard boxes, large black tires leaning against a wooden panel, and a row of fluorescent ceiling lights. In the background, two men in suits walk away from the camera, one holding a coffee mug. A plastic bottle and a few cigarette butts lie on the floor near the woman’s right foot.  
+
+- **Time & Lighting**  
+  Shot during mid‑afternoon, natural daylight mixed with artificial ceiling lights. Slight overexposure on the lights creates a warm glow; the scene has a slight ambient haze.  
+
+- **Composition Notes**  
+  The frame is slightly crooked: the left edge cuts off part of a tire, the right edge captures a portion of a box. The woman occupies the central‑left third of the frame, but the framing is accidental—she’s not posing for the camera. The background is fully sharp, giving a documentary feel.  
+
+- **Post‑Processing**  
+  Auto‑HDR off. No color grading or filters. Only raw capture data, with natural contrast and dynamic range.
+
+**Prompt Summary (structured)**  
+"Mid‑afternoon candid shot of a young woman in a yellow ’BOEWORA’ shirt and distressed denim shorts, mid‑step on an industrial warehouse floor. Slight motion blur at wrists/feet, everything in focus, wide‑angle lens (24–35 mm). Raw, unprocessed look with slight overexposure on ceiling lights. Background includes stacked boxes, leaning tires, two men in suits walking away, a plastic bottle and cigarette butts on the floor. Accidental off‑center framing, no rule‑of‑thirds. Handheld, natural motion freeze."

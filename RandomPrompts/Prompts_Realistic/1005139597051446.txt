@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework – “Sunny Beach Breeze”**
+
+- **Subject & Pose**  
+  A woman with long, wavy brown hair, wearing a coral‑red halter bikini, sitting on a weathered wooden pallet. She is mid‑smile, head tilted slightly to the right, left hand resting on her thigh, right hand gripping the edge of the pallet. Her posture is casual and spontaneous, as if she’s just finished a conversation or is about to start a new one.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. Slight tilt and off‑center framing; partial crop that gives a “handheld” feel. No rule‑of‑thirds intentionality – the frame is accidental, natural.
+
+- **Environment**  
+  Specific real‑world location: a beachside wooden dock at late afternoon. The time of day is “golden hour,” with warm, soft sunlight coming from the west, creating a slight overexposure on the subject’s face and a gentle halo around her hair. Weather is breezy, with light wind ruffling her hair and the wood.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm), wide‑angle lens. Wide‑angle gives a slightly compressed background that remains fully sharp – no bokeh, no depth‑of‑field blur. Everything in focus: subject, background, foreground. No portrait mode or subject isolation.  
+
+- **Lighting & Processing**  
+  Zero studio lighting, zero professional composition, zero editorial tone. Natural motion freeze or slight blur from handheld instability. Slight overexposure on the subject’s face to capture the warm glow; no auto‑HDR or auto‑beauty mode – raw, unprocessed look. No filters, no color grading, no post‑processing aesthetic.
+
+- **Details & Imperfections**  
+  Slight motion blur on the woman’s hand and the wooden pallet, giving a sense of movement. The background shows a slightly blurred ocean horizon and a few scattered seagulls, all in focus. The image has a natural, spontaneous feel, as if captured in a fleeting moment.
+
+- **Prompt for AI Image Generation**  
+  *“A woman with long wavy brown hair in a coral‑red halter bikini sits on a weathered wooden pallet at a beachside dock during golden hour. She smiles mid‑action, left hand on thigh, right hand gripping the pallet. The shot is candid, slightly tilted, off‑center, partial crop, handheld. Wide‑angle 30 mm lens, everything in focus, no bokeh. Natural motion blur on the hand and pallet. Slight overexposure on the face. Background shows a sharp ocean horizon with scattered seagulls. Raw, unprocessed, no filters, no auto‑HDR.”*

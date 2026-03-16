@@ -1,0 +1,27 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A young woman with long, wavy brown hair sits on a white quilted bed, mid‑adjustment of a light‑colored floral shirt. Her hands are pulling the front of the shirt open, exposing her midriff and black thong underwear. She looks downward, eyes focused on the fabric, giving a candid, unposed feel.
+
+- **Clothing & Accessories**  
+  Shirt: off‑white with delicate pink‑red floral motifs, long sleeves rolled up at the cuffs, front buttons partially undone.  
+  Underwear: thin black thong.  
+  Background: a light‑wood nightstand with a beige lamp and a small black remote on top; a beige pillow rests against the headboard.
+
+- **Lighting & Exposure**  
+  Natural daylight from a window to the left, slight overexposure in the upper right corner. No auto‑HDR or beauty filters—raw, unprocessed look. Slight handheld shake gives a natural motion blur.
+
+- **Lens & Technical Settings**  
+  24‑mm wide‑angle lens, f/4.0 aperture, 1/125 s shutter speed, ISO 400. Everything in focus—no bokeh, no depth‑of‑field blur. Slight tilt and off‑center framing; partial crop of the bed’s edge.
+
+- **Environment**  
+  Location: a cozy, modern bedroom. Time of day: late morning, soft natural light. Ambient conditions: gentle warmth, slight dust motes in the air.
+
+- **Composition Notes**  
+  No rule‑of‑thirds intentionality—accidental framing with the subject’s left side slightly cut off. Background fully sharp, no portrait‑mode isolation. The shot feels spontaneous, as if captured mid‑movement.
+
+- **Post‑Processing**  
+  Zero color grading, zero filters. Slight natural contrast and a hint of warmth to keep the image realistic.  
+
+**Prompt Summary for AI Image Generation**  
+"Generate a realistic candid photo of a young woman with long brown hair sitting on a white quilted bed, adjusting a light floral shirt while wearing black thong underwear. The scene is set in a modern bedroom with a wooden nightstand and beige lamp in the background. Capture the moment with a 24‑mm wide‑angle lens at f/4.0, 1/125 s, ISO 400, natural daylight from the left, slight overexposure on the upper right, handheld shake for motion blur. Keep everything in focus, no bokeh, accidental off‑center framing, partial crop of the bed edge. The image should feel spontaneous and raw, with no filters or color grading, preserving a natural, unprocessed look."

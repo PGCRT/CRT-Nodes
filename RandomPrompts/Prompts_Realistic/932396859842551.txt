@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A fit woman with long dark hair, wearing a black bikini top and matching bottoms, white sneakers, standing in a bright, modern apartment. She is mid‑action, reaching up to open a large sliding glass door, her left foot slightly ahead of the right, body angled toward the door, back to the camera. Her right arm is extended upward, gripping the door handle; her left arm hangs naturally by her side.  
+
+- **Motion & Focus**  
+  Slight motion blur on the hands and upper torso, indicating handheld shake. Everything in focus—no portrait‑mode bokeh. The image has a raw, unprocessed look: no filters, no color grading, just natural auto‑HDR or “auto‑beauty” off.  
+
+- **Lighting & Exposure**  
+  Natural daylight from the glass door creates a mild overexposure on the window area; the interior is slightly underexposed compared to the exterior. The lighting is diffuse, with soft shadows cast on the carpet and wall.  
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm), short focal length. No bokeh—background fully sharp. No rule‑of‑thirds intentionality; framing is accidental, slightly tilted, off‑center.  
+
+- **Environment**  
+  A bright, minimalist apartment with beige walls, a wooden dining table and chair on the left, a small lamp, and a white door leading to a balcony. The time of day is late morning, with sunlight streaming through the glass door, creating a gentle glare. Weather outside is clear, with a faint hint of blue sky visible through the window.  
+
+- **Composition Notes**  
+  Capture candidly, unposed, spontaneous—subject unaware or mid‑action. Encourage imperfections: slight tilt, partial crop, off‑center framing. Keep everything in focus, no depth‑of‑field blur.  
+
+- **Prompt Summary for Generation**  
+  “A fit woman with long dark hair in a black bikini top, white sneakers, standing in a bright modern apartment, reaching up to open a large sliding glass door. Slight motion blur on the hands, natural daylight overexposure on the window, wide‑angle lens, everything in focus, raw auto‑HDR look, accidental off‑center framing, candid mid‑action pose, beige walls, wooden table, lamp, white door, late morning sunlight, clear weather outside.”

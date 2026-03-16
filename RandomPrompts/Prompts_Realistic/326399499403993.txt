@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair, wearing a purple halter‑style bikini, kneeling on a plush white tufted sofa. She is turned away from the camera, her back to the lens, with one knee bent and the other leg extended, hand resting on her thigh, toes slightly curled. Her head is tilted upward, eyes looking toward the camera, capturing a spontaneous, mid‑action moment.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑motion. Slight tilt and off‑center framing; partial crop that gives an accidental, handheld feel. No rule‑of‑thirds intentionality. The shot is taken with a wide‑angle lens (24–35 mm), producing a short focal length that keeps the entire scene in focus—no bokeh or depth‑of‑field blur.
+
+- **Environment**  
+  Location: A bright, modern living room with a white tufted sofa and a light‑colored wall. Time of day: late morning, soft natural daylight coming from a large window on the left, creating a gentle side‑light that slightly overexposes the right side of the frame. Weather: clear, warm, no wind. The background is fully sharp, no studio lighting or post‑processing.
+
+- **Lens & Technical**  
+  - Focal length: 35 mm (wide‑angle).  
+  - Aperture: f/4.0 (handheld, natural depth).  
+  - Shutter speed: 1/60 s (slight motion blur from handheld instability).  
+  - ISO: 400 (raw, unprocessed look).  
+  - Auto‑HDR or auto‑beauty mode off.  
+  - No filters, no color grading, no post‑processing aesthetic.  
+  - Everything in focus—no portrait‑mode subject isolation.
+
+- **Composition Notes**  
+  The frame is slightly crooked, with the sofa’s tufted back on the left and the woman’s body occupying the center‑right. The camera is held at eye level, capturing the full length of the subject and a portion of the sofa’s cushion. The background wall occupies the upper right corner, keeping the entire scene sharp.
+
+- **Final Prompt**  
+  “A young woman in a purple bikini kneeling on a white tufted sofa, back to the camera, mid‑pose with slight motion blur, captured on a 35 mm wide‑angle lens at f/4 and 1/60 s, late morning natural light from the left, fully sharp background, handheld composition with accidental tilt and off‑center framing, no filters or post‑processing—raw candid photography.”

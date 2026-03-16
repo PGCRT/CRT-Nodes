@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A young woman with long, wavy dark hair, wearing a light‑denim jacket over a white top and dark leggings speckled with colorful paint drips, is mid‑gesture in a modern kitchen. She’s holding a smartphone in her left hand and a metal spoon in her right, as if she’re reading a recipe or messaging while preparing to cook. Her head is slightly tilted downward, eyes focused on the phone screen, giving a candid, unposed feel.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. Slight tilt and off‑center framing; partial crop that cuts off a bit of the background on the right side. No rule‑of‑thirds intentionality — accidental framing. The image has a raw, unprocessed look: no filters, no color grading, no post‑processing aesthetic. A hint of slight overexposure in the upper left corner to mimic ambient daylight.
+
+- **Motion & Focus**  
+  Slight motion blur on the hands and phone, indicating handheld instability. Everything is fully sharp — no bokeh, no depth‑of‑field blur; background remains crisp from a wide‑angle lens. No portrait‑mode subject isolation.
+
+- **Environment**  
+  Specific real‑world location: a bright, contemporary kitchen with light‑wood cabinets, a stainless‑steel refrigerator on the left, a countertop with wooden utensils and a metal canister on the right, and a sink visible in the background. Time of day: late morning, natural daylight coming from the window behind the camera, creating soft shadows. Weather or ambient conditions: clear, slightly humid air that gives a subtle warmth to the scene.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm) wide‑angle lens. No bokeh, no depth‑of‑field blur — background fully sharp. All elements in focus. Zero studio lighting, zero professional composition, zero editorial tone. Auto‑HDR or auto‑beauty mode off. Slight overexposure or underexposure depending on ambient light (choose slight overexposure).  
+
+**Prompt Summary:**  
+"A young woman with long wavy hair, denim jacket, white top, and dark paint‑speckled leggings stands in a bright modern kitchen, holding a smartphone and a spoon mid‑gesture. Capture candidly with accidental tilt and partial crop, slight motion blur on the hands, full sharpness across the frame using a 24‑35 mm wide‑angle lens. The scene includes light‑wood cabinets, a stainless‑steel fridge, wooden utensils, and a sink, filmed at late morning natural daylight. No filters or post‑processing—raw, unprocessed look with slight overexposure."

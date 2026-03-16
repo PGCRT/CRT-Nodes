@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, sun‑kissed hair standing mid‑step on a rocky beach. She wears a bright yellow bikini with tie‑side bottoms; her hands rest on her hips, slightly angled to one side. Her face is turned toward the camera but not directly at it—mid‑expression, as if she just finished a wave or a jog. A subtle motion blur around her shoulders and hair conveys movement.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle, late‑afternoon sun creates a slight overexposure on the upper body, with soft highlights on the skin and fabric. The exposure is uneven—warm tones on the subject’s front, cooler tones in the background—giving a raw, unprocessed look. No auto‑beauty or filter enhancement; the image retains natural grain and minor imperfections.
+
+- **Environment**  
+  The setting is a rugged coastal cliff with large, irregular stones scattered around. A small blue towel, a black plastic bag, and a metal pot sit on the rocks to the right. In the background, a faint line of green shrubs clings to the cliff’s edge, and a thin cable runs horizontally across the sky. The sky is a clear, pale blue with a few wispy clouds.
+
+- **Time of Day & Weather**  
+  Captured in the late afternoon, around 5 pm, when the sun is still high but beginning to tilt. The weather is mild and breezy; the wind lifts the woman’s hair slightly, adding a gentle motion blur. The ambient light gives a warm, golden hue to the scene.
+
+- **Lens & Technical**  
+  A wide‑angle lens (24 mm) with a short focal length captures the entire composition. Everything—from the subject to the rocks—remains in focus; no bokeh or depth‑of‑field blur is present. The framing is accidental: the shot is slightly tilted, off‑center, and the crop cuts off part of the cliff on the left, giving a spontaneous, candid feel. No rule‑of‑thirds intentionality—just a natural, handheld composition.
+
+- **Post‑Processing**  
+  No filters or color grading applied. The image retains its raw, unprocessed aesthetic with slight overexposure on the subject’s front and a faint underexposed background. All details are sharp, from the texture of the rocks to the weave of the bikini fabric.
+
+**Prompt Summary**  
+“Candid photo of a woman in a yellow bikini standing on a rocky beach at late afternoon, with a slightly blurred motion effect on her hair, natural overexposure, wide‑angle lens, all elements in focus, accidental tilt and off‑center framing, raw unprocessed look, no filters.”

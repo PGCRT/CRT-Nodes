@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair and round glasses stands on a sunlit beach, wearing a snakeskin‑patterned one‑piece swimsuit that clings to her in a deep V‑neck. She’s mid‑step, left foot slightly ahead, arms relaxed at her sides, head tilted a little to the right as if she just finished a conversation or is about to start a new one. Her expression is natural and unposed, with a faint smile and a hint of confidence.
+
+- **Lighting & Exposure**  
+  The scene is captured in late‑afternoon sunlight; the sun sits high but slightly to the left, creating soft highlights on her face and body while casting gentle shadows beneath her swimsuit’s cowl. Slight overexposure on the upper part of the frame gives a warm, natural glow. No auto‑beauty or filter enhancement—just raw, handheld exposure.
+
+- **Camera & Lens Settings**  
+  Shot with a wide‑angle lens (24–35 mm) on a DSLR or mirrorless camera, handheld. Focal length: 30 mm. Aperture: f/5.6 – background fully sharp, no bokeh. Shutter speed: 1/125 s – enough to freeze the motion but leave a subtle shake from the hand‑held instability. ISO 400 for clean detail. No portrait mode or subject isolation.
+
+- **Composition & Framing**  
+  The composition is intentionally off‑center; the subject’s left side is slightly cropped by the right edge of the frame, giving a casual, spontaneous feel. The camera tilts a little to the right, and the top of the frame cuts off just above her head, leaving a small portion of the sky visible. No rule‑of‑thirds—just natural framing.
+
+- **Background & Environment**  
+  Behind her, a line of tall palm trees lines the beach, their fronds swaying in the breeze. The sand is light beige with a few footprints near her feet. The ocean is visible on the left, a gentle wave breaking in the distance. The time of day is mid‑afternoon, about 4 pm, with warm, golden light. Weather is clear with a light haze from the sun’s heat.
+
+- **Details & Imperfections**  
+  Slight motion blur at the edges, especially around her hair and the palm leaves, indicating handheld shake. The image has no color grading or post‑processing—just the raw look of a candid snapshot. Tiny imperfections are present: a slight dust speck on the lens, a faint smudge near her left ear, and an uneven horizon line that gives authenticity.
+
+- **Final Prompt**  
+  “A young woman with long wavy brown hair and round glasses, wearing a snakeskin‑patterned one‑piece swimsuit, stands mid‑step on a sunlit beach in late‑afternoon light. Capture with a 30 mm wide‑angle lens at f/5.6 and 1/125 s shutter speed, handheld shake producing slight motion blur. The background shows palm trees and a gentle ocean wave; the frame is off‑center and slightly tilted. No filters or color grading—raw, natural, candid aesthetic.”

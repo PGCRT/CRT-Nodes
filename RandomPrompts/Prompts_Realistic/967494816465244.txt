@@ -1,0 +1,29 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman with long, wet dark hair crouching on a wooden deck beside a swimming pool, facing away from the camera. She’s wearing high‑heeled sandals and is mid‑movement, as if just having dipped her toes in the water. Her back is slightly arched, knees bent, and her hands rest on her thighs. The pose captures a natural, unposed moment with slight tilt and off‑center framing.
+
+- **Appearance & Detail**  
+  Skin glistens with a few droplets of water, catching the sunlight. The texture of her back and glutes is rendered in high detail, with subtle imperfections (e.g., faint stretch marks, tiny blemishes) adding realism. Her hair clings to her back, forming soft, irregular waves.
+
+- **Environment**  
+  The setting is a sunny, mid‑afternoon residential backyard. A rectangular pool with clear blue water lies directly behind her, its edge lined with light‑colored stone tiles. Lush green shrubs and tall trees frame the background, with a hint of a red‑tiled roof visible in the distance. The deck she stands on is made of weathered wooden planks, showing natural grain and slight wear.
+
+- **Time of Day & Lighting**  
+  Captured at around 4 pm, when the sun is high but not directly overhead, creating a warm, slightly harsh ambient light. A mild overexposure on the upper part of the frame gives a raw, unprocessed look. The lighting is natural, with no studio flash or color grading.
+
+- **Lens & Technical Settings**  
+  - Focal length: 24 mm (wide‑angle, short focal length)  
+  - Aperture: f/5.6 (everything in focus, no bokeh)  
+  - Shutter speed: 1/125 s (slight motion blur from handheld instability)  
+  - ISO: 400 (for clean detail without noise)  
+  - No portrait‑mode depth‑of‑field blur; background is fully sharp.
+
+- **Composition Notes**  
+  The shot is intentionally “accidental”: the subject is slightly off‑center, the frame is tilted a few degrees, and the crop cuts off part of the pool’s edge. The rule‑of‑thirds is abandoned for a more spontaneous feel. All elements—the woman, the pool, the deck, the foliage—are in focus, giving a true “raw” candid vibe.
+
+- **Post‑Processing**  
+  No filters or color grading applied. Only a subtle auto‑HDR boost to enhance contrast and dynamic range. The image retains its natural, unprocessed look, with slight overexposure on the upper half to emphasize the sunlight.
+
+**Prompt Summary (for AI image generator)**  
+> “A realistic candid photo of a woman with long wet dark hair crouching on a wooden deck next to a swimming pool, facing away from the camera, wearing high‑heeled sandals. Her back is slightly arched, knees bent, hands on thighs, skin glistening with water droplets. The pool has clear blue water, stone tiles, and lush green shrubs behind her, with a red‑tiled roof peeking in the distance. The scene is bathed in mid‑afternoon sunlight, slight overexposure on the upper frame. Shot with a 24 mm wide‑angle lens at f/5.6 and 1/125 s shutter speed, everything in focus, slight motion blur from handheld shake. Composition is accidental: subject slightly off‑center, tilted frame, partial crop. No filters, no color grading—only a subtle auto‑HDR boost.”

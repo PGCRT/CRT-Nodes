@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, athletic woman with long brown hair, wearing light‑blue high‑waist shorts, standing in a bright, sunlit bedroom. She’s mid‑smile, hands on hips, slightly turned to the left, as if caught in a spontaneous moment. Her pose is casual and unposed; her head is tilted a little off‑center, giving a natural, candid feel.
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window on the right side of the room creates a soft, slightly overexposed highlight on her torso. The exposure is a bit uneven—warm tones in the wall, cooler tones in the window—giving an auto‑HDR, raw look without post‑processing filters. Slight handheld shake is present, producing a subtle motion blur around the edges.
+
+- **Environment**  
+  The setting is a cozy, lived‑in bedroom with beige walls and floral wallpaper that has faded pink roses. A large white window with a wooden frame lets in bright morning light; the view outside shows a green lawn and a distant tree. The floor is light hardwood, and a small rug lies near the corner. The time of day is early afternoon, when the sun is high but still warm.
+
+- **Lens & Technical**  
+  Use a short focal‑length wide‑angle lens (24 mm). Everything is in focus—no bokeh or depth‑of‑field blur. The background is fully sharp, from the wall to the window. Capture with a handheld camera, slightly unstable, to add natural motion blur. No rule‑of‑thirds; framing is accidental and off‑center.
+
+- **Composition & Style**  
+  The shot is candid, unposed, and spontaneous—subject appears unaware of the camera. Slight tilt and partial crop give an imperfect, real‑life feel. No editorial tone or studio lighting. The composition captures the subject’s full body from head to toe, with a wide lens that keeps the entire scene clear.
+
+- **Post‑Processing**  
+  Keep auto‑HDR off; no color grading or filters. Only raw, natural tones and a slight overexposure on the right side of the image.  
+
+**Prompt Summary**  
+> “A tall, athletic woman with long brown hair, wearing light‑blue high‑waist shorts, stands in a bright, sunlit bedroom. She’s mid‑smile, hands on hips, slightly turned to the left, as if caught in a spontaneous moment. Natural daylight from a large window on the right creates a soft, slightly overexposed highlight on her torso. The exposure is uneven—warm tones in the wall, cooler tones in the window—giving an auto‑HDR, raw look without post‑processing filters. Slight handheld shake adds natural motion blur. The setting is a cozy, lived‑in bedroom with beige walls and floral wallpaper that has faded pink roses. A large white window with a wooden frame lets in bright morning light; the view outside shows a green lawn and a distant tree. The floor is light hardwood, and a small rug lies near the corner. The time of day is early afternoon, when the sun is high but still warm. Use a short focal‑length wide‑angle lens (24 mm). Everything is in focus—no bokeh or depth‑of‑field blur. The background is fully sharp, from the wall to the window. Capture with a handheld camera, slightly unstable, to add natural motion blur. No rule‑of‑thirds; framing is accidental and off‑center. The shot is candid, unposed, and spontaneous—subject appears unaware of the camera. Slight tilt and partial crop give an imperfect, real‑life feel. No editorial tone or studio lighting.”

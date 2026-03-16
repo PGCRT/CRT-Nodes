@@ -1,0 +1,33 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A young woman with long, flowing brown hair walking along a tropical beach shoreline. She wears a floral‑patterned bikini in dark green with pink and yellow accents. Her left leg is slightly bent as she steps into the shallow surf, her toes gripping the wet sand. Her head is tilted upward, eyes looking toward the horizon, capturing a moment of spontaneous joy.
+
+- **Pose & Motion**  
+  Slight motion blur on the feet and lower legs to suggest movement. The body is angled at a casual, off‑center angle—no rule‑of‑thirds intentionality. Her right arm hangs loosely by her side, while her left arm is slightly raised, as if she’s about to touch the water.
+
+- **Environment**  
+  Location: A sunny, late‑afternoon beach in a tropical resort area. Palm trees line the background, a multi‑story hotel or condominium building sits on the left, and the ocean stretches to the right. The sand is light beige with a thin layer of seawater foam trailing behind her. The sky is a soft, warm gray‑blue with scattered clouds.
+
+- **Time of Day & Lighting**  
+  Late afternoon (around 5 pm), with ambient light creating a slight overexposure on the water and a gentle warm glow on the subject’s skin. Natural sunlight comes from the right side, casting subtle shadows on the sand.
+
+- **Lens & Technical Settings**  
+  - Focal length: 24‑35 mm (wide‑angle, short focal length).  
+  - Aperture: f/8 – everything in focus, no bokeh.  
+  - Shutter speed: 1/60 s – enough to capture slight motion blur.  
+  - ISO: 400–600 for natural contrast.  
+  - No auto‑HDR or auto‑beauty mode – raw, unprocessed look.  
+  - Handheld shot with slight tilt and partial crop.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject unaware of the camera. Slight tilt and off‑center framing create a natural, accidental composition. No rule‑of‑thirds intentionality; the frame is slightly crooked but organic.
+
+- **Imperfections & Details**  
+  - Slight motion blur on the feet and lower legs.  
+  - Minor overexposure on the water surface.  
+  - Background fully sharp—no depth‑of‑field blur.  
+  - No post‑processing filters or color grading.  
+
+- **Final Prompt**  
+  “A young woman in a floral bikini walks along a tropical beach at late afternoon, her feet slightly blurred as she steps into the surf. Palm trees line the background, a hotel building stands to the left, and the ocean stretches rightward. The scene is captured on a 24‑35 mm wide‑angle lens at f/8 and 1/60 s, with natural sunlight from the right creating a soft overexposure. The shot is candid and handheld, with slight tilt and off‑center framing, everything in focus, no filters—raw, unprocessed realism.”

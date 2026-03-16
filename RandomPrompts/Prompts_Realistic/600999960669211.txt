@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, curvy woman with long, straight brown hair, wearing a white ribbed crop‑top and high‑waisted lime‑green leggings. She’s captured mid‑turn, back to the camera, left leg slightly bent, right hand resting on her hip, right foot planted on the floor. Her head is turned toward the camera with a subtle smile, eyes bright, makeup natural.  
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window, mid‑afternoon, soft but warm. Slight overexposure on the upper body to keep the scene bright and airy. No auto‑HDR or beauty filters—raw, unprocessed look.  
+
+- **Camera Settings**  
+  Wide‑angle lens (24 mm), f/3.5, 1/125 s shutter speed, ISO 400. Slight handheld shake gives a natural motion blur on the edges. Everything in focus—no portrait‑mode depth‑of‑field blur.  
+
+- **Composition**  
+  Candid, unposed, spontaneous framing. The shot is slightly tilted, off‑center, with a partial crop that cuts off the top of the window curtain and the lower part of the sofa. No rule‑of‑thirds intentionality—just accidental, organic placement.  
+
+- **Environment**  
+  A bright, modern living room. White sofa with two throw pillows, a small side table with a red lamp and a yellow vase, a white sheer curtain letting in daylight, wooden beams on the ceiling. The background is fully sharp, no bokeh.  
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, minor off‑center framing, partial crop of the subject’s left shoulder. A faint motion blur around the edges from handheld instability. The woman’s hair has a slight wave at the ends, her leggings show a subtle crease where the hip meets the thigh.  
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, zero studio lighting. Raw, natural look with only basic white‑balance adjustment.  
+
+**Prompt Summary**  
+> “A tall woman with long brown hair, white crop‑top and lime‑green leggings, captured mid‑turn in a bright modern living room. Natural daylight from a large window, mid‑afternoon, slight overexposure. Wide‑angle 24 mm lens at f/3.5, 1/125 s, ISO 400. Candid, slightly tilted, off‑center framing with partial crop. White sofa, red lamp, yellow vase, wooden ceiling beams. Raw, unprocessed, everything in focus, slight handheld motion blur.”

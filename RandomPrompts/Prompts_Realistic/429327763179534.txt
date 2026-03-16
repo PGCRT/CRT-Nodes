@@ -1,0 +1,31 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a short, straight brown haircut standing in a bright, minimalist room. She is nude except for a light‑colored underwear that sits low on her hips. Her left leg is bent at the knee and lifted high, foot off the ground, as if she’s mid‑step or balancing. Her right hand rests on her hip, fingers slightly curled. The pose is casual, unposed, with a slight tilt to the camera frame that gives an accidental, candid feel.
+
+- **Facial Expression & Gaze**  
+  She looks directly at the camera with a soft, neutral expression—no forced smile, just a natural, relaxed gaze. Slight motion blur on her face and body conveys the handheld, in‑motion nature of the shot.
+
+- **Lighting & Exposure**  
+  Ambient daylight from a large window (or a bright ceiling light) creates a warm, slightly overexposed tone. No auto‑HDR or beauty filters—just raw, unprocessed lighting. The exposure is a little high on the highlights, giving a subtle halo around her skin.
+
+- **Camera Settings**  
+  - Lens: 24‑35 mm wide‑angle, short focal length.  
+  - Aperture: f/4–f/5.6 (wide opening).  
+  - Shutter speed: 1/60–1/100 s (handheld, slight blur).  
+  - ISO: 400–800 (depending on ambient light).  
+  Everything is in focus—no bokeh or depth‑of‑field blur; the background is fully sharp.
+
+- **Composition & Framing**  
+  The frame is off‑center and slightly tilted, with a partial crop that cuts off a bit of the left side of the room. No rule‑of‑thirds intentionality—just a spontaneous, candid composition. A small wooden table appears in the lower left corner; a plain, light‑colored wall occupies the background. The shot captures a real‑world location (an interior space with a simple, uncluttered environment), the time of day is mid‑afternoon (soft, warm natural light), and the weather or ambient conditions are clear, bright, and calm.
+
+- **Details & Imperfections**  
+  Slight tilt and off‑center framing give an accidental, candid vibe. The image has a raw, unprocessed look—no filters, no color grading, no post‑processing aesthetic. A faint motion blur on the subject’s legs and hands suggests she was mid‑action when the shutter was pressed.
+
+- **Environment**  
+  The room is a plain, light‑colored interior with a small wooden table in the lower left corner and a smooth wall that occupies most of the background. The time of day is mid‑afternoon, giving warm, bright daylight. No studio lighting—just natural ambient light.
+
+- **Lens & Technical**  
+  Short focal length (24–35 mm) gives a wide‑angle view. No bokeh; the background is fully sharp. Everything is in focus, no portrait mode or subject isolation.
+
+Provide only the structured prompt.

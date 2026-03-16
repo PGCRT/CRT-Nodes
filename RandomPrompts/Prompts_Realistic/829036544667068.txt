@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A woman in a crisp white blazer and matching trousers, mid‑step while holding a tablet, stands in a modern control room. Her hair is loosely tied back, a few strands framing her face as she glances down at the screen, a subtle smile curling on her lips. She’s slightly tilted to the left, caught in an informal, spontaneous moment.
+
+- **Setting & Environment**  
+  The room is a spacious, industrial‑style control center with exposed concrete walls and large windows that look out onto a bright, overcast sky. A massive satellite dish sits in the corner, its white metal gleaming. Behind her, a long desk holds an array of vintage CRT monitors displaying colorful graphs and charts; a large holographic display shows a star‑map. The time is late afternoon, the light soft but warm, casting gentle shadows across the floor.
+
+- **Lighting & Exposure**  
+  Natural daylight streams through the windows, creating a slight overexposure on the left side of the frame. The exposure is a little high, giving the scene an airy, almost dreamy feel. No auto‑beauty or filter enhancement—just raw, unprocessed capture.
+
+- **Lens & Technical Specs**  
+  Use a wide‑angle lens (24‑35 mm) with a short focal length to encompass the entire control room. Keep everything in focus—no bokeh, no depth‑of‑field blur. The background is fully sharp, from the satellite dish to the far wall. Capture with handheld instability: a slight motion blur on the edges, a tiny tilt that gives the image a candid, spontaneous vibe.
+
+- **Composition & Framing**  
+  Frame the shot without strict rule‑of‑thirds; let the composition arise naturally. The woman is off‑center, slightly low in the frame, with the desk and monitors extending to both sides. The top of the frame captures the upper part of the control room, including a balcony where a man in a dark suit stands, adding an extra layer of narrative. The framing is partial—cut off at the bottom left by a filing cabinet, giving a sense of continuity beyond the frame.
+
+- **Details & Imperfections**  
+  Include subtle imperfections: a slight smudge on the woman’s blazer, a faint reflection in one of the monitors, and a tiny vibration blur from the handheld camera. The image should feel like a real, unposed snapshot—no studio lighting, no professional composition, no editorial tone.
+
+- **Post‑Processing**  
+  Keep it minimal: no color grading or filters. Slight auto‑HDR may be applied to brighten the scene, but the overall look remains raw and candid.
+
+**Prompt Summary**  
+"Candid, wide‑angle shot of a woman in a white blazer holding a tablet in a modern control room, with a satellite dish and vintage monitors, captured in late afternoon natural light; slight motion blur and overexposure for a raw, unprocessed look; everything in focus, no bokeh, handheld tilt, off‑center framing, partial crop."

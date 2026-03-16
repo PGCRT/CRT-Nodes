@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A young woman with vibrant pink hair tied in a high ponytail, wearing a black crop‑top and faded denim overalls, stands at a wooden coffee‑shop counter. She’s mid‑pour, holding a ceramic mug, her back slightly turned toward the camera, one hand on the mug, the other reaching for a stack of paper cups. Her black combat boots are rooted to the floor, casting a sharp shadow from the sun’s low angle.
+
+- **Pose & Motion**  
+  Slight motion blur at the wrists and hands, indicating a handheld shot captured in motion. The entire scene has a raw, unprocessed look—no auto‑beauty or filter enhancements. A subtle overexposure on the right side of the frame lets the ambient daylight bleed through the window.
+
+- **Framing & Composition**  
+  Wide‑angle lens (24‑35 mm) with a short focal length, giving an almost documentary feel. The composition is intentionally off‑center: the subject is slightly tilted to the left, the top of the frame cuts off just above her head, and the bottom edge crops the lower part of her boots. No rule‑of‑thirds—just spontaneous, candid framing.
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window on the right, creating strong directional light that produces a hard shadow beneath the subject’s feet. Slight overexposure on the right side gives a warm, golden hue; the left side remains a bit cooler, adding contrast. No studio lighting, no color grading, no post‑processing aesthetic.
+
+- **Environment**  
+  A bustling coffee shop in an urban setting. The background shows a large window that reflects the outside street, a coffee machine on the left, a stack of paper cups, and a few other patrons behind the counter. A small potted plant hangs from the ceiling, a framed poster is mounted on the wall, and a wooden countertop runs across the middle of the frame. The floor is concrete, slightly worn, with visible seams.
+
+- **Lens & Technical**  
+  Short focal length (35 mm) for wide coverage; everything in focus—no bokeh or depth‑of‑field blur. The background is fully sharp, from the coffee machine to the window reflection. No portrait mode or subject isolation. Slight handheld shake is present, giving a natural, spontaneous feel.
+
+- **Details & Imperfections**  
+  The woman’s hair has a slight fly‑away, her boots show a small scuff, and the coffee mug has a faint smudge of foam. The counter’s wood grain is visible, as are the metal handles on the cabinets. A bottle of water sits next to the stack of cups, and a plastic bag hangs from the counter edge. The scene captures an everyday moment with raw authenticity.
+
+- **Prompt Summary**  
+  “A young woman with pink ponytail, black crop‑top, denim overalls, and black combat boots stands at a wooden coffee shop counter, pouring a drink. She holds a ceramic mug in her right hand, reaching for a stack of paper cups with her left. The shot is captured on a 35 mm wide‑angle lens, slightly tilted and off‑center, with a natural daylight overexposure from the right. The background includes a coffee machine, a potted plant, and a large window that reflects the street outside. All elements are in focus, no bokeh, no filters—raw, candid, spontaneous realism.”

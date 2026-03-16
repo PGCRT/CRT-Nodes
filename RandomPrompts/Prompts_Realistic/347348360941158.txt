@@ -1,0 +1,30 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, sun‑kissed blonde hair standing on a wide, unpolished beach. She’s wearing a black, long‑sleeved mesh bodysuit with a central zipper that runs from the neck down to the hips. Her left hand rests lightly on her hip, while her right hand is raised near her ear as if she’re about to touch her hair or adjust a earring. Her head is tilted slightly to the side, eyes looking upward and to the left, giving a candid, mid‑action feel.
+
+- **Lighting & Exposure**  
+  Warm, golden hour sunlight coming from the upper right, creating soft highlights on her face and body. Slight overexposure in the high‑lights gives a raw, unprocessed look. No auto‑HDR or beauty filters—just natural ambient light with a hint of haze.
+
+- **Camera Settings**  
+  - Lens: 24‑35 mm wide‑angle, short focal length.  
+  - Aperture: f/4–f/5.6 (wide opening).  
+  - Shutter speed: 1/60–1/100 s (handheld, slight motion blur).  
+  - ISO: 400–800 (depending on ambient light).  
+  - Focus: everything in focus—background and subject.  
+  - No portrait‑mode depth‑of‑field blur; background fully sharp.
+
+- **Composition & Framing**  
+  Candid, unposed framing with accidental tilt and off‑center cropping. The shot is not intentionally rule‑of‑thirds aligned; the subject occupies the central‑right quadrant, with her body slightly cut off at the top left corner. The background shows a wide expanse of sandy beach scattered with small stones and footprints, a few sea shells near the horizon.
+
+- **Environment**  
+  Specific real‑world location: a broad, untrimmed beach at sunset. Time of day: late afternoon (golden hour). Weather: light breeze, clear sky, faint cloud cover. Ambient details: scattered rocks and shell fragments on the sand, faint footprints leading toward the horizon, a few small waves visible in the far background.
+
+- **Technical Details**  
+  - Wide‑angle lens gives a slightly distorted perspective that enhances the candid feel.  
+  - No bokeh; everything from foreground to background is sharp.  
+  - Slight motion blur on the subject’s hand and head, indicating handheld shake.  
+  - Raw, unprocessed look—no color grading or filters.
+
+- **Prompt Summary**  
+  “A young woman in a black mesh bodysuit stands on a wide beach at golden hour, her right hand near her ear and left hand on hip, captured with a 24‑35 mm wide‑angle lens at f/5.6, 1/80 s shutter speed, handheld slight blur, raw exposure, everything in focus, candid framing with accidental tilt, scattered stones and footprints in background, no filters—pure natural photography.”

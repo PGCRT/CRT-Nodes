@@ -1,0 +1,36 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy dark brown hair standing in front of a white two‑story house. She is wearing light‑wash denim jeans and a simple, sleeveless top that shows a hint of mid‑riff. Her pose is casual, slightly turned to the left, with one hand resting on her hip and the other hanging by her side. Her face is turned toward the camera but not directly at it—there’s a subtle, natural angle that gives a candid feel.
+
+- **Cinematic Details**  
+  - Slight motion blur on the subject’s hair and hands to suggest movement.  
+  - Auto‑HDR or auto‑beauty mode off – raw, unprocessed look.  
+  - No filters, no color grading, no post‑processing aesthetic.  
+  - Slight overexposure in the upper part of the frame to keep ambient light warm.  
+
+- **Lens & Technical**  
+  - Wide‑angle lens (24‑35 mm).  
+  - Short focal length, wide‑angle capture.  
+  - No bokeh – background fully sharp, everything in focus.  
+  - Handheld shot with slight tilt and off‑center framing; no rule‑of‑thirds intentionality.  
+
+- **Environment**  
+  - Specific real‑world location: a suburban front yard with a white house, a small porch, a brick chimney, and a garden path.  
+  - Time of day: late afternoon, golden hour, soft warm light.  
+  - Weather: clear, mild breeze, slight humidity.  
+
+- **Composition**  
+  - Candid, unposed, spontaneous – subject unaware or mid‑action.  
+  - Imperfections encouraged: slight tilt, off‑center framing, partial crop.  
+  - Zero studio lighting, zero professional composition, zero editorial tone.  
+  - Natural motion freeze or slight blur from handheld instability.  
+
+- **Post‑Capture Notes**  
+  - Keep the image raw; no heavy editing.  
+  - Preserve natural color palette with a hint of warm tones.  
+  - Maintain full sharpness on background details (house, garden, path).  
+
+**Prompt Summary for Text‑to‑Image Generation**
+
+> “A young woman with long wavy brown hair, wearing light denim jeans and a sleeveless top, stands casually in front of a white two‑story house with a brick chimney and a garden path. Capture the scene with a wide‑angle lens (24‑35 mm), short focal length, handheld shot with slight tilt and off‑center framing. Add slight motion blur to the hair and hands, keep everything in focus—no bokeh. The time of day is late afternoon golden hour; the lighting is warm with a hint of overexposure on the upper frame. The image should feel candid, unposed, spontaneous, raw, unprocessed, no filters or color grading, zero studio lighting, zero professional composition, zero editorial tone. Preserve all background details sharply.”

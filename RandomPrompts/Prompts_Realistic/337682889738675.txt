@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A blonde woman with a high‑waisted black choker and a thin black strap bag hanging from her left shoulder, standing back‑to‑camera in a casual, spontaneous pose. Her body is slightly turned toward the lens, one hand on her hip, the other holding the bag strap. She’s wearing a tight, backless summer dress that shows a hint of midriff. Her hair falls over her left shoulder, a few strands blowing in the wind.
+
+- **Motion & Focus**  
+  Slight motion blur at the edges from handheld shake; everything in focus—no portrait‑mode depth‑of‑field blur. The image has an auto‑HDR feel but no color grading or filters—raw, natural look. A tiny overexposure on the bright yellow umbrella in the background gives a subtle halo.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm), short focal length. No bokeh; background fully sharp. Slight tilt and off‑center framing—no rule‑of‑thirds intentionality. The composition feels accidental, like a candid snapshot taken mid‑action.
+
+- **Environment**  
+  Outdoor café or patio area on a sunny afternoon (late‑afternoon). A bright yellow umbrella is positioned directly behind the subject, slightly to her left. Wooden tables and chairs are visible in the background, with a few patrons blurred in the distance. A metal stop sign stands tall above her head, partially cut off at the top of the frame. The ground is a light gravel or concrete surface.
+
+- **Lighting & Color**  
+  Natural daylight, slightly overexposed on the umbrella and stop sign, giving a warm, golden hue. The lighting comes from the upper left, casting soft shadows on the subject’s back and right side.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, a partial crop that cuts off the top of the stop sign. The bag strap is slightly twisted, adding realism. A faint motion blur around the edges suggests handheld shooting. The background is fully sharp—no depth‑of‑field blur.
+
+- **Prompt Summary (for AI image generator)**  
+  “A candid, wide‑angle shot of a blonde woman in a backless summer dress, standing with her back to the camera near a metal stop sign and a bright yellow umbrella at an outdoor café. She holds a black strap bag in her left hand, her right hand on her hip. The image has slight motion blur from handheld shake, everything in focus, no filters or color grading, raw auto‑HDR look. The background shows wooden tables, chairs, and a few patrons, all sharply rendered. The scene is lit by natural afternoon sunlight, with a small overexposure on the umbrella and sign. Capture the spontaneous, unposed feel of a real‑life snapshot.”

@@ -1,0 +1,34 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy dark hair, wearing a black lace bra and matching high‑waist panties, sits on a mid‑height shelf of a wooden bookcase. She is bare‑legged, with pink lace‑up boots on her feet, one foot slightly ahead of the other, as if she just stepped into frame. Her left hand rests on the shelf, her right hand near her thigh, and her head tilts to the side, giving a casual, unposed look.
+
+- **Facial Expression & Gaze**  
+  She smiles softly, eyes directed slightly off‑camera, as if she is mid‑conversation or just caught in a candid moment. The expression has a natural warmth, with a hint of playful confidence.
+
+- **Lighting & Exposure**  
+  Natural daylight from a window to the left creates a slight overexposure on her face and upper body; the exposure is uneven, giving a raw, unprocessed feel. No auto‑HDR or beauty filters—just the ambient light with a tiny haze of natural contrast.
+
+- **Camera Settings**  
+  - Lens: 24‑35 mm wide‑angle, short focal length.  
+  - Focal depth: everything from the subject to the background is fully sharp; no bokeh or portrait‑mode blur.  
+  - Shutter speed: 1/60 s, producing a slight motion blur on the subject’s legs and boots due to handheld instability.  
+  - Aperture: f/4.5 (wide opening for depth but still keeping background in focus).
+
+- **Composition & Framing**  
+  The shot is slightly tilted, off‑center, with no intentional rule‑of‑thirds. The bookcase fills most of the frame; the top shelf shows a few DVDs and a small framed photo, while the bottom shelf holds a collection of CDs or DVDs. The framing captures the subject’s full body from head to toe, including her boots, which add a pop of pink against the warm wood tones.
+
+- **Environment & Background**  
+  The location is a cozy, lived‑in bedroom or study, with a wooden bookcase that has multiple shelves filled with books, DVDs, and decorative items. A small white speaker sits on the lower left shelf. The time of day is late afternoon, with warm sunlight streaming in from a window, casting soft shadows and a slight overexposure on the subject’s upper body.
+
+- **Details & Imperfections**  
+  - Slight tilt of the camera gives a casual, spontaneous feel.  
+  - The subject’s left boot shows a tiny smudge, adding realism.  
+  - The lace on her boots is slightly untied, giving an informal touch.  
+  - A faint motion blur around her legs and boots suggests she was moving when the photo was taken.
+
+- **Post‑Processing**  
+  No filters or color grading—just raw, natural tones. A subtle vignette is present due to the wide‑angle lens, but it’s minimal. The image retains a slight overexposure on the subject’s face and upper body, while the background remains fully sharp.
+
+**Prompt Summary**  
+"Capture a candid, unposed photo of a young woman in black lace lingerie and pink lace‑up boots sitting on a mid‑shelf of a wooden bookcase in a cozy bedroom. Use a 24‑35 mm wide‑angle lens at f/4.5 and 1/60 s shutter speed for slight motion blur, natural daylight from a window creating a soft overexposure, with everything in focus. The shot should be slightly tilted and off‑center, capturing the full body from head to toe, with a background of shelves filled with books, DVDs, and a small speaker, all sharply rendered without any filters or post‑processing."

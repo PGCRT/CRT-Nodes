@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy dark hair lying on a textured rug, wearing a red lace bodysuit. Her hands are gently placed on her chest, fingers slightly curled, one hand holding a ring. She is mid‑smile, eyes bright, head tilted to the side as if caught in an unplanned moment.  
+
+- **Lighting & Exposure**  
+  Natural daylight from a high window, slight overexposure on the upper left, creating soft highlights on her skin and lace. No auto‑beauty or filter enhancement—raw, unprocessed look.  
+
+- **Camera Settings**  
+  Wide‑angle lens (24‑35 mm), handheld, slightly shaky. F‑stop 4.5, shutter speed 1/125 s, ISO 400. Everything in focus, no bokeh; background fully sharp.  
+
+- **Composition**  
+  Off‑center framing: the subject’s left side is slightly cut off by the frame edge. The shot is not rule‑of‑thirds aligned—spontaneous, candid. The background shows a partial view of a white bottle and a red bag in the upper right corner, a beige shag rug underneath.  
+
+- **Environment**  
+  Location: a cozy living room with a beige shag rug, a white bottle, a red bag, and a small black object in the lower left corner. Time of day: late morning, soft natural light. Weather: clear, no wind.  
+
+- **Details & Imperfections**  
+  Slight motion blur on the hands and hair, indicating handheld instability. Minor tilt of the camera, partial crop of the subject’s left shoulder. A faint reflection in her eyes, a tiny smudge on her finger, and a slight overexposed highlight on her chest.  
+
+- **Prompt for Text‑to‑Image Generation**  
+  “A candid close‑up of a young woman with long wavy dark hair lying on a beige shag rug, wearing a red lace bodysuit. Her hands rest on her chest, one hand holding a ring, as she smiles mid‑action. Natural daylight from above creates soft highlights and slight overexposure on the upper left. Shot on a 30 mm wide‑angle lens, handheld with slight shake, everything in focus. The frame captures her off‑center, with a partial view of a white bottle and red bag in the upper right corner. Raw, unprocessed look, no filters—raw HDR off. Capture the spontaneous, unposed moment with a slight tilt and partial crop.”

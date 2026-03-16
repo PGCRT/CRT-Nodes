@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, athletic woman with long, sun‑kissed hair standing barefoot on a weathered wooden pier. She is mid‑step, one foot slightly ahead of the other, her left hand resting on her hip and right arm bent at the elbow, creating a natural, unposed silhouette. Her face is turned toward the camera with a subtle, candid smile, eyes bright, capturing a moment of spontaneous confidence.
+
+- **Lighting & Exposure**  
+  Warm mid‑afternoon sunlight from the west casts soft highlights on her skin and the wooden planks. Slight overexposure in the upper left corner gives a raw, unprocessed look. No auto‑beauty or filter enhancement—just natural contrast and slight color warmth.
+
+- **Environment**  
+  The pier stretches into a calm lake with gentle ripples; beyond the water, a low‑rise city skyline of brick buildings and modern high‑rises is visible on the far shore. A single white sailboat drifts near the horizon. The scene is set at 4:30 pm on a clear, breezy day, with the sun’s angle creating long, soft shadows.
+
+- **Lens & Technical**  
+  24‑mm wide‑angle lens, f/4.0 aperture, 1/125 s shutter speed, handheld shot with slight motion blur. Everything is in focus—from her toes to the far skyline—no bokeh or depth‑of‑field blur. The framing is accidental: a slight tilt to the left, off‑center composition, and a partial crop that cuts off the top of the pier, enhancing spontaneity.
+
+- **Composition Notes**  
+  Capture the subject’s full length, from head to toe, with her body angled at 30° relative to the camera. Keep the background fully sharp; no portrait‑mode isolation. The prompt should emphasize a raw, unedited aesthetic—no color grading or filters—just the natural textures of wood, water, and cityscape.
+
+- **Prompt Summary**  
+  “A tall, athletic woman with long, sun‑kissed hair stands barefoot on a weathered wooden pier at mid‑afternoon, one foot ahead, hand on hip, smiling candidly. Warm sunlight overexposes the upper left, soft shadows cast on the planks. The pier leads to a calm lake, a distant city skyline, and a drifting white sailboat. Shot on a 24‑mm wide‑angle lens at f/4, 1/125 s, handheld with slight motion blur, everything in focus, accidental tilt and off‑center framing, raw unprocessed look.”

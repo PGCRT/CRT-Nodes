@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, straight brown hair, wearing a sheer white lace bra and black thong, sitting on a neatly made bed. Her body is slightly turned toward the camera, one knee bent, the other leg extended, creating a dynamic, off‑center composition. She rests her left hand on the bed’s edge, right hand casually draped over her thigh, with a subtle, natural motion blur around her hands and hips as if captured mid‑movement.
+
+- **Lighting & Exposure**  
+  Natural daylight from a western window, mid‑afternoon, soft but warm ambient light with a slight overexposure on the face and upper body. No auto‑HDR or beauty filters—raw, unprocessed look. The exposure is slightly uneven, giving a candid feel; the background is fully sharp, no bokeh or depth‑of‑field blur.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24‑35 mm), short focal length, handheld shot with slight instability. Everything in focus—no portrait mode or subject isolation. The framing is accidental: a slight tilt to the left, partial crop that cuts off a bit of the bed’s headboard, no rule‑of‑thirds intentionality.
+
+- **Environment**  
+  A simple, modern bedroom with a plain beige wall and a white pillow behind her. The time of day is late afternoon, giving a warm, slightly hazy glow. A faint window shade is visible on the left side, and a small electrical outlet can be seen near the top left corner of the wall.
+
+- **Details & Imperfections**  
+  Slight motion blur around the hands and hips, natural skin texture, subtle imperfections in the focus (e.g., a tiny smudge on her thigh). The bed’s sheets have a gentle wrinkle, adding realism. Her toenails are painted light pink; her fingers are slightly curled. The overall tone is natural, unpolished, with no color grading or post‑processing.
+
+- **Prompt for Generation**  
+  *“A young woman with long brown hair in a sheer white lace bra and black thong sits on a white bed in a modern bedroom, mid‑afternoon natural light from a western window creating soft overexposure. Shot on a 24‑35 mm wide‑angle lens, handheld with slight instability, everything in focus, accidental tilt and partial crop, raw unprocessed look, subtle motion blur around hands and hips, natural skin texture, small pink toenail paint, slight bed sheet wrinkle, plain beige wall with a visible outlet, white pillow behind, late afternoon warm glow.”*

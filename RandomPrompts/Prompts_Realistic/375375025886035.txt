@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a deep‑V white gown adorned with jeweled embellishments, her hair styled in a long side braid that drapes over her left shoulder. She is mid‑smile, head slightly tilted, eyes bright and engaged, as if caught in an unplanned moment during an outdoor event. Her earrings sparkle, and a delicate necklace rests on her collarbone. The dress’s straps are thin, embellished with a row of small gemstones that catch the light.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle, late‑afternoon sun creates a soft overexposure on the subject’s face and dress, giving a warm, golden hue. Slight ambient haze keeps the background softly in focus. No auto‑HDR or beauty filters—just raw, unprocessed light.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24 mm) with a short focal length, handheld, slightly shaky. Everything is fully sharp—no bokeh, no depth‑of‑field blur. The composition is accidental: the frame is off‑center, a slight tilt gives a candid feel. No rule‑of‑thirds; the subject occupies the central‑left portion of the frame with a partial crop that cuts off part of her left shoulder.
+
+- **Environment**  
+  The setting is an outdoor courtyard with a stone balustrade on the left and a palm tree in the background, under a pale blue sky. The time of day is early evening, with warm sunlight casting long shadows. The weather is clear but slightly hazy, adding a natural softness.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Slight motion blur from handheld instability freezes the moment. No studio lighting, no professional composition, no editorial tone.
+
+- **Detailed Prompt for Generation**  
+  “A young woman in a deep‑V white gown with jeweled straps and a side braid, smiling mid‑action outdoors at a stone courtyard with palm tree and balustrade background, late‑afternoon natural light with slight overexposure, wide‑angle 24 mm lens, handheld shake, fully sharp background, accidental off‑center framing, slight tilt, no filters—raw candid photography.”

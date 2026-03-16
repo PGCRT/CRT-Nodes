@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework – “Greenhouse Harvest”**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail, wearing a beige ribbed crop‑top and matching shorts, stands in profile mid‑step, hand lightly on her hip, as if just having picked fruit from a bin. Her face is turned slightly downward, eyes focused on the produce, giving a candid, unposed feel.
+
+- **Motion & Focus**  
+  Slight motion blur at the wrists and feet to suggest movement; everything in the frame is fully sharp – no portrait‑mode blur. A wide‑angle lens (24‑35 mm) captures the entire greenhouse space from a low, near‑ground angle.
+
+- **Lighting & Exposure**  
+  Raw, auto‑HDR off. The scene is lit by natural daylight coming from the greenhouse’s glass roof; a mild overexposure on the upper left corner gives an airy, bright feel. No color grading or filters – just the natural tones of the plants, fruit, and metal structure.
+
+- **Environment**  
+  A commercial greenhouse with rows of leafy greens, a stainless‑steel bin labeled “GENESIS GRAIN GRAIN” filled with red, yellow, and green apples, and a small digital sensor on a plant tray. The background shows more plant beds, a sprinkler system, and the metal frame of the greenhouse. The time of day is mid‑morning, with soft, diffused sunlight.
+
+- **Lens & Technical**  
+  Short focal length (24–35 mm), wide‑angle, no bokeh – all elements from foreground to background are in focus. No rule‑of‑thirds intentionality; the composition is accidental, slightly tilted, and off‑center. The framing captures a partial crop of the bin’s side and the woman’s lower body, emphasizing spontaneity.
+
+- **Prompt for Image Generation**  
+  *“A candid, wide‑angle shot of a young woman in a beige crop‑top and shorts standing profile in a commercial greenhouse. She is mid‑step, hand on hip, looking down at a stainless‑steel bin filled with red, yellow, and green apples labeled ’GENESIS GRAIN GRAIN’. Rows of leafy greens line the background, a digital sensor is visible on a plant tray, and a sprinkler system runs along the metal frame. Natural daylight from the glass roof creates a slight overexposure on the upper left. Slight motion blur at the wrists and feet, everything fully sharp. Raw, no filters, auto‑HDR off, low‑ground wide‑angle lens (24–35 mm), accidental tilt and off‑center framing.”*

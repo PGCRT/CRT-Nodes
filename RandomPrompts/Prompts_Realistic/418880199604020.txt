@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wind‑blown brown hair, wearing a red bikini top with white trim, captured mid‑selfie on a sandy beach. Her left hand holds the camera at an angle that creates a slight tilt and off‑center framing; her face is slightly turned toward the lens, giving a candid, unposed feel. The shot is taken at eye level, with the camera’s wide‑angle lens encompassing the shoreline, the ocean, and a cluster of large rocks in the background.
+
+- **Lighting & Exposure**  
+  Natural daylight from a low‑angle sun (late afternoon) creates a warm, slightly overexposed highlight on her skin and a soft glow on the sand. The exposure is not perfectly balanced—there’s a gentle haze of ambient light that gives the image a raw, unprocessed look. No auto‑HDR or beauty filters are applied; the only post‑processing is a subtle contrast boost.
+
+- **Motion & Focus**  
+  A handheld shot with slight motion blur from the camera’s instability, freezing the subject’s hair and the waves in mid‑movement. Everything—from her face to the rocks—is fully sharp, as if captured with a short focal‑length wide‑angle lens (24–35 mm). No bokeh or depth‑of‑field blur; the background remains crisp.
+
+- **Environment**  
+  The scene is a real‑world beach at sunset, with the ocean’s whitecaps visible behind her and a cluster of large, weathered rocks forming a natural backdrop. The sky shows a gradient from bright yellow to soft gray, indicating the time of day. The sand is textured, with footprints and small pebbles scattered around.
+
+- **Lens & Technical**  
+  Use a short focal‑length wide‑angle lens (24–35 mm). Capture the entire scene in one frame—subject, sand, water, rocks, and sky—all in focus. No portrait‑mode isolation; the composition is accidental, with no rule‑of‑thirds intentionality. The framing is slightly off‑center, giving a spontaneous, candid feel.
+
+- **Prompt Summary**  
+  “A young woman in a red bikini top takes a selfie on a sandy beach at sunset, captured with a wide‑angle lens that keeps everything sharp while allowing slight motion blur from handheld shake. The shot has a raw, unprocessed look with natural overexposure, wind‑blown hair, and a background of ocean waves and large rocks, all framed accidentally for a candid, spontaneous feel.”

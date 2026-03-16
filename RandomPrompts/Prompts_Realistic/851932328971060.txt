@@ -1,0 +1,33 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair, wearing a white lace bodysuit, sitting by a swimming pool. She is mid‑smile, head tilted slightly to the left, eyes focused on the camera but not posing—natural candid feel. Her left arm rests on her thigh, right arm supporting her weight on the pool edge. The bodysuit’s delicate lace pattern catches the light, with subtle sheen and slight overexposure on the chest area.
+
+- **Lighting & Exposure**  
+  Warm, golden‑hour sunlight from the west, creating a soft haze and slight overexposure on the subject’s face and upper body. Ambient light is slightly uneven, giving a raw, unprocessed look. No auto‑beauty mode—just natural contrast.
+
+- **Camera Settings**  
+  - Lens: 24‑35 mm wide‑angle, short focal length.  
+  - Aperture: f/4–f/5.6 (wide, but background stays fully sharp).  
+  - Shutter speed: 1/60–1/100 s (slight motion blur from handheld instability).  
+  - ISO: 400–800 (depending on ambient light).  
+  - Focus: everything in focus—no portrait‑mode depth‑of‑field blur.  
+
+- **Composition & Framing**  
+  - No rule‑of‑thirds intentionality; the frame is slightly off‑center, with the subject’s left side cut off by the pool edge.  
+  - Slight tilt (5°) to give a casual, spontaneous feel.  
+  - Background: a calm pool with a faint reflection of palm trees and a distant horizon line of ocean. The background is fully sharp, no bokeh.  
+
+- **Environment**  
+  - Location: a private resort pool at sunset, with a concrete deck, a few palm trees in the left background, and the sea visible on the right.  
+  - Time of day: late afternoon (golden hour).  
+  - Weather: clear, light wind, slight humidity.  
+
+- **Technical Details**  
+  - Capture style: candid, unposed, spontaneous—subject unaware or mid‑action.  
+  - Imperfections encouraged: slight tilt, off‑center framing, partial crop.  
+  - No filters, no color grading, no post‑processing aesthetic.  
+  - Slight motion blur on the subject’s hair and shoulders from handheld shake.  
+
+- **Final Prompt**  
+  “A young woman with long wavy brown hair, in a white lace bodysuit, sitting by a swimming pool at golden hour. She smiles casually, head tilted left, arm resting on her thigh, while the camera captures a wide‑angle, short‑focal‑length shot with slight motion blur and a small overexposure on the chest. The background shows a calm pool, palm trees, and distant ocean, all in focus. The frame is slightly off‑center and tilted, giving a candid, spontaneous feel. No filters or post‑processing—raw, natural lighting.”

@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy blonde hair sitting on a wooden chair in a dimly lit bedroom. She wears a black off‑shoulder long‑sleeve top and dark denim shorts, hands clasped between her knees, legs slightly apart. Her face is turned toward the camera but not directly at it—mid‑gesture, as if she just finished a conversation or is about to move.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. Slight tilt and off‑center framing; partial crop that cuts off a bit of the chair’s backrest. No rule‑of‑thirds intentionality—accidental composition. The shot has a raw, unprocessed look: no filters, no color grading, no post‑processing aesthetic. A hint of overexposure in the highlights to capture ambient light.
+
+- **Motion & Focus**  
+  Slight motion blur from handheld instability; natural freeze or slight blur on the subject’s hands and face. Everything is fully sharp—no bokeh, no depth‑of‑field blur. Background (a simple bed with white sheets, a dark curtain, a small wooden nightstand) is in focus.
+
+- **Lens & Technical**  
+  Short focal length (24–35 mm), wide‑angle lens. Auto‑HDR or auto‑beauty mode off. No studio lighting—only natural indoor light from a window on the left, creating soft side‑lighting. Wide‑angle captures the entire scene: subject, chair, bed, curtain, and nightstand.
+
+- **Environment**  
+  Specific real‑world location: a modern bedroom with concrete walls, a dark curtain, a white bed, a wooden nightstand, and a small wooden chair. Time of day: late afternoon, with warm natural light coming from the left side. Weather or ambient conditions: mild indoor humidity, slight temperature variation that gives a subtle grain to the image.
+
+- **Composition & Details**  
+  The frame is slightly crooked; the top of the chair is cut off at the upper edge, giving an accidental crop. The subject’s head is slightly above the center of the frame, and her left shoulder is a bit higher than her right, creating asymmetry. The background remains fully sharp—no portrait‑mode blur. The lighting creates soft shadows on the woman’s face and body, with a faint overexposed highlight on her hair.
+
+- **Prompt Summary**  
+  “A young woman with long wavy blonde hair sits on a wooden chair in a dimly lit bedroom, wearing a black off‑shoulder top and dark denim shorts. Her hands are clasped between her knees, legs slightly apart, as if mid‑gesture. The shot is candid, slightly tilted, off‑center, partially cropped, with a short focal length wide‑angle lens capturing the entire scene—subject, chair, bed, curtain, and nightstand—all in focus. Natural late‑afternoon light from the left creates soft side‑lighting and a hint of overexposure. No filters or post‑processing; raw, unprocessed look with slight motion blur from handheld instability.”

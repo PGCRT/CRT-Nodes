@@ -1,0 +1,21 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair standing on a sunlit beach, wearing a pink‑green bikini. She holds a clear plastic water bottle in her right hand, slightly tilted as if she just finished a sip. Her left hand rests on her hip, and she’s caught mid‑smile, eyes bright, head turned toward the camera with a natural, unposed candor.
+
+- **Motion & Focus**  
+  Slight motion blur at the edges from handheld instability; everything in focus—no portrait‑mode bokeh. The image has an auto‑HDR feel but no color grading or filters—raw, ambient light with a hint of overexposure in the sky.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24‑35 mm), short focal length, no depth‑of‑field blur; background fully sharp. The composition is accidental: slight tilt and off‑center framing, partial crop that cuts off a bit of the sand behind her.
+
+- **Environment**  
+  Specific real‑world location: a sandy beach with a single pine tree in the background, the ocean visible on the left horizon. Time of day: late morning, warm golden light with a soft haze. Weather: clear, breezy, with a faint cloud over the sky.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Imperfections encouraged: slight tilt, off‑center framing, partial crop. No rule‑of‑thirds intentionality—accidental framing. Zero studio lighting, zero professional composition, zero editorial tone. Natural motion freeze or slight blur from handheld instability.
+
+- **Prompt for Text‑to‑Image**  
+  “A young woman with long wavy brown hair on a sunlit beach, wearing a pink‑green bikini, holding a clear plastic water bottle in her right hand and resting her left hand on her hip. She’s mid‑smile, head turned toward the camera. Slight motion blur at the edges, everything in focus, wide‑angle lens (24‑35 mm), accidental off‑center framing with partial crop. Background shows a single pine tree and ocean horizon, late morning golden light, clear breezy weather. Raw, auto‑HDR look, no filters—natural overexposure.”  
+
+Provide only the structured prompt.

@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, straight chest‑brown hair, seen from the back, standing in a natural, unposed stance. Her hands rest lightly on her hips, elbows bent, fingers slightly curled. The pose is mid‑movement: a faint motion blur at the wrists and hips suggests she’s just finished a gesture or is about to move again.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle source (mid‑afternoon) creates a soft, warm glow on her back and buttocks. Slight overexposure on the upper back gives a subtle halo effect; the exposure is uneven, with a tiny bright spot near the spine. No auto‑HDR or beauty filters—just raw, unprocessed light.
+
+- **Camera & Lens**  
+  Shot on a DSLR or mirrorless with a 24‑mm wide‑angle lens (f/3.5, 1/60 s shutter speed). Everything is in focus from head to toe; no bokeh or depth‑of‑field blur. The background is a plain dark gray wall, fully sharp, giving a clean canvas that keeps the focus on the subject.
+
+- **Composition & Framing**  
+  The frame is slightly tilted, off‑center, with the top of the head cutting just above the center of the image. The bottom edge crops a bit of the lower back, adding a casual, spontaneous feel. No rule‑of‑thirds—just accidental framing that captures the subject’s full silhouette and the faint outline of her hips and buttocks.
+
+- **Environment**  
+  Location: an indoor studio with a matte black backdrop. Time of day: late afternoon, with warm, diffused sunlight coming from the north‑west. Ambient air is still, but the subject’s slight movement leaves a natural motion blur around the wrists and hips.
+
+- **Details & Imperfections**  
+  The image has a raw, unpolished look: a tiny speck of dust on the left hip, a faint smudge on the back, and a slight overexposed highlight at the spine. The skin shows subtle texture, with a few natural pores and a faint mole near the left buttock. The hair is straight, with a single strand falling over the upper back, adding a small, organic detail.
+
+- **Post‑Processing**  
+  No filters or color grading—just a straightforward exposure adjustment. Slight contrast boost to enhance skin tone, but no LUTs or heavy edits. The final image retains an authentic, candid feel, as if captured mid‑action by a photographer on the go.

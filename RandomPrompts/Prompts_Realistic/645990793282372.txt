@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy auburn hair sitting on a beige sofa, mid‑action as she fastens the strap of a floral‑patterned handbag. Her body is bare except for the bag; her hands are slightly blurred from motion, suggesting a natural, unposed moment. She looks toward the camera with a soft, contemplative expression, eyes half‑closed, as if caught in a spontaneous, candid shot.
+
+- **Lighting & Exposure**  
+  Natural daylight coming from a window on the left, creating a slight overexposure on the subject’s face and body. The exposure is uneven—warm highlights on her skin and cool shadows in the background—giving a raw, unprocessed look. No auto‑beauty or filter enhancements; the image retains the grain and color fidelity of an analog camera.
+
+- **Environment**  
+  The setting is a modern living room with a textured gray marble wall behind the sofa. A heavy gray curtain hangs to the left, partially out of frame. The time of day is late morning, with soft, diffused sunlight. The weather outside is overcast, which keeps the ambient light even and avoids harsh shadows.
+
+- **Lens & Technical**  
+  Shot on a wide‑angle lens (24 mm) with a short focal length, capturing a broad view that includes the subject, sofa, wall, and curtain. Everything is in focus—no bokeh or depth‑of‑field blur. The composition is accidental: the frame is slightly tilted, the subject is off‑center, and the crop is partial, giving an informal, handheld feel. Slight motion blur on the hands and bag strap conveys natural movement.
+
+- **Style & Aesthetic**  
+  Candid, spontaneous, “mid‑action” photography with imperfections: slight tilt, off‑center framing, partial crop. No rule‑of‑thirds intentionality. The image has a raw, unprocessed look—no filters, no color grading, no post‑processing aesthetic. The exposure is slightly uneven, giving a natural, documentary feel.
+
+- **Prompt for Generation**  
+  “A young woman with long wavy auburn hair sitting on a beige sofa, fastening the strap of a floral handbag, captured in a wide‑angle, short‑focal‑length shot. Natural daylight from a left‑side window creates a slight overexposure on her skin, while the background gray marble wall and dark curtain remain fully sharp. The frame is slightly tilted and off‑center, with accidental motion blur on her hands, conveying a candid, spontaneous moment in late morning. No filters or post‑processing—raw, unprocessed realism.”

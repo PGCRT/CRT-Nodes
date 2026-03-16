@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair standing in a bright, sunlit bedroom. She’s wearing light‑blue, high‑waist shorts that sit snugly at the hips and a bare top that shows her mid‑riff. Her hands rest on her hips, elbows bent slightly, head tilted to the left, eyes smiling directly at the camera. The pose is casual, as if she just finished a quick selfie or is mid‑pose during a spontaneous shoot.
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window on the left side of the room creates a soft, warm glow. Slight overexposure on the upper body gives a subtle halo effect; the exposure is uneven, with the lower part of the image slightly darker than the top, mimicking handheld shooting. No auto‑beauty or filter enhancement—raw, unprocessed look.
+
+- **Camera Settings**  
+  Wide‑angle lens (24–35 mm) with a short focal length to capture a broad view of the scene. Everything is in focus—from her face to the floor—no bokeh; background remains sharp. Slight motion blur on the hands and hips to suggest a handheld, spontaneous capture.
+
+- **Composition & Framing**  
+  The frame is intentionally off‑center: the subject’s left side leans slightly right, creating a casual tilt. The crop cuts off part of the window’s frame at the top left, giving an accidental, “in‑the‑moment” feel. No rule‑of‑thirds—just a natural, spontaneous composition.
+
+- **Environment**  
+  A bright bedroom with floral wallpaper (pink roses on a green background) visible behind her right shoulder. A white radiator is partially seen at the bottom left. The floor is light wood, and a small portion of a white door frame appears on the far left. The time of day is mid‑afternoon, with warm, slightly harsh sunlight streaming through the window, creating soft shadows.
+
+- **Details & Imperfections**  
+  Slight tilt in the camera’s grip; the image has a faint, natural motion blur around the hands and hips. The top of the subject’s head is slightly cropped off at the upper edge. The lighting creates a subtle overexposed halo on her chest, while the lower legs are a bit darker. No post‑processing color grading—just raw, realistic capture.
+
+- **Final Prompt**  
+  “A young woman with long wavy brown hair, wearing light‑blue high‑waist shorts and a bare top, stands casually in a sunlit bedroom. Her hands rest on her hips, head tilted left, eyes smiling at the camera. Natural daylight from a large window on the left creates a soft warm glow with slight overexposure on the upper body. Shot on a 24–35 mm wide‑angle lens, everything in focus with faint motion blur on the hands and hips. The frame is off‑center, slightly tilted, cropping the top of her head and part of the window frame. Floral wallpaper, white radiator, and light wood floor are visible. Mid‑afternoon sunlight casts soft shadows. Raw, unprocessed, candid style—no filters, no auto‑beauty, no color grading.”

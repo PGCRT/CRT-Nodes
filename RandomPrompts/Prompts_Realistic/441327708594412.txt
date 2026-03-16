@@ -1,0 +1,24 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with voluminous, wavy brown hair that catches the light as she turns her head slightly to the side. She’s wearing a black off‑the‑shoulder top with a deep front cutout and a tied knot at the waist. Her expression is natural, mid‑smile, as if she’re caught in an unplanned moment. The camera frames her from the chest up, but the crop is intentional “off‑center” – the left side of her face is a bit higher than the right, giving a casual, spontaneous feel.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject appears unaware of the camera, mid‑action. Slight tilt and partial crop create an accidental framing that feels handheld. The image has a raw, unprocessed look: no filters, no color grading, no post‑processing aesthetic. A hint of overexposure in the highlights gives it a natural, ambient‑light feel.
+
+- **Motion & Focus**  
+  Slight motion blur on the subject’s hair and shoulders from handheld instability, but everything remains fully sharp – no portrait‑mode depth‑of‑field blur. The background is completely in focus, with no bokeh or “subject isolation” effect.
+
+- **Environment**  
+  The setting is an outdoor urban alleyway at dusk. The background shows a concrete wall and a metal railing, with a faint hint of greenery peeking through the gap. The time of day is late afternoon, with warm, golden light that slightly overexposes the upper part of the frame. Ambient conditions are mild, with a gentle breeze that ruffles the subject’s hair.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm) wide‑angle lens. No bokeh; background is fully sharp. The exposure is set to auto‑HDR or auto‑beauty mode off – raw, unprocessed look. Slight overexposure in the highlights gives a natural, ambient‑light feel. Wide‑angle captures a broad view of the scene, preserving all details from foreground to background.
+
+- **Composition & Framing**  
+  No rule‑of‑thirds intentionality — accidental framing that places the subject slightly off‑center. The composition is “zero studio lighting, zero professional composition, zero editorial tone.” The shot feels spontaneous and real, as if captured in a casual snapshot style.
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, zero post‑processing aesthetic. The image retains its raw, natural look with only minimal adjustments to exposure and focus.
+
+Provide only the structured prompt.

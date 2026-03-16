@@ -1,0 +1,26 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A young woman with long, wavy dark hair, wearing a light‑denim jacket over a white tank top and black leggings speckled with colorful paint drops, is mid‑gesture in a modern kitchen. She holds a smartphone in her left hand and a metal spoon in her right, as if she’s about to cook or mix something. Her head is tilted slightly downward, eyes focused on the phone screen, giving a candid, “in‑the‑moment” feel.
+
+- **Pose & Composition**  
+  Capture a spontaneous, unposed frame where the subject is unaware of the camera. The shot should be slightly off‑center, with a subtle tilt that conveys handheld instability. Keep everything in focus—no bokeh or depth‑of‑field blur; the background (kitchen cabinets, stainless‑steel refrigerator, countertop utensils, and a sink) should be fully sharp. Use a wide‑angle lens (short focal length, 10–24 mm) to include a broad view of the environment.
+
+- **Lighting & Exposure**  
+  Use natural ambient light from a large window or an open kitchen area. Allow for slight overexposure or underexposure depending on the time of day (morning or late afternoon). Avoid any auto‑HDR or beauty filters—keep the look raw and unprocessed. The lighting should be soft but warm, with no studio‑style fill lights.
+
+- **Environment & Time**  
+  Location: A bright, contemporary kitchen with wooden cabinets, a stainless‑steel refrigerator, a white countertop, and a sink area visible in the background. Time of day: early afternoon, when natural light is warm and diffused. Weather or ambient conditions: clear, mild, with a gentle breeze that slightly ruffles the subject’s hair.
+
+- **Lens & Technical Settings**  
+  - Focal length: 15 mm (wide‑angle, short)
+  - Aperture: f/4–f/5.6 (everything in focus)
+  - Shutter speed: 1/60–1/125 s (slight motion blur from handheld shake)
+  - ISO: 400–800 (depending on ambient light)
+  - No portrait‑mode subject isolation; keep background fully sharp.
+
+- **Capture Style Notes**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Encourage imperfections: slight tilt, off‑center framing, partial crop. No rule‑of‑thirds intentionality—accidental framing that feels natural and organic. Zero studio lighting, zero professional composition, zero editorial tone.
+
+- **Post‑Processing**  
+  Keep it minimal—no filters, no color grading, no heavy post‑processing. Slight auto‑beauty mode off. The final image should look like a genuine, raw snapshot captured with a DSLR or mirrorless camera in a real‑world setting.

@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman with a high ponytail, wearing a pink mesh long‑sleeve crop top and matching lace panties, kneeling on a fluffy white rug. Her back is to the camera; one hand is raised to her head, adjusting the ponytail, while the other rests on her hip. She has a large floral tattoo on her left thigh and a small ink mark near her spine.  
+
+- **Lighting & Exposure**  
+  Natural daylight from a western window, mid‑afternoon. Slight overexposure on the upper body, creating a warm, soft glow. No auto‑HDR or beauty filters—raw, unprocessed look.  
+
+- **Camera Settings**  
+  Wide‑angle lens (24‑35 mm), handheld, slightly shaky. F‑stop 8–10 for sharpness across the frame. No bokeh; background (a sheer white curtain and a faint view of a garden) is fully in focus.  
+
+- **Composition & Framing**  
+  Candid, unposed, spontaneous—subject appears unaware of the camera. Slight tilt and off‑center framing; the shot is partially cropped on the left side. No rule‑of‑thirds intentionality.  
+
+- **Environment**  
+  A bright, airy living room with a sheer white curtain in the background. The time of day is late afternoon, giving a warm, slightly hazy light. Ambient sound of a distant street or wind is implied.  
+
+- **Details & Imperfections**  
+  Slight motion blur on the hands and hair, indicating mid‑action. Tiny imperfections: a faint smudge on the rug, a slight shadow cast by the subject’s head.  
+
+- **Lens & Technical**  
+  Short focal length (30 mm), wide‑angle, no portrait‑mode isolation. Everything from foreground to background is sharp.  
+
+- **Prompt for AI Image Generation**  
+  “A woman with a high ponytail in a pink mesh crop top and lace panties, kneeling on a fluffy white rug in a bright living room, back to the camera, one hand adjusting her hair, the other on her hip, a large floral tattoo on her left thigh, slight motion blur, natural daylight from a western window, mid‑afternoon overexposure, wide‑angle 30 mm lens, handheld shake, candid unposed framing, slight tilt and off‑center crop, fully sharp background of a sheer white curtain, raw unprocessed look.”

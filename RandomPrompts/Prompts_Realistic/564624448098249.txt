@@ -1,0 +1,23 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A slender woman with long, dark brown hair standing in a public restroom, mid‑pose as she runs a hand through her hair. Her back is slightly turned toward the camera, capturing a natural, unposed silhouette. She’s wearing a thin, translucent summer dress that clings to her body, revealing subtle skin texture and a faint sheen from the ambient light.
+
+- **Capture Style**  
+  Candid, spontaneous — the subject appears unaware of the camera, caught in a fleeting moment. Slight tilt and off‑center framing give an accidental, handheld feel. The shot is slightly overexposed on the right side, letting the warm tones bleed into the background. No filters, no color grading, no post‑processing aesthetic—just raw, auto‑HDR or “auto‑beauty” off, natural motion blur from a shaky hand.
+
+- **Environment**  
+  Location: A modest, unadorned public restroom in an urban office building. The walls are tiled in muted green squares; a white ceramic sink sits on the left, with a chrome faucet and a small mirror above it. A wooden door is visible on the right, its handle turned on. The time of day is late afternoon, with soft, diffused daylight coming from the west, casting gentle shadows and a slight haze.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm) wide‑angle lens, no bokeh—everything in focus from foreground to background. The depth of field is fully sharp, with no portrait‑mode blur. Slight motion blur on the subject’s hair and hand adds a natural, handheld feel. The composition is not rule‑of‑thirds intentional; it’s a casual, spontaneous crop that slightly cuts off the top of the mirror and the lower part of the door.
+
+- **Details to Emphasize**  
+  - The texture of the woman’s skin, with subtle moisture from the sink’s faucet.  
+  - The slight overexposure on the right side of the frame softens the background tiles.  
+  - The faint reflection in the mirror shows a partial silhouette of the woman’s back.  
+  - The chrome faucet’s gleam contrasts with the matte green tiles.  
+  - The wooden door’s handle is slightly out of focus, adding depth.
+
+- **Prompt Summary**  
+  “A slender woman with long dark brown hair stands in a public restroom, mid‑pose as she runs a hand through her hair, wearing a thin translucent summer dress. Capture candidly with slight tilt and off‑center framing, overexposed on the right, using a short focal length wide‑angle lens. The scene is set in late afternoon daylight, with green tiled walls, a white ceramic sink, and a wooden door. All elements are fully sharp, with natural motion blur from handheld instability.”

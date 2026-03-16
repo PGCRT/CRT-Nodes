@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair standing on a sunlit beach, wearing a pastel‑colored bikini (lime‑green and pink). She holds a clear plastic water bottle in her right hand, slightly tilted as if mid‑gesture, and rests her left hand on her hip. Her face is turned toward the camera but not directly aimed—slight off‑center framing, a casual, candid look.
+
+- **Motion & Focus**  
+  Slight motion blur from handheld instability; everything in focus (no portrait‑mode depth of field). The image has a raw, unprocessed feel: no auto‑HDR or beauty filters, just natural ambient light with a hint of overexposure.
+
+- **Lens & Technical**  
+  Wide‑angle lens, short focal length (~24 mm). No bokeh—background is fully sharp. Capture in a single exposure, no post‑processing color grading.
+
+- **Environment**  
+  Specific real‑world location: a sandy beach with a blurred palm tree in the upper left and the ocean horizon in the background. Time of day: late morning, warm sunlight casting soft shadows. Weather: clear, light wind.
+
+- **Composition Notes**  
+  Candid, unposed, spontaneous—subject appears unaware or mid‑action. Slight tilt and partial crop; no rule‑of‑thirds intentionality. Zero studio lighting, zero professional composition, zero editorial tone. Natural freeze or slight blur from handheld shake.
+
+- **Final Prompt**  
+  “A young woman with long wavy brown hair on a sunlit beach, wearing a lime‑green and pink bikini, holding a water bottle in her right hand and resting her left hand on her hip. Slight motion blur, wide‑angle short focal length lens, everything in focus, raw unprocessed look with natural overexposure. Background shows a palm tree and ocean horizon, clear weather, late morning sunlight. Candid, spontaneous pose, slight tilt and partial crop, no rule‑of‑thirds, handheld shake.”

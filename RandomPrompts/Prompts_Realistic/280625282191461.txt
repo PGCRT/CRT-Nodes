@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair sitting cross‑legged on a red office chair in a bright, window‑facing workspace. She wears a heather‑gray crop tank and distressed white jeans, a silver bracelet on her left wrist. Her gaze is slightly off‑center, as if she’s just noticed something outside the frame.  
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject appears unaware of the camera, mid‑pose. Slight tilt and off‑center framing; the crop is partial, giving a raw, handheld feel. No rule‑of‑thirds intentionality—everything is framed accidentally, with a wide‑angle lens that keeps the background fully sharp (no bokeh).  
+
+- **Environment**  
+  A modern office or co‑working space with a large window that looks out onto a city street. Outside, a traffic light glows amber, a white car is parked, and a pedestrian in a black jacket walks away. The time of day is late morning; the ambient light is bright but slightly overexposed on the window, creating a soft halo around the subject. Snowflakes are visible on the glass, hinting at a cold, crisp afternoon.  
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm), wide‑angle lens. All elements—in‑focus from foreground to background—no portrait‑mode depth‑of‑field blur. Slight motion blur on the subject’s hair and hands to suggest natural movement. Auto‑HDR or auto‑beauty mode off; no filters, no color grading, no post‑processing aesthetic. The exposure is slightly overexposed on the window, giving a warm glow, while the interior remains crisp.  
+
+- **Composition Notes**  
+  The shot is centered on the woman but slightly tilted to the right. The chair’s backrest cuts off the lower left corner, creating a partial crop. The window’s reflection and the traffic light are visible in the background, adding context. The desk behind her holds a stack of books, a keyboard, and a mouse; a black bag rests on the floor to the right.  
+
+- **Final Prompt**  
+  “A young woman with long wavy brown hair sits cross‑legged on a red office chair in a bright window‑facing workspace, wearing a heather‑gray crop tank and distressed white jeans, silver bracelet on left wrist. She looks slightly off‑center, candid and unposed. The camera uses a 24‑35 mm wide‑angle lens, all in focus with slight motion blur on the hair and hands. Outside the window, an amber traffic light glows, a white car parked, a pedestrian in black jacket walking away; snowflakes cling to the glass. Late morning, slightly overexposed window, crisp interior. The frame is tilted right, partial crop cutting the lower left corner, desk with books, keyboard, mouse visible behind, black bag on floor to right. No filters, no auto‑HDR, raw, handheld aesthetic.”

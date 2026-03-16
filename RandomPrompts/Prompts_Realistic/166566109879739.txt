@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair, mid‑laugh, standing in a lush tropical setting. She’s wearing a black lace bikini that shows subtle texture and slight sheen. Her pose is spontaneous: one hand lightly touching her hip, the other relaxed by her side, body angled slightly to the left, head tilted upward as if she’s just seen something amusing. The shot captures a faint motion blur around her hands and face, indicating handheld shake and a quick shutter speed.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle, mid‑afternoon sun that creates a soft overexposure on the subject’s front while leaving the background slightly underexposed. The lighting is uneven, with a small highlight on her left shoulder and a gentle rim light from above. No auto‑beauty or filter enhancement—just raw, unprocessed data.
+
+- **Environment**  
+  A verdant jungle path with tall palm fronds and broad-leafed plants on either side. Behind the woman, a small waterfall cascades down a rocky ledge, its mist rising. The time of day is late afternoon, giving warm, golden tones. Weather is lightly humid, with a faint haze that keeps everything in focus.
+
+- **Lens & Technical**  
+  24‑mm wide‑angle lens (short focal length), handheld, no bokeh. Everything from foreground to background is fully sharp—no portrait‑mode depth of field blur. The composition is accidental: the frame is slightly tilted, the subject is off‑center, and the crop is imperfect, giving a candid feel.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—the woman appears unaware of the camera, mid‑action. Slight tilt and partial crop create a natural, informal look. The shot has a slight motion blur on the hands and background foliage, as if the photographer was moving while snapping the photo.
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, zero studio lighting. Only raw, in‑camera data with a slight overexposure on the subject and a subtle underexposure on the background. The image retains all natural imperfections: minor dust specks, slight compression artifacts, and an authentic, unpolished feel.
+
+**Prompt Summary**  
+“Candid photo of a woman in a black lace bikini laughing mid‑action, standing on a lush jungle path with a waterfall behind her. Shot with a 24‑mm wide‑angle lens, handheld, slightly tilted, everything in focus, natural daylight from mid‑afternoon, soft overexposure on the subject, slight motion blur. Raw, unprocessed, no filters.”

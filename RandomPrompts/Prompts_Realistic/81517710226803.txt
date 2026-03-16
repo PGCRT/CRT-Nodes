@@ -1,0 +1,31 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair sitting on a bed in a bright, sunlit bedroom. She’s wearing a sheer pink lace bra and matching panties, paired with silver high‑heeled sandals. One arm is raised behind her head, the other resting on her thigh; her legs are bent at the knee, one foot slightly forward, capturing a casual, mid‑movement pose.
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window creates a soft overexposed highlight on the left side of the frame. Slight ambient glare on the fabric and skin, giving a raw, unprocessed look. No auto‑beauty or filter enhancement—just the camera’s native dynamic range.
+
+- **Camera Settings**  
+  - Lens: 24‑mm wide‑angle, short focal length (wide‑angle “wide‑body” mode).  
+  - Aperture: f/5.6 – moderate depth of field; everything from foreground to background stays sharp.  
+  - Shutter speed: 1/125 s – enough to freeze the motion but with a hint of handheld shake.  
+  - ISO: 400 – balanced for the daylight.
+
+- **Composition & Framing**  
+  Handheld, slightly tilted composition. The frame is off‑center; the subject’s left side leans toward the top right corner, creating a casual, spontaneous feel. No rule‑of‑thirds intentionality—just natural framing. The background shows a wooden nightstand and a patterned bedspread with paisley motifs in muted earth tones.
+
+- **Environment**  
+  Location: A bright, airy bedroom with a wooden headboard and a small bedside table. Time of day: mid‑afternoon, with warm sunlight streaming from the west, casting soft shadows. Weather: clear, sunny, with a slight haze that adds depth to the scene.
+
+- **Technical Details**  
+  - No bokeh; background is fully sharp.  
+  - Slight motion blur on the subject’s hair and legs to emphasize movement.  
+  - All elements in focus—foreground, mid‑ground, background.  
+  - No portrait‑mode “subject isolation”—a flat, straightforward capture.
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, no LUTs. Raw JPEG with a slight vignette from the wide‑angle lens. The image retains the natural imperfections of a candid shot: minor tilt, slight off‑center crop, and a faint handheld shake.
+
+**Prompt Summary (for AI image generator)**  
+"A young woman in a sheer pink lace bra and matching panties, sitting on a bed with a wooden headboard and patterned paisley sheet, one arm raised behind her head, legs bent, wearing silver high‑heeled sandals. Natural daylight from a large window creates soft overexposure on the left side. 24‑mm wide‑angle lens, f/5.6, 1/125 s shutter, ISO 400. Handheld slight tilt, off‑center framing, background fully sharp, no bokeh. Raw JPEG with faint vignette. Capture a candid, spontaneous moment in a bright mid‑afternoon bedroom."

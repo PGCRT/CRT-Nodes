@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair standing mid‑stride on a city sidewalk. She’s wearing faded denim jeans and a plain white tee; her left hand is in her pocket, right arm relaxed by her side. Her head is turned slightly to the right, eyes focused ahead, capturing a candid, unposed moment.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle, late‑afternoon sun that creates a soft overexposure on the subject’s face and a subtle warm glow on her jeans. Slight handheld shake gives a natural motion blur around the edges; no auto‑beauty or filter processing—raw, unprocessed look.
+
+- **Lens & Technical**  
+  24 mm wide‑angle lens (short focal length), f/4.0 aperture, 1/125 s shutter speed, ISO 400. Everything in focus from foreground to background; no bokeh or depth‑of‑field blur—background fully sharp.
+
+- **Environment**  
+  A bustling downtown street with a white SUV parked on the left, a silver sedan on the right, and a brick building with a blue awning behind her. The scene is set in early evening, with the sun low enough to cast long shadows and a slight haze in the air. Light traffic, a few pedestrians in the distance, and a traffic light glowing amber.
+
+- **Composition & Framing**  
+  No rule‑of‑thirds intentionality—accidental framing that places the subject slightly off‑center, with a partial crop that cuts off the top of her head and the lower part of her jeans. Slight tilt in the camera gives a dynamic, spontaneous feel.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Imperfections encouraged: slight tilt, off‑center framing, partial crop. Zero studio lighting, zero professional composition, zero editorial tone. Natural motion freeze or slight blur from handheld instability.
+
+- **Post‑Processing**  
+  No filters, no color grading, no post‑processing aesthetic—just raw, in‑camera capture with auto‑HDR off.  
+
+**Prompt Summary:**  
+“Candid shot of a woman in denim jeans and a white tee on a downtown sidewalk, late‑afternoon sun creating soft overexposure, captured on a 24 mm wide‑angle lens at f/4, 1/125 s, ISO 400. Background includes a parked white SUV, a silver sedan, and a brick building with a blue awning. Slight handheld blur, off‑center framing, no filters—raw, natural look.”

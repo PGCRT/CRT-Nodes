@@ -1,0 +1,21 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair standing in a sunlit meadow, wearing a light‑denim button‑down shirt left open at the front and high‑waist jeans. Her hands hang loosely by her sides, slightly tilted to the left, as if she’s mid‑step or just paused after a walk. The shirt’s sleeves are rolled up to the elbow, revealing a hint of bare arm. She faces the camera with a relaxed, natural expression, eyes slightly downcast, lips parted as if she’s about to speak.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. Slight tilt and off‑center framing; partial crop that cuts off a bit of her left shoulder, giving an accidental, handheld feel. No rule‑of‑thirds intentionality. The shot has a slight motion blur on the hands and background to mimic handheld instability, but everything remains fully sharp — no portrait‑mode depth‑of‑field blur.
+
+- **Auto‑HDR or auto‑beauty mode off** – raw, unprocessed look. No filters, no color grading, no post‑processing aesthetic. A mild overexposure on the upper body to capture the warm ambient light of late afternoon.
+
+- **Lens & Technical**  
+  Short focal length (24–35 mm), wide‑angle lens. All elements in focus — background fully sharp, no bokeh. No “portrait mode” isolation; the background is a field of tall grass and wildflowers with a few scattered white dandelion heads.
+
+- **Environment**  
+  Specific real‑world location: a sunlit meadow at the edge of a small town, with a line of tall trees in the distance. Time of day: late afternoon (around 5 pm), warm golden light from the west casting long shadows. Weather: clear, breezy, with a light wind that ruffles the grass. Ambient conditions: the sky is a soft pale blue with a hint of orange near the horizon.
+
+- **Composition & Details**  
+  The composition captures the woman’s torso and upper legs, with her shirt slightly open to reveal her mid‑section. The background shows a mix of green grass and white dandelion heads, with a few tall reeds on the right side. A small patch of water is visible in the far left corner, reflecting the sun. The shot includes a slight overexposure on the upper body, making the skin glow. The overall tone is natural, unpolished, and raw, as if captured by an amateur photographer with a DSLR or mirrorless camera.
+
+- **Prompt Summary**  
+  “A young woman with long wavy brown hair, wearing an open denim shirt and high‑waist jeans, stands in a sunlit meadow at late afternoon. Her hands hang loosely by her sides, slightly tilted left, as if mid‑step. The shot is candid, handheld, with slight motion blur and off‑center framing, all in focus, no filters or auto‑HDR. Shot on a 35 mm wide‑angle lens, background fully sharp, capturing the green grass, white dandelion heads, and a small water patch in the left corner. Warm golden light from the west creates a mild overexposure on her upper body. The scene is raw, unprocessed, and natural.”

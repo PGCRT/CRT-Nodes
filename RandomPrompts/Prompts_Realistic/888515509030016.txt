@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high bun, light‑brown hair tied in a loose, casual knot. She’s wearing a delicate white lace lingerie set (triangular top with scalloped edges and matching thong). Her hands rest on her hips, slightly angled, as if she’s just finished a quick stretch or is about to pick something up from a couch. A subtle smile, eyes bright, captures a candid moment of confidence and ease.
+
+- **Lighting & Exposure**  
+  Natural daylight coming from a large window on the right side of the room, creating a soft overexposed highlight on her left shoulder. Slight handheld shake gives a natural motion blur around the edges. No auto‑beauty or filter processing – just raw, unedited imagery.
+
+- **Environment**  
+  A bright, sunlit living room with beige walls and a light‑colored sofa behind her. A wooden chair sits to the left, a framed family photo hangs on the wall, and a white radiator is visible near the window. The time of day is mid‑afternoon, with warm, golden light filtering through the window, casting gentle shadows.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24 mm) with a short focal length, capturing a broad view of the scene. Everything is in focus – no bokeh or depth‑of‑field blur. The composition is accidental: slightly tilted frame, off‑center framing, and a partial crop that includes a portion of the sofa cushion and a glimpse of the window frame. No rule‑of‑thirds intentionality; the shot feels spontaneous and informal.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous – the subject appears unaware of the camera, mid‑action. Slight tilt and partial crop give an authentic, “in‑the‑moment” feel. Natural motion freeze or slight blur from handheld instability adds realism.
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, zero studio lighting. The image retains its raw, unprocessed look with only basic auto‑HDR adjustments for dynamic range.  
+
+**Prompt Summary**  
+> “A candid, wide‑angle shot of a woman in white lace lingerie sitting on a beige sofa in a sunlit living room. Natural daylight from a large window creates soft overexposure on her left shoulder. The scene includes a wooden chair, framed photo, and radiator near the window. Mid‑afternoon lighting, slight handheld blur, accidental framing, everything in focus – no filters or post‑processing.”

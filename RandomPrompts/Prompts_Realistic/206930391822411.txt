@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy dark hair standing on a sunny beach, wearing a black one‑piece swimsuit with deep V‑cut and side cut‑outs. She is mid‑step, left foot slightly ahead, hands relaxed at her sides, face turned toward the camera with a gentle smile. Her posture is natural, unposed, with a slight tilt to the right to give an off‑center, spontaneous feel.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. Slight motion blur on the legs and hands to hint at handheld shake. No filters, no color grading, no post‑processing aesthetic. A tiny overexposure in the sky to keep the ambient light raw. Everything is fully sharp; no portrait‑mode depth of field blur.
+
+- **Environment**  
+  Specific real‑world location: a broad, uncluttered beach with soft white waves breaking in the background. Time of day: late morning, sun high but not directly overhead, creating warm, natural illumination. Weather: clear sky with a few fluffy cumulus clouds; light sea breeze visible in the hair.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm), wide‑angle lens. No bokeh — background fully sharp, no subject isolation. Wide‑angle gives a slight distortion that adds to the candid feel. Slight overexposure or underexposure depending on ambient light (choose natural exposure). All elements in focus: foreground, midground, background.
+
+- **Composition Notes**  
+  No rule‑of‑thirds intentionality — accidental framing. The shot is partially cropped on the right side to emphasize motion. The horizon sits slightly above the center of the frame. The background waves and clouds are fully sharp, giving a sense of depth without any “portrait mode” blur.
+
+- **Post‑Processing**  
+  Auto‑HDR or auto‑beauty mode off — raw, unprocessed look. Slight natural contrast and color fidelity. No vignetting or sharpening filters. Keep the image in its original color palette with only minimal white balance adjustment if needed.

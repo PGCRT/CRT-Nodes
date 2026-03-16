@@ -1,0 +1,26 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, athletic woman with long, sun‑kissed blonde hair standing on a rooftop terrace. She’s bare‑charged, hands on hips, head tilted slightly to the left, eyes bright and relaxed, a faint smile curling her lips. Her body is angled toward the camera but not perfectly centered— a casual, mid‑action candid stance.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle, late‑afternoon sun that casts soft shadows across her back and face. Slight overexposure on the upper torso gives a warm, raw feel; the exposure is uneven enough to hint at handheld instability. No auto‑beauty or filter enhancement—just the raw, unprocessed look of a real photo.
+
+- **Camera & Lens**  
+  24‑mm wide‑angle lens (short focal length), handheld, 1/60 s shutter speed, f/4 aperture. Everything in focus—from her skin to the city skyline behind—no bokeh, no depth‑of‑field blur. The framing is accidental: a slight tilt and partial crop that gives an unposed, spontaneous vibe.
+
+- **Environment**  
+  A concrete rooftop with a metal railing in front of a modern cityscape. In the background, a cluster of mid‑rise office buildings, one with a pointed spire, another with a green‑tiled roof. The sky is a pale blue with a few wispy white clouds. The time of day is early evening, the sun still high but beginning to tilt, creating a warm, golden hue.
+
+- **Details & Imperfections**  
+  Slight motion blur on her hips and hands, indicating a handheld shot. Her fingernails are painted a soft pink; her abdomen shows a faint belly button. The railing’s metal bars cut horizontally across the frame, partially obscuring the skyline. The composition is not rule‑of‑thirds—everything is slightly off‑center for authenticity.
+
+- **Technical Specs**  
+  - Focal length: 24 mm (wide angle)  
+  - Aperture: f/4 (mid‑range)  
+  - Shutter speed: 1/60 s (slight motion blur)  
+  - ISO: 400 (natural contrast)  
+  - No portrait mode, no auto‑HDR, no color grading—raw, in‑camera capture only.
+
+- **Final Prompt**  
+  “A tall, athletic woman with long, sun‑kissed blonde hair stands on a rooftop terrace, bare‑charged with hands on hips and a faint smile, captured on a 24‑mm wide‑angle lens at 1/60 s and f/4. The late‑afternoon sun creates soft shadows and slight overexposure on her torso. Behind her, a modern cityscape with mid‑rise office buildings and a green‑tiled roof rises against a pale blue sky with wispy clouds. The shot is handheld, slightly tilted, with accidental motion blur on the hips and hands, all in focus—no filters, no auto‑HDR, raw and unprocessed.”

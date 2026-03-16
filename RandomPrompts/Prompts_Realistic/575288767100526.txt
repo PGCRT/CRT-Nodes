@@ -1,0 +1,30 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A young woman with tousled, sun‑kissed hair, wearing a heather‑gray “HUSH” t‑shirt and high‑waist denim shorts, is mid‑scroll on her smartphone. She’s laughing softly, head tilted slightly to the left, fingers gripping the phone as if she’s just received an amusing message. Her expression is candid and spontaneous—no posed studio look, just a natural, in‑the‑moment capture.
+
+- **Pose & Composition**  
+  The shot is taken with a wide‑angle lens (24–35 mm), handheld, with a slight tilt that gives an off‑center, accidental framing. The composition is not rule‑of‑thirds‑intentional; the subject occupies the central‑right quadrant but is slightly offset by a gentle diagonal line that follows the street’s perspective. The crop is partial—her left shoulder extends just beyond the frame’s edge, adding to the candid feel.
+
+- **Motion & Focus**  
+  Slight motion blur at the fingertips and phone, indicating a quick snap during her movement. Everything—from her face to the background—is fully sharp; no portrait‑mode depth‑of‑field blur. The focus is broad, capturing both subject and environment in one plane.
+
+- **Lighting & Exposure**  
+  Natural daylight, mid‑afternoon (around 3 pm), with a slight overexposure on the upper part of the frame that gives a warm, bright halo around her hair. No auto‑beauty or filter enhancement—raw, unprocessed look. The lighting creates soft highlights on her shirt and a subtle lens flare in the top‑right corner.
+
+- **Environment**  
+  A bustling city street in an industrial district: brick buildings with neon signs (“Outrage” and “Brewery”) line the left side, a café patio with patrons at tables is visible behind her, and a tall smokestack rises in the distance. The street is paved with concrete, and a few passersby are seen on the right, adding life to the scene. The weather is clear, with a bright blue sky and a faint lens flare.
+
+- **Lens & Technical**  
+  - Focal length: 35 mm (wide‑angle).  
+  - Aperture: f/4.0 (mid‑range).  
+  - Shutter speed: 1/125 s (slight motion blur).  
+  - ISO: 400 (for natural grain).  
+  - No bokeh; background is fully sharp.  
+  - No portrait mode or subject isolation—everything in one plane.
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, no post‑processing aesthetic. The image retains its raw, candid feel with only minimal white‑balance correction and a slight contrast boost to enhance the natural tones.
+
+- **Final Prompt Summary**  
+  “A young woman in a gray HUSH t‑shirt and denim shorts is laughing while scrolling on her phone, captured with a 35 mm wide‑angle lens in a bustling city street at mid‑afternoon. The shot has slight motion blur from handheld shooting, a gentle tilt that off‑centers the framing, and a partial crop that extends beyond the frame. Natural daylight creates a soft overexposure on the upper part of the frame, while the background remains fully sharp with no bokeh. The scene includes brick buildings, neon signs, a café patio, and a distant smokestack, all captured in a raw, unprocessed, realistic candid style.”

@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young nurse with pastel‑pink hair tied in a high ponytail, wearing a light‑blue scrubs set and a matching cap, leaning forward at a casual, off‑center angle beside an hospital bed. Her face is turned upward toward a standing colleague whose arm and watch are partially visible on the right side of the frame. She’s mid‑gesture, hand near her hip, as if just having spoken or about to say something.
+
+- **Motion & Focus**  
+  Slight motion blur on the subject’s hands and the nurse’s hair, indicating handheld shake and a quick shutter speed. Everything in the frame—from the nurse’s face to the bed’s rail—is fully sharp; no portrait‑mode depth‑of‑field blur. The background (the window, curtain, and a small portable monitor) is also crisp.
+
+- **Lighting & Exposure**  
+  Natural daylight coming from a large window on the right, creating a soft overexposure on the nurse’s face and a slight highlight on the bed’s white sheet. No auto‑HDR or beauty filters—raw, unprocessed look. The exposure is slightly warm, with a hint of ambient haze from the day’s light.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24‑35 mm), short focal length, no bokeh. All elements are in focus: the nurse, the bed, the monitor, the window, and the curtain. No rule‑of‑thirds intentionality—framing is accidental, slightly tilted.
+
+- **Environment**  
+  A modern hospital ward. The scene is set in the late morning, with bright natural light streaming through a tall window. A portable vital‑signs monitor sits on wheels next to the bed. Light blue curtains hang beside the window, and a white sheet covers the bed. A small portion of another nurse’s arm and watch is visible on the right, suggesting an interaction.
+
+- **Composition & Details**  
+  The composition captures a candid moment: the nurse’s expression is half‑turned, her pink‑tipped hair slightly blurred, her scrubs catching the light. The bed’s rail curves into the frame, the monitor’s screen shows a faint digital readout. The window reveals a glimpse of an exterior building, adding context. The overall feel is spontaneous, unposed, and raw—like a snapshot taken in the middle of a shift.
+
+**Prompt:**  
+“Candid photo of a young nurse with pastel‑pink hair in a high ponytail, wearing light‑blue scrubs and cap, leaning forward beside an hospital bed, mid‑gesture near her hip. Slight motion blur on her hands and hair, everything fully sharp. Natural daylight from a large window creates soft overexposure on the subject. Wide‑angle lens, short focal length, no bokeh. Background includes a portable vital‑signs monitor on wheels, light blue curtains, and a white sheet. Another nurse’s arm and watch partially visible on the right. Late‑morning ambient light, raw unprocessed look, accidental tilted framing.”

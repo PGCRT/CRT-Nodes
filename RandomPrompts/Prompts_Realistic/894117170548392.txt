@@ -1,0 +1,16 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair, wearing a strapless black leather dress with a large satin bow at the bust, sitting in a worn‑in brown leather armchair. Her hands are clasped together on her lap, knees slightly apart, and she is looking directly at the camera with a soft, confident expression. The chair is positioned in a dimly lit bar or lounge area; behind her, a wooden counter lined with glass bottles and copperware is visible, creating a warm, amber ambience.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the woman appears mid‑pose, as if she just finished a conversation or is about to sip a drink. Slight tilt and off‑center framing give an accidental, handheld feel. The shot has a natural motion blur on the edges from a shaky camera, and a slight overexposure that keeps the background fully sharp with no bokeh. No rule‑of‑thirds intentionality; the composition is organic and imperfect.
+
+- **Environment**  
+  Location: a rustic bar or lounge with dark wood furniture, copperware, and a back‑bar filled with bottles. Time of day: late afternoon, ambient light is warm and slightly hazy, creating a golden hue. Weather/ambient conditions: mild, indoor ambience with soft natural light filtering through a window, giving a slight haze to the background.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm), wide‑angle lens. Everything is in focus — no portrait‑mode subject isolation. Slight overexposure or underexposure depending on ambient light; no auto‑HDR or auto‑beauty mode, raw, unprocessed look. No filters, no color grading, no post‑processing aesthetic. The image retains a natural, handheld feel with slight motion blur from instability, and the background remains fully sharp.
+
+**Prompt Summary (structured)**  
+"Mid‑afternoon candid shot of a woman in a black leather dress with a satin bow, seated in a brown leather armchair at a rustic bar. She looks directly at the camera with a soft expression, hands clasped on her lap. The background shows a wooden counter lined with bottles and copperware. Use a 24‑35 mm wide‑angle lens, capture with slight tilt and handheld blur, keep everything in focus, no filters or auto‑HDR, raw unprocessed look, natural overexposure, organic framing."

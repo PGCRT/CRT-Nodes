@@ -1,0 +1,28 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with shoulder‑length wavy blonde hair, wearing a pink off‑the‑shoulder mesh top with a central keyhole cutout and matching pink lace shorts. She’s mid‑step, left leg slightly bent, right hand gripping the edge of a white couch, body angled toward the camera but not perfectly centered. Her head is tilted to the left, eyes half‑closed in a relaxed, candid expression.  
+
+- **Facial Features & Accessories**  
+  Light makeup with subtle shimmer on the cheekbones, small hoop earring on the left ear, a black wristwatch on the right wrist. A few small tattoos are visible: a butterfly near the left collarbone, a script‑style tattoo across the upper chest that reads “Indie girl in love.”  
+
+- **Body & Clothing Details**  
+  The top is a thin, sheer mesh with vertical ribbing; the lace shorts have delicate floral lace trim and a central butterfly motif. Her skin is tanned, with a faint belly button dimple. A small mole on the left breast is visible through the keyhole.  
+
+- **Motion & Focus**  
+  Slight motion blur at the wrists and feet from handheld shake; the entire scene is fully sharp except for a tiny smear around the right hand.  
+
+- **Lighting & Exposure**  
+  Natural daylight from a west‑facing window, mid‑afternoon. The light hits the front of the subject with a slight overexposure on the chest area, creating a warm, soft glow. No auto‑HDR or beauty filters—raw, unprocessed look.  
+
+- **Environment**  
+  The background is an interior living room: a light‑colored wall, a wooden side table on the left with a potted plant, a red couch on the right, and a white blanket draped over the back of the couch. A small portion of a dark wooden cabinet is visible in the far left corner.  
+
+- **Lens & Technical**  
+  24‑mm wide‑angle lens, f/3.5 aperture, 1/125 s shutter speed, ISO 400. No bokeh—everything from foreground to background is in focus. The framing is accidental: the subject’s left shoulder cuts off the top left corner, and the right side of the image is partially cropped by the edge of the couch.  
+
+- **Composition Notes**  
+  The shot is slightly tilted to the right, giving a casual, spontaneous feel. The rule‑of‑thirds is ignored; the subject’s head sits just above the center of the frame, her left hand near the top right corner.  
+
+- **Prompt for AI Image Generator**  
+  “A candid, unposed photograph of a young woman with shoulder‑length wavy blonde hair, wearing a pink off‑the‑shoulder mesh top with a central keyhole cutout and matching pink lace shorts, mid‑step on a living room floor. She has a black wristwatch on her right wrist, a small hoop earring in her left ear, and tattoos of a butterfly near her left collarbone and a script tattoo across her chest that reads ’Indie girl in love.’ Her head is tilted to the left, eyes half‑closed, smiling softly. The image has slight motion blur at the wrists and feet from handheld shake, everything fully sharp. Natural daylight from a west‑facing window creates a warm overexposed glow on her chest. Background shows a light‑colored wall, a wooden side table with a potted plant on the left, a red couch on the right, and a white blanket draped over the back of the couch. 24‑mm wide‑angle lens, f/3.5 aperture, 1/125 s shutter speed, ISO 400. Slight tilt to the right, accidental framing with top left corner cut off and right side partially cropped.”

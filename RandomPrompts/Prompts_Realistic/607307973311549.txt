@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman in a black sports bra, mid‑touch, hand gently resting on her hip, fingers slightly curled, nails painted white tip. Her body is angled at a casual, off‑center angle; the shot captures a partial crop of her torso and upper thigh, with a hint of her arm reaching into frame from the top left.
+
+- **Motion & Focus**  
+  Slight motion blur on the hand and hip area, indicating handheld shake and mid‑action. Everything in focus—no portrait‑mode depth‑of‑field blur; background is fully sharp. No auto‑beauty or filter processing—raw, natural look.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑west angle, slight overexposure on the skin tones, giving a warm, ambient glow. No studio lighting, no color grading, no post‑processing aesthetic.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm), short focal length, no bokeh. All elements—subject and background—are in focus. Slight tilt and accidental framing; no rule‑of‑thirds intentionality.
+
+- **Environment**  
+  Location: a bright, open outdoor plaza at late afternoon, the sky a soft pale blue with a hint of cloud streaks. The ground is a smooth concrete surface, a few scattered leaves and a small tree trunk visible in the lower right corner. Weather is mild, a light breeze, ambient noise of distant traffic.
+
+- **Composition & Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Imperfections encouraged: slight tilt, off‑center framing, partial crop. No rule‑of‑thirds intentionality — accidental framing. Zero studio lighting, zero professional composition, zero editorial tone. Natural motion freeze or slight blur from handheld instability.
+
+- **Prompt Summary**  
+  “A young woman in a black sports bra, hand resting on her hip, captured with a wide‑angle lens at late afternoon outdoors; slight motion blur on the hand and hip, everything in focus, natural daylight overexposure, accidental off‑center framing, candid spontaneous look, raw unprocessed aesthetic.”

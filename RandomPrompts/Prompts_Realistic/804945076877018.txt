@@ -1,0 +1,32 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with light brown hair tied back, wearing a plain white T‑shirt, holding a brown paper coffee cup in her right hand. She is mid‑smile, head slightly tilted, eyes focused on the camera but not posing—captured in a spontaneous, “in‑the‑moment” stance. Her left hand rests on the cup’s lid; her nails are painted a soft pink.  
+
+- **Lighting & Exposure**  
+  Natural daylight from a western window, mid‑afternoon (≈ 4 pm). Slight overexposure on the face and cup, giving a warm, slightly hazy glow. No auto‑beauty or filter processing—raw, unedited look.  
+
+- **Camera Settings**  
+  - Lens: 24 mm wide‑angle, short focal length.  
+  - Aperture: f/5.6 (wide opening).  
+  - Shutter speed: 1/60 s (handheld, slight motion blur on the cup and hands).  
+  - ISO: 400 (mid‑range for natural contrast).  
+  - Focus: everything in frame—subject, cup, background—fully sharp, no portrait‑mode depth‑of‑field blur.  
+
+- **Composition & Framing**  
+  - No rule‑of‑thirds intentionality; the frame is slightly off‑center, with the subject’s left side cutting close to the edge.  
+  - Background: a light‑colored sofa and a wooden shelving unit with a small pink flower arrangement; a framed picture hangs on the wall to the left.  
+  - No bokeh—background remains sharp.  
+
+- **Environment Details**  
+  Location: a bright, modern living room. Time of day: late afternoon, soft natural light. Ambient noise: faint sound of distant traffic, captured in the photo’s “raw” feel.  
+
+- **Technical Notes**  
+  - Capture style: candid, unposed, spontaneous—subject unaware or mid‑action.  
+  - Imperfections encouraged: slight tilt, off‑center framing, partial crop.  
+  - No rule‑of‑thirds intentionality — accidental framing.  
+  - Zero studio lighting, zero professional composition, zero editorial tone.  
+  - Natural motion freeze or slight blur from handheld instability.  
+
+- **Final Prompt**  
+  “A young woman with light brown hair tied back, wearing a plain white T‑shirt, holding a brown paper coffee cup in her right hand, mid‑smile and slightly tilted head, captured in a candid, unposed moment inside a bright living room at late afternoon. The shot uses a 24 mm wide‑angle lens at f/5.6 and 1/60 s shutter speed, producing slight motion blur on the cup and hands while keeping the background—sofa, wooden shelving unit with pink flower, wall framed picture—fully sharp. Natural daylight creates a warm overexposed glow; no filters or post‑processing. The frame is off‑center, slightly tilted, capturing a raw, spontaneous feel with accidental composition.”

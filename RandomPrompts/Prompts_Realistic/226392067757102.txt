@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, curvy woman with long, wavy brown hair, wearing a black lace bra and matching high‑waist thong, posing mid‑turn on a plain concrete floor. She’s in a casual, unposed stance—leaning slightly to one side, one hand on her hip, the other near her thigh, feet planted in black high‑heeled sandals with red soles. A small floral tattoo is visible on her left upper arm. Her nails are painted bright red; her makeup is natural, with subtle eyeshadow and lipstick.
+
+- **Motion & Focus**  
+  Slight motion blur at the edges from a handheld camera, capturing a natural “mid‑action” feel. Everything in the frame is fully sharp—no portrait‑mode blur, no depth‑of‑field isolation. The focus covers the entire scene from head to toe, including the background.
+
+- **Lighting & Exposure**  
+  Raw, unprocessed look: no auto‑HDR or beauty filters. The exposure is slightly overexposed on the highlights, giving a warm, ambient glow that matches the midday sun. No studio lighting—only natural daylight coming from the west, creating soft side‑lighting on the subject’s body and a slight shadow behind her.
+
+- **Lens & Technical**  
+  Short focal length (24 mm) wide‑angle lens, no bokeh. Background is a plain, light‑gray concrete wall that extends to the top of the frame; it’s fully sharp, no depth‑of‑field blur. The composition is accidental: the shot is slightly tilted, off‑center, and partially cropped on the right side, giving it a candid, spontaneous feel. No rule‑of‑thirds intentionality—just a natural, handheld framing.
+
+- **Environment**  
+  Location: an industrial‑style warehouse with exposed concrete floors and walls. Time of day: mid‑afternoon, when the sun is high but slightly to the west, casting warm, soft light. Weather: clear, no wind, ambient temperature around 22 °C. The background shows a faint reflection of a distant window, adding subtle texture.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Imperfections encouraged: slight tilt, off‑center framing, partial crop. Zero studio lighting, zero professional composition, zero editorial tone. Natural motion freeze or slight blur from handheld instability.
+
+- **Post‑Processing**  
+  No filters, no color grading, no post‑processing aesthetic. Keep the image raw and natural, preserving the slight overexposure or underexposure depending on ambient light.
+
+**Prompt Summary (structured)**  
+> “A tall, curvy woman with long wavy brown hair, black lace bra, high‑waist thong, and black high‑heeled sandals with red soles, posing mid‑turn on a concrete floor in a warehouse. Capture with a 24 mm wide‑angle lens, everything fully sharp, slight motion blur from handheld, raw exposure, natural mid‑afternoon light, accidental tilt and off‑center framing, no filters or post‑processing.”

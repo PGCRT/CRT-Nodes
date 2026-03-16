@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark hair that’s slightly tousled by the sea breeze, captured mid‑step on a sunlit beach. She’s wearing white lace bikini bottoms that peek above her thigh, a delicate pattern catching the light. Her left arm is bent at the elbow, hand resting lightly on her hip, while her right arm hangs relaxed by her side. A thin gold bracelet adorns her right wrist, glinting in the sunlight.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — she’s unaware of the camera, caught in a natural, mid‑action moment. The frame is slightly tilted and off‑center, with a partial crop that gives an accidental, handheld feel. No rule‑of‑thirds intentionality; the composition is improvised.
+
+- **Environment**  
+  Specific real‑world location: a sandy beach with a gentle ocean backdrop. Time of day: late afternoon, around 5 pm, where the sun is low but still bright, casting warm, golden light. Weather or ambient conditions: mild humidity, light sea breeze, clear sky with a few scattered clouds.
+
+- **Lens & Technical**  
+  Short focal length (20–35 mm), wide‑angle lens. No bokeh; the background is fully sharp, everything in focus — no portrait‑mode subject isolation. Slight motion blur from handheld instability freezes the moment. Auto‑HDR or auto‑beauty mode off — raw, unprocessed look. No filters, no color grading, no post‑processing aesthetic. Slight overexposure on the upper body to emphasize the sunlight’s intensity.
+
+- **Details**  
+  The image has a natural, unpolished feel: slight tilt, off‑center framing, partial crop. The subject’s skin shows subtle imperfections — a small mole on her left breast, a faint scar near her navel. Her belly button is visible, and the lace pattern on her bikini bottom is partially cut off at the lower edge, adding to the candid vibe. A few stray hairs cling to her shoulder, caught in the wind. The background shows a hint of palm fronds and a distant horizon line, all in focus.
+
+- **Prompt**  
+  “A young woman with long dark hair, wearing white lace bikini bottoms and a gold bracelet on her right wrist, captured mid‑step on a sunlit beach at late afternoon. She’s unaware of the camera, caught in a natural, spontaneous moment. The frame is slightly tilted and off‑center, partially cropped, with no rule‑of‑thirds intentionality. Use a short focal length wide‑angle lens (20–35 mm) to keep everything in focus, add slight motion blur from handheld instability, avoid auto‑HDR or auto‑beauty, and keep the look raw and unprocessed. The background is fully sharp, showing a sandy beach, ocean horizon, and palm fronds. Capture the scene with natural lighting, slight overexposure on the upper body to highlight the sunlight, and preserve subtle imperfections such as a small mole on her left breast and a faint scar near her navel.”

@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark, wavy hair standing on a sunlit park pathway. She’s wearing a black halter‑style crop top and high‑waisted denim shorts that curl at the hem. Her left hand rests lightly by her thigh, right arm relaxed along her side; she’s mid‑step, feet slightly apart, as if caught in an unplanned, spontaneous moment.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. Slight tilt and off‑center framing; partial crop that gives a raw, handheld feel. No rule‑of‑thirds intentionality — the composition is accidental, but the background remains fully sharp because of a wide‑angle lens.
+
+- **Environment**  
+  Specific real‑world location: a tree‑lined park path in late afternoon. The time of day is early evening, with warm, golden ambient light that creates a slight overexposure on the subject’s face and a soft glow on the foliage. Weather is clear, with a gentle breeze ruffling the leaves; the scene feels natural and unedited.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm), wide‑angle lens. No bokeh — everything from foreground to background is in focus. Slight motion blur on the subject’s hands and feet to suggest a handheld shot. Auto‑HDR or auto‑beauty mode off — raw, unprocessed look. No filters, no color grading, no post‑processing aesthetic. The exposure is slightly high, letting the sunlight bleed a little beyond the edges of the subject’s hair.
+
+- **Details for Variation**  
+  Add a subtle, natural imperfection: a slight smudge on the left side of her shirt, a tiny wrinkle in the denim seam. The background trees are fully sharp, with a few leaves slightly out of focus due to the handheld shake. The path shows a faint white line on the right side, indicating a recent maintenance or a painted marker.
+
+- **Prompt Summary**  
+  “A young woman with long dark wavy hair, wearing a black halter‑crop top and high‑waisted denim shorts, caught mid‑step on a sunlit park pathway in late afternoon. Candid, unposed, slightly tilted framing, wide‑angle lens (24‑35 mm), fully sharp background, slight motion blur on the hands and feet, raw unprocessed look, no filters or auto‑HDR. The scene has a warm golden glow, clear weather, and a subtle imperfection in the shirt seam for realism.”

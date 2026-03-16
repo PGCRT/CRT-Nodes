@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark, slightly frizzy hair sitting on a black stool in a narrow hallway. She’s wearing an oversized beige t‑shirt that reads “THE LBANIA” with a graphic of a person raising a fist, and ripped beige sweatpants. Her hands are clenched into fists near her chest, as if she’re about to punch or gesture, eyes closed, head tilted slightly to the right, giving a candid, mid‑action feel.
+
+- **Lighting & Exposure**  
+  Natural daylight from a window on the left side of the hallway creates a soft, warm glow; slight overexposure in the upper part of the frame gives a raw, unprocessed look. No auto‑beauty or filter enhancement—just the ambient light with a handheld, slightly unstable shutter.
+
+- **Camera Settings**  
+  Wide‑angle lens (24‑35 mm), short focal length, everything in focus from foreground to background. No bokeh; depth of field is flat so the entire scene—from the stack of books on the left to the framed portrait on the right—is sharp.
+
+- **Composition & Framing**  
+  Accidental, off‑center framing: the subject is slightly tilted, the stool leans a bit to the right, and the top of the frame cuts off just above her head. The composition has no intentional rule‑of‑thirds; it feels spontaneous, like a snapshot captured in a real‑life setting.
+
+- **Environment**  
+  A narrow residential hallway with light‑colored walls. On the left, a wooden desk holds an open laptop and a telephone; a stack of thick books (titles “MISSION”, “DANS”, “ODHE” visible) sits on the floor. On the right wall hangs a framed portrait of a woman. A blue towel hangs on a rack further down the hall. The hallway extends into the background, with a door and a small window at the far end.
+
+- **Time & Ambience**  
+  Mid‑afternoon, around 3 pm, when natural light is warm but not harsh. The ambient noise of a distant street or house outside the window adds to the candid feel.
+
+- **Technical Details**  
+  Handheld camera with slight motion blur on the subject’s hands and hair, giving a sense of movement. No portrait‑mode isolation—everything from the books to the far wall is fully sharp. The image has a raw, unedited aesthetic, as if captured with a DSLR or mirrorless in “raw” mode.
+
+- **Final Prompt**  
+  *“A young woman with long dark frizzy hair sits on a black stool in a narrow hallway, wearing an oversized beige t‑shirt that reads ’THE LBANIA’ and ripped beige sweatpants. Her hands are clenched near her chest, eyes closed, head tilted right. Natural daylight from the left creates a soft warm glow with slight overexposure. Wide‑angle lens (24‑35 mm) keeps foreground books, desk, laptop, telephone, and background door and wall portrait fully sharp. Handheld motion blur on the hands and hair. Accidental off‑center framing, slight tilt. Stack of books on floor left, open laptop on desk left, framed portrait right. Mid‑afternoon ambient light. Raw, unprocessed, candid, spontaneous.”*

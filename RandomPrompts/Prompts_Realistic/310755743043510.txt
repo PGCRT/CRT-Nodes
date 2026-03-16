@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair, wearing a black lace bikini, standing mid‑step in a lush tropical setting. She is captured in a candid, unposed moment—eyes slightly closed, mouth open in a joyful laugh, hands relaxed at her sides. Her body is angled toward the camera but not perfectly centered; the frame is tilted a few degrees to the right, giving an accidental, spontaneous feel.
+
+- **Motion & Focus**  
+  Slight motion blur on the subject’s hands and the background foliage, indicating handheld instability. Everything—from her skin to the leaves—remains fully sharp, with no portrait‑mode depth‑of‑field blur. The image has a raw, unprocessed look: no filters, no color grading, no post‑processing aesthetic. A mild overexposure on the waterfall in the background adds natural brightness.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm), short focal length. No bokeh; the background foliage and waterfall are all in focus. The composition is intentionally “off‑center” and non‑rule‑of‑thirds, as if captured by a passerby who didn’t plan the shot.
+
+- **Environment**  
+  Location: A tropical rainforest near a cascading waterfall, with palm trees and broadleaf plants on both sides. Time of day: late morning, soft diffused light with a slight haze from the mist. Weather: mild, humid, with a light wind that ruffles the leaves. The scene is fully natural—no studio lighting, no professional composition.
+
+- **Capture Style**  
+  Candid, spontaneous, “mid‑action” capture. The subject appears unaware of the camera, caught in a natural laugh. Slight tilt and partial crop give an authentic, unposed vibe. The image retains a raw, in‑camera aesthetic with zero post‑processing.
+
+- **Prompt for Text‑to‑Image Generation**  
+  “A young woman with long wavy brown hair in a black lace bikini, captured mid‑step in a lush tropical rainforest near a cascading waterfall. She laughs with eyes slightly closed, hands relaxed at her sides, body angled to the right. Slight motion blur on her hands and background foliage, everything fully sharp—wide‑angle 30 mm lens, short focal length. The scene is lit in late morning soft diffused light with a mild overexposure on the waterfall. Palm trees and broadleaf plants frame the background; the composition is accidental and off‑center, no rule‑of‑thirds. Raw, unprocessed look—no filters, no color grading, no post‑processing. Capture style: candid, spontaneous, mid‑action, slight tilt, partial crop.”

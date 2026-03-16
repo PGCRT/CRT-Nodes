@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark hair sitting on a concrete curb in an urban street setting. She’s wearing a cream‑colored hooded sweatshirt, dark jogger pants, white sneakers, and black sunglasses. Her hands hold a disposable coffee cup; a plastic water bottle rests beside her on the pavement. She’s mid‑smile, slightly turned toward the camera, with a natural, unposed candid feel.
+
+- **Motion & Focus**  
+  Slight motion blur from handheld instability; everything in focus—no bokeh, no portrait‑mode isolation. Capture a wide‑angle shot with a short focal length (e.g., 24–35 mm) to keep the background fully sharp.
+
+- **Lighting & Exposure**  
+  Raw, unprocessed look: no filters, no color grading, no post‑processing aesthetic. Use natural daylight—mid‑afternoon sun creating soft shadows and a hint of slight overexposure on the subject’s face. Keep auto‑HDR off.
+
+- **Composition**  
+  No rule‑of‑thirds intentionality—accidental framing with a slight tilt and off‑center crop. The composition should feel spontaneous, as if the subject was caught mid‑action.
+
+- **Environment**  
+  Specific real‑world location: a city street with a brick building on the right, a sidewalk, and a parked car in the background. Time of day: late afternoon (around 4 pm), weather clear with gentle wind. The scene should show ambient details—scattered trash, a water bottle, a coffee cup, and a stop sign in the distance.
+
+- **Lens & Technical**  
+  Short focal length, wide‑angle lens (24–35 mm). No bokeh; background fully sharp. Zero studio lighting, zero professional composition, zero editorial tone. Capture with a handheld camera, natural motion freeze or slight blur.
+
+- **Final Prompt**  
+  “A young woman with long dark hair sits on a concrete curb in an urban street, wearing a cream hooded sweatshirt, dark jogger pants, white sneakers, and black sunglasses. She holds a disposable coffee cup in her hands, a plastic water bottle rests beside her on the pavement. Capture a wide‑angle, short‑focal‑length shot with slight motion blur and natural daylight exposure—mid‑afternoon sun creating soft shadows and a hint of overexposure. The background shows a brick building, a sidewalk, and a parked car; a stop sign is visible in the distance. The framing is accidental and off‑center, slightly tilted, with everything in focus—no bokeh. Raw, unprocessed look, no filters or color grading.”

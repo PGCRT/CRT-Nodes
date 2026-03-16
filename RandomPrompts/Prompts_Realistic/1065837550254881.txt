@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman with long dark hair, wearing a teal bodycon dress and sunglasses, waving with her right hand while holding a DSLR camera hanging from a strap around her neck. She is mid‑step, left foot slightly ahead, capturing a spontaneous moment at an outdoor event. Her expression is bright and engaging, with a subtle smile.
+
+- **Motion & Focus**  
+  Slight motion blur on the hands and camera to convey handheld instability; everything in the frame—subject and background—is fully sharp (no portrait‑mode blur). The focus is intentional but not staged: a wide‑angle shot that keeps the entire scene crisp.
+
+- **Lighting & Exposure**  
+  Natural daylight, late‑afternoon sun casting warm, soft light with a slight overexposure on the subject’s face and upper body. No auto‑HDR or beauty filters—raw, unprocessed look. The exposure is slightly high‑key, giving a bright, airy feel.
+
+- **Lens & Technical**  
+  Short focal length (24–35 mm) wide‑angle lens; no bokeh, depth of field is flat. All elements—from the woman to the background—are in focus. Handheld shake is present, adding authenticity.
+
+- **Environment**  
+  A grassy field at a photography or music event, with a few other photographers in the background holding cameras and tripods. Trees and a clear sky form the backdrop. The time of day is early evening, with warm golden hues. Weather is mild, with a light breeze.
+
+- **Composition & Framing**  
+  No rule‑of‑thirds intentionality—accidental framing that places the subject slightly off‑center. The composition is candid and spontaneous, with a slight tilt to the camera. The frame captures the woman’s full figure from head to toe, including her wave and the camera strap.
+
+- **Details & Imperfections**  
+  Slight tilt in the camera, partial crop at the edges, natural imperfections such as a faint smudge on the lens and a tiny wrinkle in the dress. The background shows a few other photographers, one with a white cap, another with a tripod, adding context to the scene.
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, no post‑processing aesthetic—just raw, natural imagery that feels like a genuine snapshot taken on location.

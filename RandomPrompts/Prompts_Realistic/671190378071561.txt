@@ -1,0 +1,24 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, curvy woman with long black hair standing mid‑step on a stone courtyard in front of an ancient Chinese temple. She wears a black silk dress with gold dragon embroidery and a high slit; her hands hang loosely by her sides, slightly tilted to the left. Her face is unposed, a natural, candid expression with a faint smile, eyes forward, head at a slight angle.
+
+- **Motion & Focus**  
+  Slight motion blur on the subject’s hands and the background stones, indicating handheld shake. Everything remains in focus—no bokeh, no depth‑of‑field blur. The image has an auto‑HDR feel but without post‑processing filters; raw, unprocessed look.
+
+- **Lighting & Exposure**  
+  Natural daylight from a low‑angle, late‑afternoon sun. Slight overexposure on the upper body, giving a warm, golden hue. No studio lighting, no color grading, no professional composition.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24 mm), short focal length. All elements—subject and background—are fully sharp. No rule‑of‑thirds intentionality; framing is accidental, off‑center.
+
+- **Environment**  
+  The setting is a real‑world courtyard with traditional Chinese architecture: red wooden pillars, grey tiled roofs, white stone railings. Time of day is early evening, the sun casting long shadows. Weather is clear, mild breeze, a few scattered clouds.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Imperfections encouraged: slight tilt, off‑center framing, partial crop. Natural motion freeze or slight blur from handheld instability.
+
+- **Prompt for Text‑to‑Image Generation**  
+  “A tall woman with long black hair in a black silk dress with gold dragon embroidery stands mid‑step on a stone courtyard in front of an ancient Chinese temple. She is captured with slight motion blur on her hands and the background stones, everything fully sharp. Natural late‑afternoon sunlight creates a warm overexposed glow. Wide‑angle 24 mm lens, short focal length, handheld shake. The scene is candid, unposed, accidental framing, off‑center composition. Raw, unprocessed look, auto‑HDR feel, no filters.”
+
+Provide only the structured prompt.

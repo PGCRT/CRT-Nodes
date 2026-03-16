@@ -1,0 +1,28 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair, wearing an off‑shoulder cream blazer over a white strapless top, standing on a city sidewalk. She’s holding a smartphone in both hands, looking down at the screen, with a clear plastic water bottle hanging from her left wrist and a small black crossbody bag slung over her shoulder. Her posture is slightly tilted, as if she’re mid‑scroll, giving a spontaneous, unposed feel.
+
+- **Action & Motion**  
+  Capture a slight motion blur around her hands and phone, indicating a handheld shot taken at a moderate shutter speed. The blur should be subtle—just enough to hint at movement without sacrificing clarity. Aim for a natural “mid‑action” vibe, as if she’s just received a message or is about to make a call.
+
+- **Lighting & Exposure**  
+  Use auto‑HDR or “auto‑beauty” off; keep the look raw and unprocessed. Let the ambient daylight create a mild overexposure on the subject’s face and clothing, with a slight warm tint from the late‑afternoon sun. The exposure should be uneven—some parts slightly brighter than others—to preserve authenticity.
+
+- **Lens & Technical Settings**  
+  Shoot with a short focal length (e.g., 24–35 mm) wide‑angle lens. Keep everything in focus—no portrait‑mode blur or depth‑of‑field isolation. The background should be fully sharp, from the parked cars to the brick building behind her. Use a handheld, slightly unstable grip for a natural, imperfect framing.
+
+- **Environment**  
+  Location: A bustling downtown street with parked white sedans along the curb and a red‑brick storefront on the side. Time of day: late afternoon, around 5 pm, when the sun is low but still warm. Weather: clear, mild humidity, a few scattered confetti pieces on the pavement from a past event. The scene should feel lived‑in, not staged.
+
+- **Composition & Framing**  
+  No rule‑of‑thirds intentionality—frame the subject off‑center, letting her head and phone slightly breach the upper edge of the frame. Keep the composition accidental: the blazer’s lapel might be a bit asymmetrical, the bag strap might drape unevenly. Capture a partial crop that cuts off a portion of her left shoulder, enhancing candidness.
+
+- **Details & Imperfections**  
+  Include subtle imperfections: a slight tilt to the camera, a faint smudge on the phone’s screen, the water bottle’s cap slightly askew. The confetti on the ground should be scattered randomly. Ensure that the background elements—cars, buildings, and the sidewalk—are fully sharp, giving a true “all‑in‑focus” look.
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, zero post‑processing aesthetic. Keep the image raw, with natural contrast and a slight dynamic range that mimics a real camera’s capture.
+
+**Prompt Summary for Generation**  
+“Candid photo of a woman in a cream blazer and white top, holding a phone and water bottle on a city sidewalk, late afternoon light, handheld shot with wide‑angle lens, everything in focus, slight motion blur on hands, accidental off‑center framing, raw unprocessed look, background fully sharp, scattered confetti on pavement, parked cars and brick building behind, natural imperfections, no filters.”

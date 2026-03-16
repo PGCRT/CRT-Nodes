@@ -1,0 +1,27 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman with a tanned, muscular physique, wearing a tight purple thong, sitting on a beige bed. She has a floral tattoo (two blue flowers with green leaves) on her right thigh and a small belly piercing. Her left hand rests on her thigh, right hand near her hip, fingers slightly curled. Her hair is long, dark, and loosely tied back, a few strands falling over her forehead.  
+
+- **Lighting & Exposure**  
+  Natural daylight from a western window, mid‑afternoon (≈ 4 pm). Slight overexposure on the upper body, creating a warm, soft glow; minor underexposed shadows in the crotch area. No auto‑HDR or auto‑beauty mode – raw, unprocessed look.  
+
+- **Camera & Lens**  
+  DSLR with a 24 mm wide‑angle lens (f/3.5). Everything in focus – background and subject. Slight handheld shake producing a subtle motion blur on the skin and background.  
+
+- **Composition**  
+  Candid, unposed, spontaneous framing – the shot is slightly tilted to the right, off‑center crop that cuts off a bit of the left arm. No rule‑of‑thirds intentionality; the composition feels accidental, as if the photographer was mid‑action.  
+
+- **Environment**  
+  A bedroom with a beige quilt and a wooden headboard in the background. The time of day is late afternoon, giving a warm, golden hue. Light comes from the left side, creating soft highlights on the chest and abdomen.  
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, partial crop that cuts off the left arm’s wrist. Tiny imperfections: a small smudge on the belly piercing, a faint reflection in the breast tissue. The tattoo shows slight motion blur on the thigh.  
+
+- **Technical Settings**  
+  ISO 400, aperture f/3.5, shutter speed 1/125 s (handheld). No bokeh – background fully sharp. No portrait‑mode subject isolation.  
+
+- **Prompt for AI Image Generation**  
+  “A realistic candid photo of a tanned woman in a purple thong sitting on a beige bed, mid‑afternoon natural light from the left, slight handheld shake and overexposure on the chest, wide‑angle 24 mm lens, everything in focus. She has a blue‑flower tattoo on her right thigh and a belly piercing. The shot is slightly tilted and off‑center, accidental framing, no rule‑of‑thirds. Background shows a wooden headboard and beige quilt. Raw, unprocessed look, no filters.”  
+
+Provide only the structured prompt.

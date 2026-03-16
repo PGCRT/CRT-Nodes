@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail, holding a small metallic key in her right hand, standing mid‑step inside a cozy apartment entrance. She wears a brown‑and‑beige plaid button‑down shirt and loose gray sweatpants, with white sneakers on the floor beside a stack of colorful books. Her left arm hangs naturally by her side, slightly bent, as if she’s just come from a quick errand.
+
+- **Lighting & Exposure**  
+  Slight overexposure from natural daylight coming through a window, creating soft highlights on her shirt and face. No auto‑beauty mode—raw, unprocessed look. The exposure is a little bright at the top, giving a warm, ambient glow.
+
+- **Camera Settings**  
+  Wide‑angle lens (24‑35 mm), short focal length, handheld. Slight motion blur from the subject’s movement and the camera’s instability. Everything in focus—no bokeh, no depth‑of‑field blur; background fully sharp.
+
+- **Composition & Framing**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. The frame is slightly tilted, off‑center, with a partial crop that cuts off the top of the door and part of the coat rack on the right. No rule‑of‑thirds intentionality—accidental framing that captures the whole scene: the woman, the door, the coat rack, the book stack, and the shoes.
+
+- **Environment**  
+  Specific real‑world location: a residential entryway with a white paneled door, a small paper note pinned to it, a metal coat rack with a black jacket and a beige wool coat, a pair of white sneakers on the floor, and a stack of books in various colors (blue, red, green) next to a small plant. Time of day: late morning, natural light from a window on the left, creating soft shadows. Weather: clear, slightly humid—ambient conditions that give a warm, lived‑in feel.
+
+- **Technical Details**  
+  Short focal length, wide angle; no bokeh, no depth‑of‑field blur—background fully sharp. Everything in focus. No portrait mode, no subject isolation. Slight tilt and partial crop for a casual, spontaneous vibe. Zero studio lighting, zero professional composition, zero editorial tone.
+
+- **Final Prompt**  
+  “A young woman with a high ponytail, holding a small metallic key in her right hand, standing mid‑step inside a cozy apartment entrance. She wears a brown‑and‑beige plaid button‑down shirt and loose gray sweatpants, with white sneakers on the floor beside a stack of colorful books. Her left arm hangs naturally by her side, slightly bent, as if she’s just come from a quick errand. Slight overexposure from natural daylight coming through a window, creating soft highlights on her shirt and face. Wide‑angle lens (24‑35 mm), handheld. Slight motion blur from the subject’s movement and the camera’s instability. Everything in focus—no bokeh, no depth‑of‑field blur; background fully sharp. Candid, unposed, spontaneous—subject unaware or mid‑action. The frame is slightly tilted, off‑center, with a partial crop that cuts off the top of the door and part of the coat rack on the right. No rule‑of‑thirds intentionality—accidental framing that captures the whole scene: the woman, the door, the coat rack, the book stack, and the shoes. Time of day: late morning, natural light from a window on the left, creating soft shadows. Weather: clear, slightly humid—ambient conditions that give a warm, lived‑in feel.”

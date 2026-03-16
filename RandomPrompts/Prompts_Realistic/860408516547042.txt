@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark hair, wearing a shimmering gold, low‑cut gown adorned with red gemstones and gold jewelry (headpiece, necklace, bracelets). She holds a golden staff in her right hand, left hand raised to her head, as if adjusting her hair. Her expression is bright, mid‑smile, slightly turned toward the camera, capturing a candid, spontaneous moment.
+
+- **Motion & Focus**  
+  Slight motion blur on the subject’s hands and the staff, indicating handheld shake. Everything in frame is fully sharp—no bokeh, no portrait‑mode isolation. The image has a raw, unprocessed look: no filters, no color grading, no post‑processing aesthetic. A hint of overexposure in the upper left corner to emphasize ambient light.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24 mm), short focal length. No depth‑of‑field blur; background is fully sharp. Slight tilt and off‑center framing—no rule‑of‑thirds intentionality. The composition feels accidental, as if the photographer was mid‑action.
+
+- **Environment**  
+  Location: a dimly lit indoor loft with exposed brick walls and a concrete floor. A small window on the left lets in natural daylight, creating soft shadows. Time of day: late afternoon, around 5 pm. Weather: mild, slightly humid. A faint smoky haze lingers in the air, adding texture.
+
+- **Lighting**  
+  Zero studio lighting; all light comes from the window and ambient interior lights. Slight overexposure in the upper left corner gives a warm glow. The lighting is natural, with soft contrast.
+
+- **Post‑Processing**  
+  Auto‑HDR or auto‑beauty mode off. No filters, no color grading, no post‑processing aesthetic—just raw, candid imagery.
+
+- **Final Prompt**  
+  “A young woman in a gold gown holding a golden staff, captured with a wide‑angle lens at a dimly lit loft during late afternoon. Slight motion blur on her hands, fully sharp background, accidental off‑center framing, natural lighting from a window, raw unprocessed look.”

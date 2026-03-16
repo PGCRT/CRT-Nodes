@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, athletic woman with long, wavy blonde hair standing in a casual, unposed stance mid‑step, hands relaxed at her sides, a natural smile on her face. She wears a white, strappy bikini top with criss‑cross detailing and matching high‑cut bottoms; the fabric is slightly sheer and soft, catching the light as she moves. Her posture is off‑center, a slight tilt to the left, giving an accidental, candid feel.
+
+- **Motion & Focus**  
+  Capture a natural motion blur on the subject’s hands and lower body, indicating handheld instability. The entire frame stays in focus—no portrait‑mode depth of field. A subtle overexposure on the upper torso, letting the white fabric glow against the bright background.
+
+- **Lens & Technical**  
+  Use a short focal length wide‑angle lens (24–35 mm). No bokeh; the background is fully sharp, from the brick wall to the floor. Keep auto‑HDR and auto‑beauty off for a raw, unprocessed look. Slight color temperature variation due to ambient daylight.
+
+- **Environment**  
+  Location: an industrial‑style loft with exposed concrete walls and a white brick backdrop. Time of day: late morning, soft sunlight from the west casting gentle shadows. Weather: clear, slightly humid air gives a natural haze that adds depth.
+
+- **Composition & Framing**  
+  No rule‑of‑thirds intentionality—frame the subject so her head is slightly above the center, her left side cut off by the edge of the frame. The shot is partial crop; the bottom right corner cuts off a bit of her thigh, adding spontaneity.
+
+- **Lighting**  
+  Zero studio lighting; rely on natural daylight. A slight overexposure on the upper body creates a warm, bright highlight, while the lower body remains subtly underexposed for contrast.
+
+- **Post‑Processing**  
+  Keep filters off. No color grading or heavy edits—just raw, candid realism.
+
+**Prompt Summary:**  
+"A tall woman in a white strappy bikini stands casually against a white brick wall in a loft, captured with a 30 mm wide‑angle lens. Her pose is slightly tilted and off‑center, hands relaxed at her sides, mid‑step. A subtle motion blur trails her hands, while the entire frame stays sharp. The scene is lit by late‑morning sunlight from the west, producing a warm overexposure on her torso. No filters or auto‑HDR—just raw, candid realism with accidental framing and partial crop."

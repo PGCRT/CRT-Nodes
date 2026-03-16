@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark, slightly frizzy hair lying prone on a beige cushioned lounge chair by a swimming pool. She’s wearing a thin pink bikini with tie‑details, her arms bent at the elbows, hands stacked on the cushion, head turned toward the camera with a soft, unposed expression. Her left foot is partially visible, bare, and a pair of gold high‑heeled shoes rests on a small wooden side table in the foreground.
+
+- **Lighting & Exposure**  
+  Natural mid‑afternoon sunlight from the west, creating a warm, slightly overexposed highlight on her face and shoulders. The light hits the pool’s surface with a gentle glare; the overall exposure is a little bright but retains raw, unprocessed feel. Slight handheld shake gives a subtle motion blur around the edges.
+
+- **Environment**  
+  A tropical resort setting: a clear blue swimming pool in the background, a wooden deck, a few lounge chairs arranged in a row, a small white towel draped over one chair, and a potted plant on a railing further back. The scene is bathed in warm, golden daylight with a slight haze from the ambient heat.
+
+- **Lens & Technical**  
+  24‑mm wide‑angle lens (short focal length), f/4.0 aperture, 1/125 s shutter speed, ISO 400. Everything is in focus—no bokeh, no depth‑of‑field blur. The framing is accidental: the composition is off‑center, the top of the lounge chair cuts off the upper left corner, and the bottom right shows a partial view of the pool’s edge. No rule‑of‑thirds; the shot feels spontaneous and candid.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject appears unaware of the camera mid‑action. Slight tilt and partial crop give an informal feel. The image has a raw, auto‑HDR look with no filters or color grading, just natural ambient light and slight overexposure.
+
+- **Details & Imperfections**  
+  A faint smudge on her left shoulder, a tiny wrinkle in the bikini strap, the cushion’s fabric showing a small crease. The wooden side table has a visible grain; the high‑heeled shoes have a subtle reflection. The pool’s surface shows ripples from a passing wave. The background lounge chairs are slightly out of alignment, adding to the candid vibe.
+
+- **Final Prompt**  
+  “A young woman in a pink bikini lies on a beige cushioned lounge chair by a swimming pool at mid‑afternoon. She has long dark hair, her hands stacked on the cushion, head turned toward the camera with a soft expression. A pair of gold high‑heeled shoes rests on a small wooden side table in the foreground. The scene is bathed in warm, slightly overexposed natural light, with a clear blue pool and a row of lounge chairs in the background. Shot on a 24‑mm wide‑angle lens at f/4.0, 1/125 s, ISO 400, everything in focus, no bokeh. The framing is accidental and off‑center, capturing a candid, spontaneous moment with slight motion blur from handheld shake. Raw, unprocessed look, no filters or color grading.”

@@ -1,0 +1,27 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A young woman with long, dark, wavy hair captured mid‑pose while holding a DSLR camera up to her eye, as if she’s about to take a photo. She’s wearing an off‑shoulder denim jacket draped over a colorful striped top, olive green shorts, white crew socks, and black platform boots with thick white soles. Her left foot is slightly ahead of the right, giving a casual, dynamic stance.
+
+- **Pose & Framing**  
+  The shot is taken from a slightly low angle, with the camera tilted a little to the right, creating an off‑center, accidental composition. The frame cuts off the top of her head and the lower part of her boots—no rule‑of‑thirds intentionality, just a spontaneous, handheld capture.
+
+- **Clothing & Accessories**  
+  Denim jacket (light blue, slightly faded), striped top (red, yellow, blue horizontal stripes), olive shorts, white crew socks, black platform boots with thick white soles. A small potted succulent and a glass of water sit on a wooden table next to her. She wears sunglasses perched on her head.
+
+- **Environment**  
+  The scene is inside a modern café or coffee shop. Behind the woman is a large window that looks out onto a city street with a white car and a building labeled “RBS” in orange, plus a neon sign that reads “Cafe & Co.” A blue leather bench runs along the wall, a glass‑top metal coffee table sits nearby, and a small potted plant rests on a wooden side table. The floor is tiled, the lighting is natural daylight from the window, with a slight overexposure in the upper right corner.
+
+- **Time of Day & Ambient Light**  
+  Mid‑afternoon, around 3:30 pm. Soft natural light comes through the window, creating a warm, slightly hazy glow. The ambient light is bright enough that the scene has a subtle overexposure in the upper right, but no heavy color grading or filters are applied.
+
+- **Lens & Technical**  
+  24‑mm wide‑angle lens, f/4.0 aperture, 1/250 s shutter speed, ISO 400. The focus is flat—everything from the subject to the background is sharp, no bokeh or depth‑of‑field blur. Slight motion blur on the subject’s hair and camera gives a sense of movement.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Imperfections encouraged: slight tilt, off‑center framing, partial crop. No rule‑of‑thirds intentionality — accidental framing. Zero studio lighting, zero professional composition, zero editorial tone. Natural motion freeze or slight blur from handheld instability.
+
+- **Post‑Processing**  
+  Raw, unprocessed look. Auto‑HDR or auto‑beauty mode off. No filters, no color grading, no post‑processing aesthetic. Slight overexposure in the upper right corner to mimic natural daylight. Wide lens, everything in focus, background fully sharp—no portrait mode or subject isolation.
+
+**Provide only the structured prompt.**

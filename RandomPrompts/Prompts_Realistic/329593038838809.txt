@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A fit woman with long, wavy blonde hair standing mid‑step on a concrete sidewalk beside a weathered wooden picket fence. She’s wearing a black sports bra and matching high‑waist bikini bottoms that show a small brand logo at the front. Her black sneakers have white soles; one foot is slightly ahead of the other as she balances. She smiles softly, looking toward the camera with a relaxed, candid expression.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject appears unaware or mid‑action. Slight tilt and off‑center framing give an accidental, handheld feel. The shot has a raw, unprocessed look: no filters, no color grading, no post‑processing aesthetic. A mild overexposure is present because of the ambient daylight.
+
+- **Motion & Focus**  
+  Slight motion blur from a handheld camera, but everything remains fully sharp — no portrait‑mode depth‑of‑field blur. The background (the fence and a patch of green foliage behind it) is in focus, giving a wide‑angle, “everything‑in‑focus” feel.
+
+- **Environment**  
+  Specific real‑world location: an outdoor sidewalk next to a wooden picket fence, with a hint of greenery behind the fence. Time of day: late afternoon, warm sunlight casting soft shadows. Weather: clear, slightly humid, ambient light creates a natural overexposure.
+
+- **Lens & Technical**  
+  Short focal length (≈20 mm) wide‑angle lens. No bokeh; background fully sharp. No rule‑of‑thirds intentionality — the composition is accidental and organic. Zero studio lighting, zero professional composition, zero editorial tone. The image uses auto‑HDR or auto‑beauty mode off for a raw look.
+
+**Prompt Summary (structured)**  
+"Candid, unposed photo of a fit woman in a black sports bra and high‑waist bikini bottoms, wearing black sneakers with white soles, standing on a concrete sidewalk next to a weathered wooden picket fence. She has long wavy blonde hair, a slight smile, and is mid‑step. Slight motion blur and accidental tilt give a handheld feel; everything is in focus with no bokeh. The scene is set in late afternoon under clear, warm sunlight. Use a short focal length wide‑angle lens, no filters or post‑processing, auto‑HDR off, raw look."

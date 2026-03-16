@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with voluminous, curly brown hair, wearing a black bra and pink bikini bottoms, leaning casually against a white pillow on a bed. Her left arm is slightly bent, revealing a detailed tattoo of a stylized face and floral motifs near her wrist. She’s mid‑gesture, hand resting on her thigh, eyes half‑closed as if just awakened or caught in a spontaneous moment. A delicate gold necklace rests on her collarbone, and a small “T” tattoo is visible just above her left breast. Her skin has a natural, unretouched warmth; a faint smudge of makeup on her cheek adds realism.
+
+- **Lighting & Exposure**  
+  Soft, natural daylight from a window behind the bed creates a slight overexposure on the upper part of the frame. The light is diffused, producing gentle highlights on her shoulder and hair, with a subtle halo effect around her head. Slight handheld shake gives a natural motion blur around the edges.
+
+- **Environment**  
+  The setting is a bright, minimalist bedroom with white walls and a simple, modern lamp in the background. A white pillow is tucked behind her left shoulder, and a small portion of a white blanket is visible at the bottom right. The time of day is late morning, with warm, golden sunlight streaming through the window, creating a slight glare on the wall.
+
+- **Lens & Technical**  
+  24‑mm wide‑angle lens, f/4.0 aperture, 1/60 s shutter speed, ISO 400. Everything is in focus from foreground to background; no bokeh or depth‑of‑field blur. The composition is off‑center, with the subject’s left side slightly tilted, giving a candid, spontaneous feel.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the woman appears unaware of the camera, caught mid‑action. Slight tilt and partial crop create an accidental framing that feels natural and raw. No rule‑of‑thirds intentionality; the frame is slightly crooked, as if taken with a handheld camera.
+
+- **Post‑Processing**  
+  Auto‑HDR or auto‑beauty mode off — no filters, no color grading, no post‑processing aesthetic. The image retains its raw, unprocessed look, with natural contrast and a slight overexposure on the upper half due to ambient light.
+
+**Prompt Summary**  
+“Candid photo of a woman in black bra and pink bikini bottoms leaning against a white pillow on a bed, with a gold necklace and tattoos visible on her left arm. Soft daylight from a window creates a subtle halo and slight overexposure. 24‑mm wide‑angle lens, f/4.0, 1/60 s, ISO 400, everything in focus. Slight handheld shake and off‑center framing give a raw, spontaneous feel. No filters or post‑processing.”

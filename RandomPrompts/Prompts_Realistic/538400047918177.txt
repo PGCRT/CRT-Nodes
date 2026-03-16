@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman with long, dark brown hair, wearing a yellow bikini with navy blue trim, standing on a sunny city sidewalk. She’s holding a smartphone in her right hand, looking down at the screen, while her left hand rests on her hip. Her pose is casual and candid—slightly tilted, off‑center, as if she’re mid‑scroll or mid‑photo.
+
+- **Motion & Focus**  
+  Slight motion blur from handheld instability; everything in focus—no portrait‑mode depth of field. The image has a raw, unprocessed look: no filters, no color grading, just natural auto‑HDR or “auto‑beauty” off. A hint of overexposure on the bright daylight.
+
+- **Lens & Technical**  
+  Wide‑angle lens (short focal length, ~24 mm). No bokeh—background fully sharp. Capture in a single exposure with ambient daylight; slight overexposure or underexposure depending on the time of day.
+
+- **Environment**  
+  Location: In front of a small cinema building with a marquee that reads “CINEMA” and a sign that says “SUMMY.” A “No Parking” sign is visible on a pole to the right. The sidewalk is concrete, with a few scattered shadows. Time of day: late morning, bright sun high in the sky, soft ambient light. Weather: clear, no wind.
+
+- **Composition & Framing**  
+  No rule‑of‑thirds intentionality—accidental framing. The shot is a wide, candid capture that includes the subject’s full body from head to toe, with a portion of the cinema marquee and a street sign in the background. The frame is slightly crooked, giving an authentic, spontaneous feel.
+
+- **Lighting**  
+  Natural daylight, zero studio lighting. Slight overexposure on the bright sky, creating a warm tone. No post‑processing aesthetic—just raw, real imagery.
+
+- **Final Prompt**  
+  “A woman in a yellow bikini with navy trim stands on a sunny sidewalk in front of a cinema, holding a phone and looking down, left hand on hip. Slight motion blur from handheld, everything sharp, wide‑angle lens, natural daylight with mild overexposure. Background includes a ‘CINEMA’ marquee and a ‘No Parking’ sign. Capture candid, unposed, accidental framing, no filters or color grading—raw, real photography.”

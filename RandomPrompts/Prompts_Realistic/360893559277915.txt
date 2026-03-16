@@ -1,0 +1,28 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, athletic woman with long, wavy blonde hair and a black face mask is captured mid‑movement on a bright, outdoor patio. She’s leaning forward on a cream‑colored sofa, one hand on her hip, the other supporting her weight on the couch. Her body is slightly tilted to the left, creating an off‑center, spontaneous feel.  
+
+- **Clothing & Accessories**  
+  She wears only a black face mask; no other clothing or accessories are visible. The mask sits snugly around her nose and mouth, with a slight crease from the motion.  
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle, mid‑afternoon sun creates a soft overexposure on the upper body, giving a raw, unprocessed look. Slight handheld shake is present, producing a subtle motion blur around the edges.  
+
+- **Background & Environment**  
+  The setting is a sunny, tropical patio with a white railing, a light blue pillow on the sofa, and a palm tree in the distance. The background is fully sharp—no bokeh or depth‑of‑field blur. A faint ocean horizon is visible beyond the railing, suggesting a coastal location.  
+
+- **Lens & Technical**  
+  Use a wide‑angle lens (24–35 mm) with a short focal length to capture a broad view of the scene. Everything—from the subject’s face to the distant palm—is in focus. No portrait‑mode isolation; keep the entire frame crisp.  
+
+- **Composition & Framing**  
+  The shot is intentionally “accidental”: the camera is held at a slightly low angle, with a small tilt to the left. The framing is partial— the top of the sofa and part of the pillow are cut off by the edge of the frame. No rule‑of‑thirds; the subject’s center of mass is offset toward the lower right quadrant.  
+
+- **Mood & Style**  
+  The image feels candid, unposed, and spontaneous—as if the subject was caught mid‑action. Slight imperfections (a tiny smudge on the mask, a faint wrinkle in the fabric of the sofa) add realism.  
+
+- **Post‑Processing**  
+  No filters or color grading; only raw, auto‑HDR adjustments to brighten the scene. Keep the colors natural: warm skin tones, cool blue pillow, and green palm foliage.  
+
+**Prompt Summary (for a new image generation)**  
+> “A tall woman with long wavy blonde hair and a black face mask leans forward on a cream sofa on a sunny tropical patio, one hand on her hip, the other supporting her weight. A light blue pillow rests beside her, a white railing and palm tree are visible in the background, with a faint ocean horizon beyond. The scene is captured with a wide‑angle lens (24–35 mm), everything in focus, slight handheld motion blur, natural daylight overexposure, no filters—raw, candid, spontaneous, off‑center framing.”

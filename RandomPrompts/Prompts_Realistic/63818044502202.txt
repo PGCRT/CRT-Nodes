@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A woman in a glossy black latex bodysuit, mid‑swing on a rope, climbing the glass façade of a modern office building. She holds a knife in her right hand, her left hand gripping the rope, body angled slightly to the left, legs bent, toes pointing downward. Her hair is long and dark, slightly blown by the wind. The camera captures her from a low angle, making her appear as if she’s about to leap or strike.
+
+- **Pose & Movement**  
+  Slight motion blur on the rope and hands, indicating handheld instability. The subject’s pose is candid, unposed — she appears unaware of the camera, mid‑action. A tiny tilt in the frame keeps the composition off‑center. Her left foot is slightly ahead of the right, adding dynamism.
+
+- **Lighting & Exposure**  
+  Auto‑HDR or auto‑beauty mode off. The scene is lit by ambient city night light: a mix of street lamps, neon signs, and the reflection in the glass. Slight overexposure on the high‑lights (the building’s glass) balances the darker lower street. No color grading or post‑processing — raw, natural look.
+
+- **Lens & Technical**  
+  Wide‑angle lens, short focal length (~24 mm). Everything is in focus — no bokeh, no depth‑of‑field blur. The background (the city street below) is fully sharp. No portrait‑mode subject isolation.
+
+- **Environment**  
+  Specific real‑world location: a busy urban street at night in Tokyo’s Shibuya district. The building’s glass wall reflects the neon signs and passing cars. The time of day is late evening (around 10 pm). Weather is lightly rainy, with droplets on the glass adding texture.
+
+- **Framing & Composition**  
+  No rule‑of‑thirds intentionality — accidental framing. The shot is a partial crop that cuts off the top of the building and the lower street, giving a “cut‑in” feel. Slight tilt to the right keeps the frame dynamic. The bottom of the image shows a few cars on the wet street, adding context.
+
+- **Details & Imperfections**  
+  Slight motion blur on the rope and hands, slight tilt, off‑center framing, partial crop. Tiny imperfections in focus (e.g., a faint smudge on the glass) add realism. The image has zero studio lighting, zero professional composition, zero editorial tone — it feels spontaneous, like a candid snapshot captured in the moment.
+
+- **Prompt Summary**  
+  “A woman in glossy black latex bodysuit climbing a glass office building at night in Tokyo’s Shibuya district, mid‑swing with a knife in her right hand, captured on a wide‑angle short focal length lens, everything in focus, slight motion blur and accidental tilt, raw unprocessed look, ambient night lighting with slight overexposure, rainy weather, partial crop framing, candid spontaneous moment.”

@@ -1,0 +1,26 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high, messy bun and loose strands framing her face, wearing an oversized beige raglan sweatshirt with blue stitching, paired with pink high‑waist jeans. She’s mid‑gesture, one hand on her hip, the other extended palm‑up, as if explaining or reacting to something. Her expression is candid—slightly tilted head, mouth open as if speaking, eyes focused off‑camera.
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window, mid‑afternoon; slight overexposure on the face and upper body, subtle halo around the hair. No auto‑HDR or beauty filters—raw, unprocessed look. Slight handheld shake gives a natural motion blur to the edges.
+
+- **Camera & Lens**  
+  Wide‑angle lens (24–35 mm), short focal length, everything in focus from foreground to background. No bokeh; background remains sharp. Handheld composition with accidental tilt and off‑center framing—no rule‑of‑thirds intentionality.
+
+- **Environment**  
+  A bright, casual apartment or studio space. Large window on the left lets in natural light, a white car visible outside. Behind the subject, a clothing rack with colorful jackets, a pair of sneakers on a shelf, and a cardboard box on the floor. The scene feels spontaneous, like a “mid‑action” snapshot.
+
+- **Time & Weather**  
+  Mid‑afternoon, clear weather; ambient light creates soft shadows and a slight halo on the subject’s hair. The time of day gives warm, golden tones.
+
+- **Technical Notes**  
+  - Capture with a wide‑angle lens for a broad field of view.  
+  - Keep everything in focus—no portrait‑mode blur.  
+  - Slight motion blur from handheld instability adds realism.  
+  - No color grading or post‑processing filters; keep the raw, unprocessed aesthetic.  
+
+**Prompt Summary:**
+
+> “A candid, spontaneous photograph of a young woman with a high messy bun and loose strands, wearing an oversized beige raglan sweatshirt with blue stitching and pink high‑waist jeans. She’s mid‑gesture, one hand on her hip, the other extended palm‑up, as if explaining something. Natural daylight from a large window creates slight overexposure on the face and upper body; no filters or auto‑HDR. Shot on a 24–35 mm wide‑angle lens, everything in focus with slight handheld shake. The background shows a clothing rack, sneakers, and a cardboard box, all sharp. Mid‑afternoon weather gives warm golden tones. Capture the scene as if it’s a raw, unposed snapshot in a casual apartment or studio.”

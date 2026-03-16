@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A young woman with long, dark brown hair, wearing a light‑pink floral hoodie and blue jeans, stands in front of a rustic wooden fence. She is holding a smartphone in both hands, looking down at the screen with a slightly surprised or contemplative expression. Her head is tilted a little to the left, and her shoulders are relaxed but not posed—she appears to be mid‑action, as if she just received a message or is reading something interesting.
+
+- **Candid Capture Style**  
+  The shot is spontaneous and unposed; the subject is unaware of the camera’s presence. The framing is off‑center and slightly tilted, giving an accidental, handheld feel. The composition does not follow the rule of thirds—instead it’s a raw, natural crop that captures the woman’s upper body and the fence behind her.
+
+- **Motion & Focus**  
+  A slight motion blur is present, indicating a handheld shot taken at a relatively low shutter speed. Everything in the frame—from the woman to the fence and the cornfield behind—is fully sharp, with no bokeh or depth‑of‑field blur. No portrait‑mode subject isolation is used; the background remains crisp.
+
+- **Lens & Technical Settings**  
+  Use a short focal‑length wide‑angle lens (e.g., 24–35 mm). Shoot in a single exposure with auto‑HDR or auto‑beauty mode turned off for a raw, unprocessed look. No filters, color grading, or post‑processing aesthetic is applied. The exposure may be slightly over‑ or under‑exposed depending on the ambient light—here it’s a bright, overcast mid‑afternoon.
+
+- **Environment**  
+  Location: A rural farm setting with a wooden fence in the foreground and a cornfield stretching into the background. Trees are visible further back, creating a layered natural scene. Time of day: Mid‑afternoon, with diffuse daylight that gives a soft, even illumination. Weather: Light rain or drizzle adds a subtle texture to the air, giving the image a slightly misty feel.
+
+- **Details & Imperfections**  
+  The woman’s hoodie has a floral pattern with pink and green motifs; her jeans are a classic blue. Her hands are gripping the phone as if she is reading a text or scrolling through a photo. The wooden fence shows natural wear, with slight cracks and weathered paint. The corn plants behind her are tall and lush, with some leaves peeking above the fence. The background trees are blurred only by the slight motion blur, not by bokeh.
+
+- **Final Prompt**  
+  “A young woman with long dark brown hair, wearing a light‑pink floral hoodie and blue jeans, stands in front of a rustic wooden fence in a cornfield. She holds a smartphone in both hands, looking down at the screen with a surprised expression, her head slightly tilted left. The shot is candid, unposed, and handheld, with slight motion blur and off‑center framing. Use a short focal‑length wide‑angle lens (24–35 mm), shoot in a single exposure without auto‑HDR or auto‑beauty, capture everything in focus from subject to background, no bokeh. The scene is set at mid‑afternoon under overcast skies with light drizzle, giving a soft, natural illumination. Include all details: the woman’s floral hoodie, her blue jeans, the weathered fence, tall corn plants, and trees in the background. No filters or color grading—raw, realistic photography.”

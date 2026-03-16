@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail and bangs, wearing a white bodycon mini‑dress and a black leather moto‑jacket, walking confidently down a city street. Her hands are relaxed at her sides, slightly turned to the left, as if she’s just finished a conversation or is about to grab a coffee. The jacket’s zipper is partially open, revealing the top of the dress, giving a casual yet stylish look.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject is mid‑step, unaware of the camera. Slight tilt and off‑center framing create a natural, handheld feel. The shot has a small amount of motion blur on the legs and background to suggest movement, but everything remains fully sharp (no portrait‑mode blur). No rule‑of‑thirds intentionality — the composition is accidental, with the subject slightly cut off at the bottom edge.
+
+- **Environment**  
+  Location: A bustling downtown alleyway in an American city (e.g., New York or Los Angeles). The street is lined with brick buildings, a red traffic light in the background, and a parked silver car on the right. Time of day: late afternoon, around 5 pm, with warm, golden ambient light that slightly overexposes the upper part of the frame. Weather: clear, mild, with a light breeze.
+
+- **Lens & Technical**  
+  Use a short focal‑length wide‑angle lens (e.g., 24 mm). Capture everything in focus — no depth‑of‑field blur; background is fully sharp. No bokeh. The exposure is slightly high, giving a warm, natural look without any auto‑HDR or color grading. Handheld shot with slight instability, producing a subtle motion blur on the subject’s legs and the background.  
+
+- **Lighting & Post‑Processing**  
+  Zero studio lighting; all light comes from natural ambient sources. No filters, no post‑processing aesthetic — just raw, unprocessed imagery. Slight overexposure on the upper part of the frame to capture the warm sunlight.  
+
+- **Prompt Summary for Text‑to‑Image Generation**  
+  “A young woman with a high ponytail and bangs, wearing a white bodycon mini‑dress and a black leather moto‑jacket, walking confidently down a downtown city street at late afternoon. The shot is candid, slightly tilted, off‑center, with a short focal‑length wide‑angle lens (24 mm) capturing everything in focus. Background includes brick buildings, a red traffic light, and a parked silver car. Warm ambient light creates slight overexposure on the upper frame. All elements are fully sharp, no bokeh, no filters, raw and unprocessed.”

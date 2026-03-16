@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with dark, shoulder‑length hair, wearing a light blue knit sweater and a brown leather recliner. She is leaning back in the chair, one arm raised behind her head, the other hand resting on her chest. Her face is turned slightly toward the camera, eyes focused forward, giving a candid, mid‑action feel. A subtle ring adorns her left ring finger; a small earring glints near her ear.
+
+- **Lighting & Exposure**  
+  Natural daylight from a western window, mid‑afternoon. Slight overexposure on the upper body, creating a warm, soft glow. No auto‑beauty or filter processing—raw, unpolished look. The exposure is uneven, with a gentle vignette at the corners.
+
+- **Camera & Lens Settings**  
+  35 mm wide‑angle lens, f/4.0 aperture, 1/125 s shutter speed, ISO 400. Slight handheld shake produces a natural motion blur on the subject’s arm and background. Everything remains in focus—no portrait‑mode depth of field blur.
+
+- **Composition & Framing**  
+  Off‑center, accidental framing: the chair’s backrest cuts off the left side of the frame, the top of the chair extends beyond the upper edge. The shot is slightly tilted, giving a casual, spontaneous vibe. Background includes a wooden dresser with drawers, a small framed photo on a shelf, and a basket on the floor—everything sharp, no bokeh.
+
+- **Environment**  
+  A lived‑in bedroom or living room. The time of day is late afternoon, with warm sunlight casting soft shadows. Ambient noise from a television or distant traffic adds to the candid feel.
+
+- **Details & Imperfections**  
+  Slight tilt in the chair’s backrest, a small wrinkle in the leather, a faint smudge on the woman’s cheek. Her sweater has a subtle texture, and a light blue blanket drapes over her lap. The background shows a white towel on the dresser, a black jacket on a shelf, and a small plant in a pot—adding realism.
+
+- **Technical Notes**  
+  No rule‑of‑thirds intentionality; the composition is accidental. The lens is short focal length (35 mm), giving a wide field of view. Background is fully sharp, no depth‑of‑field blur. No post‑processing color grading—just raw capture.
+
+- **Prompt Summary**  
+  “A candid, unposed photograph of a woman in a brown leather recliner, wearing a light blue sweater and a blanket, captured with a 35 mm wide‑angle lens at f/4.0 and 1/125 s. Natural mid‑afternoon daylight creates slight overexposure on the subject. The image features accidental off‑center framing, slight handheld blur, and a fully sharp background of a cluttered bedroom. Raw, unprocessed, no filters—purely realistic.”

@@ -1,0 +1,26 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with wavy blonde hair, wearing a soft lavender one‑piece bodysuit, standing in a sunlit bedroom. She leans casually against a white doorframe, left hand on hip, right arm extended outward as if mid‑step or mid‑gesture. Her head is turned slightly to the side, eyes cast downward, giving a candid, unposed feel.
+
+- **Lighting & Exposure**  
+  Natural daylight from a western window casts warm, golden light across the scene; slight overexposure on the right side creates a subtle halo effect. No auto‑HDR or beauty filters—raw, unprocessed look. The exposure is slightly uneven, with the left side a bit brighter than the right, mimicking ambient light fluctuations.
+
+- **Camera & Lens Settings**  
+  Wide‑angle lens (24–35 mm) captured at a short focal length; everything in focus from foreground to background. Slight handheld shake produces a natural motion blur on the edges, while the center remains crisp. No bokeh or depth‑of‑field blur—background is fully sharp.
+
+- **Composition & Framing**  
+  Imperfect, off‑center framing: the subject is slightly tilted, and the crop cuts off part of the doorframe on the left, giving a spontaneous, candid feel. No rule‑of‑thirds intentionality—accidental composition. The shot captures a real‑world location (a bedroom with a wooden floor, a small side table with a vase of flowers, and a white door), time of day mid‑afternoon, ambient warmth.
+
+- **Environment Details**  
+  The room has a pale yellow wall, a wooden floor, and a small side table holding a vase of colorful flowers. A white doorframe is visible on the left; a light switch is seen on the right wall. The background is fully sharp, no studio lighting, no professional composition, no editorial tone.
+
+- **Technical Notes**  
+  - Focal length: 30 mm (wide‑angle)  
+  - Aperture: f/4.0 (mid‑range)  
+  - Shutter speed: 1/60 s (slight motion blur)  
+  - ISO: 400 (natural contrast)  
+  - No portrait mode or subject isolation—everything in focus.
+
+**Prompt Summary**  
+“Candid, unposed photo of a blonde woman in a lavender bodysuit leaning against a white doorframe in a sunlit bedroom, captured on a 30 mm wide‑angle lens with slight handheld blur and natural overexposure. The scene includes a wooden floor, a small side table with flowers, and a yellow wall; everything is fully sharp, no filters or post‑processing, raw and spontaneous.”

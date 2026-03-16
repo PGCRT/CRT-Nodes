@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair standing on a sunlit country road, wearing light‑wash denim shorts. She is bare‑shouldered, mid‑step, slightly turned toward the camera with a natural, unposed expression. Her hands rest lightly at her sides, one finger subtly curled.  
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject appears unaware or mid‑action. Slight tilt and off‑center framing give an accidental, handheld feel. The shot is a wide‑angle capture with a short focal length (≈20 mm), everything in focus, no bokeh or depth‑of‑field blur.  
+
+- **Environment**  
+  Specific real‑world location: a paved road flanked by green grass and a line of mature trees. Time of day: late afternoon, warm golden light with a slight overexposure on the sky. Weather: clear, mild breeze, ambient noise of distant traffic.  
+
+- **Lens & Technical**  
+  Short focal length, wide‑angle lens (≈20 mm). No bokeh — background fully sharp. All elements in focus. Slight motion blur from handheld instability. Auto‑HDR or auto‑beauty mode off — raw, unprocessed look. No filters, no color grading, no post‑processing aesthetic.  
+
+- **Lighting & Composition**  
+  Zero studio lighting, zero professional composition, zero editorial tone. Natural light with slight overexposure on the sky, creating a warm glow. The framing is accidental: the subject’s head is slightly above the center of the frame, her left shoulder is a little off‑center, and the bottom edge cuts off just below her thighs.  
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, partial crop that keeps the road’s edge visible on the left side. The woman’s shirtless torso shows natural skin texture, with subtle shadows from the sun. Her denim shorts have a slight wrinkle at the hem. The background trees are fully sharp, no depth‑of‑field blur.  
+
+- **Prompt Summary**  
+  “A young woman with long wavy brown hair, bare‑shouldered and wearing light‑wash denim shorts, stands on a sunlit country road in late afternoon. She is mid‑step, slightly turned toward the camera, hands at her sides, captured with a 20 mm wide‑angle lens. The shot is candid, handheld, slightly tilted, off‑center, everything in focus, no bokeh. The background shows a paved road, green grass, and mature trees, all sharp. Warm golden light creates slight overexposure on the sky. Raw, unprocessed look, no filters or color grading.”

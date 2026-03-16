@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman with long, dark, wavy hair, wearing a white lace bikini, captured mid‑turn in a large, white freestanding bathtub. She is slightly bent forward, one hand on the tub’s edge, the other near her hip, as if she just finished a shower or is about to. Her face is turned toward the camera with a subtle, natural smile, eyes bright and relaxed. The pose should feel spontaneous, as if the photographer caught her in an unplanned, candid moment.
+
+- **Motion & Focus**  
+  Apply a slight motion blur to the subject’s limbs and hair, indicating handheld shake and mid‑action. Keep everything in focus—no depth‑of‑field blur; background should be fully sharp. Use a wide‑angle lens (20–35 mm) with a short focal length to capture a broad view of the scene.
+
+- **Lighting & Exposure**  
+  Capture with natural daylight from a large, multi‑paned window on the left side of the room. The exposure should be slightly overexposed, letting bright, warm tones fill the frame; avoid any post‑processing color grading or auto‑beauty mode—keep it raw and unprocessed.
+
+- **Environment**  
+  The setting is a bright, airy bathroom with white tiles, a large window with a grid pattern, and a chrome showerhead visible on the left. The time of day is mid‑afternoon, with soft, diffused sunlight creating gentle highlights on the woman’s skin and the bathtub’s glossy surface. The weather outside the window is lightly cloudy, adding a subtle ambient glow.
+
+- **Lens & Technical**  
+  Use a short focal length (24–35 mm) wide‑angle lens. Keep the composition accidental—slight tilt and off‑center framing, no rule‑of‑thirds intentionality. The background should be fully sharp, with no bokeh. Capture in a single exposure, no portrait mode or subject isolation.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—an “in‑the‑moment” snapshot where the subject is unaware or mid‑action. Encourage imperfections: slight tilt, partial crop, and a hint of handheld instability. The final image should feel like a genuine, raw photograph taken with a DSLR or mirrorless camera in a real‑world location.

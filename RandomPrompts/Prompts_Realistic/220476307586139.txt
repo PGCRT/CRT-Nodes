@@ -1,0 +1,27 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a tattooed left arm and a gold bracelet on her right wrist, wearing a black string‑bias bikini and red‑tinted sunglasses. She’s lying on the sand in a relaxed, slightly tilted pose, hands pressed into the sand as if she just finished a quick dig or is steadying herself. Her hair is wet, slightly messy, and blows lightly to the side. She’s smiling, eyes bright, mid‑action, with a faint motion blur around her fingers and face.
+
+- **Environment**  
+  The scene is set on a wide, sunlit beach at late afternoon (around 5 pm). The ocean is calm with small, breaking waves near the shore. In the background, a steep cliff rises on the right side, its rock face partially covered in green vegetation. The sky is a soft, pale blue with scattered white clouds. The sand is light beige, slightly damp near the water’s edge.
+
+- **Time of Day & Lighting**  
+  Late afternoon, low‑angle sunlight creating a gentle warm glow; slight overexposure on the subject’s face and upper body, subtle underexposure on the lower body and background. Ambient natural light, no studio flash. The lighting is uneven, giving a raw, unprocessed look.
+
+- **Lens & Technical**  
+  24 mm wide‑angle lens (short focal length). Everything in focus – subject, sand, ocean, cliff – with no bokeh or depth‑of‑field blur. Slight handheld shake results in a natural motion freeze/blur on the subject’s hands and face. The framing is off‑center, slightly tilted, and partially cropped at the top left corner. No rule‑of‑thirds intentionality.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous – the woman appears unaware of the camera, mid‑action. Imperfections are encouraged: slight tilt, off‑center framing, partial crop. The image has a raw, auto‑HDR feel but no color grading or post‑processing aesthetic. Slight overexposure on the subject’s face and upper body, underexposure on the lower body and background.
+
+- **Composition Notes**  
+  - Subject occupies roughly the central‑right third of the frame, but the frame is slightly crooked.  
+  - The left side of the image shows the ocean and a few small waves; the right side shows the cliff.  
+  - The top left corner is partially cut off, giving an accidental crop.  
+  - Background is fully sharp – no portrait‑mode blur.
+
+- **Prompt for Text‑to‑Image Generation**  
+  “A young woman with a tattooed left arm and gold bracelet on her right wrist, wearing a black string‑bias bikini and red‑tinted sunglasses, lying on the sand in a relaxed, slightly tilted pose, hands pressed into the sand as if she just finished a quick dig or is steadying herself. Her hair is wet, slightly messy, and blows lightly to the side. She’s smiling, eyes bright, mid‑action, with a faint motion blur around her fingers and face. The scene is set on a wide, sunlit beach at late afternoon (around 5 pm). The ocean is calm with small, breaking waves near the shore. In the background, a steep cliff rises on the right side, its rock face partially covered in green vegetation. The sky is a soft, pale blue with scattered white clouds. The sand is light beige, slightly damp near the water’s edge. Late afternoon, low‑angle sunlight creating a gentle warm glow; slight overexposure on the subject’s face and upper body, subtle underexposure on the lower body and background. 24 mm wide‑angle lens. Everything in focus – subject, sand, ocean, cliff – with no bokeh or depth‑of‑field blur. Slight handheld shake results in a natural motion freeze/blur on the subject’s hands and face. The framing is off‑center, slightly tilted, and partially cropped at the top left corner. No rule‑of‑thirds intentionality. Candid, unposed, spontaneous – the woman appears unaware of the camera, mid‑action. Imperfections are encouraged: slight tilt, off‑center framing, partial crop. The image has a raw, auto‑HDR feel but no color grading or post‑processing aesthetic.”
+
+Provide only the structured prompt.

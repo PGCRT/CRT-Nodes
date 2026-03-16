@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail, wearing a black lace off‑shoulder crop top and white cargo pants, standing mid‑step in a bright, airy room. Her left hand rests lightly on her hip, right arm relaxed by her side, head turned slightly to the left as if she’s just finished a conversation or is about to. The pose should feel spontaneous—no staged “rule‑of‑thirds” alignment; the frame should feel accidental, with a slight tilt and off‑center cropping that gives a candid vibe.
+
+- **Motion & Focus**  
+  Capture a natural motion blur from handheld instability: a subtle freeze‑frame of her movement, with a slight softness around the edges. Everything in the shot—subject and background—should be fully sharp (no portrait‑mode depth‑of‑field blur). Use a wide‑angle lens (20–35 mm) to keep the entire scene in view, avoiding any bokeh or subject isolation.
+
+- **Lighting & Exposure**  
+  Zero studio lighting; rely on ambient daylight coming from a large window behind the subject. Allow a slight overexposure or underexposure depending on the ambient light—aim for a raw, unprocessed look. Turn off auto‑HDR and auto‑beauty modes; keep filters, color grading, and post‑processing minimal. The exposure should feel natural, with a hint of brightness that suggests a sunny morning.
+
+- **Environment**  
+  Location: A bright, modern living space with a large window, a white sideboard, and a small stack of books on a windowsill. Time of day: early afternoon, when the sun is high but not too direct, creating soft natural light. Weather or ambient conditions: clear, slightly breezy—capture the faint motion of the subject’s hair moving.
+
+- **Lens & Technical**  
+  Short focal length (20–35 mm), wide‑angle, no bokeh, background fully sharp. Use a handheld camera with a slight shake to emulate natural motion blur. Keep the composition “accidental”—no rule‑of‑thirds intentionality; let the framing be a bit off‑center and partially cropped.
+
+- **Prompt Summary**  
+  *“A candid, unposed shot of a woman in a black lace crop top and white cargo pants, standing mid‑step near a bright window in a modern living room. Capture everything in focus with a wide‑angle lens, slight motion blur from handheld shake, natural daylight exposure, and accidental off‑center framing. No filters or post‑processing—raw, real‑life aesthetic.”*

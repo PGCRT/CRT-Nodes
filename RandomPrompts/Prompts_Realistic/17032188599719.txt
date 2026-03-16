@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail, wearing an olive‑green halter crop‑top and matching high‑cut bottoms, standing in a bright, green‑tiled bathroom. Her left hand is on her hip, right hand behind her head, body slightly angled toward the camera, mid‑step as if she’s just finished a grooming routine.  
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. Slight tilt and off‑center framing; partial crop that cuts off a bit of the sink basin on the lower left. No rule‑of‑thirds intentionality.  
+
+- **Motion & Exposure**  
+  Slight motion blur from handheld instability, natural freeze or mild blur. Slight overexposure to keep ambient light warm. Auto‑HDR or auto‑beauty mode off — raw, unprocessed look.  
+
+- **Lens & Technical**  
+  Short focal length (24–35 mm), wide‑angle lens. Everything in focus; no bokeh, background fully sharp. No portrait‑mode subject isolation.  
+
+- **Environment**  
+  Specific real‑world location: a modern bathroom with a white ceramic sink, dark green countertop, wooden-framed mirror on the left wall, and a double‑pane window directly behind the subject. A small towel hangs on a chrome rack to the right. Time of day: late morning, soft natural daylight coming from the window, slight haze from outside. Weather: clear, mild.  
+
+- **Lighting**  
+  Zero studio lighting, zero professional composition, zero editorial tone. Natural light only; slight overexposure or underexposure depending on ambient light.  
+
+- **Details & Imperfections**  
+  Slight tilt, off‑center framing, partial crop of the sink basin. A faint smudge on the mirror’s lower corner. The woman’s hair has a tiny stray strand that catches the light.  
+
+- **Prompt Summary**  
+  “A young woman in an olive‑green halter crop‑top and high‑cut bottoms stands candidly in a bright green tiled bathroom, her left hand on hip and right hand behind head, mid‑step. The shot is captured with a short focal length wide‑angle lens, everything in focus with slight motion blur from handheld instability. The framing is slightly tilted and off‑center, partially cropping the sink basin. Natural daylight from the window creates a soft overexposure. A small towel hangs on a chrome rack to the right, a wooden‑framed mirror on the left wall, and a double‑pane window directly behind her. No filters, no color grading, raw, unprocessed look.”

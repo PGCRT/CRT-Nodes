@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with dark hair tied in a high ponytail, accented by a bright yellow scrunchie. She’s wearing an oversized white cotton T‑shirt that drapes loosely over her torso, revealing a subtle sheen from the ambient light. Her face is turned slightly to the right, mouth open mid‑speech or laugh, capturing a spontaneous, candid moment. One hand is raised near her cheek, fingers relaxed, as if she’s gesturing or adjusting her hair—creating a natural motion blur that hints at movement.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject appears unaware of the camera, caught in a genuine expression. Slight tilt and off‑center framing give an accidental, handheld feel. The composition is not intentionally rule‑of‑thirds; the frame cuts close to the subject’s left shoulder, leaving a small margin of background on the right.
+
+- **Imperfections & Raw Aesthetic**  
+  Slight motion blur around the raised hand and hair, suggesting a quick shutter speed. Auto‑HDR or auto‑beauty mode is off—no filters, no color grading, no post‑processing aesthetic. The exposure is slightly overexposed on the subject’s front, letting the white shirt glow while keeping the background softly bright.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24‑35 mm) with a short focal length. Everything is in focus—no bokeh, no depth‑of‑field blur; the background is fully sharp. No portrait mode or subject isolation. The image captures a raw, unprocessed look as if taken with a DSLR or mirrorless camera in natural daylight.
+
+- **Environment**  
+  The scene takes place in a simple, unadorned living room. A dark blue couch sits behind the woman, a white electrical outlet visible on the left wall, and a plain beige wall serves as a neutral backdrop. The time of day is mid‑afternoon, with warm, diffused natural light coming from the west, creating soft shadows and a slight overexposure on the subject’s front.
+
+- **Detailed Prompt**  
+  “A candid, wide‑angle shot of a young woman with dark hair in a high ponytail, accented by a bright yellow scrunchie, wearing an oversized white cotton T‑shirt. She is mid‑speech or laugh, mouth open, hand raised near her cheek, creating slight motion blur. The frame is slightly tilted and off‑center, capturing a spontaneous, unposed moment. No filters or auto‑HDR—raw, natural lighting with a small overexposure on the subject’s front. Background shows a dark blue couch and a white outlet on a beige wall, all in focus. Shot with a 24‑35 mm lens, everything sharp, no bokeh.”

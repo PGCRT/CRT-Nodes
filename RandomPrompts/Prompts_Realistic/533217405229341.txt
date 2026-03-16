@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy, honey‑brown hair that catches the light in soft highlights, wearing a pastel pink V‑neck T‑shirt and a thin gold necklace with a small circular pendant. She is captured mid‑smile, head slightly tilted, eyes focused on the camera but not posing—her expression natural and candid. Her left ear is partially visible, revealing a small gold hoop earring. The shot is a close‑midshot that includes her shoulders, upper chest, and a portion of the couch behind her; the framing is off‑center, with the left side of her face cut off by the edge of the frame.
+
+- **Lighting & Exposure**  
+  Ambient daylight from a large window to the right of the scene creates a warm, slightly overexposed highlight on her forehead and hair. The exposure is natural, without any auto‑HDR or beauty filters—just raw, unprocessed light. A subtle handheld shake is present, giving the image a slight motion blur that softens the edges and adds realism.
+
+- **Lens & Technical**  
+  Shot with a wide‑angle lens (24–35 mm) at a short focal length, ensuring that the background remains fully sharp—no bokeh or depth‑of‑field blur. The focus is across the entire frame: subject, background, and foreground are all in focus. No portrait‑mode “subject isolation” is applied; everything is captured in one go.
+
+- **Environment**  
+  The setting is a cozy living room during late afternoon. A beige sofa with a floral pillow sits behind her, a wooden bookshelf filled with books and potted plants lines the left wall, and a framed photograph hangs on the right wall. A lamp is visible in the far corner. The time of day is early evening, with warm sunlight streaming in from the window, casting soft shadows and creating a gentle glare on the subject’s hair.
+
+- **Composition & Style**  
+  The composition is spontaneous and unposed—no rule‑of‑thirds intentionality. The frame is slightly tilted, and the crop is partial, cutting off the left side of her face and the right side of the sofa. The background is fully sharp, with no “rule‑of‑thirds” alignment; it’s a raw, handheld snapshot that feels natural and candid.
+
+- **Post‑Processing**  
+  No filters, color grading, or post‑processing aesthetic is applied. The image retains its original tones and textures, with only minimal adjustments to exposure and contrast.  
+
+**Prompt Summary**:  
+“Candid close‑midshot of a young woman with long wavy honey‑brown hair, pink V‑neck shirt, gold necklace, and hoop earring, captured in a cozy living room during late afternoon. Warm daylight creates a slight overexposure on her forehead; the shot uses a wide‑angle short focal length lens (24–35 mm) with everything in focus—no bokeh. The framing is off‑center and slightly tilted, capturing her mid‑smile and a portion of the beige sofa and floral pillow behind her. The background includes a wooden bookshelf with books and plants on the left, a framed photo on the right wall, and a lamp in the corner. The image has natural motion blur from handheld shake, no filters or color grading, and retains a raw, unprocessed look.”

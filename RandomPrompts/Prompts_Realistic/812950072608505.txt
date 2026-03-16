@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair lying on a concrete sidewalk, leaning on her left elbow with her chin resting in her hand. Her body is slightly angled toward the camera, creating a diagonal line that gives a dynamic, casual feel. She wears a thin gold necklace that catches the light subtly. Her expression is relaxed, eyes half-closed, as if she’s mid‑thought or just finished a conversation.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle, late‑afternoon sun that casts soft shadows and a slight overexposure on the subject’s face. The exposure is a little warm, with a hint of ambient haze that gives a raw, unprocessed look. No auto‑HDR or beauty filters—just a straightforward, handheld capture.
+
+- **Lens & Technical Settings**  
+  24 mm wide‑angle lens (short focal length), f/3.5 aperture, 1/60 s shutter speed, ISO 400. The lens is set to “wide” for a broad field of view that keeps the background fully sharp—no bokeh or depth‑of‑field blur. Everything from the foreground to the background is in focus, giving an authentic, documentary feel.
+
+- **Composition & Framing**  
+  The shot is intentionally off‑center and slightly tilted, with a partial crop that cuts off the edges of the building and the sky. No rule‑of‑thirds intentionality—this is a spontaneous, candid frame. The background shows a modern, beige‑colored building with a flat facade, a small window, and a white outdoor light fixture. A patch of green foliage peeks from the left side, adding a natural contrast.
+
+- **Environment & Time**  
+  Location: an urban plaza in a mid‑town area, near a main street. Time of day: early evening (around 5:30 pm), when the sun is still high but beginning to tilt, creating warm, soft light. Weather: lightly cloudy with a faint haze that gives a subtle auto‑beauty effect. The ground is a rough concrete surface with a few small cracks and a patch of grass at the corner.
+
+- **Details & Imperfections**  
+  Slight motion blur on the subject’s hair, indicating handheld instability. A tiny smudge on her left shoulder adds realism. The necklace has a subtle reflection, and her skin shows natural texture. The building’s wall has a small, rectangular window and an outdoor light fixture that is slightly out of alignment, reinforcing the “raw” feel.
+
+- **Post‑Processing**  
+  No filters or color grading—just a straightforward capture with auto‑HDR off. A minimal crop is applied to tighten the frame, but the overall look remains spontaneous and documentary. The final image has a natural, in‑camera aesthetic that feels like a real, unposed photograph.

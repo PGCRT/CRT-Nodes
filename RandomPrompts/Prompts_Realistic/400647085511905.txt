@@ -1,0 +1,34 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long brown hair styled in two braids, wearing round wire‑frame glasses and a sleek black one‑piece swimsuit, sitting on a stone balustrade. Her left hand rests on the rail, right arm relaxed, body angled slightly toward the camera, legs crossed at the knee, creating a casual, spontaneous pose.  
+
+- **Facial Features & Expression**  
+  Soft, natural complexion with a subtle smile; eyes gently focused on the lens. Slight motion blur around the face to convey handheld movement.  
+
+- **Wardrobe & Accessories**  
+  Black one‑piece swimsuit with thin straps, a fitted silhouette that highlights her curves. Small gold hoop earrings add a delicate accent.  
+
+- **Hair & Styling**  
+  Braided hair cascades over her shoulders; a few loose strands frame her face. Slight wind‑blown texture.  
+
+- **Lighting & Exposure**  
+  Natural daylight from the west, mid‑afternoon, creating warm, slightly overexposed highlights on her skin and clothing. No auto‑beauty or filter enhancement—raw, unprocessed look.  
+
+- **Background & Environment**  
+  A modern cityscape in the background: a tall beige office building with rectangular windows, a red brick building further back, and a patch of green foliage to the left. The scene is set on an outdoor balcony or terrace with a stone railing.  
+
+- **Time of Day & Weather**  
+  Late afternoon, clear sky with soft haze; ambient light gives a gentle warm tone. Light wind creates slight motion blur on the subject’s hair and clothing.  
+
+- **Lens & Technical Settings**  
+  24‑mm wide‑angle lens, f/4.0 aperture, 1/125 s shutter speed, ISO 400. Everything in focus—no bokeh, no depth‑of‑field blur. Slight tilt to the left for a candid feel.  
+
+- **Composition Notes**  
+  Off‑center framing: the subject’s head is slightly above the center of the frame; the left side of the image captures a portion of the green foliage, while the right side shows the beige building. The composition is accidental, not rule‑of‑thirds.  
+
+- **Post‑Processing**  
+  No filters or color grading—only raw capture. Slight overexposure on the subject’s face to emphasize natural light.  
+
+- **Final Prompt**  
+  “A young woman with braided brown hair and round glasses, wearing a black one‑piece swimsuit, sits casually on a stone balustrade outdoors. She rests her left hand on the rail, right arm relaxed, legs crossed, body angled toward the camera. Soft natural daylight from the west casts warm highlights; slight motion blur conveys handheld movement. Background features a tall beige office building and a red brick structure with green foliage to the left. Shot on a 24‑mm wide‑angle lens at f/4.0, 1/125 s, ISO 400, everything in focus. Composition is off‑center, accidental, no rule‑of‑thirds. Raw, unprocessed, no filters.”

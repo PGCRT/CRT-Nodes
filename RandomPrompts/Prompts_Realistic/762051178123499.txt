@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair standing on a sunlit pebble beach, wearing an olive‑green one‑piece swimsuit with a gold zipper. Her hands rest on her hips, body angled slightly to the left, head turned toward the camera with a natural, unposed smile. The pose is mid‑action, as if she just finished a step or is about to move—slight motion blur at the edges gives a candid feel.
+
+- **Lighting & Exposure**  
+  Warm, golden hour sunlight coming from the upper left, creating soft highlights on her skin and subtle overexposure in the sky. Slight underexposure on the lower part of the frame for a raw, unprocessed look. No auto‑beauty or filter enhancements—just natural contrast.
+
+- **Environment**  
+  A rocky shoreline with large boulders in the background and a scattering of smooth pebbles in the foreground. The beach is sandy with small, rounded stones; the sea is visible in the far distance, hinting at a gentle tide. Time of day: late afternoon, around 6 pm, giving a warm, soft glow. Weather: clear, light breeze, no clouds.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm) with a short focal length to capture a broad view. Everything in focus—from the subject’s face to the background rocks—no bokeh or depth‑of‑field blur. Slight handheld shake gives a natural motion freeze. No rule‑of‑thirds; framing is accidental, slightly off‑center, with a partial crop that includes a portion of the sand’s texture and a few stones near the top edge.
+
+- **Composition Notes**  
+  The composition is spontaneous: the subject is not centered but offset to the right, leaving a bit of empty space on the left for ambient light. The background is fully sharp, no portrait‑mode isolation. The prompt should emphasize raw realism, with subtle imperfections (slight tilt, minor crop) that give the image a candid, documentary feel.
+
+- **Prompt Summary**  
+  “A young woman in an olive‑green one‑piece swimsuit stands on a sunlit pebble beach at late afternoon, hands on hips, head turned to the camera with a natural smile. Warm golden light from the upper left creates soft highlights and slight underexposure on the lower frame. The scene includes large boulders in the background and a scattering of smooth pebbles in the foreground, with the sea visible in the distance. Shot on a 24–35 mm wide‑angle lens, everything in focus with no bokeh, capturing a candid, unposed moment with slight motion blur and accidental off‑center framing.”

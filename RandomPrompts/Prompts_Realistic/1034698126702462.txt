@@ -1,0 +1,26 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A young woman with a high ponytail and glasses, wearing a pink cropped t‑top and blue sweatpants, holding a black DSLR camera up to her face as if she’s about to take a photo. Her hair is slightly tousled, and her expression is focused but casual. The camera strap drapes over her left shoulder, and the lens is angled toward a bright window in the background.
+
+- **Pose & Framing**  
+  Candid, unposed, spontaneous — the subject is mid‑action, unaware of the camera capturing her. The frame is slightly tilted and off‑center, with a partial crop that cuts off the left side of her torso. No rule‑of‑thirds intentionality; the composition feels accidental, like a quick snapshot taken with a handheld camera.
+
+- **Motion & Focus**  
+  Slight motion blur from the handheld instability of the camera, but everything remains fully sharp — no bokeh, no depth‑of‑field blur. The background is in focus, giving a raw, unprocessed look.
+
+- **Lighting & Exposure**  
+  Natural daylight coming from a large window on the right, creating a soft overexposure on the subject’s face and a subtle highlight on her hair. No auto‑beauty mode, no filters, no color grading, no post‑processing aesthetic. The exposure is slightly warm, with a hint of ambient warmth from the interior lighting.
+
+- **Environment**  
+  A cozy kitchen or living area with light wooden cabinets, a brown leather bag on the counter, and an old television mounted on the wall. A small potted plant sits on the windowsill, and a wooden table is partially visible in the lower right corner. The time of day is late morning, with bright sunlight streaming through the window, creating a gentle lens flare.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm) wide‑angle lens, no bokeh, everything in focus. The image has a slight overexposure on the subject’s face and a subtle vignette from the wide‑angle lens. No portrait mode or subject isolation — the background is fully sharp.
+
+- **Style & Tone**  
+  Zero studio lighting, zero professional composition, zero editorial tone. The overall vibe is spontaneous, everyday realism, like a friend’s “quick snap” in a real‑world setting.
+
+**Prompt:**
+
+> "A young woman with a high ponytail and glasses, wearing a pink cropped t‑top and blue sweatpants, holding a black DSLR camera up to her face as if she’s about to take a photo. Her hair is slightly tousled, and the camera strap drapes over her left shoulder. The shot is candid, unposed, spontaneous — the subject is mid‑action and unaware of the camera. The frame is slightly tilted and off‑center with a partial crop that cuts off the left side of her torso. Slight motion blur from handheld instability, but everything remains fully sharp — no bokeh, no depth‑of‑field blur. Natural daylight from a large window on the right creates a soft overexposure on the subject’s face and a subtle highlight on her hair. No filters, no color grading, no post‑processing aesthetic. The background shows a cozy kitchen or living area with light wooden cabinets, a brown leather bag on the counter, an old television mounted on the wall, and a small potted plant on the windowsill; a wooden table is partially visible in the lower right corner. Time of day is late morning, bright sunlight streaming through the window, creating a gentle lens flare. Use a short focal length (24‑35 mm) wide‑angle lens, everything in focus, no portrait mode, no subject isolation."

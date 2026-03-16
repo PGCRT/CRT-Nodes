@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a natural, unposed expression, hair tied in a loose ponytail that slightly drifts to one side. She’s wearing a dark gray, long‑sleeved V‑neck top with subtle sparkles; the fabric clings softly to her body, catching the light as she moves. Her head is tilted a little to the left, eyes focused forward, lips parted just enough to hint at a mid‑speech or mid‑laugh moment. The framing is off‑center, a casual “mid‑action” snapshot that feels spontaneous and candid.
+
+- **Motion & Focus**  
+  Slight motion blur on the subject’s hands and hair, indicating handheld instability during capture. Everything in the frame—subject, background, details—is fully sharp except for that subtle blur. No portrait‑mode depth‑of‑field blur; the background is crisp, a real‑world location captured with a wide‑angle lens.
+
+- **Lighting & Exposure**  
+  Natural daylight from a bright window on the right side of the frame creates a soft overexposure on the subject’s chest and face, while the left side remains slightly underexposed. No auto‑HDR or beauty filters—just raw, unprocessed light. The exposure is uneven but organic, as if the camera was set to “handheld” mode.
+
+- **Lens & Technical**  
+  Short focal length (≈20 mm) wide‑angle lens, no bokeh. All elements are in focus: the subject’s face, top, and the wall behind her. The background is a plain, light‑colored interior wall with a visible window frame on the right; the time of day is mid‑afternoon, with warm, diffused sunlight.
+
+- **Environment**  
+  A simple, uncluttered room—white or off‑white walls, a single window letting in natural light. The scene feels like a casual, everyday moment captured in a real‑world setting. The weather outside is mild, as the light is soft but not harsh.
+
+- **Composition & Style**  
+  No rule‑of‑thirds intentionality—framing is accidental, with the subject’s head slightly above the center of the frame and her left shoulder cutting off the bottom right corner. The shot has a slight tilt, giving it a candid, spontaneous feel. The overall tone is naturalistic, unposed, and “mid‑action,” as if the photographer caught her in an unplanned moment.
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, zero studio lighting. The image retains its raw, unprocessed look, with only basic auto‑beauty mode turned off. Slight overexposure on the subject’s chest and face, slight underexposure on the left side, creating a subtle dynamic range that invites the viewer to explore the details.
+
+**Prompt Summary (structured)**  
+`Candid, spontaneous portrait of a young woman in a gray long‑sleeved V‑neck top, captured with a 20 mm wide‑angle lens at mid‑afternoon in a bright windowlit room. Slight motion blur on the hands and hair, full sharpness on all elements, natural overexposure on the chest, underexposure on the left side. Raw, unprocessed look, no filters, accidental off‑center framing with a slight tilt, everything in focus except for handheld instability blur.`

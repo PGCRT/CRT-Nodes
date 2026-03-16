@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, sun‑kissed blonde hair caught mid‑swing, wearing a thin black bra and high‑waisted denim shorts. She’s captured in a spontaneous, unposed moment—her face slightly turned toward the camera, mouth open as if she just said something or is about to say something, eyes bright and lively. Her shoulders are relaxed, her arms bent at the elbow, and her left arm is partially out of frame, giving an off‑center, accidental feel to the shot.
+
+- **Motion & Focus**  
+  Slight motion blur on the hair and upper body, indicating a handheld, in‑motion capture. Everything remains fully sharp—no portrait‑mode blur, no depth‑of‑field isolation. The focus is broad, covering subject and background.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle, late‑afternoon sun. A mild overexposure on the upper torso and face, creating a warm, golden hue. No auto‑HDR or beauty filters—raw, unprocessed look. The exposure is slightly uneven, with a bright highlight on the left side of her chest and a subtle vignette from the wide lens.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm), short focal length, no bokeh. Background is fully sharp, no depth‑of‑field blur. The composition is intentionally “accidental”—no rule‑of‑thirds, slight tilt and partial crop.
+
+- **Environment**  
+  Outdoor rooftop or balcony setting in a suburban neighborhood. Green foliage and a white railing are visible behind her, with a faint city skyline in the distance. The time of day is early evening, around 6 pm, giving a warm, soft light. Light wind blows her hair across her face, adding dynamic movement.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, off‑center framing that places her left shoulder near the center of the frame. Her denim shorts are slightly cropped at the bottom, and a small portion of her left arm extends beyond the right edge. The background includes a white table or bench and a few potted plants, all in focus.
+
+- **Prompt Summary**  
+  “A candid, spontaneous photograph of a blonde woman in a black bra and denim shorts on a sunny rooftop at late afternoon. Capture with a wide‑angle, short‑focal‑length lens, slight motion blur on the subject, full sharpness across the frame, mild overexposure on the upper body, natural daylight, wind‑blown hair, accidental off‑center framing, no filters or post‑processing.”

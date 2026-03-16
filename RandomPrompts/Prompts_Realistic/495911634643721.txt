@@ -1,0 +1,28 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman with short, layered brown hair and a subtle pearl choker, wearing a white lace corset with floral detailing. She is mid‑adjustment, hands pulling the straps of her corset upward, fingers slightly blurred as if caught in a natural motion. Her left arm shows a rose tattoo, right arm a small “C” tattoo; both wrists are adorned with rings.  
+
+- **Facial Features & Expression**  
+  Soft, natural makeup: defined eyeliner, subtle mascara, lightly brushed lips. Her eyes are cast downward, lips slightly parted, giving an candid, unposed feel.  
+
+- **Lighting & Exposure**  
+  Slight overexposure from ambient daylight; the image has a raw, unprocessed look. No auto‑beauty mode—just natural contrast. The exposure is slightly warm, with a hint of haze from the window’s natural light.  
+
+- **Camera Settings**  
+  Wide‑angle lens (24–35 mm), short focal length. Handheld shot with slight instability causing mild motion blur on the subject’s hands and the background. Everything is in focus—no portrait‑mode depth‑of‑field blur.  
+
+- **Composition & Framing**  
+  No rule‑of‑thirds intentionality; the frame is off‑center, a partial crop that captures the woman from the mid‑chest to the upper thighs. The background shows a bright window and a blurred outdoor garden, but everything remains sharp.  
+
+- **Environment**  
+  Location: A bright, airy room with a large glass window that opens onto a green lawn. Time of day: late morning, soft sunlight filtering through the leaves. Weather: mild, slightly humid, with a light breeze.  
+
+- **Details & Imperfections**  
+  Slight tilt in the camera angle; the woman’s left shoulder is a bit higher than the right. The corset’s lace has subtle shadows, and the pearls on her choker catch the light. Her fingers are slightly blurred, indicating motion.  
+
+- **Post‑Processing**  
+  No filters, no color grading, no auto‑beauty. Only raw, natural tones.  
+
+**Prompt Summary**  
+> “A candid, handheld shot of a woman in a white lace corset adjusting her straps, captured with a wide‑angle lens at late morning daylight. The image has slight motion blur and mild overexposure, all in focus, framed off‑center in a bright room overlooking a green lawn. Raw, unprocessed aesthetic, no filters.”

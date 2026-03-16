@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail and bangs, wearing a white bodycon dress and a black leather jacket, walking down a city street. Her head is slightly tilted, her hands relaxed at her sides, mid‑step, as if she’s just passed a coffee shop or a small boutique. The pose is candid—she’s not posing for the camera, she’s simply walking.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. Slight tilt and off‑center framing; partial crop that gives a “handheld” feel. No rule‑of‑thirds intentionality—everything is framed accidentally, as if captured with a quick snap on a smartphone or a DSLR.
+
+- **Environment**  
+  Specific real‑world location: a narrow, cobblestone alley in an urban downtown area. The street is lined with brick buildings, small storefronts, and a few passing pedestrians. Time of day: late afternoon, the sun low on the horizon casting warm golden light and long shadows. Weather: clear, slightly breezy, with a faint haze that gives a soft glow to the scene.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm) wide‑angle lens. No bokeh—background fully sharp, everything in focus. Slight motion blur on the subject’s feet and the background to suggest movement. Auto‑HDR or auto‑beauty mode off—raw, unprocessed look. No filters, no color grading, no post‑processing aesthetic. Slight overexposure or underexposure depending on ambient light (choose either warm bright or cool dim). Wide lens gives a slight distortion that adds character.
+
+- **Composition Notes**  
+  Keep the composition “accidental”: the subject is slightly off‑center, the frame cuts off a bit of the street at both ends, and the top of her head is just above the upper edge of the frame. The background includes a small shop sign and a passing cyclist, adding context. No rule‑of‑thirds—just a natural, spontaneous snapshot.
+
+- **Lighting**  
+  Zero studio lighting, zero professional composition, zero editorial tone. Natural daylight from the low sun creates a warm, slightly harsh highlight on the subject’s face and jacket, with a faint rim light on her hair. The light hits the scene from the left, creating soft shadows on the right side of the street.
+
+- **Final Prompt**  
+  “A young woman in a white bodycon dress and black leather jacket walking down a narrow cobblestone alley in an urban downtown area, late afternoon sun casting warm golden light and long shadows. Candid, unposed, spontaneous capture with slight tilt and off‑center framing, partial crop. Short focal length wide‑angle lens (24‑35 mm), everything in focus, slight motion blur on the subject’s feet and background, no bokeh, auto‑HDR off, raw unprocessed look, no filters or color grading. Background fully sharp, natural daylight with slight overexposure. Composition accidental: subject slightly off‑center, frame cuts street at both ends, top of head above upper edge. No rule‑of‑thirds—just a natural, spontaneous snapshot.”

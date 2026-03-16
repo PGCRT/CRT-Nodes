@@ -1,0 +1,29 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman with a short, brown bob haircut stands in a bright, sunlit bathroom, facing away from the camera. She wears a blue string bikini that clings to her curves, and she’s mid‑action as she applies a frothy body lotion to her glutes. Her hands are slightly blurred, indicating a natural motion freeze. The back of her head and shoulders are visible, with a subtle tilt that gives the shot an off‑center, spontaneous feel.
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window behind her creates a slight overexposure on the upper part of the frame, while the lower part remains a bit underexposed. The lighting is uneven, giving a raw, unprocessed look. No auto‑HDR or beauty filters—just the ambient light as it was when the photo was taken.
+
+- **Camera Settings**  
+  - Lens: 24 mm wide‑angle, short focal length, handheld.  
+  - Focal depth: everything from foreground to background is fully sharp; no bokeh.  
+  - Aperture: f/5.6 (mid‑range) for a natural depth.  
+  - Shutter speed: 1/125 s, producing slight motion blur on the hands and lotion droplets.  
+  - ISO: 400, for a clean, low‑noise capture.
+
+- **Environment**  
+  The setting is a modern bathroom with a white bathtub and a sheer white curtain that filters the sunlight. A small chrome faucet is visible on the right side of the tub. The time of day is late morning, when the sun is high but still casts soft shadows. The weather outside is clear, adding to the bright, airy feel of the scene.
+
+- **Composition & Framing**  
+  The shot is a wide‑angle capture that includes the subject’s full back, the bathtub, and part of the window. The framing is accidental—no rule‑of‑thirds intentionality—yet the composition is balanced by the vertical line of the tub and the horizontal line of the curtain. The background is fully sharp, with no depth‑of‑field blur.
+
+- **Details & Imperfections**  
+  - Slight tilt of the camera gives a dynamic angle.  
+  - Partial crop: the top of the head is cut off, adding to the candid feel.  
+  - Small droplets of lotion are dripping down her thighs, creating a subtle motion trail.  
+  - The skin has a natural sheen, with no color grading or filters applied.
+
+- **Final Prompt**  
+  “A woman in a blue string bikini applies body lotion to her glutes in a sunlit bathroom, captured on a 24 mm wide‑angle lens with slight motion blur and accidental framing. The scene includes a white bathtub and sheer curtain, shot at late morning, with natural overexposure on the upper frame and underexposure on the lower frame. Everything is fully sharp, no filters or post‑processing, raw and candid.”

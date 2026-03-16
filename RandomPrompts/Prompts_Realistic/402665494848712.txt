@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail and dark sunglasses, wearing an off‑shoulder white top and a faded denim jacket that drapes loosely over her shoulder. She’s mid‑gesture, holding a smartphone in both hands as if taking a selfie or recording a video, head turned slightly to the side, fingers curled around the device. Her hair is tied up in a messy, high ponytail with a few strands escaping, adding a casual, spontaneous feel.
+
+- **Motion & Focus**  
+  Slight motion blur on the subject’s hands and phone, indicating handheld instability. Everything remains sharp—no portrait‑mode blur, no depth‑of‑field isolation. The image has a raw, unprocessed look: no filters, no color grading, no post‑processing aesthetic. A mild overexposure in the upper right corner captures the ambient street light.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm), short focal length, all elements in focus. No bokeh; background is fully sharp. The composition is accidental—no rule‑of‑thirds intentionality, slight tilt and off‑center framing, partial crop that cuts off the left side of her jacket.
+
+- **Environment**  
+  Urban streetscape at dusk. Tall glass‑faced buildings line the street, a bright storefront on the left, a parked silver car behind the woman, and a few pedestrians in the background—one man in a black t-shirt walking away, another in a white shirt further back. The sky shows a soft twilight gradient, with a warm orange glow from a street lamp near the right edge. A faint haze suggests mild humidity or light wind.
+
+- **Lighting & Exposure**  
+  Natural ambient lighting with a slight overexposure in the upper right, capturing the street lamp’s glow. No studio lighting, no professional composition. The exposure is slightly high, giving a warm tone to the scene.
+
+- **Details & Imperfections**  
+  The denim jacket shows a subtle fade and a small frayed edge at the cuff. Her sunglasses have a thin black frame. The smartphone she holds is black, with a visible screen reflecting the street. A few stray hairs around her ponytail add realism. In the background, a glass window on a building reflects the sky, adding depth.
+
+- **Prompt Summary**  
+  “A candid, unposed photo of a woman in a denim jacket and sunglasses taking a selfie on a city street at dusk, captured with a wide‑angle lens, slight motion blur, all elements in focus, raw and unprocessed, with accidental framing and a soft overexposure in the upper right.”

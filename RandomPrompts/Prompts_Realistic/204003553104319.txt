@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair standing in a sunlit meadow, wearing a light beige short‑sleeved tee and high‑waisted light‑blue jeans. Her hands rest lightly at her sides, slightly angled to one side, as if she’s mid‑step or just paused after a walk. The camera captures her from a low, wide‑angle perspective that includes a portion of the grassy field and a line of trees in the background.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject appears unaware of the camera, frozen in a natural moment. Slight tilt and off‑center framing give an accidental, handheld feel. The shot has a raw, unprocessed look: no filters, no color grading, no post‑processing aesthetic. A mild overexposure is present because of the ambient daylight, giving a warm, golden hue that slightly bleeds into the background.
+
+- **Environment**  
+  Location: a sunlit meadow with tall, dry grass and a row of leafy trees on the horizon. Time of day: late afternoon, around the “golden hour” when the sun is low but still high enough to keep the background fully sharp. Weather: clear, breezy, with a light wind that ruffles the grass. The scene is fully in focus — no portrait‑mode blur or subject isolation.
+
+- **Lens & Technical**  
+  Short focal length (≈20 mm) wide‑angle lens. No bokeh; background is sharp from foreground to horizon. Everything is in focus, captured with a handheld camera that shows slight motion blur from the photographer’s instability. The exposure is slightly overexposed, letting the ambient light create a warm glow without any auto‑HDR or auto‑beauty enhancements.  
+
+- **Composition Notes**  
+  No rule‑of‑thirds intentionality — the framing is accidental and organic. The composition includes a partial crop of the subject’s lower legs, a slight tilt to the left, and a wide view that captures both the subject and the environment. The background trees and grass are fully sharp, giving depth without any depth‑of‑field blur.
+
+- **Final Prompt**  
+  “A young woman with long wavy brown hair, wearing a beige short‑sleeved tee and high‑waisted light‑blue jeans, stands in a sunlit meadow at late afternoon. Her hands rest lightly at her sides, slightly angled, as if mid‑step. The shot is captured on a 20 mm wide‑angle lens with slight handheld motion blur, all elements in focus from foreground to background. The scene includes tall dry grass and a line of trees on the horizon, fully sharp. The exposure is mildly overexposed, giving a warm golden hue. No filters or post‑processing; raw, candid, spontaneous capture.”

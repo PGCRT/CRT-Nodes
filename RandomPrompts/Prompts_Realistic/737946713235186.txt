@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman with dark, shoulder‑length hair, wearing a black fishnet bra and matching “LORIS” thong, sits on an old stone bench in a sunlit garden. Her left hand rests on the bench’s back, right hand on the side, knees bent, feet clad in gray socks and black sneakers. A small tattoo reading *“I am so beautiful”* is visible on her upper chest. She looks directly at the camera with a relaxed, confident expression.
+
+- **Candid, Unposed Feel**  
+  Capture the moment as if she’s mid‑pose, slightly off‑center, with a handheld shake that gives a subtle motion blur. No staged composition—just a spontaneous, natural freeze of her sitting, almost as though she just finished a walk or a coffee break.
+
+- **Environment**  
+  The bench sits in a lush, green garden at late afternoon. Tall pampas grass sways on the left, a cluster of leafy shrubs on the right, and a patch of sunlight hits the bench’s surface, creating a warm, slightly overexposed highlight. The background is fully sharp—no bokeh, no depth‑of‑field blur—so everything from the bench to the foliage is in focus.
+
+- **Time of Day & Lighting**  
+  Late afternoon sun casts a golden hue; the light hits the subject’s face and upper body with a slight overexposure on the highlights, giving a raw, unprocessed look. No auto‑HDR or beauty filters—just natural ambient light.
+
+- **Lens & Technical Settings**  
+  Use a wide‑angle lens (24–35 mm) with a short focal length to capture the full scene. Keep everything in focus—no portrait mode or subject isolation. Shoot at a slightly high angle to emphasize the bench and the subject’s posture.
+
+- **Composition Notes**  
+  Frame the shot so the bench runs horizontally across the middle of the frame, but keep it slightly tilted for a casual feel. The composition is accidental: the subject isn’t centered, the bench isn’t perfectly aligned, and the framing is partial—only a portion of the bench’s back is visible.  
+
+- **Post‑Processing**  
+  No filters or color grading. Keep the image raw, with natural colors and a slight overexposure on the highlights. If you’re using a camera, set your ISO to 200–400, aperture to f/4–f/5.6, shutter speed to 1/125–1/250 s, and focus on the subject’s eye.  
+
+- **Final Prompt**  
+  “A woman with dark shoulder‑length hair, in a black fishnet bra and ‘LORIS’ thong, sits on an old stone bench in a sunlit garden at late afternoon. Tall pampas grass leans to the left, leafy shrubs to the right, sunlight creates a warm overexposed highlight on the bench. Capture the moment with a wide‑angle lens, short focal length, everything fully sharp, slight motion blur from handheld shake, accidental off‑center framing, no filters—raw, candid, spontaneous.”

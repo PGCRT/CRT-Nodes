@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wet hair blowing in the wind, wearing a black-and-white triangle bikini with tie‑details, standing on a sunlit beach. She is mid‑step, one foot slightly ahead of the other, hands relaxed at her sides, a subtle smile on her face. Her left arm shows a floral tattoo that peeks above the bikini top. She wears a dark beaded bracelet on each wrist.
+
+- **Lighting & Exposure**  
+  Slight overexposure from bright midday sun; the exposure is uneven, with the foreground slightly brighter than the background. No auto‑beauty or filter processing—raw, natural look. The scene has a wide‑angle, handheld feel with minor motion blur from the camera’s instability.
+
+- **Environment**  
+  Specific real‑world location: a sandy beach with gentle waves breaking in the background. The time of day is late afternoon, with warm golden light casting soft shadows. Weather is clear, with a few scattered clouds overhead. In the far distance, a faint outline of a pier or dock is visible on the horizon.
+
+- **Lens & Technical**  
+  Short focal length (20‑35 mm) wide‑angle lens. Everything is in focus—no bokeh, no depth‑of‑field blur; background remains sharp. No rule‑of‑thirds intentionality—framing is accidental, slightly tilted and off‑center. The composition feels spontaneous, as if the subject was caught mid‑action.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑motion. Slight tilt and partial crop give an authentic, raw feel. Natural motion freeze or slight blur from handheld instability adds realism.
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, zero post‑processing aesthetic. Only natural auto‑HDR or auto‑beauty mode off. Keep the image raw, with a slight overexposure that gives it an energetic, lively vibe.

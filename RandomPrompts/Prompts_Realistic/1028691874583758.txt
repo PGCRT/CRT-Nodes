@@ -1,0 +1,29 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a sun‑kissed, slightly wet complexion, hair tied in a high ponytail that leans to one side, standing on a stone balcony overlooking the sea. She’s wearing a sheer white one‑piece swimsuit that clings to her in a subtle, glossy finish. Her hands are raised behind her head, fingers lightly gripping the back of her head, as if she just finished a quick rinse. Her gaze is upward and to the right, catching the light as she looks toward the horizon.
+
+- **Motion & Focus**  
+  Slight motion blur on the subject’s hands and hair, indicating a handheld shot captured at a fast shutter speed. Everything in the frame—from her skin to the balustrade—is fully sharp with no portrait‑mode depth of field blur. The lens is a short focal‑length wide‑angle (24–35 mm), giving a broad view of the scene and minimal background softness.
+
+- **Lighting & Exposure**  
+  Natural daylight, mid‑afternoon, with the sun high but slightly to the left, creating a warm, golden hue that casts soft shadows on her body and the balcony. A mild overexposure on the highlights gives a raw, unprocessed look; no auto‑HDR or color grading is applied. The exposure is balanced for ambient light, preserving detail in both foreground and background.
+
+- **Environment**  
+  The setting is a seaside terrace made of white stone, with a classical statue of a woman standing behind her on the left and a smaller bust on the right. The balustrade has ornate railings that curve slightly, and a small sea‑view is visible beyond the railing. The sky is a pale blue with a few wispy clouds; the sea is calm, with gentle waves visible in the distance.
+
+- **Composition & Framing**  
+  The shot is intentionally off‑center: the subject’s left side is slightly cut off by the frame edge, giving a candid, spontaneous feel. No rule‑of‑thirds is followed—framing is accidental, as if the photographer was in motion. The composition includes a slight tilt to the right, and the top of the frame captures the upper part of the statue’s head, adding depth.
+
+- **Technical Specs**  
+  - Lens: 35 mm, wide‑angle, f/4.0  
+  - Shutter speed: 1/125 s (slight motion blur)  
+  - Aperture: f/4.0 (background fully sharp)  
+  - ISO: 400 (mid‑range for natural contrast)  
+  - No bokeh, no depth‑of‑field blur; everything from foreground to background is in focus.
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, zero studio lighting. The image retains a raw, unprocessed look with only minimal white balance adjustment. Slight overexposure on the highlights gives an airy, natural feel.
+
+**Prompt Summary**  
+“Candid, wide‑angle shot of a woman in a sheer white swimsuit standing on a seaside stone balcony, mid‑afternoon sunlight, slight motion blur on her hands and hair, fully sharp background, accidental off‑center framing with a classical statue behind her, raw unprocessed look, 35 mm lens at f/4 and 1/125 s shutter speed.”

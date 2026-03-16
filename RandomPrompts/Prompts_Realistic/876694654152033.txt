@@ -1,0 +1,26 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair standing on a sunlit beach, wearing a black, long‑sleeved, high‑slit bodysuit that features a central zipper. She is mid‑turn, one hand on her hip, the other relaxed by her side, body slightly angled toward the camera, capturing a candid, unposed moment.
+
+- **Motion & Focus**  
+  Slight motion blur at the edges from handheld shake; everything in focus—no portrait‑mode depth of field. The image has a raw, auto‑HDR feel with no filters or color grading, a hint of overexposure from the ambient sunlight.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm), short focal length, no bokeh—background fully sharp. The shot is taken at a low angle to emphasize the subject’s silhouette against the rocks and sand.
+
+- **Environment**  
+  Specific real‑world location: a rocky beach with large boulders in the background, the sand textured and uneven. Time of day: late afternoon, golden hour light casting warm highlights and soft shadows. Weather: clear, breezy, with a slight wind blowing the hair.
+
+- **Composition & Framing**  
+  No rule‑of‑thirds intentionality—accidental framing with a slight tilt and off‑center crop. The composition feels spontaneous, as if the subject was caught mid‑action.
+
+- **Lighting**  
+  Zero studio lighting; natural sunlight creates a slight overexposure on the subject’s face and upper body, while the background remains fully sharp.
+
+- **Post‑Processing**  
+  Auto‑HDR or auto‑beauty mode off—raw, unprocessed look. No color grading or filters applied.  
+
+**Prompt for Text‑to‑Image Generation**
+
+> “A young woman with long wavy brown hair stands on a sunlit beach in a black long‑sleeved high‑slit bodysuit with a central zipper, mid‑turn with one hand on hip, captured with a wide‑angle lens at 30 mm. Slight motion blur from handheld shake, everything in focus, raw auto‑HDR look, no filters. The background shows large boulders and textured sand, late afternoon golden hour light, clear breezy weather. The shot is low‑angled, accidental framing with a slight tilt and off‑center crop, no rule‑of‑thirds, spontaneous candid moment, natural sunlight overexposure on the subject, fully sharp background.”

@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman with long, wet black hair standing in a modern bathroom, facing away from the camera. Her back is slightly arched, hips turned to the right, as if she’s about to perform a gentle stretch or a casual dance move. The shot captures her full body from head to toe, emphasizing the natural curve of her spine and the glossy texture of her skin.
+
+- **Motion & Focus**  
+  Slight motion blur on the lower half of the frame, indicating a handheld, spontaneous capture. Everything remains in focus—no bokeh or depth‑of‑field isolation. The image has an auto‑HDR feel but without heavy color grading; it looks raw and unprocessed.
+
+- **Lighting & Exposure**  
+  Natural daylight coming from a window on the right side of the room creates a soft, slightly overexposed highlight on the woman’s back. The exposure is a little uneven, giving the photo an authentic, candid vibe.
+
+- **Lens & Technical Settings**  
+  Wide‑angle lens (24‑35 mm), short focal length, no bokeh. All elements—from the subject to the background—are fully sharp. No portrait‑mode “subject isolation” is applied.
+
+- **Environment**  
+  A bright, contemporary bathroom with a white toilet on the left, a wooden vanity cabinet on the right, and a large mirror that reflects part of the scene. A framed picture of a lake hangs on the wall above the toilet. The time of day is late morning, with warm sunlight streaming through a window behind the mirror.
+
+- **Composition & Framing**  
+  The frame is slightly tilted, off‑center, and partially cropped at the top and bottom—no rule‑of‑thirds intentionality. The composition feels accidental, as if the photographer caught the moment by chance.
+
+- **Post‑Processing**  
+  No filters, no color grading, no post‑processing aesthetic. Only raw, natural details are preserved, with a hint of slight overexposure to enhance the ambient light.

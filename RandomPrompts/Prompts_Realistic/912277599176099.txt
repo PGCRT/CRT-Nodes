@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A young woman with a high ponytail, wearing a black crop‑top and light denim shorts, is mid‑pose on a busy city sidewalk. She’s holding a smartphone in her right hand, capturing a photo of herself or a friend, with a slight turn of the head toward the camera. Her left arm hangs naturally by her side, and a brown leather briefcase rests on the pavement beside her.
+
+- **Pose & Composition**  
+  Candid, unposed, spontaneous — the subject is unaware of the camera’s presence, caught in a natural, mid‑action moment. The frame is slightly tilted and off‑center, with a partial crop that gives an accidental, handheld feel. No rule‑of‑thirds intentionality; the composition is driven by the flow of the street and the subject’s movement.
+
+- **Motion & Focus**  
+  Slight motion blur from handheld instability, but everything remains fully sharp — no bokeh or depth‑of‑field blur. The background is in focus, preserving every detail of the scene.
+
+- **Lighting & Exposure**  
+  Raw, unprocessed look with auto‑HDR off. A mild overexposure on the bright sunlight side creates a warm, natural glow. No color grading or post‑processing aesthetic — just the raw ambience of the moment.
+
+- **Lens & Technical**  
+  Short focal length (≈20 mm) wide‑angle lens, no studio lighting. The shot is taken with a wide‑angle, handheld camera that captures a broad view of the environment. All elements are in focus: the subject, the street, the buildings, the graffiti, the passing pedestrians, and the briefcase.
+
+- **Environment**  
+  A bustling downtown sidewalk during mid‑afternoon. The time of day is late afternoon, with warm sunlight casting long shadows. The weather is clear, with a light breeze. The background includes a brick building with a green street sign, a traffic light, a passing man in a gray t-shirt, and a colorful graffiti mural on a nearby wall.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, off‑center framing, partial crop that cuts off part of the subject’s left shoulder. The image has a natural, unpolished feel with no rule‑of‑thirds intentionality. The background is fully sharp, giving an authentic, documentary vibe.
+
+- **Prompt Summary**  
+  “A young woman in a black crop‑top and denim shorts stands on a sunlit downtown sidewalk, mid‑photo with her phone, a brown leather briefcase beside her. The shot is candid, slightly tilted, handheld, wide‑angle, fully sharp, raw, unprocessed, with mild overexposure. The background shows a brick building, green street sign, traffic light, and graffiti mural. All elements in focus, no bokeh.”

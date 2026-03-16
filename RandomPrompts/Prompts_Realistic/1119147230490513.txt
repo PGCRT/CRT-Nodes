@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A young woman with dark hair tied back in a loose ponytail, wearing a black mesh crop‑top and high‑waisted denim jeans, is mid‑bite of a vanilla ice cream cone. She holds the cone with her right hand near her mouth, a subtle smile on her face, while her left hand rests on the pocket of her jeans. A silver bracelet adorns her right wrist, and a black leather handbag hangs from her left shoulder.
+
+- **Pose & Movement**  
+  Slight motion blur at the tip of the ice cream cone, indicating a natural, handheld snap. Her head is slightly tilted to the left, and her body is off‑center in the frame—roughly two‑thirdths into the right side of the shot. The composition is accidental, with no rule‑of‑thirds intentionality; the framing is a wide‑angle, short‑focal‑length capture that keeps the background fully sharp.
+
+- **Lighting & Exposure**  
+  Raw, unprocessed look—no auto‑HDR or beauty filters. The exposure is mildly overexposed on the subject’s face, giving a warm, natural daylight feel. The ambient light suggests late afternoon, with soft, diffused sunlight coming from the left, creating gentle highlights on her cheek and the ice cream.
+
+- **Environment**  
+  The scene takes place on a bustling city street, with a background crowd of blurred pedestrians in casual attire. A few indistinct figures are visible behind her, adding depth without distracting. The street is paved, with a faint reflection of the sun on the asphalt. The time of day is roughly 5 pm, as indicated by the warm, golden hue and long shadows.
+
+- **Lens & Technical**  
+  Use a wide‑angle lens (e.g., 24‑35 mm) with a short focal length to capture a broad view of the subject and environment. All elements—subject, ice cream, background—are in focus; no portrait‑mode depth‑of‑field blur is applied. The image has slight motion blur from handheld instability, giving it a candid, spontaneous feel.
+
+- **Details & Imperfections**  
+  - A faint tilt to the camera, making the horizon line slightly uneven.  
+  - Partial crop on the left side of the frame, cutting off part of the background crowd.  
+  - Slight overexposure on the subject’s face, with a subtle halo effect.  
+  - No post‑processing color grading; the colors remain natural—cool blues in the jeans, warm whites in the ice cream, and a hint of green from the street.
+
+- **Final Prompt**  
+  “A young woman with dark ponytail hair, wearing a black mesh crop‑top and high‑waisted denim jeans, mid‑bite of a vanilla ice cream cone, holding it with her right hand near her mouth while her left hand rests on her pocket. She wears a silver bracelet on her right wrist and a black leather handbag on her left shoulder. Slight motion blur on the ice cream tip, head slightly tilted left, body off‑center to the right. Raw, unprocessed exposure with mild overexposure on the face. Background is a bustling city street with blurred pedestrians, late afternoon sunlight from the left. Wide‑angle short focal length lens, all elements in focus, slight handheld tilt and partial crop.”

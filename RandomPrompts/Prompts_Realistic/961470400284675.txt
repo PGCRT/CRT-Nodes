@@ -1,0 +1,28 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with shoulder‑length brown hair, wearing a pink bunny‑ear headband and white lace underwear, sitting on a neatly made bed. Her body is slightly turned toward the camera, knees bent, hands resting on the mattress, and her face is mid‑expression—mouth open as if she’s about to speak or laugh. The pose feels spontaneous, as though captured in a natural, unposed moment.
+
+- **Lighting & Exposure**  
+  Natural daylight coming from a window behind the bed creates a soft, slightly overexposed highlight on her shoulders and chest. The exposure is not perfectly balanced—there’s a subtle warmth to the scene with a faint haze that suggests an auto‑HDR effect turned off for a raw, unprocessed look. No color grading or filters are applied; the image retains the ambient light’s slight imperfections.
+
+- **Camera & Lens Settings**  
+  - Lens: 24‑mm wide‑angle (short focal length) for a broad field of view.  
+  - Focal depth: everything from the subject to the background is fully sharp—no bokeh or portrait‑mode isolation.  
+  - Shutter speed: 1/60 s, giving a slight motion blur on the subject’s skin and hair, indicating handheld instability.  
+  - Aperture: f/4.5, allowing enough light for a bright, natural tone.
+
+- **Composition & Framing**  
+  The frame is intentionally off‑center; the subject’s left side leans slightly to the right of the center, creating a casual, candid feel. The composition does not follow the rule of thirds—instead it’s a spontaneous, accidental crop that includes part of the bed’s headboard, a white lampshade, and a glimpse of a wooden nightstand. The background is fully in focus, with no depth‑of‑field blur.
+
+- **Environment & Ambience**  
+  Location: A bright, airy bedroom with a black metal bed frame, white pillows, and a pink pillow tucked behind the subject. A white lampshade sits on a wooden nightstand to the right; a small potted plant is visible in the far corner. The time of day is mid‑afternoon, with warm sunlight streaming through a window directly behind the bed, casting soft shadows. The weather outside is clear, adding to the bright, natural illumination.
+
+- **Technical Details**  
+  - No bokeh or portrait mode—everything from foreground to background stays sharp.  
+  - Slight tilt in the camera’s horizon adds to the candid feel.  
+  - Slight motion blur on the subject’s hair and skin suggests a handheld shot captured at a moderate shutter speed.  
+  - No post‑processing filters or auto‑beauty mode—just raw, unprocessed imagery.
+
+- **Prompt Summary**  
+  “A young woman with shoulder‑length brown hair, wearing a pink bunny‑ear headband and white lace underwear, sits on a made bed in a bright bedroom. Natural daylight from behind the bed creates a soft overexposure on her shoulders. Shot on a 24‑mm wide‑angle lens at f/4.5 and 1/60 s, the image has slight motion blur and an off‑center, accidental crop that includes the bed’s headboard, a white lampshade, and a wooden nightstand. The background is fully sharp, no bokeh, no filters—raw, candid, spontaneous photography.”

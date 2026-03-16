@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark, wavy hair standing mid‑pose in a natural desert setting. She is wearing a black lace bra and matching lace panties, plus fishnet stockings that extend to the knee. Her hands are raised behind her head, slightly tilting her face upward as if she’s just finished a stretch or a dance move. The pose should feel spontaneous, as if captured mid‑action, with a hint of motion blur on her arms and hair to emphasize natural movement.
+
+- **Clothing & Accessories**  
+  Black lace lingerie with delicate floral patterns, thin adjustable straps, and a small bow at the side of the bra. The fishnet stockings have a subtle texture that catches the light. A black leather garter is attached to the stocking on her right thigh, adding a small detail that catches the eye.
+
+- **Environment**  
+  The scene takes place in a rocky desert area with large, smooth boulders scattered around. Sparse green shrubs are growing between the rocks, giving a touch of life to the otherwise arid landscape. The sky is bright blue with fluffy white clouds, indicating mid‑afternoon. The lighting is natural, slightly overexposed on the upper part of the frame, creating a warm, golden hue that enhances the skin tones and the lace texture.
+
+- **Time of Day & Weather**  
+  Mid‑afternoon, around 3 pm, when the sun is high but not directly overhead. The weather is clear with a few scattered clouds, giving a soft, diffused light that’s slightly harsh on the skin but warm on the lace. The ambient light creates subtle highlights on the woman’s shoulders and the top of her head.
+
+- **Lens & Technical**  
+  Use a wide‑angle lens (e.g., 24 mm or 35 mm) to capture a broad view of the scene, keeping everything in focus from foreground to background. The focal length should be short enough that the background rocks and shrubs remain sharp, but not so short that the frame feels cramped. Shoot with a handheld camera, letting slight instability create a natural motion blur on the subject’s hair and arms. Avoid any post‑processing filters or color grading—keep the image raw, with an auto‑HDR feel but no artificial tone mapping.
+
+- **Composition & Framing**  
+  Compose the shot so that the woman occupies roughly the central third of the frame, but let her slightly off‑center to give a casual, candid feel. The camera should be at eye level, with the lens tilted a little upward to capture her face and the sky. Keep the background fully sharp—no bokeh or depth‑of‑field blur. The framing should feel accidental, as if the photographer caught the moment by chance.
+
+- **Lighting & Exposure**  
+  Shoot with a wide aperture but keep the depth of field shallow enough that everything—from the woman to the rocks—remains in focus. Use a slightly overexposed setting to let the sunlight bloom on her skin and the lace, giving a warm, natural look. Avoid any color grading or filters; the image should look like a raw, unprocessed photograph.
+
+- **Final Prompt**  
+  “A young woman with long dark wavy hair, wearing black lace lingerie and fishnet stockings with a leather garter, poses spontaneously in a rocky desert setting at mid‑afternoon. The scene is captured with a wide‑angle lens (24–35 mm) at eye level, handheld, producing slight motion blur on her hair and arms while keeping the background rocks and shrubs fully sharp. The lighting is natural, slightly overexposed, creating a warm golden hue. Compose the shot so that she occupies the central third of the frame but is slightly off‑center, with an accidental, candid feel. No filters or post‑processing—raw, auto‑HDR look.”

@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy light‑brown hair, wearing a soft pink V‑neck T‑shirt and a gold medallion necklace. She is captured mid‑smile, slightly turned toward the camera, as if she just finished a conversation or is about to start one. Her left hand is partially out of frame, giving an informal, spontaneous feel.
+
+- **Lighting & Exposure**  
+  Natural daylight from a western window, late‑afternoon (≈ 5 pm). The light is warm but slightly overexposed on the face, with a subtle halo around her hair. No auto‑beauty or filter enhancement—raw, unprocessed look. Slight handheld shake gives a natural motion blur.
+
+- **Environment**  
+  A cozy living room: a tall wooden bookshelf filled with colorful spines, a small potted plant perched on the top shelf, and a framed family photo hanging on the wall to the right. A beige sofa sits behind her, partially visible. The scene is fully sharp—no bokeh; everything in focus—from foreground to background.
+
+- **Lens & Technical**  
+  24 mm wide‑angle lens (short focal length). No depth‑of‑field blur; background remains crisp. Capture in a single exposure with a wide‑angle prime or zoom, handheld, with slight tilt and off‑center framing. The composition is accidental: the subject is slightly left‑aligned, the top of the bookshelf cuts off at the upper edge, and the bottom of the frame cuts through the sofa cushion.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Slight tilt and partial crop create a natural, informal feel. No rule‑of‑thirds intentionality; framing is accidental but balanced. The image has a raw, in‑camera aesthetic with no post‑processing color grading.
+
+- **Final Prompt**  
+  “A young woman with long wavy light‑brown hair, wearing a pink V‑neck T‑shirt and a gold medallion necklace, captured mid‑smile in a cozy living room. Behind her is a tall wooden bookshelf full of colorful books, a small potted plant on the top shelf, and a framed family photo on the wall. A beige sofa sits to her right. The scene is lit by warm late‑afternoon daylight from a western window, slightly overexposed on the face. Shot with a 24 mm wide‑angle lens, handheld, slight tilt and partial crop, everything in focus—no bokeh, no filters, raw aesthetic.”

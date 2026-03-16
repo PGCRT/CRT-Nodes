@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with shoulder‑length, slightly frizzy light‑brown hair, kneeling on a dark‑blue quilted bedspread in a dimly lit bedroom. She’s wearing thin black bikini bottoms; her torso is bare, and she’s leaning forward with one hand on the bed and the other near her thigh, as if mid‑movement. Her face is turned toward the camera but not directly at it—her gaze is slightly off‑center, giving a candid, spontaneous feel.
+
+- **Lighting & Exposure**  
+  Natural ambient light from a window on the left side of the room creates a soft, warm glow on her skin. The exposure is mildly overexposed, with a slight haze that gives a raw, unprocessed look. No auto‑HDR or beauty filters—just a straightforward capture.
+
+- **Camera Settings**  
+  - Lens: 24 mm wide‑angle, short focal length, handheld.  
+  - Focal depth: everything from the subject to the background is fully sharp; no bokeh.  
+  - Shutter speed: 1/60 s, producing a subtle motion blur on the subject’s knees and hands.  
+  - ISO: 400–600 for natural grain.  
+
+- **Composition & Framing**  
+  The frame is intentionally off‑center; the subject’s left side cuts close to the left edge, and her right hand rests near the bottom right corner. The shot has a slight tilt (3°) and a partial crop that crops out part of the bed’s quilted pattern on the lower right. No rule‑of‑thirds—just a spontaneous, casual composition.
+
+- **Background & Environment**  
+  Behind her is a simple wooden nightstand with a glass bottle, a small jar, and a red fruit (maybe a tomato) on top. The wall is a muted gray‑beige, and a faint outline of a window can be seen on the left. The time of day is late afternoon, giving a warm, slightly golden hue. The room is uncluttered, but the presence of everyday objects gives a real‑world feel.
+
+- **Details & Imperfections**  
+  Slight motion blur around the knees and hands, a tiny smudge on her left shoulder, and a faint dust particle in the corner. Her hair has a slight frizz and a small strand falls over her right ear. The skin tone is natural, with a subtle warmth that suggests an auto‑beauty mode turned off.
+
+- **Final Prompt**  
+  “A candid, handheld shot of a young woman kneeling on a dark‑blue quilted bed in a dimly lit bedroom, wearing black bikini bottoms, with her left hand on the bed and right hand near her thigh. Her shoulder‑length light‑brown hair is slightly frizzy, a strand falling over her ear. Natural ambient late‑afternoon light comes from a window on the left, creating a soft warm glow and mild overexposure. 24 mm wide‑angle lens, 1/60 s shutter speed, ISO 500, everything in focus with slight motion blur on the knees and hands. The frame is off‑center with a 3° tilt, partial crop on the lower right. Background shows a wooden nightstand with a glass bottle, jar, and red fruit. Capture raw, unprocessed, no filters—just a spontaneous, real‑life moment.”

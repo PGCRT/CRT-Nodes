@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark brown hair, wearing a purple halter‑style bikini, captured mid‑turn on a white tufted sofa. She’s in a dynamic, slightly off‑center pose—kneeling with her back to the camera, one hand resting on the sofa and the other near her thigh, feet bare and natural. Her gaze is directed toward the camera but not directly at it, giving a candid, “mid‑action” feel.
+
+- **Lighting & Exposure**  
+  Natural daylight from a western window, mid‑afternoon, soft but warm. Slight overexposure on the highlights to give a raw, unprocessed look. No auto‑HDR or beauty filters—just a straightforward exposure that lets the ambient light carry the image.
+
+- **Lens & Technical Settings**  
+  24 mm wide‑angle lens (short focal length), f/3.5 aperture, 1/60 s shutter speed, handheld. Slight motion blur from the subject’s movement and the camera’s instability. Everything in focus—no bokeh or depth‑of‑field isolation; background is fully sharp.
+
+- **Composition & Framing**  
+  No rule‑of‑thirds intentionality. The frame is slightly tilted, off‑center, with a partial crop that cuts off the top of the sofa’s tuft and the left side of the woman’s hair. The composition feels spontaneous, as if the photographer caught her in an unplanned moment.
+
+- **Environment**  
+  A bright, airy living room with a white, button‑tufted sofa against a light‑colored wall. The time of day is late afternoon, with warm sunlight casting soft shadows. The weather is clear, with no wind, but the ambient light gives a slight haze that adds to the raw feel.
+
+- **Details & Imperfections**  
+  Capture the natural texture of her skin and the subtle sheen on her bikini straps. Include slight tilt and a partial crop that makes the image feel candid. The background sofa tuft and wall are fully sharp, reinforcing the “no portrait mode” rule. The overall tone is natural, unprocessed, and realistic—like a genuine snapshot taken in a real setting.
+
+**Prompt Summary (structured)**  
+`Candid photography of a woman in a purple bikini kneeling on a white tufted sofa, mid‑turn pose, natural daylight from a western window, mid‑afternoon, slight overexposure, 24 mm wide‑angle lens, f/3.5, 1/60 s shutter speed, handheld motion blur, off‑center framing with slight tilt, partial crop, fully sharp background, raw unprocessed look.`

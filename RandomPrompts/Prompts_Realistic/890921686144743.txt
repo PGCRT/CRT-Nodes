@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair, wearing a black lace halter‑top and matching high‑cut bottoms, standing mid‑step in a lush tropical setting. Her face is turned slightly toward the camera, mouth open in a joyful laugh, eyes closed as if she’s just caught a moment of pure happiness. She’s positioned off‑center, with her left foot forward, creating a casual, spontaneous feel.
+
+- **Motion & Focus**  
+  Slight motion blur on the subject’s hands and feet to suggest movement, while the background remains fully sharp—no bokeh, no portrait‑mode isolation. The entire frame is in focus, captured with a wide‑angle lens (24–35 mm).
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle, mid‑afternoon sun; slight overexposure on the subject’s face to give a warm, raw look. No auto‑HDR or beauty filters—just a straightforward, unprocessed capture. The lighting creates soft highlights on her skin and subtle shadows in the foliage.
+
+- **Environment**  
+  A tropical jungle clearing with a small waterfall in the background. Large, broad‑leafed plants frame the left side of the frame, while bamboo stalks rise on the right. The scene is bathed in bright, diffused light with a slight haze from moisture in the air. The time of day is late morning, around 10:30 AM, giving a warm golden tone.
+
+- **Lens & Technical**  
+  Short focal length (35 mm), wide‑angle, handheld shot with a slightly tilted camera to enhance candid feel. No rule‑of‑thirds intentionality—framing is accidental, with the subject’s head near the upper third but not exactly on it. All elements—subject, foliage, waterfall—are in focus.
+
+- **Composition Notes**  
+  The composition is imperfect: the subject’s left hand hangs slightly below the center line, and the top of the frame cuts off a bit of the waterfall, giving a “mid‑action” vibe. The background foliage is fully sharp, with no depth‑of‑field blur. The overall tone is natural, unedited, and raw.
+
+- **Prompt Summary**  
+  *“A young woman in black lace lingerie laughs mid‑step in a tropical clearing with a waterfall behind her, captured on a 35 mm wide‑angle lens at late morning. Slight motion blur on her hands and feet, full sharpness throughout, natural overexposure, no filters—raw, candid, spontaneous, imperfect framing.”*

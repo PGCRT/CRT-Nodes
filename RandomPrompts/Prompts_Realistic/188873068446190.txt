@@ -1,0 +1,24 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair walking confidently down a city sidewalk. She is nude, mid‑step, with one hand slightly bent at the wrist and the other relaxed by her side. Her face is turned toward the camera but not directly at it— a subtle, candid angle that gives a natural “in‑motion” feel.  
+
+- **Motion & Focus**  
+  Slight motion blur on the subject’s legs and feet to suggest movement, while the rest of the frame stays fully sharp. No bokeh; everything from foreground to background is in focus, captured with a wide‑angle lens (24–35 mm).  
+
+- **Lighting & Exposure**  
+  Raw, unprocessed look: no auto‑HDR or beauty filters. The exposure is mildly overexposed on the subject’s upper body, letting the ambient daylight bleed through the windows of a nearby storefront. The scene has a soft, natural contrast with a slight warm tint from the late‑afternoon sun.  
+
+- **Environment**  
+  A bustling urban street in an older downtown area. Brick buildings line the sidewalk; a shop window on the right shows a lamp and decorative items. A white car is parked on the left, a pedestrian walks away in the background, and a red awning adds a pop of color. The time of day is late afternoon, with the sun low enough to cast long shadows across the pavement.  
+
+- **Lens & Technical**  
+  Short focal length (30 mm), wide‑angle, handheld shot. No rule‑of‑thirds intentionality— the composition is accidental, slightly off‑center, with a slight tilt that gives a spontaneous feel. All elements— subject, background, foreground—are in focus, no portrait‑mode isolation.  
+
+- **Details & Imperfections**  
+  The image has a slight tilt and partial crop that give it a raw, candid vibe. The subject’s skin shows natural texture, with faint imperfections and subtle moisture on her chest from the ambient humidity. The background includes a street lamp, a red sign, and a glimpse of a green tree further down the block.  
+
+- **Prompt for Text‑to‑Image Generation**  
+  “A young woman with long wavy brown hair walking nude on an urban sidewalk, captured with a 30 mm wide‑angle lens. She is mid‑step, slightly tilted, with one hand bent at the wrist and the other relaxed by her side. Slight motion blur on her legs, full sharpness throughout the frame. Raw, unprocessed look with mild overexposure on the subject’s upper body. Background shows brick buildings, a shop window with a lamp, a parked white car, a red awning, and a pedestrian walking away. Late‑afternoon sunlight casts long shadows. All elements in focus, no bokeh, no filters.”  
+
+Provide only the structured prompt.

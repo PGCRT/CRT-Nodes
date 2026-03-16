@@ -1,0 +1,21 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, athletic woman with long, sun‑kissed blonde hair standing on a concrete rooftop at golden hour. She wears a light‑washed denim jacket with distressed seams and a black Calvin Klein bikini bottom; her hands rest lightly at her sides, slightly angled to one side. Her face is turned toward the camera but not directly aimed—mid‑expression, as if she’s just finished a workout or is about to step into a new rhythm.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. Slight tilt and off‑center framing; partial crop that gives a raw, handheld feel. No rule‑of‑thirds intentionality—everything is framed by the natural lines of the rooftop and the city behind.
+
+- **Environment**  
+  Specific real‑world location: an urban rooftop with a white railing, a low‑rise residential building in the background, and a small patch of green lawn on the side. Time of day: late afternoon, ambient light warm and soft, slight overexposure on the subject’s face to emphasize the golden hue. Weather: clear, no wind, but a faint breeze is suggested by the slight motion blur on the hair.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm), wide‑angle lens. No bokeh—background fully sharp, everything in focus. No portrait mode or subject isolation; depth of field is uniform. Slight motion blur from handheld instability, giving a natural, live‑capture feel. Auto‑HDR or auto‑beauty mode off — raw, unprocessed look. No filters, no color grading, no post‑processing aesthetic.
+
+- **Composition Notes**  
+  The composition is accidental: the subject’s left side is slightly cut off by the frame edge, creating a dynamic, imperfect crop. The railing runs horizontally across the mid‑background, but it’s not perfectly centered. The lighting comes from the upper right, casting soft shadows on her torso and face.
+
+- **Prompt for Text‑to‑Image Generation**  
+  “A tall, athletic woman with long, sun‑kissed blonde hair standing on a concrete rooftop at golden hour, wearing a light‑washed denim jacket with distressed seams and a black Calvin Klein bikini bottom; hands lightly at her sides, slightly angled. Candid, unposed, spontaneous capture—slight tilt and off‑center framing, partial crop. Background: urban rooftop with white railing, low‑rise residential building, small patch of green lawn. Late afternoon ambient light, slight overexposure on subject’s face. 24‑35 mm wide‑angle lens, everything in focus, no bokeh, slight motion blur from handheld instability. Raw, unprocessed look, no filters or color grading.”
+
+Provide only the structured prompt.

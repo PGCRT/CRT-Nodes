@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy light‑brown hair, wearing a plain white tank top and matching shorts, captured mid‑movement as she leans forward slightly, one arm extended outward, her face turned toward the camera with a natural, unposed smile.  
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action; slight tilt and off‑center framing giving an accidental, handheld feel. No rule‑of‑thirds intentionality.  
+
+- **Environment**  
+  Specific real‑world location: a sunlit park with tall pine trees in the background, grassy field, scattered fallen leaves. Time of day: late morning, soft golden light. Weather: clear, slightly humid, ambient light with mild overexposure.  
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm), wide‑angle lens. No bokeh — background fully sharp, everything in focus. No portrait‑mode subject isolation; no depth‑of‑field blur. Slight motion blur from handheld instability. Auto‑HDR or auto‑beauty mode off. No filters, no color grading, no post‑processing aesthetic.  
+
+- **Composition Notes**  
+  Capture a partial crop that cuts off the left side of her torso and right side of her arm, emphasizing spontaneity. Keep the background trees and grass in full focus.  
+
+- **Lighting & Exposure**  
+  Natural lighting from the west, creating soft shadows on her face and body. Slight overexposure to keep the scene bright and airy.  
+
+- **Final Prompt**  
+  “A young woman with long wavy light‑brown hair, wearing a plain white tank top and matching shorts, captured mid‑movement as she leans forward slightly with one arm extended outward, her face turned toward the camera with a natural smile. Candid, unposed, spontaneous — slight tilt and off‑center framing giving an accidental handheld feel. The scene is set in a sunlit park with tall pine trees in the background, grassy field, scattered fallen leaves; late morning soft golden light, clear weather, mild overexposure. Shot on a 24‑35 mm wide‑angle lens, everything in focus, no bokeh, slight motion blur from handheld instability, auto‑HDR off, no filters or color grading. Partial crop cutting off the left side of her torso and right side of her arm. Natural lighting from the west creating soft shadows on her face and body.”

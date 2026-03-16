@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, sun‑kissed hair sitting casually on a marble bathroom countertop. She’s wearing an olive‑green sports bra and matching shorts, one leg bent and the other extended, her left hand resting on the counter and her right hand near her thigh. Her head is turned slightly to the side, eyes looking upward toward the mirror, as if she’re about to check her reflection or is caught mid‑thought. A subtle motion blur at the edges of her hair conveys a natural, handheld feel.
+
+- **Lighting & Exposure**  
+  Natural daylight coming from a tall, wooden‑framed window on the left, creating a soft overexposure on the left side of the frame and a gentle gradient of warm tones across the scene. Slight ambient glare on the mirror’s surface adds realism. No auto‑beauty or filter processing—just raw, unedited light.
+
+- **Environment**  
+  A bright, retro‑style bathroom with green square tiles, vintage wooden cabinetry, and a large mirrored cabinet above the sink. The countertop is white marble, the cabinets have brass handles, and a small silver faucet sits next to the woman’s left hand. A decorative gold‑framed mirror hangs on the wall behind her, reflecting part of the window and the outside scenery. The time of day is mid‑afternoon, with warm, slightly harsh sunlight creating strong contrast and subtle shadows.
+
+- **Lens & Technical**  
+  24‑mm wide‑angle lens, short focal length, handheld. Everything is in focus from foreground to background—no bokeh or depth‑of‑field blur. The composition is accidental: the frame is slightly tilted, the subject is off‑center, and the crop is partial, giving a candid, spontaneous feel. No rule‑of‑thirds intentionality; the framing is natural and imperfect.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Slight tilt and off‑center framing create a raw, documentary vibe. The image has a slight motion blur on the hair and hand, indicating a handheld shot captured at a fast shutter speed but with natural instability.
+
+- **Post‑Processing**  
+  No filters, no color grading, no auto‑beauty mode—just a straight capture with auto‑HDR off. A tiny hint of overexposure on the left side from the window light gives an authentic, unpolished look.
+
+**Prompt Summary**  
+> “A young woman in olive‑green sports wear sits casually on a marble bathroom counter, one leg bent, hand resting on the surface, head turned upward toward a vintage gold‑framed mirror. Natural daylight streams through a tall wooden window on the left, creating soft overexposure and warm gradients. The scene is set in a retro green‑tile bathroom with wooden cabinetry and a silver faucet. Shot on a 24‑mm wide‑angle lens, everything is fully sharp, the frame is slightly tilted and off‑center, capturing a candid, spontaneous moment with slight motion blur on the hair. No filters or auto‑beauty—just raw, handheld realism.”

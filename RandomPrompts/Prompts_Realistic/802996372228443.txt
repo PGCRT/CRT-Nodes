@@ -1,0 +1,21 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with shoulder‑length, wavy brown hair standing in a sunlit meadow. She’s bare‑chested, wearing light‑wash denim shorts that sit high on her hips. Her left arm hangs naturally by her side, slightly bent at the elbow; her right arm is partially out of frame, giving a casual, mid‑movement feel. She faces the camera with a relaxed, unposed expression, eyes gently focused ahead, lips slightly parted.
+
+- **Lighting & Exposure**  
+  Warm, golden hour light from the west casts soft highlights on her shoulders and chest. Slight overexposure in the upper right corner gives a raw, natural look. No auto‑beauty or filter enhancement—just the ambient daylight with a hint of haze. The exposure is slightly uneven, with the background a bit brighter than the foreground.
+
+- **Camera & Lens Settings**  
+  35 mm wide‑angle lens, f/4.0 aperture, 1/125 s shutter speed, ISO 400. Handheld shot with slight instability, producing a subtle motion blur on the subject’s right arm and background. Everything remains in focus—no portrait‑mode depth of field blur. The composition is accidental: the subject is slightly off‑center, the frame tilts a little to the left, and the top of her head cuts off near the upper edge.
+
+- **Environment**  
+  A dry, grassy field with scattered shrubs in the background. The time of day is late afternoon, around sunset, giving a warm, golden tint. The weather is clear with a light breeze, leaving faint motion trails on the grass. A small dirt path runs along the left side of the frame, partially out of view.
+
+- **Details & Imperfections**  
+  Slight tilt and partial crop: the left side of her torso is cut off by the frame edge. The background is fully sharp—no bokeh. Her shirtless upper body shows natural imperfections: a small mole on her left breast, a faint crease in her shorts’ seam. Her hair has a slight frizz at the ends, and a tiny earring glints on her left ear.
+
+- **Prompt for Text‑to‑Image Generation**  
+  “A young woman with shoulder‑length wavy brown hair, bare‑chested and wearing high‑waist light‑wash denim shorts, stands in a sunlit meadow at late afternoon. She faces the camera with a relaxed expression, left arm hanging by her side, right arm partially out of frame. Warm golden hour light hits her from the west, creating slight overexposure in the upper right. Shot on a 35 mm wide‑angle lens at f/4.0, 1/125 s, ISO 400, handheld with subtle motion blur. The background is a dry grassy field with scattered shrubs and a dirt path along the left edge. Everything is in focus, no bokeh. The frame is slightly tilted, the subject off‑center, top of her head near the upper edge, creating a raw, candid, unposed look.”
+
+Provide only the structured prompt.

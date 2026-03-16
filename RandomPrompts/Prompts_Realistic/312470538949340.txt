@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, slender woman with long brown hair, wearing a gray thong and gray ankle socks, standing confidently with hands on hips. Her body is slightly angled toward the camera, left leg forward, creating a subtle dynamic line. She’s mid‑step, as if just having taken a pace or about to shift weight—capturing a fleeting, spontaneous moment.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. Slight motion blur on the legs and hands to hint at movement. No filters, no color grading, no post‑processing aesthetic. A tiny overexposure in the upper torso to keep the raw feel. The frame is slightly tilted, off‑center, with a partial crop that cuts off a bit of the background, giving an accidental, handheld vibe.
+
+- **Environment**  
+  Location: A bright, minimalist dining area in a modern home. Light‑colored wooden table and four matching chairs sit on a beige rug. A plain white wall behind, a small framed picture hanging high. The time of day is late morning; soft natural daylight comes from the left, casting gentle shadows across the floor. Ambient sound is faint, as if the camera is listening to the quiet hum of a house.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm), wide‑angle lens. Everything in focus — background fully sharp, no bokeh. No portrait mode or subject isolation. Slight overexposure or underexposure depending on ambient light; the exposure is slightly warm, giving a natural, unprocessed look. Auto‑HDR or auto‑beauty mode off. The image has a raw, handheld feel with slight tilt and partial crop.
+
+- **Composition Notes**  
+  No rule‑of‑thirds intentionality — accidental framing. The subject occupies the central‑right portion of the frame, with the table and chairs forming a subtle geometric backdrop. The bottom of the frame cuts off a bit of the rug, adding to the candid feel. The top of the frame captures the upper torso and head, leaving a small margin above the head for context.
+
+- **Final Prompt**  
+  “A tall woman in a gray thong and gray socks stands confidently with hands on hips, mid‑step, in a bright minimalist dining room with wooden table and chairs on a beige rug. Late morning natural light from the left casts soft shadows. Capture with a 24‑35 mm wide‑angle lens, everything in focus, slight motion blur on the legs, tiny overexposure on the torso, handheld tilt, partial crop, no filters or auto‑HDR. The scene feels spontaneous and raw, as if caught mid‑action.”

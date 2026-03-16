@@ -1,0 +1,28 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair standing mid‑step on a wooden park bench, wearing a black lace bra and matching lace panties. Her hands rest lightly at her sides, slightly tilted to the left, capturing an informal, spontaneous moment. She’s smiling softly, eyes bright, with a natural, unposed expression as if she’s just finished a conversation or is about to start one.
+
+- **Lighting & Exposure**  
+  Warm, golden hour sunlight from the east casts a slight overexposure on her face and upper body, creating a soft glow. The exposure is uneven—her torso is slightly brighter than the background—giving a raw, unprocessed look. No auto‑beauty or filter enhancement; just natural ambient light with a hint of handheld instability.
+
+- **Camera & Lens Settings**  
+  - Lens: 24mm wide‑angle (short focal length) for a broad field of view.  
+  - Aperture: f/5.6 – moderate depth of field, keeping foreground and background mostly sharp.  
+  - Shutter speed: 1/125 s – enough to freeze the motion but leave a subtle blur from slight handheld shake.  
+  - ISO: 400 – balanced for the golden hour lighting.  
+
+- **Composition & Framing**  
+  The shot is intentionally off‑center, with the subject’s left side cutting close to the frame edge. The bench runs diagonally across the lower third of the image, creating a dynamic line that guides the eye. No rule‑of‑thirds intentionality—this is a candid, accidental framing. The background shows a park with tall trees, scattered fallen leaves, and a paved pathway; a few distant cars are visible on the road, adding depth.
+
+- **Environment & Time**  
+  Location: A sunny, late‑afternoon park in a suburban city. The time of day is early evening (around 5 pm), giving warm, soft light. Weather is clear with a light breeze; the trees have a few fallen leaves on the ground, adding texture. The background is fully sharp—no bokeh or depth‑of‑field blur.
+
+- **Technical Details**  
+  - No portrait mode or subject isolation.  
+  - Slight motion blur on the woman’s hands and the bench, indicating handheld shake.  
+  - All elements (subject, bench, trees, pathway) are in focus.  
+  - Raw, unprocessed look—no color grading or filters.  
+
+- **Final Prompt**  
+  “A young woman with long wavy brown hair stands mid‑step on a wooden park bench, wearing a black lace bra and matching lace panties. Her hands rest lightly at her sides, slightly tilted to the left, capturing an informal, spontaneous moment. Warm golden hour sunlight from the east casts a slight overexposure on her face and upper body, creating a soft glow. The exposure is uneven—her torso is slightly brighter than the background—giving a raw, unprocessed look. Camera: 24mm wide‑angle, f/5.6, 1/125 s, ISO 400. Composition: off‑center, diagonal bench line across the lower third, accidental framing. Background: park with tall trees, scattered fallen leaves, paved pathway; distant cars on the road. All elements in focus, slight motion blur from handheld shake. Raw, unprocessed, no filters.”

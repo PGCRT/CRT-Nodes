@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail, wearing a gray ribbed tank top and an olive‑green cardium draped over her shoulders, standing on a city sidewalk. She is mid‑smile, head tilted slightly to the right, left hand in her pocket, right arm relaxed by her side. Her left foot is forward, toes pointing toward the camera, giving a casual, spontaneous feel.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. Slight tilt and off‑center framing; partial crop that cuts off the left edge of her jacket, creating a dynamic, handheld look. No rule‑of‑thirds intentionality — accidental composition.
+
+- **Environment**  
+  Specific real‑world location: a bustling downtown street in New York City, with brick storefronts in red, green, and yellow facades lining the block. A traffic light hangs above the intersection; a blue “Chapman” awning is visible on the right. A few pedestrians walk in the background, a man in a gray jacket and jeans walking left, a woman in a white coat carrying a brown bag. A bicycle leans against a yellow building on the far right. The scene is captured at mid‑afternoon, with warm, slightly harsh sunlight casting short shadows.
+
+- **Lens & Technical**  
+  Short focal length (24 mm) wide‑angle lens. No bokeh — background fully sharp, everything in focus. Slight motion blur on the subject’s hand and the background pedestrians to convey handheld instability. Auto‑HDR or auto‑beauty mode off — raw, unprocessed look. No filters, no color grading, no post‑processing aesthetic. Slight overexposure on the upper part of the frame to emphasize ambient light.
+
+- **Composition Details**  
+  The camera is held at eye level, slightly above the subject’s head, with the top of the traffic light nearly out of frame at the right side. The left side of the image shows a portion of a yellow storefront and a blue awning. A street sign reading “624 10th” is visible on the right side of the traffic light. The sidewalk is concrete with a white crosswalk line running horizontally across the lower third of the frame.
+
+- **Lighting & Exposure**  
+  Natural daylight, mid‑afternoon sun coming from the left, creating soft highlights on the subject’s face and a slight warm cast to the entire scene. Slight overexposure on the upper part of the image gives a subtle glow around the traffic light and the yellow building.
+
+- **Final Prompt**  
+  “A young woman with a high ponytail, wearing a gray ribbed tank top and an olive‑green cardigan draped over her shoulders, stands on a New York City sidewalk at mid‑afternoon. She smiles mid‑action, head tilted right, left foot forward, left hand in pocket, right arm relaxed. The background features red, green, and yellow brick storefronts, a traffic light with a blue ‘Chapman’ awning, pedestrians walking, and a bicycle leaning against a yellow building. Capture with a 24 mm wide‑angle lens, everything in focus, slight motion blur on the subject’s hand and background pedestrians, accidental off‑center framing, partial crop on the left side of her jacket. No filters or post‑processing, raw, unprocessed look, slight overexposure on the upper frame.”

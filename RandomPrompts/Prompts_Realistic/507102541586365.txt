@@ -1,0 +1,26 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A muscular woman with a star tattoo on her left upper arm, wearing a black sequined halter bikini set, stands in a modern loft space. Her blonde hair is slightly tousled, and she’s caught mid‑step, one foot forward, as if she just finished a dance move or is about to pick up a cup from a nearby table. She wears gold hoop earrings, a thin gold necklace, and a gold watch on her left wrist.
+
+- **Lighting & Exposure**  
+  Natural daylight coming from a large window behind her creates a soft overexposure on the right side of the frame. The exposure is slightly uneven—warm tones on the left, cooler tones on the right—giving a raw, unprocessed look. No auto‑HDR or beauty filters; just a single shutter click.
+
+- **Camera Settings**  
+  - Lens: 24 mm wide‑angle, short focal length.  
+  - Aperture: f/5.6 (mid‑range).  
+  - Shutter speed: 1/125 s (handheld, slight motion blur).  
+  - ISO: 400.  
+  Everything is in focus—no portrait‑mode depth of field blur; the background stays sharp from foreground to background.
+
+- **Composition & Framing**  
+  The shot is candid and spontaneous—an “unposed” moment captured with a handheld camera. The frame is slightly tilted, off‑center, and partially cropped on the right side, giving it an accidental, organic feel. No rule‑of‑thirds intentionality; the composition is guided by the subject’s movement and the surrounding environment.
+
+- **Environment**  
+  The location is a loft‑style apartment with exposed brick walls, a blue sofa on the left, a pink armchair on the right, and a large window that lets in natural light. A single red rose is mounted high on the brick wall to the left of the subject. In the background, through the window, you can see a cityscape at dusk—soft bokeh lights from distant buildings are visible but fully sharp.
+
+- **Details & Imperfections**  
+  Slight motion blur around the subject’s hands and feet conveys movement. The image has a natural, unfiltered look with no color grading or post‑processing. A faint overexposure on the right side adds drama. The background is fully sharp—no “portrait mode” isolation.
+
+- **Prompt for Generation**  
+  *“A muscular woman in a black sequined halter bikini, gold hoop earrings, thin gold necklace, and gold watch, standing mid‑step in a loft apartment with exposed brick walls, blue sofa, pink armchair, and a red rose on the wall. Natural daylight from a large window creates soft overexposure. 24 mm wide‑angle lens, f/5.6, 1/125 s shutter, ISO 400—everything in focus. Candid, slightly tilted, off‑center framing with accidental crop. Raw, unprocessed look, slight motion blur, no filters.”*

@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark, slightly windswept hair crouching low on a sun‑baked beach, her hands gently clasped over her chest in a protective, almost shy gesture. She wears a black bikini top and frayed denim shorts that hang loosely at the thighs, with thin black drawstrings visible at the side. A thick gold chain rests on her collarbone, complemented by a matching gold bracelet and ring on her right hand. Her gaze is directed slightly upward toward the camera, as if she’s just noticed the photographer and is still adjusting to it.
+
+- **Lighting & Exposure**  
+  Capture with a wide‑angle lens (24–35 mm) in natural daylight—mid‑afternoon, the sun high but not directly overhead, creating soft, warm highlights on her skin and a subtle overexposed glow on the sand. Keep auto‑HDR off; let the raw, unprocessed look shine through. Aim for a slight handheld shake that gives a natural motion blur around the edges, while keeping the entire frame sharply in focus—no portrait‑mode depth of field.
+
+- **Composition & Framing**  
+  Use a casual, accidental framing: the shot is slightly tilted to the right, and the composition is off‑center, with the subject’s left knee cutting close to the lower edge of the frame. The background consists of tall beach grasses swaying in the wind, a few scattered shells, and a hint of the ocean horizon at the top. Keep everything in focus—no bokeh, no subject isolation.
+
+- **Environment**  
+  Location: a sandy dune field on a coastal beach, with sea‑grass tufts rising behind her. Time of day: late afternoon, ambient light warm and slightly harsh, creating small shadows under her crouched form. Weather: breezy, with a light wind that ruffles her hair and the grass.
+
+- **Lens & Technical**  
+  Short focal length (30 mm), wide‑angle, no bokeh, background fully sharp. Use a handheld camera with a slight shake to mimic natural motion freeze. No filters, no color grading, no post‑processing aesthetic—just raw, candid imagery.
+
+- **Final Prompt**  
+  “A young woman with long dark hair crouching on a sandy beach, wearing a black bikini top and frayed denim shorts, gold chain and bracelet adorning her collarbone and wrist. She holds her chest with both hands, gazing upward. The scene is lit by mid‑afternoon sun, creating soft overexposure on the sand. Tall sea‑grass tufts rise behind her, a few shells scattered nearby, ocean horizon faintly visible at the top. Capture with a 30 mm wide‑angle lens, handheld shake for natural motion blur, slight tilt to the right, off‑center framing. Everything in focus, no bokeh, raw unprocessed look.”

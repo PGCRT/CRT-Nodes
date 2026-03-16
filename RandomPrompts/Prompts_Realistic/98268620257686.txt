@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman in a purple bikini, mid‑water splash, captured from a low, slightly off‑center angle. Her back is turned toward the camera, hips slightly arched, one hand gripping the pool edge as she lifts her thigh out of the water. The shot should feel spontaneous, like a candid moment caught in the middle of a swim or poolside play.
+
+- **Motion & Focus**  
+  Slight motion blur on the water ripples and the woman’s thighs, indicating handheld shake. Everything remains fully sharp—no portrait‑mode depth‑of‑field blur. The focus is broad, covering the subject, the water surface, and the background.
+
+- **Lighting & Exposure**  
+  Natural daylight, mid‑afternoon sun with a slight overexposure on the water’s surface. No auto‑HDR or beauty filters—raw, unprocessed look. The exposure should feel organic, with subtle highlights and soft shadows.
+
+- **Lens & Technical Settings**  
+  Wide‑angle lens (24–35 mm), short focal length. No bokeh; background fully sharp. Use a handheld shot with slight tilt and accidental framing—no rule‑of‑thirds intentionality. All elements in focus: subject, water, background.
+
+- **Environment**  
+  Location: A sunny outdoor swimming pool at a tropical resort. Palm trees and a white umbrella are visible in the background, slightly out of frame. Time of day: late afternoon, warm golden light. Weather: clear, breezy, with a few scattered clouds.
+
+- **Composition & Details**  
+  Capture the woman’s rear and lower torso, emphasizing the purple bikini strap and the water droplets on her skin. Include the reflection on the pool surface, the slight splash around her thigh, and the edge of a white umbrella in the upper left corner. The framing should be partial and off‑center, giving a casual, spontaneous feel.
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, zero studio lighting. Keep the raw, natural look with only minimal adjustments to exposure and contrast.  
+
+**Prompt Summary:**  
+“Candid, low‑angle, wide‑angle shot of a woman in a purple bikini mid‑splash in an outdoor pool at a tropical resort, captured in late afternoon sunlight. Slight motion blur on the water and subject, fully sharp background, handheld framing with accidental tilt. No filters or post‑processing—raw, natural look.”

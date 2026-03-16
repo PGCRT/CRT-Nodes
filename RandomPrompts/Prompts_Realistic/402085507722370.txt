@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman with long, dark brown hair tied in a loose low ponytail, wearing a white ribbed tank top and lime‑green high‑waist leggings. She stands with her back to the camera, hands on hips, slightly turned to the left, as if mid‑step or mid‑pose. Her shoulders are relaxed, arms bent at the elbows, creating a subtle diagonal line that gives the image a dynamic feel.
+
+- **Motion & Focus**  
+  Slight motion blur on the subject’s hands and lower back, indicating handheld shake and a quick shutter speed. Everything remains in focus—no portrait‑mode bokeh; the background is fully sharp. The blur is subtle, not distracting, giving a raw, unprocessed look.
+
+- **Lighting & Exposure**  
+  Natural daylight from a western window, mid‑afternoon. Slight overexposure on the upper back and shoulders, creating a warm, soft glow. No auto‑HDR or beauty filters—just a straight RAW capture. The lighting is uneven, with a small highlight on the left side of her back, adding depth.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24 mm), short focal length, no bokeh. All elements—from the subject to the background—are in focus. Slight tilt and off‑center framing; the composition is accidental, not rule‑of‑thirds. The frame cuts off just above her hips and below her thighs, giving a partial crop that feels spontaneous.
+
+- **Environment**  
+  A bright, modern living room with a white sofa, a light‑wood coffee table, and a small potted plant on the left. A framed abstract painting hangs on the wall behind her. The time of day is late afternoon, with warm sunlight streaming in from the west, casting soft shadows. The weather outside is clear, adding to the ambient brightness.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Imperfections encouraged: slight tilt, off‑center framing, partial crop. No rule‑of‑thirds intentionality—accidental framing that gives the image a natural, documentary feel. Natural motion freeze or slight blur from handheld instability.
+
+- **Prompt for Text‑to‑Image Generation**  
+  “A woman with long dark brown hair in a loose low ponytail, wearing a white ribbed tank top and lime‑green high‑waist leggings, standing back to camera with hands on hips, slightly turned left, mid‑step pose. Slight motion blur on hands and lower back, everything in focus, natural daylight from west window mid‑afternoon, slight overexposure on upper back. Wide‑angle 24 mm lens, short focal length, accidental off‑center framing, partial crop. Background shows white sofa, light‑wood coffee table, potted plant, framed abstract painting on wall. Raw, unprocessed look, no filters, no color grading.”

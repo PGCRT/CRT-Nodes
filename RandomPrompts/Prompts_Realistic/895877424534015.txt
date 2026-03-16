@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with vibrant pink hair tied in a high ponytail, wearing a black tank top and denim overalls, stands at a coffee shop counter. She is mid‑action, reaching for a cup or a bottle on the counter, her back slightly turned toward the camera. Her black platform boots are firmly planted on the concrete floor.  
+
+- **Motion & Focus**  
+  Slight motion blur from handheld instability; everything in focus—no portrait‑mode depth of field. The image has a raw, unprocessed look: no filters, no color grading, no post‑processing aesthetic. A hint of overexposure from natural daylight.
+
+- **Lens & Technical**  
+  Wide‑angle lens (short focal length, ~24 mm). No bokeh—background fully sharp. The composition is accidental: slight tilt, off‑center framing, partial crop. No rule‑of‑thirds intentionality.  
+
+- **Environment**  
+  Location: a modern coffee shop with large windows on the left, a concrete counter, and a small shelf stocked with paper cups and water bottles. A barista in a black cap is visible behind the counter, a few customers are talking near the back, and a black backpack rests on the floor.  
+
+- **Time of Day & Lighting**  
+  Late morning, natural sunlight streaming through the windows creates a warm, slightly harsh light with a small overexposed highlight on the counter. The ambient light is bright but not too direct; shadows fall to the right of the subject.
+
+- **Details & Imperfections**  
+  The woman’s pink hair catches the light, her denim overalls have frayed edges, and her boots cast a slight shadow. A few stacked paper cups sit on the counter next to a bottle of water. The background shows a coffee machine, a small wooden shelf with mugs, and a black lamp hanging from the ceiling.  
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Imperfections encouraged: slight tilt, off‑center framing, partial crop. Zero studio lighting, zero professional composition, zero editorial tone. Natural motion freeze or slight blur from handheld instability.
+
+**Prompt Summary (structured)**  
+"Mid‑morning at a modern coffee shop, a young woman with pink ponytail and denim overalls stands at the counter, reaching for a cup. She wears black platform boots; her back is slightly turned. The scene includes a barista behind the counter, a shelf of cups, a water bottle, and a black backpack on the floor. Wide‑angle lens, short focal length, everything in focus with slight motion blur. Raw, unprocessed look, no filters, small overexposure. Natural daylight from the left window casts warm highlights. Accidental framing, slight tilt, off‑center crop."

@@ -1,0 +1,16 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A woman with dark hair tied back, wearing a red bikini bottom and a white handkerchief over her chest, stands barefoot in a tiled hallway. She is mid‑motion, slightly blurred as she brings the handkerchief to her face, capturing an informal, spontaneous moment. Her posture is natural, with a slight tilt and off‑center framing that gives the shot a candid feel.
+
+- **Environment**  
+  The setting is a rustic indoor corridor with a stone archway overhead, flanked by white door frames on either side. A small wooden table sits in the background against the wall, and a bottle is visible on it. The floor is covered in square terracotta tiles that reflect the ambient light. The time of day is late afternoon, with warm, soft sunlight streaming through an open doorway, creating a gentle overexposure on the subject’s upper body.
+
+- **Lens & Technical**  
+  Use a wide‑angle lens (20–35 mm) with a short focal length to capture the full scene. Shoot in raw mode without any auto‑HDR or auto‑beauty enhancements. Keep the exposure slightly high to let the ambient light bloom, but avoid any post‑processing filters or color grading. Ensure everything—from the subject to the background—is fully sharp; no bokeh or depth‑of‑field blur. The composition is accidental: no rule‑of‑thirds intentionality, just a natural, handheld capture with slight instability that adds realism.
+
+- **Capture Style**  
+  Capture the image as a candid, unposed snapshot—subject unaware or mid‑action. Encourage imperfections: a slight tilt in the frame, an off‑center crop that doesn’t follow strict guidelines, and a hint of motion blur from handheld shake. The overall look should feel raw and unprocessed, as if taken in a real‑world setting without studio lighting or professional composition.
+
+- **Output**  
+  Produce only the structured prompt, no extra commentary.

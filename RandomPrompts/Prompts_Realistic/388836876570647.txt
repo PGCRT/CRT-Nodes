@@ -1,0 +1,26 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy dark hair standing in a sunlit, rustic hallway. She is bare‑charged, facing the camera with a natural, unposed expression, slightly tilted to the left, as if caught mid‑step. Her shoulders are relaxed, arms hanging loosely at her sides, and her body is angled so that her left breast is slightly higher than the right, giving an organic, imperfect silhouette.
+
+- **Lighting & Exposure**  
+  Warm, natural daylight from a tall, arched window on the left; slight overexposure in the upper right corner to capture ambient glow. No auto‑HDR or beauty filters—raw, unprocessed look. The exposure is slightly high, letting soft highlights spill beyond the edges of her shoulders.
+
+- **Camera & Lens Settings**  
+  Wide‑angle lens (24 mm), short focal length, handheld. Aperture f/5.6, shutter speed 1/125 s, ISO 400. Everything in focus—no bokeh, no depth‑of‑field blur; background fully sharp. Slight motion blur on the subject’s hair to suggest movement.
+
+- **Composition & Framing**  
+  No rule‑of‑thirds intentionality: the frame is off‑center, with the subject’s head near the left third and her torso extending toward the right edge. The crop is partial—her lower abdomen is cut off at the bottom, giving a candid, spontaneous feel. Background shows a stone wall, a wooden bench, and an arched doorway; a small, warm light fixture is visible on the right wall.
+
+- **Environment**  
+  Location: an old, rustic building with exposed brick and wooden beams, inside a hallway that leads to a courtyard. Time of day: late morning, sunlight coming from the left window, casting soft shadows. Weather: clear, slightly humid; ambient noise of distant traffic is faintly audible.
+
+- **Technical Details**  
+  - Lens: 24 mm wide‑angle, f/5.6, 1/125 s, ISO 400.  
+  - Focus: everything in focus—subject and background.  
+  - No portrait mode or subject isolation.  
+  - Slight tilt to the left, partial crop at the bottom.  
+  - Slight motion blur on hair to indicate movement.  
+
+- **Prompt for Image Generation**  
+  “A young woman with long wavy dark hair standing in a sunlit rustic hallway, bare‑charged, facing the camera with a natural unposed expression, slightly tilted left as if caught mid‑step. Warm daylight from a tall arched window on the left creates slight overexposure in the upper right. Shot on a 24 mm wide‑angle lens at f/5.6, 1/125 s, ISO 400—everything in focus with no bokeh. The frame is off‑center, partial crop at the bottom, background shows a stone wall, wooden bench, and an arched doorway with a warm light fixture on the right. Capture candid, spontaneous feel; slight motion blur on hair. No filters or post‑processing—raw, realistic photography.”

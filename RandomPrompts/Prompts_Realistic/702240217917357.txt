@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, curvy woman with dark hair tied in a high bun, wearing an off‑white halter‑style wrap dress that ties at the waist and opens at the front. She’s mid‑step, left leg slightly bent, right arm relaxed by her side, head tilted a little to the right, eyes focused forward as if she’s just finished a casual walk along the beach. Her expression is natural, unposed, with a subtle smile.
+
+- **Lighting & Exposure**  
+  Warm, golden hour sunlight from the west casts a soft overexposure on her face and upper body; the background is slightly underexposed to keep the scene raw. The light creates gentle highlights on her shoulders and the fabric’s folds. No auto‑beauty or filter enhancement—just a natural, handheld look.
+
+- **Motion & Focus**  
+  Slight motion blur at the edges from a handheld camera, giving a sense of movement. Everything—from her skin to the sand—is fully sharp; no portrait‑mode depth‑of‑field blur. The focus is broad, capturing her full figure and the immediate environment.
+
+- **Lens & Technical Settings**  
+  24 mm wide‑angle lens (short focal length). Aperture set to f/5.6 for a moderate depth of field that keeps foreground and background in focus. Shutter speed 1/125 s to freeze the motion while allowing a hint of blur. ISO 400 for clean detail.
+
+- **Environment**  
+  A tropical beach at sunset, with gentle waves lapping at the shore behind her. The sand is light beige, slightly wet, with small footprints and scattered seashells. Palm fronds peek from the top right corner. The sky shows a gradient of soft orange to pale pink, indicating the last light of day.
+
+- **Composition & Framing**  
+  No rule‑of‑thirds intentionality—her position is slightly off‑center, with her left side closer to the center of the frame. The shot is a full‑body capture that includes her head, torso, legs, and the immediate surroundings. The framing is accidental, as if she were mid‑walk, with a slight tilt to the right.
+
+- **Post‑Processing**  
+  Raw, unprocessed look: no color grading or filters applied. Slight overexposure on the subject, subtle contrast, natural dynamic range. The image retains the authenticity of a candid snapshot.

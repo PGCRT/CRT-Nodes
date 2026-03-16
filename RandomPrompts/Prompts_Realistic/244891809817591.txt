@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair, wearing a white long‑sleeved crop top and high‑waisted black jeans, captured mid‑turn as she leans slightly toward the camera. Her face is turned to the side, eyes glancing off‑camera, mouth slightly open as if she’s about to speak or react. The shot should feel spontaneous, like a candid “in‑action” moment.
+
+- **Motion & Focus**  
+  Apply a subtle motion blur to the subject’s hair and clothing to convey slight movement, while keeping the entire frame fully sharp—no portrait‑mode depth of field. Use a wide‑angle lens (20–35 mm) to keep the background crisp and the composition “accidental” rather than rule‑of‑thirds‑intentional.
+
+- **Lighting & Exposure**  
+  Capture in natural daylight, mid‑afternoon, with the sun high but not directly overhead. Allow a slight overexposure on the subject’s front side to give a raw, unprocessed look; avoid any auto‑HDR or beauty filters. Keep the exposure slightly warm, with a tiny hint of ambient haze.
+
+- **Environment**  
+  The setting is a modern office space: white desks, black computer monitors, and a red accent chair in the background. The time of day is late afternoon, giving a soft, diffused light that creates gentle shadows. Weather is clear, with a slight breeze that moves the subject’s hair.
+
+- **Lens & Technical**  
+  Use a short focal length (24–35 mm) wide‑angle lens. Shoot in a single exposure with no bokeh—everything from foreground to background should be in focus. Keep the framing off‑center, slightly tilted, and partially cropped at the edges for a casual, handheld feel.
+
+- **Post‑Processing**  
+  No filters or color grading; keep the image raw. Slight vibrancy boost on the white top and black jeans, but keep the overall look natural. Preserve any minor imperfections—slight tilt, off‑center framing, partial crop—to enhance authenticity.
+
+**Prompt Summary (structured)**  
+“Candid photo of a woman in a white long‑sleeved crop top and black high‑waist jeans, mid‑turn, slightly leaning toward camera, hair blowing in a gentle breeze. Capture with a 24–35 mm wide‑angle lens, everything fully sharp, subtle motion blur on the hair/clothes, slight overexposure on the subject’s front side. Natural daylight, mid‑afternoon, office setting with white desks, black monitors, red chair in background. Slight tilt and off‑center framing, partial crop, raw unprocessed look, no filters.”

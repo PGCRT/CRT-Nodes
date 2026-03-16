@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, curvy woman with long, straight brown hair, wearing black lace underwear, sitting on a striped couch. Her hands are gently clasped over her chest, and she’s looking downward with a soft, contemplative expression. She wears a thin gold necklace that catches the light. The pose is candid and mid‑action, as if she’re about to adjust her top or simply resting.
+
+- **Lighting & Exposure**  
+  Natural daylight from a nearby window creates a slight overexposure on the subject’s face and torso. The exposure is uneven—warm highlights on the skin with a hint of cool tones in the background. No auto‑beauty or filter processing; raw, unprocessed look.
+
+- **Motion & Focus**  
+  Slight motion blur from handheld shooting, giving a natural “in‑motion” feel. Everything—from the woman’s face to the plant in the corner—is fully sharp, no portrait‑mode depth of field. The focus is wide‑angle, capturing the entire scene without intentional rule‑of‑thirds composition.
+
+- **Lens & Technical**  
+  Short focal length (≈20 mm) wide‑angle lens. No bokeh; background remains fully sharp. The image has a slight tilt and off‑center framing, creating an accidental, spontaneous feel.
+
+- **Environment**  
+  A bright, sunlit living room in the late morning. A large green potted plant stands in the left corner, a white window frame is visible on the right, and a striped couch occupies the lower half of the frame. The time of day is early afternoon, with warm natural light streaming through the window, creating soft shadows and a gentle haze.
+
+- **Composition & Details**  
+  The shot captures the woman’s full upper body and part of her thighs, with her knees bent and her hands clasped near her chest. The background includes a glimpse of a white wall, a plant, and a window that lets in natural light. The framing is imperfect—slightly tilted, partially cropped on the right side—enhancing the candid vibe.
+
+- **Post‑Processing**  
+  No filters or color grading; only raw, auto‑HDR applied. Slight overexposure on the subject’s torso, subtle contrast, and a natural color palette (warm neutrals with a hint of cool green from the plant). The final image feels like a spontaneous snapshot taken with a DSLR or mirrorless camera in a real‑world setting.

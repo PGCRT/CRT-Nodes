@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair standing in a casual, unposed stance. She is bare‑chested, wearing high‑waist black jeans that sit snugly at the hips. Her left hand rests lightly by her thigh, fingers slightly curled, while her right arm hangs relaxed beside her hip. She faces the camera with a soft, natural smile, eyes gently focused forward, as if she’s mid‑conversation or just finished a gesture.
+
+- **Lighting & Exposure**  
+  Slight overexposure on the upper torso and face to capture ambient daylight; the exposure is uneven, giving a raw, unprocessed feel. The lighting comes from the west, creating warm, golden tones that highlight the curve of her chest and the texture of her skin. No auto‑HDR or beauty filters—just a straightforward, handheld shot.
+
+- **Motion & Focus**  
+  A slight motion blur at the edges of the torso and hands, indicating a quick shutter speed and handheld instability. Everything remains in focus from forehead to ankle, with no depth‑of‑field blur; the background is fully sharp. The blur is subtle, not distracting, adding a natural “in‑motion” vibe.
+
+- **Lens & Technical**  
+  24 mm wide‑angle lens (short focal length) with a 1:1 crop factor. No bokeh—background is crisp. The lens is set to a slightly tilted angle, creating an off‑center framing that feels spontaneous and informal. The composition does not follow the rule of thirds; the subject occupies roughly the central third of the frame but is slightly shifted to the left.
+
+- **Environment**  
+  Location: A concrete alleyway in an urban district, with a rough, gray wall on the back and a small wooden bench on the right side. Time of day: late afternoon, around 5 pm, when the sun is low, casting long, warm shadows. Weather: mild, slightly breezy; the wind has left a faint trail in her hair. The ambient light gives a soft, diffused glow that enhances the natural tones of the scene.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject appears unaware of the camera or mid‑action. Slight tilt and partial crop give an accidental framing effect. No rule‑of‑thirds intentionality; the shot feels like a quick snapshot captured with a handheld device. Zero studio lighting, zero professional composition, zero editorial tone.
+
+- **Post‑Processing**  
+  No filters, no color grading, no post‑processing aesthetic. The image remains raw, with only basic white‑balance adjustment and a slight contrast boost to bring out the natural tones.
+
+**Prompt Summary**  
+> “A young woman with long wavy brown hair, bare‑chested and wearing high‑waist black jeans, stands casually in a concrete alleyway at late afternoon. The shot is taken with a 24 mm wide‑angle lens, slightly tilted, capturing a raw, unprocessed look with slight motion blur on the torso and hands. The exposure is mildly overexposed, the background is fully sharp, and the scene is bathed in warm golden light. The composition is spontaneous and off‑center, with no rule‑of‑thirds intentionality, giving the image a candid, handheld feel.”

@@ -1,0 +1,23 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A muscular woman in a black bikini, mid‑run or mid‑step, captured in a candid, unposed stance. Her hair is tied back, slightly blowing in the wind, with a faint motion blur around the strands to emphasize movement. Her right arm is bent at the elbow, hand clenched into a loose fist, while her left arm extends outward for balance. The camera is positioned low, almost at eye level, giving a wide‑angle view that includes a portion of a city street and a parked car in the background.
+
+- **Lighting & Exposure**  
+  Natural ambient light from a late‑afternoon sun, with a slight overexposure on the subject’s front side to highlight her skin tone and muscle definition. The exposure is not perfectly balanced—there’s a subtle warmth in the highlights and a mild haze in the background. No auto‑beauty or filter processing; the image retains raw, unprocessed fidelity.
+
+- **Camera & Lens Settings**  
+  - Lens: 24‑mm wide‑angle (short focal length) for a broad field of view.  
+  - Aperture: f/5.6 – enough to keep the background fully sharp while still allowing a slight depth of field.  
+  - Shutter speed: 1/125 s – enough to freeze the motion but leave a hint of blur on the moving hair and background elements.  
+  - ISO: 400 – for clean detail without excessive noise.  
+  - Focus: manual, everything in focus from foreground to background; no portrait‑mode softening.
+
+- **Composition & Framing**  
+  The framing is intentionally off‑center, with the subject’s left side slightly cut off by the edge of the frame. The composition is spontaneous—no rule‑of‑thirds intentionality. The background includes a concrete parking lot, a parked sedan, and a distant building with lit windows, all in sharp focus. A small portion of a white railing is visible on the right, adding depth.
+
+- **Environment & Context**  
+  Location: an urban rooftop or parking garage at dusk. The ground is wet, reflecting the ambient light and creating subtle specular highlights. A few scattered leaves and a small puddle are visible near the subject’s feet. The sky shows a gradient from pale blue to soft orange, indicating the sun is setting.
+
+- **Post‑Processing & Finish**  
+  No filters or color grading; the image keeps its natural look. Slight overexposure on the subject’s front gives a warm glow, while the background remains crisp. A tiny amount of motion blur is present around the hair and the background car to reinforce the candid feel. The final output should appear as a raw, handheld photograph captured with a DSLR or mirrorless camera in a wide‑angle setting.

@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with shoulder‑length brown hair, wearing a black sports bra and gray athletic shorts, sits on a concrete step in a gym locker room. She has a white towel draped over her left shoulder, one hand resting on her knee, the other near her thigh, as if she’s about to lift a weight or stretch. Her gaze is directed slightly off‑camera, giving a candid, mid‑action feel.
+
+- **Lighting & Exposure**  
+  Natural daylight from a western‑facing window creates a warm, slightly overexposed highlight on her face and shoulder. The ambient light is soft but with a hint of harshness—no auto‑beauty or filter enhancement; the image retains raw, unprocessed texture.
+
+- **Camera Settings**  
+  - Lens: 24 mm wide‑angle, short focal length, handheld.  
+  - Focal depth: everything in focus—from her face to the lockers behind—no bokeh, no portrait‑mode isolation.  
+  - Shutter speed: 1/60 s, producing a slight motion blur on her arms and the towel, indicating spontaneous movement.  
+  - ISO: 400–600 for natural grain.
+
+- **Composition & Framing**  
+  The shot is intentionally off‑center; the subject’s left side leans toward the right edge of the frame, creating a casual, spontaneous composition. The lockers line the left background, slightly tilted, with a visible hinge and a small blue shoe on top of one locker. A red towel hangs on a rack in the far right rear. No rule‑of‑thirds—just accidental framing that captures the full scene.
+
+- **Environment**  
+  Location: a public gym or fitness studio, mid‑afternoon (≈ 4:30 pm). The walls are light gray plaster; a white towel hangs on a rack; a small blue shoe sits atop a locker. The floor is concrete, the step she’s sitting on is a wooden bench. Weather: clear, mild wind, slight humidity.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, partial crop that cuts off the top left corner of the locker. The towel’s edges are slightly frayed, the woman’s skin has natural blemishes and pores, no auto‑HDR or color grading—just a raw, realistic look.
+
+- **Final Prompt**  
+  “A candid, wide‑angle shot of a young woman in a gym locker room, mid‑afternoon daylight, 24 mm lens, handheld shutter at 1/60 s, slight motion blur on her arms and towel, everything in focus, off‑center framing with accidental tilt, raw unprocessed look, no filters or auto‑HDR, natural imperfections, background lockers and a blue shoe on top, red towel on a rack, concrete floor, wooden step, warm overexposed highlight—capture the spontaneous, real‑life moment as she prepares to lift or stretch.”

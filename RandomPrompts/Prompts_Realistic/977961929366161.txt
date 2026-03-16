@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman with long, wavy brown hair, a small scorpion tattoo on her left upper back, wearing a thin silver bracelet on her left wrist. She is standing in a bright, modern living room, turned slightly to the side, body angled toward the camera but face looking back over her shoulder with a subtle smile. Her left hand rests lightly on the back of her thigh, right arm bent at the elbow, creating a natural, candid pose.
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window to the left, mid‑afternoon, soft but warm. Slight overexposure on the upper body, giving a gentle halo effect. No auto‑beauty or filter processing—raw, unprocessed look. The exposure is slightly uneven, with the background a bit brighter than the subject, creating a subtle contrast.
+
+- **Camera & Lens Settings**  
+  Wide‑angle lens (24 mm), handheld, shot on a DSLR or mirrorless. Focal length short, 35–50 mm. Aperture f/4.0, shutter speed 1/125 s, ISO 400. Slight motion blur from the hand‑held camera, giving a natural “in‑motion” feel. Everything in focus—no bokeh, no depth‑of‑field blur; background fully sharp.
+
+- **Composition & Framing**  
+  No rule‑of‑thirds intentionality—accidental framing with a slight tilt to the left. The shot is partially cropped on the right side, cutting off a portion of the white cabinet and a small vase with dried flowers. The television is mounted on the wall behind her, slightly out of alignment with the camera’s center. The composition feels spontaneous, as if captured mid‑action.
+
+- **Environment**  
+  A bright, contemporary living room with light‑colored walls, a white low‑profile cabinet, a flat‑panel TV on the wall, and a small vase with dried branches on the left side of the cabinet. A few books are stacked on the right side of the cabinet. The time of day is late afternoon, with warm sunlight streaming in from the left, creating soft shadows.
+
+- **Details & Imperfections**  
+  Slight tilt and off‑center framing; a small portion of the subject’s left arm is cut off by the frame edge. The image has a natural, unposed feel, with the subject appearing unaware of the camera. A faint hint of motion blur around the edges gives a sense of movement.
+
+- **Post‑Processing**  
+  No filters, no color grading, no post‑processing aesthetic—just raw, realistic capture. Slight overexposure on the upper body creates a subtle halo, while the rest of the image remains natural and unedited.
+
+**Prompt Summary**  
+“Candid, wide‑angle shot of a woman with wavy brown hair and a scorpion tattoo on her back, standing in a bright modern living room, captured with a 35 mm lens at f/4.0 and 1/125 s shutter speed. The image has slight motion blur and accidental framing, with the subject’s left hand on her thigh and a subtle smile over her shoulder. Natural daylight from the left creates a soft halo, while the background includes a TV, a white cabinet, and a vase with dried flowers. Everything is in focus, no filters or post‑processing—raw, realistic photography.”

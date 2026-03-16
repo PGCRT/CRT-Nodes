@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high bun and thick black-rimmed glasses, wearing an open white button‑down shirt, captured mid‑gesture as she leans forward slightly, her hands resting on her lap. Her face is turned toward the camera but not directly aimed— a casual, spontaneous angle that gives a subtle tilt and off‑center framing.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. Slight motion blur from handheld instability, no filters, no color grading, no post‑processing aesthetic. A tiny overexposure in the highlights to keep the ambient light raw. Everything stays fully sharp; no bokeh or depth‑of‑field blur.
+
+- **Lens & Technical**  
+  Short focal length (≈20 mm) wide‑angle lens. No “portrait mode” isolation— background is completely in focus. Slight overexposure or underexposure depending on ambient light, auto‑HDR or auto‑beauty mode off.
+
+- **Environment**  
+  A bright, modern kitchen with white cabinets and a tiled floor. The time of day is late morning; natural daylight comes from a large window to the left, creating soft shadows. A small table and a bottle on the counter are visible in the background, adding context.
+
+- **Composition Notes**  
+  No rule‑of‑thirds intentionality— accidental framing with a slight tilt. The shot is partially cropped at the top and bottom, giving an intimate, candid feel. All elements (subject, background, foreground) remain in focus.
+
+- **Final Prompt**  
+  “A young woman with a high bun and thick black‑rimmed glasses, wearing an open white button‑down shirt, captured mid‑gesture as she leans forward slightly, her hands resting on her lap. Candid, unposed, spontaneous — subject unaware or mid‑action. Slight motion blur from handheld instability, no filters, no color grading, no post‑processing aesthetic. A tiny overexposure in the highlights to keep the ambient light raw. Short focal length (≈20 mm) wide‑angle lens. No bokeh, no depth‑of‑field blur— background fully sharp. Everything in focus. The setting is a bright, modern kitchen with white cabinets and a tiled floor; late morning natural daylight comes from a large window to the left, casting soft shadows. A small table and a bottle on the counter are visible in the background, adding context. No rule‑of‑thirds intentionality— accidental framing with a slight tilt. The shot is partially cropped at the top and bottom, giving an intimate, candid feel. All elements (subject, background, foreground) remain in focus.”

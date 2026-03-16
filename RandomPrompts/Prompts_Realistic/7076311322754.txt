@@ -1,0 +1,16 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, sun‑kissed brown hair, wearing a light gray spaghetti‑strap top and matching sweatpants, captured mid‑smile while leaning casually against a wooden window frame. Her head is slightly tilted to the left, her right eye catching the sunlight, and her left shoulder is partially cropped by the edge of the frame. She’s in the process of reaching for a glass of water on a small side table, hand barely visible, creating a natural sense of motion.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject appears unaware of the camera, mid‑action. Slight tilt and off‑center framing give an accidental, handheld feel. The shot is a partial crop that cuts off the left side of her torso, emphasizing spontaneity. No rule‑of‑thirds intentionality; the composition is guided by the natural lines of the room.
+
+- **Environment**  
+  A bright, airy kitchen in a suburban house, captured at late afternoon (around 5:30 pm). The window behind her lets in warm, golden light that creates a subtle overexposed highlight on her face. A small potted plant sits on the counter to the right, and a blue ceramic mug is partially visible on the table. The background is fully sharp, with no bokeh or depth‑of‑field blur.
+
+- **Lens & Technical**  
+  24 mm wide‑angle lens, short focal length. Everything in focus — from her face to the corner of the counter — with a slight motion blur on her hand as she reaches for the glass. No auto‑HDR or auto‑beauty mode; raw, unprocessed look. Slight overexposure on the window light gives a natural glow. The image has zero studio lighting and zero professional composition, but it feels genuinely candid.
+
+- **Post‑Processing**  
+  No filters, no color grading, no post‑processing aesthetic. Only minimal contrast adjustment to preserve the natural tones. The final image retains a slight handheld shake, adding to its authenticity.

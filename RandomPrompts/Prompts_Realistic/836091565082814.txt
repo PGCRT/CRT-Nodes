@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A fit woman with long, straight black hair, wearing a white crop‑top and lime‑green leggings, captured from behind. She’s mid‑step on a red rug, feet in white sneakers, slightly turned to the left, as if she just finished a workout or is about to move. Her hands rest lightly on her hips, elbows bent, giving a casual, spontaneous feel.
+
+- **Motion & Focus**  
+  Slight motion blur at the knees and toes to suggest movement, while the background remains fully sharp. Handheld camera shake gives a natural, imperfect tilt; the frame is off‑center, not following the rule of thirds. Everything from foreground to backdrop is in focus—no portrait‑mode bokeh.
+
+- **Lighting & Exposure**  
+  Auto‑HDR or auto‑beauty mode turned off. The scene is lit by bright, diffused daylight coming from a large window on the left; a hint of overexposure on the upper left corner adds rawness. No color grading or filters—just the natural tones of the room and subject.
+
+- **Environment**  
+  A bright, modern living room with white sofas, a red area rug, a large multi‑pane window that lets in natural light, and a small abstract painting on the right wall. Wooden beams run across the ceiling, adding texture. The time of day is mid‑afternoon, with soft, warm sunlight.
+
+- **Lens & Technical**  
+  Short focal length (20–35 mm) wide‑angle lens, no bokeh, depth of field fully sharp. The composition is accidental—slight tilt and partial crop, giving a candid, unposed vibe. No studio lighting, no professional composition, no editorial tone.
+
+- **Prompt for AI Image Generator**  
+  “A fit woman with long black hair, white crop‑top, lime‑green leggings, white sneakers, captured from behind on a red rug in a bright modern living room. She’s mid‑step, hands on hips, slight motion blur at the knees and toes, background fully sharp. Natural daylight from a large window, slight overexposure on the upper left. Wide‑angle short focal length, handheld shake, accidental off‑center framing, no filters, auto‑HDR off.”

@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair sitting casually on a concrete ledge in an urban rooftop setting. She is wearing a strapless, earth‑tone dress that falls to mid‑calf, paired with gold hoop earrings and a thin ankle chain. Her left hand rests near her chin, while her right hand lifts a strand of hair from her forehead—mid‑gesture, as if she just finished a conversation or is about to touch her face. Barefoot, her feet dangle slightly off the edge of the ledge, adding a casual, unposed feel.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle, late‑afternoon sun that creates a soft overexposure on the subject’s face and a subtle warm glow on the concrete. Slight handheld shake gives a natural motion blur around the edges; the exposure is slightly uneven, with the background a bit brighter than the foreground.
+
+- **Lens & Technical**  
+  24‑mm wide‑angle lens (short focal length), f/4.0 aperture, 1/125 s shutter speed, ISO 400. Everything in focus—from the subject’s face to the concrete ledge—no bokeh, no depth‑of‑field blur. The image has an auto‑HDR feel but without post‑processing filters; raw, unprocessed look.
+
+- **Composition & Framing**  
+  Candid, spontaneous framing: the shot is slightly tilted, off‑center, and partially cropped on the right side by a concrete wall. No rule‑of‑thirds intentionality—just a natural, accidental composition that captures the subject’s mid‑gesture and the surrounding environment.
+
+- **Environment**  
+  The scene is set on a rooftop with a modern building in the background, under a bright blue sky with scattered white clouds. The time of day is late afternoon, giving a warm, golden hue. The weather is clear, with a light breeze that creates slight motion on the subject’s hair and dress.
+
+- **Details & Imperfections**  
+  The image shows a faint, natural tilt of the camera, a slight overexposed highlight on the subject’s face, and a small shadow cast by the woman onto the concrete ledge. The background is fully sharp—no bokeh. The overall look is raw, unprocessed, and realistic, as if captured in a spontaneous moment.
+
+- **Prompt Summary**  
+  “A young woman with long wavy brown hair sits casually on a concrete ledge on a rooftop, wearing an earth‑tone strapless dress, gold hoop earrings, and an ankle chain. Her left hand rests near her chin, right hand lifting a strand of hair. Natural late‑afternoon light creates a soft overexposure; the 24‑mm wide‑angle lens at f/4.0, 1/125 s, ISO 400 keeps everything in focus. Slight handheld shake adds motion blur. The shot is candid, slightly tilted, off‑center, partially cropped, with a modern building and blue sky in the background. Raw, unprocessed, auto‑HDR feel.”

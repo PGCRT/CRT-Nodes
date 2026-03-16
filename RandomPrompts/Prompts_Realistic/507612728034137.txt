@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy blonde hair sitting on a wooden park bench, hands gently framing her face, wearing a light floral dress with pastel pink and green blossoms. She is mid‑smile, eyes bright, a subtle hand‑to‑chin gesture that gives a candid, spontaneous feel. Her left wrist bears a thin silver bracelet; a ring adorns her left ring finger. The bench’s slats are visible, with metal fasteners at each corner, and the background shows a sunlit park with green grass, scattered white flowers, and blurred tree trunks.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle, late‑afternoon sun creates a soft overexposure on the subject’s face and a slight warm glow on the bench. The exposure is slightly uneven—the top of the frame is a bit brighter than the bottom—to preserve a raw, unprocessed look. No auto‑HDR or beauty filters; the image retains natural contrast and color fidelity.
+
+- **Lens & Technical Settings**  
+  Use a wide‑angle lens (24–35 mm) with a short focal length to capture a broad view of the scene. Shoot everything in focus—no depth‑of‑field blur, no portrait mode. The focus is flat, capturing both subject and background sharply. Slight handheld shake gives a natural motion blur around the edges.
+
+- **Composition & Framing**  
+  Capture the shot candidly: the camera is slightly tilted, the frame is off‑center, and the crop is partial—no rule‑of‑thirds intentionality. The bench occupies the lower two‑thirdds of the frame; the woman’s head sits near the upper third but not exactly on a third line. The background trees and grass fill the remaining space, creating a lush, green environment.
+
+- **Environment**  
+  Location: a sunny park in a suburban area, mid‑late afternoon (around 4 pm). Weather is clear with a light haze from the sun’s angle. The ground is covered in green grass and small white flowers; a few tree trunks are visible behind the bench.
+
+- **Post‑Processing**  
+  No filters, no color grading, no post‑processing aesthetic. Keep the raw, unprocessed look: slight overexposure on the subject’s face, natural contrast, and minimal noise. The final image should feel spontaneous, as if captured in a moment of genuine joy.
+
+**Prompt Summary**  
+“Candid photo of a smiling woman with long blonde hair sitting on a wooden park bench, wearing a pastel floral dress, hands framing her face, in a late‑afternoon sunlit park. Shot with a wide‑angle short focal length lens, everything in focus, slight handheld blur, raw exposure, no filters—raw, unprocessed, spontaneous style.”

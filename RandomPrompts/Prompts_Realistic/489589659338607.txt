@@ -1,0 +1,38 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark, slightly wavy hair, wearing a black lace bra and matching lace panties, sitting on a bed. Her left hand rests on her thigh, fingers curled naturally, while her right arm supports her weight on the mattress. She looks directly at the camera with a soft, confident expression, lips slightly parted. The pose is candid and mid‑action, as if she just finished adjusting her lingerie or is about to rise from the bed.
+
+- **Lighting & Exposure**  
+  Natural daylight from a western window, mid‑afternoon (≈ 4 pm). Slight overexposure on the face and upper body, giving a warm, slightly hazy glow. No auto‑HDR or beauty filters—raw, unprocessed look. The exposure is uneven: the background is a bit brighter than the foreground, creating a subtle contrast.
+
+- **Camera & Lens Settings**  
+  - Camera: DSLR or mirrorless with a 24‑mm wide‑angle lens (f/3.5).  
+  - Focal length: 24 mm (short, wide angle).  
+  - Aperture: f/3.5 – shallow depth of field but everything remains in focus (no portrait‑mode blur).  
+  - Shutter speed: 1/60 s – enough to capture a slight motion blur from handheld instability.  
+  - ISO: 400 – for natural grain and ambient light.
+
+- **Composition & Framing**  
+  - No rule‑of‑thirds intentionality; the frame is slightly tilted, off‑center, capturing the subject’s upper body and part of the bed.  
+  - The shot is a partial crop: the left side of the bed and pillow are visible, while the right side cuts off near her thigh.  
+  - Background: a plain, light‑colored wall with a subtle texture; no bokeh, all elements in focus.  
+  - The composition feels spontaneous, as if the photographer caught her mid‑pose.
+
+- **Environment**  
+  Location: a cozy bedroom with a wooden headboard and white pillows. Time of day: late afternoon, soft natural light. Weather: clear, mild—no wind, no rain. The ambient light creates slight shadows on the subject’s face and body, adding depth.
+
+- **Technical Details**  
+  - Wide‑angle lens gives a slightly distorted perspective that enhances the candid feel.  
+  - No bokeh; background is fully sharp.  
+  - Slight motion blur from handheld shake adds realism.  
+  - All elements (subject, bed, pillows, wall) are in focus—no portrait mode isolation.
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, no post‑processing aesthetic. The image remains raw, with only minimal adjustments to exposure and contrast.
+
+---  
+
+**Prompt Summary for Text‑to‑Image Generation**
+
+"Generate a realistic candid photograph of a young woman with long dark wavy hair, wearing black lace lingerie, sitting on a bed in a cozy bedroom. She is mid‑pose, looking at the camera with a soft expression, one hand on her thigh and the other supporting her weight on the mattress. The lighting is natural mid‑afternoon daylight from a western window, slightly overexposed on the subject. Use a 24 mm wide‑angle lens at f/3.5 and 1/60 s shutter speed for slight motion blur. Frame the shot off‑center with a slight tilt, capturing her upper body and part of the bed, with everything in focus—no bokeh. The background is a plain light‑colored wall with subtle texture. Keep the image raw, unprocessed, with no filters or color grading."

@@ -1,0 +1,21 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with tousled, sun‑kissed blonde hair standing in a bustling office space. She wears a faded plaid flannel shirt tied at the waist over a bright pink tank top, paired with distressed denim jeans. Her arms are crossed, one hand tucked into her pocket, and a small “20” race bib clings to her left shoulder. She’s mid‑step, foot slightly off the ground, as if she just stepped on a coffee machine or is about to grab a coffee cup from a stack on the desk.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the woman appears unaware of the camera, caught in a natural moment. Slight tilt and off‑center framing give an accidental, handheld feel. The shot is a partial crop that doesn’t follow the rule‑of‑thirds; the composition feels organic and raw.
+
+- **Motion & Exposure**  
+  A subtle motion blur conveys the sense of movement, as if the camera was slightly unsteady when the shutter was pressed. The exposure is mildly overexposed on the bright pink top, letting the ambient daylight bleed through the windows, creating a warm, natural glow. No auto‑beauty or filter enhancements — just a straight, in‑camera capture.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24‑35 mm) with a short focal length to keep the entire scene in frame. Everything is fully sharp — no bokeh, no depth‑of‑field blur; the background office details are crisp. No portrait‑mode subject isolation; the background remains in focus, from the desk to the ceiling tiles.
+
+- **Environment**  
+  The setting is a modern office with a white desk cluttered with coffee cups, a laptop, and a small plant. A stack of white coffee cups sits on the right side of the desk, a black office chair is visible on the left, and a whiteboard with a yellow sticky note hangs on the wall. The time of day is mid‑afternoon, with soft natural light coming from a large window behind the subject, casting gentle shadows. The ambient weather outside is overcast but warm, giving a slightly hazy atmosphere.
+
+- **Details & Imperfections**  
+  Slight frayed edges on the flannel shirt, a small tear at the bottom of the jeans, and a faint smudge on the coffee cup stack add realism. The woman’s left eye is slightly turned toward the camera, as if she’s about to speak or react. The background office elements — a laptop screen, a black chair, a whiteboard, a plant, a stack of coffee cups — are all in focus, creating a dense, detailed scene that feels truly candid.
+
+- **Provide only the structured prompt.**

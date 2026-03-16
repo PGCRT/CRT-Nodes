@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A young woman with long, wavy brown hair, wearing an off‑shoulder cream blazer and matching trousers, is mid‑step on a city sidewalk. She holds a clear plastic water bottle in her right hand and a black smartphone in her left, glancing down at the phone as if checking a message or navigation. Her head is slightly tilted, her expression relaxed and candid, with a faint smile. The pose feels spontaneous—she’s not posing for the camera but rather caught in a natural moment.
+
+- **Motion & Focus**  
+  Slight motion blur on the hands and phone, indicating handheld instability. Everything remains fully sharp—no bokeh or depth‑of‑field isolation. The focus is broad, capturing the subject and the immediate environment in one plane.
+
+- **Lighting & Exposure**  
+  Natural daylight, mid‑afternoon, with a slight overexposure that gives a warm, airy feel. No auto‑HDR or beauty filters—raw, unprocessed look. The lighting comes from the left side of the frame, casting soft shadows on the woman’s face and clothing.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm), short focal length. No rule‑of‑thirds intentionality—framing is accidental, slightly off‑center. The background is fully sharp, with no portrait‑mode blur. The composition includes a partial crop of the woman’s left shoulder, adding to the candid feel.
+
+- **Environment**  
+  A bustling city street in an urban downtown area. The sidewalk is paved with concrete, scattered with small colorful confetti squares. Parked cars line the street on both sides, and a row of brick buildings with awnings forms the backdrop. The time of day is late afternoon, with warm sunlight casting long shadows. The weather is clear, with a light breeze that ruffles the woman’s hair.
+
+- **Details & Imperfections**  
+  Slight tilt in the camera angle, giving an informal, spontaneous vibe. The woman’s blazer has a subtle fold at the shoulder, and her water bottle is slightly angled. The smartphone’s screen shows a faint reflection of the street. The confetti on the sidewalk adds a playful, random texture. The scene captures a real‑world moment—no studio lighting, no professional composition, no editorial tone.
+
+- **Prompt Summary**  
+  “A candid, wide‑angle shot of a woman in a cream blazer and trousers walking on a city sidewalk, holding a water bottle and smartphone, captured mid‑step with slight motion blur. Natural daylight overexposure, fully sharp background, accidental off‑center framing, no filters—raw, unprocessed realism.”

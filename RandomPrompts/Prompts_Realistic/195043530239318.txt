@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman with a high ponytail, wearing a black strap‑front bra and high‑waisted black trousers, captured mid‑turn as she looks back over her shoulder. Her hair is slightly tousled, a few strands escaping the ponytail, giving a casual, spontaneous feel. She wears a thin gold hoop earring and a delicate chain necklace that catches the light.
+
+- **Motion & Focus**  
+  Slight motion blur on the subject’s back and shoulders from handheld instability; everything in the frame is fully sharp—no portrait‑mode depth of field. A subtle overexposure on the upper body to emphasize the ambient daylight.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm), short focal length, no bokeh. All elements—from the subject to the background—are in focus. No rule‑of‑thirds intentionality; framing is accidental and off‑center.
+
+- **Environment**  
+  Outdoor patio area of a modern residential house. A beige sofa sits to the left, a potted succulent on a stone table to the right, and a window with a dark frame is visible in the background. The time of day is late afternoon; the sun is high but slightly to the west, casting warm, natural light that creates soft shadows. Light foliage and a hint of a neighboring house appear in the distance.
+
+- **Lighting & Color**  
+  Natural daylight with slight overexposure on the subject’s back, giving a raw, unprocessed look. No color grading or filters—just the genuine tones of the scene. The lighting is slightly warm, with a hint of golden hue from the sun’s angle.
+
+- **Composition Notes**  
+  The shot is candid and spontaneous; the subject appears unaware of the camera. Slight tilt and partial crop give an informal feel. Background is fully sharp, no depth‑of‑field blur. The composition is not intentionally rule‑of‑thirds aligned—everything feels natural and unposed.
+
+- **Final Prompt**  
+  “A woman with a high ponytail, black strap‑front bra, black high‑waisted trousers, gold hoop earring, and delicate chain necklace, captured mid‑turn looking back over her shoulder, slight motion blur on the back, fully sharp background, wide‑angle lens, late afternoon natural daylight with subtle overexposure, outdoor patio setting with beige sofa, potted succulent, stone table, and a dark‑framed window, accidental off‑center framing, no rule‑of‑thirds, candid spontaneous feel, raw unprocessed look.”

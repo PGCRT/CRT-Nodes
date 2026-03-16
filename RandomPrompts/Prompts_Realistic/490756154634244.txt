@@ -1,0 +1,16 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, brown hair tied in a loose, casual ponytail, wearing a black halter‑top and matching black joggers. She’s mid‑step, one arm extended as if she just finished a workout or is about to grab something from a shelf. Her face is slightly turned toward the camera, mouth open as if speaking or laughing, giving a spontaneous, “in‑the‑moment” feel.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject is unaware of the camera or mid‑action. The shot has slight motion blur and a tiny tilt, creating an accidental, off‑center framing that feels handheld. No rule‑of‑thirds intentionality; the composition is natural and imperfect.
+
+- **Environment**  
+  A concrete garage or storage area with a corrugated metal roof. Behind the woman, a metal shelving unit holds various items: plastic bottles, a black bag, a pink cloth, and a blue bucket on the floor. A white plastic container sits on the top shelf, and a clear plastic bag hangs from a rack. The background is fully sharp, with no bokeh. The time of day is late afternoon; the ambient light is warm but slightly overexposed, giving a raw, unprocessed look.
+
+- **Lens & Technical**  
+  Short focal length (≈20 mm) wide‑angle lens. Everything is in focus — no portrait‑mode depth‑of‑field blur. The image uses auto‑HDR or auto‑beauty mode off; no filters, color grading, or post‑processing aesthetic. Slight overexposure from the ambient light gives a natural, gritty feel. The shot captures a wide lens view that includes the subject’s arms, torso, and the background shelving unit.
+
+- **Post‑Processing**  
+  Zero studio lighting, zero professional composition, zero editorial tone. Only natural motion freeze or slight blur from handheld instability. No rule‑of‑thirds intentionality — accidental framing. The final image should look like a genuine, spontaneous snapshot taken with a smartphone or DSLR in a real‑world setting.

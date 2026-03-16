@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A young woman with long, dark hair tied back, wearing a white ribbed tank top and dark denim jeans, is mid‑typing on a silver laptop. She sits in a black office chair at a light‑wood desk, her left hand on the keyboard and right hand on the trackpad. Her head is turned slightly to the left, a bright smile catching the sunlight as she looks toward the camera. The laptop screen shows a spreadsheet or project management interface; a pen rests on the desk beside it.
+
+- **Pose & Motion**  
+  Slight motion blur at the fingertips and keyboard area, indicating natural movement. The shot is handheld, with a subtle tilt that gives an off‑center, spontaneous feel. The subject’s body occupies roughly two‑thirdds of the frame, leaving a small margin of empty space on the right side for context.
+
+- **Environment**  
+  The setting is a bright, sunlit office or co‑working space. Behind the woman, a stack of brown cardboard boxes labeled “YANKEE” sits on the desk, and a framed picture of a palm tree hangs on the wall. A older man with white hair, wearing a brown button‑down shirt and gray trousers, stands in the background, looking toward the camera. The ceiling features recessed fluorescent lights that cast a warm, natural glow.
+
+- **Time & Lighting**  
+  Captured at mid‑afternoon, when the sun is high but not directly overhead, creating soft, diffused light with a slight overexposure on the subject’s face. The lighting is ambient and unprocessed; no auto‑HDR or beauty filters are applied.
+
+- **Lens & Technical Settings**  
+  Use a wide‑angle lens (24–35 mm) for a short focal length that keeps the entire scene in focus—no bokeh, no depth‑of‑field blur. Shoot at a high ISO to maintain detail in both foreground and background. The composition is accidental: no rule‑of‑thirds intentionality, just a candid, spontaneous framing that feels natural and raw.
+
+- **Post‑Processing**  
+  Keep the image raw—no color grading or filters. Slight overexposure may be present, but the overall look remains unprocessed and authentic. The final output should feel like a genuine, in‑moment photograph captured with a handheld camera in a real-world setting.

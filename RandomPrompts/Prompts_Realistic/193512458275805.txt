@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail and thick black-rimmed glasses, wearing a sheer dark‑colored bodysuit with a front zipper, sitting in a black ergonomic office chair. Her hands are on the zipper, slightly pulling it open as if she’s about to fasten it—mid‑action, candid. She smiles softly at the camera, head tilted a little to the right, giving an off‑center, spontaneous feel.
+
+- **Lighting & Exposure**  
+  Natural daylight from a window on the right side of the frame, creating a slight overexposure on the face and upper body; the exposure is uneven, giving a raw, unprocessed look. No auto‑HDR or beauty filters—just the ambient light with a hint of warmth.
+
+- **Environment**  
+  A bright, modern office space with a large window, a potted plant in a terracotta pot on the left, and a white wall behind. The time of day is mid‑afternoon, with soft natural light filling the room. The weather outside is clear, giving a gentle, diffused illumination.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24‑35 mm), short focal length, handheld shot with slight motion blur from instability. Everything is in focus—no bokeh or depth‑of‑field blur; the background remains sharp. No rule‑of‑thirds intentionality—framing is accidental, a little tilted, and the crop is partial, cutting off the top of the chair back and the lower part of the plant.
+
+- **Composition & Style**  
+  Candid, unposed, spontaneous—subject appears unaware she’s being photographed. Slight tilt and off‑center framing create a natural, imperfect feel. The shot has zero studio lighting, zero professional composition, zero editorial tone. All elements (subject, chair, plant, window, wall) are fully sharp.
+
+- **Post‑Processing**  
+  No filters, no color grading, no post‑processing aesthetic—just raw capture with slight overexposure or underexposure depending on ambient light.  
+
+**Prompt Summary:**  
+“Candid photo of a smiling woman in a black bodysuit, sitting in an office chair, hands on zipper, wearing glasses and a ponytail, in a bright mid‑afternoon office with a potted plant and window; wide‑angle handheld shot with slight motion blur, all sharp, natural lighting, raw unprocessed look.”

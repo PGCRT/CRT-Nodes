@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail, mid‑laugh, head tilted upward and to the right, eyes bright, mouth open in a spontaneous grin. She’s wearing an oversized white T‑shirt that reads “Study” on the left chest, paired with light denim jeans. Her left arm is slightly bent, her right shoulder relaxed, and she’s leaning casually against a glass‑door frame. The shirt hangs low, creating a soft, natural droop that catches the light.
+
+- **Motion & Focus**  
+  Slight motion blur on the hair tie and the shirt’s fold, indicating handheld shake. Everything in focus—subject, background, and foreground—captured with a wide‑angle lens (24–35 mm). No bokeh; background is fully sharp.
+
+- **Lighting & Exposure**  
+  Raw, auto‑HDR off. Ambient daylight from a bright window behind the subject creates a subtle overexposure on her face and shirt, with a faint halo around her head. Slight natural contrast, no color grading or filters. The lighting comes from the upper left, casting soft shadows under her chin and left arm.
+
+- **Environment**  
+  A modern office or studio space: a large glass door with a white frame on the left, a wooden cabinet in the background, and a small red object (maybe a mug) on a table to the right. The time of day is mid‑afternoon, around 3 pm, when the sun is high but not directly overhead. The weather is clear, with a light breeze that lifts a few strands of hair.
+
+- **Lens & Technical**  
+  Short focal length (24–35 mm), wide‑angle, no depth‑of‑field blur—everything from foreground to background is sharp. Handheld shot with slight tilt and off‑center framing; the composition is accidental, not intentional rule‑of‑thirds. The crop is partial: the left side of her torso is cut off by the frame, adding a candid feel.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Imperfections encouraged: slight tilt, off‑center framing, partial crop. No rule‑of‑thirds intentionality — accidental framing. Zero studio lighting, zero professional composition, zero editorial tone. Natural motion freeze or slight blur from handheld instability.
+
+- **Prompt Summary**  
+  “A young woman in a white ‘Study’ T‑shirt and denim jeans leans casually against a glass door frame in a bright office space at mid‑afternoon. She’s laughing with her head tilted upward, hair tied in a high ponytail that slightly blurs from motion. The shot is captured on a wide‑angle lens (24–35 mm), everything in focus with no bokeh, raw auto‑HDR off, slight overexposure from ambient daylight. The framing is accidental and off‑center, partial crop on the left side, handheld shake giving a candid, spontaneous feel. Background includes a wooden cabinet and a red mug, all sharp. No filters, no color grading—just a natural, unprocessed photograph.”

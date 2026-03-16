@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, slender woman with long dark hair, wearing a black lace bra and matching high‑waist panties, standing in front of a large glass balcony door. She’s leaning slightly against the frame, one hand on the handle, legs crossed at the ankles, wearing black stiletto heels with gold “G” logos. Her pose is casual, mid‑step, as if she just stepped out onto the balcony and is about to adjust her hair or check her reflection.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle, late‑afternoon sun; slight overexposure on the upper body, subtle warmth in the highlights. No auto‑HDR or beauty filters—raw, unprocessed look. The exposure is slightly uneven, giving a natural, handheld feel.
+
+- **Camera & Lens**  
+  Wide‑angle lens (24–35 mm), short focal length, everything in focus from foreground to background. No bokeh; the background is fully sharp, no depth‑of‑field blur. Handheld shot with slight instability, producing a natural motion freeze or soft blur on the subject’s legs and the balcony railing.
+
+- **Composition & Framing**  
+  Candid, unposed, spontaneous framing—no rule‑of‑thirds intentionality. The shot is slightly tilted, off‑center, with a partial crop that cuts off the top of the balcony railing and the lower part of the woman’s heels. The composition feels accidental, like a quick snapshot captured mid‑action.
+
+- **Environment**  
+  Location: A modern apartment balcony with a large glass door and ornate white iron railing. Outside, a residential neighborhood with low‑rise houses and greenery is visible. Time of day: late afternoon, around 5 pm, with warm, slightly harsh sunlight. Weather: clear, no clouds, ambient light is bright but not midday direct sun.
+
+- **Details & Imperfections**  
+  Slight tilt in the camera, a small handheld shake that gives a natural motion blur to the woman’s legs and the railing. The image has a raw, unprocessed look—no color grading or filters. A faint overexposure on the upper body creates a subtle halo around her hair. The background is fully sharp, no portrait‑mode isolation.
+
+- **Prompt for Text‑to‑Image Generation**  
+  “A tall woman with long dark hair in black lace lingerie and black stiletto heels stands casually against a large glass balcony door, leaning on the handle, legs crossed, mid‑step pose. Natural late‑afternoon daylight creates slight overexposure on her upper body. Shot on a 35 mm wide‑angle lens, everything in focus from foreground to background, handheld shake giving natural motion blur to the legs and railing. Candid, unposed framing with slight tilt and partial crop, no rule‑of‑thirds. Background shows a residential neighborhood through the glass door and ornate white iron railing, fully sharp. Raw, unprocessed look, no filters.”

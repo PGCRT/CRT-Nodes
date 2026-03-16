@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with light brown hair tied in a loose ponytail, wearing an olive‑green V‑neck T‑shirt. Her hands are gently clasped near her chest, fingers slightly curled, as if she’re about to adjust something or simply hold a small object. She looks directly at the camera with a soft, engaged expression, eyes wide and bright, a hint of a smile on her lips.  
+
+- **Motion & Focus**  
+  Slight motion blur on the hands and background to convey handheld shake; everything remains fully sharp—no portrait‑mode bokeh. The focus is intentional but casual, capturing a candid moment as if she’s mid‑action.  
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle source (mid‑afternoon), with a slight overexposure that gives the image a warm, luminous feel. No auto‑HDR or beauty filters—just raw, unprocessed light.  
+
+- **Lens & Technical**  
+  Wide‑angle lens (24‑35 mm), short focal length, no depth‑of‑field blur. The background is fully in focus, with a real‑world location that appears to be an outdoor patio or garden area; a stone wall and a white flower are visible behind her.  
+
+- **Environment**  
+  A sunlit patio with a textured concrete wall on the left, a blurred green plant and a white rose on the right, and a small window frame in the upper left corner. The time of day is late afternoon, with warm golden light casting soft shadows.  
+
+- **Composition & Framing**  
+  No rule‑of‑thirds intentionality—framing is accidental and off‑center. The shot is slightly tilted, creating a dynamic, spontaneous feel. The crop is partial; the woman’s left shoulder extends beyond the frame, adding to the candid vibe.  
+
+- **Style Notes**  
+  Capture a realistic, unposed moment with natural motion freeze or slight blur from handheld instability. Keep zero studio lighting, zero professional composition, and zero editorial tone.  
+
+**Prompt Summary**  
+> “A young woman in an olive‑green V‑neck T‑shirt, hair tied in a loose ponytail, hands clasped near her chest, looking directly at the camera with a soft smile. Slight motion blur on the hands and background, everything fully sharp. Natural daylight from mid‑afternoon, slight overexposure. Wide‑angle lens (24‑35 mm), short focal length. Outdoor patio setting with a stone wall and a white rose in the background. Accidental off‑center framing, slightly tilted, partial crop. Raw, unprocessed, candid style.”

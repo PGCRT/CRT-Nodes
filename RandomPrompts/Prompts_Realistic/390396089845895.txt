@@ -1,0 +1,29 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A young woman with long, sun‑kissed blonde hair, wearing an oversized black t‑shirt, captured mid‑gesture as she holds a silver smartphone in front of a large window. Her face is turned slightly to the side, eyes focused on the screen, fingers curled around the device as if taking a photo or video. The pose is spontaneous and unposed; her head is tilted a few degrees off‑center, giving a natural, handheld feel.
+
+- **Lighting & Exposure**  
+  Warm, natural daylight from a high‑angle window creates a soft overexposure on the right side of the frame. Slight ambient glare hints at a bright, sunny afternoon. The exposure is slightly uneven—the left side of the image is a bit brighter than the right, giving an authentic, raw look. No auto‑beauty or filter enhancement; the image remains unprocessed.
+
+- **Camera & Lens Settings**  
+  - Lens: 24 mm wide‑angle (short focal length) for a broad field of view.  
+  - Focal depth: everything from foreground to background is fully sharp—no portrait‑mode blur.  
+  - Aperture: f/5.6, giving a moderate depth that keeps the window and surrounding foliage crisp.  
+  - Shutter speed: 1/125 s, producing a slight motion blur on the subject’s hands and phone, indicating handheld instability.  
+  - ISO: 400 for clean detail without noise.
+
+- **Composition & Framing**  
+  The frame is intentionally imperfect: the subject’s left shoulder cuts off near the top edge, and the right side of her shirt extends beyond the bottom border. The composition follows no rule‑of‑thirds; it’s a casual, spontaneous snapshot. The window’s vertical mullion runs along the left edge, partially framing the woman’s head. A small portion of a green plant leaf peeks into the lower right corner, adding a natural accent.
+
+- **Environment & Time**  
+  Location: A bright, modern apartment balcony with a large, clear glass window. The time of day is late morning, around 10:30 AM, when the sun is high but still casts soft shadows. Outside the window, a blurred garden scene with green foliage and a hint of a blue sky is visible, fully in focus.
+
+- **Technical Details**  
+  - No bokeh; background remains sharp.  
+  - Slight tilt of the camera adds to the candid feel.  
+  - The image has a natural color palette: warm golds on the hair, cool blues in the window frame, and muted greens outside.  
+  - No post‑processing or color grading—just raw, unfiltered capture.
+
+- **Final Prompt**  
+  “A young woman with long, sun‑kissed blonde hair, wearing an oversized black t‑shirt, captured mid‑gesture as she holds a silver smartphone in front of a large window. Warm, natural daylight from a high‑angle window creates a soft overexposure on the right side. Shot on a 24 mm wide‑angle lens at f/5.6 and 1/125 s, with everything fully sharp. The frame is intentionally imperfect: the subject’s left shoulder cuts off near the top edge, and the right side of her shirt extends beyond the bottom border. The window’s vertical mullion runs along the left edge, partially framing the woman’s head. A small portion of a green plant leaf peeks into the lower right corner. Late morning, 10:30 AM, on a bright apartment balcony. No filters—raw, unprocessed, candid, spontaneous, handheld.”

@@ -1,0 +1,33 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Appearance**  
+  - A young woman with shoulder‑length auburn hair, wearing thick black‑rimmed glasses.  
+  - She is bare‑chested, mid‑expression, mouth slightly open as if she just finished speaking or singing.  
+  - A thin stream of white liquid (milk? cream?) drips from her lips down the center of her chest, adding a dynamic, spontaneous element.  
+
+- **Pose & Motion**  
+  - Slight motion blur on the face and the dripping liquid, indicating handheld shake and mid‑action.  
+  - Head tilted a few degrees to the left, eyes focused forward, a candid “mid‑conversation” look.  
+  - Shoulders relaxed, slight upward tilt of the torso, creating an off‑center, accidental framing.  
+
+- **Lighting & Exposure**  
+  - Natural daylight from a western window; slight overexposure on the face and chest, giving a warm, soft glow.  
+  - No auto‑beauty or filter enhancement – raw, unprocessed look.  
+  - Ambient light creates subtle highlights on the skin and a faint halo around the hair.  
+
+- **Environment**  
+  - Setting: a modern living room with a beige wall, a white couch, and a small potted plant in the background.  
+  - Time of day: late afternoon, around 5 pm, with warm, golden sunlight.  
+  - Background is fully sharp – no bokeh, no depth‑of‑field blur.  
+
+- **Lens & Technical**  
+  - 24 mm wide‑angle lens (short focal length).  
+  - Everything in focus – background and subject equally sharp.  
+  - Slight tilt and crop: the frame cuts off a bit of the left shoulder, giving an informal, spontaneous feel.  
+
+- **Composition Notes**  
+  - No rule‑of‑thirds intentionality – the composition is accidental, as if the photographer was capturing a fleeting moment.  
+  - The prompt emphasizes “zero studio lighting” and “zero editorial tone” – it’s a genuine, in‑the‑moment snapshot.  
+
+**Prompt Summary (structured)**  
+> “A candid, wide‑angle shot of a bare‑chested woman with auburn hair and black‑rimmed glasses, captured mid‑speech with a stream of white liquid dripping from her lips. Slight motion blur on the face and liquid, natural daylight overexposure, late‑afternoon lighting in a modern living room. 24 mm lens, fully sharp background, accidental off‑center framing, no filters or post‑processing.”

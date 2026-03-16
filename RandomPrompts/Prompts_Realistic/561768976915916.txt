@@ -1,0 +1,34 @@
+**Realistic Candid Photography Prompt Framework – “Summer Field Portrait”**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair standing in a sunlit meadow, wearing an oversized white cotton tee and high‑waisted light‑blue jeans. She’s mid‑step, one foot slightly ahead of the other, hands relaxed at her sides, face turned toward the camera but not posing—natural, candid expression with a soft smile.  
+
+- **Capture Style**  
+  * Slight motion blur on the hands and feet to suggest movement.  
+  * Auto‑HDR or auto‑beauty mode off – raw, unprocessed look.  
+  * No filters, no color grading, no post‑processing aesthetic.  
+  * Slight overexposure in the upper chest area to capture the warm ambient light.  
+  * Wide‑angle lens (24‑35 mm) – everything in focus, background fully sharp, no bokeh.  
+
+- **Environment**  
+  * Location: A grassy field with a wooden fence on the left and a line of tall trees in the distance.  
+  * Time of day: Late afternoon, golden hour—warm sunlight coming from the right, casting soft shadows.  
+  * Weather: Light breeze, clear sky, a few scattered clouds.  
+
+- **Lens & Technical**  
+  * Short focal length (24‑35 mm), wide‑angle.  
+  * No depth‑of‑field blur – all planes sharp.  
+  * Handheld shot with slight tilt and off‑center framing; partial crop of the subject’s left shoulder.  
+  * Natural motion freeze or slight blur from handheld instability.  
+
+- **Composition Notes**  
+  * No rule‑of‑thirds intentionality—accidental framing that places the subject slightly above the center of the frame.  
+  * The fence post on the left is partially cut off, adding to the candid feel.  
+  * Background trees and grass are fully in focus, giving a sense of depth without any “portrait mode” isolation.  
+
+- **Lighting**  
+  * Zero studio lighting – all light comes from natural ambient sources.  
+  * Slight overexposure on the upper chest to emphasize the warm glow of the sun.  
+
+- **Final Prompt Text**  
+  *“A young woman with long wavy brown hair, wearing an oversized white cotton tee and high‑waisted light blue jeans, stands mid‑step in a sunlit meadow at late afternoon. She smiles naturally while a wooden fence and line of trees frame the background. Shot on a 24‑35 mm wide‑angle lens, everything is fully sharp with slight motion blur on the hands and feet. The composition is accidental and off‑center, with a partial crop of her left shoulder, captured handheld with a slight tilt. No filters or post‑processing – raw, unprocessed, natural lighting with a touch of overexposure on the chest. The scene feels spontaneous, candid, and real.”*

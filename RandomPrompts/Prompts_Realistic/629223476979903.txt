@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy light‑brown hair standing in a sunlit meadow, wearing light denim shorts. She is bare‑shouldered, mid‑step, with a natural, unposed stance; her left foot is slightly ahead of the right, and her hands hang loosely at her sides. Her face is turned toward the camera but not directly aimed—slight tilt and off‑center framing give a candid feel.
+
+- **Capture Style**  
+  Candid, spontaneous, “mid‑action” moment. Slight motion blur on the legs and hands to suggest handheld shake. No filters, no color grading, no post‑processing aesthetic. The exposure is slightly warm, with a mild overexposure that keeps the ambient light bright but natural. Everything is in focus—no portrait‑mode depth‑of‑field blur; background remains sharp.
+
+- **Environment**  
+  Location: an open, grassy field with scattered wildflowers and a line of tall reeds on the right side. The background shows a faint line of trees at the horizon, a clear sky with soft golden hour light. Time of day: late afternoon, around 5 pm, giving warm, slightly harsh sunlight from the west. Weather: clear, dry, no wind.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm), wide‑angle lens. No bokeh—background fully sharp. All elements in focus. Handheld shot with slight instability. Auto‑HDR or auto‑beauty mode off. No rule‑of‑thirds intentionality; framing is accidental, with the subject slightly cropped on the right side.
+
+- **Composition Notes**  
+  The composition is intentionally imperfect: the subject’s head is slightly above the center of the frame, her left shoulder is a bit higher than the right, and the top of her hair extends just beyond the upper edge of the frame. The bottom of the frame cuts off just above her knees, giving a “mid‑body” candid feel. The background reeds extend to the right edge, creating a natural vertical line that balances the subject’s left side.
+
+- **Lighting & Color**  
+  Natural sunlight from the west creates a soft highlight on the woman’s left shoulder and a subtle shadow under her right breast. Slight overexposure keeps the tones bright but natural. No color grading—raw, unprocessed look. The overall color palette is warm earthy tones: golden grass, light blue denim, and warm brown hair.
+
+- **Final Prompt**  
+  “A young woman with long wavy light‑brown hair, bare‑shouldered and wearing light denim shorts, stands mid‑step in a sunlit meadow at late afternoon. She is candid, unposed, slightly tilted and off‑center, captured on a wide‑angle short focal length lens with everything in focus and a slight motion blur from handheld shake. The background shows a line of tall reeds and distant trees under a clear golden sky; the scene is fully sharp with no bokeh. The exposure is mildly overexposed, giving a raw, unprocessed look. All elements are in focus, no filters or color grading, just natural sunlight and accidental framing.”

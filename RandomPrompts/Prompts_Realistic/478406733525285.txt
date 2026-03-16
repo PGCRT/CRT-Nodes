@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail tied with a bright blue elastic, her hair curling slightly at the sides. She’s bare‑chested, wearing only a black bottom that peeks at the waist. Her face is turned toward the camera with a playful, mid‑expression—mouth slightly open, eyes wide, as if caught in an unplanned moment.  
+
+- **Lighting & Exposure**  
+  Natural daylight from a western window, mid‑afternoon, soft but warm. Slight overexposure on the upper torso, giving a subtle halo to her skin. No auto‑beauty or filter enhancement—raw, unprocessed look.  
+
+- **Camera Settings**  
+  Wide‑angle lens (24 mm), handheld, slight motion blur from a quick shake. Everything in focus—from her face to the tiled wall behind her—no bokeh, no depth‑of‑field blur.  
+
+- **Composition**  
+  Casual, off‑center framing: the subject’s left shoulder is slightly cut off by the frame edge. The shot is not rule‑of‑thirds; it feels spontaneous, as if she was mid‑pose when the shutter clicked.  
+
+- **Environment**  
+  A bathroom with beige square tiles on the wall and floor. A small circular light fixture is visible at the top center of the wall. The time of day is late afternoon, giving a warm, slightly hazy glow.  
+
+- **Details & Imperfections**  
+  Slight tilt to the camera, a tiny wobble that gives a natural motion blur around her shoulders. Her skin has a faint sheen from the ambient light, and a few minor blemishes are visible—adding realism. The blue elastic is slightly askew, adding to the candid feel.  
+
+- **Post‑Processing**  
+  None—no color grading or filters. Just raw capture, with auto‑HDR off.  
+
+**Prompt Summary (structured)**  
+"Mid‑afternoon natural daylight in a tiled bathroom, a bare‑chested woman with a high ponytail caught mid‑expression, captured on a 24 mm wide‑angle lens with slight handheld blur and overexposed highlights; raw, unprocessed, no filters, everything in focus, casual off‑center framing, spontaneous candid shot."

@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman with long, dark, wavy hair standing back-to-back to the camera in a modern living room. She wears a black strap‑front bra with thin adjustable straps and high‑waisted black trousers. Her left ear is adorned with a small gold hoop earring; a delicate beaded necklace rests on her neck. She’s mid‑turn, slightly angled toward a white sofa, her right hand resting on her hip.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject appears unaware of the camera, caught in a natural moment. Slight tilt and off‑center framing give an accidental, handheld feel. The shot is a partial crop that doesn’t follow the rule‑of‑thirds; the composition feels organic and raw.
+
+- **Motion & Exposure**  
+  A subtle motion blur from a handheld wide‑angle lens, with a slight overexposure that lets the ambient daylight bleed softly across the scene. No auto‑HDR or beauty filters — just a raw, unprocessed look. The exposure is slightly warm, as if the sun is high but not too high, casting gentle highlights on her back and the sofa.
+
+- **Environment**  
+  A bright, airy living room with a white couch on the left, a small wooden side table on the right, and a spherical lamp glowing softly in the corner. The time of day is late morning; the weather is clear, with a light haze that keeps everything in focus. The background is fully sharp — no bokeh or depth‑of‑field blur.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm) wide‑angle lens, all elements in focus. No portrait‑mode subject isolation; the background remains crisp. The image has a natural, unfiltered color palette with slight warmth and a hint of overexposure.
+
+- **Final Prompt**  
+  “A woman with long dark wavy hair, wearing a black strap‑front bra and high‑waisted black trousers, stands back‑to‑camera in a bright modern living room. She’s mid‑turn near a white sofa, with a gold hoop earring and beaded necklace. The shot is candid, slightly tilted, off‑center, captured on a 24‑35 mm wide‑angle lens with subtle motion blur and slight overexposure. The scene includes a white couch, a wooden side table, and a glowing spherical lamp in the corner, all in sharp focus. The time of day is late morning, the weather clear, producing a warm, raw, unprocessed look with no filters or post‑processing.”

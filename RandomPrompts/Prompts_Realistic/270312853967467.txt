@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, curvy woman with long, wavy dark hair and golden hoop earrings stands mid‑step on a wooden staircase, hands gripping the rail on each side. She wears a heather‑gray halter‑style bikini top with cross‑back straps and matching high‑cut bottoms tied at the sides with thin drawstrings. Her left hand rests on the railing, her right hand slightly forward, creating a dynamic, off‑center composition. A subtle smile is on her face; her gaze is directed toward the camera but not directly at it—mid‑action, candid feel.
+
+- **Lighting & Exposure**  
+  Natural daylight from a large circular window behind her creates a soft overexposed highlight on her back and the window glass. Slight ambient glare on the wood rail, mild underexposure on the lower part of her body. No auto‑HDR or beauty filters—raw, unprocessed look. The exposure is slightly uneven, giving an authentic handheld feel.
+
+- **Camera & Lens Settings**  
+  35 mm wide‑angle lens (short focal length), f/4.0 aperture, 1/125 s shutter speed, 30 fps. Handheld shot with slight motion blur on the subject’s hands and the railing, background fully sharp—no bokeh, no portrait‑mode depth of field. Everything in focus from foreground to background.
+
+- **Environment**  
+  A bright, airy interior with a large circular window that lets in natural light; the window frame is white, the wood rail has a warm brown finish. The staircase has white balusters and a polished wooden handrail. The floor is a light‑colored carpet. The time of day is mid‑afternoon, with soft sunlight creating gentle shadows.
+
+- **Composition & Framing**  
+  No rule‑of‑thirds intentionality—accidental framing with the subject slightly tilted to the left. The shot is partially cropped on the right side by the railing, giving a candid, spontaneous feel. The background is fully sharp, no depth‑of‑field blur.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, off‑center framing, partial crop on the right side. A faint watermark in the lower center reads “GostyMaiden.com” with a small logo above it. The woman’s left wrist has a thin gold bracelet; her right wrist shows a subtle motion blur. Her bikini top’s cross‑back straps are slightly askew, adding realism.
+
+- **Post‑Processing**  
+  Zero studio lighting, zero professional composition, zero editorial tone. Raw, unprocessed look with no color grading or filters. Only natural light and slight overexposure on the back of the subject.
+
+**Prompt Summary (structured)**  
+“Candid photo of a tall woman in a gray halter bikini standing on a wooden staircase, hands on rail, natural daylight from a circular window behind her, 35 mm wide‑angle lens, f/4, 1/125 s, handheld slight motion blur on the hands and railing, background fully sharp, accidental off‑center framing, partial crop on right, subtle gold bracelet on left wrist, faint watermark at lower center, raw unprocessed look with mild overexposure on back.”

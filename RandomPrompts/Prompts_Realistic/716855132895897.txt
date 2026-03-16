@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, straight brown hair, wearing light‑wash denim shorts and a plain white tee, standing in a bright office‑style room. She’s mid‑step, left foot slightly ahead, hands relaxed at her sides, a natural, unposed smile on her face. Her posture is casual, with a slight tilt to the right to give an off‑center, spontaneous feel.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. Slight motion blur on the feet and hands to hint at handheld shake. No filters, no color grading, no post‑processing aesthetic. A tiny overexposure in the upper left corner to capture ambient daylight. Everything is fully sharp; no bokeh or depth‑of‑field blur.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24 mm), short focal length, handheld. All elements in focus — background fully sharp. No portrait‑mode subject isolation. Slight overexposure or underexposure depending on ambient light (here, a warm, mid‑afternoon glow).
+
+- **Environment**  
+  Specific real‑world location: a modern office space with a wooden desk, a cork bulletin board, a potted plant, and a bookshelf lined with books and framed photos. Time of day: late afternoon, soft natural light coming from the west, creating gentle shadows. Weather or ambient conditions: clear, slightly breezy.
+
+- **Composition Notes**  
+  No rule‑of‑thirds intentionality — accidental framing. The shot is partially cropped on the right side, with the subject’s left shoulder cutting close to the edge. Background includes a desk with a laptop and a small plant, a bookshelf filled with books and plants, and a cork board with notes. The camera is held at eye level, slightly angled to the left, capturing the full body of the woman from head to toe.
+
+- **Details**  
+  Slight motion blur on the feet and hands. Small imperfections: a faint smudge on the lens, a slight vignette at the corners. No studio lighting — all light comes from natural daylight. The image has an auto‑HDR feel but without post‑processing; it looks raw and genuine.
+
+**Prompt Summary**  
+"Mid‑afternoon candid shot of a young woman in denim shorts and a white tee, standing in a bright office space with a wooden desk, cork board, and bookshelf. Wide‑angle, handheld, fully sharp, slight motion blur on the feet and hands, accidental off‑center framing, raw unprocessed look."

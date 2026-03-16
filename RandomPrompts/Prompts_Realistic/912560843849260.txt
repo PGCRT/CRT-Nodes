@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework – “Mid‑Drink, Wet‑Hair, Everyday Energy”**
+
+- **Subject & Action**  
+  A young woman with long, damp brown hair is captured mid‑drink from a clear plastic water bottle. Her head is tilted back, eyes closed, mouth open as she laps water, with droplets falling from her lips and running down her cheek. She wears an oversized white cotton T‑shirt that’s slightly wrinkled, bearing bold black lettering (“AND” visible). Her left hand grips the bottle; the label shows a red “Gey” logo (partial).  
+
+- **Pose & Composition**  
+  Candid, unposed, spontaneous framing – the shot is handheld, slightly tilted, and off‑center. The composition is accidental: the subject occupies the upper‑right quadrant, but the frame cuts off the left side of her shoulder, giving a partial crop. No rule‑of‑thirds intentionality; the edges are uneven, as if captured in a hurry.  
+
+- **Motion & Focus**  
+  Slight motion blur on the droplets and the bottle, indicating a handheld shake. Everything is fully sharp – no bokeh, no depth‑of‑field blur – the background remains crisp from a wide‑angle lens.  
+
+- **Lighting & Exposure**  
+  Natural daylight from a western window; the light is slightly overexposed at the top of the frame, creating a soft halo around her face. No auto‑HDR or auto‑beauty mode – raw, unprocessed look.  
+
+- **Environment**  
+  The setting is a casual indoor space: a living room with a dark wooden cabinet in the background, a blue bottle visible on a table, and a white ceramic mug on a shelf. The time of day is late afternoon, around 4 pm, with warm, golden light. Weather is clear, with a gentle breeze that has made the hair damp.  
+
+- **Lens & Technical**  
+  Short focal length (20–35 mm), wide‑angle lens. No portrait‑mode subject isolation – the background is fully sharp. The image uses a standard ISO 400–800, f/4–f/5.6 aperture, and a shutter speed that captures the droplets’ motion blur.  
+
+- **Style Notes**  
+  Zero studio lighting, zero professional composition, zero editorial tone. The photo feels like a genuine, spontaneous snapshot – a “real” moment frozen in time.  
+
+- **Prompt for AI Image Generation**  
+  *“A young woman with long damp brown hair drinking from a clear plastic water bottle, mid‑drink with her head tilted back and eyes closed, droplets falling from her lips and running down her cheek. She wears an oversized white cotton T‑shirt with bold black lettering, holding the bottle in her left hand; the bottle’s red ‘Gey’ label is partially visible. The shot is candid, handheld, slightly tilted and off‑center, with a partial crop that cuts off the left side of her shoulder. Slight motion blur on the droplets and bottle, everything fully sharp – no bokeh. Natural daylight from a western window, late afternoon around 4 pm, slight overexposure at the top. Background shows a dark wooden cabinet and a blue bottle on a table, white ceramic mug on a shelf. Short focal length 20–35 mm wide‑angle lens, ISO 400–800, f/4–f/5.6 aperture, shutter speed capturing motion blur. Raw, unprocessed look, zero auto‑HDR, zero studio lighting.”*

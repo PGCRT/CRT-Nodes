@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with dark, wind‑blown hair sitting cross‑legged on a wooden floor in a brightly lit, cluttered bedroom. She’s wearing a light gray crop top with red trim and beige ripped joggers. Her hands hold a black smartphone aloft as if she’re about to record a video or take a selfie, but her face is slightly turned toward the camera, giving a candid, mid‑action feel.
+
+- **Lighting & Exposure**  
+  Natural daylight from a window above, creating a soft, warm glow with a slight overexposure on the upper part of the frame. No auto‑HDR or beauty filters—just raw, unprocessed tones. The lighting is uneven, with a small highlight near the top right from a red lamp, adding subtle contrast.
+
+- **Composition & Framing**  
+  Wide‑angle lens (24–35 mm) captured from a low angle, producing a slightly tilted, off‑center composition that feels spontaneous and handheld. The frame is not intentionally rule‑of‑thirds; the subject’s head is a bit above the center, her phone is near the top edge, and the background includes a colorful shelving unit, a red lamp, a speaker, and a glimpse of a bed—everything in focus with no bokeh.
+
+- **Environment Details**  
+  The setting is a real‑world bedroom at mid‑afternoon, with ambient daylight and a warm lamp light. A small white blanket lies on the floor to the left, a pair of gray sweatpants are folded nearby, and a red garment hangs on the right. A window is visible at the top center, letting in bright natural light that creates a faint lens flare.
+
+- **Technical Specs**  
+  Short focal length (30 mm), wide‑angle, no depth‑of‑field blur—background fully sharp. Slight motion blur on the subject’s hands and phone to suggest handheld instability. Everything is in focus: the subject, the phone, the lamp, the shelf, the speaker, and the window.
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, no post‑processing aesthetic. Keep it raw and natural. Slight overexposure on the upper part of the image to capture the ambient light.
+
+**Prompt Summary**  
+"Candid, wide‑angle shot of a young woman in a brightly lit bedroom, sitting cross‑legged on a wooden floor, holding a smartphone above her head as if about to record. She wears a gray crop top with red trim and beige ripped joggers. Natural daylight from a window creates a soft warm glow with slight overexposure. The composition is slightly tilted and off‑center, captured with a 30 mm wide‑angle lens, everything in focus with no bokeh. Background includes a colorful shelf, a red lamp, a speaker, and a glimpse of a bed. A white blanket and gray sweatpants lie on the floor, a red garment hangs nearby. Slight motion blur on the hands and phone suggests handheld instability. Raw, unprocessed look—no filters or color grading."

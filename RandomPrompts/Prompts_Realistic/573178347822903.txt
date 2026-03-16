@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark hair standing on a white metal railing, wearing a delicate white lace bra and matching panties, draped in a soft beige fur coat that’s slightly open at the front. Her left hand rests on the railing, her right hand holds the coat, and she leans forward a little, creating a casual, mid‑action pose. She looks directly at the camera with a subtle smile, eyes slightly narrowed, giving an intimate, candid feel.
+
+- **Lighting & Exposure**  
+  Warm, golden hour sunlight coming from the upper left, causing a slight overexposure on the face and shoulders while keeping the background softly lit. The exposure is not perfectly balanced—there’s a gentle haze of ambient light that gives a raw, unprocessed look. No auto‑HDR or beauty filters; just natural contrast.
+
+- **Motion & Focus**  
+  Slight motion blur around the edges from handheld instability, but the subject and background are fully sharp—no portrait‑mode depth‑of‑field blur. The focus covers the entire frame: subject, railing, and foliage behind.
+
+- **Lens & Technical Settings**  
+  Wide‑angle lens (24–35 mm), short focal length, f/4.0 aperture, 1/60 s shutter speed, ISO 400. No bokeh; everything in focus from foreground to background.
+
+- **Environment**  
+  Outdoor setting on a white metal railing in an urban park or rooftop area. Tall green trees and a bright sky behind, with the sun low on the horizon creating a warm glow. The time of day is late afternoon (around 6 pm), giving a soft, golden light. Weather is clear, with a few scattered clouds.
+
+- **Composition & Framing**  
+  No rule‑of‑thirds intentionality—framing is accidental and off‑center. The shot is slightly tilted, the top of the frame cuts off a bit of the railing, giving a candid, spontaneous feel. The composition captures the subject’s full body from head to toe, with the coat and hair adding texture and depth.
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, no post‑processing aesthetic. Only raw, natural tones and a slight overexposure that gives an authentic, unposed vibe.
+
+**Prompt Summary**  
+“Candid photo of a woman in white lace lingerie and beige fur coat, leaning on a white railing outdoors at golden hour. Warm sunlight creates slight overexposure; wide‑angle lens, short focal length, f/4, 1/60 s, ISO 400. Slight motion blur from handheld shake, but background fully sharp. Accidental off‑center framing, slightly tilted, no rule‑of‑thirds. Raw, unprocessed look, natural colors.”

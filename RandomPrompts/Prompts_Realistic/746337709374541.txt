@@ -1,0 +1,28 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair, wearing a bright yellow bikini, sitting on a bed with her hands on her hips. She is mid‑pose, slightly turned toward the camera, with a natural, unposed expression. Her left hand rests on her hip, while her right hand is near her thigh, creating a casual, candid feel.
+
+- **Lighting & Exposure**  
+  Soft, ambient daylight from a north‑west window creates a slight overexposure on the subject’s face and torso. The exposure is not perfectly balanced—there’s a subtle warmth to the image with a faint halo around the hair. No auto‑beauty or filter enhancement; the look is raw and unprocessed.
+
+- **Camera & Lens Settings**  
+  - Lens: 24 mm wide‑angle, short focal length, handheld.  
+  - Aperture: f/5.6 (mid‑range) for a fully sharp background with no bokeh.  
+  - Shutter speed: 1/125 s, producing a slight motion blur on the subject’s hands and hair, indicating natural movement.  
+  - ISO: 400 – balanced for the ambient light.
+
+- **Composition & Framing**  
+  The frame is intentionally off‑center; the subject’s left side is slightly cut off by the edge of the image. The shot is not rule‑of‑thirds‑aligned—instead, it feels spontaneous and casual. The background shows a neutral beige headboard and white pillows, with a hint of a window in the upper right corner.
+
+- **Environment**  
+  Location: A modern bedroom with a tufted headboard, white bedding, and a beige wall. Time of day: late morning, with soft natural light coming from the west. Weather: clear, slightly humid—ambient moisture gives a subtle gloss to the skin.
+
+- **Technical Details**  
+  - Everything is in focus—from the subject’s face to the pillows—thanks to a wide‑angle lens set to a mid‑range focal length.  
+  - No portrait‑mode depth‑of‑field blur; the background remains sharp.  
+  - Slight tilt on the camera gives a dynamic, candid feel.  
+  - The image has a natural, unprocessed look with no color grading or filters applied.
+
+- **Final Prompt**  
+  “A young woman with long wavy brown hair in a yellow bikini sits on a bed, hands on hips, mid‑pose, slightly turned toward the camera. Soft daylight from a north‑west window creates a subtle overexposure on her face and torso. Shot on a 24 mm wide‑angle lens at f/5.6 and 1/125 s, handheld with slight motion blur. The frame is off‑center, capturing a casual, candid moment in a modern bedroom with a beige headboard and white pillows, all in focus with no filters or color grading.”

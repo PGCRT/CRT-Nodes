@@ -1,0 +1,31 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with wavy, shoulder‑length brown hair, wearing a rust‑colored off‑shoulder sweater and a blue patterned hood tucked under her neck. Her left arm is bent, hand resting on her chest, as if she’s just finished a conversation or is adjusting her shirt. She’s turned slightly to the right, eyes focused off‑camera, capturing a candid, mid‑action moment.
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window behind her creates a soft, warm backlight with a slight overexposure on the left side of the frame. The exposure is uneven—ambient light gives a gentle haze and a tiny lens flare near the top left corner. No auto‑beauty or filter enhancement; raw, unprocessed look.
+
+- **Camera Settings**  
+  - Lens: 24‑35 mm wide‑angle, short focal length, handheld.  
+  - Focal depth: everything in focus—no bokeh, no portrait‑mode isolation.  
+  - Shutter speed: 1/60 s (slight motion blur from handheld instability).  
+  - Aperture: f/5.6 (mid‑range for natural sharpness).  
+  - ISO: 400–600 (depending on ambient light).  
+
+- **Composition & Framing**  
+  - No rule‑of‑thirds intentionality—accidental, off‑center framing that places the subject’s head near the right third of the frame, with her left side cutting close to the edge.  
+  - Slight tilt upward to include a portion of the window blinds and a glimpse of a second woman in the background.  
+  - Background fully sharp: a light‑colored wall, a wooden desk, and a mesh office chair on the left.
+
+- **Environment**  
+  Office or study space during mid‑afternoon (around 3 pm). Sunlight streams through a tall window with horizontal blinds, casting soft shadows and a faint lens flare. A second woman is partially visible in the background, blurred but still in focus, adding depth to the scene.
+
+- **Details & Imperfections**  
+  - Slight motion blur on the subject’s hand and hair, indicating natural movement.  
+  - Minor tilt of the camera, giving a casual, spontaneous feel.  
+  - Partial crop: the left edge cuts off part of the chair, the right edge cuts off part of the background woman’s head.  
+  - No post‑processing color grading—just raw capture.
+
+- **Final Prompt**  
+  “A candid, wide‑angle shot of a young woman in a rust sweater and blue hood, captured mid‑gesture in an office setting during mid‑afternoon. Natural daylight from a tall window creates a soft backlight with slight overexposure and a tiny flare. Handheld 24‑35 mm lens, 1/60 s shutter, f/5.6 aperture, ISO 500—everything in focus, no bokeh. The frame is slightly tilted and off‑center, capturing the subject’s profile and a partial view of a second woman in the background, with a mesh chair and wooden desk on the left. Raw, unprocessed look, slight motion blur from instability, accidental framing, no rule‑of‑thirds.”

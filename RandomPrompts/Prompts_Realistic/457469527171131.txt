@@ -1,0 +1,26 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A young woman with long, wavy brown hair, wearing a bright yellow halter‑style bikini, riding a silver mountain bike on a sunlit jungle trail. She is mid‑turn, hands firmly on the handlebars, feet in bare sandals, body slightly angled toward the camera as if she just completed a sharp left‑hand turn. Her face is turned to the camera with a relaxed, confident smile; her eyes are focused forward, not directly at the lens—capturing a candid, unposed moment.
+
+- **Pose & Composition**  
+  The shot is taken with a wide‑angle lens (24 mm or 35 mm), producing a slightly tilted, off‑center framing that gives an accidental, handheld feel. The composition is not intentionally rule‑of‑thirds; the subject’s left side is slightly cut off by the frame edge, and the bike’s front wheel is partially cropped at the bottom left. The camera is held at eye level, with a slight downward angle to include the trail and background.
+
+- **Motion & Focus**  
+  Slight motion blur is present on the bike’s wheels and the surrounding foliage, indicating a handheld snap‑shot taken while the rider is in motion. Everything—from the woman’s face to the distant waterfall—is fully sharp; no portrait‑mode depth‑of‑field blur is applied. The focus is broad, capturing all elements in the scene with natural clarity.
+
+- **Lighting & Exposure**  
+  The image uses auto‑HDR or “auto‑beauty” mode turned off for a raw, unprocessed look. The exposure is slightly overexposed on the bright sunlight hitting the woman’s skin and the waterfall, creating a warm, golden hue that enhances the tropical ambience. No color grading or post‑processing filters are applied; the tones are natural, with subtle contrast.
+
+- **Environment**  
+  The setting is a lush, tropical jungle trail at mid‑afternoon, with a tall waterfall in the background and palm trees swaying on either side. The trail is a dirt path covered in patches of grass and small stones, flanked by vibrant green foliage and a few red‑leafed plants. The weather is clear, with bright sunlight filtering through the canopy, creating dappled light and soft shadows on the ground.
+
+- **Lens & Technical Details**  
+  - Focal length: 35 mm (wide‑angle, short focal length).  
+  - Aperture: f/4.0 (mid‑range) for a fully sharp background.  
+  - ISO: 400–600 (for natural grain and minimal noise).  
+  - No bokeh; the background is entirely in focus.  
+  - Handheld shot with slight instability, giving a natural, spontaneous feel.
+
+- **Final Prompt**  
+  “A young woman in a yellow bikini riding a silver mountain bike on a sunlit jungle trail, captured with a 35 mm wide‑angle lens at eye level and slightly tilted. The shot has slight motion blur on the wheels, a raw auto‑HDR look, and is fully sharp from foreground to background. The exposure is mildly overexposed, highlighting the bright sunlight and creating a warm golden tone. The scene includes a tall waterfall in the back, palm trees on either side, and a dirt path with patches of grass and small stones. The image is candid, unposed, and has accidental off‑center framing that gives it a spontaneous, handheld feel.”

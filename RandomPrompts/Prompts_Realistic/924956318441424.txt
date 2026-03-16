@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with dark hair tied in a messy top‑knot, wearing an off‑white hooded sweatshirt with bold “EKO” lettering on the chest and a gray knit underneath. She’s leaning forward slightly, arms crossed, looking off to the left with a thoughtful expression. Her face is slightly turned, capturing a natural, unposed moment.
+
+- **Motion & Focus**  
+  Slight motion blur from handheld shake; everything in focus—no bokeh, no portrait‑mode isolation. The image has a raw, auto‑HDR feel but without heavy color grading or filters. A tiny overexposure on the highlights gives it an ambient, spontaneous vibe.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24‑35 mm), short focal length. All elements—from subject to background—are fully sharp. No rule‑of‑thirds intentionality; framing is accidental, slightly tilted and off‑center.
+
+- **Environment**  
+  Urban street scene at dusk. The background shows a modern glass‑front building with bright interior lights, a silver sedan parked on the side, and a white café table with a man in a white shirt sitting behind the subject. The sky is still bright but cooling, indicating late afternoon or early evening. Light is natural, slightly diffused by clouds, creating soft shadows and subtle reflections on the glass façade.
+
+- **Composition & Details**  
+  Capture the moment as if a passerby snapped a quick photo—spontaneous, candid, mid‑action. The subject’s arms are crossed, her left hand resting on her elbow, giving a casual confidence. The hoodie’s zipper is slightly open, revealing the knit underneath. The background table and the man’s back add depth without distracting. The overall tone is natural, unprocessed, with a hint of slight overexposure on the highlights.
+
+- **Prompt Summary**  
+  *“A young woman in an off‑white hooded sweatshirt with bold ‘EKO’ lettering leans forward with crossed arms, looking thoughtfully to the left, captured with a wide‑angle lens at dusk in an urban street setting. Slight motion blur and accidental framing give a raw, candid feel; everything is fully sharp with no filters or heavy color grading.”*

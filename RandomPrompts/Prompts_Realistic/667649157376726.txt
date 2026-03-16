@@ -1,0 +1,30 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman in a casual t‑shirt and ripped jeans stands mid‑step inside a sunlit greenhouse, her body slightly turned toward the camera as if she’s about to grab a nearby lab flask. Her hair is loose, a few strands catching the light, and her face shows a natural, unposed expression—maybe a hint of surprise or concentration. She’s positioned off‑center, with the left side of her body cut off by the frame edge, giving an accidental, handheld feel.
+
+- **Motion & Focus**  
+  Capture a slight motion blur on the subject’s feet and the surrounding green vines, as if the camera was hand‑held during a quick snap. Everything—from her jeans to the distant glass ceiling—remains fully sharp; no portrait‑mode blur or depth‑of‑field softness. The focus is wide‑angle, covering the entire scene without any “rule‑of‑thirds” intentionality.
+
+- **Lighting & Exposure**  
+  Use a wide‑angle lens (24‑35 mm) with a short focal length to keep the background fully in focus. The exposure is slightly overexposed on the upper part of the frame, letting the sunlight through the glass ceiling spill onto the subject’s shoulders. No auto‑HDR or beauty filters—just raw, unprocessed light.
+
+- **Environment**  
+  The setting is a bright, airy greenhouse with a high arched glass ceiling, wooden workbenches, and potted plants. Large pink lilies and green vines climb along the walls, and a few lab flasks sit on a bench to the left. A second woman in a white lab coat is visible in the background, leaning over a bench, adding a candid, mid‑action element. The time of day is late morning, with warm, golden light filtering through the glass, creating soft highlights and subtle shadows.
+
+- **Lens & Technical**  
+  - Lens: 35 mm wide‑angle, f/2.8, short focal length.  
+  - Aperture: f/2.8 (wide, but everything stays in focus).  
+  - Shutter speed: 1/60 s (enough to capture slight motion blur).  
+  - ISO: 400 (for clean detail without noise).  
+  - No bokeh; background is fully sharp.  
+  - No portrait‑mode subject isolation—everything is in one plane.
+
+- **Composition & Framing**  
+  Frame the shot so that the greenhouse’s arched ceiling occupies the upper third of the image, while the lower third is filled with the woman’s legs and the green vine that snakes across the floor. The left side of the frame cuts off the edge of a pink lily, giving an accidental, partial crop. The right side shows the second woman and a wooden bench, creating a sense of activity and spontaneity.
+
+- **Details & Imperfections**  
+  Include subtle imperfections: a slight tilt to the camera, a small vignette on the corners, and a faint dust particle on the lens. The image should feel like a genuine, spontaneous snapshot rather than a staged portrait.
+
+- **Final Prompt Summary**  
+  “A candid, wide‑angle shot of a woman in a casual t‑shirt and ripped jeans standing mid‑step inside a sunlit greenhouse, with a second woman working at a bench in the background. The scene is bathed in late‑morning golden light, captured on a 35 mm lens at f/2.8 and 1/60 s shutter speed, producing slight motion blur on the subject’s feet while keeping everything fully sharp. The composition is accidental and off‑center, with a partial crop of a pink lily on the left and a wooden bench on the right, no filters or post‑processing, just raw, natural photography.”

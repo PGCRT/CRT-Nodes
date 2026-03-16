@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A fit woman with a high ponytail, wearing a black cross‑back sports bra and dark shorts, captured mid‑movement as she lifts a dumbbell. Her back is slightly turned toward the camera, left arm bent, right arm extended, creating a natural, unposed candid feel.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. Slight tilt and off‑center framing; partial crop that cuts off a bit of her left shoulder, giving an accidental, handheld vibe. No rule‑of‑thirds intentionality.
+
+- **Motion & Focus**  
+  Slight motion blur from handheld instability, natural freeze or soft blur on the subject’s arm. Everything in focus — no portrait‑mode depth‑of‑field blur; background fully sharp.
+
+- **Lighting & Exposure**  
+  Raw, unprocessed look: no filters, no color grading, no post‑processing aesthetic. Slight overexposure on the bright window light, giving a warm, natural tone.
+
+- **Environment**  
+  Specific real‑world location: a bright, airy home gym with a large window on the left, white walls, and a wooden floor. Time of day: late afternoon, soft natural light with a hint of golden hue. Weather or ambient conditions: clear, calm.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm), wide‑angle lens. No bokeh — background fully sharp. All elements in focus. Wide‑angle captures the entire scene without cropping too tightly.  
+
+- **Composition Notes**  
+  The prompt should emphasize a wide, handheld shot that includes the subject’s back, the dumbbell, a portion of the gym floor, and the window. Keep the framing slightly off‑center, with the subject’s head near the right edge and her left shoulder partially out of frame. Capture the natural imperfections: a slight shake in the camera, a tiny smudge on the lens, and a faint reflection from the window.  
+
+- **Final Prompt**  
+  “A fit woman with a high ponytail, wearing a black cross‑back sports bra and dark shorts, captured mid‑movement as she lifts a dumbbell in a bright home gym. The shot is handheld, slightly tilted, off‑center, with partial crop of her left shoulder. Slight motion blur on her arm, everything in focus, raw exposure with a hint of overexposure from the window. Late afternoon natural light fills the scene. 24‑35 mm wide‑angle lens, no bokeh, background fully sharp.”

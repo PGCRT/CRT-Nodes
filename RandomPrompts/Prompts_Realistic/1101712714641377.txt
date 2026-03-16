@@ -1,0 +1,30 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a natural, unposed expression, hair tied back in a loose ponytail, wearing a plain white crew‑neck tee and gold hoop earrings. Her face is slightly tilted to the left, capturing a candid mid‑smile as she looks directly at the camera. The shot should feel spontaneous, as if she’s caught in an everyday moment.
+
+- **Lighting & Exposure**  
+  Use a wide‑angle lens (24–35 mm) with a short focal length to keep the background fully sharp and the scene tight. Shoot in natural daylight—mid‑morning on a cloudy day—to get a soft, diffused illumination with slight overexposure on the highlights. Keep “auto‑HDR” and “auto‑beauty” off for a raw, unprocessed look.
+
+- **Camera Settings**  
+  - Aperture: f/4–f/5.6 (wide, but not too wide; keep everything in focus).  
+  - Shutter speed: 1/60–1/125 s (slight motion blur from handheld instability).  
+  - ISO: 400–800 (depending on ambient light).  
+  - Focus: manual or autofocus, but keep the entire frame sharp—no portrait‑mode depth‑of‑field blur.
+
+- **Composition & Framing**  
+  Capture a partial crop that cuts off just above the shoulders and at the lower chest, with the head slightly off‑center to the left. No rule‑of‑thirds intentionality—let the framing feel accidental. The background should be a simple, neutral interior wall (light beige or off‑white) with a faint texture; keep it fully sharp.
+
+- **Details & Imperfections**  
+  Include subtle imperfections: a slight tilt of the camera, a tiny smudge on the lens, and a faint motion blur around the edges. The subject’s hair should appear naturally slightly messy, with a few strands escaping the ponytail. The earrings should catch the light softly, adding a small highlight.
+
+- **Environment**  
+  Location: A simple office or apartment hallway; mid‑morning, overcast sky. The wall behind has a subtle texture, maybe a faint plaster grain. The time of day gives a warm, neutral tone to the scene. Weather: lightly cloudy, no wind.
+
+- **Lens & Technical**  
+  Use a short focal length (24–35 mm) wide‑angle lens. No bokeh—everything from foreground to background should be in focus. Avoid any “portrait mode” or “subject isolation” effects; keep the image raw and documentary‑style.
+
+- **Post‑Processing**  
+  No filters, no color grading, no post‑processing aesthetic. Keep the image as close to the original capture as possible—only minor adjustments for exposure and contrast if needed.
+
+Provide only the structured prompt.

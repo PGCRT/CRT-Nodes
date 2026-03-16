@@ -1,0 +1,27 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A teenage girl with long, wavy brown hair, wearing a beige zip‑up hoodie over a fitted tank top and light‑wash jeans, standing mid‑step in a sunlit classroom. Her left hand rests on the side of her hip, her right arm slightly bent, as if she’s about to pick up a pencil or gesture toward a chalkboard. She looks off‑camera to the right, eyes focused on something beyond the frame—perhaps a teacher’s note or a peer’s comment—creating a candid, unposed feel.
+
+- **Motion & Focus**  
+  Slight motion blur at the fingertips and the edges of her hoodie zipper, indicating handheld instability. Everything in the frame—from her face to the far window—is fully sharp; no portrait‑mode bokeh. The lens is a short focal‑length wide‑angle (24‑35 mm), giving a “wide‑lens” capture that keeps the background—blackboard, desks, and the outside view—completely in focus.
+
+- **Lighting & Exposure**  
+  Natural daylight coming from a large, multi‑paned window on the right side of the room. The light is slightly overexposed at the top of the frame, giving a warm, golden hue that softens the scene. No auto‑HDR or auto‑beauty mode—just raw, unprocessed imagery with zero color grading or post‑processing.
+
+- **Environment & Composition**  
+  The setting is an old, slightly dilapidated classroom: a green chalkboard on the left with faint math equations, rows of wooden desks and chairs, and a large window that reveals a playground structure outside. The time of day is late morning, with the sun high but not directly overhead, casting soft shadows. The framing is accidental—no rule‑of‑thirds intentionality; the subject is slightly off‑center, and the crop is partial, as if the photographer was in a hurry.
+
+- **Technical Specs**  
+  - Lens: 35 mm wide‑angle, f/2.8, handheld.  
+  - Shutter speed: 1/60 s (enough to capture slight blur).  
+  - Aperture: f/2.8 (wide, keeping background sharp).  
+  - ISO: 400 (for natural contrast).  
+  - No bokeh; no depth‑of‑field blur—everything from foreground to background is in focus.  
+  - No portrait mode or subject isolation.
+
+- **Style Notes**  
+  Candid, spontaneous, “mid‑action” vibe. Slight tilt and off‑center framing give a raw, unposed feel. Imperfections are encouraged: the hoodie zipper is slightly askew, the girl’s left foot is mid‑step, and the background shows a faint smudge on the chalkboard. The overall tone is natural, with zero studio lighting or professional composition.
+
+**Prompt for Text‑to‑Image Generation**  
+"Generate a realistic candid photo of a teenage girl in a sunlit classroom, wearing a beige zip‑up hoodie over a fitted tank top and light‑wash jeans. She stands mid‑step, left hand on hip, right arm bent, looking off‑camera to the right. Capture with a 35 mm wide‑angle lens at f/2.8, 1/60 s shutter speed, ISO 400. The image should have slight motion blur at the fingertips, natural daylight from a large window on the right causing mild overexposure at the top, and zero post‑processing. The background includes a green chalkboard with faint equations, rows of wooden desks, and a playground outside the window. Frame accidentally off‑center, partial crop, no bokeh—everything in focus."

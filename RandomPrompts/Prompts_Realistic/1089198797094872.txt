@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wind‑blown brown hair, wearing a black leather‑style bodysuit with subtle metallic studs. She is captured mid‑turn, body angled toward the right of the frame, left arm bent at the elbow, hand near hip, head turned to the left, eyes focused off‑camera. Her expression is neutral but engaged, lips slightly parted.
+
+- **Motion & Focus**  
+  Slight motion blur on the hair and background to convey movement, but everything remains sharply in focus. Handheld camera shake gives a natural, imperfect quality. No bokeh—background is fully sharp.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle, late‑afternoon sun. A mild overexposure on the upper left of the frame creates a soft halo around the subject’s head and shoulder. No auto‑beauty or filter processing—raw, unedited look.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm), short focal length. All elements are in focus; depth of field is wide. Slight tilt to the left to break the rule‑of‑thirds, giving an accidental, candid composition.
+
+- **Environment**  
+  Location: a sunlit meadow with a faint line of trees in the background, a clear blue sky above. Time of day: late afternoon (≈ 5 pm), ambient light warm and slightly hazy. Weather: breezy, with a gentle wind ruffling the subject’s hair and the grass.
+
+- **Framing & Composition**  
+  The shot is off‑center; the subject’s left side cuts close to the right edge of the frame, creating a partial crop. The composition is spontaneous—no intentional rule‑of‑thirds. A slight tilt gives a casual, candid feel.
+
+- **Post‑Processing**  
+  No filters, no color grading, no auto‑beauty mode. Raw, unprocessed look with only basic white‑balance correction. Slight overexposure on the upper left to enhance the natural light.
+
+**Prompt Summary (structured)**  
+"Mid‑afternoon candid shot of a woman in a black leather bodysuit on a sunlit meadow, wind blowing her hair, captured with a 35 mm wide‑angle lens. Slight motion blur on the hair, everything sharp, mild overexposure on the upper left, handheld tilt, off‑center framing, raw unprocessed look."

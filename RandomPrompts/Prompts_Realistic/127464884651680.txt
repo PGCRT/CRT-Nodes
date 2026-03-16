@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman with long, dark brown hair tied in a loose, casual braid, wearing a white mesh lingerie set (transparent cups and high‑waist thong) standing in a modern kitchen. She is captured from a slightly low angle, back to the camera, with her left hand resting on her hip and right hand near her thigh, as if mid‑movement. Her posture is natural, unposed, with a subtle lean to the right that gives a candid feel.
+
+- **Motion & Focus**  
+  Slight motion blur at the edges from handheld shake; the subject’s back and hips are in sharp focus, while the background (kitchen counters, cabinets, and a small window) remains fully sharp—no bokeh. The lens is set to a wide‑angle short focal length (24–35 mm), capturing a broad view of the scene without depth‑of‑field blur.
+
+- **Lighting & Exposure**  
+  Natural daylight from a side window, mid‑afternoon; slight overexposure on the subject’s back and hips, creating a warm, soft glow. No auto‑HDR or beauty mode—raw, unprocessed look. The exposure is slightly uneven, with the left side of the image a bit brighter than the right, adding to the spontaneous feel.
+
+- **Environment**  
+  A contemporary kitchen with white cabinets, a gray backsplash, and a stainless‑steel countertop. A small black kettle sits on the counter, a wooden spoon hangs on the wall, and a faint reflection of a plant is visible in the window. The time of day is late afternoon, with warm sunlight casting soft shadows.
+
+- **Lens & Technical**  
+  35 mm lens, f/4.0 aperture, 1/125 s shutter speed, ISO 400. Wide‑angle capture with no rule‑of‑thirds intentionality—framing is accidental, slightly off‑center. Everything in focus from foreground to background; no portrait mode or subject isolation.
+
+- **Composition & Style**  
+  Candid, unposed, spontaneous—subject appears unaware of the camera. Slight tilt and partial crop give an informal feel. No filters, color grading, or post‑processing. The image has a raw, natural aesthetic with slight overexposure on the subject’s back, a wide‑angle view that keeps the background fully sharp, and a sense of motion from handheld instability.
+
+**Prompt:**  
+"Candid, unposed photo of a woman in white mesh lingerie standing in a modern kitchen, captured with a 35 mm wide‑angle lens at f/4 and 1/125 s, slight motion blur on the back, natural daylight from a side window, mid‑afternoon, raw unprocessed look, everything in focus, accidental off‑center framing, slight tilt, partial crop, no filters."

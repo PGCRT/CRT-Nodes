@@ -1,0 +1,26 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark brown hair, wearing a tight, ribbed black one‑piece swimsuit, standing in front of a weathered concrete wall that has peeling paint and a large, partially finished mural. She is mid‑pose: both hands are behind her head, elbows bent, arms curved, creating a slight dynamic angle. Her left leg is bent at the knee, foot tucked into the corner of the wall, giving a casual, spontaneous stance.
+
+- **Facial Expression & Gaze**  
+  She looks directly at the camera with a soft, confident smile; her eyes are bright and engaged. Slight motion blur is present around her hands and head, indicating handheld shake and a quick shutter speed.
+
+- **Lighting & Exposure**  
+  Natural daylight from the west, mid‑afternoon, creating warm, slightly harsh sunlight that casts strong shadows on the wall and on the woman’s body. The exposure is mildly overexposed on the bright areas of the mural, giving an auto‑HDR feel without any post‑processing filters.
+
+- **Lens & Technical Settings**  
+  - Focal length: 24 mm (wide‑angle, short focal length).  
+  - Aperture: f/5.6 (mid‑range).  
+  - Shutter speed: 1/125 s (slight motion blur).  
+  - ISO: 400 (for clean noise).  
+  Everything is in focus; no bokeh or depth‑of‑field blur. The background mural and the woman’s body are both sharp.
+
+- **Environment & Composition**  
+  The wall has a large, unfinished mural with splashes of blue, purple, and yellow paint, and a green “K” symbol on the left side. The mural shows cracks and peeling paint, adding texture. The time of day is late afternoon; the sun is high but slightly to the west, creating a warm glow. The camera is handheld, producing slight tilt and off‑center framing—no rule‑of‑thirds intentionality.
+
+- **Imperfections & Raw Feel**  
+  Slight motion blur on the hands and head, small jitters from handheld instability. The image has no filters, no color grading, no post‑processing aesthetic—just a raw, candid look. The framing is accidental: the subject is slightly off‑center, and the top of the mural is partially cut off.
+
+- **Final Prompt**  
+  “A young woman with long dark brown hair, wearing a tight ribbed black one‑piece swimsuit, stands in front of a weathered concrete wall that has peeling paint and a large unfinished mural. She poses mid‑action with both hands behind her head, elbows bent, left leg bent, foot tucked into the corner. Her face is directly engaged with a soft smile. Natural daylight from the west, mid‑afternoon, creates warm, slightly harsh sunlight and mild overexposure. Shot on a 24 mm wide‑angle lens at f/5.6, 1/125 s, ISO 400—everything in focus, no bokeh. Handheld shake gives slight motion blur around the hands and head. The wall shows a large mural with blue, purple, yellow splashes and a green “K” symbol. The composition is accidental, off‑center, slightly tilted, with partial crop of the mural’s top. Raw, unprocessed, candid style.”

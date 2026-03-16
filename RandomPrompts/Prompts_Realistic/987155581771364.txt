@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wind‑blown brown hair, wearing an oversized gray crew‑neck tee and distressed high‑waist jeans, carrying a dark canvas backpack on her left shoulder. She’s mid‑laugh, head tilted to the right, one hand gripping the strap of the bag, the other relaxed by her side. A white wristwatch sits on her left wrist. Her expression is spontaneous, eyes bright, mouth open in a genuine laugh.
+
+- **Motion & Focus**  
+  Slight motion blur at the edges from handheld instability; everything in focus—no portrait‑mode depth of field. The image has a raw, unprocessed look: no filters, no color grading, no post‑processing aesthetic. A hint of overexposure on the face and shoulders due to ambient sunlight.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm), short focal length. No bokeh—background fully sharp. Capture in a single exposure with auto‑HDR off. The composition is accidental: slight tilt, off‑center framing, partial crop that cuts off the top of her head and the lower part of her legs.
+
+- **Environment**  
+  Outdoor urban setting on a sunny afternoon. The background shows a light‑colored building facade with a tall window, a concrete ledge in the foreground, and a blurred green lawn with a passerby in the distance. The time of day is late morning, with warm golden light coming from the right, creating soft shadows.
+
+- **Lighting & Color**  
+  Natural daylight, slight overexposure on the subject’s face and upper body. Warm tones with a hint of green‑blue from the foliage. No studio lighting, no professional composition—just a candid snapshot.
+
+- **Final Prompt**  
+  “A young woman with long wind‑blown brown hair, wearing an oversized gray crew‑neck tee and distressed high‑waist jeans, carrying a dark canvas backpack on her left shoulder, laughing mid‑action with one hand gripping the strap and the other relaxed by her side. A white wristwatch adorns her left wrist. Slight motion blur from handheld instability, everything in focus, raw unprocessed look, no filters or color grading. Wide‑angle short focal length lens, 24–35 mm. Capture in a single exposure with auto‑HDR off. Outdoor urban setting on a sunny late‑morning afternoon: light‑colored building facade with a tall window, concrete ledge in the foreground, blurred green lawn and a passerby in the distance. Slight overexposure on the face and shoulders. Accidental slight tilt, off‑center framing, partial crop.”

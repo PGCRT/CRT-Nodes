@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with light brown hair, wearing a plain white T‑shirt, captured mid‑gesture as she touches her cheek with her right hand. Her face is slightly turned toward the camera, a natural smile on her lips, and her left hand rests on her shoulder. The pose feels spontaneous—she’s not posing for the camera but rather caught in a candid moment.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. Slight tilt and off‑center framing; partial crop that gives an accidental, handheld feel. No rule‑of‑thirds intentionality—everything is framed as if the photographer was moving.
+
+- **Motion & Exposure**  
+  Slight motion blur from handheld instability, natural freeze or slight blur. Slight overexposure on the face to emphasize ambient light. Auto‑HDR or auto‑beauty mode off — raw, unprocessed look. No filters, no color grading, no post‑processing aesthetic.
+
+- **Lens & Technical**  
+  Short focal length (≈20 mm), wide‑angle lens. Wide‑angle gives a slightly distorted but natural perspective. No bokeh; background fully sharp—everything in focus. No portrait mode, no subject isolation.
+
+- **Environment**  
+  Location: A modern office break‑room with a wooden desk and a gray wall in the background. Time of day: late afternoon, soft natural light coming from the west, creating warm highlights on the subject’s face. Weather: clear, mild humidity, slight wind that ruffles her hair.
+
+- **Details & Imperfections**  
+  The image has a raw, unprocessed look with subtle imperfections: a tiny smudge on her cheek, a slight wrinkle in the fabric of her shirt, and a faint shadow cast by her hand. Her fingernails are painted a soft pink, adding a small pop of color. The background shows a blurred window and a small plant, but everything remains in focus.
+
+- **Prompt Summary**  
+  “A young woman in a white T‑shirt, caught mid‑gesture touching her cheek, captured on a wide‑angle lens in a late‑afternoon office break‑room. Slight motion blur and overexposure give a raw, candid feel; everything is sharply focused with no filters or post‑processing.”

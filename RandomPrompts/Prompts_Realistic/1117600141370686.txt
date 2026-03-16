@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark hair, wearing a black ribbed tank top and high‑waisted gray jeans, captured mid‑selfie on a sunny afternoon. Her right hand holds a dark‑colored smartphone at an angle that creates a slight diagonal line across the frame; her left hand rests in her pocket. She is smiling slightly, eyes bright, with a natural, unposed expression as if she’s just finished a conversation or is about to share a photo.
+
+- **Motion & Focus**  
+  Slight motion blur on the phone and hand, indicating handheld instability. Everything in the frame—subject, background, and foreground—is fully sharp, no portrait‑mode depth of field blur. No auto‑HDR or beauty filters; raw, unprocessed look with natural ambient light.
+
+- **Lighting & Exposure**  
+  Slight overexposure on the subject’s face due to bright sunlight, creating a warm, golden hue. The background is fully sharp, no bokeh. The scene is lit by mid‑afternoon sun, casting soft shadows and a gentle backlight that highlights the hair’s texture.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm), short focal length. No rule‑of‑thirds intentionality—framing is accidental, slightly tilted, off‑center. Background is a leafy park with a concrete pathway, a large tree on the right, and a white car parked in the distance. The composition is spontaneous, candid, and unposed.
+
+- **Environment**  
+  Location: A sunny park path lined with tall trees; a concrete walkway runs left to right. Time of day: Late afternoon (around 4 pm). Weather: Clear, warm, slightly hazy. Ambient conditions: Light wind, leaves rustling, natural daylight.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Imperfections encouraged: slight tilt, off‑center framing, partial crop. No rule‑of‑thirds intentionality — accidental framing. Zero studio lighting, zero professional composition, zero editorial tone. Natural motion freeze or slight blur from handheld instability.
+
+- **Prompt Summary**  
+  “A young woman with long dark hair, in a black ribbed tank top and gray jeans, taking a selfie on a sunny afternoon at a park path. Her right hand holds a dark smartphone at an angled, diagonal line; her left hand is in her pocket. Slight motion blur on the phone, everything fully sharp. Warm overexposed lighting from mid‑afternoon sun. Wide‑angle lens (24–35 mm), accidental off‑center framing, slight tilt. Background shows a concrete pathway, a large tree, and a white car in the distance. Raw, unprocessed, no filters—natural candid photography.”

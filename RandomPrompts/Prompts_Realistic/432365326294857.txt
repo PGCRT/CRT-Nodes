@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, athletic woman with a thick, wavy blonde mane standing back-to-back to the camera in a dimly lit bedroom. Her hands rest on her hips, slightly tilted, as if she’s mid‑pose or just finished a dance move. She wears a red plaid shirt tied around her waist, the fabric slipping off one shoulder, revealing a smooth, sun‑kissed back. The shot captures the full length of her body from head to toe, emphasizing the curve of her buttocks and the gentle dip of her lower back.
+
+- **Lighting & Exposure**  
+  Ambient indoor lighting from a soft, warm lamp in the corner creates a slight overexposure on the upper back and a subtle vignette at the edges. The exposure is uneven—the left side of the image is a little brighter than the right, giving a raw, unprocessed feel. No auto‑HDR or beauty filters; just natural contrast.
+
+- **Camera Settings**  
+  - Lens: 24 mm wide‑angle, short focal length, handheld.  
+  - Focal depth: everything from foreground to background is fully sharp—no bokeh or portrait‑mode blur.  
+  - Shutter speed: 1/60 s, producing a slight motion blur on the subject’s hips and hands.  
+  - ISO: 400–600, for a clean grain that adds texture.
+
+- **Composition & Framing**  
+  The frame is intentionally off‑center; the woman’s left hip is slightly cut off by the right edge of the image. The camera is tilted a few degrees to the right, giving a casual, spontaneous feel. No rule‑of‑thirds—just a natural, accidental composition that captures the moment as it unfolds.
+
+- **Environment**  
+  A modest bedroom with a white bedside table on the left, a vase of pink roses, and a wooden headboard on the right. The time of day is late afternoon, with the sun low behind the window, casting long, soft shadows. The weather outside is overcast, but the interior remains warm and cozy.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, a tiny crop that cuts off a bit of the woman’s left hip, and a faint motion blur around her hands. The background is fully in focus—no depth‑of‑field blur. The image has a raw, unprocessed look with no filters or color grading, just the natural hues of the scene.
+
+- **Prompt for Text‑to‑Image Generation**  
+  “A tall, athletic woman with a thick, wavy blonde mane standing back‑to‑back to the camera in a dimly lit bedroom. Her hands rest on her hips, slightly tilted, as if she’s mid‑pose or just finished a dance move. She wears a red plaid shirt tied around her waist, the fabric slipping off one shoulder, revealing a smooth, sun‑kissed back. The shot captures the full length of her body from head to toe, emphasizing the curve of her buttocks and the gentle dip of her lower back. Ambient indoor lighting from a soft lamp in the corner creates a slight overexposure on the upper back and a subtle vignette at the edges. Camera: 24 mm wide‑angle, handheld, 1/60 s shutter speed, ISO 500. Everything in focus—no bokeh. The frame is intentionally off‑center, slightly tilted right, with a tiny crop that cuts off a bit of her left hip. Background: white bedside table with a vase of pink roses on the left, wooden headboard on the right. Late afternoon sun behind the window casts long shadows. Raw, unprocessed look, no filters.”

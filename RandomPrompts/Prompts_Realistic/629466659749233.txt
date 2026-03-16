@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, curvy woman with long, wavy dark hair standing in a natural, unposed stance. She’s bare‑headed and bare‑legged, one hand on her hip, the other relaxed by her side. Her face is turned slightly toward the camera but not directly at it—mid‑action, as if she just finished a step or a turn.  
+
+- **Lighting & Exposure**  
+  Slight overexposure from ambient daylight; the exposure is a little warm, with a faint halo around the subject. No auto‑beauty or filter processing—raw, unedited look. The lighting comes from a low‑angle, late‑afternoon sun that casts soft shadows and a gentle highlight on her shoulders.  
+
+- **Motion & Focus**  
+  A natural freeze of motion with a slight handheld blur at the edges. Everything—from her skin to the background—is fully sharp; no portrait‑mode depth‑of‑field blur. The focus is intentional but casual, capturing every detail in a wide‑angle shot.  
+
+- **Lens & Technical Settings**  
+  Short focal length (24–35 mm) wide‑angle lens. No bokeh—background is completely sharp. Aperture set to f/8–f/10 for crisp focus across the frame. Slight tilt and off‑center framing, no rule‑of‑thirds intentionality.  
+
+- **Environment**  
+  Location: a quiet meadow near a small creek, with a light breeze rustling the grass. Time of day: late afternoon, around 5 pm, giving a warm, golden hue. Weather: clear, slightly humid, with a faint haze in the air that adds depth.  
+
+- **Composition & Style**  
+  Candid, spontaneous capture—subject appears unaware of the camera. Slight tilt and partial crop give an accidental, natural feel. The composition is not deliberately structured; it’s a “mid‑action” snapshot that feels genuine and unposed.  
+
+- **Post‑Processing**  
+  Zero studio lighting, zero professional composition, zero editorial tone. No color grading or filters—just raw, in‑camera imagery with a slight overexposure for a natural, lively feel.
+
+**Prompt Summary (structured)**  
+"Long‑hair woman, bare‑headed and bare‑legged, standing mid‑action on a quiet meadow at late afternoon, captured on a 24–35 mm wide‑angle lens with slight handheld blur, full sharpness, natural overexposure, candid framing, no filters—raw, unprocessed realism."

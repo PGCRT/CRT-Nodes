@@ -1,0 +1,29 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with dark hair tied in a messy high ponytail, wearing a light‑blue denim jacket over a black bralette and frayed denim shorts, sitting on an asphalt street at night. Her left knee is wrapped in a black sleeve. She’s mid‑laugh, head tilted slightly to the right, eyes closed, hands planted on the ground for balance.  
+
+- **Motion & Focus**  
+  Slight motion blur on the subject’s hands and the background, indicating handheld instability. Everything remains sharply in focus—no portrait‑mode bokeh.  
+
+- **Lighting & Exposure**  
+  Raw, unprocessed look with a mild overexposure of the street lamps and ambient city glow. No auto‑beauty or filter enhancements.  
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm), short focal length. All elements—subject, cars, buildings, streetlights—are fully sharp; no depth‑of‑field blur.  
+
+- **Environment**  
+  Urban night scene on a busy city street. Tall residential and commercial buildings line both sides of the road. A white sedan is parked on the left, another on the right. Street lamps cast warm yellow light, creating a slight haze. The time is late evening (around 10:30 pm), with the sky still dark but the street illuminated.  
+
+- **Composition & Framing**  
+  Candid, unposed, spontaneous—subject appears unaware of the camera. Slight tilt and off‑center framing; partial crop that cuts off the edges of the street. No rule‑of‑thirds intentionality.  
+
+- **Details to Emulate**  
+  - Slight overexposure on the street lamps and the subject’s face.  
+  - Natural motion blur from handheld shot.  
+  - Imperfections: slight tilt, off‑center framing, partial crop.  
+  - Zero studio lighting, zero professional composition, zero editorial tone.  
+
+**Prompt:**
+
+> “A young woman with dark hair in a messy high ponytail, wearing a light‑blue denim jacket over a black bralette and frayed denim shorts, sitting on an asphalt street at night. Her left knee is wrapped in a black sleeve. She’s mid‑laugh, head tilted slightly to the right, eyes closed, hands planted on the ground for balance. Slight motion blur on her hands and the background, everything sharply in focus. Raw, unprocessed look with mild overexposure of the street lamps. Wide‑angle lens (24–35 mm), short focal length. Urban night scene on a busy city street; tall residential and commercial buildings line both sides of the road. A white sedan is parked on the left, another on the right. Street lamps cast warm yellow light, creating a slight haze. Late evening (around 10:30 pm), sky still dark but the street illuminated. Candid, unposed, spontaneous—subject appears unaware of the camera. Slight tilt and off‑center framing; partial crop that cuts off the edges of the street. No rule‑of‑thirds intentionality. Zero studio lighting, zero professional composition, zero editorial tone.”

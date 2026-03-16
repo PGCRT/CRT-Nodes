@@ -1,0 +1,34 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with dark, voluminous hair tied in a high ponytail, wearing oversized black sunglasses and a bright red leather jacket. She’s holding a black DSLR camera in both hands, mid‑shot as if she’s about to take a photo—her fingers slightly blurred from motion. Her pink scarf is loosely knotted at the neck, adding a pop of color. The jacket has visible silver snap buttons and flap pockets; beneath it, a floral shirt peeks out. She stands in front of a large glass storefront window that reflects the street behind her.
+
+- **Facial Features & Expression**  
+  Her face is partially obscured by the camera and sunglasses, giving a candid, unposed feel. A subtle smile is visible between the lenses, with a hint of teeth peeking through. The lighting is natural daylight, slightly overexposed on the front of her jacket, creating a warm glow.
+
+- **Clothing & Accessories**  
+  Red leather jacket: glossy finish, classic collar, two front pockets with snap closures. Pink scarf: thin, soft fabric, tied in a loose bow. Black sunglasses: thick frames, dark tint. Hair: braided strands framing the face, high ponytail secured with a pink elastic.
+
+- **Background & Environment**  
+  The setting is a bustling city street in an urban downtown area. Behind her, a brick building with a large glass window reflects the scene. A traffic light glows red in the distance. Pedestrians walk by in the background—some are blurred, some sharp. A white car passes on the street. The time of day is mid‑afternoon, with bright sunlight casting soft shadows.
+
+- **Lens & Technical Settings**  
+  Use a wide‑angle lens (24–35 mm). Shoot at a short focal length to capture the full figure and background. Keep everything in focus—no depth‑of‑field blur. Slight handheld shake creates a natural motion blur on the subject’s hands and the camera. No bokeh; background remains sharp.
+
+- **Framing & Composition**  
+  The shot is slightly off‑center, with the subject’s left side cutting off the frame. The composition is accidental—no rule‑of‑thirds. The camera is held at a low angle, making the subject appear taller and more commanding. The framing captures a partial crop of her left shoulder and the window reflection.
+
+- **Lighting & Exposure**  
+  Natural daylight with slight overexposure on the jacket’s front. No auto‑HDR or beauty mode—raw, unprocessed look. Slight natural shadows from the sun create subtle contrast.
+
+- **Mood & Style**  
+  Candid, spontaneous, “mid‑action” vibe. The subject appears unaware of the camera capturing her, adding authenticity. Slight tilt in the frame gives a dynamic feel.
+
+- **Post‑Processing**  
+  No filters, no color grading, no post‑processing aesthetic. Keep the image raw and natural.
+
+---
+
+**Prompt Summary (for use in a text‑to‑image model)**  
+
+"A young woman with dark hair in a high ponytail, wearing black sunglasses and a glossy red leather jacket, stands in front of a glass storefront window on a busy city street. She holds a black DSLR camera in both hands, mid‑shot as if about to take a photo, with a slight motion blur on her hands. Her pink scarf is loosely knotted at her neck, and a floral shirt peeks out from under the jacket. The scene is captured with a wide‑angle lens (24–35 mm), everything in focus, no bokeh. The shot is slightly off‑center and accidental, with natural daylight overexposure on the jacket. The background shows a brick building, a red traffic light, pedestrians, and a white car on the street. Capture the image in a candid, spontaneous style, with slight handheld shake and no post‑processing filters."

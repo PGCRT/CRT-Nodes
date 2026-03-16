@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, curvy woman with long dark hair tied in a loose ponytail, wearing a beige cropped sweater and black thong bikini bottom, standing back-to-back against a classic 1960s Mustang. Her left leg is slightly bent, her right foot planted firm on the asphalt, and she’s leaning forward a bit, as if mid‑step or about to kick a tire. A green tattoo peeks from under her sweater on her left upper arm. She’s wearing beige Nike sneakers with white soles.
+
+- **Motion & Focus**  
+  Slight motion blur at the knees and feet, indicating handheld shake. Everything in focus—no portrait‑mode bokeh. The image has a raw, auto‑HDR feel: a tiny overexposure on the sky, subtle contrast boost, but no color grading or filters.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24 mm), short focal length, no depth‑of‑field blur—background fully sharp. Slight tilt and off‑center framing; the composition is accidental, not rule‑of‑thirds. The crop is partial, cutting off a bit of the car’s rear bumper on the left side.
+
+- **Environment**  
+  Location: a sunlit parking lot at a small town’s municipal building. A beige brick building sits in the background, a single street light stands tall, and a range of low mountains rise on the horizon. The sky is a pale blue with thin clouds; the sun is high, creating a bright midday ambience. A second car is parked further back near the building.
+
+- **Time of Day & Weather**  
+  Mid‑afternoon, around 2 pm. Light is warm and direct, casting short shadows. The weather is clear, with a faint haze over the mountains.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Imperfections encouraged: slight tilt, off‑center framing, partial crop. No rule‑of‑thirds intentionality—accidental framing. Zero studio lighting, zero professional composition, zero editorial tone. Natural motion freeze or slight blur from handheld instability.
+
+- **Post‑Processing**  
+  Auto‑HDR or auto‑beauty mode off — raw, unprocessed look. Slight overexposure on the sky, no color grading, no filters. Everything in focus, wide lens, short focal length, no bokeh, no depth‑of‑field blur—background fully sharp. No portrait mode, no subject isolation.
+
+**Prompt Summary (structured)**  
+"A tall woman with long dark hair in a loose ponytail, wearing a beige cropped sweater and black thong bikini bottom, standing back-to-back against a classic 1960s Mustang in a sunlit parking lot at a small town’s municipal building. She leans forward slightly, left leg bent, right foot planted, green tattoo visible on her left upper arm, beige Nike sneakers on her feet. Slight motion blur at knees and feet, everything in focus, wide‑angle 24 mm lens, accidental off‑center framing with partial crop. Background shows a beige brick building, a street light, and low mountains under a pale blue sky with thin clouds; a second car parked near the building. Mid‑afternoon 2 pm, clear weather, short shadows. Raw auto‑HDR look, no filters, slight overexposure on the sky. Capture style: candid, unposed, spontaneous, imperfect, handheld shake. No bokeh, no depth‑of‑field blur—background fully sharp."

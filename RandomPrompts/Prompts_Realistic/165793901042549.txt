@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a light‑brown, half‑tied ponytail, wearing a white cropped tank top that shows a small pink floral print on the left side, and dark denim jeans. She is captured mid‑turn, her right hand curled into a loose fist near her shoulder, as if she just finished a gesture or is about to. Her head is tilted slightly to the right, eyes cast downward with a subtle smile, giving a candid, unposed feel.
+
+- **Motion & Focus**  
+  Slight motion blur on the hands and hair, indicating handheld instability. Everything in the frame — subject, background, and foreground — is fully sharp; no portrait‑mode depth‑of‑field blur. The blur is gentle, not a dramatic smear, preserving realism.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle, late‑afternoon sun. Slight overexposure on the upper back and shoulder, creating a warm glow; the rest of the image retains a raw, unprocessed look. No auto‑HDR or beauty filters — just a straightforward exposure.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm), short focal length. No bokeh; background is fully sharp. The composition is accidental: the frame is slightly tilted, off‑center, and the subject does not follow the rule‑of‑thirds. The shot feels spontaneous, as if captured in a casual snapshot.
+
+- **Environment**  
+  Location: an outdoor residential driveway or side‑walk next to a modern house. A concrete slab extends into the background, with a wooden fence and a small patch of grass visible on the right. A building’s wall and a window are partially seen on the left. The time of day is mid‑afternoon, with warm, slightly harsh sunlight casting soft shadows. Weather is clear, with a light breeze that lifts a few strands of hair.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, partial crop that cuts off the top of the head and the lower part of the jeans. The subject’s left shoulder is partially out of frame, adding to the candid feel. A faint reflection of the sun on her back adds a subtle highlight.
+
+- **Prompt Summary for Generation**  
+  “A young woman with a light‑brown half‑tied ponytail, wearing a white cropped tank top with a pink floral print and dark denim jeans, captured mid‑turn on an outdoor driveway at late‑afternoon. Slight motion blur on the hands and hair, fully sharp background, natural daylight with slight overexposure on the back, wide‑angle short focal length lens, accidental tilted framing, raw unprocessed look.”

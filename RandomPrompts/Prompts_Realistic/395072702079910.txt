@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark hair, wearing a black mesh bikini, kneeling on a white bed. She is mid‑gesture, leaning slightly to the right, left hand resting on the bed, right arm extended outward, head tilted upward as if she’s about to touch her face or adjust her hair. Her expression is relaxed and candid, with a subtle smile.
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window behind the bed, creating soft overexposure on the upper part of the frame. Slight handheld shake gives a natural motion blur around the edges. No auto‑beauty or filter processing—raw, unprocessed look.
+
+- **Environment**  
+  A bright, airy bedroom with light beige walls, a large window draped with sheer white curtains, and a potted palm plant in the left corner. The bed has crisp white sheets, slightly rumpled to suggest recent use. The time of day is mid‑afternoon, with warm, diffused sunlight.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24 mm), short focal length, everything in focus—no bokeh, no depth‑of‑field blur. Slight tilt and off‑center framing; the composition is accidental, not rule‑of‑thirds. The shot is captured with a handheld camera, giving a slight motion blur from instability.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Imperfections encouraged: slight tilt, off‑center framing, partial crop. No rule‑of‑thirds intentionality — accidental framing. Zero studio lighting, zero professional composition, zero editorial tone. Natural motion freeze or slight blur from handheld instability.
+
+- **Post‑Processing**  
+  Auto‑HDR or auto‑beauty mode off—raw, unprocessed look. Slight overexposure on the upper part of the frame to capture ambient light. No color grading or filters applied.  
+
+**Prompt Summary**  
+"Mid‑afternoon candid shot of a woman in a black mesh bikini kneeling on a white bed in a bright bedroom; natural daylight from a large window creates soft overexposure, handheld shake gives slight motion blur, wide‑angle lens keeps background fully sharp, accidental off‑center framing, raw unprocessed look."

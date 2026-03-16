@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman with light brown hair tied in a loose, messy bun, wearing a tight black one‑piece swimsuit, standing in a bright kitchen. She’s mid‑adjustment, hands on the back of her head, body slightly angled toward the camera, legs apart, knees bent, as if she’s about to perform a dance move or stretch. Her face is turned to the camera with a subtle smile, eyes bright, eyebrows relaxed.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. Slight motion blur on the hands and hair, indicating handheld shake. No filters, no color grading, no post‑processing aesthetic. A tiny overexposure in the window’s light gives a warm, natural glow. The frame is slightly tilted, off‑center, with a partial crop that cuts off a bit of the left side of the room.
+
+- **Environment**  
+  Specific real‑world location: a bright, modern kitchen with white cabinets, a wooden countertop, and a large window on the right letting in daylight. A potted monstera plant sits on the counter, a kettle and a mug are on a small table to the left, a red container, a black bag, and a gray storage bin are on the floor. The time of day is mid‑afternoon, with soft natural light coming from the window, creating gentle shadows and a slight haze. Weather or ambient conditions: clear, warm, slightly humid.
+
+- **Lens & Technical**  
+  Short focal length (24–35 mm), wide‑angle lens. No bokeh, no depth‑of‑field blur — background fully sharp. Everything in focus from foreground to background. No portrait mode, no subject isolation. The image has a raw, unprocessed look with auto‑HDR off and zero studio lighting.
+
+- **Composition Notes**  
+  The composition is accidental: the subject is slightly off‑center to the right, the left side of the frame cuts off a bit of the kitchen counter, the top of the image is cropped at the ceiling line. The camera is held at eye level, with a slight tilt to the right. The shot captures the entire body of the woman from head to toe, including her legs and the lower part of the countertop.
+
+- **Final Prompt**  
+  “A woman in a black one‑piece swimsuit, hair in a messy bun, adjusting her hair mid‑pose in a bright kitchen. She stands slightly angled toward the camera with hands on the back of her head, legs apart, knees bent. The scene includes a potted monstera plant on the counter, a kettle and mug on a small table, a red container, a black bag, and a gray storage bin on the floor. Mid‑afternoon natural light streams through a large window on the right. Shot with a 24–35 mm wide‑angle lens, everything in focus, slight motion blur on the hands, accidental off‑center framing, tiny overexposure, raw unprocessed look, no filters.”

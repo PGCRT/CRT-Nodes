@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark hair, wearing a light‑green lace bodysuit, standing in front of a bright window with white blinds. She is mid‑gesture, hands pulling the straps of her bodysuit upward, eyes focused on the camera, body slightly angled to the left.  
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. Slight tilt and off‑center framing; partial crop that cuts off a bit of the window blinds on the left side. No rule‑of‑thirds intentionality — accidental composition.  
+
+- **Motion & Exposure**  
+  Slight motion blur from handheld instability, natural freeze or slight blur. Slight overexposure on the window area to give a warm, ambient glow. Auto‑HDR or auto‑beauty mode off — raw, unprocessed look. No filters, no color grading, no post‑processing aesthetic.  
+
+- **Environment**  
+  Specific real‑world location: a bright, sunlit bedroom with a large window covered by white blinds; the wall behind is a neutral beige tone. Time of day: late morning, soft natural light. Weather or ambient conditions: clear, warm, slightly hazy.  
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm), wide angle. No bokeh — background fully sharp; everything in focus. No portrait mode, no subject isolation.  
+
+- **Composition Notes**  
+  The prompt should emphasize a raw, candid feel: the subject’s hands slightly pulling the straps create a dynamic line that leads the eye upward. The window blinds on the left frame the subject’s head and shoulders, adding depth. The beige wall provides a neutral backdrop that keeps focus on the subject.  
+
+- **Final Prompt**  
+  “A young woman with long dark hair in a light‑green lace bodysuit stands before a bright window with white blinds, hands pulling the straps upward, eyes locked on the camera. Capture candidly with slight tilt and off‑center framing, partial crop. Apply slight motion blur from handheld shake and mild overexposure on the window for a warm, raw look. Use a 24‑35 mm wide‑angle lens; keep background fully sharp. The scene is set in a sunlit bedroom at late morning, with a neutral beige wall behind. No filters or post‑processing — just a natural, spontaneous photograph.”

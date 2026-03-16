@@ -1,0 +1,33 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Appearance**  
+  - A young woman with a short, layered brown bob and bangs, wearing a black cat‑ear headband, gold hoop earrings, a black choker with a double‑loop clasp, and long purple leather gloves that extend to the mid‑forearm.  
+  - Her nails are painted black; she is lying on a plush white bed, hands clasped together in front of her chest, looking directly at the camera with a soft, engaging smile.  
+
+- **Pose & Motion**  
+  - Slight motion blur on the hands and fingers, indicating a handheld shot captured mid‑movement.  
+  - The body is slightly tilted to the left, creating an off‑center, spontaneous composition.  
+
+- **Lighting & Exposure**  
+  - Natural daylight coming from a window on the left; slight overexposure in the upper right corner, giving a warm, golden hue.  
+  - No auto‑beauty or filter processing – raw, unprocessed look.  
+
+- **Environment**  
+  - A cozy bedroom with a white quilted bedspread, a fluffy pillow behind the subject, and a small Christmas tree visible in the background on the right.  
+  - Time of day: late afternoon, soft sunlight creating gentle shadows.  
+  - Ambient sound: faint rustle of the quilt, the click of a camera shutter.  
+
+- **Lens & Technical**  
+  - 24‑mm wide‑angle lens, short focal length, everything in focus from foreground to background.  
+  - No bokeh; background remains sharp, no portrait‑mode depth‑of‑field blur.  
+  - Slight handheld shake imparting a natural, imperfect feel.  
+
+- **Composition Notes**  
+  - No rule‑of‑thirds intentionality – the frame is accidental, with the subject’s head near the upper third but slightly off‑center.  
+  - The shot is a “realistic candid” capture: spontaneous, unposed, and raw.
+
+**Prompt for Text‑to‑Image Generation**
+
+```
+A young woman with a short brown bob and bangs, wearing a black cat‑ear headband, gold hoop earrings, a black double‑loop choker, and long purple leather gloves, lying on a white quilted bed with a fluffy pillow behind her. Her hands are clasped together in front of her chest, slightly blurred from motion, while she looks directly at the camera with a soft smile. The scene is lit by late‑afternoon natural daylight from a window on the left, creating a slight overexposure in the upper right corner. In the background, a small Christmas tree stands to the right. Capture with a 24‑mm wide‑angle lens, everything in focus, no bokeh, handheld shake, spontaneous candid composition, slight off‑center framing, raw unprocessed look.
+```

@@ -1,0 +1,29 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark brown hair, wearing a black sports bra and matching shorts, standing confidently on a city sidewalk. Her hands rest on her hips, slightly angled to one side, capturing a casual, mid‑action moment as she smiles at the camera.  
+
+- **Motion & Focus**  
+  Slight motion blur from handheld shooting; natural freeze of movement. Everything in focus—no portrait‑mode depth‑of‑field blur.  
+
+- **Lens & Technical**  
+  Wide‑angle lens (short focal length, ~24 mm). No bokeh—background fully sharp. Auto‑HDR or auto‑beauty mode off. Slight overexposure to keep ambient light warm.  
+
+- **Environment**  
+  Specific real‑world location: a busy urban street in downtown New York City. The scene is set during mid‑afternoon, with soft, diffused sunlight casting gentle shadows. A few pedestrians walk by, a silver car is parked on the street, and a green banner hangs from a building.  
+
+- **Time of Day & Weather**  
+  Mid‑afternoon (≈ 3:30 pm), clear weather, light wind. The sky is bright but not harsh, giving a natural, unprocessed look.  
+
+- **Composition & Framing**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Slight tilt and off‑center framing; partial crop to give a raw feel. No rule‑of‑thirds intentionality—accidental framing that feels natural.  
+
+- **Lighting**  
+  Zero studio lighting, zero professional composition, zero editorial tone. Natural motion freeze or slight blur from handheld instability.  
+
+- **Post‑Processing**  
+  No filters, no color grading, no post‑processing aesthetic. Raw, unprocessed look with only minimal auto‑HDR adjustments.
+
+---  
+**Prompt Summary**:  
+"Mid‑afternoon city sidewalk candid shot of a woman in black athletic wear, hands on hips, slight motion blur, wide‑angle lens, everything in focus, background fully sharp, natural lighting, raw unprocessed look."

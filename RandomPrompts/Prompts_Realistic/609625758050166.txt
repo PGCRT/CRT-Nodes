@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, curvy woman with long dark hair tied in a loose ponytail, wearing an oversized beige sweater and black thong, standing back‑to‑back to a classic 1960s Mustang. Her left foot is slightly ahead of the right, knees bent at a casual angle, one hand on her hip, the other near her lower back. She’s mid‑step, as if just having taken a pace and paused, with a subtle motion blur around her heels.  
+
+- **Clothing & Accessories**  
+  Beige sweater (slightly cropped at the waist), black thong, beige Nike sneakers with white soles, a green patterned wristband on her left wrist. A small tattoo is visible on her left upper arm.  
+
+- **Background & Setting**  
+  The scene is set in an open parking lot on a clear morning; the sun is high but not directly overhead, casting soft shadows. In the background, a silver Mustang (model 1967 Fastback) faces left, parked next to a low brick building. Further back, a range of blue‑tinted mountains rises against a pale sky. A single streetlight stands tall on the far side of the lot.  
+
+- **Lighting & Exposure**  
+  Natural daylight, slight overexposure at the top of the frame; ambient light creates a warm, golden hue. No auto‑HDR or beauty mode—raw, unprocessed look.  
+
+- **Lens & Technical Specs**  
+  24mm wide‑angle lens, f/3.5 aperture, handheld shot with slight instability. Everything in focus from foreground to background; no bokeh. Slight motion blur on the woman’s feet and the car’s wheels to convey movement.  
+
+- **Composition Notes**  
+  The frame is intentionally off‑center: the woman’s left hip is slightly cut off by the edge, giving a candid, spontaneous feel. No rule‑of‑thirds—just a natural, casual composition.  
+
+- **Prompt for AI Image Generation**  
+  “A tall woman with long dark hair in a loose ponytail, wearing an oversized beige sweater and black thong, standing back‑to‑back to a classic 1960s Mustang in a parking lot. She’s mid‑step with one foot slightly ahead, knees bent, left hand on hip, right hand near lower back, wearing beige Nike sneakers and a green wristband. Behind her, a silver 1967 Fastback is parked next to a brick building; mountains rise in the distance under a clear morning sky. Natural daylight with slight overexposure, raw unprocessed look, 24mm wide‑angle lens, f/3.5 aperture, handheld shot with subtle motion blur on the woman’s feet and car wheels. Everything in focus, no bokeh. The frame is intentionally off‑center, slightly cropped at the left hip, capturing a candid, spontaneous moment.”

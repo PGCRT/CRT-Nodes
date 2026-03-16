@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with platinum‑blonde hair tied in a high ponytail, wearing pointed elf‑like ears and blue gemstone earrings, sitting on a vintage brown leather tufted sofa. She is nude, leaning forward slightly with one arm resting on the back of the couch, her body angled toward the camera but not perfectly centered. Her face is turned to the camera with a soft, natural smile, eyes slightly focused, as if she’s mid‑conversation or just caught in a candid moment.
+
+- **Lighting & Exposure**  
+  Warm, natural daylight coming from a large window on the left side of the room, creating a gentle side‑light that produces slight overexposure on the right side of her body. The exposure is slightly uneven—no auto‑HDR or beauty filters, just raw, unprocessed light. A faint halo of sunlight hits her hair and shoulder, with a subtle vignette from the wide‑angle lens.
+
+- **Environment**  
+  The setting is a cozy, lived‑in living room. Behind the sofa, a sheer white curtain hangs beside a deep red drapes that are tied back, letting in bright daylight. A potted green plant sits in the corner, and a framed picture of a tropical scene hangs on the wall above the couch. The floor is a light wooden laminate, and a small side table with a ceramic vase is partially visible. The time of day is late morning, around 10:30 AM, when the sun is high but still warm.
+
+- **Lens & Technical**  
+  Use a short focal length wide‑angle lens (24‑35 mm). Capture everything in focus—no bokeh or depth‑of‑field blur; background and foreground are sharp. Shoot handheld with slight motion blur from the camera’s instability, giving the image a natural, spontaneous feel. The framing is accidental: the subject is slightly off‑center, the composition is not rule‑of‑thirds, and the crop is partial—only the upper body and part of the sofa are in frame.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—the woman appears unaware or mid‑action, as if she’s just finished a conversation or is about to move. Encourage imperfections: a slight tilt of the camera, an off‑center composition, and a partial crop that cuts off the top of her head and the lower part of the sofa. No rule‑of‑thirds intentionality—just natural, accidental framing.
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, zero post‑processing aesthetic. Keep the image raw, with only basic auto‑beauty mode turned off. Slight overexposure on the right side gives a natural glow, and the entire scene is fully sharp—no portrait‑mode isolation.
+
+- **Final Prompt**  
+  “A young woman with platinum‑blonde hair in a high ponytail, wearing pointed elf‑like ears and blue gemstone earrings, sitting on a vintage brown leather tufted sofa. She is nude, leaning forward slightly with one arm resting on the back of the couch, her body angled toward the camera but not perfectly centered. Her face is turned to the camera with a soft, natural smile, eyes slightly focused, as if she’s mid‑conversation or just caught in a candid moment. Warm, natural daylight comes from a large window on the left, creating a gentle side‑light that produces slight overexposure on the right side of her body. The exposure is slightly uneven—no auto‑HDR or beauty filters, just raw, unprocessed light. A faint halo of sunlight hits her hair and shoulder, with a subtle vignette from the wide‑angle lens. The setting is a cozy, lived‑in living room. Behind the sofa, a sheer white curtain hangs beside a deep red drapes that are tied back, letting in bright daylight. A potted green plant sits in the corner, and a framed picture of a tropical scene hangs on the wall above the couch. The floor is a light wooden laminate, and a small side table with a ceramic vase is partially visible. The time of day is late morning, around 10:30 AM, when the sun is high but still warm. Use a short focal length wide‑angle lens (24‑35 mm). Capture everything in focus—no bokeh or depth‑of‑field blur; background and foreground are sharp. Shoot handheld with slight motion blur from the camera’s instability, giving the image a natural, spontaneous feel. The framing is accidental: the subject is slightly off‑center, the composition is not rule‑of‑thirds, and the crop is partial—only the upper body and part of the sofa are in frame. Candid, unposed, spontaneous—the woman appears unaware or mid‑action, as if she’s just finished a

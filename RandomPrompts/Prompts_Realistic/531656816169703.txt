@@ -1,0 +1,26 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A woman with long, wavy brown hair, wearing a bright yellow bikini, stands on a pristine white‑sand beach, back to the camera, hands raised as if adjusting her hair or shielding her eyes from the sun. She is mid‑step, one foot slightly ahead of the other, capturing a spontaneous, candid moment.
+
+- **Pose & Movement**  
+  Slight motion blur at the wrists and feet, indicating handheld instability and a natural freeze‑frame. The subject’s body is angled toward a towering white limestone cliff that rises dramatically behind her, creating a striking contrast between the warm sand and cool stone.
+
+- **Environment**  
+  The scene is set on a sunlit coastal beach at mid‑afternoon, with the sea turning a soft turquoise hue and small white foam trails marking the tide’s edge. Scattered dried seaweed lies on the sand near the foreground, adding texture. In the background, a massive, layered cliff face dominates the upper third of the frame, its surface etched with natural erosion patterns and patches of green vegetation at the top.
+
+- **Time of Day & Lighting**  
+  The light is warm and slightly overexposed, suggesting late afternoon sun. The ambient illumination creates soft highlights on the sand and cliff, with a gentle gradient from bright center to softer edges. No artificial color grading or filters—just raw, natural tones.
+
+- **Lens & Technical Settings**  
+  - Wide‑angle lens (24–35 mm) for a broad field of view.  
+  - Short focal length to capture the full breadth of the cliff and beach.  
+  - Everything in focus: background, subject, and foreground all sharp, no bokeh.  
+  - Auto‑HDR off; exposure is slightly uneven, giving an authentic, unprocessed look.  
+  - No rule‑of‑thirds intentionality—framing is accidental, slightly tilted, and off‑center.
+
+- **Composition Notes**  
+  The composition is spontaneous: the subject’s left side is slightly cut off by the frame edge, adding a dynamic, imperfect feel. The cliff’s base aligns roughly with the upper middle of the frame, while the sea’s foam trail runs along the lower right. The overall effect is a natural, candid snapshot that feels like a real moment captured in the wild.
+
+- **Post‑Processing**  
+  Zero studio lighting, zero professional composition, zero editorial tone. Only natural motion blur and slight overexposure from ambient light. No filters or color grading—just raw, unprocessed imagery.

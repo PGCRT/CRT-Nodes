@@ -1,0 +1,18 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail, wearing an olive‑green cardigan over a gray V‑neck top, standing on a cobblestone street in a European town. She is mid‑smile, head tilted slightly to the right, one hand casually in her pocket, body angled toward the camera but not perfectly centered.  
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject appears unaware of the camera, caught in a natural moment. Slight tilt and off‑center framing give an accidental, handheld feel. The shot has a raw, unprocessed look: no filters, no color grading, no post‑processing aesthetic. A mild overexposure keeps the ambient light warm and slightly hazy.  
+
+- **Environment**  
+  Location: A colorful, narrow street lined with pastel‑colored storefronts (pink, yellow, green) and a blue pedestrian sign. The time of day is late morning, soft sunlight casting gentle shadows; the weather is lightly cloudy but bright. The background is fully sharp, no bokeh, no depth‑of‑field blur.  
+
+- **Lens & Technical**  
+  Short focal length (24–35 mm) wide‑angle lens. Everything in focus — background and subject. No portrait‑mode subject isolation. Slight motion blur from handheld instability freezes the moment. The composition is not rule‑of‑thirds intentional; it’s a spontaneous, imperfect frame that captures the entire scene in one shot.  
+
+- **Post‑Processing**  
+  Auto‑HDR or auto‑beauty mode off. No filters, no color grading, no post‑processing aesthetic. Only raw, natural details.
+
+*Provide only the structured prompt.*

@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, slender woman with long, wavy brown hair standing in a modern kitchen. She’s nude, wearing only high‑heeled sandals, leaning casually against the countertop with one hand on the edge and the other near her hip. Her back is slightly turned toward the camera, capturing a dynamic, mid‑movement pose that feels spontaneous and unposed.
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window behind her creates a soft, slightly overexposed glow. The light hits her skin with an auto‑HDR feel but without any post‑processing filters—just raw, ambient illumination. A subtle handheld shake gives a slight motion blur around the edges, adding to the candid vibe.
+
+- **Environment**  
+  The setting is a bright, contemporary kitchen with white cabinets, a stainless‑steel oven, and a large window that reflects her silhouette. The floor is tiled, the countertop is light wood, and a dishwasher is visible on the right. The time of day is late afternoon, with warm sunlight streaming in, casting gentle shadows and a hint of blue hour through the window.
+
+- **Lens & Technical**  
+  Use a wide‑angle lens (24‑35 mm) to capture a broad view of the scene. Keep everything in focus—no bokeh or depth‑of‑field blur. The focal length is short enough to keep the background fully sharp, but long enough to include the kitchen’s details: the stove, cabinets, and window. Shoot at a slightly low angle to emphasize her height and the sense of motion.
+
+- **Composition & Framing**  
+  Frame the shot casually—no rule‑of‑thirds intentionality. Let the composition be accidental, with the subject slightly off‑center and a partial crop that gives an intimate, raw feel. The camera is handheld, so a slight tilt and minor instability create a natural motion blur that softens the edges.
+
+- **Post‑Processing**  
+  Keep it minimal: no color grading or filters, just auto‑HDR to enhance dynamic range. Slight overexposure may be present depending on ambient light, but the overall look remains raw and unprocessed. The final image should feel like a genuine, spontaneous snapshot captured in real time.

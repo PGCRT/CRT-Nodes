@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair sitting on a beige sofa in a bright, sunlit living room. She’s wearing a black lace bra and matching panties, hands gently adjusting the lace as she looks down at her chest. Her pose is candid and mid‑action, slightly tilted to the left, with one knee bent and the other leg relaxed, creating a natural, off‑center composition.
+
+- **Lighting & Exposure**  
+  Natural daylight coming from a large window on the left, producing a soft overexposure on the subject’s face and body. Slight handheld shake gives a subtle motion blur around the edges. No auto‑HDR or beauty filters—raw, unprocessed look. The exposure is slightly warm, with a hint of ambient warmth from the sun.
+
+- **Environment**  
+  A modern, minimalist living room with a large window, a beige couch, and a tall green monstera plant in the background. The time of day is late morning, with bright, diffused sunlight creating gentle shadows. The weather outside is clear, adding to the bright indoor ambiance.
+
+- **Lens & Technical**  
+  24‑mm wide‑angle lens, short focal length, everything in focus—no bokeh or depth‑of‑field blur. The background is fully sharp, capturing every detail of the couch, plant, and window frame. No rule‑of‑thirds intentionality; framing is accidental and spontaneous.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Slight tilt and partial crop give an informal feel. Natural motion freeze or slight blur from handheld instability adds realism.
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, zero post‑processing aesthetic. Keep the image raw, with only basic auto‑beauty mode off.
+
+**Prompt Summary**  
+“Candid shot of a woman in black lace lingerie sitting on a beige sofa in a sunlit living room, with a large window and monstera plant in the background. Natural daylight creates soft overexposure; handheld shake adds subtle motion blur. 24‑mm wide‑angle lens keeps everything sharp. The composition is accidental and off‑center, capturing a natural, unposed moment.”

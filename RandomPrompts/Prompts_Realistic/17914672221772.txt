@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A curvy woman with long, dark, wavy hair, wearing a black fish‑net bodysuit with sheer long sleeves and a thin black veil that drapes over her head. She’s standing with her back to the camera, feet apart in glossy black high‑heeled shoes, hands lightly on her hips, mid‑step as if she’s just walked into a room.  
+
+- **Motion & Focus**  
+  Slight motion blur at the edges from handheld shake; everything in focus—no portrait‑mode blur. A tiny overexposure on the back of the subject to catch the ambient light.  
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm), short focal length, no bokeh, background fully sharp. Auto‑HDR off, raw, unprocessed look—no filters, no color grading, no post‑processing aesthetic.  
+
+- **Environment**  
+  A modern hotel room or apartment: a white door on the left, a dark curtain behind the subject, a flat‑screen TV mounted on the wall showing a blue screen, a small wooden side table with a remote on it, and a bed with a crisp white sheet to the right. The time of day is late afternoon; soft natural light comes from a window out of frame, creating gentle shadows and a slight warm tint.  
+
+- **Composition**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Slight tilt and off‑center framing, partial crop that cuts off the top of the door frame. No rule‑of‑thirds intentionality—accidental framing that captures the door hinge, the TV, the table, and the bed all in one shot.  
+
+- **Lighting**  
+  Zero studio lighting, zero professional composition, zero editorial tone. Natural motion freeze or slight blur from handheld instability.  
+
+- **Prompt Summary for Generation**  
+  “A woman with long dark wavy hair, wearing a black fish‑net bodysuit with sheer long sleeves and a thin black veil, standing back to the camera in a hotel room. She’s in black high‑heeled shoes, hands on hips, mid‑step. Slight motion blur, wide‑angle lens, everything in focus, natural afternoon light. Background includes a white door, a TV, a wooden side table, and a bed with white sheet. Candid, unposed, accidental framing, no filters, raw look.”

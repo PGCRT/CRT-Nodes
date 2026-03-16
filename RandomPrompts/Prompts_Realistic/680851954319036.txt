@@ -1,0 +1,24 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark brown hair, wearing a bright yellow bikini, sitting on a white bed. She is mid‑adjustment, hands pulling the straps of her top upward, a subtle motion blur around her fingers. Her expression is natural, slightly surprised, as if caught in an unplanned moment.
+
+- **Lighting & Exposure**  
+  Natural daylight from a western window, late afternoon. Slight overexposure on the face and upper body, giving a warm, soft glow. No auto‑beauty or filter enhancement—raw, unprocessed look. The exposure is uneven: the background is fully sharp, while the subject has a gentle motion blur indicating handheld shake.
+
+- **Lens & Technical**  
+  24 mm wide‑angle lens, short focal length. Everything in focus—from the bed to the wall—no bokeh. No portrait‑mode depth‑of‑field blur; the background is crisp. Slight tilt and off‑center framing, a partial crop that gives a candid feel.
+
+- **Environment**  
+  A simple bedroom with a light‑colored wall and a wooden headboard. White pillows, a white duvet, and a small bedside table visible. Time of day: late afternoon, soft natural light with a hint of warm amber. Weather: clear, no wind.
+
+- **Composition & Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Imperfections encouraged: slight tilt, off‑center framing, partial crop. No rule‑of‑thirds intentionality—accidental framing. Zero studio lighting, zero professional composition, zero editorial tone. Natural motion freeze or slight blur from handheld instability.
+
+- **Post‑Processing**  
+  No filters, no color grading, no post‑processing aesthetic. Only raw capture data, with a hint of auto‑HDR to preserve detail in highlights and shadows.
+
+**Prompt:**
+```
+Candid photograph of a young woman with long dark brown hair, wearing a bright yellow bikini, sitting on a white bed. She is mid‑adjustment, hands pulling the straps of her top upward, a subtle motion blur around her fingers. Natural daylight from a western window, late afternoon, slight overexposure on the face and upper body. 24 mm wide‑angle lens, everything in focus—no bokeh. Slight tilt and off‑center framing, partial crop. Background: simple bedroom with light‑colored wall, wooden headboard, white pillows, white duvet, small bedside table. Time of day: late afternoon, clear weather. Raw, unprocessed look, no filters, auto‑HDR off. Capture style: candid, spontaneous, imperfect, handheld blur. Environment: real‑world location, zero studio lighting, zero professional composition.
+```

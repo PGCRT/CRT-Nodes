@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark hair that’s slightly blown by the wind, wearing a distressed gray‑blue tank top with ripped details and a thin necklace. She’s mid‑gesture, hands clasped together in front of her chest, head tilted downward as if she’re reading or thinking. Her nails are painted a soft pink; a subtle motion blur conveys the fleeting nature of the moment.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject is unaware of the camera, caught in a natural, mid‑action frame. The shot has slight tilt and off‑center framing, a partial crop that gives it an accidental, handheld feel. No rule‑of‑thirds intentionality; the composition is organic, as if captured with a quick snap on a smartphone or DSLR.
+
+- **Imperfections & Aesthetic**  
+  Slight motion blur from handheld instability, a hint of overexposure in the ceiling lights, raw and unprocessed look (no filters, no color grading, no post‑processing). The image is in “auto‑HDR” off, preserving the natural dynamic range.
+
+- **Environment**  
+  Specific real‑world location: an office or studio with white tiled ceiling and a visible fluorescent light fixture. The background is fully sharp — no bokeh, no depth‑of‑field blur. The time of day is mid‑afternoon, with bright ambient daylight that creates a soft glow on the subject’s face and hands. Weather or ambient conditions are clear, with a gentle breeze that ruffles her hair.
+
+- **Lens & Technical**  
+  Short focal length (≈20 mm) wide‑angle lens, giving a broad field of view that keeps everything in focus — no portrait‑mode subject isolation. The lens is handheld, producing a slight shake that adds to the candid feel. All elements are in focus: the subject’s face, hands, and background details. No “portrait mode” depth‑of‑field blur; the background remains crisp.
+
+- **Prompt Summary for Generation**  
+  *“A young woman with long dark hair, wearing a distressed gray‑blue tank top and a thin necklace, captured mid‑gesture with her hands clasped in front of her chest. The shot is candid, slightly tilted, off‑center, with partial crop and subtle motion blur from handheld instability. The scene is set in an office with white tiled ceiling and fluorescent lighting, mid‑afternoon daylight, fully sharp background. Use a short focal length wide‑angle lens, all elements in focus, no bokeh, no filters, raw and unprocessed look.”*

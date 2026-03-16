@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair and round, thin‑rimmed glasses, wearing a snake‑print, deep‑V, one‑piece swimsuit. She is mid‑step on a sunlit beach, leaning slightly forward with her left hand relaxed by her side and right arm bent at the elbow, as if she just finished a playful dip in the water. Her face is turned toward the camera but not directly aimed—her eyes are slightly off‑center, giving a candid, spontaneous feel.
+
+- **Motion & Focus**  
+  Slight motion blur on the hair and hands to suggest movement, while the background remains fully sharp. Use a wide‑angle lens (24–35 mm) with a short focal length to capture a broad view of the scene. Everything in focus—no portrait‑mode depth‑of‑field blur.
+
+- **Lighting & Exposure**  
+  Natural midday sunlight, with a slight overexposure on the subject’s front to keep the image bright and airy. No auto‑HDR or beauty filters; raw, unprocessed look. The exposure is slightly uneven—warm tones on the sand, cool tones on the sea—creating a natural contrast.
+
+- **Environment**  
+  Tropical beach at high noon, with palm trees lining the shoreline and the ocean visible in the background. The sand is light beige, the sea a pale blue‑green, and the sky is a soft white‑blue. A few scattered palm fronds drift into the frame from the left, adding organic detail.
+
+- **Lens & Technical**  
+  Short focal length (24–35 mm), wide‑angle, handheld shot with slight tilt and off‑center framing. No rule‑of‑thirds intentionality—accidental composition. Background fully sharp, no bokeh. The image has a natural, raw aesthetic with zero post‑processing color grading.
+
+- **Composition Notes**  
+  - Crop the frame so the subject’s head is slightly above the center of the image, leaving a small portion of the palm tree on the left side.  
+  - Keep the background fully in focus—no depth‑of‑field blur.  
+  - Capture the scene as if the photographer was moving, with a slight motion blur on the hair and hands.  
+
+**Prompt for Text‑to‑Image Generation**
+
+> “A young woman with long wavy brown hair and round thin‑rimmed glasses, wearing a snake‑print deep‑V one‑piece swimsuit, mid‑step on a sunlit beach, leaning slightly forward with left hand by her side and right arm bent. Slight motion blur on the hair and hands, background fully sharp, wide‑angle 24–35 mm lens, natural midday sunlight with slight overexposure, raw unprocessed look. Tropical beach at high noon, palm trees lining the shoreline, ocean visible in the background, scattered palm fronds drifting into frame from left. Crop so subject’s head is slightly above center, small portion of palm tree on left. No rule‑of‑thirds, accidental composition, handheld tilt, everything in focus, no bokeh.”

@@ -1,0 +1,28 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair standing in a bright, lived‑in bedroom. She is bare‑chested, wrapped in a white towel tied at the front, her arms relaxed by her sides. Her face is turned slightly toward the camera but not directly at it—mid‑gesture, as if she just finished a shower or grooming routine. The pose is casual and unposed; her shoulders are relaxed, and her head is tilted a little to one side, giving an accidental, candid feel.
+
+- **Lighting & Exposure**  
+  Natural daylight coming from a window on the left, creating a soft, warm glow with a slight overexposure in the highlights. The exposure is not perfectly balanced—there’s a subtle haze in the upper part of the frame that suggests raw, unprocessed capture. No auto‑beauty or filter enhancement; the image retains the natural grain and color fidelity of a handheld camera.
+
+- **Camera & Lens Settings**  
+  - Lens: 24 mm wide‑angle (short focal length) for a broad field of view.  
+  - Focal depth: everything from the subject to the background is fully sharp—no bokeh or portrait‑mode isolation.  
+  - Shutter speed: 1/60 s, producing a slight motion blur on the subject’s hair and towel, indicating handheld instability.  
+  - Aperture: f/4.5 (mid‑range) for moderate contrast and depth.
+
+- **Composition & Framing**  
+  The frame is intentionally off‑center; the subject’s left side cuts close to the left edge, while her right side leaves a small margin. The composition is not rule‑of‑thirds‑based—instead it feels spontaneous, as if the photographer captured it in a moment of motion. The top of the frame captures the upper part of the room, including a white dresser with a vase of pink and yellow roses, a mirror, and a bottle of body lotion. A framed picture of a tree hangs on the right wall. The bottom of the frame shows a bed with a floral sheet, adding to the domestic setting.
+
+- **Environment & Ambience**  
+  The scene is set in a bright, airy bedroom during mid‑afternoon. The walls are a light beige, and the room is filled with natural light that creates soft shadows. A small vase of flowers sits on the dresser, and a bottle of body lotion is visible next to it. A mirror reflects part of the room, adding depth. A framed picture of a tree hangs on the right wall, slightly off‑center. The bed’s floral sheet peeks into the frame from the lower right corner.
+
+- **Details & Imperfections**  
+  - Slight tilt of the camera, giving a dynamic angle.  
+  - Minor motion blur on the subject’s hair and towel, suggesting a handheld shot.  
+  - A faint overexposure in the upper left corner, where the light hits the mirror and the vase.  
+  - The image has no post‑processing filters; it looks raw and authentic, with natural color tones and subtle grain.
+
+- **Final Prompt**  
+  “A candid, wide‑angle shot of a bare‑chested woman wrapped in a white towel, standing in a bright bedroom during mid‑afternoon. Natural daylight from a left‑side window creates a soft, warm glow with slight overexposure. The camera, set to 24 mm and f/4.5, captures everything in sharp focus while a 1/60 s shutter speed leaves a subtle motion blur on the subject’s hair and towel. The frame is off‑center and slightly tilted, capturing the woman’s casual pose, a white dresser with a vase of pink and yellow roses, a mirror, and a bottle of body lotion, a framed picture of a tree on the wall, and a bed with a floral sheet in the lower right corner. No filters or post‑processing—just a raw, authentic, handheld capture.”

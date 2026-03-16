@@ -1,0 +1,26 @@
+**Realistic Candid Photography Prompt Framework – “Red‑Hair Bath Candid”**
+
+- **Subject & Pose**  
+  A young woman with long, wet, copper‑red hair leaning casually on the side of a white bathtub, her left arm bent and resting on the rim, head tilted slightly to the right, eyes closed in a relaxed, mid‑thought expression. She wears a thin, light‑beige towel draped over her left shoulder. Her face is partially obscured by a soft, natural motion blur that gives the image a candid, handheld feel.
+
+- **Lighting & Exposure**  
+  Natural daylight from a western window (mid‑afternoon) casts a warm, slightly overexposed glow on the subject’s face and upper body. The lighting is uneven—soft highlights on her forehead and left cheek with subtle shadows in the crevice of her neck, creating an auto‑HDR effect that is off‑center and unprocessed. No color grading or filters; the exposure varies across the frame, giving a raw, spontaneous look.
+
+- **Environment**  
+  The setting is a rustic bathroom with a weathered concrete wall that shows peeling white paint in irregular patches. The wall’s texture is rough and uneven, adding depth to the background. The bathtub is a classic white enamel model, slightly worn at the edges. A small pool of water with a few bubbles sits in the tub, indicating she has just finished a bath. The time of day is late afternoon, with the sun low enough to create a warm, golden hue and slight lens flare near the top right corner.
+
+- **Lens & Technical**  
+  Use a wide‑angle lens (24 mm or 35 mm) with a short focal length to capture a broad view of the scene. Shoot in a handheld manner with a slightly unstable camera, resulting in a natural motion blur that softens the subject’s hair and the background. Keep everything in focus—no portrait‑mode depth‑of‑field blur; the background wall and bathtub are sharply rendered. The composition is accidental: the frame is tilted slightly to the left, the subject is off‑center, and the crop is partial, cutting off the lower part of her back.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—capture the moment as if the woman is unaware of the camera. Emulate a raw, in‑camera look with no post‑processing or filters. The image should feel like a snapshot taken in a real world, with slight tilt and off‑center framing that gives it authenticity.
+
+- **Details to Emphasize**  
+  - The texture of the peeling paint on the wall, with its uneven white patches and subtle brown underlay.  
+  - The wet hair’s glossy sheen and the way the light reflects off the water bubbles.  
+  - The slight overexposure on the subject’s face, creating a soft halo effect.  
+  - The natural motion blur around the hair and arm, suggesting movement at the moment of capture.  
+  - The small towel’s fold resting on her shoulder, adding a subtle detail that enhances realism.  
+
+- **Final Prompt**  
+  “A young woman with long, wet copper‑red hair leans casually on a white bathtub in a rustic bathroom, her left arm bent and resting on the rim, head tilted to the right, eyes closed in a relaxed expression. She wears a thin beige towel draped over her left shoulder. Natural daylight from a western window casts a warm, slightly overexposed glow on her face and upper body. The background wall is weathered concrete with peeling white paint, rough and uneven. A small pool of water with bubbles sits in the tub. Shot on a 35 mm wide‑angle lens, handheld with slight motion blur, everything in focus, accidental off‑center framing, raw, unprocessed look.”

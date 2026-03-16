@@ -1,0 +1,16 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, brown hair tied in a loose ponytail, wearing a black halter‑top and matching black joggers. She’s mid‑step, left foot slightly ahead, capturing a selfie‑style shot that leans toward spontaneous and unposed. Her face is turned toward the camera but not directly aligned—slight tilt to the right, giving an off‑center, casual feel.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. The image has a raw, unprocessed look: no filters, no color grading, no post‑processing aesthetic. A slight overexposure in the upper left corner gives a natural, handheld vibe. The shot is taken with a wide‑angle lens (24–35 mm), producing a short focal length that keeps the entire scene sharp—no bokeh or depth‑of‑field blur.
+
+- **Environment**  
+  Setting: A concrete garage or storage area, with a corrugated metal roof and an open window in the back left. A tall metal shelving unit stands on the right, filled with plastic bottles, bags, and miscellaneous supplies. A blue bucket sits on the floor to the right, and a white plastic container rests on the top shelf. The background is fully sharp, no portrait‑mode isolation. The time of day is late afternoon; ambient light comes from the left, creating soft shadows and a slight haze.
+
+- **Lens & Technical**  
+  Short focal length (24–35 mm), wide‑angle. All elements are in focus—no bokeh. Slight motion blur at the edges from handheld instability. Auto‑HDR or auto‑beauty mode off. The composition is accidental: no rule‑of‑thirds intentionality, partial crop on the left side, and a slight tilt that gives the image a dynamic, candid feel.
+
+- **Post‑Processing**  
+  Zero studio lighting, zero professional composition, zero editorial tone. Keep the raw look—only minor adjustments to exposure and contrast. The final image should feel like a genuine, spontaneous snapshot taken in a real-world location at natural light.

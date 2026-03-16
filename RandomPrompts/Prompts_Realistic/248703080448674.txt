@@ -1,0 +1,24 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail, wearing a tight white long‑sleeved bodysuit that features two keyhole cutouts (one at the bust, one at the mid‑section). She stands in a bright, modern bathroom, facing the camera with a relaxed, slightly surprised expression. Her left hand hangs by her side, right arm bent naturally; her head is tilted a little to the left, giving a candid, unposed feel.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. Slight tilt and off‑center framing, partial crop that cuts off a bit of the window frame on the left. No rule‑of‑thirds intentionality; the composition feels accidental, like a quick snapshot taken with a handheld camera.
+
+- **Environment**  
+  Location: A clean, contemporary bathroom with light‑colored tiles, a white window on the left, and a chrome showerhead on the right. Time of day: late morning, soft natural daylight coming from the window, creating a gentle warm glow. Weather: clear, no wind, ambient light is slightly overexposed at the top, giving a raw, unprocessed look.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm), wide‑angle lens. Everything in focus — background fully sharp, no bokeh, no depth‑of‑field blur. Slight motion blur on the subject’s hands and arms to suggest a handheld shot. Auto‑HDR or auto‑beauty mode off — raw, unprocessed look. No filters, no color grading, no post‑processing aesthetic.
+
+- **Lighting & Exposure**  
+  Natural lighting from the window creates a slight overexposure at the upper part of the frame; the lower part is a bit underexposed, giving an authentic, imperfect feel. The lighting is diffuse, with soft shadows.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, off‑center framing that cuts a little of the window frame on the left and the showerhead on the right. The subject’s hair is slightly messy, not perfectly styled. Her fingernails are pale pink, natural. The bodysuit’s cutouts show a subtle shadow, adding realism.
+
+- **Prompt for Text‑to‑Image Generation**  
+  “A young woman with a high ponytail, wearing a tight white long‑sleeved bodysuit with two keyhole cutouts, standing in a bright modern bathroom. She faces the camera with a relaxed surprised expression, left hand by her side, right arm bent naturally. The shot is candid and unposed, slightly tilted and off‑center, partial crop cutting a bit of the window frame. Late morning natural daylight from the window creates a slight overexposure at the top. 24‑35 mm wide‑angle lens, everything in focus, no bokeh, slight motion blur on the hands. Raw, unprocessed look, no filters, no color grading.”
+
+Provide only the structured prompt.

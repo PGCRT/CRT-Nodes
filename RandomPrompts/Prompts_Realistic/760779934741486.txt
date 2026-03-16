@@ -1,0 +1,24 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A woman in white underwear pouring water from a clear plastic bottle onto her chest, mid‑motion, slightly tilted frame. Her left hand holds the bottle at an angle, the stream of water creating a faint trail of droplets that catch the light. A small black cross is tattooed on her upper chest. She’s standing in a bright kitchen, facing the camera but not posing—her expression is natural and unposed.
+
+- **Capture Style**  
+  Candid, spontaneous, “mid‑action” shot with slight handheld shake. Slight motion blur on the water stream and the woman’s hand, giving a sense of movement. No auto‑beauty or filter processing—raw, natural look. The exposure is slightly overexposed to keep all details bright, with a warm daylight tone.
+
+- **Environment**  
+  Location: A modern kitchen with a white countertop, a blue “Dermat” bottle, and a red canister visible in the background. Time of day: late morning, soft natural light from a large window, creating gentle highlights on the skin and water droplets. Weather: clear, bright sky; ambient light fills the scene.
+
+- **Lens & Technical**  
+  Short focal length (20‑35 mm), wide‑angle lens. Everything in focus—background and subject equally sharp, no bokeh. No portrait‑mode depth‑of‑field blur. The composition is accidental: off‑center framing, slight tilt, partial crop that cuts off the top of her head and a portion of the countertop.
+
+- **Details to Emulate**  
+  - Raw, unprocessed look; no color grading or filters.  
+  - Slight overexposure on the water stream and skin.  
+  - Natural motion blur from handheld shake.  
+  - Background fully sharp, no depth‑of‑field blur.  
+  - No rule‑of‑thirds intentionality—framing is spontaneous.  
+
+**Prompt:**
+
+> “Candid, unposed photo of a woman in white underwear pouring water from a clear bottle onto her chest, mid‑action, slight handheld shake and motion blur on the water stream. She has a black cross tattoo on her upper chest. The shot is taken with a short focal length wide‑angle lens (20‑35 mm), everything in focus—subject and background sharp. The scene is set in a bright kitchen at late morning, natural daylight from a large window, slight overexposure for a warm tone. In the background you can see a white countertop, a blue Dermatology bottle, and a red canister. The framing is accidental: slightly tilted, off‑center, partial crop that cuts off the top of her head and part of the countertop. No filters or color grading—raw, natural look with slight motion blur from handheld instability.”

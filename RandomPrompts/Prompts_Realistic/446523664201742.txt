@@ -1,0 +1,27 @@
+**Realistic Candid Photography Prompt Framework – “Street Photographer’s Moment”**
+
+- **Subject & Action**  
+  A young woman with warm, sun‑kissed brown hair, wearing a cream‑colored knit sweater and blue jeans, is mid‑pose while holding a black Canon EOS 6D Mark II camera. Her hands grip the camera at an angle that suggests she’s just captured a photo and is now reviewing the screen. She smiles softly, eyes slightly downcast, as if she’s about to share her capture with a friend. A thin black wristband sits on her left wrist; a black camera strap with red “Canon” lettering drapes over her shoulder.
+
+- **Pose & Composition**  
+  The shot is taken from a low, slightly tilted angle that gives an accidental, off‑center framing. The composition is not rule‑of‑thirds‑based: the subject’s head is a little above the center line, and the camera strap leans to the right, creating a dynamic diagonal. The frame cuts off the left side of her face, leaving a partial crop that adds spontaneity.
+
+- **Lighting & Exposure**  
+  Natural daylight from a bright, slightly overcast afternoon in an outdoor café. The light comes from the front‑left, creating soft highlights on her forehead and cheek, with a faint overexposure on the right side of her face. No auto‑HDR or beauty mode – the image retains a raw, unprocessed look.
+
+- **Lens & Technical**  
+  24 mm wide‑angle lens (short focal length), handheld, 1/60 s shutter speed, f/5.6 aperture. Everything is in focus – no portrait‑mode depth‑of‑field blur; the background remains sharp from a nearby wooden table to the street behind. Slight motion blur on the camera strap indicates the subject’s subtle movement.
+
+- **Environment**  
+  A bustling outdoor café on a city street. The background shows a beige building facade with a large glass window, a wooden chair, and a partial view of another patron in the distance. A small potted plant sits on the windowsill. The time of day is mid‑afternoon (around 3 pm), with warm, diffused sunlight. The weather is lightly cloudy, giving a soft ambient glow.
+
+- **Details & Imperfections**  
+  Slight tilt and off‑center framing give the image a candid feel. A faint motion blur on the camera strap suggests handheld instability. The focus is uniform across the frame – no bokeh or subject isolation. The background is fully sharp, preserving every detail from the wooden table to the building’s texture.
+
+- **Post‑Processing**  
+  No filters, no color grading, no post‑processing aesthetic. The image stays raw and natural, with only minimal white balance correction.
+
+---  
+
+*Prompt summary:*  
+“Candid photo of a young woman in a cream sweater holding a Canon EOS 6D Mark II camera at an outdoor café, captured with a 24 mm wide‑angle lens, handheld, slightly tilted and off‑center framing, natural daylight from a bright afternoon, everything in focus with raw, unprocessed look.”

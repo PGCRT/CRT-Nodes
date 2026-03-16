@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy blonde hair, wearing a light‑colored, off‑the‑shoulder top, captured mid‑gesture as she sticks her tongue out. Her hands are slightly curled near her chest, and her body is angled toward the camera at a casual, imperfect angle. The shot should feel spontaneous, as if she’s caught in an unplanned moment during a casual gathering or a home video.
+
+- **Motion & Focus**  
+  Apply a subtle motion blur to the subject’s hands and tongue, indicating slight handheld shake. Keep the entire frame sharp—no depth‑of‑field blur; everything from foreground to background should be in focus. Use a wide‑angle lens (20–35 mm) to capture a broad view of the scene without any bokeh.
+
+- **Lighting & Exposure**  
+  Use natural daylight from a large window behind the subject, creating a slight overexposure on the face and upper body while keeping the background evenly lit. Avoid any auto‑beauty or filter enhancements—keep the look raw and unprocessed. The exposure should be slightly warm, with a hint of ambient warmth from the time of day (late morning or early afternoon).
+
+- **Environment**  
+  The setting is a bright, modern living room with a light gray sofa on the left, a large window letting in natural light, and a neutral wall behind. A small potted plant sits on a side table to the right. The time of day is mid‑morning, with soft, diffused sunlight creating gentle shadows.
+
+- **Lens & Technical**  
+  Use a short focal length (24–35 mm) wide‑angle lens. Shoot in a single exposure with no post‑processing color grading. Capture the scene with a handheld camera, allowing for slight tilt and off‑center framing that gives the image a candid feel. Ensure that all elements—subject, sofa, window, plant—are fully sharp.
+
+- **Composition Notes**  
+  Compose the shot so that the subject occupies roughly the central third of the frame but is slightly offset to the right, creating an accidental, spontaneous feel. The camera should be at eye level, with the lens positioned a few inches above the subject’s head to capture her full upper body and part of the background. Keep the composition “imperfect” by leaving a small portion of the sofa visible on the left and a hint of the window frame on the right.
+
+- **Final Prompt**  
+  *“A candid, spontaneous photograph of a blonde woman in a light‑colored off‑shoulder top, captured mid‑gesture with her tongue out, in a bright modern living room. The shot uses a wide‑angle lens (24–35 mm), handheld with slight motion blur on the hands and tongue, natural daylight from a large window creating a soft overexposure. Everything is fully sharp—no bokeh. The frame is slightly off‑center, capturing the woman’s upper body, a gray sofa to the left, a window behind, and a small plant on a side table to the right. The time of day is mid‑morning, with warm, diffused light. No filters or color grading—raw, unprocessed look.”*

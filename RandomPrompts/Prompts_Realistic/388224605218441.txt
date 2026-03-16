@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman with long, wavy brown hair, bare‑shouldered and wearing black high‑heel shoes, sitting on a wooden chair in a living‑room setting. She is turned away from the camera, her left leg bent and her right foot planted on the floor, one hand resting on her thigh, the other on her knee. Her head is tilted slightly to the side, as if she’s mid‑conversation or just finished a gesture.
+
+- **Lighting & Exposure**  
+  Natural daylight coming from a window on the left, creating soft shadows and a subtle overexposed highlight on her back. Slight handheld shake gives a natural motion blur around the edges; no auto‑HDR or beauty filters—just raw, unprocessed imagery.
+
+- **Camera Settings**  
+  Wide‑angle lens (24 mm), f/4.0, 1/125 s shutter speed, ISO 400. Everything in focus from foreground to background; no bokeh or depth‑of‑field blur. Slight tilt and off‑center framing for a candid feel.
+
+- **Environment**  
+  A cozy living room with light‑wood flooring, a dark‑stained dresser on the left, and a decorative ceramic vase atop it. The wall behind is a muted beige, with a faint texture that shows the time of day (late morning). The scene is fully sharp, no studio lighting—just ambient natural light.
+
+- **Composition Notes**  
+  No rule‑of‑thirds intentionality; the frame is slightly crooked, capturing an accidental, spontaneous moment. The chair’s backrest leans a bit to the right, and the woman’s body is angled away, giving a dynamic, unposed look. The background includes the dresser, vase, and a portion of a white baseboard—everything in focus.
+
+- **Technical Details**  
+  Short focal length (24 mm) for a wide view; no portrait‑mode isolation. Slight motion blur from handheld instability adds realism. No color grading or filters—just the raw colors of the room and subject.
+
+- **Final Prompt**  
+  “A woman with long wavy brown hair, bare‑shouldered and wearing black high‑heel shoes, sits on a wooden chair in a cozy living‑room. She is turned away from the camera, left leg bent, right foot on the floor, one hand on her thigh, the other on her knee. Natural daylight from a left window creates soft shadows and a subtle overexposure on her back. Wide‑angle 24 mm lens at f/4.0, 1/125 s, ISO 400—everything in focus with slight handheld blur. The background shows a dark‑stained dresser with a decorative ceramic vase on top, beige textured wall, and white baseboard. Slight tilt and off‑center framing give a candid, unposed feel. No filters or color grading—raw, real‑life photography.”

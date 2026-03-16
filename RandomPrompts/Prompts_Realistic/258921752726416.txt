@@ -1,0 +1,28 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A woman in a casual denim shirt and dark jeans is mid‑adjustment at a wooden counter, her fingers on a brass gear, looking down with focused intent. She’s slightly turned toward the camera, capturing a candid moment as she fine‑tunes a vintage time‑keeping device.  
+
+- **Motion & Focus**  
+  Slight motion blur on the woman’s hands and the gears, indicating handheld instability. Everything remains fully sharp—no portrait‑mode blur, no depth‑of‑field isolation.  
+
+- **Lighting & Exposure**  
+  Natural daylight from a tall arched window, slightly overexposed at the top, giving a warm, ambient glow. No auto‑HDR or beauty filters—raw, unprocessed look.  
+
+- **Environment**  
+  The scene is set inside an old‑fashioned clock shop or repair studio. Walls are lined with numerous round and square clocks of varying sizes; a large arched window frames a cityscape of historic spires and a main street, captured at late afternoon (around 5 pm). The weather outside is clear with a soft haze, suggesting a calm evening.  
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm), short focal length, no bokeh. All elements—from the clocks on the walls to the city outside—are in focus.  
+
+- **Composition & Framing**  
+  No rule‑of‑thirds intentionality—framing is accidental, slightly off‑center. The shot has a slight tilt, giving it a candid feel. The composition includes the woman, the counter with gears, the wall clocks, and the window view, all in one frame.  
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, partial crop at the edges, minor motion blur on the hands and gears. Small imperfections such as a slightly dirty glass pane on the window, faint smudges on the clocks, and a small lamp glowing on the counter add realism.  
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, zero studio lighting. The image retains its raw, natural look with only basic auto‑beauty mode off.  
+
+**Prompt Summary**  
+> “A woman in a denim shirt adjusts a brass gear on a wooden counter inside a cluttered clock shop, with walls lined with clocks and a large arched window showing a cityscape outside. Capture the moment with a wide‑angle lens, slight motion blur on the hands, full sharpness on all elements, natural daylight with mild overexposure, accidental off‑center framing, and no post‑processing filters—producing a candid, raw, realistic photograph.”

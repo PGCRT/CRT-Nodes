@@ -1,0 +1,31 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair sitting on a white bed, wearing pink high‑waist shorts. She is mid‑gesture, hands resting on the mattress, body slightly turned toward the camera, eyes looking directly at the lens with a natural, unposed expression. Her posture shows a subtle tilt and off‑center framing; the crop is partial, capturing only the upper body and part of the legs.
+
+- **Lighting & Exposure**  
+  Natural daylight from a nearby window creates a soft, slightly overexposed highlight on her skin. No auto‑HDR or beauty filters—just raw, unprocessed light. The exposure is uneven, with a gentle vignette from the ambient light.
+
+- **Camera Settings**  
+  - Lens: 24 mm wide‑angle, short focal length.  
+  - Focal depth: everything in focus—from face to toes—no bokeh or subject isolation.  
+  - Shutter speed: 1/60 s, producing a slight motion blur on the subject’s hands and hair, indicating handheld instability.  
+  - ISO: 400–600 for natural grain.
+
+- **Environment**  
+  A bright, airy bedroom with a white bed, a lamp, and a window that lets in daylight. The time of day is mid‑afternoon, with warm, diffused sunlight. The background is fully sharp, no depth‑of‑field blur.
+
+- **Composition & Style**  
+  Candid, spontaneous capture—subject appears unaware of the camera. Slight tilt and off‑center framing give an accidental, non‑rule‑of‑thirds feel. No intentional rule‑of‑thirds; the frame is a natural, casual snapshot. The image has zero studio lighting, zero professional composition, zero editorial tone.
+
+- **Technical Details**  
+  - Wide lens, short focal length, everything in focus.  
+  - Slight motion blur on the subject’s hands and hair from handheld shake.  
+  - No bokeh, no depth‑of‑field blur—background fully sharp.  
+  - No portrait mode or subject isolation.
+
+- **Post‑Processing**  
+  No filters, no color grading, no post‑processing aesthetic. Only raw, natural capture with slight overexposure from ambient light.
+
+**Prompt Summary:**  
+"A young woman with long wavy brown hair sits on a white bed in a bright bedroom, wearing pink high‑waist shorts. She is mid‑gesture with hands on the mattress, looking directly at the camera. Capture with a 24 mm wide‑angle lens at 1/60 s shutter speed, ISO 400–600, everything in focus, slight motion blur on the hands and hair, natural daylight from a nearby window, mid‑afternoon. The frame is slightly tilted and off‑center, accidental candid composition, no filters or post‑processing."

@@ -1,0 +1,33 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  - A young woman with a tattooed left arm, wearing a black triangle bikini, standing under an outdoor stone shower. Her hair is wet and slightly messy, catching the sunlight. She’s mid‑expression, eyes focused forward, mouth relaxed, as if she just finished a splash of water.  
+  - Slight motion blur on her face and shoulders to suggest natural movement.  
+  - No auto‑beauty or filter enhancements – raw, unprocessed look.
+
+- **Lighting & Exposure**  
+  - Capture in late‑afternoon sunlight; the light is warm, slightly harsh, creating a subtle overexposed highlight on her chest and forehead.  
+  - No color grading or post‑processing – just the natural ambient light.
+
+- **Lens & Technical Settings**  
+  - Wide‑angle lens (24–35 mm) with a short focal length to keep the background fully sharp.  
+  - Handheld shot with slight tilt and off‑center framing; no rule‑of‑thirds intentionality.  
+  - Everything in focus – no portrait‑mode depth‑of‑field blur.
+
+- **Environment**  
+  - Location: A rustic stone wall shower, made of irregular reddish-brown rocks, with a metal showerhead at the top.  
+  - Time of day: Late afternoon (around 5 pm), creating warm, golden light and long shadows.  
+  - Weather: Clear, slightly humid air; a few droplets of water still falling from the showerhead.
+
+- **Composition & Style**  
+  - Candid, unposed, spontaneous – subject unaware or mid‑action.  
+  - Imperfections encouraged: slight tilt, off‑center framing, partial crop.  
+  - No studio lighting, no professional composition, no editorial tone.  
+  - Natural motion freeze or slight blur from handheld instability.
+
+- **Post‑Processing**  
+  - Auto‑HDR off – raw, unprocessed look.  
+  - Slight overexposure on the subject’s chest and forehead to emphasize the ambient light.  
+
+**Prompt Summary (for use in a text‑to‑image model)**  
+"Realistic candid photo of a young woman in a black triangle bikini standing under an outdoor stone shower, with a metal showerhead above her. She has a tattooed left arm, wet hair, and a relaxed expression. Capture with a wide‑angle lens (24–35 mm), handheld slight tilt, everything in focus, no bokeh. Light is late‑afternoon sunlight causing subtle overexposure on the chest. Background is a rustic stone wall with irregular reddish-brown rocks. The scene is spontaneous and unposed, with minor motion blur on the subject. No filters or color grading – raw, natural look."

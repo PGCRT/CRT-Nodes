@@ -1,0 +1,29 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a slender, athletic build, captured from a rear‑three‑quarter angle. Her hair is a deep chestnut color, cut to a blunt, shoulder‑length fringe that falls softly over the back of her neck. She’s wearing a thin black thigh‑high garter that sits just above the knee, and a pair of gold bangles on each wrist. Her hands rest lightly on the sides of her hips, fingers slightly curled, as if she’re about to adjust her skirt or check her reflection in a mirror. The pose is candid—she’s mid‑movement, with a subtle shake that creates a faint motion blur around the edges.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle, late‑afternoon sun that casts a warm, golden hue across her skin. The exposure is slightly overexposed on the upper back and shoulders, giving a soft glow, while the lower legs and thighs have a gentle underexposure that adds contrast. No auto‑beauty mode—just raw, unprocessed light.
+
+- **Camera & Lens Settings**  
+  - Lens: 24‑mm wide‑angle prime (short focal length) for a broad field of view.  
+  - Aperture: f/5.6 – enough to keep the entire frame sharp from foreground to background.  
+  - Shutter speed: 1/125 s – fast enough to freeze the motion but still allow a hint of blur from handheld instability.  
+  - ISO: 400 – for clean detail without noise.  
+  - Focus: manual, everything in focus—no portrait‑mode depth‑of‑field blur.  
+
+- **Composition & Framing**  
+  The frame is intentionally off‑center; the subject’s left hip is slightly cut off by the right edge of the image, giving a dynamic, spontaneous feel. The composition has no rule‑of‑thirds intentionality—just a casual, candid snapshot. The background is a concrete patio with a faint outline of a green hedge and a distant white fence, all in sharp focus.
+
+- **Environment**  
+  Location: An outdoor residential patio in a suburban neighborhood. The time of day is early evening (around 6 pm), when the sun is still high but beginning to tilt, creating warm, directional light. Weather is clear with a light breeze that ruffles her hair slightly. The ambient noise is low, so the image retains a quiet, intimate vibe.
+
+- **Technical Details**  
+  - No filters, no color grading, no post‑processing aesthetic—just the raw capture.  
+  - Slight tilt in the camera body gives a natural, handheld feel.  
+  - Background is fully sharp; no bokeh or depth‑of‑field blur.  
+  - The image has a slight overexposure on the upper back and shoulders, and a subtle underexposure on the lower legs, adding dynamic range.
+
+- **Final Prompt**  
+  “A candid rear‑three‑quarter shot of a slender woman with chestnut shoulder‑length hair, wearing a black thigh‑high garter and gold bangles, captured on a wide‑angle 24‑mm lens at f/5.6 and 1/125 s. The scene is set on a concrete patio with a green hedge and white fence in the background, under late‑afternoon natural light that slightly overexposes the upper back and underexposes the lower legs. The frame is off‑center and slightly tilted, everything in focus, with a faint motion blur from handheld shake, no filters or post‑processing, all raw and unprocessed.”

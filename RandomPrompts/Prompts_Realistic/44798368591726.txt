@@ -1,0 +1,32 @@
+**Realistic Candid Photography Prompt Framework – “Shower Scene”**
+
+- **Subject & Action**  
+  A young woman with wet, slightly frizzy hair standing in a tiled bathroom shower. She’s holding a chrome handheld showerhead in both hands, mid‑wash, face turned toward the camera with a soft, unposed smile. Her body is partially covered by the shower curtain’s faint reflection; her breasts are visible and glistening. The shot should feel spontaneous, as if she’s caught in an unplanned moment.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action.  
+  Slight motion blur on the hands/showerhead to suggest movement.  
+  No filters, no color grading, no post‑processing aesthetic – raw, natural look.  
+  Slight overexposure in the high‑lights of the showerhead and water droplets.  
+  Wide‑angle lens (24–35 mm) for a short focal length, wide‑field capture.
+
+- **Environment**  
+  Specific real‑world location: a modern bathroom with gray ceramic tiles, a decorative border strip of circular motifs, and a chrome shower fixture.  
+  Time of day: late afternoon, soft natural light from a north‑west window (ambient light).  
+  Weather or ambient conditions: mild humidity, slight condensation on the tiles.
+
+- **Lens & Technical**  
+  Short focal length, wide angle – 35 mm.  
+  No bokeh; background fully sharp – everything in focus.  
+  No portrait mode, no subject isolation – keep the entire scene crisp.  
+  Slight tilt and off‑center framing; partial crop to give a casual, handheld feel.  
+  Natural motion freeze or slight blur from handheld instability on the showerhead and water droplets.
+
+- **Composition Notes**  
+  - Frame the woman’s torso and upper legs, with the showerhead extending upward out of frame.  
+  - Keep the decorative tile border visible at the top of the frame for context.  
+  - Capture the water droplets on her skin and the chrome fixture in detail.  
+  - Ensure the lighting is slightly uneven – one side a bit brighter than the other – to maintain authenticity.
+
+- **Prompt Summary (for AI image generator)**  
+  “A young woman in a tiled bathroom shower, mid‑wash, holding a chrome handheld showerhead with both hands, face turned toward camera, wet hair, slight motion blur on hands and water droplets, wide‑angle 35 mm lens, everything in focus, no bokeh, candid spontaneous capture, slight tilt and off‑center framing, partial crop, background fully sharp, late afternoon natural light, raw unprocessed look, slight overexposure on high‑lights, gray ceramic tiles with decorative border, chrome fixture, wet skin, glistening breasts, soft smile, handheld instability blur.”

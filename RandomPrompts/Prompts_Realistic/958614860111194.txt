@@ -1,0 +1,23 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman with pastel‑pink hair lying on a blue bed sheet, mid‑touch: one hand gently cupping her breast, the other resting on her abdomen. Her head is tilted slightly to the side, eyes half‑closed, as if caught in a lazy, relaxed moment. She wears large hoop earrings that catch the light. The composition is off‑center, with the bed’s corner cutting across the frame and a small portion of a white window sill visible at the top left.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle window, slightly overexposed on the upper right, giving a soft halo to the subject’s skin. No auto‑beauty or filter enhancement—raw, unprocessed look. The exposure is a little bright at the top, but the lower part of the image remains crisp, preserving detail in the skin and fabric.
+
+- **Camera & Lens Settings**  
+  Wide‑angle lens (24‑35 mm), handheld, shot with a DSLR or mirrorless camera. Focal length: 30 mm. Aperture: f/4.0 – shallow depth of field but everything from foreground to background stays in focus. Slight motion blur on the subject’s hands, indicating a casual, spontaneous capture. No portrait‑mode bokeh; the background (a plain wall, a curtain, and a window) is fully sharp.
+
+- **Environment & Context**  
+  Location: a modest bedroom with light‑blue bedding, a white window frame, and a sheer curtain on the right. Time of day: late morning, sunlight coming from the left, casting soft shadows. Ambient noise is minimal; the room is quiet, giving the image an intimate, candid feel.
+
+- **Technical Details**  
+  - Shot in RAW, no color grading or filters applied.  
+  - Slight tilt and partial crop—no rule‑of‑thirds intentionality.  
+  - Background fully sharp, no depth‑of‑field blur.  
+  - Slight overexposure at the top right for a natural, unposed look.  
+  - All elements in focus: subject, bed sheet, window sill, curtain.
+
+- **Prompt Summary**  
+  “A candid, handheld shot of a woman with pink hair lying on a blue bed, mid‑touch, captured with a 30 mm wide‑angle lens at f/4.0, slightly overexposed top right, raw RAW image, no filters, all elements in focus, background sharp, natural daylight from a high window, late morning, modest bedroom setting, slight motion blur on the hands, off‑center framing, partial crop, no rule‑of‑thirds.”

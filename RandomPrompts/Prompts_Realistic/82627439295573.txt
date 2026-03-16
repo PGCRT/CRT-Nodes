@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wet hair sitting cross‑legged on a lush green lawn, wearing an orange halter‑style bikini. She’s mid‑gesture—her left hand is raised to the back of her head, fingers slightly curled, as if she just finished a swim or a beach run. Her gaze is directed toward the camera but not directly at it; a subtle, candid look that suggests she’s unaware of the lens. A faint smile plays on her lips, and a small, natural tilt in her head adds spontaneity.
+
+- **Lighting & Exposure**  
+  Warm, golden‑hour sunlight from the west casts soft highlights on her skin and clothing, with a slight overexposure that gives the image a raw, unprocessed feel. The exposure is slightly uneven—brighter in the center than at the edges—to mimic a handheld shot taken during the late afternoon. No auto‑beauty or filter enhancements; the look is natural, with minor grain and color fidelity as captured by a DSLR or mirrorless camera.
+
+- **Lens & Technical**  
+  Shot on a wide‑angle lens (24–35 mm), producing a short focal length that keeps the entire scene—in foreground and background—fully sharp. No bokeh or depth‑of‑field blur; everything from the grass beneath her to the palm trees behind is in focus. The framing is off‑center, slightly tilted, and partially cropped at the top and right edges, giving it a spontaneous, “in‑the‑moment” vibe.
+
+- **Environment**  
+  The setting is a tropical park or beachside lawn, with tall palm trees lining the background and a white umbrella and a blue trash bin visible further back. A few scattered fallen leaves lie on the grass, adding texture. The time of day is late afternoon, around 5 – 6 p.m., when the sun is low but still bright. The weather is clear with a light breeze; the sky shows a soft gradient from pale blue to warm amber near the horizon.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Imperfections are encouraged: slight tilt, off‑center framing, partial crop. No rule‑of‑thirds intentionality—accidental framing that feels natural and organic. Zero studio lighting, zero professional composition, zero editorial tone. Natural motion freeze or slight blur from handheld instability is present on the subject’s hand and hair, adding a subtle dynamic quality.
+
+- **Post‑Processing**  
+  No filters, no color grading, no post‑processing aesthetic. The image retains its raw, in‑camera look with only minimal adjustments to exposure and contrast, preserving the natural texture and color palette of the scene.
+
+**Prompt Summary (for AI image generation)**  
+"A young woman in an orange bikini sitting cross‑legged on a green lawn, hand raised to her head, captured in a candid, unposed moment during golden hour. Wide‑angle lens, 24–35 mm, all elements fully sharp, slight tilt and off‑center framing, raw exposure with mild overexposure, natural motion blur from handheld shot. Background features palm trees, a white umbrella, and a blue trash bin; scattered leaves on the grass add texture. The scene is a tropical park or beachside lawn, late afternoon, clear sky with warm amber light. No filters or heavy post‑processing—just a raw, realistic photograph."

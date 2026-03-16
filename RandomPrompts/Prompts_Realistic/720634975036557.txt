@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair sitting casually on a concrete ledge in an urban plaza. She wears a fitted, sleeveless brown dress that falls to mid‑calf, paired with delicate gold anklets and a thin bracelet on her left wrist. Her right hand is raised to the back of her head, fingers lightly gripping a strand of hair, while her left arm rests on her knee. She leans slightly to the right, creating a dynamic, off‑center composition.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject appears mid‑movement, as if she just finished a gesture and is caught in a natural freeze. Slight tilt and partial crop give an accidental, handheld feel. No rule‑of‑thirds intentionality; framing is organic and imperfect.
+
+- **Motion & Focus**  
+  Slight motion blur on the subject’s hands and hair, indicating a handheld shot taken at a relatively low shutter speed. Everything remains fully sharp — no bokeh or depth‑of‑field blur; background is in focus as well.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle, late‑afternoon sun that creates a soft overexposure on the subject’s face and a subtle warm glow. Slight ambient haze gives an auto‑HDR feel without post‑processing filters. The exposure is slightly uneven, with the upper part of the frame a bit brighter than the lower part.
+
+- **Environment**  
+  Location: A modern concrete plaza in a city center, with a low‑rise building and a tall glass tower visible in the background. Time of day: Late afternoon (around 5 pm), with warm, golden light and a few scattered clouds in the sky. Weather: Light breeze, clear sky, a faint mist on the ground.
+
+- **Lens & Technical**  
+  Short focal length (24 mm) wide‑angle lens, no bokeh, no portrait‑mode isolation. All elements — subject, foreground, background — are in focus. The image has a raw, unprocessed look with auto‑HDR off; no color grading or filters applied.
+
+- **Composition Notes**  
+  The shot is slightly cropped on the right side, leaving a small portion of the concrete ledge out of frame. The subject’s body occupies the central‑right third of the frame, while the background extends to the left and top edges. A faint line of leaves lies on the concrete in the lower left corner, adding a natural detail.
+
+- **Final Prompt**  
+  “A young woman with long wavy brown hair sits casually on a concrete ledge in an urban plaza, wearing a fitted brown dress and gold anklets. Her right hand grips the back of her head, left arm rests on her knee, body leaning slightly right. Slight motion blur on hands and hair, everything fully sharp. Natural late‑afternoon light creates soft overexposure. Background shows a low‑rise building and glass tower, scattered clouds, faint mist. Shot with 24 mm wide‑angle lens, handheld, raw, unprocessed, no filters.”

@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, curvy woman with a high ponytail and loose strands framing her face, wearing a dark halter‑top bikini printed with pink roses and a lace‑trimmed thong. She’s mid‑adjustment of her hair, hands raised near the back of her head, body angled slightly to the left, knees bent, weight on the right foot. Her expression is natural, mouth slightly open as if she’s about to speak or laugh.
+
+- **Lighting & Exposure**  
+  Natural daylight from a western‑side window, mid‑afternoon (≈ 4 pm). Slight overexposure on the upper body, subtle halo around the hair. No auto‑HDR or beauty filters—raw, unprocessed look. The exposure is uneven: the lower half of the body is a little brighter than the upper half, giving a candid, handheld feel.
+
+- **Camera & Lens**  
+  DSLR or mirrorless with a 24‑mm wide‑angle lens (f/3.5, 1/60 s shutter speed). Everything in focus—no bokeh, no portrait‑mode depth of field. Slight motion blur on the hands and hair to emphasize spontaneity.
+
+- **Composition & Framing**  
+  Off‑center, accidental framing: the left side of the frame cuts off a bit of the bed’s headboard, the right side captures part of the white duvet. The shot is slightly tilted (≈ 3°) and cropped tight on the subject’s torso to thighs. No rule‑of‑thirds intentionality—just a casual, spontaneous capture.
+
+- **Environment**  
+  A modern bedroom with a tufted beige headboard, white pillows, and a neatly made bed. A small bedside table with a lamp is visible on the right. The room has light gray walls and a carpeted floor. The time of day is late afternoon, soft natural light coming from the west, creating gentle shadows across the subject’s face and body.
+
+- **Details & Imperfections**  
+  Slight tilt in the camera, minor handheld jitter, partial crop that cuts off a bit of the bed’s headboard on the left. The subject’s hair has a slight motion blur, indicating she’s mid‑movement. The lighting is uneven—slight overexposure on the upper body, underexposure on the lower body—giving a raw, unpolished feel.
+
+- **Prompt for AI Image Generation**  
+  *“A tall woman with a high ponytail and loose strands framing her face, wearing a dark rose‑printed halter‑top bikini and lace‑trimmed thong, mid‑adjustment of her hair in a modern bedroom. Natural daylight from the west, mid‑afternoon, slight overexposure on the upper body. 24‑mm wide‑angle lens, f/3.5, 1/60 s. Off‑center, accidental framing, slightly tilted, partial crop. Raw, unprocessed look, no filters, everything in focus, slight motion blur on the hands. The background shows a tufted beige headboard, white pillows, and a bedside lamp. Capture candid, spontaneous, handheld feel.”*

@@ -1,0 +1,31 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A woman in a glossy black latex outfit, complete with thigh-high boots and a utility belt, is mid‑climb on a glass‑facade building. Her hair is tied back in a loose ponytail, a few strands framing her face as she reaches for the rope. She’s slightly tilted, body angled toward the right, left foot planted on the wall, right foot bent, gripping the rope with both hands. The pose captures a moment of spontaneous motion—her fingers are blurred as if she just pulled up.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action.  
+  Slight tilt and off‑center framing; partial crop that cuts off the top of her head and the lower part of the building, giving a dynamic, handheld feel.  
+  No rule‑of‑thirds intentionality—everything is framed by accidental composition.  
+  Natural motion freeze or slight blur from handheld instability.
+
+- **Environment**  
+  Specific real‑world location: a modern office tower in an urban district at dusk. The building’s glass façade reflects the city lights below, with a street illuminated by neon signs and car headlights visible in the background. Weather is mild, with a light breeze that creates subtle motion on the subject’s hair and clothing. Time of day: twilight—ambient light is warm, slightly overexposed on the subject’s face but not overly bright.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm), wide‑angle lens.  
+  No bokeh; background fully sharp—everything in focus.  
+  No portrait mode or subject isolation.  
+  Slight overexposure on the subject’s face to capture the glow of the city lights, but overall exposure remains natural and raw.  
+  Auto‑HDR or auto‑beauty mode off — no filters, no color grading, no post‑processing aesthetic.  
+  Handheld shot with a tripod or stabilizer for minimal shake.
+
+- **Details & Imperfections**  
+  Slight motion blur on the hands and rope, indicating movement.  
+  The leather boots show a subtle reflection of the city lights.  
+  The woman’s belt has a small, worn strap that adds texture.  
+  The glass wall reflects the night sky, adding depth.  
+  The background includes a blurred street scene with cars and neon signs, but remains fully sharp.
+
+- **Prompt Summary**  
+  “A woman in glossy black latex and thigh‑high boots, mid‑climb on a glass‑facade building at dusk, captured with a short focal length wide‑angle lens. Candid, slightly tilted, off‑center framing, natural motion blur on the hands, raw exposure, no filters—everything in focus, background fully sharp.”

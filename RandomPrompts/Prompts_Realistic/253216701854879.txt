@@ -1,0 +1,37 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a sun‑kissed, slightly tanned complexion sits cross‑legged on a weathered brown leather couch. Her blonde hair is tied up in a loose, messy bun with a few strands framing her face. She wears a light‑green halter bikini top and matching bottoms; the fabric drapes softly over her shoulders, revealing a small tattoo of a rose on her left upper arm and a tiny star on her left wrist. Her hands rest gently on her knees, fingers slightly curled, as if she’s about to adjust her bikini strap or simply be mid‑gesture.
+
+- **Facial Features & Expression**  
+  Her eyes are half‑closed in a relaxed, contemplative look, with a hint of mischief. A faint smile plays on her lips. The lighting catches the slight sheen of moisture on her skin, suggesting a warm, humid afternoon.
+
+- **Body & Posture Details**  
+  The couch’s leather is slightly worn, with a subtle crease where her thighs meet the cushion. Her left leg is bent at the knee, foot tucked into the corner of the couch, while her right leg rests flat. A thin bracelet adorns her left wrist, and a small ring sits on her left ring finger. The angle of her torso is slightly tilted to the right, giving an off‑center, candid feel.
+
+- **Clothing & Accessories**  
+  The bikini top has a delicate strap that ties at the back, leaving a tiny hint of bare skin between the straps. A small, almost invisible seam on the side of the top reveals a subtle texture. Her bikini bottom is a matching light green, with a faint elastic band peeking at the waistline.
+
+- **Tattoos & Markings**  
+  The rose tattoo on her left arm is a delicate, hand‑drawn style with a few leaves extending outward. The star on her wrist is a simple, five‑pointed shape. Both tattoos are slightly raised, catching the light as she moves.
+
+- **Environment & Setting**  
+  Behind her, a wooden pergola with vertical slats casts dappled shadows across her face and body. A thatched roof of a nearby hut peeks into the frame on the right side. The background is a bright, slightly overcast sky with fluffy white clouds, indicating late afternoon. The ground is covered in lush green grass, and a few palm fronds are visible at the top left corner.
+
+- **Time of Day & Ambient Light**  
+  The scene is lit by warm, golden sunlight coming from the upper right, creating soft highlights on her face and shoulders. There’s a slight overexposure on her right side, giving a natural, raw feel. The ambient light is diffused, with no harsh shadows.
+
+- **Lens & Technical Settings**  
+  Use a wide‑angle lens (24–35 mm) to capture the entire scene in one shot. Keep everything in focus—no bokeh or depth‑of‑field blur. Shoot at a slightly high angle to emphasize her posture and the surrounding environment. The focal length should be short enough to keep the background fully sharp but not too short as to compress the frame excessively.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—she appears unaware of the camera, mid‑action. Slight tilt and off‑center framing create a natural, accidental composition. The shot is slightly handheld, with a faint motion blur on her hands and knees to suggest a living, breathing moment.
+
+- **No Filters, No Post‑Processing**  
+  Capture the image in raw, unprocessed form—no auto‑HDR or beauty mode. Keep the color palette natural, with slight overexposure or underexposure depending on ambient light. The final photo should feel like a genuine snapshot from a casual, everyday moment.
+
+- **Specific Real‑World Location**  
+  The setting is an outdoor lounge area of a tropical resort or beach house. The wooden pergola and thatched hut suggest a Caribbean or Mexican location. The presence of palm fronds and the bright sky reinforce the tropical vibe.
+
+- **Detailed Prompt for AI Image Generation**  
+  “A young woman with a sun‑kissed, slightly tanned complexion sits cross‑legged on a weathered brown leather couch in an outdoor lounge area of a tropical resort. Her blonde hair is tied up in a loose, messy bun with strands framing her face. She wears a light‑green halter bikini top and matching bottoms; a small rose tattoo adorns her left upper arm, and a star tattoo sits on her left wrist. Her hands rest gently on her knees as she adjusts her strap, a faint smile on her lips. The couch’s leather is slightly worn, with a crease where her thighs meet the cushion. A thin bracelet adorns her left wrist, a small ring on her left ring finger

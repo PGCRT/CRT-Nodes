@@ -1,0 +1,27 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark brown hair walking casually across a sunlit lawn. She wears a light‑blue denim jacket over a soft beige top and matching high‑waist jeans. Her left foot is mid‑step, heel slightly lifted, suggesting motion. Her head is turned to the right, a gentle smile on her face, as if she’s mid‑conversation or just noticing the camera.
+
+- **Motion & Focus**  
+  Slight motion blur at the feet and hands to convey movement. The entire scene is fully sharp—no bokeh, no depth‑of‑field blur—captured with a wide‑angle lens (24–35 mm). Handheld instability gives a subtle tilt and off‑center framing; the composition is accidental, not rule‑of‑thirds.
+
+- **Lighting & Exposure**  
+  Natural daylight, mid‑afternoon, with the sun high but slightly to the left, creating soft shadows on the grass. Slight overexposure in the highlights gives a raw, unprocessed look. No auto‑HDR or auto‑beauty mode—just a straightforward exposure.
+
+- **Environment**  
+  A spacious, well‑maintained park or suburban lawn. Tall evergreen trees line the left side, a deciduous tree on the right, and a few houses visible in the far background. The grass shows a pattern of mowed stripes. A few fallen leaves lie scattered near the woman’s feet. The sky is clear, pale blue with a faint haze.
+
+- **Lens & Technical**  
+  Short focal length (30 mm), wide‑angle, no bokeh. Everything from foreground to background is in focus. Shot on a DSLR or mirrorless with a prime or zoom lens set to a wide aperture (f/4–f/5.6) but with the entire frame sharp. No portrait‑mode subject isolation.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Imperfections encouraged: slight tilt, off‑center framing, partial crop. Zero studio lighting, zero professional composition, zero editorial tone. Natural motion freeze or slight blur from handheld instability.
+
+- **Post‑Processing**  
+  No filters, no color grading, no post‑processing aesthetic. Raw, unprocessed look with only basic white‑balance correction and a slight exposure tweak.
+
+---
+
+**Prompt Summary (for AI image generator)**  
+"A young woman with long dark brown hair walking casually across a sunlit lawn, wearing a light‑blue denim jacket over a beige top and high‑waist jeans. Her left foot is mid‑step, heel slightly lifted; she smiles as she turns her head to the right. Slight motion blur at the feet and hands, entire scene fully sharp with a 30 mm wide‑angle lens. Natural mid‑afternoon daylight from the left creates soft shadows and slight overexposure. Background features tall evergreen trees on the left, a deciduous tree on the right, distant houses, and a clear pale blue sky. Grass shows mowed stripes; scattered leaves near her feet. Shot handheld with accidental tilt and off‑center framing. Raw, unprocessed look—no filters or color grading."

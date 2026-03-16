@@ -1,0 +1,24 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with dark hair tied in a high bun, walking casually across a sunlit meadow. She wears an off‑white short‑sleeved tee and dark jogger pants, her left hand slightly bent as if she’s about to grip a railing or a branch. Her face is turned toward the camera but not directly at it—mid‑step, mid‑expression, a candid “in‑action” look.
+
+- **Motion & Focus**  
+  Slight motion blur on the legs and background to convey movement, while the foreground (the woman’s torso and face) remains fully sharp. No portrait‑mode depth‑of‑field blur; everything from front to back is in focus.
+
+- **Lighting & Exposure**  
+  Natural daylight, mid‑afternoon, with a mild overexposure that gives a warm, golden hue. No auto‑beauty or filter processing—raw, unprocessed look. The exposure is slightly high on the highlights, letting the grass and fence appear bright but not blown out.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24‑35 mm), short focal length, handheld shot with a slight tilt. No bokeh; background (fence, rocks, field) is fully sharp. The composition is accidental: the subject is slightly off‑center, the frame is not rule‑of‑thirds, and the crop is partial—creating a spontaneous, “real” feel.
+
+- **Environment**  
+  Location: A grassy field with an old wooden fence on the left, scattered light‑colored rocks along the right side, and a faint horizon line in the distance. Time of day: mid‑afternoon, sun high but slightly to the west, casting soft shadows. Weather: clear, breezy, with a hint of dust rising from the grass—adds a subtle atmospheric veil.
+
+- **Details & Imperfections**  
+  The woman’s left arm is bent at the elbow, her fingers loosely curled, as if she’s about to grasp something or simply balance herself. Her right hand hangs relaxed by her side. A slight tilt in the camera gives a natural, unposed feel. The background fence posts are slightly uneven, and the rocks have irregular shapes—adding authenticity.
+
+- **Prompt Summary**  
+  “A young woman with dark hair in a high bun, wearing an off‑white t‑shirt and dark joggers, walking casually across a sunlit meadow. She’s mid‑step, left hand bent, right hand relaxed. Slight motion blur on the legs, fully sharp foreground and background. Natural daylight, mid‑afternoon overexposure, wide‑angle lens (24‑35 mm), handheld tilt. Setting: grassy field with an old wooden fence on the left, scattered rocks on the right, distant horizon. Clear, breezy weather. Raw, unprocessed look—no filters, no auto‑beauty, no color grading.”
+
+Provide only the structured prompt.

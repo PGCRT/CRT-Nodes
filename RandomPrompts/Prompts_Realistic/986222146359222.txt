@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail, wearing a sheer lavender two‑piece lingerie set (transparent bra with a bow detail and matching thong), standing in a bright, airy living room. She is caught mid‑turn, back to the camera, left hand on hip, right hand lightly touching her waist, head turned over her shoulder with a subtle smile. Her hair has a slight frizz and a few loose strands frame her face.  
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — she appears unaware of the camera, mid‑action. The shot has a slight tilt and is off‑center, partially cropped on the right side. No rule‑of‑thirds intentionality; framing is accidental, as if taken with a handheld camera in motion.  
+
+- **Motion & Exposure**  
+  Slight motion blur from a handheld shutter, natural freeze or mild blur. The exposure is slightly overexposed on the window’s light, giving a warm, bright tone to the scene. No auto‑beauty mode; raw, unprocessed look.  
+
+- **Environment**  
+  Specific real‑world location: a modern apartment with a large window on the left, a beige sofa on the right, and a framed picture on the wall. Time of day: late morning, soft natural light coming from the window, ambient daylight with a hint of haze. Weather: clear, mild.  
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm), wide‑angle lens. Everything is in focus — no bokeh, no depth‑of‑field blur; background fully sharp. No portrait mode or subject isolation. The image has a wide‑angle slight distortion that adds to the candid feel.  
+
+- **Color & Tone**  
+  Natural color palette with a warm, slightly overexposed highlight on the window. The lavender lingerie contrasts with the beige sofa and white window frame. No filters, no color grading, no post‑processing aesthetic.  
+
+- **Composition Notes**  
+  The composition is accidental: the subject’s left hip is slightly cut off by the frame edge, the window’s vertical line runs close to the left edge, and the sofa’s corner peeks into the right side. The shot captures a moment of movement, with the woman’s back and shoulder creating a dynamic diagonal line that leads the eye toward her face.  
+
+- **Final Prompt**  
+  “A young woman in a sheer lavender two‑piece lingerie set stands in a bright, modern living room, caught mid‑turn with her back to the camera and head turned over her shoulder. Her high ponytail has a slight frizz, and a few loose strands frame her face. She touches her waist with one hand, hip on hip, while the other hand rests on her hip. The scene is captured with a 24‑35 mm wide‑angle lens, everything in focus, slight motion blur from handheld shake, and a subtle overexposure on the window. The shot is candid and unposed, slightly tilted and off‑center, partially cropped on the right. The background shows a large window on the left, a beige sofa on the right, and a framed picture on the wall. Late morning natural light fills the room, creating a warm, bright tone. No filters or post‑processing; raw, realistic photography.”

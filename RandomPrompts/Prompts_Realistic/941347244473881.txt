@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high, messy bun and blonde‑highlighted hair, wearing an oversized beige t‑shirt. She’s captured mid‑smile, head tilted slightly downward, eyes cast to the side, as if she’s just finished a conversation or is about to grab a drink. Her left ear is visible, adorned with a small gold hoop earring; a delicate gold necklace rests on her collarbone. The shot should feel spontaneous and unposed, with a slight tilt and off‑center framing that gives an accidental, handheld vibe.
+
+- **Motion & Focus**  
+  Apply a subtle motion blur to the subject’s face and upper body, as if the camera was slightly unstable when the shutter was pressed. Keep the background fully sharp—no bokeh or depth‑of‑field blur—so every element from the foreground to the back is in focus. Use a wide‑angle lens (20–35 mm) to capture a broad view of the scene, keeping everything crisp and natural.
+
+- **Lighting & Exposure**  
+  Capture with auto‑HDR or “auto‑beauty” off for a raw, unprocessed look. Allow a mild overexposure that lets the ambient daylight bleed through the window, creating a soft glow on the subject’s face and shirt. Avoid any color grading or post‑processing filters—keep the image naturalistic.
+
+- **Environment**  
+  The setting is a bright, casual cafeteria or break‑room area inside an office building. Large windows on the left let in natural daylight; outside, a parking lot and a small tree are visible. A wooden bookshelf filled with books, a red “THE COMMER” sign, and a small decorative item sit against the back wall. A table in the foreground holds a plastic cup of orange juice, a bottle of water, and a plate of food. A second woman in a beige sweater sits at the table, engaged in conversation. The time of day is mid‑afternoon, with warm sunlight streaming through the windows, creating soft shadows and a slight glare on the subject’s shirt.
+
+- **Lens & Technical**  
+  Use a short focal length (20–35 mm) wide‑angle lens to keep the entire scene in frame—subject, table, window, bookshelf—all sharply rendered. No portrait‑mode isolation; keep the background fully sharp. The composition should feel accidental: slight tilt, partial crop, and no rule‑of‑thirds intentionality. Capture the image with a handheld camera, letting natural motion freeze or slight blur from instability add realism.
+
+- **Final Prompt**  
+  “A candid, wide‑angle shot of a woman in an oversized beige t‑shirt, wearing a gold hoop earring and a delicate necklace, captured mid‑smile with a slight tilt and motion blur. The scene is set in a bright cafeteria area with large windows, a wooden bookshelf, and a table holding orange juice, water, and food. The lighting is natural mid‑afternoon daylight with mild overexposure. All elements—from the subject to the background—are fully sharp, with no filters or post‑processing, giving a raw, spontaneous, handheld feel.”

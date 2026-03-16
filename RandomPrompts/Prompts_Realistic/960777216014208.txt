@@ -1,0 +1,20 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark hair tied loosely, wearing a bright yellow bikini with blue trim, walking casually on a sunny city sidewalk while checking her phone. Her head is slightly tilted downward, eyes focused on the screen, giving a candid, mid‑action feel. She’s in motion—soft blur at the edges to suggest movement, but the background remains fully sharp.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Slight tilt and off‑center framing; partial crop that doesn’t follow the rule of thirds. No intentional composition, just a natural, handheld shot with a wide lens. A hint of overexposure from the bright daylight adds raw authenticity.
+
+- **Environment**  
+  Specific real‑world location: a downtown street in front of a cinema and a coffee shop. The time of day is mid‑afternoon, with warm, high‑angle sunlight casting soft shadows. Weather is clear, with a light breeze; a few scattered leaves on the pavement add texture.
+
+- **Lens & Technical**  
+  Short focal length (24–35 mm), wide‑angle lens. No bokeh—everything in focus, from subject to background. Auto‑HDR or auto‑beauty mode off—raw, unprocessed look. Slight motion blur on the subject’s limbs, natural freeze or slight blur from handheld instability. Zero studio lighting, zero professional composition, zero editorial tone.
+
+- **Post‑Processing**  
+  No filters, no color grading, no post‑processing aesthetic. Keep it natural and straightforward.
+
+**Prompt Summary for AI Image Generation**
+
+> “A young woman with long dark hair, wearing a yellow bikini with blue trim, walking on a sunny downtown sidewalk while checking her phone. She’s mid‑step, slightly tilted, off‑center framing, handheld shot with a 24–35 mm wide‑angle lens. The background shows a cinema and coffee shop storefronts, clear mid‑afternoon sunlight, soft shadows, scattered leaves on pavement. Capture candid, unposed, spontaneous vibe; slight motion blur on the subject, everything in focus, no bokeh. Raw, unprocessed look—no filters or color grading.”

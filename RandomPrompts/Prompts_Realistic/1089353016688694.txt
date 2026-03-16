@@ -1,0 +1,31 @@
+**Realistic Candid Photography Prompt Framework – “Summer Meadow Portrait”**
+
+- **Subject & Pose**  
+  A young woman with long, loose brown hair tied loosely at the back, wearing a simple silver pendant necklace and a light‑colored, off‑shoulder top. She is seated on a beige outdoor chair, leaning slightly forward with her elbows on the armrests, looking directly at the camera with a soft, natural expression. Her shoulders are relaxed, and her arms hang loosely, giving a candid, unposed feel.
+
+- **Lighting & Exposure**  
+  Capture in mid‑afternoon sunlight (≈ 4 pm) with a slight overexposure that gives a warm, golden hue. Use a wide‑angle lens (20–35 mm) on a DSLR or mirrorless camera, handheld, with a slightly shaky hand to introduce natural motion blur. Keep the exposure time around 1/60 s to freeze the motion while allowing a subtle blur from the hand’s instability.
+
+- **Focus & Sharpness**  
+  Everything in focus – subject and background. Use a single focal plane (no portrait‑mode depth‑of‑field blur). The background is a lush green meadow with a few scattered trees, slightly out of focus only at the far edges, but overall sharp.
+
+- **Composition & Framing**  
+  Frame the shot “accidentally” off‑center: the left side of the frame cuts off a bit of the chair’s armrest, and the right edge captures a portion of a wooden fence post. The composition is not rule‑of‑thirds; it’s a spontaneous, candid crop that feels natural and unposed.
+
+- **Environment**  
+  Location: a sunny park in a suburban town, with a grassy field and a line of tall trees behind the subject. Time of day: mid‑afternoon (≈ 4 pm), with warm, slightly harsh sunlight coming from the west. Weather: clear, light breeze, no rain. The background is fully sharp, no bokeh.
+
+- **Lens & Technical**  
+  - Focal length: 24 mm (wide‑angle).  
+  - Aperture: f/5.6 (mid‑range).  
+  - Shutter speed: 1/60 s.  
+  - ISO: 400.  
+  - Handheld, slight motion blur.  
+  - No auto‑HDR or auto‑beauty mode – raw, unprocessed look.  
+  - No filters, no color grading, no post‑processing aesthetic.
+
+- **Post‑Processing**  
+  None – keep the image raw. Only minor crop to tighten the framing after capture. Preserve natural imperfections: slight tilt, off‑center cropping, and a hint of motion blur from the handheld shot.
+
+**Prompt Summary (for AI image generation)**  
+> “A candid, unposed portrait of a young woman with long brown hair, wearing a silver pendant necklace and a light off‑shoulder top, seated on a beige chair in a sunny park at mid‑afternoon. The shot is taken with a 24 mm wide‑angle lens at f/5.6, 1/60 s shutter speed, handheld, producing natural motion blur. Everything is in focus, from the subject to the lush green meadow and trees behind her. The framing is off‑center and slightly tilted, capturing a portion of the chair’s armrest on the left and a wooden fence post on the right. The background is fully sharp, no bokeh. Capture in raw, unprocessed form with slight overexposure for a warm golden hue.”

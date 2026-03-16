@@ -1,0 +1,27 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with wet, slightly messy hair standing knee‑deep in the surf at a coastal beach. She’s wearing a shimmering gold bikini that catches the light as she tilts her head back and closes her eyes, letting the sea air kiss her face. Her left hand is gently placed over her chest, fingers curled as if she’re catching a wave or shielding herself from the wind. The pose feels spontaneous—she’s mid‑motion, caught in a natural “freeze” frame that shows a faint handheld blur around her shoulders and arms.
+
+- **Lighting & Exposure**  
+  The scene is lit by bright midday sun with a slight overexposure on the sky, giving the water a soft, hazy glow. The exposure is slightly uneven—the foreground is a bit brighter than the background, creating a subtle contrast between the foamy surf and the sandy dunes. No auto‑beauty or filter enhancement; the image retains raw, unprocessed fidelity.
+
+- **Camera & Lens Settings**  
+  Shot on a wide‑angle lens (24‑35 mm) with a short focal length to capture the full breadth of the scene. The depth of field is fully sharp—no bokeh, no subject isolation. The focus covers the woman, the foamy water, and the distant dunes in one plane. Slight tilt and off‑center framing give the composition an accidental, candid feel.
+
+- **Environment & Background**  
+  The beach is a real‑world location on a sunny afternoon; the sea is choppy with white foam rolling in from the left, and a line of low sand dunes stretches across the right side of the frame. The sky shows a faint contrail or cloud streak, adding texture to the upper portion. The time of day is roughly noon, as indicated by the high sun and strong shadows.
+
+- **Technical Details**  
+  - Focal length: 30 mm (wide‑angle)  
+  - Aperture: f/4.5 (mid‑range for sharpness)  
+  - Shutter speed: 1/125 s (producing a slight motion blur on the subject’s arms)  
+  - ISO: 400 (for clean detail without noise)  
+  - No portrait mode or “auto‑beauty” — raw, unprocessed look.  
+  - Everything in focus from foreground to background; no depth‑of‑field blur.
+
+- **Composition & Style Notes**  
+  The framing is intentionally imperfect: the subject’s left shoulder is slightly cut off by the edge of the frame, and the top of her head is just above the horizon line. The composition does not follow the rule of thirds; instead it feels spontaneous, as if the photographer was capturing a fleeting moment. The background dunes and sea are fully sharp, giving an immersive sense of being on the beach.
+
+- **Final Prompt**  
+  “A young woman in a gold bikini standing knee‑deep in the surf at a coastal beach, head tilted back with eyes closed, left hand gently over chest, captured mid‑motion with slight handheld blur. Bright midday sun creates a soft overexposed sky and foamy water, while the distant sand dunes stretch across the right side of the frame. Shot on a 30 mm wide‑angle lens at f/4.5, 1/125 s, ISO 400—everything in focus from foreground to background. The framing is slightly off‑center and imperfectly cropped, giving a candid, spontaneous feel. No filters or post‑processing; raw, natural look with full sharpness across the scene.”

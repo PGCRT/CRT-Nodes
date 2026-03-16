@@ -1,0 +1,31 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, slender woman with long, dark wavy hair standing in a sunlit forest clearing. She wears an olive‑green, deep‑V, spaghetti‑strap dress that falls to mid‑calf with a subtle high slit on the left side. Her hands hang loosely at her sides, slightly bent at the elbows; she is mid‑step, one foot forward, as if caught in a casual walk. Her face is turned toward the camera but not directly aimed—slight tilt to the right, giving an unposed, spontaneous feel.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action.  
+  Slight motion blur on the hands and lower dress, indicating handheld shake.  
+  No filters, no color grading, no post‑processing aesthetic.  
+  Slight overexposure in the upper torso area to emphasize ambient light.  
+  Wide‑angle lens (24 mm) capturing a broad view of the scene; everything from foreground to background is fully sharp—no bokeh or depth‑of‑field blur.
+
+- **Environment**  
+  Specific real‑world location: a tropical forest clearing with tall, slender tree trunks on either side, large green ferns at the base of a small waterfall in the background.  
+  Time of day: late morning, soft golden light filtering through the canopy.  
+  Weather or ambient conditions: clear, slightly humid air; leaves are wet from recent rain, giving a subtle sheen to the foliage.
+
+- **Lens & Technical**  
+  Short focal length (24 mm), wide‑angle.  
+  No bokeh, no depth‑of‑field blur — background fully sharp.  
+  Everything in focus: subject, trees, ferns, waterfall.  
+  No portrait mode, no subject isolation.  
+  Slight tilt and off‑center framing; partial crop of the left side of her dress, giving a casual, imperfect feel.
+
+- **Lighting & Composition**  
+  Zero studio lighting, zero professional composition, zero editorial tone.  
+  Natural motion freeze or slight blur from handheld instability.  
+  The camera is held at eye level, slightly above the subject’s head, with the lens focused on the subject’s mid‑torso, capturing her full figure and a portion of the background.
+
+- **Prompt Summary**  
+  “A tall woman in an olive‑green deep‑V dress stands mid‑step in a sunlit forest clearing, with a small waterfall behind her. The shot is taken with a 24 mm wide‑angle lens at eye level, capturing everything in sharp focus from the subject to the background foliage. Slight motion blur on the hands and lower dress conveys handheld shake, while a slight tilt and off‑center framing give a candid, spontaneous feel. The scene is lit by late‑morning golden light, with wet leaves adding a subtle sheen. No filters or post‑processing—just raw, natural realism.”

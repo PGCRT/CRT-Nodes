@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A young woman with a high ponytail, wearing a loose brown knit sweater over a white tank top and gray athletic shorts, stands at a kitchen counter reading a thick hard‑bound cookbook. Her left hand holds the page open, her right hand rests on the counter, and she is slightly turned toward the window, catching natural light. She appears unaware of the camera, mid‑gesture, with a faint motion blur around her hands as if she just flipped a page.
+
+- **Candid Capture Style**  
+  The shot is handheld, slightly tilted, and off‑center. The framing is accidental—no rule‑of‑thirds intentionality—capturing the woman’s back and side profile along with a portion of the kitchen counter, a coffee maker, a stack of white plates, and a small potted plant on the windowsill. A man in a dark t-shirt and sunglasses holding a DSLR camera is partially visible in the background, slightly out of focus but still sharp, as if he’s just taken a photo of the woman. The image has a raw, unprocessed look: no filters, no color grading, no auto‑beauty mode—just natural ambient light with a slight overexposure on the window side.
+
+- **Environment**  
+  Location: A bright, modern kitchen in an apartment building. The time of day is late morning, with warm sunlight streaming through a large window, creating soft lens flare and a subtle haze. The weather outside is mild, with a light breeze that slightly ruffles the woman’s hair. The kitchen counter is made of light‑colored wood, the backsplash is white tile, and a stainless‑steel pot hangs from a rack near the window.
+
+- **Lens & Technical**  
+  Use a short focal length wide‑angle lens (e.g., 24 mm) to capture a broad view of the scene. Everything is in focus—no bokeh or depth‑of‑field blur; the background, including the man’s camera and the kitchen elements, remains sharp. The exposure is slightly high, giving a warm glow to the entire frame. No portrait‑mode subject isolation; the woman and the background are both fully rendered.
+
+- **Composition Notes**  
+  The composition is spontaneous: the woman’s back is slightly angled, her head turned toward the window, creating a dynamic diagonal line that leads the eye from the lower left to the upper right. The camera is held at a low angle, almost at the woman’s waist level, emphasizing her posture and the cookbook. A small portion of the coffee maker and a stack of plates sits on the counter, adding context. The potted plant on the windowsill adds a touch of green, contrasting with the warm tones of the sweater.
+
+- **Final Prompt**  
+  “A young woman in a brown knit sweater and gray shorts reads a cookbook at a kitchen counter, her back slightly turned toward a bright window, a coffee maker and stack of plates beside her, a man in a dark t‑shirt holding a DSLR camera visible in the background. Capture with a 24 mm wide‑angle lens, handheld slight tilt, everything sharp, natural ambient light, subtle overexposure, raw unprocessed look, no filters, no auto‑beauty. The scene is set in a modern kitchen at late morning, with warm sunlight and a faint breeze. Emphasize candid, spontaneous feel, accidental framing, no rule‑of‑thirds.”

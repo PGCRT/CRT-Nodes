@@ -1,0 +1,28 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A muscular woman with a full back and defined glutes, standing back‑to‑back to the camera in a casual, unposed stance. Her hands rest on her hips, elbows bent, creating a slight diagonal line that gives the frame an off‑center, accidental feel. She wears a black mesh bodysuit that clings to her curves, highlighting the intricate snake‑and‑flower tattoo that runs down her upper back and continues onto her left arm. The tattoo’s details are crisp, with a subtle 3‑D effect from the natural light.
+
+- **Physical Details**  
+  Her dark hair is loosely tied in a low ponytail, a few strands escaping to frame the back of her neck. A thin necklace rests around her neck, catching the light. The skin shows natural texture: small pores, faint moles, and a slight sheen from the ambient daylight. Her left thigh bears an additional snake‑tattoo that curls along the side of her hip.
+
+- **Motion & Focus**  
+  Capture a candid moment with a handheld camera set to a short focal length (e.g., 24–35 mm). Use a wide‑angle lens to include the entire figure and a portion of the background. Shoot at a time when the sun is high but not directly overhead—late morning or early afternoon—to produce a bright, natural illumination with slight overexposure on the upper body. Keep everything in focus; no depth‑of‑field blur. A faint motion blur may be present on the arms and hips, indicating the subject’s subtle movement.
+
+- **Environment**  
+  The setting is an outdoor garden or backyard area. Behind the woman is a green wooden fence with a corrugated metal roof, slightly weathered, showing signs of age. A small white lamp hangs from the roof’s corner. Sparse, dry brush grows at the base of the fence, adding texture. The sky is clear, with a soft, warm hue suggesting mid‑day light.
+
+- **Lens & Technical Settings**  
+  - Focal length: 24–35 mm (wide angle)  
+  - Aperture: f/4–f/5.6 (mid‑range for natural sharpness)  
+  - Shutter speed: 1/125–1/250 s (to freeze motion slightly)  
+  - ISO: 400–800 (for clean detail without noise)  
+  - No bokeh; background fully sharp.  
+  - Auto‑HDR or auto‑beauty mode off—raw, unprocessed look.  
+  - Slight tilt and partial crop for a spontaneous feel.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject appears unaware of the camera, mid‑action. Encourage imperfections: slight tilt, off‑center framing, partial crop. No rule‑of‑thirds intentionality—accidental framing that gives the image a natural, documentary vibe. Zero studio lighting, zero professional composition, zero editorial tone.
+
+- **Final Prompt**  
+  “A muscular woman in a black mesh bodysuit stands back‑to‑back to the camera in a casual, unposed stance, hands on hips, elbows bent, creating a diagonal line that gives the frame an off‑center feel. Her dark hair is loosely tied in a low ponytail with stray strands framing her neck; a thin necklace rests around her neck. The black mesh highlights an intricate snake‑and‑flower tattoo that runs down her upper back and continues onto her left arm, while a second snake tattoo curls along her left thigh. Capture the moment with a handheld camera set to 24–35 mm, f/4–f/5.6, 1/125–1/250 s, ISO 400–800, wide‑angle lens, everything in focus, slight motion blur on the arms and hips. The background shows a green wooden fence with a corrugated metal roof, a small white lamp hanging from the corner, dry brush at the base, and a clear, warm sky. Shoot in late morning or early afternoon for natural overexposure. Keep the shot candid, unposed, accidental framing, slight tilt, partial crop, no bokeh, raw and unprocessed.”

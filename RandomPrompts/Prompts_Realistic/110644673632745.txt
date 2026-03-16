@@ -1,0 +1,38 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair standing in a bright, airy bedroom. She is nude, facing slightly toward the camera with her left shoulder turned, capturing a candid, unposed moment as if she’s mid‑pose or just finished a quick stretch. Her body is angled so that her left breast is prominently visible, and her right arm hangs naturally by her side.  
+
+- **Lighting & Exposure**  
+  Natural daylight coming from a large window on the left, creating a soft overexposure on the upper part of the frame. The exposure is slightly uneven—warm, ambient light with a hint of haze—no auto‑HDR or beauty filters applied. The scene has a raw, unprocessed look.  
+
+- **Camera Settings**  
+  - Lens: 24‑35 mm wide‑angle, short focal length.  
+  - Aperture: f/4–f/5.6 (wide opening).  
+  - Shutter speed: 1/60–1/100 s (slight motion blur from handheld shake).  
+  - ISO: 400–800 (depending on ambient light).  
+  - Focus: everything in focus—background and subject.  
+
+- **Composition**  
+  - No rule‑of‑thirds intentionality; the framing is accidental, slightly off‑center.  
+  - The shot is a partial crop that cuts off the lower part of her legs and the bottom of the bed, giving a spontaneous feel.  
+  - Background: a white sheer curtain on the left, a bed with a pink shirt and black jacket on the right, a smartphone lying on the bed.  
+  - No bokeh; depth of field is fully sharp from foreground to background.  
+
+- **Environment**  
+  - Location: a modern, minimalistic bedroom with light‑colored walls.  
+  - Time of day: late morning, natural sunlight streaming through the window.  
+  - Weather: clear, slightly humid—ambient light gives a warm tone.  
+
+- **Details & Imperfections**  
+  - Slight tilt in the camera angle.  
+  - Minor motion blur on the subject’s left breast and hair, indicating handheld shake.  
+  - The woman’s skin has natural texture, with visible pores and slight imperfections.  
+  - Her expression is neutral, almost candid—she looks directly at the camera but appears unaware of the exact framing.  
+
+- **Post‑Processing**  
+  - No filters or color grading; raw image with auto‑beauty mode off.  
+  - Slight overexposure on the upper left, underexposed on the lower right, creating a natural contrast.  
+
+**Prompt Summary**  
+> “A candid, wide‑angle shot of a nude woman with long wavy brown hair standing in a bright bedroom, captured with a 24‑35 mm lens at f/5, 1/80 s shutter speed, slight motion blur from handheld shake. Natural daylight from a large window creates a soft overexposure on the upper left. The frame is accidentally off‑center, partially cropping her legs and the bed, with a white sheer curtain on the left and a pink shirt and black jacket on a bed to the right. Everything is in focus, no filters applied, raw look, slight tilt, natural texture, and a faint smartphone on the bed.”

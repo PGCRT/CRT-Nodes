@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, sun‑kissed blonde hair standing mid‑step in a wild meadow. She wears a high‑low, rust‑colored dress patterned with small white flowers; the front of the dress is a deep V‑neck with a subtle tie‑front detail. Her left foot is slightly ahead, toes gripping the grass, as if she just took a pace and is about to take another. Her face is turned toward the camera but not directly at it—she’s looking slightly off‑center, giving a candid, “in‑motion” feel.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle, late‑afternoon sun that creates a soft overexposure on the upper part of her face and dress, while the lower part of her dress remains slightly underexposed. The exposure is raw, unprocessed—no auto‑HDR or beauty filters, just a handheld shot with a wide‑angle lens.
+
+- **Motion & Focus**  
+  Slight motion blur at the feet and lower hem of the dress, indicating a natural freeze‑frame from a shaky hand. Everything—from her hair to the distant mountains—is fully sharp; no bokeh or portrait‑mode isolation. The focus is uniform across the frame.
+
+- **Lens & Technical**  
+  Short focal length (20–35 mm) wide‑angle lens, no depth‑of‑field blur. All elements—subject, foreground grass, background hills—are in focus. The composition is accidental: a slight tilt to the left, an off‑center crop that cuts off a bit of the horizon on the right side.
+
+- **Environment**  
+  A sunlit meadow at the base of a rolling mountain range. Tall grasses sway around her ankles, scattered with small yellow and white wildflowers. The background shows a range of green hills and distant peaks under a pale blue sky with faint clouds. The time of day is mid‑late afternoon, giving warm golden light that slightly overexposes the upper part of the frame.
+
+- **Details & Imperfections**  
+  The shot has a raw, unposed feel: her hands are relaxed at her sides, one slightly bent. The dress’s high‑low hem creates a subtle contrast between the shorter front and longer back. A faint motion blur at the bottom of the dress adds realism. The grass is uneven, with a few stalks sticking up, and small wildflowers dot the field.
+
+- **Prompt for Text‑to‑Image Generation**  
+  “A candid, unposed photograph of a young woman in a rust‑colored high‑low floral dress standing mid‑step on a sunlit meadow, with a slight motion blur at her feet and lower hem, all elements fully sharp captured on a wide‑angle short focal length lens. The scene is set at late afternoon under a pale blue sky with distant green hills and mountains, the image has a raw, unprocessed look with natural overexposure on the upper part of the subject, slight tilt and off‑center framing, no bokeh or depth‑of‑field blur.”

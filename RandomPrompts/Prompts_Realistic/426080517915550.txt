@@ -1,0 +1,28 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A young woman with long, dark brown hair, wearing a yellow bikini with blue trim, stands on a sunlit city sidewalk. She is mid‑gesture, holding a black smartphone in her right hand and pointing at the screen with her left index finger. Her head is slightly tilted downward, eyes focused on the phone, giving a candid, unposed feel. She wears thin gold bracelets on both wrists, a delicate gold necklace, and a small gold ring on her left ring finger.
+
+- **Pose & Movement**  
+  Slight motion blur at the fingertips and phone, indicating handheld shake. The body is slightly off‑center, with a subtle tilt to the left. Her left leg is bent, foot planted on the pavement, creating a natural, spontaneous stance.
+
+- **Environment**  
+  Location: A bustling street corner in an urban area. Behind her is a storefront with a glass door that reads “Cinema” and a sign above that says “VENEINA.” To the right, a red‑blue circular traffic sign is partially visible. A white van passes in the background, and a pedestrian can be seen through the glass door. The scene is captured at midday, with bright, warm sunlight casting soft shadows on the pavement.
+
+- **Lighting & Exposure**  
+  Natural daylight, slight overexposure on the subject’s face and phone, giving a raw, unprocessed look. No auto‑beauty mode; no filters or color grading. The exposure is slightly high on the subject but keeps the background fully sharp.
+
+- **Lens & Technical Settings**  
+  - Wide‑angle lens (24–35 mm) with a short focal length.  
+  - Everything in focus: no bokeh, no depth‑of‑field blur.  
+  - Handheld shot with slight instability, producing natural motion blur on the hands and phone.  
+  - No rule‑of‑thirds intentionality; framing is accidental, partial crop.
+
+- **Composition Notes**  
+  The composition is spontaneous and imperfect: the subject’s left shoulder is slightly cut off by the frame edge, and the top of the traffic sign extends beyond the upper border. The background remains fully sharp, preserving the street details.
+
+- **Post‑Processing**  
+  Zero studio lighting, zero professional composition, zero editorial tone. Raw, unprocessed look with only basic auto‑HDR applied to brightness.  
+
+**Prompt Summary**  
+“Candid photo of a woman in a yellow bikini with blue trim standing on a sunny city sidewalk, holding a smartphone and pointing at it. She has long dark hair, gold bracelets, a thin gold necklace, and a small ring. The background shows a storefront labeled ’Cinema’ and a sign that reads ’VENEINA’, plus a red‑blue traffic sign. Shot with a wide‑angle lens, everything in focus, slight motion blur on the hands, natural daylight with mild overexposure, raw unprocessed look, accidental framing.”

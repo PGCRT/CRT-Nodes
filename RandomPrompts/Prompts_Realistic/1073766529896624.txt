@@ -1,0 +1,24 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, light‑brown hair and sunglasses perched on her head, wearing a ribbed white tank top and denim shorts. She is mid‑gesture: one hand near her throat, the other holding a small object (a keychain or a phone), tongue slightly protruding, eyes focused off‑camera. Her pose is casual, unposed, as if caught in an instant of spontaneous action.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. Slight tilt and off‑center framing; partial crop that gives a raw, handheld feel. No rule‑of‑thirds intentionality. The shot is taken with a wide‑angle lens (24–35 mm), producing a short focal length that keeps the entire scene in focus—no portrait‑mode depth‑of‑field blur. A tiny amount of motion blur conveys the natural instability of a handheld shoot.
+
+- **Environment**  
+  Location: an urban street at dusk, with a white SUV parked on the side of a concrete sidewalk. Behind the woman, a multi‑story residential building with lit windows, a street lamp glowing, and a faint trail of traffic lights in the distance. The weather is clear, the sky still has a soft twilight hue. The background is fully sharp, no bokeh.
+
+- **Lens & Technical**  
+  - Focal length: 35 mm (wide‑angle).  
+  - Aperture: f/4 – slight overexposure to keep everything in focus.  
+  - Shutter speed: 1/60 s – enough to capture a faint motion blur.  
+  - ISO: 400 – for clean detail without noise.  
+  - No auto‑HDR or auto‑beauty mode; raw, unprocessed look.  
+  - No filters, no color grading, no post‑processing aesthetic.  
+
+- **Composition Notes**  
+  The frame is slightly tilted to the left, cropping the top of the woman’s head and the upper part of the building. The woman’s body occupies the central‑left portion of the frame, while the white car and the street lamp occupy the right side, creating a casual balance. The shot captures the entire scene from a low angle, emphasizing the subject’s presence and the surrounding environment.
+
+- **Final Prompt**  
+  “A candid, handheld shot taken at dusk on an urban street with a wide‑angle lens (35 mm). A young woman in a white ribbed tank top and denim shorts, sunglasses perched on her head, is caught mid‑gesture near a white SUV. The scene includes a residential building with lit windows and a glowing street lamp in the background. The image has slight motion blur and a tiny overexposure, all in focus, no filters or post‑processing, raw and unprocessed.”

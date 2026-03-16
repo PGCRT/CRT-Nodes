@@ -1,0 +1,23 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy dark hair standing mid‑walk in a sunlit park. She’s wearing a black halter‑style bikini top and high‑waisted black trousers, her hands casually in her pockets, one foot slightly ahead of the other as if caught between steps. Her face is turned toward the camera but not directly at it—slight off‑center framing, a natural “mid‑action” candid feel.
+
+- **Lighting & Exposure**  
+  Slight overexposure from ambient midday sunlight; the exposure is uneven, with a warm, bright highlight on her chest and a soft halo around her hair. No auto‑beauty or filter enhancement—raw, unprocessed look. The scene has a slight handheld shake, giving a subtle motion blur that keeps everything in focus (wide‑angle lens).
+
+- **Lens & Technical**  
+  24 mm wide‑angle lens, short focal length, no bokeh. Background is fully sharp—no depth‑of‑field blur. The composition is accidental: no rule‑of‑thirds, slight tilt, partial crop that cuts off the top of her head and the lower part of her legs. Everything remains in focus because the lens is set to a wide aperture but with a small f‑stop.
+
+- **Environment**  
+  Location: a tropical park with palm trees, green lawn, and a hint of a lake in the background. Time of day: late morning, around 10:30 AM, with bright, high sun creating a slight glare. Weather: clear, warm, with a light breeze that ruffles her hair.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Imperfections encouraged: slight tilt, off‑center framing, partial crop. No rule‑of‑thirds intentionality—accidental framing. Natural motion freeze or slight blur from handheld instability.
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, zero post‑processing aesthetic. Only raw capture data, with a slight overexposure that gives the image an energetic, natural feel.
+
+**Prompt Summary for Text‑to‑Image Generation**
+
+> “A young woman with long wavy dark hair, wearing a black halter bikini top and high‑waisted black trousers, captured mid‑walk in a sunlit park with palm trees and a lake in the background. The shot is taken with a 24 mm wide‑angle lens, all elements in focus, slight handheld shake and motion blur, accidental off‑center framing, slight overexposure from midday sunlight. The scene is raw, unprocessed, no filters—pure candid realism.”

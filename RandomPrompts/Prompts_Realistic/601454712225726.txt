@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A young woman in a rustic tavern, mid‑gesture as she draws a short sword from a leather scabbard. Her hair is tied back in a loose ponytail, a few strands escaping to frame her face. She wears a worn brown leather vest over a green tunic, with a belt that holds a small axe and a pouch. Her expression is focused, slightly tilted, as if she’s about to engage in a quick skirmish. The camera captures her from a low angle, making her appear larger‑than‑life.
+
+- **Motion & Focus**  
+  Slight motion blur on the sword’s blade, indicating a fleeting movement. Everything remains sharp—no portrait‑mode blur, no depth‑of‑field isolation. The image has an auto‑HDR feel but without post‑processing filters; it looks raw and spontaneous. A hint of overexposure in the lantern light gives it a warm, natural glow.
+
+- **Lighting & Exposure**  
+  Natural ambient lighting from a stone wall lantern and a candle on a side table. The lantern’s light is slightly overexposed, creating a soft halo around the subject. The scene is lit as if it’s late afternoon, with the sun low enough to cast long shadows across the stone floor.
+
+- **Environment**  
+  A dimly lit medieval‑style tavern: rough stone walls, wooden beams, and a small table with a candle flickering. In the background, a bearded man is seen in profile, holding a spear, and another figure is partially visible on the right. The setting feels real, not staged—dust motes drift in the air, and the floor is made of worn stone tiles.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm) wide‑angle lens. No bokeh; background is fully sharp. The composition is accidental: the frame is slightly off‑center, the shot is not rule‑of‑thirds, and the camera feels handheld. All elements—subject, background, foreground—are in focus.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—an “in‑action” snapshot where the subject is unaware of the camera. The framing has a slight tilt and partial crop, giving it a raw, documentary feel. No studio lighting, no professional composition, no editorial tone—just a moment frozen in time.
+
+- **Post‑Processing**  
+  Auto‑HDR off; no color grading or filters applied. Only natural contrast and a touch of slight overexposure on the lantern light. The final image retains a natural, unpolished look with a wide‑angle perspective that captures every detail from the stone floor to the lantern’s glass.

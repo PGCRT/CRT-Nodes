@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, sun‑kissed blonde hair walking confidently down a cobblestone street in New York’s SoHo district. She wears a soft beige short‑sleeved top and matching high‑waist trousers, her hands relaxed at her sides, mid‑step with a subtle motion blur that conveys movement. Her face is turned slightly to the right, eyes focused ahead, capturing an unposed, spontaneous moment.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. Slight tilt and off‑center framing create a natural, handheld feel. The shot is a partial crop that doesn’t follow the rule of thirds; the composition feels accidental, as if caught in a quick snapshot.
+
+- **Environment**  
+  Specific real‑world location: a sunlit cobblestone alley in SoHo, New York. Time of day: late afternoon, golden hour with warm ambient light that produces a slight overexposure on the subject’s face and a gentle lens flare at the lower right. Weather: clear, breezy, with leaves swaying in the background.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm) wide‑angle lens. No bokeh — the background is fully sharp, everything in focus. No portrait mode or subject isolation; depth of field is uniform. Slight motion blur from handheld instability adds realism. Auto‑HDR or auto‑beauty mode off — raw, unprocessed look. No filters, no color grading, no post‑processing aesthetic.
+
+- **Lighting & Exposure**  
+  Natural lighting with a slight overexposure on the subject’s face and a faint lens flare at the bottom right. Slight underexposure on the background to keep the scene dynamic. Wide‑angle capture ensures all elements — the woman, the cobblestones, the brick buildings, the staircases, the passing pedestrians — remain in focus.
+
+- **Details & Imperfections**  
+  The image has a slight tilt and off‑center framing that gives it a candid feel. A partial crop cuts off the left side of the street, adding to the spontaneous vibe. Background includes a few pedestrians in casual wear, a brick building with a staircase on the right, and a tree with green leaves on the left, all rendered sharply.
+
+- **Prompt Summary**  
+  “Candid, wide‑angle shot of a woman in beige attire walking on a New York cobblestone street at late afternoon, captured with a 24‑35 mm lens, slight motion blur and handheld tilt, fully sharp background, natural overexposure on the subject, no filters or post‑processing, raw and unprocessed aesthetic.”

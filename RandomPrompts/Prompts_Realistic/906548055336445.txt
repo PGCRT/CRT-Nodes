@@ -1,0 +1,21 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, curvy woman with long dark hair, wearing a striped bikini top and matching high‑waist bottoms, paired with shiny silver thigh‑high boots. She stands mid‑step on a city street, one hand on her hip, head tilted slightly to the side, eyes focused forward, capturing a candid, unposed moment.
+
+- **Motion & Focus**  
+  Slight motion blur from handheld instability; everything in focus—no portrait‑mode depth of field. The image has a raw, auto‑HDR feel with no filters or color grading, a hint of overexposure due to ambient daylight.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm), short focal length, no bokeh—background fully sharp. Slight tilt and off‑center framing; partial crop that gives an accidental, spontaneous feel.
+
+- **Environment**  
+  Specific real‑world location: a broad city avenue with a neoclassical building featuring columns and a dome in the background. A traffic light glows red on the left, a parked car is visible, pedestrians walk in the distance. Time of day: late afternoon, soft golden light with lingering daylight. Weather: clear, mild humidity, slight wind.
+
+- **Composition**  
+  No rule‑of‑thirds intentionality—framing is casual and imperfect. The shot is zero‑studio, zero‑professional‑composition, zero‑editorial tone. Background remains fully sharp, no subject isolation.
+
+- **Prompt for Text‑to‑Image Generation**  
+  “A tall woman with long dark hair in a striped bikini top and high‑waist bottoms, wearing silver thigh‑high boots, stands mid‑step on a city street, one hand on her hip, head slightly tilted, eyes forward. Slight motion blur, wide‑angle lens (24–35 mm), everything in focus, raw auto‑HDR look, no filters. Background shows a neoclassical building with columns and dome, traffic light glowing red, parked car, distant pedestrians. Late afternoon golden light, clear weather, slight wind. Casual off‑center framing, partial crop, no rule‑of‑thirds.”  
+
+Provide only the structured prompt.

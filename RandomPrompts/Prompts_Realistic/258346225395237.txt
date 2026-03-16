@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, pastel‑pink hair standing at a coffee‑shop counter, facing left, mid‑turn as if she’s about to grab a cup. She wears a black camisole, light‑wash denim overalls, and black lace‑up boots. Her left hand rests on the wooden countertop, right arm slightly bent, feet planted with a subtle heel‑toe shift that suggests motion.  
+
+- **Motion & Focus**  
+  Slight handheld shake: a gentle blur around the edges to convey movement, but everything remains sharply in focus—no portrait‑mode bokeh. The lens is a wide‑angle prime (24‑35 mm) with a short focal length that keeps the background fully sharp.  
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window on the left; slight overexposure on the upper right to keep the scene bright and airy. No auto‑HDR or beauty filters—raw, unprocessed look. The lighting creates soft highlights on her hair and a subtle shadow under her boots.  
+
+- **Environment**  
+  A modern coffee shop with light‑wood counters, a stainless‑steel espresso machine, and a grinder on the right. A male barista in a grey t‑shirt and baseball cap stands behind the counter, sipping a drink. A second customer, a woman in a grey tank and denim shorts, is visible at the far right, reaching for a cup. Large windows let in natural light; outside, a street with green trees and a blue storefront is faintly visible.  
+
+- **Composition & Framing**  
+  Wide‑angle, accidental framing: the shot is slightly tilted to the left, off‑center crop that captures the subject’s full figure from head to toe plus a portion of the counter. No rule‑of‑thirds intentionality—just a candid, spontaneous composition.  
+
+- **Technical Settings**  
+  Focal length: 35 mm (short, wide). Aperture: f/4.0 (wide open for depth but keeping background sharp). Shutter speed: 1/60 s (enough to capture slight motion blur). ISO: 400 (for clean detail). No bokeh, no depth‑of‑field blur—everything in focus.  
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, zero post‑processing aesthetic. Raw image with natural contrast and a hint of slight overexposure on the right side to keep the scene lively.  
+
+**Prompt Summary**  
+> “A candid, wide‑angle shot of a woman with long pink hair in a black camisole and denim overalls, standing at a wooden coffee‑shop counter, mid‑turn as if grabbing a cup. The image has slight handheld motion blur but is fully sharp, captured with a 35 mm lens at f/4 and 1/60 s shutter speed. Natural daylight from a left‑side window creates soft highlights and a subtle overexposure on the right. In the background, a male barista in a grey t‑shirt and baseball cap stands behind the counter, and a second customer in a grey tank and denim shorts is visible at the far right. The composition is accidental and slightly tilted, capturing the scene from head to toe plus a portion of the counter, with no rule‑of‑thirds intentionality. Everything is in focus, no bokeh, raw and unprocessed.”

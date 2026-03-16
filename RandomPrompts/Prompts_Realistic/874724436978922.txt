@@ -1,0 +1,26 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman in a relaxed, mid‑movement pose, kneeling on a concrete floor in a dimly lit warehouse. Her back is slightly turned toward the camera, one knee bent and her left foot planted for balance, creating a natural, unposed silhouette. The shot focuses on the curve of her buttocks and lower back, with a hint of her thigh and hip visible above, emphasizing organic form and subtle motion.
+
+- **Lighting & Exposure**  
+  Ambient daylight from a high window casts a soft, slightly overexposed glow on the subject’s skin, producing gentle highlights and subtle shadows. No auto‑HDR or beauty filters—just raw, unprocessed light that gives the image a candid feel. The exposure is a little bright at the top, creating a warm, hazy atmosphere.
+
+- **Camera Settings**  
+  - Lens: 24 mm wide‑angle, short focal length, handheld.  
+  - Aperture: f/5.6 (mid‑range) for moderate sharpness across the frame.  
+  - Shutter speed: 1/60 s, producing a slight motion blur on the subject’s movement.  
+  - ISO: 400 – balanced for low‑light conditions.  
+  - Focus: everything in focus—no portrait‑mode depth of field blur; background remains sharp.
+
+- **Composition & Framing**  
+  The frame is intentionally off‑center, with the subject’s left side slightly cut off by the edge, giving a spontaneous, imperfect feel. No rule‑of‑thirds intentionality—just a natural, casual composition that captures the moment as it unfolds. The background shows a rough concrete wall and a faint industrial pipe, adding context without distracting.
+
+- **Environment**  
+  Location: an unfinished warehouse with exposed beams and a high ceiling, in the late afternoon. The time of day is around 5 pm, when the sun is low but still bright, creating warm, diffused light. A slight breeze ruffles the fabric of her shirt, adding subtle motion.
+
+- **Details & Texture**  
+  The skin shows natural imperfections—tiny blemishes, faint hair, and a slight sheen from the ambient light. The image has no color grading or post‑processing; it retains the raw, unfiltered look of a candid snapshot. A faint hint of a bare foot is visible at the bottom right, adding to the spontaneity.
+
+- **Final Prompt**  
+  “A young woman kneeling on a concrete floor in a dimly lit warehouse, captured with a 24 mm wide‑angle lens at f/5.6 and 1/60 s shutter speed. The scene is slightly overexposed, giving a warm, hazy glow. The subject’s back and buttocks are the focal point, with a slight motion blur from handheld shooting. The frame is off‑center and partially cropped, no rule‑of‑thirds, everything in focus. Ambient daylight from a high window illuminates the scene in late afternoon. Raw, unprocessed, candid style, no filters.”

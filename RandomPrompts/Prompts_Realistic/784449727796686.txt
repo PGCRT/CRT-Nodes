@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with wavy, sun‑kissed blonde hair and dark sunglasses, wearing a black “Loud” crop‑top with a cutout detail and loose gray sweatpants. She’s mid‑step, one foot slightly ahead, arms relaxed at her sides, head tilted down as if she’s just finished a dance move or is checking her phone. Her expression is casual, almost playful, with a hint of surprise or excitement.
+
+- **Motion & Focus**  
+  Slight motion blur on the lower part of her body to suggest movement, while the upper body remains relatively crisp. The entire frame is in focus—no depth‑of‑field blur, no portrait mode. A handheld, wide‑angle shot with a short focal length (e.g., 24–35 mm) that captures the full figure and surrounding environment.
+
+- **Lighting & Exposure**  
+  Raw, unprocessed look: no auto‑HDR or auto‑beauty enhancements. The exposure is slightly overexposed on the upper body, giving a warm, natural glow that matches the mid‑afternoon sun. No color grading or filters—just the ambient light of the moment.
+
+- **Environment**  
+  The scene is set on a concrete sidewalk in an urban residential area. A low‑rise building with beige stucco walls and a glass door is visible behind her, along with a small patch of green grass and a few scattered leaves. The time of day is late afternoon, with the sun high but not directly overhead, casting soft shadows. The weather is clear, with a light breeze that ruffles her hair.
+
+- **Composition & Framing**  
+  The shot is intentionally off‑center: the subject’s left side leans slightly to the right, and the frame cuts off just above her knees, giving a “partial crop” feel. No rule‑of‑thirds intentionality—just spontaneous, candid framing. The background remains fully sharp, with no bokeh.
+
+- **Technical Specs**  
+  - Lens: 35 mm wide‑angle, short focal length.  
+  - Aperture: f/4–f/5.6 (wide enough to keep everything in focus).  
+  - Shutter speed: 1/60–1/100 s (enough to capture slight motion blur).  
+  - ISO: 400–800 (for natural grain and detail).  
+
+- **Prompt Summary for Generation**  
+  “A candid, wide‑angle shot of a woman in a black crop‑top and gray sweatpants mid‑step on a concrete sidewalk, with a beige building and green patch behind her. The image has slight motion blur on the lower body, raw exposure, no filters, fully sharp background, captured with a 35 mm lens at f/5, 1/80 s shutter speed, mid‑afternoon sun, late afternoon light. The composition is off‑center and spontaneous, capturing a natural, unposed moment.”

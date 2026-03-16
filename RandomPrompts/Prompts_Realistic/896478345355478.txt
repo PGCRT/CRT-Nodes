@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair walking confidently down a busy city street. She wears a black off‑shoulder crop top and distressed gray jeans that roll at the knees. Her left hand rests lightly on her hip, right arm relaxed by her side. Slight motion blur at the edges conveys movement, while the center remains crisp.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject is mid‑step, unaware of the camera. The frame is slightly tilted and off‑center, a partial crop that gives an accidental, handheld feel. No rule‑of‑thirds intentionality; the composition is organic, as if captured with a quick, instinctive snap.
+
+- **Imperfections & Aesthetic**  
+  Slight overexposure in the upper right corner from ambient daylight, giving a raw, unprocessed look. No filters, no color grading, no post‑processing aesthetic. The image retains natural contrast and subtle grain.
+
+- **Environment**  
+  Specific real‑world location: a mid‑block of a bustling downtown street, lined with brick storefronts and parked cars. Time of day: late afternoon, around 5 pm, with warm golden light casting long shadows. Weather: clear, mild humidity, a light breeze.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm) wide‑angle lens. No bokeh; background fully sharp — everything in focus from foreground to distant traffic lights. No portrait mode or subject isolation; depth of field is uniform.
+
+- **Final Prompt**  
+  “A young woman with long wavy brown hair, wearing a black off‑shoulder crop top and distressed gray jeans, walks confidently down a busy downtown street at late afternoon. The shot is candid and slightly tilted, captured on a 24‑35 mm wide‑angle lens with full sharpness from foreground to background. Slight overexposure in the upper right corner gives a raw, unprocessed look. The scene includes brick storefronts, parked cars, and a traffic light glowing amber, all in focus with natural grain and no filters.”

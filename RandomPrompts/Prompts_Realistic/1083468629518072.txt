@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair lying on a neatly made bed, wearing a black bra and matching panties. Her body is slightly twisted, one leg bent and the other extended, hands resting on the sheets, head tilted to the side, eyes looking upward toward the camera.  
+
+- **Motion & Focus**  
+  Slight motion blur from handheld shake; everything in focus—no bokeh, no portrait‑mode isolation.  
+
+- **Lighting & Exposure**  
+  Natural daylight from a window, slight overexposure on the upper left corner, auto‑HDR off, raw unprocessed look.  
+
+- **Lens & Technical**  
+  Wide‑angle lens (24‑35 mm), short focal length, no depth‑of‑field blur—background fully sharp.  
+
+- **Environment**  
+  A bright, airy bedroom at mid‑afternoon; a wooden nightstand with a lamp in the upper right corner, a white headboard and several pillows behind the subject.  
+
+- **Composition & Framing**  
+  Candid, unposed, spontaneous—slight tilt and off‑center framing, partial crop, no rule‑of‑thirds intentionality.  
+
+- **Style Notes**  
+  Zero studio lighting, zero professional composition, zero editorial tone; natural motion freeze or slight blur from handheld instability.  
+
+- **Prompt**  
+  “A young woman with long wavy brown hair lying on a white bed, wearing a black bra and panties, one leg bent, the other extended, hands on sheets, head tilted up, slight motion blur, wide‑angle lens, natural daylight, slight overexposure, raw unprocessed look, candid spontaneous pose, wooden nightstand with lamp in corner, white headboard and pillows behind, everything in focus, no bokeh.”

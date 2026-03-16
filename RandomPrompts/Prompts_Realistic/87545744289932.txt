@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high, messy bun and loose strands framing her face, wearing a white strap‑top and dark shorts. She’s captured mid‑turn, back to the camera, head tilted slightly to the right, mouth open as if speaking or laughing. Her left arm is bent, hand on hip, creating a natural diagonal line that gives the shot dynamic tension.
+
+- **Cinematic Details**  
+  Slight motion blur on the hair and shoulders from handheld shake; subtle overexposure in the upper left corner to emphasize ambient daylight. No auto‑beauty or filter processing—raw, unpolished look. The image is taken with a wide‑angle lens (24‑35 mm), keeping the entire scene in focus, no bokeh, no depth‑of‑field blur.
+
+- **Framing & Composition**  
+  Off‑center, accidental framing: the subject’s left side cuts off the top right corner of the frame, a slight tilt to the right gives spontaneity. The composition is not rule‑of‑thirds; the subject occupies roughly the central‑right third of the frame, with a small portion of a beige sofa and a potted plant visible on the left background.
+
+- **Environment**  
+  Location: a bright, modern living room with light wood furniture. A beige couch with striped pillow is partially visible on the left; a white side table with a green potted plant sits on the right. A window in the far back lets in natural daylight, creating soft highlights on the woman’s back and subtle shadows.
+
+- **Time of Day & Lighting**  
+  Late afternoon, around 4 pm. The light is warm, slightly diffused by the window, producing a gentle haze that gives an auto‑HDR feel without post‑processing. Slight overexposure in the upper left corner adds a natural flare.
+
+- **Lens & Technical Specs**  
+  Short focal length (24–35 mm), wide‑angle. Aperture set to f/5.6 for moderate sharpness across the frame. Shutter speed 1/125 s to capture slight motion blur. ISO 400 for clean detail. No portrait mode, no subject isolation—everything is in focus.
+
+- **Captured Mood**  
+  Candid, unposed, spontaneous—an “in‑the‑moment” snapshot that feels like a real life moment frozen by a handheld camera. Slight tilt and partial crop give it an authentic, raw feel. The background is fully sharp, no bokeh, preserving every detail from the couch texture to the plant leaves.
+
+- **Final Prompt**  
+  “A young woman with a high messy bun, white strap‑top, and dark shorts captured mid‑turn back to camera in a bright living room; slight motion blur and subtle overexposure on the upper left; wide‑angle lens (24–35 mm) keeping everything in focus; off‑center accidental framing with a beige couch and potted plant in background; late afternoon natural daylight; raw, unprocessed, candid style.”

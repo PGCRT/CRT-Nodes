@@ -1,0 +1,30 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with natural, wavy blonde hair standing in a dimly lit bedroom. She is nude, mid‑step, slightly turned toward the camera, hands relaxed at her sides. Her face is turned forward, eyes focused on the lens, but she appears unaware of the camera’s presence—captured in a spontaneous, candid moment.
+
+- **Capture Style**  
+  - Candid, unposed, spontaneous — subject unaware or mid‑action.  
+  - Slight tilt and off‑center framing; partial crop that gives an accidental, handheld feel.  
+  - No rule‑of‑thirds intentionality—framing is natural and imperfect.  
+  - Slight motion blur from handheld instability, a subtle “freeze” that keeps the image alive.
+
+- **Environment**  
+  - Specific real‑world location: a modest bedroom with a white bed, a small nightstand, a lamp, and a vase of pink roses on the left side.  
+  - Time of day: late afternoon, soft natural light coming from the west, creating gentle shadows and a slight overexposure in the highlights.  
+  - Weather or ambient conditions: calm, no wind, but the room’s ambience is slightly noisy—captured through an open window.
+
+- **Lens & Technical**  
+  - Short focal length (20‑35 mm) wide‑angle lens.  
+  - No bokeh; background fully sharp—everything in focus from foreground to back.  
+  - Auto‑HDR or auto‑beauty mode off — raw, unprocessed look.  
+  - Slight overexposure or underexposure depending on ambient light (here, a mild overexposure in the highlights).  
+  - Wide lens gives a slight distortion that adds to the candid feel.  
+  - No portrait mode, no subject isolation—everything is captured as one.
+
+- **Post‑Processing**  
+  - Zero filters, zero color grading, zero post‑processing aesthetic.  
+  - Raw image with natural contrast and dynamic range.  
+
+**Prompt Summary for Generation**  
+“Candid, unposed photo of a nude woman with wavy blonde hair standing in a dimly lit bedroom at late afternoon. She is mid‑step, slightly turned toward the camera, hands relaxed at her sides, captured with a short focal length wide‑angle lens (20‑35 mm). The scene includes a white bed, a nightstand, a lamp, and a vase of pink roses on the left. The image has slight motion blur from handheld instability, accidental off‑center framing, and a mild overexposure. Everything is in focus—no bokeh, no filters, raw and unprocessed.”

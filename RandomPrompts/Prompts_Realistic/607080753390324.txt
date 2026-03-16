@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy dark brown hair standing in a casual, unposed stance. Her body is slightly turned to the side, mid‑movement as if she just finished a step or a turn. Shoulders are relaxed, arms hanging naturally, with a subtle tilt that gives an accidental, candid feel. The framing is off‑center, cropping the left side of her torso slightly, creating a partial crop that enhances spontaneity.
+
+- **Appearance & Detail**  
+  She has a warm, tan complexion with natural skin texture, including faint freckles and small blemishes for realism. Her breasts are prominent and full, with visible areolas; the nipples are clearly defined. The lighting highlights the curvature of her chest and the gentle slope of her abdomen. Her belly button is visible, adding to the realistic detail.
+
+- **Lighting & Exposure**  
+  Slight overexposure on the upper body, giving a soft glow that suggests ambient daylight. No auto‑HDR or auto‑beauty mode—just raw, unprocessed light. The exposure is slightly uneven, with a warm, natural tone that varies from the chest to the lower abdomen.
+
+- **Lens & Technical Settings**  
+  Wide‑angle lens (24–35 mm) with a short focal length. Everything is in focus—from her face down to her hips—no bokeh or depth‑of‑field blur. Background is fully sharp, capturing a simple, neutral wall that appears to be an indoor space with a plain, light‑colored surface. No portrait mode or subject isolation; the background remains flat but detailed enough to suggest a real location.
+
+- **Environment**  
+  The setting is a simple, unadorned room with a light gray wall. The time of day is mid‑afternoon, as indicated by the warm, slightly harsh ambient light that casts soft shadows. No studio lighting; the light appears natural and slightly uneven, creating a candid feel.
+
+- **Composition & Framing**  
+  The shot is handheld, with slight motion blur on the subject’s torso and arms, indicating mid‑action. The composition is not rule‑of‑thirds; the subject occupies the central‑left portion of the frame, with the right side left open for a natural, accidental feel. The crop is partial, cutting off the lower part of her thighs, which adds to the candid vibe.
+
+- **Post‑Processing**  
+  No filters, no color grading, no post‑processing aesthetic. The image retains its raw, unprocessed look, with only minimal adjustments to exposure and focus.
+
+**Prompt Summary**  
+"Long‑haired woman in a casual, mid‑movement pose, captured on a wide‑angle lens in a simple room at mid‑afternoon. Slight motion blur and overexposure give a candid, raw feel. All elements are in focus, with natural skin texture and subtle imperfections. The framing is off‑center and partial, creating an accidental, spontaneous look."

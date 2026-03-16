@@ -1,0 +1,16 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A fit woman with dark hair styled in high twin‑buns, hands behind her head, body angled slightly to the left, mid‑step on a rocky ledge. She wears black lace lingerie (bra and thong) that catches the light; subtle texture details of the lace are visible. Her face is turned toward the camera but not directly at it—slight off‑center framing.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—an “in‑the‑moment” snapshot as if she’s unaware of the lens. The shot has a slight handheld shake: a gentle motion blur on the edges, a tiny overexposure in the white foam behind her. No filters, no color grading, no post‑processing aesthetic—just raw, auto‑HDR or auto‑beauty off.
+
+- **Environment**  
+  A natural waterfall cascade in a forested valley. The background is a thick veil of white foam and green mossy rocks; the time of day is late morning, with warm, diffused sunlight filtering through the canopy. Weather is lightly breezy, creating subtle motion on the water’s surface.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24‑35 mm), short focal length. Everything is in focus—no bokeh, no depth‑of‑field blur; background fully sharp. The composition is accidental: no rule‑of‑thirds intentionality, slight tilt and partial crop. The image has a natural freeze or slight blur from handheld instability.
+
+- **Final Prompt**  
+  “A fit woman with dark twin‑buns, hands behind her head, mid‑step on a rocky ledge, wearing black lace lingerie, captured candidly in front of a waterfall cascade at late morning. Slight motion blur and overexposure, wide‑angle lens, everything in focus, accidental framing, raw auto‑HDR look, no filters.”

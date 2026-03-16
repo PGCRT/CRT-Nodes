@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, athletic woman with a tattooed left forearm (rose and vine motif) standing on a sunlit beach. She wears a black lace‑trimmed bikini that clings to her curves; the top has white lace edging along the center, the bottom is a high‑waist thong with side ties. Her long dark hair is slightly wet, falling over her left shoulder. She’s mid‑step, left foot forward, hands relaxed at her sides, a subtle smile on her face.  
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the woman appears unaware of the camera, caught in a natural moment. Slight tilt and off‑center framing; the shot is partially cropped on the left side. No rule‑of‑thirds intentionality—framing is accidental, as if taken with a handheld camera.  
+
+- **Environment**  
+  Specific real‑world location: a sandy beach at midday in California. The ocean stretches across the background, with white-capped waves breaking near the shore. The sky is bright, with a slight overexposure that gives a warm, natural glow. Ambient light is strong, creating soft shadows on the sand.  
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm) wide‑angle lens. Everything is fully sharp—no bokeh, no depth‑of‑field blur; background and subject are in focus. No portrait mode or subject isolation. Slight motion blur from handheld instability freezes the mid‑step.  
+
+- **Post‑Processing**  
+  Auto‑HDR or auto‑beauty mode off — raw, unprocessed look. No filters, no color grading, no post‑processing aesthetic. Slight overexposure to keep the ambient light natural.  
+
+- **Composition Notes**  
+  The composition is accidental and imperfect: the subject’s left side is slightly cut off, the horizon line is not perfectly level, and the background waves are fully sharp. The shot captures a genuine, spontaneous moment on a bright beach at midday.

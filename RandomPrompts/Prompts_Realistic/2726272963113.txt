@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman with voluminous, curly dark hair standing in a modern kitchen, captured mid‑turn as she adjusts her black bikini top. Her back is slightly turned toward the camera, one hand on her neck, creating a natural, unposed candid feel. The shot should show subtle motion blur at the edges to hint at handheld shake, while keeping the entire frame sharply in focus—no portrait‑mode softening.
+
+- **Clothing & Appearance**  
+  She wears a black bikini bottom and a matching top with thin straps; the fabric should appear slightly stretched as she moves. Her skin has a natural, unretouched texture, with faint moles and minor imperfections to enhance realism. The lighting should be slightly overexposed on the upper body, letting the white tiled backsplash glow.
+
+- **Environment**  
+  The setting is a bright, contemporary kitchen with dark green cabinetry, white square tiles, a marble countertop, and a stainless‑steel faucet visible in the background. A small bottle of dish soap sits near the sink, a hint of everyday life. The time of day is late afternoon, with warm natural light coming from the west, casting soft shadows across the scene.
+
+- **Lens & Technical**  
+  Use a wide‑angle lens (24–35 mm) to capture a broad view of the space. Keep the focal length short for a more intimate feel. All elements—subject, cabinets, tiles, faucet—should be fully sharp; no bokeh or depth‑of‑field blur. The composition is intentionally off‑center and slightly tilted, giving a spontaneous, candid vibe. No rule‑of‑thirds; frame the subject as if she were unaware of the camera.
+
+- **Lighting & Exposure**  
+  Capture with natural ambient light; allow a slight overexposure on the upper body to emphasize the brightness of the tiles. Avoid any auto‑HDR or beauty filters—keep the look raw and unprocessed. The exposure should feel slightly uneven, as if the photographer was hurriedly snapping a quick shot.
+
+- **Post‑Processing**  
+  No color grading or filters. Keep the image in a natural, documentary style. Slight handheld shake is acceptable; keep everything in focus.  
+
+**Prompt Summary**  
+"Mid‑afternoon candid shot of a woman with curly dark hair turning in a modern kitchen, wearing a black bikini, captured on a wide‑angle lens with full sharpness and slight motion blur, natural overexposure, raw unprocessed look, no filters—everything in focus, off‑center framing, spontaneous handheld style."

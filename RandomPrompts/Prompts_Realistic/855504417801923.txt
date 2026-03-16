@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy dark hair, wearing a metallic bronze, deep‑V evening dress with thin straps and a choker. She is mid‑smile, head slightly tilted, standing in a grand hall with marble columns and warm chandelier lights. Her pose is casual yet poised, as if she just stepped out of a photo booth or caught in a spontaneous candid moment.
+
+- **Lighting & Exposure**  
+  Natural ambient light from a large window, slight overexposure on the upper half of the frame to keep the background bright but not washed out. No auto‑HDR or auto‑beauty filters—raw, unprocessed look. Slight handheld shake gives a natural motion blur around the edges.
+
+- **Lens & Technical**  
+  24 mm wide‑angle lens, short focal length, everything in focus from foreground to background. No bokeh; depth of field is full sharpness. Slight tilt and off‑center framing—no rule‑of‑thirds intentionality. The composition feels accidental, like a real‑life snapshot.
+
+- **Environment**  
+  Location: A luxurious ballroom with cream‑colored marble columns, a tall chandelier, and a deep‑red curtain in the background. Time of day: late afternoon, soft natural light with a warm hue. Weather: clear, no wind, ambient noise of distant conversation.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Imperfections encouraged: slight tilt, off‑center framing, partial crop. No rule‑of‑thirds intentionality — accidental framing. Natural motion freeze or slight blur from handheld instability.
+
+- **Post‑Processing**  
+  Zero studio lighting, zero professional composition, zero editorial tone. Raw, unprocessed look with only basic white‑balance correction. Slight overexposure on the upper half to keep the background bright but not washed out. No color grading or filters.  
+
+**Prompt Summary**  
+"Mid‑afternoon candid shot of a woman in a bronze evening dress, standing in a marble‑columned ballroom, captured with a 24 mm wide‑angle lens. The image has slight handheld motion blur and accidental off‑center framing, all in focus, with natural ambient light and a small overexposure on the upper half. No filters or post‑processing—just a raw, realistic snapshot."

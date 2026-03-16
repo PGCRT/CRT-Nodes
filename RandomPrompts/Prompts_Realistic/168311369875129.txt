@@ -1,0 +1,32 @@
+**Realistic Candid Photography Prompt Framework – “Floral‑Tote Mid‑Gesture”**
+
+- **Subject & Action**  
+  A young woman with long, wavy auburn hair sits on a patterned sofa in a modern living room. She is bare‑chested, holding a small floral‑printed tote bag in front of her torso, hands gripping the strap as if she’s about to lift it. Her gaze is directed slightly off‑camera, capturing a candid, mid‑motion moment.
+
+- **Pose & Composition**  
+  - Candid, unposed, spontaneous – the subject appears unaware of the camera, caught in a natural, mid‑action pose.  
+  - Slight tilt and off‑center framing; the shot is partially cropped on the left side by a dark curtain, giving an accidental, handheld feel.  
+  - No rule‑of‑thirds intentionality – the composition is organic, with the subject’s left shoulder near the image’s center and her bag slightly overlapping the edge.
+
+- **Lighting & Exposure**  
+  - Raw, unprocessed look: no filters, no color grading, no post‑processing aesthetic.  
+  - Slight overexposure on the subject’s torso, creating a warm, natural glow that matches the ambient daylight coming from a window on the left.  
+  - Wide‑angle lens (24–35 mm) with a short focal length, ensuring everything – subject, background, foreground – stays fully sharp with no bokeh or depth‑of‑field blur.
+
+- **Environment**  
+  - Specific real‑world location: a contemporary apartment with a textured marble wall and a heavy gray curtain on the left.  
+  - Time of day: late morning, soft natural light with a slight haze from the window.  
+  - Weather/ambient conditions: clear, mild weather outside, quiet interior, no wind noise.
+
+- **Lens & Technical**  
+  - Short focal length (30 mm), wide‑angle, handheld.  
+  - All elements in focus – subject, bag, background wall, curtain – captured with a wide‑angle lens that keeps the entire scene sharp.  
+  - No portrait‑mode “subject isolation” – the background remains fully sharp, no depth‑of‑field blur.
+
+- **Post‑Processing**  
+  - Auto‑HDR or auto‑beauty mode off.  
+  - Slight motion blur on the hands and bag to emphasize the mid‑action.  
+  - No rule‑of‑thirds intentionality – accidental framing, slight crop on the right side.
+
+**Prompt Summary (structured)**  
+> “A young woman with long wavy auburn hair sits on a patterned sofa in a modern living room, bare‑chested, holding a small floral‑printed tote bag in front of her torso. She is mid‑gesture, hands gripping the strap as if about to lift it, gaze slightly off‑camera. The shot is candid, unposed, spontaneous, with slight tilt and off‑center framing that partially crops the left side by a dark curtain. Raw, unprocessed look, no filters or color grading, slight overexposure on the torso, wide‑angle 30 mm lens, everything fully sharp. The setting is a contemporary apartment with a textured marble wall and a heavy gray curtain, captured in late morning natural light. All elements in focus, no bokeh, no portrait mode.”

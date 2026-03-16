@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair, wearing a black lace bra and matching lace underwear set, standing on an outdoor balcony. She leans casually against a dark metal railing, one hand on her hip, the other near her waist, with a subtle, natural smile. Her jewelry includes gold hoop earrings, a thin gold necklace with a circular pendant, and a gold bracelet on each wrist.  
+
+- **Lighting & Exposure**  
+  Slight overexposure from mid‑afternoon sunlight; ambient light creates a warm, soft glow on the subject’s face and body. No auto‑HDR or beauty filters—raw, unprocessed look.  
+
+- **Camera Settings**  
+  Wide‑angle lens (24–35 mm), handheld, slight motion blur from natural instability. Everything in focus—no portrait‑mode depth of field.  
+
+- **Composition**  
+  Candid, unposed, spontaneous framing: the shot is slightly tilted and off‑center, with a partial crop that cuts off the top of the railing and a bit of the background. No rule‑of‑thirds intentionality.  
+
+- **Environment**  
+  Location: a sunny balcony in an urban residential area; background shows blurred greenery and distant houses. Time of day: late afternoon (around 4 pm). Weather: clear, mild wind, slight haze.  
+
+- **Details & Imperfections**  
+  Slight tilt and off‑center framing give the image a casual, spontaneous feel. The subject’s hair has a gentle breeze‑induced motion blur. The railing’s metal bars are visible, with a faint reflection of the sky.  
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, zero post‑processing aesthetic—just raw capture.  
+
+**Prompt Summary (structured)**  
+"Mid‑afternoon candid shot of a woman in black lace lingerie on a balcony, leaning against a dark metal railing, with slight motion blur and overexposure from natural sunlight. Wide‑angle lens, handheld, everything in focus. Slight tilt and off‑center framing, partial crop. Background shows greenery and houses, clear weather. Raw, unprocessed look."

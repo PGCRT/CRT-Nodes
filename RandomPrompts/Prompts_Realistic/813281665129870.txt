@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A young woman with a high ponytail, wearing an oversized plaid button‑down shirt in muted earth tones and loose gray jogger pants, stands in a dimly lit apartment hallway. She’s mid‑gesture, holding a set of keys in her right hand, palm slightly open, as if she just arrived home. Her face is turned toward the camera but not directly at it—she’s looking slightly off‑center, giving a candid, unposed feel.
+
+- **Pose & Motion**  
+  Slight motion blur on the hands and key, indicating handheld shake and a quick shutter speed. The body is angled 30° to the left, with a subtle tilt that makes the frame feel spontaneous. Her left arm hangs relaxed by her side, but the shoulder is slightly rolled, adding realism.
+
+- **Lighting & Exposure**  
+  Ambient indoor lighting from a window on the left; slight underexposure in the lower half of the image, with a warm, muted tone. No auto‑HDR or beauty filters—raw, unprocessed look. The exposure is uneven: the upper half is a bit brighter than the lower half, giving a natural sense of depth.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24‑35 mm), short focal length, everything in focus from foreground to background. No bokeh; background remains sharp. Slight vignetting at the corners is acceptable. The image has a flat, natural color palette with no post‑processing color grading.
+
+- **Environment**  
+  A narrow hallway with a plain beige door behind the subject. A white coat rack with a beige trench coat hangs to the right. A small stack of books and a pair of white sneakers sit on the floor to the left. A cardboard box lies on its side near the right wall. The time of day is late afternoon, with soft natural light coming from the left window.
+
+- **Composition & Framing**  
+  No rule‑of‑thirds intentionality—accidental framing that places the subject slightly off‑center. The crop is partial; the top of the door and the right side of the coat rack are cut off by the frame edge. The shot feels “in the moment,” as if captured by a passerby with a handheld camera.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, minor misalignment of the key in the hand, a faint smudge on the door’s handle, and a tiny shadow cast by the subject’s head onto the wall. The image has a raw, unpolished feel with no studio lighting or professional composition.
+
+- **Final Prompt**  
+  “A candid, wide‑angle shot of a young woman in a plaid shirt and gray joggers standing in a dimly lit apartment hallway, holding keys in her right hand mid‑gesture. The image has slight motion blur on the hands, a subtle tilt, and is framed off‑center with accidental cropping. Lighting comes from a left window, creating a warm underexposed tone. Background includes a beige door, a white coat rack with a trench coat, a stack of books, sneakers, and a cardboard box. Everything is in focus with no bokeh, captured on a 24‑35 mm lens, raw and unprocessed, no filters or color grading.”

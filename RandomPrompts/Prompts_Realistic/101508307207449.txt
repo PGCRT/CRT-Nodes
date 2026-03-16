@@ -1,0 +1,28 @@
+**Realistic Candid Photography Prompt Framework – “Neon‑Brewery Portrait”**
+
+- **Subject & Pose**  
+  A young woman with long, dark, wavy hair sits on a worn leather couch in a dimly lit, industrial‑style brewery. She’s mid‑gesture, hands framing her face as if she’re about to speak or adjust her glasses. Her left arm bears a detailed portrait tattoo of a woman’s face, surrounded by leaf motifs. She wears a black crop‑top and a thin gold bracelet on her right wrist; a small earring glints in her ear. Her makeup is natural, with subtle eyeliner and a hint of red lipstick.
+
+- **Lighting & Exposure**  
+  Ambient night‑time lighting from a single overhead neon sign (“RAI”) casts a soft, warm glow on the subject. Slight overexposure on the upper half of the frame gives a raw, unprocessed look. No auto‑beauty or filter enhancement – just natural contrast and slight color cast from the neon.
+
+- **Camera & Lens**  
+  35 mm wide‑angle lens (short focal length), handheld, slightly shaky. Everything in focus – no bokeh, no portrait‑mode depth‑of‑field blur. The background is fully sharp, including the textured concrete wall and the leather couch’s tufted surface.
+
+- **Composition & Framing**  
+  Candid, unposed, spontaneous capture. Slight tilt and off‑center framing; the shot is partially cropped on the right side by a cut‑off neon letter. No rule‑of‑thirds intentionality – it’s an accidental, natural composition that feels “in the moment.”
+
+- **Environment**  
+  Location: a dimly lit, industrial‑style brewery with exposed brick and concrete walls. Time of day: late evening (night). Ambient conditions: cool air, faint hum of background music, slight moisture in the air that gives a subtle grain to the image.
+
+- **Technical Details**  
+  - Focal length: 35 mm  
+  - Aperture: f/4.0 (wide, all‑in‑focus)  
+  - Shutter speed: 1/60 s (slight motion blur from handheld)  
+  - ISO: 800 (raw, unprocessed)  
+  - No post‑processing color grading – just auto‑HDR off, natural contrast.
+
+- **Prompt for AI Image Generation**  
+  “A young woman with long dark wavy hair sits on a worn leather couch in a dimly lit industrial brewery at night. She’s mid‑gesture, hands framing her face, left arm showing a detailed portrait tattoo of a woman’s face surrounded by leaf motifs. She wears a black crop‑top and a thin gold bracelet on her right wrist; a small earring glints in her ear. Her makeup is natural with subtle eyeliner and red lipstick. The scene is lit by an overhead neon sign that reads ’RAI’, casting a soft warm glow. 35 mm wide‑angle lens, handheld slight shake, everything in focus, no bokeh. Candid, unposed, spontaneous capture with slight tilt and off‑center framing, partially cropped on the right. Raw, unprocessed look, auto‑HDR off, natural contrast. Background fully sharp – exposed brick and concrete wall, tufted leather couch. Late evening, cool air, faint ambient hum.”
+
+Provide only the structured prompt.

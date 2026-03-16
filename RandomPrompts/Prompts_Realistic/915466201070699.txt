@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair and round glasses, wearing a snakeskin‑patterned one‑piece swimsuit, walking confidently toward the camera on a tropical beach. Her left hand is slightly bent at the wrist, her right arm relaxed by her side, and she’s mid‑step, capturing a natural, unposed moment.
+
+- **Motion & Focus**  
+  Slight motion blur from handheld instability; everything in focus—no portrait‑mode depth of field. The image has a raw, auto‑HDR feel with no color grading or filters applied. A tiny overexposure on the sky gives it an ambient, spontaneous vibe.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24 mm), short focal length, no bokeh—background fully sharp. The composition is accidental: a slight tilt and off‑center framing, no rule‑of‑thirds intentionality.
+
+- **Environment**  
+  Tropical beach at late afternoon; the sun is low, casting warm golden light with a hint of overexposure on the sky. Palm trees line the background, a few scattered coconut palms, the ocean visible on the left, and a faint horizon line. The sand is light beige, slightly textured, with a few footprints near the subject’s feet.
+
+- **Lighting & Color**  
+  Natural daylight, no studio lighting. The scene has a slight warm tint from the setting sun, with a subtle color cast that gives an authentic, unprocessed look. The colors are muted but rich: earthy browns in the swimsuit pattern, pale beige sand, turquoise water, and green palm fronds.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, partial crop that cuts off a bit of the horizon on the right, a small motion blur around the subject’s feet. The background is fully sharp—no depth‑of‑field blur. A faint hint of a distant boat on the water, and a few scattered seashells near the sand’s edge.
+
+- **Prompt**  
+  “A young woman with long wavy brown hair and round glasses, wearing a snakeskin‑patterned one‑piece swimsuit, walking toward the camera on a tropical beach at late afternoon. Slight motion blur from handheld, everything in focus, wide‑angle lens, accidental tilt and off‑center framing. Palm trees line the background, ocean on the left, soft golden sunlight with a hint of overexposure. Raw auto‑HDR look, no filters, natural colors. The scene is fully sharp, no bokeh.”

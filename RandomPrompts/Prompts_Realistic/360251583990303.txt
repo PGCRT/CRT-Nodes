@@ -1,0 +1,24 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A woman with dark, wavy hair, wearing a gold sequined bikini top, pouring a bottle of white wine (label “VAIDY”) into her mouth. Her left arm is tattooed with geometric and portrait designs; her right shoulder shows a small “M” tattoo. She’s mid‑drink, with a slight motion blur on the liquid stream.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. Slight tilt and off‑center framing, partial crop. No rule‑of‑thirds intentionality — accidental composition. Natural motion freeze or slight blur from handheld instability.
+
+- **Environment**  
+  Indoor setting in a modern apartment: a wooden stool and a colorful rainbow‑striped object (maybe a towel or banner) are visible behind her left shoulder. The time of day is late afternoon, soft natural light coming from the west, creating a warm, slightly overexposed tone. Ambient humidity is mild; the air feels cool.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm), wide‑angle lens. No bokeh — background fully sharp, everything in focus. No portrait mode or subject isolation. Slight auto‑HDR or auto‑beauty mode off for a raw, unprocessed look. No filters, no color grading, no post‑processing aesthetic.
+
+- **Lighting & Exposure**  
+  Zero studio lighting, zero professional composition, zero editorial tone. Slight overexposure due to ambient light; the image has a natural, slightly hazy feel. The exposure is set to capture the sparkle of the gold sequins and the liquid’s reflection.
+
+- **Details & Imperfections**  
+  Capture the texture of the sequins, the slight sheen on the woman’s skin, the droplets of wine in mid‑air. Include minor imperfections: a slightly crooked bottle angle, a faint smudge on the bottle label, and a tiny vibration blur on the stream. The background should show a wooden floor and a white door frame.
+
+- **Prompt for AI Image Generation**  
+  “A woman with dark wavy hair wearing a gold sequined bikini top, pouring a bottle of white wine into her mouth, mid‑drink with slight motion blur on the liquid stream. Her left arm has geometric and portrait tattoos; a small ’M’ tattoo on her right shoulder. Behind her is a wooden stool and a rainbow‑striped object. Indoor late afternoon natural light, soft westward glow, slightly overexposed. 24‑35 mm wide‑angle lens, everything in focus, no bokeh. Candid, accidental framing with slight tilt and off‑center crop. Raw, unprocessed look, no filters or color grading. Capture the sparkle of the sequins and the wine droplets in mid‑air. Include a wooden floor and white door frame in background.”
+
+Provide only the structured prompt.

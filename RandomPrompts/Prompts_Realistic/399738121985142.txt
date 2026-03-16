@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with dark, voluminous hair tied in a messy high ponytail, wearing an oversized beige hoodie and denim jeans. She is mid‑gesture,右手 slightly curled as if she’s about to tap a keyboard or hold a coffee cup, left hand tucked into her pocket. Her face is turned toward the camera with a bright, candid smile, eyes bright and engaged.
+
+- **Motion & Focus**  
+  Slight motion blur on the hands and background to convey handheld shake; everything remains fully sharp—no portrait‑mode blur. The image has a raw, unprocessed look: no filters, no color grading, just natural auto‑HDR or “auto‑beauty” off.
+
+- **Lighting & Exposure**  
+  Natural daylight from a bright window in an office space; slight overexposure on the ceiling lights, giving a warm, slightly hazy glow. The exposure is uneven—ambient light varies across the frame, creating subtle highlights and soft shadows.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm), short focal length. No bokeh; background is fully in focus. Handheld shot with slight tilt and off‑center framing—no rule‑of‑thirds intentionality. The composition feels spontaneous, as if the subject was caught mid‑conversation.
+
+- **Environment**  
+  A modern office setting: a white ceiling with recessed LED lights, a black monitor on a desk to the left, a partial view of a keyboard and a small plant on a shelf in the background. The time of day is late morning, with natural sunlight streaming through a large window behind the subject, creating soft backlighting.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, partial crop that cuts off the top of the ceiling tile, giving an informal, candid feel. The hoodie’s seam and the woman’s fingers show subtle texture; the background includes a faint reflection of a window, adding depth. The image has zero studio lighting, zero professional composition, zero editorial tone—just a genuine, spontaneous snapshot.
+
+- **Final Prompt**  
+  “A young woman with dark hair in a messy high ponytail, wearing an oversized beige hoodie and denim jeans, captured mid‑gesture in a bright office space at late morning. Slight motion blur on the hands and background, everything fully sharp, wide‑angle lens (24–35 mm), natural daylight with slight overexposure on ceiling lights. The shot is handheld, slightly tilted, off‑center framing, no filters or color grading—raw, candid, spontaneous.”

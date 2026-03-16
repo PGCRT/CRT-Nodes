@@ -1,0 +1,26 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with deep brown hair styled in two thick braids that drape over her shoulders, wearing a simple white strap‑top tied at the front and denim shorts. She is mid‑smile, head tilted slightly to the right, eyes bright and engaged, as if caught in a spontaneous moment during a casual photoshoot. Her left hand rests on her hip, fingers relaxed, while her right arm hangs naturally by her side.
+
+- **Lighting & Exposure**  
+  Natural daylight from a western‑facing window, mid‑afternoon (≈ 4:30 pm). The light is slightly overexposed on the face and upper body, giving a warm, soft glow; the exposure is uneven enough to hint at handheld instability. No auto‑HDR or beauty filters—raw, unprocessed look.
+
+- **Camera Settings**  
+  - Lens: 24 mm wide‑angle (short focal length)  
+  - Aperture: f/5.6 (mid‑range)  
+  - Shutter speed: 1/125 s (slight motion blur from handheld shake)  
+  - ISO: 400 (for natural grain)  
+  - Focus: everything in focus—no portrait‑mode depth‑of‑field blur; background stays sharp.
+
+- **Composition & Framing**  
+  Candid, unposed, spontaneous framing with intentional “accidental” tilt and partial crop. The shot is off‑center: the subject’s left side is slightly cut off by the frame edge, giving a dynamic, informal feel. No rule‑of‑thirds intentionality—just a natural, casual composition.
+
+- **Environment**  
+  A bright, modern kitchen with white cabinetry and open shelving. A small potted plant sits on the top shelf, a stack of colorful cookbooks lines the back wall, and a stainless‑steel kettle hangs on the right side. The time of day is late afternoon, with soft, warm sunlight streaming in from the west, creating gentle highlights on the woman’s face and shoulders.
+
+- **Details & Imperfections**  
+  Slight motion blur around the edges, especially at the hair braids and shoulders, indicating handheld shake. Tiny imperfections are present: a faint smudge on her left earlobe, a slight wrinkle in the strap‑top, and a small, natural shadow under her nose. The image has zero post‑processing aesthetic—no color grading or filters, just raw, real‑life capture.
+
+- **Post‑Capture Notes**  
+  Capture the scene with a wide‑angle lens to include the surrounding environment, ensuring that all elements—from the plant to the kettle—are fully sharp. Keep the background unblurred, preserving every detail from the shelves to the countertop. The final image should feel like a genuine, spontaneous snapshot of a woman in her kitchen, caught mid‑expression during a casual shoot.

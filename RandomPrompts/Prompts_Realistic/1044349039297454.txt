@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark, wavy hair sitting on a white quilted mattress in a bedroom. She is nude, turned slightly to the side, with one leg bent and her hand resting on her thigh, while her other leg is extended forward. Her left foot is bare, toes pointing downward, and she wears a single pearl necklace that rests on her collarbone. Her gaze is directed toward the camera, but she appears unaware of the lens, giving a candid feel.
+
+- **Lighting & Exposure**  
+  Natural daylight from a western window, mid‑afternoon. Slight overexposure in the highlights; the exposure is not perfectly balanced, giving a raw, unprocessed look. No auto‑HDR or auto‑beauty mode—just a straightforward snapshot. The lighting creates soft warm tones with a hint of ambient warmth.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24 mm), short focal length, handheld. Everything is in focus—from the subject to the background—no bokeh or depth‑of‑field blur. Slight motion blur on the subject’s hand and foot due to slight shake, giving a natural, spontaneous feel. No rule‑of‑thirds; framing is accidental, slightly off‑center.
+
+- **Environment**  
+  A simple bedroom with a wooden headboard and white pillows behind the woman. The wall is a light beige tone. The mattress has a subtle quilted pattern. The scene is unposed, as if captured mid‑action.
+
+- **Composition & Details**  
+  The shot is slightly tilted, with the camera not perfectly level. The composition is wide, capturing the subject’s full body, the mattress, the headboard, and part of the pillow. The background is fully sharp—no portrait mode isolation. The image has a raw, unfiltered look, as if taken with a DSLR or mirrorless camera in a “raw” file.
+
+- **Post‑Processing**  
+  No filters, no color grading, no post‑processing aesthetic. Only minimal adjustments to exposure and contrast, preserving the natural look.
+
+**Prompt for Text‑to‑Image Generation**
+
+> "A realistic candid photograph of a nude woman with long dark wavy hair sitting on a white quilted mattress in a bedroom. She is turned slightly to the side, one leg bent, hand on thigh, other leg extended forward, bare foot pointing down, wearing a single pearl necklace. Natural daylight from a western window, mid‑afternoon, slight overexposure. Wide‑angle 24 mm lens, handheld, everything in focus, slight motion blur on the hands and feet. Background shows a wooden headboard and white pillows. Slight tilt, accidental off‑center framing, no rule‑of‑thirds. Raw, unprocessed look, no filters or color grading."
+
+Provide only the structured prompt.

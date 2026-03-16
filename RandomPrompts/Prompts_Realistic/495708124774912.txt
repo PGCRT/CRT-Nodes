@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A young woman with long blonde hair styled in two thick braids, sitting on a beige sofa in a bright, lived‑in living room. She’s wearing a pink track jacket with white stripes on the sleeves and light denim shorts. In her right hand she holds a pink smartphone to her ear, mid‑call, with a small bubble of gum forming on her lips. Her left shoulder is slightly exposed, revealing a natural, unretouched chest. She’s looking slightly off‑camera, as if listening to a conversation or checking a message.
+
+- **Pose & Composition**  
+  Candid, unposed, spontaneous — the subject appears unaware of the camera, caught in a natural moment. The frame is intentionally tilted and off‑center, with a partial crop that cuts off the left side of the sofa and a small portion of the plant in the background. No rule‑of‑thirds intentionality; the composition feels accidental, like a quick snapshot taken with a handheld camera.
+
+- **Lighting & Exposure**  
+  Slight overexposure on the subject’s face and upper body, giving a warm, natural glow. The ambient light comes from a window to the left, creating soft highlights on her jacket and hair. No auto‑HDR or auto‑beauty mode — the image retains raw, unprocessed look with no filters or color grading.
+
+- **Environment**  
+  A cozy, modern living room. A potted green plant sits in the corner to the left, a framed picture hangs on the wall above the sofa, and a wooden bookshelf is visible on the right. The time of day is late afternoon, with warm sunlight streaming in, creating gentle shadows and a slight haze.
+
+- **Lens & Technical Settings**  
+  Short focal length (24‑35 mm) wide‑angle lens, giving a slightly distorted but natural perspective. Everything is fully sharp — no bokeh or depth‑of‑field blur; the background remains in focus. No portrait mode or subject isolation. The image has a slight motion blur on the woman’s hand and phone, indicating handheld instability.
+
+- **Details & Imperfections**  
+  - Slight tilt of the camera, making the top of the sofa appear slightly crooked.  
+  - Partial crop cuts off the left side of the plant, adding to the candid feel.  
+  - Tiny imperfections: a faint smudge on her jacket zipper, a slight wrinkle in her hair, and a tiny bubble of gum on her lips.  
+  - The phone’s screen shows a blurred contact list, hinting at an ongoing call.
+
+- **Final Prompt**  
+  “A young woman with long blonde braids, wearing a pink track jacket and denim shorts, sits on a beige sofa in a bright living room. She holds a pink smartphone to her ear, blowing a bubble of gum, while looking slightly off‑camera. The scene is captured with a short focal length wide‑angle lens, all in focus with slight motion blur on the hand. The image has a natural overexposed glow from late afternoon sunlight, raw and unprocessed, with no filters or color grading. The background includes a potted plant, a framed picture, and a wooden bookshelf. The composition is accidental and tilted, with a partial crop that cuts off the left side of the sofa, giving a candid, spontaneous feel.”

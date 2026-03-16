@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with short, dark hair and a tattooed left arm, wearing a white one‑piece swimsuit and red Nike sneakers. She is mid‑step, leaning casually against a concrete wall, her right foot planted on a metal drain cover, left foot slightly lifted, as if she just stepped off a ladder or a platform. Her head is turned toward the camera with a playful, confident expression, eyes bright, mouth slightly open.
+
+- **Motion & Focus**  
+  Slight motion blur at the knees and feet to suggest movement, while the face and upper body remain crisp. The entire scene is fully sharp—no bokeh or depth‑of‑field blur. Handheld camera instability gives a subtle tilt and off‑center framing; the composition is accidental, not intentional rule‑of‑thirds.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle, midday sun. A slight overexposure on the upper body, creating a warm, bright tone with a faint halo around the subject. No auto‑HDR or beauty filters—raw, unprocessed look. The concrete wall shows a soft highlight, and the background sky is a pale blue with a few wispy clouds.
+
+- **Environment**  
+  Location: A rooftop or terrace in a mountain town. Behind the woman, a low‑rise white building and a range of distant mountains are visible. A small black vent and a concrete utility box sit on the left side of the frame. The ground is a smooth, light‑gray concrete with a circular metal drain cover near the woman’s right foot.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm), short focal length. Everything in focus—from foreground to background—no portrait mode. The image has a natural, unposed candid feel, captured with a handheld camera at a slightly low angle.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, partial crop that cuts off the top of the woman’s head and the lower part of the background. A faint motion blur around the knees and feet. The woman’s left arm shows a floral tattoo with a rose and a small “I” below it; her right foot’s sneaker has a black Nike swoosh. The concrete wall has a small red label on an electrical box.
+
+- **Final Prompt**  
+  “A young woman with short dark hair, tattoos on her left arm, wearing a white one‑piece swimsuit and red Nike sneakers, mid‑step leaning against a concrete wall on a rooftop terrace. Slight motion blur at the knees and feet, crisp face and upper body, natural daylight overexposure, handheld tilt, wide‑angle lens, fully sharp background of white building and distant mountains, raw candid photography.”

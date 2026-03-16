@@ -1,0 +1,37 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy blonde hair standing in a bright, airy bedroom. She’s wearing a black lace lingerie set (bra and thong) that features delicate floral patterns and sheer mesh. Her left hand is raised to the back of her head, slightly blurred as if she’s mid‑motion, while her right arm hangs loosely by her side. She’s playfully sticking out her tongue, eyes bright, with a candid, unposed expression.
+
+- **Lighting & Exposure**  
+  Natural daylight coming from a large window on the left, creating a soft overexposure on the subject’s face and upper body. Slight ambient warmth, no color grading or filters—raw, in‑camera look. The exposure is slightly high, giving a gentle halo around her hair and shoulders.
+
+- **Camera & Lens Settings**  
+  - Lens: 24‑mm wide‑angle (short focal length), handheld.  
+  - Focal depth: everything from the subject to the background is fully sharp—no bokeh, no portrait‑mode isolation.  
+  - Shutter speed: 1/60 s (or 1/80 s) to capture a slight motion blur on the moving hand.  
+  - Aperture: f/4.0 (wide opening for bright lighting).  
+  - ISO: 400–600 (for natural grain and detail).
+
+- **Composition & Framing**  
+  - No rule‑of‑thirds intentionality—framing is accidental, slightly off‑center. The subject occupies the central‑right portion of the frame, with a small portion of the bed and a rolled white towel visible in the lower right corner.  
+  - Slight tilt to the left, giving a dynamic, spontaneous feel.  
+  - Background: a large window with a view of neighboring houses, a beige wall, and a small framed picture on the right side. The background is fully sharp, no depth‑of‑field blur.
+
+- **Environment & Time**  
+  - Location: a modern bedroom with a white bed, beige headboard, and a wooden nightstand.  
+  - Time of day: mid‑morning, natural light from the window casts soft shadows.  
+  - Weather: clear, sunny, no wind—ambient conditions are calm but the subject’s motion adds life.
+
+- **Technical Details**  
+  - Capture style: candid, unposed, spontaneous—subject appears unaware of the camera.  
+  - Imperfections encouraged: slight tilt, off‑center framing, partial crop, minor motion blur on the hand.  
+  - No rule‑of‑thirds intentionality — accidental framing.  
+  - Zero studio lighting, zero professional composition, zero editorial tone.  
+  - Natural freeze or slight blur from handheld instability.
+
+- **Post‑Processing**  
+  Auto‑HDR or auto‑beauty mode off—raw, unprocessed look. Slight overexposure on the subject’s face and upper body, no color grading or filters applied.  
+
+**Prompt Summary (for AI image generator)**  
+> “A young woman with long wavy blonde hair in a black lace lingerie set stands candidly in a bright bedroom, left hand raised to her head, right arm relaxed, tongue playfully out. Natural daylight from a large window creates soft overexposure on her face. Shot on a 24‑mm wide‑angle lens, handheld, 1/60 s shutter speed, f/4.0 aperture, ISO 500—everything in focus, slight motion blur on the hand. The composition is accidental, slightly tilted, off‑center, with a white bed and rolled towel in the lower right corner. Background includes a window view of neighboring houses and a framed picture on the wall. Mid‑morning lighting, no filters or color grading, raw in‑camera look.”

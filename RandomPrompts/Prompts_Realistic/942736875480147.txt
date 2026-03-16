@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with shoulder‑length brown hair, wearing a dark gray sports bra and no bottoms, standing mid‑step on a concrete patio at night. Her left leg is slightly bent, her right arm hangs relaxed by her side, and she’s smiling softly toward the camera as if caught in an unplanned moment.  
+
+- **Lighting & Exposure**  
+  Slight overexposure from the ambient night light, with a warm, natural tone. The exposure is a little high, giving a subtle halo around her face and body. No auto‑beauty or filter processing—just raw, handheld capture.  
+
+- **Motion & Focus**  
+  A faint motion blur on the lower part of her body from slight handheld shake, while the rest of the frame stays sharp. Everything—from her skin to the background—is in focus, no portrait‑mode depth‑of‑field blur.  
+
+- **Lens & Technical**  
+  Wide‑angle lens (24‑35 mm), short focal length, no bokeh. The background is fully sharp, capturing the concrete patio, a wooden workbench, a blue bucket, a bottle of water, a white bag, and a faint street light in the distance.  
+
+- **Environment**  
+  Specific real‑world location: an outdoor backyard patio at night. The time of day is late evening (around 9 pm), with dim ambient lighting and a single street lamp casting a warm glow. Weather is clear, with a slight breeze that gives a natural motion blur to the subject’s hair and clothing.  
+
+- **Composition & Framing**  
+  No rule‑of‑thirds intentionality—accidental framing with a slight tilt. The shot is off‑center, cropping the left side of her body slightly, giving a candid, unposed feel.  
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, zero studio lighting. Raw, in‑camera capture only, with auto‑HDR off.  
+
+**Prompt Summary**  
+> “A young woman with shoulder‑length brown hair, wearing a dark gray sports bra and no bottoms, standing mid‑step on a concrete patio at night. Slight overexposure from the ambient night light, faint motion blur on her lower body from handheld shake, everything in focus. Wide‑angle lens (24‑35 mm), short focal length, no bokeh. Background includes a wooden workbench, blue bucket, water bottle, white bag, and a distant street lamp. Late evening, clear weather, slight breeze. Raw, unprocessed, candid capture with accidental off‑center framing.”

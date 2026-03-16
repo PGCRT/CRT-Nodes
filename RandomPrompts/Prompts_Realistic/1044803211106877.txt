@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy dark hair, wearing a gold sequined off‑shoulder bodysuit with black trim and ruffled sleeves. She stands in a casual, unposed stance, slightly turned to the side, hands relaxed near her hips, as if mid‑movement. Her face is partially turned toward the camera but not directly facing it—creating a candid, spontaneous feel.
+
+- **Lighting & Exposure**  
+  Natural daylight from a western‑facing window, mid‑afternoon. Slight overexposure on the high‑lights gives a warm, soft glow; the exposure is uneven, with a tiny highlight spill on the left side of her chest. No auto‑HDR or beauty filters—raw, unprocessed look.
+
+- **Camera Settings**  
+  Wide‑angle lens (24 mm), short focal length, handheld. Slight motion blur from the subject’s movement and the camera’s instability. Everything in focus—no bokeh, no depth‑of‑field blur; background is fully sharp.
+
+- **Composition & Framing**  
+  Off‑center framing: the subject occupies the right‑hand side of the frame, with a small portion of a striped couch and a vase of red poppies visible on the left. The shot has a slight tilt, giving it an accidental, spontaneous feel. No rule‑of‑thirds intentionality—just natural, casual composition.
+
+- **Environment**  
+  A bright, informal living room. A striped couch in the background, a clear glass vase with red poppies on a white side table to the left, and a small white cabinet. The time of day is late afternoon, with warm, slightly harsh sunlight coming from the west, creating soft shadows and subtle highlights.
+
+- **Details & Imperfections**  
+  The woman’s tattoos are visible on her neck, chest, arms, and thighs—floral motifs and portrait-style ink. She wears gold hoop earrings and a delicate necklace. Her nails are painted pink. A thin chain hangs from the bodysuit’s side, adding a subtle detail. Slight tilt of the camera, partial crop of her left hip, and faint motion blur around her hands.
+
+- **Technical Specs**  
+  24 mm focal length, f/4 aperture, 1/60 s shutter speed, ISO 400. No portrait‑mode softening—everything is sharp. The image has a raw, unprocessed look with no color grading or filters.
+
+- **Final Prompt**  
+  “A candid, wide‑angle shot of a young woman in a gold sequined off‑shoulder bodysuit standing casually in a bright living room at mid‑afternoon. Natural daylight from the west creates slight overexposure on her chest. Handheld 24 mm lens captures everything in focus with a faint motion blur. The frame is off‑center, slightly tilted, capturing the woman’s tattoos, gold earrings, and necklace, with a striped couch and red poppies in the background. Raw, unprocessed, no filters—pure, spontaneous realism.”

@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman with long, dark hair, wearing a yellow halter‑top bikini and pink bottom, captured mid‑turn as she leans back slightly, one hand on her hip, in a natural, unposed stance. Her face is turned toward the camera but not directly at it—slight off‑center framing.
+
+- **Capture Style**  
+  Candid, spontaneous, “mid‑action” moment; subject appears unaware of the camera. Slight handheld shake and motion blur on the edges, giving a raw, unprocessed look. No filters, no color grading, no post‑processing aesthetic—only natural overexposure or underexposure depending on ambient light.
+
+- **Environment**  
+  Tropical beach‑side setting: palm fronds and spiky green plants in the background, large brown rocks scattered around, sandy ground. Time of day is late afternoon, warm golden light with a slight haze. Weather is clear but not perfectly sunny—soft ambient light with a hint of wind.
+
+- **Lens & Technical**  
+  Wide‑angle lens (20–35 mm), short focal length. Everything in focus—no bokeh, no depth‑of‑field blur; background fully sharp. No portrait‑mode subject isolation. Slight tilt and partial crop to emphasize spontaneity.
+
+- **Composition Notes**  
+  No rule‑of‑thirds intentionality—accidental framing with a slight tilt. The composition is imperfect: the subject’s left side is slightly cut off by the frame edge, giving a natural, candid feel. Background elements (palm, rocks) are fully sharp, creating a rich, detailed scene.
+
+- **Lighting**  
+  Natural daylight, no studio lighting. Slight overexposure on the upper part of the subject’s back, underexposed lower legs—ambient light variation adds realism.
+
+- **Final Prompt**  
+  “A woman with long dark hair in a yellow halter‑top bikini and pink bottom, captured mid‑turn leaning back with one hand on her hip, in a natural candid pose. The scene is a tropical beach‑side location with palm fronds, spiky green plants, and large brown rocks, late afternoon golden light. Use a wide‑angle short focal length lens, everything in focus, no bokeh, slight handheld motion blur, accidental off‑center framing, partial crop, natural overexposure on the back, underexposed legs. No filters, no color grading, no post‑processing—raw, realistic photography.”

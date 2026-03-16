@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman with long, wavy dark hair and bright blue eyes, wearing a black leather zip‑up bodysuit, sitting on a wooden pool table. Her left hand is raised to her chin, fingers slightly curled, as if she’s just finished a thought or is about to speak. A small tattoo is visible on her left wrist. She looks directly at the camera with a subtle, confident expression, mouth slightly open as if mid‑word.
+
+- **Lighting & Exposure**  
+  Natural daylight from a western window, late afternoon; slight overexposure on the face and upper body, creating a warm, soft glow. No auto‑beauty or filter enhancement—raw, unprocessed look. Slight handheld shake gives a natural motion blur around the edges.
+
+- **Lens & Technical**  
+  24‑mm wide‑angle lens, short focal length, everything in focus from foreground to background. No bokeh; background (a pool table with green felt, wooden rails, and a rack of pool cues) is fully sharp. Slight tilt and off‑center framing—no rule‑of‑thirds intentionality.
+
+- **Environment**  
+  Indoor setting in a casual lounge or game room. The time of day is late afternoon, with warm, slightly hazy sunlight streaming through a window. A few scattered objects (a yellow ball, a small wooden block) are visible on the pool table. The scene feels spontaneous and candid, as if captured mid‑action.
+
+- **Composition & Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Imperfections encouraged: slight tilt, off‑center framing, partial crop. Zero studio lighting, zero professional composition, zero editorial tone. Natural motion freeze or slight blur from handheld instability.
+
+- **Post‑Processing**  
+  No filters, no color grading, no post‑processing aesthetic. Auto‑HDR off. Slight overexposure on the subject’s face and upper body to emphasize the natural light.  
+
+**Prompt Summary:**  
+“Candid photo of a woman in a black leather bodysuit sitting on a pool table, hand near chin, looking at camera, late afternoon natural light, 24‑mm wide‑angle lens, everything in focus, slight motion blur, raw unprocessed look, spontaneous framing.”

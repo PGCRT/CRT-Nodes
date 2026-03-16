@@ -1,0 +1,24 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair standing on a tropical beach, wearing a shimmering pink sequined halter dress. She is mid‑smile, head tilted slightly to the left, body angled toward the camera but not perfectly centered—captured in a spontaneous, candid moment as she watches the waves. Her left hand rests lightly on her hip, and her right arm hangs naturally by her side.
+
+- **Motion & Focus**  
+  Slight motion blur at the edges from handheld instability; the subject’s face and upper body are in sharp focus, while the background (ocean, sand, palm trees) remains fully crisp—no bokeh or portrait‑mode softness. The entire frame is locked in focus, no depth‑of‑field blur.
+
+- **Lighting & Exposure**  
+  Natural daylight from a low‑angle sunrise or sunset; slight overexposure on the upper part of the frame to keep the sky bright and the sand warm. No auto‑HDR or beauty filters—raw, unprocessed look. The lighting creates soft highlights on the sequins and gentle shadows under the chin and between the breasts.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm), short focal length. All elements—subject, ocean, sand, palm trees—are in focus; no “portrait mode” isolation. The composition is accidental: a slight tilt to the right, off‑center framing, and a partial crop that cuts off the top of the sky and the lower part of the sand.
+
+- **Environment**  
+  A real‑world beach setting at dawn or dusk, with gentle waves lapping at the shore, white foam trailing along the sand, and tall palm trees lining the background. The sky shows a soft gradient from pale blue to warm amber; a few scattered clouds are visible near the horizon.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, off‑center framing that places the subject’s left side slightly higher than the right. A partial crop that cuts the top of the sky and the lower sand, giving an informal, spontaneous feel. Tiny imperfections: a faint smudge on the dress’s sequin, a slight wrinkle in the fabric near the waist, and a small shadow cast by the woman’s head onto the sand.
+
+- **Prompt for Text‑to‑Image Generation**  
+  “A young woman with long wavy brown hair, wearing a shimmering pink sequined halter dress, stands on a tropical beach at sunrise, mid‑smile with a slight tilt to the left. The image is captured on a wide‑angle lens (24–35 mm) with everything in sharp focus—no bokeh. Natural daylight creates a soft overexposure on the upper frame. The background shows gentle waves, white foam, and tall palm trees lining the shore, with a pale blue to amber sky. Slight motion blur from handheld instability adds realism. The composition is accidental: off‑center framing, partial crop, and a slight tilt. Raw, unprocessed look—no filters or color grading.”
+
+Provide only the structured prompt.

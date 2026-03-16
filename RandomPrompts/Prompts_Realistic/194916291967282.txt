@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, curvy woman with long dark hair, wearing a black off‑shoulder crop top and matching black thong bikini bottom. She’s mid‑step on a white‑sheeted bed, left leg slightly bent, right leg straight, hands relaxed at her sides. Her face is turned toward the camera but not directly posed—her gaze is soft, almost candid.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. Slight tilt and off‑center framing; partial crop that cuts off a bit of the bed’s headboard on the left. No rule‑of‑thirds intentionality—just accidental framing from a handheld shot.
+
+- **Motion & Exposure**  
+  Slight motion blur from a handheld shot, natural freeze or slight blur. Slight overexposure in the highlights to give a raw, unprocessed look. Auto‑HDR or auto‑beauty mode off — no filters, no color grading, no post‑processing aesthetic.
+
+- **Environment**  
+  Specific real‑world location: a modern bedroom with a light‑gray textured wall behind the bed. Time of day: late afternoon, soft natural daylight coming from the west, creating warm, slightly harsh highlights. Weather or ambient conditions: clear, mild, no wind.
+
+- **Lens & Technical**  
+  Short focal length (24–35 mm), wide‑angle lens. No bokeh, no depth‑of‑field blur — background fully sharp; everything in focus. No portrait mode, no subject isolation. All elements are crisp from foreground to background.
+
+- **Composition Notes**  
+  The shot is taken with a wide‑angle lens, capturing the full body of the woman and a good portion of the bed and wall. The framing is slightly off‑center, giving a casual, spontaneous feel. The composition includes the bed’s white sheets, the gray wall, and a small portion of the headboard on the left side.
+
+- **Lighting**  
+  Zero studio lighting, zero professional composition, zero editorial tone. Natural lighting from the west creates slight overexposure in the highlights and subtle shadows under the woman’s arms and crotch area.
+
+- **Final Prompt**  
+  “A tall, curvy woman with long dark hair, wearing a black off‑shoulder crop top and matching black thong bikini bottom, mid‑step on a white‑sheeted bed, left leg slightly bent, right leg straight, hands relaxed at her sides. Candid, unposed, spontaneous — subject unaware or mid‑action. Slight tilt and off‑center framing; partial crop that cuts off a bit of the bed’s headboard on the left. No rule‑of‑thirds intentionality—just accidental framing from a handheld shot. Slight motion blur from a handheld shot, natural freeze or slight blur. Slight overexposure in the highlights to give a raw, unprocessed look. Auto‑HDR or auto‑beauty mode off — no filters, no color grading, no post‑processing aesthetic. Specific real‑world location: modern bedroom with a light‑gray textured wall behind the bed. Time of day: late afternoon, soft natural daylight coming from the west. Weather or ambient conditions: clear, mild, no wind. Short focal length (24–35 mm), wide‑angle lens. No bokeh, no depth‑of‑field blur — background fully sharp; everything in focus. No portrait mode, no subject isolation. Composition notes: the shot is taken with a wide‑angle lens, capturing the full body of the woman and a good portion of the bed and wall. The framing is slightly off‑center, giving a casual, spontaneous feel. The bed’s white sheets, the gray wall, and a small portion of the headboard on the left side are all in focus.”

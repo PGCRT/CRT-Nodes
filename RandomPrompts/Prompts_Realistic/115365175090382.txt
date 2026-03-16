@@ -1,0 +1,27 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A blonde woman with a tattooed left arm, mid‑drink from a clear plastic bottle, head tilted slightly to the left, eyes closed as she laps water. Her shoulders are bare, revealing a small “Stadium” star tattoo on her left clavicle and a floral design on her right bicep. She wears a thin silver hoop earring in her left ear. The bottle’s label reads “AQUA” with a cherry graphic; the cap is blue. Her hair is loose, slightly messy, with a few strands falling over her forehead.
+
+- **Pose & Composition**  
+  Candid, unposed, spontaneous — the subject appears unaware of the camera. Framing is off‑center, slight tilt to the right, partial crop that cuts off the left side of her torso. No rule‑of‑thirds intentionality; the composition feels accidental, as if captured by a handheld camera in motion.
+
+- **Lighting & Exposure**  
+  Natural ambient light from a wooden interior space; slight overexposure on the upper chest and arm, creating a warm pinkish glow. No auto‑HDR or auto‑beauty mode — raw, unprocessed look. Slight color cast of muted amber tones.
+
+- **Environment**  
+  Specific real‑world location: a rustic cabin or loft with dark wooden paneling behind the subject. Time of day: late afternoon, soft natural light filtering through a window, creating subtle shadows. Weather: clear, dry interior; no external weather influence.
+
+- **Lens & Technical**  
+  Short focal length (24–35 mm), wide‑angle lens. No bokeh; background fully sharp — everything in focus, from the subject’s skin to the wooden paneling. No portrait mode or subject isolation. Slight motion blur on the water stream as it flows from the bottle, indicating handheld instability.
+
+- **Details & Imperfections**  
+  - Slight tilt of the camera, causing a minor diagonal line across the frame.  
+  - Partial crop: the left side of her torso is cut off by the frame edge.  
+  - Raw, unprocessed look: no filters, no color grading, no post‑processing aesthetic.  
+  - Natural motion blur on the water stream, a faint trail indicating movement.
+
+- **Prompt for Text‑to‑Image Generation**  
+  “A candid, unposed photo of a blonde woman with tattoos on her left arm, drinking from a clear plastic bottle labeled ’AQUA’ with a cherry graphic, in a rustic wooden cabin at late afternoon. Her head is tilted slightly to the left, eyes closed, as she laps water; a small ’Stadium’ star tattoo sits on her left clavicle, a floral design adorns her right bicep, and she wears a thin silver hoop earring. The shot uses a short focal length wide‑angle lens (24–35 mm), everything in focus with no bokeh, slight motion blur on the water stream from handheld instability, and accidental off‑center framing that cuts the left side of her torso. Lighting is natural ambient light with slight overexposure on the chest, creating a warm pinkish glow. The background shows dark wooden paneling, fully sharp. No filters or post‑processing, raw look, slight tilt and partial crop.”
+
+Provide only the structured prompt.

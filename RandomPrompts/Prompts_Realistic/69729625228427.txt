@@ -1,0 +1,28 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with shoulder‑length brown hair, wearing a sheer black halter top and distressed denim shorts, captured mid‑walk in a sunlit garden. Her left wrist is adorned with a pink–green double‑band; she’s slightly tilted to the right, catching a casual, spontaneous vibe.  
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle, late‑afternoon sun creates a soft overexposure on the subject’s face and a gentle warmth in the background. Slight handheld shake gives a subtle motion blur around the edges.  
+
+- **Environment**  
+  The setting is a lush, informal park with a variety of flowering plants (pink, yellow, white blooms) lining a gravel path. In the background, a few indistinct figures are walking or chatting, adding to the candid feel. Trees and a faint fence line the perimeter, giving depth without any intentional rule‑of‑thirds composition.  
+
+- **Time of Day & Weather**  
+  Captured at 5:30 pm on a clear, humid day; the sky is bright but not harsh, with a slight haze that keeps everything in focus.  
+
+- **Lens & Technical Settings**  
+  24‑mm wide‑angle lens (short focal length), f/4.0 aperture, 1/60 s shutter speed, ISO 400. No bokeh—background is fully sharp. Handheld shot with slight instability, producing a natural motion blur that’s not over‑processed.  
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject unaware of the camera. Slight tilt and off‑center framing create an accidental, organic look. Zero studio lighting, zero professional composition, zero editorial tone.  
+
+- **Post‑Processing**  
+  Raw, unfiltered image with auto‑HDR off; no color grading or filters applied. Only minimal white‑balance adjustment to preserve the natural tones.
+
+**Prompt for Text‑to‑Image Generation**
+
+```
+A young woman with shoulder‑length brown hair, wearing a sheer black halter top and distressed denim shorts, captured mid‑walk in a sunlit garden. Her left wrist is adorned with a pink–green double‑band; she’s slightly tilted to the right, catching a casual, spontaneous vibe. Natural daylight from a high‑angle, late‑afternoon sun creates a soft overexposure on the subject’s face and a gentle warmth in the background. Slight handheld shake gives a subtle motion blur around the edges. The setting is a lush, informal park with a variety of flowering plants (pink, yellow, white blooms) lining a gravel path. In the background, a few indistinct figures are walking or chatting, adding to the candid feel. Trees and a faint fence line the perimeter, giving depth without any intentional rule‑of‑thirds composition. Captured at 5:30 pm on a clear, humid day; the sky is bright but not harsh, with a slight haze that keeps everything in focus. 24‑mm wide‑angle lens, f/4.0 aperture, 1/60 s shutter speed, ISO 400. No bokeh—background fully sharp. Handheld shot with slight instability, producing a natural motion blur that’s not over‑processed. Candid, unposed, spontaneous—subject unaware of the camera. Slight tilt and off‑center framing create an accidental, organic look. Zero studio lighting, zero professional composition, zero editorial tone. Raw, unfiltered image with auto‑HDR off; no color grading or filters applied. Only minimal white‑balance adjustment to preserve the natural tones.
+```

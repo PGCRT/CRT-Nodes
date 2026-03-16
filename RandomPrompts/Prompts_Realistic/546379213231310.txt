@@ -1,0 +1,30 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy blonde hair standing in a sunlit urban alleyway at mid‑afternoon. She is wearing an all‑white lace lingerie set (transparent bra with cross‑back straps and matching panties with bow details) that drapes softly over her torso and hips. Her left hand rests lightly on her hip, right arm bent at the elbow, fingers relaxed. Slight motion blur on her hands to suggest natural movement.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle window, slight overexposure on the upper body, subtle warm tones. No auto‑HDR or beauty filters—raw, unprocessed look. The exposure is slightly uneven, giving an authentic handheld feel.
+
+- **Camera Settings**  
+  Wide‑angle lens (24‑35 mm), short focal length. Aperture f/4–f/5.6, shutter speed 1/125 s (handheld). Everything in focus—no bokeh, no depth‑of‑field blur; background fully sharp.
+
+- **Composition & Framing**  
+  Candid, unposed, spontaneous framing: the shot is slightly tilted, off‑center, with a partial crop that cuts off the left side of the alley. No rule‑of‑thirds intentionality—just accidental, natural composition. The background shows a textured concrete wall and a faint signboard; a passing cyclist is visible in the distance.
+
+- **Environment**  
+  Location: a narrow, cobblestone alley in an old downtown district. Time of day: late afternoon (mid‑afternoon). Weather: clear, mild humidity, light wind. Ambient noise suggests city life but the subject remains unaware of the camera.
+
+- **Technical Details**  
+  - Lens: 35 mm prime, wide‑angle.  
+  - Focal length: 35 mm (short).  
+  - Aperture: f/5.0.  
+  - Shutter speed: 1/125 s.  
+  - ISO: 400.  
+  - No portrait mode, no subject isolation—everything in focus.  
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, zero post‑processing aesthetic. Slight overexposure on the upper body to capture the warmth of the sun.
+
+**Prompt Summary**  
+> “A candid, unposed photograph of a woman in white lace lingerie standing in a sunlit urban alley at mid‑afternoon. The image is captured on a 35 mm wide‑angle lens at f/5.0 and 1/125 s, with slight motion blur on the hands and a subtle overexposure on the upper body. The framing is slightly tilted and off‑center, partially cropping the left side of the scene, while the background remains fully sharp. No filters or color grading—raw, natural look.”

@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework – “Red‑Hair Bath Candid”**
+
+- **Subject & Pose**  
+  A young woman with long, wavy auburn hair leaning casually against the side of a white bathtub. Her left arm is bent, resting on the rim, while her right arm supports her weight. She’s nude, with a subtle, natural smile and eyes slightly closed as if mid‑thought or relaxed. Her head tilts to the right, creating a slight off‑center framing.
+
+- **Lighting & Exposure**  
+  Natural daylight from a western window, mid‑afternoon (≈ 4 pm). The light is warm, slightly overexposed on the subject’s face and upper body, giving a soft glow. No auto‑HDR or beauty filters – raw, unprocessed look. Slight handheld shake gives a natural motion blur around the edges.
+
+- **Environment**  
+  Location: A rustic bathroom with exposed concrete walls that have peeling white paint, giving an industrial‑boho vibe. The bathtub is a classic clawfoot style, white enamel. Behind her, a small portion of a wooden stool is visible on the left. The time of day casts soft shadows to the right, and the ambient humidity keeps the air slightly thick, adding depth.
+
+- **Lens & Technical**  
+  24 mm wide‑angle lens (short focal length). Everything in focus – background and subject – no bokeh. No portrait‑mode depth‑of‑field blur; the entire scene is sharp. Slight tilt and partial crop to enhance candid feel. Handheld shot with natural instability.
+
+- **Composition & Style**  
+  Candid, unposed, spontaneous – the subject appears unaware of the camera. Imperfections are welcome: slight tilt, off‑center framing, partial crop. No rule‑of‑thirds intentionality – accidental framing is key. Zero studio lighting, zero professional composition, zero editorial tone.
+
+- **Color & Texture**  
+  Warm, earthy tones: the auburn hair contrasts with the white enamel and gray concrete. The peeling paint adds texture. Slight overexposure on the subject’s face gives a bright, airy feel. No color grading or filters – just raw, natural colors.
+
+- **Final Prompt**  
+  *“A young woman with long wavy auburn hair leans casually against a white clawfoot bathtub in a rustic bathroom with exposed concrete walls and peeling paint. Natural mid‑afternoon daylight hits her face with slight overexposure, creating a warm glow. The shot is taken on a 24 mm wide‑angle lens, everything in focus, handheld shake giving natural motion blur. Candid, unposed, spontaneous composition with slight tilt and off‑center framing. No filters, no auto‑HDR, raw, unprocessed look.”*

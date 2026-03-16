@@ -1,0 +1,28 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy blonde hair sitting on a bed in a cozy bedroom. She’s wearing a dark‑green lace bra and matching panties, her hands resting on her knees, body slightly turned toward the camera. Her face is turned to the viewer with a gentle smile, eyes bright and engaged. The pose feels spontaneous—she’s mid‑gesture, as if she just finished a dance or a photo session.
+
+- **Lighting & Exposure**  
+  Natural daylight from a window on the left side of the room creates a soft, slightly overexposed highlight on her face and shoulders. The exposure is a little warm, with a subtle haze that gives a raw, unprocessed look. No auto‑HDR or beauty filters—just a straightforward, handheld shot.
+
+- **Camera & Lens Settings**  
+  - Lens: 24‑mm wide‑angle (short focal length) for a broad field of view.  
+  - Aperture: f/5.6 – enough to keep the background sharp but still allow a slight depth of field.  
+  - Shutter speed: 1/125 s – enough to capture a faint motion blur on the subject’s hair and hands, indicating handheld instability.  
+  - ISO: 400 – for balanced noise and detail.
+
+- **Composition & Framing**  
+  The frame is intentionally off‑center; the subject’s left side leans slightly toward the right edge of the image. The composition is not rule‑of‑thirds‑based—instead it feels accidental, as if the photographer was in a hurry. The shot includes a portion of a wooden nightstand and a lamp on the left, a patterned wall hanging behind the bed, and white pillows that add texture.
+
+- **Environment & Ambience**  
+  The bedroom is a real‑world location: a light‑colored wall, a wooden bedside table with a ceramic lamp, a black‑and‑white geometric wall hanging, and a white bedspread. The time of day is late morning, with warm sunlight streaming in from the left, creating soft shadows. The weather outside is mild, as indicated by the bright, slightly hazy daylight.
+
+- **Technical Details**  
+  - No bokeh: everything from foreground to background is fully sharp.  
+  - Slight tilt and partial crop give a candid feel.  
+  - No portrait‑mode subject isolation—everything remains in focus.  
+  - The image has a natural, raw aesthetic with no post‑processing filters or color grading.
+
+- **Final Prompt**  
+  “A young woman with long wavy blonde hair sits on a bed in a cozy bedroom, wearing a dark‑green lace bra and matching panties. Her hands rest on her knees, body slightly turned, face turned to the camera with a gentle smile. Natural daylight from a left‑side window creates a soft overexposed highlight. Shot on a 24‑mm wide‑angle lens at f/5.6 and 1/125 s, ISO 400. The frame is off‑center and partially cropped, capturing part of a wooden nightstand, lamp, and black‑and‑white geometric wall hanging behind the bed, with white pillows. The scene is late morning, warm sunlight, mild weather. All elements are in focus, with slight motion blur on the hair and hands from handheld shake. No filters or post‑processing—raw, candid realism.”

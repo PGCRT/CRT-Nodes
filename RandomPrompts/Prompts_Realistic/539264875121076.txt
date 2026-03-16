@@ -1,0 +1,28 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman with a high ponytail, wearing a sheer pink satin robe, sitting on a beige sofa. She’s turned slightly to the side, back to the camera, with one arm resting on the couch and the other supporting her weight. Her left hand is on the couch, right hand on the floor, creating a dynamic, mid‑movement pose.  
+
+- **Tattoos & Detail**  
+  Visible tattoos: a floral design on her upper back, a rose on her left forearm, and a small flower near her left hip. The tattoos are sharply in focus, with subtle texture detail.  
+
+- **Lighting & Exposure**  
+  Natural daylight from a window at mid‑afternoon; slight overexposure on the right side of the frame. No auto‑HDR or beauty filters—raw, unprocessed look. Slight handheld shake gives a natural motion blur around the edges.  
+
+- **Lens & Technical**  
+  24mm wide‑angle lens, short focal length. Everything in focus—from subject to background—no bokeh, no portrait‑mode isolation.  
+
+- **Environment**  
+  A living room with a patterned blue wallpaper behind the sofa; a framed picture hangs on the wall above the couch. The couch has a soft, fabric texture. The scene is captured at a slightly low angle for a more intimate feel.  
+
+- **Composition**  
+  Off‑center framing: the subject’s head is slightly above the center of the frame, her left hip near the bottom right corner. No rule‑of‑thirds intentionality—just spontaneous, candid composition. The crop is partial; the top of the sofa and a portion of the wall are cut off at the edges.  
+
+- **Post‑Processing**  
+  Zero color grading, zero filters. Slight natural contrast and warmth from the ambient light.  
+
+**Prompt for Text‑to‑Image Generation**
+
+> “A realistic candid photograph of a woman with a high ponytail, wearing a sheer pink satin robe, sitting on a beige sofa in a living room. She is turned to the side, back to the camera, one arm resting on the couch, the other supporting her weight. Visible tattoos: floral design on her upper back, rose on her left forearm, small flower near her left hip. Natural daylight from a window at mid‑afternoon, slight overexposure on the right side. 24mm wide‑angle lens, everything in focus—no bokeh. Slight handheld shake gives natural motion blur. The background shows patterned blue wallpaper and a framed picture above the couch. Capture in a spontaneous, off‑center composition with partial crop, no rule‑of‑thirds. Raw, unprocessed look, no filters.”
+
+Provide only the structured prompt.

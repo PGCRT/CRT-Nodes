@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework – “Neon‑Bicai Street Capture”**
+
+- **Subject & Pose**  
+  *A woman with dark, wavy hair walking away from the camera on a bustling city sidewalk at night. She wears a teal floral midi dress with an open back and a high slit; her left foot is mid‑step, heel slightly lifted, suggesting motion.*  
+
+- **Motion & Focus**  
+  *Slight handheld blur on the subject’s lower leg and the ground, indicating natural movement. Everything in the frame – from the woman to the background signage – is fully sharp (no portrait‑mode depth of field).*
+
+- **Lighting & Exposure**  
+  *Auto‑HDR off; raw, unprocessed look with a mild overexposure on the neon signs that gives a warm, ambient glow. The scene is lit by street‑level neon lights (“BICAI” and “KAONS”) and passing car headlights, creating a mix of cool and warm tones.*
+
+- **Lens & Technical**  
+  *Short focal length (≈20 mm) wide‑angle lens, no bokeh. Background remains fully sharp; no subject isolation.*  
+
+- **Environment**  
+  *A busy urban street at night in an American city (likely New York). The sidewalk is paved with concrete tiles, the street is lined with storefronts and traffic lights, a few pedestrians are visible in the background, some holding phones. A white van is parked on the left side of the street.*  
+
+- **Composition & Framing**  
+  *Accidental, off‑center framing: the woman’s back is slightly tilted, the shot is cropped so that the left edge cuts off part of the “BICAI” sign. No rule‑of‑thirds intentionality – the composition feels spontaneous and candid.*  
+
+- **Details to Emulate**  
+  *The neon signs cast a reddish‑pink hue on the woman’s dress; the street light reflects off her shoes. The background includes a small group of people walking, a traffic light, and a white van. A faint reflection of a street lamp is visible on the pavement.*  
+
+- **Prompt Summary for Generation**  
+  *“Candid night‑time street photo of a woman in a teal floral dress walking away on a city sidewalk, captured with a wide‑angle short focal length lens. Slight motion blur on the subject’s leg, fully sharp background, raw auto‑HDR off, mild overexposure from neon signs. The scene includes a ‘BICAI’ and ’KAONS’ neon sign, a white van, pedestrians, and a traffic light. The framing is accidental and off‑center, no rule‑of‑thirds, everything in focus.”*

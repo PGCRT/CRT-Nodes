@@ -1,0 +1,33 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  - A young woman with long, sun‑kissed blonde hair standing by a residential swimming pool.  
+  - She is bare‑chested, mid‑smile, slightly turned toward the camera, arms relaxed at her sides.  
+  - Capture her in a casual, unposed stance—like she’s just finished a lap or is about to dive in.  
+
+- **Lighting & Exposure**  
+  - Late‑afternoon sunlight (≈ 5 pm) casting warm, soft shadows; slight overexposure on the face and upper body to keep the scene bright and airy.  
+  - No auto‑beauty or filter enhancement—raw, unprocessed look.  
+
+- **Lens & Technical Settings**  
+  - 24 mm wide‑angle lens (short focal length).  
+  - Handheld, natural motion blur from slight instability; everything in focus—no portrait‑mode depth‑of‑field blur.  
+  - No bokeh; background (pool tiles, green hedge, a few palm fronds) fully sharp.  
+
+- **Composition & Framing**  
+  - Off‑center, accidental framing: the subject’s left side is slightly cut off by the frame edge.  
+  - Slight tilt to the camera to give a candid feel.  
+  - No rule‑of‑thirds intentionality—just a spontaneous snapshot.  
+
+- **Environment**  
+  - Location: a private backyard pool with a blue‑green tile surface, a concrete deck, and a dense green hedge in the background.  
+  - Time of day: late afternoon, ambient light warm and slightly hazy.  
+  - Weather: clear, breezy; a few leaves on the water’s surface suggest a gentle wind.  
+
+- **Details & Imperfections**  
+  - Slight motion blur on the hair and arms to emphasize movement.  
+  - Minor imperfections: a faint smudge on her shoulder, a slight unevenness in the crop.  
+  - No post‑processing color grading—just natural tones.
+
+**Prompt Summary (structured)**  
+"Realistic candid photo of a bare‑chested young woman with long blonde hair standing by a residential pool, late‑afternoon sunlight, slight overexposure, 24 mm wide‑angle lens, handheld motion blur, off‑center accidental framing, slight tilt, everything in focus, no bokeh, no filters, raw unprocessed look, background fully sharp, background includes blue‑green tiles, concrete deck, and green hedge, late afternoon warm haze, breezy weather, minor imperfections and motion blur on hair/arms, natural tones."

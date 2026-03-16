@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework – “Bathroom Self‑Portrait”**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair standing in a bright, modern bathroom. She’s bare‑headed, hands raised near her head as if adjusting her hair or a headset, body slightly turned to the left, mid‑motion. Her face is turned toward the camera but not directly at it – a subtle off‑center angle that gives a candid feel.
+
+- **Lighting & Exposure**  
+  Natural daylight coming from a window on the left side of the room; slight overexposure in the upper right corner to capture the warm glow of the ceiling lamp. The exposure is a little high, giving a soft halo around her shoulders and head. No auto‑beauty or filter enhancement – just raw, unprocessed data.
+
+- **Camera Settings**  
+  - Lens: 24 mm wide‑angle (short focal length) for a broad field of view.  
+  - Focal depth: everything from the foreground countertop to the back wall is fully sharp – no bokeh.  
+  - Shutter speed: 1/60 s, producing a faint motion blur on the subject’s arms and hair, indicating handheld instability.  
+  - ISO: 400 – enough to keep the image clean without noise.
+
+- **Composition & Framing**  
+  The frame is intentionally “accidental” – the left edge cuts off a bit of the countertop, the right edge leaves a small margin to the wall. The subject is slightly tilted, giving a spontaneous, unposed vibe. No rule‑of‑thirds; the composition feels organic, as if captured mid‑action.
+
+- **Environment**  
+  A contemporary bathroom with a black marble countertop that has white veining. Behind the woman, a doorway leads to a bright window and a small potted plant is visible in the far left corner. A wall lamp on the right casts a warm light. The time of day is late morning, with soft natural light mixing with indoor lighting.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, a tiny crop that leaves a little of the woman’s left shoulder out of frame. Her hair has a slight motion blur, and her hands are in a mid‑adjustment pose. The image carries a natural, raw aesthetic – no filters, no color grading, no post‑processing.
+
+- **Final Prompt**  
+  *“A young woman with long wavy brown hair stands in a bright modern bathroom, bare‑headed with her hands raised near her head as if adjusting her hair or a headset. Natural daylight streams from a left‑side window, mixing with warm ceiling lamp light that slightly overexposes the upper right corner. Shot on a 24 mm wide‑angle lens at 1/60 s and ISO 400, everything from the black marble countertop to the back wall is fully sharp while the subject’s arms and hair show faint motion blur. The frame is intentionally off‑center and slightly tilted, capturing a candid, spontaneous moment with accidental cropping. No filters or post‑processing – just raw, unprocessed realism.”*

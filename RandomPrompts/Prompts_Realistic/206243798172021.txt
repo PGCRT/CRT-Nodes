@@ -1,0 +1,32 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a thick, braided ponytail and round glasses sits on a bed in a sunlit bedroom. She wears an open white button‑down shirt tied at the waist, denim shorts, a thin gold necklace, and large hoop earrings. Her hands rest on her thighs, one slightly blurred from motion, as she looks directly at the camera with a relaxed, candid expression.
+
+- **Lighting & Exposure**  
+  Natural daylight from a tall, white‑framed window casts soft, warm light across the scene. Slight overexposure on the window’s glare gives a raw, unprocessed look. No auto‑beauty or filter enhancement—just the camera’s native sensor capture.
+
+- **Camera Settings**  
+  - Lens: 24 mm wide‑angle, short focal length, handheld.  
+  - Focal depth: everything from foreground to background fully sharp (no portrait‑mode blur).  
+  - Shutter speed: 1/60 s (slight motion blur on the subject’s hands).  
+  - ISO: 400 (mid‑day ambient light).  
+  - No bokeh; background remains crisp.
+
+- **Composition & Framing**  
+  - No rule‑of‑thirds intentionality—framing is accidental, slightly off‑center.  
+  - The shot captures the woman from the knees up, with a partial crop that includes a potted plant on the windowsill, a framed landscape painting on the wall, and a green monstera plant in the corner.  
+  - The camera tilts subtly, giving a spontaneous, candid feel.
+
+- **Environment**  
+  - Location: A bright, lived‑in bedroom with light blue walls.  
+  - Time of day: Late morning, sunlight streaming through the window, creating soft shadows.  
+  - Ambient details: A white curtain hangs beside the window; a small terracotta pot with a green plant sits on the sill; a gold‑framed painting of a lake scene hangs on the wall; a tall green monstera plant stands in the corner.
+
+- **Technical Notes**  
+  - Capture in RAW, no color grading or post‑processing.  
+  - Slight tilt and off‑center framing give an unposed, spontaneous vibe.  
+  - All elements—subject, plant, painting, window—are in focus.
+
+**Prompt Summary (structured)**  
+"Capture a candid, unposed photo of a young woman with a thick braided ponytail and round glasses sitting on a bed in a sunlit bedroom. She wears an open white button‑down shirt tied at the waist, denim shorts, a thin gold necklace, and large hoop earrings. Natural daylight from a tall white‑framed window creates soft warm light with slight overexposure. Use a 24 mm wide‑angle lens, handheld, 1/60 s shutter speed, ISO 400—everything fully sharp. Composition is accidental off‑center, slightly tilted, capturing the woman from the knees up along with a potted plant on the windowsill, a gold‑framed landscape painting on the wall, and a green monstera plant in the corner. No filters or post‑processing; raw, realistic look."

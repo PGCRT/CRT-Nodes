@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a short, layered brown bob and soft bangs, sitting cross‑legged on a light‑wood floor. She wears an off‑shoulder, cream‑colored dress patterned with red and black floral motifs; the fabric is slightly ruffled at the sleeves. Her hands are gently clasped around her cheek, fingers curling softly, as if she’s just finished a conversation or is about to speak. A subtle smile plays on her lips, eyes bright and engaged, capturing a candid, mid‑action moment.
+
+- **Facial Features & Expression**  
+  The face is slightly tilted to the left, giving an off‑center, spontaneous feel. The lighting hits the front of her face from a slightly high angle, creating a natural highlight on her forehead and nose, with a faint overexposure that gives the image a raw, unprocessed look.
+
+- **Lighting & Exposure**  
+  Ambient daylight coming from a large, multi‑paned window in the background creates a warm, soft glow. The exposure is slightly overexposed on the subject’s face, but the overall tone remains natural—no filters or heavy color grading. A handheld shake is visible as a slight motion blur around the edges, adding realism.
+
+- **Background & Environment**  
+  The setting is a bright, airy room with light‑wood flooring and a large window that has a grid of six panes. Through the window you can see a blurred outdoor scene of green foliage and a hint of a blue sky, indicating a mid‑afternoon time of day. A simple wooden bench sits against the wall in the left corner, adding context to the space.
+
+- **Lens & Technical Settings**  
+  Use a short focal length (e.g., 24–35 mm) wide‑angle lens. Shoot everything in focus—no bokeh or depth‑of‑field blur—so the background remains sharp. The composition is accidental: no rule‑of‑thirds, just a casual, spontaneous framing that captures the subject’s full body and a portion of the window and bench.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—the subject appears unaware of the camera, mid‑gesture. Slight tilt and partial crop give an intimate, raw feel. The image has zero studio lighting, zero professional composition, zero editorial tone—just a natural, real‑world snapshot.
+
+- **Post‑Processing**  
+  No auto‑HDR or auto‑beauty mode; keep the look raw. Only minor adjustments to exposure and contrast to enhance the natural light. Keep the color palette warm and earthy, with subtle reds in the dress, beige tones in the wood, and a hint of green outside the window.
+
+**Prompt Summary for Generation**  
+"Generate a realistic candid photograph of a young woman with a short brown bob and floral off‑shoulder dress sitting on a light‑wood floor in a bright room. Capture her mid‑gesture with hands clasped around her cheek, slight tilt and partial crop, natural motion blur from handheld shooting. The background shows a large grid‑paned window with outdoor greenery and a wooden bench beside it. Use a short focal length wide‑angle lens, keep everything in focus, no bokeh. Shoot in mid‑afternoon daylight, slightly overexposed on the subject, raw unprocessed look, no filters or color grading."

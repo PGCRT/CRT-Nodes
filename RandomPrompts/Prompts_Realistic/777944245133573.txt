@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman with long, wavy brown hair standing mid‑step on a fluffy white rug in a bright, airy living room. She wears a bright yellow bikini top and matching bottoms, a watch on her left wrist, and a small tattoo of a bird on her right thigh. Her right hand is near her chest, fingers curled as if she’s about to touch her face, while her left arm hangs by her side. She looks slightly off‑camera with a soft, playful expression.
+
+- **Motion & Focus**  
+  Slight motion blur at the knees and hands to suggest natural movement. Everything in focus—no portrait‑mode bokeh. The image has a raw, unprocessed look: no filters, no color grading, just ambient daylight with a hint of overexposure on the wall.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24 mm), short focal length, handheld shot with minor tilt and off‑center framing. No rule‑of‑thirds intentionality—framing is accidental, capturing the subject’s full body plus a portion of the background. Background fully sharp: the white rug, a potted snake plant, a wooden chair with a patterned pillow, and a woven basket on the right.
+
+- **Environment**  
+  A bright, sunlit living room in the late morning. The window on the left lets in natural light that slightly overexposes the wall. A tall green snake plant sits in a white pot near the window. A wooden chair with a zig‑zag pillow rests against the back wall. A white shag rug covers the floor. A woven basket hangs on the right corner. The scene is casual, candid, and unposed.
+
+- **Lighting & Tone**  
+  Natural daylight from the left window, slight overexposure on the wall, warm tones. No studio lighting, no professional composition—just a spontaneous snapshot.
+
+- **Post‑Processing**  
+  Auto‑HDR or auto‑beauty mode off. No filters, no color grading, no post‑processing aesthetic. Keep the raw feel of a real‑life photo.
+
+**Prompt Summary**  
+> “A woman in a yellow bikini stands on a white rug in a bright living room, captured with a wide‑angle handheld lens. She’s mid‑step, slightly blurred at the knees, everything in focus, no filters—raw daylight with a hint of overexposure. The scene includes a potted snake plant by the window, a wooden chair with a patterned pillow, and a woven basket on the side. The shot is candid, accidental framing, no rule‑of‑thirds, all sharp, natural motion blur, and a slight tilt.”

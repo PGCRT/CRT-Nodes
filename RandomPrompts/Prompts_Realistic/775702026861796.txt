@@ -1,0 +1,33 @@
+**Realistic Candid Photography Prompt Framework – “Sofa‑Braid” Variation**
+
+- **Subject & Pose**  
+  A young woman with dark, thick braids that cascade over her shoulders, sitting casually on a beige, plush sofa. Her body is slightly turned toward the camera, one arm relaxed along the back of the couch, the other bent at the elbow, hand resting near her thigh. Her head tilts a little to the side, eyes looking off‑camera, giving an unposed, mid‑action feel.
+
+- **Lighting & Exposure**  
+  Natural daylight from a western window, mid‑afternoon. The light is slightly overexposed at the top of the frame, creating a warm, soft glow on her skin and the couch fabric. No auto‑beauty or filter processing – just raw, unedited capture.
+
+- **Camera Settings**  
+  - Lens: 24 mm wide‑angle, short focal length.  
+  - Aperture: f/5.6 (handheld, slight motion blur).  
+  - Shutter speed: 1/60 s (captures subtle movement).  
+  - ISO: 400 – balanced for ambient light.  
+  - Focus: everything in the frame is sharp – subject, couch, background.
+
+- **Composition & Framing**  
+  - No rule‑of‑thirds intentionality; the composition is accidental, with the subject slightly off‑center and a small tilt to the left.  
+  - The shot is a “partial crop” that cuts off a bit of the sofa’s left arm, adding spontaneity.  
+  - Background is fully sharp – no bokeh or depth‑of‑field blur.
+
+- **Environment**  
+  A cozy living room with a light‑colored wall and a small wooden side table visible on the left. The time of day is late afternoon, giving a warm, slightly hazy daylight tone. A faint window glare is present at the top right, adding a subtle overexposure effect.
+
+- **Texture & Detail**  
+  - The sofa’s fabric shows a soft, slightly worn texture.  
+  - The woman’s skin has natural imperfections – a small smudge on her cheek, a slight wrinkle at the corner of her mouth.  
+  - Her braids are thick and well‑defined, with a few loose strands escaping the braid near her ear.
+
+- **Post‑Processing**  
+  None – raw capture only. No color grading or filters applied. The image retains a natural, unpolished look with slight handheld instability captured in the motion blur.
+
+**Prompt Summary (for AI image generator)**  
+> “A young woman with dark braids sitting casually on a beige sofa in a cozy living room, mid‑afternoon daylight, 24 mm wide‑angle lens, f/5.6, 1/60 s shutter, ISO 400, slight overexposure at top, accidental off‑center framing with small tilt, everything in focus, raw unprocessed look, natural motion blur, no filters.”

@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair, wearing a white off‑the‑shoulder crop top and high‑waisted blue jeans, holding a tall glass of amber beer with a straw in her right hand. She carries a beige leather shoulder bag on her left side, a silver cross necklace hangs around her neck, and a thin bracelet adorns her left wrist. Her face is turned slightly toward the camera, a bright smile on her lips, and she appears to be mid‑step on a city sidewalk.
+
+- **Motion & Focus**  
+  Slight motion blur at the fingertips and the straw, indicating handheld shake. Everything in the frame — subject, background, and foreground — is fully sharp; no portrait‑mode depth‑of‑field blur. The lens is set to a short focal length (≈20 mm) wide‑angle that captures a broad view of the scene without significant bokeh.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑mid‑day sun, producing a soft overexposure on the subject’s face and a subtle highlight on the beer glass. No auto‑HDR or beauty filters; raw, unprocessed look with slight color warmth. The exposure is slightly higher on the foreground to keep the subject bright while keeping the background fully in focus.
+
+- **Environment**  
+  The setting is a bustling downtown street in an American city during late afternoon. Brick buildings line the sidewalk, a green “Coca‑Cola” sign is visible on a storefront, and a few pedestrians are walking in the background — one woman in a floral top and denim shorts, another man in a pink polo shirt. A small tree and a red awning add color contrast. The time of day is around 4 pm, with warm, golden light casting soft shadows.
+
+- **Lens & Technical**  
+  Use a 20‑mm prime lens (or a 24‑mm if available) on a DSLR or mirrorless camera. Shoot in RAW to preserve the raw, unprocessed look. Set the aperture to f/5.6–f/8 for moderate depth of field, ensuring that both subject and background remain sharp. Use a tripod or stable handheld grip to keep the frame steady but allow a slight tilt for spontaneous feel.
+
+- **Composition & Framing**  
+  Capture a candid, unposed moment; the framing is intentionally off‑center, with the subject’s left side slightly cut off by the edge of the frame. The composition does not follow the rule‑of‑thirds — it’s an accidental, natural snapshot that feels spontaneous and real.
+
+- **Post‑Processing**  
+  No filters or color grading applied; only basic auto‑beauty mode turned off. Keep the image in its raw state, with only minimal white balance adjustment if needed. The final output should retain a slight overexposure on the subject’s face and a faint motion blur at the fingertips to emphasize the candid nature of the shot.
+
+**Prompt Summary**  
+“Candid, wide‑angle, short‑focal‑length photograph of a smiling woman in a white off‑shoulder crop top and blue jeans holding a beer glass, walking on a downtown sidewalk at late afternoon. Raw, unprocessed look with slight motion blur on the fingertips, full sharpness across the frame, natural daylight overexposure, no filters. Background includes brick buildings, a Coca‑Cola sign, pedestrians, and a red awning. Capture in RAW, 20 mm lens, f/5.6–f/8 aperture, slight tilt for spontaneous feel.”

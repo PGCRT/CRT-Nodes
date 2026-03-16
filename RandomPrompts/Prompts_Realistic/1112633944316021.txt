@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy dark hair, wearing a light‑denim jacket over a white crop top and black leggings splashed with colorful paint drops. She’s mid‑action, holding a smartphone in her left hand and a wooden spoon in her right, as if she’s about to cook or check a recipe. Her head is slightly tilted downward, eyes focused on the phone screen, giving a candid, unposed feel.
+
+- **Motion & Focus**  
+  Slight motion blur at the fingertips and spoon, indicating handheld instability. Everything in the frame—subject, background, details—is fully sharp; no portrait‑mode bokeh. Capture with a wide‑angle lens (24–35 mm) to keep the entire scene, including kitchen elements, in view.
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window or an open kitchen door, creating a soft, ambient glow. Slight overexposure on the subject’s face and upper body, while the background remains crisp. No auto‑HDR or beauty filters—raw, unprocessed look.
+
+- **Environment**  
+  A modern home kitchen with light‑wood cabinets, a stainless‑steel refrigerator, a white countertop, and a sink visible in the right side. A set of wooden utensils sits in a ceramic jar on the counter. The time of day is late morning, with warm, golden sunlight streaming in, suggesting a cozy, lived‑in atmosphere.
+
+- **Composition & Framing**  
+  No rule‑of‑thirds intentionality—frame the shot loosely, letting the subject occupy the central‑left portion of the frame while the kitchen background extends to the right. Slight tilt and partial crop at the edges for a spontaneous feel. Keep the background fully sharp; no depth‑of‑field blur.
+
+- **Technical Settings**  
+  - Focal length: 35 mm (wide‑angle)  
+  - Aperture: f/4–f/5.6 (mid‑range for sharpness)  
+  - Shutter speed: 1/60–1/100 s (to capture slight motion blur)  
+  - ISO: 400–800 (depending on ambient light)  
+
+- **Final Prompt**  
+  “A candid, unposed photograph of a young woman in a modern kitchen, wearing a denim jacket and paint‑splashed leggings, holding a smartphone and wooden spoon mid‑action. Capture with a 35 mm wide‑angle lens, slight motion blur on the hands, full sharpness throughout, natural daylight with a soft overexposed glow on the subject. The scene includes light‑wood cabinets, a stainless‑steel fridge, and a countertop with utensils, shot at late morning. Frame loosely with a slight tilt, no rule‑of‑thirds, everything in focus, raw and unprocessed.”

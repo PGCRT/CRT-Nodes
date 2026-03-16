@@ -1,0 +1,29 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair, wearing large hoop earrings, standing bare‑against a light‑wood paneled wall. Her hands are gently clasped in front of her torso, fingers slightly curled, as if she’s about to adjust a garment or simply hold herself in a relaxed pose. Her head is tilted down, eyes cast downward, giving an intimate, candid feel.
+
+- **Lighting & Exposure**  
+  Natural daylight from a side window creates a soft, warm glow on her skin. Slight overexposure on the upper body to emphasize the texture of her skin and the subtle sheen of her hair. No auto‑beauty or filter processing—just raw, unedited capture.
+
+- **Camera Settings**  
+  - Lens: 24‑35 mm wide‑angle (short focal length) for a broad field of view.  
+  - Aperture: f/4–f/5.6 (mid‑range) to keep the background fully sharp with no bokeh.  
+  - Shutter speed: 1/60–1/100 s, producing a slight motion blur from handheld instability.  
+  - ISO: 400–800, depending on ambient light; adjust for natural contrast.
+
+- **Composition & Framing**  
+  - No rule‑of‑thirds intentionality—frame the subject slightly off‑center, with the left side of her body cutting close to the left edge of the frame.  
+  - Capture a partial crop that cuts off a bit of the wall above her head and below her knees, giving a spontaneous, “in‑the‑moment” feel.  
+  - Slight tilt (5–10°) to mimic a handheld shot.
+
+- **Environment**  
+  The setting is an interior room with vertical wooden paneling; a white double‑switch plate is visible on the left wall. The time of day is late morning, with warm sunlight streaming from a window on the right, creating gentle shadows and highlights. The ambient air feels crisp, with a faint hint of dust motes dancing in the light.
+
+- **Technical Details**  
+  - Everything in focus—from her fingertips to the top of her head—no portrait‑mode depth‑of‑field blur.  
+  - No bokeh, no post‑processing color grading, just a raw, natural look.  
+  - Slight overexposure on the upper torso to give a subtle halo effect.
+
+- **Prompt Summary**  
+  “A candid, wide‑angle shot of a bare woman with long brown hair and hoop earrings, hands clasped in front of her, standing against a light‑wood paneled wall. Capture the scene with a 24‑35 mm lens at f/5, 1/80 s shutter speed, ISO 600, slight handheld blur, natural daylight from a side window, slight off‑center framing and a small tilt. Keep everything sharp, no filters—raw, unprocessed realism.”

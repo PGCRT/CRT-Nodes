@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wind‑blown brown hair, wearing a black tank top and light denim shorts, captured mid‑step in a casual, spontaneous pose. Her face is slightly turned toward the camera, a natural smile on her lips, with a faint motion blur around her hair to emphasize movement.  
+
+- **Lighting & Exposure**  
+  Slight overexposure from the ambient daylight of late afternoon; the sky shows a soft golden hue with a hint of haze. No auto‑beauty or filter processing—raw, unprocessed look. The exposure is slightly warm, with natural contrast and a tiny vignette from the wide‑angle lens.  
+
+- **Lens & Technical**  
+  24‑mm wide‑angle lens, short focal length, handheld. Everything in focus—from the subject’s face to the background details—no bokeh or depth‑of‑field blur. Slight tilt and off‑center framing give an accidental, candid feel.  
+
+- **Environment**  
+  A residential alleyway behind a brick house, with a wooden shed on the left and a blue trash bin, a pink plastic bag, and a white garbage bag on the right. A man in a gray t-shirt is visible in the background, facing away from the camera, adding to the candid vibe. The ground is concrete, slightly wet, with scattered debris and a small puddle reflecting the sky.  
+
+- **Time of Day & Weather**  
+  Late afternoon, around 5:30 pm, with warm, diffused sunlight coming from the west, creating a slight backlight that lifts the subject’s hair. The weather is clear but not cloudless; a thin layer of clouds drifts across the sky.  
+
+- **Composition Notes**  
+  No rule‑of‑thirds intentionality—framing is accidental and slightly tilted. The shot is a wide‑angle capture that keeps the background fully sharp, from the brick wall to the wooden shed. The composition includes the subject’s left arm extending into the frame, a partial crop that gives a “mid‑action” feel.  
+
+- **Post‑Processing**  
+  Zero studio lighting, zero professional composition, zero editorial tone. Only natural motion freeze or slight blur from handheld instability. No color grading or filters—just raw, realistic imagery.  
+
+**Prompt Summary:**  
+“Candid, unposed selfie of a young woman with long brown hair in a black tank top, mid‑step in a residential alleyway at late afternoon, captured on a 24‑mm wide‑angle lens with slight motion blur and accidental framing; background includes a blue trash bin, pink bag, white garbage bag, and a man in a gray shirt; warm overexposed daylight, everything in focus, raw unprocessed look.”

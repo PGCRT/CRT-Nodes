@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail and bangs, wearing a black leather moto‑jacket and cream cargo pants, captured mid‑step in a casual, unposed stance. Her hands rest lightly at her sides, one slightly bent, as if she’s about to adjust her jacket or grab something from a nearby surface. The jacket is zipped halfway, revealing a hint of her mid‑riff, adding a dynamic, candid feel.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle, late‑afternoon sun creates a soft overexposure on the subject’s face and upper body, with a slight warm tint. The exposure is uneven—the background is a bit brighter than the foreground, giving an authentic, handheld look. No auto‑HDR or beauty filters; the image retains raw, unprocessed detail.
+
+- **Motion & Focus**  
+  A natural freeze of motion with a subtle blur around the edges from a handheld camera, suggesting slight instability. Everything—from the woman’s face to the cargo pockets—remains fully sharp, with no portrait‑mode depth‑of‑field blur. The focus is intentional on the subject but the framing is accidental: a slight tilt and off‑center composition that gives the shot a spontaneous vibe.
+
+- **Lens & Technical**  
+  24 mm wide‑angle lens, short focal length, no bokeh. The background is fully sharp, with no depth‑of‑field isolation. The lens is set to a wide aperture but the entire scene stays in focus.
+
+- **Environment**  
+  Location: A concrete alleyway in an urban loft, with a rough, textured wall and a small window that lets in the afternoon light. Time of day: late afternoon (around 5 pm), with warm, golden hues. Weather: mild, slightly breezy, with a faint haze that adds ambient softness.
+
+- **Composition & Details**  
+  The shot is a “real‑life” candid capture—no rule‑of‑thirds intentionality. The framing is accidental, with the subject slightly off‑center and a partial crop that cuts off the top of her head, emphasizing spontaneity. The background includes a small, cracked concrete wall and a faint sign that reads “LOFT 3”, adding context. The woman’s jacket has a subtle sheen from the leather, and her cargo pants show a slight wrinkle at the thigh, enhancing realism.
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, zero post‑processing aesthetic. Only raw, in‑camera data is preserved, with a slight overexposure on the subject’s upper body to capture the ambient light’s warmth.
+
+**Prompt Summary**  
+“Candid, unposed photo of a woman in a black leather jacket and cream cargo pants, captured mid‑step in an urban loft alley at late afternoon. Natural daylight creates soft overexposure; everything is fully sharp with a 24 mm wide‑angle lens. The shot has slight motion blur from handheld instability, accidental off‑center framing, and no filters or post‑processing—just a raw, realistic capture.”

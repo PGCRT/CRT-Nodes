@@ -1,0 +1,31 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  Two women in a casual, everyday setting: one leaning against a wooden desk, wearing a black leather moto‑jacket and dark jeans, holding a smartphone as if checking a message; the other standing beside her in a pink tee and denim shorts, smiling and leaning on a tall stool. Both appear naturally “mid‑action,” slightly off‑center, with a faint handheld shake that gives a candid feel.
+
+- **Pose & Composition**  
+  - Slight tilt and partial crop—no rule‑of‑thirds intentionality.  
+  - Wide‑angle lens (24–35 mm) capturing the entire scene in full sharpness; background (a bright storefront window, a street outside, a small framed picture on the wall) is entirely in focus.  
+  - No bokeh or depth‑of‑field blur—everything from foreground to background stays crisp.
+
+- **Lighting & Exposure**  
+  - Natural daylight from a large window; slight overexposure on the left side to emphasize the bright window, subtle underexposure on the right for contrast.  
+  - Auto‑HDR off—raw, unprocessed look.  
+  - No color grading or filters; keep the image’s native tones.
+
+- **Environment**  
+  - Location: a modern coffee shop or office break‑room with a wooden desk, computer monitor, keyboard, notebook, and a small framed artwork on the wall.  
+  - Time of day: late morning (around 10:30 AM), warm sunlight streaming through the window.  
+  - Weather: clear, slightly humid; faint motion blur from the wind outside adds texture.
+
+- **Lens & Technical**  
+  - Short focal length (24–35 mm) for a wide‑angle capture.  
+  - Handheld shot with slight instability—natural freeze or mild blur on the subjects’ movement.  
+  - No portrait‑mode subject isolation; all elements from foreground to background are fully sharp.
+
+- **Post‑Processing**  
+  - Zero studio lighting, zero professional composition, zero editorial tone.  
+  - Raw, unprocessed look only—no filters, no color grading, no post‑processing aesthetic.  
+
+**Prompt Summary (for use in a text‑to‑image model)**  
+"Candid, wide‑angle shot of two women in a coffee shop: one in a black leather jacket leaning on a wooden desk with a smartphone, the other in a pink tee standing by a stool; both mid‑action and slightly off‑center. Natural daylight from a large window creates slight overexposure on the left, underexposure on the right. All elements in full focus, no bokeh, raw unprocessed look, handheld shake. 24–35 mm lens, late morning, clear weather."

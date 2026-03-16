@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wind‑blown brown hair, wearing a black mesh crop‑top with a tie‑front and high‑waisted light‑blue jeans. She’s mid‑step, left arm slightly bent, right arm extended, head turned to the right as if she’s just spoken or about to speak. Her expression is natural, unposed, with a subtle smile and eyes focused off‑camera.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. Slight tilt and off‑center framing; partial crop that gives an accidental, handheld feel. No rule‑of‑thirds intentionality. The shot is taken with a wide‑angle lens (24–35 mm), producing a short focal length that keeps the entire scene in focus—no bokeh or depth‑of‑field blur.
+
+- **Environment**  
+  Specific real‑world location: an old European street, with a weathered brick building featuring arched windows and a stone façade in the background. The time of day is late morning, soft sunlight from the west casting gentle shadows. Ambient conditions are mild, with a light breeze that ruffles the woman’s hair and a few scattered leaves on the pavement.
+
+- **Lens & Technical**  
+  Short focal length, wide angle (30 mm). Everything in focus—no portrait‑mode isolation. Slight motion blur from handheld instability, giving a natural “in‑motion” feel. Auto‑HDR or auto‑beauty mode off — raw, unprocessed look. No filters, no color grading, no post‑processing aesthetic. Slight overexposure on the subject’s face to emphasize the ambient light.
+
+- **Post‑Processing**  
+  Zero studio lighting, zero professional composition, zero editorial tone. Keep the image raw and spontaneous. Only subtle adjustments to exposure and contrast; keep the colors natural.  
+
+- **Final Prompt Summary**  
+  “A young woman with long, wind‑blown brown hair, wearing a black mesh crop‑top with a tie‑front and high‑waisted light‑blue jeans, captured mid‑step on an old European street at late morning. The shot uses a 30 mm wide‑angle lens, handheld slight blur, accidental tilt, off‑center framing, everything in focus, raw unprocessed look, no filters or color grading, slight overexposure on the subject’s face, background fully sharp, natural ambient light and weather.”

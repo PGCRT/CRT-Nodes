@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A fit woman with dark hair styled in two high buns, wearing black lace lingerie (tri‑cups with floral detailing and matching bottoms). She is mid‑pose, hands behind her head, elbows bent, shoulders rolled back, body angled slightly to the right. Her face is turned toward the camera but not directly on it—slight off‑center framing.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject appears unaware or mid‑action. Slight tilt and partial crop; no rule‑of‑thirds intentionality. The shot has a raw, unprocessed look: no filters, no color grading, no post‑processing aesthetic. A hint of slight overexposure from ambient light gives a natural, handheld feel.
+
+- **Motion & Focus**  
+  Slight motion blur from handheld instability; everything in focus—no portrait‑mode depth‑of‑field blur. Background is fully sharp, no bokeh.
+
+- **Lens & Technical**  
+  Wide‑angle lens (short focal length, ~24 mm). Auto‑HDR or auto‑beauty mode off. No studio lighting, zero professional composition.
+
+- **Environment**  
+  Specific real‑world location: a small waterfall or fountain in a lush garden. The water is white‑foamy and cascading behind the subject; green mossy rocks are visible on the left side. Time of day: late morning, soft natural light with a slight warm tint. Weather: mild, slightly humid, ambient light creates a gentle glow.
+
+- **Composition Notes**  
+  The frame captures the subject from the mid‑thigh up to the top of her head, with the waterfall filling the background. The left side of the frame shows a patch of green foliage at the top, adding depth. The right side is partially cut off by the edge of the frame—creating an accidental, candid feel.
+
+- **Prompt Summary**  
+  “A fit woman in black lace lingerie posing mid‑action beside a white‑foamy waterfall, hands behind head, hair in high buns, slight tilt and partial crop, wide‑angle lens, handheld blur, fully sharp background, late‑morning natural light, raw unprocessed look.”

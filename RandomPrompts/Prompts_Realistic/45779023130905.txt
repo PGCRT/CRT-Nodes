@@ -1,0 +1,38 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, straight blonde hair lying on a plush, tufted pink bed. Her left hand supports her cheek, elbow bent, while her right arm rests along the bed’s edge. She is nude, with natural skin tone and subtle moisture sheen from a light spray or sweat. Her gaze is downward, slightly to the side, as if she’s about to touch her face or adjust her hair.  
+
+- **Outfit & Accessories**  
+  No clothing—just bare skin. A single small stud earring in her left ear. No jewelry or makeup beyond natural complexion.  
+
+- **Setting & Environment**  
+  The bed has a gold‑trimmed, tufted headboard with a decorative row of pink roses along the top. Behind the headboard, a soft, draped curtain in a muted pink tone hangs from a gold rod. The room is lit by a bright, natural daylight coming from a large window on the left, creating a slight overexposure on the upper right of the frame.  
+
+- **Time of Day & Ambient Light**  
+  Mid‑afternoon, around 3 pm. The light is warm, slightly hazy, with a soft glow that gives a natural auto‑HDR feel. The ambient temperature is 22 °C, and the air is still, so the camera’s handheld shake is minimal but present.  
+
+- **Lens & Technical Settings**  
+  - Focal length: 24 mm (wide‑angle, short focal length).  
+  - Aperture: f/4.0 (wide opening for a fully sharp background).  
+  - Shutter speed: 1/60 s (slight motion blur from handheld).  
+  - ISO: 400 (for natural contrast).  
+  - No bokeh; everything in focus, from foreground to background.  
+  - Auto‑HDR off—raw, unprocessed look.  
+
+- **Composition & Framing**  
+  The shot is slightly tilted to the right, off‑center, with a partial crop that cuts off the left side of the headboard. The rule‑of‑thirds is intentionally ignored; the subject’s head rests near the center of the frame, while her body extends toward the lower right corner.  
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Slight tilt and partial crop give a raw, natural feel. No rule‑of‑thirds intentionality; the framing is accidental, as if the photographer was just capturing a moment.  
+
+- **Imperfections & Details**  
+  - Slight motion blur on the woman’s left hand, indicating handheld shake.  
+  - Tiny smudge of dust on the bed’s fabric near the lower left corner.  
+  - A faint reflection of a lamp on the headboard’s gold trim.  
+
+- **Post‑Processing**  
+  No filters, no color grading, no post‑processing aesthetic—just raw, in‑camera data with slight overexposure on the upper right.  
+
+**Prompt Summary (for text‑to‑image generation)**  
+“Candid photo of a nude woman with long blonde hair lying on a tufted pink bed, hand supporting cheek, elbow bent, body extending to lower right. She wears a single stud earring. The bed has a gold‑trimmed headboard adorned with a row of pink roses; behind it a muted pink curtain hangs from a gold rod. Mid‑afternoon daylight from the left creates slight overexposure on the upper right. 24 mm wide‑angle lens, f/4.0, 1/60 s shutter, ISO 400—everything in focus, no bokeh. Slight tilt and partial crop, accidental framing. Raw, unprocessed look with slight motion blur on the hand.”

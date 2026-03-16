@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair featuring subtle blonde highlights, wearing a sleek black blazer over a matching black bralette and high‑waisted trousers. She is crouched low on a concrete sidewalk at dusk, one knee bent, holding a tall glass of white wine near her lips as if mid‑sip. Her left hand rests on her thigh, fingers slightly curled, while her right hand grips the glass. She wears black strappy high‑heeled sandals that peek out from beneath her trousers. A gold hoop earring dangles from her left ear, catching the light.
+
+- **Action & Motion**  
+  Capture a slight motion blur as she brings the glass to her mouth—hand slightly off‑center, creating a natural, spontaneous feel. The blur should be subtle, indicating handheld instability but not overly pronounced.
+
+- **Framing & Composition**  
+  Use a wide‑angle lens (24–35 mm) to keep the entire scene in focus, from her feet to the top of her head. Frame the shot so that she occupies roughly two‑thirds of the frame, with the remaining third left open for ambient detail. No rule‑of‑thirds intentionality—accidental, off‑center framing. The composition should feel candid, as if she is unaware of the camera.
+
+- **Lighting & Exposure**  
+  Capture at twilight, with the city’s streetlights and ambient sky providing a soft, warm glow. Slight overexposure on the subject’s face and upper body to emphasize the white wine’s brightness, while the lower part of the frame remains slightly underexposed. Avoid any auto‑HDR or beauty filters—keep the look raw and unprocessed.
+
+- **Environment**  
+  The background is a muted urban street: a concrete sidewalk, a faint storefront sign, and a distant traffic light that just flickers on. A small green glass wine glass sits on the ground near her left heel, adding a subtle detail. The time of day is late evening (around 7 pm), with the sky still retaining a soft blue‑purple hue.
+
+- **Lens & Technical**  
+  Short focal length (30 mm) for wide coverage, no bokeh—everything from foreground to background stays fully sharp. Use a handheld camera with a tripod or monopod for stability but keep the shot “live” and natural. No portrait mode or subject isolation; all elements are in focus.
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, zero post‑processing aesthetic. Keep the image’s dynamic range natural, preserving the slight overexposure/underexposure nuance. If you do edit, keep it minimal—just a subtle contrast boost and a mild vibrancy lift.
+
+- **Final Prompt Summary**  
+  “A young woman in a black blazer and trousers crouches on a concrete sidewalk at dusk, sipping white wine from a tall glass. Her hair sways slightly, her hand near her lips, a green wine glass rests on the ground beside her heel. Capture with a 30 mm wide‑angle lens, slight motion blur, accidental off‑center framing, and a raw, unprocessed look. The scene is fully sharp, no bokeh, no filters—just a candid, spontaneous moment frozen in time.”

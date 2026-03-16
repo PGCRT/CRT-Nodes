@@ -1,0 +1,28 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy blonde hair tied in a loose braid, lying supine on a white bed sheet. She’s wearing a black lace bra and matching panties, her hands gently clasped over her chest. Her eyes are closed, face relaxed, as if mid‑dream or just waking. The camera is positioned slightly above her body, capturing a full‑body shot that includes her head, torso, and legs, with the red pillow behind her head visible in the upper left corner.
+
+- **Lighting & Exposure**  
+  Natural daylight from a western window, mid‑afternoon. Slight overexposure on the face and chest, giving a warm, soft glow. No auto‑HDR or beauty filters—raw, unprocessed look. The exposure is a little bright at the top, but the lower body remains crisp.
+
+- **Lens & Technical**  
+  24 mm wide‑angle lens, f/3.5, handheld. Everything in focus from head to toe; no bokeh or depth‑of‑field blur. Slight motion blur on the hands and hair, indicating a casual, spontaneous capture. The framing is off‑center: the left side of the body is slightly cut off by the edge of the frame.
+
+- **Environment**  
+  A bright, airy bedroom with a white bed sheet and a deep red pillow. The time of day is late afternoon, with warm sunlight streaming in from the west, creating soft shadows. The background is a plain wall, no distractions.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Slight tilt to the left, partial crop on the right side of the body. No rule‑of‑thirds intentionality; the composition feels accidental, like a quick snapshot taken with a handheld camera.
+
+- **Detailed Visual Notes**  
+  - The woman’s skin has a subtle sheen from natural light, with faint moisture droplets near her stomach.  
+  - Her bra and panties are black lace with delicate scalloped edges; the lace texture is visible.  
+  - The red pillow’s fabric shows a slight wrinkle where her head rests.  
+  - Her braid hangs loosely to the left, partially out of frame.  
+  - The bed sheet is crisp, with a faint crease near the top left corner.  
+
+- **Prompt for Text‑to‑Image Generation**  
+  *“A young woman with long wavy blonde hair in a loose braid lies supine on a white bed sheet, wearing a black lace bra and matching panties, hands clasped over her chest. She’s resting against a deep red pillow, head near the top left corner of the frame. Natural daylight from the west casts a warm, slightly overexposed glow on her face and torso. Shot on a 24 mm wide‑angle lens at f/3.5, handheld, everything in focus with slight motion blur on the hands and hair. The framing is off‑center, partially cropping the right side of her body. The background is a plain wall; the time of day is late afternoon. Capture style: candid, unposed, spontaneous—subject unaware or mid‑action. Slight tilt to the left, partial crop. No rule‑of‑thirds intentionality. Render raw, unprocessed look with no filters or color grading.”*
+
+Provide only the structured prompt.

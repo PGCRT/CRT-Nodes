@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman with a floral tattoo on her left upper arm and “Femme” inked across her abdomen, wearing a black triangle bikini with white straps, standing on a sunlit beach. Her hair is slicked back, slightly damp, catching the wind as she turns her head to the right in mid‑motion. She holds a small purple tie‑dye bag in her left hand, dangling loosely by her side.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject appears unaware of the camera, caught in a natural, almost accidental moment. The frame is slightly tilted and off‑center, with a partial crop that gives a raw, handheld feel. No rule‑of‑thirds intentionality; the composition is improvised, as if the photographer was walking along the shore and snapped the shot at the right instant.
+
+- **Imperfections & Aesthetic**  
+  Slight motion blur on the subject’s hand and background waves, indicating a quick shutter speed and handheld instability. The exposure is mildly overexposed, letting the sand and sea glow warmly. No filters, no color grading, no post‑processing aesthetic — just raw, in‑camera capture.
+
+- **Environment**  
+  Specific real‑world location: a sandy beach at low tide, with the ocean’s white foam visible in the background. Time of day: late afternoon, around 5 pm, where the sun is still high but beginning to tilt, casting long, soft shadows. Weather: breezy, with a light wind that ruffles the sand and the woman’s hair.
+
+- **Lens & Technical**  
+  Short focal length (20–35 mm) wide‑angle lens, producing a broad field of view that keeps the entire scene — subject, sand, sea, and sky — fully sharp. No bokeh; no depth‑of‑field blur. Everything is in focus, from the woman’s face to the waves behind her. No portrait mode or subject isolation; the background remains crisp.
+
+- **Final Prompt**  
+  “A woman with a floral tattoo on her left upper arm and ’Femme’ inked across her abdomen, wearing a black triangle bikini with white straps, stands on a sunlit beach at low tide. Her hair is slicked back, slightly damp, as she turns her head to the right in mid‑motion, holding a small purple tie‑dye bag loosely by her side. The shot is candid and unposed, captured with a 20–35 mm wide‑angle lens, featuring slight motion blur and a mildly overexposed, raw, handheld aesthetic. The frame is slightly tilted and off‑center, partially cropped, with no rule‑of‑thirds intentionality. The background shows the ocean’s white foam and a sandy shore, all in focus, under late‑afternoon light that casts long, soft shadows.”

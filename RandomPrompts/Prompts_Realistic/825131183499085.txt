@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, sun‑kissed blonde hair, bare‑shouldered and mid‑gesture, hands raised to her forehead as if shielding her eyes from the bright sky. Her face is turned upward, mouth slightly open in a candid laugh or surprise, capturing a spontaneous moment. The shot should feel “in‑motion” with a subtle handheld blur around the edges, but the background remains fully sharp—no portrait‑mode depth‑of‑field blur.
+
+- **Lighting & Exposure**  
+  Natural daylight, mid‑afternoon, with a slight overexposure on the subject’s front side to emphasize the warmth of the sun. No auto‑beauty or filter enhancements—raw, unprocessed look. The lighting should create soft highlights on her shoulders and neck, with a faint halo of light around her hair.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm), short focal length to keep the framing tight yet expansive. Everything in focus—no bokeh, no subject isolation. Slight tilt and off‑center composition; the frame is not intentionally rule‑of‑thirds aligned but rather a spontaneous, accidental crop that gives the image a candid feel.
+
+- **Environment**  
+  A sunlit park or meadow, with a slightly blurred line of trees and a hint of a pathway in the background. The time of day is late afternoon, creating warm, golden hues. Ambient conditions are breezy, with a faint motion blur on the subject’s hair and hands to suggest movement.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Imperfections encouraged: slight tilt, off‑center framing, partial crop. No rule‑of‑thirds intentionality — accidental framing. Zero studio lighting, zero professional composition, zero editorial tone. Natural motion freeze or slight blur from handheld instability.
+
+- **Post‑Processing**  
+  No filters, no color grading, no post‑processing aesthetic. Only raw capture data, with a slight auto‑HDR touch to brighten the subject’s front while keeping the background crisp.  
+
+**Prompt Summary for Generation**  
+“Generate a realistic candid photo of a bare‑shouldered woman with long blonde hair, hands raised to her forehead, mid‑laugh, captured with a wide‑angle lens at mid‑afternoon in a sunlit park. The image should have slight motion blur on the subject’s hands and hair, but a fully sharp background; everything in focus. Use natural daylight with a slight overexposure on the subject, no filters or color grading, raw look only. Frame it off‑center with accidental tilt, partial crop, and keep the background crisp—no bokeh.”

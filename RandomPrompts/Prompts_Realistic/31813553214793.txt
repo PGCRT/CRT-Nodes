@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman with a high ponytail, wearing a black lace bra and matching thong, leaning back against a red‑brick wall. Her hands are placed on the bricks on either side of her torso, elbows bent, body slightly arched. She is mid‑turn, as if she just finished a dance move or is about to step forward.  
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject appears unaware of the camera, caught in a natural moment. Slight tilt and off‑center framing give an accidental, handheld feel. The shot is a partial crop that does not follow the rule‑of‑thirds; the edges cut off the top of her head and the lower part of her thighs.  
+
+- **Motion & Exposure**  
+  A subtle motion blur conveys movement, as if the camera was slightly unsteady. The exposure is mildly overexposed on the bright brick background, with a raw, unprocessed look—no auto‑HDR or beauty filters, just natural ambient light.  
+
+- **Environment**  
+  Location: an urban alleyway with a weathered red‑brick wall; the wall shows a mix of dark and light bricks, a few mortar lines visible. Time of day: late afternoon, soft sunlight from the west casts gentle shadows. Weather: clear, slightly humid air, no wind.  
+
+- **Lens & Technical**  
+  Short focal length (24 mm) wide‑angle lens; everything is in focus—no bokeh, no depth‑of‑field blur. The background bricks are fully sharp, the subject’s skin and lace details crisp. No portrait‑mode “subject isolation.”  
+
+- **Composition Notes**  
+  The frame captures the woman from a low angle, emphasizing her back and the texture of the brick wall. Her hair is tied in a messy bun, a few strands escaping. She wears a thin silver necklace and hoop earring. The image has a slight overexposure on the upper part of her back, giving it a natural, raw feel.  
+
+- **Final Prompt**  
+  “A woman with a high ponytail, wearing a black lace bra and matching thong, leaning back against a red‑brick wall in an urban alleyway; her hands rest on the bricks on either side of her torso, elbows bent, body slightly arched, mid‑turn. Candid, unposed, spontaneous capture with slight tilt and off‑center framing, partial crop. Subtle motion blur from handheld instability, mild overexposure on the brick background. Late afternoon sunlight, clear weather. 24 mm wide‑angle lens, everything in focus—no bokeh. Raw, unprocessed look, no filters.”

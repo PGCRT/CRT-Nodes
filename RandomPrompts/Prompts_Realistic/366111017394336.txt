@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair, wearing a light‑denim cropped jacket over a white bikini top and off‑white cargo pants, stands mid‑gesture on a residential street. Her hands are raised to the back of her head as if she’s just finished a playful pose or is adjusting her hair. She’s looking slightly off‑camera with a casual, confident expression.
+
+- **Motion & Focus**  
+  Slight motion blur at the edges from handheld instability; everything in focus—no portrait‑mode depth‑of‑field blur. The image has an auto‑HDR feel but no color grading or filters—just raw, natural lighting.
+
+- **Lighting & Exposure**  
+  Natural daylight, late‑afternoon sun creating a warm, slightly overexposed highlight on the subject’s face and jacket. Ambient light is soft, with a few leaves and a white car in the background adding depth.
+
+- **Environment**  
+  A suburban street lined with single‑family homes; a white sedan is parked on the left, a red SUV on the right. Trees and a small patch of grass are visible behind the woman. The time of day is early evening, around 5 pm, giving a golden hue to the scene. Weather is clear, light breeze, no rain.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm) wide‑angle lens, all elements fully sharp—no bokeh. The framing is accidental: slightly tilted, off‑center, and partially cropped on the right side where a glimpse of another person’s arm appears. No rule‑of‑thirds intentionality.
+
+- **Composition Notes**  
+  Capture a candid, unposed moment; the subject is mid‑action, not aware of the camera. Encourage slight tilt and partial crop for a raw, spontaneous feel. Keep background fully sharp—no depth‑of‑field blur. The overall look should feel like a real‑life snapshot taken with a handheld camera, no studio lighting, no professional composition, no editorial tone.
+
+**Prompt Summary**  
+“Candid photo of a woman in a denim jacket and cargo pants on a suburban street at late afternoon, slight motion blur, fully sharp background, wide‑angle lens, accidental framing, raw natural lighting, no filters—capture the spontaneous, unposed moment.”

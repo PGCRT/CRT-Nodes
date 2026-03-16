@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a light‑brown, half‑high ponytail, wearing a white strap‑on top and dark high‑waist shorts, captured mid‑turn on a city sidewalk. Her back is slightly angled toward the camera, head turned to the side with a subtle smile, as if she’s just finished a quick jog or is about to pick something up. The pose is spontaneous and unposed; her shoulders are relaxed, and her left arm hangs naturally by her side.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. Slight tilt and off‑center framing give a casual, handheld feel. The shot has a slight motion blur on the background to suggest movement, but everything remains fully sharp (no portrait‑mode blur). No rule‑of‑thirds intentionality; the composition is accidental, with the subject’s left side slightly cut off by the frame edge.
+
+- **Environment**  
+  Specific real‑world location: a sunny afternoon on a brick‑lined city street. The background shows a pink‑tone building with a dark window, a concrete sidewalk, and a red “STOP” sign in the distance. Trees line the street, their leaves slightly blurred by wind. The time of day is late morning (around 10:30 AM), with warm, high‑angle sunlight casting soft shadows. Weather is clear, with a light breeze.
+
+- **Lens & Technical**  
+  Short focal length (24–35 mm) wide‑angle lens. No bokeh; the background is fully sharp, no depth‑of‑field blur. The image has a slight overexposure on the upper part of the frame to capture the ambient light. Auto‑HDR or auto‑beauty mode off — raw, unprocessed look. No filters, no color grading, no post‑processing aesthetic. The exposure is natural, with a slight warmth to the tones and a faint grain from the camera’s sensor.
+
+- **Lighting & Color**  
+  Natural daylight, slightly high‑angle, creating soft highlights on the woman’s back and shoulder. Slight overexposure on the upper part of the frame gives a warm glow. No studio lighting; zero professional composition, zero editorial tone. The color palette is natural: earthy pinks from the building, green from the trees, and a hint of red from the stop sign.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, partial crop on the left side, and a faint motion blur on the background to suggest movement. The woman’s hair has a slight messiness, with a few strands escaping the ponytail. Her smile is subtle, and her eyes are focused on something off‑camera, adding to the candid feel.
+
+- **Prompt Summary**  
+  “A young woman in a white strap‑on top and dark shorts, captured mid‑turn on a sunny city sidewalk at late morning, with a slight tilt and accidental framing. The background shows a pink building, concrete sidewalk, and a red stop sign, all fully sharp with no bokeh. Shot on a 24–35 mm wide‑angle lens, with natural daylight and a faint overexposure on the upper frame. Raw, unprocessed, candid, spontaneous, with slight motion blur from handheld instability.”

@@ -1,0 +1,16 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with shoulder‑length dark hair, wearing a light gray zip‑up hoodie and high‑waisted blue jeans, captured mid‑step in a casual, unposed stance. Her face is slightly turned toward the camera, eyes focused forward, mouth relaxed, with a natural, unfiltered expression. The hoodie zipper is partially open, revealing a hint of her mid‑torso. She’s holding a smartphone in her right hand, angled as if taking a selfie, but the phone is out of frame—only her arm and part of the device are visible.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. Slight motion blur on the hands and phone, indicating handheld instability. No filters, no color grading, no post‑processing aesthetic. A slight overexposure in the highlights to keep the ambient light warm. The framing is off‑center, with a slight tilt to the left, creating a casual, “in‑the‑moment” feel.
+
+- **Environment**  
+  Specific real‑world location: an outdoor alleyway beside a brick building. The brick wall runs vertically behind her, showing a pattern of reddish‑brown bricks with subtle weathering. The time of day is late afternoon, around 4 pm, with warm, golden sunlight casting soft shadows on the wall and on the subject’s face. A few leaves from a nearby tree are visible at the top left corner, adding a natural element.
+
+- **Lens & Technical**  
+  Short focal length (20–35 mm), wide‑angle lens. No bokeh; background fully sharp—everything in focus, from the brick wall to the subject’s face. No portrait mode or subject isolation. The image has a raw, auto‑HDR look with auto‑beauty mode off. Slight overexposure in the highlights gives a natural, unpolished feel. The composition is accidental: no rule‑of‑thirds intentionality—just a casual snapshot that feels spontaneous and genuine.
+
+- **Details & Imperfections**  
+  Slight tilt and partial crop on the right side of the frame. The hoodie’s zipper is slightly askew, revealing a small portion of her abdomen. Her left hand is relaxed by her side, with a faint motion blur. The lighting creates a warm glow on her skin and a subtle highlight on the hoodie’s fabric. The brick wall shows a mix of light and shadow, adding texture. The overall look is a realistic, candid photograph that feels like a genuine moment captured in everyday life.

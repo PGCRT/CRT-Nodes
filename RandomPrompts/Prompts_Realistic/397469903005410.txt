@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, sun‑kissed blonde curls, wearing a thin‑strapped brown top and distressed denim shorts, captured mid‑turn as she leans back against a white shelving unit in a brightly lit walk‑in closet. Her left hand rests on her hip, a black beaded bracelet catching the light, while her right arm is slightly bent, creating a subtle diagonal line that leads the eye across the frame. She’s smiling broadly, eyes bright, head tilted to the side, as if she just finished a quick outfit check and is about to grab a shoe from the shelf.
+
+- **Lighting & Exposure**  
+  Natural daylight coming from a skylight above, creating a soft overexposed halo around her hair and a gentle lens flare that drifts across the upper right corner. Slight handheld shake gives a natural motion blur on the edges; the exposure is slightly warm, with a hint of golden hour warmth. No auto‑beauty or filter enhancement—just raw, unprocessed imagery.
+
+- **Environment**  
+  The setting is a cluttered but organized closet: white shelves line both sides, stocked with an array of clothing items, cans of spray paint, boxes of snacks, and a row of shoes on the lower shelf. A small window at the top left lets in bright natural light, casting sharp reflections on the glossy floor tiles. The time of day is late afternoon, as indicated by the warm, slightly diffused sunlight.
+
+- **Lens & Technical**  
+  Shot with a wide‑angle lens (24‑35 mm) to capture a broad view of the scene, keeping everything in focus from foreground to background. No bokeh—every element, from the hanging shirts to the canisters, is sharply rendered. The composition is intentionally off‑center and slightly tilted, giving it a candid, spontaneous feel. The framing is a “partial crop” that cuts off the top of the skylight and the lower edge of the shelf, emphasizing the subject’s mid‑body and creating a dynamic, informal look.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Slight tilt, off‑center framing, partial crop. No rule‑of‑thirds intentionality—accidental framing that feels natural and unscripted. Zero studio lighting, zero professional composition, zero editorial tone. Natural motion freeze or slight blur from handheld instability.
+
+- **Post‑Processing**  
+  Auto‑HDR or auto‑beauty mode off — raw, unprocessed look. Slight overexposure on the upper right to highlight the subject’s hair, with a faint lens flare that adds depth. No color grading or filters—just the natural tones of the scene.
+
+- **Final Prompt**  
+  “A young woman with long, sun‑kissed blonde curls, wearing a thin‑strapped brown top and distressed denim shorts, captured mid‑turn as she leans back against a white shelving unit in a brightly lit walk‑in closet. Her left hand rests on her hip, a black beaded bracelet catching the light, while her right arm is slightly bent, creating a subtle diagonal line that leads the eye across the frame. She’s smiling broadly, eyes bright, head tilted to the side, as if she just finished a quick outfit check and is about to grab a shoe from the shelf. Natural daylight coming from a skylight above creates a soft overexposed halo around her hair and a gentle lens flare that drifts across the upper right corner. Slight handheld shake gives a natural motion blur on the edges; the exposure is slightly warm, with a hint of golden hour warmth. The setting is a cluttered but organized closet: white shelves line both sides, stocked with an array of clothing items, cans of spray paint, boxes of snacks, and a row of shoes on the lower shelf. A small window at the top left lets in bright natural light, casting sharp reflections on the glossy floor tiles. The time of day is late afternoon, as indicated by the warm, slightly diffused sunlight. Shot with a wide‑angle lens (24‑35 mm) to capture a broad view of the scene, keeping everything in focus from foreground to background. No bokeh—every element, from the hanging shirts to the canisters, is sharply rendered. The composition is intentionally off‑center and slightly tilted, giving it a candid, spontaneous feel. The framing is a partial crop that cuts off the top of the skylight and the lower edge of the shelf, emphasizing the subject’s mid‑body and creating a dynamic, informal look.”

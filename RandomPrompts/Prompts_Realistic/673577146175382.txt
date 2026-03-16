@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**: A young woman with shoulder‑length, sun‑kissed brown hair, wearing an olive‑green crop top and high‑waisted denim jeans, captured mid‑turn as she leans against a large glass window. Her left hand rests on her hip, fingers slightly curled, while her right arm is bent at the elbow, holding a small white cup or mug. She smiles softly, eyes cast downward toward her wrist, creating a candid, unposed feel.
+
+- **Lighting & Exposure**: Warm mid‑afternoon sunlight streams from the left, producing a gentle overexposure on the subject’s back and a subtle lens flare that fades into the window. The exposure is slightly uneven—bright highlights on the hair and shoulders, with a mild underexposed tone in the lower jeans, giving a raw, unprocessed look.
+
+- **Motion & Focus**: A slight motion blur around the edges from handheld instability, but the entire frame stays fully sharp—no portrait‑mode depth of field. The background (a blurred cityscape with palm trees and a distant building) is in focus, emphasizing a wide‑angle capture.
+
+- **Composition & Framing**: No rule‑of‑thirds intentionality—the framing is accidental, slightly off‑center, with the subject’s left side cutting close to the top edge of the frame. The composition uses a short focal length (35 mm) wide‑angle lens, keeping everything in focus and avoiding bokeh.
+
+- **Environment & Time**: The scene is set on a sunny balcony or terrace at mid‑afternoon, with the sun high but not directly overhead. The weather is clear, with a light haze that adds a soft glow to the background.
+
+- **Lens & Technical Specs**: 35 mm wide‑angle lens, f/4 aperture, handheld shot with a slight tilt. No auto‑HDR or auto‑beauty mode—just raw, unprocessed imagery. The image has no filters, color grading, or post‑processing aesthetic.
+
+- **Candid Touches**: The subject appears unaware of the camera, mid‑action, with a natural, spontaneous vibe. Slight tilt and partial crop give an imperfect, real‑life feel.
+
+**Prompt Summary:**
+
+> “A candid, unposed photo of a young woman in an olive‑green crop top and denim jeans leaning against a glass window on a sunny balcony at mid‑afternoon. Warm sunlight creates a soft overexposure on her back, with a subtle lens flare. Shot on a 35 mm wide‑angle lens, handheld with slight motion blur but fully sharp background. The framing is accidental and off‑center, no rule‑of‑thirds, no filters—raw, natural, real‑life aesthetic.”

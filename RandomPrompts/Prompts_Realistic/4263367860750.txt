@@ -1,0 +1,23 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, athletic woman with long, wavy blonde hair, wearing a thin‑strapped orange‑black bikini, sitting on a zebra‑patterned rug in a sunlit living room. She’s mid‑smile, leaning forward slightly, hands on the floor, knees bent, and her body angled toward the camera as if she just finished a yoga flow or a quick photo session.  
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject is unaware of the camera, captured in a natural “mid‑action” moment. Slight tilt and off‑center framing give an accidental, handheld feel. The shot has a raw, unprocessed look: no filters, no color grading, no post‑processing aesthetic. A hint of overexposure from the bright window light gives a warm, natural glow.  
+
+- **Environment**  
+  Specific real‑world location: a bright, modern living room with a large window on the back wall, white curtains, light wooden flooring, and a zebra‑print rug. Time of day: late morning, soft natural daylight with a slight haze from the window’s ambient light. Weather: clear, warm, breezy.  
+
+- **Lens & Technical**  
+  Short focal length (24–35 mm), wide‑angle lens. No bokeh; background fully sharp — everything in focus, no portrait‑mode depth‑of‑field blur. Slight motion blur from handheld instability freezes the subject’s movement. The composition is not rule‑of‑thirds intentional; it’s a spontaneous, slightly crooked frame that captures the whole scene in one go.  
+
+- **Additional Details**  
+  - Auto‑HDR or auto‑beauty mode off — raw, unprocessed look.  
+  - Slight overexposure or underexposure depending on ambient light (choose overexposure for a warm, bright feel).  
+  - Wide lens: capture the entire rug pattern and window frame in the shot.  
+  - No rule‑of‑thirds intentionality — accidental framing that includes a bit of the curtain and floor to keep context.  
+  - Zero studio lighting, zero professional composition, zero editorial tone.  
+
+**Prompt Summary**  
+“Candid, wide‑angle, handheld shot of a tall woman in an orange‑black bikini sitting on a zebra rug in a sunlit living room, mid‑smile, slight tilt and off‑center framing, raw unprocessed look with slight overexposure, all elements in focus, no bokeh, short focal length 24–35 mm, late‑morning natural light, background fully sharp.”

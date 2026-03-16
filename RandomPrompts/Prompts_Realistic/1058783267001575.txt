@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark, wavy hair sitting on a rough seaside rock, facing the camera with a relaxed, candid expression. She wears a black bikini top and shorts; her arms are open to the side, revealing a detailed tattoo of roses along her left arm and a heart motif on her chest. Her right arm shows a bird tattoo, and her left knee has a floral design. She holds a small object (a seashell or stone) in her hands, which rest on her lap.
+
+- **Lighting & Exposure**  
+  Slight overexposure from mid‑afternoon sunlight; the scene is raw and unprocessed, with no auto‑HDR or beauty filters. The exposure is slightly warm, giving a natural golden hue. The lens is handheld, producing a subtle motion blur on the subject’s hands and background.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24 mm) with a short focal length; everything from foreground to background is fully sharp—no bokeh or depth‑of‑field blur. No portrait‑mode isolation; the composition is accidental, slightly tilted, and off‑center.
+
+- **Environment**  
+  Coastal rock formation on a sandy beach, with the ocean visible in the background. The time of day is late afternoon, creating soft, warm light that casts gentle shadows. Weather is mild, with a light breeze causing slight motion in the woman’s hair and the waves.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject appears unaware of the camera or mid‑action. Imperfections are encouraged: slight tilt, off‑center framing, partial crop. No rule‑of‑thirds intentionality—accidental framing that gives a natural, documentary feel. Natural motion freeze or slight blur from handheld instability.
+
+- **Detailed Prompt**  
+  “A young woman with long dark wavy hair sits on a rough seaside rock in late afternoon sunlight, wearing a black bikini top and shorts. Her left arm displays a rose tattoo, her chest features a heart motif, and her right arm shows a bird design; she holds a small seashell in her hands that rest on her lap. The scene is captured with a 24 mm wide‑angle lens, everything fully sharp, slight motion blur from handheld shake, and a subtle overexposure that gives a warm golden tone. The background shows a sandy beach and the ocean, with a light breeze moving her hair. The composition is accidental and slightly tilted, off‑center framing that creates a candid, documentary feel.”

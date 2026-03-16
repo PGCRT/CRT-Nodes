@@ -1,0 +1,29 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy blonde hair sitting on a neatly made bed in a bright, sunlit bedroom. She’s wearing a tight, white, sleeveless bodycon dress that clings to her curves, capturing a casual yet elegant look. Her hands rest on the bedsheet on either side of her hips, knees bent, and she’s leaning slightly forward as if mid‑movement. The pose is candid—she appears unaware of the camera, giving a natural, spontaneous feel.
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window to the left creates a soft, warm glow; slight overexposure on the upper body to emphasize the bright white dress. No auto‑HDR or beauty filters—just raw, unprocessed light. The exposure is slightly uneven, with the background a bit brighter than the foreground, giving an authentic, handheld vibe.
+
+- **Camera & Lens**  
+  Wide‑angle lens (24‑35 mm) with a short focal length to capture a broad view of the scene. Everything is in focus—no bokeh or depth‑of‑field blur. The shot has slight motion blur from handheld instability, and the framing is off‑center, not following the rule of thirds; it’s an accidental, spontaneous composition.
+
+- **Environment**  
+  Location: A bright, modern bedroom with a tufted beige headboard, white pillows, and a large window that lets in natural light. Light brown curtains hang beside the window, partially drawn. The bed has crisp white sheets that ripple slightly where she’s sitting. A small side table and a radiator are visible near the window, adding realism.
+
+- **Time of Day & Weather**  
+  Mid‑afternoon, when the sun is high but not directly overhead, creating soft shadows. The weather outside is clear, with a faint hint of greenery visible through the window, suggesting a calm, lazy afternoon.
+
+- **Technical Details**  
+  - Focal length: 35 mm (wide‑angle)  
+  - Aperture: f/4.0 (wide opening for sharpness)  
+  - Shutter speed: 1/60 s (slight motion blur)  
+  - ISO: 400 (for natural contrast)  
+  - No portrait mode or subject isolation—everything from foreground to background is fully sharp.
+
+- **Composition Notes**  
+  The shot is slightly tilted, with the bed’s headboard leaning to the right, giving an informal, candid feel. The framing cuts off the left side of the window, creating a partial crop that adds to the spontaneous vibe. The background is fully in focus, so the viewer can see the details of the pillows, sheets, and the radiator.
+
+- **Final Prompt**  
+  “A young woman with long wavy blonde hair sits on a bright white bed in a sunlit bedroom, wearing a tight white sleeveless dress. Her hands rest on the sheet on either side of her hips, knees bent, leaning slightly forward as if mid‑movement. Natural daylight from a large window to the left creates a soft warm glow with slight overexposure on the upper body. Shot on a 35 mm wide‑angle lens at f/4.0 and 1/60 s, everything in focus with slight motion blur from handheld instability. The composition is off‑center and slightly tilted, capturing a candid, spontaneous moment. The background includes a tufted beige headboard, white pillows, and a small side table near a window with light brown curtains. Mid‑afternoon lighting, clear weather, all details sharp.”

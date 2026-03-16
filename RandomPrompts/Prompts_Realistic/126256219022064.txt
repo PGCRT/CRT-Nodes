@@ -1,0 +1,33 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, athletic woman with long, straight brown hair, wearing a sheer red lace bra and matching red lace bikini bottoms. She stands in a relaxed, mid‑action pose, slightly turned to the side, hands hanging loosely by her thighs, feet planted on a wooden floor. Her face is turned toward the camera but not directly at it—she’s “unaware” of the lens, giving a candid feel.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action.  
+  Slight motion blur on the hands and lower body to suggest handheld shake.  
+  No filters, no color grading, no post‑processing aesthetic.  
+  Slight overexposure in the upper torso to keep ambient light warm.  
+  Wide‑angle lens (24–35 mm) for a short focal length, wide‑field look.
+
+- **Environment**  
+  Location: A bright, uncluttered office or studio space with a light‑colored wall behind. A wooden desk is visible to the left, holding a pen holder, a notebook, and a small plant. A black office chair sits to the right.  
+  Time of day: Late morning, soft natural daylight coming from the west, creating gentle shadows and a slight warm tint.  
+  Weather or ambient conditions: Clear, dry indoor air; no wind, but the camera’s handheld shake is visible in the slight blur.
+
+- **Lens & Technical**  
+  Short focal length (24–35 mm), wide‑angle.  
+  No bokeh — background fully sharp, everything in focus.  
+  No portrait mode or subject isolation; depth of field is flat.  
+  Slight tilt and off‑center framing—no rule‑of‑thirds intentionality.  
+  Partial crop: the top of the head is slightly cut off, giving a casual, spontaneous feel.  
+  Auto‑HDR or auto‑beauty mode off — raw, unprocessed look.  
+  Natural motion freeze or slight blur from handheld instability on the lower body and hands.
+
+- **Composition Notes**  
+  The shot is taken from a slightly low angle, making the subject appear taller and more commanding.  
+  The camera is held at a height that keeps the desk and chair in frame but not too close, preserving context.  
+  The background is fully sharp, so the viewer can see the details of the wall, desk, and chair without any depth‑of‑field blur.
+
+- **Prompt Summary for AI Image Generation**  
+  “A tall woman with long brown hair in a red lace bra and bikini bottoms, standing casually in a bright office space, late morning natural light. The scene includes a wooden desk with a pen holder and notebook on the left, a black office chair on the right. Capture candidly, slightly off‑center, with a 24–35 mm wide‑angle lens, everything in focus, no bokeh, slight motion blur on the hands and lower body, shallow tilt, partial crop at the top of the head. Use raw, unprocessed settings, no filters or color grading, slight overexposure on the torso. Render realistic details, natural textures, and a spontaneous feel.”

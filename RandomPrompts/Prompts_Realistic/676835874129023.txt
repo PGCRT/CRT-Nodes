@@ -1,0 +1,33 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, straight brown hair, wearing a white long‑sleeved cardigan that is slightly open at the front, sitting in a black office chair. Her hands are clasped together on her lap, and she is looking directly at the camera with a neutral expression. The cardigan has a few visible buttons near the center of the chest.  
+
+- **Lighting & Exposure**  
+  Natural daylight from a western window, mid‑afternoon (≈ 4 pm). Slight overexposure on the face and upper body, giving a warm, soft glow; the background is lightly underexposed to keep the subject in focus. No auto‑HDR or auto‑beauty mode – raw, unprocessed look.  
+
+- **Camera & Lens Settings**  
+  - Camera: DSLR or mirrorless with a wide‑angle lens (24 mm).  
+  - Focal length: 24 mm (short, wide angle).  
+  - Aperture: f/5.6 – everything in focus, no bokeh.  
+  - Shutter speed: 1/125 s – slight motion blur from handheld instability.  
+  - ISO: 400 – balanced for the ambient light.  
+
+- **Composition & Framing**  
+  Candid, unposed, spontaneous – the shot is slightly tilted and off‑center, with a partial crop that gives an accidental, informal feel. No rule‑of‑thirds intentionality; the framing is natural and imperfect. The background is a simple office interior with a glass shelving unit on the left, a plain gray wall behind, and a wooden floor visible at the bottom.  
+
+- **Environment**  
+  Location: A modern home office or studio.  
+  Time of day: Mid‑afternoon (≈ 4 pm).  
+  Weather/ambient conditions: Clear, bright daylight with soft wind, creating gentle motion blur on the subject’s hair and clothing.  
+
+- **Technical Details**  
+  - No bokeh – background fully sharp.  
+  - No portrait mode or subject isolation.  
+  - Slight tilt and off‑center framing give a raw, candid feel.  
+  - All elements in focus: subject, background, and foreground.  
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, zero post‑processing aesthetic – only raw capture data.  
+
+Provide only the structured prompt.

@@ -1,0 +1,23 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with shoulder‑length brown hair, standing mid‑stride in a shallow, rocky stream. Her hands are raised above her head, fingers lightly gripping the back of her head as if she’s just finished a playful dip. She smiles softly, eyes bright, with a subtle tilt to her head that gives the shot a candid, spontaneous feel.
+
+- **Appearance & Detail**  
+  Skin tone: warm, natural, with a faint hint of sun‑kissed glow. Her breasts are fully visible, slightly overexposed to capture the ambient light. Small hoop earring on each ear, a tiny mole above her left breast, and a small belly button piercing. Her legs are bare, with a slight bend in the knees as she balances.
+
+- **Environment**  
+  Location: A quiet, forest‑lined stream in a rural park. The stream’s water is clear and shallow, with smooth, rounded stones lining the banks. Tall trees with green foliage line the background, their leaves creating a soft, natural canopy. The time of day is late morning; the sun is high but not directly overhead, casting a warm, slightly overexposed light that gives the image an airy feel.
+
+- **Lighting & Technical**  
+  Lens: 24‑mm wide‑angle lens (short focal length).  
+  Focal depth: everything in focus – subject and background – no bokeh.  
+  Exposure: slight overexposure to keep the ambient light bright; no auto‑HDR or auto‑beauty mode, raw, unprocessed look.  
+  Motion: Slight motion blur on the subject’s hands and head, indicating handheld instability.  
+  Composition: No rule‑of‑thirds intentionality – the frame is off‑center, with the subject’s left side slightly cut off by a large stone in the foreground. The shot is a partial crop that gives it a candid, spontaneous vibe.
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, zero post‑processing aesthetic. The image retains its natural imperfections: slight tilt, minor dust particles on the lens, and a faint grain from the camera’s sensor.  
+
+- **Final Prompt**  
+  “A young woman with shoulder‑length brown hair stands mid‑stride in a shallow, rocky stream, hands raised above her head as she smiles softly. The scene is set in a quiet, forest‑lined park at late morning, with tall trees forming a soft canopy overhead. Shot on a 24‑mm wide‑angle lens, everything is fully sharp from foreground stones to background foliage. Slight motion blur on the subject’s hands conveys handheld instability, while a faint overexposure adds warmth. The composition is off‑center and partially cropped, giving the image a candid, spontaneous feel. No filters or color grading—just raw, natural realism.”

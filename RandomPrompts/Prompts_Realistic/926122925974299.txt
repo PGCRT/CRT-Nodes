@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman with a curvy, athletic build, wearing a black thong and a matching black bra, kneeling on a clear acrylic chair in a bright, modern living room. Her hands rest on her hips and one hand is slightly raised, giving a dynamic, mid‑movement feel. Her nails are painted a soft pink, adding a subtle detail.
+
+- **Lighting & Exposure**  
+  Slight overexposure from natural daylight coming from a large window to the left, creating warm highlights on her skin and a gentle halo around her back. The exposure is slightly uneven—warmth in the center with a cooler edge—giving a raw, unprocessed look.
+
+- **Motion & Focus**  
+  A faint motion blur at the edges of her buttocks and knees, indicating handheld shake and a quick shutter speed. Everything remains fully sharp—no bokeh, no depth‑of‑field blur—so the background (a beige sofa, a small side table, a vase of pink roses) is crisp.
+
+- **Lens & Technical**  
+  24 mm wide‑angle lens, short focal length, capturing a broad view of the scene. The composition is accidental: the frame is slightly tilted, the subject is off‑center, and the crop is partial—no rule‑of‑thirds intentionality.
+
+- **Environment**  
+  A bright, airy living room in the late morning, with soft natural light and a slight haze from a open window. The floor is a light hardwood, the chair is transparent acrylic with purple accents, and a small side table holds a vase of pink roses.
+
+- **Style & Tone**  
+  Candid, unposed, spontaneous—subject appears unaware of the camera. Imperfections are encouraged: slight tilt, off‑center framing, partial crop. No filters, no color grading, no post‑processing aesthetic. The overall tone is natural and raw, as if captured in a snapshot style.
+
+- **Prompt**  
+  “A woman in a black thong and bra kneeling on a clear acrylic chair in a bright modern living room, hands on hips with one hand raised, pink nail polish visible, slight motion blur on buttocks and knees, natural daylight overexposure from left window, wide‑angle 24 mm lens, accidental tilted framing, crisp background of beige sofa, side table, pink roses, raw candid snapshot.”

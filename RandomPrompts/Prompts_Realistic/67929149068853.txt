@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy, sun‑kissed hair walking confidently down a cobblestone alley. She’s wearing a tan, deep‑V, sleeveless top tied at the front and high‑waisted, matching tan trousers. Her left hand is slightly bent at the wrist, her right arm relaxed by her side. She’s mid‑step, one foot forward, toes turned slightly outward, as if she’s just stepped out for a casual stroll.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the woman appears unaware of the camera, caught in a natural moment. Slight tilt and off‑center framing give an accidental, handheld feel. The shot is a partial crop that doesn’t follow the rule‑of‑thirds; the composition feels organic and imperfect.
+
+- **Motion & Focus**  
+  Slight motion blur on the subject’s feet and background to suggest movement, but everything remains fully sharp — no portrait‑mode depth‑of‑field blur. The focus is all‑encompassing: foreground, midground, and background are in focus.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm) with a short focal length. No bokeh; the background is fully sharp. Slight overexposure on the upper part of the frame to capture the ambient daylight. Auto‑HDR or auto‑beauty mode off — raw, unprocessed look. No filters, no color grading, no post‑processing aesthetic.
+
+- **Environment**  
+  A narrow, historic cobblestone street lined with red‑brick buildings. The alley is flanked by old storefronts with green awnings and a small wooden bench on the right side. Trees with fresh green leaves line the left side, casting dappled shade. The time of day is late morning; the sun is high but slightly to the west, creating warm, soft light that hits the woman’s face and the cobblestones. A few pedestrians are visible in the background, blurred slightly due to motion.
+
+- **Lighting & Color**  
+  Natural daylight with a slight overexposure on the upper part of the frame. The lighting is even, no studio lights, no professional composition. Warm tones dominate: the tan outfit, red brick, green awning, and the greenish hue of the trees. The color palette is earthy — browns, tans, greens, with a hint of warm gold from the sun.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera gives an informal feel. The framing is off‑center; the subject’s head is slightly above the center line. A partial crop cuts off the left side of the alley, adding to the candid vibe. The woman’s hair has a slight windblown effect, and her shoes show a faint motion blur.
+
+- **Final Prompt**  
+  “A young woman with long, wavy, sun‑kissed hair walking confidently down a cobblestone alley, wearing a tan deep‑V sleeveless top tied at the front and high‑waisted tan trousers. Candid, unposed, spontaneous capture with slight tilt and off‑center framing, partial crop. Slight motion blur on the feet and background, but everything fully sharp. Wide‑angle lens (24–35 mm), short focal length, no bokeh. Late morning natural daylight with a slight overexposure on the upper frame. Raw, unprocessed look, no filters or color grading. Background shows red‑brick buildings, green awnings, and leafy trees, with a few pedestrians in the distance. All elements in focus, no portrait mode.”

@@ -1,0 +1,29 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy dark hair, wearing a black lace bodysuit, is captured mid‑crouch on a polished wooden floor. Her left hand rests flat on the floor, fingers slightly spread, while her right hand supports her weight. She looks directly at the camera with a soft, confident expression. Her nails are painted orange; a ring adorns her left ring finger.  
+
+- **Tattoos & Details**  
+  Visible tattoos: a sunflower on her left forearm, a rose motif on her right forearm, and a small design near her left wrist. A delicate earring hangs from her left ear.  
+
+- **Lighting & Exposure**  
+  Natural daylight coming from a window behind the subject creates a slight overexposure on the upper part of the frame. The lighting is warm, with soft shadows cast on the floor. No auto‑HDR or beauty filters—just raw, unprocessed tones.  
+
+- **Camera Settings**  
+  - Lens: 24‑mm wide‑angle, short focal length.  
+  - Aperture: f/5.6 (mid‑range).  
+  - Shutter speed: 1/125 s (slight motion blur from handheld shake).  
+  - ISO: 400.  
+  - Focus: everything in the frame is sharp, no portrait‑mode depth‑of‑field blur.  
+
+- **Composition**  
+  The shot is intentionally off‑center; the subject’s left side leans slightly to the right, giving a casual, spontaneous feel. The framing is not rule‑of‑thirds—just a natural, accidental crop that includes part of the white curtain in the background and a portion of the wooden floor extending beyond the bottom edge.  
+
+- **Environment**  
+  Location: A bright, airy room with a white sheer curtain on the left and a hardwood floor. The time of day is late morning, as indicated by the warm, slightly diffused sunlight.  
+
+- **Post‑Processing**  
+  No color grading or filters applied. Slight natural motion blur from handheld shooting, preserving a candid, in‑moment feel.  
+
+**Prompt Summary**  
+"Mid‑crouch portrait of a tattooed woman in black lace on a wooden floor, captured with a 24‑mm wide‑angle lens at f/5.6 and 1/125 s, natural daylight from a window creating soft overexposure, slight handheld blur, off‑center spontaneous framing, no filters—raw, realistic candid photography."

@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, braided hair sitting on a marble countertop in a kitchen. She is nude, mid‑pose, leaning slightly forward with one hand on the counter and the other on her thigh. Her face is turned toward the camera but not directly at it—she’s looking off‑to‑the‑side as if she’s just caught in a candid moment.
+
+- **Appearance & Detail**  
+  She has a fair complexion, a small smile, and a faint blush on her cheeks. Her breasts are prominent, with a natural, unretouched look; the skin shows subtle texture and a hint of moisture from a recent shower. The braids are thick and slightly frayed at the ends, catching the light. A single gold high‑heel shoe rests beside her on the counter, adding an unexpected detail.
+
+- **Lighting & Exposure**  
+  Natural daylight coming from a large window to the left; slight overexposure in the upper right corner gives a warm, airy feel. The exposure is slightly uneven—brighter at the top, softer at the bottom—creating a raw, unprocessed look. No auto‑beauty mode, no filters, no color grading.
+
+- **Camera Settings**  
+  Wide‑angle lens (24 mm), short focal length, handheld. Slight motion blur on the subject’s hands and the background to suggest movement. Everything is in focus—no bokeh, no depth‑of‑field blur. The background is a textured wall with vertical rainbow‑stripes painted in muted colors: blue, green, yellow, orange, red. A small white light switch is visible on the left side of the wall.
+
+- **Environment**  
+  The scene is set in a modern kitchen at mid‑afternoon. The countertop is a polished marble with subtle gray veining. The wall behind has a rough plaster finish that contrasts with the smooth counter. The time of day is late afternoon, giving a warm, golden hue to the light.
+
+- **Composition & Framing**  
+  No rule‑of‑thirds intentionality—framing is accidental and slightly off‑center. The shot is a wide capture that includes the subject, countertop, and background wall. The composition has a slight tilt to the right, giving it a spontaneous, candid feel.
+
+- **Technical Notes**  
+  All elements are fully sharp: subject, countertop, wall, and shoe. No portrait‑mode isolation. Slight overexposure in the upper right corner adds a natural, raw aesthetic. The image has a slight motion blur on the hands and background to simulate handheld shooting.
+
+**Prompt Summary:**  
+"A young woman with long braided hair sits nude on a marble countertop in a modern kitchen at mid‑afternoon. She leans forward slightly, one hand on the counter, the other on her thigh, with a gold high‑heel shoe beside her. Natural daylight from a large window creates slight overexposure in the upper right. Wide‑angle, handheld shot with slight motion blur and accidental off‑center framing. Background shows a textured wall with vertical rainbow‑stripes and a white light switch. All elements are fully sharp, no filters or post‑processing."

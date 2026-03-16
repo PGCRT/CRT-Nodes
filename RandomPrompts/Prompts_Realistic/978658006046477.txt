@@ -1,0 +1,26 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman with long, wavy dark hair sitting on a tiled floor in a grand hall. She is wearing white bikini bottoms and is mid‑gesture, one hand lightly touching her ear, the other resting on her thigh. Her body is slightly tilted, creating an off‑center, spontaneous feel.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high window casts soft, warm light across the scene. Slight overexposure on the upper torso gives a raw, unprocessed look. No auto‑HDR or beauty filters—just ambient illumination with a hint of warmth and natural contrast.
+
+- **Camera Settings**  
+  - Lens: 24 mm wide‑angle, short focal length.  
+  - Aperture: f/5.6 (mid‑range).  
+  - Shutter speed: 1/60 s (slight motion blur from handheld shake).  
+  - ISO: 400 (for clean detail without noise).  
+  Everything is in focus—no portrait‑mode depth of field blur; background remains sharp.
+
+- **Composition**  
+  Candid, unposed framing with accidental tilt and partial crop. The composition does not follow the rule‑of‑thirds; the subject’s head is slightly above the center line, and the left side of the frame cuts off a bit of the background wall. The background features ornate gold‑colored paneling with decorative scrollwork, adding richness without distracting.
+
+- **Environment**  
+  Location: A luxurious interior space with polished tile flooring and gilded wall panels. Time of day: late morning, when natural light is bright but not harsh. Ambient conditions: mild temperature, low humidity, no wind.
+
+- **Details & Imperfections**  
+  Slight motion blur on the woman’s right arm, indicating a handheld shot. Minor overexposure on the chest area gives a natural, unedited feel. The image has zero studio lighting—only natural light—and zero intentional editorial tone.
+
+- **Final Prompt**  
+  “A woman with long wavy dark hair sitting on a tiled floor in a grand hall, wearing white bikini bottoms, one hand touching her ear, the other resting on her thigh, captured with a 24 mm wide‑angle lens at f/5.6 and 1/60 s shutter speed, natural daylight from a high window with slight overexposure on the torso, candid off‑center framing with accidental tilt, background of ornate gold paneling, everything in focus, slight motion blur on the right arm, late morning lighting, polished tile floor, gilded wall scrollwork, raw unprocessed look.”

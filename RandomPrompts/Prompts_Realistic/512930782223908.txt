@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman in a red bikini sitting on a sunny beach, leaning back on her left hand with her right leg bent and toes pointing toward the camera. Her hair is blowing lightly in the wind, face turned slightly to the side, eyes bright and relaxed. She’s mid‑smile, caught in a natural, unposed moment.
+
+- **Candid, Unposed Capture Style**  
+  The shot is handheld, with slight motion blur from the camera’s instability. No rule‑of‑thirds — the framing is off‑center, a partial crop that gives a spontaneous feel. The subject appears unaware of the camera, as if she’s just caught in a casual snapshot.
+
+- **Environment**  
+  Location: A tropical beach with soft white sand, a thatched umbrella on the left, and a few lounge chairs in the background. The sea stretches to the horizon, with small waves breaking near the shore. In the distance, a green island is visible across the water. The sky is bright blue with scattered white clouds. Time of day: mid‑afternoon, around 3 pm, when the sun is high but not directly overhead, creating soft shadows.
+
+- **Lens & Technical Settings**  
+  Use a wide‑angle lens (24–35 mm). Keep everything in focus — no bokeh or depth‑of‑field blur; background remains sharp. Shoot in raw mode, with auto‑HDR off for an unprocessed look. Slight overexposure to keep the ambient light warm. No color grading or filters applied. Capture the scene with a short focal length to maintain a natural, intimate feel.
+
+- **Composition Notes**  
+  The composition is accidental: the subject’s left hand rests on the sand, her body is slightly tilted, and the frame cuts off the top of the umbrella, giving a casual, spontaneous vibe. The background includes a few other beachgoers in the distance, adding depth without distracting.
+
+- **Final Prompt**  
+  “A woman in a red bikini sits on a sunny beach, leaning back on her left hand with her right leg bent, hair blowing in the wind, mid‑smile, captured on a handheld wide‑angle lens (24–35 mm) in raw mode with slight motion blur and overexposure. The scene includes a thatched umbrella, lounge chairs, and a distant green island under a bright blue sky with scattered clouds. Mid‑afternoon lighting, everything in focus, no bokeh, no filters — a candid, unposed snapshot with accidental off‑center framing.”

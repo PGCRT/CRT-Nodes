@@ -1,0 +1,29 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair that’s slightly blown by the wind, wearing a black, deep‑V, long‑sleeved top with a subtle zip‑front. She’s captured mid‑movement, leaning forward as if she’s about to pick something up from a shelf, her face turned toward the camera but not posing—her expression is natural and unposed, a faint smile on her lips.  
+
+- **Lighting & Exposure**  
+  Natural daylight from a western window, mid‑afternoon; slight overexposure in the highlights, giving a warm, soft glow. No auto‑HDR or beauty filters—raw, unprocessed look. The exposure is slightly uneven, with the upper part of her face a bit brighter than the lower part, as if the camera’s meter was a little off.  
+
+- **Camera & Lens**  
+  Wide‑angle lens (24 mm), short focal length, handheld. Everything in focus—no bokeh, no depth‑of‑field blur; background is fully sharp. Slight motion blur on the hair and shoulders from the subject’s movement and the camera’s instability.  
+
+- **Composition & Framing**  
+  Candid, spontaneous framing: the shot is slightly tilted, off‑center, with a partial crop that cuts off the top of the shelf and the lower part of her torso. No rule‑of‑thirds intentionality—just a natural, accidental composition that feels “in the moment.”  
+
+- **Environment**  
+  A cluttered, lived‑in bedroom or living space. Behind her is a wooden shelving unit with various items: a framed photo, a plastic water bottle, a bag of rice, a blue plastic bag, a yellow bag, and a green bucket on the floor. The shelf also holds a small bowl and a can of soup. A white blanket or towel hangs on the right side. The room’s walls are painted a light neutral color; a small portion of a white ceiling is visible at the top.  
+
+- **Time & Ambient Conditions**  
+  Mid‑afternoon, the sun is high but not directly overhead, creating soft shadows and a slight haze. The ambient light is warm, with a hint of golden hue. The air feels slightly dusty, as if the room has been untouched for a day or two.  
+
+- **Technical Details**  
+  - Focal length: 24 mm (wide‑angle)  
+  - Aperture: f/5.6 (mid‑range)  
+  - Shutter speed: 1/125 s (slight motion blur)  
+  - ISO: 400 (natural contrast)  
+  - No portrait mode, no subject isolation—everything from foreground to background is in focus.  
+
+- **Prompt Summary**  
+  “A candid, wide‑angle shot of a young woman with long wavy brown hair, wearing a black deep‑V top, captured mid‑movement in a cluttered bedroom at mid‑afternoon. The image has slight motion blur and a small overexposure, taken with a 24 mm lens handheld, featuring a slightly tilted, off‑center composition that includes a wooden shelf filled with everyday items. All elements are in focus, creating a raw, unprocessed, realistic look.”

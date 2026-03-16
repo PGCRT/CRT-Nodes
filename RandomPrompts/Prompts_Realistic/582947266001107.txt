@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A young woman with a high ponytail, wearing a brown‑and‑white plaid button‑down shirt and gray jogger pants, stands in a narrow hallway. She’s mid‑gesture, holding a key in her right hand near a white door that is slightly ajar. Her left foot is planted on a pair of white sneakers that rest on a small stack of colorful books at the base of the door.  
+
+- **Pose & Motion**  
+  Slight motion blur around the hands and key, indicating a handheld shot captured at a natural, imperfect moment. The subject’s body is slightly tilted to the left, creating an off‑center framing that feels spontaneous and candid.  
+
+- **Environment**  
+  The setting is a narrow, domestic hallway with a plain white door on the right, a small corkboard with pinned papers on the left wall, and a wooden coat rack with a denim jacket and beige blazer hanging on the far right. A cardboard box sits on the floor near the coat rack. The time of day is late afternoon; the ambient light is warm and slightly overexposed, giving the scene a raw, unprocessed look.  
+
+- **Lighting & Exposure**  
+  No auto‑HDR or auto‑beauty mode—just natural daylight with a slight overexposure that softens the entire frame. The exposure is uneven, with the left side a bit brighter than the right, as if captured by a handheld camera in a hurry.  
+
+- **Lens & Technical Settings**  
+  Use a short focal length wide‑angle lens (e.g., 24mm) to capture the full scene in one shot. Everything is fully sharp—no bokeh or depth‑of‑field blur. The background, including the door, corkboard, coat rack, and box, remains in focus.  
+
+- **Composition & Framing**  
+  Capture a candid, unposed snapshot with no rule‑of‑thirds intentionality. The frame is slightly tilted, and the crop is partial—only a portion of the hallway is visible, giving an accidental, spontaneous feel.  
+
+- **Details & Imperfections**  
+  Include subtle imperfections: a slight tilt in the camera, a partial crop that cuts off the top of the door, and faint motion blur around the hands. The image should look like a raw, unprocessed photograph taken with a DSLR or mirrorless camera in a real‑world setting.  
+
+- **Final Prompt**  
+  “A young woman with a high ponytail, wearing a brown‑and‑white plaid button‑down shirt and gray jogger pants, stands in a narrow hallway, mid‑gesture holding a key near an ajar white door. Her left foot rests on white sneakers atop a stack of colorful books at the base of the door. A wooden coat rack with a denim jacket and beige blazer hangs on the far right; a cardboard box sits on the floor nearby. The scene is lit by late afternoon daylight with a slight overexposure. Capture with a 24mm wide‑angle lens, everything in focus, no bokeh. The shot is candid, slightly tilted, partially cropped, with faint motion blur around the hands—raw, unprocessed, natural photography.”

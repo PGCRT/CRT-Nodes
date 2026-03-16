@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, sun‑kissed blonde hair, wearing a white sports bra and matching high‑waist shorts, crouching low on an asphalt street. Her left knee is bent, right foot planted, and she’s balancing a black‑and‑white sneaker on her right heel while her left hand rests on her thigh. She looks directly at the camera with a subtle, confident smile.
+
+- **Motion & Focus**  
+  Slight motion blur on the subject’s legs and shoes to convey handheld shake; everything else in sharp focus. No bokeh—background fully sharp, no portrait‑mode isolation.
+
+- **Lighting & Exposure**  
+  Natural daylight, mid‑afternoon, with a slight overexposure on the upper body to keep the scene raw. Auto‑HDR off. No color grading or post‑processing filters.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm), short focal length. All elements in focus—no depth‑of‑field blur. Slight tilt and off‑center framing; partial crop to give a candid, spontaneous feel.
+
+- **Environment**  
+  A quiet residential street lined with red‑brick houses, a concrete sidewalk, and a single green tree on the left. A small blue traffic sign is visible on the right side of the frame. The time of day is late afternoon, with soft, warm sunlight casting gentle shadows. Weather is clear, light humidity, no wind.
+
+- **Composition Notes**  
+  No rule‑of‑thirds intentionality—framing is accidental and casual. The composition captures a “mid‑action” moment: the woman’s pose is slightly uneven, as if she’re just finishing a stretch or a quick photo session. The background includes a lamppost and a faint outline of a parked car, adding context without distracting.
+
+- **Prompt Summary**  
+  *“A young woman with long blonde hair, in a white sports bra and high‑waist shorts, crouching on an asphalt street, balancing a black‑and‑white sneaker on her heel, looking at the camera with a subtle smile. Slight motion blur on the legs and shoes, everything else sharp. Natural daylight mid‑afternoon, slight overexposure. Wide‑angle lens 24–35 mm, short focal length. Background: red‑brick houses, concrete sidewalk, green tree, blue traffic sign. Raw, unprocessed look, no filters. Candid, spontaneous, handheld feel.”*

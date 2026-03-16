@@ -1,0 +1,26 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with medium‑length, slightly frizzy brown hair standing in a bright, tiled bathroom. She is bare‑headed, mid‑gesture, hands raised to the back of her head as if she’s just finished a shower or is styling her hair. Her posture is natural and unposed, with a subtle lean to the left, capturing a candid moment.
+
+- **Lighting & Exposure**  
+  Natural daylight from a window on the right side of the room creates a soft, slightly overexposed highlight on her torso. The exposure is not perfectly balanced—there’s a gentle warmth to the image, as if the camera’s auto‑HDR was turned off and the photo was taken in raw mode.
+
+- **Camera Settings**  
+  - Lens: 24‑mm wide‑angle, short focal length, handheld.  
+  - Focal depth: everything from the subject to the background is fully sharp—no bokeh or portrait‑mode isolation.  
+  - Focus: locked on the subject’s mid‑section; slight tilt due to handheld instability.  
+  - Shutter speed: 1/60 s, producing a faint motion blur on the hands and hair.  
+  - ISO: 400–600 for natural grain.
+
+- **Composition & Framing**  
+  The frame is intentionally off‑center; the subject’s left side cuts close to the left edge, while the right side leaves a small margin that includes a white sink, a blue shower curtain, and a towel hanging on a rail. No rule‑of‑thirds intentionality—this is a spontaneous, “in‑the‑moment” shot.
+
+- **Environment**  
+  The setting is a modern, clean bathroom with off‑white square tiles covering the walls. A white ceramic sink sits to the right, a bottle of body wash on its edge, a small red soap bar next to it, and a chrome faucet. A blue shower curtain hangs in the background, partially visible. A white towel is draped over a rail on the left wall. The time of day is mid‑afternoon, with warm natural light streaming from a window just outside the frame, creating a slight glare on the sink’s surface.
+
+- **Details & Imperfections**  
+  Slight motion blur around the hands and hair, indicating a handheld shot. The image has a raw, unprocessed look—no filters or color grading. A faint overexposure in the upper right corner gives it an authentic, spontaneous feel. The background is fully sharp, with no depth‑of‑field blur.
+
+- **Prompt for Text‑to‑Image Generation**  
+  *“A candid, wide‑angle shot of a bare‑headed woman with medium‑length brown hair standing in a bright tiled bathroom, hands raised to the back of her head as if styling her hair. Natural daylight from a right‑side window creates a soft overexposure on her torso. Shot on a 24‑mm handheld lens at 1/60 s, ISO 500, everything in focus. The frame captures the woman’s mid‑section and a white sink with a blue shower curtain in the background, a white towel hanging on a left‑side rail. Slight motion blur on the hands, off‑center framing, raw unprocessed look, no filters.”*

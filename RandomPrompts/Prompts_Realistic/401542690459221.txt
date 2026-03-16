@@ -1,0 +1,26 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wind‑blown brown hair walking confidently down a cobblestone plaza. She wears a dark gray cropped tank top and high‑waisted denim jeans, accessorized with gold hoop earrings and a layered heart‑shaped necklace. Her face is slightly turned toward the camera, mouth open as if mid‑speech or laugh, capturing a spontaneous, candid moment.
+
+- **Motion & Focus**  
+  Slight motion blur on the hair and hands to convey movement, while the entire frame stays fully sharp—no portrait‑mode depth of field. The shot is taken with a wide‑angle lens (24–35 mm), giving a broad, immersive view of the scene.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑mid‑day sun; slight overexposure on the subject’s front to keep the image bright and raw. No auto‑HDR or beauty filters—just a straightforward, unprocessed look.
+
+- **Environment**  
+  The background is an old European-style building with arched windows and stone facades, slightly out of focus but still sharp. The plaza is paved with irregular cobblestones; a few scattered leaves and a passing dog add life to the scene. The time of day is late afternoon, with warm golden light casting soft shadows.
+
+- **Composition & Framing**  
+  The frame is intentionally off‑center, with the subject’s left side slightly cut off by the edge—no rule‑of‑thirds intentionality. The camera is handheld, producing a natural tilt and slight instability that gives the image a candid feel. Everything from foreground to background is in focus, creating a wide, detailed capture.
+
+- **Technical Settings**  
+  - Focal length: 35 mm (wide angle)  
+  - Aperture: f/4.0 (wide opening for sharpness)  
+  - Shutter speed: 1/125 s (for slight motion blur)  
+  - ISO: 400 (for clean detail)  
+  - No bokeh, no depth‑of‑field blur—background fully sharp.
+
+- **Final Prompt**  
+  “A young woman with long wind‑blown brown hair walking confidently down a cobblestone plaza in late afternoon sunlight, wearing a dark gray cropped tank top and high‑waisted denim jeans, gold hoop earrings, and a layered heart necklace. Capture the candid moment with slight motion blur on her hair and hands, full sharpness across the frame using a 35 mm wide‑angle lens. The background shows an old European building with arched windows and stone facades, a few scattered leaves and a passing dog. Shoot handheld with a natural tilt, off‑center framing that slightly cuts the subject’s left side, all in focus. Use natural daylight with slight overexposure, no filters or auto‑HDR, raw and unprocessed.”

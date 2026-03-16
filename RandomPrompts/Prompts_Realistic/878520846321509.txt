@@ -1,0 +1,27 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wind‑blown brown hair, wearing round sunglasses and a snakeskin‑patterned one‑piece swimsuit, standing on a sunny beach. She is mid‑step, left hand lightly touching the fabric of her suit, right arm relaxed by her side. Her face is turned slightly toward the camera but not directly at it—capturing a candid, “in‑motion” feel.
+
+- **Motion & Focus**  
+  Slight motion blur on the hair and background to suggest movement, while the subject remains mostly sharp. Use a wide‑angle lens (24–35 mm) with a short focal length to keep the entire scene in focus—no bokeh or depth‑of‑field blur.
+
+- **Lighting & Exposure**  
+  Natural midday sunlight with a slight overexposure on the sky and water, giving a warm, bright tone. No auto‑beauty or filter processing—raw, unprocessed look. The exposure is slightly uneven to keep the image feeling spontaneous.
+
+- **Environment**  
+  A tropical beach at high noon, with gentle waves breaking in the background and palm trees leaning toward the camera. The sand is light beige, the sea is a calm blue‑green, and the sky is a pale, almost white‑blue. The location is a real‑world, specific spot—no studio or staged setting.
+
+- **Lens & Technical**  
+  Short focal length (24–35 mm), wide‑angle, handheld shot with slight tilt and off‑center framing. Everything from foreground to background is fully sharp; no portrait‑mode isolation. The composition is accidental—no rule‑of‑thirds intentionality.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—the subject appears unaware of the camera. Slight tilt, partial crop, and a raw, in‑the‑moment feel. No editorial tone, just a natural freeze frame from a handheld shot.
+
+- **Post‑Processing**  
+  Auto‑HDR or auto‑beauty mode off. No color grading or filters—just the original capture with minimal editing. Keep the image’s native dynamic range and keep the colors true.
+
+---  
+
+**Prompt Summary (structured)**  
+"Photorealistic candid photo of a woman in a snakeskin swimsuit on a tropical beach at midday, captured with a 24–35 mm wide‑angle lens. The shot has slight motion blur on the hair and background, while the subject remains sharp. Natural sunlight creates a mild overexposure on the sky and water. The scene includes gentle waves, palm trees, and sandy foreground. Handheld, accidental framing with slight tilt and off‑center composition. No filters or auto‑beauty—raw, unprocessed look."

@@ -1,0 +1,33 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy dark hair, wearing a black choker, black high‑waist briefs, sheer black thigh‑highs with elastic cuffs, and black pointed heels. She is seated on a plush, tufted red velvet sofa, leaning slightly forward with one hand resting on the back of the couch and the other on her thigh. Her legs are crossed at the ankles, and she’s wearing dark, glossy shoes. The pose captures a casual, spontaneous moment as if she’s mid‑movement, with a faint handheld shake.
+
+- **Lighting & Exposure**  
+  Natural daylight from a tall, arched stained‑glass window behind the sofa casts soft, warm light onto the scene. The exposure is slightly overexposed on the highlights, giving a raw, unprocessed look. No auto‑beauty or filter enhancements—just the genuine ambience of the moment.
+
+- **Camera & Lens Settings**  
+  - Lens: 24 mm wide‑angle, short focal length, handheld.  
+  - Focal depth: everything from the foreground (the woman) to the background (window and wall) is fully sharp—no bokeh or portrait‑mode isolation.  
+  - Shutter speed: 1/60 s, producing a slight motion blur on the subject’s legs and hands, indicating spontaneous movement.  
+  - Aperture: f/4.5, giving a wide aperture but keeping the background in focus.
+
+- **Composition & Framing**  
+  The shot is intentionally off‑center, with the sofa occupying roughly two‑thirds of the frame. The composition is not rule‑of‑thirds‑based; it’s a casual, spontaneous capture. The top of the frame cuts off just above the woman’s head, and the bottom extends past her heels, giving a “full‑body” feel. A slight tilt to the right adds to the candid vibe.
+
+- **Environment**  
+  The setting is a bright, airy living room with light‑colored walls and a tall, arched stained‑glass window that lets in natural sunlight. The floor is polished hardwood. A small side table with a lamp is visible to the left of the sofa. The time of day is mid‑afternoon, around 3 pm, when the sun is high but not directly overhead, creating soft shadows.
+
+- **Details & Imperfections**  
+  - Slight tilt and partial crop: the left side of the sofa is cut off by the frame edge.  
+  - Minor motion blur on the woman’s legs and hands, as if she just shifted position.  
+  - Tiny dust particles float in the air near the window, adding texture.  
+  - The red velvet couch shows subtle wear and tear—tiny frays at the corners, a realistic detail.  
+  - The woman’s choker has a small, metallic clasp that catches the light.  
+  - Her heels have a slight heel‑toe gradient in the gloss.
+
+- **Post‑Processing**  
+  No filters or color grading—just raw, natural tones. A subtle auto‑HDR lift on the highlights to balance the exposure. The image retains all the imperfections of a real, candid snapshot: slight unevenness in focus, natural contrast, and an authentic “in‑the‑moment” feel.
+
+**Prompt Summary (for text‑to‑image generation)**  
+“Candid photograph of a young woman with long wavy dark hair, black choker, black high‑waist briefs, sheer black thigh‑highs with elastic cuffs, and black pointed heels, seated on a plush tufted red velvet sofa in a bright living room. She leans forward, one hand on the back of the couch, legs crossed at the ankles, wearing dark glossy shoes. Natural daylight from a tall arched stained‑glass window behind her creates soft warm lighting; exposure slightly overexposed. 24 mm wide‑angle lens, handheld, 1/60 s shutter speed, f/4.5 aperture—everything in focus with slight motion blur on the legs and hands. Composition is off‑center, slightly tilted, partial crop. The scene includes a small side table with a lamp to the left, polished hardwood floor, and a bright mid‑afternoon sun. All details are sharp from foreground to background; no bokeh or portrait mode. Render realistic textures: red velvet, glossy shoes, dust particles in air, subtle wear on couch corners, metallic clasp on choker. No filters—raw, unprocessed look with slight auto‑HDR on highlights.”

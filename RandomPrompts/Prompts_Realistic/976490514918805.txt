@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A young woman with shoulder‑length brown hair, wearing a dark gray tank top and heathered gray shorts, is captured mid‑stride on a bustling city street. She holds a clear plastic water bottle in her right hand, slightly tilted as she walks away from the camera. Her left arm is bent at the elbow, and her head is turned to the right, catching a gentle lens flare from the sun. The wind lifts a few strands of hair, adding a subtle motion blur.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject is unaware of the camera, caught in a natural, everyday moment. Slight tilt and off‑center framing give an accidental, handheld feel. No rule‑of‑thirds intentionality; the composition is organic, with the frame cutting off part of the background to emphasize movement.
+
+- **Imperfections & Aesthetic**  
+  Slight motion blur on the subject’s legs and the background pedestrians. Auto‑HDR or auto‑beauty mode is off — the image retains a raw, unprocessed look. No filters, no color grading, no post‑processing aesthetic. The exposure is slightly overexposed on the right side, letting ambient sunlight create a soft halo around the subject’s hair.
+
+- **Environment**  
+  Specific real‑world location: a busy pedestrian street in an urban area, with storefronts and a traffic light visible in the background. Time of day: late afternoon, around 5 pm, with warm, golden sunlight coming from the right. Weather: clear, mild breeze, slight haze from the sun’s angle.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm), wide‑angle lens. No bokeh; background is fully sharp, everything in focus. No portrait mode or subject isolation — the entire scene, from foreground to background, remains crisp. The image uses a handheld shot with natural instability, giving it a genuine, spontaneous feel.
+
+- **Composition Notes**  
+  The frame captures the woman’s back and right side, with her left foot slightly ahead, indicating forward motion. Pedestrians are visible in the background, some blurred by the slight motion. A traffic light glows red on the far right, adding a small point of contrast. The street is paved, with a faint reflection of the sun on the asphalt. The camera’s lens flares slightly from the top left, adding a subtle artistic touch.
+
+- **Final Prompt**  
+  “A young woman in a dark gray tank top and heathered gray shorts walks away from the camera on a busy city street, holding a water bottle in her right hand. She is mid‑stride, with wind blowing a few strands of hair across her neck. The shot is taken with a short focal length wide‑angle lens, capturing everything in sharp focus with slight motion blur on the subject’s legs and background pedestrians. The exposure is slightly overexposed on the right side, creating a warm halo around her hair. The scene is set in late afternoon, with sunlight coming from the right and a traffic light glowing red in the distance. The composition is accidental and off‑center, giving a candid, spontaneous feel to the image.”

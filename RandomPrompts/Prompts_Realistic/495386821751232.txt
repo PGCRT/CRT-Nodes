@@ -1,0 +1,21 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark, wavy hair tied loosely with a soft beige scarf, standing in a sunlit bedroom. She wears a flowing, pale‑gold dress with subtle leaf motifs, the fabric catching the light as she shifts slightly mid‑step. Her hands hang relaxed at her sides, one hand lightly gripping the edge of a wooden bed frame.  
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the woman is unaware of the camera, caught in a natural, mid‑action moment. The shot has a slight handheld shake and mild motion blur on the edges, giving it a raw, unprocessed feel. No filters or color grading; the exposure is slightly warm, with a hint of overexposure from the ambient daylight.  
+
+- **Environment**  
+  Location: A bright, airy bedroom with a rustic wooden bed, a white pillow, and a small potted plant on a side table. The time of day is late morning, when the sun casts soft golden light through an arched window. Weather: clear, warm, with a gentle breeze that ruffles the dress.  
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm) wide‑angle lens, all elements in focus — no bokeh or depth‑of‑field blur. The background is fully sharp, capturing every detail of the room. No rule‑of‑thirds intentionality; the framing is accidental and off‑center, with a slight tilt that gives the image a candid feel.  
+
+- **Composition Notes**  
+  - Capture the subject’s upper body and a portion of the bed, keeping the head slightly above the center of the frame.  
+  - Include a small portion of the arched window to add architectural interest.  
+  - Keep the shot wide to preserve the entire scene, from the woman’s feet to the top of her head, with a little space above her head for the scarf.  
+
+- **Final Prompt**  
+  “A young woman with long dark wavy hair loosely tied with a beige scarf stands in a sunlit bedroom, wearing a flowing pale‑gold dress with leaf motifs. She is caught mid‑step, hands relaxed by her sides, one hand gripping a wooden bed frame. The scene includes a white pillow and a small potted plant on a side table, with an arched window letting in late‑morning golden light. Shot on a 24‑35 mm wide‑angle lens, all elements in sharp focus, slight handheld blur, accidental off‑center framing, no filters or color grading, raw and unprocessed, capturing a candid, spontaneous moment in a real‑world setting.”

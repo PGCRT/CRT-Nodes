@@ -1,0 +1,27 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with shoulder‑length dark hair, wearing a black off‑the‑shoulder long‑sleeve top and high‑waisted black shorts, standing in a casual indoor setting. Her left hand rests on her hip, fingers slightly curled, while her right arm hangs naturally by her side. She has a small skull tattoo on her left wrist and a delicate bracelet on her right wrist. Her expression is neutral, almost candid, with a subtle smile.
+
+- **Motion & Focus**  
+  Slight motion blur at the fingertips and the edges of the hands, indicating handheld shake. Everything in the frame is fully sharp—no bokeh, no depth‑of‑field blur. The focus covers the entire scene from foreground to background.
+
+- **Lighting & Exposure**  
+  Natural ambient light from a western‑facing window, mid‑afternoon. Slight overexposure on the subject’s face and upper body, giving a warm, slightly hazy tone. No auto‑HDR or beauty filters—raw, unprocessed look. The background has a faint hint of a wooden shelving unit with a blue bottle, a white bottle, and a small green box.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24 mm), short focal length. No rule‑of‑thirds intentionality—framing is accidental, slightly tilted. The composition is off‑center; the subject’s head is positioned a little above the vertical center, and her left side extends beyond the frame’s edge.
+
+- **Environment**  
+  A casual home studio or apartment interior. The wall behind her is a muted gray concrete texture. A small wooden shelf on the left holds a blue water bottle, a white bottle, and a green box labeled “COK.” A blue cylindrical object (maybe a vacuum or a lamp) stands next to the shelf. The time of day is late afternoon, with soft natural light coming from the right side of the frame.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject appears unaware of the camera. Slight tilt and partial crop give an informal feel. No professional composition or editorial tone. The image has a raw, in‑the‑moment vibe with a slight overexposure that adds texture.
+
+- **Details & Imperfections**  
+  The woman’s left hand has a small skull tattoo visible on the wrist, and her right wrist bears a thin bracelet. Her nails are painted a light pink. The top she is wearing has a subtle ribbed texture, and the shorts have a frayed hem. The background shelf items cast soft shadows onto the wall.
+
+- **Prompt for Text‑to‑Image Generation**  
+  “A young woman with shoulder‑length dark hair, wearing a black off‑the‑shoulder long‑sleeve top and high‑waisted black shorts, standing in a casual indoor setting. Her left hand rests on her hip, fingers slightly curled, while her right arm hangs naturally by her side. She has a small skull tattoo on her left wrist and a delicate bracelet on her right wrist. Slight motion blur at the fingertips and the edges of the hands. Everything in the frame is fully sharp—no bokeh. Natural ambient light from a western‑facing window, mid‑afternoon, slight overexposure on the subject’s face. Wide‑angle lens (24 mm), short focal length. Accidental off‑center framing, slightly tilted. Background shows a muted gray concrete wall and a wooden shelf with a blue bottle, a white bottle, and a green box labeled ’COK’. A blue cylindrical object stands next to the shelf. Raw, unprocessed look, no filters.”
+
+Provide only the structured prompt.

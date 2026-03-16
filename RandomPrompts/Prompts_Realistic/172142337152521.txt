@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman with long, wavy brown hair walking barefoot on a sandy beach, wearing a black triangle‑style bikini. She is mid‑step, left foot slightly ahead, head tilted downward as if she’s looking at her own reflection in the water. Her right arm hangs naturally by her side, left arm bent at the elbow, revealing a floral tattoo on her upper left arm and a small “B” tattoo near her left wrist.
+
+- **Motion & Focus**  
+  Slight motion blur around the feet and lower legs to suggest movement, while the rest of the frame stays fully sharp. Handheld camera shake gives a subtle, organic jello‑effect. No portrait‑mode bokeh; background (ocean, waves, horizon) is in focus.
+
+- **Lighting & Exposure**  
+  Natural daylight, mid‑afternoon, with a slight overexposure on the upper body and a gentle warm tint from the sun’s angle. Auto‑HDR off – raw, unprocessed look. Slight color cast of warm beige and light blue tones. No filters, no color grading, no post‑processing aesthetic.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm), short focal length. Everything in focus from foreground to background. No depth‑of‑field blur; the entire scene is crisp. Slight tilt and off‑center framing – a casual, accidental composition.
+
+- **Environment**  
+  Specific real‑world location: a sunny beach with gentle waves breaking near the shore. The sand is light beige, slightly wet near the water’s edge. The ocean is a soft blue‑green with white foam. The horizon sits about a third of the frame up, but not intentionally placed – it’s an accidental, spontaneous capture.
+
+- **Candid Tone**  
+  Unposed, spontaneous — subject unaware or mid‑action. Imperfections encouraged: slight tilt, off‑center framing, partial crop. No rule‑of‑thirds intentionality – a natural, raw snapshot. Zero studio lighting, zero professional composition, zero editorial tone.
+
+- **Final Prompt**  
+  “A woman in a black bikini walking barefoot on a sandy beach, mid‑step with slight motion blur around her feet, head tilted down, floral tattoo visible on her left arm. Natural daylight mid‑afternoon, slight overexposure on the upper body, wide‑angle lens (24–35 mm), everything in focus, no bokeh. Background of ocean waves and horizon fully sharp. Candid, unposed, accidental framing with slight tilt and off‑center crop. Raw, unprocessed look, no filters.”

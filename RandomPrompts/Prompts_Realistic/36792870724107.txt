@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy auburn hair, wearing black lace lingerie, kneeling on a light‑colored floor in a living‑room setting. She is turned away from the camera, her left knee bent and her right leg extended, one hand resting on her thigh, the other near her hip. Her head is tilted slightly to the side, eyes looking back over her shoulder toward the camera, giving a candid, mid‑motion feel.
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window on the left, creating a soft, warm glow with a slight overexposure in the highlights. The exposure is not perfectly balanced—there’s a subtle haze in the upper left corner that gives a raw, unprocessed look. No auto‑HDR or beauty filters; the image retains a natural, handheld feel.
+
+- **Camera & Lens**  
+  Shot on a DSLR or mirrorless with a 24‑mm wide‑angle lens (f/3.5, 1/60 s shutter speed, ISO 400). The focus is flat—everything from the subject to the background is sharp, no bokeh or depth‑of‑field blur. Slight handheld shake gives a natural motion freeze with a hint of blur at the edges.
+
+- **Composition & Framing**  
+  The frame is intentionally off‑center: the subject’s left side cuts close to the left edge, while her right side leaves a small margin. The composition is spontaneous—no rule‑of‑thirds intentionality. A slight tilt (5° clockwise) adds dynamism. The top of the frame captures the white sofa and a portion of a green patterned rug on the floor, while the bottom cuts off just above her feet, creating a partial crop that enhances candidness.
+
+- **Environment**  
+  A modern living room with a plain white sofa against a light gray wall. A green rug with floral motifs lies on the floor, partially visible. The time of day is late afternoon, with warm sunlight streaming in from the left, casting soft shadows. The ambient light is slightly uneven, creating a subtle vignette.
+
+- **Details & Imperfections**  
+  The image has a slight tilt and a small crop that makes it feel unposed and spontaneous. There’s a faint motion blur around the edges, especially near the hands and feet, indicating a handheld shot. A tiny star tattoo is visible on her left upper arm. Her skin has natural texture, with no retouching or color grading—just raw, realistic capture.
+
+- **Final Prompt**  
+  “A young woman with long wavy auburn hair in black lace lingerie kneels on a light floor in a living‑room, turned away from the camera and looking back over her shoulder. Natural daylight from a left‑side window creates a soft warm glow with slight overexposure. Shot on a 24‑mm wide‑angle lens at f/3.5, 1/60 s, ISO 400, flat focus. The frame is off‑center with a slight clockwise tilt and partial crop, capturing the white sofa and green rug in the background. Raw, handheld feel with subtle motion blur, no filters or post‑processing.”

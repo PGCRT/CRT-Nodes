@@ -1,0 +1,29 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair, wearing a bright yellow string bikini, captured mid‑turn as she steps onto a wooden chair in a sunlit living room. Her left hand grips the side of her bikini bottom, fingers slightly curled, while her right arm rests on her hip. She looks back over her shoulder toward the camera with a soft, playful expression, eyes half‑closed, lips parted.
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window behind her creates a gentle backlight that slightly overexposes the upper part of the frame. The exposure is uneven—the background is a bit brighter than the foreground—giving a raw, unprocessed feel. No auto‑HDR or beauty filters; just a straightforward, handheld shot.
+
+- **Camera & Lens**  
+  Shot on a DSLR or mirrorless with a 24‑mm wide‑angle lens (f/3.5, 1/60 s shutter speed). Everything is in focus—no bokeh or depth‑of‑field blur; the background, including the wooden chair and potted plant, remains sharp.
+
+- **Composition & Framing**  
+  The composition is intentionally off‑center: the subject occupies the right‑hand side of the frame, slightly tilted to the left. The crop is partial—her left hip extends beyond the right edge, and the top of her head cuts off near the upper corner. No rule‑of‑thirds; it’s a spontaneous, candid capture.
+
+- **Environment**  
+  A bright, airy living room with a large window draped in sheer white curtains. A potted green plant sits in a white pot to the left, and a wooden chair with patterned cushions is behind her. The floor is light wood, and a small portion of a white rug is visible at the bottom left.
+
+- **Time & Mood**  
+  Mid‑afternoon, around 3 pm, when the sun is high but not directly overhead. The ambient light is warm, creating soft shadows and a slight haze. The mood is casual and unposed, as if she’re just finishing a workout or preparing for a beach outing.
+
+- **Technical Details**  
+  - Focal length: 24 mm (wide‑angle)  
+  - Aperture: f/3.5  
+  - Shutter speed: 1/60 s  
+  - ISO: 400  
+  - No post‑processing color grading or filters; only raw, in‑camera capture with slight handheld jitter.
+
+- **Final Prompt**  
+  “A young woman with long wavy brown hair, wearing a bright yellow string bikini, captured mid‑turn as she steps onto a wooden chair in a sunlit living room. Her left hand grips the side of her bikini bottom, fingers slightly curled, while her right arm rests on her hip. She looks back over her shoulder toward the camera with a soft, playful expression, eyes half‑closed, lips parted. Natural daylight from a large window behind her creates a gentle backlight that slightly overexposes the upper part of the frame. The exposure is uneven—background brighter than foreground—raw, unprocessed look. Shot on a DSLR or mirrorless with a 24‑mm wide‑angle lens (f/3.5, 1/60 s). Everything in focus—no bokeh. Composition intentionally off‑center: subject on the right, slightly tilted left, partial crop. Environment: bright living room with sheer white curtains, potted plant in white pot to the left, wooden chair with patterned cushions behind her, light wood floor, small portion of white rug at bottom left. Mid‑afternoon 3 pm, warm ambient light. Casual, unposed mood. No filters, no color grading, raw handheld jitter.”

@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with shoulder‑length, sun‑kissed blonde hair, wearing a pastel pink halter‑style bikini, crouching low on a tiled floor. Her left hand rests on her left knee, right hand slightly curled near her thigh, body angled toward the camera but not perfectly centered. She looks directly at the lens with a soft, contemplative expression, eyes slightly narrowed, mouth relaxed.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject is mid‑movement, as if she just finished a dance or a stretch. Slight handheld shake gives a natural motion blur around the edges. The shot has a raw, unprocessed look: no auto‑HDR or auto‑beauty enhancements, just ambient light with a hint of overexposure on the highlights.
+
+- **Environment**  
+  Location: A bright, airy living room with a textured pink wall behind the subject; a white baseboard runs along the floor, a small window to the left lets in natural daylight. Time of day: late afternoon, soft golden light filtering through the window, creating gentle shadows and a warm tone. Weather: clear, mild, no wind.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm) wide‑angle lens, all elements in focus — background fully sharp, no bokeh. No depth‑of‑field blur or portrait mode. The framing is accidental: slightly tilted, off‑center, a partial crop that cuts off the top of the wall and the left side of the floor tile. Everything is crisp from edge to edge.
+
+- **Composition Notes**  
+  No rule‑of‑thirds intentionality — the subject’s head sits just above the center of the frame, her knees form a slight diagonal line. The composition feels spontaneous, as if captured in a fleeting moment. The background wall has subtle texture, small imperfections that add character.
+
+- **Lighting**  
+  Natural daylight from the left, creating soft highlights on the subject’s face and shoulders; a slight overexposure on the upper body but no color grading or post‑processing.
+
+- **Final Prompt**  
+  “A young woman with shoulder‑length, sun‑kissed blonde hair, wearing a pastel pink halter‑style bikini, crouching low on a tiled floor in a bright living room. Her left hand rests on her left knee, right hand slightly curled near her thigh, body angled toward the camera but not perfectly centered. She looks directly at the lens with a soft, contemplative expression, eyes slightly narrowed, mouth relaxed. Candid, unposed, spontaneous — the subject is mid‑movement, as if she just finished a dance or a stretch. Slight handheld shake gives a natural motion blur around the edges. The shot has a raw, unprocessed look: no auto‑HDR or auto‑beauty enhancements, just ambient light with a hint of overexposure on the highlights. Location: a bright, airy living room with a textured pink wall behind the subject; a white baseboard runs along the floor, a small window to the left lets in natural daylight. Time of day: late afternoon, soft golden light filtering through the window, creating gentle shadows and a warm tone. Weather: clear, mild, no wind. Lens & Technical: short focal length (24‑35 mm) wide‑angle lens, all elements in focus — background fully sharp, no bokeh. No depth‑of‑field blur or portrait mode. The framing is accidental: slightly tilted, off‑center, a partial crop that cuts off the top of the wall and the left side of the floor tile. Everything is crisp from edge to edge.”

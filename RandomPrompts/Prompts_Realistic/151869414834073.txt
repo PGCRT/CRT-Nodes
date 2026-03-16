@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework – “Summer Bedroom Shoot”**
+
+- **Subject & Pose**  
+  A young woman with long, dark brown hair, sitting on a white‑lined bed in a bright, sunlit bedroom. She’s nude, turned slightly to the side, leaning back on her elbows with one hand on the mattress and the other on the bed frame. Her face is turned toward the camera, a subtle smile, eyes bright, capturing a candid, mid‑action moment.
+
+- **Lighting & Exposure**  
+  Natural daylight from a window on the right side of the room; slight overexposure in the upper right corner to emphasize the ambient light. No auto‑HDR or beauty filters – raw, unprocessed look. Slight handheld shake gives a natural motion blur around the edges.
+
+- **Environment Details**  
+  The bedroom has a wooden dresser on the left with a stack of colorful books on top, a small white outlet, and a dark wooden door in the back. A window with a white frame lets in warm sunlight, creating soft highlights on the woman’s skin. The bed has a simple white sheet with faint wrinkles. The floor is a light hardwood.
+
+- **Time of Day & Weather**  
+  Late morning, around 10:30 AM; the sun is high but not directly overhead, giving a warm, golden hue. Light breeze suggests a mild, pleasant day outside.
+
+- **Lens & Technical Settings**  
+  24‑mm wide‑angle lens (short focal length), f/4.0 aperture, 1/60 s shutter speed, ISO 400. Everything is in focus – no bokeh, no depth‑of‑field blur. The background is fully sharp, capturing every detail from the dresser to the window frame.
+
+- **Composition Notes**  
+  The framing is off‑center and slightly tilted, giving a casual, spontaneous feel. The shot is a “wide” capture that includes the subject, the bed, the dresser, and the door, with no rule‑of‑thirds intentionality. The composition is accidental – the woman’s body occupies the central right quadrant, while the dresser sits on the left, creating a balanced but not staged look.
+
+- **Post‑Processing**  
+  No color grading or filters applied. Slight overexposure in the upper right corner for a natural, raw feel. The image retains a little motion blur from handheld shooting, adding to the candid vibe.
+
+**Prompt Summary (for AI image generator)**  
+> “A young woman with long dark brown hair sits nude on a white‑lined bed in a bright, sunlit bedroom, turned slightly to the side and leaning back on her elbows. Natural daylight comes from a window on the right, creating a slight overexposure in the upper right corner. A wooden dresser with a stack of colorful books sits on the left, a dark wooden door is behind her, and a white‑framed window lets in warm sunlight. The shot is taken with a 24‑mm wide‑angle lens at f/4.0, 1/60 s shutter speed, ISO 400 – everything in focus, no bokeh. The framing is off‑center and slightly tilted, capturing a candid, spontaneous moment. No filters or color grading, just raw, unprocessed realism.”

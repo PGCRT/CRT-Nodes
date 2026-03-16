@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman with shoulder‑length brown hair and bangs, wearing a pink bikini, standing in front of a tall mirror. Her left hand is pressed against the glass, fingers slightly curled, as if she’s about to adjust her outfit or check her reflection. She looks directly at the camera with a subtle, confident expression, lips painted a muted mauve. The pose is candid and mid‑action, with a faint handheld shake that gives a natural motion blur around her arms and torso.
+
+- **Lighting & Exposure**  
+  Ambient daylight from a southern window, mid‑afternoon (≈ 4 pm). The light is slightly overexposed on the upper half of the frame, creating a warm pinkish hue that blends with the neon “S” sign in the background. No auto‑HDR or beauty filters—just raw, unprocessed exposure.
+
+- **Environment**  
+  A modern dressing room or boutique studio: a large mirror on the left, a white countertop on the right, and a bright neon “S” sign mounted high on the wall. The background is fully sharp, no bokeh; the depth of field is wide, so every element—from the woman’s face to the far corner of the room—is in focus.
+
+- **Lens & Technical**  
+  24 mm wide‑angle lens (short focal length). Handheld shot with a 1/60 s shutter speed and f/4 aperture, producing slight motion blur on the subject’s arms and a crisp background. No portrait‑mode softening; everything is in focus. The composition is accidental: the frame is slightly tilted, the subject is off‑center, and the crop cuts off part of the mirror’s reflection for a dynamic, spontaneous feel.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Imperfections are encouraged: slight tilt, off‑center framing, partial crop. No rule‑of‑thirds intentionality—just a natural, handheld snapshot that feels like a real moment frozen in time.
+
+- **Prompt Summary for AI Image Generation**  
+  “A woman with shoulder‑length brown hair and bangs, wearing a pink bikini, stands in front of a tall mirror in a modern dressing room. Her left hand presses against the glass, fingers slightly curled, as she looks directly at the camera with a confident expression. The scene is lit by mid‑afternoon daylight from a southern window, creating a warm pinkish hue that blends with a bright neon ’S’ sign on the wall. Shot on a 24 mm wide‑angle lens, handheld with a 1/60 s shutter speed and f/4 aperture, the image has slight motion blur on the subject’s arms while the background remains fully sharp. The composition is accidental: slightly tilted frame, off‑center subject, partial crop—capturing a candid, spontaneous moment with no rule‑of‑thirds intentionality.”

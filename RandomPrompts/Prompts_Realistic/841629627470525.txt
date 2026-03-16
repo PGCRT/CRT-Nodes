@@ -1,0 +1,26 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with shoulder‑length dark hair, wearing a black one‑piece swimsuit, sitting on a white bed. Her left leg is bent, foot slightly lifted, and her right hand rests on her thigh; she looks directly at the camera with a neutral expression.  
+
+- **Motion & Focus**  
+  Slight motion blur from handheld shake; everything in focus—no portrait‑mode depth of field.  
+
+- **Lighting & Exposure**  
+  Natural indoor lighting from a window behind the bed; slight overexposure on the face and shoulders, subtle ambient glow. No auto‑beauty or filter processing.  
+
+- **Lens & Technical**  
+  Wide‑angle lens (24 mm), short focal length, no bokeh—background (a tall window with city lights outside) fully sharp.  
+
+- **Environment**  
+  A modern hotel room at night; the bed has a tufted headboard, white pillows, and a small bedside lamp. A window shows a blurred city skyline outside.  
+
+- **Composition**  
+  Candid, unposed framing—slight tilt and off‑center crop. No rule‑of‑thirds intentionality.  
+
+- **Post‑Processing**  
+  Raw, unprocessed look; no color grading or filters.  
+
+**Prompt:**
+
+> “A young woman with shoulder‑length dark hair in a black one‑piece swimsuit sits on a white bed in a modern hotel room at night. Her left leg is bent, foot slightly lifted, right hand resting on her thigh, looking directly at the camera. Slight motion blur from handheld shake keeps everything in focus—no portrait mode. Natural indoor lighting from a window behind the bed gives a subtle overexposed glow on the face and shoulders. Wide‑angle 24 mm lens, short focal length, no bokeh; the background shows a tall window with city lights outside, fully sharp. Candid, unposed framing with slight tilt and off‑center crop. Raw, unprocessed look, no filters or color grading.”

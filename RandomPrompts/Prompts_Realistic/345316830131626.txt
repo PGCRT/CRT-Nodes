@@ -1,0 +1,34 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman with long, dark hair sitting on a concrete ledge in front of a tall, cascading waterfall. She is wearing a black lace bikini and has her hands placed gently over her chest, head tilted back as if she’s feeling the cool mist. Her expression is relaxed, slightly dreamy, with a faint smile. The pose should feel spontaneous, as if captured mid‑movement.
+
+- **Cinematic Details**  
+  - Slight motion blur on the subject’s hands and the waterfall’s flow to convey handheld shake.  
+  - Auto‑HDR or auto‑beauty mode off – keep the look raw and unprocessed.  
+  - No filters, no color grading, no post‑processing aesthetic.  
+  - Slight overexposure in the upper part of the frame to highlight the mist and water droplets.  
+
+- **Lens & Technical**  
+  - Wide‑angle lens (24–35 mm) with a short focal length.  
+  - Everything in focus – no bokeh, no depth‑of‑field blur; background fully sharp.  
+  - No portrait mode or subject isolation.  
+
+- **Capture Style**  
+  - Candid, unposed, spontaneous – the subject is unaware of the camera or mid‑action.  
+  - Imperfections encouraged: slight tilt, off‑center framing, partial crop.  
+  - No rule‑of‑thirds intentionality – accidental framing that feels natural.  
+  - Natural motion freeze or slight blur from handheld instability.  
+
+- **Environment**  
+  - Specific real‑world location: a lush tropical forest with ferns and moss on either side of the waterfall.  
+  - Time of day: late morning, soft sunlight filtering through the canopy.  
+  - Weather or ambient conditions: light mist, gentle wind, slightly humid.  
+
+- **Composition Notes**  
+  - Frame the subject’s upper body and the waterfall in a single shot; keep the ledge in the foreground for a solid base.  
+  - Include surrounding foliage to add depth and context.  
+  - Keep the composition wide, but not overly broad – enough space on all sides to keep the scene balanced without intentional rule‑of‑thirds.  
+
+- **Final Prompt**  
+  “A woman with long dark hair in a black lace bikini sits on a concrete ledge before a tall waterfall, hands over chest, head tilted back, slight motion blur on her hands and the water flow, raw unprocessed look, wide‑angle lens, everything in focus, candid spontaneous capture, slight tilt and off‑center framing, no rule‑of‑thirds, natural ambient light of late morning, lush ferns and moss around, soft mist and wind, handheld shake.”

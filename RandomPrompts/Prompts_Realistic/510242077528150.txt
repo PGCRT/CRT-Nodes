@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with shoulder‑length, wavy brown hair, wearing a black sports bra and no underwear, captured mid‑step in a casual, spontaneous pose. Her left hand hangs loosely by her side, right arm slightly bent, as if she just finished a movement or is about to do a dance step. She’s standing in a dimly lit bedroom at dusk; the window behind her shows a faint twilight sky.  
+
+- **Lighting & Exposure**  
+  Slight overexposure on the subject’s face and torso, giving a warm, natural glow. Ambient light from the window creates soft highlights on her skin and a subtle rim light on her hair. No auto‑beauty mode—raw, unprocessed look.  
+
+- **Camera Settings**  
+  Wide‑angle lens (24 mm), short focal length, handheld. Slight motion blur on the subject’s hands and torso to suggest movement. Everything in focus—from her face to the background—no bokeh, no depth‑of‑field blur.  
+
+- **Composition & Framing**  
+  Imperfect, off‑center framing: the subject is slightly tilted to the left, cropping the top of her head just above the ear. The composition is not rule‑of‑thirds; the left side of the frame cuts off a bit of the bedside table, adding spontaneity.  
+
+- **Environment**  
+  A modest bedroom with a wooden bed frame, a small white nightstand on the left, and a wall poster of a beach scene behind her. A bottle of soda, a book, and a small clock sit on the nightstand. The bed’s floral sheet is partially visible beneath her.  
+
+- **Details & Texture**  
+  Capture the texture of her skin, the slight sheen on her black bra, the faint reflection in her eyes. Include minor imperfections: a tiny smudge on her left wrist, a slight wrinkle in her bra strap.  
+
+- **Post‑Processing**  
+  No filters, no color grading, no post‑processing aesthetic—just raw, natural imagery.  
+
+**Prompt Summary**  
+> “A young woman with shoulder‑length wavy brown hair, wearing a black sports bra, captured mid‑step in a dimly lit bedroom at dusk. Slight overexposure on her face and torso, handheld wide‑angle lens (24 mm) with slight motion blur. The scene includes a wooden bed frame, a white nightstand with a soda bottle, book, and clock, and a beach poster on the wall. Capture raw, unprocessed details, imperfect framing, and everything in focus—no bokeh.”

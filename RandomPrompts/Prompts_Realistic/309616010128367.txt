@@ -1,0 +1,34 @@
+**Realistic Candid Photography Prompt Framework – “Blonde Woman on Wooden Chest”**
+
+- **Subject & Pose**  
+  A young woman with long, wavy blonde hair sits atop a rustic wooden chest in a dimly lit, industrial‑style loft. She is nude, her body slightly turned toward the camera, hands clasped over her chest in a protective, contemplative gesture. Her left arm bears a floral tattoo that peeks above her shoulder. She wears a thin black choker around her neck. Her gaze is downward, eyes closed or half‑closed, as if she’s mid‑thought or about to speak.
+
+- **Lighting & Exposure**  
+  Ambient lighting from a high‑window or a ceiling lamp creates a soft, slightly overexposed highlight on her face and torso. The exposure is uneven—warm tones in the foreground, cooler shadows in the background. No auto‑beauty or filter processing; raw, unedited look.
+
+- **Camera Settings**  
+  - Lens: 24‑35 mm wide‑angle, short focal length.  
+  - Aperture: f/4–f/5.6 (wide opening).  
+  - Shutter speed: 1/60–1/100 s (slight motion blur from handheld shake).  
+  - ISO: 800–1600 (for natural grain).  
+  - Focus: everything in focus—foreground and background.  
+  - No bokeh; depth of field is flat.
+
+- **Composition & Framing**  
+  - Candid, unposed framing: the shot is slightly off‑center, with a subtle tilt that gives a spontaneous feel.  
+  - The composition does not follow the rule of thirds; the subject occupies the central‑left portion of the frame, her body extending toward the bottom right.  
+  - The wooden chest she sits on occupies the lower third of the image, its textured grain visible.  
+  - Background: a concrete wall with a small wall lamp and a doorway leading to a darker interior space; a white door handle is visible on the far right.
+
+- **Environment & Time**  
+  - Location: an industrial loft or warehouse converted into a studio, with exposed concrete walls and wooden elements.  
+  - Time of day: late afternoon, natural light coming from a high window, creating soft shadows.  
+  - Weather/ambient conditions: mild, slightly humid air; the ambient noise is low, allowing for quiet motion.
+
+- **Details & Imperfections**  
+  - Slight tilt and off‑center framing give a casual, spontaneous vibe.  
+  - Minor motion blur on the woman’s hands and hair, indicating handheld shake.  
+  - The image has a raw, unprocessed look—no color grading or filters, just the natural tones of the scene.
+
+- **Final Prompt**  
+  *“A candid, wide‑angle shot of a nude blonde woman sitting on a rustic wooden chest in an industrial loft. She wears a black choker and a floral tattoo on her left arm, hands clasped over her chest, gaze downward. The image is slightly overexposed with natural ambient light from a high window, captured on a 24‑35 mm lens at f/5.6, 1/80 s shutter speed, ISO 1200. Everything is in focus, no bokeh. The framing is off‑center and slightly tilted, capturing the woman’s body and the textured chest in the lower third, with a concrete wall and a doorway in the background. Raw, unprocessed, no filters—pure, spontaneous realism.”*

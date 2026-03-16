@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail, wearing an oversized white hoodie with gray side panels and a front pocket, standing mid‑step on a concrete sidewalk. Her hands hang loosely at her sides, slightly bent, as if she’s about to grab something or just released a gesture. The hoodie’s drawstrings are tied, and the sleeves drape naturally over her arms. She faces the camera with a relaxed, neutral expression, eyes forward, a hint of a subtle smile.
+
+- **Candid, Unposed Feel**  
+  Capture a spontaneous moment where the subject is unaware of the camera or caught in a natural motion—slight body tilt and off‑center framing. The shot should feel “in progress,” with a faint handheld shake that gives a slight motion blur around the edges. No staged composition; the frame is accidental, with the subject slightly cut off at the bottom and right side.
+
+- **Environment**  
+  Location: A small convenience store or gas station entrance, identifiable by a red‑green sign and a glass door in the background. The building’s facade is white with a red stripe, and a small yellow pillar is visible on the left. Behind the subject, a parked car and a traffic cone sit at the corner of a paved lot. The scene is set in late afternoon, with warm, golden sunlight casting soft shadows to the right. Light is slightly overexposed on the subject’s face, giving a natural, raw look.
+
+- **Lens & Technical**  
+  Use a wide‑angle lens (e.g., 24‑35 mm) with a short focal length to capture a broad view of the scene. Keep everything in focus—no bokeh or depth‑of‑field blur; background remains sharp. Shoot at a high resolution, with auto‑HDR or auto‑beauty mode turned off. No color grading or filters—just raw, unprocessed imagery. The exposure is slightly bright on the subject’s face and shirt, creating a subtle halo effect.
+
+- **Composition Notes**  
+  - Frame the subject slightly above the center of the image, leaving more space above her head than below her feet.  
+  - Keep the background fully sharp; the convenience store sign and traffic cone should be clearly visible.  
+  - Capture the natural motion blur from a handheld shot—slight shake around the edges.  
+  - Ensure that the subject’s hoodie and hair are in focus, with no portrait‑mode isolation.
+
+- **Final Prompt**  
+  “A young woman with a high ponytail, wearing an oversized white hoodie with gray side panels, stands mid‑step on a concrete sidewalk in front of a convenience store. Her hands hang loosely at her sides, slightly bent, as if she’s about to grab something. The shot is candid and unposed, with accidental off‑center framing and slight motion blur from handheld shooting. The background shows a red‑green sign, a glass door, and a traffic cone, all in sharp focus. Shot with a wide‑angle lens at late afternoon, the image has a subtle overexposure on the subject’s face, no filters or color grading, raw and natural.”

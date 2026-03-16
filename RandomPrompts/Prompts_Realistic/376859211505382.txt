@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair, wearing a pink tank top and white high‑waist jeans, stands at a wooden classroom desk. She is mid‑turn, facing slightly toward the camera with a candid, unposed smile, her left hand gripping a yellow pencil as if she just finished a note. Her right hand rests on the desk’s edge. The shot captures a subtle motion blur around her hands and the pencil, indicating handheld instability.
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window behind her creates a slight overexposure on her face and upper body; the background is fully sharp with no bokeh. No auto‑HDR or beauty filters—raw, unprocessed look. The exposure is slightly warm, as if the sun is high in the late morning.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm) with a short focal length. Everything in focus—from her face to the desk surface—to achieve a “no‑portrait‑mode” effect. Slight tilt and off‑center framing give an accidental, spontaneous feel.
+
+- **Environment**  
+  A bright, modern classroom with large windows on the back wall, a wooden desk, and a few classmates visible in the background (one man writing at a desk, another student partially visible). The time of day is mid‑morning, with soft natural light and a gentle haze from the window. Weather is clear, with no rain or wind.
+
+- **Composition & Framing**  
+  No rule‑of‑thirds intentionality—framing is casual, with the subject slightly cut off at the right edge. The background remains fully sharp, preserving the detail of the classroom and the classmates’ activity. The shot has a slight handheld jitter, giving it a realistic candid feel.
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, zero studio lighting. Only natural light and raw capture. Slight motion blur on the subject’s hands and pencil, subtle overexposure on her face, and a wide‑angle perspective that keeps everything in focus.

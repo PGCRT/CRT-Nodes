@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, athletic woman with long, wavy dark hair that catches the wind, wearing a pink triangle‑style bikini. She’s mid‑step on a sandy beach, slightly leaning forward as if she just kicked up a wave or is about to. Her left hand rests near her hip, right hand relaxed by her side, and she’s looking down at the water with a subtle, confident expression. A thin gold necklace hangs around her neck, a small pendant glinting in the light; a silver watch sits on her left wrist, a gold bracelet on her right.
+
+- **Lighting & Exposure**  
+  Slight overexposure from the mid‑afternoon sun, creating a warm, soft glow on her skin and the sand. The exposure is uneven—slightly brighter on the front of her body, with a faint halo around her hair. No auto‑beauty or filter enhancement; the image retains raw, unprocessed detail.
+
+- **Motion & Focus**  
+  A natural, handheld freeze with slight motion blur at the edges, giving a sense of movement. Everything—from her face to the waves behind—is fully sharp, no portrait‑mode depth‑of‑field blur. The framing is off‑center and slightly tilted, capturing a candid, spontaneous moment.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24 mm) with a short focal length, no bokeh. All elements—subject, sand, sea, sky—are in focus. No rule‑of‑thirds intentionality; the composition is accidental, as if she were mid‑action and the photographer was moving.
+
+- **Environment**  
+  A bright, breezy beach at late afternoon. The ocean is gently lapping at the shore behind her, with a few small whitecaps visible. The sky is a pale, warm hue, suggesting the sun is low but still high enough to keep the background fully sharp. The sand is light, fine, and slightly textured; a faint footprints remain near her feet.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, partial crop that cuts off a bit of the horizon on the top right. Her hair has a slight wind‑blown stray strand. A tiny imperfection in the bikini strap’s tie is visible on the left side, adding realism. The image has no studio lighting or professional composition—just an authentic, raw snapshot.
+
+- **Prompt for Text‑to‑Image Generation**  
+  “A tall woman with long wavy dark hair, wearing a pink triangle bikini, mid‑step on a sandy beach at late afternoon. She leans forward slightly, looking down at the ocean, with a silver watch on her left wrist and a gold bracelet on her right. Warm overexposed sunlight creates a soft glow; everything is fully sharp with no bokeh. Handheld camera with slight motion blur, wide‑angle 24 mm lens, accidental off‑center framing, slight tilt. Background shows gentle waves and a pale sky. Raw, unprocessed, candid style.”

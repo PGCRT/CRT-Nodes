@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair standing on a sunlit beach, wearing a black, long‑sleeved, high‑slit bodysuit with a central zipper. Her left hand rests on her hip, right arm relaxed by her side, body angled slightly toward the camera, head turned to face the lens with a soft, natural smile.  
+
+- **Motion & Focus**  
+  Slight motion blur at the edges from handheld shake; everything in focus—no portrait‑mode depth of field. The shutter speed is fast enough to freeze the subject’s pose but leave a hint of movement in her hair and the background waves.  
+
+- **Lighting & Exposure**  
+  Auto‑HDR off, raw, unprocessed look. The scene is slightly overexposed on the upper body, letting the sunlight flare through the fabric, while the lower body remains softly lit. No color grading or filters—just natural ambient light.  
+
+- **Lens & Technical**  
+  Wide‑angle lens (24‑35 mm), short focal length, no bokeh. Background is fully sharp, no subject isolation. The composition is accidental: slight tilt and off‑center framing, no rule‑of‑thirds intentionality.  
+
+- **Environment**  
+  Specific real‑world location: a sandy beach with large, rounded boulders in the background, the ocean visible beyond the rocks. Time of day: late afternoon, golden hour, warm sunlight casting long shadows. Weather: clear, light breeze, slight haze from the sand.  
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Imperfections encouraged: slight tilt, off‑center framing, partial crop. Zero studio lighting, zero professional composition, zero editorial tone. Natural motion freeze or slight blur from handheld instability.  
+
+- **Prompt Summary for AI Image Generation**  
+  “A young woman with long wavy brown hair, wearing a black long‑sleeved high‑slit bodysuit with a central zipper, stands on a sunlit beach with large boulders behind her. She poses casually with one hand on hip, head turned to the camera, slight motion blur on the edges, everything in focus. The scene is slightly overexposed, captured on a wide‑angle short focal length lens, no bokeh, no filters, raw and unprocessed. Late afternoon golden hour lighting, clear sky, soft breeze. Candid, accidental framing, slight tilt, off‑center composition.”

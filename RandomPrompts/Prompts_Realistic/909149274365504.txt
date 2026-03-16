@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark brown hair, wearing a bright pink bikini with yellow trim, standing on a sunlit beach. She holds a clear plastic water bottle in her right hand, slightly angled toward the camera, and smiles casually while looking directly at the lens. Her left arm hangs naturally by her side, with a ring visible on her ring finger.  
+
+- **Motion & Focus**  
+  Slight motion blur from handheld shooting; the image has an auto‑HDR or “auto‑beauty” off look—no filters, no color grading, no post‑processing. The exposure is mildly overexposed to capture the bright ambient daylight. Everything in the frame—from the woman’s face to the sand and background—is fully sharp, captured with a wide‑angle lens (short focal length).  
+
+- **Framing & Composition**  
+  Candid, unposed, spontaneous—subject appears mid‑action, slightly off‑center, with accidental tilt and partial crop. No rule‑of‑thirds intentionality; the composition is natural and informal.  
+
+- **Environment**  
+  Specific real‑world location: a tropical beach with white sand, scattered green palm leaves, and a hint of ocean in the background. Time of day: mid‑afternoon, with warm, high‑angle sunlight creating soft shadows. Weather: clear, slightly hazy sky, ambient light giving a natural glow.  
+
+- **Lens & Technical**  
+  Short focal length (e.g., 24–35 mm), wide‑angle lens. No bokeh—background is fully sharp, no depth‑of‑field blur. Zero studio lighting, zero professional composition, zero editorial tone.  
+
+- **Final Prompt**  
+  “A young woman with long dark brown hair in a pink bikini with yellow trim stands on a sunlit beach, holding a clear water bottle in her right hand and smiling at the camera. The shot is candid and slightly blurred from handheld motion, captured with a wide‑angle lens at mid‑afternoon, with a fully sharp background of white sand, scattered palm leaves, and ocean. The exposure is mildly overexposed, no filters or post‑processing applied, everything in focus, framed accidentally off‑center for a natural, spontaneous look.”

@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail and golden hoop earrings, wearing an all‑white string bikini, captured mid‑gesture with both fists slightly curled near her shoulders. Her face is turned toward the camera with a bright, open smile; her head is tilted slightly to the right, giving a casual, spontaneous feel.
+
+- **Motion & Focus**  
+  Slight motion blur on the hands and background to suggest handheld shake, but everything remains fully sharp—no portrait‑mode blur. The image has an auto‑HDR “raw” look: no color grading or filters, just natural exposure with a hint of overexposure in the sky.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24 mm) with a short focal length; no bokeh—foreground and background are both in focus. Slight tilt and off‑center framing create an accidental, candid composition. The shot is taken at midday, with the sun high overhead, producing bright, direct lighting.
+
+- **Environment**  
+  Setting: a sunny outdoor sports field with a covered grandstand in the background. The stand has red, yellow, and green panels; a crowd of spectators can be seen on the bleachers. A traffic light is visible on the right side of the frame, and several white paper airplanes float in the sky above the subject’s head. The sky is a pale blue with scattered white clouds.
+
+- **Details & Imperfections**  
+  The image shows natural imperfections: a slight tilt of the camera, a partial crop that cuts off the top left corner of the grandstand, and a faint motion blur around the hands. The exposure is slightly high in the sky but keeps the foreground well‑lit. No post‑processing aesthetic—just raw, candid photography.
+
+- **Prompt for Text‑to‑Image Generation**  
+  “A young woman with a high ponytail and golden hoop earrings, wearing an all‑white string bikini, captured mid‑gesture with both fists slightly curled near her shoulders. Her face is turned toward the camera with a bright, open smile; her head is tilted slightly to the right, giving a casual, spontaneous feel. Slight motion blur on the hands and background to suggest handheld shake, but everything remains fully sharp—no portrait‑mode blur. Wide‑angle lens (24 mm) with a short focal length; no bokeh—foreground and background are both in focus. Slight tilt and off‑center framing create an accidental, candid composition. The shot is taken at midday, with the sun high overhead, producing bright, direct lighting. Setting: a sunny outdoor sports field with a covered grandstand in the background. The stand has red, yellow, and green panels; a crowd of spectators can be seen on the bleachers. A traffic light is visible on the right side of the frame, and several white paper airplanes float in the sky above the subject’s head. The sky is a pale blue with scattered white clouds. Natural imperfections: slight tilt, off‑center framing, partial crop. Raw, unprocessed look, auto‑HDR, no filters.”

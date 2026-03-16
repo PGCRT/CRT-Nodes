@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman in a black thong, standing back-to-camera in a tiled bathroom. Her hair is damp, slightly messy, and falls over her shoulders. She’s mid‑step, one hand on each thigh, fingers curled naturally, nails painted red. The shot captures the curve of her buttocks and the gentle lines of water droplets sliding down her thighs.
+
+- **Motion & Focus**  
+  Slight motion blur at the edges from handheld shake; the center is almost sharp but not perfectly in focus. No portrait‑mode bokeh—everything from foreground to background stays fully sharp. A tiny overexposure on the upper back, giving a warm, natural glow.
+
+- **Lighting & Exposure**  
+  Natural daylight coming from a window on the left, creating soft shadows and a subtle highlight on her left hip. Slight underexposure on the lower legs, making the water droplets appear almost translucent. No color grading or filters—just raw, unprocessed tones.
+
+- **Lens & Technical**  
+  24‑mm wide‑angle lens, short focal length. No depth‑of‑field blur; background tiles and showerhead are fully sharp. Slight tilt to the left, off‑center framing that feels spontaneous and imperfect.
+
+- **Environment**  
+  A modern bathroom with beige ceramic tiles, a stainless‑steel showerhead visible on the left, and a small window that lets in natural light. The time of day is late morning, when the sun is high but not directly overhead, giving a warm, diffused illumination. A few stray water droplets hang from her thighs, adding a sense of immediacy.
+
+- **Composition & Style**  
+  Candid, unposed, spontaneous—subject appears unaware of the camera. Slight tilt and partial crop give an accidental, raw feel. No rule‑of‑thirds intentionality; the frame is slightly off‑center, with the subject’s back occupying the central vertical space. The shot feels like a fleeting moment captured mid‑action.
+
+- **Prompt**  
+  *“A woman in a black thong stands back‑to‑camera in a tiled bathroom, damp hair draping over her shoulders. Her hands rest on her thighs, fingers curled, nails red. Slight motion blur at the edges, center almost sharp. Natural daylight from a left‑side window creates soft shadows and a subtle highlight on her left hip. 24‑mm wide‑angle lens, short focal length, everything in focus. The scene is a modern bathroom with beige tiles and a stainless‑steel showerhead; late‑morning light gives warm tones. Slight tilt, off‑center framing, candid, unposed, spontaneous capture.”*

@@ -1,0 +1,24 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with shoulder‑length light brown hair, wearing a pale‑green sports bra and matching shorts that both feature a large avocado graphic on the front. She stands in a bright, lived‑in living room, hands on hips, slightly turned toward the camera, head tilted a little to one side as if she just finished a quick stretch or is about to pick something up from a cabinet. Her expression is relaxed and candid, with a subtle smile, eyes looking directly at the lens but not posing formally.
+
+- **Lighting & Exposure**  
+  Natural daylight coming from a large window on the left, creating a soft overexposed highlight on her face and a slight warm tint. The exposure is a little high, giving a raw, unprocessed look. No auto‑beauty or filter enhancement—just the camera’s native settings.
+
+- **Camera & Lens Settings**  
+  35 mm wide‑angle lens (short focal length), handheld, slightly shaky. Focus is kept on the subject and the background is fully sharp—no bokeh or depth‑of‑field blur. The shot has a slight tilt and off‑center framing; the composition feels accidental, as if the photographer caught her mid‑movement.
+
+- **Environment**  
+  A modern apartment living room: a white side table with a small potted plant on the left, a beige sofa on the right, a wooden shelf with a white vase, and a large window that lets in bright daylight. The time of day is late morning, with soft, diffused light. A few scattered items (a remote, a book) sit on the sofa, adding to the candid feel.
+
+- **Technical Details**  
+  - Focal length: 35 mm  
+  - Aperture: f/4.0 (wide, all‑in‑focus)  
+  - Shutter speed: 1/125 s (slight motion blur from handheld)  
+  - ISO: 400 (natural contrast)  
+  - No rule‑of‑thirds—framing is accidental, partial crop.  
+  - Background fully sharp, no portrait‑mode isolation.
+
+- **Style Notes**  
+  Capture the “in‑the‑moment” vibe: slight motion blur on the hands, a tiny overexposed highlight on the forehead, and a faint tilt that gives the image a spontaneous, real‑life feel. Keep colors natural—no color grading or filters. The final look should read like a genuine snapshot taken with a DSLR or mirrorless camera in a real setting.

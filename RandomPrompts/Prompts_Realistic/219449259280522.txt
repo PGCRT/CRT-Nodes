@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, athletic woman with long, wavy blonde hair stands confidently in a white bikini, hands on hips, slightly turned to the side. Her pose is casual and candid, as if she’s mid‑pose or just finished a movement. She wears a thin gold bracelet on her right wrist and a subtle ring on her left hand. The bikini has a halter top with delicate straps that tie at the neck, and thong‑style bottoms that cling to her curves. Her skin is tanned, with a natural glow; she’s smiling softly, showing a hint of teeth.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle, midday sun creates a slight overexposure on the subject’s face and upper body, giving a warm, bright feel. The exposure is uneven—slightly brighter at the top of her head, with a faint halo effect around her hair. No auto‑HDR or beauty filters; the look remains raw and unprocessed.
+
+- **Camera & Lens**  
+  Shot on a DSLR or mirrorless with a 24‑mm wide‑angle lens (f/3.5, 1/125 s shutter speed). The focus is sharp across the entire frame—no bokeh or depth‑of‑field blur. The background is a plain white brick wall, fully in focus, giving a clean, minimal setting.
+
+- **Composition & Framing**  
+  The framing is accidental and off‑center: the subject’s left hip is slightly cut off by the right edge of the frame, and the top of her head extends just beyond the upper border. The camera is handheld, with a slight tilt that gives a natural, spontaneous feel. No rule‑of‑thirds; the composition is guided by the subject’s position and the ambient light.
+
+- **Environment**  
+  Location: an outdoor studio or a simple white brick wall in a suburban area. Time of day: mid‑afternoon, with bright, direct sunlight. Weather: clear, no wind, slight humidity. The background shows subtle texture from the bricks, with faint shadows cast by the subject’s body.
+
+- **Details & Imperfections**  
+  Slight motion blur on the edges of her limbs, indicating a handheld shot. Her left hand is partially out of frame, adding to the candid feel. A small, natural imperfection: a slight smudge on her bikini strap, and a faint reflection in her eyes from the sun. The bracelet has a tiny dent, showing wear.
+
+- **Post‑Processing**  
+  No filters or color grading; only basic auto‑beauty mode off. Slight contrast boost and a mild vignette are applied only to soften the edges. The image retains its raw, unpolished look.
+
+- **Final Prompt**  
+  “A tall woman in a white bikini stands confidently against a plain white brick wall, hands on hips, slight gold bracelet on her right wrist, ring on her left hand. Her long wavy blonde hair frames a warm, tanned face that smiles softly. Natural midday sunlight creates a bright halo around her head, with a slight overexposure. Shot on a 24‑mm wide‑angle lens at f/3.5 and 1/125 s, handheld with a slight tilt, framing the subject off‑center with a small crop on the right side. The background is fully sharp, no bokeh. Raw, unprocessed look with minor motion blur on the edges, capturing a candid, spontaneous moment.”

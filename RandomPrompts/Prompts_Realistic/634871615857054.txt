@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail and streaks of gray in her hair, wearing a white tank top with black straps, a pink long‑sleeve shirt tied at the waist, and dark denim jeans. She is mid‑selfie: right hand holding a smartphone with a patterned case, left hand on her hip, body angled to the side, head turned toward the camera as if capturing a video or photo. Her expression is focused, mouth slightly open, eyes on the screen.
+
+- **Motion & Focus**  
+  Slight motion blur at the edges from handheld shake; everything in focus—no portrait‑mode depth blur. The blur is subtle, giving a raw, unprocessed feel. No auto‑beauty or filter enhancement—just natural lighting.
+
+- **Lighting & Exposure**  
+  Natural daylight from a bright office window; slight overexposure on the upper left corner, underexposed lower right, creating a dynamic contrast. No studio lights, no color grading. The scene has a warm, mid‑afternoon tone with soft ambient light.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24‑35 mm), short focal length. No bokeh—background is fully sharp. All elements in frame are in focus: the subject, the office desk, the “BUSINESS HOURS” sign, a computer monitor, a white filing cabinet, a trash bin, and a small bucket of supplies on the floor.
+
+- **Environment**  
+  A modern office space with beige carpet, white ceiling tiles, and a large window. The time of day is late afternoon; the sun casts soft shadows. A colleague is visible in the background at a desk, working on a computer. A “BUSINESS HOURS” sign hangs on the wall. A white filing cabinet sits next to a gray trash bin; a bucket of office supplies rests on the floor. The scene feels spontaneous and candid—no posed composition.
+
+- **Framing & Composition**  
+  Off‑center, accidental framing: the subject is slightly tilted, the crop cuts off part of her left shoulder, giving an informal feel. No rule‑of‑thirds intentionality. The shot captures a wide view that includes the subject, the desk, and the background elements, with everything in focus.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, partial crop of the subject’s left shoulder, minor motion blur at the edges, natural imperfections such as a slight smudge on the phone case, a small reflection on the window, and a faint shadow from the ceiling light. The image has a raw, unprocessed look with no filters or post‑processing.
+
+- **Final Prompt**  
+  “A candid, wide‑angle shot of a young woman taking a selfie in an office setting. She wears a white tank top with black straps, a pink long‑sleeve shirt tied at the waist, and dark jeans. Her hair is tied in a high ponytail with gray streaks. She holds a smartphone with a patterned case in her right hand, has her left hand on her hip, and is mid‑action as she looks at the screen. Slight motion blur from handheld shake keeps the image raw and unprocessed. Everything is in focus—no bokeh. The scene is lit by natural daylight from a bright window, with a slight overexposure on the upper left. The background shows a beige carpeted floor, white ceiling tiles, a “BUSINESS HOURS” sign on the wall, a computer monitor, a white filing cabinet, and a bucket of office supplies on the floor. A colleague works at a desk in the distance. The framing is off‑center and accidental, with a slight tilt and partial crop of the subject’s left shoulder. No filters or color grading—just a realistic, spontaneous capture.”

@@ -1,0 +1,28 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A young woman with a high ponytail, wearing an oversized beige hoodie and loose light‑blue jeans, mid‑step in a casual, unposed walk. Her left foot is slightly lifted, toes turned outward, capturing a natural, spontaneous motion. She’s smiling, head tilted to the side, as if laughing at something unseen. Her hair swings behind her, adding a subtle motion blur.
+
+- **Pose & Framing**  
+  Capture a wide‑angle, handheld shot with a short focal length (e.g., 24–35 mm). Frame the scene off‑center: the subject occupies roughly two‑thirds of the frame on the right, leaving a third of the left side for background detail. Slight tilt (5–10°) to give a casual, imperfect feel. Keep everything in focus—no portrait‑mode blur; background should be fully sharp.
+
+- **Motion & Focus**  
+  Use a fast shutter speed to freeze or slightly blur the movement of the subject’s foot and hair. Aim for a natural “mid‑action” freeze with a tiny motion blur on the feet and hair, while the background remains crisp.
+
+- **Lighting & Exposure**  
+  Capture at dusk or early evening; the window on the left shows a faint sunset glow outside, casting warm ambient light into the interior. Use auto‑HDR off—no post‑processing color grading. Allow a slight overexposure on the subject’s face to keep the image bright and lively.
+
+- **Environment**  
+  The setting is a modern retail or café hallway with large windows on the left, a brick wall, and a green chair near the corner. In the background, a red “free to com” sign hangs above a “Etsy” banner; a few other shoppers walk in the distance. A white car is visible outside the window, adding context. The floor is tiled, with a subtle pattern.
+
+- **Lens & Technical**  
+  Short focal length (24–35 mm), wide‑angle lens. No bokeh—everything from foreground to background should be sharp. Use a tripod or handheld, but keep the camera steady enough that only natural motion blur appears on the subject’s movement.
+
+- **Composition Notes**  
+  Avoid rule‑of‑thirds intentionality; let the composition arise naturally from the candid moment. The shot should feel spontaneous, as if the subject is unaware of the camera. Include a partial crop of the background sign and a glimpse of the street outside to add depth.
+
+- **Post‑Processing**  
+  No filters or heavy color grading—just raw, unprocessed realism. Slight auto‑exposure adjustment to brighten the subject’s face and clothing. Keep the overall look natural, with a hint of slight overexposure for a warm, lively feel.
+
+**Prompt Summary:**
+> “A candid, wide‑angle shot of a young woman in a beige hoodie and blue jeans mid‑step inside a retail hallway at dusk. Capture her natural motion blur on feet and hair, keep the background fully sharp with a slight tilt and off‑center framing. Use a 24–35 mm lens, auto‑HDR off, slight overexposure, no filters—raw, unprocessed realism.”

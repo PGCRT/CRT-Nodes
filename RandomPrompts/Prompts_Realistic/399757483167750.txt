@@ -1,0 +1,26 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with auburn hair tied in a messy bun, sitting on a neatly made bed in a dimly lit bedroom. She is bare‑headed, showing a detailed tattoo that runs from her left shoulder down to her wrist—featuring a stylized rose and an eye motif. Her left hand rests on the bedsheet, fingers slightly curled, while her right hand supports her back. She looks over her left shoulder toward the camera, eyes half‑closed, giving a candid, mid‑motion feel.
+
+- **Lighting & Exposure**  
+  Natural daylight from a window on the left creates a soft, warm glow; slight overexposure in the upper left corner gives a raw, unprocessed look. No auto‑HDR or beauty filters—just a handheld shot with a wide‑angle lens. The exposure is slightly uneven, with the lampshade and curtain in the background barely visible but still in focus.
+
+- **Environment**  
+  A cozy bedroom at dusk. A wooden nightstand with a white lampshade sits to the left; a sheer curtain hangs behind the bed. The room’s walls are a muted gray‑brown, and a small white cabinet is visible on the right. The time of day is late afternoon, with ambient light fading into evening.
+
+- **Lens & Technical**  
+  24 mm wide‑angle lens, short focal length, no bokeh—everything from foreground to background is fully sharp. Slight motion blur on the subject’s hands and feet conveys a natural, spontaneous capture. The framing is off‑center, slightly tilted, with a partial crop that cuts off part of the bedsheet on the right side.
+
+- **Composition & Style**  
+  Candid, unposed, spontaneous—subject appears unaware of the camera. Imperfections are welcome: slight tilt, off‑center framing, partial crop. No rule‑of‑thirds intentionality—just a natural, accidental composition. Zero studio lighting, zero professional pose, zero editorial tone.
+
+- **Details to Emphasize**  
+  - The tattoo’s intricate lines and shading on the left arm, with a rose and eye motif.  
+  - Her red earring catches the light, adding a small pop of color.  
+  - The texture of the bedsheet, slightly rumpled, adds realism.  
+  - The lampshade’s white glow contrasts with the warm tones of her skin.  
+  - Slight motion blur on her feet and hands, as if she just shifted position.  
+
+- **Prompt for Text‑to‑Image Generation**  
+  *“A young woman with auburn hair in a messy bun sits on a made bed in a dimly lit bedroom at dusk. She is bare‑headed, showing a detailed tattoo that runs from her left shoulder down to her wrist—featuring a stylized rose and an eye motif. Her left hand rests on the bedsheet, fingers slightly curled, while her right hand supports her back. She looks over her left shoulder toward the camera, eyes half‑closed, giving a candid, mid‑motion feel. Natural daylight from a window on the left creates a soft, warm glow; slight overexposure in the upper left corner gives a raw, unprocessed look. A wooden nightstand with a white lampshade sits to the left; a sheer curtain hangs behind the bed. The room’s walls are a muted gray‑brown, and a small white cabinet is visible on the right. 24 mm wide‑angle lens, short focal length, no bokeh—everything from foreground to background is fully sharp. Slight motion blur on her feet and hands conveys a natural, spontaneous capture. The framing is off‑center, slightly tilted, with a partial crop that cuts off part of the bedsheet on the right side. Candid, unposed, spontaneous—subject unaware of the camera. Imperfections are welcome: slight tilt, off‑center framing, partial crop. No rule‑of‑thirds intentionality—just a natural, accidental composition. Zero studio lighting, zero professional pose, zero editorial tone.”*

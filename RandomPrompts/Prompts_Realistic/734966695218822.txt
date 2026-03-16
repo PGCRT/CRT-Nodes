@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail, wearing a white tank top and a two‑tone cargo pant (lime‑green and beige), captured mid‑step in a casual, unposed stance. Her left hand rests on her hip, right arm slightly bent, feet angled as if she’s about to kick or tap a rhythm. The camera is positioned at a low angle, almost at eye level, giving an intimate, ground‑level view.
+
+- **Motion & Focus**  
+  Slight motion blur on the subject’s legs and feet, indicating a handheld shot taken in real time. Everything remains fully sharp—no portrait‑mode depth of field blur; background is crisp from a wide‑angle lens. The focus is intentional on the woman, but the framing is accidental: a slight tilt to the left, off‑center composition, no rule‑of‑thirds intentionality.
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window on the right side of the hallway; the light is slightly overexposed at the top, creating a soft halo around the subject’s head. No auto‑HDR or auto‑beauty mode—raw, unprocessed look. The exposure captures the ambient brightness of the day, with a subtle warm tone.
+
+- **Lens & Technical**  
+  Short focal length (24–35 mm), wide‑angle lens. No bokeh; background is fully sharp. The shot uses a handheld, “in‑the‑moment” approach, with natural instability that gives the image a candid feel. All elements—subject, background, floor tiles, people in the distance—are in focus.
+
+- **Environment**  
+  A bright, modern office hallway with white walls, a large window on the right, and a tiled floor. The time of day is mid‑afternoon, as indicated by the warm, slightly harsh sunlight. Several other people are visible in the background, some walking, some standing, creating a lively, spontaneous atmosphere.
+
+- **Composition & Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Imperfections encouraged: slight tilt, off‑center framing, partial crop. Zero studio lighting, zero professional composition, zero editorial tone. The image feels like a snapshot taken by a friend with a DSLR or mirrorless camera, captured on a cloudy but bright afternoon.
+
+- **Post‑Processing**  
+  No filters, no color grading, no post‑processing aesthetic. Only raw, natural details are preserved. Slight overexposure at the top gives a subtle glow; the rest of the image remains true to the original capture.

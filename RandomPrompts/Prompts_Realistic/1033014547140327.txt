@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A woman in a glossy black latex outfit, complete with thigh-high boots and a utility belt, is mid‑climb on a glass‑facade building. Her hair is tied back in a loose ponytail, a few strands escaping to frame her face as she reaches for the rope. She’s slightly tilted, body angled toward the right, left foot planted on the glass, right foot still in motion, capturing a dynamic, spontaneous moment.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. Slight tilt and off‑center framing; partial crop that cuts off a portion of her left thigh, giving an accidental, handheld feel. No rule‑of‑thirds intentionality. Natural motion freeze or slight blur from handheld instability.
+
+- **Environment**  
+  Specific real‑world location: a modern office tower in an urban downtown area at night. The building’s glass exterior reflects the city lights below. Time of day: late evening, around 9 pm, with ambient city glow and a faint moonlight hint. Weather: clear, mild wind, no rain.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm), wide‑angle lens. Wide‑angle gives a slightly compressed background that remains fully sharp — everything in focus, no bokeh. No portrait mode or subject isolation. Slight overexposure on the subject’s face to emphasize the glossy texture, but overall exposure remains natural, raw, unprocessed. Auto‑HDR or auto‑beauty mode off. No filters, no color grading, no post‑processing aesthetic.
+
+- **Composition Notes**  
+  The composition is accidental: the subject is slightly above the center of the frame, the left side of her body is partially cropped by the edge. The background shows a blurred cityscape with illuminated skyscrapers and streetlights below, but all elements are in focus. The rope hangs from an unseen anchor point near the top right corner, adding a diagonal line that guides the eye.
+
+- **Lighting**  
+  Zero studio lighting; all light comes from ambient city illumination and natural moonlight. Slight overexposure on the subject’s face to enhance the latex’s sheen, while the background remains softly bright but still sharp. The lighting creates subtle highlights on the latex and boots, with a slight warm tone from the city lights.
+
+- **Final Prompt**  
+  “A woman in glossy black latex and thigh‑high boots, mid‑climb on a glass‑facade building at night, captured with a 24‑35 mm wide‑angle lens. The shot is candid, slightly tilted, off‑center, with partial crop and accidental framing. All elements are fully sharp, no bokeh. Slight overexposure on the subject’s face for raw, unprocessed look. Ambient city lights reflect off the glass, with a faint moonlit sky above. The scene shows a modern downtown office tower at 9 pm, clear weather, mild wind. No filters, no color grading, no post‑processing.”

@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, sun‑kissed blonde hair and dark sunglasses perched on her head, standing in a bright, wooden‑framed glass door of a suburban house. She is nude except for a pair of white knee‑high socks that reach just above her knees. Her left leg is slightly bent, foot off the ground, as if she’s mid‑step or about to kick. Her right arm hangs loosely by her side, while her left arm is angled outward, giving a casual, unposed feel.
+
+- **Lighting & Exposure**  
+  Warm, golden hour sunlight streams from the west, creating a soft overexposure on the subject’s torso and a gentle flare at the top of the frame. The exposure is slightly uneven—brighter at the top, with a faint vignette at the bottom—to emulate a handheld, spontaneous shot.
+
+- **Camera & Lens**  
+  35 mm wide‑angle lens, f/4.0, 1/125 s shutter speed, ISO 400. The focus is flat—every part of the scene, from the subject to the background, is sharp with no bokeh. Slight motion blur on the subject’s left leg conveys a natural, in‑motion feel.
+
+- **Composition & Framing**  
+  The shot is intentionally off‑center: the woman occupies the left‑hand side of the frame, while the right side shows a glimpse of a neighboring house, a patch of green lawn, and a driveway. The framing is accidental—no rule‑of‑thirds applied. The top of the frame cuts off just above her head, giving a “partial crop” effect.
+
+- **Environment**  
+  A quiet suburban street at dusk. The background includes a two‑story house with a brown shingle roof, a small garden with green shrubs, and a tree with leaves that catch the sunlight. A parked car is visible on the far right of the driveway. The sky is a pale, warm gradient, suggesting late afternoon.
+
+- **Details & Imperfections**  
+  Slight tilt to the camera, giving a casual, handheld vibe. The wooden frame of the door is slightly out of alignment with the edge of the image. A faint smudge on the glass adds realism. The socks show a subtle crease at the ankle, and the woman’s left toe is slightly curled, as if she’s about to push off.
+
+- **Post‑Processing**  
+  No filters or color grading—just raw, auto‑HDR‑free capture. A tiny amount of natural overexposure on the subject’s chest, with a slight vignette at the bottom corner. The image retains all the imperfections of a real, spontaneous snapshot.

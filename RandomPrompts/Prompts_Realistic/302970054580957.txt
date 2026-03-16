@@ -1,0 +1,29 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with dark, wavy hair tied in a high ponytail, wearing black-framed glasses, a bright red scarf, an oversized beige sweater, and a denim jacket draped over her shoulder. She is mid‑pose, holding a smartphone in her right hand as if taking a selfie, but the frame captures her in a slightly off‑center, spontaneous angle. Her left arm is bent, elbow slightly out of frame, giving a natural, unposed feel.
+
+- **Motion & Focus**  
+  Slight motion blur on the subject’s hand and phone, indicating handheld instability. Everything in the scene—subject, background, foreground—is fully sharp; no portrait‑mode blur or depth‑of‑field isolation. The image has an auto‑HDR “raw” look: a subtle overexposure in the ceiling lights and a faint underexposure on the floor, giving it a natural, unprocessed vibe.
+
+- **Lighting & Exposure**  
+  Wide‑angle lens (24–35 mm) with zero bokeh; background is fully sharp. The lighting comes from an indoor source—likely a fluorescent ceiling light combined with natural daylight coming through a window on the left. There is a slight overexposure on the ceiling lights and a mild underexposure on the floor, creating a dynamic contrast.
+
+- **Environment**  
+  The setting is a casual retail or storage space: a tiled floor, a large window on the left letting in natural light, a rack of clothes on the right, and several plastic bins filled with shoes along the wall. A man in a dark jacket and jeans stands near the clothing rack, facing away from the camera. The time of day is mid‑afternoon, as indicated by the warm daylight and the shadows cast on the floor.
+
+- **Composition & Framing**  
+  The shot is intentionally “accidental”: a slight tilt to the right, a partial crop that cuts off the top of the phone and the lower part of the woman’s leg. No rule‑of‑thirds intentionality—framing is spontaneous, with the subject occupying roughly the central‑right portion of the frame. The background elements (clothing rack, bins, window) are all in focus, giving a wide‑lens, documentary feel.
+
+- **Technical Specs**  
+  - Lens: 35 mm wide‑angle, f/4.0, ISO 400  
+  - Shutter speed: 1/125 s (slight motion blur)  
+  - Aperture: f/4 (wide, sharp background)  
+  - Focus: manual, everything in focus  
+  - Exposure: auto‑HDR on, auto‑beauty off; slight overexposure on the ceiling lights, underexposure on the floor
+
+- **Post‑Processing**  
+  No filters, no color grading, no post‑processing aesthetic—just raw, candid imagery. The final image retains the natural imperfections of a handheld shot: slight tilt, off‑center framing, partial crop, and subtle motion blur.
+
+**Prompt Summary**  
+> “A young woman with dark wavy hair in a high ponytail, wearing black glasses, a red scarf, an oversized beige sweater, and a denim jacket draped over her shoulder, is mid‑pose holding a smartphone in her right hand as if taking a selfie. The shot uses a 35 mm wide‑angle lens at f/4 and ISO 400, with a shutter speed of 1/125 s producing slight motion blur on the hand. The image has an auto‑HDR raw look—slight overexposure on the ceiling lights and underexposure on the floor—captured in an indoor retail space with a tiled floor, a large window on the left, a clothing rack on the right, and plastic bins of shoes along the wall. A man in a dark jacket stands near the rack, facing away. The framing is accidental: slightly tilted, off‑center, partial crop, everything fully sharp, no bokeh, no portrait mode.”

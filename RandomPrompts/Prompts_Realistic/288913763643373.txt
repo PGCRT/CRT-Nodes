@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, athletic woman with long, wavy blonde hair standing in a modern, sunlit living room. She wears a sheer white lace bra and matching high‑waist panties, her hands relaxed at her sides, a subtle smile on her face. Her nails are painted light blue; she’s mid‑step, one foot slightly ahead of the other, giving a natural, unposed feel.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the woman appears unaware of the camera, caught in a casual, everyday moment. Slight tilt and off‑center framing give an accidental, handheld vibe. The shot is a wide‑angle capture with a short focal length (≈20 mm), ensuring everything from foreground to background stays fully sharp—no bokeh or depth‑of‑field blur. A faint motion blur hints at the subject’s movement and the camera’s slight instability.
+
+- **Environment**  
+  Location: A bright, contemporary apartment with a large glass door leading to a balcony. The room features light wood furniture, a white sofa, a small side table, and a potted plant near the window. Through the glass door, a distant city skyline is visible. Time of day: late morning, soft natural light from the west, creating a gentle overexposure on the subject’s face and a slight warm hue. Weather: clear, mild, with a light breeze.
+
+- **Lens & Technical**  
+  - Focal length: 20 mm (wide‑angle, short).  
+  - Aperture: f/4.5 (wide opening, shallow depth but fully sharp background).  
+  - Shutter speed: 1/60 s (producing a slight motion blur).  
+  - ISO: 400 (for natural contrast).  
+  - Auto‑HDR or auto‑beauty mode off — raw, unprocessed look.  
+  - No filters, no color grading, no post‑processing aesthetic.  
+  - Slight overexposure on the subject’s face to capture the ambient light.  
+
+- **Composition Notes**  
+  The framing is not rule‑of‑thirds intentional; the subject is slightly off‑center, with the left side of her body cutting close to the left edge of the frame. The background includes a glass door and a balcony railing, keeping everything in focus. A small portion of a white sofa and a potted plant appear on the right, adding context. The shot captures a natural, candid moment as if the woman were mid‑action or mid‑conversation.
+
+- **Final Prompt**  
+  “A tall, athletic woman with long wavy blonde hair, wearing a sheer white lace bra and high‑waist panties, stands in a bright modern living room at late morning. She’s mid‑step, hands relaxed, slightly smiling, captured with a 20 mm wide‑angle lens at f/4.5 and 1/60 s shutter speed, producing a faint motion blur. The scene includes a glass door, balcony railing, white sofa, and potted plant; everything is fully sharp. The shot has a slight tilt and off‑center framing, no rule‑of‑thirds intentionality, raw and unprocessed, with a subtle overexposure on the subject’s face. The overall feel is candid, spontaneous, and natural.”

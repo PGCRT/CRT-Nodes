@@ -1,0 +1,26 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark brown hair standing in a bright office‑style room. She’s wearing light‑wash denim shorts and a plain white tank top. Her pose is casual and spontaneous—mid‑step, one hand slightly bent at the side, a natural “in‑motion” stance that captures a faint handheld blur.  
+
+- **Facial Expression & Details**  
+  She smiles softly, eyes bright, with a slight tilt to her head that gives an off‑center, candid feel. The capture should keep all details sharp—skin texture, hair strands, fabric weave—while allowing a subtle motion blur at the edges from the camera’s handheld shake.  
+
+- **Lighting & Exposure**  
+  Use a wide‑angle lens (24–35 mm) with a short focal length to emphasize the full scene. Shoot in natural daylight; the time of day is mid‑afternoon, giving warm, slightly overcast light that creates gentle highlights on her face and clothing. Keep auto‑HDR off for a raw, unprocessed look—no color grading or filters, just the ambient light’s natural tone.  
+
+- **Background & Environment**  
+  The setting is a modern office space with a wooden bookshelf filled with colorful books, a small potted plant, framed photographs on the wall, and a cork bulletin board with notes. A green houseplant sits in the corner, adding depth. The background should be fully sharp—no bokeh or depth‑of‑field blur—so everything from foreground to back remains in focus.  
+
+- **Composition & Framing**  
+  Capture a wide, candid shot that feels “mid‑action.” Frame the subject slightly off‑center, with accidental overlap of her left shoulder and the bookshelf. Keep the composition spontaneous: no rule‑of‑thirds intentionality, just natural framing that includes part of the desk and a chair in the background.  
+
+- **Technical Settings**  
+  - Lens: 35 mm wide‑angle, short focal length.  
+  - Aperture: f/4–f/5.6 for full sharpness across the frame.  
+  - Shutter speed: 1/60–1/100 s to allow slight motion blur.  
+  - ISO: 400–800 for natural detail.  
+  - Focus: all elements in focus—subject, background, and foreground.  
+
+- **Final Prompt**  
+  “A young woman with long dark brown hair, wearing light‑wash denim shorts and a white tank top, stands casually in a bright office space. She smiles softly while mid‑step, captured on a 35 mm wide‑angle lens at f/5.6 and 1/80 s shutter speed, producing a slight handheld blur. The scene is lit by natural mid‑afternoon daylight, with auto‑HDR off for a raw look. Behind her, a wooden bookshelf brimming with colorful books, a potted plant, framed photos on the wall, and a cork bulletin board create a fully sharp background. The composition is spontaneous and off‑center, capturing an unposed, candid moment in a real‑world setting.”

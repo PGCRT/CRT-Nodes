@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, straight brown hair, wearing black-framed glasses and a bright orange tank top, lying on her stomach on a plush, shaggy rug. Her left hand is raised to her chin in a casual, thoughtful gesture, fingers slightly curled. She’s smiling softly, eyes bright, head tilted a little to the right as if she’s just finished a conversation or is about to say something. The pose feels spontaneous and candid, as though captured mid‑action.
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window behind her creates a warm, slightly overexposed highlight on her face and shirt. The exposure is a little high, giving a soft glow but keeping the overall look raw and unprocessed. No auto‑beauty or filter enhancements—just the natural ambiance of the room.
+
+- **Background & Setting**  
+  The background shows a plain beige wall with a white door on the left and a small electrical outlet on the right. A framed picture hangs high on the wall, slightly out of focus. The rug has a subtle striped pattern in muted gray‑pink tones, adding texture. The scene is a typical living room, no studio lighting, just everyday ambient light.
+
+- **Lens & Technical**  
+  Shot with a wide‑angle lens (24‑35 mm) at a short focal length, giving a slightly distorted, intimate feel. Everything is in focus—from her face to the rug—no bokeh or depth‑of‑field blur. The image has slight motion blur on her hand and head, indicating handheld shake and a quick shutter speed. No rule‑of‑thirds; the framing is accidental, with the subject slightly off‑center and the composition a bit tilted.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. The photo has imperfections: a slight tilt, partial crop that cuts off a bit of the rug on the right side, and a natural, raw feel. It’s not an editorial shot but a genuine snapshot of everyday life.
+
+- **Environment**  
+  Time of day: late morning, with soft, warm sunlight streaming in from the left. Weather: clear, no wind, ambient indoor conditions. The room is quiet, the only movement coming from the subject’s subtle motion.
+
+- **Prompt Summary for Generation**  
+  “A young woman with long brown hair and black glasses, wearing an orange tank top, lying on a shaggy rug in a living room. She smiles softly while resting her chin on her hand, captured mid‑action with slight motion blur. Natural daylight creates a warm overexposure; the background shows a white door and a framed picture on a beige wall. Shot on a wide‑angle lens, everything in focus, no bokeh, accidental framing, slight tilt, raw unprocessed look.”

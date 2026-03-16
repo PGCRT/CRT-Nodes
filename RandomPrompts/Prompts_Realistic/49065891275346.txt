@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark hair, wearing a black mesh bikini, kneeling on a white bed. She is mid‑turn, left knee bent, right leg extended, head tilted slightly to the right, eyes looking upward and to the left, a subtle smile on her face. Her left hand rests on the bed near her hip, right arm extended outward for balance.  
+
+- **Lighting & Exposure**  
+  Natural daylight from a window behind the subject creates a soft, slightly overexposed highlight on her back and right shoulder. The light is warm, mid‑afternoon, with a gentle haze that gives an auto‑HDR feel but without post‑processing filters. Slight handheld shake is present, giving a natural motion blur around the edges.  
+
+- **Environment**  
+  The setting is a bright, airy bedroom with a large window covered by sheer white curtains. A potted green plant stands in the left corner, partially out of frame. The bed has crisp white sheets that are slightly rumpled, indicating recent use. The room’s walls are a light beige, and a small wooden bedside table is visible on the right.  
+
+- **Lens & Technical**  
+  Use a wide‑angle lens (24–35 mm) with a short focal length to capture a broad view of the scene. Keep everything in focus—no bokeh or depth‑of‑field blur. Shoot at a slightly low angle to emphasize the subject’s posture and the bed’s texture.  
+
+- **Composition & Framing**  
+  Capture a candid, unposed shot with accidental framing: the composition is not intentionally rule‑of‑thirds aligned but rather a spontaneous, off‑center crop that includes the subject, the bed, the window, the plant, and a portion of the bedside table. The frame is slightly tilted, giving an informal, raw feel.  
+
+- **Post‑Processing**  
+  No filters or color grading—just raw, natural tones. Apply auto‑HDR only to brighten the exposure; keep the image unprocessed except for basic exposure correction.  
+
+- **Final Prompt Summary**  
+  “A young woman in a black mesh bikini kneeling on a white bed in a sunlit bedroom, with a potted plant and sheer curtains behind her. Natural daylight from a window creates soft overexposure, wide‑angle lens captures everything in focus, slight handheld blur, candid framing with accidental tilt, raw unprocessed look.”

@@ -1,0 +1,28 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy blonde hair standing in a dimly lit bar. She wears a dark, semi‑transparent button‑front cardigan over a bare midriff and high‑waisted jeans. Her head is tilted slightly upward, eyes looking off to the side, as if she’s watching something beyond the frame. Her left hand rests on her hip, fingers casually curled. The cardigan’s buttons are visible, one slightly undone, giving a relaxed, unposed feel.
+
+- **Lighting & Exposure**  
+  Warm ambient lighting from a recessed lamp in the background creates a soft overexposure on the subject’s face and torso. The exposure is slightly uneven—the foreground is brighter than the rear, giving a raw, unprocessed look. No auto‑HDR or beauty filters; just natural contrast.
+
+- **Camera Settings**  
+  - Lens: 24 mm wide‑angle, short focal length.  
+  - Focal depth: everything from the subject to the back wall is fully sharp—no bokeh, no portrait‑mode isolation.  
+  - Shutter speed: 1/60 s, producing a slight motion blur on the subject’s hair and the background’s details.  
+  - ISO: 800, for a grainy but natural texture.
+
+- **Composition & Framing**  
+  The shot is handheld, slightly tilted, with an off‑center crop that cuts off the left side of her hip. No rule‑of‑thirds intentionality—just accidental framing that captures the subject’s face, torso, and a portion of the bar’s back wall. The background includes a wooden shelf stocked with bottles and a white candle, plus a dimly lit lamp on the right, all in focus.
+
+- **Environment**  
+  Location: a cozy, rustic bar with dark wood furniture. Time of day: late afternoon, as the ambient light is warm and slightly dim. Weather: indoor, no external weather influence, but the ambient humidity is noticeable in the slight moisture on the bar’s surface.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera creates a dynamic angle; the subject’s left ear is partially cropped. The cardigan’s fabric shows subtle wrinkles, and the buttons have a slight sheen from the lamp’s reflection. The background shelf has a few bottles, a white candle, and a small decorative item, all in focus.
+
+- **Post‑Processing**  
+  No filters or color grading—just raw, unprocessed imagery. A mild natural contrast curve is applied to enhance the warm tones.
+
+**Prompt Summary**  
+“Candid photo of a young woman with long wavy blonde hair, wearing a dark semi‑transparent button‑front cardigan and high‑waisted jeans, standing in a dimly lit bar. She tilts her head upward, eyes off‑frame, left hand on hip. Warm ambient lighting creates slight overexposure on the subject. Shot on 24 mm wide‑angle, 1/60 s shutter speed, ISO 800—everything in focus, slight motion blur. Handheld tilt, off‑center crop, no rule‑of‑thirds. Background shows a wooden shelf with bottles and a white candle, plus a dim lamp. Raw, unprocessed, natural contrast.”

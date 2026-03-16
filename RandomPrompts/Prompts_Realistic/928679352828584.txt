@@ -1,0 +1,31 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Appearance**  
+  - A young woman with long, dark wavy hair, wearing a black denim skirt and a thin gold necklace. She has a rose tattoo on her left upper arm and large gold hoop earrings. Her pose is casual, slightly turned toward the camera, with one hand in her pocket and a subtle smile.  
+
+- **Capture Style**  
+  - Candid, unposed, spontaneous — subject unaware or mid‑action.  
+  - Slight motion blur from handheld instability.  
+  - No filters, no color grading, no post‑processing aesthetic.  
+  - Slight overexposure to keep ambient light warm.  
+  - Wide‑angle lens (24–35 mm) for a short focal length, wide‑field capture.  
+
+- **Environment**  
+  - Specific real‑world location: a city street corner in an urban downtown area; a beige brick building with a large window on the left, a sidewalk, and a lamppost on the right.  
+  - Time of day: late afternoon, soft golden hour.  
+  - Weather or ambient conditions: clear, mild breeze, slight haze from the sun.  
+
+- **Lens & Technical**  
+  - Short focal length (24–35 mm), wide‑angle.  
+  - No bokeh; background fully sharp – everything in focus.  
+  - No portrait mode or subject isolation.  
+  - Slight tilt and off‑center framing; partial crop to give a raw, spontaneous feel.  
+  - No rule‑of‑thirds intentionality — accidental composition.  
+
+- **Post‑Processing**  
+  - Auto‑HDR off – raw, unprocessed look.  
+  - Minimal exposure adjustment; slight overexposure for warmth.  
+  - Keep natural colors and textures.  
+
+- **Final Prompt Summary**  
+  “A candid, wide‑angle shot of a young woman with long dark wavy hair, black denim skirt, gold necklace, and a rose tattoo on her left arm, posing casually on an urban downtown sidewalk beside a beige brick building, late afternoon golden hour, slight motion blur and accidental framing, everything in focus, raw unprocessed look.”

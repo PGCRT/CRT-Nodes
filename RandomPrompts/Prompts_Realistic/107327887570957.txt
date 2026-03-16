@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with wet, tousled hair sitting cross‑legged on a sandy beach, her body slightly tilted to the left, mid‑gesture as she reaches for a seashell. Her arms are open, one hand resting on her knee, the other near her thigh, creating a natural, unposed candid feel. She has several tattoos: a sunburst design on her right upper arm, a star above her left breast, a rose on her left forearm, and a script “Seraph” on her right calf. Her skin is glistening from the sea spray, with subtle moisture droplets catching the light.
+
+- **Appearance & Detail**  
+  She wears a thin, translucent beach dress that drapes loosely over her shoulders, allowing the wind to ripple the fabric. Her facial expression is relaxed, eyes cast toward the horizon, mouth slightly parted as if she’s about to speak or sing. The lighting is warm, golden‑hour sunlight coming from the left, creating soft highlights on her chest and shoulder, with a slight overexposure in the upper right corner that gives a raw, unprocessed look.
+
+- **Environment**  
+  The setting is a tropical beach at sunset, the ocean waves breaking in the background with white foam. The sand is light beige, slightly uneven, with small pebbles and a stray seashell near her left foot. A few scattered debris pieces (a red plastic bottle, a piece of wood) lie on the sand to the right, adding realism. The horizon line is low, the sea stretches to the left, and the sky shows a soft gradient from pale blue to warm amber.
+
+- **Lens & Technical**  
+  Use a wide‑angle lens (24‑35 mm) with a short focal length to capture a broad view of the scene. Shoot in handheld mode with slight motion blur from the camera’s instability, but keep everything in focus—no bokeh, no depth‑of‑field blur. The image should have an auto‑HDR or auto‑beauty mode off, no filters, no color grading, no post‑processing aesthetic. Slight tilt and off‑center framing create a spontaneous, accidental composition.
+
+- **Composition Notes**  
+  Capture the scene with zero rule‑of‑thirds intentionality—frame the subject slightly off‑center, let the horizon line cut across the frame at an angle. The background should be fully sharp, no portrait‑mode isolation. Keep the shot candid and unposed; the subject should appear unaware or mid‑action.
+
+- **Final Prompt**  
+  “A young woman with wet, tousled hair sits cross‑legged on a sandy beach, her body slightly tilted left, reaching for a seashell. She wears a thin, translucent beach dress that drapes loosely over her shoulders. Her arms are open, one hand on her knee, the other near her thigh; tattoos of a sunburst on her right upper arm, a star above her left breast, a rose on her left forearm, and script ’Seraph’ on her right calf shine in the golden‑hour light. The ocean waves break behind her, white foam curling at the shore. A red plastic bottle and piece of wood lie on the sand to the right. Shoot with a 24‑35 mm wide‑angle lens, handheld slight motion blur, all in focus, no bokeh, no filters, auto‑HDR off, raw unprocessed look. Capture candid, unposed, spontaneous—subject unaware or mid‑action—with slight tilt and off‑center framing, accidental composition, zero rule‑of‑thirds intentionality. The horizon is low, the sky gradients from pale blue to warm amber, the sand is light beige with small pebbles and a stray seashell near her left foot.”

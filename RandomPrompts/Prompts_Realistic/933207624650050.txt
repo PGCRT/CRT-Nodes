@@ -1,0 +1,24 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with wet, wind‑blown hair standing mid‑step on a sunlit beach, wearing a black tie‑front bikini that shows a subtle sheen on her skin. Her left arm is slightly bent, revealing a detailed floral tattoo on the upper bicep. She’s captured in a candid, unposed stance—mid‑motion, as if she just stepped from the water and is about to touch her hair with one hand.
+
+- **Lighting & Exposure**  
+  Slight overexposure on the bright, ambient daylight; the exposure is a little high, giving a warm, golden hue that slightly washes out the background. No auto‑beauty mode—raw, unprocessed look. The image has a natural, handheld feel with a tiny bit of motion blur from the subject’s movement and the camera’s instability.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24 mm or 35 mm) – short focal length, capturing a broad view of the scene. Everything is in focus—from the woman’s face to the waves—no bokeh, no depth‑of‑field blur; the background (the ocean and sand) remains fully sharp. No portrait‑mode “subject isolation.”  
+
+- **Framing & Composition**  
+  The frame is slightly tilted, off‑center, with a partial crop that cuts off the left side of her torso and the right side of the sea. No rule‑of‑thirds intentionality—this is an accidental, spontaneous composition. The shot captures the woman’s full body from head to toe, but the lower legs are partially cropped by the bottom edge of the frame.
+
+- **Environment**  
+  Location: a tropical beach with gentle, foamy waves breaking on the sand. Time of day: late afternoon, around 5 pm, when the sun is still high but starting to tilt, casting warm, golden light. Weather: breezy, with a light wind that ruffles her hair and creates small ripples on the water’s surface. The sky is clear, with a few scattered clouds.
+
+- **Details & Imperfections**  
+  Slight motion blur around the woman’s hands and the waves, indicating a handheld shot. The image has a natural, unpolished look—no filters, no color grading, no post‑processing aesthetic. A faint overexposure on the upper part of the frame gives a bright highlight on her skin and the water’s surface.
+
+- **Prompt for Text‑to‑Image Generation**  
+  “A young woman in a black tie‑front bikini standing mid‑step on a sunlit beach, wet hair blowing in the wind, a floral tattoo visible on her left bicep. Capture with a wide‑angle lens (24–35 mm), everything in focus, slight motion blur from handheld instability, small overexposure on the bright daylight. The frame is slightly tilted and off‑center, partially cropping the lower legs and the right side of the sea. Background: gentle waves breaking on sandy shore, clear sky with a few scattered clouds, late afternoon light. No filters or post‑processing—raw, candid, spontaneous look.”
+
+Provide only the structured prompt.

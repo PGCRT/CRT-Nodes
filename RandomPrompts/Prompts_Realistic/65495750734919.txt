@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark hair, wearing a light‑pink, short‑sleeved crop top and matching high‑waist shorts. She is mid‑step, left arm extended to the side, right hand resting on her hip, body slightly turned toward the camera. Her face is turned forward, eyes focused ahead, mouth relaxed. A faint motion blur at the wrists and hips suggests natural movement.
+
+- **Lighting & Exposure**  
+  Ambient daylight from a high‑angle, midday sun. Slight overexposure on the upper torso, creating a warm, soft glow. No auto‑beauty or filter enhancement—raw, unprocessed look. The exposure is uneven: the left side of the image is slightly brighter than the right, giving an organic feel.
+
+- **Camera Settings**  
+  Wide‑angle lens (24 mm), f/3.5, 1/125 s shutter speed, ISO 400. Handheld, slight instability causing a gentle blur on the edges. Everything is in focus—no portrait‑mode depth of field blur; background remains sharp.
+
+- **Composition & Framing**  
+  Candid, unposed framing: the subject is off‑center, slightly tilted. The crop cuts off part of her left arm and the right side of her shorts, giving a spontaneous feel. No rule‑of‑thirds intentionality—accidental composition. The background shows a plain concrete wall with a faint texture, a small green plant on the right, and a bright window on the left.
+
+- **Environment**  
+  Location: an urban loft space in a residential building. Time of day: early afternoon, sun high but not directly overhead. Weather: clear, mild humidity. A small potted plant sits in the corner; a faint reflection of a ceiling light is visible.
+
+- **Lens & Technical Details**  
+  Short focal length (24 mm) for wide coverage. No bokeh—background fully sharp. All elements are in focus, from the subject’s face to the distant wall. No “portrait mode” isolation; the entire scene is crisp.
+
+- **Final Prompt**  
+  *“A young woman with long dark hair, wearing a light‑pink crop top and high‑waist shorts, captured mid‑step in a candid, unposed shot. She stands against a plain concrete wall with a small green plant in the corner, early afternoon daylight casting slight overexposure on her torso. Shot on a 24 mm wide‑angle lens at f/3.5, 1/125 s, ISO 400, handheld with gentle motion blur. The framing is off‑center and slightly tilted, all elements in focus, no bokeh—raw, unprocessed realism.”*

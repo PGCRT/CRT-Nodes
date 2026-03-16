@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A plus‑size woman with dark, wavy hair tied in a loose side‑ponytail lies supine on a neatly made bed. She’s wearing a thin black thong; her arms are spread wide, palms open, and her legs are slightly apart, giving a relaxed, spontaneous feel. Her face is turned upward, eyes closed, as if she’s just woken up or is about to get up—mid‑action, unposed.
+
+- **Lighting & Exposure**  
+  Natural daylight from a south‑west window; the light is slightly overexposed on the upper body, creating a warm, soft glow. No auto‑beauty mode—raw, unprocessed look. Slight handheld shake gives a subtle motion blur around the edges. The exposure is a little bright at the top, but the bottom remains crisp.
+
+- **Camera & Lens**  
+  35 mm wide‑angle lens (short focal length). Everything is in focus—from her toes to the pillow—no bokeh, no depth‑of‑field blur. No portrait‑mode subject isolation; the background (the bed, the pillow, a portion of the wall) stays fully sharp.
+
+- **Composition & Framing**  
+  The shot is off‑center: the left side of the frame cuts off a bit of the bed’s corner, and the right side captures a small portion of a beige patterned pillow. No rule‑of‑thirds intentionality—just accidental, candid framing. The camera is held at eye level, slightly tilted, giving a natural, spontaneous feel.
+
+- **Environment**  
+  A bright, airy bedroom in the late morning. The bed has crisp white sheets and a beige, quilted pillow with a subtle diamond pattern. A small portion of a light‑wood headboard is visible on the left. The room’s walls are painted a soft cream, and a faint shadow of a window curtain can be seen on the right.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera adds a natural, imperfect touch. The subject’s skin has a faint grain from the sensor, and there’s a hint of overexposure on her chest, giving a raw, unedited look. Her fingers are slightly curled, and her toes are relaxed, as if she just rolled out of bed. A small smudge of dust on the pillow adds realism.
+
+- **Post‑Processing**  
+  No filters, no color grading, no post‑processing aesthetic—just the raw image with auto‑HDR off. The only touch is a mild contrast boost to bring out the details in the skin and fabric.
+
+**Prompt Summary**  
+> “A plus‑size woman in a black thong lies on a white bed with a beige diamond‑patterned pillow, captured with a 35 mm wide‑angle lens at eye level. Natural daylight from a south‑west window slightly overexposes her upper body. The shot is handheld, slightly tilted, with everything in focus—no bokeh. The framing is off‑center, accidental, candid. Raw, unprocessed look, no filters.”

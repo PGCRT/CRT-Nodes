@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy blonde hair sitting cross‑legged on a plush beige carpet in a living room. She wears a delicate, nude‑colored lace bra and floral‑patterned panties; a thin gold necklace and bracelet add subtle detail. Her hands rest gently on her knee, fingers slightly curled, as if she’s about to adjust her clothing or simply pause mid‑movement.
+
+- **Facial Expression & Gaze**  
+  She looks directly at the camera with a soft, confident smile, eyes bright and relaxed. Slight motion blur is present around her face and hands, suggesting a handheld shot captured in real time.
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window casts warm, slightly overexposed highlights on her skin and hair. The exposure is uneven—warm tones dominate the foreground while the background remains fully sharp with no bokeh. No auto‑beauty or filter enhancements; raw, unprocessed look.
+
+- **Background & Environment**  
+  Behind her sits a light‑beige sofa adorned with two pillows: one gray, one beige with a subtle floral print, and a colorful, retro‑style pillow in yellow, blue, and orange. A small wooden side table is partially visible to the right. The room appears to be a modern, cozy living space; the time of day is late morning, with soft sunlight streaming in.
+
+- **Lens & Technical Settings**  
+  Use a short focal length (e.g., 24‑35 mm) wide‑angle lens. Capture everything in focus—no portrait mode or subject isolation. The composition is accidental: slightly tilted frame, off‑center framing, and a partial crop that includes a portion of the sofa’s backrest. No rule‑of‑thirds intentionality; the shot feels spontaneous and candid.
+
+- **Captured Details**  
+  - Slight motion blur on the subject’s hands and hair, indicating handheld instability.  
+  - Natural color palette: warm neutrals with subtle pastel accents.  
+  - Texture details: the lace pattern on her bra, the floral print on her panties, the soft carpet fibers, the fabric weave of the sofa.  
+  - Small accessories: a thin gold necklace resting on her collarbone, a delicate bracelet on her right wrist.  
+
+- **Prompt for AI Image Generation**  
+  “A young woman with long wavy blonde hair sits cross‑legged on a plush beige carpet in a cozy living room, wearing a nude lace bra and floral panties, accessorized with a gold necklace and bracelet. She smiles softly at the camera while her hands rest on her knee. Natural daylight from a large window creates warm overexposure on her skin and hair, with a slightly blurred motion effect. Behind her is a light‑beige sofa with a gray pillow, a beige floral pillow, and a colorful retro pillow. The shot is captured with a short focal length wide‑angle lens, everything in focus, accidental framing with slight tilt and off‑center crop, no bokeh, raw unprocessed look.”

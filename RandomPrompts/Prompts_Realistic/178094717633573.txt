@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a messy, half‑tied ponytail, wearing an oversized white tank top that reads “MAMES” in bold orange letters over a graphic of a person in a red cap. She’s seated on a wooden stool near a large storefront window, leaning slightly forward as if she just stepped out of a coffee shop. Her head is turned to the right, eyes focused on something outside the frame, giving a candid, mid‑action feel.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle, late‑afternoon sun creates a soft overexposure on the subject’s face and a slight warm glow on the background. The exposure is slightly uneven—brighter in the center than at the edges—to emulate a handheld, unprocessed look. No auto‑beauty or filter enhancement; raw, unedited aesthetic.
+
+- **Camera & Lens**  
+  35 mm wide‑angle lens (short focal length), f/4.0 aperture, 1/125 s shutter speed, ISO 400. Everything is in focus—no bokeh or depth‑of‑field blur; the background remains sharp from the window’s reflection to the street beyond. Slight motion blur on the subject’s hair and shoulders to suggest a natural, spontaneous capture.
+
+- **Composition & Framing**  
+  The shot is intentionally off‑center: the woman occupies the left‑third of the frame, while the right‑third shows a yellow taxi and a storefront with a blue awning. The framing is accidental—no rule‑of‑thirds intentionality; the composition feels spontaneous, as if the photographer was in a hurry. A slight tilt gives a dynamic, informal feel.
+
+- **Environment**  
+  Urban street scene in a downtown area. The background includes a large glass window that reflects the street, a yellow taxi, and a blue awning on a brick building. The time of day is late afternoon, with warm, slightly harsh sunlight casting soft shadows. Weather is clear, with a light breeze that ruffles the woman’s hair.
+
+- **Details & Imperfections**  
+  Slight tilt and partial crop at the edges; the top of the woman’s head is cut off by the frame, adding to the candid vibe. The tank top’s graphic shows a smaller image of a person in a red cap, with the text “MAMES” above it. The woman’s denim shorts are partially visible, and a folded white cloth sits on the stool beside her. The window’s reflection shows a faint outline of a tree and a traffic light, adding depth.
+
+- **Post‑Processing**  
+  No filters, no color grading, no post‑processing aesthetic—just raw, in‑camera capture with auto‑HDR off. A slight overexposure on the subject’s face gives a natural, unpolished look. The image retains all the imperfections of a real‑life snapshot: minor dust specks, slight vibration blur, and natural contrast.
+
+**Prompt Summary**  
+“Candid photo of a young woman in an oversized white tank top with a ‘MAMES’ graphic, seated on a wooden stool near a storefront window in a downtown street. Late‑afternoon sunlight creates a soft overexposure; 35 mm wide‑angle lens at f/4.0, 1/125 s, ISO 400 captures everything in focus with slight motion blur. The composition is off‑center and accidental, capturing the woman’s sideways gaze and a yellow taxi in the background. Raw, unprocessed, no filters—pure, spontaneous realism.”

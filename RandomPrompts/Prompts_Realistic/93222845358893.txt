@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy dark hair sitting on a neatly made bed in a cozy bedroom. She’s wearing a white ribbed crop‑top and matching white thong bikini, accessorized with a thin gold necklace, hoop earring, and a silver watch on her left wrist. Her right hand rests on her thigh, left hand on her knee, feet slightly turned outward, toes relaxed. She looks directly at the camera with a soft, confident expression, lips slightly parted.
+
+- **Lighting & Exposure**  
+  Warm ambient daylight from a bedside lamp plus natural window light; slight overexposure in the upper left corner giving a subtle halo around her head. No auto‑HDR or beauty filters—raw, unprocessed look. Slight handheld shake gives a natural motion blur on the edges.
+
+- **Lens & Technical**  
+  24‑mm wide‑angle lens (short focal length), f/3.5 aperture, 1/60 s shutter speed, ISO 400. Everything in focus—no bokeh, no depth‑of‑field blur; background fully sharp. Slight tilt and off‑center framing; partial crop that cuts off a bit of the bedside table on the left.
+
+- **Environment**  
+  A bright, tidy bedroom at mid‑afternoon. The bed has crisp white linens, a small wooden nightstand with a lamp, a black rectangular object (maybe a phone or remote) on top, and a beige headboard. A small window lets in natural light; the wall is a pale neutral tone.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Imperfections encouraged: slight tilt, off‑center framing, partial crop. No rule‑of‑thirds intentionality—accidental framing. Zero studio lighting, zero professional composition, zero editorial tone. Natural motion freeze or slight blur from handheld instability.
+
+- **Post‑Processing**  
+  None. Raw JPEG with minimal color cast; no filters, no color grading, no post‑processing aesthetic.
+
+**Prompt Summary (structured)**  
+"Mid‑afternoon candid shot of a woman in white crop‑top and thong bikini sitting on a bed in a bright bedroom, captured with a 24‑mm wide‑angle lens at f/3.5, 1/60 s, ISO 400. Warm ambient light from a lamp and window creates slight overexposure on the upper left. Raw, unprocessed look with handheld shake. Everything in focus, no bokeh. Slight tilt, off‑center framing, partial crop. Background includes a nightstand with a lamp and a black object. No filters or color grading."

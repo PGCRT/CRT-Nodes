@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with soft, sun‑kissed blonde hair, wearing a ribbed pink bikini top, captured mid‑gesture as she brings her hand to her lips in a spontaneous, “surprise” pose. Her face is slightly tilted, eyes bright and engaged, with natural makeup that gives a raw, unfiltered look.
+
+- **Lighting & Exposure**  
+  Ambient daylight from the west, late‑afternoon, creating a warm, slightly overexposed highlight on her chest and shoulder. The exposure is uneven—soft high‑key centers with subtle vignetting at the edges—to emulate a handheld, in‑camera capture.
+
+- **Motion & Focus**  
+  Slight motion blur around the hand‑to‑lip gesture, indicating a quick shutter speed and handheld shake. Everything—from her skin to the background—is fully sharp; no portrait‑mode depth of field blur. The focus is intentional on the subject but the framing is accidental: a wide‑angle, short‑focal‑length shot that cuts off the edges of the scene for a “partial crop” effect.
+
+- **Lens & Technical**  
+  24 mm wide‑angle lens, f/4.0 aperture, 1/250 s shutter speed, ISO 400. No bokeh; background is completely in focus—a plain, textured pink wall that keeps the attention on the subject.
+
+- **Environment**  
+  Location: a casual outdoor patio in a suburban backyard, mid‑late afternoon. The time of day gives a golden hue to the scene, with soft shadows cast by the sun. Light wind ruffles her hair slightly, adding natural movement.
+
+- **Composition & Style**  
+  Candid, unposed, spontaneous—subject appears unaware of the camera. Slight tilt and off‑center framing create a dynamic, informal composition. No rule‑of‑thirds intentionality; the frame is accidental, with the subject’s head and hand slightly cropped at the top and right. Zero studio lighting, zero professional composition, zero editorial tone.
+
+- **Post‑Processing**  
+  Auto‑HDR or auto‑beauty mode off—raw, unprocessed look. No filters, no color grading, no post‑processing aesthetic. Only natural imperfections: slight tilt, off‑center framing, partial crop, and a hint of overexposure at the center.
+
+- **Final Prompt**  
+  “A young woman with sun‑kissed blonde hair in a pink ribbed bikini top, captured mid‑gesture as she brings her hand to her lips, slightly tilted and off‑center framing, handheld shake blur on the gesture, fully sharp background, 24 mm wide‑angle lens, f/4.0, 1/250 s, ISO 400, late‑afternoon daylight, raw unprocessed look, candid spontaneous pose, accidental partial crop, no filters.”

@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework – “Night‑City Leather Dress”**
+
+- **Subject & Pose**  
+  A woman with long, wavy dark hair and thick black-rimmed glasses, wearing a sleek black leather mini‑dress with a high slit. She’s mid‑pose, holding a smartphone in her right hand as if taking a selfie, left hand on hip. Slight tilt and off‑center framing; the crop is accidental, not rule‑of‑thirds.
+
+- **Motion & Focus**  
+  Capture with a wide‑angle lens (24–35 mm). Shoot at night, with a handheld camera that produces a slight motion blur and minor overexposure to keep the ambient glow. Everything in focus – no portrait‑mode depth‑of‑field blur; background fully sharp.
+
+- **Lighting & Color**  
+  Auto‑HDR or auto‑beauty mode off. No filters, no color grading, no post‑processing aesthetic. Use natural night lighting: street lamps and car taillights create a soft bokeh halo around the subject’s head and shoulder.
+
+- **Environment**  
+  Urban street at dusk/night. A concrete sidewalk, a parked car in the background, and a dimly lit building façade. The time of day is late evening (around 9 pm), with ambient city lights and a slight wind that gives a natural motion blur.
+
+- **Lens & Technical**  
+  Short focal length (30 mm), wide‑angle. Aperture set to f/5.6–f/8 for moderate sharpness across the frame. ISO 1600–2000 for night clarity. Slight overexposure to keep the background bright but not washed out. No bokeh, no depth‑of‑field blur – everything in focus.
+
+- **Composition Notes**  
+  Candid, unposed, spontaneous – subject unaware or mid‑action. Imperfections encouraged: slight tilt, off‑center framing, partial crop. Zero studio lighting, zero professional composition, zero editorial tone. Natural motion freeze or slight blur from handheld instability.
+
+- **Prompt Summary for AI Image Generation**  
+  “A woman with long wavy dark hair and thick black‑rimmed glasses, wearing a black leather mini‑dress with a high slit, holding a smartphone in her right hand and resting her left hand on her hip. Capture at night on an urban street, with a wide‑angle lens (30 mm), handheld slight motion blur, natural overexposure, everything in focus. Background includes a parked car and dim building lights. No filters, no auto‑HDR, no post‑processing. Candid, accidental framing, off‑center crop.”

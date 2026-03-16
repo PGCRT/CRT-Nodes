@@ -1,0 +1,28 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark hair lying on a white bed, wearing black lace lingerie that features intricate floral patterns and a central mesh panel. Her legs are slightly apart, toes curled, and her thighs are wrapped in sheer black stockings that taper at the ankle. She’s mid‑motion, as if just rolled onto the bed, with a faint blur around her hips and lower back to suggest movement.
+
+- **Lighting & Exposure**  
+  Natural daylight from a window on the left side of the room creates a soft, slightly overexposed highlight on her back and thighs. The exposure is not perfectly balanced—there’s a subtle warmth in the tones that gives a raw, unprocessed feel. No auto‑beauty or filter enhancements; the image retains the grain and noise of a handheld shot.
+
+- **Camera & Lens Settings**  
+  - Lens: 24‑mm wide‑angle prime (short focal length) for a broad field of view.  
+  - Aperture: f/5.6 – enough to keep the entire scene sharp, no bokeh.  
+  - Shutter speed: 1/125 s – enough to capture slight motion blur on the subject’s hips and the gentle sway of her legs.  
+  - ISO: 400 – for a balanced, low‑noise look.  
+
+- **Composition & Framing**  
+  The shot is intentionally off‑center; the bed takes up most of the frame, with a small portion of the window and a potted plant visible in the upper right corner. The camera is held at a slightly tilted angle, giving an accidental, candid feel. The composition does not follow the rule of thirds—instead, it’s a spontaneous, “mid‑action” capture where the subject appears unaware of the camera.
+
+- **Environment**  
+  A bright, airy bedroom with light gray walls and a wooden headboard. A small potted plant sits on a bedside table near the window, adding a touch of green to the scene. The time of day is late morning, as indicated by the warm, diffused sunlight streaming through the window.
+
+- **Technical Details**  
+  - No portrait‑mode depth‑of‑field blur; everything from foreground to background is in focus.  
+  - Slight motion blur on the subject’s hips and lower back, indicating a handheld shot.  
+  - Raw, unprocessed look—no color grading or filters applied.  
+  - The image has a slight overexposure on the upper left side, where the light hits the woman’s back, giving it a natural, organic glow.
+
+- **Final Prompt**  
+  “A young woman in black lace lingerie lying on a white bed, captured with a 24‑mm wide‑angle lens at f/5.6 and 1/125 s, natural daylight from a window creating soft overexposure, slight motion blur on the hips, off‑center candid framing, raw unprocessed look, no filters—raw, spontaneous, handheld shot.”

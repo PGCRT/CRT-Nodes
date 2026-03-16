@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with wet, slightly frizzy hair, mid‑touching her head with both hands, eyes focused forward, subtle smirk. Her skin is unretouched, with natural freckles and a faint moisture sheen. She’s standing in a bright, tiled bathroom; a white towel hangs on a rack to the left, a small window lets in daylight from the right.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject is unaware of the camera, caught mid‑action. Slight tilt and off‑center framing; the crop is accidental, not rule‑of‑thirds. No rule‑of‑thirds intentionality — just a handheld shot with a short focal length lens.
+
+- **Environment**  
+  Location: A clean, modern bathroom with off‑white square tiles, a chrome towel rack, and a small window that casts soft daylight. Time of day: late morning, ambient light slightly warm. Weather: clear, no wind, the window’s glass is fully sharp. The background is entirely in focus — no bokeh, no depth‑of‑field blur.
+
+- **Lens & Technical**  
+  Short focal length (≈20 mm), wide‑angle lens. Wide‑angle gives a slight distortion that adds character. No bokeh, no portrait‑mode isolation — everything from foreground to background is sharp. Slight motion blur on the subject’s hands and hair, indicating handheld instability. Auto‑HDR or auto‑beauty mode off — raw, unprocessed look. No filters, no color grading, no post‑processing aesthetic.
+
+- **Lighting & Exposure**  
+  Natural lighting from the window; slight overexposure in the upper right corner to emphasize the wet hair and skin sheen. Slight underexposure on the lower left to keep the composition balanced. The exposure is uneven but natural, as if captured by a casual photographer.
+
+- **Details & Imperfections**  
+  - Slight tilt of the camera, making the frame slightly crooked.  
+  - Partial crop: the top of the head cuts off just above the ear, giving an intimate feel.  
+  - The towel on the rack is partially out of frame, adding to the candid vibe.  
+  - The window’s reflection is faint but visible, adding a subtle glare.
+
+- **Final Prompt**  
+  “A candid, wide‑angle shot of a young woman in a bright bathroom, mid‑touching her wet hair with both hands, captured with a short focal length lens. The image has slight motion blur on the hands and hair, a small tilt, and accidental off‑center framing. The background is fully sharp, no bokeh, no filters, raw and unprocessed. Natural daylight from a window creates a slight overexposure in the upper right. The scene includes a white towel on a chrome rack to the left and a small window to the right, all in focus. The exposure is uneven — slightly overexposed at the top right, underexposed at the bottom left — giving a natural, handheld feel.”

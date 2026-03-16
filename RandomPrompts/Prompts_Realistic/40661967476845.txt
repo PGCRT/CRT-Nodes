@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A plus‑size woman with long, dark hair, wearing a sheer white wrap dress and tan ankle boots, leaning casually against a modern kitchen counter. Her left hand grips the edge of the counter, her right hand touches her forehead in a mid‑gesture, and she looks slightly off‑camera with a relaxed, confident expression.
+
+- **Candid, Unposed Feel**  
+  Capture the moment as if she’s unaware of the camera—slight tilt and off‑center framing, partial crop that gives an accidental, spontaneous vibe. The composition is not intentionally rule‑of‑thirds; it’s a handheld snapshot with a wide‑angle lens.
+
+- **Motion & Focus**  
+  Apply a subtle motion blur to convey slight instability, while keeping the entire frame fully sharp—no portrait‑mode depth of field blur. All elements (subject, background, details) are in focus.
+
+- **Lighting & Exposure**  
+  Use natural daylight from a large window; allow a mild overexposure that gives a raw, unprocessed look. No auto‑HDR or beauty filters—just a straightforward exposure that keeps the scene bright but organic.
+
+- **Environment**  
+  Setting: A contemporary kitchen with white tiled walls, black geometric backsplash, and wooden flooring. A stand mixer sits on the left counter, a set of wooden spoons rests in a jar on the right, and a small potted plant is visible in the corner. The time of day is late morning, with warm, diffused sunlight creating soft highlights.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm) wide‑angle lens, no bokeh. Background is fully sharp, no subject isolation. Capture everything in focus from foreground to background.
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, zero studio lighting. Keep the image raw and natural, with only minimal adjustments for exposure and contrast.
+
+**Prompt Summary**  
+> “Candid, unposed photo of a plus‑size woman in a white wrap dress and tan boots leaning on a kitchen counter, captured with a 24‑35 mm wide‑angle lens, slight motion blur but fully sharp focus, natural daylight overexposure, raw unprocessed look, no filters—everything in focus from subject to background.”

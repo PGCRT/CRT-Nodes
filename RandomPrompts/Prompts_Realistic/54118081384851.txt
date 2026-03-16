@@ -1,0 +1,23 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a natural, unposed expression, hair tied back in a loose ponytail, wearing a white tank top and gold hoop earrings. She is mid‑smile, slightly tilted to the left, with a faint motion blur around her face that suggests a handheld shot captured in motion. Her eyes are bright, with subtle eyelash definition and a light makeup touch—no heavy filters or auto‑beauty processing, just raw, authentic detail.
+
+- **Lighting & Exposure**  
+  Ambient daylight from a southern window, mid‑afternoon, soft but warm. The exposure is slightly overexposed on the face, giving a gentle halo effect, with no color grading or post‑processing. The lighting creates natural highlights on her forehead and cheekbones, with a slight warmth in the skin tones.
+
+- **Camera & Lens**  
+  A wide‑angle lens (24 mm) on a DSLR or mirrorless camera, handheld. The focal length is short, producing a slightly distorted perspective that adds to the candid feel. Everything in the frame—from her face to the background wall—is fully sharp; no bokeh or depth‑of‑field blur. The composition is accidental: the subject is off‑center, the frame is slightly tilted, and the crop is partial, giving an unposed, spontaneous vibe.
+
+- **Environment**  
+  The setting is a simple, light‑colored interior wall with a faint texture—perhaps a plaster or painted surface. The time of day is late afternoon, with warm sunlight casting soft shadows. The background is fully sharp, no studio lighting, no professional composition, and no editorial tone—just an everyday, real‑world scene captured in a casual moment.
+
+- **Technical Details**  
+  - Slight motion blur on the subject’s face and ears, indicating a handheld shot.  
+  - No auto‑HDR or auto‑beauty mode; the image retains raw, unprocessed look.  
+  - Wide lens, short focal length, everything in focus, no bokeh.  
+  - Slight overexposure on the face, natural ambient light.  
+  - No rule‑of‑thirds intentionality—accidental framing.  
+
+- **Final Prompt**  
+  “A candid, unposed portrait of a young woman with a white tank top and gold hoop earrings, captured with a 24 mm wide‑angle lens on a handheld camera. The shot is taken mid‑afternoon in a simple, light‑colored room, with natural daylight creating a soft halo on her face. The image has slight motion blur and a faint overexposure, everything is fully sharp with no bokeh, the framing is accidental and off‑center, producing a raw, unprocessed, real‑life look.”

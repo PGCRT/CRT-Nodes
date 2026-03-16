@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A blonde woman in a green crochet bikini standing knee‑deep in shallow sea water on a tropical beach. She is mid‑gesture, one hand raised to her head as if shielding her eyes from the sun, body slightly turned toward the camera, legs spread for balance. Her hair flows loosely over her shoulder, a few strands catching the wind. The bikini has thin tie‑front and side ties, a textured mesh pattern, and a subtle sheen from the water.
+
+- **Lighting & Exposure**  
+  Slight overexposure due to bright mid‑afternoon sun; the scene is raw and unprocessed, no auto‑beauty or filters. The exposure is uneven—highlighted by a warm, golden hue with a faint halo around the subject. A wide‑angle lens (24–35 mm) captures everything in focus, from the woman’s torso to the palm trees in the background; no bokeh or depth‑of‑field blur.
+
+- **Motion & Framing**  
+  Slight motion blur on the subject’s hand and hair, indicating handheld instability. The frame is off‑center, slightly tilted, with a partial crop that cuts off the left side of the beach. No rule‑of‑thirds intentionality—just a spontaneous, candid composition.
+
+- **Environment**  
+  Specific real‑world location: a sandy beach with gentle waves lapping at the shore, palm trees lining the background, a few colorful coolers and a blue bucket visible in the distance. Time of day: late afternoon, around 4 pm, with warm ambient light and a slight haze. Weather: clear, breezy, with a faint cloud cover overhead.
+
+- **Lens & Technical**  
+  Short focal length (24–35 mm), wide‑angle, no portrait mode. Everything is fully sharp—foreground and background. The image has a natural, unpolished look; no color grading or post‑processing. Slight overexposure gives a bright, almost washed‑out feel that enhances the candid vibe.
+
+- **Final Prompt**  
+  “A blonde woman in a green crochet bikini stands knee‑deep in shallow sea water on a tropical beach, one hand raised to her head as if shielding her eyes from the sun, body slightly turned toward the camera, legs spread for balance. Her hair flows loosely over her shoulder, a few strands catching the wind. The bikini has thin tie‑front and side ties, a textured mesh pattern, and a subtle sheen from the water. Slight motion blur on the subject’s hand and hair indicates handheld instability. The frame is off‑center, slightly tilted, with a partial crop that cuts off the left side of the beach. No rule‑of‑thirds intentionality—just a spontaneous, candid composition. Background shows palm trees, a blue bucket, and a few coolers on the sand. Time of day: late afternoon around 4 pm, warm ambient light with a faint haze. Clear, breezy weather with a slight cloud cover overhead. Shot on a wide‑angle lens (24–35 mm), everything in focus—no bokeh or depth‑of‑field blur. Slight overexposure gives a bright, raw look. No filters, no color grading, no post‑processing.”

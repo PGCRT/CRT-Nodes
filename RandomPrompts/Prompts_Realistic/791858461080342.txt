@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair, wearing a tight black bodycon dress that clings to her curves. She stands in a casual, unposed stance, slightly turned toward the camera, hands relaxed at her sides, as if caught mid‑walk or mid‑pose. Her expression is natural and unforced, a subtle smile with a hint of confidence.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle, late‑afternoon sun that creates a soft overexposure on the subject’s face and upper body. Slight ambient glare on the dress’s fabric, no color grading or filters—just raw, unprocessed tones. The exposure is slightly warm, with a gentle haze that gives an auto‑HDR feel without post‑processing.
+
+- **Motion & Focus**  
+  A natural motion blur on the subject’s hair and dress, indicating handheld instability. Everything in the frame—from her face to the background—is fully sharp, no portrait‑mode depth of field blur. The focus is even across the entire composition, capturing every detail.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24 mm or 35 mm) with a short focal length. No bokeh; the background is fully sharp, no subject isolation. The shot is taken at eye level, with a slight tilt that gives an off‑center, accidental framing.
+
+- **Environment**  
+  Location: A quiet, sunlit alleyway in an urban loft, with concrete walls and a wooden floor. Time of day: late afternoon, the light is golden but not harsh. Weather: clear, mild breeze, a few scattered leaves on the ground. The background includes a faint, out‑of‑focus window and a small potted plant, adding context without distracting.
+
+- **Composition & Style**  
+  Candid, spontaneous capture—subject unaware or mid‑action. Imperfections are encouraged: slight tilt, off‑center framing, partial crop. No rule‑of‑thirds intentionality—everything feels accidental yet deliberate. The overall tone is raw, natural, and unpolished, as if captured in a real‑life moment.
+
+- **Prompt Summary**  
+  “A young woman with long wavy brown hair, wearing a black bodycon dress, stands casually in a sunlit urban alley at late afternoon. Natural daylight creates a soft overexposure on her face and dress. Slight motion blur from handheld shake, everything fully sharp. Shot on a wide‑angle short focal length lens, slightly tilted for accidental off‑center framing. Raw, unprocessed, no filters—pure candid realism.”

@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman in a casual office setting, mid‑mirror selfie. She’s wearing black athletic shorts and a bare top, holding a dark smartphone in her right hand, capturing a reflection that slightly obscures her face. Her hair is loose and slightly messy, catching the light as she tilts her head. The phone’s camera lens is visible, emphasizing the “mid‑action” feel.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject appears unaware of the camera’s presence, caught in a natural moment. The frame is intentionally off‑center, with a slight tilt that gives a handheld, informal vibe. The crop is partial; the bottom of the image cuts off just above her thighs, and the top extends into the ceiling tiles, creating a “partial crop” effect. No rule‑of‑thirds intentionality — the composition feels accidental, as if captured by a quick, impulsive snap.
+
+- **Imperfections & Raw Aesthetic**  
+  Slight motion blur on the subject’s hand and phone, indicating a handheld shot. The exposure is mildly overexposed in the ceiling lights, giving a raw, unprocessed look. No filters, no color grading, no post‑processing aesthetic — just the natural tones of the scene. The lighting comes from overhead fluorescent panels, creating a bright, slightly hazy glow that lifts the subject’s skin and clothing.
+
+- **Environment**  
+  A typical office space: white ceiling tiles, fluorescent lights, a desk with a computer monitor, a keyboard, a mouse, a water bottle, and a stack of papers. In the background, another person is visible at a desk, adding to the candid atmosphere. The time of day is mid‑afternoon, as indicated by the warm ambient light and the shadows cast on the ceiling tiles. Weather or ambient conditions are neutral — the scene is indoors, but the lighting suggests a bright, clear day outside.
+
+- **Lens & Technical**  
+  Short focal length (approximately 24–35 mm) wide‑angle lens, capturing a broad view of the scene without significant bokeh. Everything in focus — background, subject, and foreground are all sharp, with no depth‑of‑field blur. No portrait mode or subject isolation; the entire frame is a single plane of focus. The lens produces a slight vignette at the corners, adding to the “raw” feel.
+
+- **Composition Notes**  
+  The prompt emphasizes a wide‑angle capture that includes the subject’s upper body, the phone she’s holding, a portion of the desk, and the ceiling tiles. The framing is intentionally not centered; the subject’s left side is slightly cut off, giving an informal, spontaneous feel. The background elements (computer monitor, keyboard, water bottle) are fully sharp, reinforcing the “everything in focus” requirement.
+
+- **Final Prompt**  
+  *“A young woman in a casual office setting, mid‑mirror selfie, wearing black athletic shorts and a bare top, holding a dark smartphone in her right hand that slightly obscures her face. Her hair is loose and messy, catching the light as she tilts her head. The shot is candid, unposed, spontaneous — the subject appears unaware of the camera. Slight motion blur on the hand and phone, mild overexposure from overhead fluorescent lights, raw, unprocessed look. The frame is off‑center with a slight tilt, partial crop at the bottom above the thighs and top into the ceiling tiles. Background includes a desk with a computer monitor, keyboard, mouse, water bottle, and a stack of papers; another person is visible at a desk in the distance. Time of day: mid‑afternoon. Use a short focal length wide‑angle lens (24–35 mm) that keeps everything in focus — no bokeh, no depth‑of‑field blur. No filters, color grading, or post‑processing. Capture the scene with natural motion freeze or slight blur from handheld instability.”*

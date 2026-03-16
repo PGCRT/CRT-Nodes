@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman with long, dark hair that’s slightly tousled by the sea breeze, standing on a sunlit beach. She’s wearing white lace bikini bottoms that catch the light as she turns her head to the side, mid‑step, as if she just took a photo or is about to. Her left arm is bent at the elbow, holding a small beige tote bag in her hand. The camera captures her from a low angle, emphasizing the curve of her torso and the delicate lace detail on her bottoms.
+
+- **Lighting & Exposure**  
+  Slight overexposure on the upper part of the frame to mimic natural midday sunlight; the exposure is uneven, with the background slightly brighter than the foreground. No auto‑beauty or filter enhancement—just raw, unprocessed data. The lens produces a wide‑angle view that keeps the entire scene in focus, from her face to the sand beneath her feet.
+
+- **Motion & Framing**  
+  A subtle motion blur around the edges suggests handheld instability. The composition is intentionally off‑center: the subject’s left side leans slightly to the right, and the top of the frame cuts off just above her forehead, giving a “partial crop” effect. No rule‑of‑thirds—just spontaneous, candid framing.
+
+- **Environment**  
+  The setting is a tropical beach at high noon; the sand is light beige with small pebbles scattered around, and a few palm fronds peek into the upper right corner. The ocean is visible in the background, its surface shimmering under the sun. The weather is clear, with a faint haze that adds depth to the scene.
+
+- **Lens & Technical**  
+  Use a short focal length (e.g., 24‑35 mm) wide‑angle lens. All elements—subject, sand, ocean, palm fronds—are fully sharp; no bokeh or depth‑of‑field blur. The image has an auto‑HDR feel but without post‑processing color grading. Capture the scene with a handheld camera, letting slight shake add realism.
+
+- **Details & Imperfections**  
+  Include natural imperfections: a small smudge on her left wrist from a gold bracelet, a faint shadow cast by her hair, and a slight tilt of the camera that gives the image a casual, unposed feel. The lace on her bikini bottoms shows subtle texture, with a few threads catching the light.
+
+- **Final Prompt**  
+  “A woman with long dark hair standing on a sunlit beach at high noon, wearing white lace bikini bottoms and holding a beige tote bag. Capture from a low angle with a short focal length wide‑angle lens, slight overexposure on the upper frame, subtle motion blur from handheld shake, and off‑center spontaneous framing. The background shows the shimmering ocean and a few palm fronds, all in focus with no bokeh. Include natural imperfections such as a wrist smudge and slight camera tilt for a raw, candid look.”

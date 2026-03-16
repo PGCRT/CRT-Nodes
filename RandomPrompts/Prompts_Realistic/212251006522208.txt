@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman in a factory setting, mid‑step, slightly off‑center. She’s wearing dark denim shorts and a plain white t‑shirt, with a pair of silver handcuffs hanging from her left wrist. Her hair is long, brown, and loosely tied back. She holds a small metal tool in her right hand, as if she’s about to start a task. Her face is turned toward the camera but not directly at it—slight tilt, natural candid expression.
+
+- **Motion & Focus**  
+  Slight motion blur on the subject’s hands and the tool, indicating handheld instability. Everything remains fully sharp—no portrait‑mode blur. The image has an auto‑HDR feel but no color grading or filters; a mild overexposure in the upper right corner to capture ambient light.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24 mm), short focal length, no bokeh. All elements—subject, background, foreground—are in focus. Slight overexposure or underexposure depending on ambient light; the overall tone is raw and unprocessed.
+
+- **Environment**  
+  A bustling industrial workshop at dusk. The time of day is late afternoon, with warm sunlight streaming through high windows, creating a soft glow. The weather is slightly humid, with a faint mist in the air. The background shows a large metal beam, a welding spark, and a control panel on the wall.
+
+- **Candid Details**  
+  The woman appears unaware of the camera—she’s mid‑action, as if she’ll soon lift the tool. Her posture is natural, with a slight tilt to the left. The framing is accidental; the composition does not follow the rule of thirds. The shot captures a real‑world location, no studio lighting, no professional pose.
+
+- **Post‑Processing**  
+  No filters, no color grading, no post‑processing aesthetic—just raw, natural imagery with an auto‑HDR touch.  
+
+**Prompt Summary:**  
+"Capture a candid, unposed photo of a young woman in a factory workshop at dusk, wearing denim shorts and a white t‑shirt, holding a metal tool in her right hand and handcuffs on her left wrist. Use a wide‑angle, short focal length lens to keep everything sharp while adding slight motion blur to the hands. The scene should show a large metal beam, a welding spark, and a control panel on the wall, with a soft glow from high windows. The image should have a raw, auto‑HDR feel with mild overexposure, no filters, and an accidental, off‑center composition that feels spontaneous and natural."

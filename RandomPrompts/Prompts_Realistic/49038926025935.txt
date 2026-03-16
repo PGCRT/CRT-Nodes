@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A young woman with a high bun, wearing a black distressed hoodie and ripped grey jeans, captured mid‑step as she reaches for a tissue on a cluttered desk. Her hand is near her face, fingers curled, suggesting she’s about to touch or adjust something. She stands in an unstyled, lived‑in room that looks like a home office or a small studio.
+
+- **Pose & Motion**  
+  Slight motion blur at the knees and hands to convey handheld shake. The subject is slightly off‑center, leaning forward with her left leg bent, creating a dynamic, spontaneous feel. Her head tilts down toward the desk, as if she’s reading or writing.
+
+- **Environment**  
+  The setting is a casual, real‑world space: a white wall with faint coffee stains, a fluorescent light fixture overhead, a small wooden desk piled with magazines and a stack of notebooks, a grey office chair to the left, and a box of tissues labeled “LORGY” on the floor. A roll of tape hangs from a white rail near the ceiling. The room is lit by natural daylight coming from a window out of frame, giving a soft, slightly overexposed highlight on the wall.
+
+- **Time & Ambient Conditions**  
+  Mid‑afternoon, around 3 pm, with warm, diffused sunlight. The ambient light creates subtle shadows and a slight haze across the scene.
+
+- **Lens & Technical Settings**  
+  24‑mm wide‑angle lens, f/4.0 aperture, 1/60 s shutter speed, ISO 400. Everything is in focus from foreground to background; no bokeh. The image has a raw, unprocessed look with auto‑HDR off and no color grading or filters.
+
+- **Composition Notes**  
+  No rule‑of‑thirds intentionality—framing is accidental, with the subject’s left side cutting off the edge of the frame. The camera is held at eye level, slightly tilted to the right. The shot captures a candid, unposed moment, as if the woman was caught mid‑action by a photographer walking into the room.
+
+- **Final Prompt**  
+  “A young woman in a black distressed hoodie and ripped grey jeans stands mid‑step on a cluttered desk in a casual home office, reaching for a tissue. Her hand is near her face, fingers curled, as she looks down at a stack of magazines. The room has a white wall with coffee stains, a fluorescent light overhead, a grey chair, and a LORGY tissue box on the floor. Capture with a 24‑mm wide‑angle lens at f/4.0, 1/60 s, ISO 400, everything in focus, slight motion blur on the knees and hands, accidental off‑center framing, raw unprocessed look, mid‑afternoon daylight.”

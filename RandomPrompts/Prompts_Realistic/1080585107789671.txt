@@ -1,0 +1,30 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark brown hair, wearing a white off‑shoulder long‑sleeve top and a black high‑waist skirt, standing in a bright, minimalist interior. She holds a clear glass of water in her right hand, slightly tilted as if mid‑sip, while her left hand rests on a sleek silver table. Her gaze is directed toward the camera but not directly at it— a subtle, candid look. A small, crystal‑like decorative object sits on the table near her wrist.
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window casts soft, warm sunlight across the scene; slight overexposure in the upper left corner gives a gentle halo effect. No auto‑HDR or beauty filters—raw, unprocessed look. The exposure is slightly uneven, with a warm tint in the highlights and cooler tones in the shadows.
+
+- **Camera Settings**  
+  - Lens: 24‑mm wide‑angle, short focal length, handheld.  
+  - Focal depth: everything in focus—from subject to background—no bokeh, no portrait‑mode isolation.  
+  - Shutter speed: 1/60 s (slight motion blur from handheld instability).  
+  - Aperture: f/4.0 (wide opening for sharp background).  
+  - ISO: 400 (for natural grain and dynamic range).
+
+- **Composition & Framing**  
+  - No rule‑of‑thirds intentionality—accidental, off‑center framing that captures the subject’s upper body and a portion of the table.  
+  - Slight tilt to the left, creating a dynamic, spontaneous feel.  
+  - The frame cuts off just above her waist, keeping the lower part of her skirt out of view for a tighter candid crop.
+
+- **Environment**  
+  A bright, white‑walled room with a large window on the left; a small, clear crystal sphere sits on the table near the woman’s wrist. The time of day is mid‑afternoon, with warm, diffused sunlight creating soft shadows. The weather outside is clear, adding to the natural lighting.
+
+- **Details & Imperfections**  
+  - Slight motion blur around the hand holding the glass, indicating a handheld shot.  
+  - Minor imperfections: a faint smudge on the glass, a slight shadow cast by the woman’s head onto the wall.  
+  - No post‑processing color grading—just raw, natural tones.
+
+- **Final Prompt**  
+  “A candid, wide‑angle shot of a woman in a white off‑shoulder top and black skirt, holding a glass of water, standing beside a silver table with a crystal sphere, in a bright white room with natural daylight; slight motion blur and overexposure, handheld composition, everything in focus, no filters—raw, spontaneous realism.”

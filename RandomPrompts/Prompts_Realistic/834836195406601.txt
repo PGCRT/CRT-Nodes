@@ -1,0 +1,35 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, curvy woman with long brown hair, wearing black thin‑strap lingerie and sheer black thigh‑highs, standing in a bright, airy bedroom. Her left hand rests on her hip, right arm relaxed by her side, body angled slightly to the right, capturing a natural, unposed stance as if she’s just finished a quick selfie or is about to move.  
+
+- **Lighting & Exposure**  
+  Soft, natural daylight from a large window behind her creates a slight overexposure on the left side of the frame; the exposure is uneven, giving a raw, unprocessed look. No auto‑HDR or beauty filters—just a handheld shot with a wide‑angle lens.  
+
+- **Camera Settings**  
+  - Lens: 24‑35 mm wide‑angle, short focal length.  
+  - Aperture: f/4–f/5.6 (wide, shallow depth but everything stays in focus).  
+  - Shutter speed: 1/60–1/100 s (slight motion blur from handheld instability).  
+  - ISO: 400–800 (depending on ambient light).  
+
+- **Composition**  
+  - No rule‑of‑thirds intentionality; the frame is slightly tilted, off‑center, with a partial crop that cuts off the top of the window curtain and the lower part of the bed.  
+  - Background: a bright window with sheer white curtains, a small portion of an external building visible through the glass, a white bed with a pillow and a sleeping cat on it, a poster on the wall partially visible.  
+  - Everything is in focus—no bokeh or depth‑of‑field blur.  
+
+- **Environment**  
+  - Location: a modern, minimalist bedroom in a suburban house.  
+  - Time of day: late morning, natural light coming from the west, creating soft shadows.  
+  - Weather: clear, slightly cloudy sky outside the window.  
+
+- **Details & Imperfections**  
+  - Slight motion blur on the subject’s right arm and the window curtain.  
+  - Minor overexposure on the left side of the image, giving a natural, unpolished feel.  
+  - The woman’s skin has a subtle warmth, with faint freckles and a small mole on her left hip.  
+  - Her thigh‑highs have a thin black band at the top, and a faint bracelet is visible on her right wrist.  
+
+- **Post‑Processing**  
+  No color grading or filters—just raw capture. A minimal crop to tighten the composition after the shot.
+
+**Prompt Summary**  
+> “A tall woman with long brown hair in black thin‑strap lingerie and sheer thigh‑highs stands casually in a bright bedroom, left hand on hip, right arm relaxed, captured with a 24‑35 mm wide‑angle lens at f/5, 1/80 s shutter speed, slight motion blur, natural daylight from a large window creating soft overexposure on the left. The frame is slightly tilted and off‑center, partially cropping the window curtain and the bed with a sleeping cat on it, all in focus, no filters—raw, candid, spontaneous.”

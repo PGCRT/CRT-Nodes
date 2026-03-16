@@ -1,0 +1,16 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark brown hair that cascades over her left shoulder, standing mid‑step on a sunlit forest trail. She wears a soft pink ribbed camisole with button front and high‑waisted light‑blue denim shorts; a delicate silver bracelet adorns her left wrist, and a thin necklace rests on her collarbone. Her face is turned slightly toward the camera, mouth curled in a casual smile, eyes bright and relaxed.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — she appears unaware of the camera, caught mid‑motion. Slight tilt and off‑center framing give an accidental, handheld feel. The shot has a subtle motion blur on her hands as they move naturally by her side, suggesting a brief freeze of movement. No rule‑of‑thirds intentionality; the composition is organic, with the subject’s left side slightly cut off by the frame edge.
+
+- **Environment**  
+  Location: A sun-dappled forest trail in late afternoon, the path lined with tall eucalyptus trees and a small stream on the right. The time of day is early evening, around 5:30 p.m., when the light is warm and golden. Weather is mild, with a light breeze; the sky is overcast but bright, creating soft ambient illumination.
+
+- **Lens & Technical**  
+  Short focal length (24 mm) wide‑angle lens, all elements in focus from foreground to background. No bokeh or depth‑of‑field blur — the background trees and stream are sharply rendered. Auto‑HDR or auto‑beauty mode off; no filters, no color grading, no post‑processing aesthetic. Slight overexposure on the subject’s chest area to capture the ambient warmth. The image retains a raw, unprocessed look with natural contrast.
+
+- **Post‑Processing**  
+  Zero studio lighting, zero professional composition, zero editorial tone. Only natural light and a handheld camera. Final output is a single JPEG that preserves all visual details without any artificial enhancements.

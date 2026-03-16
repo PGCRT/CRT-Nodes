@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, athletic woman with long, wavy blonde hair sits casually on a rustic stone bench outside a white-framed glass door. She wears a delicate lavender lace bra and matching high-waisted panties, paired with black ankle‑heeled shoes. Her left hand rests near her chin, fingers slightly curled, while her right arm hangs relaxed by her side. She is mid‑step, one foot planted on the bench and the other slightly forward, giving a natural, unposed feel.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the woman appears unaware of the camera, caught in a casual moment. Slight tilt and off‑center framing give an accidental, handheld vibe. The shot is a wide‑angle capture with a short focal length (≈20 mm), ensuring everything from the bench to the background is fully sharp—no bokeh or depth‑of‑field blur.
+
+- **Environment**  
+  Location: A sunny, late‑afternoon patio of a modern house with a large white glass door and a terracotta planter beside it. The time of day is early evening; the light is warm, slightly overexposed on the subject’s face but not overly bright. Ambient conditions are mild, with a gentle breeze ruffling her hair.
+
+- **Lens & Technical**  
+  - Lens: 20 mm wide‑angle, short focal length.  
+  - Aperture: f/4.5 (wide opening).  
+  - Shutter speed: 1/60 s (slight motion blur from handheld instability).  
+  - ISO: 400 (raw, unprocessed look).  
+  - Auto‑HDR or auto‑beauty mode off.  
+  - No filters, no color grading, no post‑processing aesthetic.  
+  - Slight overexposure on the subject’s face to capture the warm daylight.
+
+- **Composition Notes**  
+  The framing is not rule‑of‑thirds intentional; the bench sits slightly off‑center, the door frame is partially cropped on the left, and the planter is visible on the right. All elements—bench, door, planter, woman—are in focus. No portrait‑mode subject isolation.
+
+- **Final Prompt**  
+  “A tall, athletic woman with long wavy blonde hair sits casually on a rustic stone bench outside a white‑framed glass door, wearing a delicate lavender lace bra and matching high‑waisted panties with black ankle‑heeled shoes. Her left hand rests near her chin, fingers slightly curled, while her right arm hangs relaxed by her side. The shot is a wide‑angle capture at 20 mm, handheld, with slight tilt and off‑center framing. The scene is set in a sunny late‑afternoon patio of a modern house, with a terracotta planter beside the door. Capture the moment as candid, unposed, spontaneous—subject unaware, mid‑step. Use f/4.5 aperture, 1/60 s shutter speed, ISO 400, no filters or auto‑HDR, slight overexposure on the subject’s face. Everything in focus, no bokeh. The composition is accidental, not rule‑of‑thirds, with the bench slightly off‑center and the door frame partially cropped.”

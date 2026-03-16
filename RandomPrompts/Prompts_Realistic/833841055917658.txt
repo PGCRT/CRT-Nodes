@@ -1,0 +1,16 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, sun‑kissed hair kneeling on a polished wooden floor in a bright, airy bedroom. She is bare‑headed, mid‑action as she pours a creamy white liquid (milk or cream) from a glass bottle onto her chest; the liquid drips down her torso and spreads into a soft, irregular pool beneath her knees. Her hands rest on the floor on either side of her hips, fingers slightly curled, as if she just finished a gesture and is caught in a fleeting moment of spontaneity.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject appears unaware of the camera, mid‑motion. Slight tilt and off‑center framing give an accidental, handheld feel. The shot is a wide‑angle capture with a short focal length (≈20 mm), ensuring that the entire scene — from the floor to the window, from the bed to the plant — remains fully sharp with no bokeh or depth‑of‑field blur.
+
+- **Environment**  
+  Specific real‑world location: a bright, sunlit bedroom with a large, multi‑paned window on the left that lets in warm daylight, a wooden bed with a blue blanket on the right, and a tall green plant in the corner. The time of day is late morning; the light is slightly overexposed at the top, creating a soft halo around the subject. Ambient conditions are calm, with a gentle breeze that gives a slight motion blur to the subject’s hair and the liquid’s drip.
+
+- **Lens & Technical**  
+  Short focal length, wide‑angle lens (≈20 mm). No bokeh — everything from foreground to background is in focus. No portrait‑mode subject isolation; the composition is accidental, not rule‑of‑thirds. Slight overexposure at the upper part of the frame for a raw, unprocessed look. Auto‑HDR or auto‑beauty mode off. No filters, no color grading, no post‑processing aesthetic. The image retains natural imperfections: slight tilt, partial crop, and a hint of motion blur from handheld instability.
+
+- **Final Prompt**  
+  “A young woman with long, sun‑kissed hair kneeling on a polished wooden floor in a bright, airy bedroom, bare‑headed mid‑action as she pours creamy white liquid from a glass bottle onto her chest; the liquid drips down her torso and spreads into a soft, irregular pool beneath her knees. Her hands rest on the floor on either side of her hips, fingers slightly curled. The shot is a wide‑angle capture with a short focal length (≈20 mm), everything fully sharp with no bokeh. The time of day is late morning; the light is slightly overexposed at the top. The scene includes a large multi‑paned window on the left, a wooden bed with a blue blanket on the right, and a tall green plant in the corner. Slight tilt and off‑center framing give an accidental, handheld feel. No filters, no color grading, no post‑processing. Capture candid, unposed, spontaneous — subject unaware or mid‑action.”

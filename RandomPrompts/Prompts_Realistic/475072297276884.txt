@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy blonde hair standing in a dimly lit café at dusk. She’s wearing a black lace lingerie set that catches the ambient light. Her pose is casual and spontaneous—slightly turned toward the camera, one hand relaxed by her side, the other lightly touching her hip. Her expression is neutral but engaged, as if she’re mid‑conversation or just finished a coffee.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. Slight motion blur on the hands and hair to suggest handheld shake. No filters, no color grading, no post‑processing aesthetic. A tiny overexposure in the highlights gives a raw, natural feel. The framing is off‑center, slightly tilted, with a partial crop that cuts off a bit of the background table on the right.
+
+- **Environment**  
+  Location: a cozy, modern café with dark wooden tables and metal chairs. A small framed poster hangs on the wall behind her left shoulder; a glass of water sits on a table to her right. The time is late evening (around 7 pm), with the city outside the window casting a soft pink‑blue hue. Ambient lighting comes from a recessed ceiling lamp and a small wall sconce, creating warm highlights and subtle shadows.
+
+- **Lens & Technical**  
+  Short focal length (24–35 mm) wide‑angle lens. Everything is fully sharp—no bokeh, no depth‑of‑field blur. The background tables, chairs, and wall details are in focus. No portrait‑mode subject isolation; the entire scene is captured with a single exposure. Slight overexposure on the subject’s face and upper body to keep the ambient light’s warmth.
+
+- **Composition Notes**  
+  - Use a wide‑angle shot that includes a portion of the table, chair, and wall poster behind her.  
+  - Keep the composition accidental: slight tilt and off‑center framing, no rule‑of‑thirds intentionality.  
+  - Capture the subject’s full body from head to toe, but keep the lower legs slightly cropped at the bottom edge for a dynamic feel.  
+  - Preserve natural imperfections: a tiny smudge on her left shoulder, a slight blur on her right hand, and a faint reflection of the lamp on her hair.
+
+- **Lighting & Color**  
+  Natural ambient light with a hint of warm pink from the sconce; the lighting is uneven, creating soft highlights on her chest and abdomen, while the background remains fully sharp. Use auto‑HDR or “auto‑beauty” off for a raw look. Keep the color palette natural—no post‑processing color grading.
+
+- **Final Prompt**  
+  *“A young woman with long wavy blonde hair in black lace lingerie stands casually in a dimly lit café at dusk, mid‑conversation, captured on a 24–35 mm wide‑angle lens. The shot is slightly tilted and off‑center, with a partial crop of the table and chair to her right and a framed poster on the wall behind her. All elements are in focus—no bokeh. The subject has a slight motion blur on her hands and hair, while the background tables, chairs, and wall details remain sharp. The exposure is mildly overexposed on the subject’s face and upper body. The scene includes a glass of water on a nearby table, a recessed ceiling lamp and a wall sconce casting warm pink‑blue hues. Capture the raw, unprocessed look with natural imperfections: a smudge on her left shoulder, slight blur on her right hand, and a faint reflection in her hair.”*

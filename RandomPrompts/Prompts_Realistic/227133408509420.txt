@@ -1,0 +1,27 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with tousled, mid‑dry hair, wearing a heathered gray sleeveless top and black bottoms, captured in a spontaneous selfie‑style pose. Her head is slightly tilted, her left arm extended toward the camera as if she’s about to adjust her phone. The shot should feel “in the moment” – a natural freeze of her expression with a hint of motion blur from handheld instability.
+
+- **Camera & Lens**  
+  Use a wide‑angle lens (24–35 mm) with a short focal length, set to a relatively wide aperture (f/4–f/5.6) so that everything – subject and background – stays fully sharp. No bokeh or depth‑of‑field blur; keep the entire frame in focus.
+
+- **Lighting & Exposure**  
+  Capture under ambient indoor lighting with a slight overexposure or underexposure depending on the ambient light level. Aim for a raw, unprocessed look: no auto‑HDR, no beauty filters, no color grading, and no post‑processing aesthetic. The lens should produce a natural, slightly grainy texture that preserves the “real” feel of the scene.
+
+- **Composition & Framing**  
+  Adopt a candid, unposed, spontaneous composition. Frame the subject off‑center, with an accidental slight tilt that gives the image a casual, handheld vibe. Avoid rule‑of‑thirds intentionality; let the framing be imperfect, as if the photographer was mid‑action. The shot should feel like a genuine selfie captured in a real office setting.
+
+- **Environment**  
+  The background is a real office space: a wooden shelving unit on the left with various items (phones, notebooks, a red soda can), a white desk with a laptop and a stack of magazines, and a cubicle partition on the right. The time of day is mid‑afternoon, with soft natural light coming from a window above the camera, creating a gentle lens flare that adds to the raw aesthetic. The weather or ambient conditions are calm, with no wind or noise that would interfere with the capture.
+
+- **Technical Details**  
+  - Focal length: 35 mm (wide‑angle)  
+  - Aperture: f/5.6  
+  - Shutter speed: 1/125 s (to allow slight motion blur)  
+  - ISO: 400–800 (depending on ambient light)  
+  - Focus: everything in focus, no portrait‑mode isolation  
+  - Post‑processing: none – raw, unfiltered, natural look
+
+- **Final Prompt**  
+  “A young woman with tousled hair, wearing a heathered gray sleeveless top and black bottoms, captured in a spontaneous selfie‑style pose in a real office setting. The shot is taken with a 35 mm wide‑angle lens at f/5.6 and 1/125 s shutter speed, producing a slight motion blur from handheld instability while keeping the entire frame sharp. The lighting is natural mid‑afternoon light with a subtle lens flare, creating a raw, unprocessed look. The composition is candid and off‑center, with an accidental slight tilt and imperfect framing. The background shows a wooden shelving unit with phones and notebooks, a white desk with a laptop and magazines, and a cubicle partition. Capture the scene in a single exposure with no filters or color grading, preserving the real, unposed feel of the moment.”

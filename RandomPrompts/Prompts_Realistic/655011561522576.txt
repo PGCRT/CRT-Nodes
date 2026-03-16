@@ -1,0 +1,32 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy light‑brown hair, wearing a black mesh sports bra and matching high‑waist bikini bottoms, is captured mid‑turn on a bright kitchen counter. Her left hand rests on her hip, right hand lightly touching her thigh, body angled slightly toward the camera, creating a dynamic, candid pose.
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window casts soft, warm illumination across the scene; slight overexposure on the upper body gives a raw, unprocessed look. The exposure is slightly uneven—warm highlights on the face and shoulders, cooler tones in the background—creating an authentic, handheld feel.
+
+- **Motion & Focus**  
+  Slight motion blur at the edges from a handheld shot, but the entire frame remains sharp—no portrait‑mode depth of field. A wide‑angle lens (24‑35 mm) captures the full setting, including the kitchen cabinet, countertop, and a laptop on the right side.
+
+- **Composition & Framing**  
+  The composition is intentionally off‑center: the subject occupies the central‑right third of the frame, with the left side showing a dark wooden cabinet and a small white counter. No rule‑of‑thirds intentionality—just spontaneous, casual framing. The shot includes a slight tilt to the right, adding to the candid vibe.
+
+- **Environment Details**  
+  The location is a modern home kitchen: a dark wood cabinet with a silver handle on the left, a white countertop on the right holding a silver laptop, a pink phone, a clear plastic bottle, and a small jar. A green bottle and a white can sit on a lower shelf. A pink bowl sits near the back corner. The background wall is a light beige, with subtle texture.
+
+- **Time of Day & Ambient Conditions**  
+  Shot in the late morning, when natural light is bright but not harsh. The ambient temperature is warm, giving a slightly golden hue to the entire scene.
+
+- **Lens & Technical Specs**  
+  - Focal length: 35 mm (wide‑angle)  
+  - Aperture: f/4.0 (wide opening for full sharpness)  
+  - Shutter speed: 1/125 s (slight motion blur)  
+  - ISO: 400 (for clean, low‑noise capture)  
+  - No bokeh—background fully in focus.
+
+- **Post‑Processing**  
+  No filters or color grading; raw, unprocessed look. Slight auto‑HDR applied only to the highlights for a subtle lift. The image retains natural imperfections: slight tilt, off‑center framing, and minor handheld shake.
+
+**Prompt Summary (structured)**  
+"Capture a candid, spontaneous photo of a young woman in a black sports bra and bikini bottoms turning on a kitchen counter, with her left hand on hip and right hand on thigh. Use a 35 mm wide‑angle lens at f/4 and 1/125 s shutter speed for slight motion blur while keeping the entire frame sharp. The scene is lit by warm late‑morning daylight, producing a soft overexposed highlight on the subject. Frame the shot off‑center with a slight tilt, including a dark wooden cabinet on the left and a white countertop with a laptop, phone, bottle, jar, and pink bowl on the right. Keep the background fully in focus, no bokeh, no filters—raw, unprocessed, natural look."

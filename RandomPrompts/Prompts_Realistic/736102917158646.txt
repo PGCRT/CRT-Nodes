@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with deep‑brown, wavy hair tied loosely on one side, sitting on a plush white fur rug in a bedroom. She wears a black lace bodysuit with floral motifs and gold buttons; her left arm is raised behind her head, creating a casual, mid‑motion pose. Her face is turned slightly toward the camera, lips parted as if she’s about to speak or just finished a gesture.
+
+- **Lighting & Exposure**  
+  Natural daylight from a western window, mid‑afternoon (≈ 4 pm). Slight overexposure on the subject’s front, giving a warm, soft glow; background is fully sharp with no bokeh. No auto‑HDR or auto‑beauty mode—raw, unprocessed look.
+
+- **Lens & Technical**  
+  24 mm wide‑angle lens (short focal length). Handheld shot with slight instability, producing a subtle motion blur on the subject’s hair and arms. Everything in focus—no portrait‑mode depth of field. No rule‑of‑thirds; framing is accidental, slightly tilted, off‑center.
+
+- **Environment**  
+  A modern bedroom with light‑beige walls, a white fluffy rug, and a bed with beige pillows behind the subject. A small portion of a white door frame is visible on the left side. The time of day gives a warm, soft ambient light; no weather effects, but the room feels cozy and lived‑in.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject appears unaware of the camera or mid‑action. Imperfections encouraged: slight tilt, off‑center framing, partial crop. No rule‑of‑thirds intentionality — accidental framing. Zero studio lighting, zero professional composition, zero editorial tone.
+
+- **Post‑Processing**  
+  No filters, no color grading, no post‑processing aesthetic. Only raw capture data, with a slight overexposure or underexposure depending on ambient light.  
+
+**Prompt Summary**  
+> “A young woman in a black lace bodysuit sits on a white fur rug in a beige bedroom, mid‑gesture with one arm raised behind her head. Natural daylight from a western window hits her front, creating a warm glow; the shot is taken with a 24 mm wide‑angle lens, handheld with slight motion blur, everything in focus. The framing is accidental and off‑center, slightly tilted, capturing a candid, unposed moment. No filters or post‑processing—raw, unprocessed realism.”

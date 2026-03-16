@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A curvy woman with long, wavy brown hair, wearing a glossy red halter‑top and matching high‑waist latex leggings that cling to her curves. She stands at the edge of a swimming pool, one hand on her hip, the other near her thigh, feet planted on a white circular mat marked “JA.” She wears red strappy high‑heeled sandals. Her expression is bright, mid‑smile, slightly turned toward the camera but not directly facing it—capturing a candid, unposed moment.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle, late‑afternoon sun that creates a soft overexposure on the subject’s upper body while keeping the background fully sharp. Slight handheld shake gives a subtle motion blur around the edges; no auto‑HDR or beauty filters—just raw, unprocessed imagery.
+
+- **Environment**  
+  A residential poolside setting: a rectangular swimming pool with turquoise water, a beige patio umbrella, wooden lounge chairs, and a modern house in the background. Palm trees sway in the distance, a small potted plant sits near a railing, and a metal pool ladder leans against the pool edge. The scene is bathed in warm, golden light; the sky is clear with a faint haze.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm) with a short focal length to capture a broad view of the subject and surroundings. Everything—from the woman to the pool, patio, and background—is in focus; no bokeh or depth‑of‑field blur. The composition is accidental: slightly tilted frame, off‑center framing, partial crop that cuts off part of the pool ladder and a portion of the house’s roofline.
+
+- **Capture Style**  
+  Candid, spontaneous—subject appears unaware of the camera, mid‑pose. Slight tilt and off‑center framing create a natural, unposed feel. No rule‑of‑thirds intentionality; the frame is a casual snapshot that feels like a real moment captured with a handheld camera.
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, no post‑processing aesthetic—just raw imagery with slight overexposure from ambient light and natural motion blur from handheld shake.  
+
+**Prompt Summary:**  
+“Candid photo of a curvy woman in a glossy red halter‑top and latex leggings standing by a pool, wearing red high‑heeled sandals, with a beige umbrella, wooden lounge chairs, and a modern house in the background; palm trees sway, a metal ladder leans against the pool. Shot with a 24–35 mm wide‑angle lens, everything in focus, slight handheld blur, natural late‑afternoon overexposure, accidental off‑center framing, no filters—raw, unprocessed realism.”

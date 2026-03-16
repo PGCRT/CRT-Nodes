@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy dark brown hair standing in a sunlit garden alley. She’s bare‑chested, wearing light denim jeans that sit low on her hips. Her left arm is slightly bent, her right arm relaxed by her side, and she’s turning her head to the left as if she just noticed the camera. A faint smile plays on her lips; her eyes are focused off‑camera, giving a candid, mid‑action feel.
+
+- **Lighting & Exposure**  
+  Warm, golden hour sunlight coming from the right, creating a soft overexposure on her chest and a subtle highlight in her hair. Slight natural contrast with an ambient light that’s not fully processed—no auto‑HDR or beauty filters. The exposure is a little high on the highlights but still retains detail in the shadows.
+
+- **Camera & Lens**  
+  35 mm wide‑angle lens, f/4.0 aperture, handheld. Shot with a DSLR or mirrorless camera at ISO 200, shutter speed 1/125 s, giving a slight motion blur on the subject’s shoulders and a gentle “handheld” wobble. Everything in the frame—from her face to the background—is fully sharp; no portrait‑mode depth‑of‑field blur.
+
+- **Composition & Framing**  
+  The composition is intentionally off‑center: the woman’s head is slightly above the center of the frame, and the left side of her body cuts off near the edge, creating a partial crop. No rule‑of‑thirds intentionality—just spontaneous framing. The background shows a rustic brick wall on the left, a potted plant with broad green leaves, and a cluster of pink roses on the right. The scene is a real‑world location—an outdoor alleyway in a residential area—captured at late afternoon (around 5 pm), with a clear, warm sky.
+
+- **Environment Details**  
+  The alley’s brick wall has a weathered texture; a terracotta pot sits on the left side, and a bush of pink roses is visible on the right. A small portion of a wooden fence appears in the far background. The ground is paved with stone tiles, and a few scattered leaves are visible near the bottom edge. The time of day is golden hour, giving a warm, slightly overcast light that casts soft shadows.
+
+- **Technical Specs**  
+  Focal length: 35 mm (wide‑angle). Aperture: f/4.0. Shutter speed: 1/125 s. ISO: 200. Handheld shot with slight instability, resulting in a subtle motion blur on the subject’s shoulders and a faint “shake” across the frame. No bokeh; background is fully sharp. No portrait‑mode subject isolation—everything from foreground to background is in focus.
+
+- **Post‑Processing**  
+  Raw, unprocessed look: no filters, no color grading, no auto‑HDR. Slight natural contrast and a hint of overexposure on the subject’s chest. The image retains an authentic, candid feel as if captured spontaneously by a photographer on the go.
+
+- **Final Prompt Summary**  
+  “A young woman with long wavy brown hair, bare‑chested and wearing low‑hip denim jeans, stands in a sunlit garden alley at golden hour. She turns her head left with a faint smile, mid‑action, captured on a 35 mm wide‑angle lens at f/4.0 and 1/125 s, handheld with slight motion blur. The scene includes a weathered brick wall, a terracotta pot, and pink roses, all in sharp focus. The exposure is slightly high on the highlights, giving a raw, unprocessed look with no filters or auto‑HDR.”

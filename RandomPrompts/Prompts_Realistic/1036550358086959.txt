@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework – “Night‑City Loft”**
+
+- **Subject & Pose**  
+  A tall, athletic woman with long, straight blonde hair stands mid‑step in a modern loft apartment. She wears a black sparkly bikini top and matching high‑waist bottoms, her left arm slightly bent, hand on hip, right arm relaxed by her side. Her face is turned toward the camera but not directly at it – a subtle, candid angle that gives a slight tilt and off‑center framing. A small tattoo of a geometric design adorns her left upper arm. Her nails are painted a soft pink; she has a faint smile, eyes bright, looking slightly above the lens.
+
+- **Lighting & Exposure**  
+  The scene is lit by natural twilight outside the large window, with ambient city lights visible in the background. The lamp on the side of the room casts a warm glow that slightly overexposes the left side of the frame. No auto‑beauty or filter processing – just raw, unprocessed light. The exposure is a gentle overexposure on the left, creating a subtle halo around the subject’s head and shoulders.
+
+- **Environment**  
+  Location: A contemporary loft apartment with exposed brick walls, a wooden coffee table, a beige sofa, and a tall floor lamp with a cream shade. A large window occupies the right side of the frame, showing a city skyline at dusk – a few lit skyscrapers and a faint moon. The time of day is late evening (around 8 pm), giving a cool blue‑amber tone to the ambient light. Weather outside is clear, with a light breeze that creates slight motion blur on the subject’s hair.
+
+- **Lens & Technical**  
+  Use a wide‑angle lens (24–35 mm). Capture everything in focus – no bokeh, no portrait‑mode isolation. The background is fully sharp, from the brick wall to the city view. Shoot handheld with slight instability that produces a natural motion blur on the subject’s hair and a tiny tilt in the frame. Keep the composition accidental – no rule‑of‑thirds intentionality; the framing is off‑center, with the subject’s left hip slightly cut off by the edge of the frame.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous – the woman appears to be mid‑action, as if she just finished a dance move or is about to pick something up from the coffee table. Slight tilt and partial crop give an informal, documentary feel. No editorial tone; it looks like a genuine snapshot taken by a friend with a DSLR or mirrorless camera.
+
+- **Post‑Processing**  
+  Auto‑HDR or auto‑beauty mode off – keep the look raw. Only minor adjustments to exposure and contrast; no color grading or filters. Slight overexposure on the left side balances the ambient light.
+
+- **Final Prompt Summary**  
+  “A tall woman in a black sparkly bikini top and high‑waist bottoms stands mid‑step in a modern loft apartment at dusk, with a city skyline visible through a large window. The scene is lit by natural twilight and a warm floor lamp, creating a slight overexposure on the left. Capture with a wide‑angle lens (24–35 mm), everything in focus, handheld instability producing natural motion blur and a slight tilt. The composition is accidental and off‑center, capturing a candid, unposed moment with a raw, unprocessed look.”

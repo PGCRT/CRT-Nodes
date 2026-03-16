@@ -1,0 +1,29 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair standing in a casual, unposed stance. She is bare‑chested, wearing high‑waisted black jeans that sit snugly at the hips and taper down to the ankles. Her hands hang loosely by her sides, slightly curled, as if she just finished a gesture or is about to do something. Her face is turned toward the camera but not directly at it—there’s a subtle, natural angle that gives the shot a candid feel.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle source (mid‑afternoon) creates a soft, slightly overexposed highlight on her chest and shoulders. The exposure is uneven: the upper part of the frame is a little brighter than the lower part, giving an authentic, handheld look. No auto‑HDR or beauty filters—just raw, unprocessed light.
+
+- **Camera Settings**  
+  - Lens: 24‑35 mm wide‑angle, short focal length.  
+  - Aperture: f/4–f/5.6 (wide opening for a shallow but still fully sharp background).  
+  - Shutter speed: 1/60–1/100 s (enough to capture slight motion blur from handheld instability).  
+  - ISO: 400–800 (depending on ambient light).  
+  - Focus: everything in the frame—subject and background—is sharp, no portrait‑mode depth‑of‑field blur.
+
+- **Composition & Framing**  
+  The shot is intentionally off‑center; the subject’s left side leans slightly to the right of the center line. The framing is a partial crop that cuts off just above her elbows and below her knees. No rule‑of‑thirds intentionality—just a spontaneous, casual composition.
+
+- **Environment**  
+  Location: A quiet, uncluttered urban alleyway with a concrete wall and a small window in the background. The time of day is late afternoon, with warm, diffused sunlight filtering through the leaves of a nearby tree. The weather is mild, with a light breeze that creates subtle motion on the subject’s hair and clothing.
+
+- **Details & Imperfections**  
+  Slight tilt in the camera housing gives a natural, handheld feel. There’s a faint motion blur around the edges, especially near her hands, indicating she was mid‑action when the shutter was pressed. The background is fully sharp—no bokeh or subject isolation. Small imperfections are present: a slight smudge on her jeans, a tiny wrinkle in the fabric, and a subtle unevenness in the lighting that adds realism.
+
+- **Post‑Processing**  
+  No color grading or filters applied. The image retains its raw, unprocessed look, with only minimal adjustments to exposure and contrast after capture.
+
+**Prompt Summary**  
+"Capture a candid, unposed photograph of a bare‑chested woman in black jeans standing against a concrete wall in a quiet urban alleyway. Use a 24‑35 mm wide‑angle lens at f/5, 1/80 s shutter speed, and ISO 600. The shot should have slight motion blur from handheld instability, natural daylight overexposure, and a fully sharp background. Frame the image off‑center with a partial crop, preserving small imperfections for authenticity."

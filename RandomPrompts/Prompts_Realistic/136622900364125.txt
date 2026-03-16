@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with shoulder‑length, slightly frizzy brown hair standing on a tropical beach at sunset. She is wearing a pink sequined halter‑neck dress that catches the warm light. Her head is tilted a little to the left, her face turned toward the camera but not directly aimed — a candid, mid‑action pose as if she just finished a step or a turn.
+
+- **Motion & Focus**  
+  Slight motion blur on the hair and background to suggest handheld shake; everything remains fully sharp – no portrait‑mode depth of field. The focus is broad, capturing the subject and the beach scene in one plane.
+
+- **Lighting & Exposure**  
+  Natural ambient light from a setting sun creates a soft overexposure on the upper part of the frame, with warm golden tones and a hint of slight underexposure on the lower sand. No auto‑HDR or beauty filters – raw, unprocessed look.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm) with a short focal length; no bokeh, background fully sharp. The composition is accidental: slight tilt and off‑center framing, partial crop that cuts off part of the horizon.
+
+- **Environment**  
+  Tropical beach at dusk, with gentle waves lapping at the shore on the left and a cluster of palm trees and a red umbrella in the far right background. The sand shows footprints and small debris; the sky is a pale orange‑pink gradient.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, partial crop that cuts the top of the subject’s head and the lower edge of the sand. A few stray hairs blow in the wind, a faint motion blur around the hair. The image has no studio lighting or professional composition – it looks like a spontaneous, handheld snapshot.
+
+- **Prompt for Text‑to‑Image Generation**  
+  “A young woman with shoulder‑length frizzy brown hair wearing a pink sequined halter‑neck dress, standing on a tropical beach at sunset. Slight motion blur on the hair, everything fully sharp. Natural ambient sunlight creates soft overexposure on the upper frame. Wide‑angle lens, short focal length, accidental tilt and off‑center framing, partial crop. Background shows gentle waves on the left and palm trees with a red umbrella on the right. Raw, unprocessed look, no filters.”

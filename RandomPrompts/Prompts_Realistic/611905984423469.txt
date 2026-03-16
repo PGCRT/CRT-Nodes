@@ -1,0 +1,16 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, athletic woman with long, sun‑kissed blonde hair, wearing a black strapless top and a quilted black crossbody bag, captured mid‑turn as she walks past a red “STOPP” sign. Her back is slightly turned toward the camera, her left hand gripping the bag strap, her right arm relaxed by her side. She’s in motion—her legs are blurred slightly, indicating a casual, handheld shot.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—an “in‑the‑moment” snapshot where the subject is unaware of the camera or caught mid‑action. The frame has a slight tilt and is off‑center, with a partial crop that gives it a raw, imperfect feel. No intentional rule‑of‑thirds; the composition feels accidental, as if taken by a passerby with a handheld camera.
+
+- **Environment**  
+  Outdoor café or patio area on a bright, mid‑afternoon day. Yellow umbrellas and white tables are visible in the background, along with a few blurred patrons and a small fountain. The weather is clear, with a soft, warm ambient light that creates a faint overexposure on the subject’s skin. The scene is fully sharp—no bokeh or depth‑of‑field blur; everything from foreground to background is in focus.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm) with a short focal length, producing a broad field of view that captures the subject and her surroundings in one shot. No portrait‑mode subject isolation—everything remains crisp. Slight motion blur on the subject’s legs conveys movement, while the background stays sharp, giving an authentic, documentary feel. The image has an auto‑HDR or “auto‑beauty” off look: natural colors, no filters, no post‑processing aesthetic, and a hint of slight overexposure that gives it a warm, lively tone.
+
+- **Final Prompt**  
+  *“A tall, athletic woman with long, sun‑kissed blonde hair, wearing a black strapless top and a quilted black crossbody bag, captured mid‑turn as she walks past a red “STOPP” sign at an outdoor café on a bright mid‑afternoon. The shot is candid, slightly tilted, off‑center, with partial crop, handheld motion blur on the subject’s legs, fully sharp background, wide‑angle short focal length, natural colors, slight overexposure, no filters—raw, unprocessed, documentary style.”*

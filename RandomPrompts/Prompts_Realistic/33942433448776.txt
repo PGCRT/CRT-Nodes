@@ -1,0 +1,28 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Appearance**  
+  A young woman with deep‑brown skin, long black dreadlocks that cascade past her shoulders, and a subtle, natural makeup look (soft brow, muted eyeliner, nude lips). She’s bare‑shouldered, wearing a simple, loose‑fitting linen top that drapes over her torso. Her expression is neutral‑to‑slightly amused, eyes focused forward, mouth relaxed.
+
+- **Pose & Motion**  
+  Mid‑turn: she’s caught in a casual, unposed twist of the body, left shoulder slightly angled toward the camera. A faint motion blur at the edges suggests handheld shake and a quick shutter speed. Her head is tilted a few degrees off‑center, giving an accidental, candid feel.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle, late‑afternoon sun. Slight overexposure on the upper chest and face, creating a warm, soft glow. No auto‑beauty or filter enhancement—raw, unprocessed look. The background is a plain, light‑gray wall with a faint texture, fully sharp, no bokeh.
+
+- **Lens & Technical**  
+  24 mm wide‑angle lens (short focal length), f/4.0 aperture, 1/250 s shutter speed, ISO 400. Everything in focus from foreground to background; no portrait‑mode depth‑of‑field blur. The composition is intentionally “off‑rule”: the subject’s left side cuts close to the frame edge, creating a partial crop that feels spontaneous.
+
+- **Environment**  
+  Location: a quiet corner of an urban loft, with a concrete floor and a single exposed brick column on the right. Time of day: early evening (≈ 5:30 pm), ambient light warm but not harsh. Weather: clear, no wind, slight humidity.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Slight tilt and off‑center framing give a raw, handheld vibe. No rule‑of‑thirds intentionality; the frame is slightly crooked, as if the photographer was in a hurry. Natural motion freeze or slight blur from instability.
+
+- **Post‑Processing**  
+  Zero studio lighting, zero professional composition, zero editorial tone. Raw JPEG with auto‑HDR off. Only minimal white‑balance correction. No color grading or filters.
+
+---
+
+**Prompt Summary (for a new image generation)**  
+
+> “A candid, unposed photograph of a young woman with long black dreadlocks and a natural makeup look, bare‑shouldered in a loose linen top, caught mid‑turn with a slight off‑center tilt. She stands against a plain light‑gray wall in an urban loft, bathed in warm late‑afternoon sunlight that slightly overexposes her chest and face. Shot on a 24 mm wide‑angle lens at f/4, 1/250 s, ISO 400, everything fully sharp with no bokeh. The image has a raw, handheld feel: slight motion blur from instability, accidental partial crop, and no filters or color grading—just a genuine, spontaneous capture.”

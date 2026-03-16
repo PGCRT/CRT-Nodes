@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with shoulder‑length, wavy brown hair, wearing a simple beige off‑shoulder top, captured mid‑turn as she leans slightly toward the camera. Her face is turned a few degrees to the left, eyes focused on a point just beyond the lens, giving a candid, unposed feel.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. Slight tilt and off‑center framing; partial crop that cuts off a bit of her left shoulder, creating a natural, imperfect composition. No rule‑of‑thirds intentionality—framing is accidental, as if taken with a handheld camera in motion.
+
+- **Motion & Focus**  
+  Slight motion blur on the subject’s hair and shoulders from handheld instability, but everything remains fully sharp—no portrait‑mode depth‑of‑field blur. No bokeh; background stays in focus.
+
+- **Lighting & Exposure**  
+  Zero studio lighting, zero professional composition, zero editorial tone. Ambient natural light from a bright, overcast afternoon; slight overexposure on the subject’s chest and shoulders, giving a raw, unprocessed look. Auto‑HDR or auto‑beauty mode off. No filters, no color grading, no post‑processing aesthetic.
+
+- **Environment**  
+  Specific real‑world location: a modern apartment loft with a white sofa and a concrete wall in the background. Time of day: late afternoon, soft diffused sunlight. Weather: lightly cloudy, ambient temperature 22 °C.
+
+- **Lens & Technical**  
+  Short focal length (35 mm), wide‑angle lens. No bokeh, no depth‑of‑field blur—background fully sharp. Everything in focus. Wide‑angle gives a slight distortion that adds to the candid feel. All settings: aperture f/4, shutter speed 1/125 s, ISO 400.
+
+- **Prompt for AI Image Generation**  
+  “A young woman with shoulder‑length wavy brown hair, wearing a beige off‑shoulder top, captured mid‑turn as she leans slightly toward the camera in a modern apartment loft. The shot is candid and unposed, with accidental tilt and partial crop. Slight motion blur on the hair and shoulders from handheld instability, but everything stays fully sharp—no bokeh. Ambient natural light from a bright late‑afternoon, slight overexposure on the chest. 35 mm wide‑angle lens, f/4, 1/125 s, ISO 400. Raw, unprocessed look, no filters or color grading.”

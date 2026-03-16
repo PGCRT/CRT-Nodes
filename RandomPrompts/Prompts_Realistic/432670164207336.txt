@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman with long, dark brown hair that falls loosely over her left shoulder, wearing a white sleeveless top and a single strand of pearls around her neck. She is captured mid‑tilt, head slightly angled toward the camera, with a natural, unposed expression. Her face shows subtle imperfections—tiny freckles, slight smudge of mascara—giving a raw, authentic feel.
+
+- **Lighting & Exposure**  
+  Ambient daylight from a bright window, creating a soft overexposure on the right side of the frame. Slight handheld shake results in a natural motion blur around the edges. No auto‑beauty or filter enhancement; the image remains unprocessed.
+
+- **Lens & Technical Settings**  
+  24 mm wide‑angle lens, f/3.5 aperture, 1/60 s shutter speed, ISO 400. Everything in focus from foreground to background—no bokeh or depth‑of‑field blur. The focal length gives a short, immersive perspective that keeps the background fully sharp.
+
+- **Composition & Framing**  
+  Candid, spontaneous capture: the frame is slightly off‑center, with the subject’s left shoulder cutting close to the top edge. No rule‑of‑thirds intentionality—accidental framing that includes a glimpse of a white door and a small framed picture on the wall behind her. The background is a plain, light‑colored interior space; a white door frame and a partial view of a shelf with items are visible on the right.
+
+- **Environment**  
+  Location: a bright, minimalist bedroom or living room. Time of day: late morning, natural sunlight streaming from a window on the left. Weather: clear, mild—no external weather effects, just clean ambient light.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, partial crop that cuts off the top of her head and a bit of her left shoulder. A faint motion blur around the hair strands and the necklace. The pearl strand is slightly uneven, adding realism. Her makeup is natural—thin eyeliner, subtle eyeshadow, natural lip color.
+
+- **Post‑Processing**  
+  None. Raw, unedited look with only basic auto‑HDR applied during capture. No color grading or filters.
+
+**Prompt Summary**  
+"Capture a candid, spontaneous photo of a woman with long dark hair, white top, and pearl necklace, slightly tilted and off‑center framing in a bright bedroom at late morning. Use a 24 mm wide‑angle lens at f/3.5, 1/60 s, ISO 400 for full sharpness with slight motion blur. Keep the background sharp, no bokeh, no filters—raw, natural, unprocessed aesthetic."

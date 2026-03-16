@@ -1,0 +1,26 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail, the hair tied at the crown and a few loose curls framing the face. Her makeup is natural‑looking: subtle contour, defined eyeliner, long lashes, and a glossy lip. She wears a sparkling choker and a dangling earring that catches the light. The pose is mid‑turn, head slightly tilted, as if she just finished a conversation or is about to move—captured in a spontaneous, unposed moment.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle source (mid‑afternoon). Slight overexposure on the face and shoulders, giving a warm, soft glow. No auto‑HDR or beauty filters; raw, unprocessed look. The exposure is slightly uneven—bright highlights on the forehead and cheek, with a faint vignette at the edges.
+
+- **Camera & Lens**  
+  Wide‑angle lens (24 mm or 35 mm). Short focal length to keep the background fully sharp, no bokeh. Everything in focus—from the subject’s face to the back of her hair—no portrait‑mode depth‑of‑field blur. Handheld shot with slight instability, producing a natural motion blur on the hair and a tiny tilt in the framing.
+
+- **Composition & Framing**  
+  Off‑center, accidental framing: the subject’s left eye is slightly above the center of the frame, and the top of her ponytail extends beyond the upper edge. The crop is partial—only the head, neck, and upper shoulders are visible. No rule‑of‑thirds intentionality; the composition feels spontaneous and candid.
+
+- **Environment**  
+  The scene takes place in a bright, open outdoor setting—a sunny park or a city plaza. The background shows a soft, indistinct green‑gray tone (a mix of foliage and building facades). The time of day is mid‑afternoon, with the sun high and slightly to the north‑west, casting soft shadows.
+
+- **Technical Details**  
+  - Focal length: 35 mm  
+  - Aperture: f/4.0 (wide, shallow depth but fully sharp)  
+  - Shutter speed: 1/60 s (slight motion blur)  
+  - ISO: 400 (natural contrast)  
+  - No post‑processing color grading; raw image with slight overexposure on the face.
+
+- **Final Prompt**  
+  “A candid, spontaneous portrait of a woman with a high ponytail and a sparkling choker, captured on a wide‑angle 35 mm lens in mid‑afternoon daylight. The shot is handheld, slightly tilted, with a natural motion blur and slight overexposure, all in focus from the face to the background. The framing is off‑center and partial, capturing only the head, neck, and upper shoulders against a soft green‑gray outdoor backdrop. No filters or HDR—raw, unprocessed, real‑life aesthetics.”

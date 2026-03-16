@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A blonde woman in a green crochet bikini standing knee‑deep in shallow seawater on a tropical beach. She’s mid‑touch, one hand raised to her hair, body angled slightly toward the camera, legs bent at the knees, toes pointing forward. Her left leg is slightly ahead of the right, giving a casual, unposed stance. The bikini has thin tie‑front and side ties that drape loosely.  
+
+- **Lighting & Exposure**  
+  Slight overexposure from the warm, late‑afternoon sun; the scene is bright but not overly saturated. Auto‑HDR off – raw, unprocessed look. No color grading or filters. The exposure is a little high on the highlights, giving a soft glow to the water and sand.  
+
+- **Camera Settings**  
+  Wide‑angle lens (24–35 mm), short focal length. Handheld, natural motion freeze with slight blur from instability. Everything in focus – no portrait‑mode depth of field blur; background fully sharp.  
+
+- **Composition & Framing**  
+  Candid, spontaneous capture: the frame is slightly tilted, off‑center, and partially cropped on the right side. No rule‑of‑thirds intentionality. The subject occupies the central‑right portion of the frame, with the shoreline and palm trees extending across the background.  
+
+- **Environment**  
+  Specific real‑world location: a sandy beach with gentle waves lapping at the shore, palm trees lining the back, a few colorful coolers and a blue bucket visible in the distance. Time of day: late afternoon (around 5 pm), warm ambient light. Weather: clear, slightly humid, light wind.  
+
+- **Details & Imperfections**  
+  Slight motion blur on the woman’s hair and one hand, indicating handheld shake. The image has a raw, unprocessed look with no filters or post‑processing. A faint overexposed halo around the subject’s head. The background palm fronds and shoreline are fully sharp.  
+
+- **Prompt for Generation**  
+  “A blonde woman in a green crochet bikini standing knee‑deep in shallow seawater on a tropical beach, one hand raised to her hair, legs bent, slight tilt and off‑center framing, late‑afternoon warm overexposure, wide‑angle handheld shot with natural motion blur, everything in focus, background palm trees and distant coolers fully sharp, raw unprocessed look, candid spontaneous capture.”

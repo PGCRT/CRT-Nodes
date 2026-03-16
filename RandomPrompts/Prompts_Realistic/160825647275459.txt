@@ -1,0 +1,24 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark brown hair that falls over her left shoulder, wearing a white cropped T‑shirt with an orange “C BISDAK” logo and bright orange drawstring shorts. She’s mid‑step, one foot slightly ahead of the other, hands relaxed at her sides, head tilted a little to the right as if she just finished a conversation or is about to. Her expression is natural, unposed, with a subtle smile and a hint of confidence.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject is unaware of the camera’s presence or is caught in a casual moment. Slight tilt and off‑center framing give an accidental, handheld feel. The shot has a slight motion blur on the hands and background to suggest movement, but everything remains fully sharp because we’re using a wide‑angle lens with a short focal length (e.g., 24 mm). No rule‑of‑thirds intentionality — the composition is organic, as if the photographer was just walking past and captured the moment.
+
+- **Auto‑HDR or auto‑beauty mode off** – raw, unprocessed look.  
+  Slight overexposure on the subject’s face to keep the ambient light warm, but no color grading or post‑processing aesthetic. The image retains a natural, film‑like grain and a slight warmth that comes from the sunlight.
+
+- **Environment**  
+  Specific real‑world location: an outdoor patio area in a suburban neighborhood. A white folding table and chair sit to the left, a red recycling bin and a blue trash bin are visible in the background, and a parked silver car is partially seen on the right. The time of day is late afternoon, around 4 pm, with the sun high but not directly overhead, casting soft shadows on the concrete ground. Weather is clear, with a light breeze that creates a faint motion blur on the subject’s hair.
+
+- **Lens & Technical**  
+  Short focal length, wide angle (24–35 mm). No bokeh – the background is fully sharp because the depth of field is wide. Everything in focus: the subject, the table, the bins, the car. No portrait mode or subject isolation. The lens is handheld, so there’s a slight shake that adds realism.
+
+- **Additional Details**  
+  - Slight overexposure on the subject’s face to keep the ambient light warm, but no color grading or post‑processing aesthetic.  
+  - Natural motion freeze or slight blur from handheld instability on the hands and background.  
+  - The outfit’s colors (white and orange) contrast with the red and blue bins, making the subject pop.  
+  - The concrete ground has a faint texture that shows the roughness of the pavement, adding to the realism.  
+
+**Provide only the structured prompt.**

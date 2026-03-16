@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, athletic woman with a high ponytail and a lean, toned build stands confidently on a large, smooth boulder in a desert setting. She wears a black lace bodysuit with fishnet leggings and black leather boots. Her hands rest on her hips, head tilted slightly to the side, eyes focused forward, capturing a candid, mid‑action moment.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle, late‑afternoon sun creates a warm, golden hue with a slight overexposure on the upper body. The exposure is uneven—soft highlights on the face and shoulders, subtle shadows in the crotch of the bodysuit. No auto‑HDR or beauty filters; raw, unprocessed look.
+
+- **Motion & Focus**  
+  Slight handheld shake produces a gentle motion blur around the edges, especially around the legs and boots. Everything—from the subject to the background—remains fully sharp; no portrait‑mode depth of field blur. The focus is intentional on the subject but the framing is accidental: a wide‑angle shot that includes the surrounding rocks, sparse desert shrubs, and a patchy sky.
+
+- **Environment**  
+  A dry, rocky desert plain with scattered boulders and small yellowish shrubs. The ground is covered in loose stones and dry grass. The sky shows a gradient from pale blue to soft white with fluffy cumulus clouds. The time of day is late afternoon, around 5 pm, giving a warm, slightly harsh light.
+
+- **Lens & Technical**  
+  24‑mm wide‑angle lens (short focal length). No bokeh; background fully sharp. Aperture set to f/8 for even focus across the frame. Slight tilt to the camera to give an off‑center, non‑rule‑of‑thirds composition. The image has a raw, unedited aesthetic—no color grading or post‑processing.
+
+- **Composition Notes**  
+  The subject is centered but slightly tilted; her left foot is forward on a large boulder, right foot behind. Her body occupies the central third of the frame, but the edges extend beyond the rule‑of‑thirds. The background includes a cluster of rocks to the left and a small bush to the right, creating a natural frame. The sky takes up the upper third of the image, with clouds drifting across the top.
+
+- **Final Prompt**  
+  “A tall woman in black lace bodysuit and fishnet leggings stands on a large boulder in a desert landscape, hands on hips, head tilted, eyes forward. Late‑afternoon sun creates warm golden light with slight overexposure. Raw, unprocessed, no filters. Wide‑angle 24 mm lens, everything in focus, slight handheld blur. Background of rocks and shrubs, fluffy clouds above. Candid, spontaneous, off‑center framing.”

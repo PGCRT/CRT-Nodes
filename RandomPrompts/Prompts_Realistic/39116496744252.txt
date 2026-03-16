@@ -1,0 +1,33 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A curvy woman with long, dark, wavy hair, wearing a white mesh bodysuit with thin straps, captured mid‑turn in a kitchen. Her back is slightly angled toward the camera, left hand resting on her hip, right arm bent at the elbow, creating a natural, unposed silhouette. The bodysuit’s delicate mesh and thin straps create subtle highlights on her skin, emphasizing the curve of her buttocks and the smooth line of her spine.
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window, slightly overexposed on the right side to give a warm, soft glow. The exposure is uneven—the left side of the frame is a bit brighter, giving a raw, unprocessed look. No auto‑beauty mode; the image retains slight grain and minor imperfections.
+
+- **Camera & Lens Settings**  
+  - Lens: 24 mm wide‑angle, short focal length, handheld.  
+  - Aperture: f/4.0 (wide opening).  
+  - Shutter speed: 1/60 s (slight motion blur from hand‑held instability).  
+  - ISO: 400 (for balanced brightness).  
+  - Focus: everything in focus—background and subject, no portrait‑mode depth of field blur.  
+
+- **Composition & Framing**  
+  - No rule‑of‑thirds intentionality; the frame is slightly off‑center, with the subject’s left side cutting close to the edge.  
+  - The shot is a “mid‑action” candid capture—she appears to be turning or adjusting her pose mid‑step.  
+  - Slight tilt to the right gives a dynamic, spontaneous feel.  
+  - Background: a modern kitchen with light‑colored cabinets, a countertop, and a stove visible in the upper right; the background is fully sharp, no bokeh.
+
+- **Environment & Time**  
+  - Location: a bright, contemporary kitchen with white countertops and light gray backsplash.  
+  - Time of day: late morning, natural light coming from a large window on the left.  
+  - Weather: clear, slightly humid—ambient light creates soft shadows.  
+
+- **Post‑Processing & Aesthetic**  
+  - No filters, no color grading, no post‑processing aesthetic.  
+  - Slight overexposure on the right side gives a natural, raw feel.  
+  - The image retains a bit of grain and minor vibration blur from handheld shooting.
+
+**Prompt Summary (for AI image generation)**  
+"A curvy woman with long dark wavy hair, wearing a white mesh bodysuit with thin straps, captured mid‑turn in a modern kitchen. Natural daylight from a large window creates a slight overexposure on the right side. Shot on a 24 mm wide‑angle lens at f/4.0 and 1/60 s, handheld with slight motion blur. The frame is off‑center and slightly tilted, capturing a candid, unposed moment. Everything in focus—subject and background—no bokeh. The kitchen backdrop includes white countertops and a stove, fully sharp. No filters or color grading, raw, unprocessed look."

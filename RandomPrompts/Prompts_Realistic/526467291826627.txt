@@ -1,0 +1,26 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark hair tied in a loose ponytail, standing mid‑step at a dimly lit bar. She’s wearing a black thong and a sleeveless top that leaves her shoulders bare. Her head is tilted slightly to the right, eyes looking upward as if she’s about to grab a drink or watch something on the wall. Her left hand rests on the bar counter, fingers relaxed, while her right hand hangs by her side. The pose feels spontaneous, as though she’s caught in an unposed moment.
+
+- **Lighting & Exposure**  
+  Warm ambient lighting from candles and overhead lamps creates a soft glow on her skin. Slight overexposure on the upper body gives a raw, unprocessed look. No auto‑beauty mode—just natural contrast. The exposure is slightly uneven, with the lower part of the image a bit darker than the upper part, reflecting the ambient candlelight.
+
+- **Camera Settings**  
+  - Lens: 24mm wide‑angle, short focal length, handheld.  
+  - Focal depth: everything in focus—no bokeh, no portrait mode.  
+  - Shutter speed: 1/60 s (slight motion blur from handheld instability).  
+  - ISO: 3200 (for the warm tone and grain).  
+  - Aperture: f/4.5 (wide opening for sharp background).  
+
+- **Composition & Framing**  
+  The frame is intentionally off‑center; the subject’s left side cuts close to the right edge, creating a partial crop. No rule‑of‑thirds intentionality—just accidental framing that gives a candid feel. The background shows a bar shelf lined with bottles, glasses, and candles, all in sharp focus.
+
+- **Environment**  
+  Location: A cozy, dimly lit bar at night. The back wall has a wooden shelf stocked with various liquor bottles, a row of candles, and a set of glassware. The bar counter is made of dark wood, with a metal tap and a small laptop on it. The time of day is late evening, around 10 pm, when the candlelight and ambient lamps create a warm hue. The weather outside is not visible, but the interior feels snug and slightly humid.
+
+- **Details & Imperfections**  
+  Slight tilt in the camera angle gives a dynamic feel. The image has a raw, unprocessed look—no filters, no color grading, no post‑processing aesthetic. There’s a hint of grain from the high ISO, and a faint motion blur around the edges that suggests the subject was mid‑action when the shutter was pressed.
+
+- **Final Prompt**  
+  “A young woman with long dark hair in a loose ponytail, wearing a black thong and sleeveless top, stands mid‑step at a dimly lit bar. Her head tilts upward as she looks toward the shelf, left hand on the counter, right hand by her side. Warm candlelight and ambient lamps create a soft glow with slight overexposure on the upper body. Shot on a 24mm wide‑angle lens at 1/60 s, ISO 3200, f/4.5—everything in focus, no bokeh. The background shows a wooden shelf lined with liquor bottles, candles, and glassware, all sharp. The frame is off‑center, partially cropped, capturing a spontaneous, candid moment at night.”

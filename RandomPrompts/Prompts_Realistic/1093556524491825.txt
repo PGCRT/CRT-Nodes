@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman in a black one‑piece swimsuit, hands on hips, back to the camera, slight turn to the right. Her left arm bears a small “love” tattoo; her nails are painted pink. She’s mid‑step, captured in a casual, unposed moment as if she’s just finished a workout or is about to walk somewhere.
+
+- **Motion & Focus**  
+  Slight motion blur on the hands and hips, indicating handheld shake. Everything remains fully sharp—no bokeh, no portrait‑mode isolation. The image has an auto‑HDR feel but without post‑processing filters; a subtle overexposure that gives it a raw, natural look.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24‑35 mm), short focal length. No depth‑of‑field blur—background is completely in focus. Slight tilt and off‑center framing, no rule‑of‑thirds intentionality. The composition feels accidental, spontaneous, as if the photographer was walking and caught this moment.
+
+- **Environment**  
+  Location: a sunlit urban park at late afternoon. The background shows a mix of green foliage and a concrete pathway, with a faint hint of a distant building. Weather is clear, warm, with soft ambient light that creates a gentle halo on the subject’s skin. Time of day: early evening (around 5 pm), giving a warm, slightly golden tone.
+
+- **Lighting & Color**  
+  Natural daylight, slight overexposure in the highlights. The color palette is muted earth tones—soft pinks from the subject’s nail polish, dark gray from the swimsuit, and muted green from the foliage. No color grading or filters; the image retains its raw, candid feel.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, partial crop that cuts off a bit of the background on the left side. The subject’s hands are slightly blurred, but her tattoo and pink nails are crisp. The background foliage is fully sharp, adding depth without any “portrait mode” blur.
+
+- **Prompt Summary for AI Image Generation**  
+  *“A woman in a black one‑piece swimsuit, back to the camera, hands on hips, slight turn right, left arm tattoo ‘love’, pink nails. Capture candid, unposed moment mid‑step. Slight motion blur on hands/hips, everything fully sharp, wide‑angle short focal length (24‑35 mm). Raw auto‑HDR look, subtle overexposure. Setting: urban park at late afternoon, clear weather, warm golden light. Slight tilt, off‑center framing, partial crop. No filters, no post‑processing.”*

@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, sun‑kissed blonde hair lying prone on a warm, undisturbed beach sand. She’s wearing a light blue bikini with black side‑ties; her left arm is extended forward, palm flat, while her right arm supports her weight. Her head is turned slightly toward the camera, a natural, unposed smile on her face. The wind has lifted a few strands of hair across her forehead, adding motion.
+
+- **Motion & Focus**  
+  Slight motion blur at the edges from handheld shake; the subject’s hands and the sand around them are in soft focus, while the background (ocean, sky, palm trees) remains fully sharp. No bokeh—everything is in focus, captured with a wide‑angle lens.
+
+- **Lighting & Exposure**  
+  Natural mid‑afternoon sunlight, slightly overexposed on the subject’s skin and the sand, giving a warm, raw look. Auto‑HDR or auto‑beauty mode off. No filters, no color grading, no post‑processing aesthetic. The light hits the scene from the left, creating subtle shadows that fall to the right of the subject.
+
+- **Lens & Technical**  
+  Short focal length (24–35 mm), wide‑angle, no portrait mode. All elements—subject, sand, ocean, sky, palm trees—are in focus. The composition is accidental: a slight tilt and off‑center framing, no rule‑of‑thirds intentionality.
+
+- **Environment**  
+  Specific real‑world location: a tropical beach with fine, light‑colored sand, the ocean stretching to the horizon, a few scattered palm trees on the right side, and a bright sky dotted with fluffy white clouds. Time of day: mid‑afternoon, around 3 pm, giving warm, golden light. Weather: clear, breezy, with a gentle wind.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Imperfections encouraged: slight tilt, off‑center framing, partial crop. Zero studio lighting, zero professional composition, zero editorial tone. Natural motion freeze or slight blur from handheld instability.
+
+- **Final Prompt**  
+  “A young woman in a light blue bikini lies prone on a warm beach sand, her left hand extended and right hand supporting her weight, head turned to the camera with a natural smile. Slight motion blur at the edges from handheld shake, all elements in focus, captured on a wide‑angle lens. Natural mid‑afternoon sunlight slightly overexposes the subject and sand, creating warm shadows to the right. Background shows a clear sky with fluffy clouds, ocean horizon, and scattered palm trees on the right. The scene is candid, unposed, accidental framing, no filters or post‑processing, raw and authentic.”

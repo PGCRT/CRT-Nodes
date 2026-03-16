@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework – “Blonde Woman in a Retro Bathroom”**
+
+- **Subject & Pose**  
+  A tall, curvy woman with long blonde hair stands back‑to‑the‑camera at a rustic wooden countertop in an old‑style bathroom. Her left hand rests on the edge of the counter, her right arm bent, and she’s turning slightly toward the lens as if she just finished a quick rinse. The pose is candid, unposed, mid‑action, with a subtle tilt that gives a handheld feel.
+
+- **Appearance & Detail**  
+  She wears only a thin, sheer silk scarf draped over her shoulders; the fabric drapes softly, catching the light. Her skin is warm and unretouched, with natural texture and slight imperfections—tiny blemishes, faint moles, and a small smudge of soap on her wrist. Her feet are bare, toes curled into the tiled floor.
+
+- **Environment**  
+  The bathroom has a vintage feel: green square tiles cover the walls, a worn wooden countertop with visible grain, a brass faucet, and an old-fashioned round mirror mounted high on the wall. A small bottle of hand soap sits near the faucet. The lighting comes from a single wall lamp that casts a warm, slightly overexposed glow; the ambient light suggests late afternoon, the sun low but still bright.
+
+- **Lens & Technical**  
+  Use a wide‑angle lens (24–35 mm) with a short focal length to capture the entire scene in one shot. Keep everything in focus—no bokeh, no depth‑of‑field blur. Shoot at a slightly high angle to emphasize the subject’s full figure and the surrounding environment. Use a handheld shake that produces a subtle motion blur on the edges, but keep the background fully sharp.
+
+- **Composition & Framing**  
+  Frame the shot so the woman occupies the central‑right portion of the frame, with the counter extending to the left and the mirror peeking into the top‑left corner. The composition is accidental: slight off‑center cropping, no rule‑of‑thirds intentionality. The camera is tilted a little, giving a casual, spontaneous vibe.
+
+- **Lighting & Color**  
+  Auto‑HDR or auto‑beauty mode off—raw, unprocessed look. Slight overexposure on the lamp’s glow, natural color grading. Keep the colors true: muted greens of the tiles, warm browns of the wood, and a hint of beige from the woman’s skin. No filters, no post‑processing aesthetic.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Imperfections encouraged: slight tilt, off‑center framing, partial crop. Zero studio lighting, zero professional composition, zero editorial tone. Natural motion freeze or slight blur from handheld instability.
+
+- **Final Prompt**  
+  *“A tall, curvy woman with long blonde hair stands back‑to‑the‑camera at a rustic wooden countertop in an old‑style bathroom, her left hand resting on the edge while her right arm bends as she turns toward the lens. She wears a thin sheer silk scarf, barefoot, with natural skin texture and slight imperfections. The bathroom features green square tiles, a worn wooden counter, a brass faucet, and a round mirror high on the wall; a bottle of hand soap sits near the faucet. Warm lamp light creates a slight overexposure. Shot on a 24–35 mm wide‑angle lens, everything in focus with no bokeh, handheld shake producing subtle motion blur. The frame is off‑center, slightly tilted, capturing the woman in the central‑right and the counter extending left, with the mirror peeking into the top‑left corner. Candid, unposed, spontaneous, raw, unprocessed, natural colors, late‑afternoon ambient light.”*

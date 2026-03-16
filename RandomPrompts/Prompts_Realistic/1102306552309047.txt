@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A teenage girl standing in a bright, bustling classroom, mid‑gesture with her hands clasped together near her chest. Her hair is tied up in a messy high ponytail that slightly tilts to one side, catching the ambient light. She wears an oversized white T‑shirt featuring a black‑and‑white portrait print of a man and the text “BEGG GIRL” below it, paired with ripped black jeans. Her expression is warm and engaged, eyes cast downward as if she’s about to speak or react to something.
+
+- **Candid, Unposed Moment**  
+  Capture her in a spontaneous, unposed stance—her body angled slightly off‑center, as though she’s mid‑conversation or reacting to an event. The shot should feel natural and raw, with a hint of motion blur from handheld instability, giving the image a lively, in‑motion feel.
+
+- **Environment**  
+  The setting is a modern classroom with white walls, fluorescent ceiling lights, and a large window that lets in soft daylight. In the background, a few students are seated at desks, one of them working on a laptop, another holding a water bottle. A blue bin sits on the floor, a bundle of black cables lies on a desk, and a red notebook rests on another desk. The time of day is late afternoon, with warm, golden light filtering through the window, creating subtle overexposure highlights on the girl’s shirt.
+
+- **Lens & Technical**  
+  Use a wide‑angle lens (24–35 mm) to capture a broad view of the scene. Keep everything in focus—no bokeh or depth‑of‑field blur—so the background remains sharp. Shoot with a slightly wide aperture to keep the entire frame crisp, but avoid any intentional rule‑of‑thirds composition; let the framing be accidental and organic. The lens should produce a slight tilt to the subject’s position, enhancing the candid feel.
+
+- **Lighting & Color**  
+  Natural daylight from the window combined with ceiling fluorescents create a bright, slightly overexposed look. Keep auto‑HDR or auto‑beauty modes off—no filters, no color grading, no post‑processing aesthetic. The lighting should be uneven enough to give a raw, unpolished feel, with soft highlights on the girl’s shirt and subtle shadows in the background.
+
+- **Composition & Details**  
+  Capture the scene with a short focal length, ensuring that all elements—the girl, the desks, the students, the cables, the bin—are fully sharp. The composition should be imperfect: slight off‑center framing, partial crop of the girl’s lower body, and a hint of motion blur from a handheld camera. Include visible imperfections such as the slight tilt of her ponytail, the messy knot of her hair, and the faint smudge on her shirt that suggests real life.
+
+- **Final Prompt**  
+  “A teenage girl in an oversized white T‑shirt with a black‑and‑white portrait print and ripped black jeans stands mid‑gesture in a bright classroom, hands clasped near her chest, hair tied in a messy high ponytail that tilts to one side. She is captured in a candid, unposed moment with slight motion blur from handheld instability. The background shows students at desks, a blue bin, and a bundle of black cables on a desk, all in sharp focus. The scene is lit by late‑afternoon daylight and ceiling fluorescents, creating soft overexposure highlights. Use a wide‑angle lens (24–35 mm) for a broad, sharp view with no bokeh, accidental off‑center framing, and a slight tilt. Keep the look raw and natural—no filters or post‑processing.”

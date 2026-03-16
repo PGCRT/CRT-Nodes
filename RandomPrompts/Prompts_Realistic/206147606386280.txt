@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, curvy woman with long, wavy brown hair and gold hoop earrings stands in a casual, off‑shoulder white sheer bodysuit. Her pose is mid‑turn, left hand lightly gripping the side of her hip, right arm relaxed by her thigh. She faces slightly toward the camera but isn’t posing—her expression is natural, almost candid.
+
+- **Lighting & Exposure**  
+  Ambient daylight from a western‑facing window creates a soft, warm overexposure on the front of her body. Slight underexposure on the background gives a raw, unprocessed look. No auto‑beauty mode—just a straightforward ISO 400, f/2.8, 1/125 s shutter speed with a 35 mm wide‑angle lens.
+
+- **Camera & Technical Settings**  
+  - Lens: 35 mm (wide‑angle, short focal length)  
+  - Aperture: f/2.8 – everything in focus, no bokeh, background fully sharp  
+  - Shutter speed: 1/125 s – natural motion freeze with a hint of handheld blur  
+  - ISO: 400 – balanced exposure without excessive grain
+
+- **Composition & Framing**  
+  The shot is slightly tilted, off‑center, and partially cropped on the left side. No rule‑of‑thirds intentionality—just accidental framing that gives a spontaneous feel. The background is a plain beige wall with faint texture, no studio lighting, no post‑processing filters.
+
+- **Environment**  
+  Location: A bright, unadorned apartment hallway with a textured beige wall and a small potted plant in the corner. Time of day: late morning, natural light coming from the west, creating soft shadows. Weather: clear, mild—no wind, no rain.
+
+- **Details & Imperfections**  
+  Slight motion blur at the edges of her hands and hair, indicating handheld instability. The bodysuit’s sheer fabric shows subtle wrinkles and a slight overexposed highlight on her chest. Her nails are painted a pale pink; her earrings catch the light. The background plant’s leaves are in focus, no portrait‑mode isolation.
+
+- **Prompt for AI Image Generation**  
+  “A tall woman with long wavy brown hair and gold hoop earrings, wearing a white sheer off‑shoulder bodysuit, stands mid‑turn in a bright apartment hallway. Natural daylight from the west creates soft overexposure on her body and slight underexposure on the beige textured wall behind her. Shot on a 35 mm wide‑angle lens at f/2.8, 1/125 s, ISO 400—everything in focus with no bokeh. The frame is slightly tilted and off‑center, partially cropped on the left, capturing a candid, spontaneous moment. Slight motion blur on her hands and hair shows handheld instability. The background includes a small potted plant in the corner. Render in raw, unprocessed realism, no filters, no color grading.”

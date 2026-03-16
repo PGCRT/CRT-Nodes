@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, sun‑kissed blonde hair walking barefoot on a tropical beach. She wears a floral‑patterned green bikini, mid‑stride with one foot slightly ahead of the other, arms relaxed at her sides, head tilted upward as if she’s just caught a wave or is simply basking in the warm breeze. Her expression is casual and unposed, a natural smile with a hint of confidence.
+
+- **Motion & Focus**  
+  Slight motion blur on the feet and background to convey movement, but everything remains fully sharp—no portrait‑mode depth‑of‑field blur. The image has an auto‑HDR feel but without heavy color grading; it’s raw, unprocessed, with a natural overexposed tone that lets the ambient light shine through.
+
+- **Lens & Technical**  
+  Wide‑angle lens (20–35 mm) with a short focal length, no bokeh. The background is fully in focus, from the sandy foreground to the ocean horizon and the distant houses. No rule‑of‑thirds intentionality—framing is accidental, slightly tilted, off‑center, and partially cropped at the edges.
+
+- **Environment**  
+  Specific real‑world location: a tropical beach with soft, wet sand, gentle waves lapping at the shore, a few palm trees swaying in the background, and a two‑story house with a terracotta roof on the left side. The time of day is late afternoon, around 5 pm, giving warm, golden light that slightly overexposes the scene. Weather is lightly cloudy with a hint of haze, creating a soft, ambient glow.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Imperfections encouraged: slight tilt, off‑center framing, partial crop. Zero studio lighting, zero professional composition, zero editorial tone. Natural motion freeze or slight blur from handheld instability.
+
+- **Post‑Processing**  
+  No filters, no color grading, no post‑processing aesthetic—just a raw, natural look that preserves the authenticity of the moment.
+
+**Prompt Summary**  
+"Mid‑stride woman in a floral bikini walking barefoot on a tropical beach, late afternoon light, slight motion blur and accidental framing, wide‑angle lens, fully sharp background, raw auto‑HDR feel, no filters—candid, spontaneous, handheld shot."

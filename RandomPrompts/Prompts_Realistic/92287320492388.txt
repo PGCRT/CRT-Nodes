@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark, wavy hair sitting on a white bed, wearing a bright yellow bikini. She is mid‑gesture, one hand pulling the strap of her top upward, the other resting on her thigh. Her gaze is directed slightly off‑camera, giving a candid, unposed feel.
+
+- **Lighting & Exposure**  
+  Natural daylight from a side window creates a soft, warm overexposure that gives a raw, unprocessed look. Slight ambient glare on the skin and fabric, no color grading or filters—just the camera’s auto‑HDR off and a handheld “in‑the‑moment” feel.
+
+- **Camera & Lens Settings**  
+  Wide‑angle lens (24 mm) with a short focal length, everything in focus—no bokeh, no depth‑of‑field blur. Slight motion blur from the subject’s movement and the photographer’s handheld shake. The framing is accidental: slightly tilted, off‑center, and partially cropped at the edges.
+
+- **Environment**  
+  A modern bedroom with a textured beige headboard and white pillows. The time of day is late morning, with warm sunlight streaming in, creating gentle shadows and highlights. The background is fully sharp, no studio lighting, no professional composition—just a real‑world setting captured spontaneously.
+
+- **Details & Imperfections**  
+  Capture the subtle imperfection of her slightly asymmetrical pose, the faint smudge on her bikini strap, the tiny reflection in her earrings, and the slight tilt of the camera. The image should feel like a snapshot taken mid‑action, with natural motion freeze or slight blur from handheld instability.
+
+- **Prompt Summary**  
+  “A young woman with long dark wavy hair sits on a white bed in a modern bedroom, wearing a bright yellow bikini. She pulls her strap upward with one hand while the other rests on her thigh, gazing slightly off‑camera. Natural daylight from a side window creates a soft warm overexposure; the wide‑angle 24 mm lens keeps everything sharp with no bokeh. Slight motion blur and accidental framing give the image a candid, raw feel. The scene is captured at late morning, with a textured beige headboard and white pillows in the background. All elements are fully in focus, no filters or color grading applied.”

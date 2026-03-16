@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair, wearing a fitted brown mini‑dress and gold accessories (a bracelet on her right wrist, a thin anklet on her left ankle). She is seated on a concrete ledge, leaning slightly forward with one knee bent and the other leg extended, hand touching her chin in a casual, mid‑thought gesture. Her left foot is bare, resting on the ground, adding a natural, unposed feel.
+
+- **Motion & Focus**  
+  Slight motion blur from handheld shooting; the subject’s face and hands are in focus while the background remains fully sharp—no bokeh. The image has a raw, auto‑HDR look with no filters or color grading, a hint of overexposure to capture ambient daylight.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24‑35 mm), short focal length, everything in focus, no portrait‑mode depth‑of‑field blur. The composition is accidental: slight tilt and off‑center framing, partial crop that cuts off part of the ledge on the left side.
+
+- **Environment**  
+  Urban outdoor setting: a concrete wall and a low ledge along a city sidewalk. A modern building with a brown façade is visible in the background, a few trees and a patch of blue sky with scattered white clouds above. The time of day is late morning, soft sunlight casting gentle shadows; the weather is clear but not harsh, giving a natural, ambient light.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject appears unaware of the camera. Imperfections are encouraged: slight tilt, off‑center framing, partial crop. No rule‑of‑thirds intentionality—accidental framing that gives a documentary feel. Zero studio lighting, zero professional composition, zero editorial tone.
+
+- **Prompt Summary**  
+  “A young woman in a brown mini‑dress sits on a concrete ledge beside a modern building, leaning forward with one knee bent and the other leg extended, hand touching her chin. She wears a gold bracelet and anklet. The shot is taken with a wide‑angle lens at late morning, soft sunlight, clear sky, slight motion blur, fully sharp background, accidental off‑center framing, raw auto‑HDR look, no filters—capturing a candid, spontaneous moment in an urban setting.”

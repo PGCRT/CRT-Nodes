@@ -1,0 +1,27 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman with voluminous, curly auburn hair, wearing a black leather harness-style bodysuit with multiple buckles and straps. She is kneeling on a bed with light blue sheets, one hand touching her cheek, the other resting on her thigh, in a casual, mid‑action pose that feels spontaneous and unposed.
+
+- **Lighting & Exposure**  
+  Natural daylight from a side window creates a soft, slightly overexposed highlight on the subject’s face and upper body. The exposure is uneven—warm tones on the front, cooler tones in the background—giving a raw, unprocessed look. No auto‑HDR or beauty filters; just a straightforward capture with a handheld camera.
+
+- **Camera & Lens Settings**  
+  - Lens: 24 mm wide‑angle, short focal length, no bokeh.  
+  - Aperture: f/5.6 (mid‑range) for moderate depth of field—everything from subject to background stays sharp.  
+  - Shutter speed: 1/125 s, producing a slight motion blur on the subject’s hands and hair, indicating handheld instability.  
+  - ISO: 400–600 for natural grain.
+
+- **Composition & Framing**  
+  The shot is intentionally off‑center, with a slight tilt that gives a candid feel. The frame cuts off the left side of the bed and the headboard, creating a partial crop. No rule‑of‑thirds—just accidental framing that captures the subject’s full body and part of the surrounding environment.
+
+- **Environment**  
+  Location: A bedroom with a dark metal headboard and a light blue wall. The time of day is late morning, with warm sunlight streaming in from the left, casting soft shadows. The ambient air is slightly hazy, adding a subtle texture to the background.
+
+- **Technical Details**  
+  - No portrait‑mode depth‑of‑field blur; background is fully sharp.  
+  - Slight overexposure on the subject’s face, underexposed background—creates contrast and drama.  
+  - Raw, unprocessed look: no color grading or filters, just a direct capture.
+
+- **Final Prompt**  
+  “A woman with curly auburn hair in a black leather harness bodysuit kneeling on a bed, one hand near her cheek, the other on her thigh, captured with a 24 mm wide‑angle lens at f/5.6 and 1/125 s shutter speed, natural daylight from the side creating slight overexposure on the subject, raw unprocessed look, handheld motion blur, off‑center framing, partial crop, background fully sharp, no filters—candid spontaneous photography.”

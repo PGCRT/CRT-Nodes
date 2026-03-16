@@ -1,0 +1,29 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with wet, slightly frizzy hair kneeling on a polished wooden floor in a bright, sunlit bedroom. Her body is bare, with natural contours and a subtle sheen from the water droplets that cling to her skin. She’s mid‑motion, hands flat on the floor, knees bent, and hips tilted slightly to one side as if she just finished a dance or a stretch. Her gaze is directed toward the camera but not directly at it—she’s “unposed,” as if caught in a spontaneous moment.
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window on the left, creating a soft, warm glow with a slight overexposure on the upper body. The light hits the wet skin and wood, producing subtle highlights and gentle shadows. No auto‑beauty or filter processing—just raw, unprocessed imagery.
+
+- **Camera & Lens Settings**  
+  Wide‑angle lens (24‑35 mm), handheld, slightly shaky. Focal length short, background fully sharp with no bokeh. Depth of field is wide: everything from the subject to the far wall is in focus. Slight motion blur on the subject’s hands and hair to emphasize movement.
+
+- **Composition & Framing**  
+  Off‑center, accidental framing—no rule‑of‑thirds intentionality. The shot is a partial crop that cuts off the left side of the window and the right side of the bed, giving a candid feel. Slight tilt to the camera adds spontaneity.
+
+- **Environment & Time**  
+  Location: A cozy, modern bedroom with light wood furniture—a dresser on the left, a bed on the right, a small bedside table, and a white lamp. A large window lets in bright morning sunlight; a faint haze of dust motes drifts in the air. The time of day is early afternoon, around 10‑11 AM, when the sun is high but still warm. Weather: clear, mild, with a light breeze.
+
+- **Details & Imperfections**  
+  Slight tilt and partial crop give an unposed, spontaneous vibe. Tiny water droplets cling to her skin and hair; a few stray hairs frame her face. The wooden floor shows faint scuff marks and a small puddle of water near her knees. The lamp’s shade is slightly out of focus but still visible. The bed’s white pillow and wooden headboard are partially in frame, adding context.
+
+- **Technical Notes**  
+  - ISO: 400–600 (for natural grain)  
+  - Aperture: f/4–f/5.6 (wide, sharp background)  
+  - Shutter speed: 1/125–1/250 s (slight motion blur)  
+  - Focus: manual, everything in focus from foreground to background  
+  - No portrait mode or subject isolation—just a straight, candid capture
+
+- **Prompt Summary**  
+  “A young woman kneeling on a polished wooden floor in a sunlit bedroom, bare and wet, captured with a wide‑angle handheld lens at early afternoon. Natural daylight from a large window creates a soft overexposed glow. Slight motion blur on the hands and hair, accidental off‑center framing, all elements fully sharp—no filters, no post‑processing, raw and spontaneous.”

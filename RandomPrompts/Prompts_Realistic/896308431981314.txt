@@ -1,0 +1,26 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail and bangs, wearing a white crop‑top, a black leather bomber jacket, and a white mini‑skirt, walking confidently down a city street. Her hands are relaxed at her sides, slightly bent at the elbows, as if she’s mid‑step.  
+
+- **Motion & Focus**  
+  Slight motion blur on the subject’s legs and the background to suggest movement, but everything remains fully sharp—no portrait‑mode bokeh. The lens is a short focal‑length wide‑angle (24–35 mm), capturing a broad view of the scene with no depth‑of‑field blur.  
+
+- **Lighting & Exposure**  
+  Natural daylight from a mid‑morning sun, creating a warm, slightly overexposed highlight on the subject’s face and jacket. No auto‑HDR or beauty filters—raw, unprocessed look.  
+
+- **Environment**  
+  A bustling urban alleyway lined with brick buildings, small storefronts, and a red traffic sign in the background. The street is paved, with a faint reflection of the sun on the asphalt. A few pedestrians are visible further back, blurred slightly due to motion.  
+
+- **Framing & Composition**  
+  Handheld, slightly tilted frame that isn’t intentionally rule‑of‑thirds aligned; the subject’s head sits just above the center of the frame, with her left shoulder cutting a diagonal line across the image. The crop is partial—her lower legs extend beyond the bottom edge, giving a casual, spontaneous feel.  
+
+- **Technical Settings**  
+  Aperture f/4.0, shutter speed 1/125 s, ISO 400. Wide‑angle lens, no bokeh, background fully in focus.  
+
+- **Post‑Processing**  
+  Zero color grading or filters—just a natural, raw capture with slight overexposure to keep the ambient light alive.  
+
+**Prompt Summary for Text‑to‑Image Generation**
+
+> “A young woman with a high ponytail and bangs, wearing a white crop‑top, black leather bomber jacket, and white mini‑skirt, walking confidently down a city street. Capture with a short focal‑length wide‑angle lens (24–35 mm), slight motion blur on the legs and background, everything fully sharp. Natural mid‑morning daylight, slightly overexposed. The scene is a bustling urban alleyway lined with brick buildings, small storefronts, and a red traffic sign in the background; a few pedestrians further back. Frame handheld, slightly tilted, partial crop, subject’s head just above center, left shoulder diagonal. No filters or color grading—raw, unprocessed look.”

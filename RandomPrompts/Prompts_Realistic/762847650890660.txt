@@ -1,0 +1,29 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair and round glasses stands on a sunlit beach, wearing a gold‑snake‑print one‑piece swimsuit with a deep V‑neck. She is mid‑step, left foot slightly ahead, hands relaxed at her sides, face turned toward the camera but not posing—captured in a spontaneous, “in‑the‑moment” stance.
+
+- **Motion & Focus**  
+  Slight motion blur on the lower legs and background to suggest handheld shake; everything remains fully sharp—no portrait‑mode depth of field. The lens is a short focal‑length wide‑angle (24–35 mm), giving a broad, almost “all‑in‑one” view of the scene.
+
+- **Lighting & Exposure**  
+  Natural midday sunlight with a mild overexposure on the upper body and background; no auto‑beauty or filter processing. The exposure is slightly warm, preserving the amber tones of the sand and the subtle hue of the swimsuit.
+
+- **Environment**  
+  Tropical beach at high noon: white sand stretches to the horizon, a few palm trees line the left side, a faint outline of a distant pier appears on the right. The sky is a pale blue with thin, wispy clouds. The background is fully in focus—no bokeh.
+
+- **Composition & Framing**  
+  No rule‑of‑thirds intentionality—the frame is slightly off‑center, with the subject’s head near the upper third but not aligned; the left side of the image cuts off a bit of the palm tree, giving an accidental, candid feel. The crop is partial—edges cut close to the subject’s shoulders and the sand’s texture.
+
+- **Technical Settings**  
+  - Focal length: 35 mm (wide‑angle)  
+  - Aperture: f/4.0 (wide opening, but depth of field is flat)  
+  - Shutter speed: 1/125 s (captures slight motion blur)  
+  - ISO: 400 (for natural contrast)  
+  - No bokeh, no portrait‑mode isolation—everything from foreground to background stays sharp.
+
+- **Post‑Processing**  
+  Raw, unprocessed look—no color grading or filters. Slight auto‑HDR applied only to the highlights for a natural brightness boost.  
+
+**Prompt Summary**  
+> “A young woman with long wavy brown hair and round glasses, wearing a gold snake‑print one‑piece swimsuit, stands mid‑step on a sunlit beach at high noon. The shot is taken with a 35 mm wide‑angle lens at f/4.0 and 1/125 s shutter speed, capturing slight motion blur on the lower legs while keeping the entire scene fully sharp. Natural midday sunlight creates a mild overexposure on the upper body and background. The beach setting includes white sand, palm trees on the left, and a distant pier on the right, all in focus. The frame is slightly off‑center and partially cropped, giving a candid, spontaneous feel with no rule‑of‑thirds intentionality. Raw, unprocessed, auto‑HDR only.”

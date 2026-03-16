@@ -1,0 +1,27 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with dark, glossy hair styled in two thick braids that cascade over her shoulders, each braid adorned with a small gold bead. She stands bare‑shouldered in a simple black bikini bottom, her torso open and relaxed, one arm slightly bent as if she’s about to touch her face or adjust her earring. Her expression is neutral but lively, eyes focused forward, a hint of a subtle smile.  
+
+- **Lighting & Exposure**  
+  Natural daylight from a western‑facing window, mid‑afternoon (≈ 4:30 pm). The light is slightly warm, with a gentle overexposure on the upper chest and shoulders that gives a soft glow. No auto‑HDR or beauty filters—just raw, unprocessed capture.  
+
+- **Camera & Lens Settings**  
+  - Lens: 24 mm wide‑angle (short focal length) on a DSLR or mirrorless.  
+  - Aperture: f/5.6 – everything in focus from foreground to background.  
+  - Shutter speed: 1/125 s – enough to freeze the motion but leave a faint handheld blur.  
+  - ISO: 400 – for clean noise without over‑processing.  
+
+- **Composition & Framing**  
+  Candid, unposed framing: the shot is slightly tilted to the left, off‑center, with a partial crop that cuts off the top of her head and the lower part of her thighs. No rule‑of‑thirds intentionality—just spontaneous composition. The background is a plain beige wall with a faint outline of a door frame; it’s fully sharp, no bokeh.  
+
+- **Environment**  
+  Location: A bright, uncluttered living room with a light wooden floor and a neutral-colored wall. Time of day: late afternoon, ambient natural light coming from the west. Weather: clear, no wind.  
+
+- **Technical Details**  
+  - No depth‑of‑field blur; everything from subject to background is in focus.  
+  - Slight motion blur on the subject’s shoulders and braids, indicating handheld instability.  
+  - Raw JPEG with no color grading or filters—just the natural tones of the scene.  
+
+- **Prompt for AI Image Generation**  
+  “A young woman with dark, glossy hair styled in two thick braids, each braid accented by a small gold bead, standing bare‑shouldered in a simple black bikini bottom. She is mid‑action, one arm slightly bent as if about to touch her face, eyes forward with a subtle smile. Natural daylight from a western window at mid‑afternoon creates a soft overexposure on her upper chest and shoulders. Shot on a 24 mm wide‑angle lens at f/5.6 and 1/125 s, everything in focus, slight handheld blur on the shoulders. Candid, slightly tilted, off‑center framing with a partial crop. Background is a plain beige wall with a faint door frame, fully sharp. Raw JPEG, no filters, no color grading.”

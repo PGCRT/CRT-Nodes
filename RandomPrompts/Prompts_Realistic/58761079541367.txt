@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy blonde hair standing in a sunlit hallway. She’s bare‑charged, wearing a delicate pearl necklace and a thin gold chain that rests lightly on her collarbone. Her head is slightly tilted to the left, eyes focused forward, lips parted as if mid‑speech or mid‑smile. The camera captures her from the waist up, with a shallow crop that cuts off the lower part of her torso, giving an “off‑center” candid feel.
+
+- **Lighting & Exposure**  
+  Natural daylight coming from a large window on the left side of the hallway; the light is slightly overexposed at the top, creating a soft halo around her hair. No auto‑HDR or beauty filters—just raw, unprocessed tones. The exposure is a little bright at the highlights, giving a subtle glare on her skin and a gentle warmth to the beige walls.
+
+- **Environment**  
+  Location: a modern residential hallway with light‑wood paneling and a single recessed LED fixture on the ceiling. Time of day: late morning, around 10:30 AM, when the sun is high but still casts soft shadows. Ambient conditions: a faint breeze ruffles her hair, a slight motion blur from handheld shake is present, and the background is fully sharp—no bokeh or depth‑of‑field blur.
+
+- **Lens & Technical**  
+  Use a short focal length (e.g., 24 mm) wide‑angle lens. Shoot in a single exposure with no portrait mode; everything from foreground to background stays in focus. The composition is accidental—no rule‑of‑thirds, just a spontaneous frame that captures the subject’s upper body and a portion of the hallway wall.
+
+- **Capture Style**  
+  Candid, unposed, “mid‑action” vibe: the woman appears to be about to speak or adjust her necklace. Slight tilt and partial crop give an informal, real‑life feel. The image has a natural motion freeze or slight blur from handheld instability, reinforcing the candid nature.
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, no post‑processing aesthetic. Keep the raw look: only basic white‑balance adjustment and a tiny lift in the highlights to compensate for the overexposure.  
+
+**Prompt Summary**  
+> “A young woman with long wavy blonde hair stands in a sunlit hallway, bare‑charged and wearing a pearl necklace and gold chain. Capture her waist‑up with a 24 mm wide‑angle lens, slight tilt and partial crop, natural daylight from a large window causing a soft halo on her hair. Shoot at late morning, 10:30 AM, with a slightly overexposed top, raw unprocessed look, everything in focus, no bokeh. The image should feel candid, mid‑action, with a hint of motion blur from handheld shake, and keep the background fully sharp.”

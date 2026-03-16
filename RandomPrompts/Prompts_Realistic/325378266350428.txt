@@ -1,0 +1,29 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wind‑blown brown hair walking confidently toward the camera on a cobblestone plaza. She wears a dark gray crop‑top and high‑waisted gray jeans, accessorized with a thin gold heart‑shaped necklace. Her left hand is slightly bent at the wrist, her right arm relaxed by her side; her face is turned directly to the lens with a subtle, natural expression.  
+
+- **Motion & Focus**  
+  Slight motion blur on the hair and hands to convey movement, while the entire frame stays fully sharp—no portrait‑mode depth of field. The shot is captured with a wide‑angle lens (24–35 mm), giving a short focal‑length, almost “handheld” feel.  
+
+- **Lighting & Exposure**  
+  Raw, unprocessed look: no auto‑HDR or beauty filters. Ambient daylight from late morning creates a mild overexposure on the subject’s face and a gentle warm tint across the scene. Slight tilt to the camera to give an off‑center, spontaneous feel.  
+
+- **Environment**  
+  The background is a European‑style town square with arched windows and stone facades; a wooden door and a white awning are visible on the right. The time of day is early afternoon, with soft, diffused sunlight and a slight haze from the morning heat. Weather is clear, with a light breeze that ruffles the woman’s hair.  
+
+- **Composition & Framing**  
+  No rule‑of‑thirds intentionality—framing is accidental, capturing the subject’s full body from head to toe with a partial crop that leaves a little space above her head and below her knees. The background remains fully in focus, no bokeh.  
+
+- **Technical Settings**  
+  - Lens: 35 mm, wide‑angle, handheld  
+  - Aperture: f/4 (wide opening)  
+  - Shutter speed: 1/125 s (for slight motion blur)  
+  - ISO: 400 (for natural contrast)  
+  - No post‑processing color grading; raw image with auto‑exposure only.  
+
+**Prompt for Text‑to‑Image Generation**
+
+> “A candid, spontaneous photograph of a young woman walking toward the camera on a European cobblestone plaza. She has long brown hair that blows in the wind, wearing a dark gray crop‑top and high‑waisted gray jeans, with a thin gold heart necklace. Capture the shot with a 35 mm wide‑angle lens, slight motion blur on the hair and hands, full sharpness across the frame, raw unprocessed look, mild overexposure from late morning sunlight. The background shows arched windows and a wooden door with a white awning. The composition is accidental and off‑center, no rule‑of‑thirds, partial crop, handheld feel. Everything in focus, no bokeh.”
+
+Provide only the structured prompt.

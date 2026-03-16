@@ -1,0 +1,24 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A young woman with light brown hair tied in a messy high ponytail, mid‑laugh, holding a bronze‑colored iPhone in each hand. She’s wearing an oversized light denim jacket over a cream knit sweater. Her face is slightly tilted, eyes crinkled in joy, mouth open as if she’s about to speak or shout. The capture should feel spontaneous—she’s unaware of the camera, caught in a natural moment.
+
+- **Pose & Composition**  
+  Capture with a wide‑angle lens (24–35 mm). Frame her from the waist up, slightly off‑center, letting the left side of her body extend beyond the right edge of the frame. Keep everything in focus—no depth‑of‑field blur; background should be sharp. The composition should feel accidental: a slight handheld tilt, no rule‑of‑thirds intentionality.
+
+- **Lighting & Exposure**  
+  Use natural daylight from a large window behind her, creating a soft, slightly overexposed highlight on her face and jacket. Keep auto‑HDR off—no color grading or post‑processing filters. The exposure should be raw, with a subtle warmth to the scene.
+
+- **Environment**  
+  The setting is a bright, modern apartment loft during late morning. A large window on the left lets in natural light; behind her, a blurred view of a city building and a man in a dark shirt walking away. The background should be fully sharp, no bokeh.
+
+- **Lens & Technical Details**  
+  Short focal length (35 mm), wide‑angle. No portrait‑mode subject isolation. All elements—subject, background, foreground—are in focus. Slight motion blur on the subject’s hands and hair to emphasize the candid feel.
+
+- **Style Notes**  
+  Raw, unprocessed look: zero filters, no color grading, no post‑processing aesthetic. The image should feel like a real, spontaneous snapshot taken with a handheld camera in a real world setting.
+
+**Prompt:**
+```
+Candid photo of a laughing young woman in a denim jacket and cream sweater, holding an iPhone in each hand, captured with a 35 mm wide‑angle lens. She’s mid‑laugh, slightly tilted, off‑center framing, all elements in focus. Natural daylight from a large window creates soft overexposure. Background shows a bright loft apartment with a city building and a man walking away. Raw, unprocessed, no filters—spontaneous, handheld feel.
+```

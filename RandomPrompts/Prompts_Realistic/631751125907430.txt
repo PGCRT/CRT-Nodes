@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long dark hair and bangs, wearing a white bikini, standing beside an open convertible car. She’s mid‑step, one hand on the door handle, the other near her hip, smiling naturally at the camera. Sunglasses rest on top of her head. Her pose is casual and unposed, as if she’s just finished getting in or out of the car.
+
+- **Motion & Focus**  
+  Slight motion blur on the subject’s legs and the car’s interior to convey a natural, handheld capture. Everything remains fully sharp—no bokeh, no portrait‑mode isolation. The image has a raw, unprocessed look: no filters, no color grading, no post‑processing aesthetic. A hint of overexposure in the sky gives an ambient, sunny feel.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm), short focal length. No depth‑of‑field blur; background is fully sharp. The shot uses a slightly tilted, off‑center framing that feels accidental and spontaneous. The composition has no intentional rule‑of‑thirds—just a natural, candid capture.
+
+- **Environment**  
+  Location: A sunny park or roadside area with tall pine trees in the background, a concrete parking lot beneath the car. Time of day: mid‑afternoon, with bright, warm sunlight casting soft shadows. Weather: clear, slightly hazy sky; a few scattered clouds. The ambient light creates a slight overexposure on the sky and a gentle glare on the car’s chrome.
+
+- **Details & Imperfections**  
+  The image shows a faint hand‑held shake, a slight tilt that gives it a casual vibe. The crop is partial—only a portion of the car’s door and the woman’s lower body are visible, enhancing the candid feel. A few stray specks of dust or small reflections are present on the car’s surface, adding realism.
+
+- **Prompt Summary**  
+  “A young woman in a white bikini stands beside an open blue convertible at a sunny park, mid‑step with sunglasses perched on her head. Capture with a wide‑angle, short focal length lens, slight motion blur on the subject’s legs and the car interior, everything fully sharp. The framing is accidental and off‑center, no rule‑of‑thirds. The background shows tall pine trees and a concrete lot, bright mid‑afternoon light with a hint of overexposure on the sky. Raw, unprocessed look—no filters or color grading.”

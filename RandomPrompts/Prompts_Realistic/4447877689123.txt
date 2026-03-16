@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework – “Tropical Waterfall Portrait”**
+
+- **Subject & Pose**  
+  A woman with long, dark hair sitting on a light‑colored stone ledge, hands gently clasped over her chest in a protective, contemplative gesture. She’s wearing a black lace bikini top and matching bottoms; the lace details should catch the light with subtle texture. Her head is tilted back slightly, eyes closed or looking upward, as if she’s feeling the cool mist from the waterfall behind her.
+
+- **Motion & Focus**  
+  Capture a natural, handheld shot with slight motion blur on the subject’s hands and the falling water, giving a sense of movement. Use a wide‑angle lens (20–35 mm) to keep the entire scene—instrument, subject, and background—fully sharp; no bokeh or depth‑of‑field blur. Aim for an “auto‑HDR” feel but keep the look raw: no heavy color grading or filters, just a straightforward exposure that may be slightly over‑ or under‑exposed depending on ambient light.
+
+- **Environment**  
+  The setting is a lush tropical waterfall in a rainforest or jungle area. Tall ferns frame the left side of the frame, with additional foliage on the right. The waterfall itself cascades down a rocky cliff in the background, creating a misty, white‑tinted backdrop. The time of day is late morning or early afternoon, when the sun is high but not directly overhead, giving soft, diffused light that enhances the natural colors. Weather is mild and humid, with a slight haze from the waterfall’s spray.
+
+- **Lens & Technical**  
+  Use a short focal length (20–35 mm) to capture a wide view of the scene. Keep everything in focus—subject, foliage, waterfall—by using a small aperture (f/8–f/11). Shoot in a “raw” format for maximum post‑processing flexibility, but keep the “auto‑beauty mode” off for an unprocessed, authentic look. The composition is intentionally imperfect: slight tilt and off‑center framing, no rule‑of‑thirds intentionality, and a partial crop that gives a spontaneous, candid feel.
+
+- **Lighting & Exposure**  
+  No studio lighting; rely entirely on natural light. Allow for a slight overexposure or underexposure depending on the ambient brightness—this will give the image a slightly hazy, organic quality. The exposure should be balanced so that the white mist of the waterfall and the green foliage are all visible and crisp.
+
+- **Final Prompt**  
+  “A woman in a black lace bikini sits on a stone ledge in front of a tropical waterfall, hands clasped over her chest, head tilted back in contemplation. Capture with a wide‑angle lens (20–35 mm), slight motion blur on the hands and water, everything fully sharp. The scene is framed by tall ferns on both sides, with the waterfall cascading behind. Shoot at late morning, soft diffused light, raw format, no filters—slight overexposure for a natural, candid feel. Keep the composition imperfect, slightly tilted, off‑center, and partial crop.”

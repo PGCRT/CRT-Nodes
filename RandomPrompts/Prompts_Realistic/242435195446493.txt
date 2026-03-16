@@ -1,0 +1,28 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a slender, athletic build, lying on her stomach on a neatly made bed. Her hair is a light golden-blonde, loosely tied in a low ponytail that drifts slightly to one side. She wears a black thong-style bikini bottom and a thin gold chain around her waist, the chain catching the light as she shifts. Her arms are bent at the elbows, hands clasped behind her head, fingers curled as if she’s just finished a stretch or is about to adjust her hair. The back of her body is fully visible, showcasing the natural curve of her spine and the gentle dip of her lower back.
+
+- **Lighting & Exposure**  
+  Natural daylight from a western window, mid‑afternoon, soft but warm. Slight overexposure on the upper torso to emphasize the sheen of skin. No auto‑HDR or auto‑beauty mode—just raw, unprocessed capture. The exposure is slightly uneven, with a subtle vignette at the corners due to a wide‑angle lens.
+
+- **Camera & Lens Settings**  
+  - Lens: 24‑mm wide‑angle prime (or equivalent short focal length).  
+  - Aperture: f/4.0 – shallow depth of field but everything remains in focus because the background is a flat, uncluttered wall.  
+  - Shutter speed: 1/60 s – enough to freeze the motion while allowing a hint of handheld shake.  
+  - ISO: 400 – for clean noise and dynamic range.  
+
+- **Composition & Framing**  
+  The shot is intentionally off‑center, with the subject’s left hip slightly cut off by the frame edge. No rule‑of‑thirds intentionality—just a spontaneous, candid framing that feels like a snapshot taken mid‑action. The camera is held at eye level, creating a “mid‑action” perspective as if the woman is just about to sit up or adjust her hair.
+
+- **Environment**  
+  A quiet bedroom with a plain beige wall behind the bed. The bed has a smooth, light‑brown sheet that drapes softly around the woman’s body. A single pillow rests at the head of the bed, slightly askew. The time of day is late afternoon, giving a warm, golden hue to the scene. The ambient light is diffused by a thin veil of dust motes, adding texture to the image.
+
+- **Technical Details**  
+  - No bokeh; background is fully sharp because everything is in focus.  
+  - Slight motion blur on the woman’s arms, indicating a handheld shot.  
+  - No post‑processing filters or color grading—just raw capture.  
+  - The image has a slight tilt to the left, giving it an informal, spontaneous feel.
+
+- **Final Prompt**  
+  “A young woman in a black thong and gold chain lies on her stomach on a beige bed, hands behind her head, captured with a 24‑mm wide‑angle lens at f/4.0 and 1/60 s shutter speed. Natural mid‑afternoon daylight creates slight overexposure on the torso. The shot is candid, off‑center, with a subtle handheld blur, no bokeh, everything in focus, and a slightly tilted frame. The background is a plain beige wall with an askew pillow, all sharp and unfiltered.”

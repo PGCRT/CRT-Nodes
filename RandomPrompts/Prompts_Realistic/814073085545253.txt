@@ -1,0 +1,28 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with shoulder‑length brown hair, wearing a black mesh crop‑top and no bottom, leaning casually against a kitchen countertop. Her left hand rests on the counter, her right hand near her thigh, body angled slightly toward the camera, head turned to face forward with a neutral, candid expression.  
+
+- **Lighting & Exposure**  
+  Slight overexposure from natural daylight coming from the west, creating soft highlights on her skin and a subtle warm tint. No auto‑beauty or filter processing—raw, unprocessed look.  
+
+- **Camera Settings**  
+  Wide‑angle lens (24 mm), short focal length, handheld. Slight motion blur from the subject’s movement and camera shake. Everything in focus—no portrait‑mode depth of field blur.  
+
+- **Environment**  
+  A modern kitchen with light‑colored cabinets, a granite countertop, a white ceramic mug, a plastic water bottle, and a red utensil holder on the left side. A small framed picture hangs on the back wall. Time of day: late afternoon, ambient light warm but not harsh.  
+
+- **Composition**  
+  No rule‑of‑thirds intentionality—accidental framing with a slight tilt. The shot is partially cropped on the right edge, giving a spontaneous, candid feel. Background remains fully sharp, no bokeh.  
+
+- **Technical Details**  
+  - Focal length: 24 mm  
+  - Aperture: f/5.6 (wide, but all elements in focus)  
+  - Shutter speed: 1/125 s (slight motion blur)  
+  - ISO: 400  
+  - No auto‑HDR or auto‑beauty mode—raw, unprocessed.  
+
+- **Prompt for Text‑to‑Image Generation**  
+  “A young woman with shoulder‑length brown hair, wearing a black mesh crop‑top, leaning against a kitchen countertop in a modern home. Her left hand rests on the counter, right hand near her thigh, body angled toward the camera, head turned forward with a neutral expression. The scene is lit by late‑afternoon natural daylight causing slight overexposure. Shot on a 24 mm wide‑angle lens, handheld, slight motion blur from subject movement and camera shake, everything in focus. Kitchen details: light‑colored cabinets, granite countertop, white mug, blue water bottle, red utensil holder on the left, framed picture on back wall. Slight tilt and partial crop for candid feel. No filters or post‑processing—raw, realistic photography.”
+
+Provide only the structured prompt.

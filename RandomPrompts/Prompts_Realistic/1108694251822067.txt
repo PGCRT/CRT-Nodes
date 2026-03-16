@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair, wearing an off‑shoulder cream blouse and dark blue joggers, captured mid‑movement as she sits on a concrete bench, knees bent, hands clasped near her shins. She is smiling softly, head tilted slightly downward, eyes cast to the side, conveying a candid, unposed moment.
+
+- **Capture Style**  
+  Candid, spontaneous — the subject appears unaware of the camera, mid‑action. Slight tilt and off‑center framing; partial crop that gives an accidental, handheld feel. No rule‑of‑thirds intentionality. The shot has a raw, unprocessed look: slight overexposure in the high‑light areas, subtle motion blur from handheld instability, and no filters or color grading.
+
+- **Environment**  
+  Location: An urban park bench under a modern glass‑roof structure, with a concrete pillar and a “no smoking” sign visible in the background. Time of day: late morning, soft sunlight filtering through the glass, creating gentle lens flare and slight overexposure on the subject’s face. Weather: clear, mild, with a light breeze that ruffles her hair.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm) wide‑angle lens, all elements in focus — background fully sharp, no bokeh. No portrait‑mode depth‑of‑field blur. The image uses auto‑HDR or auto‑beauty mode off; no post‑processing aesthetic. Slight overexposure on the subject’s face and shoulders to capture ambient light.
+
+- **Composition Notes**  
+  Wide lens captures a broad view of the scene, keeping background details crisp. The composition is intentionally imperfect: the bench edge cuts off the lower left corner, the pillar’s sign is partially cropped, and the top of the frame shows the glass roof’s edges. Everything remains in focus, giving a documentary‑style realism.
+
+- **Final Prompt**  
+  “A young woman with long wavy brown hair, wearing an off‑shoulder cream blouse and dark blue joggers, sitting on a concrete bench in a modern park, mid‑smile, hands near shins, captured with a 24‑35 mm wide‑angle lens, all sharp, slight motion blur, handheld tilt, accidental framing, late‑morning sunlight, raw unprocessed look, no filters.”

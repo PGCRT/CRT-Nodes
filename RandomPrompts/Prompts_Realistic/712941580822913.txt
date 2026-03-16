@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, athletic woman with long, wet hair tied in a loose braid, wearing tight pink leggings and a matching pink sports bra. She’s mid‑squat, knees bent, back arched slightly, one hand on her thigh for balance, the other reaching toward her hip. Her face is turned to the side, eyes focused on something off‑camera, giving a candid, unposed feel.
+
+- **Motion & Focus**  
+  Slight motion blur at the knees and hands from handheld shake; everything else in sharp focus. No bokeh—background fully sharp. No auto‑HDR or auto‑beauty mode—raw, unprocessed look. A hint of overexposure on the upper back due to natural daylight.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm), short focal length. No portrait‑mode depth‑of‑field blur; all elements from foreground to background are crisp. Slight tilt and off‑center framing—no rule‑of‑thirds intentionality.
+
+- **Environment**  
+  Location: A sunlit, empty wooden‑floor studio with a large window on the right and a potted palm plant in the left corner. Time of day: late morning, soft natural light with warm, golden hues. Weather: clear, no wind. The window lets in a bright, slightly harsh light that creates subtle highlights on the subject’s back and thigh.
+
+- **Lighting & Composition**  
+  Zero studio lighting—only ambient daylight. Natural, high‑contrast illumination from the window creates slight shadows under the squat. Composition is accidental: the subject is slightly off‑center, the frame cuts off a bit of her left thigh, giving a raw, spontaneous vibe. The background includes the window frame and a plain wall; no rule‑of‑thirds, just a casual snapshot.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, partial crop on the right side, minor motion blur at the knees. A few stray hairs cling to her back from the wet hair. The pink leggings show a subtle texture, and the wooden floor has a natural grain. The potted plant’s leaves are slightly out of focus but still visible. No filters, no color grading, no post‑processing aesthetic—just a raw, realistic capture.
+
+- **Prompt Summary**  
+  “A tall woman in pink leggings and matching sports bra, mid‑squat pose, wet hair braid, captured with a wide‑angle lens at late morning in a sunlit studio with a window and potted plant. Slight motion blur on the knees, everything sharp, raw unprocessed look, accidental off‑center framing, natural daylight overexposure, no filters—realistic candid photography.”

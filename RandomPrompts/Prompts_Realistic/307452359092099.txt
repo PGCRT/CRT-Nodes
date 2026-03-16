@@ -1,0 +1,30 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, curvy woman with long, wavy brown hair, wearing a black fish‑net bodysuit with lace trim and glossy, thigh‑high stiletto boots. She’s captured mid‑turn, back to the camera, left foot slightly ahead, hand on hip, head turned toward the lens with a subtle, confident gaze. Her pose is casual and spontaneous—no staged composition, just a natural “mid‑action” freeze.
+
+- **Lighting & Exposure**  
+  Natural daylight from a western window, mid‑afternoon. Slight overexposure on the subject’s back and boots, giving a warm, soft glow. No auto‑beauty or filter processing—raw, unedited look. The exposure is slightly uneven, with the background a little brighter than the foreground, creating a subtle contrast.
+
+- **Camera & Lens**  
+  35 mm wide‑angle lens (short focal length). Handheld, with slight instability that produces a gentle motion blur on the subject’s boots and a tiny tilt in the frame. Everything is fully sharp—no portrait‑mode depth of field blur; background (pink wall, white door, wooden cabinet) remains crisp.
+
+- **Framing & Composition**  
+  Off‑center, accidental framing: the left side of the frame cuts off a bit of the woman’s hip, giving a partial crop. The shot is not rule‑of‑thirds aligned; the subject’s center of mass sits slightly above the vertical third line. The composition feels candid and spontaneous.
+
+- **Environment**  
+  A bright, pink‑painted bedroom or studio. A white door with a silver knob is directly behind the woman, a small white candle on a wooden cabinet to the right, and a dual‑socket outlet on the left wall. The floor is light wood laminate. The time of day is late afternoon, with warm, slightly harsh natural light coming from the west, creating soft shadows and a faint overexposed halo around the subject.
+
+- **Technical Details**  
+  - Focal length: 35 mm  
+  - Aperture: f/4 (wide, but not too wide—background stays sharp)  
+  - Shutter speed: 1/125 s (slight motion blur on the boots)  
+  - ISO: 400 (mid‑range, no noise)  
+  - No bokeh; background fully in focus.  
+  - No portrait mode or subject isolation.  
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, zero studio lighting adjustments. The image retains a raw, candid feel with natural imperfections: slight tilt, off‑center framing, partial crop, and a hint of overexposure on the subject’s back.
+
+**Prompt Summary (structured)**  
+“Candid, unposed photograph of a tall woman in a black fish‑net bodysuit and thigh‑high stiletto boots, captured mid‑turn with a slight motion blur on her boots. Shot on a 35 mm wide‑angle lens, handheld, with natural mid‑afternoon daylight from the west creating a soft overexposure on the subject. The background is a pink wall, white door, and wooden cabinet; everything is fully sharp. Framing is off‑center and accidental, with a partial crop of the hip. No filters or post‑processing—raw, spontaneous look.”

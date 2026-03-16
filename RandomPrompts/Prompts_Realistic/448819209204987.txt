@@ -1,0 +1,32 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair standing in a bright, sunlit living room. She’s wearing high‑waisted black trousers and a simple white camisole. Her pose is casual and spontaneous—mid‑step, slightly turned toward the camera, with one hand on her hip and the other relaxed by her side. Her face is turned to the camera but not directly aimed; a natural, candid smile is captured as if she’s just finished a conversation or is about to.
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window on the left creates a soft, warm glow. Slight overexposure on the upper body to emphasize the brightness of the room. No auto‑beauty mode—raw, unprocessed look. The exposure is slightly uneven, giving an authentic handheld feel.
+
+- **Camera Settings**  
+  - Lens: 24mm wide‑angle (short focal length) for a broad field of view.  
+  - Aperture: f/5.6 – everything in focus from foreground to background.  
+  - Shutter speed: 1/125 s – enough to freeze the motion but still retain a subtle handheld blur.  
+  - ISO: 400 – for clean detail without noise.  
+
+- **Composition & Framing**  
+  - No rule‑of‑thirds intentionality—framing is accidental, slightly off‑center. The shot is a partial crop that cuts off the top of the window and the lower part of the plant, giving a “mid‑frame” feel.  
+  - Slight tilt to the right to capture the subject’s dynamic angle.  
+  - Background: a light‑colored wall, a tall green potted plant on the right, and a wooden side table with a framed picture hanging on the wall.  
+
+- **Environment & Time**  
+  - Location: A modern, airy living room with a large window that lets in natural morning light.  
+  - Time of day: Early afternoon, when the sun is high but not too high—soft, warm illumination.  
+  - Weather: Clear, sunny, no wind.  
+
+- **Technical Details**  
+  - No bokeh; background is fully sharp.  
+  - No portrait‑mode subject isolation—everything remains in focus.  
+  - Slight motion blur on the subject’s shoulders and arms to hint at movement.  
+  - Auto‑HDR or auto‑beauty mode off—raw, unprocessed look.  
+
+- **Final Prompt**  
+  “A candid, spontaneous photograph of a young woman with long wavy brown hair, wearing black high‑waisted trousers and a white camisole, standing in a bright living room. The image is captured on a 24mm wide‑angle lens at f/5.6 and 1/125 s, with slight handheld blur. Natural daylight from a large window creates a warm glow, slightly overexposed on the upper body. The framing is accidental and off‑center, partially cropping the top of the window and the lower part of a green potted plant. The background includes a light‑colored wall, a wooden side table, and a framed picture. Everything is in focus, with no bokeh, no auto‑HDR or auto‑beauty processing, preserving a raw, unprocessed look.”

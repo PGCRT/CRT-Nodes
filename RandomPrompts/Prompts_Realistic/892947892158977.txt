@@ -1,0 +1,30 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail, mid‑crouch on a city sidewalk, one hand in her hair, the other resting on her thigh. She’s wearing loose cream joggers, dark lace‑up boots, and a bare‑shoulder top that gives a casual, street‑style vibe. Her face is turned toward the camera with a bright, spontaneous smile; her eyes are slightly focused on something off‑frame, adding candid energy.
+
+- **Motion & Focus**  
+  Slight motion blur at the wrists and boots to suggest movement, while the rest of the frame stays fully sharp—no portrait‑mode softness. The lens is a wide‑angle prime (24‑35 mm) with a short focal length, capturing a broad view of the scene.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑mid‑day sun; a mild overexposure on the subject’s face and upper body, creating a warm, almost hazy glow. No auto‑HDR or beauty filters—just raw, unprocessed light. The exposure is slightly uneven, with the background a bit brighter than the foreground for a natural, handheld feel.
+
+- **Environment**  
+  A modern, white brick building with large glass windows lines the back of the scene. Two stainless steel bollards stand near the left edge, and a few passersby are visible in the distance, walking away from the camera. The sidewalk is concrete, with faint cracks and a small patch of grass at the lower right corner. The time of day is late morning, with the sun high but not directly overhead, casting soft shadows.
+
+- **Composition & Framing**  
+  No rule‑of‑thirds intentionality—frame the shot as if it were captured by a hurried photographer: the subject is slightly off‑center, the top of her head cuts off the upper edge of the frame, and the bottom of her boots extend just beyond the lower border. The composition feels spontaneous, with a slight tilt to the left.
+
+- **Technical Settings**  
+  - Focal length: 35 mm (wide‑angle)  
+  - Aperture: f/4.0 (mid‑range)  
+  - Shutter speed: 1/125 s (to capture slight motion blur)  
+  - ISO: 400 (for natural grain)  
+  - No bokeh; background is fully sharp, no depth‑of‑field blur.  
+  - Handheld, slightly unstable camera shake captured in the final image.
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, zero studio lighting. The image retains its raw, candid aesthetic with natural contrast and a slight vignette from the wide lens.
+
+**Prompt Summary**  
+> “A young woman in cream joggers and dark lace‑up boots, crouching on a city sidewalk beside a white brick building, one hand in her hair, smiling spontaneously. Capture with a 35 mm wide‑angle lens at f/4, 1/125 s, ISO 400, natural daylight from late morning, slight motion blur on the wrists and boots, full sharpness across the background. Frame casually with off‑center composition, no rule‑of‑thirds, handheld shake. The scene includes two stainless steel bollards on the left and passersby in the distance; a small patch of grass peeks out at the lower right. Keep the look raw—no filters or auto‑HDR, just a genuine, unposed candid snapshot.”

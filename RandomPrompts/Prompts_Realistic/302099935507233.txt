@@ -1,0 +1,29 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair, wearing a delicate pink lace bra and matching panties, standing in a plush, tufted pink velvet sofa. She has a light beige cardigan draped over her shoulders, one sleeve slipped off to reveal a black thigh-high sock. Her pose is casual and candid—she’s mid‑step, slightly turned toward the camera, with one hand resting on her hip and the other hanging by her side.
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window behind the sofa casts a soft, warm glow across the scene. The exposure is slightly overexposed, giving a subtle halo around the subject’s face and body. No auto‑HDR or beauty filters—just raw, unprocessed light.
+
+- **Camera Settings**  
+  - Lens: 24‑mm wide‑angle, short focal length.  
+  - Aperture: f/4.0 (wide opening).  
+  - Shutter speed: 1/60 s (handheld, slight motion blur on the subject’s movement).  
+  - ISO: 400 (for clean detail without noise).  
+  - Focus: everything in focus—subject and background equally sharp, no portrait‑mode depth of field blur.
+
+- **Composition & Framing**  
+  The shot is intentionally off‑center; the subject’s left side leans slightly to the right of the frame’s center. The composition is spontaneous—no rule‑of‑thirds intentionality. The top of the frame captures the upper part of her torso and head, while the bottom cuts just below her knees, keeping the lower leg and sock visible. A small portion of a white mannequin and a framed photo on the wall peek into the background, adding context.
+
+- **Environment**  
+  The setting is an indoor lounge area with a large pink velvet sofa, a tall window with sheer curtains, and a white mannequin in the corner. A framed photograph hangs on the wall, and a small decorative pillow rests on the sofa’s armrest. The time of day is late morning, with bright natural light streaming in from the left, creating soft shadows.
+
+- **Details & Texture**  
+  Capture the fine lace details of her pink lingerie, the slight wrinkling of the cardigan’s fabric, and the subtle sheen of the velvet sofa. Include a hint of motion blur on her hair and clothing to emphasize candid movement. The background remains fully sharp—no bokeh.
+
+- **Post‑Processing**  
+  No filters or color grading. Keep the image raw, with only basic white‑balance adjustments. Slight overexposure gives a warm, natural feel.
+
+**Prompt Summary**  
+“Candid photo of a woman in pink lace lingerie and a beige cardigan, standing beside a plush pink velvet sofa in a bright, late‑morning room. Shot on a 24‑mm wide‑angle lens at f/4.0 and 1/60 s, with slight motion blur and overexposure, everything in focus, spontaneous off‑center framing, raw unprocessed look.”

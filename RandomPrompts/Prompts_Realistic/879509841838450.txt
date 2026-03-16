@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair standing in a sunlit meadow, mid‑step as she walks forward, slightly turned toward the camera. Her body is unclothed, showcasing natural contours and a subtle, raw beauty. She’s captured at a waist‑to‑thigh height, with her left arm bent at the elbow, hand resting lightly on her hip.
+
+- **Facial Features & Expression**  
+  Her face shows a soft, natural smile, eyes slightly narrowed as if she’s just noticed the camera. The lighting hits the front of her face, creating a gentle highlight on her forehead and nose. Slight motion blur around the edges gives a sense of movement.
+
+- **Lighting & Exposure**  
+  Ambient daylight from a high‑angle, late‑afternoon sun creates a warm, slightly overexposed tone on the subject’s skin. The exposure is uneven—the background is a bit brighter than the foreground, giving an authentic, unprocessed look. No auto‑beauty or filter enhancements; just raw, in‑camera capture.
+
+- **Lens & Technical Settings**  
+  24 mm wide‑angle lens, f/4.0 aperture, 1/125 s shutter speed, ISO 400. The shallow depth of field is intentionally minimal—everything from the subject to the background is fully sharp, with no portrait‑mode blur. Slight handheld shake adds a natural, imperfect touch.
+
+- **Environment**  
+  A grassy field dotted with white wildflowers, a line of tall trees in the distance, and a clear blue sky above. The scene is captured at midday, with the sun high and slightly to the north‑west, casting soft shadows. The background is fully sharp, no bokeh.
+
+- **Composition & Framing**  
+  The shot is off‑center; the subject’s left side is slightly cropped, giving a casual, spontaneous feel. No rule‑of‑thirds—framing is accidental, as if the photographer was walking and captured the moment by chance. The composition includes a slight tilt to the right, enhancing the candid vibe.
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, zero studio lighting. The image retains its raw, unprocessed aesthetic, with only basic white‑balance adjustments and a mild contrast boost.  
+
+**Prompt Summary**  
+"Long‑hair woman in a sunlit meadow, mid‑step walk, natural smile, unclothed body, 24 mm wide‑angle lens, f/4, 1/125 s, ISO 400, late‑afternoon sunlight, fully sharp background, slight handheld blur, off‑center framing, raw unprocessed look."

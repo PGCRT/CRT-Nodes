@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair, wearing a light denim short set and red high‑top sneakers, captured mid‑crouch near a large window. Her left hand is extended forward, fingers slightly curled, as if she’s about to grasp something or balance herself. She wears a delicate gold necklace that catches the ambient light. Her face is turned toward the camera with a subtle smile, eyes bright and engaged.
+
+- **Motion & Focus**  
+  Slight motion blur on the hands and lower body to suggest movement, while the upper body remains relatively crisp. The entire scene is fully sharp—no portrait‑mode softness. A wide‑angle lens (24 mm) captures a broad view of the space, with no bokeh or depth‑of‑field blur.
+
+- **Lighting & Exposure**  
+  Natural daylight from a tall window creates a soft, slightly overexposed highlight on the subject’s chest and face. The exposure is not auto‑HDR; it retains a raw, unprocessed look. No color grading or filters—just the natural tones of the day.
+
+- **Environment**  
+  The setting is an urban loft with a large floor‑to‑ceiling window that frames a cityscape of mid‑rise buildings in the background. The time of day is late morning, around 10:30 AM, when the sun is high but not too direct, giving a warm, diffused light. Light rain or drizzle may be present outside, adding a subtle mist to the window glass.
+
+- **Lens & Technical**  
+  Short focal length (24–35 mm) wide‑angle lens, handheld shot with slight tilt and off‑center framing. No rule‑of‑thirds intentionality—framing is accidental, capturing a partial crop of the subject’s lower body and the window’s frame. Everything in focus, no portrait mode.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject appears unaware or mid‑action. Slight tilt and off‑center framing create a dynamic, informal composition. The image has zero studio lighting, zero professional composition, zero editorial tone. Natural motion freeze or slight blur from handheld instability adds realism.
+
+- **Post‑Processing**  
+  No filters, no color grading, no post‑processing aesthetic—just raw capture with auto‑beauty mode off. Slight overexposure on the subject’s chest and face to emphasize the natural light.  
+
+**Prompt Summary**  
+> “A young woman in denim shorts and red high‑top sneakers crouches near a tall window in an urban loft, her hand extended forward as if reaching for something. Captured with a 24 mm wide‑angle lens on a handheld camera, the shot has slight motion blur on the lower body but is fully sharp overall. Natural daylight from late morning illuminates the scene, producing a soft overexposure on the subject’s chest. The background shows mid‑rise buildings through the window, with a hint of drizzle outside. The composition is accidental and off‑center, capturing a candid, unposed moment with no studio lighting or post‑processing.”

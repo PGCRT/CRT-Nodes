@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy dark hair, wearing a delicate pink lace bikini, sitting on a white bed. She is mid‑gesture, one hand on her hip, the other resting on the bed, body slightly turned toward the camera. Her arms are adorned with floral and rose tattoos; a small tattoo is visible on her left wrist. Her expression is natural, unposed, with a subtle smile.
+
+- **Lighting & Exposure**  
+  Natural daylight from a window behind her creates a soft overexposure on the upper body, giving a warm, slightly hazy glow. The exposure is not perfectly balanced—there’s a gentle vignette of brightness at the top of the frame. No auto‑HDR or beauty filters; raw, unprocessed look.
+
+- **Camera & Lens**  
+  Shot with a wide‑angle lens (24–35 mm), short focal length, handheld. The image has slight motion blur from the subject’s movement and the camera’s instability, but everything remains in focus—no bokeh, no depth‑of‑field blur. Background is fully sharp, a plain white wall with a bright window.
+
+- **Composition & Framing**  
+  Candid, spontaneous framing: the composition is off‑center, slightly tilted, and partially cropped at the top and right edges. No rule‑of‑thirds intentionality—just a natural, accidental capture. The subject occupies the central‑right portion of the frame, with her left arm extending toward the left edge.
+
+- **Environment**  
+  A bright, minimalistic bedroom. White bedding, a plain white wall, and a window that lets in natural light. Time of day is mid‑afternoon, with warm, soft sunlight. The room is empty except for the bed; no other objects distract from the subject.
+
+- **Details & Imperfections**  
+  Slight tilt and partial crop give a raw, candid feel. Tiny imperfections: a faint smudge on the left side of her chest, a slight shadow under her hip, and a tiny reflection of a plant in the window. The tattoos on her arms are clearly visible, with one rose tattoo on her right bicep and a larger floral design on her left thigh.
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, no post‑processing aesthetic. Only natural contrast and slight overexposure from the ambient light.
+
+**Prompt Summary (structured)**  
+"Realistic candid photo of a woman in a pink lace bikini sitting on a white bed in a bright bedroom. She has long wavy hair, floral tattoos on both arms, and a small wrist tattoo. Natural daylight from a window creates soft overexposure. Shot with a wide‑angle lens (24–35 mm), handheld, slight motion blur but fully sharp background. Candid, off‑center framing, slightly tilted, partial crop. Raw, unprocessed look, no filters."

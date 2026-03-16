@@ -1,0 +1,36 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with shoulder‑length brown hair, standing mid‑water in a shallow, rocky stream. Her arms are raised above her head, hands clasped together, creating a subtle “heart” shape. She’s bare‑headed, smiling slightly, eyes forward, as if caught in an unplanned moment.  
+
+- **Appearance & Detail**  
+  Skin tone: warm, natural, with a faint sheen from the water. Slight imperfections on the cheeks and neck (tiny blemish near left ear). Her breasts are visible, with natural contour and slight asymmetry. Her abdomen is flat, with a small navel.  
+
+- **Clothing & Accessories**  
+  No clothing—she’s nude, but the prompt should specify “nude” for clarity. No accessories, no jewelry.  
+
+- **Environment**  
+  Location: A forested stream in a mountain valley. The stream is shallow and clear, with smooth, rounded stones along the banks. Trees line the background, their leaves forming a dense canopy. The ground is covered in moss and fallen leaves.  
+
+- **Time of Day & Lighting**  
+  Late afternoon, around 4:30 pm. Ambient light is warm, slightly overexposed on the subject’s face, giving a soft glow. The sky is partially visible through the canopy, creating a subtle backlight.  
+
+- **Lens & Technical Settings**  
+  - Focal length: 24 mm (wide‑angle).  
+  - Aperture: f/5.6 (mid‑range).  
+  - Shutter speed: 1/125 s (slight motion blur on the subject’s arms).  
+  - ISO: 400.  
+  - No bokeh; background is fully sharp.  
+  - Handheld shot, slight tilt and off‑center framing.  
+
+- **Composition & Framing**  
+  The frame captures the woman from the knees up, with her lower legs partially submerged in water. The left side of the frame shows a large rock, the right side a cluster of smaller stones. The background trees are slightly out of focus but still distinct.  
+
+- **Mood & Style**  
+  Candid, spontaneous, “mid‑action” feel. Slight tilt gives an informal, natural vibe. No rule‑of‑thirds; the composition is accidental, as if the photographer was walking and caught this moment.  
+
+- **Post‑Processing**  
+  Raw, unprocessed look. No filters, no color grading, no auto‑beauty mode. Only a slight overexposure on the subject’s face to emphasize the natural light.  
+
+- **Prompt Summary (for AI image generator)**  
+  “A nude young woman with shoulder‑length brown hair standing in a shallow stream, arms raised above her head forming a heart shape, smiling slightly, in a forested mountain valley at late afternoon. The scene includes smooth stones along the stream, trees forming a dense canopy, and a large rock on the left side of the frame. Shot on a 24 mm wide‑angle lens at f/5.6, 1/125 s, ISO 400, handheld with slight tilt and off‑center framing. Raw, unprocessed, no filters, slight overexposure on the subject’s face, background fully sharp, candid spontaneous moment.”

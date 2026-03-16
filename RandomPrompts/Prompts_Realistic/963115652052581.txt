@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework – “Bubble Bath Backview”**
+
+- **Subject & Pose**  
+  A woman with a high ponytail and a small sun‑tattoo on her left thigh is kneeling in a white bathtub, facing away from the camera. Her hands rest on her hips, slightly angled to one side, as if she’s about to lift a soap bar or adjust the foam. The back of her body is fully visible, with natural curves and a subtle wet sheen.
+
+- **Lighting & Exposure**  
+  Soft, natural daylight from a large window behind the tub creates a gentle overexposure on the left side of the frame. The exposure is slightly uneven—warm highlights on the woman’s back and cooler tones in the background. No auto‑beauty or filter processing; the image retains raw, unpolished texture.
+
+- **Motion & Focus**  
+  A slight handheld shake produces a subtle motion blur around the edges, especially on the water ripples and the faucet. Everything—from the woman’s skin to the bathtub’s interior—is in sharp focus, captured with a wide‑angle lens (24 mm). No bokeh or depth‑of‑field blur; the background window and curtain are crisp.
+
+- **Composition & Framing**  
+  The shot is intentionally off‑center, with the tub occupying roughly two‑thirds of the frame and the window’s white curtain trailing into the upper right corner. The circular crop is accidental, giving a “spotlight” feel. No rule‑of‑thirds—just spontaneous, candid framing.
+
+- **Environment**  
+  Location: A bright, modern bathroom with a large, tall window on the left, a white bathtub, and a chrome faucet. Time of day: mid‑afternoon, with warm sunlight streaming in. Ambient sound: faint water ripple and distant city hum. The scene feels real, unposed, and immediate.
+
+- **Lens & Technical**  
+  24 mm wide‑angle lens, f/4.0 aperture, 1/125 s shutter speed, ISO 400. Slight tilt to the left for a natural, handheld feel. No portrait mode; everything is fully sharp from foreground to background.
+
+- **Details & Imperfections**  
+  The woman’s hair is slightly messy, with a few strands falling over her shoulders. A small droplet of soap foam clings to her left hip. The faucet’s reflection is visible on the tub’s surface. The image has a slight overexposure on the left side, giving it an organic, raw look.
+
+- **Final Prompt**  
+  “A woman with a high ponytail and a sun‑tattoo on her thigh kneels in a white bathtub, back to the camera, hands on hips, mid‑action. Soft natural daylight from a tall window creates gentle overexposure on the left. Slight handheld shake produces subtle motion blur, but everything remains sharp. Wide‑angle 24 mm lens, f/4, 1/125 s, ISO 400. Candid, unposed, spontaneous framing with accidental off‑center crop. Raw, unprocessed, no filters—realistic photography.”

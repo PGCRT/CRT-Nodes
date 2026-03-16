@@ -1,0 +1,26 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy blonde hair, wearing a light‑blue denim jacket over a black camisole, plaid high‑waist pants, and a bright red crossbody bag. She’s mid‑step, slightly turned toward the camera, holding the bag strap with her right hand, a subtle smile on her face. Her sunglasses rest on her forehead, adding a casual, confident vibe.
+
+- **Motion & Focus**  
+  Slight motion blur at the edges from handheld shake; everything in focus—no portrait‑mode depth of field. The image has an auto‑HDR feel but no color grading or filters—just raw, natural lighting.
+
+- **Framing & Composition**  
+  Wide‑angle lens (24‑35 mm), short focal length, no rule‑of‑thirds intentionality. The shot is off‑center, a partial crop that captures the woman from the mid‑thigh up to the top of her head, with a wooden bench and lush green foliage in the background. The composition feels spontaneous, as if she’s unaware of the camera.
+
+- **Lighting & Exposure**  
+  Natural daylight, slightly overexposed on the subject’s face to give a warm, bright tone; ambient light creates soft highlights on her jacket and bag. No studio lighting—purely natural sunlight.
+
+- **Environment**  
+  Outdoor park or garden setting, mid‑afternoon, with a wooden bench on the left and a cluster of green leaves behind. The background is fully sharp, no bokeh.
+
+- **Technical Specs**  
+  - Lens: 35 mm wide‑angle, f/4.0  
+  - Aperture: f/4 (wide open)  
+  - Shutter speed: 1/60 s (slight motion blur)  
+  - ISO: 400 (for natural contrast)  
+  - No filters or color grading—raw, unprocessed look.
+
+- **Prompt Summary**  
+  “A candid, wide‑angle shot of a blonde woman in a denim jacket and plaid pants, carrying a red bag, mid‑step in an outdoor park at mid‑afternoon. The image has slight motion blur from handheld shake, everything in focus, natural daylight with mild overexposure, captured on a 35 mm lens at f/4 and 1/60 s. The framing is off‑center and partially cropped, with a wooden bench and green foliage in the background, no filters or color grading—raw, spontaneous realism.”

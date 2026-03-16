@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy dark hair walking confidently down a city street. She wears an ivory, knee‑length A‑line dress with a deep V‑neck and subtle side pockets. Her left hand is slightly bent at the wrist, her right arm relaxed by her side. Her face is turned toward the camera but not directly at it—she’s mid‑step, capturing a natural, candid moment.
+
+- **Motion & Focus**  
+  Slight motion blur on the lower part of the frame from handheld instability; the rest of the image stays fully sharp. No portrait‑mode depth‑of‑field blur—every element from foreground to background is in focus.
+
+- **Lighting & Exposure**  
+  Raw, unprocessed look with a slight overexposure on the upper half of the frame, letting the ambient daylight bleed through the dress’s fabric. Auto‑HDR and auto‑beauty modes are off; no color grading or filters applied. The scene is lit by mid‑afternoon sun, casting soft shadows on the pavement and a gentle highlight on the woman’s left shoulder.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24 mm) with a short focal length, giving a slightly distorted, immersive feel. No bokeh—background is fully sharp, from the parked cars to the building facades. The composition is intentionally off‑center and slightly tilted, no rule‑of‑thirds intentionality.
+
+- **Environment**  
+  A quiet residential street in an urban neighborhood. The background shows a row of parked cars on the left, a line of green trees, and a beige brick building with a large window on the right. The time of day is late afternoon, with warm, golden light hitting the street at a low angle. The weather is clear, with a faint haze from the sun’s heat rising off the pavement.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Imperfections encouraged: slight tilt, off‑center framing, partial crop. Zero studio lighting, zero professional composition, zero editorial tone. Natural motion freeze or slight blur from handheld instability.
+
+- **Prompt Summary for Text‑to‑Image Generation**  
+  “A young woman with long wavy dark hair walking down a quiet residential street in late afternoon, wearing an ivory knee‑length A‑line dress with a deep V‑neck. Capture with a wide‑angle short focal length lens, all elements fully sharp, slight motion blur on the lower frame, raw unprocessed look with a subtle overexposure on the upper half. The background shows parked cars, green trees, and a beige brick building; the scene is lit by mid‑afternoon sun casting soft shadows. The composition is off‑center and slightly tilted, no rule‑of‑thirds, natural candid moment.”

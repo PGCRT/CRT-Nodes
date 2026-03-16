@@ -1,0 +1,24 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair, wearing a light‑wash denim jacket (unbuttoned, slightly slouched) and white latex gloves. She stands with her back leaning lightly against a plain beige wall, eyes closed, head tilted upward as if mid‑breath or about to step. Her hands rest on her hips, fingers slightly curled, one glove slipping off the jacket’s lapel. The jacket’s sleeves are rolled up to the forearm, revealing a thin bracelet on her left wrist.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle window, mid‑afternoon. Slight overexposure on the upper torso, creating a warm, soft glow; subtle halo around the hair. No auto‑beauty or filter enhancement—raw, unprocessed look. The exposure is uneven: the lower body is slightly underexposed compared to the upper body, giving an authentic, handheld feel.
+
+- **Lens & Technical**  
+  24 mm wide‑angle lens, f/3.5, handheld. Everything in focus—from the fingertips to the top of the head—no bokeh, no portrait‑mode isolation. Slight motion blur at the edges from a shaky hand, capturing a spontaneous moment.
+
+- **Composition & Framing**  
+  Off‑center, accidental framing: the left side of the image is cut off by a vertical edge of the wall; the right side shows a faint corner of a doorway. The shot is slightly tilted, not following the rule‑of‑thirds. The subject occupies roughly two‑thirds of the frame, with her head near the top third and her hips near the bottom third, but the alignment is imperfect.
+
+- **Environment**  
+  A plain, unadorned beige wall; a faint vertical line on the right indicates a doorframe or corner. The time of day is late afternoon, with warm, diffused sunlight coming from above, creating soft shadows beneath the jacket’s lapels. Ambient noise is minimal, no other objects in frame.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, a tiny smudge on the jacket’s left shoulder, a small wrinkle in the glove’s cuff. The woman’s fingers are slightly curled, one glove slipping off the jacket, giving a candid, mid‑action feel. The image has no post‑processing color grading—just raw, natural tones.
+
+- **Prompt for Text‑to‑Image Generation**  
+  “A young woman with long wavy brown hair, wearing an unbuttoned light‑wash denim jacket and white latex gloves, standing against a plain beige wall. Her back leans slightly, eyes closed, head tilted upward as if mid‑breath. Her hands rest on her hips, one glove slipping off the lapel. Natural daylight from a high‑angle window, mid‑afternoon, slight overexposure on the upper torso. 24 mm wide‑angle lens, f/3.5, handheld, everything in focus, slight motion blur at edges. Off‑center accidental framing, slightly tilted camera, imperfect composition. Raw, unprocessed look, no filters.”
+
+Provide only the structured prompt.

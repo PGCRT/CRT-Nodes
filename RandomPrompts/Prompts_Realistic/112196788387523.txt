@@ -1,0 +1,39 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Appearance**  
+  - A young woman with dark, wavy hair that falls in soft, uneven bangs framing her face.  
+  - She wears gold hoop earrings and a delicate gold chain necklace with a small circular pendant.  
+  - Her skin has a natural, unretouched finish; subtle freckles and slight imperfections are visible.  
+  - She is bare‑shouldered, with a casual, effortless posture that suggests she’s mid‑movement.  
+
+- **Pose & Expression**  
+  - The subject is captured in a candid, unposed stance—her head slightly tilted, eyes looking toward the camera as if she just finished a gesture or is about to do something.  
+  - A faint motion blur at the edges conveys a sense of movement and handheld instability.  
+
+- **Lighting & Exposure**  
+  - Lighting comes from a natural source (sunlight or ambient daylight) that creates a slight overexposure on the upper chest and face, giving a warm, golden hue.  
+  - No auto‑beauty or filter processing—raw, unedited look.  
+  - Slight color cast of warm beige tones; minor vignetting from a wide‑angle lens.  
+
+- **Lens & Technical Settings**  
+  - Short focal length (≈20 mm) wide‑angle lens; everything in focus, no bokeh.  
+  - Handheld shot with slight shake, producing a natural motion blur that’s not too pronounced but enough to hint at spontaneity.  
+  - No rule‑of‑thirds composition—framing is accidental, off‑center, and partially cropped at the edges.  
+
+- **Environment**  
+  - Location: an outdoor plaza or open courtyard with a textured stone wall in the background.  
+  - Time of day: late afternoon, golden hour, soft warm light.  
+  - Weather: clear, mild breeze; faint clouds in the sky that are partially out of frame.  
+
+- **Capture Style**  
+  - Candid, spontaneous—subject unaware or mid‑action.  
+  - Imperfections encouraged: slight tilt, off‑center framing, partial crop.  
+  - Zero studio lighting, zero professional composition, zero editorial tone.  
+  - Natural motion freeze or slight blur from handheld instability.  
+
+- **Post‑Processing**  
+  - Auto‑HDR off; no color grading or filters applied.  
+  - Slight overexposure on the upper body to emphasize the warm light.  
+
+**Prompt Summary (structured)**  
+`Candid, unposed portrait of a bare‑shouldered woman with dark wavy hair and gold hoop earrings, wearing a delicate gold chain necklace, captured with a short focal length wide‑angle lens in a natural outdoor setting at late afternoon. The shot has slight motion blur and accidental off‑center framing, raw and unprocessed, with a warm golden overexposure and everything fully sharp—no bokeh or depth‑of‑field blur.`

@@ -1,0 +1,27 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A young woman with long, braided hair in a casual beige ribbed crop‑top and matching high‑waist leggings, mid‑hair‑styling with a flat iron. She’s holding the iron in her right hand, a small curl forming at the tip of her hair, and a cable dangling from the iron in her left hand. Her face is turned slightly toward the camera, a subtle smile, eyes bright, capturing a spontaneous, “in‑the‑moment” vibe.
+
+- **Pose & Framing**  
+  The shot is taken with a handheld camera at a wide‑angle focal length (24–35 mm). The frame is intentionally off‑center: the subject’s left side leans slightly to the right of the center, creating a casual tilt. The composition is not rule‑of‑thirds‑based; the subject occupies roughly 60 % of the vertical space, with her body extending from the lower middle to the upper third of the frame. A small portion of the background— a beige sofa, a white TV unit, and a large window— is visible on the right, while a small plant sits on the left side of the TV stand.
+
+- **Lighting & Exposure**  
+  Natural daylight from the window creates a soft, slightly overexposed highlight on the woman’s face and hair. The exposure is not perfectly balanced; there’s a gentle haze around the edges that gives a raw, unprocessed look. No auto‑beauty or filter enhancements—just the native camera settings.
+
+- **Background & Environment**  
+  The setting is a modern living room with light wood flooring, a beige sectional sofa, a white TV console, and a large window that lets in bright natural light. A small green plant sits on the left side of the TV stand, adding a touch of life. The time of day is mid‑afternoon, as indicated by the warm, slightly harsh sunlight streaming through the window.
+
+- **Lens & Technical Details**  
+  - Focal length: 35 mm (wide‑angle).  
+  - Aperture: f/4.0 (no bokeh; background fully sharp).  
+  - ISO: 400 (for a clean, natural grain).  
+  - Shutter speed: 1/125 s (slight motion blur from handheld instability).  
+  - Focus: everything in focus—subject and background.  
+  - No portrait‑mode depth‑of‑field blur; no subject isolation.
+
+- **Post‑Processing**  
+  No filters, color grading, or heavy post‑processing. The image retains a slight natural overexposure that gives it an authentic, candid feel.
+
+- **Cinematic Touches**  
+  Slight motion blur on the flat iron as it moves through the hair, a subtle tilt in the camera’s grip, and a partial crop that cuts off a bit of the sofa’s corner for a more intimate framing. The overall tone is raw, spontaneous, and realistic—like a snapshot captured in the middle of a casual grooming routine.

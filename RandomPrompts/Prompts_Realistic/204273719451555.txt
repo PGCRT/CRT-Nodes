@@ -1,0 +1,26 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high bun, wearing a lavender hoodie and ripped black jeans, sitting on a beige couch. Her hands are clasped together in her lap, knees bent, and she’s mid‑expression—mouth slightly open as if reacting to something just said. She wears white sneakers, toes pointed forward.  
+
+- **Lighting & Exposure**  
+  Slight overexposure from natural daylight coming from the front‑right; ambient light gives a warm, soft glow. No auto‑beauty or filter processing—raw, unpolished look.  
+
+- **Camera Settings**  
+  Wide‑angle lens (24–35 mm), short focal length. Handheld shot with slight motion blur from instability. Everything in focus—no bokeh, no portrait‑mode isolation.  
+
+- **Composition & Framing**  
+  Candid, unposed, spontaneous framing; the shot is slightly tilted and off‑center. The couch takes up most of the frame, the coffee table is partially visible to the right, a remote control and sticky notes on its surface.  
+
+- **Environment**  
+  A living room with a beige sofa, a wooden coffee table, a black TV in the background, a small white object (maybe a rolled-up mat) on the couch cushion, and a faint curtain on the left wall. Time of day: late morning, soft natural light. Weather: clear, mild—no external weather effects needed.  
+
+- **Details & Imperfections**  
+  Slight tilt and partial crop; the subject’s face is slightly off‑center to the left. The hoodie has a small logo on the left chest. The jeans have ripped knees. Her white sneakers have laces tied. A remote control sits on the coffee table, along with two sticky notes (yellow and pink).  
+
+- **Technical Notes**  
+  No rule‑of‑thirds intentionality—accidental framing. Background fully sharp, no depth‑of‑field blur.  
+
+**Prompt:**
+
+> “A candid, unposed photograph of a young woman sitting on a beige couch in a living room. She wears a lavender hoodie, ripped black jeans, and white sneakers, with her hands clasped in her lap and mouth slightly open as if reacting to something. The shot is taken with a wide‑angle lens (24–35 mm), handheld with slight motion blur, everything in focus—no bokeh. Natural daylight from the front‑right causes a soft overexposure. The frame is slightly tilted and off‑center, capturing the couch, a wooden coffee table to the right with a remote control and sticky notes, and a black TV in the background. The image has raw, unprocessed look, no filters or color grading, and retains imperfections: slight tilt, partial crop, and accidental framing.”

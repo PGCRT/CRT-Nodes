@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework – “Bathroom Self‑Portrait”**
+
+- **Subject & Pose**  
+  A young woman with long, wet brown hair standing in a modern bathroom. She’s nude, hands raised above her head as she runs a finger through her hair, eyes closed, lips slightly parted. Her body is centered but slightly off‑center in the frame; the shot is a tight, wide‑angle crop that cuts off a bit of the left side of the room.  
+
+- **Lighting & Exposure**  
+  Natural daylight from a window on the right side of the room creates a soft, slightly overexposed highlight on her torso. The exposure is a little bright at the top, giving a raw, unprocessed look. No auto‑HDR or beauty filters – just a single shutter click.  
+
+- **Environment Details**  
+  The bathroom has beige tile walls, a white ceramic sink with a chrome faucet on the right, and a folded white towel hanging on a rail to the left. A small electrical outlet is visible on the wall behind her. A mirror runs along the back wall, reflecting the window and a glimpse of the outside world.  
+
+- **Time of Day & Ambient Conditions**  
+  Mid‑afternoon, with warm, diffused sunlight streaming through the window, creating gentle shadows and a slight haze that gives depth to the scene. The air is still, no wind, so the only motion blur comes from the handheld shake of the camera.  
+
+- **Lens & Technical Settings**  
+  24 mm focal length, wide‑angle lens. Aperture set to f/5.6 for a fully sharp background with no bokeh. Shutter speed 1/125 s to capture a slight motion blur from the subject’s movement. ISO 400 for clean detail.  
+
+- **Composition Notes**  
+  The framing is accidental: the subject’s left hip is slightly cut off by the edge of the frame, and the top of her head touches the upper border. No rule‑of‑thirds – just a spontaneous, candid composition. Everything from her toes to the top of her head is in focus, with the background fully sharp.  
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, no LUTs. The image retains its raw, unprocessed feel, with only basic white balance adjustments.  
+
+**Prompt Summary**  
+> “A young woman in a modern bathroom, nude, hands above head, mid‑afternoon natural light, wide‑angle 24 mm lens, slight motion blur, accidental framing, fully sharp background, raw unprocessed look.”

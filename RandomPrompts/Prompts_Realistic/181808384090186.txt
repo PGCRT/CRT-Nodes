@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, slender woman with long, wavy brown hair that falls over her left shoulder, standing in a casual, unposed stance. Her body is bare, with natural contours and a slight tilt to her torso. She’s mid‑step, one foot slightly ahead of the other, hands relaxed at her sides, fingers curled naturally. Her face is turned toward the camera but not directly at it— a subtle off‑center gaze that gives a candid feel.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle source (mid‑afternoon) creates a soft, warm glow on her skin. Slight overexposure on the upper body, giving a gentle halo effect; the exposure is uneven enough to hint at handheld instability. No auto‑beauty or filter processing—raw, unedited look.
+
+- **Motion & Focus**  
+  A slight motion blur around the shoulders and hands, indicating a handheld shot captured in real time. Everything—from her hair to the background—is fully sharp; no bokeh or depth‑of‑field blur. The focus is broad, capturing every detail in a wide‑angle lens.
+
+- **Lens & Technical**  
+  24 mm focal length (short, wide angle). No portrait‑mode isolation—background is completely sharp. The framing is accidental: the subject is slightly off‑center, the crop is partial, and there’s no rule‑of‑thirds intentionality.
+
+- **Environment**  
+  Location: a quiet, unadorned urban alleyway in a modern city (mid‑afternoon). The background shows a concrete wall and a faint silhouette of a passing cyclist. Weather: light wind, clear sky, ambient temperature 23 °C. Time of day: late afternoon, with warm, diffused sunlight.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Imperfections encouraged: slight tilt, off‑center framing, partial crop. No rule‑of‑thirds intentionality—accidental framing. Zero studio lighting, zero professional composition, zero editorial tone. Natural motion freeze or slight blur from handheld instability.
+
+- **Post‑Processing**  
+  Auto‑HDR or auto‑beauty mode off — raw, unprocessed look. Slight overexposure on the upper body or underexposure on the lower body depending on ambient light. No filters, no color grading, no post‑processing aesthetic.
+
+- **Final Prompt**  
+  “A tall, slender woman with long wavy brown hair stands casually in a quiet urban alleyway at mid‑afternoon, bare and unposed, captured on a 24 mm wide‑angle lens. Natural daylight creates a soft warm glow with slight overexposure on the upper body; everything is fully sharp with no bokeh. Her pose is mid‑step, hands relaxed, gaze slightly off‑center. Slight motion blur around the shoulders and hands hints at handheld instability. The framing is accidental—subject off‑center, partial crop, no rule‑of‑thirds. No auto‑HDR or beauty filters; raw, unprocessed look. Background shows a concrete wall and a faint cyclist silhouette. Weather is clear, wind lightly blowing. Time of day is late afternoon. Capture style: candid, spontaneous, imperfect, natural motion freeze.”

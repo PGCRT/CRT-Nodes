@@ -1,0 +1,30 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail, wearing a pastel pink halter‑top and white skinny jeans, sitting on a light‑wood stool in the middle of a bright, bustling clothing boutique. She’s turned slightly toward the camera, smiling, with one hand resting on her thigh, as if she’s mid‑conversation or just finished a fit check. Her hair has a subtle messiness that gives a candid feel; a few strands escape the ponytail, adding natural movement.
+
+- **Candid, Unposed Vibe**  
+  The shot is spontaneous—she appears unaware of the camera, caught in a natural moment. Slight handheld shake is present: a gentle motion blur around the edges that suggests a quick snap with a wide‑angle lens. The framing is off‑center, not following the rule of thirds; the stool leans a little to the left, and the top of her head cuts off the upper right corner for an accidental, raw look.
+
+- **Environment**  
+  Location: A modern, airy clothing store with large windows on the left, wooden shelving units stacked with folded shirts and pants, and a rack of hanging garments on the right. The store’s floor is tiled, and a small coffee table sits near the back. It’s mid‑afternoon (around 3 pm), with soft natural daylight coming through the windows, creating a slight overexposure in the upper left corner that gives an auto‑HDR feel without any post‑processing. A few other shoppers are visible in the background: a man in a gray tee browsing shelves, a woman in a pink shirt near the rack, and another man in a white tee— all blurred slightly to keep focus on the main subject.
+
+- **Lens & Technical**  
+  - Focal length: 24 mm (wide‑angle, short focal length).  
+  - Aperture: f/4.0 – everything from foreground to background is fully sharp, no bokeh.  
+  - Exposure: Slight overexposure in the upper left, underexposed slightly at the lower right, giving a natural, raw look.  
+  - Focus: Manual focus on the subject; depth of field covers the entire scene.  
+  - Settings: ISO 400, shutter speed 1/125 s (handheld shake).  
+  - No portrait‑mode isolation—no “subject isolation” blur.  
+
+- **Lighting & Color**  
+  Natural daylight from the left window, with a slight warm tint; the lighting is uneven, creating a subtle contrast between the bright left side and the slightly darker right side. The color palette is muted pastels (pink top, white jeans) contrasted with the warm brown of the stool and wooden shelves. No filters or heavy color grading—just raw, unprocessed tones.
+
+- **Composition Notes**  
+  - The stool is angled slightly to the right, giving a dynamic diagonal line.  
+  - The woman’s body forms a gentle “C” shape, adding organic flow.  
+  - Background elements (shelves, shoppers) are all in focus, reinforcing the wide‑angle capture.  
+  - Slight tilt of the camera adds to the candid feel.
+
+- **Final Prompt Summary**  
+  “A young woman with a high ponytail, wearing a pastel pink halter‑top and white skinny jeans, sits on a light‑wood stool in a bright clothing boutique. She smiles casually, hand on thigh, as if mid‑conversation. The scene is captured with a 24 mm wide‑angle lens at f/4.0 and 1/125 s shutter speed, producing a slightly overexposed upper left corner and a natural motion blur from handheld shake. Everything—from the woman to the background shelves—is fully sharp. The image has no filters or post‑processing, preserving a raw, candid aesthetic. The boutique’s large windows let in mid‑afternoon daylight, creating a warm, uneven lighting that enhances the spontaneous feel of the shot.”

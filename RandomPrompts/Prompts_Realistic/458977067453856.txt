@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A young woman in a plain white T‑shirt and dark jeans is mid‑step on a wooden deck, her left foot just about to touch a bright green toy truck with red wheels. She’s looking down at the truck, a subtle expression of concentration, hair slightly blown by a gentle breeze. Her right hand is relaxed near the truck’s side, as if she’s about to adjust it or pick up one of the scattered blue and yellow blocks that lie beside her.
+
+- **Pose & Motion**  
+  Slight motion blur on the feet and the toy truck to indicate movement. The camera is handheld, giving a natural, imperfect tilt that keeps the frame slightly off‑center. The subject’s body is angled toward the left of the frame, creating a dynamic diagonal line that leads the eye from her foot to the truck.
+
+- **Environment**  
+  The scene is set in a sunny suburban backyard during late afternoon. A large leafy tree casts dappled shade over the deck, its branches reaching upward into a bright sky with soft clouds. Behind the woman, a green house with white trim stands beside a wooden fence; a small patch of grass and a few garden plants are visible near the house’s side. The deck itself is made of light‑colored wood planks that show natural grain and slight wear.
+
+- **Lighting & Exposure**  
+  Auto‑HDR or auto‑beauty mode off — raw, unprocessed look. The ambient light is warm, with a slight overexposure on the upper part of the frame that gives a gentle halo to the tree’s leaves. The exposure is slightly uneven, with the lower part of the image a bit darker than the upper part, as if captured by a handheld camera in natural daylight.
+
+- **Lens & Technical**  
+  Short focal length (≈20 mm) wide‑angle lens, no bokeh, everything in focus from foreground to background. No depth‑of‑field blur; the deck, tree, and house are all sharp. The composition is accidental: no rule‑of‑thirds intentionality, just a candid snapshot that feels spontaneous and unposed.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, partial crop that cuts off the top left corner of the tree’s canopy. The woman’s shoe has a faint smudge on the sole, and the toy truck’s wheels show a tiny scratch. A few leaves from the tree hang over the deck, adding texture. The wooden planks have natural knots and cracks, enhancing realism.
+
+- **Final Prompt**  
+  “A young woman in a white T‑shirt and dark jeans steps onto a wooden deck, her left foot near a green toy truck with red wheels, while a blue and yellow block lies beside her. She looks down at the truck, hair slightly blown by a gentle breeze, as if about to adjust it. The deck is set in a sunny suburban backyard during late afternoon; a large leafy tree casts dappled shade overhead, a green house with white trim stands behind her, and a wooden fence lines the side of the yard. The scene is captured on a wide‑angle lens, everything in focus from foreground to background, with slight motion blur on the feet and truck, a natural handheld tilt, and a subtle overexposure on the upper part of the frame. No filters or post‑processing, raw and unprocessed, creating a candid, spontaneous photograph that feels like a real moment frozen in time.”

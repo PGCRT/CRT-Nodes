@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair tied in a high ponytail sits casually on a plush, tufted bed. She wears an off‑the‑shoulder white crop top adorned with gold leaf motifs and black lace underwear. Her left hand rests on the bed’s edge, while her right hand is slightly out of frame, giving a natural, unposed feel.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject appears mid‑action, unaware of the camera. Slight tilt and off‑center framing create accidental composition. The shot has a raw, unprocessed look: no filters, no color grading, no post‑processing aesthetic. A hint of overexposure from ambient daylight gives a warm, natural tone.
+
+- **Motion & Focus**  
+  Slight motion blur from handheld instability freezes the moment. Everything remains in focus — no bokeh or depth‑of‑field blur; background is fully sharp.
+
+- **Lens & Technical**  
+  Short focal length (24–35 mm) wide‑angle lens. No portrait‑mode subject isolation. All elements — subject, bedding, pillows, headboard — are in focus.
+
+- **Environment**  
+  Location: a cozy, modern bedroom with a beige tufted headboard and white pillows. Time of day: late morning, soft natural light from a north‑west window. Weather: clear, slightly humid air gives a subtle haze that adds to the raw aesthetic.
+
+- **Composition Details**  
+  The frame captures the woman from the waist up, with her left thigh and part of the bed’s edge extending beyond the right side of the frame. The top of the headboard is partially cut off at the upper edge, enhancing the casual feel. The lighting comes from the left, creating soft shadows on the right side of her body.
+
+- **Prompt for Generation**  
+  “A young woman with long wavy brown hair in a high ponytail sits casually on a plush tufted bed, wearing an off‑the‑shoulder white crop top with gold leaf patterns and black lace underwear. Her left hand rests on the bed’s edge, right hand out of frame. Candid, unposed, spontaneous capture with slight tilt and off‑center framing. Slight motion blur from handheld instability, everything in focus — no bokeh. Shot on a 35 mm wide‑angle lens, late morning natural light from the left, raw unprocessed look, no filters or color grading. Background includes a beige tufted headboard and white pillows; partial crop at top and right edges for accidental composition.”

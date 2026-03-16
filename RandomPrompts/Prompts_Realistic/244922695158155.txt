@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair, wearing a sleek, body‑tight swimsuit and high‑heeled sandals, is captured mid‑kneel on a wet wooden deck. Her body is angled slightly toward the camera, with one knee bent and the other foot planted for balance, creating a dynamic, almost spontaneous pose that feels like a candid moment frozen in time.
+
+- **Motion & Focus**  
+  Slight motion blur at the edges to suggest handheld shake; everything remains fully sharp—no portrait‑mode depth of field. The image has a raw, unprocessed look: no filters, no color grading, no post‑processing aesthetic. A hint of overexposure in the highlights gives it an ambient, natural feel.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm), short focal length, no bokeh—background is fully sharp. The composition is accidental: slight tilt, off‑center framing, partial crop that keeps the scene feeling spontaneous.
+
+- **Environment**  
+  Location: a modern outdoor poolside deck made of dark wood planks, with a clear blue pool in the background and a low wall of concrete on the far side. Time of day: late afternoon, soft sunlight casting long shadows; weather is mild with a light breeze that ruffles her hair. The deck is slightly wet, reflecting the sky and the subject’s form.
+
+- **Lighting & Color**  
+  Natural daylight, slight overexposure in the highlights to capture the glistening water droplets on the wood. Warm, earthy tones dominate—brown wood, blue pool, skin tones—with a subtle contrast between the warm foreground and cooler background.
+
+- **Details & Imperfections**  
+  The image contains small imperfections: a slight tilt of the camera, an off‑center crop that cuts off part of the deck’s edge, and a faint motion blur around the subject’s hands and feet. These details give the photo a genuine, candid feel.
+
+- **Prompt Summary for Generation**  
+  “A young woman in a tight swimsuit and high‑heeled sandals kneels on a wet wooden poolside deck, captured with a wide‑angle lens at late afternoon. The shot has slight motion blur and accidental framing, fully sharp background, raw unprocessed look, natural overexposure, and small imperfections that give it a candid, spontaneous feel.”

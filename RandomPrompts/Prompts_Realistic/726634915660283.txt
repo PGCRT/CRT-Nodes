@@ -1,0 +1,32 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A plus‑size woman in a white bathtub, captured from a low, slightly off‑center angle. She’s mid‑movement, knees bent and back arched, hands gripping the edge of the tub, as if she’s about to lift herself out of the water. Her hair is loose, slightly damp, falling over her shoulders. The shot should feel spontaneous, like a candid snapshot taken without posing.
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window behind the tub, creating a soft, diffused illumination with a hint of slight overexposure on the upper body. No auto‑HDR or beauty filters—just raw, unprocessed light. The exposure should be slightly warm, as if the ambient light is still bright but not harsh.
+
+- **Camera Settings**  
+  - Lens: 24‑35 mm wide‑angle, short focal length, handheld.  
+  - Focal depth: everything in focus—from the woman’s back to the tub’s edge—no bokeh, no portrait‑mode isolation.  
+  - Shutter speed: 1/60 s to capture a faint motion blur on the legs and water ripples.  
+  - ISO: 400–800 for natural grain.
+
+- **Composition & Framing**  
+  - No rule‑of‑thirds intentionality; frame the scene so that the tub’s edge cuts off slightly at the top, the woman’s back occupies the central‑right quadrant, and a portion of the white towel hangs on the left side.  
+  - Slight tilt to the left gives a casual, spontaneous feel.  
+  - The composition should include a partial crop of the window curtain on the right, keeping everything fully sharp.
+
+- **Environment**  
+  - Location: A bright, modern bathroom with a large window, white tiles, and a marble‑finished tub.  
+  - Time of day: Late morning, when the sun is high but not too direct.  
+  - Ambient details: A few droplets of water on the woman’s back, small bubbles in the tub, a faint reflection on the glass curtain.
+
+- **Details & Imperfections**  
+  - Slight motion blur on the legs and water surface.  
+  - Minor tilt and off‑center framing.  
+  - Partial crop of the tub’s edge, so the bottom of the image is not perfectly level.  
+  - No post‑processing color grading—just raw, natural tones.
+
+- **Final Prompt**  
+  “A plus‑size woman in a white bathtub, captured from a low, slightly off‑center angle, mid‑movement with knees bent and back arched, hands gripping the tub edge, hair loose and damp. Natural daylight from a large window creates soft diffused illumination with slight overexposure on the upper body. 24‑35 mm wide‑angle lens, handheld shutter at 1/60 s, ISO 400–800—everything in focus, no bokeh. Composition shows the tub’s edge cutting off at the top, woman’s back in central‑right, a white towel hanging on the left, and a partial crop of the window curtain on the right. Slight tilt to the left gives casual spontaneity. Raw, unprocessed look with faint motion blur on legs and water ripples, small bubbles in the tub, droplets on her back, natural tones.”

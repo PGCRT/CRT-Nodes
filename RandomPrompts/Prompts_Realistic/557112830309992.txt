@@ -1,0 +1,29 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark hair that’s slightly blown by the wind, standing in a bright, lived‑in living room. She’s wearing faded denim shorts and a thin gold bracelet on her right wrist; her left wrist bears a black watch. Her body is angled toward the camera but not perfectly centered—her left hip is a little off‑center, giving a casual, spontaneous feel. She’s mid‑step, one foot slightly ahead of the other, with her knees bent and elbows relaxed. Her face is turned to the camera but her eyes are not directly looking at the lens—she appears to be caught in a natural, unposed moment.
+
+- **Lighting & Exposure**  
+  Natural daylight coming from a large window behind her, creating a soft overexposure on her upper body and a slight warm tint. The exposure is slightly high, giving a bright, airy feel; the shadows are gentle but not fully diffused. No auto‑beauty mode—raw, unprocessed look.
+
+- **Camera Settings**  
+  - Lens: 24‑mm wide‑angle, short focal length, handheld.  
+  - Focal depth: everything in focus—from her face to the back of the room—no bokeh, no portrait‑mode isolation.  
+  - Shutter speed: 1/60 s (slight motion blur on the subject’s hair and hands).  
+  - ISO: 400–600 (for natural grain).  
+  - No auto‑HDR; raw file with minimal post‑processing.
+
+- **Composition & Framing**  
+  - No rule‑of‑thirds intentionality—framing is accidental, slightly tilted. The shot is a partial crop that cuts off the top of the window blinds and the lower part of the sofa, giving a “mid‑action” vibe.  
+  - Background: A beige couch on the left, a small side table with a bottle and a green can, a white plastic bag on a wooden shelf, and a partially visible pink garment hanging on a rack. The window’s vertical blinds are slightly open, letting in bright daylight.  
+  - Time of day: mid‑afternoon (the light is warm but not harsh).  
+  - Weather: clear, breezy—hair is lightly blowing.
+
+- **Details & Imperfections**  
+  - Slight tilt of the camera, giving a dynamic angle.  
+  - The subject’s right hand is slightly blurred as she moves her arm.  
+  - A small, natural imperfection: a faint smudge on her left shoulder, and a slight shadow under her breast.  
+  - The image has no filters, no color grading, no post‑processing aesthetic—just raw, realistic candid photography.
+
+- **Final Prompt**  
+  “A young woman with long dark hair caught mid‑step in a bright living room, wearing faded denim shorts and a gold bracelet, captured on a 24‑mm wide‑angle lens with slight motion blur and natural overexposure. The scene includes a beige couch, a side table with a bottle and green can, a white plastic bag on a wooden shelf, and a pink garment on a rack. The window’s vertical blinds let in mid‑afternoon daylight. The shot is accidental, slightly tilted, partial crop, everything in focus, no bokeh—raw, realistic candid photography.”

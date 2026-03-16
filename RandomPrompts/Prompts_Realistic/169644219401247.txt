@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  *A young woman with long, dark hair standing on a concrete rooftop, body slightly turned to the side, head tilted upward as if gazing at the sky. Her left arm hangs relaxed by her side, a small tattoo visible on her upper left chest and another on her left wrist. She is nude, with natural skin texture and subtle imperfections (e.g., faint moles, slight unevenness in tone). Her right hand rests lightly on a concrete railing, fingers slightly curled.*
+
+- **Capture Style**  
+  *Candid, unposed, spontaneous — the subject appears unaware of the camera, mid‑action. Slight tilt and off‑center framing give an accidental, handheld feel. The shot is partially cropped at the edges, with no intentional rule‑of‑thirds.*  
+
+- **Environment**  
+  *The location is an industrial rooftop in a city, with a concrete building and a tall chimney visible in the background. A white van is parked nearby. The sky shows a warm sunset with soft clouds, creating a gentle overexposure on the upper part of the frame.*  
+
+- **Lens & Technical**  
+  *Wide‑angle lens (24–35 mm), short focal length. Everything is in focus — no bokeh or depth‑of‑field blur; background remains sharp. Slight motion blur from handheld instability freezes the subject’s movement. No auto‑HDR or beauty mode — raw, unprocessed look. The exposure is slightly high, letting the ambient light bleed into the sky.*  
+
+- **Lighting & Color**  
+  *Natural daylight from a low sunset, producing warm golden tones on the subject’s skin and a slight overexposure on the sky. No color grading or filters; the image retains its natural, unprocessed look.*  
+
+- **Post‑Processing**  
+  *No post‑processing aesthetic — just raw capture. The final image should feel spontaneous, like a real‑life snapshot taken with a DSLR or mirrorless camera in handheld mode.*
+
+**Prompt Summary (structured)**  
+`Candid photography of a nude woman on an industrial rooftop at sunset, wide‑angle lens, slight motion blur, accidental off‑center framing, raw unprocessed look, natural daylight with overexposed sky, everything in focus, no filters.`

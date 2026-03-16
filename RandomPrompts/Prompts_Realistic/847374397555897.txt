@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, slender woman with long, wavy dark brown hair that cascades over her left shoulder, standing in a relaxed, mid‑step pose. Her arms hang loosely by her sides, slightly bent at the elbows, with a natural, casual curvature. She wears large gold hoop earrings that catch the light, and a subtle, natural makeup look that highlights her cheekbones and lips. Her skin is smooth with a faint sheen from the ambient lighting, and her breasts are prominently visible, creating a bold, confident silhouette.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject appears unaware of the camera, caught mid‑action as she walks or adjusts her stance. Slight tilt and off‑center framing give an accidental, handheld feel. The shot is partially cropped on the right side, leaving a small margin of empty space that invites movement. No rule‑of‑thirds intentionality — the composition feels organic and imperfect.
+
+- **Motion & Focus**  
+  A slight motion blur at the edges suggests a handheld shutter speed of about 1/60 s, with the subject’s hair and arms showing a soft, natural streak. Everything in the frame is fully sharp — no portrait‑mode depth‑of‑field blur; the background remains crisp from a wide‑angle lens.
+
+- **Environment**  
+  The setting is a modern living room at dusk. A beige sofa sits behind her, a small candle burns on a side table to the left, and a pendant lamp hangs from the ceiling on the right. The time of day is late evening, with warm ambient light that creates a gentle overexposure on the subject’s chest and a slight cool tone in the background. The weather is clear, with no wind, so the only motion comes from the subject’s subtle movement.
+
+- **Lens & Technical**  
+  A short focal length (24 mm) wide‑angle lens captures the full body in a single frame. No bokeh; the background is fully sharp. Auto‑HDR or auto‑beauty mode is off — the image retains a raw, unprocessed look. Slight overexposure on the subject’s upper body gives a natural glow, while the lower body remains slightly underexposed, adding contrast. The exposure is balanced by a neutral color grade that keeps the tones natural without post‑processing filters.
+
+- **Lighting & Color**  
+  Zero studio lighting — the light comes from the ambient indoor lamp and the candle, creating a warm, soft illumination on the subject’s chest and face. The color palette is muted earth tones: beige, brown, and a hint of gold from the earrings. The lighting creates subtle highlights on her skin and hair, with a faint rim light on the right side of her body.
+
+- **Prompt for Generation**  
+  “A tall, slender woman with long wavy dark brown hair standing casually in a modern living room at dusk, wearing large gold hoop earrings, captured with a 24 mm wide‑angle lens. The shot is candid and slightly tilted, partially cropped on the right, with a faint motion blur from handheld shooting. Everything is fully sharp, no bokeh. Warm ambient light from a pendant lamp and a candle creates a gentle overexposure on the subject’s chest. The background includes a beige sofa and a side table with a lit candle, all in focus. Render the image in raw, unprocessed tones with slight natural color grading, preserving an authentic, spontaneous feel.”

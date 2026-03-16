@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A young woman with dark, wind‑blown hair riding a vintage wooden bicycle through a lush tropical jungle. She’s wearing a bright yellow bikini with blue trim, barefoot, and is mid‑pedal, her hands gripping the handlebars as she leans forward slightly. Her face is turned toward the camera but not directly at it—she’s unaware of the lens, giving a candid, spontaneous feel.
+
+- **Pose & Motion**  
+  Slight motion blur on the bicycle wheels and her legs, indicating handheld instability. The bike’s front wheel is angled a few degrees off‑center, creating an accidental, non‑rule‑of‑thirds framing. Her left knee is bent, and her right foot is pushing down on the pedal—mid‑action, as if she just passed a tree root or a small stream.
+
+- **Environment**  
+  The scene is set in a dense, green jungle with tall palm trees and broad-leafed plants lining a narrow dirt trail. In the background, a small waterfall cascades over a rocky ledge, partially hidden by foliage. The time of day is late morning; the sun is high but not directly overhead, casting soft, warm light that slightly overexposes the upper part of the frame. Ambient humidity is visible in the mist rising from the trail.
+
+- **Lens & Technical**  
+  Use a wide‑angle lens (24–35 mm) with a short focal length to capture a broad view of the scene. Everything—from the foreground foliage to the background waterfall—is fully sharp, no bokeh or depth‑of‑field blur. The image has an auto‑HDR feel but without post‑processing filters; it’s raw and unprocessed. Slight overexposure on the upper half gives a natural, candid vibe.
+
+- **Composition & Framing**  
+  The shot is slightly tilted, with the bicycle’s handlebars leaning to the left, and the frame is partially cropped at the top and bottom by a circular vignette that mimics a view through a hole or a lens aperture. No rule‑of‑thirds intentionality—everything is framed accidentally, as if captured by a passerby.
+
+- **Lighting & Color**  
+  Natural daylight with a warm, slightly harsh midday sun. The lighting creates soft shadows under the bicycle’s frame and gentle highlights on the woman’s skin. Colors are natural: deep greens of the jungle, bright yellow of the bikini, brownish wood of the bike, and the white‑gray of the waterfall. No color grading or filters—just raw, in‑camera capture.
+
+- **Details & Imperfections**  
+  The bicycle’s wooden frame shows a small, faded logo on the front tube. A few leaves hang from the handlebars, adding to the candid feel. The woman’s bare feet are slightly visible, emphasizing the “no studio lighting” aspect. The background foliage is fully in focus, with no portrait‑mode blur.
+
+- **Final Prompt**  
+  *“A young woman in a yellow bikini rides a vintage wooden bicycle on a jungle trail, mid‑pedal, barefoot, wind‑blown hair, captured with a wide‑angle lens at late morning. The scene includes tall palm trees, broad leaves, and a small waterfall in the background. Slight motion blur on the bike, accidental off‑center framing, circular vignette, raw auto‑HDR look, natural overexposure, fully sharp background, no filters—candid, unposed, spontaneous photography.”*

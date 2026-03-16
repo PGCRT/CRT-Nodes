@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, light‑brown hair standing in a bright, lived‑in bedroom. She wears a ribbed white crop‑top and dark gray jogger pants with a white drawstring. Her left hand rests on her hip, right arm slightly bent, body angled toward the camera but not perfectly centered. Slight motion blur at the edges suggests handheld shake.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — she appears mid‑gesture, maybe just finished a workout or about to tie her shoes. The shot has a raw, auto‑HDR feel: no filters, no color grading, no post‑processing aesthetic. A hint of overexposure on the window’s glass adds natural brightness.
+
+- **Environment**  
+  Location: a cozy, sunlit bedroom with pale beige walls. A white dresser with a vase of pink roses sits to the left; a framed photo hangs above it. A wooden stool and a small sofa are visible in the background. The time of day is late morning, soft daylight coming from a tall window on the right, creating gentle shadows and subtle highlights.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm) wide‑angle lens. Everything is fully sharp — no bokeh, no depth‑of‑field blur. The background is in focus, but the framing is accidental: a slight tilt and off‑center crop give the image a spontaneous feel. No rule‑of‑thirds intentionality; the composition feels natural and informal.
+
+- **Lighting & Exposure**  
+  Natural daylight from the window creates a slight overexposure on the upper right corner, while the left side remains softly lit. The exposure is slightly high, giving a warm, airy tone. No studio lighting, no professional composition, zero editorial tone.
+
+- **Details & Imperfections**  
+  Slight motion blur around the edges, especially at the hands and hair. A partial crop cuts off a bit of the dresser, enhancing candid feel. Tiny specks of dust and faint reflections on the window add realism. The image retains a raw, in‑camera look with auto‑HDR turned off.
+
+**Prompt Summary**  
+"Mid‑morning candid shot of a woman in a white crop‑top and gray joggers standing in a bright bedroom; wide‑angle lens, fully sharp background, slight motion blur and accidental framing; natural daylight from a tall window creates soft overexposure; raw auto‑HDR off, no filters or color grading."

@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework – “Sunny Loft, Afternoon Breeze”**
+
+- **Subject & Pose**  
+  A young woman with long, wavy chest‑brown hair, wearing a black lace thong and a gold choker, sitting cross‑legged on a beige sofa. Her hands are gently clasped over her stomach, eyes closed as if she’s mid‑thought or about to speak. The pose is slightly off‑center, with a subtle tilt that gives the shot a candid, spontaneous feel.
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window on the right side of the room creates a soft, warm glow. Slight overexposure on the right edge gives an auto‑HDR vibe without any post‑processing filters. The exposure is slightly uneven—brighter on the right, softer on the left—to mimic handheld instability.
+
+- **Environment**  
+  A bright, airy loft space with a large window, a potted plant in the background, and a striped throw blanket draped over the sofa. The time of day is mid‑afternoon, around 3 pm, when the sun is high but not too direct. The weather outside is lightly breezy, adding a subtle motion blur to the subject’s hair.
+
+- **Lens & Technical**  
+  24 mm wide‑angle lens (short focal length), handheld, all‑in‑focus. No bokeh—every part of the scene, from the subject to the background plant and window frame, is sharp. The composition is accidental: no rule‑of‑thirds, just a casual, spontaneous framing that captures the whole scene in one shot.
+
+- **Capture Style**  
+  Candid, unposed, “mid‑action” moment. Slight motion blur on the subject’s hands and hair to emphasize movement. No portrait‑mode isolation—everything remains fully sharp. The image has a raw, unprocessed look with zero color grading or filters, just natural auto‑HDR brightness.
+
+- **Details for Variation**  
+  Add a faint, natural shadow cast by the plant onto the sofa, a slight dust particle floating in the air near the window, and a small, accidental crop that cuts off the top left corner of the window frame. These imperfections enhance the candid feel.
+
+**Prompt Summary (structured)**  
+> “A young woman with long wavy hair, wearing a black lace thong and gold choker, sits cross‑legged on a beige sofa in a bright loft. Her hands are clasped over her stomach, eyes closed, captured mid‑thought. Natural daylight from a large window on the right creates a soft warm glow with slight overexposure on the right edge. A potted plant stands behind her, a striped throw blanket drapes over the sofa. The shot is taken with a 24 mm wide‑angle lens, handheld, all‑in‑focus, no bokeh. Candid, unposed, slightly tilted framing with accidental crop. Slight motion blur on the hands and hair. Raw auto‑HDR look, no filters.”

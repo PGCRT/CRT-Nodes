@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman with long, wavy brown hair, wearing a bright yellow bikini, standing mid‑step on a fluffy white rug. Her left hand is near her chest, fingers curled as if she’s about to touch her face, while her right arm hangs loosely by her side. She’s barefoot, with a watch on her left wrist and a small tattoo of a bird on her right thigh.  
+
+- **Motion & Focus**  
+  Slight motion blur at the knees and feet to suggest movement; everything in focus from head to toe. No portrait‑mode bokeh—background stays sharp.  
+
+- **Lighting & Exposure**  
+  Natural daylight coming from a large window on the left, creating a soft, slightly overexposed highlight on her shoulder. Ambient light is warm, mid‑afternoon.  
+
+- **Environment**  
+  A bright, minimalist living room with light wood flooring, a white ceramic pot with a snake plant next to the window, a wooden chair with a patterned pillow behind her, and a woven basket in the far corner. A small table edge peeks out on the right.  
+
+- **Lens & Technical**  
+  24‑mm wide‑angle lens, short focal length. Handheld shot with slight tilt and off‑center framing—no rule‑of‑thirds intentionality. All elements (subject, plant, chair, rug) fully sharp.  
+
+- **Style Notes**  
+  Candid, unposed, spontaneous—subject appears unaware of the camera. Slight imperfections: a tiny smudge on her bikini strap, a faint dust particle in the air. No filters, no color grading, no post‑processing.  
+
+- **Final Prompt**  
+  “A woman with long wavy brown hair in a yellow bikini stands mid‑step on a fluffy white rug in a bright minimalist living room. Natural daylight from a left‑side window creates soft overexposure on her shoulder. A snake plant in a white pot sits by the window, a wooden chair with a patterned pillow is behind her, and a woven basket rests in the corner. Shot on a 24‑mm wide‑angle lens, handheld with slight tilt and off‑center framing; everything in focus, slight motion blur at the knees and feet. Candid, unposed, spontaneous, raw, no filters.”

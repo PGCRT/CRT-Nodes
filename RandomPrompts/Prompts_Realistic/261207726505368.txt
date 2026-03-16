@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair, wearing a colorful off‑shoulder striped romper and white knee‑high boots, sitting mid‑pose on stone steps. Her hands rest lightly on her knees, one hand holding a small white clutch. She’s looking directly at the camera with a soft, confident expression, a subtle smile.
+
+- **Motion & Focus**  
+  Slight motion blur from handheld shake; natural freeze of movement. Everything in focus—no portrait‑mode depth blur. No auto‑HDR or beauty filters—raw, unprocessed look.
+
+- **Lighting & Exposure**  
+  Slight overexposure on the bright midday sun, creating a warm, natural glow. Wide‑angle lens (24–35 mm) captures a broad view of the scene; no bokeh, background fully sharp.
+
+- **Environment**  
+  Outdoor stone steps in front of a light‑colored building with a wooden door and a terracotta planter on a railing behind her. A small potted plant sits on the railing, adding greenery. The time of day is late morning, sun high but not too direct, casting soft shadows. Light breeze suggests slight motion.
+
+- **Composition & Framing**  
+  No rule‑of‑thirds intentionality—accidental framing with a slight tilt and off‑center crop. The shot is candid, unposed, spontaneous; the subject appears unaware of the camera’s presence.
+
+- **Lens & Technical**  
+  Short focal length (24–35 mm), wide‑angle, no bokeh, everything in focus. Handheld instability gives a natural motion blur. No studio lighting, no professional composition, no editorial tone.
+
+- **Final Prompt**  
+  “A young woman with long wavy brown hair, wearing a colorful off‑shoulder striped romper and white knee‑high boots, sits mid‑pose on stone steps, hands on knees holding a small white clutch, looking directly at the camera with a soft smile. Slight motion blur from handheld shake, natural freeze, everything in focus, no auto‑HDR or filters. Warm midday sun creates slight overexposure. Background shows a light‑colored building with a wooden door and a terracotta planter on a railing, a small potted plant adding greenery. Late morning, high sun, soft shadows, light breeze. Wide‑angle 24–35 mm lens, no bokeh, background fully sharp. Candid, unposed, spontaneous, accidental framing with slight tilt and off‑center crop. No studio lighting, no professional composition, no editorial tone.”

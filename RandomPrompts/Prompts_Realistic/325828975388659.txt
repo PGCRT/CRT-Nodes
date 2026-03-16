@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, athletic woman with a rose tattoo on her left upper arm, wearing black fish‑net stockings and black fingerless gloves. She holds a wine glass in her right hand, mid‑sip, body slightly turned toward the camera, hips angled. Her hair is long, brown, and loosely brushed, falling over her shoulders.  
+
+- **Lighting & Exposure**  
+  Natural daylight from a western window, mid‑afternoon (16:30–17:00). Slight overexposure on the upper body, giving a warm, soft glow; minor vignette at the edges. No auto‑HDR or beauty filters—raw, unprocessed look.  
+
+- **Camera & Lens**  
+  DSLR or mirrorless with a 24‑mm wide‑angle lens (f/3.5, 1/60 s shutter speed). Everything in focus; background fully sharp, no bokeh. Slight handheld shake producing a subtle motion blur on the wine glass and the woman’s hand.  
+
+- **Composition**  
+  Candid, unposed, spontaneous framing—subject is mid‑action, slightly off‑center. The shot is not intentionally rule‑of‑thirds; the composition feels accidental, with a slight tilt to the left. The frame cuts off the lower left corner, cropping the woman’s left thigh slightly.  
+
+- **Environment**  
+  Location: A rustic wooden table in a sunlit loft, with a plain beige wall behind. The time of day is late afternoon, creating warm, directional light from the west. Ambient humidity is moderate; a faint breeze is visible in the subject’s hair.  
+
+- **Details & Imperfections**  
+  Slight tilt and partial crop on the lower right side; the woman’s left glove shows a tiny smudge. The wine glass has a slight reflection of the window. The tattoo’s edges are crisp, with a hint of natural shading.  
+
+- **Post‑Processing**  
+  Zero color grading, zero filters—only raw capture. A minimal crop is applied after capture to tighten the frame.  
+
+**Prompt Summary**  
+> “A tall woman with a rose tattoo on her left upper arm, wearing black fish‑net stockings and black fingerless gloves, holding a wine glass in her right hand mid‑sip, body slightly turned toward the camera, hips angled. Long brown hair loosely brushed over shoulders. Natural daylight from a western window at 16:30–17:00, slight overexposure on the upper body, warm soft glow. DSLR with 24‑mm wide‑angle lens (f/3.5, 1/60 s), everything in focus, background fully sharp, subtle handheld shake blur on the glass. Candid, unposed, spontaneous framing—subject mid‑action, slightly off‑center, accidental tilt, partial crop on lower right. Rustic wooden table in a sunlit loft, plain beige wall behind. Raw, unprocessed look, minimal post‑crop.”

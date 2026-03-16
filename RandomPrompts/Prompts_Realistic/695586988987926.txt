@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail and sunglasses, mid‑laughter, sitting on a beige sofa in a sunlit living room. She’s wearing an oversized off‑shoulder beige sweater and distressed jeans, with a pair of pink sneakers peeking from beneath her. Her head is slightly tilted to the right, capturing a spontaneous, candid moment as she looks toward a window, catching the warm daylight.
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window on the left, creating a soft overexposed highlight on her shoulder and face. Slight handheld shake gives a subtle motion blur around the edges; no auto‑beauty or filter enhancement—raw, unprocessed look. The exposure is slightly warm, with a hint of ambient warmth from the afternoon sun.
+
+- **Environment & Background**  
+  The setting is a cozy, lived‑in apartment: a white radiator beneath the window, a wooden side table with a fuzzy blanket and a small potted plant, a blue cushion on the sofa, and a glimpse of a pink shoe on the floor. A framed picture hangs on the wall behind her, and a window sill holds a small bowl. The background is fully sharp—no bokeh or depth‑of‑field blur—everything in focus, from the foreground to the back wall.
+
+- **Lens & Technical**  
+  Use a short focal length wide‑angle lens (e.g., 24mm) to capture a broad view of the scene. Shoot with a handheld camera at a slightly low angle, creating an accidental, off‑center framing that isn’t intentionally rule‑of‑thirds compliant. The composition is spontaneous and imperfect: slight tilt, partial crop, and natural motion freeze or mild blur from instability.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Encourage imperfections: a slight tilt of the camera, an off‑center framing that doesn’t follow rule‑of‑thirds, and a partial crop that cuts off part of the sofa cushion. No studio lighting, no professional composition, no editorial tone. The final image should feel like a genuine snapshot taken in a real world setting.
+
+- **Post‑Processing**  
+  Keep it raw: no filters, no color grading, no post‑processing aesthetic. Only minimal adjustments to exposure and focus. Aim for a natural, unpolished look that preserves the authenticity of the moment.

@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair standing on a tropical beach at sunset. She is wearing a shimmering pink sequined halter dress that catches the light as she turns slightly toward the camera. Her face is lit by warm, golden hour sunlight, and she has a gentle, candid smile. The pose is spontaneous—she appears to be mid‑step, with one foot planted on the sand and the other slightly lifted, giving a natural sense of motion.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Slight tilt and off‑center framing; partial crop that does not follow the rule‑of‑thirds. The shot is taken with a handheld camera, producing a subtle motion blur from the instability of the shutter. No auto‑HDR or auto‑beauty mode—raw, unprocessed look. A slight overexposure in the highlights to emphasize the ambient golden light.
+
+- **Environment**  
+  Specific real‑world location: a sandy beach with the ocean on the left and palm trees on the right. Time of day: late afternoon, just before dusk. Weather: clear, warm, with a soft haze that gives a gentle glow to the scene. The background is fully sharp—no bokeh or depth‑of‑field blur.
+
+- **Lens & Technical**  
+  Short focal length (20–35 mm), wide‑angle lens. Everything in focus—from subject to background—no portrait mode or subject isolation. No filters, no color grading, no post‑processing aesthetic. The exposure is slightly high to keep the highlights bright but natural.
+
+- **Composition Notes**  
+  Accidental framing: the subject’s head is slightly above the center of the frame; the left side of the image cuts off a bit of the ocean, giving an informal, candid feel. The background palm trees and ocean are fully sharp, creating a sense of depth without any intentional rule‑of‑thirds placement.
+
+- **Final Prompt**  
+  “A young woman with long wavy brown hair in a shimmering pink sequined halter dress stands on a tropical beach at sunset, captured with a handheld wide‑angle lens. The shot is candid and slightly tilted, with partial crop and accidental framing. The background shows the ocean to the left and palm trees to the right, all in sharp focus under warm golden hour light. Slight motion blur from instability adds realism, while a minor overexposure keeps the highlights bright. No filters or post‑processing—raw, natural, unposed photography.”

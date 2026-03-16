@@ -1,0 +1,27 @@
+**Realistic Candid Photography Prompt Framework – “Beach Breeze”**
+
+- **Subject & Pose**  
+  A young woman with long, wind‑blown brown hair, wearing a black one‑piece swimsuit, standing on a sandy beach. She’s mid‑step, slightly turned toward the camera, left foot forward, right foot behind, arms relaxed at her sides, hands loosely curled. Her face is turned to the camera but not directly posed – a natural, candid expression with a subtle smile. She wears gold hoop earrings and thin gold bracelets on both wrists.  
+
+- **Lighting & Exposure**  
+  Slight overexposure from mid‑afternoon sun, ambient light creating soft highlights on her skin and the sand. No auto‑beauty or filter processing – raw, unprocessed look. The exposure is a little bright at the top, giving a warm, natural glow.  
+
+- **Motion & Focus**  
+  Slight motion blur on the hair and background waves, indicating handheld shake. Everything in focus – subject, sand, ocean, and sky – captured with a wide‑angle lens (24–35 mm). No bokeh; background fully sharp.  
+
+- **Framing & Composition**  
+  Wide‑angle, accidental framing: the shot is slightly tilted, off‑center, with the top of the frame cutting off a bit of the sky. The rule‑of‑thirds is ignored – the subject’s head sits just above the center line, her left foot near the lower third. The composition feels spontaneous, as if she was caught mid‑walk.  
+
+- **Environment**  
+  Specific real‑world location: a sunny beach with gentle waves breaking behind her. The ocean is a bright turquoise with white foam at the water’s edge. The sand is light beige, slightly textured. The time of day is late afternoon (around 4 pm), giving warm, slightly harsh sunlight from the north‑west. Weather is clear, no wind‑blown dust, but the wind is blowing her hair across her face.  
+
+- **Lens & Technical**  
+  Short focal length (24–35 mm), wide‑angle. No depth‑of‑field blur – everything from foreground to background is sharp. No portrait mode. The lens is handheld, giving a slight shake.  
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, no auto‑beauty mode. Raw image with minimal editing – only basic exposure adjustment and crop.  
+
+- **Prompt Summary for Generation**  
+  “A candid, unposed photo of a woman in a black one‑piece swimsuit on a sunny beach at late afternoon, captured with a wide‑angle lens (24–35 mm). The image has slight motion blur on the hair and background waves, all elements in focus, accidental off‑center framing with a tiny tilt. The scene shows a bright turquoise ocean with white foam, sandy foreground, and a clear sky. The exposure is slightly overexposed, giving a warm, natural glow. No filters or auto‑beauty processing – raw, handheld shot.”
+
+Provide only the structured prompt.

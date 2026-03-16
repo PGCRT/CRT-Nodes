@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark hair, wearing a bright yellow triangle‑style bikini, sitting on a weathered concrete wall. She is leaning slightly against the wall, one knee bent, hands resting on her thigh, head tilted a little to the side, eyes looking directly at the camera with a calm, confident expression. Her pose is candid and unposed – as if she was caught mid‑action while posing for a photo.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle, late‑afternoon sun creates a warm, slightly overexposed highlight on her skin and the yellow fabric. The exposure is a little bright at the top of the frame, giving a subtle halo effect. No auto‑beauty or filter processing – just raw, unprocessed light.
+
+- **Environment**  
+  Location: an abandoned industrial building with exposed concrete walls and a rusted metal window frame in the background. The time of day is early evening, when the sun is low but still high enough to cast soft shadows. The weather is clear, with a faint haze in the air that adds depth to the scene.
+
+- **Lens & Technical**  
+  Use a wide‑angle lens (24–35 mm) with a short focal length to capture a broad view of the subject and surroundings. Everything is in focus – no bokeh or depth‑of‑field blur; the background, including the concrete wall and window frame, remains sharp. The image has slight motion blur from handheld instability, giving it a natural, spontaneous feel.
+
+- **Composition**  
+  The framing is off‑center and slightly tilted, not following the rule of thirds. The shot is a partial crop that cuts off the top left corner of the wall, adding to the candid vibe. The composition is accidental – the subject’s body is slightly angled, her hands are not perfectly placed, and her gaze is direct but natural.
+
+- **Post‑Processing**  
+  No filters, no color grading, no post‑processing aesthetic. Keep the raw look: keep the slight overexposure, maintain the natural colors, preserve the imperfections (slight tilt, off‑center framing, partial crop). The final image should feel like a real, spontaneous photograph captured with a handheld camera in a real-world setting.

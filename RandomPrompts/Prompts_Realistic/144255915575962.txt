@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman standing on a rugged mountain ridge, mid‑step as if she just finished a climb. Her hair is loosely tied back with a thin silk scarf, a few strands framing her face. She wears a long, flowing beige robe with gold trim, a wide belt with a large ornamental buckle, and a delicate pearl necklace. Her hands are clasped in front of her, fingers slightly curled, as if she’s about to adjust her gloves or hold a small pouch. A subtle motion blur around her wrists suggests she is still moving.
+
+- **Facial Features & Expression**  
+  Her face shows a natural, unposed expression—eyes half‑closed, lips slightly parted, a faint smile. The lighting hits the side of her face from the left, creating soft highlights and gentle shadows. Slight tilt in the camera angle gives an off‑center, spontaneous feel.
+
+- **Clothing & Accessories**  
+  The robe’s fabric has a subtle sheen, with a gold lining visible at the collar and cuffs. A thin leather belt cinches her waist, and a small pendant hangs from her necklace. She wears a pair of simple silver earrings and a bracelet on each wrist. Her left foot is slightly ahead of the right, indicating motion.
+
+- **Environment**  
+  The background is a range of steep, green‑ish mountains that slope down to the right, with a few scattered boulders at the base of the ridge. The sky is a pale, hazy blue, suggesting early morning or late afternoon. Light wind ripples the clouds above the peaks.
+
+- **Time of Day & Ambient Light**  
+  The scene is lit by warm, low‑angle sunlight coming from the left, creating a slight overexposure on the subject’s right side and a faint halo around her head. The ambient light gives a natural, raw look without any post‑processing color grading.
+
+- **Lens & Technical Settings**  
+  Use a wide‑angle lens (24–35 mm) with a short focal length to capture the full breadth of the scene. Shoot at a high ISO to keep everything in focus—no bokeh, no depth‑of‑field blur. The entire frame is sharp, from foreground to background. Slight handheld shake adds realism.
+
+- **Composition & Framing**  
+  The shot is candid and unposed; the camera is slightly tilted, and the framing is accidental—no rule‑of‑thirds intentionality. The subject occupies the central‑left portion of the frame, with the mountain ridge extending to the right. A partial crop at the bottom left corner captures a small patch of grass and a stone, adding to the raw feel.
+
+- **Post‑Processing & Finish**  
+  No filters or auto‑beauty mode—just raw, unprocessed imagery. Keep the exposure natural; if needed, adjust brightness slightly to compensate for the ambient light. The final image should look like a genuine, spontaneous photograph taken in the wild.

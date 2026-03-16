@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A fit woman with long, wavy brown hair, wearing a black sports bra with red trim and matching black leggings that feature a vertical red stripe. She’s captured mid‑turn, holding a red towel in her right hand, body angled toward the camera but face turned back, giving a dynamic, spontaneous feel.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject is unaware of the camera or caught in a natural motion. Slight tilt and off‑center framing create an accidental, handheld vibe. The shot has a raw, unprocessed look: no filters, no color grading, no post‑processing aesthetic. A mild overexposure (or underexposure, depending on ambient light) adds realism.
+
+- **Motion & Focus**  
+  Slight motion blur from handheld instability, but everything remains fully sharp — no bokeh, no depth‑of‑field blur. The background is completely in focus, preserving every detail.
+
+- **Lens & Technical**  
+  Wide‑angle lens (short focal length, ~24 mm). Auto‑HDR or auto‑beauty mode off. No rule‑of‑thirds intentionality — the composition is accidental and organic.
+
+- **Environment**  
+  Specific real‑world location: an outdoor stadium or sports venue with metal bleachers in the background. Time of day: late afternoon, warm sunlight casting soft shadows. Weather: clear, slightly breezy, ambient light creates a natural glow.
+
+- **Details & Imperfections**  
+  The image shows slight tilt and partial crop, giving it a candid feel. The subject’s hair is slightly blown by the wind, her muscles are defined, and the red towel adds a pop of color. The background crowd is visible but not a focal point; it remains fully sharp.
+
+- **Prompt for Text‑to‑Image Generation**  
+  “A fit woman with long wavy brown hair, wearing a black sports bra with red trim and black leggings with a vertical red stripe, holding a red towel in her right hand while mid‑turn. Capture candidly with slight tilt and off‑center framing, handheld motion blur, wide‑angle short focal length lens, everything fully sharp, no bokeh. Background: outdoor stadium bleachers, late afternoon warm sunlight, clear weather. Raw, unprocessed look, mild overexposure, accidental composition.”

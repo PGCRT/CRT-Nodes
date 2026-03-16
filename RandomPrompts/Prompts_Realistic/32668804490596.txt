@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman with long, straight brown hair, wearing a colorful rainbow thong, standing back-to-back to the camera in a sunlit bedroom. Her back is fully visible, slightly angled to the left, with a subtle tilt that gives a candid, spontaneous feel. She’s mid‑step, one foot slightly ahead of the other, as if she just finished a dance move or is about to step out the door.
+
+- **Motion & Focus**  
+  Slight motion blur on the lower legs and feet, indicating handheld instability. Everything in the frame—subject, bed, window, balcony—is fully sharp with no portrait‑mode blur. The focus is broad, capturing every detail from the texture of her skin to the weave of the wooden ceiling.
+
+- **Lighting & Exposure**  
+  Natural daylight coming from a large glass door on the left, creating a soft overexposure on the upper back and a gentle highlight on the right side of the scene. The exposure is slightly warm, with a hint of ambient heat, as if it’s late afternoon. No auto‑HDR or beauty filters—just raw, unprocessed light.
+
+- **Environment**  
+  A modern bedroom with a wooden ceiling, a white bed with a linen sheet on the right, a small bedside lamp, and a glass door that opens to a balcony with a view of a neighboring house and palm trees. The time of day is mid‑afternoon, with bright, warm sunlight casting soft shadows. The weather is clear, with a light breeze that ruffles the woman’s hair.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24‑35 mm) with a short focal length to capture the full scene. No bokeh—background is fully sharp. The composition is accidental: no rule‑of‑thirds, slightly off‑center framing, and a partial crop that cuts off the top of the balcony railing. The shot feels spontaneous, as if captured by a friend who happened to be in the room.
+
+- **Details & Imperfections**  
+  A small tattoo on the left shoulder blade, a faint smudge of dust on the bed sheet, a slight tilt of the camera that gives a natural, unposed vibe. The woman’s hands are relaxed at her sides, one finger slightly curled. The overall tone is warm, natural, and unedited.
+
+**Prompt:**  
+"A woman with long brown hair in a rainbow thong stands back‑to‑back to the camera in a sunlit bedroom, slight motion blur on her feet, everything fully sharp, natural daylight from a glass door creating soft overexposure, mid‑afternoon warm light, wide‑angle short focal length lens, accidental off‑center framing, candid spontaneous pose, raw unprocessed look."

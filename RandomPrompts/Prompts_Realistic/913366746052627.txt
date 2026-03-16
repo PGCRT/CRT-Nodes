@@ -1,0 +1,30 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, straight brown hair, bare‑toed, sitting cross‑legged on a large, smooth river rock. Her hands are pressed together in front of her chest, fingers slightly curled, as if she’s about to clap or is holding a small object. Her face is turned toward the camera but not directly at it—slight off‑center, giving a candid feel. The pose should look natural and spontaneous, with a hint of motion blur from handheld shooting.
+
+- **Appearance & Detail**  
+  Skin tone: warm, sun‑kissed, with subtle imperfections (tiny blemishes, faint freckles). Hair: glossy, slightly frayed at the ends. Legs: slender, with natural curvature; feet: bare, toes slightly spread. The woman’s shoulders are relaxed, but her head is tilted a little to one side—creating a slight tilt in the frame.
+
+- **Environment**  
+  Location: A quiet, shallow riverbank in late afternoon. The ground is covered with large, rounded stones and a scattering of smaller pebbles. In the background, a few more rocks rise up, creating a layered, but not rule‑of‑thirds composition. The sky is a soft, warm gray‑blue, indicating the light is just before sunset.
+
+- **Time of Day & Ambient Light**  
+  Late afternoon (around 5:30 pm). The ambient light is slightly overexposed on the subject’s face and legs, giving a subtle halo effect. No auto‑HDR or auto‑beauty mode—just raw, unprocessed capture.
+
+- **Lens & Technical Settings**  
+  - Focal length: 24 mm (wide‑angle, short focal length).  
+  - Aperture: f/5.6 (mid‑range, keeping the background fully sharp).  
+  - Shutter speed: 1/60 s (producing a slight motion blur on the subject’s hands and legs).  
+  - ISO: 400 (for clean detail without noise).  
+  - No bokeh or depth‑of‑field blur—everything from foreground to background is in focus.  
+  - Handheld, slightly unstable shake for natural motion freeze.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Slight tilt and off‑center framing; partial crop that cuts off a bit of the left side of her head. No rule‑of‑thirds intentionality—accidental framing. Zero studio lighting, zero professional composition, zero editorial tone.
+
+- **Post‑Processing**  
+  No filters, no color grading, no post‑processing aesthetic. Keep it raw and natural. Slight overexposure on the subject to emphasize the warm tones of her skin and the stones around her.
+
+- **Final Prompt Summary**  
+  “A young woman with long brown hair sits cross‑legged on a large river rock at a quiet shoreline in late afternoon. Her hands are clasped in front of her chest, fingers slightly curled, as if about to clap. She is bare‑toed, with natural skin imperfections and a slight head tilt that gives the image a candid feel. The scene is filled with rounded stones and pebbles, all in focus under a soft gray‑blue sky. Shot on a 24 mm wide‑angle lens at f/5.6 and 1/60 s, with a slight motion blur from handheld shake. No filters or heavy post‑processing—just raw, natural realism.”

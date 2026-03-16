@@ -1,0 +1,30 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, slender woman with long, dark hair that blows lightly in the wind, standing bare‑footed in a sunlit kitchen. She’s wrapped in a soft, beige towel tied at the waist, her torso exposed and her hips slightly tilted as she reaches for a dish on the counter. Her head is bent downward, eyes focused on the surface, giving a candid, mid‑action feel.
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window behind her creates a slight overexposure on her skin, with a warm, golden hue. The exposure is uneven—brighter at the top of her body, softer at the bottom—producing a raw, unprocessed look. No auto‑HDR or beauty filters; just a single shutter snap.
+
+- **Camera Settings**  
+  - Lens: 24 mm wide‑angle, short focal length, handheld.  
+  - Focal depth: everything from her feet to the top of her head is fully sharp—no bokeh, no portrait‑mode isolation.  
+  - Shutter speed: 1/60 s, giving a subtle motion blur on her hair and hands as she moves.  
+  - ISO: 400–600 for natural grain.
+
+- **Composition**  
+  The frame is intentionally off‑center; the left side of the image is slightly cut off by a wooden countertop edge. The woman’s body occupies roughly two‑thirds of the vertical space, with her legs extending close to the bottom edge. The background shows a large window with sheer curtains that drapes softly, a white radiator beneath, and a glimpse of greenery outside—a real‑world, everyday setting.
+
+- **Environment**  
+  Location: A bright, modern kitchen in a suburban house. Time of day: late morning, when the sun is high but still warm. Ambient conditions: light breeze, slight dust motes dancing in the air. The floor is tiled, the walls are pale, and a small wooden table corner peeks into the lower left corner.
+
+- **Technical Details**  
+  - No rule‑of‑thirds intentionality—framing is accidental, as if captured by a photographer on the go.  
+  - Slight tilt of the camera gives a dynamic angle.  
+  - All elements in focus: her face, body, and the background are crisp.  
+  - No post‑processing color grading; just raw JPEG output.
+
+- **Prompt for Generation**  
+  “A tall woman with long dark hair standing barefoot in a sunlit kitchen, wrapped in a beige towel tied at her waist, reaching for a dish on the counter. Her head is bent downward, eyes focused on the surface, capturing a candid mid‑action moment. Natural daylight from a large window behind her creates a slight overexposure on her skin, with an uneven warm golden hue. Shot on a 24 mm wide‑angle lens, handheld, 1/60 s shutter speed, ISO 500—everything in focus, no bokeh. The frame is off‑center, the left side cut by a wooden countertop edge, the woman occupies two‑thirds of the vertical space. Background shows a large window with sheer curtains, a white radiator beneath, and a glimpse of greenery outside; a small wooden table corner peeks into the lower left. Late morning, light breeze, dust motes in the air. Raw JPEG, no filters, no auto‑HDR, slight motion blur on hair and hands, accidental tilt, all sharp.”  
+
+Provide only the structured prompt.

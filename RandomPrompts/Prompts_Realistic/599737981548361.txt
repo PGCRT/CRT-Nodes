@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail, hands raised to the back of her head, adjusting her hair mid‑motion. She wears a sheer white polka‑dot bra and a pearl necklace. Her face is slightly turned toward the camera, eyes focused forward, lips parted as if she’s about to speak or laugh. The pose captures a moment of spontaneous movement—soft motion blur at the edges suggests handheld shake.
+
+- **Lighting & Exposure**  
+  Natural daylight from a window on the right side of the frame creates a warm, slightly overexposed highlight on her chest and left shoulder. Ambient light is uneven; the left side of the image is brighter than the right, giving an authentic “raw” look. No auto‑beauty or filter enhancement—just the camera’s native sensor response.
+
+- **Environment**  
+  The scene is a home kitchen: a white gas stove on the left, wooden cabinets above the counter, a tiled backsplash, and a window that lets in daylight. A stainless steel sink sits to the right; a small portion of a green outdoor view is visible through the window. The time of day is late afternoon, with soft golden hues. Weather outside is clear, with a hint of blue sky and distant trees.
+
+- **Lens & Technical**  
+  24‑mm wide‑angle lens (short focal length), handheld, no bokeh—everything from foreground to background is fully sharp. The composition is accidental: the subject is slightly off‑center, the frame is tilted, and the crop cuts off a bit of the stove’s control panel on the left. No rule‑of‑thirds; the framing feels spontaneous and informal.
+
+- **Capture Style**  
+  Candid, unposed, “mid‑action” snapshot. Slight tilt and partial crop give an imperfect, real‑life feel. The image has a natural motion blur around the hands and hair, indicating a quick shutter speed and slight shake. No post‑processing or color grading—just raw, in‑camera capture with auto‑HDR off.
+
+- **Prompt for Text‑to‑Image Generation**  
+  “A young woman with a high ponytail adjusting her hair, wearing a sheer white polka‑dot bra and pearl necklace, standing in a home kitchen at late afternoon. She’s mid‑motion, hands on the back of her head, eyes forward, lips slightly parted. Natural daylight from a right‑side window creates warm overexposure on her chest. White gas stove on left, wooden cabinets, tiled backsplash, stainless steel sink on right, small view of green trees outside. 24‑mm wide‑angle lens, handheld shake with slight motion blur, accidental off‑center framing, full sharpness throughout. Raw, unprocessed look, no filters or auto‑beauty.”

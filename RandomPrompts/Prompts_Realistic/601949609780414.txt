@@ -1,0 +1,27 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, sun‑kissed hair sitting on a beige sofa in a bright, lived‑in living room. She’s wearing a white bikini bottom with pink floral ties and a light pink strap; her left hand is raised near her ear as if she just received a call or is adjusting her hair. Her expression is mid‑speech, mouth slightly open, eyes bright, capturing a spontaneous, candid moment.
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window on the left creates a soft overexposed highlight on her shoulder and a gentle warm glow across the scene. Slight underexposure on the lower part of the frame gives a raw, unprocessed feel. No auto‑beauty mode—just a straightforward camera capture.
+
+- **Camera & Lens**  
+  Wide‑angle lens (24 mm) with a short focal length, handheld. The shot has a slight motion blur from the subject’s movement and the photographer’s hand instability, but everything remains fully sharp—no bokeh, no portrait‑mode isolation. No rule‑of‑thirds intentionality; the framing is accidental, slightly tilted, and off‑center.
+
+- **Environment**  
+  The setting is a cozy, real‑world living room with a large window on the left, a potted plant on the windowsill, and a tall wooden bookshelf filled with colorful books behind the woman. The time of day is late morning, with warm sunlight streaming in, creating soft shadows and a slight haze. Weather is clear, ambient light is bright but not harsh.
+
+- **Composition & Details**  
+  The composition captures the woman’s full upper body and part of her legs, with her left leg bent and right leg extended. The sofa’s fabric shows a subtle texture, and the window curtain is slightly ruffled. In the background, the bookshelf’s spines display a variety of colors—red, blue, green—adding depth. A small plant in a white pot sits on the windowsill, adding a touch of green to the scene. The overall look is raw, unposed, and spontaneous, with imperfections like a slight tilt and partial crop that give it authenticity.
+
+- **Technical Notes**  
+  - Focal length: 24 mm (wide angle)  
+  - Aperture: f/5.6 (mid‑range)  
+  - Shutter speed: 1/125 s (slight motion blur)  
+  - ISO: 400 (natural brightness)  
+  - No post‑processing filters; raw, ungraded image.
+
+**Prompt for Text‑to‑Image Generation**
+
+> “A young woman with long sun‑kissed hair sits on a beige sofa in a bright, lived‑in living room, wearing a white bikini bottom with pink floral ties and a light pink strap. Her left hand is raised near her ear as if she just received a call or is adjusting her hair; her mouth is slightly open mid‑speech. Natural daylight from a large window on the left creates a soft overexposed highlight on her shoulder and a gentle warm glow across the scene, with slight underexposure on the lower part of the frame. Capture with a 24 mm wide‑angle lens handheld, producing a slight motion blur from the subject’s movement and the photographer’s hand instability, but everything remains fully sharp—no bokeh, no portrait‑mode isolation. The framing is accidental, slightly tilted, and off‑center. In the background, a tall wooden bookshelf filled with colorful books stands behind her, and a potted plant sits on the windowsill. The time of day is late morning, with warm sunlight streaming in, creating soft shadows and a slight haze. All elements are fully in focus; no rule‑of‑thirds intentionality—just a raw, unposed, spontaneous candid shot.”

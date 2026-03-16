@@ -1,0 +1,29 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair standing in a sunlit meadow, mid‑step as if caught between two strides. She wears dark denim jeans that sit snug at the hips and loose, natural‑looking fabric that drapes softly over her shoulders. Her posture is slightly off‑center, a handheld “in‑motion” feel with a faint blur around her hands and the edges of her body.  
+
+- **Lighting & Exposure**  
+  Warm, golden hour light from the west casts a gentle overexposure on her face and upper torso; the exposure is slightly uneven, giving a raw, unprocessed look. No auto‑beauty or filter enhancement—just natural ambient light with a hint of haze.  
+
+- **Camera Settings**  
+  - Lens: 24‑mm wide‑angle, short focal length, handheld.  
+  - Focal depth: everything from her face to the background is fully sharp; no bokeh or portrait‑mode isolation.  
+  - Shutter speed: 1/60 s (slight motion blur on the subject’s hands and the grass).  
+  - Aperture: f/4.5 (wide, low‑depth‑of‑field but still sharp).  
+
+- **Environment**  
+  A wide, open field of tall, dry grass with a few scattered wildflowers; a line of distant trees forms a soft horizon. The time of day is late afternoon, around sunset, giving a warm, slightly overcast sky. The weather is mild, with a light breeze that ruffles the grass and the woman’s hair.  
+
+- **Composition & Framing**  
+  - No rule‑of‑thirds intentionality; the frame is accidental, slightly tilted, and partially cropped at the top and bottom.  
+  - The subject occupies the central‑right portion of the frame, with her left hand hanging loosely by her side.  
+  - Background remains fully in focus—no depth‑of‑field blur.  
+
+- **Details & Imperfections**  
+  - Slight tilt of the camera, a tiny shake that gives a natural motion blur.  
+  - Minor imperfections: a small smudge on her left shoulder, a slight unevenness in her jeans seam.  
+  - No post‑processing color grading—just raw, real‑life tones.  
+
+- **Final Prompt**  
+  “A young woman with long wavy brown hair, wearing dark denim jeans, stands mid‑step in a sunlit meadow at late afternoon. The scene is captured on a 24‑mm wide‑angle lens, handheld, with a slight motion blur on the subject’s hands and a faint overexposure on her upper torso. Everything from her face to the distant trees is fully sharp. The frame is accidentally tilted and partially cropped, giving a candid, spontaneous feel. The background shows tall grass and scattered wildflowers with a soft horizon line. No filters or color grading—just raw, natural lighting and a genuine, unposed moment.”

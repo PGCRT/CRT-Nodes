@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman with wet, slightly frizzy hair walking toward the camera on a sunny beach. She’s wearing a long‑sleeved, black, one‑piece swimsuit with a front zipper. Her left hand is relaxed by her side, right arm bent at the elbow, fingers curled naturally. Mid‑step, feet slightly off the ground, toes pointing forward.
+
+- **Motion & Focus**  
+  Slight motion blur on the lower legs and feet to suggest movement. Everything in focus—no portrait‑mode blur; background fully sharp. Handheld shot with a wide‑angle lens (24–35 mm). No bokeh.
+
+- **Lighting & Exposure**  
+  Natural midday sunlight, slight overexposure on the upper body and face, subtle warm tones. Auto‑HDR off—raw, unprocessed look. No color grading or filters.
+
+- **Environment**  
+  Beach with large, dark volcanic rocks scattered around, ocean waves breaking in the background. Time of day: early afternoon, bright sky, soft shadows. Weather: clear, humid.
+
+- **Lens & Technical**  
+  Short focal length (24–35 mm), wide‑angle. No depth‑of‑field blur; all elements sharp. No rule‑of‑thirds—accidental framing, slight tilt and off‑center composition.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Imperfections encouraged: slight tilt, partial crop, natural hand posture. Zero studio lighting, zero professional composition, zero editorial tone.
+
+- **Post‑Processing**  
+  None—raw image with auto‑beauty mode off. Slight overexposure on the upper body to capture ambient light.  
+
+**Prompt Summary:**  
+“A woman in a black long‑sleeved swimsuit walks toward the camera on a sunny beach, mid‑step with slight motion blur on her feet. She has wet hair and a natural hand posture. The scene includes large volcanic rocks and breaking waves in the background under bright midday sun. Shot on a 24–35 mm wide‑angle lens, everything in focus, no bokeh, raw unprocessed look with slight overexposure, handheld tilt, accidental framing.”

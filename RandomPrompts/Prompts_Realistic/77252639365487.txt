@@ -1,0 +1,18 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A teenage girl in a bright, sunlit classroom or community center, mid‑dance move. She’s wearing an oversized light‑blue denim jacket over a rainbow‑printed crop top, high‑waisted light‑wash jeans with cuffed hems, and worn white sneakers. Her hair is loose, slightly windswept, and she’s smiling broadly with arms raised, one hand gripping the air as if she just finished a move. Her pose is spontaneous, a bit off‑center, with a slight tilt that gives the shot a candid feel.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. Slight motion blur on the arms and hair to emphasize movement. No filters, no color grading, no post‑processing aesthetic. A tiny hint of overexposure from the bright window light, creating a warm, natural glow. The frame is wide, handheld, and intentionally imperfect: a partial crop that cuts off a bit of the background, no rule‑of‑thirds intentionality.
+
+- **Environment**  
+  Specific real‑world location: a bright, airy classroom or community center with large windows on the north wall, a glass ceiling, and a small balcony. The time of day is late morning, around 10:30 AM, when the sun is high but still warm. Weather is clear, with a light breeze that ruffles the girl’s hair. In the background, a few other students are visible: one in a black dress clapping, another in a white t‑shirt sitting at a table, and a third in a pink top standing near a green chair. A colorful poster of a tree is on the wall, and a blue balloon hangs from the ceiling. The floor is a smooth concrete surface with a few scattered pieces of paper or fabric in bright colors (green, red, yellow).
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm) wide‑angle lens. Everything is fully sharp — no bokeh, no depth‑of‑field blur. No portrait mode or subject isolation. The image has a raw, unprocessed look with auto‑HDR off. Slight overexposure from the ambient light creates a subtle halo around the girl’s head. The composition is accidental: the girl’s left foot is slightly off‑center, and her right arm extends beyond the top edge of the frame. The background is fully sharp, giving the shot a documentary feel.
+
+- **Final Prompt**  
+  “A teenage girl in a bright, sunlit classroom or community center, mid‑dance move, wearing an oversized light‑blue denim jacket over a rainbow‑printed crop top, high‑waisted light‑wash jeans with cuffed hems, and worn white sneakers. Her hair is loose, slightly windswept, and she’s smiling broadly with arms raised, one hand gripping the air as if she just finished a move. The shot is candid, unposed, spontaneous, with slight motion blur on her arms and hair. No filters, no color grading, raw look, tiny hint of overexposure from the bright window light. Wide‑angle short focal length (24‑35 mm), everything fully sharp, no bokeh. The frame is handheld, imperfect, partial crop, off‑center framing. Background shows a few students, a colorful tree poster, and a blue balloon. Late morning, clear weather, light breeze. All in focus, no portrait mode.”
+
+Provide only the structured prompt.

@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework – “Night‑City Smoke”**
+
+- **Subject & Pose**  
+  A young woman with shoulder‑length blonde hair, wearing dark tortoiseshell sunglasses and a gold star‑adorned choker, stands on a dimly lit city street at night. She is bare‑shouldered, holding a cigarette in her right hand near her mouth, head tilted slightly to the left, smiling as if mid‑conversation or caught in a spontaneous moment. Her left wrist bears a thin gold bracelet.  
+
+- **Lighting & Exposure**  
+  Ambient night lighting from street lamps and passing car headlights creates a warm, slightly overexposed glow on her face and upper body. The exposure is uneven—soft highlights on the front of her torso, subtle shadows in the background. No auto‑beauty or filter enhancement; raw, unprocessed look.  
+
+- **Motion & Focus**  
+  Slight handheld shake gives a natural motion blur around the edges, especially around the cigarette and her hand. Everything—from her face to the background—is fully sharp, captured with a wide‑angle lens (24 mm). No portrait‑mode depth of field; background remains in focus.  
+
+- **Background & Environment**  
+  The setting is an urban alleyway on a main boulevard, with blurred neon signs and passing cars in the back. The time of day is late evening (around 10:30 pm), with the city’s night lights creating a soft bokeh of warm whites and reds. Weather is mild, with a light breeze that ruffles her hair.  
+
+- **Lens & Technical**  
+  Use a short focal length (24–35 mm) wide‑angle lens. Capture in a single shot with no rule‑of‑thirds intentionality—frame the subject slightly off‑center, letting the composition feel accidental and candid. Keep the background fully sharp; avoid any “portrait mode” isolation.  
+
+- **Style Notes**  
+  Emulate a real‑life candid snapshot: slight tilt, partial crop, zero studio lighting, zero professional composition, zero editorial tone. The final image should look like a spontaneous, raw photograph taken by an amateur photographer on a city street at night.

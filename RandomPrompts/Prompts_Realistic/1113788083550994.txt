@@ -1,0 +1,24 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, sun‑kissed blonde hair tied into a loose braid that drapes over her left shoulder. She’s standing in a bright, airy loft space, back to the camera, slightly turned toward the right, one hand running through her hair and the other resting on her hip. Her posture is casual, as if she’re mid‑movement, with a subtle, natural tilt that gives the shot a candid feel.
+
+- **Lighting & Exposure**  
+  Natural daylight from a large south‑west window casts a warm, slightly overexposed glow across the scene. The ambient light is soft but has a hint of haze, suggesting a lazy afternoon in early summer. No auto‑beauty or filter processing—just raw, unedited capture.
+
+- **Lens & Technical Settings**  
+  24 mm wide‑angle lens, f/4.0 aperture, 1/125 s shutter speed, ISO 400. The focus is flat and sharp across the entire frame—no bokeh or depth‑of‑field blur. The composition is intentionally off‑center, with a slight handheld shake that adds a natural motion blur to the edges.
+
+- **Environment**  
+  Location: A concrete‑finished loft with exposed brick walls and a large, abstract painting hanging on the left side. The time of day is late afternoon, around 4:30 pm, with the sun low but still high enough to keep the background fully sharp. Light wind ruffles the curtains, adding subtle motion.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Slight tilt and partial crop create a raw, documentary feel. No rule‑of‑thirds intentionality; framing is accidental, as if the photographer just caught her in a natural moment.
+
+- **Details & Imperfections**  
+  The image has a slight overexposure on the right side, giving it an airy, dreamy quality. Tiny imperfections—like a faint smudge on the wall, a stray thread in the braid, and a slight blur at the bottom edge—add realism. The background is fully sharp, with no portrait‑mode isolation.
+
+- **Prompt for Text‑to‑Image Generation**  
+  “A young woman with long sun‑kissed blonde hair in a loose braid, standing in a bright loft space with exposed brick and an abstract painting, back to the camera and slightly turned right, one hand running through her hair and the other on her hip. Natural daylight from a large window casts a warm overexposed glow. 24 mm wide‑angle lens, f/4.0, 1/125 s, ISO 400. Candid, spontaneous pose with slight handheld shake and accidental off‑center framing. Flat focus across the frame, no bokeh. Late afternoon, 4:30 pm, soft wind ruffling curtains. Raw, unprocessed look with subtle motion blur.”  
+
+Provide only the structured prompt.

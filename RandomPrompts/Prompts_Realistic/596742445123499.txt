@@ -1,0 +1,27 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with shoulder‑length, sun‑kissed brown hair, wearing a pale pink crop top and high‑waisted beige shorts, standing on a cobblestone street. She holds a tan clutch in her left hand, a gold watch on her left wrist, and a thin gold necklace around her neck. Her right hand is relaxed by her side, slightly bent at the elbow. She smiles broadly, eyes bright, head tilted a little to the right, as if mid‑conversation or caught in a spontaneous moment.
+
+- **Motion & Focus**  
+  Slight motion blur on the subject’s hands and background, indicating handheld shake. Everything is fully sharp—no portrait‑mode blur—so the background street details remain crisp. The blur is subtle, just enough to give a natural, candid feel.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle, late‑afternoon sun. Slight overexposure on the subject’s face, giving a warm, golden hue. No auto‑beauty mode—raw, unprocessed look. The exposure is slightly uneven, with the lower part of the image a bit brighter than the upper part.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24 mm), short focal length. No bokeh; background is fully sharp. No rule‑of‑thirds—framing is accidental, slightly off‑center. The composition is spontaneous: the subject is not centered, her left side leans toward the edge of the frame.
+
+- **Environment**  
+  A European‑style cobblestone street with old brick buildings on either side. A small shop with a dark sign is visible on the left; a passerby in a blue shirt walks away in the background on the right. The street is lined with green trees, and a red traffic sign is partially visible further down. The time of day is mid‑afternoon, with warm, slightly harsh sunlight casting soft shadows.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, giving a dynamic angle. The subject’s left shoulder is a little higher than the right, creating an asymmetrical look. Her hair has a slight windblown effect. A faint smudge on her left wrist watch strap adds realism. The clutch she holds is slightly angled, as if she just received a message or is about to gesture.
+
+- **Post‑Processing**  
+  No filters, no color grading, no post‑processing aesthetic. Only raw capture data, with minimal adjustments to exposure and contrast.
+
+---  
+
+**Prompt Summary (structured)**  
+"Capture a candid, unposed photo of a young woman in a pale pink crop top and beige shorts on a European cobblestone street. Use a 24 mm wide‑angle lens, keep everything sharp but add slight motion blur to the subject’s hands and background. Light from a high‑angle late‑afternoon sun creates a warm overexposed glow. Frame the shot accidentally off‑center, with the subject slightly tilted, holding a tan clutch in her left hand and a gold watch on her wrist. Include background details of old brick buildings, a passerby, and a red traffic sign. Keep the look raw, no filters, no color grading."

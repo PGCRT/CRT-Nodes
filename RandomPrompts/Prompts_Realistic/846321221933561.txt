@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair standing in a sunlit meadow, wearing a light denim jacket draped over her shoulders and high‑waisted jean shorts. Her pose is casual and spontaneous—mid‑step, slightly turned toward the camera, with one hand on her hip and the other holding the jacket. She’s smiling softly, eyes bright, capturing an unposed, candid moment.
+
+- **Lighting & Exposure**  
+  Warm, golden hour lighting from the west, creating a slight overexposure on the face and upper body while keeping the background fully sharp. The exposure is natural, without auto‑HDR or beauty filters—just raw, unprocessed light. A subtle handheld shake gives a slight motion blur around the edges.
+
+- **Lens & Technical**  
+  24 mm wide‑angle lens, short focal length, all elements in focus (no portrait‑mode depth of field). The framing is accidental: off‑center, slightly tilted, and partially cropped at the top and bottom. No rule‑of‑thirds—just a spontaneous composition.
+
+- **Environment**  
+  A grassy field with scattered trees in the background, mid‑afternoon, the sun low on the horizon. The weather is clear, with a gentle breeze ruffling the grass. The background is fully sharp, no bokeh.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Imperfections encouraged: slight tilt, off‑center framing, partial crop. Natural motion freeze or slight blur from handheld instability. Zero studio lighting, zero professional composition, zero editorial tone.
+
+- **Post‑Processing**  
+  No filters, no color grading, no post‑processing aesthetic—just a raw, natural look with auto‑beauty mode off and a hint of slight overexposure to emphasize the ambient light.
+
+**Prompt Summary**  
+"Candid photo of a young woman in a sunlit meadow, wearing a denim jacket and jean shorts, captured on a 24 mm wide‑angle lens at golden hour. The image shows her mid‑step, slightly tilted and off‑center, with natural motion blur and slight overexposure, all in focus, no filters—raw, spontaneous, handheld style."

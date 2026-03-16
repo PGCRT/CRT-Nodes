@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework – “Bathroom Beauty”**
+
+- **Subject & Pose**  
+  A young woman with light brown hair tied in a loose ponytail, leaning casually against a green pedestal sink in a tiled bathroom. Her body is bare, slightly bent at the waist, one hand gripping the sink’s edge, the other resting on her thigh. She looks directly at the camera with a relaxed, confident expression. A delicate silver necklace rests around her neck; a small pendant hangs from it.
+
+- **Lighting & Exposure**  
+  Natural daylight coming from a window in the upper right corner creates a soft, slightly overexposed highlight on her shoulder and the sink’s faucet. The exposure is uneven—warm tones dominate the foreground while the background remains subtly underexposed, giving a raw, unprocessed feel. No auto‑beauty or filter enhancements; the image retains the grainy texture of an old DSLR.
+
+- **Environment**  
+  The bathroom has a retro vibe: green square tiles with floral motifs line the walls, a white towel hangs on a rack, and a small white bucket sits on the floor. A mirror reflects part of the scene, showing a bottle of shampoo and a green bottle of body lotion. A wall‑mounted lamp glows softly above the sink. The time of day is late morning, with bright sunlight streaming through a window, casting gentle shadows.
+
+- **Lens & Technical**  
+  Shot on a wide‑angle lens (24 mm) with a short focal length, capturing a broad view of the space. Everything—from the sink to the tiles—is in sharp focus; no bokeh or depth‑of‑field blur. Slight handheld shake is present, giving the image a natural motion blur and a slight tilt. The framing is off‑center, not following the rule of thirds, and the crop is partial—edges cut off at the left and right sides.
+
+- **Composition & Style**  
+  Candid, unposed, spontaneous—the subject appears unaware of the camera’s presence, mid‑action. Imperfections are intentional: a slight tilt of the camera, an off‑center composition, and a partial crop that gives the image a raw, documentary feel. No rule‑of‑thirds intentionality; the framing is accidental, as if captured by a hurried photographer.
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, no auto‑HDR. The image keeps its natural, unprocessed look, with only basic adjustments to exposure and contrast. Slight overexposure on the subject’s shoulder and a faint underexposure in the background create a dynamic range that feels organic.
+
+- **Final Prompt**  
+  “A young woman with light brown hair in a loose ponytail leans casually against a green pedestal sink in a retro‑styled bathroom, her body bare and slightly bent at the waist. She wears a delicate silver necklace, looking directly at the camera with confidence. Natural daylight from a window in the upper right creates a soft overexposure on her shoulder and a subtle underexposure in the background. The bathroom features green square tiles with floral motifs, a white towel on a rack, a small white bucket on the floor, and a wall‑mounted lamp above the sink. A mirror reflects a bottle of shampoo and a green body lotion bottle. Shot on a 24 mm wide‑angle lens, everything is in sharp focus with slight handheld shake. The composition is candid, off‑center, and partially cropped, capturing a spontaneous, raw moment without filters or color grading.”

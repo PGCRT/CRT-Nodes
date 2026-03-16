@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a natural, unposed posture, seated on a wooden bench in a casual, everyday setting. Her body is slightly turned toward the camera, hands resting on her thighs, fingers relaxed. She wears loose, light‑colored jeans that drape softly over her hips and knees. Her hair falls loosely over her shoulders, a few strands catching the light. The shot captures her from the mid‑chest down to the mid‑thigh, with a partial crop that cuts off the top of her head and the lower part of her legs, giving an intentional “mid‑action” feel.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject appears unaware of the camera, as if caught in a natural moment. Slight tilt and off‑center framing create a casual, handheld vibe. The composition is not rule‑of‑thirds‑intentional; it’s an accidental frame that includes a bit of the background on both sides.
+
+- **Environment**  
+  Location: A dimly lit living room with a beige couch and a small side table visible in the background. Time of day: late afternoon, with warm, soft ambient light coming from a window to the left, creating a gentle overexposure on the subject’s front. Weather or ambient conditions: calm, no wind, slight indoor humidity that gives a natural grain to the image.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm) wide‑angle lens. No bokeh; everything from foreground to background is fully sharp. Slight motion blur on the subject’s hands and thighs due to handheld instability. Auto‑HDR or auto‑beauty mode off — raw, unprocessed look. No filters, no color grading, no post‑processing aesthetic. The exposure is slightly high, giving a warm, natural tone.
+
+- **Details & Imperfections**  
+  Slight overexposure on the subject’s front, subtle shadows in the crotch area, minor dust particles on the jeans, faint smudges on the fabric. A small, random patch of light reflection on her left breast, and a slight asymmetry in the shoulders that adds realism. The background shows a blurred couch cushion and a small framed picture on the wall, all in focus.
+
+- **Prompt Summary**  
+  “A candid, wide‑angle shot of a woman sitting on a wooden bench in a dimly lit living room, captured with a 24‑35 mm lens. The image has slight motion blur and a small overexposure, no filters or auto‑HDR, raw and unprocessed. The subject is mid‑pose, hands on thighs, wearing loose jeans, with a partial crop that cuts off the top of her head and lower legs. Background includes a beige couch and a side table, all in focus. The scene is late afternoon, warm ambient light from a window, slight indoor humidity, handheld instability.”

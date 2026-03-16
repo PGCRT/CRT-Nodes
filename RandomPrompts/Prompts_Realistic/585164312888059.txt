@@ -1,0 +1,16 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark hair tied in a high ponytail, wearing a white ribbed crop‑top with a keyhole cutout and matching high‑waist leggings. She stands on a sunlit forest trail, hands lightly clasped near her waist, head tilted slightly to the left, smiling softly at the camera. Her left ear is partially visible, revealing a small hoop earring.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. Slight tilt and off‑center framing; partial crop that gives an accidental, handheld feel. No rule‑of‑thirds intentionality. The shot has a raw, auto‑HDR look with no filters or color grading, just natural overexposure from the ambient sunlight.
+
+- **Environment**  
+  Specific real‑world location: a tree‑lined trail in a mixed‑forest park. Time of day: late afternoon, golden hour. Weather: clear, mild humidity, light wind. The background is fully sharp—no bokeh or depth‑of‑field blur—everything in focus from the foreground foliage to the distant trees.
+
+- **Lens & Technical**  
+  Short focal length (24 mm), wide‑angle lens. Slight motion blur from handheld instability, natural freeze of the subject’s movement. No portrait mode or subject isolation; the composition is spontaneous and imperfect. The image retains a slight overexposure in the highlights to capture the warm sunlight.
+
+- **Post‑Processing**  
+  Auto‑HDR or auto‑beauty mode off — raw, unprocessed look. No filters, no color grading, no post‑processing aesthetic. Keep everything in focus, maintain natural lighting, and preserve the authenticity of the scene.

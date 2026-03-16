@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail, wearing a black lace‑top and white cargo pants, captured mid‑step in a casual, unposed stance. Her head is slightly tilted downward, eyes cast toward the floor, giving a natural “in‑motion” feel.  
+
+- **Motion & Focus**  
+  Slight motion blur on the hands and lower body to suggest movement; everything else fully sharp—no portrait‑mode depth of field.  
+
+- **Lighting & Exposure**  
+  Raw, auto‑HDR off, no color grading or filters. Ambient daylight from a large window creates a mild overexposure on the upper torso, with natural contrast.  
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm), short focal length, handheld shot with minor shake. No bokeh—background is completely in focus.  
+
+- **Environment**  
+  A bright, airy living room with white furniture, large French doors leading to a green garden, and a wooden coffee table. Time of day: late morning, soft sunlight filtering through the windows. Weather: clear, slightly humid.  
+
+- **Composition**  
+  Off‑center framing; slight tilt and partial crop. No rule‑of‑thirds intentionality—capture the moment as it unfolds.  
+
+- **Prompt for Generation**  
+  “A candid, spontaneous photograph of a woman in a black lace top and white cargo pants, mid‑step inside a sunlit living room with white sofa and French doors, captured on a wide‑angle handheld lens. Slight motion blur on the hands, everything fully sharp, raw auto‑HDR off, mild overexposure from natural daylight, late morning, clear weather. The shot is slightly tilted and off‑center, no rule‑of‑thirds, no bokeh, all in focus.”

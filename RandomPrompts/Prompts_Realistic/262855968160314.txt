@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy auburn hair, kneeling on a rustic wooden floor in a dimly lit studio. She is bare‑headed and draped with a deep‑blue cloth that hangs from her left shoulder, partially covering her back. Her right hand is clasped near her chin, fingers slightly curled, as if she’s about to touch her face or adjust her hair. Her head tilts downward, eyes closed, giving a contemplative, mid‑action feel.
+
+- **Lighting & Exposure**  
+  Natural ambient light from a side window creates a soft, warm glow on her back and hips. Slight overexposure on the right side of the frame gives a raw, unprocessed look. No auto‑HDR or beauty filters—just a single exposure that captures the subtle highlights and shadows.
+
+- **Lens & Technical**  
+  24 mm wide‑angle lens, short focal length, handheld. Everything is in focus—from her face to her toes—no bokeh, no depth‑of‑field blur. The background (a plain gray wall) stays sharp, emphasizing the candid nature of the shot.
+
+- **Composition & Framing**  
+  Off‑center, accidental framing: the subject’s left knee leans slightly to the right, and the blue cloth drapes unevenly, adding a natural, spontaneous feel. The composition does not follow the rule of thirds; instead it feels “mid‑motion” as if she just finished a gesture.
+
+- **Environment**  
+  A simple studio space with a wooden floor and a muted gray wall. The time of day is late afternoon, giving a warm, golden hue. A faint breeze seems to ruffle her hair, adding a subtle motion blur.
+
+- **Details & Imperfections**  
+  Slight tilt in the camera’s grip, a tiny handheld shake that leaves a gentle motion blur on the subject’s back. The image has no post‑processing color grading—just raw, realistic capture. Small specks of dust are visible in the air, caught by the light.
+
+- **Prompt for Generation**  
+  “A young woman with long wavy auburn hair kneeling on a rustic wooden floor in a dimly lit studio, bare‑headed and draped with a deep‑blue cloth from her left shoulder. Her right hand is clasped near her chin, fingers slightly curled, head tilted downward with eyes closed. Natural ambient light from a side window creates a soft warm glow; slight overexposure on the right side. 24 mm wide‑angle lens, handheld, everything in focus—no bokeh. Off‑center accidental framing, slight tilt and motion blur. Background is a plain gray wall, sharp. Late afternoon lighting, subtle dust specks. Capture candid, unposed, spontaneous feel with raw, unprocessed look.”

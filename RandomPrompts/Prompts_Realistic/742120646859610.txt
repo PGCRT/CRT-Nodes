@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with wavy blonde hair, wearing a deep‑green two‑piece outfit (a halter‑style crop top and a high‑waist mini skirt), captured mid‑step on an urban balcony. Her left hand rests lightly on the railing, her right arm relaxed by her side, and she’s looking slightly off‑camera with a natural, unposed expression.
+
+- **Motion & Focus**  
+  Slight motion blur at the wrists and feet to suggest movement; everything in focus—no portrait‑mode bokeh. The image has a raw, auto‑HDR feel: a subtle overexposure on the face and background lights, no color grading or post‑processing filters.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm), short focal length. No rule‑of‑thirds—framing is accidental, slightly tilted, off‑center. Background is fully sharp, no depth‑of‑field blur.
+
+- **Environment**  
+  Location: a city rooftop balcony at dusk. The sky is a soft twilight gray with scattered clouds; the background shows a blurred city skyline with bokeh lights in warm amber and cool teal tones. A metal railing runs behind her, and a small concrete ledge is visible beneath her feet.
+
+- **Lighting**  
+  Natural ambient light from the setting sun—slight overexposure on the subject’s face and the background lights, creating a gentle halo effect. No studio lighting, no professional composition.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, partial crop that cuts off the top of the railing, minor handheld shake. The woman’s nails are painted a soft pink; her earrings are small pearl studs. Her outfit has a subtle sheen from the fabric’s texture.
+
+- **Final Prompt**  
+  “A young woman with wavy blonde hair in a deep‑green two‑piece outfit steps on an urban balcony at dusk, captured with a wide‑angle lens. She’s mid‑motion, slightly blurred at the wrists and feet, everything in focus. The background shows a sharp city skyline with warm amber and cool teal bokeh lights. Natural ambient light creates a subtle overexposure on her face and the background. The framing is accidental and tilted, a raw, auto‑HDR look without filters or post‑processing.”

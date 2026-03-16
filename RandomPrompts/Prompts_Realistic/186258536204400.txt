@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with shoulder‑length brown hair, wearing a sheer black lace bra and matching panties, sitting on a white bed. She is mid‑gesture, one hand resting on the mattress, the other near her hip, body slightly turned toward the camera. Her expression is neutral, almost candid, as if she’s caught in a spontaneous moment.
+
+- **Lighting & Exposure**  
+  Natural daylight from a window on the left, creating a soft overexposure on the face and upper body. Slight handheld shake gives a subtle motion blur around the edges. No auto‑beauty or filter processing—raw, unpolished look.
+
+- **Camera Settings**  
+  Wide‑angle lens (24‑35 mm), f/4.0, 1/60 s shutter speed, ISO 400. Everything in focus from foreground to background; no bokeh or depth‑of‑field blur.
+
+- **Composition & Framing**  
+  Off‑center, accidental framing: the subject is slightly tilted, the top of the frame cuts off a bit of her head, giving a casual, spontaneous feel. The background shows a wooden headboard and a window with sheer curtains; the scene is fully sharp.
+
+- **Environment**  
+  A bright, airy bedroom in the late morning, with natural light streaming through a window. The room has a neutral color palette—white bedding, light wood furniture, beige curtains—creating a calm, intimate atmosphere.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, minor crop asymmetry, faint motion blur from handheld shooting. The image retains raw realism: no filters, no color grading, no post‑processing aesthetic.  
+
+**Prompt for Text‑to‑Image Generation**
+
+```
+A young woman with shoulder‑length brown hair, wearing a sheer black lace bra and matching panties, sitting on a white bed in a bright bedroom. She is mid‑gesture, one hand on the mattress, the other near her hip, body slightly turned toward the camera. Natural daylight from a window on the left creates soft overexposure on the face. Wide‑angle lens (24‑35 mm), f/4.0, 1/60 s shutter speed, ISO 400—everything in focus, no bokeh. Off‑center, accidental framing with slight tilt and minor crop. Background shows a wooden headboard and sheer curtains; the scene is fully sharp. Raw, unprocessed realism, no filters or color grading.
+```

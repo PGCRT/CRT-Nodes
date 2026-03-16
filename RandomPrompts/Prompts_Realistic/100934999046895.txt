@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark, wavy hair standing in a sunlit bedroom. She’s wearing a delicate white lace lingerie set (bra and high‑waist bottoms) paired with sheer white long sleeves that drape over her arms. Her left arm is slightly bent, her right hand relaxed by her side, and she’s looking directly at the camera with a subtle, confident expression. A small tattoo of a floral design adorns her left collarbone, another tattoo of a portrait is visible on her left thigh, and a third tattoo of a flower is on her right hip. Her posture is casual but poised, as if caught mid‑movement.
+
+- **Motion & Focus**  
+  Slight motion blur on the subject’s hair and arms to suggest natural movement. Everything in the frame is fully sharp—no bokeh, no depth‑of‑field blur—wide‑angle lens (24‑35 mm) capturing the entire scene from a low, slightly off‑center angle.
+
+- **Lighting & Exposure**  
+  Natural daylight coming from a window on the left side of the room; slight overexposure in the highlights to give a raw, unprocessed look. No auto‑HDR or auto‑beauty mode—just a straightforward exposure that keeps the entire frame bright but unfiltered.
+
+- **Environment**  
+  The setting is a cozy, slightly cluttered bedroom with light‑wood flooring, a white wall, and a window with horizontal blinds partially open. A small wooden basket sits in the corner, a white electrical outlet is visible on the left wall, and a beige rug lies near the center of the floor. The time of day is mid‑afternoon, with warm, soft sunlight streaming through the window, creating gentle shadows and highlights across the subject’s body and the room.
+
+- **Lens & Technical**  
+  Short focal length (24–35 mm), wide‑angle lens. No bokeh—background fully sharp. Handheld shot with slight tilt and off‑center framing; no rule‑of‑thirds intentionality. The composition feels spontaneous, as if the subject was caught mid‑action.
+
+- **Style & Aesthetic**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Imperfections encouraged: slight tilt, off‑center framing, partial crop. Zero studio lighting, zero professional composition, zero editorial tone. Natural motion freeze or slight blur from handheld instability.
+
+- **Post‑Processing**  
+  No filters, no color grading, no post‑processing aesthetic—just raw, realistic imagery that preserves the natural texture and nuance of the scene.

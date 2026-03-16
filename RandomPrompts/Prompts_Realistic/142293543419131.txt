@@ -1,0 +1,27 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, athletic woman with long, dark hair blowing in the wind, wearing a navy blue “BELL” bikini. She stands on a concrete pier overlooking the ocean, one hand on her hip, head tilted slightly to the side, eyes focused forward, mid‑step as if she just walked into frame. Her left wrist bears a thin gold bracelet; a delicate necklace rests on her collarbone.  
+
+- **Lighting & Exposure**  
+  Slight overexposure from early‑afternoon sun, creating soft highlights on her skin and a subtle halo around her hair. No auto‑beauty or filter enhancement—raw, unprocessed look. The exposure is slightly warm, with a gentle haze that keeps the background fully sharp.  
+
+- **Motion & Focus**  
+  Slight motion blur at the edges from handheld instability, capturing the movement of her hair and the ripple of water behind her. Everything in focus: subject, pier, ocean, and sky. No portrait‑mode depth‑of‑field blur; no subject isolation.  
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm), short focal length. No bokeh. All elements—subject, environment—are in focus.  
+
+- **Environment**  
+  Location: a concrete pier on a coastal town, with the ocean stretching to the horizon. Time of day: early afternoon, sun high but not directly overhead, creating soft shadows. Weather: light breeze, clear sky with a faint cloud layer near the horizon.  
+
+- **Composition & Style**  
+  Candid, unposed, spontaneous—subject appears unaware of the camera. Slight tilt and off‑center framing; partial crop that cuts off the top of her head and the lower part of the pier. No rule‑of‑thirds intentionality. Zero studio lighting, zero professional composition, zero editorial tone.  
+
+- **Post‑Processing**  
+  No filters, no color grading, no post‑processing aesthetic. Raw, natural look with slight overexposure or underexposure depending on ambient light.
+
+**Prompt:**
+```
+Candid photography of a tall woman in a navy “BELL” bikini standing on a concrete pier overlooking the ocean, early afternoon sun creating soft highlights and slight overexposure. Her long dark hair blows in the wind, one hand on hip, head slightly tilted, mid‑step pose. Slight motion blur from handheld instability, everything in focus—subject, pier, ocean, sky. Wide‑angle lens (24–35 mm), short focal length, no bokeh. Raw, unprocessed look, no filters or color grading. Background fully sharp, no rule‑of‑thirds, off‑center framing, partial crop.
+```

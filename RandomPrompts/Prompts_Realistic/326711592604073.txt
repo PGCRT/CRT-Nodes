@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair standing on a sunlit city sidewalk. She wears an off‑white V‑neck T‑shirt and dark denim jeans, accessorized with gold hoop earrings and a thin necklace with a small pendant. Her head is slightly tilted, her gaze directed toward the camera but not posing—she appears mid‑step, one foot forward, as if caught in a casual, spontaneous moment.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. Slight tilt and off‑center framing; the shot is partially cropped on the left side, giving an accidental, handheld feel. No rule‑of‑thirds intentionality—everything is in focus, no portrait‑mode depth‑of‑field blur.
+
+- **Motion & Exposure**  
+  Slight motion blur from handheld instability, natural freeze or soft blur. Slight overexposure on the face and shirt to emphasize ambient daylight; no auto‑HDR or auto‑beauty processing—raw, unprocessed look.
+
+- **Environment**  
+  Specific real‑world location: a stone‑paved sidewalk in front of a beige brick building with arched windows. Time of day: late morning, soft golden sunlight casting gentle shadows. Weather: clear, mild, with a light breeze; background fully sharp, no bokeh.
+
+- **Lens & Technical**  
+  Short focal length (24–35 mm), wide‑angle lens. No bokeh or subject isolation—everything in focus. Wide‑angle captures the entire scene from a low angle, slightly above eye level, with a wide‑field view that includes the building’s facade and a glimpse of a green tree in the background.
+
+- **Lighting & Post‑Processing**  
+  Zero studio lighting, zero professional composition, zero editorial tone. Natural daylight, slight overexposure on the subject to keep the image bright and lively. No filters, no color grading, no post‑processing aesthetic—just raw, realistic candid photography.

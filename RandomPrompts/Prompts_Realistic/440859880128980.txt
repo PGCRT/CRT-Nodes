@@ -1,0 +1,24 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair, wearing a white off‑shoulder T‑shirt featuring a small dog graphic on the left side, and light‑wash denim jeans. She is captured mid‑step, one foot slightly ahead of the other, with a natural, unposed expression that conveys a casual confidence. Her left arm is extended outward as if she’s holding a phone for a selfie, creating a slight diagonal line that gives the frame an off‑center, spontaneous feel.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject appears unaware of the camera at the moment of capture, with a slight tilt and partial crop that give the image a raw, handheld vibe. The shot has a subtle motion blur on the subject’s arm and hair, indicating a quick shutter speed and slight instability. No rule‑of‑thirds intentionality; the composition is accidental, but the background remains fully sharp because of a wide‑angle lens with a short focal length (e.g., 24 mm). Everything in focus, no portrait‑mode depth‑of‑field blur.
+
+- **Auto‑HDR or auto‑beauty mode off** – raw, unprocessed look.  
+  Slight overexposure on the subject’s face to keep the ambient light warm and natural. No filters, no color grading, no post‑processing aesthetic. The exposure is slightly higher on the foreground to keep details visible, but the overall tone remains natural.
+
+- **Wide lens** – 24 mm (or 35 mm) wide‑angle, short focal length, no bokeh.  
+  No depth‑of‑field blur; background fully sharp. The lens captures a broad view of the street scene, allowing all elements to remain in focus.
+
+- **Environment**  
+  Specific real‑world location: a bustling city street lined with brick buildings, storefronts with green awnings, and a sidewalk that runs parallel to the road. The time of day is late morning (around 10:30 AM), with soft, warm sunlight casting gentle shadows. Weather is clear with a light breeze, giving a slight motion blur on the subject’s hair. A few pedestrians are walking in the background, one in a pink striped shirt and another in a white T‑shirt, adding life to the scene. Parked cars line the street, and a yellow taxi is visible further down, contributing to the urban vibe.
+
+- **Lens & Technical**  
+  Short focal length (24 mm), wide angle, handheld. All elements — subject, background, foreground — are in focus. No portrait mode or subject isolation. Slight motion blur on the subject’s arm and hair from a quick shutter speed and slight instability. The image has no filters, no color grading, no post‑processing aesthetic; it looks raw and natural, as if captured with an iPhone or a DSLR in “raw” mode.
+
+- **Additional Details**  
+  The woman’s necklace with a small gold pendant is visible, adding a subtle accessory detail. Her jeans have a slight fade at the thighs, giving a casual, worn‑in look. The T‑shirt’s dog graphic is positioned on the left side of her chest, slightly tilted due to the off‑shoulder cut. The background includes a green street sign and a traffic light that is partially visible, adding context to the urban setting. The sidewalk is made of concrete, with a faint crack running along the edge. The street is paved with asphalt, and a few parked cars are visible on both sides. A tree line is present on the right side of the street, providing a natural contrast to the brick buildings.
+
+- **Provide only the structured prompt.**

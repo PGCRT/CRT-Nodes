@@ -1,0 +1,29 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, athletic woman with dark, wavy hair, wearing a black bikini, captured mid‑gesture as she runs a hand through her hair. Her left arm is slightly raised, revealing a detailed tattoo of a rose and a horse’s head that wraps around her bicep and forearm. The right side of her torso shows a subtle, natural belly curve. She stands in a bright, sunlit bedroom with a white bedspread and a mustard‑yellow pillow behind her; a wooden nightstand is visible to the left.
+
+- **Lighting & Exposure**  
+  Natural daylight from a west‑facing window creates a soft, slightly overexposed highlight on her face and upper body. The exposure is uneven—her front is brighter than the background—giving a raw, unprocessed look. No auto‑beauty or filter enhancement; the image retains slight grain and minor color cast.
+
+- **Camera & Lens Settings**  
+  - Focal length: 24 mm (wide‑angle, short focal length)  
+  - Aperture: f/5.6 (mid‑range, no bokeh)  
+  - Shutter speed: 1/125 s (handheld, slight motion blur on the subject’s arm)  
+  - ISO: 400 (for balanced noise)  
+  Everything is in focus—no portrait‑mode depth of field blur. The background (bed, pillow, nightstand) stays sharp.
+
+- **Composition & Framing**  
+  Candid, unposed framing with a slight tilt to the left. The shot is off‑center: her head is near the upper right corner, her torso occupies the central left. The composition is accidental—no rule‑of‑thirds intentionality. A partial crop cuts off the top of her hair, adding spontaneity.
+
+- **Environment & Time**  
+  Location: a modern, minimalist bedroom in a mid‑tier apartment building. Time of day: late afternoon (around 4 pm), with warm, golden light. Weather: clear, no wind—ambient stillness except for the subject’s motion.
+
+- **Technical Details**  
+  - No filters, color grading, or post‑processing aesthetic.  
+  - Slight overexposure on the subject’s front, creating a subtle halo.  
+  - Handheld instability produces a natural freeze‑frame blur on the moving arm.  
+  - Wide‑angle lens captures the entire scene without cropping the background.
+
+- **Final Prompt**  
+  “A tall, athletic woman with dark wavy hair in a black bikini, captured mid‑gesture as she runs a hand through her hair, standing in a bright, sunlit bedroom with a white bedspread and mustard‑yellow pillow behind her; a wooden nightstand is visible to the left. Natural daylight from a west‑facing window creates a soft, slightly overexposed highlight on her face and upper body. 24 mm wide‑angle lens at f/5.6 and 1/125 s shutter speed freezes her motion with slight blur on her arm. Everything is in focus—no bokeh. Candid, unposed framing with a slight tilt, off‑center composition that partially crops the top of her hair. Late afternoon light, clear weather, handheld instability.”

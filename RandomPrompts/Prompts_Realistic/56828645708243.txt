@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman with shoulder‑length brown hair and bangs, wearing a pink bikini, standing in front of a tall mirror. Her left hand is pressed against the glass, fingers slightly curled, as if she’s about to adjust her reflection. She looks directly at the camera with a subtle, confident expression, lips painted a muted rose tone.  
+
+- **Lighting & Exposure**  
+  Natural daylight from a western‑facing window, mid‑afternoon. The light is slightly overexposed on the upper half of the frame, giving a warm, soft glow. No auto‑HDR or beauty filters—just raw, unprocessed tones.  
+
+- **Camera Settings**  
+  Wide‑angle lens (24 mm), handheld, 1/60 s shutter speed, f/4 aperture. Everything in focus—from the subject’s face to the background mirror—no bokeh, no depth‑of‑field blur.  
+
+- **Composition & Framing**  
+  Candid, unposed, spontaneous. The shot is slightly tilted, off‑center, with a partial crop that cuts off the top of the mirror. No rule‑of‑thirds intentionality; the framing feels accidental, as if the photographer caught the moment mid‑action.  
+
+- **Environment**  
+  A bright, modern dressing room or boutique studio. The background shows a large mirror with a faint neon “S” sign above it, a white countertop, and a glimpse of a green plant in the corner. The time of day is late afternoon, with soft, diffused sunlight.  
+
+- **Technical Details**  
+  Short focal length (24 mm) for a wide view. Background fully sharp—no bokeh. No portrait‑mode subject isolation. Slight motion blur on the subject’s hand, indicating handheld instability.  
+
+- **Final Prompt**  
+  “A woman in a pink bikini stands before a tall mirror in a bright dressing room, her left hand pressed against the glass as if adjusting her reflection. She looks directly at the camera with a confident expression, lips painted rose. Natural daylight from a western window casts a warm overexposed glow. Shot on a 24 mm wide‑angle lens, handheld at 1/60 s and f/4, everything in focus. The frame is slightly tilted and off‑center, partially cropped, capturing a candid, spontaneous moment. Background shows a neon ‘S’ sign and a green plant, mid‑afternoon light. Raw, unprocessed, no filters—just a realistic, sharp, in‑focus candid photograph.”

@@ -1,0 +1,40 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A blonde woman with a tattooed left arm, mid‑drink from a clear plastic bottle, head tilted slightly to the left, eyes closed as she laps water. Her shoulders are bare, a few droplets of liquid hang from her chest. She wears a thin, dark earring on her left ear. The bottle’s label reads “AQUA” with a small graphic of a cherry.  
+
+- **Appearance & Detail**  
+  - Hair: long, wavy, light‑blonde, slightly messy, a few strands falling over the forehead.  
+  - Skin: glossy, wet, with visible pores and natural texture; a faint pink hue from ambient lighting.  
+  - Tattoos: a floral design on the left upper arm, a star‑shaped tattoo near the collarbone, a small “M” symbol on the right breast.  
+  - Makeup: bold black eyeliner, subtle blush, matte red lipstick.  
+
+- **Pose & Composition**  
+  - Body angled 30° to the right, left arm raised holding bottle above shoulder, right arm relaxed by side.  
+  - Slight tilt of camera (5°) and handheld shake producing a natural motion blur around the edges.  
+  - Framing: off‑center, partial crop; the top of the bottle cuts off near the upper edge, the lower part of her torso is partially cropped at the bottom.  
+
+- **Lighting & Exposure**  
+  - Ambient indoor lighting from a wooden wall behind; slight overexposure on the chest area, creating a soft glow.  
+  - No auto‑HDR or auto‑beauty mode – raw, unprocessed look.  
+  - Wide‑angle lens (24 mm) with short focal length, everything in focus, no bokeh.  
+
+- **Environment**  
+  - Location: a rustic wooden bar or tavern; the background shows vertical wood planks with a faint knot pattern.  
+  - Time of day: late afternoon, warm natural light from a window on the left, casting soft shadows.  
+  - Weather: clear, no wind, slight humidity in the air.  
+
+- **Lens & Technical**  
+  - Focal length: 24 mm (wide‑angle).  
+  - Aperture: f/5.6 – moderate depth of field, background fully sharp.  
+  - Shutter speed: 1/125 s – enough to capture slight motion blur.  
+  - ISO: 400 – natural grain.  
+
+- **Style & Tone**  
+  - Candid, unposed, spontaneous — subject unaware or mid‑action.  
+  - Imperfections encouraged: slight tilt, off‑center framing, partial crop.  
+  - No rule‑of‑thirds intentionality — accidental framing.  
+  - Zero studio lighting, zero professional composition, zero editorial tone.  
+
+- **Output**  
+  Produce a single image that faithfully embodies all the above parameters, with emphasis on realism, rawness, and spontaneous feel. The final photo should look like an authentic, unedited snapshot taken in a real world setting.

@@ -1,0 +1,30 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, athletic woman with a tattooed back, wearing a red one‑piece swimsuit, captured mid‑turn on an old wooden pier. Her hair is long, wavy, and sun‑kissed; she’s slightly angled toward the camera but not fully facing it, as if she’s just finished a dip in the water.  
+
+- **Motion & Focus**  
+  Slight motion blur at the edges from handheld shake; everything in focus—no bokeh, no portrait‑mode isolation. The image has an auto‑HDR feel but without post‑processing filters: raw, natural exposure with a hint of overexposure on the sky.
+
+- **Environment**  
+  Location: A weathered wooden pier extending over a calm, blue‑green sea. The pier’s railings are made of rough, aged wood; the deck shows wear and tear, with visible nail heads and faint rope ties. The sea beyond is gentle, with small waves lapping at the pier’s edge.  
+
+  Time of day: Late afternoon, around 5 pm, giving a warm, golden hue to the scene. The sky is clear with a soft, diffused light that creates a slight overexposure on the upper part of the frame.  
+
+  Weather: Light breeze, no rain, ambient temperature suggests a cool evening.
+
+- **Lens & Technical**  
+  Lens: 24‑mm wide‑angle lens (short focal length).  
+  Focal length: 24 mm, giving a broad field of view that keeps the background fully sharp.  
+  Aperture: f/5.6 – moderate depth of field, everything from foreground to background in focus.  
+  Shutter speed: 1/125 s – enough to capture slight motion blur.  
+  ISO: 400 – for natural contrast without noise.  
+
+- **Composition & Framing**  
+  No rule‑of‑thirds intentionality—framing is accidental, slightly off‑center. The pier’s railings run diagonally across the frame, creating a subtle leading line. The subject’s back is partially turned, adding a dynamic element.  
+
+- **Lighting**  
+  Natural lighting from the west, creating a warm backlight that slightly overexposes the sky and gives a golden tint to the subject’s hair. No studio lights, no color grading, no post‑processing aesthetic.
+
+- **Final Prompt**  
+  “A tall woman with a tattooed back in a red one‑piece swimsuit turns mid‑pose on an old wooden pier at late afternoon, captured with a 24‑mm wide‑angle lens at f/5.6 and 1/125 s shutter speed, slight motion blur from handheld shake, everything in focus, natural overexposure on the sky, accidental off‑center framing, raw unprocessed look.”

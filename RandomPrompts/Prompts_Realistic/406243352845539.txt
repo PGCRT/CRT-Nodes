@@ -1,0 +1,16 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**: A tall, athletic woman with long, wavy blonde hair sits casually on a cream‑colored sofa in a bright, airy living room. She wears a black ribbed tank top and a red high‑waist skirt, with white and black striped knee‑socks that peek above the skirt. Her hands rest on her hips, one hand slightly forward, giving a subtle dynamic angle. She smiles softly at the camera, eyes bright, with natural makeup and a hint of blush.
+
+- **Lighting & Exposure**: Natural daylight from a large window to the left creates a warm, slightly overexposed highlight on her face and upper body. The exposure is a little high, giving a soft glow, but no filters or color grading—just raw, unprocessed light. Slight handheld shake gives a natural motion blur around the edges.
+
+- **Camera & Lens**: 24‑mm wide‑angle lens (short focal length), f/3.5 aperture, 1/60 s shutter speed, ISO 400. Everything in focus from foreground to background; no bokeh or depth‑of‑field blur. The composition is accidental—slightly off‑center, a little tilted, with a partial crop that cuts off the top of the sofa and a portion of the plant behind her.
+
+- **Environment**: A modern living room with a large, leafy green plant in a ceramic pot on a side table, a white curtain hanging to the right, and a bright window that lets in soft natural light. The time of day is mid‑afternoon, around 3 pm, when the sun is high but not directly overhead, creating gentle shadows. The weather outside is clear, with a slight breeze that moves the plant’s leaves.
+
+- **Details & Imperfections**: The image has a slight tilt and a partial crop that gives it a candid feel. There’s a faint motion blur on her hands and the plant’s leaves, indicating handheld instability. The background is fully sharp—no portrait‑mode isolation. A small ring on her left hand adds a subtle detail.
+
+- **Prompt for Text‑to‑Image Generation**:  
+  *“A tall, athletic woman with long wavy blonde hair sits casually on a cream sofa in a bright living room, wearing a black ribbed tank top and a red high‑waist skirt with white and black striped knee‑socks. Her hands rest on her hips, one slightly forward, as she smiles softly at the camera. Natural daylight from a large window to the left creates a warm, slightly overexposed glow. Shot on a 24‑mm wide‑angle lens at f/3.5, 1/60 s, ISO 400—everything in focus with no bokeh. The composition is accidental: a slight tilt and partial crop cut off the top of the sofa and a portion of a large green plant behind her. A white curtain hangs to the right, a bright window lets in mid‑afternoon light, and a ceramic pot sits on a side table. The image has a faint motion blur from handheld shake, a small ring on her left hand, and a fully sharp background.”*
+
+Provide only the structured prompt.

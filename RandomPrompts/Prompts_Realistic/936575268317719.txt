@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark brown hair tied back, wearing a tan denim jacket over a white crop‑top and high‑waisted blue jeans. She stands mid‑step on a dry, grassy field, slightly tilted to the left, capturing a natural, unposed moment as she walks toward the camera. Her face is turned toward the lens with a soft, candid smile; her left hand rests on her hip, and her right arm hangs loosely by her side.
+
+- **Lighting & Exposure**  
+  Warm, golden‑hour sunlight from the west casts a slight overexposure on the subject’s front, creating a subtle halo around her head and shoulders. The exposure is slightly uneven—the background is fully sharp with no depth‑of‑field blur, while the foreground has a gentle, handheld motion blur that suggests movement.
+
+- **Lens & Technical**  
+  24 mm wide‑angle lens, f/4.0 aperture, 1/60 s shutter speed, ISO 400. The lens is set to a short focal length for a broad field of view. Focus is locked on the subject’s face and upper torso; everything from her feet to the top of her head is in focus. No bokeh or portrait‑mode isolation—just crisp, real‑life detail.
+
+- **Environment**  
+  The setting is an open, dry meadow with scattered shrubs and a small creek in the background. The time of day is late afternoon, around 6 pm, when the sun is low but still high enough to keep the scene bright. The weather is clear with a light breeze, leaving a faint trail of dust rising from the ground.
+
+- **Composition & Framing**  
+  The frame is intentionally off‑center: the subject’s left side cuts close to the left edge, and her right foot nearly touches the bottom border. No rule‑of‑thirds intentionality—this is a spontaneous, handheld shot that feels like it was captured in the moment. The background remains fully sharp, with no depth‑of‑field blur, giving the image a documentary feel.
+
+- **Post‑Processing**  
+  Raw, unprocessed look: no filters, no color grading, no auto‑beauty mode. Slight overexposure on the subject’s front gives it a natural, candid vibe. The image retains all imperfections—slight tilt, partial crop, and a hint of motion blur from handheld instability.
+
+**Prompt Summary**  
+> “A young woman with long dark brown hair tied back, wearing a tan denim jacket over a white crop‑top and high‑waisted blue jeans, stands mid‑step on a dry grassy field in late afternoon golden hour light. Capture the scene with a 24 mm wide‑angle lens at f/4.0, 1/60 s shutter speed, ISO 400, ensuring everything is fully sharp while adding slight motion blur to the subject’s front. The shot should feel spontaneous and candid, with intentional off‑center framing that cuts close to the left edge and nearly touches the bottom border, no rule‑of‑thirds, handheld instability. Keep the background fully sharp, no bokeh, no filters—raw, unprocessed, natural look.”

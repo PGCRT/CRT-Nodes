@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman with long, dark, wavy hair, wearing a black mesh off‑shoulder top and matching sheer thong, sitting on a light‑wood floor with her back to the camera. Her hands rest on the floor on either side of her hips, knees bent, thighs slightly spread, creating a dynamic, candid pose. A small floral tattoo is visible on her left upper back.
+
+- **Motion & Focus**  
+  Slight motion blur from handheld shooting; natural freeze‑frame with minor instability. Everything in focus—no portrait‑mode depth‑of‑field blur. No auto‑HDR or auto‑beauty mode—raw, unprocessed look.
+
+- **Lighting & Exposure**  
+  Natural ambient lighting from a bright, diffused window; slight overexposure on the upper back and hair, subtle underexposure on the lower body. No studio lighting, no color grading, no post‑processing aesthetic.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm), short focal length. No bokeh—background fully sharp. No rule‑of‑thirds intentionality; framing is accidental, slightly tilted, off‑center.
+
+- **Environment**  
+  A modern living room with a gray fabric sofa in the background, a beige pillow on the left side, and a light‑wood floor. Time of day: late morning, soft natural daylight. Weather: clear, no wind.
+
+- **Composition Notes**  
+  Capture a candid, unposed moment—subject unaware or mid‑action. Slight tilt and partial crop for spontaneous feel. Keep background fully sharp; no subject isolation.  
+
+**Prompt:**  
+"Long‑hair woman in black mesh top and sheer thong sitting on wooden floor, back to camera, hands on floor, small floral tattoo on left back, slight motion blur, natural ambient lighting, wide‑angle lens, all in focus, gray sofa background, late morning daylight, accidental off‑center framing, no filters."

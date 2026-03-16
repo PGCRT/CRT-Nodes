@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A woman with dark, tied‑back hair stepping forward in a bare‑shouldered red bikini, holding a white towel over her face as if she’s just finished a shower or a quick tan. Her left foot is slightly ahead of the right, giving a natural, mid‑step motion. She’s barefoot on a terracotta‑tile floor, toes relaxed, heel slightly turned inward.
+
+- **Pose & Movement**  
+  Slight motion blur at the knees and feet to convey handheld movement. The towel is partially covering her chest, creating a soft, organic fold that catches the light. Her head is tilted slightly to the right, eyes peeking through the towel, giving a candid, unposed feel.
+
+- **Environment**  
+  The scene is set in a sunlit hallway with an arched stone doorway behind her. The arch is made of rough‑hewn limestone blocks, with a faint mortar line running horizontally. To the left of the arch, a small wooden side table holds a clear glass bottle and a blue cloth. The floor is a grid of square terracotta tiles, each tile slightly uneven, reflecting the ambient daylight. The hallway is flanked by white painted door frames on either side, with visible hinges and a small keyhole.
+
+- **Time of Day & Lighting**  
+  Mid‑afternoon sunlight streams from the left, creating a soft overexposure on the woman’s right shoulder and a gentle shadow under her left foot. The light is warm, slightly hazy, suggesting a humid day. No artificial lighting or filters—just natural daylight with a slight handheld shake.
+
+- **Lens & Technical**  
+  Use a wide‑angle lens (24 mm or 35 mm) to capture the full scene in one shot. Keep everything in focus—from the woman’s feet to the arch’s top—no bokeh, no depth‑of‑field blur. The composition is accidental: the frame is slightly off‑center, with the door frames cutting close to the edges. No rule‑of‑thirds intentionality; the subject occupies the central vertical axis but is tilted a few degrees to the right.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Encourage imperfections: slight tilt, off‑center framing, partial crop. No rule‑of‑thirds intentionality — accidental framing. Natural motion freeze or slight blur from handheld instability.
+
+- **Post‑Processing**  
+  Auto‑HDR or auto‑beauty mode off—raw, unprocessed look. Slight overexposure on the subject’s right side to mimic ambient light. No color grading or filters; keep the image naturalistic.
+
+- **Final Prompt**  
+  “A woman in a red bikini stepping forward while wiping her face with a white towel, captured in a sunlit hallway with an arched stone doorway and terracotta tile floor. The shot uses a wide‑angle lens, all elements in focus, slight motion blur on the knees and feet, accidental off‑center framing, natural daylight overexposure, raw unprocessed look.”

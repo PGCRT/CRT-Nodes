@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail and large gold hoop earrings, wearing an oversized white short‑sleeve top with a deep back cutout and frayed white shorts. She’s mid‑mirror selfie: right hand holding a white iPhone at eye level, left arm relaxed by her side. Her head is turned slightly to the right, capturing a candid, unposed moment.
+
+- **Motion & Focus**  
+  Slight motion blur on the subject’s hand and phone, indicating handheld instability. Everything in the frame — subject, background, and foreground — is fully sharp with no portrait‑mode depth of field blur. No auto‑HDR or beauty filters; raw, unprocessed look.
+
+- **Lighting & Exposure**  
+  Natural daylight from a western window, mid‑afternoon. Slight overexposure on the subject’s back, giving a warm, soft glow. No color grading or post‑processing. The lighting is uneven, creating subtle shadows on the back of the top and a small highlight on the phone’s lens.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24‑35 mm), short focal length. No bokeh; background remains fully sharp. Handheld shot with slight tilt and off‑center framing — no rule‑of‑thirds intentionality. The composition is accidental, capturing the scene as it was.
+
+- **Environment**  
+  A cozy living room: a gray fabric sofa on the left, a light‑wood dresser with three drawers on the right, a small potted plant atop the dresser, and a framed photograph hanging on the wall behind the subject. The floor is carpeted, and a pink notebook lies on the floor near the dresser. Time of day: late afternoon, ambient light warm but not harsh. Weather: clear, no wind.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, partial crop that cuts off the top of the sofa and the lower part of the dresser. The subject’s hair has a tiny stray strand that catches the light. The phone’s back shows a subtle reflection of the room. The overall tone is natural, unposed, spontaneous — a real‑life snapshot with zero studio lighting or professional composition.
+
+- **Prompt Summary**  
+  “A candid, wide‑angle, handheld shot of a woman in a white top and frayed shorts taking a mirror selfie in a cozy living room. Slight motion blur on her hand, full sharpness throughout, natural daylight overexposure, no filters. The scene includes a gray sofa, wooden dresser with a plant, and a framed photo on the wall. Mid‑afternoon lighting, accidental framing, slight tilt, all in focus.”

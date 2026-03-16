@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman with long, wavy brown hair, a small scorpion tattoo on her left upper back, wearing a thin silver bracelet on her left wrist. She is standing in a bright, modern living room, facing slightly to the right of the camera, body turned away from the lens, head tilted back, eyes looking over her shoulder with a soft, playful smile. Her left arm hangs loosely by her side, while her right hand rests lightly on the back of her thigh. She is nude, with natural skin tone and subtle shadows.
+
+- **Motion & Focus**  
+  Slight motion blur at the edges from handheld shake; the subject’s body is mostly in focus but not perfectly centered. The background is fully sharp—no bokeh or depth‑of‑field blur. No auto‑beauty mode, no filters, no color grading, no post‑processing.
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window to the left of the room; slight overexposure on the upper body, underexposed lower body. The lighting is uneven, giving a raw, unprocessed look. No studio lights, no professional composition.
+
+- **Environment**  
+  A contemporary living space with white walls, a flat‑panel TV mounted on the wall behind the subject, a low white cabinet with open shelves to the left, and a small vase with dried branches on the cabinet. A stack of books sits on the right side of the cabinet. The time of day is late afternoon, with warm, soft sunlight casting gentle shadows.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24 mm), short focal length. Everything in focus—no portrait mode. The framing is accidental: the subject’s left hip is slightly cut off by the right edge of the frame; the top of the TV is partially cropped at the upper left corner. No rule‑of‑thirds intentionality.
+
+- **Composition Notes**  
+  Capture a candid, unposed moment as if the subject is unaware of the camera. The shot should feel spontaneous, with slight tilt and off‑center framing. Keep the background fully sharp, no bokeh. Preserve natural imperfections: a faint smudge on the wall, a slight vibration in the image.
+
+- **Prompt for AI Image Generation**  
+  “A woman with long wavy brown hair, a scorpion tattoo on her left upper back, and a thin silver bracelet on her left wrist, standing nude in a bright modern living room. She is turned away from the camera, looking over her shoulder with a playful smile, right hand lightly touching her thigh, left arm hanging by her side. Slight motion blur at the edges, everything in focus, no bokeh. Natural daylight from a large window to the left, slight overexposure on the upper body, underexposed lower body. Behind her is a flat‑panel TV mounted on a white wall, a low white cabinet with open shelves to the left holding a vase of dried branches, and a stack of books on the right side of the cabinet. Late afternoon sunlight casts soft shadows. Wide‑angle 24 mm lens, accidental off‑center framing, slight tilt, raw unprocessed look.”

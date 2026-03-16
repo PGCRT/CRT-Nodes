@@ -1,0 +1,28 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, straight black hair, a rose tattoo on her left upper arm, kneeling on a large, rough stone in a natural setting. Her hands rest gently on her knees, fingers slightly spread, as if she’s about to lift something or simply balancing. Her gaze is direct, meeting the camera with a calm, confident expression.  
+
+- **Appearance & Detail**  
+  Skin tone: warm, tanned, with subtle texture and natural imperfections (small blemishes, faint moles). Clothing: none—she is nude, emphasizing raw, unposed realism. Hair: glossy, slightly frayed ends, a few strands escaping the ponytail. Tattoo: a detailed rose with green leaves, ink slightly faded, adding character.  
+
+- **Lighting & Exposure**  
+  Slight overexposure in the highlights; ambient daylight from a mid‑afternoon sun, creating soft warm tones and mild haze. No auto‑beauty mode—raw, unprocessed look. The exposure is uneven: the foreground is brighter than the background, giving a natural “handheld” feel.  
+
+- **Motion & Focus**  
+  Slight motion blur on the subject’s hands and the surrounding foliage, indicating a handheld shot captured at a fast shutter speed. Everything remains in focus—no portrait‑mode depth of field blur.  
+
+- **Lens & Technical**  
+  Wide‑angle lens (24‑35 mm), short focal length, no bokeh. Background fully sharp: rocks, plants, and foliage all in focus. No rule‑of‑thirds intentionality; framing is accidental, slightly tilted, off‑center.  
+
+- **Environment**  
+  Location: a rocky outcrop in a tropical garden or desert-like setting. Large, weathered stones surround the subject, with spiky green plants (like yucca or agave) rising behind her. Time of day: late afternoon, sun high but not directly overhead, casting soft shadows. Weather: clear, mild humidity, slight wind moving the leaves.  
+
+- **Composition & Style**  
+  Candid, unposed, spontaneous—subject appears unaware of the camera mid‑action. Imperfections encouraged: slight tilt, off‑center framing, partial crop that cuts off a bit of the background on the right side. Zero studio lighting, zero professional composition, zero editorial tone.  
+
+- **Post‑Processing**  
+  No filters, no color grading, no post‑processing aesthetic. Raw, natural look with only minimal adjustments to exposure and contrast.
+
+**Prompt Summary (structured)**  
+"Realistic candid photo of a nude woman with long black hair and a rose tattoo on her left arm, kneeling on a large stone in a rocky garden setting. She is mid‑action, hands on knees, gazing at the camera. Slight motion blur on her hands, everything in focus, wide‑angle lens (24–35 mm), raw exposure with mild overexposure. The background shows spiky green plants and rough stones, all sharp. Shot in late afternoon daylight, handheld, slightly tilted framing. No filters or color grading—pure, natural aesthetic."

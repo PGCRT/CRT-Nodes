@@ -1,0 +1,26 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark, wavy hair standing mid‑step on a sunlit garden path. She wears an ivory, knee‑length dress with a deep V‑neck and a high slit that reveals a hint of bare leg; the dress’s sleeves are embroidered with red roses that echo the nearby hydrangeas. Her right foot is slightly ahead, capturing a natural, unposed stride. She smiles softly, eyes cast toward the camera but not directly at it—mid‑action, candid.
+
+- **Motion & Focus**  
+  Slight motion blur on the lower leg and feet, indicating handheld shake. Everything in frame—from her toes to the top of the hedge—is fully sharp; no portrait‑mode blur. The lens is a short focal‑length wide‑angle (24–35 mm), giving a “wide” feel without bokeh.
+
+- **Lighting & Exposure**  
+  Auto‑HDR off. The scene is lit by mid‑afternoon sun, with a slight overexposure on the upper body and a gentle warm glow on the grass. No color grading or filters—raw, natural tones.
+
+- **Environment**  
+  A lush green garden in late afternoon. To the left, a cluster of bright pink hydrangeas; behind the woman, a wooden bench with two children (a boy in a gray shirt and a girl in a pink top) sitting and looking at phones. Tall evergreen hedges line the back of the scene. The sky is a pale blue with a few wispy clouds.
+
+- **Composition & Framing**  
+  No rule‑of‑thirds intentionality—frame the woman slightly off‑center, with the bench and children forming a casual background. The shot is a wide, handheld capture; the top of the hedge cuts off the upper right corner, giving an accidental crop. Slight tilt to the left gives a dynamic feel.
+
+- **Technical Specs**  
+  - Lens: 35 mm, wide‑angle, short focal length.  
+  - Aperture: f/4–f/5.6 (wide opening).  
+  - Shutter speed: 1/125 s (slight motion blur).  
+  - ISO: 400–800 (natural brightness).  
+  - No bokeh, no depth‑of‑field blur—background fully sharp.  
+
+- **Final Prompt**  
+  “A candid, wide‑angle shot of a woman in an ivory rose‑embroidered dress mid‑step on a sunlit garden path, with pink hydrangeas to her left and two children on a wooden bench behind her; the scene is framed slightly off‑center with accidental tilt, slight motion blur on her feet, everything fully sharp, captured on a 35 mm wide‑angle lens at f/5.6, 1/125 s, mid‑afternoon sun, auto‑HDR off, raw natural tones.”

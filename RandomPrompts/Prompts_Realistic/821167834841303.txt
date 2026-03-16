@@ -1,0 +1,27 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with deep red, half‑tied ponytail and bangs, wearing a black spaghetti‑strap mini dress with a cut‑out at the waist. She’s holding a gray smartphone in both hands, looking down at the screen as if texting or browsing. Her left wrist is adorned with a gold bracelet and a thin gold necklace; a ring sits on her right hand. The pose is candid—she’s mid‑action, slightly tilted, off‑center, as if caught in a spontaneous moment.
+
+- **Lighting & Exposure**  
+  Natural daylight from a bright, diffused window (mid‑afternoon). Slight overexposure on the face and upper body, giving a warm, raw feel. No auto‑HDR or auto‑beauty—just a straightforward exposure that keeps everything in focus. The background is a plain off‑white wall with a subtle texture, no bokeh, no depth‑of‑field blur.
+
+- **Camera & Lens**  
+  Wide‑angle lens (24–35 mm). Short focal length to keep the entire scene sharp. Handheld shot with slight instability, producing a natural motion blur on the subject’s hands and phone. All elements—subject, phone, jewelry, background—are fully in focus.
+
+- **Composition & Framing**  
+  No rule‑of‑thirds intentionality; the frame is accidental, with the subject slightly cropped at the top and right. The shot captures a “real” moment: the woman’s fingers are mid‑touch on the phone, her head is tilted downwards, and her left shoulder is slightly turned toward the camera.
+
+- **Environment**  
+  Location: A bright, uncluttered living room with a white wall and a light wooden floor. Time of day: late afternoon, soft natural light from a large window. Weather: clear, no wind—only the subtle motion blur from the subject’s movement.
+
+- **Technical Details**  
+  - Focal length: 35 mm  
+  - Aperture: f/4 (wide, shallow depth but all elements stay sharp)  
+  - Shutter speed: 1/60 s (captures slight motion blur)  
+  - ISO: 400 (for natural contrast)  
+  - No filters, no color grading, no post‑processing.  
+  - Auto‑beauty mode off; raw image with minimal noise.
+
+- **Final Prompt**  
+  “A candid, unposed photograph of a woman with deep red half‑tied ponytail and bangs, wearing a black spaghetti‑strap mini dress with a waist cut‑out, holding a gray smartphone in both hands while looking down at the screen. She wears a gold bracelet on her left wrist, a thin gold necklace, and a ring on her right hand. The shot is taken with a 35 mm wide‑angle lens at f/4 and 1/60 s shutter speed, capturing slight motion blur from handheld instability. Natural daylight from a bright window creates a slight overexposure on the subject. The background is a plain off‑white wall with a subtle texture, all in focus, no bokeh. The composition is accidental—slightly tilted and off‑center—with the subject partially cropped at the top right. No filters or post‑processing, raw, unprocessed look.”

@@ -1,0 +1,31 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail secured by a bright yellow scrunchie, wearing an oversized white cotton tee that shows a faint, natural stain near the left hem. Her right hand is raised to her chin in a casual, mid‑gesture pose, fingers slightly curled, as if she’s about to touch her face or adjust her hair. Her expression is candid and unposed—mouth slightly open, eyes focused off‑camera, giving a sense of spontaneous action.
+
+- **Facial Features & Makeup**  
+  Light makeup with defined eyeliner and subtle mascara; eyebrows are neatly shaped but not overly stylized. Her skin has a natural, unfiltered texture with a slight overexposure in the highlight area, capturing the ambient daylight. The lighting is uneven, with a warm, slightly hazy tone that suggests an indoor setting during late afternoon.
+
+- **Hair & Styling**  
+  Dark brown hair is tied into a high ponytail, the scrunchie adding a pop of color. A few loose strands frame her face, creating a natural, imperfect look. The hair’s texture is visible, with slight frizz and a gentle curl at the ends.
+
+- **Clothing & Fabric**  
+  The white tee is a relaxed fit, with a small, faint stain near the lower left side of the chest, adding realism. The fabric appears soft and slightly wrinkpled, indicating casual wear. The shirt’s sleeves are rolled up a bit, revealing a hint of her forearm.
+
+- **Hand & Gesture**  
+  Her right hand is lifted to her chin, fingers curled into a loose clench, with the thumb slightly above the index finger. The palm is turned inward, and the wrist is angled, giving a dynamic sense of motion. The nails are short and clean, with a natural pink tone.
+
+- **Background & Environment**  
+  The background is a plain, light‑colored wall with a subtle texture, likely a painted drywall. A small portion of a dark object (possibly a piece of clothing or a bag) is visible on the left side, suggesting a bedroom or living space. The time of day is late afternoon, with warm, diffused natural light coming from the right, creating soft highlights and gentle shadows.
+
+- **Lens & Technical Settings**  
+  Use a wide‑angle lens (24–35 mm) to capture a broad view of the subject and environment. Shoot at a short focal length for a more intimate feel. The image is fully sharp—no bokeh or depth‑of‑field blur—so the background remains in focus. Slight motion blur is present on the hand and hair, indicating handheld instability during capture. No auto‑HDR or auto‑beauty mode; the look is raw and unprocessed.
+
+- **Composition & Framing**  
+  The framing is accidental and off‑center: the subject’s head is slightly tilted, and the left side of the image is cropped at the edge. There’s no intentional rule‑of‑thirds; the composition feels spontaneous, as if the photographer was mid‑shot. The shot has a slight tilt, giving it a candid, unposed feel.
+
+- **Lighting & Exposure**  
+  Natural ambient light with a slight overexposure in the upper right quadrant, creating a warm glow. No post‑processing color grading; the image retains its natural tones and slight imperfections.
+
+- **Final Prompt Summary**  
+  “A candid, wide‑angle shot of a young woman in a white tee, her hair tied up with a yellow scrunchie, mid‑gesture near her chin, captured in a bright, late‑afternoon indoor setting. The image shows natural texture and slight motion blur, with accidental off‑center framing and no filters or post‑processing, preserving a raw, realistic feel.”

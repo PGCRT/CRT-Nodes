@@ -1,0 +1,31 @@
+**Realistic Candid Photography Prompt Framework – “Moonlit Country Path”**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair walking toward the camera on a dusty country path. She’s bare‑headed, mid‑step, slightly tilted in a casual, unposed stance. Her hands hang loosely at her sides, fingers relaxed. Her face is turned to the camera but not directly facing it – a subtle off‑center angle that gives a candid feel.
+
+- **Lighting & Exposure**  
+  Ambient twilight light with a full moon rising in the upper right of the frame. The scene has a slight overexposure on the sky, giving a soft glow to the moon and trees, while the ground remains naturally lit. No auto‑beauty or filter enhancement – raw, unprocessed look.
+
+- **Environment**  
+  Location: A quiet, unpaved path in a rural field. A large tree stands on the left side of the path, its leaves forming a partial canopy overhead. The background shows a line of distant trees and a faint horizon. Weather is clear, with a light breeze that ruffles the woman’s hair and the grass along the path.
+
+- **Time of Day**  
+  Late evening, just after sunset – the “blue hour” transition. The sky is a muted gray‑blue, the moon is bright but not overpowering, and the ground still retains a warm, earthy tone.
+
+- **Lens & Technical Settings**  
+  - Focal length: 24 mm (wide‑angle, short focal length).  
+  - Aperture: f/5.6 – enough to keep the entire scene in focus without a strong bokeh.  
+  - Shutter speed: 1/60 s – slight motion blur on the subject’s hair and the path, indicating handheld instability.  
+  - ISO: 400 – for clean detail without noise.  
+  - No portrait‑mode depth‑of‑field blur; everything from foreground to background is sharply rendered.
+
+- **Composition Notes**  
+  - The framing is accidental: the path leads slightly off‑center, the woman’s head is not perfectly centered, and the moon is positioned high in the right corner – a natural, spontaneous composition.  
+  - No rule‑of‑thirds intentionality; the shot feels improvised.  
+  - The background trees and moon are fully sharp, giving a sense of depth without any “portrait mode” isolation.
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, no auto‑HDR. A simple, raw capture with minimal post‑processing – only basic white‑balance correction and a slight contrast boost to enhance the natural tones.
+
+**Prompt Summary (for use in a text‑to‑image model)**  
+> “A young woman with long wavy brown hair walking toward the camera on a dusty country path, bare‑headed, mid‑step, slightly tilted. The scene is lit by twilight with a bright moon rising in the upper right, creating a slight overexposure on the sky. A large tree stands on the left, a line of distant trees forms the horizon. Capture with a 24 mm wide‑angle lens at f/5.6 and 1/60 s shutter speed, keeping everything in focus while allowing slight motion blur on the subject’s hair. The composition is accidental and off‑center, no rule‑of‑thirds. Render raw, unprocessed, with natural colors and no filters.”

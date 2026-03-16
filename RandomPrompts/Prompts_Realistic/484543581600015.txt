@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high bun, wearing a sheer white satin camisole with lace trim, sitting on a neatly made bed. Her left leg is bent, foot tucked under the pillow, and her right arm rests along the side of her thigh. She looks directly at the camera with a soft, unposed expression, as if caught mid‑pose in a spontaneous snapshot.
+
+- **Lighting & Exposure**  
+  Natural daylight from a north‑west window, slightly overexposed on the face and upper body, giving a warm, hazy glow. No auto‑beauty or filter processing—raw, unedited look. Slight handheld shake gives a subtle motion blur around the edges.
+
+- **Camera & Lens**  
+  35 mm wide‑angle lens (short focal length), fully sharp background with no bokeh. Handheld, slightly tilted, off‑center framing—no rule‑of‑thirds intentionality. Everything in focus, from the subject’s face to the pillow and bedside table.
+
+- **Environment**  
+  A modern bedroom with a light‑colored wall, a white pillow, and a wooden nightstand on the right. The bed has crisp white sheets, slightly rumpled to suggest recent use. Time of day: late morning, soft ambient light with a hint of warm hue. Weather: clear, no wind—quiet, intimate setting.
+
+- **Composition & Details**  
+  Capture the scene as if a friend snapped a quick photo: slight tilt, partial crop, and accidental framing. The composition should feel spontaneous, not staged. Emphasize the texture of the satin fabric, the lace detail, and the subtle motion blur from a handheld shot. Keep the background fully sharp—no depth‑of‑field blur.
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, zero studio lighting. Only natural light and raw capture. Slight overexposure on the subject’s face to give a bright, airy feel.  
+
+**Prompt Summary**  
+> “A young woman in a sheer white satin camisole with lace trim sits on a white bed in a modern bedroom, captured with a 35 mm wide‑angle lens. Natural daylight from a north‑west window creates a warm, slightly overexposed glow. The shot is handheld, slightly tilted, and fully sharp—no bokeh—spontaneous and unposed, with subtle motion blur around the edges. The background includes a white pillow and a wooden nightstand, all in focus. Capture the raw, candid feel of a friend’s instant photo.”

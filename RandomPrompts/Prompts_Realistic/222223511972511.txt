@@ -1,0 +1,26 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with wet, slightly frizzy hair, mid‑smile, leaning forward in a shallow outdoor pool. Her shoulders are bare, and she’s wearing a patterned bikini bottom that peeks above the water line. She’s caught in a casual, unposed moment—her head tilted a little to one side, eyes bright, as if she just finished a lap or is about to splash. The capture should feel spontaneous, like a friend’s “quick snap” before a poolside gathering.
+
+- **Lighting & Exposure**  
+  Natural daylight, late‑afternoon sun casting soft warm highlights on her skin and a gentle rim light on the water surface. Slight overexposure in the high‑lights gives a raw, unprocessed feel. No auto‑beauty or filter work—just the camera’s native dynamic range. The exposure is a little bright at the top, with a subtle halo around her hair.
+
+- **Camera & Lens Settings**  
+  Wide‑angle lens (24–35 mm), handheld, slightly shaky. Focal length short, background fully sharp—no bokeh. Aperture set to f/8–f/10 for crisp focus across the frame. Slight motion blur from the subject’s movement and camera shake. No portrait‑mode depth‑of‑field blur; everything in focus from her face to the pool edge.
+
+- **Composition & Framing**  
+  Accidental, off‑center framing: the subject’s left side is slightly cut off by the frame edge, giving a casual, candid feel. The composition doesn’t follow the rule of thirds—she’s more centered but tilted, with her head almost at the top third of the frame. The background includes a concrete pool deck, a potted plant, and a row of colorful plastic buckets (red, blue, yellow) on a stone ledge. A white towel is draped on the edge, adding a small detail.
+
+- **Environment**  
+  Outdoor residential pool, mid‑afternoon, clear weather with a light breeze. The water ripples around her torso, reflecting the sun and the surrounding objects. The scene has a natural, unstyled vibe—no studio lighting, no professional composition, just a real‑life snapshot.
+
+- **Technical Details**  
+  - Use a wide‑angle lens (24–35 mm).  
+  - Slight motion blur on the subject’s hair and water ripples.  
+  - No auto‑HDR or auto‑beauty mode—raw, unprocessed look.  
+  - Slight overexposure on the high‑lights; background fully sharp.  
+  - Everything in focus: no portrait mode or subject isolation.  
+
+- **Final Prompt**  
+  “A candid, spontaneous photo of a young woman with wet hair leaning forward in an outdoor pool, captured with a wide‑angle lens at 30 mm. The image shows her mid‑smile, slightly tilted, wearing a patterned bikini bottom, with natural daylight creating soft warm highlights and a faint overexposed rim. The background features a concrete deck, a potted plant, and a row of red, blue, and yellow buckets on a stone ledge, plus a white towel. The shot is handheld with slight shake, all elements in focus, no bokeh, and the framing is off‑center and accidental, giving a raw, unprocessed, real‑life feel.”

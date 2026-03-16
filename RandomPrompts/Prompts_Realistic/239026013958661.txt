@@ -1,0 +1,20 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair walking toward the camera on a cobblestone street. She’s wearing a loose, taupe, V‑neck top and matching high‑waist trousers that drape naturally as she moves. Her hands are relaxed at her sides, fingers slightly curled, and her face is turned directly to the lens with a subtle, confident smile. The clothing should show realistic fabric texture, slight creases from motion, and a faint hint of auto‑beauty “raw” look—no heavy filters or post‑processing.
+
+- **Motion & Focus**  
+  Capture a candid, unposed moment with a handheld camera that produces a slight motion blur around the edges (about 0.5 px RMS). The focus should be entirely on the subject and the immediate surroundings; everything from her feet to the top of her head and the background street is fully sharp—no portrait‑mode depth‑of‑field blur. Use a wide‑angle lens (24–35 mm) to keep the entire scene in frame, avoiding any bokeh or subject isolation.
+
+- **Lighting & Exposure**  
+  The shot should be taken during late afternoon, with the sun low on the western side of the street, creating warm, golden ambient light that slightly overexposes the upper part of the frame. The lighting should feel natural, as if captured in a real‑world setting—no studio lighting or intentional color grading. The exposure should be set to “auto‑HDR” but with the “beauty mode” turned off for a raw, unprocessed look.
+
+- **Environment & Composition**  
+  The location is a historic brick‑lined street in an urban neighborhood; the background shows a row of red‑brick buildings with fire escapes, a few pedestrians walking away, and a tree with green leaves at the corner. The time of day is about 5:30 pm, giving a soft, warm glow. Weather is mild and slightly breezy, as indicated by the gentle motion blur in the hair and clothing.  
+  Compose the shot so that the subject is slightly off‑center to the left, with the camera tilted a little to the right, creating an accidental, spontaneous framing. The rule of thirds is intentionally ignored—frame the scene as it naturally appears, with a wide lens that keeps everything in focus.
+
+- **Lens & Technical Settings**  
+  Use a short focal length (24–35 mm) with a wide‑angle view. Set the aperture to f/8–f/10 for full sharpness across the frame. Shoot in RAW to preserve the raw, unprocessed look; apply auto‑HDR only to the exposure. Keep the ISO at a moderate level (around 400–600) to maintain detail without noise. The final image should have no color grading or filters applied—just the natural colors and textures of the scene.
+
+- **Final Prompt**  
+  “A young woman with long, wavy brown hair walking toward the camera on a cobblestone street, wearing a loose taupe V‑neck top and high‑waist trousers. Capture candid motion blur, full sharpness, wide‑angle lens (24–35 mm), slight overexposure from late afternoon sun, raw unprocessed look, accidental off‑center framing on a historic brick‑lined street with pedestrians and a tree in the background. No filters or color grading—just natural, realistic photography.”

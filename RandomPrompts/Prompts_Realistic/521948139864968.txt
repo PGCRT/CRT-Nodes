@@ -1,0 +1,23 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with shoulder‑length blonde hair, wearing a black sports bra and black shorts with a white drawstring, is captured mid‑crouch in a school locker room. She has a white towel draped over her shoulders, hands resting on her knees, and a natural, unposed smile. Her pose is slightly off‑center, with a subtle tilt that gives the image a candid feel.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high window above the lockers creates a soft, slightly overexposed highlight on her face and torso. The exposure is uneven—warm tones in the foreground with a cooler background—producing a raw, unprocessed look. No auto‑beauty or filter enhancements; the image retains slight handheld instability.
+
+- **Camera & Lens Settings**  
+  Shot on a wide‑angle lens (24‑35 mm) with a short focal length to capture a broad view of the scene. Focus is kept on the subject and the lockers behind her, so the background remains fully sharp—no bokeh or depth‑of‑field blur. The aperture is set to f/8 for even sharpness across the frame.
+
+- **Environment & Composition**  
+  Location: a bright, airy locker room with teal metal lockers lining both sides of the space. A window at the back lets in natural light, and a small wooden shelf holds a brown jacket on a hook. The time of day is mid‑afternoon, with warm sunlight casting soft shadows. The composition is accidental—no rule‑of‑thirds intentionality; the subject is slightly off‑center, and the frame cuts off the top of the lockers, giving a partial crop effect.
+
+- **Technical Details**  
+  - Focal length: 35 mm (wide angle)  
+  - Aperture: f/8  
+  - Shutter speed: 1/125 s (slight motion blur from handheld)  
+  - ISO: 400  
+  - No portrait‑mode or subject isolation; everything in focus.  
+
+- **Prompt for Text‑to‑Image Generation**  
+  “A candid, unposed photograph of a young woman with blonde hair, black sports bra, and black shorts with a white drawstring, crouching in a school locker room with teal lockers on both sides. She has a white towel draped over her shoulders, hands on knees, and a natural smile. Natural daylight from a high window creates a soft overexposure on the subject, while the background lockers remain fully sharp. Shot on a 35 mm wide‑angle lens at f/8, 1/125 s shutter speed, ISO 400, with slight handheld blur. The composition is accidental and off‑center, capturing a raw, unprocessed look with no filters or color grading.”

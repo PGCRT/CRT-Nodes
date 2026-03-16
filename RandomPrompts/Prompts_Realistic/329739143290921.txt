@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, sun‑kissed blonde hair, wearing floral‑patterned bikini bottoms, sitting on a beige couch in a bright, lived‑in living room. One arm is raised high, her elbow bent, as if she just finished a playful stretch or is reaching for something out of frame. Her face is turned upward, eyes bright, a candid smile catching the light. She’s mid‑motion, with a slight blur at the fingertips to suggest movement.
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window on the right, creating soft overexposure on the subject’s left side and a subtle warm glow. Slight underexposure on the lower left corner for a raw, unprocessed look. No auto‑beauty or filter enhancements—just the camera’s native settings.
+
+- **Camera & Lens**  
+  Wide‑angle lens (24 mm), handheld, shot with a DSLR or mirrorless. Everything in focus from foreground to background; no bokeh or depth‑of‑field blur. Slight tilt and off‑center framing for a spontaneous, unposed feel.
+
+- **Environment**  
+  A cozy, slightly cluttered living room: a tall wooden bookshelf filled with books, a small clock, and potted green plants on a side table; a large window letting in warm sunlight; a beige couch that the woman is sitting on. The time of day is late morning, with soft, diffused light. A few leaves from a plant are visible near the top of the frame, adding a natural, organic touch.
+
+- **Composition & Details**  
+  The composition is accidental: the subject’s left hand rests on the couch back, her right arm is raised, and her head is tilted upward, creating a dynamic diagonal line. The framing is partial—she extends beyond the top edge of the frame, giving a sense of continuity. The background is fully sharp, with no rule‑of‑thirds intentionality. A slight motion blur at the fingertips and a faint overexposure on the left side adds realism.
+
+- **Post‑Processing**  
+  No filters or color grading—just raw, in‑camera capture. Slight auto‑HDR for dynamic range, but the overall look remains natural and unpolished.
+
+**Prompt Summary**  
+"Mid‑morning candid shot of a woman in floral bikini bottoms sitting on a beige couch in a sunlit living room, one arm raised, face upward, slight motion blur at the fingertips, wide‑angle lens, everything in focus, accidental off‑center framing, natural daylight from a large window, background fully sharp, raw auto‑HDR, no filters."

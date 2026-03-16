@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with platinum‑blonde hair tied into high pigtails, the tips dyed electric blue, sitting on a silver metal stool in an outdoor setting. She is wearing a rainbow‑colored bikini (tri‑angle top and matching bottom) with tie‑off cords on the sides. Her hands are behind her head, elbows bent, creating a casual, playful pose. She looks directly at the camera with a soft smile, eyes slightly narrowed, giving a candid, unposed feel.
+
+- **Lighting & Exposure**  
+  Natural night lighting from a low‑angle street lamp or ambient moonlight; slight overexposure on the subject’s face and upper body, creating a warm glow. No auto‑HDR or beauty filters—raw, unprocessed look. The exposure is slightly uneven, with the background a bit darker than the subject, giving an authentic handheld feel.
+
+- **Motion & Focus**  
+  Slight motion blur around the hands and hair, indicating a handheld shot captured mid‑action. Everything in the frame is fully sharp—no bokeh or depth‑of‑field blur. The focus covers the entire scene from the subject’s toes to the top of her head, plus the stool and immediate background.
+
+- **Lens & Technical**  
+  Wide‑angle lens (20–35 mm) with a short focal length. No rule‑of‑thirds intentionality—framing is accidental, slightly tilted, off‑center. The composition is spontaneous; the stool sits slightly to the left of the center, and the background tree trunk is partially cropped on the left side.
+
+- **Environment**  
+  A residential backyard at night, with a concrete driveway, a young tree on the left, and a patch of grass with scattered fallen leaves on the right. The time of day is late evening (around 9 pm), with dim ambient light but a bright lamp illuminating the subject. Weather is clear, no wind, slight humidity.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Imperfections encouraged: slight tilt, off‑center framing, partial crop. Zero studio lighting, zero professional composition, zero editorial tone. Natural motion freeze or slight blur from handheld instability.
+
+- **Prompt for AI Image Generation**  
+  *“A young woman with platinum‑blonde hair in high pigtails, the tips dyed electric blue, sitting on a silver metal stool in a backyard at night. She wears a rainbow‑colored bikini (tri‑angle top and matching bottom) with tie‑off cords on the sides. Her hands are behind her head, elbows bent, she smiles directly at the camera. Natural night lighting from a low‑angle lamp creates slight overexposure on her face. Slight motion blur around the hands and hair, everything fully sharp. Wide‑angle lens (20–35 mm), short focal length, accidental off‑center framing, slightly tilted. Background shows a concrete driveway, a young tree on the left, a patch of grass with scattered fallen leaves on the right. Late evening, clear weather, no wind. Raw, unprocessed look, no filters.”*

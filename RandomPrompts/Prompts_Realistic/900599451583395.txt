@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, athletic woman with long, wind‑blown brown hair, wearing a black, studded leather bodysuit that clings to her toned frame. She’s captured mid‑turn, left arm bent at the elbow, right arm extended slightly backward, as if she just finished a dance move or a sports gesture. Her face is turned toward the camera but not directly at it—her gaze is off‑center, giving a candid, spontaneous feel.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle, late‑afternoon sun creates a soft overexposure on the upper part of the frame; the sky is a pale, hazy white with faint lens flare. The exposure is slightly uneven—brighter at the top, dimmer at the bottom—to preserve a raw, unprocessed look. No auto‑beauty or filter enhancement; the image keeps its natural grain and imperfections.
+
+- **Motion & Focus**  
+  Slight motion blur on the hair and background to suggest movement, produced by a handheld camera with a short focal length lens (24–35 mm). Everything—from the subject’s skin to the background—is fully sharp, no portrait‑mode depth of field blur. The focus is intentional but not staged: the camera is tilted slightly to the right, and the framing is off‑center, giving an accidental, spontaneous composition.
+
+- **Lens & Technical**  
+  Wide‑angle, short focal length (30 mm), f/4.5 aperture, 1/200 s shutter speed, ISO 400. No bokeh; the background is fully sharp, a real‑world location with no studio lighting. The lens is set to “wide” to capture a broad view of the scene, including the subject’s full silhouette and a portion of the sky.
+
+- **Environment**  
+  The setting is an open, sunlit meadow at the end of the afternoon—mid‑day but with the sun slightly low, casting long shadows. The grass is green and slightly uneven, with a few scattered wildflowers. A faint breeze ruffles the woman’s hair and the grass, adding a sense of motion. The time of day is late evening, as indicated by the warm, golden hue and the direction of the light.
+
+- **Composition & Style**  
+  The image is candid and unposed; the subject appears unaware of the camera, mid‑action. Slight tilt and partial crop create a dynamic, imperfect feel. No rule‑of‑thirds intentionality—framing is accidental, with the subject’s head near the upper right corner and her left arm extending toward the lower left. The composition includes a wide view of the subject’s body and a portion of the sky, with no intentional depth‑of‑field isolation.
+
+- **Post‑Processing**  
+  No filters, no color grading, no post‑processing aesthetic—just raw, natural imagery with a slight overexposure on the upper half to mimic ambient light. The final image retains the grain and texture of a real camera, giving it an authentic, documentary feel.

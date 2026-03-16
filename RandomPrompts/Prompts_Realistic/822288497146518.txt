@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A young woman with a high, messy bun, her hand mid‑adjust on the back of her head, wearing a thin gold necklace that catches the light. She’s bare‑shouldered, a casual white tee hanging loosely, and a subtle earring glints near her ear. Her skin is sun‑kissed, with faint sweat beads catching in the ambient light. She’s turned slightly away from the camera, creating an off‑center, spontaneous pose.
+
+- **Candid, Unposed Moment**  
+  The shot captures her mid‑motion: a slight blur at the fingertips and the back of her hand, as if she’re just finishing a hair‑tie or adjusting a scarf. Her face is partially turned toward another woman in the background who’s smiling, adding a layer of human interaction.
+
+- **Environment**  
+  The scene takes place in an open‑air café patio at late afternoon; the sun is low, casting warm, golden hues across the scene. The background shows a white brick wall and a small glass window, with a few potted plants and a wooden table visible. The weather is mild, with a light breeze that ruffles her hair.
+
+- **Lens & Technical**  
+  Use a wide‑angle lens (24–35 mm) to capture the full frame without cropping too tightly. Shoot in raw mode, no auto‑HDR or auto‑beauty enhancements; keep the image unprocessed. Allow a slight overexposure on the subject’s back to emphasize the sweat beads and the necklace. Keep everything in focus—no portrait‑mode blur—so the background remains sharp.
+
+- **Composition & Framing**  
+  Frame the shot with a slight tilt, letting the left side of the frame cut off a bit of her arm for a more natural, handheld feel. The composition is intentionally not rule‑of‑thirds; the subject’s back occupies the central‑right portion of the frame, while the background woman’s face peeks in at the upper right corner. Keep the background fully sharp, no bokeh.
+
+- **Lighting**  
+  Natural daylight from the west, creating a soft, warm glow on the subject’s back and a slight highlight on her necklace. The lighting is uneven—slightly brighter on the top of her back than on the lower part—to give a raw, unpolished look.
+
+- **Details & Imperfections**  
+  Include subtle imperfections: a stray strand of hair escaping the bun, a tiny smudge on her shoulder, and a slight shake in the hand that’s adjusting the bun. The image should feel spontaneous, as if captured mid‑action without posing.
+
+- **Final Prompt**  
+  “A young woman with a high, messy bun, bare‑shouldered and wearing a thin gold necklace, mid‑adjusting her hair on a sunny late‑afternoon café patio. Capture the scene with a wide‑angle lens in raw mode, no filters or auto‑HDR, slight overexposure on the subject’s back, everything fully sharp. Frame with a handheld tilt, off‑center composition, and keep the background woman’s face visible in the upper right corner. Preserve natural motion blur on the hand, maintain a raw, unprocessed look, and keep all elements in focus for a truly candid, spontaneous photograph.”

@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman with shoulder‑length, wavy brown hair, wearing a black long‑sleeved crop top and a beige turtleneck scarf, standing in a modern office or retail space. She is mid‑gesture, hand on her waist, slightly turned to the right, mouth open as if speaking or laughing. Her expression is natural, unposed, with a hint of spontaneity.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. Slight tilt and off‑center framing; partial crop that gives a raw, handheld feel. No rule‑of‑thirds intentionality. The shot is taken with a wide‑angle lens (24–35 mm), producing a short focal length that keeps the background fully sharp—no bokeh or depth‑of‑field blur. Everything is in focus, no portrait mode.
+
+- **Lighting & Exposure**  
+  Auto‑HDR or auto‑beauty mode off — raw, unprocessed look. Slight overexposure or underexposure depending on ambient light (the ceiling lights create a soft glow). No filters, no color grading, no post‑processing aesthetic. The lighting is natural, coming from the overhead fluorescent fixtures, with a slight warm tint.
+
+- **Environment**  
+  Specific real‑world location: a bright office or retail store with a visible ceiling light and a blue sign in the background. Time of day: mid‑afternoon, ambient daylight mixed with artificial lighting. Weather or ambient conditions: clear, indoor, no wind.
+
+- **Lens & Technical**  
+  Short focal length, wide angle (24–35 mm). No bokeh, no depth‑of‑field blur — background fully sharp. Everything in focus. No portrait mode, no subject isolation. Slight motion blur from handheld instability, capturing the subject’s natural movement.
+
+- **Composition Notes**  
+  The frame is slightly crooked, with the subject’s head near the upper right corner and her left hand near the lower middle of the frame. The background shows a portion of a blue sign and a ceiling light, adding context without distracting. The shot is a “real” candid capture, as if the photographer was in the middle of a conversation or a quick snapshot.
+
+**Prompt Summary (structured)**  
+`Candid, unposed photography of a woman with shoulder‑length wavy brown hair, black crop top and beige turtleneck scarf, mid‑gesture in a bright office space, captured on a 24–35 mm wide‑angle lens, slight tilt and off‑center framing, raw exposure, no filters, everything in focus, background fully sharp, natural ambient lighting, mid‑afternoon, handheld motion blur.`

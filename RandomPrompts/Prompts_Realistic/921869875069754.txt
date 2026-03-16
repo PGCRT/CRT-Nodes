@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A plus‑size woman with long, wavy blonde hair walking toward the camera on a sandy beach. She’s wearing a navy‑blue floral bikini (triangular top and thong bottom) that shows subtle texture and slight stretch as her skin moves. Her left foot is mid‑step, toes gripping the sand, right foot slightly ahead; her right arm hangs relaxed by her side, left arm bent at the elbow with a small tattoo visible on the wrist. She’s smiling broadly, eyes bright, head tilted slightly to the right, capturing an unposed, spontaneous moment.
+
+- **Motion & Focus**  
+  Slight motion blur on the feet and lower legs, indicating handheld instability. Everything in the frame—from her toes to the distant shoreline—is fully sharp, no portrait‑mode depth of field. The image has a raw, auto‑HDR feel: a mild overexposure on the sky, giving the clouds a soft glow.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24 mm or 35 mm), short focal length. No bokeh; background is fully sharp. The composition is accidental—no rule‑of‑thirds, slight tilt and off‑center framing, a partial crop that cuts off the left side of her hip.
+
+- **Environment**  
+  Location: a tropical beach with pale sand, gentle waves breaking near the shore, a line of palm trees and a few residential houses in the background. Time of day: late afternoon, the sun low but not too low, casting warm, golden light that slightly overexposes the sky. Weather: light wind, a few scattered clouds, ambient humidity.
+
+- **Lighting & Color**  
+  Natural daylight, no studio lighting. The sky has a slight overexposure that gives a soft halo to the clouds; the sand is a warm beige with subtle texture. Colors are natural—no color grading or filters. The bikini’s floral pattern shows a faint sheen on the fabric, and her skin has a natural warmth.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, off‑center framing that keeps her left hip partially out of frame. Her right foot is slightly blurred, indicating movement. A small tattoo on her left wrist is visible. The beach sand shows faint footprints and a few scattered shells. The background houses have a muted red tile roof, and palm fronds sway in the wind.
+
+- **Prompt Summary**  
+  “A plus‑size woman with long wavy blonde hair walks toward the camera on a sandy beach, wearing a navy‑blue floral bikini. She’s mid‑step, smiling, with a slight motion blur on her feet. The image is captured on a wide‑angle lens, fully sharp background, accidental framing, slight tilt, raw auto‑HDR lighting. The scene is set at late afternoon on a tropical beach with palm trees and houses in the distance, gentle waves breaking near the shore, light wind, and a soft overexposed sky.”

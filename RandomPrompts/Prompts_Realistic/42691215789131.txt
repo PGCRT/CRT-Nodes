@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair lying supine on a plush, mauve‑colored bed. She’s wearing a sheer black lace bra and matching thigh‑highs, plus black leather gloves that rest on her hips. Her eyes are gently closed, as if she’re mid‑dream or just woke, giving an unposed, spontaneous feel.
+
+- **Lighting & Exposure**  
+  Natural daylight from a window at late afternoon; slight overexposure in the upper left corner to catch the ambient glow. No auto‑HDR or beauty filters—raw, unprocessed look. The exposure is slightly warm, with a hint of yellow‑toned ambience.
+
+- **Camera Settings**  
+  Wide‑angle lens (24‑35 mm), short focal length, handheld. All elements in focus—no bokeh, no depth‑of‑field blur. Slight motion blur on the subject’s hands and hair to suggest movement. No rule‑of‑thirds; framing is accidental, slightly tilted.
+
+- **Environment**  
+  A cozy bedroom with a wooden nightstand and a white lamp visible in the upper left. The bed has a soft, textured cover in muted mauve. The time of day is early evening, with warm, diffused sunlight streaming in.
+
+- **Composition & Details**  
+  Capture the scene as if you’re leaning over the bed, capturing the subject’s full body from head to toe. Keep the background fully sharp—no portrait‑mode isolation. Include imperfections: a slight tilt to the frame, a partial crop that cuts off a bit of the nightstand, and a faint smudge on the lamp shade for realism.
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, no post‑processing aesthetic. Only natural contrast and subtle vibrancy. Keep the image in a raw, candid style.
+
+**Prompt Summary**  
+> “A young woman with long wavy brown hair lies on a mauve bed, wearing a sheer black lace bra, thigh‑highs, and black leather gloves. Capture the scene with a wide‑angle, short‑focal‑length lens at late afternoon daylight, slight overexposure in the upper left, all elements in focus, handheld motion blur on the hands and hair, accidental tilt and partial crop, raw unprocessed look, no filters—capture the candid, spontaneous moment as if you’re leaning over the bed.”

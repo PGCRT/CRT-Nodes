@@ -1,0 +1,32 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair, wearing a pink sports bra and matching high‑waist leggings, captured mid‑movement in a casual, dynamic pose. She’s barefoot, leaning slightly forward with one hand on her hip and the other extended outward, as if she’re about to perform a light exercise or dance move. Her face is turned toward the camera with a subtle smile, eyes bright, conveying a sense of spontaneity and confidence.
+
+- **Cinematic Capture Style**  
+  - *Slight motion blur* on the subject’s limbs to emphasize movement.  
+  - *Auto‑HDR or auto‑beauty mode off* – raw, unprocessed look.  
+  - *No filters, no color grading, no post‑processing aesthetic.*  
+  - *Slight overexposure* (or underexposure, depending on ambient light) for a natural, organic feel.  
+  - *Wide lens* (24–35 mm) with a short focal length to keep the entire scene in frame.
+
+- **Capture Style Details**  
+  - Candid, unposed, spontaneous – subject unaware or mid‑action.  
+  - Imperfections encouraged: slight tilt, off‑center framing, partial crop.  
+  - No rule‑of‑thirds intentionality – accidental framing that feels genuine.  
+  - Zero studio lighting, zero professional composition, zero editorial tone.  
+  - Natural motion freeze or slight blur from handheld instability.
+
+- **Environment**  
+  - *Specific real‑world location*: a bright, minimalist living room with light wooden flooring and a small side table in the background. A white window frame is visible behind the subject, letting in natural daylight.  
+  - *Time of day*: late morning, soft sunlight casting gentle shadows across the floor.  
+  - *Weather or ambient conditions*: clear, warm, slightly breezy – the ambient light gives a warm tint to the scene.
+
+- **Lens & Technical**  
+  - Short focal length (24–35 mm), wide angle.  
+  - No bokeh, no depth‑of‑field blur – background fully sharp.  
+  - Everything in focus: subject, background, details.  
+  - No portrait mode, no subject isolation.
+
+- **Prompt Summary**  
+  “A young woman with long wavy brown hair, in a pink sports bra and high‑waist leggings, captured mid‑movement in a casual pose inside a bright minimalist living room. The shot is taken with a wide‑angle lens at late morning, with slight motion blur and accidental framing for a candid, raw look. No filters or post‑processing – everything in focus from subject to background.”

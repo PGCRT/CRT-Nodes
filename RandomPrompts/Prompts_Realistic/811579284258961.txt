@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, sun‑kissed brown hair, wearing a black mesh bikini top and matching high‑waist bottoms, kneeling on a light‑colored stone patio beside a shallow swimming pool. Her hands rest gently on her thighs, fingers slightly curled, as if she’s about to lift a towel or adjust her shirt. She looks directly at the camera with a soft, confident smile, eyes bright and relaxed.
+
+- **Motion & Focus**  
+  Slight motion blur on the subject’s hands and hair, indicating a handheld shot captured in real time. Everything remains fully sharp—no bokeh, no depth‑of‑field blur—so the background (the pool, the railing, the building wall) is also crisp. The image has an auto‑HDR feel but without any post‑processing color grading; it looks raw and spontaneous.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle, mid‑afternoon sun that creates a gentle overexposure on the subject’s face and a subtle shadow under her knees. The lighting is slightly uneven, giving the photo an authentic, unposed feel. No studio lights, no artificial flash—just ambient sunlight.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24 mm or 35 mm) with a short focal length, capturing a broad view of the scene. The composition is intentionally off‑center: the subject’s left knee leans slightly to the right, and the frame cuts off the top of the pool’s edge, giving a casual, candid feel. All elements—subject, pool, railing, wall—are in focus.
+
+- **Environment**  
+  Location: A residential backyard with a clean, modern pool, a metal railing along the side, and a beige stucco wall behind the subject. The time of day is late morning to early afternoon, with the sun high but not directly overhead, producing soft shadows. Weather is clear, with a light breeze that ruffles the subject’s hair.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject appears unaware of the camera’s presence at first, then looks up and smiles. Slight tilt in the frame gives an accidental, natural feel. The shot is partially cropped on the left side, cutting off a portion of the pool’s edge, reinforcing the “mid‑action” vibe.
+
+- **Final Prompt**  
+  *“A young woman with long, sun‑kissed brown hair, wearing a black mesh bikini top and matching high‑waist bottoms, kneeling on a light‑colored stone patio beside a shallow swimming pool. Her hands rest gently on her thighs, fingers slightly curled, as if she’s about to lift a towel or adjust her shirt. She looks directly at the camera with a soft, confident smile, eyes bright and relaxed. Slight motion blur on the subject’s hands and hair, everything fully sharp—raw auto‑HDR look, no filters. Natural daylight from a high‑angle mid‑afternoon sun creates gentle overexposure on the face and a subtle shadow under her knees. Wide‑angle lens (24 mm or 35 mm), short focal length, all elements in focus. Location: residential backyard with a clean modern pool, metal railing, beige stucco wall. Time of day: late morning to early afternoon. Weather: clear, light breeze. Candid, unposed, spontaneous—subject appears unaware then smiles. Slight tilt and partial crop on the left side for accidental framing.”*

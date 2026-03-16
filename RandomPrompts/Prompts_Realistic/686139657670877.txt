@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy dark hair standing in a casual, unposed stance, mid‑step as if she’s just finished a conversation or is about to move. She wears a fitted white turtleneck and high‑waisted beige trousers that taper at the ankle, paired with black leather ankle boots. Her hands hang loosely by her sides, slightly angled, giving a natural, off‑center feel.
+
+- **Lighting & Exposure**  
+  Capture with a wide‑angle lens (24–35 mm) in a bright, overcast afternoon. The ambient light is slightly harsh—noticeable overexposure on the front of her face and clothing, giving a raw, unprocessed look. No auto‑HDR or beauty filters; keep the image in a natural, handheld style with slight instability.
+
+- **Motion & Focus**  
+  Freeze the moment with a natural motion blur from a shaky hand‑held camera—soft edges on the subject’s hands and boots, while the background remains fully sharp. Everything is in focus: no portrait‑mode depth of field blur.  
+
+- **Environment**  
+  The setting is an urban alleyway in a modern city, near a concrete wall and a glass storefront. The time of day is late afternoon, with the sun high but not directly overhead, casting soft shadows. A faint breeze ruffles her hair, adding a candid, spontaneous feel.
+
+- **Lens & Technical**  
+  Use a short focal length (30 mm) for a wide‑angle view that captures the full body and a portion of the surrounding environment. Keep the framing accidental—slight tilt and partial crop. No rule‑of‑thirds intentionality; the composition is organic, as if the photographer caught her by chance.
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, no post‑processing aesthetic. The final image should look like a genuine, raw snapshot—slight overexposure on the subject’s front, natural contrast, and a faint grain from the camera’s sensor.  
+
+**Prompt Summary:**  
+“A young woman with long wavy hair, wearing a white turtleneck, beige high‑waisted trousers, and black ankle boots, captured mid‑step in a late‑afternoon urban alleyway. The shot is taken with a 30 mm wide‑angle lens, slightly shaky, with natural motion blur on the subject’s hands and boots while the background stays sharp. The exposure is slightly overexposed, no filters applied, preserving a raw, candid feel.”

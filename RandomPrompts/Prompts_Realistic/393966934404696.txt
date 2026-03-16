@@ -1,0 +1,16 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with soft, wavy blonde hair, wearing a dark ribbed cardigan that’s slightly open at the front, standing in a dimly lit bar or lounge. She’s mid‑gesture, hands clasped together near her chest, head tilted downward as if she’s about to say something or react to a sound. Her expression is candid and natural, with a hint of playful surprise.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject is unaware of the camera, captured in a moment of natural action. Slight tilt and off‑center framing give an accidental, handheld feel. The shot has a slight motion blur from the camera’s instability, and a subtle overexposure that keeps the ambient light warm and raw. No filters, no color grading, no post‑processing aesthetic — just a straight, in‑camera capture with auto‑HDR off.
+
+- **Environment**  
+  Location: A modern bar or lounge with dark walls, a small wooden table stocked with bottles of liquor, and a framed poster on the wall. The time of day is late evening, around 9 pm, when the ambient light is soft and warm. The background shows another patron in the distance, adding depth to the scene. The weather or ambient conditions are indoor, with a gentle hum of music and the faint glow of overhead lights.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm) wide‑angle lens, handheld. Everything is fully sharp — no bokeh, no depth‑of‑field blur. The background is in focus, giving a true “wide” feel to the image. No portrait mode or subject isolation; the composition is accidental and non‑rule‑of‑thirds. Slight overexposure or underexposure depending on ambient light is allowed, but the overall look remains raw and unprocessed.
+
+- **Final Prompt**  
+  *“A young woman with soft wavy blonde hair, wearing a dark ribbed cardigan, stands in a dimly lit bar at late evening. She’s mid‑gesture with hands clasped near her chest, head tilted downward in a candid, spontaneous moment. The shot is captured on a short focal length wide‑angle lens, handheld with slight motion blur and accidental tilt. The background shows a wooden table with liquor bottles and a framed poster, another patron visible in the distance. All elements are fully sharp, no bokeh, no filters, raw and unprocessed, with a subtle overexposure that preserves the ambient warmth of the scene.”*

@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, curvy woman with long, wavy brown hair standing on a neatly made bed in a cozy bedroom. She’s wearing a black lace bodysuit and black platform boots with blue laces. Her left hand is raised to the back of her head, slightly tilted, as if she just finished a quick hair‑fix and is about to step into frame. Her face is turned toward the camera with a subtle smile, eyes bright, capturing a candid, mid‑action moment.
+
+- **Lighting & Exposure**  
+  Natural daylight from a window on the left side of the room creates a soft, slightly overexposed highlight on her back and the headboard. The exposure is a little warm, with a faint haze that gives a raw, unprocessed look. No auto‑beauty mode—just a straightforward, handheld shot.
+
+- **Camera & Lens Settings**  
+  - Lens: 24‑mm wide‑angle (short focal length) for a broad, immersive view.  
+  - Aperture: f/5.6 – everything from the subject to the headboard is fully sharp, no bokeh.  
+  - Shutter speed: 1/125 s – enough to freeze the motion but still retain a slight blur from handheld instability.  
+  - ISO: 400 – for clean detail without noise.
+
+- **Composition & Framing**  
+  The shot is intentionally off‑center, with the subject’s left side slightly cut off by the frame edge. The camera is held at a low angle, almost at the subject’s waist level, to emphasize her height and the boots. The headboard and a bedside lamp are visible in the background, adding context. No rule‑of‑thirds—just spontaneous, casual framing.
+
+- **Environment & Ambience**  
+  The bedroom has a tufted beige headboard, white linens, and a wooden nightstand with a lamp and a small framed photo. A white pillow is slightly askew, suggesting recent activity. The time of day is late morning, with warm sunlight streaming in from the left, creating gentle shadows and a subtle overexposure on the subject’s back.
+
+- **Post‑Processing**  
+  No filters or color grading—just raw, natural tones. A slight auto‑HDR tweak for brightness consistency, but otherwise a straightforward capture. The final image should feel like a genuine, spontaneous snapshot: slightly tilted, imperfect, and full of life.

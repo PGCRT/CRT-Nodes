@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair, wearing a beige button‑down shirt and matching trousers, sitting on a rustic wooden bench at a cluttered desk. Her head is tilted slightly downward, eyes focused on a stack of papers, pen in hand, as if she’s mid‑note taking. One leg is bent, foot resting on the bench, creating a casual, unposed stance.
+
+- **Motion & Focus**  
+  Slight motion blur from handheld instability; everything in focus—no bokeh, no depth‑of‑field blur. Capture with a wide‑angle lens (24–35 mm) to keep the entire scene sharp.
+
+- **Lighting & Exposure**  
+  Natural daylight coming from a window on the right; slight overexposure in the highlight area, giving a raw, unprocessed look. No auto‑HDR or beauty filters—just ambient light with a hint of warmth.
+
+- **Environment**  
+  A cozy home office or study space. The desk is made of dark wood and holds a stack of notebooks, a pen, a smartphone, a small bowl on the windowsill, and a few other office supplies. A wooden chair sits beside the bench. Through the window you can see a blurred outdoor scene—trees and a hint of sky—suggesting a morning or late‑afternoon time of day.
+
+- **Composition & Framing**  
+  No rule‑of‑thirds intentionality: frame the shot slightly off‑center, letting the subject’s left side extend beyond the bench’s edge. The camera is held at eye level, creating a candid, spontaneous feel. Keep the background fully sharp—no portrait‑mode isolation.
+
+- **Technical Settings**  
+  - Focal length: 35 mm (wide‑angle)  
+  - Aperture: f/4–f/5.6 (mid‑range for depth)  
+  - Shutter speed: 1/60–1/100 s (to allow slight blur)  
+  - ISO: 400–800 (depending on ambient light)  
+
+- **Final Prompt**  
+  “A young woman with long, wavy brown hair, wearing a beige button‑down shirt and matching trousers, sits on a rustic wooden bench at a cluttered desk in a cozy home office. Her head is tilted downward, eyes focused on a stack of papers, pen in hand, as if mid‑note taking. One leg is bent, foot resting on the bench, creating a casual, unposed stance. Capture with a 35 mm wide‑angle lens at f/5, 1/80 s shutter speed, ISO 600, slight motion blur from handheld instability. Natural daylight comes from a window on the right, slightly overexposing the highlight area. The desk holds a stack of notebooks, a pen, a smartphone, and a small bowl; a wooden chair sits beside the bench. Through the window a blurred outdoor scene of trees and sky is visible. Frame the shot slightly off‑center, everything in focus—no bokeh—raw, unprocessed look, candid and spontaneous.”

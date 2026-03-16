@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, sun‑kissed blonde hair standing mid‑step near a tranquil pool, wearing a black bikini. She is captured in a candid, unposed moment—her face slightly turned toward the camera, hands relaxed at her sides, one wrist adorned with a simple watch and the other with a thin bracelet. Her expression is natural, almost contemplative, as if she’s just finished a swim or is about to dive in.
+
+- **Lighting & Exposure**  
+  Slight overexposure on the upper body to emphasize the warm daylight; the exposure is uneven, giving a raw, unprocessed look. The lighting comes from a high‑angle, late‑afternoon sun that casts soft shadows and subtle highlights on her skin and the water’s surface.
+
+- **Motion & Focus**  
+  A natural motion blur around the edges from handheld instability, with a slight tilt to the frame. Everything—from her hair to the pool’s ripples—is fully sharp; no portrait‑mode depth of field blur is present. The focus covers the entire scene, from foreground to background.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm) with a short focal length, producing a broad view that includes the subject and the surrounding environment. No bokeh; the background remains fully sharp. The composition is accidental—no rule‑of‑thirds intentionality—yet the frame captures her in an off‑center, partial crop that feels spontaneous.
+
+- **Environment**  
+  Location: A quiet residential pool in a suburban backyard. The pool’s water reflects the surrounding greenery and the sky, with a few floating leaves adding texture. The time of day is late afternoon, around 5 pm, giving a warm, golden hue. Weather is mild with a light breeze, creating gentle ripples on the water and slight movement in her hair.
+
+- **Details & Imperfections**  
+  Slight overexposure on the upper torso, a faint halo around her head, and a tiny smudge of dust on her left wrist, enhancing the raw feel. The image has no color grading or post‑processing filters—just natural auto‑HDR and auto‑beauty mode off. The background foliage is in focus, adding depth without any studio lighting or professional composition.
+
+- **Prompt Summary**  
+  “A candid, wide‑angle shot of a blonde woman in a black bikini standing by a residential pool at late afternoon. Capture her mid‑step with slight motion blur and accidental framing, all elements fully sharp, no filters—raw auto‑HDR only.”

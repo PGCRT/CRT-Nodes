@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, slender woman with long, wavy brown hair that falls loosely over her shoulders, standing in a casual, unposed stance. Her body is bare, showcasing a naturally curvy silhouette with a slight bounce in her hips as she shifts her weight onto one leg. Her hands hang relaxed at her sides, fingers slightly curled, with a subtle tilt to her posture that gives the shot an accidental, candid feel.
+
+- **Facial Features & Expression**  
+  Her face is turned slightly toward the camera, eyes half-closed in a lazy, confident gaze. A soft smile plays on her lips, and a faint blush highlights the cheeks. The lighting catches the curve of her nose and the gentle contour of her jawline, creating a natural highlight that suggests an auto‑HDR effect but without any post‑processing filters.
+
+- **Body & Anatomy Details**  
+  Her chest is full and rounded, with visible areolas that have a warm, pinkish tone. The abdomen is flat, with a faint navel detail. Her hips flare out in a natural, organic shape, and her thighs are thick and muscular. The skin has a subtle sheen from the ambient light, indicating a slight overexposure that gives the image a raw, unpolished look.
+
+- **Lighting & Exposure**  
+  The lighting comes from a high‑angle source that creates a soft shadow beneath her hips and a gentle highlight on the top of her head. There is a slight overexposure on the upper body, making the skin appear bright but still natural. No color grading or filters are applied; the exposure is determined by the ambient light of the location.
+
+- **Lens & Technical Settings**  
+  A wide‑angle lens (24‑35 mm) is used, capturing a broad view of the subject and her surroundings. The focal length is short, giving a slightly distorted, handheld feel. Everything in the frame is fully sharp—no bokeh or depth‑of‑field blur. The camera is held at a low angle, almost at eye level, with a slight tilt that adds to the candid vibe.
+
+- **Environment & Background**  
+  The setting is an urban alleyway at dusk. The background shows a textured concrete wall and a faint silhouette of a city building in the distance. The time of day is late evening, with the sky still slightly bright, creating a warm, amber tone that enhances the skin’s sheen. The weather is mild, with a light breeze that ruffles her hair.
+
+- **Composition & Framing**  
+  The framing is off‑center; the subject’s left side is slightly cut off by the edge of the frame, giving an accidental, spontaneous feel. The composition does not follow the rule of thirds; instead, it follows the natural flow of the subject’s body and the surrounding environment. The background remains fully sharp, with no depth‑of‑field blur.
+
+- **Cinematic Touches**  
+  A slight motion blur is present on the subject’s hands, indicating a handheld shot captured in real time. The overall look is raw, unprocessed, and natural, as if the photo was taken by a passerby who happened to capture a beautiful moment. No studio lighting or professional composition is used; the image feels spontaneous, like a real‑life encounter.

@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, light‑brown hair, wearing a black lace thong and a gold choker, sitting on a beige sofa. Her hands are gently clasped over her chest, elbows bent, fingers slightly curled. She is looking downward with a soft, contemplative expression, eyes closed or half‑closed, as if caught mid‑thought.  
+
+- **Lighting & Exposure**  
+  Natural daylight coming from a window to the left, creating a warm, slightly overexposed highlight on her skin. The exposure is a little high, giving a subtle halo effect. No auto‑beauty mode—raw, unprocessed look.  
+
+- **Camera Settings**  
+  Wide‑angle lens (24–35 mm), handheld, slight motion blur from the camera’s instability. Everything in focus—no bokeh, no depth‑of‑field blur; background fully sharp.  
+
+- **Composition & Framing**  
+  Off‑center, accidental framing: the subject is slightly tilted, the crop is partial, and the rule of thirds is intentionally ignored. The shot feels spontaneous, candid, as if the subject was unaware of the camera.  
+
+- **Environment**  
+  A bright, sunlit living room with a large window on the left, a potted plant in the corner, and a striped throw blanket draped over the sofa. Time of day: late morning, soft natural light. Weather: clear, no wind.  
+
+- **Details & Imperfections**  
+  Slight tilt and partial crop give a raw, unposed feel. The image has a faint motion blur around the edges, suggesting handheld shooting. No filters, no color grading, no post‑processing aesthetic—just a genuine, realistic capture.  
+
+- **Prompt for Generation**  
+  “A young woman with long light‑brown hair, wearing a black lace thong and gold choker, sitting on a beige sofa in a bright living room. Her hands are clasped over her chest, elbows bent, fingers slightly curled; she looks downward with a soft contemplative expression. Natural daylight from a left‑side window creates a warm, slightly overexposed highlight on her skin. Shot on a 24–35 mm wide‑angle lens, handheld with slight motion blur, everything in focus—no bokeh. Off‑center, accidental framing with a slight tilt and partial crop; the rule of thirds is ignored. The background shows a large window, a potted plant, and a striped throw blanket. Late morning light, clear weather. Raw, unprocessed look, no filters or color grading.”

@@ -1,0 +1,27 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**: A young woman with long, wavy brown hair sits on a white bed in a bright, minimalist bedroom. She wears a crisp white crop top and high‑waisted white shorts, paired with black fish‑net stockings that have a subtle sheen. Her hands are gently placed over her chest, fingers slightly curled, as if she’s about to adjust her shirt or hold a small object. Her nails are painted a vivid red, adding a pop of color against the white attire. She looks directly at the camera with an expressive, slightly surprised face—mouth open as if mid‑sentence or mid‑laugh.
+
+- **Capture Style**  
+  *Candid, unposed, spontaneous — subject unaware or mid‑action.*  
+  Slight motion blur on the hands and hair to suggest movement.  
+  No filters, no color grading, no post‑processing aesthetic—just raw, natural light.  
+  A hint of overexposure from the bright window, creating a soft halo around her.  
+
+- **Lens & Technical**  
+  *Short focal length, wide angle (24‑35 mm).*  
+  Everything in focus—no bokeh, no depth‑of‑field blur; background fully sharp.  
+  Slight tilt and off‑center framing; partial crop that captures a bit of the bed’s edge and a portion of the window frame.  
+
+- **Environment**  
+  *Specific real‑world location:* A bright, modern bedroom with white walls and a large window that lets in natural daylight. The window shows a glimpse of an urban building outside, indicating a city setting.  
+  *Time of day:* Late morning, when the sun is high but not too direct—soft, warm light fills the room.  
+  *Weather or ambient conditions:* Clear, sunny, with a gentle breeze that ruffles her hair slightly.  
+
+- **Composition Notes**  
+  - The camera is handheld, creating a slight shake that adds authenticity.  
+  - The frame is not intentionally rule‑of‑thirds aligned; the subject’s head sits just above the center of the frame, and her legs extend toward the bottom edge, giving a dynamic, casual feel.  
+  - Background includes a portion of the bed’s white duvet, a radiator beneath the window, and a faint outline of the outside building—everything remains sharp.  
+
+- **Prompt for AI Image Generation**  
+  “A young woman with long wavy brown hair sits on a white bed in a bright minimalist bedroom, wearing a white crop top, high‑waisted white shorts, and black fish‑net stockings. Her hands rest over her chest, fingers curled, as if about to adjust her shirt. She looks directly at the camera with an expressive open mouth, as if mid‑sentence. The image is captured on a wide‑angle lens (24‑35 mm) with everything in focus—no bokeh. Slight motion blur on the hands and hair suggests movement. The framing is handheld, slightly tilted and off‑center, partially cropping the bed and the window frame. Natural daylight from a large window creates a soft halo, with a hint of overexposure. The background shows a white wall, a radiator, and a glimpse of an urban building outside. The scene is candid, unposed, spontaneous, with imperfections like slight tilt and partial crop. No filters or post‑processing—raw, real‑life photography.”

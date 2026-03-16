@@ -1,0 +1,26 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark hair that’s slightly blown by the wind, wearing a black ribbed tank top and high‑waisted black jeans. She’s mid‑step, one hand lightly on her stomach, a subtle smile on her face, as if she just finished a quick dance or is about to grab something from a nearby surface. Her head is tilted a little to the side, giving an off‑center, spontaneous feel.
+
+- **Motion & Focus**  
+  Capture with a wide‑angle lens (24–35 mm) at a short focal length. Use a handheld shot with slight motion blur on the subject’s hair and body, but keep the background fully sharp—no bokeh, no depth‑of‑field blur. Everything in focus from foreground to background.
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window, slightly overexposed on the right side to emphasize the ambient light. No auto‑HDR or beauty filters—raw, unprocessed look. The exposure is a little bright at the top, giving a subtle halo effect to the subject’s hair.
+
+- **Environment**  
+  A lived‑in bedroom: a wooden bed with a white pillow and a black bag on it, a small potted plant on a windowsill, a wooden side table with a yellow mug, a clear plastic cup, and a white cloth. A framed picture hangs on the wall behind her. The window lets in bright natural light, and outside you can see a green lawn and trees, indicating a sunny morning.
+
+- **Composition & Framing**  
+  No rule‑of‑thirds intentionality—frame the scene accidentally, with a slight tilt and partial crop that includes the subject’s upper body, the bed to her left, the window to her right, and a portion of the side table. The composition is candid, unposed, and spontaneous.
+
+- **Technical Settings**  
+  - Lens: 35 mm wide‑angle, f/4.0  
+  - Aperture: f/4 (wide opening)  
+  - Shutter speed: 1/60 s (slight motion blur)  
+  - ISO: 400 (for natural brightness)  
+  - No portrait mode or subject isolation—everything in focus.
+
+- **Final Prompt**  
+  “A candid, handheld shot of a young woman with long dark hair in a black tank top and high‑waisted jeans, mid‑step with one hand on her stomach, captured with a 35 mm wide‑angle lens at f/4 and 1/60 s shutter speed. The image has slight motion blur on the subject but a fully sharp background. Natural daylight from a large window creates a subtle overexposure on the right side. The setting is a lived‑in bedroom with a wooden bed, a potted plant on the windowsill, a wooden side table with a yellow mug and clear cup, and a framed picture on the wall. The composition is accidental and off‑center, with a slight tilt and partial crop, no rule‑of‑thirds, no filters, no post‑processing, everything in focus.”

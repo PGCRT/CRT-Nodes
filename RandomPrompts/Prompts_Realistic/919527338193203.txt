@@ -1,0 +1,24 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, sun‑kissed blonde hair standing in a modern kitchen. She’s bare‑headed, leaning casually against a black marble countertop, one hand on her hip, the other resting near her thigh. Her gaze is direct, slightly off‑center, giving a candid, unposed feel.
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window behind the kitchen, mid‑afternoon. Slight overexposure on the upper part of the frame to capture the ambient glow; no auto‑HDR or beauty filters—raw, unprocessed look. The lighting is uneven, with a soft highlight on her face and a gentle shadow under her arm.
+
+- **Camera Settings**  
+  Wide‑angle lens (24 mm), handheld, slight motion blur from natural shake. Everything in focus—from the subject to the background—no portrait‑mode depth of field. The focal length is short, giving a broad view of the scene.
+
+- **Composition & Framing**  
+  No rule‑of‑thirds intentionality; the frame is slightly tilted, off‑center, with a partial crop that cuts off part of the countertop on the lower right. The background shows a stainless‑steel sink, a modern faucet, and dark marble backsplash with white veining. The kitchen cabinets are matte gray, and a small portion of an oven is visible on the right.
+
+- **Environment Details**  
+  Time of day: late afternoon, warm sunlight streaming in, creating subtle lens flare. Weather: clear, no wind. The kitchen is spacious, with a stainless‑steel range hood on the left and a black marble counter that reflects the subject’s body. A small green earring catches the light on her ear.
+
+- **Technical Nuances**  
+  Short focal length (24 mm) captures a wide field of view; no bokeh—background is fully sharp. Slight motion blur on the subject’s torso and hips to suggest movement. No post‑processing color grading; raw, natural tones. The image has a slight overexposure on the upper half, giving it an organic feel.
+
+- **Prompt for Generation**  
+  “A young woman with long sun‑kissed blonde hair leaning casually against a black marble countertop in a modern kitchen, bare‑headed, one hand on her hip, the other near her thigh, direct gaze slightly off‑center. Natural daylight from a large window behind the kitchen, mid‑afternoon, slight overexposure on the upper part of the frame. Wide‑angle 24 mm lens, handheld shake with slight motion blur, everything in focus. The scene includes a stainless‑steel sink, modern faucet, dark marble backsplash with white veining, matte gray cabinets, and a glimpse of an oven on the right. Time of day: late afternoon, clear weather. Slight tilt and partial crop, no rule‑of‑thirds, raw unprocessed look, no filters.”  
+
+Provide only the structured prompt.

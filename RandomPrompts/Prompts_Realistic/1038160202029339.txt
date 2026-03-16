@@ -1,0 +1,30 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail, wearing a deep‑purple neck scarf tied at the waist, loose white cargo pants, and red leather boots. She stands with arms crossed, head tilted slightly to one side, looking directly at the camera with a confident, casual expression. Her hair is slightly messy, adding to the candid feel.
+
+- **Lighting & Exposure**  
+  Warm golden‑hour sunlight from the west casts soft shadows on her face and body; slight overexposure in the highlights gives a raw, unprocessed look. The exposure is a little bright at the top of the frame, but the overall tone remains natural—no filters or heavy color grading.
+
+- **Camera Settings**  
+  Wide‑angle lens (24 mm), f/4.0, 1/60 s shutter speed, ISO 400. Slight handheld shake produces a subtle motion blur on the subject’s arms and the background. Everything remains in focus—no portrait‑mode depth of field blur.
+
+- **Composition**  
+  The shot is intentionally off‑center: the woman occupies the left‑hand third of the frame, but the framing is not rule‑of‑thirds‑perfect; the top of her head cuts slightly beyond the upper edge. The background shows a wooden warehouse or studio building on the left and a group of people in casual wear on the right, all in focus.
+
+- **Environment**  
+  Location: an outdoor paved plaza in front of a rustic wooden building, with a concrete floor and a low‑slanted roof. Time of day: late afternoon, just before sunset. Weather: clear, light wind, a few scattered clouds near the horizon.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera adds spontaneity. The subject’s left arm is slightly blurred from motion. A small portion of her left boot is cut off by the bottom edge. The background people are mid‑action, one holding a cup, another walking past.
+
+- **Post‑Processing**  
+  Auto‑HDR off. No color grading or filters—just raw, natural tones.
+
+---
+
+**Prompt for Text‑to‑Image Generation**
+
+> “A candid, unposed photograph of a young woman with a high ponytail, wearing a deep‑purple neck scarf tied at the waist, loose white cargo pants, and red leather boots. She stands with arms crossed, head slightly tilted, looking directly at the camera. The image is captured on a wide‑angle 24 mm lens at f/4.0, 1/60 s, ISO 400, with slight handheld motion blur. The lighting is warm golden‑hour sunlight from the west, slightly overexposed highlights. Composition is off‑center, the woman occupies the left third of the frame, background shows a rustic wooden building on the left and a group of people in casual wear on the right, all in focus. The scene is set on an outdoor paved plaza in front of a warehouse, late afternoon, clear sky with scattered clouds. Raw, unprocessed look—no filters or color grading.”
+
+Use this prompt in a high‑quality image generator (e.g., Stable Diffusion XL, Midjourney v6) and adjust the “raw, unprocessed” setting to keep the natural aesthetic. The result should feel like a genuine, spontaneous snapshot taken with a handheld camera in a real-world environment.

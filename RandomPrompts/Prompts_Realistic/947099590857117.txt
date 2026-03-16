@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, athletic woman with long, wavy brown hair that cascades over her shoulders, wearing a fitted beige cardigan and matching leggings. She stands in a relaxed, mid‑step pose, one foot slightly ahead of the other, hands hanging loosely at her sides. Her face is turned toward the camera but not directly aimed—she’s caught in a natural, candid moment, as if she’re about to do a light exercise or simply posing casually.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. Slight tilt and off‑center framing; partial crop that gives an accidental, handheld feel. No rule‑of‑thirds intentionality—everything is framed as it naturally appears.
+
+- **Motion & Exposure**  
+  Slight motion blur from handheld instability, a natural freeze of movement. Slight overexposure on the upper body to highlight the subject’s skin and clothing, with ambient light creating a warm, soft glow. No auto‑HDR or auto‑beauty mode—raw, unprocessed look.
+
+- **Environment**  
+  Location: A quiet, sunlit park bench at dusk in an urban suburb; the background shows a blurred line of trees and a distant building, but everything remains fully sharp. Time of day: late afternoon, golden hour. Weather: mild, clear with a light breeze.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm), wide‑angle lens. No bokeh—background fully sharp, no depth‑of‑field blur. Everything in focus, no portrait mode or subject isolation. Wide‑angle captures the entire figure and surrounding environment in one shot.
+
+- **Lighting & Color**  
+  Zero studio lighting; natural daylight with a slight warm tint from the setting sun. No color grading or post‑processing aesthetic—just raw, realistic capture. Slight overexposure on the upper body to emphasize skin tone and fabric texture.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, off‑center framing that gives a spontaneous feel. Partial crop that cuts off a bit of the background on the right side, enhancing the candid vibe. The subject’s hands are slightly out of alignment with her hips, adding to the natural, unposed look.
+
+- **Final Prompt**  
+  “A tall, athletic woman with long wavy brown hair, wearing a fitted beige cardigan and matching leggings, captured mid‑step in a casual pose at a quiet park bench at dusk. The shot uses a short focal length wide‑angle lens, handheld with slight motion blur and accidental tilt, all-in-focus, no bokeh. The background shows a blurred line of trees and a distant building but remains sharp. Lighting is natural daylight with a warm golden‑hour tint, slight overexposure on the upper body for skin and fabric highlight. No filters or post‑processing—raw, realistic candid photography.”

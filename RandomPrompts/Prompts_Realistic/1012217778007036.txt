@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, light‑brown hair and thick black‑rimmed glasses lying on her stomach on a plush, shaggy gray rug. She’s wearing an orange tank top, one hand supporting her cheek, the other extended forward as if she just finished a playful gesture. Her head is slightly tilted to the left, a candid, unposed expression with a bright smile.  
+
+- **Lighting & Exposure**  
+  Natural daylight from a western‑facing window, mid‑afternoon. Slight overexposure on the subject’s face, giving a warm, soft glow; background has a subtle haze. No auto‑HDR or beauty filters—raw, unprocessed look.  
+
+- **Camera Settings**  
+  Wide‑angle lens (24 mm), handheld, slightly shaky. Focal length short, everything in focus from foreground to background. No bokeh; depth of field is full sharpness.  
+
+- **Composition & Framing**  
+  Off‑center, accidental framing: the subject’s left side cuts close to the left edge, the right side leaves a small margin of empty space. Slight tilt of the camera creates a dynamic angle. The composition has no intentional rule‑of‑thirds—just a spontaneous, candid snapshot.  
+
+- **Environment**  
+  A bright, airy bedroom with a white paneled door in the background, a small section of a beige wall, and a portion of a wooden floor visible. The time of day is late afternoon, with warm sunlight casting soft shadows. The room appears tidy but lived‑in, with a few personal items (a small plant, a framed photo) partially visible on a shelf behind the door.  
+
+- **Texture & Detail**  
+  The rug’s shaggy fibers are clearly visible, adding texture to the foreground. The woman’s skin has a natural, unretouched finish; slight motion blur around her hands and face from handheld shooting.  
+
+- **Post‑Processing**  
+  No color grading or filters—just raw capture. Slight vignetting from the wide‑angle lens is present but subtle.  
+
+**Prompt Summary**  
+“Candid, unposed photo of a woman in an orange tank top lying on a gray shaggy rug in a bright bedroom; natural mid‑afternoon daylight, slight overexposure, wide‑angle handheld shot with full sharpness, accidental off‑center framing, raw unprocessed look.”

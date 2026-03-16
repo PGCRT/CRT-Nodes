@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, light‑brown hair, mid‑adjustment of a black bikini top and matching bottoms, seated on a quilted bed. Her hands are gently pulling the top into place, fingers slightly blurred from motion. She wears an open, pale‑pink button‑down shirt with a floral pattern (roses and green leaves), sleeves rolled up to the elbow. The shirt’s front is untucked, creating a casual, spontaneous look.
+
+- **Lighting & Exposure**  
+  Natural daylight from a west‑facing window, mid‑afternoon. Slight overexposure on the upper body, giving a warm, soft glow. No auto‑HDR or auto‑beauty filters—raw, unprocessed imagery. The exposure is uneven: the lower half of the image is slightly brighter than the top, hinting at ambient light fluctuations.
+
+- **Camera & Lens Settings**  
+  35 mm wide‑angle lens, f/4.0 aperture, 1/125 s shutter speed, ISO 400. Handheld shot with slight instability, producing a natural motion blur on the hands and a tiny tilt to the left. Everything is in focus—no bokeh or depth‑of‑field blur; background (a beige pillow and a plain wall) remains sharp.
+
+- **Composition & Framing**  
+  Candid, unposed framing: the shot is off‑center, with the subject’s left side slightly cut off by the frame edge. The composition is accidental—no rule‑of‑thirds intentionality. The bed’s quilted texture fills the lower third of the frame, while a beige pillow rests against the wall in the upper left corner.
+
+- **Environment**  
+  A cozy bedroom, mid‑afternoon daylight. A plain off‑white wall behind the bed, a beige pillow on the left, and a white quilted coverlet covering the bed. The scene is unstyled, lived‑in, with a slight clutter of a remote or small object on the bed’s corner.
+
+- **Details & Imperfections**  
+  Slight motion blur on the hands, a tiny shake in the frame, and a faint overexposed halo around the subject’s chest. The shirt’s buttons are slightly askew, adding to the candid feel. The woman’s expression is neutral, almost unaware of the camera.
+
+- **Post‑Processing**  
+  None—raw capture only. No color grading or filters applied. The image retains natural contrast and a subtle grain from the camera’s sensor.
+
+**Prompt Summary**  
+> “A young woman with long light‑brown hair sits on a quilted bed, adjusting her black bikini top while wearing an open pale‑pink floral shirt. Natural daylight from a west‑facing window creates a warm, slightly overexposed glow. Shot on a 35 mm wide‑angle lens at f/4, 1/125 s, ISO 400, handheld with slight motion blur and accidental off‑center framing. The background shows a beige pillow and plain wall; everything is in focus. No filters or post‑processing—raw, candid, spontaneous photography.”

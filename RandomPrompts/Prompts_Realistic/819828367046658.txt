@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with shoulder‑length dark hair, wearing a tight gray thong and gray crew socks, standing mid‑step in a casual, unposed stance. Her left foot is slightly ahead of the right, knees bent, hands hanging loosely by her sides. The camera captures her from a low angle, emphasizing the full length of her body and the slight tilt of her torso.
+
+- **Motion & Focus**  
+  Slight motion blur on the legs and feet to suggest movement, while the upper body remains relatively sharp. Handheld instability gives a natural, imperfect feel. Everything is in focus—no portrait‑mode bokeh; background stays crisp.
+
+- **Lighting & Exposure**  
+  Auto‑HDR off. The scene is lit by natural daylight coming from the west, creating a soft overexposure on the upper body and a subtle underexposure on the lower legs. No color grading or filters—raw, unprocessed look.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24 mm), short focal length. No depth‑of‑field blur; background is fully sharp. The composition is accidental: no rule‑of‑thirds, slight off‑center framing, partial crop that cuts off a bit of the left chair and the right wall.
+
+- **Environment**  
+  Location: a modern kitchen with light‑wood flooring, a simple wooden dining chair on the left, a white baseboard, and a faint glimpse of a black framed picture on the right wall. Time of day: late afternoon, ambient daylight with a warm hue. Weather: clear, no wind.
+
+- **Capture Style**  
+  Candid, spontaneous—subject unaware of camera. Slight tilt in the camera’s grip, partial crop that includes the subject’s torso, legs, and feet, plus a portion of the chair and wall. No editorial tone; it looks like a real, unposed snapshot.
+
+- **Prompt for AI Image Generation**  
+  *“A young woman with shoulder‑length dark hair, wearing a tight gray thong and gray crew socks, standing mid‑step in a casual, unposed stance. Low‑angle shot, wide‑angle lens (24 mm), slight motion blur on the legs and feet, everything in focus. Natural daylight from the west creates soft overexposure on the upper body and subtle underexposure on the lower legs. Raw, unprocessed look, no filters. Background includes a wooden dining chair on the left, light‑wood flooring, white baseboard, and a faint black framed picture on the right wall. Late afternoon, clear weather. Candid, accidental framing, slight tilt, partial crop.”*

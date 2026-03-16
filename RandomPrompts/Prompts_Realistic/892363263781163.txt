@@ -1,0 +1,26 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, straight brown hair sitting mid‑pose on a large, smooth river rock in a sunlit beach setting. Her hands are gently clasped over her chest, fingers slightly curled, nails painted pale pink. She’s barefoot, toes relaxed, with a subtle shift of weight onto one foot that creates a slight lean and a natural “mid‑action” feel.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject appears unaware of the camera, caught in a natural moment. Slight tilt and off‑center framing give an accidental, handheld vibe. The composition is not intentionally rule‑of‑thirds; the rock and sand frame her body in a loose, organic way.
+
+- **Motion & Exposure**  
+  A faint motion blur from a handheld shot at a relatively slow shutter speed (≈ 1/60 s) captures the subtle movement of her fingers and the gentle sway of her hair. Slight overexposure on the bright sky gives a warm, raw look; no auto‑beauty or filter enhancement—just natural light.
+
+- **Environment**  
+  Location: a sunny beach with a cluster of rounded boulders and soft sand. Time of day: late afternoon, golden hour, ambient light casting long, soft shadows. Weather: clear, breezy, with a few scattered clouds overhead. The background is fully sharp—no bokeh, no depth‑of‑field blur—everything in focus from foreground to background.
+
+- **Lens & Technical**  
+  Use a wide‑angle lens (24–35 mm) with a short focal length to capture the broad scene. No portrait‑mode subject isolation; keep the entire frame—from her feet to the top of her head and beyond—sharp. The lens is set to a low f‑number for maximum light intake, but the exposure is slightly overbright, giving a natural, unprocessed look.
+
+- **Details & Imperfections**  
+  - Slight tilt of the camera creates a dynamic angle on the subject.  
+  - Partial crop: the edges of the frame cut off part of the rock and a few nearby boulders, adding to the candid feel.  
+  - No rule‑of‑thirds intentionality—framing is accidental, as if the photographer was simply capturing a moment.  
+  - Natural motion blur on the subject’s hands and hair, suggesting movement.  
+  - Slight overexposure on the sky and sand, giving warmth and a raw aesthetic.  
+
+- **Final Prompt**  
+  “A young woman with long brown hair sits casually on a large river rock at a sunny beach, barefoot and mid‑pose with her hands clasped over her chest. The shot is handheld, slightly tilted, with a faint motion blur from a 24–35 mm wide‑angle lens. The scene is captured in late afternoon golden hour, all elements in sharp focus, no filters or post‑processing—just raw, candid realism.”

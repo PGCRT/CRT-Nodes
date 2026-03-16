@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with light‑blonde hair tied in a loose, casual braid, wearing a fitted, long‑sleeved gray top with a deep V‑neck and denim shorts. She is captured mid‑step, slightly turned toward the camera, with her left foot forward and her body angled at an off‑center, accidental composition. Her face is partially turned, giving a candid, unposed expression—mouth slightly open as if she’s about to speak or laugh.
+
+- **Capture Style**  
+  Candid, spontaneous, “mid‑action” snapshot. Slight handheld shake produces a subtle motion blur around the edges. No auto‑beauty or filter processing; raw, natural look with slight overexposure in the highlights to emphasize ambient daylight. The frame is intentionally imperfect—tilted left, cropped asymmetrically, no rule‑of‑thirds intentionality.
+
+- **Environment**  
+  Location: A bright, unadorned bedroom with a white window frame on the left and a plain beige wall behind. Time of day: late morning, soft natural light coming from the window, creating gentle shadows and a warm tone. Weather: clear, no wind, ambient temperature is mild.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm) wide‑angle lens. Everything in focus—no bokeh or depth‑of‑field blur; background remains sharp. No portrait‑mode subject isolation. Slight overexposure in the highlights gives a raw, unprocessed feel. The image has an auto‑HDR touch only in the exposure metering, but no color grading or post‑processing aesthetic.
+
+- **Composition Notes**  
+  The shot is taken with a wide lens, capturing a broad view of the subject and environment. The background is fully sharp, no rule‑of‑thirds intentionality—just an accidental, candid framing that includes part of the window frame, a portion of the wall, and a hint of the floor. The subject’s head is slightly above the center of the frame, with her left shoulder closer to the top edge, creating a dynamic, off‑center balance.
+
+- **Final Prompt**  
+  “A candid, wide‑angle snapshot of a young woman in a gray V‑neck top and denim shorts, captured mid‑step in a bright bedroom at late morning. The image has slight motion blur from handheld shake, raw exposure with subtle overexposure, no filters or color grading, everything in focus. The framing is accidental and off‑center, tilting left, cropped asymmetrically, with the window frame and beige wall visible in the background. The scene feels spontaneous and unposed, capturing a natural moment as she moves.”

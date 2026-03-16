@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark hair that’s slightly blown by the wind, wearing a bright blue floral romper with pink and orange hibiscus motifs. She’s mid‑gesture—right hand touching her chest, left hand near her shoulder—smiling broadly as if caught in a spontaneous moment. Her pose is casual and unposed, with a slight tilt to the camera that gives an off‑center, handheld feel.
+
+- **Motion & Focus**  
+  Capture a natural motion blur on the subject’s hair and hands, indicating a quick shutter speed and slight handheld shake. Everything—from her face to the background—remains fully sharp; no portrait‑mode bokeh. The focus is wide‑angle, capturing the entire scene without depth‑of‑field softening.
+
+- **Lighting & Exposure**  
+  Use a wide‑angle lens (20–35 mm) with a slightly overexposed ambient light that gives a warm, natural glow. No auto‑HDR or beauty filters—just raw, unprocessed imagery. The lighting comes from a high window, creating soft highlights on her face and a subtle lens flare in the upper left corner.
+
+- **Environment**  
+  The setting is a bright, sunlit office or co‑working space. Large windows on the left let in natural daylight, while a wooden desk, computer monitor, and a coffee cup sit on a nearby table. In the background, a man in a white shirt works at a desk, and a shelving unit with bowls and mugs is visible on the right. A clock hangs high on the wall, and a small plant sits on a shelf. The time of day is mid‑afternoon, with warm, golden sunlight streaming through the windows.
+
+- **Lens & Technical**  
+  Short focal length (24–35 mm) for wide coverage; no bokeh, all elements in focus. Use a handheld camera with slight instability to create a natural, candid feel. The composition is accidental—no rule‑of‑thirds intentionality—just a spontaneous, real‑life snapshot that feels like it was captured mid‑action.
+
+- **Post‑Processing**  
+  Keep the image raw: no color grading or filters. Slight overexposure may be present, but the overall look remains natural and unpolished. The final photo should feel like a genuine, candid moment frozen in time, with all details—from the subject’s expression to the office’s clutter—clearly visible.

@@ -1,0 +1,29 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair, wearing a white long‑sleeved crop top and black high‑waist jeans, captured mid‑turn as she leans slightly toward the camera. Her face is turned to the side, eyes glancing off‑camera, mouth slightly open as if she’s about to speak or react. The pose should feel spontaneous—no staged composition, just a natural, candid moment.
+
+- **Capture Style**  
+  • Candid, unposed, spontaneous — subject unaware or mid‑action.  
+  • Slight tilt and off‑center framing; partial crop that gives a “handheld” feel.  
+  • No rule‑of‑thirds intentionality—accidental framing.  
+  • Natural motion freeze or slight blur from handheld instability.
+
+- **Environment**  
+  Office setting: a bright, modern workspace with white desks, black computer monitors, and a red chair in the background. The time of day is mid‑afternoon; ambient light is soft but warm, with a hint of overexposure on the upper part of the frame. Weather or ambient conditions are clear, no glare, just natural daylight.
+
+- **Lens & Technical**  
+  • Short focal length (≈20–35 mm) wide‑angle lens.  
+  • No bokeh—background fully sharp, everything in focus.  
+  • No portrait mode or subject isolation; depth of field is flat.  
+  • Slight overexposure on the upper half to capture the ambient light.  
+  • Auto‑HDR or auto‑beauty mode off — raw, unprocessed look.  
+  • No filters, no color grading, no post‑processing aesthetic.  
+
+- **Composition Notes**  
+  • Capture the subject’s torso and upper legs, with a portion of her left hip slightly cut off by the frame edge.  
+  • Keep the background elements (desks, monitors, red chair) visible but not distracting; they should remain sharp.  
+  • Emulate a handheld shot: slight jitter and a small vertical shift to give authenticity.
+
+- **Output Description**  
+  A high‑resolution, realistic photograph that looks like an unposed, in‑the‑moment snapshot taken with a wide‑angle lens in a bright office space. The image should feel natural, raw, and spontaneous, with subtle imperfections that enhance its candid nature.

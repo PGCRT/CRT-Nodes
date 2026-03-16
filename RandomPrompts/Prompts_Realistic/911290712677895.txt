@@ -1,0 +1,29 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy blonde hair tied in a loose braid, lying supine on a white bed sheet. She is wearing a black lace bodysuit with sheer mesh panels and matching black leather gloves that rest lightly on her chest. Her eyes are closed, face relaxed, as if mid‑dream or just awoken. The shot should capture a slight motion blur at the fingertips and the edges of the gloves, indicating handheld shake and a natural “in‑motion” feel.
+
+- **Lighting & Exposure**  
+  Use a wide‑angle lens (20–35 mm) with a short focal length to keep the entire body and surrounding environment in focus. Shoot at a slightly overexposed setting to let the white sheet and red pillow appear bright but not blown out. Turn off any auto‑HDR or auto‑beauty modes – aim for a raw, unprocessed look. Keep the exposure time around 1/60 s to allow a subtle motion trail.
+
+- **Composition & Framing**  
+  Frame the image as a candid, unposed snapshot: the camera is slightly tilted and off‑center, creating an accidental, non‑rule‑of‑thirds composition. The frame should cut off just beyond her hips and shoulders, with the red pillow peeking out at the top left and the white sheet extending to the bottom right. No intentional rule‑of‑thirds – let the framing feel spontaneous and “mid‑action.”  
+
+- **Environment**  
+  Location: a bright, airy bedroom in a modern apartment. Time of day: late morning (≈ 10:30 AM), with soft natural light coming from the west, creating gentle highlights on the woman’s skin and the glossy gloves. Weather: clear, mild, with a slight breeze that gives a faint motion blur to the hair and gloves.  
+
+- **Lens & Technical**  
+  - Focal length: 24 mm (wide‑angle, short).  
+  - Aperture: f/5.6 – enough to keep everything in focus without a deep‑depth‑of‑field blur.  
+  - Shutter speed: 1/60 s – slight motion blur from handheld shake.  
+  - ISO: 400 – for clean detail without noise.  
+  - No bokeh, no portrait‑mode isolation – background (bed sheet, pillow, a small portion of a white wall) is fully sharp.  
+
+- **Style Notes**  
+  Capture the “realistic candid” vibe: the subject should appear unaware or mid‑action, with a slight tilt and partial crop that gives an authentic, spontaneous feel. Encourage imperfections – a tiny smudge on the glove, a slight wrinkle in the sheet – to enhance realism.  
+
+- **Post‑Processing**  
+  Keep it minimal: no color grading or filters. Slight auto‑beauty off, just raw capture. If needed, apply a subtle contrast boost after shooting, but maintain the natural look.
+
+**Prompt Summary (for use in a text‑to‑image model)**  
+"Realistic candid photo of a blonde woman in black lace bodysuit and leather gloves lying on a white bed sheet with a red pillow beside her. Late morning natural light, wide‑angle 24 mm lens, f/5.6, 1/60 s shutter speed, slight motion blur on the gloves and hair, accidental tilted framing, everything in focus, raw unprocessed look."

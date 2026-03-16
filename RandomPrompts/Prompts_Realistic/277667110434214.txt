@@ -1,0 +1,31 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with wet, slightly frizzy hair lying prone on a sun‑baked beach, her left arm bent and tattooed floral design visible, hand resting near the foam of a breaking wave. She is mid‑pose, eyes focused toward the camera but not directly at it, giving a candid, unposed feel. Her body is angled diagonally across the frame, creating a dynamic, off‑center composition.
+
+- **Clothing & Accessories**  
+  She wears a simple white bikini bottom; no top, exposing her shoulders and upper back. A thin, translucent seashell adorns her left wrist, catching the light. No jewelry or accessories beyond the shell.
+
+- **Tattoo & Detail**  
+  The tattoo on her left upper arm features a large pink hibiscus flower with green leaves, slightly faded, adding texture and depth. The ink is partially obscured by the foam and water droplets.
+
+- **Lighting & Exposure**  
+  Natural mid‑afternoon sunlight, slightly overexposed in the highlights, giving a warm, golden tone. No auto‑HDR or auto‑beauty mode—raw, unprocessed look. Slight handheld shake creates a subtle motion blur around the edges.
+
+- **Environment**  
+  The scene is a real beach with fine, dry sand and a small, foamy wave breaking in front of her. In the background, the ocean stretches to the horizon, with a few distant figures visible on the water. The sky is clear, light blue with a faint haze.
+
+- **Time of Day & Weather**  
+  Captured at around 4 pm, when the sun is high but not directly overhead, creating soft shadows and warm highlights. Light wind creates gentle ripples in the sand and foam.
+
+- **Lens & Technical Settings**  
+  24‑mm wide‑angle lens, f/4.0 aperture, 1/125 s shutter speed, ISO 400. Everything is in focus—no bokeh or depth‑of‑field blur; the background remains sharp. No rule‑of‑thirds intentionality—framing is accidental and slightly tilted.
+
+- **Capture Style**  
+  Candid, spontaneous, “mid‑action” pose with slight tilt and partial crop. No studio lighting, no professional composition, no editorial tone. The image feels like a snapshot taken by an amateur photographer who captured a fleeting moment.
+
+- **Post‑Processing**  
+  No filters, no color grading, no post‑processing aesthetic. Raw, unprocessed look with only minimal adjustments to exposure and contrast.
+
+- **Final Prompt**  
+  “A young woman in a white bikini bottom lies prone on a beach, her left arm bent and tattooed hibiscus visible, hand near the foam of a breaking wave. She is mid‑pose, eyes focused toward the camera but not directly at it, body angled diagonally across the frame. Wet hair frizzes around her face. A thin seashell adorns her left wrist. The scene is a real beach with fine dry sand and a small foamy wave in front of her; ocean stretches to the horizon with distant figures on the water. Captured at mid‑afternoon, natural sunlight slightly overexposed, handheld shake creating subtle motion blur. 24‑mm wide‑angle lens, f/4.0, 1/125 s, ISO 400—everything in focus, no bokeh. Candid, spontaneous, accidental framing, slight tilt and partial crop. No filters or post‑processing.”

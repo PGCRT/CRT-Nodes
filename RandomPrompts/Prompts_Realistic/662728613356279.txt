@@ -1,0 +1,35 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A young woman with reddish‑brown hair, wearing a plain white T‑shirt and dark‑rimmed glasses, is mid‑face‑mask application. Her hand is gently pressing a thick, white facial mask onto her cheek, leaving a few droplets that trail down her face. She appears unaware of the camera, captured in a spontaneous, candid moment.
+
+- **Capture Style**  
+  - Slight motion blur on the hand and mask drips to convey handheld movement.  
+  - No auto‑HDR or auto‑beauty filters – raw, unprocessed look.  
+  - Slight overexposure in the highlights to keep ambient light natural.  
+  - Wide‑angle lens (24‑35 mm) for a short focal length, wide‑field shot that keeps the entire scene sharp.  
+
+- **Environment**  
+  - Location: A bright, uncluttered bedroom with a neutral beige wall and a white pillow in the background.  
+  - Time of day: Late morning, soft natural daylight coming from the west, creating gentle shadows.  
+  - Weather: Clear, mild weather; no wind, so the only motion is the subject’s hand.  
+
+- **Lens & Technical**  
+  - Focal length: 35 mm (wide‑angle).  
+  - Aperture: f/4.0 – enough open aperture to keep foreground and background in focus.  
+  - Shutter speed: 1/60 s – enough to capture slight motion blur.  
+  - ISO: 400 – for clean, low‑noise capture.  
+  - No bokeh; everything from the subject’s face to the background pillow is fully sharp.  
+  - No portrait‑mode depth‑of‑field blur; no subject isolation.  
+
+- **Composition Notes**  
+  - Slight tilt and off‑center framing – the camera is not perfectly centered on the subject’s face, giving a casual, spontaneous feel.  
+  - Partial crop: the top of the head and the lower part of the torso are slightly cut off by the frame edge.  
+  - No rule‑of‑thirds intentionality – the composition is accidental, as if the photographer caught the moment by chance.  
+
+- **Lighting**  
+  - Natural daylight with a slight overexposure in the highlights; no color grading or post‑processing.  
+  - Zero studio lighting; the only light source is the window’s natural light.  
+
+- **Final Prompt Summary**  
+  “Candid, unposed photo of a young woman applying a facial mask in a bright bedroom, captured with a 35 mm wide‑angle lens at f/4 and 1/60 s, slight motion blur on the hand, natural daylight from late morning, all elements in focus, no filters or color grading, slightly tilted and off‑center framing for a raw, spontaneous look.”

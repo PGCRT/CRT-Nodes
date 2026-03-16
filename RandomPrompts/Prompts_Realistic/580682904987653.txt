@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, slender woman with long, wavy brown hair standing in a bright, airy indoor space. She wears a ribbed, camel‑colored crop top and high‑waisted denim shorts that match the top’s tone. Her left hand rests on her hip, right arm slightly bent, head tilted a few degrees to the right, eyes focused forward with a soft, natural smile. A subtle motion blur at the edges suggests handheld shake.
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window behind her creates a slight overexposure on the upper body, giving a warm, airy feel. The exposure is slightly uneven—the background is a bit brighter than the foreground, as if captured without a tripod. No auto‑beauty or filter enhancement; raw, unprocessed look.
+
+- **Camera & Lens Settings**  
+  35 mm wide‑angle lens, f/4.0 aperture, 1/60 s shutter speed, ISO 400. Everything in focus from foreground to background; no bokeh or depth‑of‑field blur. Slight tilt and off‑center framing give a candid, spontaneous vibe.
+
+- **Environment**  
+  The setting is a modern loft with floor‑to‑ceiling windows, a concrete railing, and a view of distant mountains and palm trees outside. The time of day is mid‑afternoon, with soft, diffused sunlight. A few indoor plants are visible near the window, adding greenery to the scene.
+
+- **Composition & Framing**  
+  No rule‑of‑thirds intentionality—framing is accidental, with the subject slightly cut off at the bottom right corner. The background is fully sharp, no portrait‑mode isolation. The composition captures a natural, candid moment as if the photographer was moving while shooting.
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, zero post‑processing aesthetic. Slight overexposure on the subject’s upper body, subtle grain from the camera’s sensor, and a faint hint of natural motion blur from handheld instability.
+
+**Prompt Summary**  
+> “A tall woman with long wavy brown hair, wearing a camel ribbed crop top and high‑waisted denim shorts, stands in a bright loft with floor‑to‑ceiling windows, concrete railing, and a mountain‑palm view outside. Natural daylight from a large window creates a slight overexposure on her upper body; the exposure is uneven, raw and unprocessed. Shot on a 35 mm wide‑angle lens at f/4.0, 1/60 s, ISO 400, everything in focus with no bokeh. The framing is accidental, slightly tilted and off‑center, capturing a candid, spontaneous moment with a subtle motion blur from handheld shake. The background is fully sharp. No filters or color grading.”

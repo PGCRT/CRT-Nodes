@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A plus‑size woman with long, wavy brown hair, wearing a red bikini, sitting on a metal staircase. She holds the rail with both hands, a bright smile on her face, and a subtle tilt to the left. Her left wrist bears a gold bracelet, right wrist a gold watch; she wears a thin gold necklace with a small pendant. The camera captures her from a low angle, slightly above the seat, giving a dynamic “mid‑action” feel.
+
+- **Lighting & Exposure**  
+  Natural daylight, late afternoon (around 5 pm), soft but warm ambient light. Slight overexposure on the face and upper body to keep the background bright; no auto‑HDR or auto‑beauty processing—raw, unfiltered look. The exposure is uneven: the lower part of the image is slightly brighter than the top, creating a subtle vignette.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24 mm), short focal length, handheld shot with slight motion blur from instability. Everything in focus—no bokeh, no depth‑of‑field blur; background (concrete steps, green lawn, a white house in the distance) is fully sharp. No rule‑of‑thirds intentionality—framing is accidental, off‑center, partial crop.
+
+- **Environment**  
+  Outdoor setting on a concrete staircase in a residential neighborhood. The time of day is late afternoon, with warm sunlight casting soft shadows. Weather is clear, light breeze, slight humidity. A white car is partially visible in the left background; a palm tree and a small patch of grass are seen behind the stairs.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Imperfections encouraged: slight tilt, off‑center framing, partial crop. No rule‑of‑thirds intentionality — accidental framing. Natural motion freeze or slight blur from handheld instability. Zero studio lighting, zero professional composition, zero editorial tone.
+
+- **Post‑Processing**  
+  No filters, no color grading, no post‑processing aesthetic. Raw, natural look with only basic white‑balance correction. Slight overexposure on the subject’s face and upper body; background remains fully sharp.  
+
+**Prompt Summary (structured)**  
+“Candid, wide‑angle handheld shot of a plus‑size woman in a red bikini sitting on a concrete staircase, holding the rail with both hands, smiling, wearing a gold bracelet and watch, captured at late afternoon natural light with slight overexposure, all elements in focus, no bokeh, raw unprocessed look, accidental off‑center framing, slight motion blur from handheld instability, background includes a white house and green lawn, no studio lighting, no filters.”

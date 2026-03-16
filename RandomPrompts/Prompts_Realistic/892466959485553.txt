@@ -1,0 +1,30 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  - A tall, slender woman with long, straight brown hair standing on a sunlit beach.  
+  - She wears a white lace thong that clings to her curves, a gold bracelet adorning her left wrist.  
+  - Her pose is casual and spontaneous: one hand relaxed by her thigh, the other slightly bent, as if she just stepped forward mid‑walk.  
+  - Slight motion blur at the edges conveys a handheld, in‑motion feel.
+
+- **Lighting & Exposure**  
+  - Auto‑HDR or auto‑beauty mode turned off; the image retains a raw, unprocessed look.  
+  - A mild overexposure on the upper body, letting the sunlight bleed through the lace and hair.  
+  - No color grading or post‑processing filters—just natural ambient light.
+
+- **Lens & Technical**  
+  - Wide‑angle lens (24‑35 mm) with a short focal length, giving a broad field of view.  
+  - Everything is in focus—from the subject’s face to the sand and sea behind—no bokeh or depth‑of‑field blur.  
+  - Slight tilt and off‑center framing; the composition feels accidental, not intentional.
+
+- **Environment**  
+  - Specific real‑world location: a tropical beach at mid‑afternoon, with the ocean’s surface visible in the background.  
+  - Palm fronds peek into the upper right corner, adding natural depth.  
+  - Weather is bright and warm; the sky is a soft, pale blue with a hint of haze.
+
+- **Capture Style**  
+  - Candid, unposed, spontaneous—subject appears unaware of the camera.  
+  - Imperfections encouraged: slight tilt, off‑center framing, partial crop that cuts off a bit of the horizon.  
+  - No rule‑of‑thirds intentionality—accidental framing that feels natural and organic.
+
+- **Final Prompt**  
+  *“A tall, slender woman with long, straight brown hair stands on a sunlit beach in a white lace thong, gold bracelet on her left wrist, one hand relaxed by her thigh, the other slightly bent as if mid‑walk. The image is captured on a wide‑angle lens (24‑35 mm) with everything in focus—no bokeh. Slight motion blur at the edges gives a handheld feel. Auto‑HDR off, raw look with mild overexposure on the upper body. The background shows the ocean and palm fronds, bright mid‑afternoon light, soft haze. Candid, unposed, accidental framing with slight tilt and off‑center crop; no rule‑of‑thirds. No filters, color grading, or post‑processing—just natural ambient lighting.”*

@@ -1,0 +1,16 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, athletic woman with long, sun‑kissed blonde hair standing mid‑walk on a city street. She wears an oversized, light‑wash denim jacket (slightly frayed at the cuffs) over a black “calvin” branded bikini bottom; her left hand is curled into a loose fist near her chest, right hand hanging by her side. Her face is turned toward the camera but not directly aimed—slight off‑center tilt, natural expression with a soft smile.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject appears unaware of the lens. Slight handheld shake gives a subtle motion blur around the edges. No filters, no color grading, no post‑processing aesthetic; raw, auto‑HDR off, natural exposure (slight overexposure on the upper body). Wide‑angle lens (24–35 mm) captures a broad field with everything in focus—no bokeh, no depth‑of‑field blur.
+
+- **Environment**  
+  Specific real‑world location: an urban parking lot at dusk. A white car is parked on the left, a low concrete wall runs along the back, and a modern building looms in the distance. The sky is a soft, warm gray with a hint of sunset. Ambient light is diffused; the scene has a slight overexposure on the subject’s torso, giving a natural glow.
+
+- **Lens & Technical**  
+  Short focal length (30 mm), wide‑angle. No bokeh—background fully sharp. All elements in focus: foreground, mid‑ground, background. No portrait mode or subject isolation. Slight tilt and partial crop to create accidental framing; no rule‑of‑thirds intentionality.
+
+- **Composition Notes**  
+  The frame is slightly crooked, with the subject’s head near the upper third but not centered. Her left shoulder leans toward the camera, creating a dynamic angle. The background wall and car are partially cut off at the edges, enhancing candid feel. The overall look is raw, spontaneous, and realistic—like a snapshot captured in the moment.

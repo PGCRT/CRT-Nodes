@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with dark hair tied back, wearing a white two‑piece swimsuit featuring red dragon motifs on the top. Her arms are raised behind her head, elbows bent, hands gripping the back of her head in a relaxed, candid pose. She stands in a sunlit park, eyes closed as if savoring the warmth of the day.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. Slight tilt and off‑center framing; partial crop that gives an accidental, handheld feel. No rule‑of‑thirds intentionality. The shot has a raw, unprocessed look: no filters, no color grading, no post‑processing aesthetic. A slight overexposure in the highlights to capture the ambient daylight.
+
+- **Environment**  
+  Specific real‑world location: a lush green park with tall trees and a patch of grass. Time of day: late morning, around 10:30 AM, when the sun is high but still warm. Weather: clear, bright, with a few scattered clouds. The background is fully sharp—no bokeh or depth‑of‑field blur.
+
+- **Lens & Technical**  
+  Short focal length (24–35 mm) wide‑angle lens. All elements in focus; no portrait mode or subject isolation. Slight motion blur from handheld instability, giving a natural freeze‑frame effect. Auto‑HDR or auto‑beauty mode off. The image retains a slight overexposure or underexposure depending on ambient light, preserving the raw feel.
+
+- **Composition Notes**  
+  The framing is accidental: the subject’s left side is slightly cut off by the edge of the frame, and the top of her head is just above the upper border. The background trees and foliage are fully sharp, creating a dense, green backdrop that contrasts with the white swimsuit. The shot captures a moment of quiet confidence, as if the woman is mid‑pose, unaware of the camera.
+
+- **Final Prompt**  
+  “A young woman in a white dragon‑motif swimsuit stands in a sunlit park at late morning, arms raised behind her head in a candid, unposed pose. The shot is captured on a short focal length wide‑angle lens, with slight tilt and off‑center framing, partial crop, and accidental handheld blur. All elements are in focus—no bokeh or portrait mode. The background trees and foliage are fully sharp, the scene is bright and clear, the exposure is slightly high to emphasize ambient light. No filters or post‑processing; raw, natural aesthetic.”

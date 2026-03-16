@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail, wearing a faded denim jacket over a black long‑sleeve shirt and beige trousers, is captured mid‑turn, her left hand resting on the back of a wooden desk. She’s looking back over her shoulder with a subtle smile, as if just having finished a conversation or a presentation. Her hair is slightly messy, catching the natural light, and a few strands frame her face.
+
+- **Motion & Focus**  
+  Slight motion blur at the edges from handheld instability; the subject’s movement is frozen in a natural, spontaneous moment. Everything in the frame—from her jacket to the distant window—is fully sharp, with no portrait‑mode blur. The focus covers the entire scene, from foreground to background.
+
+- **Lighting & Exposure**  
+  Raw, unprocessed look: no auto‑HDR or beauty filters. The exposure is mildly overexposed on the left side, letting the daylight from the window spill onto her jacket, while the right side remains slightly darker, giving a natural contrast. No color grading or post‑processing aesthetic—just the raw tones of the day.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24‑35 mm) with a short focal length. No bokeh; the background is fully sharp, from the desk to the window. The composition is accidental: slight tilt and off‑center framing, no rule‑of‑thirds intentionality. The shot feels candid, unposed, and spontaneous.
+
+- **Environment**  
+  A bright office space in the late morning. Large window on the left lets in natural daylight, with a glimpse of trees outside. A wooden desk is cluttered with a coffee mug, a notepad, a pen, and a roll of paper towels. In the background, an older man sits at another desk, and a woman is visible near the window. A small cabinet holds books and a polka‑dot cloth. The floor is tiled, and a black office chair is partially visible.
+
+- **Details & Imperfections**  
+  The denim jacket shows a slight wear mark on the left shoulder, adding realism. Her fingers are casually curled, one thumb tucked into the pocket of her jacket. A small smudge on her sleeve hints at recent activity. The desk’s wood grain is visible, and the coffee mug’s handle is angled. The window’s reflection shows a faint silhouette of a tree, indicating the time of day—mid‑morning, around 10:30 AM.
+
+- **Prompt Summary**  
+  “A young woman in a denim jacket turns back with a subtle smile, captured on a wide‑angle lens in a bright office setting. The scene is raw and unprocessed, with slight motion blur from handheld shooting, natural overexposure on the left, and full sharpness across the frame. The background includes a cluttered desk, a coffee mug, a notepad, and an older man at a nearby desk, all in focus. The lighting comes from a large window on the left, casting natural daylight onto the subject’s jacket. The composition is accidental and candid, with slight tilt and off‑center framing.”

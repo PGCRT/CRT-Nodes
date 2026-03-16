@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman with long, dark hair kneeling on a cluster of dark volcanic rocks, her body slightly tilted to the left, mid‑gesture as she reaches for a succulent plant beside her. Her left arm is bent, hand resting on a rock, while her right arm supports her weight. She’s bare‑headed, no clothing, with a visible tattoo on her left upper arm. Her face is turned toward the camera but not directly at it—slight off‑center framing.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle, late‑afternoon sun; slight overexposure in the highlights, giving a warm, golden hue. No auto‑HDR or auto‑beauty mode—raw, unprocessed look. The exposure is slightly uneven, with the top of the subject’s head a bit brighter than the lower body.
+
+- **Motion & Focus**  
+  Slight motion blur on the subject’s right hand and the nearby succulent, indicating handheld instability. Everything in the frame—from the rocks to the background plants—is fully sharp; no bokeh or depth‑of‑field blur.  
+
+- **Lens & Technical**  
+  Wide‑angle lens (24 mm), short focal length. No rule‑of‑thirds intentionality—framing is accidental, with a slight tilt and partial crop that cuts off the top of the subject’s head and the lower left corner of the rock cluster.  
+
+- **Environment**  
+  Location: A sunny, rocky outcrop in a coastal or mountain meadow. The ground is covered in dark, porous volcanic stones, interspersed with pale green succulents (likely an agave or yucca variety). In the background, a few palm fronds peek from above, and a faint line of trees can be seen at the far edge. Time of day: late afternoon, around 5 pm, with warm, golden light. Weather: clear, no wind, but the sun’s angle creates soft shadows.  
+
+- **Composition & Style**  
+  Candid, unposed, spontaneous—subject appears unaware of the camera. Imperfections are encouraged: slight tilt, off‑center framing, partial crop. No studio lighting, no professional composition, no editorial tone. The image should feel like a captured moment in real life, with natural motion freeze or slight blur from handheld instability.  
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, zero post‑processing aesthetic. Keep the raw look; only minor adjustments to exposure and contrast if needed.
+
+**Prompt Summary (for AI image generator)**  
+"A woman with long dark hair kneeling on a cluster of dark volcanic rocks in a sunny late‑afternoon setting, reaching for a pale green succulent beside her. She’s bare‑headed, tattooed left arm visible, slightly tilted pose, hand resting on a rock. Natural daylight from high angle causes slight overexposure. Slight motion blur on the right hand and nearby plant, everything fully sharp. Wide‑angle 24 mm lens, short focal length. Background includes dark porous stones, succulents, and a hint of palm fronds. Accidental framing with slight tilt and partial crop. Raw, unprocessed look, no filters."

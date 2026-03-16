@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with dark hair styled in twin buns, each adorned with red tassels, sitting casually on a tufted bench. She wears a bright red cheongsam with gold dragon embroidery and matching gold trim along the collar and cuffs. Her hands rest gently on her knees, fingers slightly curled, as if she’s about to adjust her dress or hold a small object. A subtle smile plays on her lips, capturing a candid moment of quiet confidence.
+
+- **Motion & Focus**  
+  Slight motion blur at the edges from handheld instability; the center of the frame is crisp while the periphery has a soft, natural blur. No auto‑beauty or filter interference—raw, unprocessed look. The exposure is slightly warm, with a mild overexposure that lets the ambient daylight bleed through the window, giving the scene an airy, lively feel.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24‑35 mm) with a short focal length, capturing a broad view of the interior space. Everything is in focus—from the subject to the background—no portrait‑mode depth‑of‑field blur. The composition is accidental: the frame is slightly tilted, the subject is off‑center, and the crop is partial, giving an unposed, spontaneous vibe.
+
+- **Environment**  
+  A bright, sunlit living room in the late morning. A large window on the left lets in natural light, a potted plant sits on a wooden side table, and a small lamp glows softly on a matching table to the right. The bench she sits on has a floral pattern, and a stack of books rests on a lower shelf. The background is fully sharp, with no bokeh.
+
+- **Lighting & Color**  
+  Natural daylight from the window creates a slight overexposure on the upper part of the frame, while the lower part remains a bit darker, adding contrast. Warm tones dominate—the red of the cheongsam, the beige of the bench, the light wood of the furniture—accentuated by the subtle hue of the lamp’s shade.
+
+- **Details & Imperfections**  
+  The image carries a slight tilt and partial crop that give it a candid feel. The subject’s hair tassels sway slightly, as if she just finished a movement. A faint smudge on the window glass adds realism. The overall look is raw, unprocessed, and fully in focus, with no filters or color grading.
+
+**Prompt Summary**  
+> “A young woman in a red cheongsam with gold dragon embroidery sits casually on a tufted bench in a bright, sunlit living room. Her hair is styled in twin buns with red tassels. The shot is taken with a wide‑angle lens at a short focal length, everything in focus but with slight motion blur from handheld shake. Natural daylight from a large window creates a mild overexposure on the upper frame. The composition is accidental—slightly tilted, off‑center, partial crop—capturing a candid, unposed moment. Raw, unprocessed, no filters.”

@@ -1,0 +1,28 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail, wearing a black bikini top with teal trim and matching high‑waist bottoms, captured mid‑step in a casual, spontaneous pose. Her left hand rests on a light‑wood side table, right arm relaxed by her side, body angled slightly toward the camera, one leg bent as if she’s just turned or about to move.  
+
+- **Facial Expression & Gaze**  
+  She looks directly at the camera with a soft, confident smile, eyes bright and engaged. Slight motion blur on the fingers and lower leg conveys natural movement.
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window behind her creates a subtle overexposed highlight on her face and upper body; slight warm tint from ambient sunlight. No auto‑beauty or filter enhancement—raw, unprocessed look.  
+
+- **Camera Settings**  
+  Wide‑angle lens (24–35 mm), handheld, f/4–f/5.6 aperture, 1/125 s shutter speed, ISO 400. Everything in focus from foreground to background; no bokeh or depth‑of‑field blur.  
+
+- **Composition & Framing**  
+  Off‑center, accidental framing: the subject is slightly tilted, the crop cuts off a bit of the left side of the room, giving a candid feel. The composition does not follow the rule‑of‑thirds intentionally; the table, sofa, and plant are placed loosely around her.  
+
+- **Environment**  
+  A bright, modern living room with light‑wood furniture: a beige sofa adorned with green pillows, a small wooden side table, a potted green plant on a cabinet, and a large window with dark curtains to the left. A white lamp is partially visible in the top left corner. The time of day is mid‑afternoon, with soft natural light filling the space.  
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, minor motion blur on the hands and feet, a faint spark of dust in the air near the window, and a tiny overexposure halo around the subject’s head. The background is fully sharp—no portrait‑mode isolation.  
+
+- **Post‑Processing**  
+  No filters or color grading; raw, natural look with auto‑HDR off. Only minimal adjustments to exposure and contrast.
+
+**Prompt Summary (structured)**  
+"Mid‑afternoon candid shot of a woman in a black bikini with teal trim, mid‑step pose, hand on wooden side table, soft smile, slight motion blur, wide‑angle handheld capture, natural daylight from window, raw unprocessed look, off‑center accidental framing, fully sharp background, no bokeh, no filters."

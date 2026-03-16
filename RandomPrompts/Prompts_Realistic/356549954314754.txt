@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy dark hair, wearing a gray cropped hoodie and denim shorts, crouches on the floor of a casual coffee‑shop. She leans her elbow on her knee, looking slightly off‑camera with a relaxed, candid expression. Her beige Nike sneakers are visible, one foot planted, the other bent.  
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window creates a soft, slightly overexposed highlight on her face and shoulder. The lighting is uneven—warm tones from the window, cool tones from the interior—giving a raw, unprocessed look. No auto‑HDR or beauty filters; just a handheld shot with slight instability.  
+
+- **Composition & Framing**  
+  Wide‑angle lens (24‑35 mm) captures a broad view of the scene. The frame is intentionally off‑center: the subject’s left side leans toward the left edge, her right foot near the bottom right corner. No rule‑of‑thirds—just spontaneous framing. Background is fully sharp, no bokeh.  
+
+- **Environment**  
+  Location: a cozy, modern coffee shop with exposed concrete walls and wooden shelving. A wooden table with coffee blenders, cups, and a small potted plant sits to the left; a green chair and a stack of magazines are on the right. A second customer is visible in the background, facing away. The time of day is mid‑afternoon, with warm sunlight streaming through the window.  
+
+- **Lens & Technical**  
+  Short focal length (24–35 mm), wide‑angle, handheld. All elements are in focus—no portrait‑mode depth‑of‑field blur. Slight motion blur on the subject’s hand and knee to suggest natural movement.  
+
+- **Details & Imperfections**  
+  The image has a slight tilt and partial crop, giving it a casual, unposed feel. A faint lens flare is present from the window light. The color palette is muted: gray hoodie, denim blue, beige shoes, warm wood tones, with a hint of green from a plant.  
+
+- **Prompt for Generation**  
+  “A young woman with long wavy dark hair, wearing a gray cropped hoodie and denim shorts, crouches on the floor of a casual coffee‑shop. She leans her elbow on her knee, looking slightly off‑camera with a relaxed, candid expression. Her beige Nike sneakers are visible, one foot planted, the other bent. Natural daylight from a large window creates a soft, slightly overexposed highlight on her face and shoulder. The lighting is uneven—warm tones from the window, cool tones from the interior—giving a raw, unprocessed look. Wide‑angle lens (24–35 mm) captures a broad view of the scene. The frame is intentionally off‑center: the subject’s left side leans toward the left edge, her right foot near the bottom right corner. No rule‑of‑thirds—just spontaneous framing. Background is fully sharp, no bokeh. Location: a cozy, modern coffee shop with exposed concrete walls and wooden shelving. A wooden table with coffee blenders, cups, and a small potted plant sits to the left; a green chair and a stack of magazines are on the right. A second customer is visible in the background, facing away. The time of day is mid‑afternoon, with warm sunlight streaming through the window. Short focal length (24–35 mm), wide‑angle, handheld. All elements are in focus—no portrait‑mode depth‑of‑field blur. Slight motion blur on the subject’s hand and knee to suggest natural movement. The image has a slight tilt and partial crop, giving it a casual, unposed feel. A faint lens flare is present from the window light. Color palette: gray hoodie, denim blue, beige shoes, warm wood tones, green plant.”

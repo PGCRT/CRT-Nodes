@@ -1,0 +1,27 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, blonde woman with a slender yet curvy figure stands in a retro‑style bathroom, her back slightly turned toward the camera as she leans on a rustic wooden countertop. Her left hand rests on the edge of the sink, fingers curled gently, while her right hand is tucked into the corner of the counter. She’s barefoot, toes relaxed, and her long, wavy hair cascades over her left shoulder. Her face is turned back toward the camera with a subtle, confident smile, eyes bright and engaged.
+
+- **Lighting & Exposure**  
+  Warm, natural daylight from a side window creates a soft, slightly overexposed glow on her skin. The light hits the green tiles and wooden counter, creating gentle highlights and subtle shadows. A small wall lamp above the sink is on, adding an extra source of warmth. Slight handheld shake gives a natural motion blur to the edges.
+
+- **Environment**  
+  The bathroom has a vintage feel: green square tiles cover the walls, a rustic wooden countertop with visible grain, a chrome faucet, and a small bottle of hand soap on the counter. A round mirror hangs on the left wall, reflecting part of the scene. The floor is tiled in muted earth tones. The time of day is late morning, with bright sunlight streaming in from the side, creating a warm, golden hue.
+
+- **Lens & Technical**  
+  Use a wide‑angle lens (24–35 mm) to capture the entire scene in one shot. Keep everything in focus—no depth‑of‑field blur. Shoot in raw mode, no auto‑HDR or auto‑beauty enhancements. Capture a slightly off‑center composition with accidental tilt, giving the image a candid, spontaneous feel. The framing is not intentionally rule‑of‑thirds; it’s a natural, handheld shot that feels “in the moment.”
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Encourage imperfections: slight tilt, off‑center framing, partial crop. No rule‑of‑thirds intentionality—accidental framing. Zero studio lighting, zero professional composition, zero editorial tone. Natural motion freeze or slight blur from handheld instability.
+
+- **Post‑Processing**  
+  Keep it raw and unprocessed. No filters, no color grading, no heavy editing. Only a subtle exposure adjustment to balance the natural light.
+
+---
+
+**Prompt for Text‑to‑Image Generation**
+
+```
+A tall, blonde woman with a slender yet curvy figure stands in a retro‑style bathroom, her back slightly turned toward the camera as she leans on a rustic wooden countertop. Her left hand rests on the edge of the sink, fingers curled gently, while her right hand is tucked into the corner of the counter. She’s barefoot, toes relaxed, and her long, wavy hair cascades over her left shoulder. Her face is turned back toward the camera with a subtle, confident smile, eyes bright and engaged. Warm, natural daylight from a side window creates a soft, slightly overexposed glow on her skin. The green tiles, rustic wooden countertop, chrome faucet, and small bottle of hand soap on the counter form a vintage bathroom scene. A round mirror hangs on the left wall, reflecting part of the scene. The time of day is late morning, with bright sunlight streaming in from the side, creating a warm, golden hue. Use a wide‑angle lens (24–35 mm) to capture the entire scene in one shot. Keep everything in focus—no depth‑of‑field blur. Shoot in raw mode, no auto‑HDR or auto‑beauty enhancements. Capture a slightly off‑center composition with accidental tilt, giving the image a candid, spontaneous feel. The framing is not intentionally rule‑of‑thirds—accidental framing. Natural motion freeze or slight blur from handheld instability. No filters, no color grading, no post‑processing aesthetic.
+```

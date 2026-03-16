@@ -1,0 +1,29 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark brown hair, wearing a plain white T‑shirt and a delicate gold necklace, captured mid‑gesture as if she’s just finished speaking or is about to say something. Her face is slightly tilted, her eyes half‑closed in a casual, unposed expression. She holds a small black plush toy in her left hand, which rests on a patterned cushion beside her.
+
+- **Lighting & Exposure**  
+  Natural daylight from a window behind her creates a soft, slightly overexposed glow on her face and shirt. The exposure is uneven—brighter at the top of the frame, giving a raw, unprocessed look. No auto‑HDR or beauty filters; the image retains the natural grain and color tone of a handheld shot.
+
+- **Composition & Framing**  
+  Shot with a wide‑angle lens (≈20 mm), the frame is intentionally off‑center and slightly tilted. The composition is spontaneous: the subject occupies the left‑central portion of the frame, while the right side shows a wooden desk with a laptop, a small framed photo, and a shelf stocked with books and mugs. A green potted plant peeks from the left background, adding a touch of life to the scene.
+
+- **Environment**  
+  The setting is a cozy, lived‑in bedroom or home office. A white ceiling light fixture hangs above, a window lets in warm daylight, and a small black bear plush sits on a floral cushion. The time of day appears to be late morning, with soft, diffused sunlight creating gentle shadows.
+
+- **Lens & Technical Details**  
+  Short focal length (≈24 mm) for a wide‑angle view; everything from foreground to background is in focus—no bokeh or depth‑of‑field blur. Slight motion blur is present on the subject’s hand and the plush toy, indicating handheld instability during capture. The image has a natural, unfiltered look with no post‑processing color grading.
+
+- **Additional Details**  
+  - A small black bear plush toy rests on a patterned cushion.  
+  - A green potted plant adds a fresh accent to the left side.  
+  - A wooden desk holds a laptop, a framed photograph, and a shelf full of books and mugs.  
+  - The ceiling light fixture is visible at the top center.  
+  - The window behind the subject shows an outdoor view of trees, hinting at a suburban setting.  
+
+**Prompt for Text‑to‑Image Generation**
+
+> “A candid, spontaneous photograph of a young woman with long dark brown hair, wearing a plain white T‑shirt and a delicate gold necklace, captured mid‑gesture as if she’s just finished speaking. She holds a small black plush toy in her left hand, which rests on a patterned cushion beside her. The scene is set in a cozy, lived‑in bedroom or home office: a wooden desk with a laptop, a framed photo, and a shelf stocked with books and mugs sits to the right; a green potted plant peeks from the left background. Natural daylight from a window behind her creates a soft, slightly overexposed glow on her face and shirt. The image is shot with a wide‑angle lens (≈20 mm), slightly tilted and off‑center, everything in focus with no bokeh. Slight motion blur is present on the woman’s hand and plush toy, indicating handheld instability. No filters or post‑processing—raw, unprocessed look. The time of day is late morning, with soft diffused sunlight casting gentle shadows.”
+
+Provide only the structured prompt.

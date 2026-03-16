@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with voluminous, curly dark hair, wearing a black backless crop‑top and light‑blue high‑waist bikini bottoms, sitting on a white‑sheeted bed. She is turned slightly to her left, leaning against a rusted metal post, one hand gripping the post, the other resting on her thigh. Her gaze is directed toward the camera but not directly at it—mid‑action, as if she just finished a pose or is about to move.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—an “in‑the‑moment” snapshot where the subject is unaware of the camera or caught mid‑motion. The frame is slightly tilted and off‑center; the crop is partial, giving an accidental, handheld feel. No rule‑of‑thirds intentionality—just a natural, casual composition.
+
+- **Motion & Exposure**  
+  Slight motion blur from a handheld shot, capturing the subject’s subtle movement. A mild overexposure that lets the ambient daylight bleed through the scene, creating a warm, raw look. No auto‑beauty or filter processing—just raw, unprocessed imagery.
+
+- **Environment**  
+  Location: a cozy bedroom with light‑wood wardrobes and a visible white bedspread. The time of day is late afternoon, with soft natural light coming from the west, casting gentle shadows across the subject’s face and body. Ambient conditions are calm, with a quiet hum of a distant street or house outside, adding to the candid mood.
+
+- **Lens & Technical**  
+  Short focal length (≈20‑35 mm) wide‑angle lens, giving a broad field of view while keeping everything in focus—no bokeh, no depth‑of‑field blur. The background is fully sharp, from the wardrobe doors to the metal post. No portrait‑mode subject isolation; the entire scene remains crisp.
+
+- **Post‑Processing**  
+  Zero studio lighting, zero professional composition, zero editorial tone. A simple, raw capture with a slight overexposure or underexposure depending on ambient light. The final image retains a natural, unpolished feel, as if just taken with a DSLR or mirrorless camera in a real‑world setting.

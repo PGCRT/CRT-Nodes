@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair, wearing an off‑white hooded sweatshirt (with a faint, natural stain on the left sleeve) and frayed denim shorts, is captured mid‑turn, her right leg bent and foot lifted as if she just stepped or was about to step. She’s smiling broadly, head tilted slightly to the right, giving a candid, spontaneous feel. Her white sneakers are visible, with a subtle motion blur indicating movement.
+
+- **Lighting & Exposure**  
+  Natural daylight from a large, multi‑paned window on the left creates a warm, slightly overexposed highlight on her hoodie. The exposure is a little high, giving a raw, unprocessed look. No auto‑beauty or filter enhancement—just the ambient light’s natural tone.
+
+- **Environment**  
+  The setting is a cozy, sunlit study or classroom. A wooden desk cluttered with an assortment of books (red, yellow, green spines) sits to her left; a chalkboard with handwritten notes (“Homes Cooking – La Gand Cote – Pour Soummi – Poud Cafe – Hot Soup – Freshout Lact”) hangs on the right wall. A large window with white frames lets in bright daylight, and a small potted plant is visible near the corner. The time of day is mid‑afternoon, around 3 pm, when the sun is high but not directly overhead.
+
+- **Lens & Technical**  
+  Use a short focal length (e.g., 24–35 mm) wide‑angle lens to capture the entire scene in one shot. Shoot at a wide aperture (f/2.8–f/4) but keep everything in focus—no bokeh or subject isolation. The image should have slight motion blur on the subject’s foot and a tiny tilt, as if taken with a handheld camera. No rule‑of‑thirds intentionality; framing is accidental, off‑center, and includes a partial crop of the desk and chalkboard.
+
+- **Composition & Style**  
+  Capture a candid, unposed moment—subject unaware or mid‑action. Encourage imperfections: slight tilt, off‑center framing, partial crop. The background should be fully sharp, no depth‑of‑field blur. Zero studio lighting, zero professional composition, zero editorial tone. Aim for a natural, raw aesthetic with a hint of overexposure from the window light.
+
+- **Post‑Processing**  
+  Keep it minimal—no color grading or filters. Slight auto‑HDR may be applied to brighten the scene, but maintain the raw feel. The final image should look like a genuine, spontaneous photograph taken in a real-world location.

@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark hair that’s slightly blown by the wind, wearing amber‑tinted sunglasses, a thin “Guinness” tattoo on her left clavicle, bright red jogger‑style pants, and black ankle boots adorned with floral patterns. She is crouching low on a large, rough granite boulder, one knee bent, hand resting on her thigh, body angled toward the camera but not perfectly centered. Her head is tilted slightly to the side, eyes focused ahead, capturing a candid, mid‑action moment.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle, late‑afternoon sun that creates a soft overexposure on the subject’s face and a subtle warm glow on the rocks. Slight handheld shake gives a natural motion blur around the edges; no auto‑beauty or filter processing—raw, unpolished look.
+
+- **Environment**  
+  A sunlit desert‑rock landscape, with a cluster of large, weathered boulders forming a natural “stage” behind her. Small succulents peek out from a crevice in the rock on the left, and a white ceramic pot sits near the base of a boulder, adding a subtle detail. The sky is a clear, pale blue with a faint haze, indicating the end of the afternoon.
+
+- **Lens & Technical**  
+  24‑mm wide‑angle lens (short focal length), handheld, fully sharp background with no bokeh. Everything in focus—no portrait‑mode depth‑of‑field blur. The composition is accidental: slight tilt and off‑center framing, no rule‑of‑thirds intentionality.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Imperfections encouraged: slight tilt, off‑center framing, partial crop. No studio lighting, no professional composition, no editorial tone. Natural motion freeze or slight blur from handheld instability.
+
+- **Post‑Processing**  
+  Auto‑HDR off; no color grading or filters. Only raw, natural tones with a hint of overexposure to keep the image lively and organic.

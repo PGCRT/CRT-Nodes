@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair standing in a bright, minimalist indoor space. She wears a black, spaghetti‑strap wrap top with a mid‑riff cutout and a pleated midi skirt that falls to the mid‑calf. Her hands hang loosely by her sides, slightly angled, as if she just finished a gesture or is about to move. Her face is turned toward the camera but not directly at it— a subtle, candid angle.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. Slight motion blur on the hands and skirt to suggest movement. No filters, no color grading, no post‑processing aesthetic. A hint of natural overexposure from ambient daylight. The frame is slightly tilted and off‑center, giving an accidental, handheld feel. Everything remains in focus; no portrait‑mode depth‑of‑field blur.
+
+- **Environment**  
+  Location: a modern, uncluttered studio or loft with concrete walls and a single large window. Time of day: late morning, soft natural light coming from the left, creating gentle highlights on the subject’s right side. Weather: clear, warm, slightly humid— ambient warmth gives a subtle haze that adds to the raw look.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm), wide‑angle lens. No bokeh; background fully sharp. All elements in focus. No “rule of thirds” intentionality— framing is casual, as if captured by a photographer on the move. Slight overexposure or underexposure depending on ambient light— here, a mild warm tint.
+
+- **Composition Notes**  
+  The shot is cropped tightly around the subject’s torso to mid‑thigh, with a small portion of the window visible on the right side. The left side of the frame cuts off the top of her head, giving an incomplete, spontaneous feel. The background shows a faint texture of concrete and a faint vertical line from a structural beam.
+
+- **Lighting**  
+  Natural daylight from a large window, slightly high‑angle. Soft shadows on the subject’s left side; slight warm hue from the ambient light. No studio flash.
+
+- **Final Prompt**  
+  “A young woman with long wavy brown hair, wearing a black wrap top with a mid‑riff cutout and a pleated midi skirt, stands in a bright minimalist loft at late morning. Her hands hang loosely by her sides, slightly angled, as if mid‑gesture. The shot is captured on a 30 mm wide‑angle lens, handheld, slightly tilted, with everything in focus and a faint motion blur on the skirt. Natural daylight from a large window creates soft shadows and a warm tint. The frame is off‑center, cropping the top of her head and a portion of the concrete wall on the left, while a vertical beam line appears on the right. No filters or post‑processing— raw, candid, spontaneous.”

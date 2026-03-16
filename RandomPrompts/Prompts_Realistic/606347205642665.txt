@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, sun‑kissed blonde hair walking barefoot on a tropical beach. She wears a floral‑patterned green bikini, mid‑stride with one foot slightly ahead of the other, arms relaxed at her sides, head tilted upward as if she’s just caught a wave or is simply basking in the warm breeze. Her expression is casual and unposed, a natural smile with eyes bright, capturing a spontaneous moment.
+
+- **Motion & Focus**  
+  Slight motion blur on the feet and lower legs to suggest movement, while the upper body remains crisp. The entire scene is fully sharp—no bokeh or depth‑of‑field blur; everything from foreground to background stays in focus as if shot with a wide‑angle lens set to a low f‑number.
+
+- **Lighting & Exposure**  
+  Raw, unprocessed look: no filters, no color grading, no post‑processing aesthetic. The lighting is natural mid‑afternoon sunlight with a slight overexposure on the sky and water, giving a warm, golden hue that slightly bleeds into the sand. The exposure is uneven—the foreground is a bit brighter than the background, creating a subtle contrast.
+
+- **Lens & Technical**  
+  Short focal length (20–35 mm), wide‑angle lens. No bokeh; background is fully sharp. Handheld shot with slight tilt and off‑center framing—no rule‑of‑thirds intentionality. The composition feels accidental, as if the photographer caught the moment while walking along the shore.
+
+- **Environment**  
+  Specific real‑world location: a sandy beach with gentle waves lapping at the shore, palm trees swaying in the background, and a couple of resort buildings perched on the dunes. The time of day is late afternoon, with the sun high but not directly overhead, casting long, soft shadows. Weather is clear with a few scattered clouds, ambient light warm and slightly hazy.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, partial crop that cuts off the edges of the beach, giving a candid feel. The subject’s hair has a slight wind‑blown texture, and her feet leave faint footprints in the sand. The waves show a subtle ripple pattern, and the sand has a natural, unpolished grain.
+
+- **Prompt Summary**  
+  “A young woman in a floral green bikini walks barefoot on a tropical beach at mid‑afternoon, captured with a wide‑angle lens at 25 mm. The shot is raw and unprocessed, with slight motion blur on the feet, full sharpness across the frame, and accidental off‑center framing. The background features palm trees, resort buildings, and gentle waves, all in focus under warm, slightly overexposed sunlight.”

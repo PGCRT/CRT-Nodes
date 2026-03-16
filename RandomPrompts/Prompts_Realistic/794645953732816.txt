@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A young woman with long blonde hair, mid‑adjustment of a denim skirt, captured in a spontaneous, unposed moment. Her hands are gripping the waistband of her skirt, fingers curled as if she’s about to fasten it. She wears a dark, patterned crop‑top with red and white geometric motifs, the fabric slightly wrinkled from movement. Her abdomen is visible, showing a small scar near the navel. Her hair is partially lifted by the motion, creating a soft, dynamic halo.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. Slight tilt and off‑center framing; partial crop that cuts off the top of her head and the lower part of her thighs. No rule‑of‑thirds intentionality — accidental composition. The image has a raw, unprocessed look: no filters, no color grading, no post‑processing aesthetic. A hint of slight overexposure in the high‑light areas gives it an ambient, natural feel.
+
+- **Motion & Focus**  
+  Slight motion blur from handheld instability, capturing the fleeting movement of her hands and hair. Everything is fully sharp — no bokeh, no depth‑of‑field blur; background remains crisp. No portrait‑mode subject isolation.
+
+- **Environment**  
+  Specific real‑world location: a dimly lit bedroom with a wooden dresser in the background, a framed picture on the wall, and a small white bowl on the dresser. Time of day: late afternoon, soft natural light coming from the west, creating warm highlights and subtle shadows. Weather or ambient conditions: mild, slightly humid air that gives a gentle haze to the scene.
+
+- **Lens & Technical**  
+  Short focal length (20‑35 mm), wide‑angle lens. Wide‑angle captures the entire subject and most of the background without cropping too tightly. No bokeh, no depth‑of‑field blur — background fully sharp. All elements in focus: the subject’s face, hands, torso, and the background details.
+
+- **Composition & Aesthetic**  
+  The prompt should emphasize a raw, candid aesthetic with slight imperfections (e.g., a slightly crooked horizon line). The framing should feel spontaneous, as if the photographer caught the moment by chance. The image should look like an authentic, unedited snapshot taken in a real setting, with natural lighting and no studio‑style polish.
+
+- **Output**  
+  Generate only the structured prompt, no extra commentary or instructions.

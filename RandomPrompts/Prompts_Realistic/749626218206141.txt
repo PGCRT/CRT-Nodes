@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A plus‑size woman in a light‑pink, ribbed sports bra and matching high‑waist shorts, standing mid‑step on a tiled floor. Her hands rest lightly on her thighs, fingers curled, as if she’s about to adjust her shirt or grab something from a small wooden side table nearby. Her hair is loose, slightly wavy, catching the warm glow of candles that sit on the table; a few of them are lit, casting soft, flickering light across her face and body.
+
+- **Lighting & Exposure**  
+  Warm, ambient candlelight mixed with natural daylight from a window behind the subject. Slight overexposure on the upper half of the frame gives a subtle halo effect. No auto‑beauty or filter processing—just raw, unprocessed capture. The exposure is slightly uneven, with the lower part of the image a bit darker than the top, as if the camera’s meter was off by a fraction of a stop.
+
+- **Camera & Lens**  
+  24‑mm wide‑angle lens, handheld, shot at f/4.8, 1/60 s shutter speed, ISO 400. The lens is set to a short focal length for a “wide” look that keeps the background fully sharp—no bokeh, no portrait‑mode isolation. Slight motion blur on the subject’s hands and the side table conveys a natural, spontaneous feel.
+
+- **Composition & Framing**  
+  Candid, unposed framing: the shot is slightly tilted to the right, off‑center, with a partial crop that cuts off the left edge of the room. No rule‑of‑thirds intentionality—just a casual, spontaneous composition. The side table with candles sits to the left, partially in view; a man’s head and shoulder are visible at the bottom right, lying on the floor, adding an element of everyday spontaneity.
+
+- **Environment**  
+  A quiet, dimly lit living room with beige walls and a small wooden side table holding three white candles. The time of day is late afternoon, as indicated by the warm, golden hue. The room’s tiles reflect the candlelight, and a curtain hangs in the background, slightly out of focus but still sharp.
+
+- **Details & Imperfections**  
+  Slight tilt and off‑center framing give the image a raw, candid feel. A faint motion blur on the woman’s hands suggests she is mid‑movement. The lighting is uneven—slight overexposure on the upper half, underexposure on the lower half—creating a natural contrast. No post‑processing or color grading; the image retains its original, unfiltered look.
+
+- **Final Prompt**  
+  “A plus‑size woman in a light‑pink ribbed sports bra and high‑waist shorts stands mid‑step on a tiled floor, hands lightly on her thighs, near a small wooden side table with lit candles. Warm candlelight mixes with natural daylight, creating a slight overexposure on the upper half of the frame. Shot on a 24‑mm wide‑angle lens at f/4.8, 1/60 s, ISO 400, handheld, with a slight tilt and partial crop. The background shows a beige wall, a curtain, and a man’s head and shoulder lying on the floor, all in focus. Capture a candid, unposed moment with raw, unprocessed aesthetics—no filters, no color grading, just a natural, spontaneous photograph.”

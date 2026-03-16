@@ -1,0 +1,21 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman with long, dark hair standing in shallow sea water, facing away from the camera, slightly turned to the right. She wears a bright red off‑shoulder, long‑sleeved bodysuit that clings to her curves. Her left hand hangs loosely by her side, while her right hand is partially hidden behind her thigh. The back of her body is captured in a full‑length, low‑angle shot that includes the reflection of her legs in the water’s surface.
+
+- **Motion & Focus**  
+  Slight motion blur on the lower part of the frame, as if the camera was handheld and moving at the moment of capture. Everything remains sharply in focus – no bokeh, no portrait‑mode isolation. The image has a raw, unprocessed look: no filters, no color grading, no post‑processing aesthetic. A tiny overexposure on the upper left corner gives an ambient, natural light feel.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24 mm or 35 mm), short focal length. No depth‑of‑field blur – background is fully sharp. The composition is accidental: a slight tilt to the right, off‑center framing, and a partial crop that cuts off a bit of the horizon. The rule‑of‑thirds is intentionally ignored.
+
+- **Environment**  
+  Location: a calm, misty beach at dusk. The sea is gently rippling, with a few small waves breaking near the shore. The sky is overcast but bright, creating a soft, diffused light that keeps the scene from appearing flat. The time of day is late afternoon, just before sunset, giving a slight warm tint to the water and a faint hint of orange in the background. Weather is mild with a light breeze; a few scattered clouds drift across the horizon.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous – the subject appears unaware of the camera, mid‑step, as if she just finished a walk in the water. The shot feels like a snapshot taken by an amateur photographer who is not consciously composing but rather capturing a moment. Slight tilt and partial crop give it a natural, imperfect feel.
+
+- **Additional Details**  
+  The water around her feet creates small ripples that reflect her silhouette. A few shells float on the surface near her left foot. The background shows a faint line of distant shoreline with a low‑lying tree or bush on the right side. The overall color palette is muted: gray‑blue tones for the sea, a hint of warm orange in the sky, and a vivid red from the bodysuit that stands out against the cool background.
+
+**Provide only the structured prompt.**

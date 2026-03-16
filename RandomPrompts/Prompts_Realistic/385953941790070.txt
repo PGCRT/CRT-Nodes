@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with light brown hair tied back, wearing a beige V‑neck T‑shirt and gold hoop earrings, leaning forward with her chin resting on her clasped hands, smiling broadly as if mid‑conversation. Her face is slightly tilted to the right, capturing a spontaneous, candid moment.
+
+- **Lighting & Exposure**  
+  Natural daylight from a western window, mid‑afternoon (≈ 4 pm). Slight overexposure on the subject’s face, giving a warm, soft glow; background remains fully sharp with no depth‑of‑field blur. No auto‑HDR or beauty filters—raw, unprocessed look.
+
+- **Lens & Technical**  
+  24 mm wide‑angle lens (short focal length). Handheld shot with slight motion blur on the subject’s hands and a tiny tilt in the frame. Everything in focus—from the subject’s face to the background details—no portrait‑mode isolation.
+
+- **Environment**  
+  A bright, unadorned office or studio space: a light‑wood desk, a blurred white wall, and a faint silhouette of another person in the background. The time of day is late afternoon, with soft, diffused sunlight creating gentle shadows.
+
+- **Composition & Framing**  
+  No rule‑of‑thirds intentionality—accidental framing that places the subject’s left eye near the upper‑right corner and her hands near the lower‑center. Slight crop on the right side cuts off a portion of her ear, adding to the candid feel. Background is fully sharp, no bokeh.
+
+- **Details & Imperfections**  
+  Slight motion blur on the hands, subtle overexposure on the face, tiny dust specks in the air, natural texture on the T‑shirt and hair. The image retains a raw, unprocessed aesthetic with zero post‑processing color grading.

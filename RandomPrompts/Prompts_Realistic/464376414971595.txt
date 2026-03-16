@@ -1,0 +1,29 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, curvy woman with long dark hair tied in high pigtails, wearing thick round glasses and a black leather corset with a front zipper. She’s seated on an office chair, hands pulling at the corset’s zipper as if mid‑adjustment, a bright smile on her face. Her pose is slightly off‑center, with a subtle tilt to the left, giving a candid, spontaneous feel.
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window behind her creates a soft overexposed highlight on her chest and face. Slight ambient glare on the window glass adds a raw, unprocessed look. No auto‑HDR or beauty filters—just a straightforward exposure that captures the ambient light’s warmth.
+
+- **Environment**  
+  The setting is a bright, modern home office. A tall green potted plant stands to her left, a white window frame is visible behind her right side, and a beige wall forms the backdrop. The time of day is mid‑afternoon, with warm sunlight streaming in, casting gentle shadows.
+
+- **Lens & Technical**  
+  Use a wide‑angle lens (24–35 mm) with a short focal length to keep the entire scene in focus—no bokeh. Everything from foreground to background is sharp, no portrait‑mode depth of field blur. Capture with handheld stability, allowing slight motion blur on the subject’s hands and the chair’s armrests.
+
+- **Composition & Framing**  
+  The shot is intentionally imperfect: the frame cuts off the top of the plant’s leaves, the chair’s backrest is partially out of frame, and the composition does not follow the rule‑of‑thirds. The subject is slightly off‑center to the right, creating a dynamic, candid feel.
+
+- **Color & Tone**  
+  Warm natural tones with a slight yellow cast from the sunlight. Keep the color grading raw—no filters or post‑processing. Emphasize the contrast between the black corset and the green plant, and the warm beige wall.
+
+- **Details to Emphasize**  
+  - The texture of the leather corset, especially the zipper’s metallic sheen.  
+  - The slight tension in her hands as she pulls the zipper.  
+  - The reflection in her glasses, capturing the window’s light.  
+  - The subtle motion blur on her hands and the chair’s armrest.  
+  - The sharpness of the background elements: plant, window, wall.
+
+- **Final Prompt**  
+  “A tall woman with dark pigtails and round glasses, wearing a black leather corset, sits on an office chair in a bright home office. She pulls at the zipper with both hands, smiling, while a tall green plant stands to her left and a white window frames the background. Mid‑afternoon sunlight creates a soft overexposure on her chest. Shot on a 35 mm wide‑angle lens, everything is in focus with slight motion blur on the hands and chair. The composition is off‑center, slightly tilted, capturing a candid, spontaneous moment.”

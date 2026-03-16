@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with dark hair tied in a high ponytail, wearing a navy button‑up shirt and distressed denim jeans, captured mid‑conversation in an office setting. Her expression is slightly surprised or engaged, mouth open as if speaking, with a natural, unposed candid feel.
+
+- **Motion & Focus**  
+  Slight motion blur on the subject’s hands and background to convey handheld instability; everything remains fully sharp—no portrait‑mode depth of field. A wide‑angle lens (24‑35 mm) captures a broad view of the scene, with no bokeh.
+
+- **Lighting & Exposure**  
+  Raw, auto‑HDR off, no filters or color grading. The lighting is natural ambient office light with a mild overexposure on the ceiling fluorescents, giving a bright but unprocessed look. Slight tilt and off‑center framing create a spontaneous, accidental composition.
+
+- **Environment**  
+  Office cubicle area with white desks, black ergonomic chairs, and a computer monitor visible in the background. A small cup of pens, a notebook, and a teal mug sit on a desk; a red apple is partially visible near the woman’s hip. The time of day is mid‑afternoon, with soft daylight mixing with indoor lighting.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm), wide‑angle, no bokeh, background fully sharp. Handheld shot with slight jitter, natural freeze or blur. No rule‑of‑thirds intentionality—framing is casual and imperfect.
+
+- **Prompt Summary**  
+  “A young woman in a navy shirt and distressed jeans, hair in a high ponytail, mid‑talk in an office cubicle, captured on a wide‑angle lens with slight motion blur and raw exposure; background includes desks, chairs, and a computer monitor, all fully sharp, no filters—natural candid photography.”

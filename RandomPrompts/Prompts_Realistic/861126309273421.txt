@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy blonde hair standing in the middle of a snow‑covered village street. She wears a classic Santa‑style red coat with white fur trim, a black belt with a gold buckle, and a fluffy white pom‑pom at the belt’s end. Her hands are slightly curled at her sides, one hand hanging loosely by her thigh, the other near her hip. She is mid‑step, left foot forward, as if she just took a pace and hasn’t yet finished the next. Her face is turned toward the camera but not directly at it—her eyes are slightly off‑center, giving a candid feel.
+
+- **Motion & Focus**  
+  Slight motion blur on the lower part of her body, indicating handheld shake and a quick shutter speed. Everything in the frame—from her feet to the far end of the street—is fully sharp; no depth‑of‑field blur or bokeh. The focus is even across the entire composition, capturing every detail from the texture of her coat’s fur to the individual snowflakes on the ground.
+
+- **Lighting & Exposure**  
+  Natural daylight, mid‑afternoon, with a slight overexposure that gives a soft glow to the scene. The light comes from the north‑west, casting gentle shadows toward the south‑east. No auto‑HDR or auto‑beauty mode—just raw, unprocessed imagery.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24 mm), short focal length, no bokeh. All elements are in focus: the woman, the buildings, the snow, the potted plants, the blue trash bin, and the small wooden fence in the background. The framing is accidental—slightly tilted, off‑center, and partially cropped on the left side.
+
+- **Environment**  
+  A quiet village street lined with two‑story wooden houses, each with a gabled roof covered in snow. The street is paved with cobblestones and covered in a thick layer of fresh snow. On the right side of the street there are three potted plants (one red, one green, one white) and a small wooden fence. On the left side a blue trash bin sits near the corner of a house. In the background, a small wooden bridge crosses a stream that runs along the street. The sky is overcast but bright, with a few scattered clouds.
+
+- **Time of Day & Weather**  
+  Mid‑afternoon (around 4 pm), with the sun low enough to create soft shadows. Light snow is falling, creating a subtle motion blur on the lower part of the frame. The weather is crisp and cold, but not freezing—snowflakes are visible in the air and on the ground.
+
+- **Composition & Style**  
+  No rule‑of‑thirds intentionality—the composition is spontaneous, as if the photographer caught the scene by chance. The shot feels candid, unposed, and slightly chaotic. The background is fully sharp, no portrait mode or subject isolation. The entire image has a raw, natural look with zero post‑processing aesthetic.
+
+- **Final Prompt**  
+  “A young woman in a red Santa‑style coat stands mid‑step on a snow‑covered village street, captured with a wide‑angle lens at 24 mm. Her hair is long and wavy, her hands loosely positioned by her sides, one near her thigh and the other near her hip. Slight motion blur softens her lower body, while everything from her feet to the far end of the street remains fully sharp. Natural daylight from the north‑west creates a gentle overexposure, casting shadows toward the south‑east. The scene is set at mid‑afternoon with light snow falling. The street is lined with two‑story wooden houses, a blue trash bin on the left, potted plants and a small wooden fence on the right. In the background a wooden bridge crosses a stream. The frame is slightly tilted and off‑center, partially cropped, giving a candid, spontaneous feel. No filters or post‑processing—raw, unprocessed realism.”

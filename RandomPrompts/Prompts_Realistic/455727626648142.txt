@@ -1,0 +1,16 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman standing mid‑step on a damp city sidewalk, head tilted slightly downward, hands in the pockets of a beige bomber jacket. Her hair falls loosely over her shoulders, a few strands catching the ambient light. She wears light‑wash jeans cuffed at the ankles and white sneakers. The camera is positioned at a low angle, capturing her from the knees up, with a slight handheld shake that gives a natural motion blur around the edges.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject appears unaware of the camera, caught in an everyday moment. Slight tilt and off‑center framing create a casual, imperfect composition. No rule‑of‑thirds intentionality; the frame is accidental, with the subject slightly cropped on the right side. The image has a raw, unprocessed look: no filters, no color grading, no post‑processing aesthetic. A hint of overexposure in the upper left corner reflects the street lamp’s glow.
+
+- **Environment**  
+  Specific real‑world location: a bustling urban street at dusk. Neon signs (Japanese characters, a red “Open” sign) hang above a row of storefronts. A white sedan is parked on the left, its rear tire slightly off the curb. The sidewalk is littered with small trash bags, a discarded bottle, and a plastic bag, adding to the candid realism. The street is wet from recent rain, reflecting the ambient light. The time of day is late evening, around 7 pm, with the city’s night lights beginning to brighten.
+
+- **Lens & Technical**  
+  Short focal length (24–35 mm) wide‑angle lens. Everything is in focus — no bokeh or depth‑of‑field blur; the background remains sharp from foreground to background. No portrait mode or subject isolation. The image uses auto‑HDR or auto‑beauty mode off for a natural, raw look. Slight overexposure on the upper left corner gives a subtle halo around the neon sign. The overall exposure is slightly warm, with a cool tone cast by the night sky.
+
+- **Final Prompt**  
+  “A young woman in a beige bomber jacket and light‑wash jeans stands on a damp city sidewalk at dusk, hands in pocket, head tilted down, captured with a 30 mm wide‑angle lens. The scene includes a parked white car, neon signs, scattered trash, and wet pavement reflecting the night lights. The image has slight motion blur and accidental framing, no filters or color grading, raw and candid.”

@@ -1,0 +1,21 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman with long, dark, wavy hair sitting on a white bed, facing away from the camera, slightly turned to the left. She’s wearing a red lace bra and matching red lace panties. Her back is partially exposed, revealing a small floral tattoo near the base of her neck. She’s barefoot, with her feet planted on the bed, hands resting on the mattress for balance. Her head is tilted upward, mouth slightly open as if she’s about to speak or sing.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject appears unaware of the camera, mid‑action. The shot has a slight tilt and off‑center framing; the composition is accidental, not intentional. No rule‑of‑thirds. The image shows a raw, unprocessed look: no filters, no color grading, no post‑processing aesthetic. A hint of overexposure from natural daylight gives a soft glow.
+
+- **Motion & Focus**  
+  Slight motion blur from handheld instability, but everything remains fully sharp — no bokeh, no depth‑of‑field blur. The background is completely in focus.
+
+- **Environment**  
+  Specific real‑world location: a bright bedroom with white bedding and a window covered by horizontal blinds. The time of day is mid‑afternoon, with warm natural light streaming through the blinds, creating soft shadows. Ambient conditions are calm, with a gentle breeze that slightly ruffles the woman’s hair.
+
+- **Lens & Technical**  
+  Short focal length (20–35 mm), wide‑angle lens. No studio lighting; all illumination comes from ambient daylight. The shot is taken with a wide‑angle prime or zoom, capturing a broad field of view that includes the subject and the surrounding environment. All elements — subject, bed, window, blinds — are in focus.  
+
+- **Post‑Processing**  
+  Auto‑HDR or auto‑beauty mode off. No filters applied. Slight overexposure or underexposure depending on ambient light (choose whichever gives a more natural feel).  
+
+Provide only the structured prompt.

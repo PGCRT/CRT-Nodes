@@ -1,0 +1,28 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with shoulder‑length light‑brown hair, standing in a bright, sunlit kitchen. She is bare‑chested, wearing a light denim skirt that hangs loosely at the hips. Her left arm is raised above her head, catching a faint motion blur as she reaches for a pot on the counter. Her right hand rests near her chin, fingers slightly curled, giving a candid, mid‑action feel.
+
+- **Facial Expression & Gaze**  
+  She looks directly at the camera with a soft, unposed expression—eyes wide and slightly squinted as if she’s just noticed the photographer. A subtle smile curls on her lips, and a faint overexposure catches the highlights in her hair.
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window behind her creates a warm, slightly overexposed glow. The light hits her skin with an auto‑HDR feel but without any post‑processing filters—just raw, unprocessed contrast. The exposure is a little high, letting the background bleed into a bright, almost washed‑out white.
+
+- **Camera Settings**  
+  - Lens: 24 mm wide‑angle, short focal length.  
+  - Focal depth: everything in focus—from her face to the back of the kitchen—no portrait‑mode blur.  
+  - Shutter speed: 1/60 s, producing a slight motion blur on the raised arm.  
+  - ISO: 400, for natural grain.
+
+- **Composition & Framing**  
+  The shot is intentionally off‑center; the subject’s head is slightly above the center of the frame, and the left side of the image is cut off by the window frame. No rule‑of‑thirds—just a spontaneous, handheld composition. A small plant in a terracotta pot sits in the lower right corner, adding a touch of green to the scene.
+
+- **Environment & Background**  
+  The setting is a modern kitchen with a large, tall window that lets in bright daylight. The background shows a blurred view of a garden outside, but everything remains sharp—no bokeh. A white countertop and a stainless‑steel backsplash are visible behind her. The time of day is mid‑afternoon, around 3 pm, when the sun is high and the light is warm.
+
+- **Details & Imperfections**  
+  Slight tilt in the camera gives a casual feel. The woman’s left arm shows a faint blur, indicating movement. Her skin has natural texture, with a few tiny blemishes and pores visible—no auto‑beauty smoothing. The image carries a raw, unprocessed look, as if captured on an older DSLR with a wide‑angle lens.
+
+- **Final Prompt**  
+  *“A young woman with shoulder‑length light‑brown hair, bare‑chested and wearing a denim skirt, stands in a bright kitchen at mid‑afternoon. Her left arm is raised above her head, creating a slight motion blur, while her right hand rests near her chin. She looks directly at the camera with a soft, candid expression. Natural daylight from a tall window creates a warm overexposure, everything in focus with a 24 mm wide‑angle lens. The shot is off‑center and handheld, with a small potted plant in the lower right corner and a blurred garden view behind her. Capture the raw, unprocessed look of a spontaneous candid photograph.”*

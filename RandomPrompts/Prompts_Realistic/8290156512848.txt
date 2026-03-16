@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, slender woman with long dark hair and visible tattoos on her left arm and right thigh stands bare‑headed on a weathered fallen log that lies half‑submerged in a calm lake. Her body is slightly tilted to the left, mid‑step as if she’s about to cross the log, one foot planted, the other bent at the knee. Her head is turned downward, eyes cast toward the water, giving an unposed, candid feel.
+
+- **Appearance & Detail**  
+  She has a light tan, with natural skin texture and a small mole on her left breast. Her left arm is slightly bent, hand hanging loosely by her side. The tattoos are faint but distinct: a floral motif on her left upper arm, a thin line of script on her right thigh that reads “Natalie.” Her feet are bare, one toe slightly curled as she balances.
+
+- **Environment**  
+  The lake’s surface is rippled, reflecting the warm hues of a setting sun. In the background, a range of rugged mountains rises behind the lake, their peaks catching the last light. A single pine tree stands on the far left shore, its needles dark against the sky. The sky shows a soft gradient from pale blue to warm orange near the horizon, with a faint cloud streak.
+
+- **Time of Day & Weather**  
+  Late afternoon, near sunset. Ambient light is warm and slightly overexposed on the right side, creating a subtle halo around the subject. Light wind creates gentle ripples on the water and slight motion blur on the log.
+
+- **Lens & Technical**  
+  Use a wide‑angle lens (24–35 mm). Capture everything in focus—subject, log, lake, mountains, and sky—all sharp with no bokeh. Slight handheld shake results in a natural motion blur around the edges. No auto‑HDR or beauty mode; keep raw, unprocessed look. Keep the composition accidental: slight off‑center framing, no rule‑of‑thirds intentionality.
+
+- **Capture Style**  
+  Candid, spontaneous—subject unaware of camera. Slight tilt and partial crop. Zero studio lighting, zero professional composition, zero editorial tone. Natural freeze or slight blur from handheld instability.
+
+- **Post‑Processing**  
+  No filters, no color grading, no post‑processing aesthetic. Only raw capture with auto‑HDR off. Keep the image in a natural, unpolished style.
+
+**Prompt Summary**  
+“Candid photo of a tall woman with long dark hair and tattoos on her left arm and right thigh standing bare‑headed on a weathered log half‑submerged in a calm lake. She is mid‑step, slightly tilted, head cast downward. The lake reflects the warm sunset, a single pine tree stands on the far left shore, rugged mountains rise behind the lake. Late afternoon, slight overexposure on the right, natural motion blur from handheld. Wide‑angle lens, everything in focus, raw unprocessed look.”

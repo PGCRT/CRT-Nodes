@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A muscular man and a woman in red lingerie, captured mid‑kissing. The woman’s back is to the camera; her hair cascades down her spine, slightly blurred from motion. The man’s hands rest on her hips, his face partially visible over her shoulder. Their bodies are in a natural, unposed stance—mid‑action, as if caught in a spontaneous moment.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subjects appear unaware of the camera or are mid‑gesture. Slight tilt and off‑center framing give an accidental, handheld feel. The shot is partially cropped on the left and right, with no rule‑of‑thirds intentionality.
+
+- **Motion & Exposure**  
+  Slight motion blur on the woman’s hair and the man’s hands, indicating a natural freeze or slight instability. A mild overexposure keeps the ambient light warm; the image has an auto‑HDR or “auto‑beauty” off, raw look—no filters, no color grading, no post‑processing aesthetic.
+
+- **Lens & Technical**  
+  Wide‑angle lens (short focal length), everything in focus—no bokeh, no depth‑of‑field blur; the background is fully sharp. No portrait mode or subject isolation.
+
+- **Environment**  
+  Location: a modern living room with a gray sofa and a tall green plant in the corner. Time of day: late afternoon, soft natural light from a window on the right, creating subtle highlights on skin. Weather: clear, warm, slightly humid—ambient light gives a slight haze that adds to the raw feel.
+
+- **Composition Details**  
+  The frame captures the couple’s mid‑body, with the woman’s hips and the man’s chest visible. A wooden coffee table is partially seen at the bottom right; a gray couch occupies the left side. The background plant’s leaves are in focus, adding depth. The shot is centered but slightly tilted to the right, giving an informal, candid vibe.
+
+- **Prompt Summary**  
+  “Candid mid‑kiss between a muscular man and a woman in red lingerie, captured with a wide‑angle lens in a modern living room at late afternoon. Slight motion blur and accidental framing create a raw, unprocessed look—everything sharp, no filters, natural overexposure, handheld feel.”

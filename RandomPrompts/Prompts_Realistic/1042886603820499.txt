@@ -1,0 +1,28 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy dark hair, wearing a light‑blue lace bodysuit, mid‑adjustment of the garment, hands gripping the straps. She’s standing in a rustic wooden kitchen, facing slightly left, eyes downcast, a subtle smile. Her pose is candid and spontaneous—mid‑motion, as if she just finished tying the straps.
+
+- **Lighting & Exposure**  
+  Natural daylight from a large glass‑door window, slight overexposure on the right side to capture ambient warmth. No auto‑HDR or beauty filters; raw, unprocessed look. Slight handheld shake gives a natural motion blur around the edges.
+
+- **Camera Settings**  
+  Wide‑angle lens (24‑35 mm), short focal length, everything in focus—no bokeh, no depth‑of‑field blur. Aperture f/5.6, shutter speed 1/125 s, ISO 400. Slight tilt and off‑center framing; partial crop to keep the scene feeling spontaneous.
+
+- **Environment**  
+  A cozy, rustic kitchen with wooden cabinetry, a shelf adorned with floral‑patterned vases and a small white angel figurine, and a large glass‑door that lets in bright daylight. The background is fully sharp—no portrait‑mode isolation. The time of day is late morning, with soft, warm sunlight creating gentle shadows.
+
+- **Composition Notes**  
+  No rule‑of‑thirds intentionality—accidental framing that places the subject slightly left of center, with the wooden cabinet and vases forming a natural vertical line. The composition captures a “mid‑action” moment, with the woman’s hands pulling the straps taut, creating a sense of movement.
+
+- **Technical Details**  
+  - Lens: 35 mm (wide‑angle)  
+  - Focal length: 35 mm  
+  - Aperture: f/5.6  
+  - Shutter speed: 1/125 s  
+  - ISO: 400  
+  - Focus: everything in focus, no bokeh  
+  - Exposure: slight overexposure on the right side for a warm, natural feel  
+
+- **Final Prompt**  
+  “A candid, unposed photograph of a young woman with long wavy dark hair, wearing a light‑blue lace bodysuit, mid‑adjustment of the garment, hands gripping the straps, standing in a rustic wooden kitchen with a shelf of floral vases and a glass‑door window letting in late‑morning daylight. Shot on a 35 mm wide‑angle lens at f/5.6, 1/125 s, ISO 400, everything in focus, slight handheld shake, accidental off‑center framing, no filters or post‑processing, raw and natural look.”

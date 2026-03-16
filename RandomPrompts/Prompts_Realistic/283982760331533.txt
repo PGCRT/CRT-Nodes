@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman with long, dark hair kneeling on a wooden deck, hands behind her head, body slightly tilted, mid‑pose as if she’s just finished a stretch or is about to rise. She wears white lace underwear that catches the light. Her face is turned toward the camera but not directly at it—slight off‑center framing.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle, mid‑afternoon sun; slight overexposure on the upper body, creating soft highlights on her skin and subtle warmth. No auto‑HDR or beauty filters—raw, unprocessed look. The exposure is slightly uneven, with a warm tone that suggests ambient heat and a gentle haze.
+
+- **Environment**  
+  A concrete wall with visible cracks and weathered texture behind her; a leafy tree branches peek through the top left corner, casting dappled shadows on the deck. The scene is an outdoor balcony or terrace in a tropical or subtropical setting. The time of day is late morning to early afternoon, with bright but not harsh sunlight.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm), short focal length, handheld shot with slight motion blur from the camera’s instability. Everything in focus—no bokeh, no depth‑of‑field blur; background fully sharp. No portrait mode or subject isolation. The composition is accidental: no rule‑of‑thirds intentionality, a slight tilt and partial crop that give it a candid feel.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Imperfections encouraged: slight tilt, off‑center framing, partial crop. No studio lighting, no professional composition, no editorial tone. Natural motion freeze or slight blur from handheld instability.
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, zero post‑processing aesthetic. Slight overexposure or underexposure depending on ambient light—here, a warm, slightly bright top half and a cooler bottom half. Keep the raw look.
+
+- **Final Prompt Summary**  
+  “A woman with long dark hair kneeling on a wooden deck, hands behind her head, mid‑pose, wearing white lace underwear. Natural daylight from a high‑angle sun creates slight overexposure on her upper body. Concrete wall with cracks and a leafy tree branch in the top left background. Shot on a 24–35 mm wide‑angle lens, handheld with slight motion blur, everything in focus. Candid, accidental framing with a slight tilt and partial crop. No filters or post‑processing—raw, unprocessed look.”

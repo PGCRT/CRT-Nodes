@@ -1,0 +1,16 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with shoulder‑length brown hair, wearing a simple hoop earring, standing in a dimly lit bedroom. She is bare‑headed, hands clasped near her chest, head tilted slightly downward, eyes cast to the side as if she’s about to do something spontaneous (e.g., adjusting clothing or checking a mirror). Her posture conveys a casual, mid‑action feel; the framing is off‑center and slightly tilted.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. Slight motion blur on the hands and chest area to hint at movement. No filters, no color grading, no post‑processing aesthetic. A tiny overexposure in the center of the frame gives a raw, natural look. The image is captured with a wide‑angle lens (24–35 mm), everything in focus from foreground to background, no bokeh or depth‑of‑field blur.
+
+- **Environment**  
+  Specific real‑world location: a bedroom with a dark wooden door and a white light switch on the left wall. The time of day is late afternoon; ambient light is soft but warm, creating subtle shadows. Weather or ambient conditions are calm, no wind, no external noise.
+
+- **Lens & Technical**  
+  Short focal length (35 mm), wide‑angle. No bokeh, no depth‑of‑field blur — background fully sharp. Everything in focus. No portrait mode, no subject isolation. The composition is accidental: no rule‑of‑thirds intentionality, slight tilt and partial crop.
+
+- **Post‑Processing**  
+  Auto‑HDR or auto‑beauty mode off — raw, unprocessed look. Slight overexposure in the center to mimic natural lighting. No color grading, no filters. Keep the image clean and documentary‑style.

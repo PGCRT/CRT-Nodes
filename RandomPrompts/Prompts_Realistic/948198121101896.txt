@@ -1,0 +1,16 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A young woman with a high ponytail, wearing a black crop‑top and high‑waisted denim jeans, is mid‑bite of a vanilla‑flavored ice cream cone. Her left hand holds the cone near her mouth, while her right hand rests on the back of a black leather shoulder bag. She’s standing on a cobblestone plaza in a European‑style town square, with blurred pedestrians and historic buildings in the background. The scene is captured at midday, under bright, slightly overcast sky; the ambient light gives a natural, raw feel without any post‑processing color grading.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject is unaware of the camera as she eats her ice cream. Slight tilt and off‑center framing give an accidental, handheld feel. The shot is a partial crop that doesn’t follow the rule‑of‑thirds; the composition feels organic and informal.
+
+- **Environment**  
+  Location: A sunlit town square with stone pavement, old stone facades, and a green awning in the background. Time of day: early afternoon, with soft, diffused daylight. Weather: light cloud cover, no wind, ambient temperature is warm. The background is fully sharp—no bokeh or depth‑of‑field blur.
+
+- **Lens & Technical**  
+  Use a short focal length wide‑angle lens (e.g., 24 mm). Capture everything in focus—no portrait‑mode subject isolation. Slight motion blur from handheld instability freezes the mid‑bite action. No auto‑HDR or auto‑beauty mode; keep the raw, unprocessed look. The exposure is slightly overexposed to emphasize the bright ice cream and the warm tones of the stone.  
+
+- **Final Prompt**  
+  “A young woman with a high ponytail, wearing a black crop‑top and high‑waisted denim jeans, mid‑bite of a vanilla‑flavored ice cream cone on a sunny early‑afternoon European town square. She holds a black leather shoulder bag on her left side, standing on cobblestones with blurred pedestrians and historic stone facades behind her. Capture candidly with a 24 mm wide‑angle lens, slight handheld blur, accidental off‑center framing, full sharpness in background, raw unprocessed look, slightly overexposed. No filters, no color grading, no post‑processing.”

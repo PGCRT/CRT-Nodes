@@ -1,0 +1,24 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, athletic woman with long, sun‑kissed blonde hair standing on a warm, sandy beach. She wears a floral‑patterned tie‑dye bikini in pastel pinks, blues, and greens; the top is a halter style with a thin strap that ties at the neck. Her hands are slightly raised, palms open, as if she’s about to gesture or catch something mid‑conversation. A subtle smile plays on her lips, eyes bright, capturing a spontaneous, “in‑the‑moment” vibe.
+
+- **Candid Capture Style**  
+  The shot is taken from a handheld, wide‑angle lens (24–35 mm) at a slightly low angle to emphasize the subject’s fullness and the beach’s texture. A faint motion blur trails along her hands and hair, indicating natural movement. No rule‑of‑thirds—her body is off‑center, tilted just enough to feel organic. The frame is partially cropped on the left side, giving a “raw” candid feel.
+
+- **Environment**  
+  Location: a bright, breezy tropical beach at late afternoon; the sun is low but still high enough to cast soft, warm light across the scene. The ocean’s surface is a calm, rippled blue‑green with small white foam where waves break near the shore. In the far background, a cluster of low‑rise houses sits along the coastline, slightly blurred but still visible. The sky is overcast with thin clouds, giving a diffused ambient light that avoids harsh shadows.
+
+- **Lens & Technical**  
+  - Focal length: 35 mm (wide‑angle).  
+  - Aperture: f/4.0 – everything from foreground to background stays sharp, no bokeh.  
+  - ISO: 400–600 for natural grain.  
+  - Exposure: slight overexposure on the subject’s face and upper body; the background remains fully in focus.  
+  - Auto‑HDR or auto‑beauty mode off – raw, unprocessed look.  
+  - No filters, no color grading, no post‑processing aesthetic.  
+
+- **Composition Notes**  
+  The camera is held at a slight tilt, making the subject’s left side marginally cut off by the frame edge. The horizon line sits just above the middle of the frame, giving a casual, spontaneous feel. The waves’ foam near the bottom of the image adds texture and depth. The overall tone is natural, with a warm, golden hue from the late‑afternoon sun.
+
+- **Prompt Summary**  
+  “A tall woman in a floral tie‑dye bikini stands on a sandy beach at late afternoon, hands slightly raised, smiling spontaneously. Shot on a 35 mm wide‑angle lens at f/4.0, with slight motion blur and a subtle overexposure on the subject. The background shows gentle ocean waves and distant houses, all in focus. The frame is handheld, tilted, and partially cropped, capturing a raw, candid moment without filters or post‑processing.”

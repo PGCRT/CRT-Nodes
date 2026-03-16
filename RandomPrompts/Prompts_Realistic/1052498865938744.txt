@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a sun‑kissed, tanned complexion, hair tied back in a loose ponytail, walking confidently toward the camera on a gravel path. She wears a black, halter‑style bikini top and matching high‑waist bottoms that highlight her toned midsection and strong legs. Her left arm is slightly bent at the elbow, hand relaxed by her side, while her right arm hangs naturally; she’s mid‑step, toes gripping the ground, as if caught in an unposed moment.
+
+- **Facial Expression & Motion**  
+  A bright, genuine smile with teeth visible, eyes focused forward, slight motion blur around the edges to suggest movement. The face is slightly tilted to the left, giving a casual, off‑center framing.
+
+- **Lighting & Exposure**  
+  Warm, golden hour light from the west, creating a soft overexposure on the subject’s front while leaving subtle highlights in the foliage behind. Slight underexposure on the background to keep the foreground sharp. No auto‑HDR or beauty filters—just raw, natural contrast.
+
+- **Environment & Background**  
+  A tropical park setting: tall palm trees with rough bark line the path, their fronds reaching upward. A small, beige camping tent is partially visible on the right, tucked among green shrubs. The ground is a mix of gravel and grass, with scattered fallen leaves. The time of day is late afternoon, around 6 pm, giving a warm, golden hue.
+
+- **Lens & Technical Settings**  
+  24‑mm wide‑angle lens, f/4.0 aperture, 1/125 s shutter speed, ISO 400. Everything is in focus—no bokeh or depth‑of‑field blur. The image has a slight handheld shake, giving it a natural, spontaneous feel.
+
+- **Composition Notes**  
+  No rule‑of‑thirds intentionality: the subject’s head sits slightly above the center line, her left foot is just beyond the middle of the frame. The framing is partial—edges cut off at the top and bottom, as if captured by a quick, casual shot.
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, no post‑processing aesthetic. Keep it raw, with only basic auto‑exposure adjustments.  
+
+**Prompt Summary**  
+> “A young woman in a black bikini walks toward the camera on a gravel path in a tropical park at golden hour. She’s mid‑step, slightly tilted, smiling broadly, with a beige tent and palm trees behind her. Capture with a 24‑mm wide‑angle lens at f/4, 1/125 s, ISO 400—everything in focus, slight motion blur, raw exposure, no filters.”

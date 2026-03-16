@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework – “Desert Rock Boudoir”**
+
+- **Subject & Pose**  
+  A tall, slender woman with long, dark hair that flows wildly in the wind, wearing a black lace bodysuit and thigh‑high leather boots with fishnet details. She stands on a large, smooth reddish‑brown rock, one leg slightly bent, her left hand resting near her hip, right arm relaxed by her side. Her head is tilted back, eyes closed, as if she’s savoring the sun on her skin. A subtle motion blur at the edges of her hair and boots conveys movement.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous – the subject appears unaware of the camera, mid‑action. Slight tilt and off‑center framing give an accidental, handheld feel. No rule‑of‑thirds intentionality; the composition is organic, with a partial crop that cuts off the lower left corner of the rock.
+
+- **Environment**  
+  Specific real‑world location: a desert canyon rim in Utah. The ground is a mix of large, weathered boulders and sparse green shrubs. Time of day: late afternoon, around 5 pm, with warm, golden sunlight coming from the west, creating soft shadows that stretch toward the north. Weather: clear sky with a few scattered white clouds; ambient light is slightly overexposed on the subject’s face, giving a raw, unprocessed look.
+
+- **Lens & Technical**  
+  Short focal length – 24 mm wide‑angle lens. Everything is in focus – no bokeh, no depth‑of‑field blur; background rocks and sky are sharply rendered. No portrait mode or subject isolation. Slight overexposure on the subject’s face and upper body to emphasize the natural light. Auto‑HDR or auto‑beauty mode off – raw, unprocessed look. No filters, no color grading, no post‑processing aesthetic.
+
+- **Lighting & Color**  
+  Natural sunlight from the west creates a warm, golden hue on the woman’s skin and the rocks. The sky shows a gradient from pale blue to soft white clouds. Slight color cast of warm amber is present throughout the image, preserving the raw feel.
+
+- **Details & Imperfections**  
+  The woman’s boots show a slight scuff on the heel, adding realism. Her hair has a faint motion blur, indicating wind. The rock she stands on has a subtle uneven edge that is partially cut off by the frame. Small green shrubs are visible in the lower right corner, adding depth.
+
+- **Final Prompt**  
+  “A tall woman with long dark hair flowing in the wind, wearing a black lace bodysuit and thigh‑high leather boots with fishnet details, stands on a large smooth reddish‑brown rock in a Utah desert canyon. She is mid‑pose, head tilted back, eyes closed, left hand near hip, right arm relaxed. The scene is captured with a 24 mm wide‑angle lens, everything in focus, no bokeh. The image has a slight motion blur on the hair and boots, a subtle tilt, and an off‑center framing that partially crops the lower left corner. Late afternoon sunlight from the west casts warm golden tones across the subject and rocks; scattered white clouds dot the blue sky. Small green shrubs peek out from the lower right, adding detail. The photo is raw, unprocessed, with a slight overexposure on the subject’s face, preserving a candid, spontaneous feel.”

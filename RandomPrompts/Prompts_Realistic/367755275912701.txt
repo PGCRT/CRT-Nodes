@@ -1,0 +1,21 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail and bangs, wearing a light‑beige, mandarin‑collar blouse with navy blue trim and a short black skirt. She is mid‑action, holding a pink bottle in both hands, slightly leaning forward as if about to pour or apply something. Her gaze is downward, focused on the bottle, giving a candid, unposed feel.
+
+- **Lighting & Exposure**  
+  Warm, ambient indoor lighting from a cluster of white candles on a dark wooden side table to the left, plus a small lamp in the background. The exposure is slightly overexposed on the foreground, creating a soft glow around the subject while keeping the background fully sharp. No auto‑HDR or beauty filters—raw, unprocessed look.
+
+- **Camera & Lens Settings**  
+  Wide‑angle lens (24–35 mm), short focal length, handheld. Slight motion blur from the subject’s movement and minor tilt in framing. Everything in focus—no portrait‑mode depth of field blur. No rule‑of‑thirds; the composition is accidental, off‑center, with a partial crop that cuts off part of the side table.
+
+- **Environment**  
+  A cozy, dimly lit living room at dusk. The time of day is late afternoon, with the candles providing a warm, diffused light. The background shows a patterned curtain, a small framed picture on the wall, and a cushioned chair with a floral design. The weather is not visible but the ambient light suggests a calm evening.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, a partial crop that cuts off the left side of the candle table. The subject’s hair has a tiny stray strand, and her hands are slightly overlapping the bottle, giving a natural, spontaneous feel. The background is fully sharp—no bokeh. The overall tone is raw, unprocessed, with no color grading or filters applied.
+
+- **Prompt for Text‑to‑Image Generation**  
+  “A candid, wide‑angle shot of a young woman in a beige mandarin‑collar blouse and black skirt, holding a pink bottle mid‑action, slightly leaning forward with downward gaze. Warm candlelight from a dark wooden side table on the left, late‑afternoon dusk, cozy living room. Handheld camera, 24–35 mm lens, slight motion blur and accidental tilt, everything in focus. Raw, unprocessed look, no filters—slight overexposure on foreground, background fully sharp. Background includes a patterned curtain, framed picture, floral chair. Soft glow from candles, natural ambient lighting.”  
+
+Provide only the structured prompt.

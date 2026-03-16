@@ -1,0 +1,32 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Appearance**  
+  - A young woman with a pale, almost porcelain‑like complexion, long straight dark‑brown hair that falls past her shoulders, and subtle, natural makeup (soft pink blush, warm brown eyeshadow, nude lipstick).  
+  - She’s wearing a light‑blue strapless top that shows a hint of a delicate necklace.  
+  - Her pose is mid‑turn: left shoulder slightly forward, head tilted to the right, eyes looking directly at the camera with a faint smile.  
+  - Slight motion blur on the hair and shoulders to suggest handheld movement.
+
+- **Lighting & Exposure**  
+  - Auto‑HDR or auto‑beauty mode off — raw, unprocessed look.  
+  - Slight overexposure in the highlights (especially on the face) or underexposure in the shadows depending on ambient light.  
+  - Wide‑angle lens (24‑35 mm) with a short focal length, giving a slightly distorted but natural perspective.  
+
+- **Composition & Framing**  
+  - Candid, unposed, spontaneous — subject unaware or mid‑action.  
+  - Imperfections encouraged: slight tilt, off‑center framing, partial crop.  
+  - No rule‑of‑thirds intentionality — accidental framing that keeps the entire subject in focus.  
+  - Background fully sharp, no bokeh, no depth‑of‑field blur.
+
+- **Environment**  
+  - Location: a dimly lit loft in an industrial‑style building, with exposed brick walls and a large window that lets in natural daylight.  
+  - Time of day: late afternoon, soft golden light filtering through the window.  
+  - Weather or ambient conditions: mild humidity, slight breeze that moves the subject’s hair.
+
+- **Lens & Technical**  
+  - Short focal length (35 mm), wide‑angle.  
+  - No bokeh, no depth‑of‑field blur — everything in focus.  
+  - No portrait mode or subject isolation.  
+  - Slight handheld shake captured in the final shot.
+
+- **Prompt Summary**  
+  “A candid, wide‑angle snapshot of a woman with pale skin and long dark hair, mid‑turn pose, wearing a light‑blue strapless top, captured in a dimly lit loft at late afternoon. Raw, unprocessed look with slight motion blur and accidental framing; everything in focus, no bokeh, handheld shake.”

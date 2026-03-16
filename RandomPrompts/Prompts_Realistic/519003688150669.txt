@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark hair, wearing a sheer white long‑sleeved top and black bottoms, standing in an office hallway. She is mid‑smile, slightly tilted to the left, with her head turned toward the camera as if she just finished a conversation. Her pose is casual and unposed; her arms are relaxed at her sides, one hand lightly gripping the side of a white desk in the background.
+
+- **Capture Style**  
+  Candid, spontaneous — the subject appears unaware of the camera, caught mid‑action. The shot has a slight handheld shake, with a subtle motion blur on the edges that gives a natural, raw feel. No filters or heavy color grading; the image retains an auto‑HDR look but without post‑processing aesthetics. A tiny overexposure in the center keeps the lighting crisp yet organic.
+
+- **Environment**  
+  Location: A modern office building, mid‑afternoon (3 pm). The hallway is lined with dark wooden doors and a white desk on the left, a black office chair tucked underneath. Natural daylight comes from a window at the far end of the corridor, creating soft ambient light with a slight warm tint. The floor is a patterned carpet, and a small potted plant sits on a shelf in the background.
+
+- **Lens & Technical**  
+  Use a wide‑angle lens (24 mm or 35 mm) to capture a broad view of the scene. Keep everything in focus — no bokeh or depth‑of‑field blur; the background, including the desk, chair, and door, remains sharp. The composition is accidental: the frame is slightly off‑center, with the subject’s left side cutting close to the edge, giving an imperfect, candid feel. No rule‑of‑thirds intentionality — just a natural, spontaneous capture.
+
+- **Lighting & Exposure**  
+  Natural daylight from the window creates a slight overexposure in the center of the image, enhancing the white top’s sheen while keeping the background fully sharp. The exposure is adjusted to preserve detail in both foreground and background, with a tiny hint of warmth from the ambient light.
+
+- **Details & Imperfections**  
+  Add a faint motion blur around the edges to simulate handheld instability. Include minor imperfections: a slight tilt of the camera, a partial crop that cuts off a bit of the desk’s edge, and a small overexposed highlight on the subject’s chest. The overall look is raw, unprocessed, and realistic — as if captured with a DSLR or mirrorless camera in a real‑world setting.
+
+- **Final Prompt**  
+  “Candid, spontaneous photograph of a woman in a white long‑sleeved top standing in an office hallway, mid‑smile, slightly tilted, handheld shake with subtle motion blur. The scene includes a white desk, black chair, and dark wooden doors; natural daylight from a window creates soft ambient light with a slight overexposure. Wide‑angle lens (24–35 mm), everything in focus, no bokeh. Accidental framing, off‑center composition, raw, unprocessed look, slight overexposure or underexposure depending on ambient light, wide lens, natural motion freeze or slight blur from handheld instability.”

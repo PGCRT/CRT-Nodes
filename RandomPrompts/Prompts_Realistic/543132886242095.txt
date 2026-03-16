@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with dark, wavy hair tied in a high ponytail, wearing a black short‑sleeved crop top and light‑blue bikini bottoms. She is captured mid‑turn, body angled toward the camera but face turned back, creating a dynamic “C‑shape” with her hips and shoulders. Her left hand rests lightly on her thigh, fingers slightly curled, while her right arm hangs natural. The pose feels spontaneous, as if she’s just finished a dance move or is adjusting her outfit in a bedroom.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject appears unaware of the camera, mid‑action. Slight tilt and off‑center framing give an accidental, handheld feel. The shot has a raw, unprocessed look: no filters, no color grading, no post‑processing aesthetic. A mild overexposure in the highlights gives a warm, natural glow.
+
+- **Motion & Focus**  
+  Slight motion blur on the subject’s lower body from handheld instability, but the background remains fully sharp — everything in focus, no portrait‑mode depth‑of‑field blur. The lens is a short focal length wide‑angle (24–35 mm), capturing a broad view of the scene with zero bokeh.
+
+- **Environment**  
+  Specific real‑world location: a tidy bedroom with light‑wood furniture. A large wooden wardrobe with silver handles spans the back wall, a wooden bed frame is visible on the left, and a white mattress peeking out. The room has neutral walls, a plain ceiling, and a small window that lets in natural daylight. Time of day: late afternoon, soft warm light from the west, creating gentle shadows and a slight overexposed highlight on the subject’s back. Weather or ambient conditions: clear, calm, no wind.
+
+- **Lens & Technical**  
+  Short focal length, wide‑angle (24–35 mm). No bokeh, no depth‑of‑field blur — background fully sharp. Everything in focus. No rule‑of‑thirds intentionality — accidental framing that keeps the composition organic. The shot uses a handheld, slightly unsteady camera, producing a subtle motion blur on the subject’s lower body and a slight tilt that gives the image a candid feel. Auto‑HDR or auto‑beauty mode is off; no filters, no color grading, no post‑processing aesthetic.
+
+- **Prompt Summary**  
+  “A young woman with dark wavy hair in a high ponytail, wearing a black crop top and light‑blue bikini bottoms, captured mid‑turn in a bedroom with a wooden wardrobe and bed frame. The shot is candid, slightly tilted, handheld, with mild motion blur on the lower body but a fully sharp background. Shot on a 24–35 mm wide‑angle lens, late afternoon natural light, raw and unprocessed, no filters or auto‑HDR.”

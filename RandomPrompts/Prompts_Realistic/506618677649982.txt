@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail, wearing a black floral bikini, standing in a bustling outdoor fruit market. She is mid‑step, holding a clear plastic bag filled with red and green apples in her right hand, her left hand gently pulling at the bottom of her bikini. Her face is turned toward the camera with a bright, candid smile; her eyes are slightly focused on the camera but not directly at it, giving a natural “unposed” feel.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. Slight tilt and off‑center framing; partial crop that cuts off a bit of the background on the left side. No rule‑of‑thirds intentionality — accidental framing. The image has a raw, unprocessed look: no filters, no color grading, no post‑processing aesthetic. A slight overexposure in the upper right corner to capture ambient daylight.
+
+- **Motion & Focus**  
+  Slight motion blur from handheld instability; natural freeze or slight blur on the subject’s hands and bag. Everything is fully sharp — no portrait mode, no subject isolation, no depth‑of‑field blur. Background remains completely in focus.
+
+- **Lens & Technical**  
+  Short focal length (24–35 mm), wide‑angle lens. No bokeh; background fully sharp. Auto‑HDR or auto‑beauty mode off. Slight overexposure or underexposure depending on ambient light — here, a mild warm tint from midday sun.
+
+- **Environment**  
+  Specific real‑world location: an outdoor farmers’ market with wooden stalls lined along a cobblestone aisle. The stall behind the woman is stocked with bananas, apples, pears, and other fruits; a bunch of bananas hangs from the stall’s roof. A string of colorful beads dangles from the left side of the stall. In the background, a man in a white t‑shirt and denim shorts walks past carrying a white plastic bag, and a woman in a black tank top is visible further back. The scene is bathed in bright midday sunlight with a slight haze, creating a warm, natural tone.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, partial crop that cuts off a portion of the stall’s roof on the left. A faint smudge on the woman’s right hand, a tiny imperfection that adds realism. The bag she holds has a slight wrinkle, and her bikini strap is slightly askew, giving an authentic, candid feel.
+
+- **Final Prompt**  
+  “A young woman with a high ponytail, wearing a black floral bikini, stands mid‑step in a bustling outdoor fruit market, holding a clear plastic bag of apples in her right hand while gently pulling at the bottom of her bikini with her left. She smiles candidly toward the camera, slightly off‑center and tilted, with accidental partial crop. The scene is captured on a 35 mm wide‑angle lens with no bokeh, everything fully sharp, slight motion blur from handheld instability, and a mild overexposure from midday sunlight. The background shows wooden stalls lined with bananas, apples, pears, and a dangling串 of beads, a man in a white t‑shirt carrying a bag, and a woman in a black tank top further back. Raw, unprocessed, no filters, no color grading — a natural, spontaneous candid photograph.”

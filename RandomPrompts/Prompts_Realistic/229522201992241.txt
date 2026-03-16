@@ -1,0 +1,30 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy dark hair, wearing a black triangle‑style bikini top and pearl hoop earrings. She stands in a relaxed, mid‑action pose, slightly turned to the side, as if caught mid‑step or mid‑turn. Her face is partially turned toward the camera, giving an informal, candid feel.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle, late‑afternoon sun. Slight overexposure on the upper body, creating a warm, soft glow. No auto‑HDR or beauty filters—raw, unprocessed look. The exposure is slightly uneven, with a subtle vignette from the wide lens.
+
+- **Camera & Lens Settings**  
+  - Lens: 24 mm wide‑angle (short focal length).  
+  - Aperture: f/4.0 (wide opening).  
+  - Shutter speed: 1/60 s (handheld, slight motion blur).  
+  - ISO: 400 (mid‑range for natural contrast).  
+  Everything in focus—no bokeh or depth‑of‑field blur; background remains sharp.
+
+- **Composition & Framing**  
+  - No rule‑of‑thirds intentionality—framing is accidental, slightly off‑center.  
+  - Slight tilt and partial crop at the top and bottom, giving a spontaneous feel.  
+  - Background: a simple, neutral concrete wall with a faint texture; a small patch of greenery on the left side adds depth.
+
+- **Environment**  
+  Location: an urban alleyway in a modern city, near a glass‑front building. Time of day: late afternoon (warm, golden light). Weather: clear, mild humidity, slight breeze.
+
+- **Details & Imperfections**  
+  - Slight motion blur on the shoulders and arms from handheld shake.  
+  - Minor tilt of the camera, creating a dynamic angle.  
+  - Small, natural imperfections in focus and exposure—no post‑processing filters.
+
+- **Final Prompt**  
+  *“A candid, unposed portrait of a woman with long wavy hair, black bikini top, and pearl hoop earrings, captured on a 24 mm wide‑angle lens at f/4.0 and 1/60 s in late afternoon daylight. The image shows her mid‑step, slightly tilted and off‑center framing, with a subtle overexposed glow and slight motion blur from handheld shake. Background is a neutral concrete wall with a faint green patch, everything in focus, no filters or auto‑HDR, raw and natural.”*

@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, straight chest‑brown hair, wearing a translucent white button‑down shirt and no underwear, leaning forward on a gray sofa. Her hands rest on her knees, fingers slightly curled, nails painted pale pink. She’s mid‑movement, as if just finishing a stretch or a gentle dance move, with a subtle motion blur around her hands and knees to convey spontaneity.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject is unaware of the camera, caught in a natural, “in‑the‑moment” pose. Slight tilt and off‑center framing give an accidental, handheld feel. The shot is partially cropped on the left side, leaving a small margin of empty wall space that adds to the informal vibe.
+
+- **Environment**  
+  Location: A cozy living room in a modern apartment. The background shows a light‑gray fabric sofa with a blue striped pillow on the left, a wooden floor visible at the bottom, and a beige wallpaper with subtle floral motifs on the wall. Time of day: late afternoon, soft natural light coming from the west, creating a warm, slightly overexposed highlight on the subject’s face and shirt. Ambient conditions: mild temperature, quiet, no wind.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm) wide‑angle lens, handheld. Everything is in focus — background and subject — with a slight motion blur on the hands/knees area to suggest movement. No bokeh; depth of field is fully sharp. Auto‑HDR or auto‑beauty mode off — raw, unprocessed look. Slight overexposure on the subject’s shirt, giving a bright, natural glow. No color grading or post‑processing filters. The image has a zero‑studio‑lighting feel, as if captured by a casual photographer with a DSLR or mirrorless camera.
+
+- **Composition Notes**  
+  No rule‑of‑thirds intentionality — the framing is accidental, with the subject’s head slightly above the center of the frame and her left hand near the lower edge. The shot is a wide‑angle capture that includes the sofa, pillow, floor, and wall, creating an immersive, real‑world context. All elements (sofa, pillow, wallpaper, floor) are fully sharp.
+
+- **Final Prompt**  
+  “A candid, handheld shot of a young woman with long chest‑brown hair, wearing a translucent white button‑down shirt, leaning forward on a gray sofa in a modern apartment. Her hands rest on her knees, fingers slightly curled, nails painted pale pink. The image has slight motion blur around her hands and knees, capturing mid‑movement. The background shows a blue striped pillow on the sofa, a wooden floor at the bottom, and a beige floral‑motif wallpaper on the wall. Late afternoon natural light creates a warm, slight overexposure on the subject’s shirt. Shot with a 24‑35 mm wide‑angle lens, everything in focus, no bokeh, no filters, raw and unprocessed. The framing is accidental, slightly tilted and off‑center, partially cropped on the left side, giving a spontaneous, informal feel.”

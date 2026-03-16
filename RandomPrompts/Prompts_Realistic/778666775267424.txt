@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a messy bun, wearing a gray sweatshirt and blue denim overalls, captured mid‑expression with an open mouth and wide eyes as if reacting to something just said. Her head is slightly tilted, her left shoulder leaning toward the camera, creating a casual, spontaneous feel.
+
+- **Motion & Focus**  
+  Slight motion blur on the subject’s face and hands, indicating handheld instability. Everything in the frame—from foreground to background—is fully sharp; no portrait‑mode depth‑of‑field blur. The focus is intentional but not staged.
+
+- **Lighting & Exposure**  
+  Raw, unprocessed look with auto‑HDR off. Ambient indoor lighting from a fluorescent ceiling fixture creates a mild overexposure on the upper part of the frame, giving a natural, slightly hazy tone. No color grading or filters applied.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24‑35 mm) with a short focal length. No bokeh; background is fully sharp. The composition is accidental—no rule‑of‑thirds intentionality, just a casual, off‑center crop that includes a portion of a glass door and a hallway.
+
+- **Environment**  
+  A modern office corridor with a large glass door on the left, a fluorescent light fixture overhead, and a faint silhouette of another person in the background. The time of day is mid‑afternoon, with natural daylight mixing with artificial lighting. The weather is clear, and the ambient conditions are calm but not stagnant.
+
+- **Candid Details**  
+  The subject’s right hand is partially out of frame, giving a sense of movement. A slight tilt in the camera angle adds to the candid feel. The background includes a faint reflection in the glass door, adding depth without distracting.
+
+- **Final Prompt**  
+  “A young woman with a messy bun, gray sweatshirt, and denim overalls captured mid‑expression in an office hallway; slight motion blur on her face and hand, fully sharp background, raw auto‑HDR off, mild overexposure from fluorescent lighting, wide‑angle short focal length lens, accidental off‑center framing, no bokeh, everything in focus, candid spontaneous pose, natural indoor ambient light, mid‑afternoon time of day, clear weather, subtle reflection in glass door, faint background figure, slight camera tilt.”

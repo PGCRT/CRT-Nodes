@@ -1,0 +1,16 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair and a warm, engaging smile stands in a bright, lived‑in bedroom. She wears a black, strappy bikini-style bodysuit that criss‑crosses across her chest and waist, accentuating her toned physique. Her arms are slightly bent, hands relaxed near her hips, as if she’s just finished a quick stretch or is about to pick up a book from the shelf beside her. A subtle motion blur hints at natural movement, while the framing is slightly off‑center, giving a candid, spontaneous feel.
+
+- **Appearance & Details**  
+  She has several black ink tattoos of classical portrait style on both arms and thighs, adding an artistic touch. Her nails are painted a soft pink, and she wears simple hoop earrings. The lighting is natural daylight coming from a window to the left, creating a slight overexposure on her face and a warm glow on her skin. No filters or heavy color grading—just raw, unprocessed realism.
+
+- **Environment**  
+  The setting is a cozy, slightly cluttered bedroom with a wooden bookshelf filled with colorful spines behind her, a white bed with a yellow pillow to the right, and a small bedside lamp that’s softly lit. The time of day is mid‑afternoon, with bright, diffused sunlight creating gentle shadows. The weather outside is clear, as the light has a crisp, warm tone.
+
+- **Lens & Technical**  
+  Use a wide‑angle lens (24–35 mm) with a short focal length to capture a broad view of the scene. Keep everything in focus—no bokeh or depth‑of‑field blur. Shoot handheld with slight instability for a natural motion freeze. The composition is accidental: no rule‑of‑thirds, no intentional centering, just a candid snapshot that feels spontaneous and real.
+
+- **Post‑Processing**  
+  No auto‑HDR or beauty mode—keep the look raw. Slight overexposure on the subject’s face gives a natural highlight, while the background remains fully sharp. Capture the image with a wide lens to keep all elements in frame, from the bookshelf to the pillow, creating an immersive, realistic candid photograph.

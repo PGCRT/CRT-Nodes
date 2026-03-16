@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy auburn hair standing on a sun‑bathed beach at late afternoon. She wears a red‑and‑white triangle bikini, a butterfly tattoo visible on her left ribcage, and holds a brown glass bottle in her right hand. Her left hand is raised to her chin, fingers slightly curled, as if she’s just finished a conversation or is about to touch her face. A subtle smile plays on her lips; her eyes are directed slightly off‑camera, giving a candid, mid‑action feel.
+
+- **Lighting & Exposure**  
+  Warm, golden hour light from the west casts soft highlights on her hair and skin. Slight overexposure in the upper right corner gives a raw, unprocessed look. No auto‑beauty mode—just natural contrast and slight grain. The exposure is a little bright at the top, creating a gentle halo effect around her head.
+
+- **Motion & Focus**  
+  Handheld shot with a short focal length (24–35 mm). A faint motion blur on the woman’s right hand and bottle conveys spontaneous movement. Everything—from her face to the background rocks—is fully sharp, no portrait‑mode depth of field blur.
+
+- **Framing & Composition**  
+  Off‑center, slightly tilted frame that captures the woman from the mid‑thigh up to the top of her head. The composition is not rule‑of‑thirds intentional; the left side of the image is a bit cut off, giving an accidental, candid feel. The background shows a cluster of large, rounded stones and a patch of sandy beach, all in focus.
+
+- **Environment**  
+  Location: a rocky beach with large boulders in the back, the sand showing a pattern of small, irregular tiles. Time of day: late afternoon (golden hour). Weather: clear, warm, with a light breeze that ruffles her hair.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm), no bokeh, background fully sharp. No post‑processing filters or color grading—just raw, natural tones and slight grain. Slight overexposure in the upper right corner for a natural, spontaneous vibe.
+
+- **Prompt Summary**  
+  “A young woman with long wavy auburn hair, wearing a red‑and‑white triangle bikini, stands on a golden‑hour beach at late afternoon. She holds a brown glass bottle in her right hand and touches her chin with her left hand, a butterfly tattoo visible on her ribcage. The shot is taken with a 24–35 mm wide‑angle lens, handheld, slightly tilted, off‑center framing that captures everything in focus from her mid‑thigh to the top of her head. Warm golden light creates a soft halo around her head with slight overexposure in the upper right corner. The background features large rounded stones and sandy beach, all sharp. The image has a raw, unprocessed look with faint motion blur on the bottle, capturing a candid, spontaneous moment.”

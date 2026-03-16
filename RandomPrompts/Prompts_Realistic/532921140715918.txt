@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy dark hair, wearing a light‑denim jacket over a white crop‑top and black leggings speckled with colorful paint drops. She’s mid‑action, holding a smartphone in her left hand and a spoon in her right, as if she’s about to eat or prepare something. Her head is slightly tilted downward, eyes focused on the phone screen, giving a candid, unposed feel.
+
+- **Motion & Focus**  
+  Slight motion blur on the hands and phone, indicating handheld instability. Everything remains fully sharp—no bokeh, no portrait‑mode isolation. The focus covers the entire frame from foreground to background.
+
+- **Lighting & Exposure**  
+  Natural daylight from a western‑facing window, mid‑afternoon. Slight overexposure on the subject’s face and upper body, with a warm, ambient glow. No auto‑HDR or beauty filters—raw, unprocessed look.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24‑35 mm), short focal length. No rule‑of‑thirds intentionality; framing is accidental, slightly off‑center. Background is fully sharp, no depth‑of‑field blur.
+
+- **Environment**  
+  A modern kitchen with light‑wood cabinets, a stainless‑steel refrigerator on the left, and a countertop with wooden utensils and a white mug on the right. The time of day is late afternoon, with soft natural light casting gentle shadows. Weather is clear, with a slight haze from the window’s glare.
+
+- **Composition & Style**  
+  Candid, spontaneous capture—subject unaware of camera. Slight tilt and partial crop give an informal feel. Zero studio lighting, zero professional composition, zero editorial tone. The prompt should emphasize raw realism, with all elements in focus, capturing a genuine moment in everyday life.

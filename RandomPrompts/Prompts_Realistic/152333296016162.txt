@@ -1,0 +1,26 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair tied in a loose low ponytail, wearing a single earring on the left ear. She is nude except for a pair of black high‑heeled shoes with red soles placed on the steps below her. Her back is turned to the camera, knees bent, hips slightly tilted, and one hand resting on the step beside her. The pose captures a natural, candid moment as if she is mid‑adjustment or about to step.
+
+- **Setting**  
+  A wooden staircase in a residential hallway. The stairs are made of light‑colored hardwood with a smooth finish; a simple wooden handrail runs along the left side. The wall on the right is painted a neutral beige. The time of day is late afternoon, with warm, soft natural light coming from the front‑right, creating gentle highlights on the woman’s back and the wood grain.
+
+- **Lighting & Exposure**  
+  Slight overexposure in the high‑lights to give a raw, unprocessed look. Auto‑HDR off. The exposure is slightly uneven—brighter at the top of the stairs, with a subtle vignette that fades into the background. No color grading or filters applied.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24 mm) with a short focal length. Everything in focus—from the woman’s back to the shoes on the steps—no bokeh, no depth‑of‑field blur. Slight handheld shake is present, giving a natural motion blur around the edges. The framing is off‑center; the left side of the image is slightly cut off by the handrail.
+
+- **Composition & Style**  
+  Candid, unposed, spontaneous—subject appears unaware of the camera. Imperfections are encouraged: slight tilt of the camera, partial crop on the right edge, and a lack of rule‑of‑thirds intentionality. The background is fully sharp, no portrait‑mode isolation.
+
+- **Details to Emphasize**  
+  - Texture of the wooden steps and handrail.  
+  - Reflection in the high‑heel soles.  
+  - Slight motion blur on the woman’s hair as if she just moved.  
+  - Ambient light reflections on her skin.  
+
+**Prompt for Text‑to‑Image Generation**
+
+> “A candid, unposed photograph of a nude woman with long wavy brown hair in a low ponytail, wearing a single earring, sitting on a wooden staircase in a residential hallway. She is facing away from the camera, knees bent, hips slightly tilted, one hand resting on the step beside her, with a pair of black high‑heeled shoes with red soles placed on the step below. The scene is lit by late afternoon natural light coming from the front‑right, creating slight overexposure and a raw, unprocessed look. Use a 24 mm wide‑angle lens, everything in focus, no bokeh, slight handheld shake producing subtle motion blur. The framing is off‑center with a partial crop on the right, and the composition is spontaneous and imperfect. Capture the texture of the wood, the reflection in the heels, the soft glow on her skin, and the gentle blur of movement.”

@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail and loose curls, wearing a red lace bra and matching thong, sitting on an ornate floral sofa. She’s mid‑gesture, leaning slightly to the left, one hand resting on the back of the couch, head tilted upward as if she just finished a conversation or is about to stand. Her expression is natural, unposed, with a subtle smile and eyes cast toward the right side of the frame.
+
+- **Lighting & Exposure**  
+  Warm, ambient indoor lighting from a lamp in the corner creates a slight overexposure on the subject’s face and upper body. The exposure is uneven—soft highlights on her skin and a gentle haze around the lamp shade. No auto‑beauty or filter processing; raw, unedited look.
+
+- **Camera Settings**  
+  Wide‑angle lens (24–35 mm), handheld, slightly shaky. Focal length short, background fully sharp—no bokeh, no depth‑of‑field blur. Everything in focus from foreground to background. No portrait‑mode “subject isolation.” Slight motion blur on the subject’s hair and arms to convey spontaneous movement.
+
+- **Composition & Framing**  
+  Off‑center, accidental framing: the left side of the image is cut off by the couch’s edge, giving a partial crop. The shot is not rule‑of‑thirds; the subject’s head sits slightly above the upper third line. Slight tilt to the right gives a casual, candid feel.
+
+- **Environment**  
+  A cozy living room with patterned wallpaper and a wooden side table in the left corner. A lamp with a beige shade hangs in the top right, casting warm light. The time of day is late afternoon, with natural daylight mixing with the lamp’s glow. Weather or ambient conditions are calm, no wind, quiet.
+
+- **Details & Imperfections**  
+  Slight tilt and off‑center framing create a spontaneous vibe. Minor motion blur on the hair and arms. The background is fully sharp—no “portrait mode” blur. Small imperfections: a faint smudge on the lamp shade, a slight overexposed highlight on her chest. No post‑processing or color grading; raw, natural look.
+
+- **Final Prompt**  
+  *“A young woman with a high ponytail and loose curls, wearing a red lace bra and matching thong, sitting on an ornate floral sofa in a cozy living room. She leans slightly left, hand on the couch back, head tilted upward toward a lamp in the top right. Warm ambient lighting creates soft overexposure on her face. Shot on a 35 mm wide‑angle lens, handheld with slight shake, everything in focus, background sharp. Off‑center framing, partial crop on the left, accidental tilt. Late afternoon daylight mixed with lamp glow. Raw, unprocessed, candid, spontaneous, no filters.”*

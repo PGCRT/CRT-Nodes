@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A young woman with long, wavy brown hair sitting on a white bed, mid‑towel‑drying. She holds a light gray towel over her chest with both hands, eyes closed in a relaxed, candid pose. Her left wrist bears a thin gold bracelet; she wears black “arrie” branded underwear that peeks above the bed.  
+
+- **Lighting & Exposure**  
+  Slight overexposure from natural daylight coming from a western‑facing window; ambient light creates soft highlights on her skin and towel. No auto‑beauty or filter processing—raw, unprocessed look.  
+
+- **Camera Settings**  
+  Wide‑angle lens (24 mm), handheld, slight motion blur from shaky hand. Everything in focus—no bokeh, no portrait‑mode isolation.  
+
+- **Composition**  
+  Off‑center framing: the subject’s left side is slightly tilted, the crop cuts off a bit of the bed’s edge. No rule‑of‑thirds intentionality; the shot feels spontaneous and “in‑the‑moment.”  
+
+- **Environment**  
+  A bright, airy bedroom with light blue walls. A framed picture hangs on the left wall, a white pillow rests behind her, and a small portion of a wooden chair is visible in the lower right corner. Time of day: late morning, soft sunlight casting gentle shadows. Weather: clear, no wind.  
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, partial crop of the towel’s edge, natural motion blur around the hands. The towel’s texture shows subtle folds; her skin has a natural, unretouched warmth.  
+
+- **Prompt for Generation**  
+  “A young woman with long wavy brown hair sits on a white bed in a bright bedroom, mid‑towel‑drying. She holds a light gray towel over her chest with both hands, eyes closed, wearing black ‘arrie’ underwear and a gold bracelet on her left wrist. The scene is lit by late‑morning natural daylight from a western window, creating slight overexposure. Shot on a 24 mm wide‑angle lens, handheld with mild motion blur, everything in focus. Composition is off‑center and slightly tilted, capturing a candid, spontaneous moment. Background includes a light blue wall, a framed picture on the left, a white pillow behind her, and a hint of a wooden chair in the lower right. Render realistic textures, raw unprocessed look, no filters.”

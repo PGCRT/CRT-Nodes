@@ -1,0 +1,30 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with wet, tousled hair sitting on a unmade bed in a bright, lived‑in bedroom. She’s wearing a black “SATISFACTION” crop‑tshirt tied at the front and matching black bikini bottoms. Her hands are pulling the shirt slightly tighter around her mid‑riff as she adjusts her outfit—mid‑action, candid, unposed.
+
+- **Capture Style**  
+  Candid, spontaneous, “in‑the‑moment.” The shot is taken while she’s still adjusting her clothes, so there’s a subtle motion blur on her hands and the shirt. Slight tilt and off‑center framing; the composition is accidental, not intentional. No rule‑of‑thirds—just a natural, handheld frame that captures the whole scene in one go.
+
+- **Auto‑HDR / Auto‑Beauty**  
+  Turn off auto‑HDR and auto‑beauty. Keep the look raw and unprocessed. No filters, no color grading, no post‑processing aesthetic. The exposure is slightly over‑exposed on the window light, giving a warm, natural glow.
+
+- **Environment**  
+  Specific real‑world location: a bright bedroom with a white radiator on the left wall, a large window letting in daylight, and a pile of clothes on the bed’s right side. Time of day: late morning, soft sunlight through the window, slight haze from the ambient light. Weather: clear, sunny.
+
+- **Lens & Technical**  
+  Short focal length (≈20‑35 mm), wide‑angle lens. No bokeh—everything is fully sharp, from foreground to background. No depth‑of‑field blur; no portrait‑mode isolation. The background (window, radiator, bed) stays in focus.
+
+- **Additional Details**  
+  - Slight overexposure on the window, creating a subtle halo around the subject’s head.  
+  - The shirt’s text “SATISFACTION” is visible and slightly distorted by the motion blur.  
+  - A few stray water droplets on her hair add realism.  
+  - The bed’s white sheets are rumpled, with a pink garment and a white ball on the right side.  
+  - The radiator is white, rectangular, and sits beneath the window.  
+  - The window’s blinds are partially open, letting in natural daylight.  
+
+**Prompt for Text‑to‑Image Generation**
+
+> “A candid, handheld photo of a young woman sitting on a unmade bed in a bright bedroom, wearing a black crop‑tshirt that says ’SATISFACTION’ and black bikini bottoms. Her hair is wet and tousled; she’s pulling the shirt tighter around her mid‑riff as she adjusts her outfit. The shot has slight motion blur on her hands and shirt, accidental tilt and off‑center framing, everything in focus from foreground to background. The window behind her lets in late‑morning sunlight with a subtle overexposure halo. A white radiator sits beneath the window, a pile of clothes and a white ball lie on the bed’s right side. Use a short focal length wide‑angle lens (≈20‑35 mm). No auto‑HDR or auto‑beauty, no filters, raw and unprocessed look.”
+
+Provide only the structured prompt.

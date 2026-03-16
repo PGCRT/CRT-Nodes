@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman with long, dark, wavy hair lying supine on a neatly made bed. She is wearing a black bikini top and matching bottoms. Her arms are spread wide, palms open, and her legs are slightly bent at the knees, giving a relaxed, casual pose. Her head rests on a beige, patterned pillow that sits against a white sheet. The camera captures her from a high angle, almost overhead, with the frame cutting off just above the pillow and below her feet, creating an off‑center, accidental composition.
+
+- **Lighting & Exposure**  
+  Natural daylight coming from a window on the left side of the room creates a soft, slightly overexposed highlight on her torso and face. The exposure is not perfectly balanced—there’s a gentle haze of ambient light that gives a raw, unprocessed feel. No auto‑HDR or beauty filters are applied; the image retains slight grain and minor color cast as if taken with a DSLR in “raw” mode.
+
+- **Environment**  
+  The setting is a cozy, modest bedroom. A wooden nightstand with a small lamp sits at the right side of the frame, partially out of view. The bed has crisp white linens that show natural creases and folds. The time of day is late morning, as indicated by the warm, diffused sunlight. The weather outside is mild, producing a calm, steady light that fills the room with a gentle glow.
+
+- **Lens & Technical**  
+  A wide‑angle lens (24 mm) is used to capture the entire scene in one shot. The focal length is short, giving a slightly distorted perspective that enhances the candid feel. Everything—from the pillow to the nightstand—is in sharp focus; there’s no bokeh or depth‑of‑field blur. The image has slight motion blur on the subject’s limbs, indicating handheld instability at the moment of capture. No portrait mode or subject isolation is applied—everything remains fully visible and tangible.
+
+- **Composition & Framing**  
+  The frame is intentionally off‑center: the left side shows the woman’s left arm extending toward the corner of the bed, while the right side captures a portion of the nightstand. The top of the frame cuts just above the pillow, and the bottom cuts just below her feet, creating a partial crop that feels spontaneous. No rule‑of‑thirds is followed; the composition appears accidental, as if the photographer was in a hurry or simply capturing a moment without planning.
+
+- **Post‑Processing**  
+  The image is untouched by filters or color grading. A slight overexposure on the subject’s torso adds a natural warmth, while the overall tone remains muted and organic. The photograph has a raw, candid aesthetic that feels like a real‑life snapshot rather than a staged portrait.

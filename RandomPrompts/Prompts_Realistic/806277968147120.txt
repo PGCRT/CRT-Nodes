@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, sun‑kissed hair standing barefoot on a cracked concrete floor in an abandoned industrial warehouse. She wears a loose, beige, high‑slit dress that falls to mid‑calf, slightly torn at the hem for a raw, unposed look. Her hands hang loosely by her sides, fingers relaxed, as if she just stepped out of a doorway and is unaware of the camera.  
+
+- **Motion & Focus**  
+  Slight motion blur on the subject’s feet and the background machinery, indicating handheld instability. Everything remains fully sharp—no portrait‑mode depth‑of‑field blur. The lens is a short focal‑length wide‑angle (24 mm) that captures the entire scene without significant bokeh.  
+
+- **Lighting & Exposure**  
+  Natural daylight from a tall, dusty window on the left creates a soft, slightly overexposed highlight on the woman’s face and the metal machines. The exposure is uneven—ambient light varies across the frame, giving a raw, unprocessed feel. No auto‑HDR or color grading; just the natural contrast of the moment.  
+
+- **Environment**  
+  The setting is an abandoned factory hall with rusted industrial machinery on both sides: a large steam engine on the left, a series of gear‑driven machines on the right. Tall windows let in warm sunlight, and small wildflowers poke through cracks in the concrete floor. The time of day is late morning, when the sun is high but still casts long shadows. Weather is clear, with a light breeze that stirs the woman’s hair.  
+
+- **Lens & Technical**  
+  Wide‑angle short focal length (24 mm), no bokeh, background fully sharp. The composition is accidental—slight tilt and off‑center framing, partial crop of the subject’s lower legs, no rule‑of‑thirds intentionality. All elements are in focus: the woman, the machinery, the windows, the wildflowers.  
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—an “in‑the‑moment” snapshot where the subject is mid‑action, slightly unaware of the camera. Imperfections are encouraged: a slight tilt to the left, an off‑center crop that cuts off a bit of the woman’s lower legs, and a partial crop of the background machinery.  
+
+- **Final Prompt**  
+  “A young woman with long, sun‑kissed hair, barefoot on cracked concrete, wearing a loose beige high‑slit dress, standing in an abandoned industrial warehouse. Rusty machinery lines both sides of the hall; tall windows let in late‑morning sunlight that slightly overexposes her face. Small wildflowers grow through cracks near her feet. Capture with a 24 mm wide‑angle lens, everything fully sharp, slight motion blur on the subject’s feet and background machinery, accidental tilt and off‑center framing, no rule‑of‑thirds, raw unprocessed look.”

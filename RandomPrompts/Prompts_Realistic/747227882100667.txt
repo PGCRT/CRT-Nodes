@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark hair, wearing a white bikini top and matching high‑waist bottoms, standing beside an open convertible car. She’s leaning slightly against the car door, one hand on the door frame, feet planted on the asphalt, wearing white sneakers with green stripes. Her pose is casual, mid‑step, as if she just got out of the car and is about to grab a drink or adjust her hat.  
+
+- **Lighting & Exposure**  
+  Slight overexposure in the upper right quadrant to capture the bright midday sun; subtle halo around the subject’s head and shoulders. No auto‑beauty mode—raw, unprocessed look. The exposure is slightly uneven, giving a natural, handheld feel.  
+
+- **Motion & Focus**  
+  Slight motion blur on the woman’s left leg and the car door, indicating a quick, spontaneous snap. Everything remains fully sharp—no portrait‑mode depth of field blur; background is crisp from a wide‑angle lens.  
+
+- **Lens & Technical Settings**  
+  24mm wide‑angle lens, f/4.0 aperture, 1/250 s shutter speed, ISO 400. No bokeh. The framing is off‑center, slightly tilted, with the car’s door open on the left and a spare tire visible in the background on the right.  
+
+- **Environment**  
+  Location: A sunny, open parking lot at a roadside café. Time of day: early afternoon (sun high, slight haze). Weather: clear, light wind, a few scattered clouds. The ground is a rough asphalt surface with faint cracks and small debris. In the background, a distant utility pole and a row of green shrubs line the horizon.  
+
+- **Composition Notes**  
+  No rule‑of‑thirds intentionality—accidental framing. The shot captures a candid moment as the woman steps forward, her sneakers slightly off the center of the frame. The convertible’s chrome trim reflects the sun, adding a bright highlight. A spare tire sits on the rear of the car, partially out of frame.  
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, no post‑processing aesthetic. Only raw, in‑camera data. Slight overexposure in the upper right to emphasize the ambient light.  
+
+**Prompt Summary**  
+“Candid photo of a woman in a white bikini and sneakers leaning against an open blue convertible at a sunny roadside parking lot. Capture with a 24mm wide‑angle lens, f/4, 1/250 s, ISO 400. Slight motion blur on the subject’s left leg, everything fully sharp. Slight overexposure in the upper right quadrant. No filters or color grading—raw, unprocessed look. Background includes a spare tire and distant utility pole, all in focus.”

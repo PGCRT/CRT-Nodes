@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark hair tied loosely at the back, wearing a rust‑colored, brocade‑patterned dress with a deep V‑neck and a leather belt that cinches her waist. Her arms are slightly bent, one hand gripping the handle of a wooden sword or dagger that hangs from her left hip. She is mid‑step, as if just having moved from one location to another, with a subtle motion blur on her right foot indicating recent movement.
+
+- **Facial Expression & Detail**  
+  Her face shows an earnest, slightly surprised expression, mouth open as if she’s about to speak or shout. The lighting catches the faint freckles across her cheeks and the slight shine on her forehead. Small gold earrings dangle from her earlobes, catching the light.
+
+- **Clothing & Accessories**  
+  The dress features a textured, earthy brown‑gold pattern with subtle floral motifs. The sleeves are puffed at the shoulder and taper to a narrow cuff at the wrist. A leather belt with a rectangular buckle sits at her waist, and a small pouch hangs from her left hip. Her right arm is partially covered by a leather bracer that shows visible stitching.
+
+- **Background & Environment**  
+  The setting is an old stone courtyard of a medieval castle or manor, with rough-hewn walls and a partial archway behind her. A few other figures are visible in the background, blurred but indistinct, suggesting a busy scene. The time of day is late afternoon; the sun is low, casting warm, golden light that slightly overexposes the upper part of the frame.
+
+- **Lens & Technical Settings**  
+  Use a wide‑angle lens (24–35 mm) with a short focal length to capture the full scene. Shoot at a high ISO to keep everything in focus, from foreground to background. No bokeh; all elements are sharp. The exposure is slightly uneven—ambient light creates a gentle overexposure on the upper half of the image. No post‑processing filters or color grading; keep the raw, unprocessed look.
+
+- **Composition & Framing**  
+  Capture the shot candidly, with the camera handheld and slightly tilted. The framing is off‑center, not following the rule of thirds. The composition feels spontaneous: the woman’s body is angled toward the left side of the frame, her head turned slightly to the right, creating a dynamic sense of motion.
+
+- **Lighting & Color**  
+  Natural daylight from the west, creating strong contrast between the warm tones of the dress and the cool gray of the stone walls. The light hits the subject’s face from above, producing soft shadows under her chin and beneath the belt buckle.
+
+- **Final Prompt**  
+  “A young woman in a rust‑colored brocade dress, mid‑step on an old stone courtyard, late afternoon sun casting warm overexposure; wide‑angle lens, short focal length, handheld tilt, candid spontaneous capture, all elements sharp, raw unprocessed look.”

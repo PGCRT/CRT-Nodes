@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman with long, wavy brown hair, wearing a tiger‑striped bikini, seated on an orange velvet chair. Her left hand is raised to the back of her head, creating a casual, mid‑motion pose. She’s looking slightly off‑camera, giving a candid, unposed feel.
+
+- **Lighting & Exposure**  
+  Natural daylight from a western window, mid‑afternoon. Slight overexposure on the subject’s face and upper body, with a warm, golden hue. No auto‑HDR or beauty filters—raw, unprocessed look. The exposure is uneven, with a subtle vignette from the wide‑angle lens.
+
+- **Camera & Lens Settings**  
+  24‑mm wide‑angle lens, f/3.5 aperture, 1/60 s shutter speed, ISO 400. Handheld shot with slight instability, producing a natural motion blur on the subject’s hair and the background. Everything remains in focus—no portrait‑mode depth of field blur.
+
+- **Composition & Framing**  
+  Off‑center framing: the chair is slightly tilted to the left, the subject’s body occupies the central‑right third of the frame. The composition is accidental, not rule‑of‑thirds intentional. The background includes a tiled wall with geometric patterns, a small table with bottles and a basket, and a white bucket on the floor—everything fully sharp.
+
+- **Environment**  
+  Location: a bright, informal living room in a modern home. Time of day: late afternoon, soft sunlight casting gentle shadows. Ambient noise is low, but the subject’s hair shows slight motion blur from a quick movement.
+
+- **Details & Imperfections**  
+  Slight tilt and partial crop on the chair and background. A faint smudge on the left side of the subject’s face from a quick touch‑up. The bikini’s tiger stripes are slightly uneven, adding realism. The orange velvet chair has a subtle texture, and the tiled wall shows a mix of brown, beige, and gray tones.
+
+- **Post‑Processing**  
+  No filters or color grading—just raw capture. A minimal crop to tighten the frame, but otherwise untouched.  
+
+**Prompt Summary:**  
+“Candid photo of a woman in a tiger‑striped bikini sitting on an orange velvet chair in a bright living room, captured with a 24‑mm wide‑angle lens at f/3.5 and 1/60 s. The shot has slight motion blur from handheld shake, natural daylight overexposure, and accidental off‑center framing. All elements—subject, chair, tiled wall, table, basket, and bucket—are in focus, producing a raw, unprocessed, realistic candid image.”

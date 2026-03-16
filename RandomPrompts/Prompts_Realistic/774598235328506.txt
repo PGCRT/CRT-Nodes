@@ -1,0 +1,32 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, straight brown hair sitting bare‑headed on a large, smooth boulder in a natural setting. Her hands are pressed together in front of her chest, fingers slightly curled, as if she’s about to clap or is holding a small object. Her knees are bent, feet planted flat on the rock, toes pointing forward. The pose is candid and unposed; she appears to be mid‑action, unaware of the camera.
+
+- **Facial Expression & Gaze**  
+  She looks directly at the camera with a soft, neutral expression, eyes slightly narrowed, mouth closed. A faint smile may be seen as her lips curl upward. The face is captured with slight motion blur, giving a raw, unprocessed feel.
+
+- **Lighting & Exposure**  
+  Natural daylight from the west, late‑afternoon, creating a warm, golden hue. Slight overexposure on the subject’s face and upper body, while the background remains fully sharp. No auto‑HDR or beauty filters—just a raw, handheld shot.
+
+- **Camera Settings**  
+  - Lens: 24‑35 mm wide‑angle, short focal length.  
+  - Aperture: f/4–f/5.6 (wide opening).  
+  - Shutter speed: 1/60–1/100 s (slight motion blur).  
+  - ISO: 400–800 (depending on ambient light).  
+  - Focus: everything in focus—no portrait‑mode depth‑of‑field blur.  
+
+- **Composition & Framing**  
+  No rule‑of‑thirds intentionality; the frame is slightly tilted, off‑center, with a partial crop that cuts off the top of her head and the lower part of the rock behind her. The background consists of several large, rounded boulders stacked in a natural pile, with a hint of green foliage at the very top. The scene is fully sharp, no bokeh.
+
+- **Environment**  
+  Location: A rocky outcrop in a meadow or forest edge. Time of day: late afternoon (golden hour). Weather: clear, mild wind, slight haze. The ground is covered with small stones and patches of grass.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, handheld instability captured in the motion blur. The subject’s hair has a few stray strands that catch the light. Her skin shows natural texture, no retouching. The rock she sits on has a subtle speckled pattern, with faint white veins.
+
+- **Post‑Processing**  
+  No filters or color grading—just raw capture. A minimal exposure adjustment to brighten the subject slightly.  
+
+**Prompt Summary (for use in a text‑to‑image model)**  
+"Realistic candid photo of a bare‑headed young woman sitting on a large boulder, hands clasped in front of chest, looking at camera, slight motion blur, natural late‑afternoon light, wide‑angle 24‑35 mm lens, everything in focus, slightly tilted off‑center framing, background of stacked rocks and green foliage, raw unprocessed look, no filters."

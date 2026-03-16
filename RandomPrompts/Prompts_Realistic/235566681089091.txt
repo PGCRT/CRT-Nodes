@@ -1,0 +1,30 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail, wearing a navy blazer embroidered with gold laurel details over a crisp white shirt, stands at a wooden desk in a bright classroom. Her left hand rests on an open textbook filled with handwritten notes and diagrams; her right hand holds a black pen, poised as if about to write. She looks slightly upward and to the left, caught mid‑thought, with a subtle smile that conveys confidence and curiosity.
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window on the left creates a soft overexposure on the subject’s face and clothing, while the background remains fully sharp. The exposure is slightly warm, with a hint of ambient haze from the morning sun. No auto‑beauty or filter processing—just raw, unposed realism.
+
+- **Camera & Lens Settings**  
+  Wide‑angle lens (24 mm) with a short focal length, handheld. Focus is set on the woman’s face and hands; everything in the frame—from her fingers to the whiteboard behind—is in focus, no bokeh. Slight motion blur at the edges from the camera’s instability adds a candid feel.
+
+- **Composition & Framing**  
+  The shot is intentionally off‑center: the subject’s head is slightly tilted, and the left edge of the frame cuts off part of the window, giving an accidental, spontaneous feel. The rule‑of‑thirds is abandoned; the composition is guided by the natural lines of the desk, book, and whiteboard.
+
+- **Environment**  
+  Location: a bright, airy classroom with a large window on the left, a wooden desk, a thick textbook, a black pen, and a whiteboard in the background that displays a chemistry diagram (with visible labels “Cyanide” and “Glycerol”). The time of day is early afternoon, with warm sunlight streaming through the window, creating soft shadows and a slight overexposure on the subject. The weather is clear, with a light haze that adds depth to the scene.
+
+- **Technical Details**  
+  - Focal length: 24 mm (wide angle)  
+  - Aperture: f/5.6 (mid‑range for sharpness)  
+  - Shutter speed: 1/125 s (slight motion blur)  
+  - ISO: 400 (for natural contrast)  
+  - No portrait mode or depth‑of‑field blur—background fully sharp.  
+  - Raw, unprocessed look; no color grading or filters.
+
+- **Cinematic Touches**  
+  The image captures a candid moment of learning or teaching, with the subject unaware of the camera’s presence. Slight tilt and partial crop give an authentic, spontaneous feel. The background whiteboard diagram adds context, while the thick textbook and pen suggest academic activity. The entire scene is in focus, creating a sense of immediacy and realism.
+
+**Prompt Summary (structured)**  
+"Mid‑afternoon classroom candid shot: a woman in a navy blazer with gold laurel embroidery stands at a wooden desk, holding a black pen over an open textbook. Natural daylight from a left‑side window creates soft overexposure; wide‑angle 24 mm lens, handheld, slight motion blur, everything in focus. Off‑center framing, accidental tilt, partial crop. Background whiteboard shows chemistry diagram. Raw, unprocessed, no filters."

@@ -1,0 +1,29 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A young woman in a plain white tee and dark jeans, mid‑step on a wooden deck, feet slightly blurred as if caught in a casual, spontaneous motion. She’s walking toward a bright blue toy car that sits near the front left of the frame; her right foot is just about to touch the car, creating a sense of imminent action. Her hair is loose and slightly windblown, and she’s wearing white sneakers with a subtle wear pattern.
+
+- **Pose & Framing**  
+  The shot is taken with a wide‑angle lens (24–35 mm), giving a short focal length that keeps the entire deck and surrounding environment in focus. The framing is intentionally off‑center, with the subject’s left side slightly cut off by the edge of the frame—no rule‑of‑thirds intentionality. The camera is handheld, producing a slight tilt and natural motion blur around the subject’s feet and the toy car.
+
+- **Lighting & Exposure**  
+  Ambient daylight from a high‑angle sun (mid‑afternoon) creates a soft, natural overexposure on the woman’s face and the deck, with a gentle haze that gives the image an auto‑HDR feel but without any post‑processing color grading. The exposure is slightly warm, preserving the green hue of the lawn and the brown tone of the deck.
+
+- **Environment**  
+  The setting is a suburban backyard: a wooden deck made of light‑colored planks, a lush green lawn extending to a tall evergreen tree on the left, a wooden fence in the background, and a single‑story house with light green siding on the right. A small blue toy bucket sits near the left edge of the deck, a yellow plastic block is on the right, and a small blue toy car is placed in front of the woman’s feet. The scene is fully sharp—no bokeh or depth‑of‑field blur.
+
+- **Time of Day & Weather**  
+  Mid‑afternoon, with the sun high and slightly to the north‑west, casting soft shadows that fall toward the south‑east. The weather is clear, with a light breeze that slightly ruffles the woman’s hair.
+
+- **Lens & Technical Settings**  
+  - Focal length: 35 mm (wide angle)  
+  - Aperture: f/4.0 (everything in focus)  
+  - Shutter speed: 1/125 s (natural motion blur)  
+  - ISO: 400 (raw, unprocessed look)  
+  - No portrait‑mode subject isolation; background remains fully sharp.
+
+- **Cinematic Touches**  
+  The image has a slight overexposure on the subject’s face and deck, giving it an auto‑HDR feel while staying raw and unprocessed. The overall tone is natural, with no filters or color grading applied. The composition feels spontaneous and candid, as if captured in a real‑life moment without staged intentionality.
+
+**Prompt Summary (for text‑to‑image generation)**  
+"A young woman in a white tee and dark jeans walking on a wooden deck, mid‑step toward a blue toy car, captured with a 35 mm wide‑angle lens, handheld motion blur, natural daylight overexposure, full sharpness of background, suburban backyard setting with a green lawn, evergreen tree, wooden fence, and a light‑green house, mid‑afternoon sun, clear weather, raw unprocessed look, slight tilt and off‑center framing, no rule‑of‑thirds, candid spontaneous composition."

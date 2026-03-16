@@ -1,0 +1,44 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail, wearing a red “Love”‑printed bikini top and a beige track jacket with orange stripes, stands mid‑step on a concrete sidewalk. Her left leg is bent, foot planted on the ground, hand resting on a mural‑adorned wall. She’s smiling slightly, head tilted, eyes forward, as if caught in an unplanned, spontaneous moment.
+
+- **Appearance & Styling**  
+  - Hair: long, dark brown, tied in a high ponytail with a subtle braid at the side.  
+  - Makeup: natural, light makeup with a touch of highlight on the cheekbones.  
+  - Accessories: small gold hoop earrings, thin gold necklace, white sneakers.  
+  - Outfit details: the jacket is open, revealing the bikini top; the red top has a white cursive “Love” in the center. The jacket’s cuffs are slightly loose, giving a casual, relaxed look.
+
+- **Pose & Motion**  
+  - Body angled toward the camera but slightly off‑center.  
+  - Right arm bent at the elbow, hand on the wall; left arm hanging down, holding a white sneaker.  
+  - Slight motion blur around the feet and hands to suggest movement.  
+  - A faint “auto‑beauty” effect is off; the image retains raw, unprocessed realism.
+
+- **Environment**  
+  - Location: a city street with brick buildings on the left, a yellow “Sik” sign on a pole, a white car parked further down, and a palm tree in the distance.  
+  - Time of day: late morning, soft sunlight casting long shadows; the sky is clear with a hint of pale blue.  
+  - Weather: mild, slightly humid; ambient light creates a natural overexposure on the subject’s face.
+
+- **Lens & Technical**  
+  - Lens: 24‑mm wide‑angle lens (short focal length).  
+  - Focus: everything in focus—subject, wall, background—no portrait‑mode blur.  
+  - Depth of field: full sharpness from foreground to background; no bokeh.  
+  - Exposure: slight overexposure on the subject’s face and upper body, underexposed on the lower legs, giving a dynamic contrast.  
+  - Color grading: natural, unfiltered tones; no post‑processing aesthetic.
+
+- **Composition & Framing**  
+  - No rule‑of‑thirds intentionality—framing is accidental, slightly tilted.  
+  - The subject occupies the central‑right portion of the frame; the wall’s mural extends to the right edge.  
+  - The sidewalk leads into the background, creating a subtle leading line.  
+  - Slight crop on the left side cuts off part of the street, adding a candid feel.
+
+- **Lighting**  
+  - Zero studio lighting; all light comes from natural daylight.  
+  - Light source: sun positioned to the left‑front, casting soft shadows behind the subject.  
+  - Slight handheld instability creates subtle motion blur on the lower legs and shoes.
+
+- **Prompt Summary (for AI image generation)**  
+  “A young woman with a high ponytail, wearing a red ’Love’ bikini top and an open beige track jacket with orange stripes, stands mid‑step on a concrete sidewalk in a city street. She’s smiling, hand on a mural‑adorned wall, white sneakers on her feet. The background shows brick buildings, a yellow ’Sik’ sign, a parked car, and a palm tree. Late morning sunlight casts long shadows; the scene is captured with a 24‑mm wide‑angle lens, full focus, slight motion blur on the feet, accidental off‑center framing, natural overexposure on the face. Raw, unprocessed realism, no filters.”
+
+Provide only the structured prompt.

@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, straight blonde hair, wearing a light‑blue, semi‑transparent button‑down shirt that is slightly unbuttoned at the front, revealing a hint of her chest. She stands in a casual, relaxed pose, hands on her hips, head tilted slightly to the left, eyes looking directly at the camera with a soft, confident expression. Her shoulders are relaxed, and her body is angled a bit off‑center, giving an accidental, candid feel.
+
+- **Lighting & Exposure**  
+  Natural daylight from a western window, mid‑afternoon (≈ 4:30 pm). The light is warm, slightly harsh, creating a mild overexposure on the subject’s face and upper body. No auto‑HDR or beauty filters—just raw, unprocessed tones. Slight handheld shake gives a subtle motion blur around the edges.
+
+- **Lens & Technical**  
+  24 mm wide‑angle lens (short focal length), f/3.5 aperture, 1/60 s shutter speed, ISO 400. Everything in focus—no bokeh, no depth‑of‑field blur; the background is fully sharp. No portrait‑mode subject isolation.
+
+- **Environment**  
+  Location: A modern apartment hallway with a light‑wood door on the right and a beige wall behind the subject. The floor is a polished concrete, and a small potted plant sits in the corner. Time of day: late afternoon, soft sunlight casting gentle shadows. Weather: clear, no wind.
+
+- **Composition & Framing**  
+  No rule‑of‑thirds intentionality—framing is accidental, slightly tilted. The shot is a partial crop that cuts off the top of the door frame and the lower part of the plant, giving a candid, spontaneous feel. The background is fully sharp, with no blur or “portrait mode” isolation.
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, zero post‑processing aesthetic. Slight overexposure on the subject’s face, natural contrast. Capture style: candid, unposed, spontaneous—subject unaware or mid‑action.
+
+- **Final Prompt**  
+  “A young woman with long blonde hair, wearing a light‑blue button‑down shirt, standing casually in a modern apartment hallway at mid‑afternoon. Natural daylight creates a mild overexposure on her face. Shot on a 24 mm wide‑angle lens at f/3.5, 1/60 s, ISO 400—everything in focus, no bokeh. The framing is accidental and slightly tilted, partial crop cutting off the door frame and plant. No filters or color grading—raw, candid, spontaneous capture.”

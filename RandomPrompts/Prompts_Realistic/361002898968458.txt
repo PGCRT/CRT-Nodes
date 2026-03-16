@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark brown hair, wearing a simple gold necklace and black drawstring jeans, standing bare‑shouldered in front of a decorated Christmas tree. She is mid‑step, left foot slightly ahead, body angled toward the camera but not perfectly centered. Her right arm hangs loosely by her side, elbow bent a little, as if she just finished a gesture or is about to touch the tree. A subtle motion blur at the edges suggests handheld shake.
+
+- **Lighting & Exposure**  
+  Natural daylight from a western‑facing window, mid‑afternoon. Slight overexposure on the upper torso and face, giving a warm, soft glow. No auto‑beauty or filter processing—raw, unedited look. The exposure is uneven: the background tree is slightly brighter than the subject’s lower body, creating a subtle contrast.
+
+- **Camera & Lens Settings**  
+  35 mm wide‑angle lens (short focal length), f/4.0 aperture, 1/60 s shutter speed, ISO 400. Everything in focus from foreground to background; no bokeh or depth‑of‑field blur. Handheld shot with slight tilt and off‑center framing—no rule‑of‑thirds intentionality.
+
+- **Environment**  
+  Indoor setting in a living room. A Christmas tree adorned with red and silver baubles stands behind the woman, a Santa‑claus figurine perched on the left side of the tree. The wall is a muted beige, with faint texture visible. The time of day is late afternoon, giving a warm, slightly hazy light.
+
+- **Composition & Details**  
+  The frame captures the woman from the mid‑thigh up to the top of her head, with the tree and figurine partially cut off on both sides—spontaneous, candid feel. Her necklace glints softly; a faint smudge of dust on her left shoulder adds realism. The background tree’s ornaments are sharply in focus, no portrait‑mode isolation.
+
+- **Post‑Processing**  
+  No filters, color grading, or auto‑beauty mode—just raw capture. Slight overexposure on the upper body creates a natural highlight. The image retains a slight motion blur around the hands and shoulders, indicating handheld instability.
+
+**Prompt Summary**  
+> “A young woman with long dark hair, bare‑shouldered in black drawstring jeans, stands mid‑step before a decorated Christmas tree inside a beige living room. A Santa‑claus figurine sits on the left side of the tree. Shot on a 35 mm wide‑angle lens at f/4, 1/60 s, ISO 400, with slight overexposure and handheld blur. The composition is candid and off‑center, everything in focus from foreground to background, no filters or auto‑beauty processing.”

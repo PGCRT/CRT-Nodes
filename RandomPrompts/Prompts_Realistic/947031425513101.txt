@@ -1,0 +1,29 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A young woman with long, dark brown hair, wearing a light‑pink floral hoodie and blue jeans, stands in a cornfield, holding a black smartphone in both hands. She is mid‑gesture, slightly tilting her head downward as if reading or typing, with a subtle expression of concentration. Her hands are positioned at the center of the frame, but the composition is intentionally off‑center, giving a casual, spontaneous feel.
+
+- **Pose & Movement**  
+  The subject’s pose is candid and unposed; she appears unaware of the camera, caught in a natural moment. A slight motion blur is present around her hands and phone, indicating handheld instability and a quick shutter speed. The blur is gentle, not excessive, preserving a raw, unprocessed look.
+
+- **Lighting & Exposure**  
+  Ambient daylight from a high‑angle, mid‑afternoon sun creates a mild overexposure on the subject’s face and clothing, with a slight warm tint. No auto‑beauty mode or filters are applied; the image retains the natural grain and color fidelity of a DSLR or mirrorless camera. The exposure is slightly uneven, with the background marginally brighter than the foreground.
+
+- **Lens & Optical Settings**  
+  A wide‑angle lens (24–35 mm) is used, capturing a broad view of the scene. The focal length is short, giving a “close‑up” feel while still including the surrounding cornstalks and wooden fence. Everything in the frame—from the woman’s face to the top of the corn—remains fully sharp; no depth‑of‑field blur or bokeh is present.
+
+- **Environment & Background**  
+  The setting is a real‑world cornfield at a rural farm, with tall green cornstalks on either side and a weathered wooden fence running horizontally behind the subject. The time of day is late afternoon, with soft, diffused sunlight that creates gentle shadows and highlights. Light rain or drizzle is visible as faint streaks in the air, adding texture and a subtle motion cue.
+
+- **Composition & Framing**  
+  The framing is accidental and imperfect: the subject’s head is slightly above the center, and the left side of the frame cuts off a bit of the cornstalk, giving a “partial crop” effect. No rule‑of‑thirds intentionality is applied; the composition feels spontaneous and informal. The background is fully sharp, with no portrait‑mode isolation.
+
+- **Technical Details**  
+  - ISO: 400–600 (for natural grain)  
+  - Aperture: f/5.6–f/8 (for sharpness across the frame)  
+  - Shutter speed: 1/125–1/250 s (to capture slight motion blur)  
+  - Focal length: 30 mm (wide‑angle, short focal length)  
+  - No post‑processing or color grading; raw image with auto‑HDR off.
+
+- **Final Prompt**  
+  “A young woman in a light‑pink floral hoodie and blue jeans stands in a cornfield at mid‑afternoon, holding a black smartphone in both hands as she reads or types. Her head is slightly tilted downward, her expression focused, and a faint motion blur surrounds her hands. The scene is captured on a 30 mm wide‑angle lens, with everything in focus from foreground to background. The wooden fence runs horizontally behind her, and tall cornstalks frame the sides. Soft daylight creates a mild overexposure on her face, while gentle rain streaks add texture. The composition is off‑center and accidental, with a slight partial crop, giving a candid, spontaneous feel. No filters or color grading are applied; the image retains raw, natural grain and sharpness.”

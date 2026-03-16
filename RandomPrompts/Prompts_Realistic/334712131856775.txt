@@ -1,0 +1,29 @@
+**Realistic Candid Photography Prompt Framework – “Kneeling Woman in a Bright, Cozy Room”**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair, wearing a thin, sheer black blouse and high‑waist denim shorts, kneeling on a light‑wood floor. Her hands are gently placed over her chest, fingers slightly curled, as if she’s about to adjust a necklace or a small cross pendant that sits at the center of her torso. Her nails are painted a soft pink, adding a subtle pop of color. She looks directly at the camera with a calm, confident expression, eyes slightly narrowed, mouth relaxed.
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window to the left of the frame creates a warm, slightly overexposed highlight on her face and upper body. The exposure is not perfectly balanced – the background is a bit bright, giving an airy, candid feel. No auto‑beauty or filter enhancement; the image retains raw, unprocessed texture.
+
+- **Camera Settings**  
+  - Lens: 24 mm wide‑angle, short focal length, handheld.  
+  - Focal depth: everything from foreground to background is fully sharp – no bokeh.  
+  - Shutter speed: 1/60 s, producing a slight motion blur on the subject’s hands and hair, indicating spontaneous movement.  
+  - Aperture: f/4.5, giving a wide aperture but still keeping the background in focus.
+
+- **Composition & Framing**  
+  The shot is intentionally off‑center; the woman’s left knee is slightly cut off by the frame edge. The camera tilts a little to the right, creating a casual, spontaneous feel. The rule of thirds is ignored – the subject occupies the central‑left portion of the frame, with a small empty space on the right that hints at an unseen object or décor.
+
+- **Environment**  
+  The setting is a bright, modern living room with light‑colored walls and a simple, geometric artwork hanging above the woman’s head. A wooden side table is partially visible on the far right. The time of day is mid‑afternoon, when the sun is high, casting soft shadows. The ambient air feels warm, and the overall mood is relaxed, candid, and unposed.
+
+- **Details & Imperfections**  
+  - Slight tilt in the camera gives a natural, handheld vibe.  
+  - A faint overexposure on the woman’s chest creates a subtle halo effect.  
+  - The background is fully sharp – no depth‑of‑field blur.  
+  - Minor dust particles are visible in the air, adding realism.  
+  - The woman’s tattoo of a cross on her left breast is partially covered by her hand, adding a personal detail.
+
+- **Prompt for AI Image Generation**  
+  *“A young woman with long wavy brown hair, wearing a thin black blouse and high‑waist denim shorts, kneeling on a light‑wood floor in a bright modern living room. Her hands gently cover a cross pendant at her chest, nails painted pink. Natural daylight from a large window creates a warm overexposed highlight on her face. Shot on a 24 mm wide‑angle lens, handheld, 1/60 s shutter speed, f/4.5 aperture – everything in focus with slight motion blur on the hands and hair. The frame is off‑center, slightly tilted to the right, capturing a candid, spontaneous moment at mid‑afternoon. Background includes a light‑colored wall, a geometric artwork above her head, and a partial wooden side table on the right. Raw, unprocessed look, no filters, no color grading.”*

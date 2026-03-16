@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, sun‑kissed hair walking confidently down a cobblestone alley in an urban downtown. She’s wearing a loose, taupe, off‑shoulder blouse tied at the front and matching high‑waist trousers. Her hands are slightly blurred as if she’s mid‑step, capturing a natural motion.  
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject is unaware of the camera, caught in a genuine moment. The frame is slightly tilted and off‑center, with a partial crop that gives an accidental, handheld feel. No rule‑of‑thirds intentionality; the composition is improvised.  
+
+- **Motion & Focus**  
+  Slight motion blur on the subject’s hands and feet, indicating a handheld shot. Everything remains fully sharp — no portrait‑mode depth‑of‑field blur. The background is crisp, with the alley’s brick walls and distant pedestrians in focus.  
+
+- **Environment**  
+  Specific real‑world location: a narrow cobblestone street lined with red‑brick buildings, a small tree on the left, and a green awning on a shop front. Time of day: late afternoon, warm golden light from the setting sun creates a soft overexposure on the subject’s face. Weather: clear, mild breeze, leaves slightly rustling.  
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm), wide‑angle lens. No bokeh; background fully sharp. Auto‑HDR or auto‑beauty mode off — raw, unprocessed look. Slight overexposure on the subject’s face to emphasize the ambient light. No filters, no color grading, no post‑processing aesthetic.  
+
+- **Lighting & Post‑Processing**  
+  Zero studio lighting, zero professional composition, zero editorial tone. Natural motion freeze or slight blur from handheld instability. The image retains a natural, documentary feel with imperfections: slight tilt, off‑center framing, partial crop.  
+
+- **Final Prompt**  
+  “A young woman with long, sun‑kissed hair walking confidently down a cobblestone alley in an urban downtown, wearing a loose taupe off‑shoulder blouse tied at the front and matching high‑waist trousers. Candid, unposed, spontaneous capture with slight motion blur on her hands and feet, handheld tilt and partial crop. Background of brick buildings, a small tree, and a green awning, fully sharp. Late afternoon golden light creates soft overexposure on her face. 24‑35 mm wide‑angle lens, no filters or auto‑HDR, raw, unprocessed look.”

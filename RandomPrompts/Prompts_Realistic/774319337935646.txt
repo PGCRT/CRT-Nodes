@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with deep brown hair styled in a loose braid, wearing a pink bikini top, standing by a swimming pool. Her left hand is near her mouth, fingers slightly curled, as if she’s about to touch her lips or adjust her hair. She wears a thin gold necklace with a small heart pendant. Her expression is playful, eyes bright, tongue peeking out slightly.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject appears unaware of the camera, mid‑action. Slight tilt and off‑center framing; partial crop that gives an accidental, handheld feel. No rule‑of‑thirds intentionality. The shot has a raw, auto‑HDR look with no filters or color grading, just natural overexposure from ambient sunlight.
+
+- **Environment**  
+  Location: A sunny resort pool area in the late afternoon. The background shows a multi‑story building with balconies, a closed white umbrella, and a few palm trees. The sky is clear with a soft haze, indicating the sun is low but still bright. The water in the pool reflects the sky and surrounding architecture.
+
+- **Lens & Technical**  
+  Short focal length (20–35 mm) wide‑angle lens. Everything is fully sharp — no bokeh, no depth‑of‑field blur. Slight motion blur from handheld instability freezes the subject’s movement. The image has a natural color palette with slight warmth from the sun’s angle.
+
+- **Composition Notes**  
+  The frame captures the woman from the waist up, with her left shoulder slightly in front of the pool’s edge. The background building and umbrella are partially visible but not fully centered. The shot is a “wide” capture that includes both subject and environment, giving context and depth.
+
+- **Post‑Processing**  
+  Auto‑HDR applied for dynamic range; no color grading or filters. Slight overexposure on the sky and water to enhance brightness. Final image retains a raw, documentary feel with all elements in focus.

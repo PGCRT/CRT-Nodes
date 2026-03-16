@@ -1,0 +1,26 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Appearance**  
+  - A young woman with long, wavy blonde hair that catches the light as she moves. She’s wearing a simple gold chain necklace with a small pendant and black high‑waist pants. Her posture is relaxed but confident, slightly turned toward the camera, as if she’re mid‑walk or mid‑conversation.  
+  - Slight motion blur on her face and upper body to convey movement; the blur is subtle, not excessive, giving a raw, handheld feel.  
+
+- **Lighting & Exposure**  
+  - Natural daylight from a high angle, slightly overexposed to keep the scene bright and airy. The exposure is uneven—the left side of her face is a bit brighter than the right, as if the camera’s auto‑HDR was turned off.  
+  - No color grading or filters; the image retains the true ambient tones of the location.  
+
+- **Lens & Technical Settings**  
+  - Wide‑angle lens (24–35 mm) with a short focal length to capture a broad view of the subject and environment.  
+  - Everything is in focus—from her face to the background—no portrait‑mode depth‑of‑field blur.  
+  - Slight tilt and off‑center framing; the composition is accidental, not intentional rule‑of‑thirds.  
+
+- **Environment**  
+  - Location: a seaside promenade with a calm ocean visible in the background, a row of low‑rise buildings on the left, and a blue‑tinted sky that suggests late afternoon.  
+  - Time of day: early evening, around 5 pm, when the sun is still high but starting to dip, creating warm, soft light.  
+  - Weather: lightly breezy, with a few scattered clouds; the wind has left a faint trail in her hair.  
+
+- **Capture Style**  
+  - Candid, unposed, spontaneous—she’s unaware of the camera at the moment the shutter clicks.  
+  - Imperfections are welcome: a slight tilt to the right, a partial crop that cuts off a bit of the background on the left, and a subtle motion blur that gives the image life.  
+
+- **Final Prompt**  
+  *“A young woman with long wavy blonde hair, wearing a gold chain necklace and black high‑waist pants, captured on a seaside promenade in late afternoon. The shot uses a wide‑angle lens at 30 mm, everything in focus with slight motion blur on the subject, natural overexposure, no filters or color grading. The framing is accidental—slightly tilted and off‑center—while the background remains fully sharp. The scene shows a calm ocean, low‑rise buildings, and a blue sky with scattered clouds, all bathed in warm early‑evening light.”*

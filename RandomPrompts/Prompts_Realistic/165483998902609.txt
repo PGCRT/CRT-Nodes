@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair standing in a sunlit park. She wears a soft pink crop top and light‑blue denim shorts, a simple gold necklace and a black wristwatch on her left wrist. Her left hand rests lightly on her hip, right arm relaxed by her side. Slight motion blur at the fingertips suggests natural movement.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — she is mid‑step, unaware of the camera. The frame is slightly tilted and off‑center, a partial crop that gives an informal, handheld feel. No rule‑of‑thirds intentionality; the composition is accidental, as if captured with a quick snap.
+
+- **Environment**  
+  Location: a grassy park with a large tree on the left, a small stream in the background. Time of day: late afternoon, golden hour. Weather: clear, mild breeze. The background is fully sharp — no bokeh, no depth‑of‑field blur.
+
+- **Lens & Technical**  
+  Short focal length (24 mm), wide‑angle lens. All elements in focus, from foreground to background. Slight overexposure on the face and upper body to capture the warm ambient light. No auto‑HDR or auto‑beauty mode — raw, unprocessed look. No filters, no color grading, no post‑processing aesthetic.
+
+- **Lighting & Exposure**  
+  Natural lighting from the sun’s low angle creates a soft glow on the subject’s face and a slight highlight on her shoulder. Slight overexposure on the upper body to keep the image bright but natural. No studio lighting, no professional composition, no editorial tone.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, partial crop cutting off a bit of the tree’s trunk on the left. The woman’s right hand is slightly blurred, indicating motion. A small imperfection in the denim shorts’ thread is visible, adding realism. The watch’s band shows a faint reflection.
+
+- **Final Prompt**  
+  “A young woman with long wavy brown hair, wearing a pink crop top and light‑blue denim shorts, stands mid‑step in a sunlit park at late afternoon. She wears a gold necklace and black wristwatch. The shot is candid, slightly tilted, off‑center, partial crop, handheld. All elements in focus, no bokeh. Short focal length 24 mm wide‑angle lens. Slight overexposure on the face. Raw, unprocessed, no filters.”

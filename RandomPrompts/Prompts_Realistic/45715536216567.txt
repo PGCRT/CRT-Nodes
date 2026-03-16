@@ -1,0 +1,36 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy dark hair, wearing a black strappy bodysuit and beige high‑waist trousers. She stands in a casual, unposed stance, slightly turned to the side, hands relaxed at her sides. Her face is turned toward the camera but she appears unaware of the lens—mid‑action, as if caught in a spontaneous moment.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action.  
+  Slight motion blur from handheld instability.  
+  No filters, no color grading, no post‑processing aesthetic.  
+  Slight overexposure on the upper torso to emphasize the raw feel of the shot.  
+  Wide‑angle lens (24–35 mm) for a natural, wide capture.
+
+- **Environment**  
+  Location: A sunlit alleyway in an urban loft, with a concrete wall and a wooden beam visible in the background.  
+  Time of day: Late afternoon, soft golden light from the west, creating gentle shadows.  
+  Weather: Light breeze, clear sky, ambient noise of distant city.
+
+- **Lens & Technical**  
+  Short focal length (35 mm), wide‑angle.  
+  No bokeh — background fully sharp, everything in focus.  
+  No portrait mode or subject isolation; the entire frame is crisp.  
+  Slight tilt and off‑center framing—no rule‑of‑thirds intentionality.  
+  Slight partial crop on the right side to give a casual, spontaneous feel.
+
+- **Lighting & Exposure**  
+  Zero studio lighting — natural daylight only.  
+  Slight overexposure on the upper torso to keep the image raw and unprocessed.  
+  Auto‑HDR off; no color grading or post‑processing.  
+
+- **Composition Notes**  
+  The composition is accidental: the subject’s left shoulder is slightly higher than the right, creating a subtle diagonal line.  
+  The background remains fully sharp, with the concrete wall and wooden beam providing context.  
+  The frame cuts off just above the subject’s left hip, giving a partial crop that enhances candidness.
+
+- **Final Prompt**  
+  “Candid, unposed photograph of a woman in a black strappy bodysuit and beige high‑waist trousers, standing in a sunlit urban alleyway at late afternoon. Capture with a 35 mm wide‑angle lens, slight motion blur and overexposure on the torso, natural daylight, no filters or color grading. The shot is slightly tilted and off‑center, partially cropped on the right, with a fully sharp background of concrete wall and wooden beam, all in focus.”

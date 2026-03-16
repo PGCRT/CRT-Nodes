@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark hair standing mid‑step beside a weathered wooden fence in a sunlit park. She wears a light‑washed denim jacket over a white crop‑top and high‑waist jeans, hands relaxed at her sides, a natural, unposed smile on her face. Her body is slightly tilted to the left, creating an off‑center, accidental framing that gives the shot a candid feel.
+
+- **Lighting & Exposure**  
+  Capture the scene with a wide‑angle lens (24–35 mm) at a low angle, using ambient daylight that’s just past mid‑afternoon. The light is warm and slightly overexposed on the subject’s face, leaving a soft halo of golden hue around her hair. No auto‑HDR or beauty filters—just raw, unprocessed exposure.
+
+- **Motion & Focus**  
+  Use a handheld shot with slight motion blur from natural instability; the background (green grass, trees, and a wooden fence) is fully sharp, no bokeh or depth‑of‑field blur. Everything in focus—from the subject’s jacket buttons to the texture of the fence—creates an immersive, documentary feel.
+
+- **Environment**  
+  The setting is a quiet, slightly overgrown park with tall trees casting dappled shade. The time of day is late afternoon, with the sun low enough to create a warm, golden glow and subtle lens flare on the subject’s hair. A few fallen leaves lie on the grass, adding texture.
+
+- **Lens & Technical**  
+  Short focal length (35 mm) for a wide‑angle view; no portrait‑mode isolation. The composition is intentionally “accidental”—no rule‑of‑thirds, just a spontaneous, candid framing that feels like a real‑life snapshot. Keep the depth of field wide so all elements—subject, fence, background—are crisp.
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, zero studio lighting. A simple, natural “auto‑beauty” off, with only minimal white‑balance adjustment if needed. The final image should look like a genuine, in‑moment photograph captured on a DSLR or mirrorless camera with a wide‑angle prime lens.
+
+**Prompt Summary**  
+> “A candid, handheld photo of a young woman in a denim jacket and jeans standing beside an old wooden fence in a sunlit park. The shot is taken with a 35 mm wide‑angle lens at late afternoon, capturing warm, slightly overexposed light on her face while keeping the background fully sharp. Slight motion blur from handheld shake adds realism, and the composition is intentionally off‑center and spontaneous, with no filters or post‑processing.”

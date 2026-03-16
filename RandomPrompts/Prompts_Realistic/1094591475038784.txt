@@ -1,0 +1,29 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A young woman with long, wind‑blown hair, wearing an oversized gray hoodie and loose denim joggers, is captured mid‑step on a busy city sidewalk. She’s holding a smartphone in her right hand, head tilted slightly downward as if checking a message, with a faint smile on her face. Her left foot is just about to lift off the pavement, creating a subtle motion blur at the toe.
+
+- **Pose & Composition**  
+  The shot is taken from a low, handheld angle with a wide‑angle lens (24‑35 mm). The framing is intentionally off‑center: the subject’s left side cuts close to the right edge of the frame, and the top of the frame is slightly tilted clockwise. The composition is spontaneous—no rule‑of‑thirds, just a casual, candid capture that feels like it was taken in the moment.
+
+- **Motion & Focus**  
+  Slight motion blur on the subject’s feet and the background traffic, indicating a natural freeze or slight instability of the camera. Everything remains fully sharp—no portrait‑mode depth‑of‑field blur; the background (a city street with yellow taxis, pedestrians, and brick buildings) is in focus.
+
+- **Lighting & Exposure**  
+  The scene is lit by bright mid‑afternoon sunlight that creates a soft overexposure on the subject’s back and a gentle lens flare near the top right corner. No auto‑beauty or filter processing—just raw, ungraded imagery with natural color tones.
+
+- **Environment**  
+  A bustling urban street in New York City during late afternoon. The time of day is around 4 pm, giving warm, golden light that casts long shadows. The weather is clear with a light breeze, as evidenced by the movement of the woman’s hair and the slight blur of passing traffic.
+
+- **Lens & Technical**  
+  - Focal length: 30 mm (wide‑angle)  
+  - Aperture: f/4 (handheld, shallow depth but full focus)  
+  - Shutter speed: 1/60 s (enough to capture motion blur)  
+  - ISO: 400 (for clean detail without noise)  
+  - No bokeh; background is fully sharp.
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, no auto‑beauty mode—just a straightforward, raw capture that retains the imperfections of a real‑life moment. The image has a slight overexposure on the subject’s back, giving it an energetic, spontaneous feel.
+
+- **Final Prompt**  
+  “A candid, wide‑angle shot of a young woman in a gray hoodie and denim joggers walking on a New York City sidewalk at mid‑afternoon, captured with a 30 mm lens at f/4 and 1/60 s shutter speed. The subject is mid‑step, holding a phone, with slight motion blur on her feet and a soft overexposure near the back. The frame is intentionally off‑center and slightly tilted, capturing a spontaneous, unposed moment. Background includes yellow taxis, pedestrians, and brick buildings, all in sharp focus. No filters or heavy post‑processing—just raw, natural lighting and a genuine city vibe.”

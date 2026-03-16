@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair standing by a large window, body turned slightly to the side, back to the camera, hands resting on hips. Her pose is candid and spontaneous—mid‑action, as if she just finished a dance move or is about to step outside. The framing is off‑center, with a slight tilt that gives a raw, handheld feel.
+
+- **Appearance & Detail**  
+  She’s nude, but the image keeps a natural, unprocessed look: no auto‑beauty filters, no color grading, just the raw tones of the camera’s sensor. Her skin shows subtle imperfections—tiny blemishes and natural texture—captured with a wide‑angle lens that keeps the background fully sharp.
+
+- **Lighting & Exposure**  
+  The scene is lit by natural daylight coming from the window; there’s a slight overexposure on the upper part of the frame, giving a warm, bright halo around her head and shoulders. The exposure is uneven, as if the camera’s meter was a bit off—this adds to the candid aesthetic.
+
+- **Environment**  
+  The location is an urban apartment balcony or terrace, with a city street visible through the window. Outside, a brick building with green‑tiled roof, a parked car, and a traffic light are in view. The time of day is late morning, with soft, diffused sunlight that creates gentle shadows on her back and hips.
+
+- **Lens & Technical**  
+  Use a short focal length (e.g., 24 mm) wide‑angle lens. Capture everything in focus—no bokeh, no depth‑of‑field blur. The background is fully sharp, from the street to the building façade. Shoot with handheld stability, letting slight motion blur convey movement.
+
+- **Composition Notes**  
+  No rule‑of‑thirds intentionality—frame the subject so that her head sits near the upper left corner, while her hips extend toward the lower right. The crop is partial; the bottom edge cuts off a bit of her legs, adding to the spontaneous feel. Keep the composition “accidental”—the camera was likely held at an angle and the shot was captured in a single go.
+
+- **Final Prompt**  
+  *“A candid, unposed photograph of a nude woman with long wavy brown hair standing by a large window on an urban balcony. She’s turned to the side, back to the camera, hands on hips, mid‑action. Natural daylight from the window creates a slight overexposure on her head. The scene outside shows a brick building with a green tile roof and a parked car. Shot with a 24 mm wide‑angle lens, everything in focus, background sharp, handheld motion blur. No filters, no color grading, raw, unprocessed look. Slight tilt and off‑center framing, partial crop, no rule‑of‑thirds.”*

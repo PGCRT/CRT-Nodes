@@ -1,0 +1,26 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair, wearing a light beige button‑up shirt left open at the front, sitting on a white sofa. Her right hand is gently touching her cheek, fingers slightly curled, while her left arm rests on her thigh. She looks directly at the camera with a soft, confident smile. A gold hoop earring adorns her left ear, and a thin gold ring sits on her right ring finger.
+
+- **Facial & Body Details**  
+  Emphasize natural skin texture, subtle pores, and a faint mole above her left breast. Capture the slight asymmetry of her breasts, with one side slightly higher than the other. Her nails are painted a pale pink, and a small crack in one nail adds realism.
+
+- **Lighting & Exposure**  
+  Use a wide‑angle lens (24–35 mm) at a short focal length. Shoot at a slightly overexposed setting to keep the ambient light warm and natural. No auto‑HDR or beauty filters—keep the look raw and unprocessed. Keep everything in focus; no bokeh or depth‑of‑field blur.
+
+- **Motion & Framing**  
+  Introduce slight motion blur from handheld instability, as if the camera was moving when the shot was taken. The framing is intentionally off‑center: the subject’s head is slightly above the center of the frame, and the left side of her body extends beyond the right edge, creating a partial crop. No rule‑of‑thirds—just spontaneous, candid composition.
+
+- **Background & Environment**  
+  The background shows a plain white wall on the left and a cluster of pink roses with green leaves on the right, slightly out of focus but still sharp. The time of day is late afternoon, giving a warm, golden hue to the scene. The weather is clear, with no wind, so the only motion comes from the subject’s subtle movement.
+
+- **Technical Settings**  
+  - Lens: 35 mm, wide‑angle, short focal length  
+  - Aperture: f/4 (wide opening)  
+  - Shutter speed: 1/60 s (to capture slight blur)  
+  - ISO: 400 (for natural grain)  
+  - Focus: everything in focus, no portrait‑mode isolation
+
+- **Final Prompt**  
+  “A candid, spontaneous photograph of a young woman with long wavy brown hair, wearing an open beige shirt, sitting on a white sofa. Her right hand touches her cheek, left arm rests on her thigh, and she smiles directly at the camera. Capture natural skin texture, subtle mole above breast, and a gold hoop earring. Slight motion blur from handheld shake, slight overexposure, wide‑angle 35 mm lens, everything in focus. Background of white wall and pink roses, late afternoon light. No filters, no auto‑HDR, raw look.”

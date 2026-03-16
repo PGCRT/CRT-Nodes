@@ -1,0 +1,34 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy blonde hair standing in a sunlit glass‑door entryway. She is wearing a delicate white lace bra and matching panties, her left hand gripping the door handle while her right hand rests near her hip. Her gaze is direct, slightly above eye level, with a soft, natural expression. Her fingernails are painted a bright cobalt blue, adding a subtle pop of color.
+
+- **Lighting & Exposure**  
+  Natural daylight from the glass door creates a slight overexposure on the left side of the frame; the exposure is uneven, giving a raw, unprocessed look. The lighting is warm, mid‑afternoon, with soft shadows and a gentle highlight on her face and chest. No auto‑HDR or beauty filters—just a straightforward, handheld capture.
+
+- **Camera & Lens Settings**  
+  - Lens: 24 mm wide‑angle, short focal length, handheld.  
+  - Focal depth: everything in focus—from her face to the door handle—to the plant in the corner; no bokeh, no subject isolation.  
+  - Shutter speed: 1/60 s (slight motion blur on the subject’s hand and the door handle).  
+  - Aperture: f/4.5 (wide opening for a bright, airy feel).  
+  - ISO: 400 (for natural contrast without excessive grain).
+
+- **Composition & Framing**  
+  - The shot is slightly tilted, off‑center, with no intentional rule‑of‑thirds; the door frame cuts across the left side of the image, and a green potted plant peeks into the right corner.  
+  - The crop is partial—her left shoulder is partially cut off by the door frame, adding spontaneity.  
+  - Background: a bright, slightly blurred outdoor view through the glass door; the outdoor scene is fully sharp, no portrait‑mode blur.
+
+- **Environment**  
+  Location: a modern home entryway with a large glass door and a white wooden frame. A small green plant sits on a stand to the right. The time of day is late afternoon, with warm sunlight streaming in from the left, creating soft highlights and gentle shadows. The weather is clear, with a light breeze that creates slight motion blur on the subject’s hair.
+
+- **Details & Imperfections**  
+  - Slight tilt of the camera gives a casual, candid feel.  
+  - The door handle is slightly out of alignment with the frame, adding to the spontaneous vibe.  
+  - Her blue nail polish is visible on the door handle and her right hand, a small detail that adds color contrast.  
+  - A faint reflection on the glass door shows an outdoor tree, adding depth.
+
+- **Post‑Processing**  
+  No filters or color grading—just raw, natural capture. Slight overexposure on the left side gives a warm, airy feel. The image is fully in focus from foreground to background, with no portrait‑mode depth of field blur.
+
+**Prompt Summary (structured)**  
+"Photograph a young woman with long wavy blonde hair in a white lace bra and panties, standing by a glass door in a sunlit entryway. Her left hand grips the door handle, her right hand near her hip, gaze direct. Natural daylight from the left creates slight overexposure; capture with 24 mm wide‑angle lens, f/4.5, 1/60 s shutter speed, ISO 400. Slight tilt and off‑center framing, partial crop at the left shoulder. Background through the glass door is fully sharp. A green plant peeks into the right corner. No filters—raw, candid, spontaneous."

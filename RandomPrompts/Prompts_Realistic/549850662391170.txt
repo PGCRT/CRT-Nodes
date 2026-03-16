@@ -1,0 +1,18 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman in a light‑pink bikini, mid‑pose while taking a selfie with a pink smartphone. Her left arm is raised, hand near her forehead, capturing the shot from a low angle that slightly tilts the frame. Her hair is long, brown, and loosely tied back, a few strands framing her face. She’s standing in a bright, minimalist room with white walls and a visible black trim at the ceiling corner. The lighting is natural daylight coming from a large window to the left, creating a soft overexposure on the upper part of the image while the lower part remains slightly underexposed.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject appears unaware that she’s being filmed, mid‑action with a slight shake in the handheld camera. The framing is off‑center and accidental: the top of the phone is cut off by the upper edge of the frame, and the bottom of the bikini tie hangs slightly below the lower border. No rule‑of‑thirds intentionality — just a natural, spontaneous composition.
+
+- **Imperfections & Aesthetic**  
+  Slight motion blur on the subject’s arm and phone, indicating a handheld shot. Auto‑HDR or auto‑beauty mode is off; the image retains a raw, unprocessed look. No filters, no color grading, no post‑processing aesthetic. The exposure is slightly uneven: the upper half is a bit overexposed, the lower half a little underexposed, depending on ambient light.
+
+- **Environment**  
+  Location: A modern, white‑walled studio with a large window on the left side. Time of day: late morning, soft natural light. Weather: clear, bright sky. The background is fully sharp — no bokeh, no depth‑of‑field blur. Everything in focus, from the subject’s skin to the wall trim.
+
+- **Lens & Technical**  
+  Short focal length (24 mm) wide‑angle lens. No bokeh, no subject isolation. All elements are in focus: the woman, her phone, the bikini tie, the white wall, and the black ceiling trim. The image has a raw, realistic feel with slight overexposure at the top and underexposure at the bottom, captured on a handheld camera with natural motion freeze or slight blur from instability.
+
+**Provide only the structured prompt.**

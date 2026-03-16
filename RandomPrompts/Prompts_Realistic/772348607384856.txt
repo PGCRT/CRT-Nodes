@@ -1,0 +1,26 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with deep, warm brown skin and long, wavy dark hair that falls past her shoulders, captured mid‑turn as she walks through a bustling city plaza. She wears a sheer black camisole with thin straps and a statement‑jewelry necklace featuring large clear crystals; matching crystal earrings dangle from her ears. Her face is slightly tilted, eyes focused forward, lips relaxed—no posed studio stare, just a natural, candid moment.
+
+- **Lighting & Exposure**  
+  Ambient daylight from a bright midday sun, slight overexposure on the high‑lights to give a raw, unprocessed feel. The exposure is uneven: the foreground is a bit brighter than the background, creating a subtle halo around her head and shoulders. No auto‑beauty or filter enhancement—just the camera’s native sensor response.
+
+- **Camera & Lens Settings**  
+  - Lens: 24 mm wide‑angle, short focal length, handheld.  
+  - Aperture: f/5.6 (mid‑range) for a fully sharp background with no bokeh.  
+  - Shutter speed: 1/125 s, producing a slight motion blur on the subject’s hair and the surrounding movement.  
+  - ISO: 400 – balanced for the ambient light.  
+  - Focus: everything in focus—subject, jewelry, background—all sharp, no portrait‑mode depth‑of‑field blur.
+
+- **Composition & Framing**  
+  Accidental, off‑center framing: the subject’s left side is slightly cut off by the frame edge, giving a casual, spontaneous feel. The shot is not rule‑of‑thirds aligned; the face sits near the upper‑left quadrant but is tilted a few degrees, as if she’re walking and turning. The background shows a modern glass‑faced building and a small fountain, with a few passersby blurred by the motion.
+
+- **Environment**  
+  Location: A sunlit city plaza in downtown Los Angeles, near the intersection of Main St. and 8th Ave. Time of day: early afternoon (14:30), with high‑angle sunlight casting soft shadows. Weather: clear, slightly humid, with a light breeze that ruffles her hair. The background includes a concrete pavement, a glass‑reflected tree, and a distant billboard; the entire scene is fully sharp.
+
+- **Post‑Processing**  
+  No filters, no color grading, no auto‑beauty mode—just raw, in‑camera capture with a slight overexposed highlight on the subject’s chest. The image retains natural imperfections: a tiny smudge on the necklace, a faint wrinkle in the camisole strap, and a slight tilt that gives it a genuine, candid feel.
+
+- **Final Prompt**  
+  “A young woman with deep brown skin and long wavy hair, wearing a sheer black camisole and crystal‑adorned necklace, captured mid‑turn in a sunlit city plaza. Shot on a 24 mm wide‑angle lens at f/5.6 and 1/125 s, with slight motion blur and a small overexposure on the high‑lights. The frame is off‑center and slightly tilted, everything fully sharp, no filters or auto‑beauty enhancement—raw, candid, spontaneous realism.”

@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A plus‑size woman with long, wavy brown hair walking confidently through a bustling outdoor fruit market. She’s wearing a black floral‑patterned bikini top and matching bottoms, carrying a clear plastic bag filled with red apples in her right hand. Her left arm is slightly bent, her head tilted to the side, and she’s smiling at the camera as if mid‑conversation.  
+
+- **Motion & Focus**  
+  Slight motion blur on the subject’s hands and the bag, indicating handheld instability. Everything remains fully sharp—no bokeh, no portrait‑mode isolation. The image has a raw, unprocessed look: no filters, no color grading, no post‑processing aesthetic. A tiny overexposure in the center of the frame gives it an ambient, natural feel.  
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm), short focal length. No rule‑of‑thirds intentionality—framing is accidental, slightly off‑center. The background is completely in focus, with no depth‑of‑field blur.  
+
+- **Environment**  
+  A busy, open‑air fruit stall market on a sunny afternoon. Wooden crates of apples, oranges, and bananas line both sides of the aisle. Bananas hang from a red awning overhead; a few other shoppers are visible in the background, one woman in a white tank top and denim shorts walking away, another man in a gray t-shirt and dark shorts near the right side. The scene is captured at mid‑day, with bright natural light creating slight overexposure on the subject’s face.  
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Imperfections encouraged: slight tilt, off‑center framing, partial crop. Zero studio lighting, zero professional composition, zero editorial tone. Natural motion freeze or slight blur from handheld instability.  
+
+- **Prompt Summary for Generation**  
+  “A plus‑size woman with long wavy brown hair walking through a fruit market, wearing a black floral bikini, carrying a bag of apples, captured with a wide‑angle lens at mid‑day sunlight. Slight motion blur on the hands, raw unprocessed look, everything in focus, accidental off‑center framing, background fully sharp, no filters or color grading.”

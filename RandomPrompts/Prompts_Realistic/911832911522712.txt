@@ -1,0 +1,31 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair, wearing a white button‑down shirt and a black leather moto jacket, standing on a city sidewalk. She is mid‑step, slightly turned toward the camera, with a natural, unposed smile. Her left hand rests on her hip, and she holds a small, dark tote bag in her right hand. The jacket’s zipper is partially open, revealing the shirt’s front buttons. A thin gold necklace with a small pendant rests around her neck.
+
+- **Facial Features & Accessories**  
+  She wears gold hoop earrings that catch the light. Her makeup is natural: subtle eyeshadow, defined brows, and a soft pink lip color. The lighting highlights the gentle curve of her nose and the slight dimple when she smiles. A faint motion blur around her hair suggests movement.
+
+- **Clothing Details**  
+  The leather jacket has a visible metal zipper on the left side, a small rectangular patch on the left shoulder, and a ribbed cuff at the wrist. The white shirt’s top button is undone, adding a casual touch. Her belt is black, with a silver buckle that sits at the waist.
+
+- **Jewelry & Accessories**  
+  A delicate gold chain necklace with a tiny heart pendant hangs at her collarbone. Gold hoop earrings drape slightly to one side, adding an elegant accent.
+
+- **Background & Environment**  
+  The scene is set on a bustling city street in downtown Manhattan during late afternoon. The background shows a brick building with a blue awning on the left, a parked silver sedan, and a tree with green leaves on the right. The street is lined with trees and storefronts; a few pedestrians are visible in the distance. The sky is overcast but bright, creating soft ambient light.
+
+- **Time of Day & Weather**  
+  Late afternoon (around 5:30 pm) with diffused natural light. Light haze from the city atmosphere gives a slight warm tone to the scene. The weather is mild and slightly humid, with a gentle breeze.
+
+- **Lens & Technical Settings**  
+  Use a wide‑angle lens (24 mm or 35 mm). Shoot in a raw format, no filters or color grading applied. Slight overexposure on the subject’s face to keep the background fully sharp. Handheld shot with slight tilt and off‑center framing; no rule‑of‑thirds intentionality. All elements—subject, background, foreground—are in focus. No bokeh or depth‑of‑field blur.
+
+- **Capture Style**  
+  Candid, spontaneous, “mid‑action” pose. Slight motion blur on the subject’s hair and jacket to convey movement. The composition feels accidental: a partial crop that cuts off the left side of the street, a slight tilt that gives a dynamic angle. No studio lighting; all illumination comes from natural daylight.
+
+- **Post‑Processing**  
+  Keep the image raw—no auto‑HDR or auto‑beauty mode. Slight overexposure on the subject to maintain a natural look. Preserve all details: texture of the leather, the sheen of the gold jewelry, the crispness of the brick wall.  
+
+**Prompt Summary**  
+> “A young woman with long wavy brown hair, wearing a white button‑down shirt and black leather moto jacket, stands on a Manhattan sidewalk in late afternoon. She holds a dark tote bag, wears gold hoop earrings and a delicate heart pendant necklace. The background features a brick building with a blue awning, a parked silver car, and a leafy tree. Shoot with a 35 mm wide‑angle lens, raw format, slight overexposure, handheld tilt, all elements in focus—no bokeh, no filters.”

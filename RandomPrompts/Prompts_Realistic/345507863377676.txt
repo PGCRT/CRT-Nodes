@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Appearance**  
+  A young woman with long, wavy hair that transitions from pastel pink at the roots to soft blue‑green at the tips. She’s wearing a shimmering gold‑beaded gown with an off‑shoulder cape; the fabric has subtle sequin details and a high‑slit that reveals a hint of skin. Her hands are clasped near her chest, slightly tilted, as if she’re mid‑gesture or adjusting her garment.
+
+- **Pose & Motion**  
+  Candid, unposed stance—she’s unaware of the camera, caught in a natural moment. Slight motion blur on the hands and hair to convey handheld shake. The frame is off‑center, with a partial crop that cuts off the left side of her shoulder, giving an accidental, spontaneous feel.
+
+- **Lighting & Exposure**  
+  Raw, auto‑HDR off. The exposure is slightly overexposed on the highlights, letting the gold threads gleam, while the background remains fully sharp—no bokeh. No color grading or post‑processing; just the natural ambient light of a late‑afternoon sun filtering through a stone archway.
+
+- **Environment**  
+  Location: An ancient stone arcade with a rough, weathered arch and a faint hint of moss on the stones. Time of day: late afternoon, soft golden hour. Weather: mild, slightly humid, with a light breeze that ruffles her hair.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm), wide‑angle lens. Everything in focus—no portrait mode or subject isolation. The background is fully sharp, no depth‑of‑field blur. Slight tilt and handheld instability produce a natural motion freeze.
+
+- **Composition Notes**  
+  No rule‑of‑thirds intentionality—the framing is accidental, with the subject’s left shoulder slightly cut off by the edge of the frame. The composition captures a candid moment as if the woman were mid‑action, adjusting her dress or clasping her hands in a natural, unposed gesture.
+
+- **Final Prompt**  
+  “A young woman with pastel pink‑to‑blue‑green wavy hair, wearing a gold‑beaded gown and off‑shoulder cape, captured candidly in a late‑afternoon stone arcade. Her hands are clasped near her chest, slight motion blur on the hands and hair, raw auto‑HDR off, slightly overexposed highlights, fully sharp background. Shot on a 24‑35 mm wide‑angle lens, handheld tilt with accidental off‑center framing, partial crop cutting the left shoulder. No bokeh, no post‑processing—just a natural, spontaneous, in‑the‑moment photograph.”

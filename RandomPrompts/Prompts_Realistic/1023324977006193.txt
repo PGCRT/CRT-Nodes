@@ -1,0 +1,34 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail and subtle face jewelry, wearing a maroon cross‑back crop top and black cargo pants, captured mid‑turn as she looks back over her shoulder. Her hair is slightly tousled, giving a natural, unposed feel. She’s seated on a beige couch, knees bent, one arm resting on the back of the couch, creating a casual, spontaneous stance.
+
+- **Cinematic Details**  
+  - Slight motion blur on the subject’s movement, as if the camera was handheld and moving.  
+  - Auto‑HDR or auto‑beauty mode off – raw, unprocessed look.  
+  - No filters, no color grading, no post‑processing aesthetic.  
+  - Slight overexposure in the highlights to keep ambient light warm.  
+
+- **Lens & Technical**  
+  - Wide‑angle lens (24‑35 mm) with a short focal length for a broad field of view.  
+  - Everything in focus – no bokeh, no depth‑of‑field blur; background fully sharp.  
+  - No portrait‑mode subject isolation; the entire scene is crisp.  
+
+- **Capture Style**  
+  - Candid, unposed, spontaneous – the subject is unaware of the camera or mid‑action.  
+  - Imperfections encouraged: slight tilt, off‑center framing, partial crop.  
+  - No rule‑of‑thirds intentionality – accidental framing that feels natural.  
+  - Natural motion freeze or slight blur from handheld instability.  
+
+- **Environment**  
+  - Specific real‑world location: a cozy living room with a wooden bookshelf filled with books, a white helmet, and a glass of water on a side table.  
+  - Time of day: late afternoon, warm natural light coming from the west, creating soft shadows.  
+  - Weather or ambient conditions: clear, mild, no wind – the environment is calm but not sterile.  
+
+- **Composition Notes**  
+  - The shot is slightly off‑center, with the subject’s left side cutting into the frame.  
+  - Background includes a partial view of a framed picture on the wall and a pair of sneakers on the floor, adding context.  
+  - The couch and bookshelf create a layered backdrop that keeps the scene rich and detailed.  
+
+- **Final Prompt**  
+  “A young woman with a high ponytail and subtle face jewelry, wearing a maroon cross‑back crop top and black cargo pants, captured mid‑turn as she looks back over her shoulder. She’s seated on a beige couch, knees bent, one arm resting on the back of the couch, creating a casual, spontaneous stance. Slight motion blur on the subject’s movement, auto‑HDR off, raw unprocessed look, slight overexposure in highlights. Wide‑angle lens (24‑35 mm), everything in focus – no bokeh, background fully sharp. Candid, unposed, accidental framing with slight tilt and off‑center crop. Late afternoon natural light from the west, clear mild weather. Setting: cozy living room with a wooden bookshelf full of books, a white helmet on a side table, a glass of water, a framed picture on the wall, and a pair of sneakers on the floor. All elements in focus, no portrait‑mode isolation.”

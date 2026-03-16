@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Appearance**  
+  A young woman with long, wavy brown hair that catches the light as she walks down a city street. She wears a black leather moto jacket over a crisp white button‑down shirt, accessorized with gold hoop earrings and a delicate layered necklace. Her face is slightly turned toward the camera, a subtle smile on her lips, and her eyes are focused on something off‑frame—capturing a candid moment.
+
+- **Pose & Motion**  
+  The subject is mid‑step, one foot forward, creating a slight motion blur at the edges that suggests movement. Her head is tilted slightly to the left, and the framing is off‑center, giving an accidental, spontaneous feel. The shot is taken with a handheld camera, so there’s a natural shake that softens the edges just enough to keep it realistic.
+
+- **Lighting & Exposure**  
+  Ambient daylight from a bright, overcast afternoon creates a soft, even illumination. The exposure is slightly overexposed on the highlights, giving a warm, golden tint that enhances the texture of the leather and the sheen of the hair. No auto‑HDR or beauty filters—just raw, unprocessed light.
+
+- **Environment**  
+  The background is a brick‑lined city street with a mix of storefronts and a tree in the distance. A red traffic light glows faintly in the far right corner, adding a small pop of color. The time of day is late morning, around 10:30 AM, when the sun is high but still diffused by clouds. The weather is mild and slightly humid, with a gentle breeze that ruffles the woman’s hair.
+
+- **Lens & Technical Settings**  
+  A wide‑angle lens (24 mm) is used to capture the full scene in a single frame. The focal length is short, so the background remains fully sharp—no bokeh or depth‑of‑field blur. Everything from foreground to background is in focus, giving a documentary‑style feel. The aperture is set to f/5.6 for a moderate depth of field that keeps the entire composition crisp.
+
+- **Composition & Framing**  
+  The shot is intentionally “accidental”: the subject is slightly off‑center, and the frame is tilted a few degrees to the left. The crop is partial—only a portion of the street is visible, which adds to the candid vibe. No rule‑of‑thirds is followed; the composition feels spontaneous and natural.
+
+- **Post‑Processing**  
+  No filters or color grading are applied. The image retains its raw, unprocessed look, with only minimal adjustments to exposure and contrast during capture. The final result is a realistic, documentary‑style photograph that feels like a genuine candid moment captured in a real city setting.

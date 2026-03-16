@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark hair and a large black bow perched on her forehead, wearing a black choker with a ring pendant, a black wrist cuff, and thigh‑high boots with white fur trim. She is lying on a plush white rug in a modern loft, leaning on her elbow with one hand touching her cheek, looking directly at the camera with a soft, contemplative expression. Her left leg is slightly bent, boot heel visible, and her right arm curls around her knee.  
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window behind her creates a warm, slightly overexposed highlight on her face and shoulder. The ambient light is diffused by a sheer curtain, giving a gentle gradient of cool purple‑pink tones in the background. Slight handheld shake gives a natural motion blur around the edges.  
+
+- **Environment**  
+  The setting is an industrial‑style loft with exposed concrete walls, a wooden bench along the left side, and a tall, narrow window that lets in bright daylight. A thin vertical neon strip runs along the right wall, adding a subtle glow. The time of day is late morning, around 10:30 AM, with the sun high but not directly overhead, casting soft shadows.  
+
+- **Lens & Technical**  
+  24‑mm wide‑angle lens (short focal length), f/4 aperture, 1/125 s shutter speed, ISO 400. Everything is in focus from foreground to background; no bokeh. The composition is accidental: the frame is slightly tilted, the subject is off‑center, and the crop is partial—no rule‑of‑thirds intentionality.  
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the woman appears unaware of the camera, mid‑pose. Slight tilt and partial crop give a raw, unprocessed look. No filters, no color grading, no post‑processing aesthetic.  
+
+- **Output Description**  
+  A hyper‑realistic image that captures the texture of the rug, the sheen on the boots, the subtle gloss of the choker, and the faint neon glow, with a natural depth of field that keeps the background fully sharp. The overall mood is intimate and casual, as if captured in a spontaneous moment during a coffee break.

@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework – “Tattooed Woman in Black Bikini Under a Stone Shower”**
+
+- **Subject & Pose**  
+  A fit woman with long, wavy brown hair and a small floral tattoo on her left upper arm stands beneath an outdoor stone shower. She wears a black triangle‑style bikini with thin straps; the top is tied at the side, and the bottom has a small bow at the hip. Her body is slightly turned to the right, her left arm raised above her head as if she’s reaching for the showerhead, her right arm bent at the elbow, holding the showerhead in place. Her face is tilted upward, eyes closed, capturing a moment of relaxed intimacy.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle, mid‑afternoon sun creates a soft, slightly overexposed glow on the subject’s skin and the water droplets. The exposure is uneven—bright highlights on the face and shoulders, subtle shadows in the cleft between the stones. No auto‑beauty or filter enhancement; raw, unprocessed look.
+
+- **Motion & Focus**  
+  Slight handheld shake produces a gentle motion blur on the water droplets and the woman’s hair, while the background remains fully sharp—no bokeh, no portrait‑mode isolation. The focus covers the entire frame: subject, showerhead, stone wall, and surrounding rocks.
+
+- **Lens & Technical**  
+  24 mm wide‑angle lens (short focal length). Aperture set to f/5.6 for moderate depth of field; everything from foreground to background is in focus. Slight tilt to the left to give an off‑center, accidental framing. No rule‑of‑thirds intentionality—framing is spontaneous and imperfect.
+
+- **Environment**  
+  The setting is a rustic outdoor stone shower located in a natural canyon or hillside. Large, rough gray stones form the wall behind the showerhead; a small patch of green foliage peeks from the top right corner. The time of day is late afternoon, with warm, golden light casting soft shadows. Ambient humidity is high, visible water droplets hang in the air.
+
+- **Composition & Details**  
+  The composition captures the woman’s full figure from head to toe, with her left foot slightly ahead of the right, giving a dynamic stance. Her right hip is slightly protruding, adding a natural curve. A small gold necklace adorns her neck, and a thin earring dangles from her left ear. The showerhead is metallic, with a brushed finish, and water streams down in a fine spray. The background stones show natural fissures and a faint white stain near the top left.
+
+- **Post‑Processing**  
+  No color grading or filters applied. Slight overexposure on the subject’s face, subtle underexposure on the lower body. Raw, candid aesthetic with zero studio lighting.
+
+**Prompt Summary (for AI image generator)**  
+> “A fit woman with long wavy brown hair and a floral tattoo on her left upper arm stands beneath an outdoor stone shower, wearing a black triangle bikini. Her left arm is raised holding the showerhead, right arm bent, body slightly turned right. Natural mid‑afternoon daylight creates soft overexposure on the face and subtle shadows. Slight handheld motion blur on the water droplets, background fully sharp. 24 mm wide‑angle lens, f/5.6 aperture, slight left tilt. Rough gray stone wall behind, small green foliage top right. Raw, candid, unposed, spontaneous framing; no filters or color grading.”

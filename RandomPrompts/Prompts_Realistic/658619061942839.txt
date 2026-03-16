@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair, wearing a white spaghetti‑strap crop top and high‑waisted white trousers, stands in a brightly lit storage room. She is turned slightly to her left, facing away from the camera but looking back over her shoulder with a warm, candid smile. Her right hand rests on her hip, left arm relaxed by her side. The pose captures a natural, unposed moment as if she’s mid‑conversation or just finished organizing.
+
+- **Motion & Focus**  
+  Slight motion blur at the edges from handheld instability; the subject’s face and upper body are in sharp focus while the background remains fully sharp—no bokeh. The image has a raw, auto‑HDR feel with a subtle overexposure that keeps the ambient daylight alive.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm), short focal length, no depth‑of‑field blur—all elements in focus. No rule‑of‑thirds intentionality—framing is accidental, slightly tilted and off‑center. The composition feels spontaneous, like a snapshot taken in a real setting.
+
+- **Environment**  
+  Location: A tidy apartment or office space filled with cardboard moving boxes, metal shelving units stocked with books and storage containers, and a window with blinds partially open. Time of day: late morning, soft natural light streaming through the window, creating gentle shadows and a slight highlight on the subject’s back. Weather: clear, mild, with a hint of warmth.
+
+- **Lighting & Color**  
+  Natural daylight from the window, slightly overexposed to keep brightness. Auto‑HDR off—no color grading or filters. The tones are muted but warm, with a neutral palette that emphasizes the white outfit and brown hair.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, partial crop that cuts off a bit of the shelf on the left, giving an informal feel. The woman’s hair has a slight motion blur, indicating she was moving when the photo was taken. Small imperfections: a faint smudge on her shoulder, a tiny shadow cast by the boxes behind her.
+
+- **Final Prompt**  
+  “A candid, wide‑angle shot of a young woman in a white crop top and high‑waisted trousers standing in a bright storage room filled with cardboard boxes and metal shelves. She looks back at the camera with a warm smile, captured mid‑motion with slight blur. The image is sharply focused from a short focal length lens, raw auto‑HDR, natural daylight, slightly overexposed, accidental framing, no bokeh—everything in focus. The scene includes a window with blinds, a metal shelving unit, and various storage containers, all fully sharp. The lighting is soft late‑morning sunlight, the color palette is muted warm tones, and the composition has a slight tilt and off‑center crop for a spontaneous, unposed feel.”

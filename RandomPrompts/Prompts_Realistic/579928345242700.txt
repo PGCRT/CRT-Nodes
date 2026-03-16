@@ -1,0 +1,13 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy blonde hair sitting on a bed in a bright, sunlit bedroom. She’s wearing a white ribbed crop top and high‑waisted light denim shorts, paired with black fish‑net stockings that catch the light. Her hands are clasped near her chest, fingers slightly curled, as if she’re about to adjust her shirt or hold a small object. Her face is turned toward the camera but not directly at it—slight off‑center tilt gives a candid feel. She’s mid‑expression: mouth slightly open, eyes wide, capturing a spontaneous moment.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. Slight motion blur on the hands and hair to suggest handheld shake. No filters, no color grading, no post‑processing aesthetic. A tiny overexposure in the window’s light gives a raw, natural look. The frame is accidental: a wide‑angle shot that doesn’t follow the rule of thirds; the edges cut off a bit of the bed and wall, adding to the informal feel.
+
+- **Environment**  
+  Specific real‑world location: a bright, slightly cluttered bedroom with a large window on the right side. The time of day is late morning, with warm, diffused sunlight streaming in, creating soft highlights on the subject’s skin and clothing. Ambient conditions include a gentle breeze that ruffles her hair, and a faint hint of a green plant visible through the window, adding depth.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm) wide‑angle lens. Everything is in focus—no bokeh or depth‑of‑field blur; background fully sharp. No portrait mode or subject isolation. The image has a slight overexposure on the window’s glass, giving an auto‑HDR feel without any post‑processing. Slight tilt and partial crop create a dynamic, spontaneous composition. All elements—the subject, bed, window, wall—are captured with natural lighting and handheld instability.

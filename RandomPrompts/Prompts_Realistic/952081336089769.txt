@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with light brown hair tied in a loose, casual bun, a few strands framing her face. She wears a short‑sleeved, khaki‑colored button‑down shirt with two chest pockets, a thin gold necklace, and large gold hoop earrings. Her head is slightly tilted to the right, eyes cast downward as if she’s reading or thinking, mouth relaxed. The shot captures her from the chest up, but the frame extends a bit below her waist, giving a “partial crop” feel.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the woman appears unaware of the camera, mid‑action. Slight tilt and off‑center framing give an accidental, handheld vibe. No rule‑of‑thirds intentionality; the composition is organic. The image has a raw, unprocessed look: no filters, no color grading, no post‑processing aesthetic. A hint of slight overexposure in the highlights to emphasize ambient light.
+
+- **Motion & Focus**  
+  Slight motion blur from handheld instability, but everything remains fully sharp — no bokeh, no depth‑of‑field blur. The background is completely in focus, preserving every detail.
+
+- **Environment**  
+  The setting is a sunlit urban alleyway in late afternoon. A beige brick wall and an old wooden door are visible behind her; a small patch of green grass and a concrete curb appear to the right. The time of day is around 5 pm, with warm, golden light casting soft shadows. Weather is clear, with a light breeze.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm) wide‑angle lens. No bokeh; background fully sharp. Auto‑HDR or auto‑beauty mode off — raw, unprocessed look. Wide‑angle gives a slight distortion that adds to the candid feel. The exposure is slightly high in the highlights, giving an ambient “overexposed” nuance.
+
+- **Prompt Summary**  
+  *“A young woman with light brown hair in a loose bun, wearing a khaki button‑down shirt, gold necklace, and hoop earrings, captured mid‑thought in a sunlit urban alleyway at late afternoon. The shot is candid, slightly tilted, off‑center, handheld, with slight motion blur but full sharpness across the frame. No filters or post‑processing; raw, natural look. Wide‑angle short focal length, auto‑HDR off, wide‑angle, everything in focus, background fully sharp.”*

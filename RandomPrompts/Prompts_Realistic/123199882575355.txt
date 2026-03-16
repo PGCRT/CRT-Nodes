@@ -1,0 +1,27 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair kneeling on a light‑wood floor in a simple, unadorned room. She is nude, her body slightly turned toward the camera, hands clasped over her chest with pink nail polish visible. Her gaze is direct, almost candid, as if she’s mid‑action and unaware of the lens. A small cross tattoo sits on her upper chest, catching the light.
+
+- **Lighting & Exposure**  
+  Natural daylight from a side window creates a soft, slightly overexposed highlight on her skin. No auto‑HDR or beauty filters—just raw, unprocessed tones. The exposure is a little warm, with a subtle haze that gives an ambient, spontaneous feel.
+
+- **Camera Settings**  
+  - Lens: 24 mm wide‑angle, short focal length, handheld.  
+  - Focal depth: everything in focus—from her knees to the back wall—no bokeh, no portrait‑mode isolation.  
+  - Shutter speed: 1/60 s, producing a faint motion blur on her hands and hair, indicating slight instability.  
+  - ISO: 400–600 for natural grain.
+
+- **Composition & Framing**  
+  The frame is intentionally off‑center; the subject’s left knee sits slightly below the center line. The shot captures a partial crop of the floor and a portion of the wall, giving a casual, candid vibe. No rule‑of‑thirds—just accidental, spontaneous framing.
+
+- **Environment**  
+  A plain, light‑colored wall with a subtle geometric pattern; a wooden baseboard runs along the bottom. The time of day is mid‑afternoon, with warm, diffused sunlight. The room is empty except for the subject, emphasizing raw candidness.
+
+- **Technical Details**  
+  - No filters or color grading; the image retains the natural color palette of the scene.  
+  - Slight tilt to the camera adds a human touch.  
+  - Background remains fully sharp—no depth‑of‑field blur.  
+
+**Prompt for Generation**  
+"Generate a realistic candid photo of a nude woman with long wavy brown hair kneeling on a light‑wood floor in a plain room. She should be mid‑action, hands clasped over her chest, a small cross tattoo visible on her upper chest. Capture the scene with a 24 mm wide‑angle lens, handheld, at 1/60 s shutter speed for slight motion blur, ISO 500, natural daylight from a side window creating soft overexposure. Keep everything in focus, no bokeh. Frame the shot off‑center with accidental, partial crop, slight tilt, and keep the background fully sharp. No filters or post‑processing—raw, unprocessed look."

@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, athletic woman with long, wavy blonde hair sits mid‑pose on a neatly made bed in a bright, modern bedroom. She wears a sheer black lace bra and matching high‑waist bikini bottoms tied at the side, with a delicate white lace sock on her right foot. Her left hand rests on her thigh, right hand on the bed’s edge, body slightly angled toward the camera, knees bent, hips relaxed.  
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window to the left creates a soft, warm glow; slight overexposure on the upper torso and face, subtle halo effect. No auto‑HDR or beauty filters—raw, unprocessed look. Slight handheld shake gives a natural motion blur around the edges.  
+
+- **Camera & Lens**  
+  35mm wide‑angle lens (short focal length), f/4.0 aperture, 1/60 s shutter speed, ISO 400. Everything in focus—background and foreground sharp, no bokeh.  
+
+- **Composition**  
+  Off‑center framing: the subject’s head is slightly above the center of the frame; the bed’s headboard occupies the upper left quadrant. The composition is accidental, not rule‑of‑thirds. Slight tilt to the right gives a candid feel.  
+
+- **Environment**  
+  Location: a bright, minimalist bedroom with a tufted cream headboard, white pillows, a small bedside table with a lamp, and a white rug. Time of day: late morning, ambient light from a large window. Weather: clear, no wind.  
+
+- **Details & Imperfections**  
+  Slight motion blur on the hands and feet, minor overexposure on the chest area, natural texture on the lace and skin. The image has zero studio lighting, zero professional composition, zero editorial tone—just a spontaneous, raw snapshot.  
+
+- **Post‑Processing**  
+  No filters or color grading; only basic auto‑beauty mode off. Slight contrast boost and vibrancy increase to enhance the natural tones.  
+
+**Prompt Summary**  
+> “A tall woman with long wavy blonde hair sits on a white bed in a bright modern bedroom, wearing a sheer black lace bra and high‑waist bikini bottoms with a white lace sock on her foot. Natural daylight from a large window creates a soft warm glow with slight overexposure on the torso. Shot on a 35mm wide‑angle lens at f/4.0, 1/60 s, ISO 400, everything in focus. Off‑center framing with accidental tilt, slight handheld motion blur, no filters—raw candid photography.”

@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman on her knees in a tiled bathroom, wearing a purple lace thong and matching bra. Her hair falls loosely over her shoulders, slightly messy. She is mid‑movement, leaning forward as if about to pick up a towel or adjust a product on the floor. Her feet are bare, toes curled naturally, with a faint motion blur at the heels indicating a handheld shot.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject appears unaware of the camera, caught in a natural moment. The frame is slightly tilted and off‑center, with a partial crop that cuts off the top of her back and the lower part of the tile floor. No rule‑of‑thirds intentionality; the composition feels accidental, like a quick snapshot.
+
+- **Imperfections & Raw Aesthetic**  
+  Slight motion blur at the feet and lower back, as if the camera was handheld and not fully stabilized. The exposure is mildly overexposed on the skin tones, giving a raw, unprocessed look. No filters, no color grading, no post‑processing aesthetic — just the natural light of the room.
+
+- **Environment**  
+  Specific real‑world location: a bright, airy bathroom with light blue tiles. Time of day: mid‑afternoon, with soft natural daylight coming from a window on the left side of the frame. Weather or ambient conditions: calm, no wind, the room is quiet and still except for the subject’s movement.
+
+- **Lens & Technical**  
+  Short focal length (20–35 mm) wide‑angle lens. No bokeh; background fully sharp — every part of the scene, from the tiles to the woman’s back, is in focus. No portrait mode or subject isolation. The image captures a wide view that includes the full length of the woman’s body, her feet, and a portion of the floor, with a slight tilt that gives it a candid feel.
+
+- **Prompt Summary**  
+  “A young woman on her knees in a tiled bathroom, wearing a purple lace thong and matching bra, captured with a short focal‑length wide‑angle lens. The shot is slightly tilted and off‑center, with mild motion blur at the feet, raw exposure, and no post‑processing. The background tiles and the woman’s back are fully sharp, conveying a candid, spontaneous moment in mid‑afternoon natural light.”

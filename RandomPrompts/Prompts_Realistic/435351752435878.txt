@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair standing in a sunlit meadow, wearing high‑waisted denim jeans and a bare‑shoulder top. She is mid‑step, one foot slightly ahead of the other, with a natural, unposed smile. Her left hand rests on her hip, and she’s turning her head to the right, catching a brief flash of sunlight on her face.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. Slight tilt and off‑center framing; partial crop that cuts off the top of her head and the lower part of her jeans. No rule‑of‑thirds intentionality — accidental framing. The shot is taken with a handheld camera, producing a subtle motion blur on the subject’s movement and a slight overexposure in the highlights.
+
+- **Environment**  
+  Specific real‑world location: a grassy field near a small wooden fence, with a line of tall reeds on the left and a distant tree row on the right. Time of day: late afternoon, around 5 pm, with warm, golden light coming from the west. Weather: clear, lightly breezy, with a few scattered clouds in the sky.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm), wide‑angle lens. No bokeh — background fully sharp, everything in focus. No portrait mode or subject isolation. Slight auto‑HDR or auto‑beauty mode off for a raw, unprocessed look. No filters, no color grading, no post‑processing aesthetic. The exposure is slightly high in the highlights but still natural.
+
+- **Composition Notes**  
+  The frame captures the woman from the mid‑thigh up to the top of her head, with the left side of her face slightly cut off. The background shows a patch of green grass and a faint line of trees, giving depth without any intentional rule‑of‑thirds placement. The shot has a natural, spontaneous feel, as if the subject was caught mid‑gesture.
+
+- **Prompt Summary**  
+  “A young woman with long wavy brown hair, wearing high‑waisted denim jeans and a bare‑shoulder top, stands in a sunlit meadow near a wooden fence at late afternoon. She is mid‑step, smiling spontaneously, captured with a handheld wide‑angle lens (24‑35 mm) that keeps the background fully sharp. The shot has slight motion blur and accidental framing, with a subtle overexposure from the warm golden light. No filters or post‑processing — raw, realistic candid photography.”

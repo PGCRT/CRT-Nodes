@@ -1,0 +1,32 @@
+**Realistic Candid Photography Prompt Framework – “Pink Sequin Beach Portrait”**
+
+- **Subject & Pose**  
+  A young woman with dark, wind‑blown hair standing on a tropical beach, wearing a pink sequined halter dress that catches the light. She is mid‑step, slightly turned toward the camera, with one hand on her hip and a subtle smile. Her face is partially obscured by moving hair, giving a candid, spontaneous feel.
+
+- **Cinematic Capture Style**  
+  * Slight motion blur on the hair and dress to suggest movement.  
+  * Auto‑HDR or auto‑beauty mode off – raw, unprocessed look.  
+  * No filters, no color grading, no post‑processing aesthetic.  
+  * Slight overexposure in the upper left corner to highlight the sunlight.  
+  * Wide‑angle lens (24‑35 mm) with a short focal length, giving a natural, handheld feel.
+
+- **Environment**  
+  * Location: A sandy beach at sunset, with the ocean on the left and palm trees on the right.  
+  * Time of day: Late afternoon, golden hour – warm, soft light from the left.  
+  * Weather: Light breeze, clear sky, a few scattered clouds.  
+  * Ambient details: A red umbrella in the background, a faint trail of footprints in the sand, a small wave breaking near the shore.
+
+- **Lens & Technical**  
+  * Short focal length (24‑35 mm), wide‑angle.  
+  * No bokeh – background fully sharp, everything in focus.  
+  * No portrait mode or subject isolation.  
+  * Slight tilt and off‑center framing; partial crop of the subject’s left shoulder.  
+  * Handheld instability produces a natural motion freeze or slight blur.
+
+- **Composition Notes**  
+  * No rule‑of‑thirds intentionality – accidental framing.  
+  * The camera is held at eye level, slightly above the subject’s eye, with the lens tilted upward to include the sky and ocean.  
+  * The composition captures a “mid‑action” moment: the woman’s hair is blowing to the left, her dress is slightly ruffled, and her smile is half‑hidden by the wind.
+
+- **Final Prompt**  
+  *“A young woman with dark, wind‑blown hair in a pink sequined halter dress stands on a tropical beach at sunset, mid‑step with one hand on her hip. The scene includes the ocean to the left and palm trees to the right, a red umbrella in the background, and a small wave near the shore. Capture with a 24‑35 mm wide‑angle lens, slight motion blur on the hair and dress, raw unprocessed look, no filters or auto‑HDR, slight overexposure in the upper left corner, handheld instability. Everything is fully sharp, no bokeh. Frame accidentally off‑center, slightly tilted, partial crop of the left shoulder. The image should feel candid, spontaneous, and natural, with a warm golden‑hour light and a light breeze.”*

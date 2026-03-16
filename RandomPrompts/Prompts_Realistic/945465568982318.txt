@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A young woman in her late twenties, with dark, voluminous hair tied into a messy high ponytail, is captured mid‑photo‑taking. She holds a black DSLR camera with both hands up to her face, lens pointed forward, fingers gripping the body of the camera as if she’s about to snap a picture. Her expression is focused but relaxed, slightly tilted to the left, giving an authentic candid feel.
+
+- **Clothing & Accessories**  
+  She wears an oversized, muted beige cotton tee that drapes loosely over her torso, paired with dark denim jeans that have intentional distressing at the front pockets. A black camera strap hangs from the camera, dangling between her thumb and index finger.
+
+- **Pose & Composition**  
+  The shot is a tight, off‑center crop that frames the woman from the mid‑thigh up to the top of her head. The framing is slightly tilted, not following the rule of thirds, as if taken with a handheld camera in motion. The background is fully sharp—no bokeh or depth‑of‑field blur—so the entire scene, including the street behind her, remains in focus.
+
+- **Lighting & Exposure**  
+  Natural daylight from a bright, overcast sky creates a soft, even illumination on the subject. There’s a slight overexposure on the upper part of the image, giving it a raw, unprocessed look. No auto‑HDR or beauty filters are applied; the exposure is determined by ambient light.
+
+- **Lens & Technical**  
+  A wide‑angle lens (24 mm) is used, producing a short focal length that captures a broad view of the scene. The lens is set to a wide aperture but keeps the background fully sharp—no portrait‑mode blur. The image has a slight motion blur on the subject’s hands and camera, indicating handheld instability at the moment of capture.
+
+- **Environment**  
+  The setting is a busy city street in an urban area, likely downtown New York. A yellow taxi is visible behind her to the left, slightly out of focus but still sharp. A concrete sidewalk stretches into the background, with a few pedestrians walking in the distance. The time of day is mid‑afternoon, around 3 pm, when the sun is high but not directly overhead, casting soft shadows.
+
+- **Mood & Style**  
+  The overall mood is spontaneous and candid, as if the woman is caught in the act of taking a photo while walking. The image has no editorial polish—just a natural, raw snapshot with slight imperfections that add to its authenticity.
+
+- **Prompt for Text‑to‑Image Generation**  
+  “A young woman in her late twenties with dark hair tied into a messy high ponytail, wearing an oversized beige cotton tee and distressed denim jeans, holding a black DSLR camera up to her face as if about to take a photo. The shot is a tight, off‑center crop from mid‑thigh to top of head, slightly tilted. Natural daylight from a bright overcast sky creates soft even illumination with a slight overexposure on the upper part. Use a wide‑angle 24 mm lens for short focal length, keeping background fully sharp with no bokeh. Capture candid, spontaneous mood on a busy city street in downtown New York at mid‑afternoon; a yellow taxi is visible behind her. Add slight motion blur to the hands and camera for handheld instability. No filters or post‑processing—raw, unprocessed look.”

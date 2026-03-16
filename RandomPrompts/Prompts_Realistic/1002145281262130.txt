@@ -1,0 +1,26 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman with long, dark, slightly frizzy hair standing on a concrete rooftop, body angled toward the camera but not perfectly centered. She’s nude, mid‑pose, head tilted upward as if she’s looking at the sky or a distant object. Her left arm hangs relaxed by her side, a small tattoo visible on her upper left arm. Her right shoulder is bare, with a faint “Chloe” tattoo near the collarbone. Her posture is natural, unposed, with a slight tilt that gives an accidental, candid feel.
+
+- **Lighting & Exposure**  
+  Warm, golden hour sunlight from the west casts soft highlights on her back and left side; slight overexposure in the sky creates a subtle halo effect. The exposure is slightly uneven—brighter at the top of the frame, giving a raw, unprocessed look. No auto‑beauty mode or filters applied.
+
+- **Camera Settings**  
+  - Lens: 24‑35 mm wide‑angle, short focal length.  
+  - Aperture: f/4–f/5.6 (wide, keeping background fully sharp).  
+  - Shutter speed: 1/60–1/100 s (handheld, slight motion blur on the subject’s hair and background).  
+  - ISO: 400–800 (depending on ambient light).  
+  - Focus: everything in focus—no portrait‑mode depth‑of‑field blur.  
+
+- **Composition & Framing**  
+  No rule‑of‑thirds intentionality; the frame is slightly off‑center, with the subject’s left side cutting close to the left edge and her right side near the right edge. The background includes a concrete building with a tall chimney, a small white van parked in the distance, and a metal railing along the rooftop. A few scattered clouds drift across the sky, catching the sunset.
+
+- **Environment**  
+  Location: an industrial‑style rooftop in an urban area; the building behind has a concrete façade, windows, and a tall smokestack. The time of day is late afternoon, just before dusk. Weather is clear with a bright sun low on the horizon, creating a warm, golden glow. A light wind ruffles her hair slightly.
+
+- **Details & Imperfections**  
+  Slight motion blur on the hair and background, giving a sense of movement. The image has no post‑processing color grading—just raw, natural tones. Small imperfections: a slight tilt of the camera, a partial crop that cuts off a bit of the rooftop railing at the bottom right. A faint “Chloe” tattoo is visible on her upper chest; a small earring glints in her left ear. Her skin shows natural texture and subtle shadows.
+
+- **Final Prompt**  
+  *“A nude woman with long dark hair stands on a concrete rooftop, angled slightly off‑center, head tilted upward as if gazing at the sky. Warm golden hour light from the west overexposes the sky a little, casting soft highlights on her back. Shot on a 24‑35 mm wide‑angle lens at f/5, 1/80 s shutter speed, ISO 600—everything in focus with slight handheld motion blur. The background shows an industrial building with a tall chimney and a white van parked nearby, a metal railing runs along the edge of the roof. The scene is captured at late afternoon, clear weather, a light wind ruffles her hair. No filters or color grading, raw, candid, spontaneous, no rule‑of‑thirds—just an accidental, natural composition.”*

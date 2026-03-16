@@ -1,0 +1,30 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, curvy woman with long, wavy dark hair that cascades over her left shoulder, standing in a modern, sunlit living room. She’s bare‑chested, wearing high‑waisted black trousers with side slits that reveal a hint of skin. Her hands hang loosely by her sides, slightly bent at the elbows, as if she just finished a gesture or is about to do a dance move. Her face is turned toward the camera with a soft, natural smile, eyes bright and relaxed.
+
+- **Lighting & Exposure**  
+  Warm mid‑afternoon sunlight streams from a large window on the left, creating a gentle overexposure on her chest and a subtle warm glow on her skin. The exposure is slightly uneven—the left side of her body is a little brighter than the right, giving a raw, unprocessed feel. No auto‑beauty or filter enhancement; just natural contrast and depth.
+
+- **Camera Settings**  
+  - Lens: 24 mm wide‑angle, short focal length, handheld.  
+  - Focal length: 24 mm (wide‑angle).  
+  - Aperture: f/3.5 (low f‑number for a shallow but still sharp depth).  
+  - Shutter speed: 1/60 s (slight motion blur from handheld instability).  
+  - ISO: 400 (for natural grain and dynamic range).  
+  - Focus: everything in frame is fully sharp—no portrait‑mode blur.  
+
+- **Composition & Framing**  
+  The shot is intentionally off‑center; the subject’s left side leans slightly to the right of the frame, creating a casual, candid feel. The framing is not rule‑of‑thirds‑based—she occupies roughly two‑thirds of the vertical space, with her head near the top third and her hips near the bottom third. A small portion of a wooden chair and a framed picture on the wall peek into the background, adding context without distracting.
+
+- **Environment**  
+  The setting is a bright, contemporary living room with light‑colored walls, a large window that lets in natural daylight, and a dark sofa in the far right corner. A small potted plant sits near the window, and a wooden chair is partially visible on the left. The time of day is late afternoon, around 4:30 pm, when the sun is high but slightly angled, casting soft shadows.
+
+- **Details & Imperfections**  
+  Slight motion blur on her torso and arms, indicating a handheld shot captured mid‑movement. Her skin has natural texture, with a few tiny blemishes and pores visible, enhancing realism. The trousers have a subtle crease at the side slit, and her hair shows a slight frizz at the ends. The background is fully sharp—no bokeh or depth‑of‑field blur—so every element from foreground to background remains in focus.
+
+- **Post‑Processing**  
+  No filters, no color grading, no auto‑beauty mode. Only raw, natural contrast and a hint of slight overexposure on the left side of the subject. The image retains a little ambient noise for authenticity.
+
+**Prompt Summary (for AI image generator)**  
+> “A tall woman with long wavy dark hair standing bare‑chested in a modern living room, wearing high‑waisted black trousers with side slits. She’s mid‑pose, hands slightly bent, smiling naturally. Warm mid‑afternoon sunlight streams from a left window, creating a soft overexposure on her chest. Shot on a 24 mm wide‑angle lens, handheld at f/3.5 and 1/60 s, ISO 400—everything in focus with slight motion blur. The composition is off‑center, capturing her from head to mid‑calf, with a partial view of a wooden chair on the left and a framed picture on the wall. The scene is fully sharp, no bokeh, raw, unprocessed look.”

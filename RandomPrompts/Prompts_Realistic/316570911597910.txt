@@ -1,0 +1,26 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A young woman with long, wavy dark hair, wearing a light‑denim jacket over a white crop‑top and black leggings speckled with colorful paint drips, is mid‑gesture in a modern kitchen. She holds a smartphone in her left hand and a small spoon in her right, as if she’s about to taste or mix something on a countertop. Her head is slightly tilted downward, eyes focused on the phone screen, giving a candid, “mid‑action” feel.
+
+- **Pose & Composition**  
+  Capture a spontaneous, unposed frame that feels accidental: slight tilt and off‑center framing, partial crop that cuts off a bit of the countertop on the right. No rule‑of‑thirds intentionality—just a natural handheld shot. The composition should include the subject’s upper body and a portion of the kitchen counter, with the stainless‑steel refrigerator on the left and wooden cabinets and a set of wooden utensils on the right.
+
+- **Lighting & Exposure**  
+  Use wide‑angle, short‑focal‑length lens (e.g., 24–35 mm) to keep the entire scene in focus—no bokeh, no depth‑of‑field blur. Shoot at a time of day that gives warm, natural daylight (late morning or early afternoon). Allow a slight overexposure or underexposure depending on ambient light; aim for a raw, unprocessed look with auto‑HDR or auto‑beauty mode turned off.
+
+- **Environment & Ambience**  
+  The setting is a bright, contemporary kitchen with light‑wood cabinets, a stainless‑steel refrigerator, a white countertop, and a sink visible on the right. A set of wooden spoons and a metal canister sit in a container, adding texture. The background should be fully sharp—everything in focus—from the subject to the far wall.
+
+- **Lens & Technical Settings**  
+  - Focal length: 24–35 mm (wide‑angle)  
+  - Aperture: f/4–f/5.6 (mid‑range for full focus)  
+  - Shutter speed: 1/60–1/125 s (to capture slight motion blur if desired)  
+  - ISO: 400–800 (for natural grain)  
+  - No portrait‑mode “subject isolation”—keep the background crisp.  
+
+- **Post‑Processing**  
+  Keep filters off, no color grading, no post‑processing aesthetic. Apply a subtle auto‑HDR or auto‑beauty mode off for a raw, candid feel. The final image should look like an authentic, in‑moment snapshot with slight handheld instability captured in the frame.
+
+- **Final Prompt Summary**  
+  “A young woman in a denim jacket and paint‑speckled leggings is mid‑gesture with a smartphone and spoon in a bright, contemporary kitchen; capture with a wide‑angle short‑focal‑length lens, full focus on subject and background, slight tilt and partial crop, natural daylight exposure, raw auto‑HDR, no filters—producing a realistic candid snapshot that feels spontaneous, unposed, and fully sharp.”

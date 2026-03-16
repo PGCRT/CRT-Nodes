@@ -1,0 +1,29 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, curvy woman with long, wavy brown hair and a warm, sun‑kissed complexion stands in a casual, off‑shoulder mesh dress that drapes loosely over her torso and hips. Her left hand rests on her hip, while her right hand hangs by her thigh, creating a relaxed, mid‑movement stance. She’s smiling softly, eyes slightly tilted toward the camera, as if caught in an unplanned, spontaneous moment.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle, late‑afternoon sun creates a gentle overexposure on the upper body, with a slight warm hue. The exposure is uneven—the top of the dress is a bit brighter than the lower part, giving a raw, unprocessed look. No auto‑HDR or beauty filters; just a straightforward, handheld capture.
+
+- **Camera & Lens Settings**  
+  - Lens: 24 mm wide‑angle, short focal length, handheld.  
+  - Aperture: f/5.6 (mid‑range) for moderate sharpness across the frame.  
+  - Shutter speed: 1/125 s, producing a faint motion blur on the subject’s hands and hair.  
+  - ISO: 400 – balanced for ambient light.  
+  - Focus: everything in focus—no portrait‑mode depth of field blur; background stays crisp.
+
+- **Composition & Framing**  
+  The shot is intentionally off‑center, with a slight tilt to the left, giving an accidental, candid feel. The frame cuts off the left side of her hip, leaving a partial crop that emphasizes spontaneity. No rule‑of‑thirds; the subject occupies roughly two‑thirds of the vertical space, with the background—a plain, textured beige wall—fully sharp.
+
+- **Environment**  
+  Location: A simple, unadorned interior space with a matte beige backdrop; a small window on the right side lets in warm, diffused light. Time of day: late afternoon, around 5 pm, when the sun is high but not directly overhead. Weather: clear, no wind, ambient temperature 22 °C.
+
+- **Details & Imperfections**  
+  Slight motion blur on the hands and hair, a tiny overexposed highlight on the chest area, and a minor tilt that gives the image a natural, unposed vibe. The dress’s mesh texture is visible, with subtle folds and a slight wrinkle at the waist. Her nails are painted a soft pink, adding a small detail of color contrast.
+
+- **Post‑Processing**  
+  No filters or color grading—just raw capture. A minimal crop is applied after the shot to tighten the composition slightly, but otherwise the image remains as captured.
+
+**Prompt Summary**  
+> “A tall woman in an off‑shoulder mesh dress stands casually against a beige wall, caught mid‑pose with a slight motion blur on her hands and hair. Natural late‑afternoon light creates a warm overexposure on the upper body. Shot on a 24 mm wide‑angle lens at f/5.6, 1/125 s, ISO 400, with everything in focus. The frame is intentionally off‑center and partially cropped, giving a candid, spontaneous feel. No filters—just raw, handheld realism.”

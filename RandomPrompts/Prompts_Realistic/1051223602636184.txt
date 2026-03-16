@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework – “Cocktail‑Hour Selfie in a Sunlit Bedroom”**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair, wearing a black deep‑V tank top, captured mid‑gesture as she touches her lip with her right hand. Her left wrist bears a simple black watch. She is slightly tilted to the left, off‑center in the frame, creating a casual, spontaneous feel.
+
+- **Motion & Focus**  
+  Slight motion blur on the subject’s hand and hair, indicating handheld instability. Everything in the frame – from her face to the background – is fully sharp; no portrait‑mode depth‑of‑field blur. No auto‑beauty or filter processing; raw, natural look with a hint of slight overexposure from ambient daylight.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24 mm) with a short focal length. No bokeh; background remains fully sharp. The shot is taken at eye level, with a wide‑angle “wide‑lens” perspective that captures a broad view of the room.
+
+- **Environment**  
+  Location: A bright, lived‑in bedroom with a wooden side table on the right, a small shelf holding jars and bottles, and a speaker on the table. A white rug is visible on the floor, and a window lets in natural daylight from the left. Time of day: late afternoon (around 4 pm), soft warm light with a slight haze. Weather: clear, no wind.
+
+- **Composition & Framing**  
+  No rule‑of‑thirds intentionality – the frame is accidental, slightly crooked. The subject occupies the central‑left portion of the image, with her head near the top third and her torso extending downwards. The right side of the frame shows the wooden table, a black speaker, a yellow jar, a red bottle, and a white cloth. A small black wristwatch is visible on her left wrist.
+
+- **Lighting**  
+  Natural daylight from the window creates a slight overexposure on the subject’s face and a warm tone across the scene. No studio lighting or color grading; the image retains an authentic, unprocessed look.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, partial crop that cuts off a bit of the left side of the room. The woman’s hair has a gentle wind‑blown effect, and her hand is mid‑touch to her lip, suggesting candid action. A faint motion blur around her hand adds realism.
+
+- **Prompt Summary**  
+  “A young woman with long wavy brown hair, wearing a black deep‑V tank top, captured mid‑gesture as she touches her lip with her right hand, left wrist watch visible. Slight motion blur on the hand and hair, everything fully sharp, wide‑angle 24 mm lens, natural daylight from a window, late afternoon, raw unprocessed look, accidental off‑center framing, slight tilt, partial crop, background includes wooden side table with speaker, shelf with jars, white rug, and a black watch on wrist. No filters, no auto‑beauty, no color grading.”

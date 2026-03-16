@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with shoulder‑length, wavy brown hair standing in a sunlit wheat field. She wears an off‑white, short‑sleeved scoop‑neck tee and high‑waisted denim jeans. Her hands rest lightly on her hips, head tilted slightly to the left, eyes focused toward the camera but not posing—mid‑gesture, natural candid feel.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Slight tilt and off‑center framing; partial crop that cuts off a bit of her left shoulder, giving an accidental, handheld vibe. No rule‑of‑thirds intentionality—everything is in focus, no portrait‑mode subject isolation.
+
+- **Motion & Exposure**  
+  Slight motion blur from handheld instability, natural freeze or soft blur. Slight overexposure on the face and chest to capture ambient warmth; no auto‑HDR or auto‑beauty mode—raw, unprocessed look. No filters, no color grading, no post‑processing aesthetic.
+
+- **Environment**  
+  Specific real‑world location: a golden wheat field at late afternoon. Time of day: early evening, warm sunlight casting long shadows. Weather: clear, light breeze, ambient conditions with a hint of dust in the air.
+
+- **Lens & Technical**  
+  Short focal length (24–35 mm), wide‑angle lens. No bokeh—background fully sharp, everything in focus. Wide‑angle captures the entire scene from head to toe, no depth‑of‑field blur. No portrait mode or subject isolation.
+
+- **Composition Notes**  
+  Frame the subject slightly above the center of the frame; keep the background’s horizon line low to emphasize the field. Capture the subject’s full body from head to mid‑thigh, with a small portion of her left hip cut off for candid feel. Keep the camera level but not perfectly centered—slight handheld wobble.
+
+- **Lighting**  
+  Natural sunlight from the west, creating warm highlights on the subject’s face and chest; slight overexposure on the upper body to keep the look raw. No studio lighting, no professional composition, no editorial tone.
+
+- **Final Prompt**  
+  “A young woman with shoulder‑length wavy brown hair, wearing an off‑white scoop‑neck tee and high‑waisted denim jeans, stands in a golden wheat field at late afternoon. She rests her hands on her hips, head tilted left, eyes focused toward the camera—mid‑gesture candid. Slight motion blur from handheld shake, slight overexposure on the face and chest. Wide‑angle 35 mm lens, everything in focus, no bokeh. Frame slightly off‑center with a partial crop of the left shoulder. Raw, unprocessed, natural lighting, no filters.”

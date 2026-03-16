@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wind‑blown brown hair, wearing a black tank top and light denim shorts, captured mid‑selfie in an urban alleyway. She’s smiling broadly, head tilted slightly to the right, left arm extended toward the camera, creating a natural “handheld” angle that’s off‑center and imperfectly framed.
+
+- **Motion & Focus**  
+  Slight motion blur on the subject’s hair and background, indicating a handheld shot taken at a low shutter speed. Everything—from her face to the brick wall—remains fully sharp; no bokeh or portrait‑mode softness. The image has a raw, unprocessed look: no filters, no color grading, no post‑processing aesthetic.
+
+- **Lighting & Exposure**  
+  Capture in natural daylight with a slight overexposure on the sky, giving a warm, golden‑hour feel. The wide‑angle lens (24–35 mm) keeps the entire scene in focus—no depth‑of‑field blur. The exposure is slightly uneven, with the sky brighter than the brick wall, preserving an authentic, unposed vibe.
+
+- **Environment**  
+  A gritty alleyway between a wooden shed and a red brick building. A blue trash bin, a black garbage bag, and a white plastic bag sit on the ground. A man in a gray shirt is visible in the background, working at a table. The scene includes exposed conduit, a red cloth hanging from the brick wall, and a few scattered debris pieces. The time of day is late afternoon, with the sun low, casting long shadows and a soft glow.
+
+- **Lens & Technical**  
+  Use a short focal length (24–35 mm) wide‑angle lens. Capture with a handheld camera, no tripod. All elements—subject, background, foreground—are in focus; no portrait mode or subject isolation. The composition is accidental: slight tilt, partial crop, no rule‑of‑thirds intentionality.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—an “in‑the‑moment” snapshot where the subject is unaware of the camera’s presence or mid‑action. Encourage imperfections: a slightly crooked frame, a tiny shake from the camera’s instability, and a natural, unpolished look.
+
+- **Post‑Processing**  
+  Auto‑HDR or auto‑beauty mode off—raw, unprocessed look. No filters, no color grading, no post‑processing aesthetic. Keep the image as close to the original capture as possible, preserving the slight overexposure or underexposure depending on ambient light.
+
+- **Final Prompt**  
+  “A young woman with long wind‑blown brown hair, wearing a black tank top and light denim shorts, captured mid‑selfie in an urban alleyway. She’s smiling broadly, head tilted slightly to the right, left arm extended toward the camera, creating a natural ‘handheld’ angle that’s off‑center and imperfectly framed. Slight motion blur on the subject’s hair and background, indicating a low shutter speed. Everything—from her face to the brick wall—remains fully sharp; no bokeh or portrait‑mode softness. Capture in natural daylight with a slight overexposure on the sky, giving a warm golden‑hour feel. The wide‑angle lens (24–35 mm) keeps the entire scene in focus—no depth‑of‑field blur. The background includes a blue trash bin, a black garbage bag, a white plastic bag, a man in a gray shirt at a table, exposed conduit, and a red cloth hanging from a red brick wall. Time of day is late afternoon, casting long shadows. Use a short focal length wide‑angle lens, handheld, all elements in focus. Candid, unposed, spontaneous—subject unaware or mid‑action. Encourage imperfections: slight tilt, partial crop, no rule‑of‑thirds intentionality. Auto‑HDR off—raw, unprocessed look. No filters, no color grading, no post‑processing aesthetic.”

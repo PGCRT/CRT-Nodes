@@ -1,0 +1,33 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair lying on a rough, moss‑covered cave floor. She is wearing a sheer, white lace bodysuit that clings to her curves, with delicate floral patterns. Her left arm is bent, hand behind her head, while her right arm rests on the ground for support. Her face is turned slightly toward the camera, eyes half‑closed, giving a lazy, confident vibe.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle window in the cave creates a soft, diffused illumination with a slight overexposure on the subject’s chest and shoulder area. The background remains fully sharp—no bokeh or depth‑of‑field blur. The exposure is slightly uneven, as if captured by a handheld camera in ambient light.
+
+- **Camera & Lens Settings**  
+  - Lens: 24‑35 mm wide‑angle, short focal length.  
+  - Focal plane: everything in focus—subject and background.  
+  - Aperture: f/4–f/5.6 (wide but not too broad).  
+  - Shutter speed: 1/60–1/100 s (slight motion blur from handheld instability).  
+  - ISO: 400–800 (depending on ambient light).  
+
+- **Composition & Framing**  
+  - Candid, unposed, spontaneous—subject appears unaware or mid‑action.  
+  - Slight tilt and off‑center framing; the composition is accidental, not rule‑of‑thirds.  
+  - The frame cuts off the left side of her torso and the right side of the cave entrance, giving a partial crop effect.  
+
+- **Environment**  
+  - Location: A limestone cave with a natural archway; the floor is uneven and covered in moss and small stones.  
+  - Time of day: Late afternoon, when the sun is low but still high enough to cast soft light into the cave.  
+  - Weather: Clear, dry, no wind—ambient conditions are calm but the camera’s handheld shake adds a subtle motion blur.  
+
+- **Technical Details**  
+  - No filters, no color grading, no post‑processing aesthetic—raw, unprocessed look.  
+  - Auto‑HDR or auto‑beauty mode off.  
+  - Slight overexposure on the subject’s chest, underexposed slightly in the cave’s deeper recesses.  
+  - Wide lens captures the entire scene with full sharpness; no bokeh.  
+
+- **Final Prompt**  
+  “A young woman in a sheer white lace bodysuit lying on a moss‑covered cave floor, natural daylight from above creating soft overexposure on her chest, captured on a 24‑35 mm wide‑angle lens with everything in focus and slight handheld blur. The scene is candid and unposed, framed slightly off‑center with accidental tilt, the cave’s archway visible behind her, late afternoon light, dry weather, no filters or post‑processing.”

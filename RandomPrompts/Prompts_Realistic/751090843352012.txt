@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, blonde hair tied in a loose braid, lying on a white bed with a deep‑red pillow behind her. She’s wearing a black lace bra and matching panties, hands gently clasped over her chest. Her eyes are closed, face relaxed, as if mid‑dream or just waking. The shot should feel spontaneous—she’s unaware of the camera, slightly tilted, off‑center framing.
+
+- **Lighting & Exposure**  
+  Natural daylight from a side window, mid‑morning. Slight overexposure on the highlights to give a warm, soft glow; no auto‑beauty or filter processing. The exposure should be a little bright at the top, creating a subtle halo around her head and shoulders.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm), short focal length. Everything in focus—no bokeh, no depth‑of‑field blur. Slight handheld shake to add realism. Capture the entire body from head to toe, with a partial crop that cuts off a bit of the pillow on the left side.
+
+- **Environment**  
+  A bright, airy bedroom. The bed has crisp white sheets; a single red pillow is positioned behind her head. A small window lets in warm sunlight, creating soft shadows and a slight glare on her skin. The time of day is early‑morning, around 10 AM, with the sun high but not too direct.
+
+- **Composition & Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Imperfections encouraged: slight tilt, off‑center framing, partial crop. No rule‑of‑thirds intentionality—accidental framing. Zero studio lighting, zero professional composition, zero editorial tone. Natural motion freeze or slight blur from handheld instability.
+
+- **Post‑Processing**  
+  Auto‑HDR or auto‑beauty mode off — raw, unprocessed look. No filters, no color grading, no post‑processing aesthetic. Keep the image natural, with a hint of warmth and a faint overexposed halo.
+
+**Prompt Summary**  
+“Candid photo of a woman in black lace lingerie lying on a white bed with a red pillow, captured with a wide‑angle lens at mid‑morning daylight. Slight overexposure, handheld shake, off‑center framing, raw unprocessed look.”

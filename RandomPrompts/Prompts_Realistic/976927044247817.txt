@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail, wearing a glossy black one‑piece bodysuit with a front zipper, fishnet thigh‑highs, and large hoop earrings. She’s mid‑step, left foot slightly ahead, body angled toward the camera but not perfectly centered; her head is turned to the side as if she’s just noticed the photographer. Her expression is natural, unposed, with a subtle smile and a hint of curiosity.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. Slight tilt and off‑center framing; partial crop that cuts off a bit of the background on the right side. No rule‑of‑thirds intentionality — accidental framing. Slight motion blur on the legs and feet to suggest movement, but the background remains fully sharp.
+
+- **Environment**  
+  Location: A sunlit beach or sandy promenade with a bright pink and yellow star‑shaped mural in the background. The ground is scattered with fallen pink petals and a few small white flowers. Time of day: late afternoon, warm golden light from the west, creating soft shadows and a slight overexposure on the subject’s face. Weather: clear, breezy, with a gentle wind that ruffles her hair.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm), wide‑angle lens. No bokeh — everything in focus from foreground to background. Slight overexposure or slight underexposure depending on ambient light; no auto‑HDR or auto‑beauty mode, raw, unprocessed look. No filters, no color grading, no post‑processing aesthetic. Handheld shot with natural instability producing a subtle motion blur on the subject’s lower body.
+
+- **Composition Notes**  
+  The composition is intentionally imperfect: the left side of the frame is slightly cut off, the right side shows a partial view of the mural. The background is fully sharp, no portrait‑mode depth‑of‑field blur. The lighting comes from the side, creating highlights on the glossy fabric and subtle shadows in the crevices of the bodysuit.
+
+- **Final Prompt**  
+  “A young woman with a high ponytail, wearing a glossy black one‑piece bodysuit with a front zipper, fishnet thigh‑highs, and large hoop earrings, mid‑step on a sandy beach with a pink and yellow star mural behind her. Candid, unposed, accidental framing with slight tilt and off‑center crop. Slight motion blur on the legs, fully sharp background. Late afternoon golden light, scattered pink petals, handheld shot on a 24‑35 mm wide‑angle lens. Raw, unprocessed, no filters.”

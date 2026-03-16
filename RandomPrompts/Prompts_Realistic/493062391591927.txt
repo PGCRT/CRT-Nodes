@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark brown hair standing in a narrow hallway. She wears an oversized white cotton T‑shirt that hangs low on her torso and blue denim jeans. Her hands are relaxed at her sides, slightly bent at the elbows, as if she’s about to grab something from a shelf or just finished a conversation. Her face is turned toward the camera but not directly aimed — a slight, natural tilt that gives the shot a candid feel.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject appears unaware of the camera or mid‑action. The frame is off‑center and slightly tilted, with a partial crop that cuts off a bit of the hallway on both sides. No rule‑of‑thirds intentionality; the composition feels accidental, like a quick snapshot taken with a handheld camera.
+
+- **Imperfections & Raw Aesthetic**  
+  Slight motion blur from a shaky hand, a tiny overexposed highlight on the ceiling light, and a faint auto‑HDR tone that keeps the image raw and unprocessed. No filters, no color grading, no post‑processing aesthetic — just natural lighting and a wide‑angle lens capture.
+
+- **Environment**  
+  The setting is a narrow residential hallway with beige walls and a single recessed ceiling light at the far end. A framed painting hangs on the right wall, a small pink cup sits on a white side table to the left, and a purple object (maybe a bottle or a bottle‑cap) is visible near the corner. The time of day is mid‑afternoon; the ambient light is warm and slightly diffused, creating soft shadows and a gentle glow on the subject’s face.
+
+- **Lens & Technical**  
+  Short focal length (≈20 mm) wide‑angle lens, no bokeh, no depth‑of‑field blur — everything from foreground to background is fully sharp. The shot uses a wide‑angle “wide‑lens” capture that keeps the entire hallway in focus, with a slight natural tilt and a handheld instability that adds a subtle motion blur. No portrait‑mode subject isolation; the background remains crisp.
+
+- **Prompt Summary**  
+  *“A young woman with long dark hair, wearing an oversized white T‑shirt and blue jeans, stands candidly in a narrow beige hallway. The scene includes a framed painting on the right wall and a pink cup on a white side table to the left. Mid‑afternoon ambient light creates soft shadows and a slight overexposure on the ceiling light. Capture with a 20 mm wide‑angle lens, handheld, slightly tilted, off‑center framing, raw auto‑HDR tone, no filters — everything in focus, slight motion blur from shaky hand.”*

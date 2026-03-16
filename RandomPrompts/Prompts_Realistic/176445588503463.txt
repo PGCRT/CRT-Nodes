@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with wet, slightly frizzy hair standing in a bright, sunlit bathroom. She’s wearing a white lace bra that catches the light, her body angled toward the camera but not perfectly centered—mid‑turn, as if she just finished a shower. Her face is partially turned, showing a soft smile and a hint of neck, with a delicate gold necklace hanging low on her chest. The shot captures a natural “in‑motion” feel: a subtle motion blur around the edges that suggests a handheld, spontaneous capture.
+
+- **Lighting & Exposure**  
+  Natural daylight from a window on the left, creating a slight overexposure on the upper torso and a warm, ambient glow. No auto‑HDR or beauty filters—just raw, unprocessed tones. The exposure is slightly uneven, with the background a bit brighter than the foreground, giving an authentic, candid vibe.
+
+- **Environment**  
+  Location: A modern bathroom with a white tile wall, a sink on the right, and a window that lets in bright morning light. A bottle of shampoo sits on the counter, a small reflection visible in the mirror. The time of day is early afternoon, when the sun is high but still warm, casting soft shadows. Weather: clear, breezy, with a faint hint of humidity that’s visible in the subject’s hair.
+
+- **Lens & Technical**  
+  Use a short focal length (e.g., 24‑35 mm) wide‑angle lens. Everything is fully sharp—no bokeh or depth‑of‑field blur. The background is in focus, but the framing is accidental: a slight tilt and partial crop that gives an off‑center, spontaneous feel. No rule‑of‑thirds intentionality; the composition feels natural and unposed.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Slight tilt, off‑center framing, partial crop. No studio lighting, no professional composition, no editorial tone. Natural motion freeze or slight blur from handheld instability.
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, zero post‑processing aesthetic. Keep it raw and authentic.
+
+**Prompt Summary**  
+“Candid photo of a woman in a white lace bra, wet hair, gold necklace, standing in a bright bathroom with a sink and mirror. Natural daylight from a window, slight overexposure, wide‑angle lens, fully sharp background, accidental framing, handheld blur.”

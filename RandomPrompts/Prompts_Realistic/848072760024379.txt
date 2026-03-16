@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair, wearing a red‑and‑white bikini, captured mid‑selfie on a sandy beach. She’s slightly tilted to the left, her face turned toward the camera with a natural, unposed expression, one arm extended as if holding a phone. The shot is a close‑mid‑range, handheld selfie‑style frame that cuts off the lower legs and part of the background, giving an accidental, off‑center composition.
+
+- **Lighting & Exposure**  
+  Ambient daylight from a low‑angle sunrise or sunset; slight overexposure on the upper half of the frame, with a warm golden hue. No auto‑HDR or beauty filters—raw, unprocessed look. The exposure is uneven, with the sky slightly brighter than the sand, creating a subtle halo around the subject’s head.
+
+- **Motion & Focus**  
+  Slight motion blur on the subject’s arm and background, indicating handheld instability. Everything—from her face to the distant waves—is fully sharp, no portrait‑mode depth of field blur. The focus is broad, capturing every detail in the foreground and background.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm) with a short focal length, producing a wide, immersive view. No bokeh; the background—ocean, rocks, and a cloudy sky—is fully sharp. The lens is set to a slightly wide‑open aperture for a natural feel.
+
+- **Environment**  
+  A real‑world beach setting at dawn or dusk, with gentle waves crashing against rocks in the distance. The sand shows footprints and small debris; a few scattered palm fronds are visible on the far right. The sky is a mix of dark clouds and a hint of sunrise, adding contrast.
+
+- **Capture Style**  
+  Candid, spontaneous—subject unaware or mid‑action. Slight tilt and partial crop give an informal, documentary feel. No rule‑of‑thirds intentionality; the framing is accidental, as if the photographer was in a hurry. Zero studio lighting, zero professional composition, zero editorial tone.
+
+- **Post‑Processing**  
+  No filters or color grading—just raw, natural tones. A slight auto‑beauty mode off, preserving imperfections such as minor blemishes and natural skin texture. The image retains a natural, unpolished vibe with a hint of warmth from the ambient light.
+
+**Prompt Summary**  
+> “A candid, wide‑angle selfie of a woman in a red‑and‑white bikini on a sandy beach at sunrise, captured with a short focal length lens. The shot has slight motion blur and a small overexposure, all in focus, no filters—raw, natural, handheld style.”

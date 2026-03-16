@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman in a bright pink‑yellow bikini, captured from a low‑angle rear view, mid‑step on a sunlit beach. Her back is slightly turned toward the camera, knees bent, hands resting lightly on her hips. The shot should feel spontaneous—she’s unaware of the lens, caught in a natural, unposed moment.
+
+- **Motion & Focus**  
+  Slight motion blur at the edges to convey handheld instability, but everything remains fully sharp—no portrait‑mode depth of field. Capture a wide‑angle, short‑focal‑length shot (≈24 mm) that keeps the background crisp from foreground to horizon.
+
+- **Lighting & Exposure**  
+  Raw, auto‑HDR off. Use natural midday sunlight with a slight overexposure on the skin and a warm, golden tint. No color grading or filters—just the raw, unprocessed look of a candid snapshot.
+
+- **Environment**  
+  Location: a rocky beach with scattered volcanic stones, palm fronds swaying in the background, and a faint horizon line of ocean. Time of day: early afternoon, high‑sun, bright but not harsh. Weather: clear, breezy, with a light wind that creates subtle motion on the subject’s hair and clothing.
+
+- **Lens & Technical**  
+  Wide‑angle, short focal length (≈24 mm), no bokeh, background fully in focus. Use a handheld camera with a slight tilt to keep the framing accidental—no rule‑of‑thirds intentionality. The composition should feel spontaneous, with a partial crop that cuts off the top of the horizon and a slight off‑center placement of the subject’s center of mass.
+
+- **Capturing Style**  
+  Candid, unposed, spontaneous—an “in‑the‑moment” snapshot. The subject is mid‑action, slightly blurred at the edges but still crisp overall. No studio lighting, no professional composition, no editorial tone—just a natural, raw photograph that feels like it was taken by a friend with a DSLR or mirrorless camera.
+
+- **Final Prompt**  
+  “A woman in a pink‑yellow bikini captured from a low rear angle on a sunny beach, mid‑step with hands on hips, slight motion blur at the edges but fully sharp background, raw auto‑HDR off, wide‑angle short focal length 24 mm, natural midday sunlight with slight overexposure, rocky foreground and palm fronds in background, early afternoon, clear breezy weather, handheld spontaneous candid shot, accidental framing with partial crop and slight tilt.”

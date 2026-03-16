@@ -1,0 +1,28 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark brown hair, wearing a white floral bikini, leaning casually on a brown leather couch. Her left hand supports her head, fingers curled gently, while her right arm rests on the couch’s armrest. She is mid‑pose, slightly tilted, as if caught in an unplanned moment.  
+
+- **Facial Expression & Gaze**  
+  Eyes cast downward, lips slightly parted, a soft, contemplative expression. Slight motion blur around the hands and face to suggest natural movement.  
+
+- **Lighting & Exposure**  
+  Natural daylight from a window on the left, creating a warm, slightly overexposed highlight on her shoulder. No auto‑beauty or filter enhancement—raw, unprocessed look.  
+
+- **Camera Settings**  
+  Wide‑angle lens (24–35 mm), short focal length, handheld. Everything in focus—from foreground to background—no bokeh. Slight instability in the frame gives a candid feel.  
+
+- **Environment & Background**  
+  A bright living room with beige walls, a small potted plant on a side table, and a gallery wall of framed photos behind the couch. The time of day is late morning, soft sunlight filtering through a window, creating gentle shadows.  
+
+- **Composition Notes**  
+  Off‑center framing; the subject’s left side is slightly cut off by the frame edge. No rule‑of‑thirds intentionality—just spontaneous, natural composition.  
+
+- **Technical Details**  
+  - Focal length: 35 mm  
+  - Aperture: f/4 (wide, shallow depth but fully sharp background)  
+  - Shutter speed: 1/60 s (slight motion blur)  
+  - ISO: 400 (natural contrast)  
+
+- **Final Prompt**  
+  “A young woman with long dark brown hair in a white floral bikini leans casually on a brown leather couch, left hand supporting her head, right arm resting on the armrest. Her eyes look downward, lips slightly parted, captured mid‑motion with slight blur. Natural daylight from a left‑side window creates warm overexposure on her shoulder. The background shows a beige wall, a potted plant on a side table, and a gallery of framed photos. Shot on a 35 mm wide‑angle lens, handheld, everything in focus, no bokeh. The frame is off‑center, slightly tilted, capturing an unplanned candid moment in late morning light.”

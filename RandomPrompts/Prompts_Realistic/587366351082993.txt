@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair, wearing a black lace bikini, standing mid‑step in a lush tropical jungle. Her face is turned toward the camera with a natural, unposed smile, eyes slightly closed as if she’s catching her breath after a run. Her left hand hangs loosely by her side, right arm bent at the elbow, creating a casual, spontaneous posture.
+
+- **Motion & Focus**  
+  Slight motion blur on the lower part of her body, indicating handheld shake and mid‑movement. Everything in the frame—from her skin to the foliage—is fully sharp, no portrait‑mode depth‑of‑field blur. No auto‑HDR or beauty filters; raw, unprocessed look with a hint of natural overexposure from the bright waterfall behind her.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm), short focal length. No bokeh—background foliage and waterfall are all in focus. Slight tilt to the camera, off‑center framing, no rule‑of‑thirds intentionality. The composition feels accidental, like a candid snapshot taken in the moment.
+
+- **Environment**  
+  Location: A verdant jungle trail with a tall, cascading waterfall in the background. Time of day: late morning, soft diffused sunlight filtering through the canopy, creating dappled light and subtle shadows on her skin. Weather: mild, humid, with a few leaves slightly blurred by the wind.
+
+- **Lighting & Color**  
+  Natural daylight, no studio lighting. Slight overexposure on the waterfall, giving a bright, airy feel. Colors are natural—greens of the foliage, white of the waterfall, black of the bikini—with a subtle warm tone. No color grading or post‑processing.
+
+- **Details & Imperfections**  
+  The image has a slight tilt and partial crop; the left side of her body is cut off by the frame edge. Her fingers are slightly curled, not perfectly posed. The background foliage includes palm leaves and broad-leafed plants, with the waterfall’s spray visible behind her. The overall vibe is spontaneous, raw, and realistic—like a genuine candid photo captured in the wild.

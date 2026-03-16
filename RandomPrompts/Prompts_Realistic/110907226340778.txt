@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with deep brown, slightly frizzy hair, wearing a white halter‑top, lying on a neatly made bed and holding a plain white mug with both hands. Her fingers are painted pink; she wears a gold ring on her left hand. She looks directly at the camera with a soft, natural smile.  
+
+- **Lighting & Exposure**  
+  Slight overexposure from ambient daylight, no auto‑HDR or auto‑beauty filters. The exposure is a little bright in the center but retains a raw, unprocessed look.  
+
+- **Lens & Technical Settings**  
+  Wide‑angle lens (24 mm), short focal length, handheld shot with slight motion blur and minor tilt. Everything in focus – no bokeh or depth‑of‑field blur; background is fully sharp.  
+
+- **Composition & Framing**  
+  Candid, unposed, spontaneous framing: the shot is slightly off‑center, a partial crop that gives an accidental, natural feel. No rule‑of‑thirds intentionality. The composition captures her mid‑action as she holds the mug, with a hint of the bed’s white sheets and a neutral wall behind her.  
+
+- **Environment**  
+  Location: a bright, airy bedroom in a modern apartment. Time of day: late morning, natural sunlight coming from the west, creating soft shadows. Weather: clear, mild, with a slight haze that adds a warm tone to the image.  
+
+- **Details & Imperfections**  
+  Slight motion blur from handheld instability, minor tilt, and a partial crop that keeps the scene feeling spontaneous. The image has zero studio lighting, zero professional composition, and zero editorial tone – it looks like a genuine, everyday snapshot.  
+
+- **Post‑Processing**  
+  No filters, no color grading, no post‑processing aesthetic – just raw, natural colors and an auto‑beauty mode off.  
+
+**Prompt Summary**  
+> “A young woman with deep brown hair, wearing a white halter‑top, lying on a bed, holding a white mug with both hands, looking at the camera with a soft smile. Slight motion blur and minor tilt from handheld shooting, wide‑angle 24 mm lens, everything in focus. The shot is candid, off‑center, partially cropped, no rule‑of‑thirds. Ambient daylight from late morning, clear weather, bright bedroom. Raw, unprocessed look, no filters.”

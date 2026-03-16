@@ -1,0 +1,28 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, flowing brown hair, wearing a sheer white lace dress that drapes loosely over her body. She is mid‑step, one foot slightly ahead of the other, with her left hand gently gripping the side of her dress. Her head is tilted slightly to the right, eyes focused forward, capturing a candid, unposed moment.
+
+- **Motion & Focus**  
+  Slight motion blur on the hair and dress to convey movement, while the background remains fully sharp—no bokeh or depth‑of‑field blur. The image uses a wide‑angle lens (24 mm) with a short focal length, ensuring everything in the frame is in focus.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle source (mid‑afternoon), producing a soft overexposure on the upper left of the frame that gives a warm, golden hue. No auto‑HDR or auto‑beauty mode—raw, unprocessed look. The exposure is slightly uneven, with the top of the subject a bit brighter than the lower portion.
+
+- **Composition & Framing**  
+  Candid, spontaneous framing: the shot is off‑center and slightly tilted, with a partial crop that cuts off the left side of her hair. No rule‑of‑thirds intentionality—just a natural, handheld composition. The background is a blurred meadow with scattered wildflowers, a small wooden fence on the right, and a faint path leading into the distance.
+
+- **Environment**  
+  Location: A sunlit meadow at a rural farmhouse, near a small creek. Time of day: late afternoon (around 4 pm). Weather: clear, light breeze, ambient temperature 23 °C. The scene is slightly overcast but with a bright patch of sunlight hitting the subject’s left shoulder.
+
+- **Lens & Technical**  
+  Short focal length (24 mm), wide‑angle, no bokeh. All elements—subject, background, foreground—are in focus. No portrait‑mode isolation; the depth of field is uniform. Slight handheld shake is present, giving a natural, imperfect feel.
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, zero post‑processing aesthetic. The image retains its raw, unprocessed look, with only minimal adjustments to exposure and contrast.
+
+---
+
+**Prompt Summary (for a text‑to‑image model)**  
+
+> “A candid, wide‑angle shot of a young woman in a sheer white lace dress mid‑step on a sunlit meadow at late afternoon. Her hair flows to the left, slightly blurred, while the background—a blurred meadow with wildflowers and a small wooden fence—remains fully sharp. The frame is off‑center and slightly tilted, capturing a natural, spontaneous moment. Lighting comes from high‑angle mid‑afternoon sun, creating a soft overexposure on the upper left. Use a 24 mm lens, short focal length, no bokeh, everything in focus. No filters or heavy post‑processing—raw, unprocessed look.”

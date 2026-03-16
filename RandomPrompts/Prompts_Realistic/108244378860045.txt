@@ -1,0 +1,37 @@
+**Realistic Candid Photography Prompt Framework – “Summer Evening on the Balcony”**
+
+- **Subject & Pose**  
+  A young woman with long, sun‑kissed blonde hair, wearing a light, breezy summer dress and black lace thigh‑highs, standing mid‑turn on a wooden balcony. Her left leg is slightly bent, her right foot planted firm, and her hands rest lightly on the railing as she looks toward the camera with a soft, contemplative expression.  
+
+- **Lighting & Exposure**  
+  Warm, golden hour light from the west—slight overexposure on the face and upper body, subtle underexposure on the lower legs—to create a natural, raw look. No auto‑beauty or filter enhancement; the image retains slight handheld jitter and a faint motion blur around the edges.  
+
+- **Camera & Lens Settings**  
+  - Lens: 24‑mm wide‑angle, short focal length (wide‑angle “wide‑body” mode).  
+  - Aperture: f/5.6 (mid‑range) for full sharpness across the frame.  
+  - Shutter speed: 1/125 s to freeze the motion while allowing a hint of blur.  
+  - ISO: 400–600 for clean detail without noise.  
+
+- **Composition & Framing**  
+  - No rule‑of‑thirds intentionality; the frame is slightly off‑center, with the subject’s head near the upper left quadrant and her feet extending toward the lower right.  
+  - The balcony railing cuts across the bottom of the image, giving a casual, spontaneous feel.  
+  - Background: a clear, uncluttered city skyline in the distance; no bokeh—everything is fully sharp.  
+
+- **Environment**  
+  - Location: A wooden balcony on a mid‑rise apartment building, facing a wide street and a distant river.  
+  - Time of day: Late afternoon (golden hour), with the sun low to the west, casting long, warm shadows.  
+  - Weather: Light breeze, clear sky, no clouds.  
+
+- **Technical Details**  
+  - Capture style: Candid, unposed, spontaneous—subject unaware or mid‑action.  
+  - Imperfections encouraged: Slight tilt of the camera, partial crop at the edges, natural motion freeze or slight blur from handheld instability.  
+  - No rule‑of‑thirds intentionality — accidental framing.  
+  - Zero studio lighting, zero professional composition, zero editorial tone.  
+
+- **Post‑Processing**  
+  - Auto‑HDR off—raw, unprocessed look.  
+  - Slight overexposure on the subject’s upper body; underexposure on the lower legs to emphasize depth.  
+  - No color grading or filters; only natural contrast and a subtle vignette from the wide lens.  
+
+- **Final Prompt Summary**  
+  “A young woman in a light summer dress and black lace thigh‑highs stands mid‑turn on a wooden balcony, her hands lightly gripping the railing as she looks toward the camera. Golden hour light bathes her in warm tones, slightly overexposed on her face and underexposed at her legs. Shot on a 24‑mm wide‑angle lens at f/5.6 and 1/125 s, the image captures a candid, spontaneous moment with slight handheld blur and off‑center framing. The background shows a clear city skyline, everything in focus, no bokeh. The scene is raw, unprocessed, and fully sharp, preserving the natural imperfections of a real‑life capture.”

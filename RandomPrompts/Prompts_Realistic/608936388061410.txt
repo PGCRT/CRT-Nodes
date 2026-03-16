@@ -1,0 +1,23 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A young woman in a rustic tavern, mid‑gesture as she draws a short sword from her belt. Her hair is tied back in a loose ponytail, a few strands escaping to frame her face. She wears a worn leather vest over a green tunic, with a brown sash and a small cross pendant hanging at her chest. Her left hand grips the hilt of a curved dagger, while her right hand holds a wooden staff; both hands are slightly blurred from motion.
+
+- **Pose & Composition**  
+  The shot is taken with a wide‑angle lens (24 mm), capturing a broad view of the scene. The framing is intentionally off‑center: the woman’s left side leans slightly to the right, creating a casual, spontaneous feel. The camera is handheld, producing a subtle shake and a tiny overexposure that gives the image an authentic, raw look.
+
+- **Lighting & Exposure**  
+  Ambient lighting comes from a cluster of candle flames on a wooden table to the left and a lantern hanging from the stone ceiling on the right. The light is warm, slightly yellow‑tinted, with a mild overexposure that brightens the central figure while keeping the background fully sharp. No post‑processing filters or color grading are applied; the exposure is natural, as if captured by an amateur photographer in a real setting.
+
+- **Environment**  
+  The location is a stone‑walled tavern, with rough limestone pillars and a wooden beam ceiling. A small table with a candle and a mug sits to the left, while a crate and a hanging lantern are visible on the right. In the background, a man in a grey shirt is partially visible, holding a spear, adding depth to the scene. The time of day is late afternoon, as indicated by the warm, slightly dim lighting.
+
+- **Lens & Technical**  
+  - Focal length: 24 mm (wide‑angle)  
+  - Aperture: f/5.6 (mid‑range)  
+  - Shutter speed: 1/125 s (producing slight motion blur)  
+  - ISO: 400 (for natural grain)  
+  Everything is in focus; no depth‑of‑field blur or portrait mode isolation. The background remains sharp, and the entire frame feels like a genuine, unposed candid snapshot.
+
+- **Final Prompt**  
+  “A young woman in a rustic tavern, mid‑gesture as she draws a short sword from her belt, hair tied back in a loose ponytail with stray strands framing her face, wearing a worn leather vest over a green tunic, brown sash, and a small cross pendant. Her left hand grips a curved dagger, right hand holds a wooden staff. Shot with a 24 mm wide‑angle lens, handheld shake, slight motion blur, warm candle lighting from the left and lantern from the right, late afternoon ambient light. The scene includes a stone‑walled tavern with rough limestone pillars, a wooden beam ceiling, a small table with a candle and mug on the left, a crate and hanging lantern on the right, and a partially visible man in a grey shirt holding a spear in the background. Capture candid, unposed, spontaneous — subject unaware or mid‑action, slight tilt, off‑center framing, partial crop, no rule‑of‑thirds intentionality, zero studio lighting, zero professional composition, zero editorial tone. Natural motion freeze or slight blur from handheld instability. Wide lens, short focal length, everything in focus, no bokeh, no depth‑of‑field blur — background fully sharp. No portrait mode, no subject isolation.”

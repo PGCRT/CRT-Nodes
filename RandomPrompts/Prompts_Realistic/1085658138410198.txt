@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A curvy woman with shoulder‑length dark hair tipped in pastel pink and yellow, wearing a shimmering blue triangle bikini, standing at a dimly lit bar. Her left hand rests on her hip, right arm bent, body angled slightly toward the camera, eyes focused forward with a subtle smirk. Slight motion blur on the hands and torso to convey candid movement.
+
+- **Lighting & Exposure**  
+  Warm ambient lighting from overhead pendant lamps; slight overexposure on the upper body to keep the scene raw. No auto‑beauty or filter processing—just natural contrast. The background is fully sharp, no bokeh, no depth‑of‑field blur.
+
+- **Environment**  
+  A modern bar with a wooden countertop, tiled backsplash, and a neon “ORY” sign in pink. Behind the counter, an array of liquor bottles and glassware line a shelf; two pink heart neon lights hang on the wall. A black leather stool sits to the right. The time of day is late afternoon, with soft natural light mixing with indoor illumination.
+
+- **Lens & Technical**  
+  24‑mm wide‑angle lens, short focal length. Everything in focus—no portrait mode. Slight tilt and off‑center framing; partial crop that cuts off a portion of the left shoulder, giving an accidental, spontaneous feel. No rule‑of‑thirds intentionality.
+
+- **Composition Notes**  
+  Capture a candid, unposed moment as if the subject is unaware of the camera. Embrace imperfections: slight hand tilt, uneven horizon line, and a handheld shake that adds realism. Keep the background fully sharp, no selective focus.
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, zero editorial tone. Use auto‑HDR only for exposure balance. Maintain a raw, unprocessed look with natural contrast and slight overexposure on the subject’s upper body.
+
+**Prompt Summary**  
+> “A curvy woman in a blue triangle bikini stands at a dimly lit bar, hand on hip, slightly angled toward the camera. Warm overhead lights illuminate her, with a neon ‘ORY’ sign and pink heart lights in the background. The scene is captured on a 24‑mm wide‑angle lens, fully sharp, with slight motion blur and accidental framing. Raw, unprocessed, no filters—just a candid, spontaneous snapshot.”

@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, straight brown hair, wearing a ribbed beige tank top and dark denim jeans, captured mid‑selfie. She holds a silver iPhone in her right hand, angled slightly to the left, with a black beaded bracelet on her wrist. Her face is turned toward the camera, a bright, natural smile, eyes bright, teeth visible. The shot should feel spontaneous—she’s not posing for the camera but rather in the act of taking a photo.
+
+- **Motion & Focus**  
+  Slight motion blur at the edges to suggest handheld shake; the subject’s face and phone are in sharp focus, while the background remains fully sharp with no bokeh. Use a wide‑angle lens (24–35 mm) to keep everything in frame—no depth‑of‑field blur, just crisp detail from foreground to background.
+
+- **Lighting & Exposure**  
+  Natural daylight coming from a large window behind the subject; the light is slightly overexposed on the face, giving a warm, bright feel. No auto‑HDR or beauty filters—raw, unprocessed look. The exposure should be a little high, letting the ambient light carry a slight halo.
+
+- **Framing & Composition**  
+  Capture in a candid, unposed manner: the frame is slightly tilted, off‑center, and partially cropped on the right side. No rule‑of‑thirds intentionality—just accidental framing that gives a natural, spontaneous vibe. The background should be a bright, airy living room with a large window, a beige sofa, a white side table, and a glimpse of greenery outside the window.
+
+- **Environment**  
+  Location: a modern, light‑filled living room in a suburban house. Time of day: late morning, around 10–11 am, when the sun is high but not too direct. Weather: clear, sunny, with a soft breeze. The scene should feel lived‑in and real—no studio lighting, no professional composition.
+
+- **Lens & Technical**  
+  Short focal length (24–35 mm), wide‑angle, handheld. No bokeh, no portrait mode. Everything in focus from the subject’s face to the background details. Use a standard white balance (daylight) and keep “auto‑beauty mode” off for a raw look.
+
+- **Post‑Processing**  
+  No filters, no color grading, no post‑processing aesthetic—just a straight capture with slight overexposure or underexposure depending on ambient light. Keep the image naturalistic, with subtle imperfections (slight tilt, partial crop) that enhance the candid feel.
+
+**Prompt Summary**  
+“Candid selfie of a smiling woman in a beige tank top and denim jeans, holding an iPhone, captured with a wide‑angle lens in a bright, airy living room. Slight motion blur and overexposure for a raw, natural look; everything in focus from subject to background. The frame is slightly tilted and off‑center, partially cropped, capturing the spontaneous moment of a selfie in late morning daylight.”

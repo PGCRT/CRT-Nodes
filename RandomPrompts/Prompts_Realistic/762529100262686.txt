@@ -1,0 +1,28 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with wet, slightly frizzy hair standing on a neatly made bed in a bright, airy bedroom. Her body is bare, with natural contours and a subtle sheen from the moisture on her skin. She’s mid‑step, one foot planted, the other slightly lifted, as if she just finished a dance or a stretch. Her arms hang loosely at her sides, palms open, with a natural, unposed candor.
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window on the left, creating a soft overexposure on the upper body and a slight underexposure on the lower body. The light is warm, mid‑afternoon, with a gentle haze that gives an auto‑HDR feel but without any post‑processing filters. The exposure is uneven—roughly 1.2 stops brighter at the top, 0.8 stops darker at the bottom—to keep the look raw and spontaneous.
+
+- **Camera Settings**  
+  - Lens: 24mm wide‑angle, short focal length, handheld.  
+  - Focal depth: everything in focus—from face to toes—no bokeh, no portrait‑mode isolation.  
+  - Shutter speed: 1/60 s, giving a slight motion blur on the limbs and a tiny shake from the camera’s instability.  
+  - ISO: 400, for a natural grain that adds texture.
+
+- **Composition & Framing**  
+  The shot is off‑center, with the subject’s left side slightly cut off by the frame edge. No rule‑of‑thirds intentionality—just a casual, accidental framing that captures the full figure and the bed’s white linens. The background shows a bright window, a small radiator, and a bedside lamp; all are fully sharp.
+
+- **Environment**  
+  A modern bedroom with light beige walls, a large window letting in warm daylight, a white bed with crisp sheets, and a simple bedside lamp. The time of day is late afternoon, around 4:30 pm, when the sun is still high but starting to tilt. The weather outside is clear, with a faint hint of clouds, adding a subtle ambient glow.
+
+- **Details & Imperfections**  
+  Slight tilt in the camera angle, a tiny wobble that gives a natural motion blur around the edges. The subject’s hair has a few stray strands that catch the light, and her skin shows a natural sheen from a light mist or water. The bed’s sheets are slightly rumpled, adding realism. The lamp’s shade is visible but not in focus—still sharp because of the wide‑angle lens.
+
+- **Post‑Processing**  
+  No filters, no color grading, no auto‑beauty mode. Only raw, unprocessed imagery with a slight overexposure on the upper body and a subtle underexposure on the lower body. The image retains its natural grain and minor imperfections for an authentic, candid feel.
+
+- **Final Prompt**  
+  “A young woman standing on a white bed in a bright bedroom, captured with a 24mm wide‑angle lens at 1/60 s shutter speed, ISO 400, natural daylight from a large window creating a slight overexposure on the upper body and underexposure on the lower body. The shot is handheld, slightly tilted, with everything in focus—no bokeh—spontaneous candid composition. The scene includes a crisp white sheet, a bedside lamp, and a bright window; the time of day is late afternoon. Rendered in raw, unprocessed realism with natural grain and minor motion blur.”

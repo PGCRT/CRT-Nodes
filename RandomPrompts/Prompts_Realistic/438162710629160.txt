@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman with long, wavy dark hair and black-rimmed glasses stands confidently on a city street at night. She wears a sleek, black leather‑style mini dress with thin straps and a high slit on the left side, revealing a hint of her thigh. Her hands rest on her hips, one hand slightly higher than the other, giving a casual, spontaneous feel. A gold bracelet adorns her right wrist, and a ring is visible on her left hand.
+
+- **Lighting & Exposure**  
+  Slight overexposure from ambient street lights; the exposure is a little bright in the center but retains natural contrast. No auto‑beauty or filter enhancement—just raw, unprocessed light. The scene has a mild handheld shake that gives a subtle motion blur around the edges.
+
+- **Lens & Technical**  
+  Use a wide‑angle lens (24–35 mm) with a short focal length to capture a broad view of the subject and background. Everything is in focus—no portrait‑mode depth‑of‑field blur; the background remains sharp. The composition is accidental: the frame is slightly tilted, the subject is off‑center, and the crop is partial, giving an unposed, candid feel.
+
+- **Environment**  
+  The setting is a busy urban street at night. Several cars are parked along the side of the road, their taillights creating soft bokeh orbs in the background. A traffic light glows green in the distance, and a street sign is visible on the right. The weather is clear, with a slight breeze that ruffles the woman’s hair.
+
+- **Details & Imperfections**  
+  Capture the natural motion freeze or slight blur from handheld instability. Include minor imperfections: a slight tilt to the camera, an off‑center framing that doesn’t follow the rule of thirds, and a partial crop that cuts off a bit of the background on the right side. The background is fully sharp, with no depth‑of‑field blur, ensuring every detail—from the texture of the leather dress to the reflections in the glasses—is crisp.
+
+- **Final Prompt**  
+  “A woman with long wavy dark hair and black‑rimmed glasses stands confidently on a city street at night, wearing a sleek black leather mini dress with thin straps and a high slit, hands on hips, gold bracelet on right wrist, ring on left hand. Slight overexposure from ambient street lights, raw unprocessed look, wide‑angle short focal length lens, everything in focus, accidental tilt and off‑center framing, partial crop. Background shows parked cars with soft bokeh taillights and a green traffic light, clear weather, night time. Capture natural motion freeze or slight blur from handheld instability. No filters, no color grading, no post‑processing aesthetic.”

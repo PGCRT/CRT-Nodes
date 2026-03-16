@@ -1,0 +1,37 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a shoulder‑length, wavy brown hairstyle, wearing a black off‑the‑shoulder knotted crop top and high‑waist bottoms. She is mid‑smile, head tilted slightly to the right, left hand resting on her hip, right arm relaxed by her side. Her pose is candid and spontaneous—she appears unaware of the camera, as if caught in a natural moment.
+
+- **Capture Style**  
+  - Candid, unposed, spontaneous — subject unaware or mid‑action.  
+  - Slight tilt and off‑center framing; partial crop that gives an accidental, handheld feel.  
+  - No rule‑of‑thirds intentionality—framing is casual, as if shot with a quick snapshot.  
+  - Natural motion freeze or slight blur from handheld instability.
+
+- **Auto‑HDR / Auto‑Beauty**  
+  - Auto‑HDR off — raw, unprocessed look.  
+  - No filters, no color grading, no post‑processing aesthetic.  
+  - Slight overexposure in the highlights to keep ambient light warm.  
+
+- **Lens & Technical**  
+  - Short focal length (≈20 mm) wide‑angle lens.  
+  - Everything in focus—no bokeh, no depth‑of‑field blur; background fully sharp.  
+  - No portrait mode or subject isolation.
+
+- **Environment**  
+  - Location: A sunlit urban plaza with a modern building façade behind the subject; a large glass window and a tree are visible to the right, a paved ground in front.  
+  - Time of day: Late morning, soft golden light with a slight warm tint.  
+  - Weather: Clear, mild breeze; leaves on the tree slightly moving, giving a subtle motion cue.
+
+- **Composition Notes**  
+  - The shot is taken from a low angle, making the subject appear taller and more commanding.  
+  - The background is fully sharp, so the tree’s foliage and building window are crisp.  
+  - The composition is intentionally imperfect: the top of the frame cuts off a bit of the subject’s hair, giving a casual, snapshot vibe.
+
+- **Lighting**  
+  - Natural daylight from the west; slight overexposure in the highlights gives a warm, lively feel.  
+  - No studio lighting—only ambient natural light.  
+
+- **Final Prompt Summary**  
+  “A young woman with shoulder‑length wavy brown hair, wearing a black off‑the‑shoulder knotted crop top and high‑waist bottoms, captured in a candid, unposed moment on a sunlit urban plaza. The shot uses a short focal length wide‑angle lens, everything in focus with no bokeh, slight tilt and partial crop for an accidental handheld feel. Auto‑HDR is off, no filters or color grading, a touch of overexposure keeps the ambient light warm. The background shows a modern building façade and a tree, fully sharp. Late morning golden light hits the scene from the west, creating a warm, lively atmosphere. The composition is imperfect, low‑angle, and casual, as if snapped by a photographer on the go.”

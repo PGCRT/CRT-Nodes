@@ -1,0 +1,30 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark hair caught mid‑motion, wearing a glossy black, full‑length latex bodysuit that clings to her form. Her right hand is curled into a loose fist near her chest, left arm bent at the elbow, creating a dynamic, almost martial‑arts‑like stance. She’s captured in a candid, unposed moment—her expression focused, eyes locked on something just out of frame.
+
+- **Motion & Focus**  
+  Slight motion blur on the subject’s hair and hands, indicating a handheld shot taken at a low shutter speed. Everything remains sharp from foreground to background; no depth‑of‑field blur, no portrait‑mode “bokeh.” The lens is a short focal‑length wide‑angle (24–35 mm), giving a broad, immersive field of view.
+
+- **Lighting & Exposure**  
+  Natural daylight, mid‑afternoon, with the sun high but slightly to the side, producing a soft overexposure on the subject’s front while keeping the background fully in focus. No auto‑HDR or auto‑beauty filters—raw, unprocessed look. A subtle tilt in the camera plane adds spontaneity.
+
+- **Environment**  
+  The setting is an urban plaza with a colorful, geometric mural behind the woman: a patchwork of bright yellow, blue, pink, and white triangles. The mural’s edges are crisp, no bokeh. The ground is a smooth concrete surface, reflecting the subject’s lower body. The time of day is late afternoon, giving warm, golden tones that slightly overexpose the scene.
+
+- **Lens & Technical**  
+  - Focal length: 35 mm (wide‑angle, short).  
+  - Aperture: f/4.0 (wide opening, but no portrait‑mode isolation).  
+  - Shutter speed: 1/60 s (enough to capture slight motion blur).  
+  - ISO: 400 (for clean detail without noise).  
+  - No bokeh, no depth‑of‑field blur—background fully sharp.  
+  - Handheld, slightly unstable camera resulting in a natural freeze or blur on the subject’s movement.
+
+- **Composition & Framing**  
+  The shot is off‑center; the woman occupies the left‑hand side of the frame, with the mural’s upper right corner extending into the background. The framing is accidental—no rule‑of‑thirds intentionality. A partial crop cuts off the lower left corner, adding a raw, candid feel.
+
+- **Style & Tone**  
+  Candid, spontaneous, “mid‑action” vibe; zero studio lighting, zero professional composition, zero editorial tone. The image feels like a snapshot captured in the moment, with natural imperfections (slight tilt, off‑center framing) that give it authenticity.
+
+**Prompt Summary for Text‑to‑Image Generation**  
+> “A young woman with long dark hair, wearing a glossy black latex bodysuit, captured mid‑motion in a candid, unposed shot. Her right hand is curled near her chest, left arm bent, creating a dynamic stance. Slight motion blur on the hair and hands, everything sharp—no bokeh. The background is a colorful geometric mural of yellow, blue, pink, white triangles on a concrete plaza, mid‑afternoon daylight with soft overexposure. Shot on a 35 mm wide‑angle lens at f/4.0, 1/60 s shutter speed, ISO 400. The composition is off‑center and partially cropped, handheld instability giving a natural freeze or blur. Raw, unprocessed look, no filters.”

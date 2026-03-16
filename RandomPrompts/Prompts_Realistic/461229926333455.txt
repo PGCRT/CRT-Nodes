@@ -1,0 +1,31 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman with light brown hair tied in a loose ponytail, wearing black lace lingerie (bra and panties) and fish‑net stockings, sitting on a white‑covered bed. Her hands are raised near her shoulders, adjusting the straps of the bra, giving a candid, mid‑action feel. She looks directly at the camera with a subtle smile, eyes slightly wide, capturing a spontaneous moment.
+
+- **Lighting & Exposure**  
+  Natural daylight from a window on the left side of the room, creating a warm, soft illumination with a slight overexposure on the face and upper body. The exposure is not perfectly balanced—there’s a gentle haze that gives a raw, unprocessed look. No auto‑HDR or beauty filters; just a straightforward, handheld shot.
+
+- **Camera & Lens Settings**  
+  - Lens: 24‑35 mm wide‑angle (short focal length) for a broad field of view.  
+  - Aperture: f/4–f/5.6 (mid‑range) to keep the background fully sharp, no bokeh.  
+  - Shutter speed: 1/60–1/100 s, producing a slight motion blur on the subject’s hands and the background, indicating handheld instability.  
+  - Focus: everything in focus—subject, bedding, background wall, and a small plant on the right side of the bed.  
+
+- **Composition & Framing**  
+  - The shot is slightly tilted, off‑center, with no intentional rule‑of‑thirds; the subject’s head sits just above the center of the frame.  
+  - The framing captures the woman from the knees up to the top of her head, with a portion of the white pillows, the dark headboard, and a small green plant on the right side.  
+  - Background is fully sharp—no depth‑of‑field blur—so the entire scene (bed, pillows, wall, plant) remains in focus.
+
+- **Environment & Ambience**  
+  - Location: A cozy bedroom with a dark wooden headboard, white bedding, and a small potted plant on a bedside table.  
+  - Time of day: Late morning, natural light coming from a window on the left, casting soft shadows.  
+  - Weather/ambient conditions: Clear, warm indoor ambience; no external weather influence.
+
+- **Post‑Processing & Aesthetic**  
+  - No filters or color grading—just raw, unprocessed imagery.  
+  - Slight overexposure on the subject’s face and upper body, giving a natural, candid feel.  
+  - Handheld shake is visible in the slight blur of the subject’s hands and the background.
+
+- **Prompt Summary for AI Image Generation**  
+  “A woman with light brown hair in a loose ponytail, wearing black lace lingerie and fish‑net stockings, sitting on a white‑covered bed, hands adjusting bra straps, looking directly at camera with a subtle smile. Natural daylight from left window, slight overexposure, handheld shake. 24‑35 mm wide‑angle lens, f/4–f/5.6 aperture, 1/60–1/100 s shutter speed. Slightly tilted, off‑center framing, everything in focus. Dark headboard, white pillows, small green plant on right side. Raw, unprocessed, no filters.”

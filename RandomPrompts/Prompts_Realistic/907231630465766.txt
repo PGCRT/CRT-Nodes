@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework – “Summer Sweat in the Park”**
+
+- **Subject & Pose**  
+  A young woman with wet, tousled auburn hair, wearing a sheer dark‑blue sports tank with silver trim, stands mid‑action on a sunlit park path. Her hands rest on her hips, slightly tilted to the left, tongue protruding as if she just finished a run or a swim. The camera captures her from a low, wide‑angle perspective that includes a portion of the green foliage and a tree trunk in the background.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous – the subject is unaware of the camera, caught in a natural “mid‑motion” moment. Slight tilt and off‑center framing give an accidental, handheld feel. The shot has a raw, unprocessed look: no filters, no color grading, no post‑processing aesthetic. A faint overexposure from the bright midday sun creates subtle highlights on her skin and clothing.
+
+- **Environment**  
+  Location: A sunny, leafy park with a paved walkway; a tall tree and a patch of grass are visible behind her. Time of day: Mid‑afternoon, around 2 pm, when the sun is high but still warm. Weather: Clear, humid, with a light breeze that ruffles her hair. Ambient light produces a slight haze and a few small bokeh spots from the background foliage.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm) wide‑angle lens; everything is in focus – no portrait‑mode blur, no depth‑of‑field isolation. Slight motion blur from handheld instability freezes the mid‑action. Auto‑HDR or auto‑beauty mode is off. The image has a natural color palette with a hint of warm tones from the sun. No rule‑of‑thirds intentionality – the composition is accidental, with the subject slightly cut off at the bottom right corner.
+
+- **Details to Emphasize**  
+  - Wet hair with droplets falling from her chin.  
+  - Subtle sweat droplets on her tank top.  
+  - Slight imperfections: a tiny smudge on her left hand, a slight shadow cast by the tree leaves.  
+  - Background fully sharp – no bokeh, just crisp foliage and tree bark.  
+
+**Prompt Summary (for use in a text‑to‑image model)**  
+> “A candid, wide‑angle shot of a young woman with wet auburn hair and a sheer dark‑blue sports tank, standing on a sunny park path mid‑action, hands on hips, tongue protruding, slight tilt and off‑center framing, accidental handheld blur, everything in focus, no filters or auto‑HDR, raw natural look, background foliage fully sharp, mid‑afternoon sun, clear weather, short focal length 24‑35 mm.”

@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A fit woman with a high ponytail, wearing a black bikini and a backpack, captured mid‑step on a sunlit beach. Her head is turned slightly to the side, a casual smile on her face, as if she’s just finished a jog or is about to start a new activity. The camera is handheld, giving a slight motion blur that conveys movement.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle, midday sun creates a soft overexposure on the subject’s front while the background remains fully sharp. No auto‑HDR or beauty filters—just raw, unprocessed imagery with a hint of ambient warmth.
+
+- **Lens & Technical Settings**  
+  Use a wide‑angle lens (24‑35 mm) with a short focal length to keep the entire scene in focus. Shoot at a high ISO to capture fine detail without losing contrast. The composition is accidental: the frame is slightly tilted, the subject is off‑center, and the crop is partial—no rule‑of‑thirds intentionality.
+
+- **Environment**  
+  The setting is a sandy dune beach with a gentle slope in the background. The sand shows subtle footprints and small pebbles, and the sky is bright but not harsh. The time of day is early afternoon, when the sun is high, creating strong shadows and a warm glow.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Encourage imperfections: slight tilt, off‑center framing, partial crop. No studio lighting, no professional composition, no editorial tone. The image should feel like a snapshot taken in the moment.
+
+- **Post‑Processing**  
+  Keep it minimal. Slight overexposure or underexposure depending on ambient light, no color grading, no filters. All elements—subject and background—are fully sharp; no portrait mode or subject isolation.
+
+**Prompt Summary**  
+“Handheld wide‑angle shot of a fit woman in a black bikini with a backpack, mid‑step on a sunlit beach, captured at early afternoon. Natural daylight creates soft overexposure; all elements in focus. Slight motion blur and accidental framing give a candid, spontaneous feel. No filters or post‑processing—raw, real‑life aesthetic.”

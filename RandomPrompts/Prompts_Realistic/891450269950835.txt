@@ -1,0 +1,28 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with light brown hair tied in a loose ponytail, wearing an off‑white crew‑neck t‑shirt and a thin brown belt. She is captured mid‑turn, head tilted slightly downward, eyes cast to the side, as if she’s just finished a conversation or is about to pick something up. Her left ear is partially visible, adorned with a thin silver hoop earring that catches the light. The shot should feel spontaneous and unposed; her expression should be natural, with a hint of contemplation.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action.  
+  Slight motion blur on the hands or hair to suggest movement.  
+  No filters, no color grading, no post‑processing aesthetic – raw, in‑camera look.  
+  Slight overexposure or underexposure depending on ambient light (choose natural daylight).  
+  Wide‑angle lens (24–35 mm) for a short focal length, wide‑field capture.
+
+- **Environment**  
+  Specific real‑world location: a residential backyard or side‑garden next to a beige stucco house with a white window frame. A concrete patio or stone walkway is visible behind her, with a small potted plant and a few fallen leaves on the ground. Time of day: late afternoon, soft golden hour light coming from the west, creating gentle shadows and warm highlights. Weather: clear, slightly breezy, with a faint haze in the air that adds depth.
+
+- **Lens & Technical**  
+  Short focal length (24–35 mm), wide‑angle.  
+  No bokeh – background fully sharp; everything in focus from foreground to mid‑ground.  
+  No portrait mode or subject isolation – keep the entire scene crisp.  
+  Slight tilt or off‑center framing, partial crop to give a casual, handheld feel.  
+  No rule‑of‑thirds intentionality – frame the shot as if it were captured by hand, with accidental composition.
+
+- **Composition Notes**  
+  Place the subject slightly left of center, with her body angled toward the right side of the frame. Keep the background’s window and plant in the upper right corner for balance. Ensure that the top of her head does not exceed the top edge of the frame, and that her lower torso is cut off by the bottom edge for a “partial crop” effect.  
+  Capture the scene with natural lighting – no studio lights, no artificial flash. The light should hit the subject from the side, creating subtle highlights on her face and shirt.
+
+- **Final Prompt**  
+  “A candid, wide‑angle shot of a young woman in an off‑white t‑shirt and brown belt, hair tied in a loose ponytail, wearing a silver hoop earring, captured mid‑turn with slight motion blur on her hands and hair. She is standing in front of a beige stucco house with a white window frame, on a concrete patio next to a potted plant, with fallen leaves scattered on the ground. The time of day is late afternoon golden hour, soft light from the west. Use a 24–35 mm lens, everything in focus, no bokeh, slight tilt and partial crop, no rule‑of‑thirds, raw, unprocessed look, natural motion blur, slight overexposure or underexposure depending on ambient light.”

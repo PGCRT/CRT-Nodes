@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, loose brown hair tied in a casual ponytail, wearing an oversized, faded denim jacket and matching jeans. She’s mid‑step, turning slightly toward the camera while holding a white sneaker in her right hand, as if about to put it on. Her expression is relaxed, almost candid—she’s not posing for the photo but rather caught in a natural moment.
+
+- **Motion & Focus**  
+  Slight motion blur on the hands and feet to convey movement, with the rest of the frame fully sharp. The focus is even across the entire scene—no portrait‑mode depth-of-field blur. The image has a raw, unprocessed look: no filters, no color grading, no post‑processing aesthetic.
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window, slightly overexposed on the left side to give a soft halo effect. The lighting is ambient, with a hint of lens flare from the window’s glass. No studio lights, no artificial flash—just the sun’s warm glow.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm), short focal length, handheld. Everything in focus, background fully sharp, no bokeh. Slight tilt and off‑center framing give an accidental, spontaneous feel. The composition is not rule‑of‑thirds; it’s a casual, real‑world snapshot.
+
+- **Environment**  
+  A modern apartment interior with a large window that lets in bright daylight. A white radiator is visible on the left, a small wooden table with a stack of books on the right, and a faint reflection of the outside building on the window glass. The time of day is late morning, around 10:30 AM, with soft, warm sunlight.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, partial crop that cuts off the top of the woman’s head and the lower part of her shoes. A few dust particles float in the air, caught by the lens. The denim jacket has a subtle fade and a small tear at the left shoulder, adding authenticity.
+
+- **Prompt for AI Image Generation**  
+  “A candid photo of a young woman with long brown hair in a ponytail, wearing an oversized faded denim jacket and jeans, holding a white sneaker in her right hand as she steps forward. The image has slight motion blur on the hands and feet, everything else fully sharp. Natural daylight from a large window creates a soft halo on the left, with a hint of lens flare. The scene is set in a modern apartment interior; a white radiator is visible on the left, a wooden table with books on the right, and a reflection of an outside building on the window glass. Time of day is late morning. Use a wide‑angle lens (24–35 mm), handheld, slight tilt and off‑center framing, no rule‑of‑thirds. Raw, unprocessed look—no filters or color grading.”

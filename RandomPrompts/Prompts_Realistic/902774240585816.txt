@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with short, brown, slightly frizzy hair and bold red lipstick stands in a dimly lit bedroom at dusk. She is bare‑charged, forming a heart shape with her hands over her chest, fingers slightly overlapping. Her gaze is direct, almost candid, as if she’s mid‑pose while filming a selfie or a quick video.
+
+- **Lighting & Exposure**  
+  The scene is lit by natural ambient light from a window on the left; the exposure is mildly overexposed, giving a warm, soft glow. No auto‑beauty filter is applied – the image retains raw, unprocessed detail. Slight handheld shake is present, creating a subtle motion blur around the edges.
+
+- **Camera Settings**  
+  - Lens: 24‑mm wide‑angle, short focal length, no bokeh.  
+  - Focal depth: everything from foreground to background is fully sharp – no portrait‑mode isolation.  
+  - Focus: manual focus, slightly off‑center.  
+  - Composition: no rule‑of‑thirds; the framing is accidental, with a slight tilt that captures the subject’s upper body and part of the room behind her.
+
+- **Environment**  
+  The setting is a lived‑in bedroom: a wooden shelf on the left holds a red bottle, a white mug, and a clear container; a blue bin sits on the floor. A red sofa with a crumpled white blanket hangs on the right. The wall is a muted gray, and a closed door is visible in the back. The time of day is late afternoon, with soft daylight filtering through the window, creating gentle shadows and a slight haze.
+
+- **Technical Details**  
+  - Capture style: candid, unposed, spontaneous – the subject appears unaware that she’s being photographed, mid‑action.  
+  - Imperfections: slight tilt, off‑center framing, partial crop; the image is not fully centered but feels natural.  
+  - Background: fully sharp, no depth‑of‑field blur.  
+  - Post‑processing: none – no filters, color grading, or LUTs.  
+
+- **Prompt for Generation**  
+  “A young woman with short brown hair and red lipstick, bare‑charged, forming a heart shape with her hands over her chest, standing in a dimly lit bedroom at dusk. The scene is lit by natural ambient light from a left‑side window, mildly overexposed. Use a 24‑mm wide‑angle lens, everything in focus, no bokeh. Capture a candid, unposed moment with slight handheld shake and accidental off‑center framing. Include a wooden shelf with a red bottle, white mug, and clear container on the left; a red sofa with a crumpled white blanket on the right. The wall is muted gray, a closed door in the back. Late afternoon daylight creates soft shadows and haze. No filters or post‑processing – raw, realistic look.”

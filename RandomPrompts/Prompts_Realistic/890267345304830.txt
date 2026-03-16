@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark, wavy hair standing on a wooden balcony, leaning casually against a light‑brown railing. She wears a delicate white lace lingerie set (bra and thong) that drapes softly over her torso and hips. Her left hand rests on the rail, right hand near her hip, body slightly turned toward the camera, head tilted a few degrees to the left, eyes looking directly at the lens with a subtle, confident smile.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle, mid‑afternoon sun; slight overexposure on the upper torso and face, creating a warm, golden hue. No auto‑HDR or beauty filters—raw, unprocessed look. Slight handheld shake gives a natural motion blur around the edges.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm), short focal length, everything in focus from foreground to background. No bokeh; background fully sharp. No portrait‑mode depth‑of‑field blur. Slight tilt and off‑center framing—no rule‑of‑thirds intentionality.
+
+- **Environment**  
+  Location: a sunny residential balcony with a glass door and a cushioned armchair on the left, a wooden railing on the right, a small garden visible behind. Time of day: late afternoon (around 4 pm), soft ambient light with long shadows. Weather: clear, lightly breezy, no clouds.
+
+- **Composition & Details**  
+  Capture style: candid, unposed, spontaneous—subject appears unaware or mid‑action. Imperfections encouraged: slight tilt, partial crop, natural motion blur from handheld instability. No studio lighting, no professional composition, no editorial tone.
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, zero post‑processing aesthetic. Raw image with auto‑beauty mode off. Slight overexposure on the subject’s upper body to emphasize texture and warmth.
+
+**Prompt Summary (structured)**  
+"Mid‑afternoon natural daylight on a wooden balcony; young woman in white lace lingerie leaning on railing, slight handheld blur, wide‑angle lens, everything in focus, candid unposed pose, raw unprocessed look, slight overexposure, no filters—capture the moment as if caught by chance."

@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with shoulder‑length brown hair, wearing a simple hoop earring, standing in a dimly lit hallway. She is bare‑headed, hands clasped near her chest, head tilted slightly downward, eyes cast to the side as if she’s about to do something. Her body is angled toward the camera but not perfectly centered; the left side of her torso is a bit cut off by the frame edge.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. Slight tilt and partial crop give an accidental, handheld feel. No rule‑of‑thirds intentionality; framing is imperfect but natural. The image has a raw, auto‑HDR look with no filters, color grading, or post‑processing. A hint of overexposure in the center keeps the ambient light warm.
+
+- **Motion & Focus**  
+  Slight motion blur from handheld instability, but everything remains fully sharp — no bokeh, no depth‑of‑field blur. The background is completely in focus, giving a wide‑angle, short‑focal‑length feel.
+
+- **Environment**  
+  Specific real‑world location: a wooden‑panelled hallway with a white light switch on the left wall and a small white tile near the floor. Time of day: late afternoon, soft natural light coming from the right, creating subtle shadows. Weather or ambient conditions: mild, slightly humid, no wind.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm), wide angle. No bokeh, no depth‑of‑field blur — background fully sharp. Everything in focus. No portrait mode, no subject isolation. The image is captured on a DSLR or mirrorless with a manual focus ring, set to a low f‑stop for maximum light intake.
+
+- **Post‑Processing**  
+  Auto‑HDR off — raw, unprocessed look. Slight overexposure in the center to keep ambient light warm. No color grading, no filters. The final image retains the natural imperfections of a candid shot: slight tilt, off‑center framing, partial crop, and subtle motion blur.
+
+**Prompt Summary**  
+> “A young woman with shoulder‑length brown hair and a hoop earring stands in a dimly lit wooden hallway, hands clasped near her chest, head tilted downward. Capture the scene with a short focal length wide‑angle lens, everything in focus, slight motion blur from handheld instability, accidental tilt and partial crop, raw auto‑HDR look, no filters or color grading, late afternoon natural light, all background sharp — a candid, unposed, spontaneous snapshot.”

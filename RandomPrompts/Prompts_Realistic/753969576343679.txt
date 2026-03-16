@@ -1,0 +1,28 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with short, sun‑kissed blonde hair, a tattooed chest and arms, standing on an open balcony. She is nude, arms crossed over her chest, head tilted slightly to the left, eyes cast upward as if she’s just noticed something in the distance. Her expression is relaxed but contemplative, a hint of surprise in her gaze.  
+
+- **Lighting & Exposure**  
+  Warm, golden‑hour sunlight from the west casts soft highlights on her skin and hair; slight overexposure at the top of the frame gives a dreamy, natural feel. The exposure is slightly uneven—brighter at the top, softer at the bottom—to mimic handheld shooting.  
+
+- **Motion & Focus**  
+  A subtle motion blur around the edges from a handheld camera, giving a sense of movement. Everything in the frame—from her skin to the balcony railing—is fully sharp; no portrait‑mode depth‑of‑field blur.  
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm), short focal length. No bokeh—background is completely sharp, from the iron railing to the bookshelf behind her.  
+
+- **Environment**  
+  The scene is a residential balcony in an urban setting. Behind her, a row of low‑rise houses and green trees line the street; a small potted plant sits on a wooden table next to a tall bookshelf filled with books. A wicker chair and a stack of books rest on a small side table, and a patterned cushion hangs from a rail. The balcony railing is wrought iron, with decorative curves.  
+
+- **Time of Day & Weather**  
+  Late afternoon, around sunset. The sky is a soft pale blue with a hint of orange near the horizon. Light breeze ruffles her hair slightly.  
+
+- **Composition Notes**  
+  The frame is intentionally off‑center; the subject’s left side is slightly cut off by the railing. No rule‑of‑thirds—just spontaneous, candid framing. The composition captures both the subject and a portion of the surrounding environment, creating a narrative of “mid‑action” and “unposed realism.”  
+
+- **Post‑Processing**  
+  Raw, unprocessed look: no filters, no color grading, no auto‑beauty mode. Slight overexposure at the top to keep the image natural.  
+
+**Prompt Summary**  
+> “A young woman with short blonde hair and extensive arm tattoos stands nude on a balcony, arms crossed, head tilted upward, eyes looking off‑frame. Warm golden‑hour light hits her from the west, slight overexposure at the top, subtle motion blur from handheld shooting. Wide‑angle lens (24–35 mm) keeps everything sharp—from her skin to the iron railing, the bookshelf, and the wooden table with a stack of books. The balcony is in an urban setting with low‑rise houses and green trees in the background. Late afternoon sunset, gentle breeze. Raw, unprocessed, no filters—spontaneous candid photography.”

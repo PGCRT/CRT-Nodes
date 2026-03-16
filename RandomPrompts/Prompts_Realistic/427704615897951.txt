@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman standing mid‑step on a sunlit asphalt parking lot, her body angled slightly to the left of the frame. She’s wearing an off‑white long‑sleeve graphic tee that reads “Hike God” with a vintage poster print of a cowboy and a desert scene, black bikini bottoms, and tan Nike sneakers. Her hair is a deep brown, loosely tied in a low ponytail that swings slightly as she moves. She’s capturing a casual, spontaneous moment—mid‑gesture, as if she just finished a photo or is about to start a dance.
+
+- **Motion & Focus**  
+  Slight motion blur on the subject’s legs and feet, indicating a handheld shot captured at a fast shutter speed. Everything in the frame—from her shoes to the distant mountains—is fully sharp; no bokeh or depth‑of‑field blur. The image has an auto‑HDR feel but without any post‑processing color grading—just raw, natural lighting.
+
+- **Lighting & Exposure**  
+  The scene is lit by bright midday sun, creating a slight overexposure on the upper part of the frame that gives a warm, hazy glow. The sunlight casts soft shadows beneath her feet and behind the car. No studio lights—only ambient daylight.
+
+- **Environment**  
+  A classic American muscle car, a 1968 Mustang in a muted gold color, is parked directly behind her, angled slightly to the right. The car’s chrome grille and round headlights reflect the sun. In the background, a range of arid mountains rises under a pale blue sky; a few scattered clouds drift across the horizon. A chain‑link fence runs along the far side of the lot, and a patch of green shrubbery is visible on the right. The time of day is early afternoon, when the sun is high but still warm enough to create a subtle lens flare.
+
+- **Lens & Technical**  
+  Shot with a wide‑angle lens (24 mm or 35 mm) that captures a broad view of the scene—subject, car, and background all in focus. The focal length is short, giving a “close‑up” feel to the image while still allowing space for the car and mountains. No rule‑of‑thirds intentionality; the composition is accidental, slightly tilted, and off‑center. The frame is a full‑width capture that includes a partial crop of the parking lot’s white line on the left side.
+
+- **Candid Tone**  
+  The image feels spontaneous and unposed—the woman appears to be mid‑action, as if she just finished a step or is about to move. Slight tilt and off‑center framing give it a natural, handheld vibe. No professional editorial feel—just a raw, real‑life snapshot.
+
+- **Final Prompt**  
+  “A young woman in an off‑white graphic tee, black bikini bottoms, and tan Nike sneakers stands mid‑step on a sunlit parking lot, with a gold 1968 Mustang parked behind her and arid mountains in the background. Capture the scene with a wide‑angle lens at short focal length, ensuring everything from her shoes to the distant peaks is fully sharp while allowing slight motion blur on her legs. The lighting should be bright midday sun with a subtle overexposure on the upper frame, creating a warm haze. The composition should be accidental and off‑center, slightly tilted, with no rule‑of‑thirds intentionality, giving the image a candid, spontaneous feel. Use auto‑HDR for a raw, unprocessed look without any color grading or post‑processing.”

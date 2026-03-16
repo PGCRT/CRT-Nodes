@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman standing in a mirror‑reflection, captured mid‑pose while taking a selfie with a smartphone. Her back is to the camera, her hair tied into two thick braids that drape over her shoulders. She wears faded light‑blue denim shorts with frayed hem and a brown leather patch on the back pocket; a small Levi’s logo is visible. Her left hand holds a black phone at shoulder height, slightly angled, creating a subtle motion blur around the device.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject appears unaware of the camera, as if caught in a casual moment. Slight tilt and off‑center framing give an accidental, handheld feel. The shot is partially cropped on the right side, leaving a tiny margin of the mirror frame. No rule‑of‑thirds intentionality; the composition is natural and imperfect.
+
+- **Motion & Exposure**  
+  Slight motion blur from handheld instability, with a wide‑angle lens that keeps the entire scene in focus—no bokeh or depth‑of‑field blur. The exposure is slightly overexposed on the upper part of the mirror, reflecting the overhead fluorescent light and creating a soft halo around the subject’s head.
+
+- **Environment**  
+  A dorm‑room or small bedroom, with a twin bed covered in white sheets visible behind the woman. A wooden shelf stands to the left, holding a few items (a black bag, a white bottle). A green plastic bin sits on the floor near the bottom left corner. The ceiling shows a fluorescent light fixture and an air‑conditioning vent. The time of day is late afternoon; the ambient light is warm and slightly hazy, suggesting a bright, sunny day outside.
+
+- **Lens & Technical**  
+  Short focal length (≈20 mm) wide‑angle lens, no bokeh, everything in focus. No portrait‑mode subject isolation—background remains sharp. The image has an auto‑HDR or “auto‑beauty” off look: raw, unprocessed, with natural color tones and zero post‑processing aesthetic.
+
+- **Details & Imperfections**  
+  A faint reflection of the phone’s camera lens is visible on the mirror’s surface. The woman’s right arm is slightly bent, her elbow near the back pocket, adding a natural curve to the frame. The denim shorts have a small brown Levi’s patch on the upper left pocket; the back pockets show subtle stitching and a slight wear mark at the bottom hem. The phone’s screen shows a faint reflection of the room’s interior.
+
+- **Prompt Summary**  
+  “A candid, wide‑angle selfie captured with a short focal length lens in a dorm bedroom. A young woman, seen from behind, holds a black smartphone at shoulder height while standing in front of a mirror. She wears faded light‑blue denim shorts with frayed hem and a brown Levi’s patch, her hair styled in two thick braids. The shot has slight motion blur and a small overexposure halo around her head, reflecting an overhead fluorescent light. The background includes a twin bed, a wooden shelf, and a green bin on the floor. The image is raw, unprocessed, with accidental framing and a partially cropped right side, preserving a natural, spontaneous feel.”

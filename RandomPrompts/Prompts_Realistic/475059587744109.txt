@@ -1,0 +1,28 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, sun‑kissed brown hair, wearing a blue‑and‑yellow striped bikini top tied at the front. She’s lying on a white bed, leaning slightly to her left, one arm bent above her head in a casual, mid‑motion pose. Her face is turned toward the camera but not directly aimed — a slight off‑center tilt that gives a candid feel. A thin gold necklace rests on her collarbone.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high window, creating soft overexposure on the upper chest and shoulder area. Slight handheld shake gives a subtle motion blur around the edges. No auto‑beauty or filter processing — raw, unprocessed look.
+
+- **Camera Settings**  
+  Wide‑angle lens (24–35 mm), short focal length. Everything in focus from foreground to background; no bokeh. Slight overexposure or underexposure depending on ambient light, giving a natural, spontaneous vibe.
+
+- **Environment**  
+  A bright, unstyled bedroom. White sheets rumpled, a pink towel hanging in the corner, a wooden bedside table visible. Time of day: late morning, warm sunlight streaming through a window. Weather: clear, slightly hazy.
+
+- **Composition & Framing**  
+  No rule‑of‑thirds intentionality — accidental framing with a slight crop that cuts off part of her left shoulder. Background fully sharp, no depth‑of‑field blur. The composition captures the subject’s upper body and part of the bed, with the hand near her head creating a dynamic line.
+
+- **Technical Details**  
+  - Lens: 35 mm, wide‑angle, handheld.  
+  - Focal length: 35 mm (short).  
+  - Aperture: f/4–f/5.6 (wide).  
+  - Shutter speed: 1/125 s (slight motion blur).  
+  - ISO: 400–800 (natural brightness).  
+
+- **Prompt for Generation**  
+  “A young woman with long, sun‑kissed brown hair, wearing a blue‑and‑yellow striped bikini top tied at the front, lying on a white bed in a bright bedroom. She leans to her left with one arm bent above her head, a thin gold necklace adorning her collarbone. Natural daylight from a high window creates soft overexposure on her chest. Shot on a 35 mm wide‑angle lens, handheld, everything in focus with slight motion blur. The scene includes rumpled white sheets and a pink towel in the corner, captured at late morning. Composition is accidental, off‑center, with a slight crop that cuts off part of her left shoulder, no rule‑of‑thirds, raw, unprocessed look.”
+
+Provide only the structured prompt.

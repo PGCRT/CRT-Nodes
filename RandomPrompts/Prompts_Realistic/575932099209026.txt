@@ -1,0 +1,28 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with shoulder‑length brown hair, light blue eyes, and a soft, natural complexion, captured mid‑movement as she leans forward slightly, her hands resting on a white dresser. She wears sheer black stockings with a delicate ribbed cuff; the fabric catches the light at the knee. Her expression is relaxed, almost contemplative, with a subtle smile that hints at an unposed, spontaneous mood.
+
+- **Lighting & Exposure**  
+  Warm, ambient daylight from a western‑facing window creates a gentle overexposure on the right side of the frame. The exposure is slightly uneven—the left side is a bit brighter, giving a raw, unprocessed look. No auto‑beauty mode; the image retains natural imperfections, including slight grain and a faint haze that suggests a handheld camera.
+
+- **Camera & Lens Settings**  
+  - Lens: 24 mm wide‑angle, short focal length, capturing a broad view of the scene.  
+  - Aperture: f/5.6 (mid‑range) for a fully sharp background with no bokeh.  
+  - Shutter speed: 1/125 s, producing a slight motion blur on the subject’s hands and the background’s decorative elements.  
+  - ISO: 400 – balanced for the ambient light and to keep noise low.
+
+- **Composition & Framing**  
+  The shot is intentionally off‑center; the subject’s head sits slightly above the left edge of the frame, while her hips extend toward the bottom right. The framing is accidental—no rule‑of‑thirds applied—yet the composition includes a subtle diagonal line formed by her body and the white swirl pattern on the wall. A small portion of a green plant peeks into the lower right corner, adding a natural contrast.
+
+- **Environment & Background**  
+  The setting is a cozy, slightly cluttered bedroom. The wall behind the subject features a light beige paint with a white, swirling decorative motif and a single star‑shaped accent. Small, warm string lights hang along the right side of the wall, casting soft glows that reflect off the subject’s skin. A white dresser with two drawers is visible on the left; its knobs catch the light. The time of day is late afternoon, as indicated by the golden hue and long shadows.
+
+- **Technical Details**  
+  - No filters or color grading: the image keeps its natural tones and slight overexposure.  
+  - Everything is in focus—from the subject’s face to the background details—thanks to a wide‑angle lens set for full sharpness.  
+  - Slight tilt and partial crop give the shot a candid, spontaneous feel.  
+  - The overall aesthetic is raw, unprocessed, and realistic, as if captured with a DSLR or mirrorless camera in a real‑world setting.
+
+**Prompt Summary**  
+> “A young woman with shoulder‑length brown hair and light blue eyes leans forward on a white dresser in a cozy bedroom, wearing sheer black stockings. Warm daylight from a western window creates a gentle overexposure, while a 24 mm wide‑angle lens captures a fully sharp, slightly blurred candid shot. The background shows a beige wall with white swirls and string lights, a green plant peeking into the corner, and a white dresser with two drawers. The composition is off‑center and accidental, preserving a raw, unprocessed look.”

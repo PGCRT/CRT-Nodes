@@ -1,0 +1,29 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with shoulder‑length brown hair, wearing a bright yellow bikini, captured mid‑step in a casual, unposed stance. Her left leg is slightly bent, knee turned inward, as if she’s just finished a dance move or is about to pick up a beach ball. She smiles softly, eyes focused forward, with a subtle tilt to her head that gives the shot a spontaneous feel.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle, late‑afternoon sun creates a warm, slightly overexposed highlight on her skin and bikini. The exposure is uneven—the upper part of the frame is a bit brighter than the lower part, giving an auto‑HDR feel without any post‑processing. Slight color cast of muted golds and greens.
+
+- **Camera Settings**  
+  - Lens: 24‑35 mm wide‑angle, short focal length.  
+  - Aperture: f/4.0 (wide opening).  
+  - Shutter speed: 1/60 s (handheld, slight motion blur on the subject’s legs).  
+  - ISO: 400 (for natural grain).  
+  - Focus: everything in focus—no portrait‑mode depth‑of‑field blur.  
+
+- **Composition & Framing**  
+  The shot is off‑center; the subject’s left side leans slightly to the right, creating a dynamic diagonal line. The frame is partially cropped on the bottom left, giving an accidental, candid feel. No rule‑of‑thirds—just a spontaneous composition that captures the moment as it happened.
+
+- **Background & Environment**  
+  A lush green tree canopy fills the upper left and right corners, with a hint of a blue‑white sky peeking through the leaves. The background is fully sharp, no bokeh. The scene is an outdoor park or beachside area, mid‑afternoon, with a gentle breeze visible in the foliage.
+
+- **Details & Imperfections**  
+  Slight motion blur on the lower leg and foot, indicating handheld instability. A faint overexposure halo around the subject’s head. Minor dust particles on the lens are visible, adding raw authenticity. The bikini straps are slightly askew, giving a real‑life feel.
+
+- **Post‑Processing**  
+  No filters or color grading—just raw, unprocessed imagery. Auto‑HDR is off; the image retains natural contrast and dynamic range.
+
+**Prompt Summary**  
+> “A young woman in a yellow bikini, captured mid‑step outdoors under late‑afternoon sun, with a 24‑35 mm wide‑angle lens at f/4.0 and 1/60 s shutter speed, handheld slight blur on the legs, off‑center framing, fully sharp background of green foliage and sky, raw unprocessed look, no filters, natural motion freeze.”

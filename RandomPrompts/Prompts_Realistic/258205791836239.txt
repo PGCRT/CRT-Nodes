@@ -1,0 +1,18 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A young woman in a casual gray hoodie and light‑wash cargo jeans is captured mid‑phone‑take, her fingers gripping a green smartphone as she looks down at the screen. Her hair is tied up in a messy bun, a few strands escaping to frame her face. She stands in an office space with a concrete floor and a grid of fluorescent lights overhead; behind her, three colleagues are engaged in a lively discussion near a whiteboard, while another person sits at a desk in the background. A small yellow notepad lies on the carpet near her feet, and a pair of black sneakers is partially visible at the lower right corner.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject is unaware of the camera, caught in a natural moment. Slight tilt and off‑center framing give an accidental, handheld feel. The composition is not rule‑of‑thirds; it’s a raw, wide‑angle snapshot that includes all elements in focus.
+
+- **Environment**  
+  Location: A modern office with a low‑profile ceiling, large windows covered by horizontal blinds, and a long desk with a computer monitor, keyboard, and a stack of papers. Time of day: mid‑afternoon, the ambient light is bright but slightly warm, creating a subtle overexposure on the subject’s face. Weather or ambient conditions: indoor, no wind, no external noise.
+
+- **Lens & Technical**  
+  Short focal length (24–35 mm) wide‑angle lens. No bokeh; background is fully sharp. Everything in focus — no portrait‑mode depth‑of‑field blur. Slight motion blur from handheld instability freezes the subject’s movement. Auto‑HDR or auto‑beauty mode off — raw, unprocessed look. No filters, no color grading, no post‑processing aesthetic. Slight overexposure on the subject’s face to emphasize the natural lighting.
+
+- **Additional Details**  
+  The image should retain imperfections: a slight crop that cuts off a bit of the background, a tiny tilt that makes the frame feel organic. The phone’s camera lens is visible in her hands, and the reflection of the ceiling lights can be seen on her hoodie. The overall tone is natural, with a warm, slightly hazy daylight feel.
+
+**Provide only the structured prompt.**

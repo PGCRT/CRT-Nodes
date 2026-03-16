@@ -1,0 +1,31 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with medium‑length, slightly frizzy brown hair, wearing a black lace‑trimmed sports bra and matching high‑waist bikini bottoms, crouching low on a light‑wood floor. Her left foot is planted forward, right foot tucked behind, knees bent deep, toes pointing slightly inward. She’s mid‑gesture: her right hand is reaching toward her shin, fingers curled as if she’s about to adjust her shoe or tap a rhythm. Her gaze is directed at the camera but not directly at it—she’s “unposed” and candid.
+
+- **Facial Features & Expression**  
+  Soft, natural makeup: subtle eyeliner, lightly brushed lashes, a faint pink tint on cheeks. A small pendant necklace rests on her collarbone. Her nails are painted in a mint‑green shade with a single orange accent on the ring finger. Slight motion blur around her hands and knees indicates handheld shake.
+
+- **Wardrobe & Accessories**  
+  White canvas sneakers with laces tied loosely; the tongue of the shoe is slightly askew. A thin gold chain hangs from her ear, catching the light. Her left ear has a small hoop earring.
+
+- **Lighting & Exposure**  
+  Natural daylight coming from a western‑side window, creating a warm, slightly overexposed highlight on her torso and face. The exposure is uneven—her front is brighter than the background—giving a raw, unprocessed look. No auto‑beauty mode; no filters, no color grading.
+
+- **Camera Settings**  
+  - Lens: 24 mm wide‑angle (short focal length)  
+  - Aperture: f/5.6 (everything in focus, no bokeh)  
+  - Shutter speed: 1/125 s (slight motion blur on moving parts)  
+  - ISO: 400 (for natural grain)  
+
+- **Composition & Framing**  
+  The shot is off‑center; the subject’s left knee is slightly cut off by the bottom edge of the frame. No rule‑of‑thirds intentionality—just accidental, spontaneous framing. Background is a plain, unadorned wall with faint specks of dust and a small patch of sunlight.
+
+- **Environment**  
+  Location: A bare, modern apartment floor with light‑wood planks. Time of day: late morning, around 10:30 a.m., when the sun is high but still casts soft shadows. Weather: clear, no wind.
+
+- **Post‑Processing**  
+  Zero studio lighting, zero professional composition, zero editorial tone. Raw, in‑camera look only—no auto‑HDR or auto‑beauty mode. Slight tilt to the camera, giving a casual, handheld feel.
+
+- **Final Prompt**  
+  “A candid, wide‑angle shot of a young woman crouching on a light‑wood floor, wearing a black lace sports bra and high‑waist bikini bottoms with white sneakers. Her hair is medium‑length brown with a slight fringe, her left ear adorned with a gold hoop, a thin chain around her neck. She’s mid‑gesture with her right hand reaching toward her shin, fingers curled, while her left foot is planted forward and her right foot tucked behind. The image captures natural daylight from a western window, creating a warm overexposure on her torso. Shot on a 24 mm wide‑angle lens at f/5.6 and 1/125 s, with slight motion blur on the hands and knees. The framing is off‑center and accidental, background is a plain wall with faint dust specks. No filters or post‑processing—raw, handheld realism.”

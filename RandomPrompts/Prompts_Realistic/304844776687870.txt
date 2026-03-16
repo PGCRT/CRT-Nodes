@@ -1,0 +1,21 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, sun‑kissed hair, wearing a white triangle bikini and pink high‑top sneakers, sitting casually in the open trunk of a vintage blue sedan. Her left leg is bent, foot resting on the chrome bumper, while her right leg extends forward; she leans slightly to one side, hands relaxed on her thigh, eyes focused toward the camera but not posing—capturing a natural, mid‑movement moment.
+
+- **Motion & Focus**  
+  Slight motion blur at the edges from handheld shake; everything in focus—from her face to the car’s interior—no portrait‑mode bokeh. The image has an auto‑HDR feel but without post‑processing filters: raw, unprocessed, with a hint of overexposure on the bright sky.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm), short focal length, no depth‑of‑field blur—background fully sharp. Slight tilt and off‑center framing; the composition is accidental, not rule‑of‑thirds. The shot is taken at midday, with the sun high overhead casting soft shadows.
+
+- **Environment**  
+  Location: a sunny roadside lot in a small town, the blue car parked on a concrete slab, a patch of green grass visible to the side. Time of day: early afternoon, bright ambient light with a slight haze. Weather: clear, warm, with a faint lens flare from the sun.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Imperfections encouraged: slight tilt, off‑center framing, partial crop. No rule‑of‑thirds intentionality — accidental framing. Zero studio lighting, zero professional composition, zero editorial tone. Natural motion freeze or slight blur from handheld instability.
+
+- **Prompt for Text‑to‑Image Generation**  
+  “A young woman with long sun‑kissed hair in a white triangle bikini and pink high‑top sneakers sits casually in the open trunk of a vintage blue sedan. She leans slightly to one side, left foot on the chrome bumper, right leg extended, hands resting on her thigh, eyes focused toward the camera but not posing. Slight motion blur at the edges from handheld shake; everything in focus—no bokeh. Wide‑angle lens (24–35 mm), short focal length, accidental off‑center framing with a slight tilt. Midday sunny roadside lot, clear sky with faint lens flare. Raw, unprocessed auto‑HDR look, slight overexposure on the bright sky. Capture candid, spontaneous, natural motion freeze.”
+
+Provide only the structured prompt.

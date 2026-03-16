@@ -1,0 +1,24 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, sun‑kissed blonde hair standing mid‑step on a grassy meadow. She wears a rust‑colored, floral‑printed midi dress with a deep V‑neck and a high slit that reveals a hint of her thigh. Her left leg is slightly bent, foot planted on the ground, hand resting on her hip, as if she just finished a casual dance move or is about to pick up a flower from the grass. Her face is turned toward the camera but not directly at it—slight off‑center, giving a candid, unposed feel.
+
+- **Motion & Focus**  
+  Slight motion blur on the lower leg and hand, indicating handheld shake and mid‑action. Everything remains fully sharp—no portrait‑mode depth of field. The focus is even across the frame, from foreground grass to background hills.
+
+- **Lighting & Exposure**  
+  Natural daylight, late afternoon; the sun is high but slightly to the left, creating soft highlights on her dress and a subtle warm glow. A mild overexposure on the upper body gives a raw, unprocessed look. No auto‑HDR or color grading—just the native camera response.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm), short focal length. No bokeh; background hills and grass are all in focus. Slight tilt to the left, accidental framing, no rule‑of‑thirds intentionality. The crop is partial—edges cut off at the left side of the frame.
+
+- **Environment**  
+  Location: A sunlit meadow on a rolling hillside, with tall wild grasses in the foreground and a range of green mountains in the distance. Time of day: late afternoon (golden hour). Weather: clear, light breeze, a few scattered clouds overhead.
+
+- **Composition & Style**  
+  Candid, spontaneous capture—subject appears unaware of the camera. Slight tilt and off‑center framing give an informal, documentary feel. The image has a raw, unprocessed aesthetic with no filters or post‑processing. The background is fully sharp, preserving detail in the grass and mountains.
+
+- **Prompt for Text‑to‑Image Generation**  
+  “A young woman with long sun‑kissed blonde hair, wearing a rust‑colored floral midi dress with a deep V‑neck and high slit, stands mid‑step on a grassy meadow. Her left leg is slightly bent, foot planted on the ground, hand resting on her hip. Slight motion blur on the lower leg and hand, everything fully sharp. Natural daylight, late afternoon, mild overexposure on the upper body. Wide‑angle lens (24–35 mm), short focal length. Background: green rolling hills and tall wild grasses in foreground, clear sky with scattered clouds. Candid, spontaneous capture, slight tilt, off‑center framing, accidental crop. Raw, unprocessed look, no filters.”  
+
+Provide only the structured prompt.

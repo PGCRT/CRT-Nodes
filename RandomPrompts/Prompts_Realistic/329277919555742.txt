@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, straight brown hair, wearing a black lace bodysuit and matching fishnet stockings adorned with silver embellishments. She is kneeling on a white bed, leaning forward slightly, hands planted on the mattress, head tilted to the side, eyes focused on the camera but with a casual, unposed expression. Her left leg is bent, right leg extended, creating a dynamic, off‑center composition.
+
+- **Lighting & Exposure**  
+  Natural daylight from a north‑west window, mid‑afternoon, soft but slightly harsh ambient light. Slight overexposure on the face and upper body, subtle halo effect. No auto‑HDR or beauty filters—raw, unprocessed look. The exposure is uneven: the background is a bit brighter than the foreground, giving a natural, handheld feel.
+
+- **Lens & Technical**  
+  24 mm wide‑angle lens (short focal length), f/3.5 aperture, 1/60 s shutter speed, ISO 400. Everything in focus—no bokeh, no depth‑of‑field blur. Slight motion blur on the hands and legs to suggest spontaneous movement. No portrait‑mode subject isolation; the entire scene is sharp.
+
+- **Framing & Composition**  
+  Handheld, slightly tilted frame with accidental crop: the top of the head cuts off a bit at the upper edge, the left side of the body extends beyond the right border. No rule‑of‑thirds intentionality—just a casual, spontaneous capture. The background shows a plain white wall with a small framed picture hanging high on it; a portion of a wooden bed frame is visible on the left.
+
+- **Environment**  
+  A bright, minimalist bedroom. The time of day is late afternoon, with warm sunlight casting soft shadows. The weather outside is clear, which keeps the ambient light steady. The room has a neutral color palette—white bedding, light wall, subtle wood tones—so the subject stands out without competing visual noise.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, minor off‑center framing, partial crop of the subject’s left shoulder. A faint smudge on the lens gives a raw feel. The subject’s hair has a slight stray strand that catches the light. The fishnet stockings show a small wrinkle at the knee, adding realism.
+
+- **Prompt Summary**  
+  “A young woman in black lace and silver‑adorned fishnets kneels on a white bed in a bright bedroom, captured with a 24 mm wide‑angle lens at f/3.5, 1/60 s, ISO 400. Natural mid‑afternoon light creates slight overexposure on the subject. Handheld, slightly tilted frame with accidental crop, everything in focus, subtle motion blur on the hands and legs. Background shows a plain white wall with a framed picture and a wooden bed frame. Raw, unprocessed, no filters—realistic candid photography.”

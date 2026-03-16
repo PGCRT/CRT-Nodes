@@ -1,0 +1,26 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark brown hair, wearing a black ribbed one‑piece swimsuit, sitting on a wooden office desk. She is mid‑smile, leaning slightly to her right, left leg bent and resting on the desk, right leg extended. Her left hand rests on a stack of white papers; her right hand holds a black calculator. A thin gold necklace hangs around her neck.
+
+- **Lighting & Exposure**  
+  Natural daylight from a western window, mid‑afternoon (≈ 4 pm). Slight overexposure in the upper left corner, giving a warm, soft glow. No auto‑beauty or filter processing – raw, unprocessed look.
+
+- **Camera Settings**  
+  - Lens: 24 mm wide‑angle, short focal length.  
+  - Aperture: f/5.6 (wide opening).  
+  - Shutter speed: 1/125 s (handheld, slight motion blur on the subject’s hand).  
+  - ISO: 400.  
+  - Focus: everything in focus – background and foreground equally sharp; no portrait‑mode depth‑of‑field blur.
+
+- **Composition & Framing**  
+  Candid, unposed, spontaneous framing. The shot is slightly tilted to the right, off‑center, with a partial crop that cuts off the top left corner of the bookshelf. No rule‑of‑thirds intentionality – it feels accidental, like a quick snapshot.
+
+- **Environment**  
+  Office setting: a light‑wood desk with a black office chair behind the woman. A tall wooden bookshelf stands to the left, filled with colorful spines (red, blue, green, yellow). A white coffee cup sits on the desk near the calculator. A small framed picture hangs on the wall to the right. The floor is hardwood; a fluffy white rug is partially visible under the chair.
+
+- **Details & Imperfections**  
+  Slight motion blur on the woman’s left hand, indicating handheld instability. The image has a natural, raw aesthetic – no color grading or filters. A faint overexposure in the upper left corner softens the bookshelf spines. The background is fully sharp, no bokeh.
+
+- **Prompt for Text‑to‑Image Generation**  
+  “A young woman with long dark brown hair, wearing a black ribbed one‑piece swimsuit, sitting on a wooden office desk mid‑smile, left leg bent on the desk, right leg extended, left hand on a stack of white papers, right hand holding a black calculator. She wears a thin gold necklace. Natural daylight from a western window at mid‑afternoon creates a warm soft glow with slight overexposure in the upper left. 24 mm wide‑angle lens, f/5.6, 1/125 s shutter, ISO 400 – everything in focus. Candid, slightly tilted, off‑center framing, partial crop. Background includes a tall wooden bookshelf filled with colorful spines, a white coffee cup on the desk, and a framed picture on the wall. Hardwood floor, fluffy white rug under the chair. Raw, unprocessed look, slight motion blur on the hand, natural aesthetic.”

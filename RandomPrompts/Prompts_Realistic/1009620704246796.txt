@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman with long, dark hair kneeling on a wooden deck, hands behind her head, body slightly tilted, mid‑pose as if she just finished a stretch or is adjusting her white lace underwear. Her face is turned toward the camera but not directly at it—slight off‑center framing. She’s in a natural, unposed stance, with a hint of motion blur around her hands and shoulders from handheld shake.
+
+- **Lighting & Exposure**  
+  Warm, mid‑afternoon sunlight coming from the left, creating soft highlights on her skin and subtle overexposure on the upper body. Slight ambient glare on the concrete wall behind her. No auto‑HDR or beauty filters—raw, unprocessed look. The exposure is a little bright at the top, giving a natural “sun‑kissed” feel.
+
+- **Environment**  
+  A rustic concrete wall with visible cracks and weathered texture, a patch of green foliage peeking from above, and a wooden deck floor. A tree branch hangs into the frame from the upper left, casting dappled shadows on the deck. The scene is an outdoor balcony or terrace in a tropical or subtropical setting. Time of day: late morning to early afternoon; weather: clear, slightly humid.
+
+- **Lens & Technical**  
+  24‑mm wide‑angle lens (short focal length), handheld, everything in focus from foreground to background. No bokeh—background is fully sharp. Slight motion blur on the subject’s hands and shoulders, indicating a natural freeze or slight shake. No portrait mode or depth‑of‑field blur. The composition is accidental: no rule‑of‑thirds, no intentional centering.
+
+- **Capture Style**  
+  Candid, spontaneous—subject appears unaware of the camera, mid‑action. Slight tilt and partial crop give a raw, unposed vibe. Imperfections are encouraged: slight focus softness at edges, minor vignetting, natural color palette. No post‑processing or color grading.
+
+- **Prompt for AI Image Generation**  
+  “A woman with long dark hair kneeling on a wooden deck, hands behind her head, body slightly tilted, mid‑pose as if just finishing a stretch, wearing white lace underwear. Warm mid‑afternoon sunlight from the left creates soft highlights and slight overexposure on her upper body. Behind her is a weathered concrete wall with visible cracks, a patch of green foliage above, and a tree branch hanging into the frame from the upper left, casting dappled shadows on the deck. The scene is an outdoor balcony in a tropical setting. Shot on a 24‑mm wide‑angle lens, everything in focus, slight motion blur on the hands and shoulders from handheld shake, no bokeh, no filters—raw, unprocessed, candid, spontaneous capture with accidental framing and slight tilt.”

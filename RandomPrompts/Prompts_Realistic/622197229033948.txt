@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with shoulder‑length brown hair and bangs, wearing a white bikini top printed with large yellow sunflowers and green leaves, sits casually on a beige fabric sofa. Her left hand rests on her thigh, while her right hand touches the side of her head in a relaxed, mid‑gesture pose. She looks directly at the camera with a subtle, confident expression.
+
+- **Lighting & Exposure**  
+  Natural daylight from a western window casts soft, warm illumination across the scene. Slight overexposure on the upper half of the frame gives a raw, unprocessed look. No auto‑HDR or beauty filters—just ambient light with a hint of warmth and a tiny flare in the top right corner.
+
+- **Camera & Lens Settings**  
+  35 mm wide‑angle lens, f/4.0 aperture, 1/125 s shutter speed, ISO 400. Slight handheld shake produces a natural motion blur on the edges. Everything is in focus—no portrait‑mode depth of field blur; background remains sharp.
+
+- **Composition & Framing**  
+  The shot is intentionally off‑center: the subject’s left side leans slightly to the right, creating a casual, spontaneous feel. The frame captures a wide view of the interior space: a tall wooden bookshelf filled with colorful spines, a small potted plant on the top shelf, and a large monstera leaf hanging from the right wall. A white pillow rests against the back of the sofa. The composition is not rule‑of‑thirds; it’s a “mid‑action” candid capture.
+
+- **Environment & Time**  
+  Location: a bright, modern living room with light‑wood furniture. Time of day: late morning, around 10:30 AM, when the sun is high but still casts soft shadows. Weather: clear, slightly humid air; ambient noise of distant city.
+
+- **Details & Imperfections**  
+  The image has a slight tilt to the right, giving it an informal vibe. A faint dust mote is visible near the top left corner. The sofa’s fabric shows a subtle texture, and the bookshelf’s wood grain is clearly seen. The monstera leaf’s veins are crisp, and the potted plant’s terracotta pot is partially in view.
+
+- **Post‑Processing**  
+  No filters or color grading—just raw capture. A tiny amount of natural vignetting at the corners is present. The overall tone is warm, with a slight yellow cast from the sunlight.
+
+**Prompt Summary (structured)**  
+`Candid photography of a woman in a sunflower bikini sitting on a beige sofa in a bright living room, 35mm wide‑angle lens, f/4, 1/125s, ISO 400, natural daylight from west window, slight overexposure, handheld shake, off‑center framing, background includes wooden bookshelf with colorful spines and monstera leaf, late morning, raw unprocessed look.`

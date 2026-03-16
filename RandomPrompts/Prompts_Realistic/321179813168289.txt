@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail, wearing a red spaghetti‑strand top and denim shorts, bending forward as if tending to a small garden or rooftop plot. Her face is turned toward the camera with a genuine, mid‑laugh expression, eyes slightly closed, capturing a spontaneous, unposed moment.
+
+- **Motion & Focus**  
+  Slight motion blur on the subject’s hands and lower body to convey handheld instability; everything else in sharp focus—no bokeh, no portrait‑mode isolation. The image has an auto‑HDR feel but without post‑processing filters: raw, natural tones with a hint of overexposure from the bright midday sun.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm), short focal length, all elements fully sharp. No rule‑of‑thirds intentionality—framing is accidental, slightly tilted and off‑center. The composition is candid, spontaneous, and “in the moment.”
+
+- **Environment**  
+  Location: a sunlit rooftop or balcony garden in an urban setting; a concrete wall and a distant city skyline are visible in the background. Time of day: mid‑afternoon, with strong, high‑angle sunlight creating slight overexposure on the subject’s shoulders. Weather: clear, bright sky with a few scattered clouds.
+
+- **Lighting & Color**  
+  Natural daylight, no studio lighting. The sun’s intensity creates a warm, slightly harsh highlight on the woman’s shoulder and a soft shadow under her arm. Colors are raw—red top, denim blue, green plants, concrete gray, and a pale blue sky. No color grading or filters; the look is purely candid.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, partial crop that cuts off the lower edge of the frame, giving an informal feel. The woman’s hair has a few loose strands blowing in the wind, adding to the spontaneous vibe. Background foliage and concrete are fully sharp, no depth‑of‑field blur.
+
+- **Prompt Summary**  
+  “A young woman with a high ponytail, wearing a red spaghetti‑strand top and denim shorts, bends forward on a sunlit rooftop garden, laughing spontaneously. Slight motion blur on her hands, everything in focus, captured on a wide‑angle short focal length lens. The scene includes a concrete wall and distant city skyline, bright mid‑afternoon sunlight with a hint of overexposure. Raw, unprocessed, no filters—candid, accidental framing, slight tilt, partial crop.”

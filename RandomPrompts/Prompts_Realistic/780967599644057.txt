@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A young woman with long, dark, slightly frizzy hair is mid‑drink, holding a clear plastic bottle of amber soda in her right hand. She’s seated on a white, stackable storage crate in an industrial‑style office or studio space. Her shirt—a red‑and‑blue plaid button‑down—hangs off one shoulder, revealing a hint of bare skin. On her feet she wears black platform sneakers with thick rubber soles and white laces, paired with white crew socks. She’s leaning forward a little, eyes focused on the bottle, mouth slightly open as if she’s about to take a sip.
+
+- **Pose & Composition**  
+  The shot is taken from a low, slightly off‑center angle, giving a casual, spontaneous feel. The framing is accidental—no rule‑of‑thirds, just a handheld, wide‑angle capture that includes the subject’s full body and a portion of the background. The camera is tilted a little, creating a subtle motion blur that suggests movement and a raw, unprocessed look.
+
+- **Lighting & Exposure**  
+  Natural daylight comes from a large window on the left, creating a soft overexposure on the subject’s face and upper body. The lighting is uneven; the right side of the image is slightly brighter than the left, giving an ambient, unedited feel. No auto‑HDR or beauty filters—just raw, in‑camera exposure.
+
+- **Environment**  
+  The setting is a real‑world office or studio with exposed concrete walls, large industrial windows, and a wooden table on the left. Behind the woman, there’s a metal shelving unit filled with books and storage bins, a large water bottle on a shelf, and a white storage crate she’s sitting on. A black office chair sits near the table, and a small pendant lamp hangs from the ceiling. The floor is concrete, and a piece of fabric lies on the ground in the lower right corner.
+
+- **Time of Day & Weather**  
+  The scene is captured during mid‑afternoon, when the sun is high but not directly overhead, producing strong natural light through the window. The weather outside the window appears clear, with a bright sky that contributes to the overexposed highlight on the subject’s face.
+
+- **Lens & Technical Settings**  
+  Use a short focal length wide‑angle lens (e.g., 24mm or 35mm) to capture the entire scene in one shot. Keep everything in focus—no portrait‑mode blur—so that the background, foreground, and subject are all sharp. Avoid bokeh; keep the depth of field broad. Shoot at a high ISO to reduce noise, but keep the “auto‑beauty” mode off for a raw look.
+
+- **Capture Style**  
+  The image should feel candid and unposed—as if the subject was mid‑action when the shutter was pressed. Encourage slight tilt, off‑center framing, and partial crop. Capture a natural motion freeze or slight blur from handheld instability. No studio lighting, no professional composition, no editorial tone—just an authentic, spontaneous snapshot.
+
+- **Final Prompt**  
+  “A young woman with long dark frizzy hair sits on a white storage crate in an industrial office, drinking amber soda from a clear bottle. She wears a red‑blue plaid shirt off one shoulder, black platform sneakers, and white socks. The shot is taken from a low, slightly off‑center angle with a 24mm wide‑angle lens, capturing the entire scene in one go. Natural daylight streams through a large window on the left, creating soft overexposure on her face. Behind her are metal shelves, a wooden table, a black office chair, and a pendant lamp. The image has a raw, unprocessed look with slight motion blur and accidental framing, as if captured mid‑action by a handheld camera.”

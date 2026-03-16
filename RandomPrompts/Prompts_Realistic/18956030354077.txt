@@ -1,0 +1,37 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark brown hair tied back, wearing large gold hoop earrings, a delicate gold necklace, and no clothing other than a pair of faded blue jeans. She stands in a relaxed, candid pose, slightly turned toward the camera, with her left hand resting on the chest of a shirtless man beside her. The man has short dark hair, a light beard, and is wearing the same jeans; his right arm is around the woman’s waist. Both appear natural and unposed, as if caught mid‑conversation or mid‑dance.
+
+- **Lighting & Exposure**  
+  Natural daylight from a western window, late afternoon (around 5 pm). The light is slightly warm, with a mild overexposure on the upper body, giving a raw, unprocessed look. No auto‑HDR or beauty filters—just a straightforward exposure that keeps the entire frame bright but unedited.
+
+- **Camera & Lens Settings**  
+  - Camera: DSLR or mirrorless with a wide‑angle lens (24 mm or 35 mm).  
+  - Focal length: 35 mm, short‑focal‑length wide angle.  
+  - Aperture: f/4.0 – shallow but not too shallow; everything in the frame stays sharp.  
+  - Shutter speed: 1/60 s – enough to capture a slight motion blur from handheld instability.  
+  - ISO: 400–600 for natural grain.  
+  - No portrait‑mode depth‑of‑field blur; background is fully sharp.
+
+- **Composition & Framing**  
+  - Candid, unposed framing: the shot is slightly tilted, off‑center, and partially cropped at the top and right edges.  
+  - No rule‑of‑thirds intentionality – the composition feels spontaneous, as if the photographer was in the middle of a conversation.  
+  - The frame captures both subjects from the mid‑thigh up to the head, with a small portion of a white bed or couch visible in the lower left corner.
+
+- **Environment**  
+  - Location: A bright, modern bedroom in an apartment building; the window behind the subjects lets in warm afternoon light.  
+  - Time of day: Late afternoon (5 pm), ambient natural light with a slight haze.  
+  - Weather: Clear, mild weather; no wind, but the handheld camera introduces a subtle motion blur.
+
+- **Details & Imperfections**  
+  - Slight tilt and off‑center framing give the image a casual, real‑life feel.  
+  - Minor overexposure on the upper bodies creates a soft glow.  
+  - The woman’s left ear is partially cut off by the frame edge; the man’s right shoulder is slightly cropped.  
+  - Small imperfections: a faint smudge on the woman’s necklace, a slight wrinkle in the jeans, and a tiny shadow from the window frame.
+
+- **Post‑Processing**  
+  - No filters or color grading – just raw, natural colors.  
+  - Slight auto‑beauty mode off; the image retains a genuine, unpolished look.  
+
+This prompt can be used in a text‑to‑image generator to create a new realistic candid photo that mirrors the original scene’s style, lighting, and composition while offering enough variation to feel fresh and unique.

@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a shoulder‑length brown bob, wearing an oversized white puffed‑sleeve t‑shirt and dark jeans, standing on a cobblestone city street. Her left hand is lightly touching her chin, a subtle smile on her face, and she carries a brown leather shoulder bag slung over her right shoulder. She wears gold hoop earrings, a thin gold necklace with a small pendant, a gold bracelet on her left wrist, and a black watch on her right wrist.  
+
+- **Motion & Focus**  
+  Slight motion blur from handheld shooting; the subject’s face and upper body are fully sharp while the background remains crisp—no portrait‑mode depth‑of‑field blur.  
+
+- **Lighting & Exposure**  
+  Natural daylight, mid‑afternoon (around 3 pm), with a slight overexposure that gives a warm, raw feel. No auto‑HDR or beauty filters; no color grading or post‑processing.  
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm), short focal length, everything in focus—no bokeh.  
+
+- **Environment**  
+  A bustling downtown street with brick buildings, a storefront sign that reads “COCONUT” on the left, a green awning, a street lamp, and a few pedestrians in the background. The street is paved with gray cobblestones; a parked car and a traffic light are visible further back. The scene is slightly tilted to the right, giving an accidental, candid feel.  
+
+- **Composition**  
+  Off‑center framing: the subject’s head is slightly above the center of the frame, her left side leans toward the left edge, creating a casual, spontaneous look. The shot is partially cropped at the top and bottom, emphasizing rawness.  
+
+- **Prompt for AI Image Generation**  
+  “A young woman with a shoulder‑length brown bob, wearing an oversized white puffed‑sleeve t‑shirt and dark jeans, standing on a cobblestone city street. Her left hand lightly touches her chin, she smiles, and she carries a brown leather shoulder bag over her right shoulder. She wears gold hoop earrings, a thin gold necklace with a small pendant, a gold bracelet on her left wrist, and a black watch on her right wrist. Slight motion blur, fully sharp subject and background, natural daylight mid‑afternoon with slight overexposure, wide‑angle lens 24–35 mm, everything in focus. Background features brick buildings, a storefront sign that reads ’COCONUT’, a green awning, a street lamp, pedestrians, a parked car, and a traffic light. Slight right tilt, off‑center framing, partially cropped. Raw, unprocessed, no filters.”

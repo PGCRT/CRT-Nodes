@@ -1,0 +1,21 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair standing in a sunlit meadow, bare‑chested and wearing light‑wash denim jeans. She is mid‑step, one foot slightly ahead of the other, her left arm relaxed by her side, right arm bent at the elbow as she holds a small, wooden cutting board in front of her chest. Her face is turned toward the camera but not directly aimed — a slight, natural tilt that gives the shot a candid feel.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. The image has a slight motion blur on the hands and the cutting board, indicating handheld instability. No filters, no color grading, no post‑processing aesthetic; only raw, auto‑HDR or auto‑beauty mode off. A faint overexposure in the upper left corner captures the warm ambient light of late afternoon.
+
+- **Environment**  
+  Specific real‑world location: a grassy field with scattered wildflowers, a small wooden fence post to the right, and a distant line of trees on the horizon. Time of day: early evening, the sun low on the western side casting long, soft shadows. Weather or ambient conditions: mild breeze, clear sky, slight humidity.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm), wide angle. No bokeh, no depth‑of‑field blur — background fully sharp. Everything in focus, no portrait mode, no subject isolation. The composition is accidental: no rule‑of‑thirds intentionality; the frame is slightly off‑center, with a partial crop that cuts off the top of her head and the lower part of her jeans.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, slight motion blur on the hands, a tiny smudge on the cutting board, a faint overexposure in the upper left corner, a small shadow cast by the woman’s body onto the grass. The image has zero studio lighting, zero professional composition, zero editorial tone.
+
+- **Prompt for Text‑to‑Image Generation**  
+  “A young woman with long wavy brown hair, bare‑chested and wearing light‑wash denim jeans, standing in a sunlit meadow at early evening. She holds a small wooden cutting board in front of her chest, one foot ahead of the other, mid‑step. The shot is candid, slightly tilted, with a faint motion blur on her hands and the board, captured on a 24‑35 mm wide‑angle lens. Background shows a grassy field with scattered wildflowers, a wooden fence post to the right, and a line of trees on the horizon. Everything in focus, no bokeh, no filters, raw auto‑HDR. Slight overexposure in the upper left corner, accidental off‑center framing, partial crop.”  
+
+Provide only the structured prompt.

@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, sun‑kissed blonde hair standing bare‑chested on a grassy picnic blanket in a sunlit park. She is mid‑smile, slightly tilted to the left, hands resting on the front of her denim shorts, body angled toward the camera but not perfectly centered. Her shoulders are relaxed, a natural “mid‑action” candid feel.
+
+- **Lighting & Exposure**  
+  Warm, golden hour sunlight coming from the upper right, creating soft highlights on her chest and face with a slight overexposed warmth. The exposure is naturally uneven—some parts bright, some slightly darker—to preserve raw authenticity. No auto‑HDR or beauty filters; just a direct, unprocessed capture.
+
+- **Environment**  
+  A lush green park with scattered fallen leaves, a wooden fire pit, and a small table set for a picnic in the background. Trees line the perimeter, their branches forming a natural canopy overhead. The time of day is late afternoon, around 5 pm, giving a soft, diffused glow. Weather is clear, mild breeze, slight humidity.
+
+- **Lens & Technical**  
+  24‑mm wide‑angle lens (short focal length), handheld, slightly shaky. Everything in focus—no bokeh or depth‑of‑field blur; background remains sharp. Slight motion blur on the subject’s torso and hands to suggest natural movement. No rule‑of‑thirds; framing is accidental, off‑center, with a partial crop that cuts off the left side of her shoulder.
+
+- **Composition & Style**  
+  Candid, unposed, spontaneous—subject appears unaware of the camera. Slight tilt and off‑center framing create a natural, imperfect look. The composition is “mid‑action” with the woman’s body slightly turned, hands on her shorts, and a picnic blanket beneath her. No studio lighting or professional composition; everything feels organic and real.
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, no post‑processing aesthetic. Only raw, in‑camera data with a slight overexposure on the right side of the frame to mimic ambient light.  
+
+**Prompt Summary**  
+“Candid photo of a bare‑chested woman with long blonde hair standing on a picnic blanket in a sunlit park at late afternoon. Warm golden hour light from the upper right creates soft highlights and slight overexposure. 24‑mm wide‑angle, handheld shot with slight motion blur, everything in focus, accidental off‑center framing, no filters or post‑processing.”

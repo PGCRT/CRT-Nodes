@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail, wearing an off‑white cotton tee, captured mid‑thought while leaning slightly forward over a wooden desk. Her head is tilted down, eyes cast toward a pink cup filled with colorful pens, a white coffee cup beside it, and a fuzzy beige mouse pad. She’s in the act of writing or drawing, pen in hand, with a faint motion blur on her fingers to suggest movement.
+
+- **Setting & Environment**  
+  The scene is set in a sunlit home office or study room during late morning; the window behind her shows a bright street outside with a parked car and a tree, indicating a clear, warm day. The desk is cluttered with a small potted plant, a stack of books, and a beige cushion, giving a lived‑in, spontaneous feel. A wooden cabinet with open shelves holds books and a polka‑dot bag; a white coffee cup sits on the desk’s corner.
+
+- **Lighting & Exposure**  
+  Natural daylight from the window creates a soft overexposure on the subject’s left side, with slight ambient glare. The exposure is slightly uneven—no auto‑beauty or filter enhancement, just raw, unprocessed light. A wide‑angle lens (24‑35 mm) captures the entire scene in one shot, keeping the background fully sharp with no bokeh.
+
+- **Lens & Technical**  
+  Use a short focal length (35 mm) wide‑angle lens to keep everything in focus—no portrait‑mode depth of field blur. Shoot handheld with slight instability, producing a natural motion freeze or mild blur on the subject’s hand and head. The framing is accidental: the composition is off‑center, slightly tilted, and the rule‑of‑thirds is ignored for authenticity.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject unaware of camera. Slight tilt and partial crop create a raw, documentary feel. No rule‑of‑thirds intentionality; everything is in focus, no portrait mode, no subject isolation. The image has a zero‑studio‑lighting, zero‑professional‑composition, zero‑editorial‑tone vibe.
+
+- **Post‑Processing**  
+  No filters, no color grading, no post‑processing aesthetic—just raw, auto‑HDR or auto‑beauty off. Slight overexposure on the left side to mimic natural daylight. Keep everything in focus, background fully sharp, no bokeh.
+
+- **Final Prompt**  
+  “A young woman with a high ponytail, wearing an off‑white cotton tee, captured mid‑thought while leaning slightly forward over a wooden desk. Her head is tilted down, eyes cast toward a pink cup filled with colorful pens, a white coffee cup beside it, and a fuzzy beige mouse pad. She’s in the act of writing or drawing, pen in hand, with a faint motion blur on her fingers to suggest movement. The scene is set in a sunlit home office or study room during late morning; the window behind her shows a bright street outside with a parked car and a tree, indicating a clear, warm day. The desk is cluttered with a small potted plant, a stack of books, and a beige cushion, giving a lived‑in, spontaneous feel. A wooden cabinet with open shelves holds books and a polka‑dot bag; a white coffee cup sits on the desk’s corner. Natural daylight from the window creates a soft overexposure on the subject’s left side, with slight ambient glare. The exposure is slightly uneven—no auto‑beauty or filter enhancement, just raw, unprocessed light. A wide‑angle lens (24‑35 mm) captures the entire scene in one shot, keeping the background fully sharp with no bokeh. Use a short focal length (35 mm) wide‑angle lens to keep everything in focus—no portrait‑mode depth of field blur. Shoot handheld with slight instability, producing a natural motion freeze or mild blur on the subject’s hand and head. The framing is accidental: the composition is off‑center, slightly tilted, and the rule‑of‑thirds is ignored for authenticity. Candid, unposed, spontaneous—subject unaware of camera. Slight tilt and partial crop create a raw, documentary feel. No rule‑of‑thirds intentionality; everything in focus, no portrait mode, no subject isolation. Natural motion freeze or slight blur from handheld instability.”

@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young couple in a casual, urban setting: the woman with long brown hair tied back, wearing a white distressed hoodie and pink jeans; the man with short dark hair, a white hooded sweatshirt and tan chinos. They’re mid‑conversation, faces close, eyes locked, hands lightly touching, as if sharing a playful toast. The woman’s left hand is slightly blurred from motion, indicating a natural, handheld snap.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the couple appears unaware of the camera, caught in a genuine moment. Slight tilt and off‑center framing give an accidental, imperfect feel. The shot is partially cropped on the right side, leaving a hint of the background out of frame. No rule‑of‑thirds intentionality; the composition feels organic and spontaneous.
+
+- **Motion & Focus**  
+  Slight motion blur on the woman’s hand and the man’s face, suggesting a handheld, in‑motion capture. Everything remains fully sharp — no portrait‑mode depth‑of‑field blur. The focus is broad, capturing both subjects and background in one plane.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm), short focal length. No bokeh; the background is fully sharp, with no depth‑of‑field softness. Auto‑HDR or auto‑beauty mode off — raw, unprocessed look. Slight overexposure on the bright window light, giving a natural, ambient glow.
+
+- **Environment**  
+  A modern office loft during mid‑afternoon. Large floor‑to‑ceiling windows let in warm daylight, creating a slight haze and a small lens flare. The background shows a blurred cityscape outside the window, with a few colleagues working at desks. The time of day is late afternoon, around 4:30 pm, with soft natural light. Weather is clear, with a gentle breeze.
+
+- **Lighting & Color**  
+  Natural daylight from the window, slight overexposure on the upper part of the frame. No color grading or filters — raw, unprocessed colors. The white hoodies contrast with the pink jeans and tan chinos, creating a vibrant, lively palette.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, a small crop that cuts off the right side of the man’s hand. The woman’s hair is slightly blown out on the top, giving a natural overexposed highlight. The background is fully sharp, with no bokeh. The image has a candid, spontaneous feel, as if captured in a real moment at a casual office gathering.
+
+- **Prompt for Text‑to‑Image Generation**  
+  “A young couple in a casual urban loft setting, mid‑conversation with hands touching, woman in white distressed hoodie and pink jeans, man in white hooded sweatshirt and tan chinos, slight motion blur on the woman’s hand, candid unposed snapshot, wide‑angle short focal length lens, fully sharp background, natural daylight from large window, slight overexposure, organic off‑center framing, accidental crop on right side, mid‑afternoon time, clear weather, raw unprocessed look.”

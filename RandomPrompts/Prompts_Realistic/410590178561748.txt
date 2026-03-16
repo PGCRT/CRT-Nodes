@@ -1,0 +1,23 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman standing mid‑step in an ancient stone corridor, her hands gently clasped over her chest as if adjusting a light scarf. She wears loose, earth‑tone trousers and a simple, draped top that reveals a hint of skin at the waist. Her hair falls loosely over her shoulders, slightly tousled by the wind. She is captured mid‑motion, with a subtle handheld blur around her hands and head, suggesting she was unaware of the camera as she walked.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. The shot has a slight tilt and off‑center framing that gives it an accidental, natural feel. No rule‑of‑thirds intentionality; the composition is dictated by the subject’s position in the corridor and the surrounding stone carvings. Slight motion blur on the hands and feet, while the background remains fully sharp — no portrait‑mode depth‑of‑field blur.
+
+- **Environment**  
+  Specific real‑world location: an old, weathered stone walkway with carved reliefs on either side, leading to a misty mountain vista beyond. Time of day: late morning, with soft, warm sunlight filtering through the clouds and creating a gentle overexposure on the upper part of the frame. Weather or ambient conditions: light breeze, faint fog clinging to the mountains, a few falling leaves visible in the air.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm), wide‑angle lens. No bokeh; everything from foreground to background is in focus. Auto‑HDR or auto‑beauty mode off — raw, unprocessed look. No filters, no color grading, no post‑processing aesthetic. Slight overexposure on the upper half of the image due to ambient light. The exposure is slightly uneven, giving a natural, imperfect feel.
+
+- **Details & Imperfections**  
+  - Slight tilt of the camera, making the vertical lines of the corridor appear almost diagonal.  
+  - Partial crop: the top of the frame cuts off just above the woman’s head, leaving a small portion of the sky visible.  
+  - The stone carvings on either side are partially obscured by the woman’s body, adding to the candid feel.  
+  - A few leaves drift into the frame from the left side, caught in the wind.  
+  - The floor tiles show subtle wear and cracks, with a faint reflection of the sunlight.
+
+- **Final Prompt**  
+  “A young woman in loose earth‑tone trousers and a draped top stands mid‑step in an ancient stone corridor, her hands gently clasped over her chest as if adjusting a light scarf. She is captured mid‑motion with slight handheld blur on her hands and head, while the background of carved reliefs and misty mountains remains fully sharp. The shot is taken with a 24‑35 mm wide‑angle lens, slightly tilted and off‑center, with a small partial crop at the top. Late morning sunlight creates a gentle overexposure on the upper half of the frame, leaving a faint trail of falling leaves in the air. No filters or post‑processing — raw, candid, spontaneous photography.”

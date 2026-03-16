@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark brown hair, wearing a pink and yellow halter‑style bikini, standing on a sunlit beach. She holds a clear plastic water bottle in her right hand, slightly angled toward the camera, with a gentle, natural smile. Her left arm hangs relaxed by her side, a ring visible on her ring finger. The pose is candid—she appears to be mid‑step, as if just having taken a photo or about to pick up another bottle.
+
+- **Motion & Focus**  
+  Slight motion blur at the edges from handheld instability; the subject’s face and torso are in sharp focus, while the background (ocean, sand, palm fronds) remains fully sharp—no bokeh. The image has a raw, unprocessed look: no filters, no color grading, no auto‑beauty mode. A tiny overexposure on the upper left corner captures the bright sky.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24 mm), short focal length, all elements in focus. The composition is accidental—no rule‑of‑thirds intentionality; the frame is slightly tilted and off‑center, with a partial crop that cuts off the left side of the beach.
+
+- **Environment**  
+  Specific real‑world location: a tropical beach with soft white sand, scattered green palm leaves, the ocean stretching to the horizon, and a few distant clouds. Time of day: late morning, warm ambient light with a slight haze. Weather: clear, breezy, with a faint wind ripple on the sand.
+
+- **Lighting & Exposure**  
+  Natural daylight, no studio lighting. Slight overexposure on the upper left corner gives a subtle glow; the rest of the image retains a natural contrast. The exposure is balanced for a raw, candid feel.
+
+- **Post‑Processing**  
+  Auto‑HDR or auto‑beauty mode off—no filters, no color grading, no post‑processing aesthetic. Keep the image as close to the original capture as possible.
+
+- **Prompt Summary**  
+  “A young woman in a pink and yellow bikini holding a water bottle, standing on a sunlit beach with scattered palm leaves, captured on a wide‑angle lens with slight motion blur and accidental framing. The scene shows a tropical horizon, late‑morning light, and a raw, unprocessed look—all in focus, no filters, no color grading.”

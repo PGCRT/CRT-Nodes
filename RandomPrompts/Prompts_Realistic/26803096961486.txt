@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail, hair slightly escaping at the sides, standing mid‑lean against a wooden railing. She’s wearing distressed denim shorts that curl at the hem and a bare top that shows natural contours. Her hands grip the rail on both sides, one hand slightly lower than the other, giving an asymmetrical, spontaneous feel.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — she appears unaware of the camera, caught in a natural moment. The shot has a slight tilt and is partially cropped on the left and right, creating an off‑center framing that feels accidental. No rule‑of‑thirds intentionality; the composition is organic and informal.
+
+- **Motion & Exposure**  
+  Slight motion blur from handheld instability, with a natural freeze that keeps every part of the subject in focus. The exposure is mildly overexposed on the right side, letting ambient light bleed through the window, while the left side remains slightly darker for contrast.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm) with a short focal length. No bokeh; the background is fully sharp, from the wooden railing to the window behind. Everything in focus — no portrait‑mode depth‑of‑field blur. The image has an auto‑HDR feel but without post‑processing filters or color grading.
+
+- **Environment**  
+  Location: A modern apartment balcony with a large window that reflects the outside cityscape. Time of day: late afternoon, around 5 pm, giving warm, golden ambient light. Weather: clear, with a few scattered clouds visible through the window. The background shows a faint reflection of a building and a small tree, adding depth without distracting.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, partial crop on both sides, and a faint grain that gives a raw, unprocessed look. The subject’s skin has natural texture, with subtle blemishes and pores visible. Her denim shorts have frayed edges and a small tear at the left thigh, adding realism. The wooden railing shows natural wear, with scratches and a slight discoloration.
+
+- **Final Prompt**  
+  “A young woman with a high ponytail leaning casually against a wooden railing on a balcony, wearing distressed denim shorts and a bare top, captured with a wide‑angle lens at 30 mm. The shot is slightly tilted and partially cropped, with mild motion blur from handheld shake but everything in focus. The exposure is gently overexposed on the right side, reflecting late afternoon light through a large window that shows a cityscape behind. Raw, unprocessed, no filters — a candid, spontaneous moment frozen in time.”

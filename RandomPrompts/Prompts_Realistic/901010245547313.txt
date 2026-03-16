@@ -1,0 +1,33 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair lying supine on a neatly made bed, wearing black bikini bottoms. Her arms are spread wide, one hand resting on the pillow and the other on the mattress, creating a relaxed, spontaneous pose. She’s mid‑expression, mouth slightly open as if she just whispered a secret or is about to blow a kiss.  
+
+- **Lighting & Exposure**  
+  Natural daylight from a south‑west window, mid‑afternoon (≈ 4:30 pm). Slight overexposure on the upper body to keep the scene bright and airy; subtle halo around her shoulders. No auto‑beauty or filter enhancement—raw, unprocessed look.  
+
+- **Camera Settings**  
+  - Lens: 24 mm wide‑angle (short focal length), handheld.  
+  - Aperture: f/5.6 (mid‑range).  
+  - Shutter speed: 1/125 s (slight motion blur from instability).  
+  - ISO: 400 (for clean noise).  
+  - Focus: everything in focus—background, subject, and foreground all sharp, no portrait‑mode depth‑of‑field blur.  
+
+- **Composition & Framing**  
+  - No rule‑of‑thirds intentionality; the frame is slightly tilted, off‑center, giving a casual, spontaneous feel.  
+  - The bed occupies about two‑thirds of the frame, with the pillow and a small portion of the nightstand visible at the top left.  
+  - Background: a light‑colored wall, a wooden bedside table, and a white pillow; all in focus.  
+
+- **Environment Details**  
+  - Location: a bright, airy bedroom with a wooden headboard, a white duvet, and a beige decorative pillow.  
+  - Time of day: late afternoon, soft natural light with a warm tint.  
+  - Ambient conditions: gentle breeze from the window, slight dust motes dancing in the light.  
+
+- **Technical Nuances**  
+  - Slight motion blur on the subject’s arms and hair to emphasize handheld shooting.  
+  - No bokeh—background remains fully sharp.  
+  - Raw image with auto‑HDR off; no color grading or post‑processing aesthetic.  
+  - Capture style: candid, unposed, spontaneous—subject unaware or mid‑action.  
+
+- **Final Prompt**  
+  “A young woman with long wavy brown hair lying supine on a neatly made bed, wearing black bikini bottoms, arms spread wide, one hand on the pillow and the other on the mattress, mouth slightly open as if about to blow a kiss. Natural daylight from a south‑west window at mid‑afternoon creates slight overexposure on her upper body. Shot on 24 mm wide‑angle handheld at f/5.6, 1/125 s, ISO 400—everything in focus. The frame is slightly tilted and off‑center, capturing a casual, spontaneous candid moment. Background includes a light‑colored wall, wooden bedside table, and a white pillow, all sharp. No filters or auto‑HDR—raw, unprocessed look.”

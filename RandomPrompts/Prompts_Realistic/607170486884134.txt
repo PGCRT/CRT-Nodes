@@ -1,0 +1,31 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman in a red lace thong, captured mid‑turn as she steps forward on a concrete patio. Her back is slightly angled toward the camera, left hand resting on her hip, right arm bent at the elbow, creating a natural, unposed silhouette. The shot focuses on the curve of her buttocks and the lower part of her back, with a small portion of her thigh visible below the lace.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle, late‑afternoon sun that casts a soft warm glow on the subject’s skin. Slight overexposure on the upper back, giving a subtle halo effect. No auto‑beauty or filter processing—raw, unedited look.
+
+- **Camera Settings**  
+  - Lens: 24 mm wide‑angle, short focal length, handheld.  
+  - Aperture: f/5.6 (mid‑range).  
+  - Shutter speed: 1/125 s (slight motion blur from hand‑held instability).  
+  - ISO: 400 (for clean noise).  
+  - Focus: everything in focus—background and subject, no portrait‑mode depth‑of‑field blur.
+
+- **Composition & Framing**  
+  - No rule‑of‑thirds intentionality; the frame is slightly tilted, off‑center, capturing a partial crop of the woman’s lower back, hips, and thighs.  
+  - Background: a plain concrete patio with a faint line of grass and a small wooden bench in the distance.  
+  - Time of day: late afternoon (warm, golden light).  
+  - Weather: clear, mild breeze, no wind‑blown motion.
+
+- **Details & Imperfections**  
+  - Slight motion blur at the edges of the hips and thighs, indicating a natural, spontaneous capture.  
+  - Minor dust particles on the skin, tiny blemishes, and a faint hair strand hanging from the back.  
+  - The red lace has a subtle pattern of diamond‑shaped cutouts that catch the light.
+
+- **Environment**  
+  A quiet residential patio in an urban suburb; a small patch of green grass is visible beyond the concrete slab. The scene is unposed, candid, and feels like a real‑life snapshot.
+
+- **Output Description**  
+  A high‑resolution, realistic photograph that shows the woman’s back and hips in a natural, candid pose, with a slightly overexposed warm tone, handheld blur, wide‑angle lens, and full sharpness across the frame—no post‑processing filters or color grading. The image conveys an authentic, spontaneous moment captured in real time.

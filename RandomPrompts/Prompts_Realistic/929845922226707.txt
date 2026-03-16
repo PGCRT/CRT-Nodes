@@ -1,0 +1,30 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, curvy woman with long, wavy dark hair that cascades over her left shoulder. She’s standing in a casual, unposed stance, one hand on her hip and the other raised near her forehead as if adjusting her hair. Her face is turned slightly toward the camera, eyes open, expression relaxed.  
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle source (mid‑afternoon). Slight overexposure on the upper body, giving a warm, soft glow. No auto‑HDR or beauty filters—raw, unprocessed look.  
+
+- **Camera Settings**  
+  Wide‑angle lens (24‑35 mm), handheld, slightly shaky. F‑stop 8–10 for sharpness across the frame. Slight motion blur on the hands and hair to emphasize movement.  
+
+- **Composition**  
+  Off‑center framing: the subject’s left side is a bit cut off by the right edge of the frame. No rule‑of‑thirds intentionality—just spontaneous, candid composition. Background is a plain, neutral beige wall that keeps focus on the subject.  
+
+- **Environment**  
+  Location: a simple indoor studio with a flat, light‑colored backdrop. Time of day: late afternoon, soft natural light. Weather: clear, no wind.  
+
+- **Lens & Technical Details**  
+  Short focal length (35 mm), wide‑angle. Everything in focus—no bokeh or depth‑of‑field blur. No portrait mode or subject isolation.  
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject appears unaware of the camera mid‑action. Slight tilt and partial crop for a raw feel. Natural motion freeze or slight blur from handheld instability.  
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, zero post‑processing aesthetic. Only natural contrast and subtle auto‑exposure adjustments.
+
+---
+
+**Prompt Summary (for text‑to‑image generation)**  
+"A tall woman with long wavy dark hair stands casually against a plain beige wall, one hand on hip, the other near her forehead. Natural daylight from above creates a warm glow with slight overexposure. Shot on a 35 mm wide‑angle lens, handheld with slight shake and motion blur on the hands and hair. Off‑center framing, partial crop, no rule‑of‑thirds. Everything in focus, no bokeh. Candid, spontaneous pose, raw unprocessed look."

@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, athletic woman with long blonde hair, wearing black fish‑net stockings and black gloves, holding a wine glass in her right hand. She stands in a bright, sunlit bedroom, leaning slightly against a wooden dresser. Her left hand rests on the side of the dresser, fingers relaxed. She wears a delicate gold necklace and a small cross pendant; a tattoo of a rose is visible on her left breast.  
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window, mid‑afternoon. Slight overexposure on the upper body, giving a warm, soft glow. No auto‑beauty or filter processing – raw, unprocessed look.  
+
+- **Camera Settings**  
+  Wide‑angle lens (24 mm), handheld, slight motion blur from the camera’s instability. Everything in focus – no bokeh, no portrait‑mode depth of field.  
+
+- **Composition**  
+  Candid, unposed, spontaneous framing. The shot is slightly tilted, off‑center, with a partial crop that cuts off the top of the dresser and the left side of the room. No rule‑of‑thirds intentionality – it feels accidental, like a snapshot captured mid‑action.  
+
+- **Environment**  
+  A bright, airy bedroom with light beige walls. A white trash can sits in the lower left corner; a wooden dresser with two framed photos on top is behind the woman. The time of day is late afternoon, with warm sunlight streaming through a large window, creating soft shadows and a slight haze.  
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, minor motion blur around the edges, natural imperfections in the subject’s pose (e.g., one toe slightly turned). The fish‑net stockings have a subtle wrinkle at the thigh. The wine glass holds a small amount of red wine, visible through the glass.  
+
+- **Prompt for Text‑to‑Image Generation**  
+  “A tall, athletic woman with long blonde hair, wearing black fish‑net stockings and black gloves, holding a wine glass in her right hand, standing in a bright, sunlit bedroom, leaning slightly against a wooden dresser. She wears a delicate gold necklace with a small cross pendant; a tattoo of a rose is visible on her left breast. Natural daylight from a large window, mid‑afternoon, slight overexposure on the upper body. Wide‑angle lens (24 mm), handheld, slight motion blur, everything in focus. Candid, unposed, spontaneous framing – slightly tilted, off‑center, partial crop. Background includes a white trash can in the lower left and framed photos on the dresser. Raw, unprocessed look, no filters, no color grading.”

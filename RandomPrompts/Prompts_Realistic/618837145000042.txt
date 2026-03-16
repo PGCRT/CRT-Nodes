@@ -1,0 +1,26 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A blonde woman with voluminous, wavy hair sitting casually on a weathered stone step outside a residential house. She wears a delicate purple lace bodysuit and black high‑heeled shoes. Her left hand is raised to her ear as if she’s mid‑conversation or adjusting a headphone, giving a candid, “in‑action” feel.
+
+- **Lighting & Exposure**  
+  Slight overexposure from natural daylight (mid‑afternoon), with a warm, soft glow that slightly bleeds through the window curtains. No auto‑HDR or beauty filters—raw, unprocessed look. The exposure is a little bright at the highlights but still retains detail in the shadows.
+
+- **Camera Settings**  
+  Wide‑angle lens (24–35 mm), handheld, short focal length. Slight motion blur from the subject’s movement and the photographer’s hand instability. Everything remains in focus—no bokeh or depth‑of‑field blur; background is fully sharp.
+
+- **Composition & Framing**  
+  No intentional rule‑of‑thirds; the frame is slightly tilted and off‑center, capturing the woman’s lower body, the step she’s on, and a portion of a large terracotta planter to her right. The shot includes a glimpse of a white window with sheer curtains behind her, and a green bush peeking from the corner, adding context to the real‑world location.
+
+- **Environment**  
+  Location: Front porch of a suburban house, on a sunny mid‑afternoon. The ground is a rough stone step, the house’s exterior is light beige stucco, and a terracotta planter with greenery sits beside her. A small patch of grass and a white window frame are visible in the background.
+
+- **Technical Details**  
+  - Focal length: 35 mm (wide‑angle).  
+  - Aperture: f/4.0 (wide opening, but no bokeh).  
+  - Shutter speed: 1/60 s (slight motion blur).  
+  - ISO: 400 (mid‑range for natural light).  
+  - No portrait‑mode subject isolation; background remains fully sharp.
+
+- **Style Notes**  
+  Candid, unposed, spontaneous—subject appears unaware of the camera. Slight tilt and partial crop give an accidental, informal feel. Zero studio lighting, zero professional composition, zero editorial tone. The image should look like a genuine snapshot captured in real life.

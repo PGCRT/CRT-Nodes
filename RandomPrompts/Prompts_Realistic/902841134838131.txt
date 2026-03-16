@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a short, sun‑kissed blonde bob and dark sunglasses, walking confidently down a busy city street. She’s wearing a black fishnet mini skirt and a thin black belt, with a small star‑shaped pendant hanging from her neck. Her mouth is open in a playful smile, tongue peeking out, as if she’re mid‑chat or about to say something. A lollipop sticks out from her mouth, adding a pop of pink. She’s holding a white cup in her right hand, and her left hand is relaxed by her side.
+
+- **Motion & Focus**  
+  Slight motion blur on the subject’s hands and the background, indicating handheld instability. Everything remains largely sharp—no portrait‑mode blur. The image has an auto‑HDR feel but no color grading or filters; it looks raw and spontaneous.
+
+- **Lighting & Exposure**  
+  Natural daylight, mid‑afternoon sun with a slight overexposure on the subject’s face, giving a warm glow. The street is bathed in golden light, with soft shadows cast by the woman and passing cars.
+
+- **Environment**  
+  A bustling downtown avenue lined with tall brick buildings, traffic lights, and parked cars. A white sedan is parked on the left, a black SUV on the right, and a pedestrian walking in the background. The street has white crosswalk lines and a green traffic light glowing. Trees line the sidewalk, their leaves a bright green.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24‑35 mm), short focal length. No bokeh—background is fully sharp. All elements are in focus, from the woman’s face to the distant traffic light. The composition is accidental: slightly tilted, off‑center framing, no rule‑of‑thirds intentionality.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—the subject appears unaware of the camera. Slight tilt and partial crop give a raw, documentary feel. No studio lighting, no professional composition, no editorial tone—just a natural snapshot of everyday life.
+
+- **Post‑Processing**  
+  Auto‑HDR turned on for dynamic range; no filters or color grading. The image retains its natural look, with only minor exposure adjustments.
+
+**Prompt Summary**  
+“Candid photo of a blonde woman in a black fishnet mini skirt and sunglasses walking down a busy city street at mid‑afternoon. She’s smiling with a lollipop in her mouth, holding a white cup. Slight motion blur on her hands, everything sharp, wide‑angle lens, natural daylight with slight overexposure, auto‑HDR, no filters. Background includes parked cars, traffic light, and green trees. Raw, spontaneous, accidental framing.”

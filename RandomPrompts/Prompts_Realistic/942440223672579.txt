@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman with long, dark hair caught mid‑motion, wearing a glossy black, zip‑front bodysuit that clings to her form. Her right hand is curled into a loose fist near her chest, left arm bent at the elbow, creating a dynamic, almost martial‑arts‑like stance. She’s captured in a candid, unposed moment—her face slightly turned toward the camera, eyes focused ahead, as if she’re about to perform a move or react to an event.
+
+- **Motion & Focus**  
+  Slight motion blur on the hair and hands to emphasize movement, while the rest of the frame stays sharp. No portrait‑mode bokeh—everything from foreground to background is in focus, achieved with a wide‑angle lens (20–35 mm). The blur is subtle, as if the camera was handheld and slightly unstable at the moment of capture.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle source—mid‑afternoon, with the sun slightly to the left of the subject. A mild overexposure on the upper body gives a warm, almost hazy glow, while the lower body remains a bit underexposed, creating contrast. No auto‑beauty or filter processing; raw, unedited look.
+
+- **Background & Environment**  
+  The setting is an outdoor urban plaza with a colorful, geometric wall behind the subject—panels in bright yellow, blue, pink, and white arranged in a mosaic pattern. The wall’s texture is slightly rough, adding depth. The time of day is late afternoon, giving a soft, golden hue. Light rain or mist may be present, as faint droplets are visible on the surface of the bodysuit and in the air.
+
+- **Lens & Technical**  
+  Short focal length (24–35 mm), wide‑angle, no depth‑of‑field blur. The composition is accidental: the subject is slightly off‑center, the frame tilts a little to the right, and the crop is not perfectly centered—this gives an authentic, spontaneous feel. All elements—the subject, the background wall, and any peripheral details—are fully sharp.
+
+- **Style & Tone**  
+  The overall tone is raw, candid, and energetic. No editorial polish or rule‑of‑thirds intentionality—just a natural freeze of a moment in time. Slight tilt and partial crop create a more organic feel. The image has a slight overexposure on the upper body and a subtle underexposure on the lower body, adding drama and realism.
+
+**Prompt Summary (structured)**  
+"A woman with long dark hair mid‑motion, wearing a glossy black zip‑front bodysuit, captured in a candid, unposed moment at an outdoor urban plaza with a colorful geometric wall behind her. The scene is lit by late‑afternoon daylight from the left, producing a mild overexposure on the upper body and subtle underexposure below. A wide‑angle lens (24–35 mm) keeps everything in focus while a slight motion blur highlights movement. The composition is accidental—subject slightly off‑center and frame tilted—creating a raw, spontaneous feel with no filter or post‑processing."

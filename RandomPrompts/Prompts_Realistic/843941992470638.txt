@@ -1,0 +1,23 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair walking casually down a city sidewalk. She’s wearing a tan utility‑style jacket over a white crop top, dark high‑waist jeans, and a small brown crossbody bag. Her left hand is slightly curled, her right hand relaxed by her side, and she’s looking directly at the camera with a soft, natural smile. A subtle motion blur should be applied to suggest movement, as if she’re mid‑step.
+
+- **Lighting & Exposure**  
+  Use a wide‑angle lens (24–35 mm) set to a relatively high ISO (800–1600) for a raw, unprocessed look. Apply a slight overexposure to keep the ambient light warm and lively; avoid any auto‑beauty or filter enhancements. The exposure should feel spontaneous—no studio lighting, no intentional rule‑of‑thirds composition.
+
+- **Framing & Composition**  
+  Capture a candid, unposed shot with a handheld, slightly tilted frame that’s off‑center. Keep the background fully sharp—no bokeh or depth‑of‑field blur. The crop should feel accidental, as if the photographer was in motion and captured the scene mid‑frame.
+
+- **Environment**  
+  Location: A bustling downtown street in an American city (or a similar urban setting). The background shows a brick building with a storefront sign, a parked car, and a tree line, with a clear blue sky overhead. Time of day: late morning, around 10:30 AM, giving warm, golden sunlight that casts soft shadows on the pavement. Weather: mild, slightly breezy, with a few scattered leaves on the ground indicating early autumn.
+
+- **Lens & Technical**  
+  Short focal length (24–35 mm), wide‑angle, handheld. All elements—subject and background—are in focus; no portrait‑mode isolation. Use a tripod or stable mount only if needed for the initial setup; otherwise, shoot from a standing position with a slight shake to emphasize natural motion blur.
+
+- **Post‑Processing**  
+  No filters, no color grading, no post‑processing aesthetic—just raw, real‑life imagery. Keep the colors natural and the exposure slightly warm. If editing is required, apply minimal contrast and saturation adjustments only.
+
+**Prompt Summary for AI Image Generation**
+
+> “A candid, unposed photograph of a young woman with long wavy brown hair walking on a downtown city sidewalk. She wears a tan utility jacket over a white crop top, dark high‑waist jeans, and a small brown crossbody bag. Her left hand is slightly curled, right hand relaxed by her side, smiling naturally at the camera. Capture with a 24–35 mm wide‑angle lens, ISO 800–1600, slight overexposure, handheld motion blur. Background: brick storefront, parked car, tree line, clear blue sky; time of day late morning (10:30 AM). All elements in focus, no bokeh. Slight tilt and off‑center framing, accidental crop. Raw, unprocessed look—no filters or color grading.”

@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, straight brown hair, wearing a blue bikini, sitting on a weathered wooden lounge chair by a swimming pool. She is mid‑pose, slightly turned toward the camera, one hand resting on the chair’s armrest, the other on her thigh. Her expression is natural and unposed, with a subtle smile and direct gaze.
+
+- **Candid, Unposed Capture**  
+  The shot should feel spontaneous—subject unaware or mid‑action. Slight tilt and off‑center framing; partial crop to give an accidental, handheld feel. No rule‑of‑thirds intentionality—just a natural, casual composition.
+
+- **Motion & Focus**  
+  Apply slight motion blur to suggest handheld instability, but keep the background fully sharp—everything in focus, no portrait‑mode depth‑of‑field blur. Use a wide‑angle lens (short focal length) to capture the entire scene without excessive bokeh.
+
+- **Lighting & Exposure**  
+  Capture with auto‑HDR or “auto‑beauty” off for a raw, unprocessed look. Allow slight overexposure or underexposure depending on ambient light—here, a bright midday sun with soft cloud cover. No filters, no color grading, no post‑processing aesthetic.
+
+- **Environment**  
+  Location: A residential poolside area with a clear blue pool, several white umbrellas, and a row of lounge chairs in the background. Time of day: mid‑afternoon, around 3 pm, with warm, high‑angle sunlight. Weather: partly cloudy, gentle breeze. The background should be fully sharp, no bokeh.
+
+- **Lens & Technical**  
+  Use a short focal length (e.g., 24–35 mm) wide‑angle lens. Capture everything in focus—no portrait mode or subject isolation. Keep the depth of field wide to keep the entire scene crisp.
+
+- **Final Prompt**  
+  “A young woman with long brown hair in a blue bikini sits on a weathered wooden lounge chair by a swimming pool, mid‑pose with one hand on the armrest and the other on her thigh, smiling slightly at the camera. The shot is candid and unposed, captured with a handheld wide‑angle lens (24–35 mm) at mid‑afternoon, with slight motion blur from instability but fully sharp background. The scene includes a clear pool, white umbrellas, and a row of lounge chairs in the background under a partly cloudy sky. Capture with auto‑HDR off, no filters or color grading, slight overexposure to emphasize ambient light, everything in focus, no rule‑of‑thirds—just accidental, natural framing.”

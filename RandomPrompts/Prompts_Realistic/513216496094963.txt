@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A plus‑size woman with a high ponytail, wearing an oversized denim shirt (rolled‑up sleeves, distressed hem), ripped thigh‑length shorts, and chunky red‑black boots. She’s mid‑bite of a slice of pizza, left hand on her hip, right hand bringing the pizza to her mouth. Her head is turned slightly toward the camera, capturing a candid, spontaneous moment.
+
+- **Pose & Composition**  
+  Slight handheld tilt; off‑center framing that doesn’t follow the rule‑of‑thirds. The shot is a wide‑angle capture with a short focal length (≈20 mm), so everything—from her boots to the back wall—is in focus, no bokeh. The composition feels accidental: she’s not posed, she’s unaware of the camera, and the frame cuts off the edge of a cardboard box and a white sneaker on the floor.
+
+- **Motion & Focus**  
+  Slight motion blur from a handheld shot—mid‑action freeze with a tiny wobble. All elements are sharp: the subject, the background kitchen cabinets, the countertop, the tiled floor, the green chair, the blue backpack, and the white sneaker. No portrait‑mode depth‑of‑field blur; everything is fully in focus.
+
+- **Lighting & Exposure**  
+  Natural ambient lighting from a window above the kitchen counter; slight overexposure on the upper part of the frame (the ceiling lights). No auto‑HDR or auto‑beauty mode—raw, unprocessed look. The exposure is slightly warm, with a hint of yellow tint from the indoor lights.
+
+- **Environment**  
+  A home kitchen with light‑wood cabinets, a white countertop, a black microwave, a white mug, a vase of pink roses, and a small green chair tucked against the wall. A cardboard box sits on the floor next to her, a blue backpack leans against the left wall, and a white sneaker lies near the right corner. The time of day is late afternoon; the window lets in soft natural light that creates a slight glare on the countertop.
+
+- **Lens & Technical**  
+  Short focal length (≈20 mm), wide‑angle lens. No bokeh, no depth‑of‑field blur—background fully sharp. Everything is in focus from foreground to background. No portrait mode or subject isolation. The lens is set to a wide aperture for maximum light capture.
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, zero post‑processing aesthetic. Slight overexposure or underexposure depending on ambient light—here it’s a mild overexposure on the upper part of the frame. The image retains a raw, candid feel.
+
+- **Final Prompt**  
+  “A plus‑size woman with a high ponytail, wearing an oversized denim shirt (rolled‑up sleeves, distressed hem), ripped thigh‑length shorts, and chunky red‑black boots, mid‑bite of a slice of pizza, left hand on her hip, right hand bringing the pizza to her mouth. Slight handheld tilt; off‑center framing that doesn’t follow the rule‑of‑thirds. Wide‑angle short focal length (≈20 mm), everything in focus—subject, kitchen cabinets, countertop, green chair, blue backpack, white sneaker. Natural ambient late‑afternoon lighting with slight overexposure on the upper frame. Raw, unprocessed look, no filters, no auto‑HDR. Capture style: candid, unposed, spontaneous—subject unaware or mid‑action. Imperfections encouraged: slight tilt, off‑center framing, partial crop. No rule‑of‑thirds intentionality — accidental framing. Zero studio lighting, zero professional composition, zero editorial tone. Natural motion freeze or slight blur from handheld instability. Environment: home kitchen with light‑wood cabinets, white countertop, black microwave, white mug, vase of pink roses, green chair, cardboard box, blue backpack, white sneaker. Time of day: late afternoon. Lens & technical: short focal length, wide angle, no bokeh, no depth‑of‑field blur—background fully sharp. Everything in focus. No portrait mode, no subject isolation.”

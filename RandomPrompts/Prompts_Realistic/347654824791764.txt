@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair, wearing a beige ribbed crop top and matching high‑waist shorts, standing in a bright, lived‑in bedroom. She is mid‑step, one foot slightly ahead of the other, hands relaxed at her sides, face turned toward the camera but not posing—natural, candid expression with a subtle smile.
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window on the right side of the room; slight overexposure in the upper right corner to capture the ambient glow. No auto‑HDR or beauty filters—raw, unprocessed look. Slight handheld shake gives a natural motion blur around the edges.
+
+- **Composition & Framing**  
+  Wide‑angle lens (24–35 mm) capturing a broad view of the scene; everything in focus from foreground to background. The frame is slightly tilted and off‑center, with the subject’s head near the upper third but not exactly on the rule‑of‑thirds line. The crop is partial—left side cuts off a bit of the shelf, right side cuts off part of the window.
+
+- **Background & Environment**  
+  A cozy bedroom with a wooden closet open on the left, containing hanging shirts and folded clothes, a red mug, a vase of pink roses, and a white cup on a small table. On the right, a desk with a laptop, a plant, and a red mug; a window lets in bright daylight. The room is cluttered but tidy, giving a genuine, spontaneous feel.
+
+- **Time of Day & Weather**  
+  Late morning, around 10:30 AM, with soft, warm sunlight streaming through the window, creating gentle highlights on the subject’s hair and face. The weather outside is clear, with a hint of blue sky visible through the window.
+
+- **Lens & Technical Settings**  
+  Short focal length (24–35 mm), wide‑angle, f/4–f/5.6 aperture, ISO 400–800, shutter speed 1/125–1/250 s to freeze the motion while allowing a slight blur from handheld instability. No bokeh—background fully sharp. Depth of field is deep, keeping foreground and background in focus.
+
+- **Style Notes**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Imperfections encouraged: slight tilt, off‑center framing, partial crop. Zero studio lighting, zero professional composition, zero editorial tone. Natural motion freeze or slight blur from handheld instability.
+
+- **Prompt Summary for Generation**  
+  “A young woman with long wavy brown hair, wearing a beige ribbed crop top and matching high‑waist shorts, stands mid‑step in a bright bedroom. Natural daylight streams through a window on the right, creating a slight overexposure in the upper right. The scene includes an open closet with hanging shirts, a red mug, a vase of pink roses, and a small table with a laptop, plant, and another red mug. Capture with a 24–35 mm wide‑angle lens, f/5.6, ISO 500, 1/200 s. Keep everything in focus, slight handheld blur, off‑center tilted frame, partial crop. Raw, unprocessed, candid, spontaneous.”

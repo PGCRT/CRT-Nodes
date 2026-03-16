@@ -1,0 +1,26 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy blonde hair sitting on a white bed, wearing a sheer white lace bra and matching underwear. She is mid‑smile, slightly turned toward the camera, with one hand resting on the pillow and the other on the bedsheet. Her pose is casual and unposed, as if she just finished a photo session and is still catching her breath.
+
+- **Lighting & Exposure**  
+  Natural daylight from a south‑west window, mid‑afternoon (≈ 4 pm). The light is soft but warm, creating a gentle highlight on her left shoulder and a subtle warmth in the background wallpaper. Slight overexposure on the high‑lights gives a raw, unprocessed feel. No auto‑HDR or beauty mode—just a straight RAW capture.
+
+- **Camera & Lens**  
+  DSLR or mirrorless with a 24 mm wide‑angle lens (f/3.5). Everything is in focus—from her face to the bed’s edge—no bokeh, no depth‑of‑field blur. The background wallpaper and pillows are fully sharp.
+
+- **Composition & Framing**  
+  Handheld shot with a slight tilt and off‑center framing; the composition is accidental, not rule‑of‑thirds. The crop cuts off a small portion of the bed’s headboard on the right, giving a casual, spontaneous feel. The background shows a light‑colored damask wallpaper and a white pillow, adding texture without distracting.
+
+- **Environment**  
+  A bright, airy bedroom in a modern apartment. The time of day is late afternoon, with warm natural light. The weather outside is clear, which keeps the ambient light steady. The room’s decor includes a subtle patterned wallpaper and a white bed frame, creating a clean, neutral backdrop.
+
+- **Technical Details**  
+  - Focal length: 24 mm (wide‑angle)  
+  - Aperture: f/3.5  
+  - Shutter speed: 1/60 s (slight motion blur from handheld)  
+  - ISO: 400  
+  - No post‑processing filters or color grading—just a raw JPEG export.
+
+- **Final Prompt**  
+  “A young woman with long, wavy blonde hair sits on a white bed in a bright bedroom, wearing a sheer white lace bra and matching underwear. She smiles casually, one hand on the pillow, the other on the sheet, mid‑action. Natural daylight from a south‑west window hits her left shoulder, creating soft highlights. Shot on a 24 mm wide‑angle lens at f/3.5, 1/60 s, ISO 400—everything in focus, slight handheld blur. The background shows a light damask wallpaper and a white pillow; the framing is accidental, slightly tilted and off‑center, capturing a candid, unposed moment.”

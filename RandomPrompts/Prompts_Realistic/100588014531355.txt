@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair walking confidently down a city street. She wears a black off‑the‑shoulder top and distressed gray jeans that have ripped, frayed knees. Her hands are relaxed at her sides, fingers slightly curled, as if she’s just been mid‑step when the shutter clicked. A subtle, natural smile is on her face; her eyes are focused forward, not directly at the camera—capturing a genuine, candid moment.
+
+- **Motion & Focus**  
+  Slight motion blur around the edges to suggest movement, but the subject remains sharply in focus. The entire scene is fully sharp—no bokeh or depth‑of‑field blur. No “portrait mode” isolation; everything from foreground to background stays crisp.
+
+- **Lens & Technical Settings**  
+  Wide‑angle lens (24–35 mm), short focal length, handheld. Slight tilt and off‑center framing—no intentional rule‑of‑thirds. The composition feels accidental, spontaneous. No auto‑HDR or auto‑beauty; the image has a raw, unprocessed look with natural ambient light. A hint of overexposure in the upper right corner to capture the warm daylight.
+
+- **Environment**  
+  Location: A bustling downtown street lined with brick buildings, storefronts with red awnings, and a traffic light at the intersection. A white sedan is parked on the left side of the road; a few pedestrians are walking in the background on the right. The street is paved with concrete, and a curb runs along the right side. The time of day is late afternoon, around 5 pm, with warm, golden sunlight casting soft shadows. Weather is clear, with a light breeze.
+
+- **Lighting & Color**  
+  Natural daylight, slightly overexposed in the upper right to keep the ambient light bright. No color grading or filters—just raw colors. The lighting creates subtle highlights on the woman’s hair and the red awning, while the street’s concrete has a slight grain.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, partial crop that cuts off the top of the traffic light, giving an informal feel. A few leaves are scattered on the curb; a small patch of grass is visible at the far right. The background includes a green street sign and a traffic light that shows yellow. The image has a natural, unposed vibe as if the subject was mid‑walk when captured.
+
+- **Final Prompt**  
+  “A candid, wide‑angle shot of a young woman with long wavy brown hair, wearing a black off‑the‑shoulder top and distressed gray jeans, walking down a downtown street at late afternoon. The image has slight motion blur around the subject but is fully sharp overall. Shot on a 35 mm lens with handheld tilt, accidental framing that cuts off the top of the traffic light, partial crop, and a hint of overexposure in the upper right. The background shows brick buildings, red awnings, a parked white car, a green street sign, and a yellow traffic light. The scene is clear, sunny, with soft shadows, raw unprocessed look, no filters or color grading.”

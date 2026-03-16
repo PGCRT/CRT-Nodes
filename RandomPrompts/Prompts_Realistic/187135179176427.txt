@@ -1,0 +1,26 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair standing in a cozy bedroom. She’s wearing a sheer white lace bra and matching white lace panties with garters; her hands are raised behind her head, creating a casual, spontaneous pose. Her face is turned slightly toward the camera, eyes focused forward, with a soft, natural expression.
+
+- **Lighting & Exposure**  
+  Warm, ambient daylight from a window on the right side of the room creates a slight overexposure on the subject’s front, giving a raw, unprocessed look. The exposure is not perfectly balanced—there’s a gentle haze that suggests a handheld camera with no auto‑beauty or filter interference.
+
+- **Camera Settings**  
+  - Lens: 24‑35 mm wide‑angle, short focal length.  
+  - Aperture: f/4–f/5.6 (wide, keeping background fully sharp).  
+  - Shutter speed: 1/60–1/100 s (slight motion blur from handheld instability).  
+  - ISO: 400–800 (depending on ambient light).  
+  - Focus: everything in focus—no portrait‑mode depth of field blur.  
+
+- **Composition & Framing**  
+  Candid, unposed framing with a slight tilt and off‑center crop. The subject occupies the central‑right portion of the frame; the left side shows a wooden dresser with drawers, a framed photo, and a small lamp. A bed with white linens is visible in the background, along with a sheer curtain letting in natural light. No rule‑of‑thirds intentionality—accidental, spontaneous composition.
+
+- **Environment**  
+  A real‑world bedroom at mid‑afternoon, with soft daylight filtering through a window. The room has a warm, lived‑in feel: the dresser has black handles, a small framed picture, and a lamp; a bed with a white duvet is partially visible. The background is fully sharp, no bokeh.
+
+- **Details & Imperfections**  
+  Slight motion blur on the subject’s hands and hair, indicating handheld shake. Minor overexposure on the front of the subject, giving a natural, raw aesthetic. The image has no post‑processing filters or color grading—just a straightforward capture.
+
+- **Final Prompt**  
+  “A young woman with long wavy brown hair in a sheer white lace bra and matching white lace panties with garters, standing in a cozy bedroom at mid‑afternoon. Her hands are raised behind her head, face turned slightly toward the camera, eyes focused forward. Warm daylight from a window on the right creates a slight overexposure. Shot on a 24‑35 mm wide‑angle lens at f/5, 1/80 s, ISO 600. Candid, unposed framing with a slight tilt and off‑center crop; the wooden dresser with drawers, a framed photo, and a lamp are on the left, a bed with white linens and a sheer curtain in the background. Everything in focus, no bokeh, raw, unprocessed look, slight motion blur from handheld instability.”

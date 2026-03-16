@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail, wearing a black‑and‑white gingham long‑sleeve crop top and dark high‑waist trousers, standing by a large floor‑to‑ceiling window. She is turned to the side, facing right, with her left arm bent at the elbow, hand near her hip, as if she’s about to adjust her hair or hold a phone. Her head is slightly tilted upward, eyes looking out the window, capturing a candid mid‑action moment.
+
+- **Lighting & Exposure**  
+  Natural daylight from the window creates a soft, warm glow on her back and side. Slight overexposure on the right side of the frame gives a subtle halo effect. No auto‑beauty or filter processing—raw, unprocessed look. The exposure is slightly uneven, with the left side a bit brighter than the right, reflecting the ambient light.
+
+- **Camera & Lens Settings**  
+  Wide‑angle lens (24‑35 mm), short focal length, handheld. F‑stop 8–10 for sharpness across the frame. Slight motion blur from the subject’s movement and the photographer’s hand. No bokeh; background is fully in focus. Depth of field is deep—everything from the woman to the distant cityscape is crisp.
+
+- **Composition & Framing**  
+  The shot is off‑center, with the woman’s left side cutting close to the left edge of the frame and her right side leaving a small margin to the right. The horizon line (window sill) runs slightly above the middle of the frame. No rule‑of‑thirds intentionality—accidental framing that gives a spontaneous feel. The composition includes the woman, a portion of a wooden desk with a lamp, a small potted plant, and a window that shows a brick building and city skyline outside.
+
+- **Environment & Time**  
+  Location: A modern apartment loft in an urban neighborhood, with a large south‑facing window. Time of day: late morning (around 10:30 AM), with warm sunlight streaming in. Weather: clear, mild, with a light breeze. The window reflects the interior lamp and plant, adding subtle glare.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera to the right gives a dynamic angle. The woman’s hair has a tiny strand that falls over her left shoulder, adding realism. A faint lens flare is visible near the top of her head. The lamp shade casts a soft shadow on the wall. The potted plant’s leaves are slightly out of focus but still sharp. The window frame is thick, dark metal, and the glass shows a slight reflection of the interior.
+
+- **Post‑Processing**  
+  No color grading or filters—just raw capture. A subtle auto‑HDR effect is applied only to the high‑dynamic‑range aspects (lighting and contrast). Slight overexposure on the right side gives an airy, natural feel.
+
+**Prompt Summary**  
+“Candid photo of a woman in a gingham crop top and dark trousers, standing by a tall window in a loft apartment, late morning sunlight creating soft warm glow. Wide‑angle lens, handheld, slight motion blur, off‑center framing, accidental composition with a lamp, desk, plant, and city view outside. Raw, unprocessed look with subtle auto‑HDR, no filters, everything in focus.”

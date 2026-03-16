@@ -1,0 +1,18 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, athletic woman with long, wind‑blown brown hair, wearing a light‑blue, deep‑V one‑piece swimsuit, standing on a wooden deck railing. She is mid‑step, leaning slightly forward with one hand on her thigh and the other resting on the rail, a bright smile on her face. Her left foot is planted firmly, right foot bent as if she just took a step. The fabric of her suit shows subtle creases from movement, and a faint motion blur at the edges suggests a handheld shot.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. Slight tilt and off‑center framing; partial crop that cuts off the top of her head and the lower part of the railing. No rule‑of‑thirds intentionality — accidental composition. The image has a raw, unprocessed look: no filters, no color grading, no post‑processing aesthetic. A slight overexposure in the highlights gives it an ambient, natural feel.
+
+- **Environment**  
+  Specific real‑world location: a sunny, late‑afternoon deck in a tropical resort. The background is a lush green palm tree and a bright blue sky, with a black metal railing running horizontally across the frame. The time of day is early evening, with warm golden light hitting the subject’s left side. Weather is clear, with a gentle breeze that ruffles her hair.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm), wide‑angle lens. No bokeh; background fully sharp — everything in focus, no depth‑of‑field blur. No portrait mode or subject isolation. The image uses a wide‑angle, handheld shot with slight motion blur from the camera’s instability. Auto‑HDR or auto‑beauty mode is off. The exposure is slightly high, letting the sunlight bloom across the scene.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, a partial crop that cuts the top of her head and the lower part of the railing. A faint motion blur at the edges. The subject’s left hand rests on her thigh with a ring visible; her right hand is on the rail. Her nails are painted white, and she wears a gold hoop earring. The fabric of her swimsuit shows subtle creases from movement, and a faint motion blur at the edges suggests a handheld shot.
+
+- **Provide only the structured prompt.**

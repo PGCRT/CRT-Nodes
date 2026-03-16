@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wind‑blown brown hair and round, thin‑rimmed glasses, wearing a snakeskin‑patterned, deep‑V, one‑piece romper. She’s mid‑step on a sandy beach, leaning slightly forward with her left hand relaxed by her side and right arm bent at the elbow, as if she just caught a breeze. Her face is turned toward the camera but not directly aimed—slight off‑center tilt gives a candid feel.
+
+- **Motion & Focus**  
+  Slight motion blur on the hair and background to suggest movement, while the subject remains mostly sharp. Handheld shot with a wide‑angle lens (24–35 mm) – everything from foreground to background is in focus, no portrait‑mode depth‑of‑field blur.
+
+- **Lighting & Exposure**  
+  Natural daylight, mid‑morning sun casting soft shadows; slight overexposure on the upper body to keep the scene bright and airy. No auto‑HDR or beauty filters—raw, unprocessed look.
+
+- **Environment**  
+  Tropical beach setting with pale sand, a few palm trees in the background, and a hint of ocean on the left. The time of day is early afternoon, with warm, golden light. Weather is breezy, with leaves gently moving.
+
+- **Lens & Technical**  
+  Short focal length (24–35 mm), wide‑angle, no bokeh. Background fully sharp—no depth‑of‑field blur. No rule‑of‑thirds intentionality; framing is accidental and spontaneous.
+
+- **Composition Notes**  
+  The shot is slightly cropped on the right side, giving a “mid‑action” feel. The camera is held at eye level, with a slight downward angle to capture the subject’s lower body and the sand beneath her feet. All elements—subject, hair, glasses, outfit, palm trees, sand, ocean—are in focus.
+
+- **Final Prompt**  
+  *“A young woman with long wind‑blown brown hair and round thin‑rimmed glasses, wearing a snakeskin‑patterned deep‑V one‑piece romper, mid‑step on a sandy beach, leaning slightly forward with left hand by her side and right arm bent. Slight motion blur on hair and background, subject sharp. Natural daylight mid‑morning, slight overexposure on upper body. Tropical beach setting with pale sand, palm trees, ocean hint. Wide‑angle 24–35 mm lens, everything in focus. Candid, unposed, accidental framing, slightly cropped right side, eye‑level downward angle.”*

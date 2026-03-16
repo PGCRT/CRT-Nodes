@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework – “Park‑Evening Nude”**
+
+- **Subject & Pose**  
+  *A woman with a natural, unposed stance mid‑step, slightly turned to the side, one arm bent at the elbow, hand relaxed near her thigh. Her body is partially cropped on the left and right edges, giving an accidental, off‑center framing.*  
+
+- **Appearance Details**  
+  *She wears a thin silver necklace that catches the light; her hair falls to the shoulders, slightly blown by a gentle breeze. Her skin shows subtle imperfections – a faint bruise on her left breast, a small mole near her navel – and a slight overexposure around the upper torso.*  
+
+- **Motion & Focus**  
+  *Slight motion blur at the wrists and toes from handheld instability; everything remains fully sharp – no portrait‑mode depth of field.*  
+
+- **Environment**  
+  *A sunny late‑afternoon in an urban park. The background shows a grassy lawn, scattered fallen leaves, a white plastic bucket near her left foot, a small white towel on the ground, and a few pink flowers along a pathway. A tree line and a distant building are visible in the far background.*  
+
+- **Time of Day & Lighting**  
+  *Mid‑afternoon, warm golden light from the setting sun creates a slight overexposure on the upper body; the sky is a soft pale blue with thin clouds.*  
+
+- **Lens & Technical Settings**  
+  *Short focal length (24–35 mm), wide‑angle lens. No bokeh – the background is fully sharp. Auto‑HDR or auto‑beauty mode off. No filters, no color grading, no post‑processing aesthetic.*  
+
+- **Composition Notes**  
+  *No rule‑of‑thirds intentionality – the frame is slightly tilted, the subject’s left side cuts off near the edge. The composition feels spontaneous and candid.*  
+
+- **Final Prompt**  
+  *“A woman in a park at late afternoon, mid‑step pose with a silver necklace, partially cropped on both sides, slight motion blur on wrists and toes, fully sharp background, golden sunlight overexposing the upper torso, white bucket and towel on grass, scattered leaves and pink flowers nearby, wide‑angle short focal length lens, no filters or auto‑HDR, spontaneous candid framing.”*

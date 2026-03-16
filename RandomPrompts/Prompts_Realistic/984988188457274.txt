@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy blonde hair, wearing a sheer pink lace bra and matching panties, kneeling on a plush pink carpet in a vintage‑style bedroom. She is mid‑conversation, holding a phone to her ear with one hand, while the other hand rests on her hip. Her left knee is slightly bent, and a thin silver anklet adorns her right ankle. A delicate gold necklace hangs around her neck, and a small bracelet sits on her left wrist.
+
+- **Motion & Focus**  
+  Slight motion blur from handheld shooting; natural freeze‑frame with minor instability. Everything in focus—no portrait‑mode depth of field. The image has a raw, unprocessed look: no filters, no color grading, no post‑processing aesthetic. A hint of overexposure from ambient daylight.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm), short focal length. No bokeh—background fully sharp. All elements in focus, including the subject and surrounding environment.
+
+- **Environment**  
+  Specific real‑world location: a pastel‑pink bedroom with ornate gold mirrors, a wooden side table with a lamp, a chandelier hanging from the ceiling, and a pink upholstered chair. Time of day: late morning, soft natural light coming from a window on the right, creating gentle shadows. Weather: clear, slightly humid—ambient light gives a warm tone.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Imperfections encouraged: slight tilt, off‑center framing, partial crop. No rule‑of‑thirds intentionality—accidental framing. Zero studio lighting, zero professional composition, zero editorial tone. Natural motion freeze or slight blur from handheld instability.
+
+- **Composition Details**  
+  The camera is positioned low, almost at the subject’s knee level, capturing a full‑body shot that includes the woman’s upper body, legs, and the surrounding furniture. The framing is slightly off‑center to the left, with the mirror reflecting part of the room behind her. The lamp on the side table casts a soft glow, and the chandelier’s crystals catch the light. The pink carpet adds a warm base, while the gold frames of the mirrors add contrast.
+
+- **Prompt for Generation**  
+  “A young woman with long wavy blonde hair, wearing a sheer pink lace bra and matching panties, kneeling on a plush pink carpet in a vintage‑style bedroom. She is mid‑conversation, holding a phone to her ear with one hand, while the other hand rests on her hip. Her left knee is slightly bent, and a thin silver anklet adorns her right ankle. A delicate gold necklace hangs around her neck, and a small bracelet sits on her left wrist. Slight motion blur from handheld shooting; natural freeze‑frame with minor instability. Everything in focus—no portrait‑mode depth of field. Wide‑angle lens (24–35 mm), short focal length. No bokeh—background fully sharp. The room has ornate gold mirrors, a wooden side table with a lamp, a chandelier hanging from the ceiling, and a pink upholstered chair. Late morning natural light from a window on the right casts gentle shadows. Capture candid, unposed, spontaneous—subject unaware or mid‑action. Imperfections encouraged: slight tilt, off‑center framing, partial crop. No rule‑of‑thirds intentionality—accidental framing. Zero studio lighting, zero professional composition, zero editorial tone. Natural motion freeze or slight blur from handheld instability.”

@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair, wearing a delicate silver necklace, lying on her stomach on a plush gray couch. Her left arm is extended forward, her right arm supports her weight, and her head is turned slightly toward the camera with a soft, contemplative expression. A bird tattoo is visible on her left hip. She appears mid‑movement, as if she just finished a playful gesture.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject is unaware of the camera or is caught in a natural, casual moment. Slight tilt and off‑center framing give an accidental, handheld feel. The composition is not intentionally rule‑of‑thirds; it’s a raw, imperfect snapshot.
+
+- **Motion & Exposure**  
+  A slight motion blur conveys the sense of movement and handheld instability. The exposure is mildly overexposed, letting ambient light bloom softly across the scene. No auto‑beauty or filter processing — just a natural, unprocessed look.
+
+- **Environment**  
+  Location: a modern living room with a textured gray couch and a plain white wall in the background. Time of day: late afternoon, with warm, diffused daylight coming from the west, creating gentle highlights on the subject’s skin and hair. Weather: clear, calm, with no wind, allowing for steady but not rigid framing.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm) wide‑angle lens, producing a broad field of view that keeps the entire scene — subject, couch, wall, and a portion of the floor — in focus. No bokeh; background is fully sharp. Depth of field is wide, so everything from foreground to background remains crisp. No portrait‑mode subject isolation.
+
+- **Post‑Processing**  
+  Zero studio lighting, zero professional composition, zero editorial tone. The image retains a raw, natural aesthetic with no color grading or filters applied. Slight overexposure or underexposure is present depending on ambient light, giving the photo a candid, spontaneous feel.
+
+**Prompt Summary**  
+> “A young woman with long wavy brown hair and a bird tattoo on her hip lies on a gray couch in a modern living room. She’s wearing a silver necklace, her left arm extended, right arm supporting her, head turned toward the camera in a contemplative pose. The shot is candid, slightly tilted, captured with a 24‑35 mm wide‑angle lens, all elements in focus, mild motion blur and slight overexposure, no filters or post‑processing, late afternoon daylight, raw and unposed aesthetic.”

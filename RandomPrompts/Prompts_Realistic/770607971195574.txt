@@ -1,0 +1,32 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman in a light‑blue nurse‑style uniform, wearing a white cap with a red cross, sits on a hospital bed. Her hair is loosely tied back, a few strands framing her face. She’s mid‑gesture: one hand rests on the bed rail, the other on her thigh, while a man’s arm (wearing a dark watch) reaches in from the right side of the frame to adjust her skirt. The woman’s gaze is directed slightly off‑camera, giving a candid, “mid‑action” feel.
+
+- **Lighting & Exposure**  
+  Natural daylight coming from a large window on the left; slight overexposure in the upper left corner to emphasize ambient light. No auto‑HDR or beauty filters—raw, unprocessed look. The exposure is slightly warm, with a subtle haze that suggests a bright, lazy afternoon.
+
+- **Camera & Lens**  
+  Wide‑angle lens (24‑35 mm), short focal length, handheld. Everything in focus—no bokeh, no portrait‑mode isolation. Slight motion blur on the woman’s hand and the man’s arm to convey spontaneous movement. The frame is slightly tilted, off‑center, with accidental crop that gives a casual, unposed vibe.
+
+- **Environment**  
+  A bright hospital room: a large window with sheer curtains, a metal bed frame, a white pillow, and a small bedside table. The time of day is late morning; the weather outside is clear, giving a soft, diffused light. The background is fully sharp—no depth‑of‑field blur.
+
+- **Details & Imperfections**  
+  - Slight tilt of the camera, making the horizon line angle.  
+  - Partial crop: the man’s arm cuts off the right edge, and the woman’s left thigh extends beyond the bottom border.  
+  - Tiny dust motes visible in the air, a faint smudge on the window curtain.  
+  - The nurse’s uniform has a subtle wrinkle at the collar; the man’s watch face is partially visible.  
+  - The bed rail’s metal finish reflects the light, adding a small highlight.
+
+- **Composition**  
+  No rule‑of‑thirds intentionality—everything is placed spontaneously. The woman’s head is slightly above the center of the frame, while her hips are lower, creating an asymmetrical balance. The man’s arm creates a diagonal line that leads the eye toward the woman’s hand.
+
+- **Technical Settings**  
+  - Aperture: f/4.0 (wide, shallow depth but still sharp).  
+  - Shutter speed: 1/60 s (enough for slight motion blur).  
+  - ISO: 400 (for natural contrast).  
+  - Focus: manual, everything in focus.  
+
+- **Final Prompt**  
+  “A young nurse sitting on a hospital bed, wearing a light‑blue uniform and white cap with a red cross, mid‑gesture as a man adjusts her skirt; natural daylight from a large window creates slight overexposure; wide‑angle handheld shot with 24‑35 mm lens, everything in focus, slight motion blur on the hands; accidental tilt and partial crop; raw, unprocessed look; background fully sharp; no filters or color grading.”

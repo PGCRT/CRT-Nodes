@@ -1,0 +1,26 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with shoulder‑length wavy brown hair, wearing an off‑white V‑neck T‑shirt and faded grey jogger pants, sitting cross‑legged on a concrete patio. Her left arm rests on the edge of a white, rounded tabletop; her right hand is flat on the ground for balance. She’s mid‑smile, head tilted slightly to the right, eyes bright and engaged, as if she just finished a conversation or is about to say something. The shot captures a natural “mid‑action” moment with a slight handheld shake.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject appears unaware of the camera, caught in a casual, everyday moment. Slight tilt and off‑center framing give an accidental, informal feel. No rule‑of‑thirds intentionality; the composition is organic, with the table edge cutting off part of the frame and the subject’s left knee slightly out of line.
+
+- **Environment**  
+  Location: a small outdoor café or market stall in a suburban town. Behind the woman, a glass window reflects a parked car and a row of hanging clothing racks, suggesting a retail or fashion setting. The time of day is late afternoon, with warm, golden sunlight casting soft shadows on the concrete. Light is slightly overexposed at the top, creating a subtle halo around her hair.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm) wide‑angle lens, handheld. Everything is fully sharp — no bokeh or depth‑of‑field blur; background details (clothes, window reflection, pavement) are in focus. Slight motion blur on the subject’s hair and arm conveys natural movement. No auto‑HDR or beauty filters; raw, unprocessed look with minimal post‑processing. The image has a slight overexposure at the upper left corner, giving it an energetic, spontaneous vibe.
+
+- **Color & Lighting**  
+  Natural daylight with a warm, slightly yellow tint. The white T‑shirt contrasts with the grey pants and the white table, while the background clothing racks add color variety. No color grading or filters — just the raw colors captured by the camera.
+
+- **Details to Emphasize**  
+  - The texture of the concrete ground, slight dust particles in the air.  
+  - The reflection in the window: a parked car and a faint silhouette of a person.  
+  - The hanging clothes on the rack: a mix of white, black, and patterned shirts.  
+  - A small blue streak of light from the sun hitting her hair, creating a subtle highlight.  
+  - Her white socks peeking out from under the jogger pants.  
+
+- **Final Prompt**  
+  “A young woman with shoulder‑length wavy brown hair, wearing an off‑white V‑neck T‑shirt and faded grey jogger pants, sitting cross‑legged on a concrete patio at a small outdoor café. Her left arm rests on a white rounded tabletop; her right hand is flat on the ground for balance. She’s mid‑smile, head tilted slightly to the right, as if she just finished a conversation. The shot is candid and unposed, with slight tilt and off‑center framing. Behind her, a glass window reflects a parked car and a row of hanging clothing racks. The time of day is late afternoon, with warm golden sunlight casting soft shadows. Use a 24‑35 mm wide‑angle lens, handheld, everything in focus, slight motion blur on the hair, natural daylight, raw unprocessed look, no filters.”

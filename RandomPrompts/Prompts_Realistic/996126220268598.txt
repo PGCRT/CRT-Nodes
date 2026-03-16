@@ -1,0 +1,28 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, curvy woman with long, dark, wavy hair standing in a casual, unposed stance. Her body is slightly tilted to the left, her hands relaxed at her sides, and she’s mid‑step as if just having moved. Her face is turned toward the camera but not directly aimed— a natural, candid expression with a soft smile.  
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle source (mid‑afternoon). Slight overexposure on the upper body to keep the background bright and airy; subtle grain and auto‑HDR feel but no heavy color grading. The exposure is uneven— a little brighter at the top, giving a raw, handheld vibe.  
+
+- **Camera & Lens**  
+  35 mm wide‑angle lens (short focal length). Everything in focus—from face to toes—no bokeh; background fully sharp. Slight motion blur on the lower legs from handheld instability.  
+
+- **Composition & Framing**  
+  Off‑center, accidental framing: the subject’s left side cuts close to the left edge, creating a partial crop. No rule‑of‑thirds intentionality— the composition feels spontaneous. The shot is slightly tilted, giving a dynamic, informal feel.  
+
+- **Environment**  
+  Location: a quiet urban alleyway with a concrete wall and a small window in the back. Time of day: late afternoon, soft sunlight casting gentle shadows. Weather: clear, light wind.  
+
+- **Technical Details**  
+  - ISO 400–600 (for natural grain).  
+  - Aperture f/5.6 – moderate depth but still sharp background.  
+  - Shutter speed 1/125 s – enough to capture slight motion blur.  
+  - No portrait mode; no subject isolation.  
+
+- **Post‑Processing**  
+  Raw, unprocessed look— only basic auto‑HDR and a tiny lift in exposure. No filters, no color grading, no stylized LUT.  
+
+**Prompt Summary**  
+> “A tall woman with long dark wavy hair stands casually in a quiet urban alleyway at late afternoon. Natural daylight from above creates slight overexposure on her upper body. Shot on a 35 mm wide‑angle lens, everything is in focus with a tiny motion blur on the legs. The frame is off‑center and slightly tilted, capturing a candid, unposed moment with accidental partial crop. Raw, unprocessed look with only auto‑HDR.”

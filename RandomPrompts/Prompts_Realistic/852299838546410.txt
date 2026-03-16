@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair, bare and in a natural, unposed stance, kneeling on soft beach sand. She’s leaning forward slightly, hands planted in the sand for balance, head tilted down as if she’s just finished a playful dip or is about to pick something up from the ground. Her left arm is bent at the elbow, her right arm extended for support. A small tattoo reading “My Beauty” sits on her upper left chest. She wears a thin, sheer, off‑shoulder bikini top in a muted navy tone that drapes loosely over her shoulders.
+
+- **Lighting & Exposure**  
+  Slight motion blur from handheld shooting; the exposure is mildly overexposed to capture the bright, warm daylight of late afternoon. No auto‑HDR or auto‑beauty mode—raw, unprocessed look. The scene has a natural, ambient light with a slight haze from the sun’s low angle, creating soft highlights on her skin and the sand.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24‑35 mm) with a short focal length to keep the entire composition in frame. Everything is fully sharp—no bokeh or depth‑of‑field blur; background remains crisp from near to far. No portrait mode or subject isolation.
+
+- **Environment**  
+  A secluded beach cove with large, moss‑covered rocks scattered around. The sand is light beige with a few small pebbles and seaweed fragments. The time of day is late afternoon (around 5 pm), giving warm, golden tones. Weather is lightly breezy, with a faint cloud cover that diffuses the sunlight.
+
+- **Composition & Framing**  
+  Candid, unposed, spontaneous—subject appears unaware or mid‑action. Slight tilt and off‑center framing; partial crop at the edges to give an accidental, natural feel. No rule‑of‑thirds intentionality—everything is framed as it naturally falls into the shot.
+
+- **Details & Imperfections**  
+  Slight motion blur on the subject’s hands and the sand around her, indicating a handheld shot. The image has a raw, unprocessed look with no filters or color grading. A faint overexposure in the upper right corner gives a subtle halo effect. The background rocks are partially out of focus but still sharp, preserving the “everything in focus” requirement.
+
+- **Prompt for Text‑to‑Image Generation**  
+  *“A young woman with long wavy brown hair, bare and in a natural unposed kneeling stance on soft beach sand, leaning forward slightly with hands planted for balance, head tilted down as if mid‑action. She wears a thin sheer navy off‑shoulder bikini top. A small tattoo reading ’My Beauty’ sits on her upper left chest. Slight motion blur from handheld shooting, mild overexposure capturing warm late‑afternoon light. Wide‑angle lens (24‑35 mm) keeps everything sharp—no bokeh. Background features large moss‑covered rocks and a few small pebbles, a lightly breezy beach cove at 5 pm. Candid, spontaneous framing with slight tilt and off‑center crop; no rule‑of‑thirds. Raw, unprocessed look, no filters or color grading.”*

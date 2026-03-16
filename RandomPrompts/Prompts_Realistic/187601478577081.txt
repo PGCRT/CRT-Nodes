@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark brown hair, wearing a black strapless crop top and a matching high‑waist skirt, walking confidently toward the camera in a bustling fashion showroom. Her face is slightly turned to the left, a warm smile on her lips, and she appears mid‑step, capturing a spontaneous, candid moment.
+
+- **Motion & Focus**  
+  Slight motion blur at the wrists and feet to suggest movement, while the entire scene remains fully sharp—no portrait‑mode depth of field. The camera is handheld, with a subtle tilt that gives an off‑center, accidental framing feel.
+
+- **Lighting & Exposure**  
+  Raw, unprocessed look: no auto‑HDR or beauty filters. Ambient daylight from a large window above the rack creates a soft overexposure on the upper part of the frame, with natural shadows cast by the clothing racks and people in the background. Slight warmth in the tones, as if the camera’s white balance was set to “daylight.”
+
+- **Lens & Technical**  
+  Wide‑angle lens (24‑35 mm) with a short focal length, no bokeh. Everything from foreground to background is in focus, giving a documentary‑style capture. The lens is slightly tilted, producing a gentle diagonal line across the top of the image that follows the row of lights.
+
+- **Environment**  
+  A bright, modern fashion showroom or boutique. White walls, a long row of clothing racks filled with garments in various colors, and a ceiling track of spotlights running horizontally across the top. The time of day is mid‑afternoon, with natural light coming from a large window on the left, casting soft shadows. A few other people are visible in the background—some are taking photos, others are browsing—adding to the candid atmosphere.
+
+- **Composition & Framing**  
+  No rule‑of‑thirds intentionality: the subject is positioned slightly off‑center, with her left side cut off by the frame edge. The top of the image captures a portion of the ceiling lights, and the bottom shows a glimpse of the floor and a pair of red shoes on the right. The framing is casual, as if the photographer was walking alongside the subject and pressed the shutter at the last moment.
+
+- **Details & Imperfections**  
+  Slight overexposure on the upper part of the image gives a bright, airy feel. Tiny imperfections—slight dust particles in the air, a faint smudge on the lens—are present, enhancing the raw, unpolished aesthetic. The background is fully sharp, with no depth‑of‑field blur, making every element—from the clothing racks to the people’s faces—clearly visible.
+
+- **Final Prompt**  
+  “A candid, wide‑angle shot of a woman in a black strapless crop top and high‑waist skirt walking toward the camera inside a bright fashion showroom. The image has slight motion blur on her hands and feet, is fully sharp from foreground to background, and shows a row of clothing racks and ceiling spotlights across the top. Natural daylight from a large window creates a soft overexposure at the upper frame. The composition is accidental and off‑center, with a gentle tilt, capturing a spontaneous, unposed moment in mid‑afternoon.”

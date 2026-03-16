@@ -1,0 +1,28 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with shoulder‑length light brown hair, wearing a pale‑green sports bra and matching shorts that both feature a large avocado graphic on the front. She stands in a bright, sunlit living room, hands on hips, slightly turned to the left, head tilted a little to the right, as if caught mid‑pose. Her expression is relaxed, a subtle smile, eyes looking directly at the camera but not quite focused—like she’s just finished a workout or is about to start one.
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window on the left side of the room creates a soft, warm glow. The exposure is slightly overexposed on the right side, giving a gentle halo effect around her. No auto‑beauty mode; the image retains raw, unprocessed detail.
+
+- **Camera Settings**  
+  - Lens: 24‑mm wide‑angle, short focal length, handheld.  
+  - Focal depth: everything from the subject to the background is fully sharp—no bokeh.  
+  - Shutter speed: 1/60 s, producing a slight motion blur on the subject’s hands and the background’s furniture.  
+  - ISO: 400, for balanced noise and contrast.
+
+- **Composition & Framing**  
+  The shot is intentionally off‑center; the subject’s left side cuts close to the left edge of the frame, while her right side leaves a small margin of empty wall space. The framing is slightly tilted, giving a casual, spontaneous feel. The background shows a white couch, a small potted plant on a side table, and a window with a sheer curtain; all are in focus.
+
+- **Environment**  
+  Location: A modern, minimalist apartment living room. Time of day: late morning, around 10:30 a.m., when the sun is high but not directly overhead. Ambient conditions: mild temperature, gentle breeze from the window, slight humidity that keeps the light soft.
+
+- **Details & Imperfections**  
+  - Slight tilt in the camera’s horizon.  
+  - Partial crop: the top of her head is cut off by the upper edge of the frame.  
+  - Minor motion blur on her hands and the couch’s backrest.  
+  - No filters or color grading—just raw, natural colors with a slight warm tint from the daylight.
+
+- **Final Prompt**  
+  “A young woman in a pale‑green avocado‑print sports bra and shorts stands casually in a bright living room, caught mid‑pose with hands on hips. Natural daylight from a left‑side window creates a soft, slightly overexposed glow. Shot on a 24‑mm wide‑angle lens at 1/60 s, everything from subject to background is fully sharp with a slight motion blur. The composition is off‑center and slightly tilted, framing the woman’s left side near the edge and a small portion of a white couch and potted plant in the background. The image retains a raw, unprocessed look with no filters or color grading.”

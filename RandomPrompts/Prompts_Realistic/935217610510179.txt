@@ -1,0 +1,29 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark brown hair that falls loosely over her left shoulder, wearing a plain white sleeveless top and a single strand of pearls around her neck. She is captured mid‑tilt, head slightly angled to the left, eyes focused forward, mouth relaxed. Her expression is natural, unposed, as if she’s in the middle of a casual conversation or a selfie.
+
+- **Lighting & Exposure**  
+  Ambient daylight from a bright, diffused window; slight overexposure on the right side of the frame giving a warm, natural glow. No auto‑beauty filter—raw, unprocessed look. The exposure is slightly uneven, with a subtle highlight on her face and a faint halo on her hair.
+
+- **Camera Settings**  
+  Wide‑angle lens (24–35 mm), short focal length, handheld. All elements in focus—no bokeh, no depth‑of‑field blur. Slight motion blur from the subject’s movement and the camera’s instability. No rule‑of‑thirds; framing is accidental, off‑center, with a partial crop that cuts off a bit of her left shoulder.
+
+- **Environment**  
+  A bright, airy bedroom or living room. A white door frame is visible on the right, a small framed picture hanging on the wall in the background, and a silver doorknob peeking out at the top right corner. The background is fully sharp, no studio lighting, no professional composition.
+
+- **Time of Day & Weather**  
+  Late morning, natural sunlight coming from the left, creating soft shadows and a slight overexposed highlight on the subject’s face. The ambient light gives a warm, slightly hazy atmosphere.
+
+- **Technical Details**  
+  - Focal length: 35 mm (wide‑angle)  
+  - Aperture: f/4.0 (all in focus)  
+  - Shutter speed: 1/60 s (slight motion blur)  
+  - ISO: 400 (natural grain)  
+  - No filters, no color grading, no post‑processing aesthetic.
+
+- **Composition Notes**  
+  The shot is candid and spontaneous; the subject appears unaware of the camera. Slight tilt of the camera creates a dynamic, informal feel. The framing is off‑center, with the subject’s left ear partially cut off, adding to the raw, real‑life vibe. Background elements (door frame, picture) remain fully sharp.
+
+**Prompt Summary**  
+“Candid, unposed selfie of a woman in a white top and pearl necklace, captured with a 35 mm wide‑angle lens at f/4.0 and 1/60 s shutter speed, handheld with slight motion blur. The image shows her mid‑tilt in a bright bedroom, with a white door frame and a small wall picture in the background. Natural daylight from the left creates a subtle overexposure on the right side of the frame. All elements are in focus, no filters or post‑processing, raw and unprocessed aesthetic.”

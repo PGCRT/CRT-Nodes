@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman with long, dark hair tied in a loose low ponytail, wearing a pink lace bra and matching pink lace thong. She is captured from a rear‑three‑quarter angle, mid‑step on a wooden floor, her left foot slightly ahead of the right, knees bent as if she’s about to kick or dance. Her hands rest lightly on the back of a white sofa that sits against a pale beige wall; a small potted plant peeks into frame from the top right corner.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the woman is unaware of the camera, caught in a natural, mid‑action moment. Slight tilt and off‑center framing give an accidental, handheld feel. The shot is partially cropped on the left side, leaving a tiny margin of empty space that hints at a wider scene.
+
+- **Environment**  
+  Location: A bright, unadorned living room in a modern apartment. Time of day: late afternoon, with warm, diffused sunlight coming from the west, creating a soft overexposure on the subject’s back and a gentle highlight on her hips. Ambient light is natural; no studio flash. The background wall is a neutral beige, the sofa is white with subtle texture, and the floor is polished hardwood. A small green plant in a terracotta pot sits in the corner, adding a touch of life.
+
+- **Lens & Technical**  
+  Short focal length: 24 mm wide‑angle lens. Everything is fully sharp — no bokeh, no depth‑of‑field blur. Slight motion blur on the subject’s hips and hands to suggest movement. Auto‑HDR or auto‑beauty mode off; no filters, no color grading, no post‑processing aesthetic. The exposure is slightly high, letting a hint of brightness spill onto the skin. No rule‑of‑thirds intentionality — the composition is accidental, with the subject’s back and the sofa’s edge cutting off the frame on both sides.
+
+- **Details**  
+  The woman’s skin has a natural sheen from the ambient light; her bra’s lace details are visible, as are the delicate seams and small floral motifs. Her hair falls over her left shoulder, slightly messy. The white sofa’s fabric shows a subtle weave, and the plant’s leaves cast a faint shadow on the wall. The wooden floor reflects the light, adding warmth to the scene.
+
+- **Prompt**  
+  “A woman in pink lace lingerie captured from a rear‑three‑quarter angle, mid‑step on a hardwood floor in a bright living room, with a white sofa and a small potted plant in the corner. Long dark hair in a loose ponytail, hands resting on the back of the sofa, slight tilt and off‑center framing, accidental crop on the left. 24 mm wide‑angle lens, everything fully sharp, slight motion blur on the hips, natural overexposure, no filters or post‑processing, late afternoon sunlight from the west, handheld feel, candid spontaneous moment.”

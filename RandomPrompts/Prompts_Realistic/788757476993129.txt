@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark hair, wearing a simple black short‑sleeve t‑shirt and black shorts, sitting cross‑legged on a rustic wooden stool with a black leather seat. Her hands rest gently on her knees, fingers slightly curled, as if she’s about to adjust her shirt or hold a small object. The stool shows natural wear: a slightly faded varnish and a small dent at the front leg. She is positioned in the center of the frame, but the composition is intentionally off‑center, with a slight tilt to the right.
+
+- **Motion & Focus**  
+  Capture a candid, unposed moment with a handheld camera set to a wide‑angle lens (24 mm or 35 mm). Use a fast shutter speed to freeze the subject’s pose while allowing a subtle motion blur on the edges to hint at spontaneity. Everything in the frame—from the woman’s face to the stool’s legs—is fully sharp, no bokeh or depth‑of‑field blur. No “portrait mode” isolation; the background stays crisp.
+
+- **Lighting & Exposure**  
+  Zero studio lighting—use natural daylight from a side window or an open sky. The exposure is slightly overexposed on the subject’s front, giving a warm, lively tone, while the background remains neutral and muted. No auto‑HDR or auto‑beauty mode; keep the raw, unprocessed look.
+
+- **Environment**  
+  The scene takes place in a casual indoor setting: a small studio or a home office with a plain dark gray backdrop that rolls down a wall. A white shelving unit is partially visible on the left side, and a black roll‑off backdrop lies on the floor behind the stool. The time of day is mid‑afternoon, with soft, diffused sunlight creating gentle shadows beneath the stool and a faint highlight on the woman’s left shoulder.
+
+- **Lens & Technical**  
+  Short focal length (24–35 mm) for a wide‑angle view that captures the entire subject and a good portion of the surroundings. No bokeh—everything from foreground to background is in focus. Use a tripod or a stable handheld setup to keep the frame steady, but allow a slight tilt and partial crop for a more spontaneous feel.
+
+- **Composition & Framing**  
+  The framing is accidental: the stool’s front leg is slightly cut off by the right edge of the frame, and the top of the woman’s head is just within the upper border. No rule‑of‑thirds intentionality—just a natural, candid snapshot. The background is fully sharp, so the viewer can see the texture of the dark gray backdrop and the faint lines on the white shelving unit.
+
+- **Post‑Processing**  
+  Keep it minimal: no color grading or filters. A slight contrast boost may be applied after capture to enhance the raw look, but otherwise preserve the original exposure and tonality.
+
+**Prompt Summary**  
+“Candid photo of a woman in a black t‑shirt and shorts sitting cross‑legged on a rustic wooden stool with a black leather seat, mid‑afternoon natural light, wide‑angle lens (24–35 mm), fully sharp background, slight tilt and partial crop, accidental framing, no filters or auto‑HDR, raw unprocessed look.”

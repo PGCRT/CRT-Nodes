@@ -1,0 +1,29 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail, wearing a black spaghetti‑strap top and high‑waisted denim jeans, standing on a city sidewalk. She is mid‑turn, holding a red cup in her right hand, her left arm bent at the elbow, slightly angled toward the camera. Her head is turned to the left, catching the sunlight on her face.  
+
+- **Motion & Focus**  
+  Slight motion blur on the subject’s hands and the cup, indicating handheld shake. Everything in the frame—subject, background, street, trees, cars—is fully sharp; no portrait‑mode depth‑of‑field blur.  
+
+- **Lighting & Exposure**  
+  Natural daylight, mid‑afternoon sun creating a soft lens flare near the top right. Slight overexposure on the upper left corner, giving a raw, unprocessed look. No auto‑HDR or beauty filters—just a straight capture.  
+
+- **Lens & Technical**  
+  Wide‑angle lens (24‑35 mm), short focal length. No bokeh; background is fully sharp.  
+
+- **Environment**  
+  A busy urban street in an American city. The sidewalk is lined with green trees, a concrete curb, and a manhole cover near the bottom left. In the background, a white van and a silver sedan are parked along the street, a traffic light shows yellow, and a red “One‑Way” sign is visible on the right.  
+
+- **Composition & Framing**  
+  The shot is slightly tilted, off‑center, with no intentional rule‑of‑thirds. The frame cuts off the left side of the street, leaving a partial crop of the white van. The top of the image captures the tree canopy and a portion of the sky.  
+
+- **Candid Touch**  
+  The woman appears unaware of the camera, mid‑action, giving the image a spontaneous, unposed feel.  
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, zero studio lighting. Raw capture only.  
+
+**Prompt Summary:**
+
+> “A young woman with a high ponytail, wearing a black spaghetti‑strap top and high‑waisted denim jeans, stands on a city sidewalk mid‑turn while holding a red cup. Capture with a wide‑angle lens (24‑35 mm) at mid‑afternoon daylight, slight motion blur on the hands, full sharpness throughout, slight overexposure on the upper left, no filters or post‑processing. The background shows a busy street with a white van, silver sedan, traffic light, and a red One‑Way sign. Frame slightly tilted and off‑center, partial crop of the left side, capturing the scene in a candid, unposed manner.”

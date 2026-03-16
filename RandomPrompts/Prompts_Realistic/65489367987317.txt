@@ -1,0 +1,29 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a short, straight brown bob, seen from behind, kneeling on a white bed in a bright, airy bedroom. Her hands rest flat on the bedsheet, fingers slightly spread, as if she’s about to adjust her position or reach for something. The back of her body is fully visible, showcasing natural curves and a subtle hint of muscle tension in her shoulders and spine.
+
+- **Lighting & Exposure**  
+  Soft, natural daylight coming from a window on the left, creating a gentle overexposure on the upper part of the frame. Slight ambient warmth with a slight blue tint from the morning sun. No auto‑beauty or filter processing—raw, unprocessed look. The exposure is slightly high, giving a bright, airy feel.
+
+- **Camera Settings**  
+  - Lens: 24mm wide‑angle (short focal length), handheld.  
+  - Aperture: f/5.6 (mid‑range).  
+  - Shutter speed: 1/60 s (slight motion blur from handheld instability).  
+  - ISO: 400 (for clean noise).  
+  - Focus: everything in focus—background and subject, no portrait‑mode depth of field blur.
+
+- **Composition & Framing**  
+  Candid, unposed, spontaneous framing. The shot is slightly tilted to the right, off‑center, with a partial crop that cuts off a bit of the left side of the room. No rule‑of‑thirds intentionality—just natural, accidental composition. The background shows a sheer white curtain and a light brown drape on the right, both fully sharp.
+
+- **Environment**  
+  Location: A bright, modern bedroom with a white bed, a sheer curtain, and a light brown drape. Time of day: early morning, around 10 AM. Weather: clear, sunny, with soft ambient light. The room is quiet, no other people or distractions.
+
+- **Details & Imperfections**  
+  Slight motion blur on the subject’s hands and back, indicating handheld shake. Minor imperfections: a small blemish on her lower back, a faint crease in the bedsheet near her left hand. The image has zero studio lighting, zero professional composition, zero editorial tone—just a raw, candid snapshot.
+
+- **Post‑Processing**  
+  No filters, no color grading, no auto‑beauty mode. Only basic auto‑HDR applied for dynamic range. Slight overexposure on the upper part of the frame to capture the bright daylight.
+
+**Prompt Summary**  
+> “A young woman with a short brown bob seen from behind, kneeling on a white bed in a bright bedroom, hands flat on the sheet, captured with a 24mm wide‑angle lens at f/5.6 and 1/60 s shutter speed, handheld slight motion blur, soft natural daylight from a window, early morning, all in focus, candid and off‑center framing, raw unprocessed look with auto‑HDR, no filters.”

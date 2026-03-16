@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman with voluminous, curly dark hair standing in a modern kitchen, captured mid‑turn as she adjusts her black bikini top. Her back is slightly turned toward the camera, one hand on her neck, creating a natural, unposed candid feel. The shot should show subtle motion blur at the edges to suggest handheld shake, while keeping the entire frame sharply in focus—no portrait‑mode softness.
+
+- **Clothing & Appearance**  
+  She wears a thin‑strap black bikini bottom and a matching top with delicate straps. Her skin has a natural, unretouched texture; slight imperfections (like a small mole or a stray hair) are welcome. The lighting should be slightly overexposed on the upper body, giving a warm, ambient glow that mimics mid‑afternoon sunlight.
+
+- **Environment**  
+  The setting is a bright, contemporary kitchen with emerald‑green cabinetry, white subway tiles, and a marble countertop. A stainless‑steel faucet and a small plant in the corner add detail. The time of day is late afternoon; the windows let in soft, golden light that creates subtle highlights on her back and the countertop. Weather is clear, with a gentle breeze that slightly ruffles her hair.
+
+- **Lens & Technical**  
+  Use a wide‑angle lens (24–35 mm) to capture a broad view of the scene. Keep everything in focus—no bokeh or depth‑of‑field blur. The composition should be accidental: slight tilt and off‑center framing, no rule‑of‑thirds intentionality. Capture a full‑body shot that includes the subject’s legs, hips, and the kitchen counter, with a partial crop that cuts off a bit of the left side to enhance spontaneity.
+
+- **Lighting & Post‑Processing**  
+  No auto‑HDR or beauty filters—just raw, natural lighting. Slight overexposure on the upper body to emphasize the ambient light. Keep the image unprocessed; no color grading or vignetting. The final look should feel like a genuine, spontaneous snapshot taken with a DSLR or mirrorless camera in a real‑world setting.
+
+- **Final Prompt**  
+  “A woman with voluminous curly dark hair, mid‑turn adjusting her black bikini top, standing in a bright modern kitchen with emerald cabinets and white subway tiles. Capture the scene with a wide‑angle lens (24–35 mm), keeping everything sharp while allowing slight motion blur at the edges. Use natural late‑afternoon lighting that slightly overexposes the upper body. Frame the shot accidentally—slight tilt, off‑center, partial crop—no rule‑of‑thirds. Keep the image raw and unprocessed, with no filters or color grading, preserving a candid, spontaneous feel.”

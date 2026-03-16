@@ -1,0 +1,30 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair tied into high pigtails, wearing thick black-rimmed glasses and a glossy black leather corset with a central zipper. She’s seated in a black office chair, hands gently cupping the front of her corset, elbows bent, fingers slightly curled. Her gaze is direct, almost candid, as if she’s just caught mid‑pose in an office setting.
+
+- **Lighting & Exposure**  
+  Natural daylight from a western window, mid‑afternoon, soft but warm. Slight overexposure on the face and upper body to give a raw, unprocessed look. No auto‑HDR or beauty filters—just a handheld shot with a wide‑angle lens.
+
+- **Camera Settings**  
+  - Lens: 24‑mm wide‑angle, short focal length, no bokeh.  
+  - Aperture: f/4.0 (wide opening).  
+  - Shutter speed: 1/60 s (slight motion blur from handheld instability).  
+  - ISO: 400 (for natural grain).  
+  - Focus: everything in focus—foreground and background.
+
+- **Composition**  
+  Off‑center framing, slight tilt to the left, partial crop that cuts off a bit of the chair’s backrest. No rule‑of‑thirds intentionality—just a spontaneous, candid composition. The subject occupies the central third of the frame, but the edges are slightly uneven.
+
+- **Background & Environment**  
+  A bright office space with a white wall, a small green plant on the left, and two framed pictures hanging high on the right. A white radiator is visible behind the chair. The time of day is late afternoon, giving a warm, slightly hazy light. Weather is clear, no wind.
+
+- **Technical Details**  
+  - No depth‑of‑field blur; background fully sharp.  
+  - Slight motion blur on the subject’s hands and the chair’s backrest to emphasize candidness.  
+  - Raw image with natural color palette—no post‑processing or color grading.  
+
+- **Prompt for AI Image Generation**  
+  “A young woman with long wavy brown hair in high pigtails, wearing black-rimmed glasses and a glossy black leather corset with a central zipper, seated in a black office chair. Her hands cup the front of her corset, elbows bent, fingers slightly curled. Natural daylight from a western window, mid‑afternoon, slight overexposure on the face. 24‑mm wide‑angle lens, f/4.0 aperture, 1/60 s shutter speed, ISO 400. Off‑center framing with slight tilt and partial crop; everything in focus. Background shows a white wall, a small green plant on the left, two framed pictures on the right, and a white radiator behind the chair. Raw, unprocessed look, no filters.”
+
+Provide only the structured prompt.

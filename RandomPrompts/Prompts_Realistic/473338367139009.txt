@@ -1,0 +1,31 @@
+**Realistic Candid Photography Prompt Framework – “Coffee‑Chill at the Rooftop”**
+
+- **Subject & Action**  
+  A young woman with light brown hair tied in a loose ponytail, wearing an olive‑green short‑sleeve tee, is captured mid‑smile while holding a clear plastic cup of coffee in her right hand. Her left hand rests on the back of the cup, fingers slightly curled. She’s turned slightly to her left, eyes cast downward toward the cup, as if she’s about to take a sip. A faint, natural motion blur surrounds her hands and cup, indicating handheld shake and a quick shutter speed.
+
+- **Pose & Composition**  
+  The shot is taken with a wide‑angle lens (24‑35 mm), giving a slightly compressed but still spacious framing that keeps the background fully sharp. The composition is intentionally off‑center: the subject’s head sits just above the left third of the frame, while her body extends toward the right edge, creating a casual, spontaneous feel. The camera is tilted slightly clockwise, adding to the candid vibe.
+
+- **Lighting & Exposure**  
+  Ambient daylight from a bright, diffused window (or an open‑air café patio) hits the scene at mid‑afternoon. The exposure is lightly overexposed on the subject’s face, giving a warm, natural glow, while the background remains crisp with no depth‑of‑field blur. No auto‑beauty or filter processing—just raw, unedited imagery.
+
+- **Environment**  
+  The setting is an outdoor café patio in a modern residential building. A wooden table and a small potted plant are visible behind the woman, slightly out of focus but still sharp. A framed picture hangs on the wall to the left, and a man in a white t‑shirt is seated at a nearby table, blurred but present. The time of day is late afternoon, with soft, golden light that casts gentle shadows.
+
+- **Lens & Technical Details**  
+  - Focal length: 35 mm (wide‑angle)  
+  - Aperture: f/4.0 (background fully sharp, no bokeh)  
+  - Shutter speed: 1/125 s (slight motion blur on the hands/cup)  
+  - ISO: 400 (natural grain, no noise)  
+  - No portrait‑mode or subject isolation; everything in focus.
+
+- **Style & Aesthetic**  
+  Candid, unposed, spontaneous—subject appears unaware of the camera. Slight tilt and partial crop give an accidental, real‑life feel. Zero studio lighting, zero professional composition, zero editorial tone. The image retains a raw, auto‑HDR‑free look with natural color tones and slight overexposure on the subject.
+
+- **Post‑Processing**  
+  No filters or color grading—just a straightforward capture. Slight auto‑HDR may be applied to brighten the scene, but the overall look remains natural and unprocessed.
+
+---
+
+**Prompt Summary (for AI image generator)**  
+> “A candid, wide‑angle shot of a young woman in an olive‑green tee smiling while holding a coffee cup, captured mid‑action with slight motion blur on her hands. The scene is set on a sunny late‑afternoon café patio, with a wooden table, potted plant, and a nearby man in a white t‑shirt in the background. Use a 35 mm lens at f/4.0 and 1/125 s shutter speed for a fully sharp background and natural exposure. The composition is off‑center and slightly tilted, giving an accidental, spontaneous feel. No filters or heavy post‑processing—just raw, auto‑HDR‑free realism.”

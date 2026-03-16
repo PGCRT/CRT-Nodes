@@ -1,0 +1,30 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A young woman with long, wavy brown hair, wearing a faded denim jacket over a white top and distressed brown jeans, sits cross‑legged on a weathered wooden bench. She is mid‑gesture, holding a small, handcrafted wooden box tied with a natural jute cord; her right hand is pulling the cord taut as if she’s about to open or close the box. Her face is turned slightly toward the camera, eyes softly focused, lips parted in a gentle smile. The pose feels spontaneous and candid—she’s unaware of the lens, caught in a natural moment.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action.  
+  Slight tilt and off‑center framing; partial crop that gives a casual, handheld feel.  
+  No rule‑of‑thirds intentionality — accidental framing.  
+  Natural motion freeze or slight blur from handheld instability.
+
+- **Environment**  
+  Specific real‑world location: a sunny park in a tropical suburb, with tall palm trees and lush green shrubs lining the background. The bench is old but sturdy, made of rough‑hewn wood. The scene is bathed in warm, golden hour light that comes from the west, casting soft shadows and a slight overexposure on the subject’s face. The weather is clear, with a light breeze rustling the leaves; ambient noise adds to the candid vibe.
+
+- **Lens & Technical**  
+  Short focal length (20‑35 mm) wide‑angle lens.  
+  No bokeh — background fully sharp, everything in focus.  
+  No portrait mode or subject isolation.  
+  Slight overexposure or underexposure depending on ambient light (choose golden hour warmth).  
+  Auto‑HDR or auto‑beauty mode off — raw, unprocessed look.  
+  No filters, no color grading, no post‑processing aesthetic.  
+  Handheld shot with slight instability, giving a natural motion blur if desired.
+
+- **Composition Notes**  
+  Keep the subject slightly above the center of the frame; let the wooden box occupy the lower middle portion.  
+  Include a hint of the palm tree trunk on the left side for depth.  
+  Capture the texture of the bench and the grass beneath, to reinforce the real‑world setting.  
+
+- **Final Prompt**  
+  “A young woman with long wavy brown hair, in a faded denim jacket and distressed brown jeans, sits cross‑legged on an old wooden bench in a tropical park. She holds a small handcrafted wooden box tied with jute cord, pulling the cord taut as if about to open it. The shot is candid, slightly tilted, off‑center, with accidental framing. The background shows tall palm trees and green shrubs, all in sharp focus. Shot on a 20‑35 mm wide‑angle lens, handheld with slight motion blur, captured in golden hour light with a mild overexposure. No filters or post‑processing, raw and natural.”

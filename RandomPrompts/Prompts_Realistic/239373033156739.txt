@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, slender woman with long dark hair, visible tattoos on both arms and left thigh, standing barefoot on a weathered fallen log that lies diagonally across a calm lake. She is mid‑step, one foot planted, the other slightly lifted, head tilted downward as if she’s about to touch the water or adjust her stance. Her body is angled toward the camera but not perfectly centered—slight off‑center framing gives a candid feel.
+
+- **Motion & Focus**  
+  Capture with a wide‑angle lens (24–35 mm). Use a handheld shot with slight motion blur from natural instability, but keep everything in focus—no portrait‑mode depth of field blur. The background (mountains, trees, water) should be fully sharp, no bokeh.
+
+- **Lighting & Exposure**  
+  Auto‑HDR or auto‑beauty mode off. Use ambient natural light of late afternoon (golden hour), with a slight overexposure on the sky and water to enhance warmth. No color grading or post‑processing filters—raw, unprocessed look.
+
+- **Environment**  
+  Specific real‑world location: a mountain‑lined lake in the Rockies (or similar range). The time of day is early evening, with warm sunlight reflecting off the water and a soft orange‑pink hue in the sky. Weather is mild, light wind, a few scattered clouds. Trees line the far shore, a dead branch extends into the water, and a small island or rock formation is visible in the distance.
+
+- **Lens & Technical**  
+  Short focal length (24–35 mm), wide‑angle. No bokeh—background fully sharp. Everything in focus. No rule‑of‑thirds intentionality—accidental framing, slight tilt. Capture a candid, unposed moment with the subject unaware or mid‑action.
+
+- **Composition Notes**  
+  The log cuts diagonally across the frame; the woman’s body forms a subtle vertical line that is slightly tilted. The composition should feel spontaneous, as if the photographer caught her in an instant. Keep the shot wide to include the lake, the log, the woman, and the distant mountains and trees.
+
+**Prompt Summary (structured)**  
+“Candid photo of a tall woman with long dark hair and arm/thigh tattoos standing barefoot on a weathered log that lies diagonally across a calm lake. She’s mid‑step, head tilted down, body slightly off‑center. Shot with a 24–35 mm wide‑angle lens, handheld slight motion blur but fully sharp background. Ambient late‑afternoon light with soft overexposure on sky and water. Location: mountain‑lined lake in the Rockies, early evening, mild wind, scattered clouds. Trees line the far shore, a dead branch extends into the water, distant island visible. Auto‑HDR off, no filters—raw, unprocessed look. Everything in focus, no bokeh. Capture spontaneous, unposed moment with natural instability.”

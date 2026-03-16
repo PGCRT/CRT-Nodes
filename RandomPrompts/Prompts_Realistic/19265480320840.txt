@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, sun‑kissed brown hair, wearing a red‑and‑white horizontal‑striped one‑piece swimsuit, stands on a sandy beach. She is mid‑gesture: left hand raised to the back of her head, right hand on hip, body angled slightly toward the camera, face turned to the viewer with a bright, candid smile. A thin gold necklace rests on her collarbone; small hoop earrings catch the light. Her left foot is planted firm in the sand, right foot slightly ahead, creating a natural, unposed stance.
+
+- **Motion & Focus**  
+  Slight motion blur at the edges from handheld shake; the subject’s face and upper body are in sharp focus, while the background remains fully sharp—no bokeh. The image has an auto‑HDR feel but no color grading or filters: raw, natural tones with a hint of overexposure in the sky.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24 mm), short focal length, everything in focus, no depth‑of‑field blur. The composition is accidental: slight tilt and off‑center framing, no rule‑of‑thirds intentionality. The shot captures a “mid‑action” candid moment with natural, unposed spontaneity.
+
+- **Environment**  
+  Beach setting at mid‑afternoon, the sun high but not directly overhead, creating warm, soft light. The sand is light beige with faint footprints; a pair of dark sneakers lies on the ground to the right of the subject. In the background, a few other beachgoers are visible: one man in a turquoise shirt and shorts, another woman in a blue‑patterned bikini, a third woman in a white top and black bikini bottom kneeling near a green folding chair. A small yellow umbrella peeks from the left side, and a cluster of green trees lines the far right. The sky is a pale, hazy blue with a few wispy clouds.
+
+- **Lighting & Exposure**  
+  Natural daylight with slight overexposure in the sky; the subject’s face is slightly brighter than the background. No studio lighting, no professional composition—just an authentic, spontaneous snapshot.
+
+- **Post‑Processing**  
+  Auto‑HDR or auto‑beauty mode off. No filters, no color grading, no post‑processing aesthetic. The final image retains a raw, unprocessed look with natural contrast and subtle grain.

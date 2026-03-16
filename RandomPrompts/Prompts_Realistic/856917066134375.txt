@@ -1,0 +1,16 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A young woman with dark hair tied in a high ponytail, wearing an oversized blue knit sweater and black trousers, sits on a wooden chair in a casual office or study space. She is mid‑gesture, holding a pink smartphone in both hands, her fingers poised as if she’s about to type or scroll. Her expression is focused but relaxed, with a slight smile, eyes downcast at the screen. The shot should capture a faint motion blur on her hands and phone to convey the candid, handheld feel.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject should appear unaware of the camera, caught in a natural moment. Encourage imperfections: a slight tilt to the frame, off‑center composition, and a partial crop that cuts off a bit of the background on the left side. No intentional rule‑of‑thirds; let the framing feel accidental.
+
+- **Environment**  
+  The setting is a bright, informal office or co‑working space with light wooden furniture, a small round table, and a bookshelf filled with books and decorative items in the background. A second woman is visible in the left background, also on her phone, adding to the casual atmosphere. A potted plant sits atop a shelf, and a fluorescent light fixture hangs from the ceiling. The time of day is mid‑afternoon, with soft natural daylight coming from a window out of frame, creating a gentle overexposure on the subject’s face and a slight warmth in the tones.
+
+- **Lens & Technical**  
+  Use a short focal length wide‑angle lens (e.g., 24‑35 mm) to capture a broad view of the scene without significant bokeh. Keep everything in focus – no portrait‑mode depth‑of‑field blur – so the background remains sharp. Shoot in raw, unprocessed mode; avoid filters or color grading. The exposure should be slightly high, letting a hint of overexposure on the subject’s face and hands, while the background stays crisp. Use a handheld shot with slight instability to add natural motion blur.
+
+- **Post‑Processing**  
+  Keep it minimal: no auto‑beauty mode, no heavy color grading, just a raw, unprocessed look that preserves the authenticity of the moment. Slight vignetting is acceptable if it enhances the sense of depth. The final image should feel like a genuine snapshot captured with a DSLR or mirrorless camera in a real-world setting.

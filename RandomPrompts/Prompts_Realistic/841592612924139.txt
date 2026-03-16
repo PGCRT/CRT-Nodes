@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long blonde hair styled in a loose braid, sitting casually on a gray fabric sofa. She wears a black triangle‑style bikini top and light‑blue sequined bottoms that tie at the side. Her left leg is bent, foot flat on the couch, while her right leg rests slightly forward; both hands rest on the couch’s edge, one near her thigh, the other by her hip. She looks directly at the camera with a soft, unposed expression, mouth slightly open as if mid‑speech or mid‑laugh.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. Slight tilt and off‑center framing; partial crop that cuts off a bit of the couch’s left armrest. No rule‑of‑thirds intentionality — accidental framing. The shot is taken with a handheld camera, producing a natural motion blur on the subject’s hands and a slight shake in the background.
+
+- **Environment**  
+  Specific real‑world location: a modern living room with a gray textured wall behind the sofa. A dark curtain hangs to the left, a small white light fixture is visible on the wall, and a wooden side table appears on the right. Time of day: late afternoon; ambient light is warm but not harsh, creating soft shadows. Weather or ambient conditions: clear, no wind, indoor lighting is natural daylight with a slight overexposure in the highlights.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm), wide‑angle lens. No bokeh; background fully sharp — everything in focus. No portrait mode or subject isolation. Slight overexposure in the highlights to give a raw, unprocessed look. Auto‑HDR or auto‑beauty mode off. No filters, no color grading, no post‑processing aesthetic. The image retains a natural, slightly grainy feel from a DSLR or mirrorless camera with a wide‑angle prime.
+
+- **Composition & Details**  
+  The composition captures the subject’s upper body and lower torso, with her left hand near her thigh and right hand on the couch edge. Her face is centered but slightly tilted to the right. The background shows a portion of the sofa’s armrest, a dark curtain, a white light fixture, and a wooden side table. The lighting comes from the front‑right, creating soft highlights on her skin and clothing. The shot has a slight motion blur on the hands, indicating handheld instability.
+
+- **Prompt Summary**  
+  “A young woman with long blonde hair in a loose braid sits casually on a gray sofa in a modern living room, wearing a black triangle bikini top and light‑blue sequined bottoms. She looks directly at the camera with a soft expression, hands resting on the couch. The shot is taken with a 24‑35 mm wide‑angle lens, handheld, slightly tilted, off‑center framing, all in focus, with a raw, unprocessed look and slight motion blur. The background includes a dark curtain, a white light fixture, and a wooden side table. Late afternoon natural daylight creates soft shadows and a mild overexposure in the highlights.”

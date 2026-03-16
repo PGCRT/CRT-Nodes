@@ -1,0 +1,31 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A young woman with long, dark, wavy hair, wearing a cream‑colored lace‑trimmed nightgown and a black shawl draped over her shoulders, is kneeling on a polished wooden floor in a cozy living room. She is mid‑reading a small hardcover book, her fingers gently holding the pages as she turns a leaf. Her head is slightly tilted downward, eyes focused on the text, giving a candid, unposed feel.
+
+- **Pose & Composition**  
+  The shot is taken with a wide‑angle lens (24 mm or 35 mm), capturing a broad view of the scene. The framing is accidental and off‑center: the woman’s left knee is slightly cut off by the bottom edge, and the camera is held at a slight tilt. No rule‑of‑thirds is followed—everything is in focus, from the subject to the background, with no portrait‑mode blur.
+
+- **Motion & Exposure**  
+  A subtle motion blur is present, indicating handheld instability during the snap. The exposure is slightly overexposed on the bright lace details, but the overall tone remains natural, unprocessed, and raw. No auto‑HDR or beauty filters are applied.
+
+- **Environment**  
+  The setting is a warm, dimly lit living room at dusk. A beige armchair sits to the left, a wooden bookshelf filled with books lines the right wall, and a small side table holds a lamp that casts a soft glow. The time of day is late afternoon, with ambient light filtering through a window, creating gentle shadows and highlights.
+
+- **Lens & Technical**  
+  - Focal length: 35 mm (wide‑angle)  
+  - Aperture: f/4.0 (everything in focus, no bokeh)  
+  - Shutter speed: 1/60 s (slight motion blur)  
+  - ISO: 400 (natural contrast)  
+  - No depth‑of‑field blur; background is fully sharp.  
+
+- **Lighting**  
+  Natural ambient lighting from a window, with a slight overexposure on the lace and skin, giving a raw, unprocessed look. The light comes from the left, illuminating the subject’s face and the book she holds.
+
+- **Details & Imperfections**  
+  - Slight tilt of the camera, partial crop of the woman’s left knee, and a faint motion blur around her hands.  
+  - The book’s cover shows a subtle texture, and the lace trim on her nightgown catches the light.  
+  - A small earring glints on her ear, and a faint reflection can be seen in the lamp’s glass.  
+
+- **Prompt Summary**  
+  “A young woman with long dark wavy hair, wearing a cream lace‑trimmed nightgown and black shawl, kneeling on a polished wooden floor in a cozy living room at dusk, reading a small hardcover book. The shot is taken with a 35 mm wide‑angle lens, slightly tilted and off‑center, with subtle motion blur and natural ambient lighting. The scene includes a beige armchair on the left and a bookshelf on the right, all in focus. Capture the candid, unposed moment with raw, unprocessed realism.”

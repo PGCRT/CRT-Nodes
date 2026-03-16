@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair, wearing a black high‑waist skirt and no top, captured mid‑turn as she walks through a modern office hallway. Her left arm is slightly bent, her right shoulder relaxed, and her head tilted a few degrees to the left, giving an accidental off‑center framing. She’s in the act of adjusting her hair with her right hand, a subtle motion that creates a faint trail of blur.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject is unaware of the camera, mid‑action, with a slight tilt and partial crop that gives a raw, handheld feel. The shot has a natural motion freeze or slight blur from handheld instability, no rule‑of‑thirds intentionality, just accidental framing.
+
+- **Environment**  
+  Location: A bright, open‑plan office space with a concrete wall and a glass partition on the right. Time of day: late afternoon, soft natural light coming from the west, creating a warm, slightly overexposed highlight on the subject’s left shoulder. Weather or ambient conditions: clear, mild humidity, gentle breeze that ruffles her hair.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm), wide‑angle lens. No bokeh — background is fully sharp, everything in focus. No portrait mode or subject isolation; the depth of field is uniform. Slight overexposure on the subject’s left side to capture ambient warmth. Auto‑HDR or auto‑beauty mode off — raw, unprocessed look. No filters, no color grading, no post‑processing aesthetic.
+
+- **Composition Notes**  
+  The frame cuts off the top of her left ear, leaving a partial crop that gives a candid feel. Her right hip is slightly out of the center, and her left foot is partially visible at the bottom edge. The background shows a faint outline of a white desk and a black cabinet, all in focus.
+
+- **Lighting & Color**  
+  Natural daylight from the west, slight overexposure on the subject’s left shoulder, subtle warm tones. No studio lighting, no professional composition, zero editorial tone.
+
+- **Final Prompt**  
+  “A young woman with long wavy brown hair, wearing a black high‑waist skirt and no top, captured mid‑turn as she walks through a modern office hallway, her right hand adjusting her hair, left shoulder slightly overexposed, handheld blur, wide‑angle 24‑35 mm lens, all in focus, raw unprocessed look, candid spontaneous capture, slight tilt and partial crop, accidental framing, late afternoon natural light, clear weather, fully sharp background.”

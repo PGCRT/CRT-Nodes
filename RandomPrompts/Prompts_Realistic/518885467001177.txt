@@ -1,0 +1,16 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman with long, dark hair, wearing a black lace bra, black leather thigh‑high boots, and a thin chain belt, standing on a large, rough boulder in a rocky field. She is mid‑turn, one hand on her head, the other on her hip, legs slightly apart, body angled toward the camera. A tattoo is visible on her left thigh. Her expression is confident but natural, as if she’s just finished a dance or a photo shoot and is now posing spontaneously.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. Slight tilt and off‑center framing; partial crop that gives a raw, handheld feel. No rule‑of‑thirds intentionality. The shot has a slight motion blur from handheld instability, but everything remains in focus (wide‑angle, short focal length).
+
+- **Environment**  
+  Specific real‑world location: a dry, grassy plain scattered with large, weathered rocks. Time of day: late afternoon, the sun high but slightly to the side, creating soft shadows and a warm, golden hue. Weather: clear sky with a few fluffy white clouds, mild wind.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm), wide‑angle lens. No bokeh; background fully sharp — all elements in focus. No portrait mode or subject isolation. Slight overexposure to keep the ambient light natural. Auto‑HDR or auto‑beauty mode off — raw, unprocessed look. No filters, no color grading, no post‑processing aesthetic. Zero studio lighting, zero professional composition, zero editorial tone.
+
+- **Final Prompt**  
+  “A woman with long dark hair, black lace bra, leather thigh‑high boots, chain belt, standing on a large boulder in a rocky field, mid‑turn pose, one hand on head, other on hip, tattoo visible on left thigh, candid spontaneous capture, slight tilt and off‑center framing, partial crop, handheld motion blur, late afternoon sun, clear sky with fluffy clouds, wide‑angle short focal length, everything in focus, raw unprocessed look, no filters, no auto‑HDR, natural overexposure.”

@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair, wearing gold hoop earrings, kneeling on a light‑wood floor. She is nude, with a small cross tattoo on her left upper chest. Her hands rest gently on her knees, fingers slightly curled, nails painted pale pink. Her gaze is direct, confident, with a subtle smile.  
+
+- **Lighting & Exposure**  
+  Natural daylight from a side window, mid‑afternoon. Slight overexposure on the subject’s face and torso, giving a warm, soft glow. No auto‑HDR or beauty filters—raw, unprocessed look.  
+
+- **Camera Settings**  
+  Wide‑angle lens (24 mm), handheld, slight motion blur from natural shake. Everything in focus—no bokeh, no depth‑of‑field blur.  
+
+- **Composition**  
+  Candid, unposed, spontaneous framing. Slight tilt and off‑center crop; no rule‑of‑thirds intentionality. Background is a textured beige wall with faint marble‑like veining.  
+
+- **Environment**  
+  Location: a bright, airy living room with a wooden floor and a subtle, matte wall finish. Time of day: late afternoon, soft sunlight casting gentle shadows. Weather: clear, no wind.  
+
+- **Technical Details**  
+  Short focal length (24 mm), wide‑angle, all elements sharply in focus. No portrait mode or subject isolation.  
+
+- **Prompt for Generation**  
+  “A young woman with long wavy brown hair and gold hoop earrings kneels on a light‑wood floor in a bright living room, nude with a small cross tattoo on her left chest. Her hands rest on her knees, fingers slightly curled, nails pale pink. She looks directly at the camera with a subtle smile. Natural daylight from a side window casts a warm soft glow, slight overexposure on the subject. Shot on a 24 mm wide‑angle lens, handheld with slight motion blur, everything in focus. Candid, unposed, spontaneous framing with a slight tilt and off‑center crop; background is a textured beige wall with faint marble‑like veining. No filters, no auto‑HDR, raw, unprocessed look.”

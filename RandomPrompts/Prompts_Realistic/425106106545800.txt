@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, athletic woman with long, sun‑kissed blonde hair, a floral tattoo running down her left shoulder blade, wearing a bright red bikini bottom. She’s mid‑turn, back to the camera, left leg slightly bent, right hand gripping a black beaded bracelet on her wrist, body angled toward the right side of the frame. Her face is turned back to the camera with a subtle, confident smile, eyes bright, lashes catching the light.
+
+- **Motion & Focus**  
+  Slight motion blur at the edges from handheld shake; everything in focus—no portrait‑mode blur. The blur is concentrated mainly on the hair and background, giving a natural “in‑motion” feel. No auto‑HDR or beauty filters—raw, unprocessed look.
+
+- **Lighting & Exposure**  
+  Natural daylight, mid‑afternoon, slightly overcast but with a warm, golden hue. Slight overexposure on the upper body, creating a soft halo around her hair. No studio lighting, no color grading, no post‑processing aesthetic.
+
+- **Environment**  
+  The scene is set on a weathered wooden dock with rough, natural planks and thick rope railings. In the background, a small white house sits behind a line of palm trees, a blue awning visible to the left. The sky is a pale, hazy blue, suggesting a warm summer day. The dock’s posts are made of rough, untreated pine, with visible grain and knots.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm), short focal length. No bokeh—background fully sharp. All elements in focus: subject, dock, background. No rule‑of‑thirds intentionality—framing is accidental, slightly off‑center, a slight tilt to the left.
+
+- **Composition & Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Imperfections encouraged: slight tilt, off‑center framing, partial crop. The composition feels “in the moment,” as if the photographer just caught her in a natural pose. No editorial tone; it looks like a genuine snapshot from a casual photoshoot.
+
+- **Prompt Summary**  
+  *“A tall woman with long blonde hair and a floral tattoo on her left shoulder, wearing a red bikini bottom, stands on a weathered wooden dock at mid‑afternoon. She’s turning away from the camera, back to the lens, with a subtle smile, hand on a beaded bracelet. Slight motion blur on the hair, everything in focus, natural daylight with a warm overexposed halo. The background shows a white house and palm trees behind a rope railing. Shot on a 24–35 mm wide‑angle lens, no bokeh, no filters, raw, candid, accidental framing.”*

@@ -1,0 +1,27 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high bun and loose strands framing her face, wearing an off‑white long‑sleeve shirt that reads “SERKOE MOCA” in gold lettering, paired with tan corduroy shorts. She is mid‑smile, slightly turned toward the camera, with one hand resting on her thigh and the other holding a beige cardigan that drapes over her shoulder. Her left eye is subtly tilted, giving a candid, unposed feel.
+
+- **Motion & Focus**  
+  Capture a natural motion blur from handheld instability—about 1–2 mm of lateral blur across the face. Everything in the frame (subject and background) stays fully sharp; no portrait‑mode depth‑of‑field blur. Use a wide‑angle lens (35 mm or 40 mm) to keep the entire scene, including the train car interior, in view.
+
+- **Lighting & Exposure**  
+  Raw, unprocessed look: no auto‑HDR or auto‑beauty mode. Slight overexposure on the upper chest and face to highlight ambient light. The lighting is natural daylight from a window on the left side of the train car, creating soft highlights and subtle shadows.
+
+- **Environment**  
+  Interior of a commuter train at dusk. The background shows a row of seats, a wooden table with a white mug, a water bottle, and a few passengers in the rear carriage. A window on the left reflects the outside night sky, giving a slight glare. The time of day is late afternoon/evening, with warm ambient light.
+
+- **Composition & Framing**  
+  No rule‑of‑thirds intentionality—frame the shot slightly off‑center, with the subject’s head near the upper right quadrant and her left shoulder extending beyond the right edge of the frame. The composition is accidental, capturing a spontaneous moment as she walks or sits.
+
+- **Technical Settings**  
+  - Focal length: 40 mm (wide‑angle)  
+  - Aperture: f/5.6 (mid‑range for sharpness across the frame)  
+  - Shutter speed: 1/125 s (to allow slight motion blur)  
+  - ISO: 400 (for clean detail without noise)  
+  - No bokeh; background fully sharp.  
+  - No post‑processing filters or color grading—just raw capture.
+
+- **Final Prompt**  
+  “A candid, unposed selfie of a young woman with a high bun and loose strands, wearing an off‑white long‑sleeve shirt that reads ’SERKOE MOCA’ in gold lettering, paired with tan corduroy shorts, mid‑smile on a commuter train at dusk. Capture natural motion blur from handheld instability, wide‑angle 40 mm lens, everything fully sharp, slight overexposure on the upper chest, raw unprocessed look. The background shows a wooden table with a white mug, a water bottle, and passengers in the rear carriage; a window on the left reflects the outside night sky. Frame slightly off‑center, subject near the upper right quadrant, accidental composition, no rule‑of‑thirds.”

@@ -1,0 +1,37 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  - A young woman with tousled, wind‑blown hair, wearing a faded denim jacket over a plain white tee, captured mid‑laugh with her head tilted slightly to the right.  
+  - Her face is partially cropped by the frame’s left edge; her left hand is barely visible at the bottom of the shot, giving an informal, “in‑the‑moment” feel.  
+
+- **Motion & Focus**  
+  - Slight motion blur on the hair and jacket, indicating a handheld, spontaneous capture.  
+  - Everything in the frame—subject, background, details—is fully sharp; no portrait‑mode depth‑of‑field blur.  
+
+- **Lighting & Exposure**  
+  - Natural daylight from a high‑angle, mid‑afternoon sun that creates a soft overexposure on the subject’s face and a subtle lens flare near the top left.  
+  - No auto‑HDR or beauty filters; raw, unprocessed look with natural color tones.  
+
+- **Lens & Technical**  
+  - Wide‑angle lens (24–35 mm) with a short focal length, giving a slightly distorted, intimate perspective.  
+  - No bokeh; background is fully sharp, from the brick storefront to the street behind.  
+
+- **Environment**  
+  - A bustling city street in an urban downtown area; a brick building with a “Duck” sign is visible on the left, a red awning on the right, and a white car parked along the curb.  
+  - Time of day: late morning to early afternoon, warm sunlight casting soft shadows.  
+  - Weather: clear, slightly breezy, with a few pedestrians in the background adding to the candid vibe.  
+
+- **Composition & Framing**  
+  - No rule‑of‑thirds intentionality; the frame is off‑center, with the subject’s left side cut off by the edge of the shot.  
+  - Slight tilt to the right gives a dynamic, informal feel.  
+  - Background elements (storefront, awning, car) are fully in focus, enhancing the “real‑life” authenticity.  
+
+- **Style Notes**  
+  - Candid, unposed, spontaneous—subject unaware or mid‑action.  
+  - Imperfections encouraged: slight tilt, off‑center framing, partial crop.  
+  - Zero studio lighting, zero professional composition, zero editorial tone.  
+  - Natural motion freeze or slight blur from handheld instability.  
+
+**Prompt Summary (for use in a text‑to‑image model):**
+
+> “A candid, wide‑angle shot of a young woman laughing mid‑walk on a sunny city street. She wears a faded denim jacket over a white tee, her hair blowing in the wind. The frame captures her from the chest up, slightly cropped on the left, with a subtle motion blur on her hair and jacket. Natural daylight creates a soft overexposure and lens flare near the top left. Background shows a brick storefront with a ’Duck’ sign, a red awning, and a white car, all in sharp focus. The image has no filters or post‑processing, raw and unprocessed, captured with a 24–35 mm lens, handheld, slightly tilted, off‑center framing, everything fully sharp.”

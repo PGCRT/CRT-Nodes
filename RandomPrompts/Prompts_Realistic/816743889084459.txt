@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair sitting casually on a set of outdoor stone stairs. She’s wearing a bright, rainbow‑striped one‑piece swimsuit with a deep V‑neck and high‑waist, paired with tall white leather boots that reach just above the ankle. Her hands are behind her head, elbows out, creating a relaxed, playful posture. She’s mid‑smile, eyes bright, looking slightly off‑camera as if she’s just finished a photo session or is about to start a new one.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject appears unaware of the camera, caught in a natural moment. Slight tilt and off‑center framing give an accidental, handheld feel. The shot has a raw, unprocessed look: no filters, no color grading, no post‑processing aesthetic. A hint of slight overexposure from ambient daylight gives it a warm, natural glow.
+
+- **Environment**  
+  Location: A public outdoor staircase in a residential or campus setting, with a brick wall and a metal handrail visible in the background. The stairs are made of light‑colored stone with a subtle texture. A small patch of green foliage peeks from the top right corner, adding depth. Time of day: late morning, soft sunlight casting gentle shadows; the sky is overcast but bright, creating even lighting without harsh contrasts. Weather: mild, breezy, with a slight wind that ruffles the subject’s hair.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm) wide‑angle lens, handheld. Everything is fully sharp — no bokeh or depth‑of‑field blur; background and foreground are in focus. Slight motion blur on the subject’s hands and hair to suggest movement. The composition intentionally avoids rule‑of‑thirds: the subject is slightly off‑center, the frame is a partial crop that includes part of the stair rail and a portion of the brick wall. No portrait‑mode subject isolation; the entire scene is crisp.
+
+- **Lighting & Exposure**  
+  Natural daylight with a slight overexposure that keeps the tones warm and lively. The lighting comes from the left side, creating soft highlights on the subject’s face and boots, while subtle shadows fall behind her. No studio lighting or professional composition — it looks like a quick snapshot captured with a DSLR or mirrorless camera in a casual mood.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera adds a candid feel; the framing is not perfectly centered. The boots show a tiny crease at the toe, and the swimsuit’s fabric has a slight wrinkle where the hands touch the back, enhancing realism. The brick wall has a mix of red and brown tones, with a faint patch of moss near the top left corner. A metal handrail runs along the right side of the stairs, partially out of frame.
+
+- **Final Prompt**  
+  “A young woman with long wavy brown hair sits casually on outdoor stone stairs, wearing a rainbow‑striped one‑piece swimsuit and tall white leather boots. Her hands are behind her head, elbows out, mid‑smile, looking slightly off‑camera. The scene is set in late morning sunlight, with a brick wall and metal handrail in the background, a patch of green foliage peeking from the top right. Capture with a 24‑35 mm wide‑angle lens, handheld, everything fully sharp with slight motion blur on the hands and hair. The shot is candid, slightly tilted, off‑center, partial crop, no filters or color grading, raw and natural. Light comes from the left, creating soft highlights and subtle shadows. Include a hint of slight overexposure for a warm glow. All elements in focus — background, foreground, and subject — with no bokeh.”

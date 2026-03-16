@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  Two women in sheer black lace lingerie, one with long brown hair and the other with short blonde hair, standing side‑by‑side near a large window. The woman on the left is turned slightly toward the camera, her hand resting on her hip; the woman on the right faces forward, a subtle smile on her face. Their poses are candid and spontaneous, as if caught mid‑action in a natural, unposed moment.
+
+- **Lighting & Exposure**  
+  Natural daylight from a tall window, slightly overexposed to give a warm, soft glow. No auto‑HDR or auto‑beauty mode – the look is raw and unprocessed. The exposure is a little bright at the top, creating a subtle halo around the subjects.
+
+- **Camera Settings**  
+  Wide‑angle lens (20–35 mm), short focal length, handheld. Slight motion blur from the camera’s instability, natural freeze of the moment. Everything in focus – no portrait‑mode depth‑of‑field blur; background is fully sharp. No rule‑of‑thirds intentionality – framing is accidental, slightly tilted and off‑center.
+
+- **Environment**  
+  A bright, airy living room with a large window that lets in natural light. Outside the window, a glimpse of green foliage and a distant city skyline can be seen. A framed tropical painting hangs on the wall to the right. The time of day is late morning, with soft, diffused sunlight.
+
+- **Composition & Details**  
+  The shot captures both subjects from a low angle, emphasizing their full figures. The background includes the window blinds and a partial view of a plant, adding depth. The prompt encourages slight tilt, partial crop, and no intentional rule‑of‑thirds placement. The overall aesthetic is raw, realistic, and candid, with a hint of spontaneous energy.
+
+- **Prompt for Image Generation**  
+  “Two women in sheer black lace lingerie standing side‑by‑side near a large window, one turned toward the camera with hand on hip, the other facing forward with a subtle smile. Natural daylight from the window creates a slight overexposure. Wide‑angle lens (20–35 mm), handheld shot with slight motion blur, everything in focus. Raw, unprocessed look, no auto‑HDR or color grading. The scene is a bright living room with a framed tropical painting on the wall and a glimpse of green foliage outside. Late morning light, accidental off‑center framing, slightly tilted composition.”

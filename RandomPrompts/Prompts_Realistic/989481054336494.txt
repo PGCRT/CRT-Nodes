@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail, wearing white high‑waist jeans and a bare back, sits on a wooden stool in the middle of a clothing store. She turns her head to the left, smiling broadly, as if caught mid‑conversation. Her left hand rests on the back of her jeans, creating a slight diagonal line that breaks the horizontal composition.
+
+- **Candid Action**  
+  The woman’s pose is spontaneous and unposed; she appears unaware of the camera, slightly tilted to one side, with a partial crop that gives an off‑center feel. Her fingers are loosely gripping the stool, and her hair has a gentle motion blur as if she just finished a conversation.
+
+- **Background & Environment**  
+  The setting is a bright, modern clothing boutique with a wooden rack of garments on the left and a man in a grey hoodie and white cap standing on the right. The background shows a light‑colored floor, a wooden stool, and a partially visible clothing rack. The time of day is mid‑afternoon, with natural daylight coming from the front, creating a slight overexposure on the woman’s back.
+
+- **Lens & Technical**  
+  Use a wide‑angle lens (24–35 mm) with a short focal length to capture a broad view of the scene. Keep everything in focus—no bokeh or depth‑of‑field blur. Shoot in raw mode, no auto‑HDR or beauty filters, and apply minimal post‑processing. The image should have a natural, unprocessed look with slight handheld instability, giving a subtle motion blur on the woman’s back and a faint tilt in framing.
+
+- **Composition Notes**  
+  Avoid rule‑of‑thirds; frame the shot so the woman occupies the central‑right portion of the frame, with the clothing rack extending to the left edge. The stool sits slightly off‑center, and the top of the woman’s head is cut off at the upper edge, adding a partial‑crop effect. The background remains fully sharp, with no subject isolation.
+
+- **Lighting**  
+  Natural daylight from the front creates a slight overexposure on the woman’s back, while the rest of the scene stays evenly lit. No studio lighting or professional composition—just a candid, spontaneous snapshot.
+
+- **Final Prompt**  
+  “A young woman with a high ponytail, wearing white high‑waist jeans and a bare back, sits on a wooden stool in a clothing boutique. She turns her head left, smiling broadly as if caught mid‑conversation, while a man in a grey hoodie and white cap stands to the right and a rack of garments lines the left wall. The shot is taken with a wide‑angle lens (24–35 mm), everything in focus, raw, unprocessed, with slight motion blur on the woman’s back and a handheld tilt that gives an off‑center, partial‑crop feel. Natural daylight from the front creates a subtle overexposure on the subject’s back. The composition is spontaneous and candid, no rule‑of‑thirds, fully sharp background, no bokeh.”

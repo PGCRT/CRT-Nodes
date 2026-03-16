@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail, wearing a bright yellow sports bra and matching shorts, sitting on a wooden window sill. Her hands are behind her head, elbows out, knees bent, feet planted on the sill, wearing white sneakers. She’s mid‑pose, eyes closed, a relaxed, candid expression.
+
+- **Lighting & Exposure**  
+  Warm, natural daylight from a large window to the left; slight overexposure in the highlights, subtle grain, no auto‑beauty or filter processing. The light creates soft shadows on her face and body, with a faint lens flare near the right shoulder.
+
+- **Camera Settings**  
+  Wide‑angle lens (24–35 mm), handheld, slight motion blur from shaky hand, everything in focus – no bokeh, no portrait‑mode depth of field. The focal plane covers the subject and the window frame, background fully sharp.
+
+- **Composition & Framing**  
+  Off‑center, accidental framing: the window frame cuts off the left side, the bottom of the sill is slightly cropped. No rule‑of‑thirds intentionality – the composition feels spontaneous, as if captured mid‑action. The shot is slightly tilted, giving a dynamic, candid feel.
+
+- **Environment**  
+  A sunlit bedroom or studio with a large wooden window on the left, a plain yellow wall behind the sill. The time of day is late morning, with bright, warm sunlight casting strong but soft shadows. Ambient air is still, no wind.
+
+- **Details & Imperfections**  
+  Slight tilt and partial crop; a faint lens flare near the right shoulder; a tiny smudge on the window glass; the woman’s hair has a slight messiness, not perfectly styled. The sneakers show a small dust particle on the sole. The overall look is raw, unprocessed, natural, with zero studio lighting or professional composition.
+
+- **Prompt for Text‑to‑Image Generation**  
+  “A young woman in a yellow sports bra and shorts sitting on a wooden window sill, hands behind her head, knees bent, white sneakers, eyes closed, candid pose, warm daylight from left, slight overexposure, handheld shake blur, wide‑angle 30 mm lens, everything in focus, off‑center accidental framing, slightly tilted, raw unprocessed look, no filters, natural ambient light, late morning sun, small lens flare near right shoulder, dust particle on sneaker sole, background fully sharp.”

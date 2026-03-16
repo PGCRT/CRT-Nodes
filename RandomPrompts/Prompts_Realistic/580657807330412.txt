@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with wavy, ocean‑blue hair, wearing a translucent white button‑down shirt and dark denim shorts, captured mid‑action as she receives a spoonful of creamy white sauce (or yogurt) on her tongue. Her head is slightly tilted, eyes closed in a relaxed, almost dreamy expression, and a few droplets of the sauce trail down her chin and chest. She wears gold hoop earrings that catch the light.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject appears unaware of the camera, caught in a natural, mid‑motion moment. Slight tilt and off‑center framing give an accidental, handheld feel. The shot is partially cropped on the right side, leaving a portion of the feeding hand out of frame.
+
+- **Motion & Focus**  
+  A subtle motion blur conveys the fleeting nature of the action, while everything remains fully sharp — no portrait‑mode depth‑of‑field blur. The lens is a short focal‑length wide‑angle (24–35 mm) that keeps the background crisp.
+
+- **Lighting & Exposure**  
+  Zero studio lighting; the scene is lit by natural daylight from a bright, slightly overcast window. The exposure is mildly overexposed on the subject’s face and chest, giving a warm, luminous feel, with a slight haze that suggests ambient light. No color grading or filters — raw, unprocessed look.
+
+- **Environment**  
+  The setting is a simple residential kitchen: beige tiled floor, plain walls, and a visible white baseboard. A small electrical outlet is visible on the left wall. The time of day is mid‑afternoon, with soft, diffused sunlight that creates gentle shadows.
+
+- **Lens & Technical**  
+  Short focal length (30 mm), wide‑angle lens, no bokeh, background fully sharp. Handheld shot with slight instability, producing a natural freeze‑frame or mild blur. No rule‑of‑thirds intentionality — the composition is accidental and organic.
+
+- **Prompt Summary**  
+  “A candid, handheld photo of a blue‑haired woman in a white shirt and dark shorts, mid‑feed of a spoonful of cream, captured with a 30 mm wide‑angle lens at mid‑afternoon in a kitchen. The image has slight motion blur, mild overexposure, and accidental framing, all in raw, unprocessed detail.”

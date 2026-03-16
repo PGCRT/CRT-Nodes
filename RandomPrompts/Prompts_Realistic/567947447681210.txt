@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A blonde woman with a full sleeve tattooed arm and a floral‑cross design on her chest, standing on an outdoor balcony. She is nude, arms crossed over her chest, head tilted slightly to the left, eyes looking upward and to the right as if she’s about to say something or react to a sound. Her hair is short, sun‑kissed, with a few strands blowing in the wind.  
+
+- **Lighting & Exposure**  
+  Warm, golden hour light from the west, slight overexposure on the upper left of the frame, natural ambient light with no filters or auto‑beauty processing. The exposure is a little bright at the top, giving a soft halo around her hair.  
+
+- **Camera Settings**  
+  Wide‑angle lens (24–35 mm), handheld, slight motion blur from the subject’s movement and the camera’s instability. Everything in focus – no portrait‑mode depth of field blur.  
+
+- **Composition & Framing**  
+  No rule‑of‑thirds intentionality; the frame is off‑center, a partial crop that cuts off the left side of the balcony railing. The background shows a cityscape with low‑rise buildings and a few trees, a bookshelf and a small table with books on the right, a potted plant on top of the shelf, and a wicker chair beside it.  
+
+- **Environment**  
+  Specific real‑world location: a residential balcony in an urban neighborhood. Time of day: late afternoon, around sunset. Weather: clear, mild breeze, slight haze from the sun.  
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, a tiny smudge on the lens, a faint motion blur around her arms. The image has no post‑processing color grading – just raw, natural tones.  
+
+- **Prompt for Text‑to‑Image Generation**  
+  “A blonde woman with a full sleeve tattooed arm and a floral‑cross design on her chest, standing on an outdoor balcony, nude, arms crossed over her chest, head tilted slightly to the left, eyes looking upward and to the right as if she’s about to say something or react to a sound. Warm golden hour light from the west, slight overexposure on the upper left of the frame, natural ambient light, no filters. Wide‑angle lens (24–35 mm), handheld, slight motion blur from the subject’s movement and camera instability. Everything in focus – no portrait‑mode depth of field blur. No rule‑of‑thirds intentionality; off‑center, partial crop. Background shows a cityscape with low‑rise buildings and a few trees, a bookshelf and a small table with books on the right, a potted plant on top of the shelf, and a wicker chair beside it. Specific real‑world location: residential balcony in an urban neighborhood. Time of day: late afternoon, around sunset. Weather: clear, mild breeze, slight haze from the sun. Slight tilt of the camera, a tiny smudge on the lens, a faint motion blur around her arms. Raw, unprocessed look.”

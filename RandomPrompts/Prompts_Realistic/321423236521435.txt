@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail, wearing an olive‑green hooded sweatshirt, standing on a city sidewalk. Her back is to the camera, hands on hips, head turned slightly left as if she’s about to say something or react to a passing event. The hoodie’s drawstring is loose, the fabric softly drapes over her shoulders, and the cuffs are slightly bunched at the wrists.
+
+- **Motion & Focus**  
+  Slight motion blur on the hands and back of the sweatshirt, indicating a handheld shot captured mid‑movement. Everything in the frame—from the woman’s hair to the brick wall behind—is fully sharp; no portrait‑mode depth‑of‑field blur. The focus is intentional but casual, with no rule‑of‑thirds intentionality—framing is accidental and off‑center.
+
+- **Lighting & Exposure**  
+  Natural daylight, mid‑afternoon, with a slight overexposure on the upper part of the frame that gives a warm, raw feel. No auto‑HDR or auto‑beauty mode; no color grading or post‑processing. The exposure is uneven—slightly brighter at the top, creating a subtle halo around the subject’s head.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24‑35 mm), short focal length. No bokeh; background is fully sharp. The shot uses a wide‑angle “handheld” feel with slight tilt and a partial crop that cuts off part of the sidewalk on the right side.
+
+- **Environment**  
+  A brick storefront with graffiti on the left, a concrete sidewalk stretching into the distance, and a blurred street scene in the background (other pedestrians, a passing bicycle). The time of day is late afternoon, with soft sunlight casting long shadows. Weather is clear, a light breeze is visible in the subject’s hair.
+
+- **Composition & Style**  
+  Candid, unposed, spontaneous—subject appears unaware of the camera. Slight tilt and off‑center framing create a casual, documentary feel. The composition is not intentionally rule‑of‑thirds; it’s a “mid‑action” snapshot that feels natural and raw.
+
+- **Prompt for Text‑to‑Image Generation**  
+  *“A young woman with a high ponytail, wearing an olive‑green hooded sweatshirt, standing on a city sidewalk, back to the camera, hands on hips, head turned left. Slight motion blur on the hands and back, everything fully sharp. Natural daylight mid‑afternoon, slight overexposure at the top. Wide‑angle lens (24‑35 mm), short focal length, no bokeh. Background includes a brick storefront with graffiti, concrete sidewalk, and a blurred street scene. Candid, unposed, accidental off‑center framing, partial crop. Raw, unprocessed look, no filters.”*

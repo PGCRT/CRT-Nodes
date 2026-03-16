@@ -1,0 +1,36 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman with pastel‑pink hair lying on a blue bed sheet, mid‑touch: one hand gently cupping her breast, the other resting on her abdomen. Her head is tilted slightly to the side, eyes half‑closed, as if caught in a spontaneous moment of self‑care or relaxation. She wears only a thin, translucent silk scarf draped over her shoulders, adding a subtle texture contrast.
+
+- **Lighting & Exposure**  
+  Natural daylight from a window directly above the bed casts a soft, warm glow across the scene. Slight overexposure on the upper left corner gives a gentle halo effect, while the lower right remains slightly underexposed for depth. No auto‑beauty or filter enhancement—raw, unprocessed look.
+
+- **Camera Settings**  
+  - Lens: 24‑mm wide‑angle, short focal length, handheld.  
+  - Focal depth: everything in focus—from foreground to background—no bokeh.  
+  - Shutter speed: 1/60 s, producing a faint motion blur on the subject’s hands and the bed sheet.  
+  - ISO: 400–600 for natural grain.
+
+- **Composition & Framing**  
+  - Off‑center, accidental framing: the bed occupies roughly two‑thirds of the frame, the window frame cuts a thin line at the top right.  
+  - Slight tilt to the left, creating a dynamic diagonal line that follows the woman’s body.  
+  - No rule‑of‑thirds intentionality—everything feels spontaneous and candid.
+
+- **Environment**  
+  - Location: a bright, uncluttered bedroom with a white window frame and a light gray curtain hanging to the right.  
+  - Time of day: late morning, around 10:30 AM, when the sun is high but not too direct.  
+  - Weather: clear, mild weather outside, no wind, ambient noise of a distant city.
+
+- **Details & Imperfections**  
+  - The bed sheet has subtle wrinkles and a slight sheen from the silk scarf.  
+  - The woman’s skin shows natural imperfections—small moles, faint freckles, and a tiny scar on her left wrist.  
+  - Her pink hair is slightly tousled, with a stray strand falling over her ear.  
+  - A small, almost invisible shadow falls under her left hip, adding realism.
+
+- **Post‑Processing**  
+  - No color grading or filters—just raw capture.  
+  - Slight auto‑HDR applied only to the window’s glare for a natural brightness boost.  
+
+**Prompt Summary**  
+"Capture a candid, unposed photograph of a woman with pastel‑pink hair lying on a blue bed sheet in a bright bedroom, mid‑touch with one hand cupping her breast and the other on her abdomen. Use a 24‑mm wide‑angle lens at 1/60 s shutter speed for slight motion blur, ISO 400–600, natural daylight from a window above, handheld tilt to the left, off‑center framing. Include a thin silk scarf, subtle wrinkles, natural imperfections, and a faint auto‑HDR glow on the window. Everything in focus, no bokeh, raw unprocessed look."

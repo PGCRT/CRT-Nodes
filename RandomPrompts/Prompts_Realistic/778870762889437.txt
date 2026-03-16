@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail, wearing an oversized light‑green T‑shirt and denim shorts, captured mid‑gesture as she lifts her shirt slightly, revealing a subtle motion blur on her torso. Her face is turned to the right, mouth open in a playful laugh, eyes bright, capturing a spontaneous, unposed moment.
+
+- **Lighting & Exposure**  
+  Natural daylight from a western‑facing window, slight overexposure on the right side of the frame, ambient light creating soft highlights on her skin and clothing. No auto‑beauty or filter processing—raw, unprocessed look. Slight handheld shake gives a natural motion blur around the edges.
+
+- **Composition & Framing**  
+  Wide‑angle lens (24‑35 mm) with a short focal length, all elements in focus from foreground to background. The frame is slightly tilted and off‑center, no rule‑of‑thirds intentionality; the subject occupies the central‑right quadrant, with a partial crop that cuts off part of her left shoulder. Background shows a bedroom setting: a bed with white sheets, a wooden nightstand, a mug, a small green plant, and a partially visible poster on the wall. A man in a dark T‑shirt and denim shorts stands in the far right background, slightly out of focus but still sharp.
+
+- **Environment & Time**  
+  Location: a bright, modern bedroom with large windows, interior walls painted pale gray, wooden furniture. Time of day: late morning, sunlight coming from the west, creating warm, natural tones. Weather: clear, mild, no wind. Ambient noise suggests a casual, everyday scene.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm), wide‑angle, all elements fully sharp—no bokeh or depth‑of‑field blur. No portrait mode or subject isolation. Slight overexposure on the right side gives a subtle halo effect. Handheld instability creates a natural motion freeze/blur.
+
+- **Style & Tone**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Imperfections encouraged: slight tilt, off‑center framing, partial crop. Zero studio lighting, zero professional composition, zero editorial tone. Natural motion blur from handheld shake.
+
+- **Post‑Processing**  
+  Auto‑HDR or auto‑beauty mode off—raw, unprocessed look. No filters, no color grading, no post‑processing aesthetic. Only minimal white‑balance adjustment to keep the natural tones consistent.
+
+**Prompt Summary (structured)**  
+"Capture a candid, spontaneous photograph of a young woman in a bright bedroom, mid‑gesture as she lifts her shirt, wearing an oversized light‑green T‑shirt and denim shorts, with a high ponytail. Use a wide‑angle lens (24‑35 mm) for a short focal length, ensuring everything from foreground to background is fully sharp. Frame the shot slightly tilted and off‑center, with the subject occupying the central‑right quadrant and a partial crop that cuts off part of her left shoulder. Light from a western window creates a slight overexposure on the right side, producing natural motion blur from handheld shake. The background includes a bed with white sheets, a wooden nightstand, a mug, a small green plant, and a partially visible poster on the wall; a man in a dark T‑shirt and denim shorts stands in the far right background. Capture the scene at late morning, with clear, mild weather. Keep the look raw and unprocessed—no auto‑HDR or filters—only minimal white‑balance adjustment."

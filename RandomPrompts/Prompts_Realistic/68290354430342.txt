@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair standing in a sunlit meadow, wearing a thin white camisole and light‑wash denim jeans. She is mid‑step, one foot slightly ahead of the other, arms relaxed at her sides, face turned toward the camera but not posing—natural, candid expression.  
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Slight tilt and off‑center framing; partial crop that gives a raw, handheld feel. No rule‑of‑thirds intentionality—everything is in focus, no portrait‑mode subject isolation.  
+
+- **Motion & Exposure**  
+  Slight motion blur from handheld instability, natural freeze or soft blur. Slight overexposure to keep the ambient light warm and bright. Auto‑HDR or auto‑beauty mode off—raw, unprocessed look. No filters, no color grading, no post‑processing aesthetic.  
+
+- **Environment**  
+  Specific real‑world location: a grassy field with scattered trees in the background. Time of day: late afternoon, golden hour. Weather: clear, mild breeze, ambient light that casts soft shadows.  
+
+- **Lens & Technical**  
+  Short focal length (20–35 mm), wide angle. No bokeh—background fully sharp, everything in focus. No depth‑of‑field blur. Wide‑angle lens gives a slight distortion that adds to the candid feel.  
+
+- **Composition Notes**  
+  The frame captures the subject from the waist up, with her upper body and part of her lower torso visible. The background shows a line of trees and a patch of grass, slightly out of alignment to emphasize spontaneity. The composition is accidental—no rule‑of‑thirds, but the subject’s head is slightly above the center of the frame.  
+
+- **Lighting**  
+  Zero studio lighting, zero professional composition, zero editorial tone. Natural sunlight from the west, creating a warm glow on the subject’s face and clothing.  
+
+- **Final Prompt**  
+  “A young woman with long wavy brown hair, wearing a thin white camisole and light‑wash denim jeans, stands mid‑step in a sunlit meadow at late afternoon golden hour. Candid, unposed, spontaneous capture with slight tilt and off‑center framing, partial crop. Slight motion blur from handheld instability, natural freeze or soft blur, slight overexposure for warm ambient light. Auto‑HDR off—raw, unprocessed look, no filters, no color grading, no post‑processing. Short focal length 30 mm wide angle, background fully sharp, everything in focus. Background shows a line of trees and grass, clear weather, mild breeze. All elements in focus, no portrait mode isolation.”

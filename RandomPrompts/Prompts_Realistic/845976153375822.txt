@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair lying supine on a plush red bed. She’s wearing a black lace bra and matching panties, plus black leather gloves that extend to the wrist. Her hands rest on her hips, fingers slightly curled, eyes closed in a relaxed, meditative pose. The camera captures her from a low angle, almost at eye level, with the top of her head near the upper edge of the frame and her feet extending toward the lower edge.
+
+- **Lighting & Exposure**  
+  Natural daylight coming from a window on the left side of the room, creating a soft, warm glow across her body. Slight overexposure in the highlights gives a raw, unprocessed look; the exposure is slightly higher on the skin and fabric, with subtle halos around her shoulders and hips. No auto‑beauty mode—just a straightforward, candid capture.
+
+- **Lens & Technical Settings**  
+  24mm wide‑angle lens (short focal length) set to f/4.0, ISO 400, 1/125 s shutter speed, 1/60 s blur for a natural motion freeze. Everything in focus from foreground to background; no bokeh or depth‑of‑field blur. The lens is handheld, producing slight tilt and off‑center framing that gives the image a spontaneous, unposed feel.
+
+- **Environment**  
+  A cozy bedroom with a wooden nightstand on the right side, a white lamp on top, and a beige wall in the background. The bed has a deep red pillow and a matching red sheet that drapes over the woman’s body. The time of day is late afternoon, with warm, golden light filling the room. A faint breeze suggests a casual, relaxed atmosphere.
+
+- **Composition & Framing**  
+  The composition is intentionally imperfect: the frame cuts off just above her head and below her knees, leaving a small portion of the nightstand visible. The shot is slightly tilted to the right, giving it a candid, spontaneous vibe. The background is fully sharp—no portrait‑mode isolation. The woman’s face is centered but not symmetrical; her left eye is slightly higher than her right, adding to the natural feel.
+
+- **Details & Imperfections**  
+  Slight motion blur on her hands and gloves, indicating a handheld shot. Her gloves have a subtle sheen, and the lace on her bra shows fine texture. The red pillow’s fabric has a slight wrinkle near the top of her head. The nightstand’s wood grain is visible, as is a small white lamp shade at the upper right corner.
+
+- **Post‑Processing**  
+  No filters or color grading—just raw, unprocessed imagery. A tiny hint of overexposure on the highlights gives the photo a natural, candid feel. The overall tone is warm, with a slight yellowish cast from the afternoon light.
+
+**Prompt Summary**  
+“Candid, wide‑angle shot of a woman in black lace lingerie and leather gloves lying on a red bed, captured with a 24mm lens at f/4.0, ISO 400, 1/125 s. Natural daylight from the left creates a soft glow with slight overexposure. The frame is slightly tilted and off‑center, capturing her from a low angle with a wooden nightstand and white lamp in the background. Everything is fully sharp, no bokeh. Raw, unprocessed look with natural motion blur.”

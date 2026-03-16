@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair sitting casually on a set of stone steps in an urban plaza. She’s wearing a vibrant, rainbow‑striped one‑piece dress with thin straps and white, knee‑high heeled boots. Her hands rest gently on her knees, fingers slightly curled, nails painted a soft pink. She smiles softly at the camera, eyes bright, face turned slightly to the left, giving a candid, unposed feel.
+
+- **Capture Style**  
+  Candid, spontaneous, “mid‑action” vibe—she’s caught in a natural moment, as if she just finished a conversation or is about to move. Slight tilt and off‑center framing; the shot is not intentionally rule‑of‑thirds composed but rather a handheld, accidental frame that feels genuine.
+
+- **Environment**  
+  Location: A modern city plaza with a glass‑front building behind the steps. The steps are made of polished granite, the building’s windows reflecting the sky. Time of day: late morning, soft golden light from the east, creating gentle shadows and a slight overexposure on the subject’s face. Weather: clear, mild breeze, no rain.
+
+- **Lens & Technical**  
+  Use a wide‑angle lens (24–35 mm). Capture everything in focus—no bokeh, no depth‑of‑field blur; background remains sharp. Shoot in raw mode, no auto‑HDR or auto‑beauty enhancements. Keep the exposure slightly high to keep the subject bright but retain natural contrast. No post‑processing filters or color grading—just a clean, organic look.
+
+- **Composition Notes**  
+  Frame the subject slightly above the center of the frame; let her boots extend near the bottom edge. Capture the steps so that they occupy about two thirds of the vertical space, leaving a small margin at the top for the building’s facade. Keep the horizon level but not perfectly centered.
+
+- **Lighting**  
+  Natural daylight from the east, creating soft highlights on the woman’s face and boots. Slight overexposure on the subject to keep her bright against the slightly darker background. No studio lighting or artificial fill.
+
+- **Final Prompt**  
+  “A young woman with long wavy brown hair sits casually on stone steps in a city plaza, wearing a rainbow‑striped one‑piece dress and white knee‑high boots. She smiles softly at the camera, hands resting on her knees, captured in a candid, slightly tilted handheld shot. The background shows a glass‑front building, the steps occupy two thirds of the frame, everything in sharp focus with natural daylight from the east creating a slight overexposure on the subject. Shot on a 35 mm wide‑angle lens, raw mode, no filters or post‑processing, all elements in focus.”

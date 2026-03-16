@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with shoulder‑length brown hair, standing mid‑stride in a shallow, rocky stream. Her hands are raised above her head, fingers lightly gripping the back of her head, as if she’s just finished a playful dip or is adjusting her hair after a splash. She smiles softly, eyes bright, facing slightly toward the camera but not directly at it—capturing a candid, “in‑motion” moment. Her body is fully visible, no clothing, natural skin tone with subtle moisture on her shoulders and back.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle, late‑afternoon sun that creates a gentle warm glow on her torso and the water’s surface. Slight overexposure in the highlights gives a raw, unprocessed look; the exposure is uneven, with the background a bit brighter than the foreground. No auto‑HDR or beauty filters—just a straightforward, handheld shot.
+
+- **Camera & Lens Settings**  
+  Wide‑angle lens (24‑35 mm), f/4.0, 1/125 s shutter speed, ISO 400. Slight motion blur on the subject’s hands and head, indicating a handheld shake. Everything from foreground rocks to background trees is in focus—no portrait‑mode depth of field blur.
+
+- **Environment**  
+  A forested stream with large, rounded boulders along the bank. The stream’s water is clear, reflecting the green foliage and the sky. The time of day is early evening, with the sun low but still high enough to keep the scene bright. Light mist rises from the water, adding a subtle atmospheric layer.
+
+- **Composition & Framing**  
+  No rule‑of‑thirds intentionality—the frame is slightly off‑center, capturing the woman’s full figure and the surrounding rocks. The background trees and foliage are fully sharp, giving a sense of depth without any “studio” composition. The shot feels spontaneous, as if the photographer caught her mid‑action.
+
+- **Details & Imperfections**  
+  Slight tilt in the camera angle, a small crop that cuts off the top of the tree trunk on the left side. The woman’s hair has a tiny bit of motion blur, and the water’s surface shows ripples around her legs. The overall look is raw, unpolished, and natural—no color grading or filters applied.
+
+- **Prompt for Text‑to‑Image Generation**  
+  “A candid, wide‑angle photograph of a nude young woman with shoulder‑length brown hair standing in a shallow rocky stream, hands above her head, mid‑stride, smiling softly. Natural late‑afternoon light creates slight overexposure on the highlights. Handheld shot at 24‑35 mm, f/4, 1/125 s, ISO 400—slight motion blur on the hands, everything in focus. Background features large rounded boulders and green trees, clear water with mist, fully sharp. Slight off‑center framing, spontaneous composition, no filters or color grading.”

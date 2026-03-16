@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair, wearing a black fishnet bodysuit and black high‑heeled sandals, crouching mid‑gesture in front of an open wooden door. Her left hand is slightly extended, fingers relaxed, as if she’s about to grab something or balance herself. She wears gold hoop earrings, a delicate chain necklace with a small pendant, and a thin bracelet on her right wrist. A subtle smile plays on her lips, capturing a candid, unposed moment.
+
+- **Motion & Focus**  
+  Slight motion blur on the subject’s hands and feet to suggest movement, while the background remains fully sharp—no bokeh, no portrait‑mode isolation. The entire frame is in focus, captured with a wide‑angle lens (24–35 mm).
+
+- **Lighting & Exposure**  
+  Natural daylight from a bright, slightly overcast afternoon; the light hits the scene from the left, creating soft highlights on the subject’s face and clothing. A mild overexposure on the upper part of the frame gives a raw, unprocessed look. No auto‑HDR or beauty filters—just a straightforward, natural aesthetic.
+
+- **Composition & Framing**  
+  The shot is intentionally off‑center: the door frame cuts off the left side of the image, and the bottom edge is partially cropped. The composition has no rule‑of‑thirds intentionality; it feels spontaneous, as if the photographer was capturing a fleeting moment. The background shows a simple interior doorway with a wooden panel, a small rug on the floor, and a glimpse of a hallway beyond.
+
+- **Environment**  
+  Location: A residential entryway in a modern house, with a wooden door and a light‑colored floor. Time of day: mid‑afternoon, around 3 pm, with diffused natural light. Weather: clear, slightly humid air, no wind. The ambient noise is minimal, allowing the subject’s movement to be the main focus.
+
+- **Lens & Technical**  
+  Short focal length (24–35 mm), wide‑angle lens. No depth‑of‑field blur; everything from foreground to background is sharp. Handheld shot with slight instability, producing a natural freeze or mild blur on the subject’s hands and feet. Exposure set to ISO 400, f/4, 1/125 s shutter speed.
+
+- **Style Notes**  
+  Candid, unposed, spontaneous—subject appears unaware of the camera. Imperfections are encouraged: slight tilt, off‑center framing, partial crop. Zero studio lighting, zero professional composition, zero editorial tone. The final image should feel like a genuine, raw snapshot captured in a real-world setting.

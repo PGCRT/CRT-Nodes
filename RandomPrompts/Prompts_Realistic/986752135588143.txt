@@ -1,0 +1,26 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A young woman with long, wavy brown hair, wearing an off‑shoulder cream blazer and matching trousers, is mid‑step on a city sidewalk. She’s holding a smartphone in her right hand, glancing down at the screen as if checking a message or navigation, while a plastic water bottle hangs from her left wrist. Her head is slightly tilted, and her left foot is just about to lift off the pavement—capturing a fleeting, spontaneous moment.
+
+- **Pose & Composition**  
+  The shot is taken with a handheld wide‑angle lens (24‑35 mm), producing a slight tilt and off‑center framing that gives an accidental, candid feel. The composition is not intentionally rule‑of‑thirds; the subject occupies the right‑hand side of the frame, with her body slightly cut off at the bottom edge for a partial crop. Everything—from her face to the parked cars behind—remains fully sharp, no bokeh or depth‑of‑field blur.
+
+- **Lighting & Exposure**  
+  Natural daylight, mid‑afternoon, with the sun high but not directly overhead, creating soft, warm illumination. A mild overexposure on the highlights gives a raw, unprocessed look; no auto‑HDR or beauty filters are applied. The exposure is slightly uneven, with the foreground a bit brighter than the background, as if captured by a hurried photographer.
+
+- **Environment**  
+  The scene is an urban street in a downtown area: a row of parked cars lines the left side, a concrete sidewalk stretches into the distance, and a brick building with a “Cafe” sign stands on the right. Small colorful confetti or leaves are scattered across the pavement, hinting at a recent celebration or event. The time of day is late afternoon, around 4 pm, when the light is golden but still bright.
+
+- **Lens & Technical**  
+  - Focal length: 35 mm (wide‑angle, short).  
+  - Aperture: f/4–f/5.6 (mid‑range) for full sharpness.  
+  - Shutter speed: 1/125 s to capture slight motion blur from the subject’s movement.  
+  - ISO: 400–800, depending on ambient light.  
+  - No portrait‑mode or subject isolation; background is fully in focus.
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, no post‑processing aesthetic—just a raw, natural look. The image retains slight imperfections: a tiny vibration in the frame from handheld shooting, a faint overexposed highlight on the woman’s blazer, and a subtle tilt that gives the shot its candid character.
+
+- **Final Prompt**  
+  “A young woman with long wavy brown hair, wearing an off‑shoulder cream blazer and matching trousers, steps on a downtown sidewalk while checking her phone; she holds a water bottle in her left wrist, captured mid‑motion with a handheld wide‑angle lens (35 mm). The shot has slight tilt and partial crop, everything fully sharp, natural daylight at 4 pm, mild overexposure, no filters—raw candid photography.”

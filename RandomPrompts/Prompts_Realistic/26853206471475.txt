@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework – “Coastal Pier Portrait”**
+
+- **Subject & Pose**  
+  A tall, athletic woman with long, sun‑kissed blonde hair, wearing a tight red one‑piece swimsuit that shows a small back tattoo. She’s mid‑turn on a weathered wooden pier, her left hand resting on her hip and her right arm slightly bent, as if she just finished a playful dip into the water. Her face is turned toward the camera but not directly at it – a slight off‑center angle that gives a candid feel.
+
+- **Motion & Focus**  
+  Slight motion blur on the subject’s limbs and background to suggest handheld shooting. Everything remains fully sharp – no portrait‑mode blur, just a wide‑angle capture where foreground and background are in focus. The blur is subtle, a “handheld” softness that gives the image a raw, unprocessed look.
+
+- **Lighting & Exposure**  
+  Natural daylight from a low‑mid‑afternoon sun; the light hits the subject’s left side, creating a gentle highlight on her shoulder and a slight overexposed warm glow on her hair. No auto‑HDR or beauty filters – just a single exposure that captures the ambient brightness of the scene.
+
+- **Environment**  
+  Location: a rustic wooden pier extending over a calm, blue‑green sea. The pier’s weathered planks show natural grain and slight wear, with a few rusted metal fasteners visible. Above, a simple green‑painted roof structure casts soft shadows. In the background, the horizon line is low, the sea stretches to the left, and a faint shoreline is visible in the far distance. The sky is clear with a pale, warm hue.
+
+- **Lens & Technical**  
+  Use a short focal length wide‑angle lens (e.g., 24 mm). Capture everything in focus – subject, pier, sea, and sky – with no bokeh. The composition is accidental: the frame is slightly tilted, the subject is off‑center, and the pier’s railing cuts across the top of the image. No rule‑of‑thirds intentionality; the framing feels spontaneous and informal.
+
+- **Style Notes**  
+  Candid, unposed, “mid‑action” feel. The image should look like a real, raw photograph taken by an amateur or semi‑pro photographer who captured a moment in real time. Slight tilt and partial crop give it a natural, imperfect vibe. No color grading or filters – just the original colors and tones of the scene.
+
+**Prompt Summary (for a text‑to‑image model)**  
+> “A tall woman with long blonde hair in a red one‑piece swimsuit stands on a weathered wooden pier, turning mid‑pose with her left hand on her hip. The scene is captured with a 24 mm wide‑angle lens, everything fully sharp but with slight motion blur on the subject and background. Natural daylight from a low‑mid‑afternoon sun creates a warm highlight on her shoulder and a soft overexposure on her hair. The pier extends over a calm blue‑green sea, with a simple green roof above and a faint shoreline in the distance. The composition is accidental: slightly tilted frame, off‑center subject, no rule‑of‑thirds. Raw, unprocessed look, no filters or color grading.”

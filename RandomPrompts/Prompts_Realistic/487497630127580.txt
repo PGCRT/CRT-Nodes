@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair walking confidently down a city sidewalk. She’s wearing tight black jeans and a delicate gold necklace; her top is off‑shoulder, exposing her shoulders and upper chest. Her face is turned toward the camera but she’s not posing—she’s mid‑step, slightly tilted, as if caught in an unplanned moment.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—an “in‑motion” snapshot where the subject is unaware of the lens. The frame is off‑center and slightly crooked, with a partial crop that gives a raw, handheld feel. No rule‑of‑thirds intentionality; the composition is accidental, as if taken with a quick, instinctive shake.
+
+- **Motion & Exposure**  
+  Slight motion blur from a handheld shot, capturing the subject’s movement and the subtle jolt of a walking stride. The exposure is mildly overexposed, letting ambient daylight bleed slightly through the scene, giving it a natural, unprocessed look. No auto‑beauty or filter enhancements—just raw, in‑camera data.
+
+- **Lens & Technical**  
+  Wide‑angle lens (20–35 mm) with a short focal length to keep the background fully sharp—no bokeh or depth‑of‑field blur. Everything is in focus from foreground to background; no portrait‑mode isolation. The image uses a wide‑angle “wide‑lens” look that keeps the entire scene crisp, from the subject’s face to the street behind her.
+
+- **Environment**  
+  A bustling urban street at mid‑afternoon, with a clear sky and soft sunlight. The background shows a city block lined with brick buildings, storefronts, and a few pedestrians in the distance. A traffic light glows orange on the left, hinting at an upcoming intersection. The sidewalk is concrete, slightly uneven, with a metal grate near the foreground.
+
+- **Details & Imperfections**  
+  The shot has a slight tilt and a partial crop that cuts off the edges of the sidewalk, giving it a casual, spontaneous vibe. Tiny imperfections—like a faint smudge on the lens or a slight vibration—add realism. The background is fully sharp, with no “portrait mode” blur, so the street, buildings, and pedestrians are all crisp.
+
+- **Prompt Summary**  
+  *“A young woman with long wavy brown hair, wearing tight black jeans and a gold necklace, walking down a city sidewalk at mid‑afternoon. The shot is captured on a wide‑angle lens (20–35 mm) with slight motion blur and mild overexposure, producing a candid, unposed, accidental framing. Everything in focus from foreground to background, no bokeh. The background shows brick buildings, storefronts, and distant pedestrians, with an orange traffic light on the left. Slight tilt and partial crop give a raw, handheld feel. No filters or post‑processing—just a natural, realistic candid photograph.”*

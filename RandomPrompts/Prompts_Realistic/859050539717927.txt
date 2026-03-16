@@ -1,0 +1,32 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair standing on a sunlit dirt trail, bare‑shouldered and wearing light‑wash denim jeans that are slightly ripped at the thigh. Her pose is casual and unposed—she’s mid‑step, one hand in her pocket, head tilted slightly to the side, eyes focused forward. The shot captures a natural “in‑motion” feel with a subtle handheld shake.
+
+- **Lighting & Exposure**  
+  Warm golden hour light from the west, creating a soft overexposed halo around her shoulders and a gentle rim light on her hair. Slight underexposure on the lower body to keep the background visible. No auto‑beauty or filter processing—raw, unedited look.
+
+- **Camera Settings**  
+  - Lens: 24 mm wide‑angle, short focal length.  
+  - Aperture: f/5.6 (mid‑range).  
+  - Shutter speed: 1/60 s (producing a slight motion blur).  
+  - ISO: 400 (for clean detail).  
+  - Focus: everything in focus—background and subject, no depth‑of‑field blur.
+
+- **Composition & Framing**  
+  No rule‑of‑thirds intentionality; the frame is slightly off‑center, with the subject’s left side cutting close to the edge. The background shows a dry grassy field with scattered shrubs, a faint horizon line, and a few distant trees. The shot is fully sharp from foreground to background.
+
+- **Environment**  
+  Location: a rustic rural trail in a semi‑arid meadow. Time of day: late afternoon (golden hour). Weather: clear, mild breeze, slight haze. Ambient details: a small patch of water or a stream in the far left background, a few wildflowers on the ground.
+
+- **Technical Notes**  
+  - Use a handheld camera with a wide‑angle lens; capture a natural “mid‑action” candid feel.  
+  - Slight tilt to the camera to give an accidental, spontaneous vibe.  
+  - No bokeh—keep the background fully sharp.  
+  - No portrait mode or subject isolation; keep everything in one plane.
+
+- **Post‑Processing**  
+  Auto‑HDR off. No color grading or filters. Only minimal contrast adjustment to preserve the raw look.  
+
+**Prompt Summary**  
+> “A candid, wide‑angle shot of a bare‑shouldered woman in light‑wash jeans on a sunlit dirt trail, captured at golden hour with a 24 mm lens, f/5.6, 1/60 s shutter speed, ISO 400. The frame is slightly off‑center and tilted, everything in focus from subject to background, with a subtle motion blur from handheld shake. No filters or auto‑HDR—raw, unprocessed realism.”

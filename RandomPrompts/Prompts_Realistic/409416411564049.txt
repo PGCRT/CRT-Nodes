@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a shoulder‑length brown bob and bangs, standing barefoot among a cluster of large, moss‑speckled boulders in a sunlit forest clearing. She is mid‑gesture, both arms raised above her head, hands clasped together, a bright, spontaneous smile on her face. Her body is slightly tilted to the left, creating an off‑center, accidental framing that gives the shot a candid feel.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject appears unaware of the camera, caught in a natural moment. Slight tilt and partial crop give the image a raw, handheld quality. No rule‑of‑thirds intentionality; the composition is accidental, as if captured by a passerby with a quick snap.
+
+- **Environment**  
+  Specific real‑world location: a forested meadow with tall, slender tree trunks and scattered boulders. Time of day: late morning, soft golden light filtering through the canopy, creating dappled shadows on the ground. Weather: clear, mild humidity, slight wind rustling leaves, giving a natural motion blur to the subject’s hair and clothing.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm) wide‑angle lens, no bokeh — background fully sharp, everything in focus. No portrait mode or subject isolation; depth of field is uniform. Slight overexposure on the highlights to capture the bright canopy light. Auto‑HDR or auto‑beauty mode off — raw, unprocessed look. No filters, no color grading, no post‑processing aesthetic. The image has a natural motion freeze or slight blur from handheld instability.
+
+- **Post‑Processing**  
+  Zero studio lighting, zero professional composition, zero editorial tone. Keep the shot raw and authentic, with only minimal white‑balance adjustment if needed.  
+
+**Prompt Summary**  
+"Mid‑morning forest clearing, wide‑angle lens, candid pose of a smiling woman among boulders, slight tilt and accidental framing, sharp background, natural motion blur, raw unprocessed look."

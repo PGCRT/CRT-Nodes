@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman with long, sun‑kissed brown hair, wearing a bright orange Calvin Klein bikini, standing back to the camera at a chain‑link fence. Her left hand rests on a black metal bar; her right arm is slightly bent, capturing a natural, mid‑motion stance. The bikini’s waistband shows the “Calvin Klein” logo in white, and the fabric has a subtle sheen from the sunlight.
+
+- **Motion & Focus**  
+  Slight motion blur at the edges of the hands and hair, indicating handheld instability. Everything is fully sharp—no bokeh, no portrait‑mode isolation. The focus covers the entire frame: subject, fence, sign, and background.
+
+- **Lighting & Exposure**  
+  Raw, auto‑HDR off, no color grading or post‑processing. A mild overexposure on the upper back and shoulders, creating a warm, natural glow. The ambient light suggests mid‑afternoon sun, with a slight haze that gives a soft edge to the chain‑link fence.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24‑35 mm), short focal length. No rule‑of‑thirds intentionality—framing is accidental, slightly tilted, off‑center. The background (a green metal structure behind the fence) remains fully in focus.
+
+- **Environment**  
+  Location: an outdoor sports field or park with a chain‑link fence and a small “NO TRESPASSING” sign that reads “CALVIN KLEIN” on its lower right corner. Time of day: mid‑afternoon, around 3 pm, with warm, high‑angle sunlight. Weather: clear, slightly humid, with a faint wind that ruffles the woman’s hair.
+
+- **Composition & Details**  
+  The shot captures the woman’s back and left side, her hips turned toward the camera, with a visible “Calvin Klein” logo on the bikini’s waistband. Her right hand grips a horizontal bar, while her left hand is out of frame. A white “NO TRESPASSING” sign is partially visible in the upper left corner of the fence. The chain‑link pattern creates a subtle grid that frames the subject.
+
+- **Prompt for Generation**  
+  *“A woman with long, sun‑kissed brown hair, wearing a bright orange Calvin Klein bikini, stands back to the camera at a chain‑link fence on a sports field. Her left hand rests on a black metal bar; her right arm is slightly bent. Slight motion blur at the hands and hair, everything fully sharp. Raw auto‑HDR off, mild overexposure on the upper back. Wide‑angle lens (24‑35 mm), short focal length. Accidental tilt, off‑center framing. The fence shows a ‘NO TRESPASSING’ sign with ‘CALVIN KLEIN’ text. Mid‑afternoon sun, clear weather, faint wind ruffling hair. No bokeh, no depth‑of‑field blur—background fully sharp.”*

@@ -1,0 +1,16 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with shoulder‑length dark hair, mid‑stride in a casual, unposed stance. She’s wearing a simple gray thong and gray ankle socks, standing on a light‑wood floor. Her left foot is slightly ahead of the right, knees bent a little, hands hanging loosely by her sides. The camera captures her from a low angle, emphasizing the full length of her body and the surrounding environment.
+
+- **Motion & Focus**  
+  Slight motion blur at the knees and feet to suggest movement. Everything in focus—no portrait‑mode depth‑of‑field blur. No auto‑beauty or filter processing; raw, natural look with a hint of slight overexposure from ambient daylight.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24‑35 mm), short focal length. Handheld shot with minor tilt and off‑center framing—no rule‑of‑thirds intentionality. Background fully sharp, no bokeh.
+
+- **Environment**  
+  Location: a bright, modern kitchen with light‑wood furniture on the left, a white wall, and a small window in the back. Time of day: late morning, soft natural light coming from the window, creating gentle shadows. Weather: clear, slightly humid.
+
+- **Composition Notes**  
+  Capture the scene as if you’re walking into the room, capturing the subject’s full silhouette and the surrounding details—chair, table, floor planks, a small plant in the corner. Keep the framing accidental; let the edges cut off slightly at the top and bottom. No studio lighting, no professional composition, no editorial tone—just a candid snapshot of everyday life.

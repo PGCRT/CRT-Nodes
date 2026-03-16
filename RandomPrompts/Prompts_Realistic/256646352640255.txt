@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with wet, slightly frizzy hair standing knee‑deep in the surf at a sunny beach. She’s wearing a thin black thong‑style bikini that clings to her curves, her arms relaxed by her sides, one hand lightly touching her hip. Her face is turned toward the camera with a natural, unposed smile, eyes bright and lively. The shot captures her mid‑step, as if she just walked out of the water and is about to touch the sand.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. Slight tilt and off‑center framing; partial crop that gives a raw, handheld feel. No rule‑of‑thirds intentionality. The image has a slight motion blur from a shaky camera, and a faint overexposure that keeps the ambient light warm.
+
+- **Environment**  
+  Specific real‑world location: a broad, uncluttered beach with the ocean stretching to the horizon. Time of day: late morning, when the sun is high but not directly overhead, casting soft, warm highlights on the water and sand. Weather: clear sky with a few wispy clouds; gentle, rolling waves break near the shore.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm) wide‑angle lens. No bokeh — background fully sharp, everything in focus. No portrait mode or subject isolation. Slight overexposure or underexposure depending on ambient light; no auto‑HDR or auto‑beauty mode — raw, unprocessed look. No filters, no color grading, no post‑processing aesthetic. The exposure is natural, the contrast is moderate, and the colors are true to life.
+
+- **Composition Notes**  
+  The composition is accidental: the subject is slightly off‑center, the frame is not perfectly centered on her face or body, and the bottom of the image cuts off just above her knees, giving a “mid‑step” feel. The background shows the ocean horizon line about a third up the frame, but it’s not intentionally placed; it’s just there because the camera was handheld. The waves create a natural leading line that guides the eye toward the subject.
+
+- **Final Prompt**  
+  “A young woman in a black thong bikini standing knee‑deep in the surf at a sunny beach, mid‑step, slight motion blur and accidental framing, wide‑angle lens, fully sharp background, natural overexposure, no filters or post‑processing, raw candid look.”

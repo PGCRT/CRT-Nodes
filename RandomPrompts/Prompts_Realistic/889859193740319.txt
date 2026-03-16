@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with shoulder‑length wavy blonde hair, wearing a black long‑sleeved off‑shoulder crop top and matching high‑waist bottoms, sitting on a bed in a dimly lit bedroom. Her left leg is bent, foot tucked under the mattress, right leg extended forward; she leans slightly to her right, head tilted, eyes looking toward the camera with a soft, contemplative expression.  
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. Slight tilt and off‑center framing, partial crop that cuts off a bit of the bed’s edge. No rule‑of‑thirds intentionality; the composition is accidental, as if captured by a handheld camera in a hurry.  
+
+- **Motion & Focus**  
+  Slight motion blur from handheld instability, natural freeze or mild blur on the subject’s hands and legs. Everything in focus — no portrait‑mode depth‑of‑field blur; background fully sharp.  
+
+- **Lighting & Exposure**  
+  Zero studio lighting, zero professional composition, zero editorial tone. Ambient light from a north‑west window creates a soft, slightly overexposed highlight on the subject’s face and shoulder, with a faint warm tint.  
+
+- **Environment**  
+  Specific real‑world location: a modest bedroom with concrete walls, a white pillow, a wooden nightstand, and a small orange object (maybe a bottle) on the bed. Time of day: late afternoon, low natural light. Weather or ambient conditions: calm, no wind.  
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm), wide‑angle lens. No bokeh; background fully sharp. All elements in focus.  
+
+- **Post‑Processing**  
+  Auto‑HDR or auto‑beauty mode off — raw, unprocessed look. No filters, no color grading, no post‑processing aesthetic. Slight overexposure on the subject’s upper body to emphasize the black top’s texture.  
+
+- **Prompt Summary for Generation**  
+  “A young woman with shoulder‑length wavy blonde hair, wearing a black long‑sleeved off‑shoulder crop top and matching high‑waist bottoms, sitting on a bed in a dimly lit bedroom. Her left leg is bent, foot tucked under the mattress, right leg extended forward; she leans slightly to her right, head tilted, eyes looking toward the camera with a soft, contemplative expression. Candid, unposed, spontaneous — slight tilt and off‑center framing, partial crop. Slight motion blur from handheld instability, natural freeze or mild blur on the subject’s hands and legs. Everything in focus — no portrait‑mode depth‑of‑field blur; background fully sharp. Ambient light from a north‑west window creates a soft, slightly overexposed highlight on the subject’s face and shoulder. Zero studio lighting, zero professional composition, zero editorial tone. Short focal length (24‑35 mm), wide‑angle lens. All elements in focus. Auto‑HDR or auto‑beauty mode off — raw, unprocessed look. No filters, no color grading, no post‑processing aesthetic.”

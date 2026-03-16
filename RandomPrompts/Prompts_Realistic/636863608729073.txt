@@ -1,0 +1,24 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a thick braided ponytail, bare and mid‑movement on a white‑sheeted bed. She’s kneeling on the bed, back to the camera, hands flat on the sheet, feet slightly turned outward, toes relaxed. Her shoulders are relaxed, slight tilt in the frame as if she just finished a gentle stretch or is about to rise.
+
+- **Lighting & Exposure**  
+  Natural daylight from a western‑facing window, mid‑afternoon. Slight overexposure on the upper body, giving a warm, soft glow; subtle underexposed shadows in the crotch area for contrast. No auto‑beauty or filter processing—raw, unedited look.
+
+- **Camera & Lens Settings**  
+  Wide‑angle lens (24–35 mm), f/4.0, 1/125 s shutter speed, ISO 400. Slight handheld shake gives a natural motion blur on the edges. Everything in focus—no portrait‑mode depth‑of‑field blur; background (bed, headboard, wall) fully sharp.
+
+- **Composition & Framing**  
+  Off‑center, accidental framing: the bed’s white headboard with blue floral motifs occupies the upper third, slightly tilted left. The two framed lemon prints on the wall are visible in the top corners. No rule‑of‑thirds intentionality—just a candid snapshot.
+
+- **Environment & Details**  
+  Location: a bright, airy bedroom with pale yellow walls. Time of day: late afternoon, soft natural light. Weather: clear, no wind. The bed has white sheets and two beige pillows; the headboard is white metal with blue decorative motifs. Two framed pictures of lemons hang above the headboard. The woman’s hair is a dark brown braid that falls down her back. Her skin is smooth, with a slight sheen from the light.
+
+- **Technical Notes**  
+  Short focal length (35 mm) for wide coverage. No bokeh—background fully sharp. No portrait mode. Slight motion blur on the woman’s hands and feet to emphasize movement. No color grading or filters—just raw, natural colors.
+
+**Prompt:**
+```
+Candid photo of a bare woman kneeling on a white bed, back to camera, hands flat on sheet, feet outward, slight tilt frame. She has a thick brown braid hanging down. Bed has white sheets, two beige pillows, white metal headboard with blue floral motifs. Two framed lemon pictures above headboard. Pale yellow walls, mid‑afternoon natural light, slight overexposure on upper body, underexposed shadows below. Wide‑angle 35 mm lens, f/4, 1/125 s, ISO 400. Everything in focus, no bokeh. Raw, unprocessed look, slight motion blur on hands/feet. No filters, no auto‑beauty, no color grading.
+```

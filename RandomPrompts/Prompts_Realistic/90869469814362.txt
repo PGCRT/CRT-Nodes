@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy dark brown hair that falls loosely over her left shoulder, standing in a bright, airy living room. She is bare‑shouldered, wearing a simple black camisole that drapes naturally across her torso. Her head is slightly tilted to the right, eyes focused forward with a soft, unposed expression, as if she’s mid‑conversation or just caught in a candid moment.
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window on the left side of the room creates a gentle side‑light that slightly overexposes the upper chest and face, giving a warm, raw look. The exposure is not perfectly balanced—there’s a subtle halo around her shoulders and a faint vignette at the edges. No auto‑HDR or beauty filters; the image retains the raw, unprocessed feel of a handheld shot.
+
+- **Camera & Lens Settings**  
+  Shot on a DSLR or mirrorless with a 24‑mm wide‑angle lens (f/3.5, 1/125 s shutter speed, ISO 400). The focal length is short and broad, capturing a full‑body view that includes the subject’s torso, arms, and upper thighs. Depth of field is fully sharp—no bokeh; background elements (a white couch, a small potted plant, a window frame) are in focus from foreground to background.
+
+- **Composition & Framing**  
+  The framing is accidental and off‑center: the subject’s left shoulder sits slightly above the center of the frame, and the top of her head cuts just beyond the upper edge, giving a partial crop that enhances candidness. The camera is held at eye level with a slight tilt, producing a natural motion blur on the edges that suggests handheld instability. No rule‑of‑thirds intentionality—everything feels spontaneous.
+
+- **Environment & Time**  
+  The scene takes place in a modern, minimalistic living room during late morning. The walls are pale beige, and a tall, slender plant sits on a side table in the background. The time of day is about 10:30 AM, when the sun’s angle casts soft, warm light through the window, creating gentle highlights and subtle shadows.
+
+- **Details & Imperfections**  
+  Slight motion blur around the edges gives a sense of movement. The subject’s hair has a few stray strands that catch the light, adding texture. Her skin shows natural imperfections—tiny blemishes and pores—are visible, enhancing realism. The background is fully sharp, with no depth‑of‑field blur, ensuring that every element—from her breast tissue to the plant leaves—is crisp.
+
+- **Post‑Processing**  
+  No color grading or filters applied. The image retains its raw, natural look, with only minimal white‑balance adjustment and a slight contrast boost to bring out the warmth of the daylight.
+
+**Prompt Summary**  
+> “A candid, unposed photograph of a bare‑shouldered woman with long wavy hair standing in a bright living room at late morning. Shot on a 24‑mm wide‑angle lens at f/3.5 and 1/125 s, with natural side‑light causing slight overexposure on the chest. The framing is accidental and off‑center, capturing the subject’s torso and upper thighs in full focus from foreground to background. No filters or color grading—just a raw, realistic, handheld capture.”

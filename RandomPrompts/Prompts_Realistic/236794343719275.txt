@@ -1,0 +1,32 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark, wavy hair standing in a casual, unposed stance, mid‑step as if she’s just finished a conversation or is about to move. She wears a black, thin‑strap crop top that shows a subtle cross‑detail at the bust, paired with a high‑waisted black skirt that clings to her waist and hips. A delicate silver necklace with a single pendant rests on her collarbone, and a sparkling watch adorns her left wrist. Her right hand is slightly curled near her hip, while her left hand hangs relaxed by her side. She wears hoop earrings that catch the light.
+
+- **Facial Features & Expression**  
+  Her face is turned slightly toward the camera, with a soft, natural smile. The lighting gives a slight overexposure on her forehead and cheek, creating a warm, ambient glow. Her eyes are open, looking directly at the lens, giving an intimate, candid feel.
+
+- **Lighting & Exposure**  
+  Use a wide‑angle lens (24–35 mm) with a short focal length to capture a broad view of her body and surroundings. Keep the exposure slightly warm—about 1.2 EV above neutral—to emulate natural daylight. No auto‑HDR or beauty mode; keep the look raw and unprocessed.
+
+- **Motion & Focus**  
+  Capture a slight motion blur on the subject’s hands and the background, as if the camera was handheld and moving. Everything—from her hair to the distant wall—should be fully sharp, no portrait‑mode depth of field blur. The focus is on the entire scene, not just the subject.
+
+- **Framing & Composition**  
+  Frame the shot with a slight tilt (5° to the right) and an off‑center crop that cuts off a bit of the background on the left side. No rule‑of‑thirds intentionality—just accidental, spontaneous framing. The background is a plain, light‑colored wall that keeps the focus on the subject.
+
+- **Environment**  
+  The location is a simple office or studio space with a neutral beige wall. The time of day is mid‑afternoon, with soft natural light coming from the west, creating gentle shadows and highlights. The weather is clear, with no wind or ambient noise to distract.
+
+- **Lens & Technical Settings**  
+  - Focal length: 35 mm (wide angle)  
+  - Aperture: f/4.0 (for a sharp background)  
+  - Shutter speed: 1/60 s (to allow slight motion blur)  
+  - ISO: 400 (for clean, natural contrast)  
+  - No bokeh; everything in focus from foreground to background.
+
+- **Post‑Processing**  
+  Keep the image raw—no filters, no color grading, no post‑processing aesthetic. Slight overexposure on the subject’s face and upper body to capture the ambient light. The final look should feel like a genuine, spontaneous snapshot taken with a DSLR or mirrorless camera.
+
+- **Final Prompt**  
+  “A candid, unposed photograph of a woman in a black crop top and high‑waisted skirt, wearing a silver necklace and hoop earrings, standing against a plain beige wall in mid‑afternoon light. Capture with a 35 mm wide‑angle lens at f/4.0 and 1/60 s shutter speed, slight motion blur on the hands and background, all elements fully sharp. Frame with a slight right tilt and off‑center crop, no rule‑of‑thirds. Keep the exposure warm and slightly overexposed, raw and unprocessed, no filters or color grading.”

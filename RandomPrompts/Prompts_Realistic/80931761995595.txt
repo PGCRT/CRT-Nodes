@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark hair, wearing a rainbow‑striped off‑shoulder bikini top and matching bottoms, seated on stone steps in front of a stucco building. She is mid‑pose, one knee bent, hands resting on her thigh, wearing tall white boots that reach just above the ankle. Her gaze is directed slightly off‑camera, giving a candid, unposed feel.
+
+- **Motion & Focus**  
+  Slight motion blur from handheld shooting; everything in focus—no bokeh, no depth‑of‑field blur. Use a wide‑angle lens (20–35 mm) to capture the entire scene, including the steps, the plant in a terracotta pot beside her, and part of the building’s window and railing.
+
+- **Lighting & Exposure**  
+  Natural daylight, late‑afternoon sun creating soft shadows and a mild overexposure on the subject’s face. No auto‑HDR or beauty filters—raw, unprocessed look. Slight tilt in camera to accentuate casual framing.
+
+- **Environment**  
+  Specific real‑world location: an outdoor staircase in front of a beige stucco house with a white window frame and metal railing. A small green plant in a terracotta pot sits to the left of the woman. The time of day is mid‑afternoon, about 4 pm, giving warm, golden light. Weather is clear, lightly breezy.
+
+- **Lens & Technical**  
+  Short focal length (24–35 mm), wide‑angle, no bokeh. All elements—subject, steps, plant, building—fully sharp. No portrait mode or subject isolation. Capture in a single shot with a handheld camera, slight instability producing natural motion blur.
+
+- **Composition & Style**  
+  Candid, spontaneous, “mid‑action” pose; slight off‑center framing and accidental tilt. No rule‑of‑thirds intentionality—just a casual snapshot that feels real. The prompt should encourage variation in the subject’s pose, clothing details, background elements, lighting nuances, and camera settings to create a fresh, new image while staying true to the original vibe.

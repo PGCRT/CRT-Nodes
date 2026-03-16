@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy dark hair, wearing an off‑shoulder cream knit sweater and a high‑waisted denim mini skirt, standing on a city sidewalk. Her arms are crossed over her chest, slightly tilted to the left, capturing a candid, mid‑gesture moment as she smiles broadly toward the camera.  
+
+- **Lighting & Exposure**  
+  Natural daylight from a bright mid‑afternoon sun; slight overexposure on the upper part of the frame with a soft halo around the subject’s head. No auto‑beauty or filter enhancement—raw, unprocessed look.  
+
+- **Camera Settings**  
+  Wide‑angle lens (24–35 mm), handheld, slightly shaky. F‑stop 8–10 for sharpness across the frame. Slight motion blur on the subject’s arms and background pedestrians to convey spontaneous movement.  
+
+- **Composition & Framing**  
+  No rule‑of‑thirds intentionality—accidental framing with the subject positioned off‑center, a partial crop that cuts off the top of the building behind her. Background includes a brick storefront, a white sedan, and a few pedestrians in casual attire, all in focus.  
+
+- **Environment**  
+  A bustling downtown street at mid‑afternoon, with a red‑brick building, a white car, and a sidewalk crosswalk. The scene is bathed in warm, slightly harsh sunlight that creates a subtle lens flare near the top right corner.  
+
+- **Technical Details**  
+  Short focal length (30 mm), wide‑angle, no bokeh—everything from foreground to background is fully sharp. No portrait‑mode depth‑of‑field blur; all elements are in focus. Slight tilt and off‑center crop give the image a spontaneous, candid feel.  
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, zero studio lighting. Raw, natural look with only minimal white‑balance adjustment.  
+
+**Prompt Summary**  
+“Candid photo of a woman in a cream sweater and denim mini skirt standing on a downtown sidewalk, arms crossed, slight tilt and off‑center framing, handheld wide‑angle shot with 30 mm lens, mid‑afternoon sun causing soft overexposure on the subject’s head, background includes brick storefront, white car, pedestrians—all in focus, raw unprocessed look.”

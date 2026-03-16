@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with voluminous, sun‑kissed curls falling loosely around her face, wearing a black crop‑top and high‑waisted shorts. She’s mid‑step, one hand resting on her thigh, a subtle smile on her lips, as if caught in an unplanned moment. Her left arm bears a small floral tattoo; a silver watch glints on her wrist.  
+
+- **Motion & Focus**  
+  Slight motion blur at the edges from handheld shake, natural freeze‑frame of the subject’s movement. Everything in focus—no portrait‑mode bokeh. The background is fully sharp, no depth‑of‑field blur.  
+
+- **Lighting & Exposure**  
+  Raw, auto‑HDR off. A mild overexposure on the upper half of the frame, letting ambient daylight bleed through the window behind her. No color grading or filters—just the natural tone of the scene.  
+
+- **Lens & Technical**  
+  Wide‑angle lens (24‑35 mm), short focal length. No bokeh; background fully sharp. The shot is slightly tilted, off‑center framing, a partial crop that gives it a candid feel.  
+
+- **Environment**  
+  A cozy living room with beige sofas, a patterned rug, and a small framed picture on the wall. The time of day is late afternoon, soft sunlight streaming from the west, casting gentle shadows. The weather outside is mild, with a light breeze that ruffles her hair.  
+
+- **Composition Notes**  
+  No rule‑of‑thirds intentionality—accidental framing that places the subject’s left side slightly higher in the frame. The composition is spontaneous, as if she were mid‑conversation or mid‑dance.  
+
+- **Prompt Summary for Generation**  
+  “A candid, unposed photograph of a young woman with sun‑kissed curls and a black crop‑top, captured on a wide‑angle lens in a cozy living room at late afternoon. The image has slight motion blur from handheld shake, raw auto‑HDR off, mild overexposure, everything in focus, no bokeh. The background shows beige sofas, a patterned rug, and a framed picture. The frame is slightly tilted and off‑center, partial crop, natural lighting, no filters.”

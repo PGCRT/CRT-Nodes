@@ -1,0 +1,30 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy dark hair, wearing a sleek white evening gown with a deep V‑neck and a high slit on the left side. She is mid‑step, one foot slightly ahead of the other, capturing a natural, unposed moment as she walks toward the camera. Her expression is relaxed, a subtle smile, eyes focused forward, with a faint hint of motion blur around her hands and face to emphasize movement.
+
+- **Lighting & Exposure**  
+  Warm, golden‑hour sunlight from the east, creating soft highlights on her gown and gentle overexposure in the upper part of the frame. The exposure is slightly uneven—brighter at the top, softer at the bottom—to give a raw, unprocessed look. No auto‑beauty or filter enhancement; the image retains the natural grain and color palette of a handheld camera.
+
+- **Camera & Lens**  
+  35 mm wide‑angle lens, f/4.0 aperture, 1/60 s shutter speed, ISO 400. The focal length is short enough to keep the entire scene in focus, with no depth‑of‑field blur. The background—palm trees, a stone colonnade, and a light‑colored walkway—is fully sharp, giving an immersive, documentary feel.
+
+- **Composition & Framing**  
+  The shot is intentionally off‑center: the subject’s left side leans slightly to the right of the frame’s center, creating a casual, spontaneous composition. The framing is not rule‑of‑thirds; it’s a natural, handheld capture that includes a partial crop of the woman’s lower leg and the surrounding environment. A slight tilt adds realism, as if the photographer was walking while shooting.
+
+- **Environment & Context**  
+  Location: a sunlit outdoor promenade lined with tall palm trees and classical columns, in a tropical city center. The time of day is late afternoon, around 5 pm, when the sun is low but still high enough to keep the background bright. Light foliage and a few scattered shadows add texture. The weather is clear, with a gentle breeze that slightly ruffles the woman’s hair.
+
+- **Technical Details**  
+  - **Lens**: 35 mm, wide‑angle, f/4.0  
+  - **Aperture**: f/4.0 (everything in focus)  
+  - **Shutter Speed**: 1/60 s (slight motion blur on the subject)  
+  - **ISO**: 400 (natural grain)  
+  - **Focus**: manual, everything sharp—subject and background.  
+  - **Depth of Field**: full focus, no portrait‑mode isolation.  
+
+- **Post‑Processing**  
+  No filters or color grading; raw, unprocessed look with slight overexposure at the top to mimic natural ambient light. The image retains the authentic feel of a candid snapshot, with minor imperfections such as a slight tilt and off‑center framing that give it personality.
+
+- **Final Prompt Summary**  
+  “A young woman in a white evening gown walks toward the camera on a sunlit palm‑lined promenade at late afternoon. Capture with a 35 mm wide‑angle lens at f/4.0, 1/60 s shutter speed, ISO 400—everything in focus but with slight motion blur on the subject. Frame off‑center and slightly tilted for a spontaneous, handheld feel. No filters or heavy post‑processing; keep the raw, natural look with a faint overexposure at the top.”

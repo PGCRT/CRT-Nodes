@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A curvy woman with long, straight dark hair tied back by a colorful patterned headband, wearing a rainbow‑tied bikini. She stands in a sunlit bedroom, facing away from the camera but turning her head to look over her shoulder, one hand on her hip and the other raised near the back of her head. Her posture is casual, mid‑motion, as if she’s just finished a quick stretch or is about to step into a new pose.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject appears unaware of the camera, caught in a natural moment. Slight tilt and off‑center framing give an accidental, handheld feel. The shot has a raw, unprocessed look: no filters, no color grading, no post‑processing aesthetic. A hint of overexposure from the bright daylight gives it a warm, natural glow.
+
+- **Environment**  
+  Specific real‑world location: a bright, airy bedroom with a large French‑style window that opens to a lush green garden. The time of day is late morning, when the sun is high but still casts soft shadows. Ambient light is warm and slightly hazy, with a few leaves visible through the glass. A neatly made bed with a white towel folded on the footboard sits beside a small nightstand holding a ceramic vase. Light brown curtains hang beside the window, partially drawn to let in the sunlight.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm) wide‑angle lens. Everything is fully sharp — no bokeh, no depth‑of‑field blur; background and subject are in focus. No portrait‑mode “subject isolation.” The image exhibits slight motion blur from handheld instability, giving it a natural, spontaneous feel. The composition avoids rule‑of‑thirds intentionality; the framing is accidental, with the subject slightly off‑center and the horizon line tilted.
+
+- **Post‑Processing**  
+  Auto‑HDR or auto‑beauty mode off — raw, unprocessed look. Slight overexposure or underexposure depending on ambient light (here, a gentle overexposure that brightens the scene). No rule‑of‑thirds intentionality — accidental framing. Zero studio lighting, zero professional composition, zero editorial tone.
+
+**Prompt Summary**  
+> “Candid, unposed photo of a curvy woman in a rainbow bikini, standing in a sunlit bedroom with a French‑style window, late morning light, slight motion blur and handheld tilt, wide‑angle lens, everything in focus, raw and unprocessed aesthetic.”

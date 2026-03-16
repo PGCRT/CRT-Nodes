@@ -1,0 +1,21 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A fit woman with a high ponytail, wearing a black crop‑top with white trim and matching black track pants, captured mid‑turn on a busy city sidewalk. Her face is turned toward the camera with a bright, spontaneous smile; her left hand rests lightly on her hip, right arm relaxed by her side. The shot should feel “in the moment” – as if she’re just finishing a workout or grabbing a coffee, unaware of the lens.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. Slight tilt and off‑center framing; partial crop that leaves a little of the street behind her left shoulder. No rule‑of‑thirds intentionality – the composition should feel accidental, like a quick snapshot taken with a handheld camera.
+
+- **Motion & Focus**  
+  Slight motion blur from handheld instability, but everything remains fully sharp – no portrait‑mode depth‑of‑field blur. Capture a wide‑angle shot that keeps the background (the street, the storefront, passing pedestrians) in focus.
+
+- **Environment**  
+  Specific real‑world location: a bustling downtown sidewalk in New York City. The time of day is late morning, around 10:30 AM, with soft, diffused sunlight that creates a slight overexposure on the subject’s face and a gentle warm tone on the building façade. Weather is mild, slightly humid, with a light breeze.
+
+- **Lens & Technical**  
+  Short focal length (24–35 mm) wide‑angle lens. No bokeh – background fully sharp. Auto‑HDR or auto‑beauty mode off — raw, unprocessed look. No filters, no color grading, no post‑processing aesthetic. Slight overexposure or underexposure depending on ambient light (choose a subtle warm overexpose).
+
+- **Additional Details**  
+  Include background elements: a yellow taxi in the distance, a storefront window with a mannequin, a passerby’s foot in the lower right corner, and a faint city sign above. The street is paved, with a concrete curb and a small patch of grass on the side. The scene should feel alive – a mix of movement and everyday city life.
+
+- **Provide only the structured prompt.**

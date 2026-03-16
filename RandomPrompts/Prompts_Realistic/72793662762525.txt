@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman mid‑step, captured from a low, slightly off‑center angle that gives the impression of spontaneous motion. Her back is turned toward the camera, with her left arm bent at the elbow and her right arm extended forward, as if she’s just finished a light jog or a casual dance move. The pose is natural, unposed, with a hint of movement blur on the limbs to emphasize the handheld feel.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑north‑west direction, creating soft shadows and a slight overexposure on the skin’s highlights. No auto‑HDR or beauty filters—just raw, unprocessed tones. The exposure is slightly warm, with a subtle haze that suggests a bright, humid afternoon.
+
+- **Environment**  
+  Location: A quiet urban park with a concrete bench and a patch of grass in the background. Time of day: Late morning (around 10:30 AM), when the sun is high but not directly overhead. Weather: Light breeze, clear sky, a faint mist on the grass that catches the light. The background is fully sharp—no bokeh or depth‑of‑field blur—so everything from foreground to background stays in focus.
+
+- **Lens & Technical**  
+  Use a short focal length (24 mm) wide‑angle lens. Capture with a handheld camera, using a tripod or a stable shoulder grip. Shoot in RAW format, then apply auto‑beauty mode off. The image should exhibit slight motion blur on the moving parts (arms and legs), while the background remains crisp. No rule‑of‑thirds intentionality—frame the shot as it naturally appears, with accidental tilt and partial crop.
+
+- **Composition & Framing**  
+  The composition is casual and imperfect: the top of the frame cuts off just above the woman’s shoulders, the bottom cuts near her knees, and the left side slightly overflows beyond the edge of the park bench. The right side of the frame captures a small portion of a tree trunk, adding depth. The shot is centered on the woman’s back, but the center is slightly offset to the right, giving an organic, candid feel.
+
+- **Details & Imperfections**  
+  Include subtle imperfections: a slight smudge on the woman’s left shoulder, a tiny droplet of water on her back from a recent rain or a spray of a garden hose, and a faint motion blur around her arms. The skin texture should look natural, with visible pores and fine lines. The hair is loosely tied in a low ponytail that swings slightly as she moves.
+
+- **Post‑Processing**  
+  Keep the image raw—no color grading or filters. Apply a mild contrast boost only to enhance the natural tones. Use a wide‑angle lens to keep everything in focus, from the woman’s skin to the park bench and tree trunk in the background. The final output should feel like a genuine, spontaneous snapshot captured in real life.

@@ -1,0 +1,16 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman with a natural, unposed stance, mid‑movement on a bed in a bright, sunlit bedroom. Her body is slightly tilted, creating an off‑center, accidental framing that feels spontaneous and raw. She’s wrapped in a white towel that drapes loosely around her hips, adding a soft, textured element to the scene. Her skin shows subtle imperfections—tiny blemishes, natural freckles, and a faint sheen from the ambient light—emphasizing a genuine, unfiltered look.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject appears unaware of the camera, caught mid‑action as she adjusts the towel or shifts her weight. Slight motion blur is present on her torso and abdomen, indicating handheld instability and a natural freeze‑frame. The image has no filters, color grading, or post‑processing; it’s a raw, auto‑HDR capture that retains the ambient exposure’s slight over‑or under‑exposure depending on the natural light.
+
+- **Environment**  
+  Specific real‑world location: a bright, airy bedroom with a large window on the left side, a potted plant in the corner, and a small wooden side table next to the bed. The time of day is late morning, with warm, diffused sunlight streaming through the window, creating soft highlights on the subject’s skin and a gentle glare on the white towel. Weather or ambient conditions are clear and calm, with no wind or noise interfering.
+
+- **Lens & Technical**  
+  Short focal length (20‑35 mm) wide‑angle lens, producing a broad field of view that captures the entire scene—subject, bed, window, plant, and table—all in focus. No bokeh or depth‑of‑field blur; everything from foreground to background is sharp. The composition intentionally avoids rule‑of‑thirds, relying on accidental framing that slightly tilts the shot and partially crops the subject’s upper body and face. Auto‑HDR or auto‑beauty mode is off; the image retains a natural, unprocessed look with slight overexposure in the window area and a subtle underexposure on the lower part of the body.  
+
+- **Final Prompt**  
+  “A woman in a white towel on a bed, captured with a short focal length wide‑angle lens in a bright, late‑morning bedroom. The shot is candid and unposed, with slight motion blur and accidental tilt. The background includes a potted plant and a wooden side table, all in focus. No filters or color grading—raw auto‑HDR capture with natural overexposure.”

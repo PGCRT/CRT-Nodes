@@ -1,0 +1,30 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a bright pink high ponytail, wearing a black crop‑top and denim overalls, stands at a wooden coffee‑shop counter. Her left hand rests on the counter, right hand near a coffee grinder; she’s turned slightly toward the camera but not looking directly at it—mid‑action, candid. She wears black leather boots that touch the floor with a faint motion blur.
+
+- **Setting & Environment**  
+  The scene is a cozy, sunlit coffee shop in an urban downtown area. Large wooden windows let in warm afternoon light; a coffee grinder and a kettle sit on the counter. A male barista in a grey t‑shirt and navy cap is pouring a drink behind the counter; a female customer in a white tee and denim shorts stands at the far side of the counter, facing away from the camera. The floor is polished concrete, the walls are light wood paneling, and a small wall‑mounted lamp glows softly.
+
+- **Time of Day & Ambient Light**  
+  Late afternoon (around 4 pm). Natural daylight comes through the large windows, creating a slight overexposure on the left side of the frame. The ambient light is warm, with soft shadows and a hint of golden hue.
+
+- **Lens & Technical Settings**  
+  - 24‑mm wide‑angle lens (short focal length) – “wide” for a broad field of view.  
+  - Handheld shot with slight instability: a subtle motion blur on the subject’s boots and the barista’s hand.  
+  - No bokeh; everything from foreground to background is fully sharp.  
+  - Auto‑HDR off – raw, unprocessed look.  
+  - Slight tilt (5°) and off‑center framing; the composition is accidental, not rule‑of‑thirds.  
+  - Exposure: slightly overexposed on the left, underexposed on the right, giving a natural dynamic range.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous – the woman appears unaware of the camera, mid‑gesture. Slight tilt and partial crop give an informal, documentary feel. No professional composition or editorial tone—just a snapshot that feels real.
+
+- **Details & Imperfections**  
+  - The woman’s hair has a slight motion blur at the tip of the ponytail.  
+  - The coffee grinder’s shadow falls onto the counter, adding depth.  
+  - The barista’s cap casts a small reflection on the wooden paneling.  
+  - A faint dust particle hangs in the air near the window, caught by the wide lens.
+
+- **Final Prompt**  
+  “A young woman with a bright pink high ponytail, wearing a black crop‑top and denim overalls, stands at a wooden coffee‑shop counter, left hand resting on the counter, right hand near a coffee grinder; she’s turned slightly toward the camera but not looking directly at it—mid‑action, candid. She wears black leather boots that touch the floor with a faint motion blur. The scene is a cozy, sunlit coffee shop in an urban downtown area. Large wooden windows let in warm afternoon light; a coffee grinder and a kettle sit on the counter. A male barista in a grey t‑shirt and navy cap is pouring a drink behind the counter; a female customer in a white tee and denim shorts stands at the far side of the counter, facing away from the camera. The floor is polished concrete, the walls are light wood paneling, and a small wall‑mounted lamp glows softly. Late afternoon (around 4 pm). Natural daylight comes through the large windows, creating a slight overexposure on the left side of the frame. The ambient light is warm, with soft shadows and a hint of golden hue. 24‑mm wide‑angle lens – short focal length for a broad field of view. Handheld shot with slight instability: a subtle motion blur on the subject’s boots and the barista’s hand. No bokeh; everything from foreground to background is fully sharp. Auto‑HDR off – raw, unprocessed look. Slight tilt (5°) and off‑center framing; the composition is accidental, not rule‑of‑thirds. Exposure: slightly overexposed on the left, underexposed on the right, giving a natural dynamic range. Candid, unposed, spontaneous – the woman appears unaware of the camera, mid‑gesture. Slight tilt and partial crop give an informal, documentary feel. The woman’s hair has a slight motion blur at the tip of the ponytail. The coffee grinder’s shadow falls onto the counter, adding depth. The barista’s cap casts a small reflection on the wooden paneling. A faint dust particle hangs in the air near the window, caught by the wide lens.”

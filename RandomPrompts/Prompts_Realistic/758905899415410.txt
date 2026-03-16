@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A curvy woman with long, wavy brown hair, wearing a bright, rainbow‑striped one‑piece swimsuit and white high‑heel boots, sitting on a brick staircase. Her hands are behind her head, elbows out, creating a casual, confident pose. She’s mid‑smile, eyes slightly tilted toward the camera, as if caught in a spontaneous moment.
+
+- **Lighting & Exposure**  
+  Natural daylight from a low‑angle, late‑afternoon sun; slight overexposure on the upper body to highlight skin tones. No auto‑HDR or beauty filters—raw, unprocessed look. The exposure is a little bright at the top, giving a warm, golden hue.
+
+- **Camera & Lens Settings**  
+  Wide‑angle lens (24–35 mm), handheld, slightly shaky. Focal length short, background fully sharp—no bokeh. Everything in focus: subject, railing, bricks, and surrounding foliage. No portrait‑mode depth‑of‑field blur.
+
+- **Composition & Framing**  
+  Candid, unposed framing: the shot is off‑center, with a slight tilt to the left. The composition is accidental—no rule‑of‑thirds intentionality. The staircase railing runs along the left side, partially cut off at the top, giving a “mid‑action” feel.
+
+- **Environment**  
+  Location: an outdoor brick stairway in a residential area, with a small patch of green foliage visible above the stairs. Time of day: late afternoon, soft sunlight casting long shadows. Weather: clear, slightly humid, ambient light creates a warm tone.
+
+- **Technical Details**  
+  - Short focal length (24–35 mm) for wide coverage.  
+  - No bokeh; background fully sharp.  
+  - Slight motion blur on the subject’s hands and hair to suggest movement.  
+  - No post‑processing color grading—raw JPEG output.  
+
+- **Prompt Summary**  
+  “A curvy woman in a rainbow one‑piece and white boots sits on a brick staircase, hands behind head, mid‑smile, captured with a wide‑angle handheld lens at late afternoon sunlight. Slight motion blur on the hands, raw exposure, accidental off‑center framing, fully sharp background, no filters—realistic candid photography.”

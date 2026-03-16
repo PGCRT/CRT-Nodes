@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wind‑blown brown hair, wearing a black mesh crop‑top with a tie‑front and high‑waisted light‑wash jeans. She’s mid‑step, left arm slightly bent, right arm relaxed, head turned to the right as if she’s just noticed something off‑camera. Her expression is natural, a subtle smile with lips parted, eyes focused ahead. Small gold hoop earring and a thin gold necklace with a heart pendant drape over her collarbone.  
+
+- **Lighting & Exposure**  
+  Slight overexposure on the upper body to keep the ambient daylight warm; no auto‑beauty or filter processing. The exposure is uneven—slightly brighter at the top of the frame, giving a raw, handheld feel.  
+
+- **Motion & Focus**  
+  Slight motion blur on the hair and arms from a handheld shot, but the background remains fully sharp—no bokeh, no portrait‑mode isolation. Everything in focus from foreground to background.  
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm), short focal length. No rule‑of‑thirds intentionality; the frame is slightly tilted and off‑center, a partial crop that captures the subject’s left side and a portion of the street behind her.  
+
+- **Environment**  
+  Urban street scene at mid‑afternoon, with a brick building featuring arched windows in the background. The street is paved, a faint gray‑brown with scattered leaves. A small blue sign is visible on the wall, a green door, and a metal trash can near the corner. The weather is lightly breezy, indicated by the hair’s motion.  
+
+- **Composition & Details**  
+  Capture the subject’s left side in a candid, unposed stance; her right hand is slightly out of frame, creating a partial crop. The background includes a portion of a brick wall and an arched window, with a blue sign and green door visible. The scene has a natural, spontaneous feel—no studio lighting or professional composition.  
+
+- **Prompt Summary**  
+  “A young woman with long brown hair, black mesh crop‑top, high‑waisted jeans, gold hoop earring, and heart pendant, captured mid‑step on a brick street at mid‑afternoon. Slight motion blur on the hair and arms, slight overexposure on the upper body, wide‑angle lens, fully sharp background, candid unposed stance, partial crop, slight tilt, no filters or auto‑beauty, raw handheld look.”

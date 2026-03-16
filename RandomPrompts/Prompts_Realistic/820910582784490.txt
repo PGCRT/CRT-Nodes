@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A fit woman with a high ponytail, viewed from the back‑side, standing in a living‑room. She wears a black sports bra with teal cross‑back straps and matching high‑waist shorts. Her hands rest lightly on her hips, one arm slightly bent, as if she’s about to perform a light exercise or adjust her clothing. The pose is candid, unposed, mid‑action, with a subtle handheld shake that gives a slight motion blur around the edges.
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window on the left, creating a soft, warm glow on her back and hips. Slight overexposure in the upper part of the frame to keep the ambient light alive; no auto‑HDR or beauty filters—just raw, unprocessed imagery. The exposure is slightly uneven, giving an authentic, “in‑the‑moment” feel.
+
+- **Camera & Lens Settings**  
+  Wide‑angle lens (24–35 mm), short focal length, handheld. Everything in focus from foreground to background; no bokeh or depth‑of‑field blur. Slight tilt and off‑center framing—no rule‑of‑thirds intentionality. The composition is accidental, spontaneous, with a partial crop that cuts off the top of the sofa and a portion of the coffee table.
+
+- **Environment**  
+  A cozy living room with a beige couch adorned with green patterned pillows on the left, a wooden coffee table on the right holding two glasses (one filled with amber liquid, the other empty). Dark curtains hang on the back wall, partially drawn. A framed picture is visible on the left wall. The time of day is late afternoon, with warm sunlight streaming in, creating soft shadows and a gentle haze. Weather outside is mild, with a light breeze that slightly ruffles the woman’s hair.
+
+- **Details & Imperfections**  
+  Slight motion blur at the edges from handheld instability; minor tilt of the camera. The framing is imperfect— the top of the couch is partially cropped, and the coffee table’s edge cuts off near the bottom right corner. The image has no post‑processing color grading or filters; it looks raw and authentic.
+
+- **Final Prompt**  
+  “A fit woman with a high ponytail, seen from behind in a cozy living room, wearing a black sports bra with teal cross‑back straps and high‑waist shorts. She stands casually with one arm bent, hands on hips, mid‑action. Natural daylight from a left window creates a warm glow with slight overexposure. Wide‑angle lens (24–35 mm), handheld, everything in focus, slight motion blur and tilt. Background includes a beige couch with green patterned pillows, a wooden coffee table with two glasses, and dark curtains. Late afternoon sunlight, soft shadows, accidental framing, partial crop. Raw, unprocessed, candid style.”

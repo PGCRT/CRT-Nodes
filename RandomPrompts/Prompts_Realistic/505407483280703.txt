@@ -1,0 +1,32 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, slender woman with long, wavy brown hair, standing in a casual, unposed stance. She is bare‑headed, wearing only a light, breathable summer dress that falls to her calves. Her left hand rests lightly on the back of her thigh, while her right arm hangs by her side. She faces slightly toward the camera but is not looking directly at it—her head is turned to the side, giving a natural, candid feel.
+
+- **Lighting & Exposure**  
+  Natural daylight from a western‑facing window, mid‑afternoon. The light is soft but has a slight overexposure on the upper body, creating a warm, almost hazy glow. No auto‑HDR or beauty filters—just raw, unprocessed tones.
+
+- **Camera Settings**  
+  - Lens: 24 mm wide‑angle (short focal length)  
+  - Aperture: f/5.6 (mid‑range, no bokeh)  
+  - Shutter speed: 1/125 s (slight motion blur from handheld instability)  
+  - ISO: 400 (for natural grain)  
+  - Focus: everything in focus—background and subject equally sharp, no portrait‑mode depth of field.
+
+- **Composition & Framing**  
+  Handheld, slightly tilted frame that is off‑center; the subject occupies the right‑hand side of the frame, leaving a small negative space on the left. The composition is accidental—no rule‑of‑thirds intentionality. The shot captures a partial crop of the background: a white nightstand with three drawers, a small vase of pink roses, and a black bag on a bed, all in focus.
+
+- **Environment**  
+  A bright, airy bedroom in a modern apartment. The wall is a muted gray‑beige, the floor is hardwood. The time of day is late afternoon, with warm sunlight casting soft shadows. A faint breeze suggests a gentle motion blur.
+
+- **Details & Imperfections**  
+  Slight tilt and off‑center framing give a spontaneous feel. The subject’s hair has a few stray strands that catch the light. The dress has a subtle wrinkle at the side, adding realism. The background objects are fully sharp—no bokeh.
+
+- **Post‑Processing**  
+  No filters or color grading. A minimal auto‑beauty mode is off. Slight overexposure on the upper body gives a natural, raw look.
+
+---
+
+**Prompt for Text‑to‑Image Generation**
+
+> “A tall woman with long wavy brown hair, standing casually in a bright bedroom at mid‑afternoon. She wears a light summer dress to her calves, left hand on thigh, right arm by side, slightly turned away from the camera. Natural daylight from a western window creates soft warm overexposure. Shot on 24 mm wide‑angle, f/5.6, 1/125 s, ISO 400—everything in focus, slight handheld blur. Composition is accidental, slightly tilted, off‑center frame; the woman occupies the right side, a white nightstand with three drawers and a small vase of pink roses sits on the left, a black bag rests on a bed in the background. No filters, no auto‑HDR, raw unprocessed look. Capture candid, spontaneous feel with imperfections: slight tilt, off‑center framing, partial crop.”

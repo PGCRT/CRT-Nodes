@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with voluminous, wavy dark hair sitting on a neatly made bed in a bright, airy bedroom. She wears a delicate yellow lace lingerie set with thin straps and criss‑cross detailing. Her left hand rests on the mattress while her right arm is slightly bent, giving a natural, mid‑motion feel. She looks directly at the camera with a soft, engaging expression, as if caught in an unposed moment.
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window behind her creates a slight overexposure on the left side of the frame, giving a warm, ambient glow. The exposure is slightly uneven—no auto‑HDR or beauty filters, just raw, unprocessed light. The scene has a gentle, natural contrast with no color grading or post‑processing aesthetic.
+
+- **Camera & Lens Settings**  
+  - Wide‑angle lens (24–35 mm) for a short focal length that captures the entire subject and much of the surrounding environment.  
+  - Handheld shot with slight instability, producing a subtle motion blur on the subject’s hair and the background.  
+  - Everything is in focus—no portrait‑mode depth‑of‑field blur; the background (bed, window, bedside table) remains sharp.  
+  - No rule‑of‑thirds intentionality: the framing is accidental, slightly tilted, and off‑center.
+
+- **Environment & Composition**  
+  The setting is a real‑world bedroom with a large window letting in bright daylight, a wooden headboard, a pink pillow, and a small bedside table holding a bottle of lotion and a pen. The time of day is mid‑morning, when the sun is high but not directly overhead, casting soft shadows. The weather is clear, with no wind, so the only motion blur comes from the camera’s handheld shake.
+
+- **Technical Details**  
+  - Shot on a DSLR or mirrorless with a wide‑angle prime or zoom lens.  
+  - Aperture set to f/5.6–f/8 for moderate depth of field, ensuring everything—from the subject to the background—is fully sharp.  
+  - No bokeh; no subject isolation.  
+  - Slight tilt and partial crop give the image a candid, spontaneous feel.
+
+- **Final Prompt**  
+  “A young woman with voluminous wavy dark hair sits on a made bed in a bright bedroom, wearing yellow lace lingerie. Natural daylight from a large window creates a slight overexposure on the left side. Shot on a 35 mm wide‑angle lens, handheld with subtle motion blur, everything in focus, no bokeh. The frame captures the bed, a pink pillow, and a bedside table with a bottle and pen. The time is mid‑morning, the camera is slightly tilted, the composition accidental and off‑center, giving a raw, candid feel.”

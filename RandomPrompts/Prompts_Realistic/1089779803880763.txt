@@ -1,0 +1,28 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with wet, slightly frizzy hair standing mid‑step on a sunlit beach. She wears a blue triangle‑style bikini that clings to her in a natural, unposed way. Her left hand rests lightly on her thigh, while her right arm hangs by her side, a subtle shift that gives the shot a candid feel. A thin gold bracelet adorns her right wrist, catching the light as she moves.
+
+- **Facial Features & Expression**  
+  Her face is turned toward the camera with a soft, unforced gaze; a slight smile curls at the corner of her mouth. The lighting leaves a faint overexposure on her forehead and cheek, giving an auto‑HDR feel without any post‑processing filters. A few stray water droplets cling to her hair, adding raw realism.
+
+- **Body & Clothing Details**  
+  The bikini’s fabric is a muted blue with subtle vertical ridges that reflect the ambient light. The top’s halter straps tie at the back, creating a gentle V‑shape. Her midsection shows a natural belly button and a faint mole near the left hip. The lower piece of the bikini sits low on her hips, emphasizing the curve of her thighs.
+
+- **Pose & Motion**  
+  She is captured in a slight motion blur as she steps forward, her feet partially out of frame. Her right knee bends slightly, giving a natural, unposed stance. A faint tilt in the camera angle adds to the spontaneous feel. The entire figure occupies the central third of the frame but is not perfectly centered—this off‑center framing gives the image an accidental, candid vibe.
+
+- **Background & Environment**  
+  Behind her, the ocean’s white foam rolls onto the shore, creating a soft, textured backdrop. The beach sand is light beige with small pebbles and footprints scattered around. The time of day is late afternoon; the sun hangs low, casting long shadows and a warm golden hue across the scene. The weather is clear, with a light breeze that ruffles her hair.
+
+- **Lens & Technical Settings**  
+  Use a wide‑angle lens (24–35 mm) to capture the full scene in one shot. Keep the focal length short for an immersive feel. Shoot at a high ISO to preserve detail in the bright sunlight. The exposure is slightly overcast, letting a hint of brightness bleed across the subject’s face and upper body. All elements—subject, ocean, sand—are fully sharp; no bokeh or depth‑of‑field blur is applied. No portrait‑mode isolation; everything remains in focus.
+
+- **Composition & Framing**  
+  The frame is intentionally imperfect: a slight handheld shake is present, giving the image a natural motion freeze. The composition does not follow the rule of thirds; instead, the subject’s center is slightly offset to the left, and the top of her head nearly touches the upper edge of the frame. The bottom of the shot cuts off just above her feet, creating a partial crop that enhances candidness.
+
+- **Lighting & Color**  
+  Natural daylight with a warm, golden tone. No color grading or filters are applied; the image retains its raw, unprocessed look. Slight overexposure on the subject’s face gives a subtle halo effect. The overall color palette is muted blues and beige tones, with a hint of green from the sea’s foam.
+
+- **Final Prompt**  
+  “A young woman in a blue bikini stands mid‑step on a sunlit beach, her wet hair slightly frizzy and a gold bracelet on her wrist. She wears a low‑sitting bikini bottom and a triangle‑style top with halter straps, her right hand resting on her thigh while her left arm hangs by her side. Her face shows a soft gaze with a faint smile, a small mole near her left hip. The background features rolling ocean foam and sandy beach with scattered footprints. Shot with a 30 mm wide‑angle lens at late afternoon, the image has slight motion blur and a handheld tilt. All elements are fully sharp, no bokeh applied. The frame is imperfectly centered, capturing a candid, spontaneous moment.”

@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with wild, damp dreadlocks framing a bright, open‑mouthed laugh, leaning forward on a rustic wooden floor. She’s wearing an oversized, patched denim jacket in faded beige with red shoulder panels; the jacket bears a small “TULIKA” patch on the left chest. Her hands are gripping two white plastic cups that tilt slightly, as if she just poured something, while several colorful bottle caps and metal screws scatter around her palms. She’s mid‑gesture, one hand reaching for a cap, the other steadying a cup—capturing a spontaneous, playful moment.
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window behind her creates a soft, slightly overexposed highlight on her face and jacket. The light is warm, with a hint of golden hour warmth, casting gentle shadows that add depth. Slight handheld shake gives a natural motion blur around the edges. No auto‑beauty or filter processing—raw, unpolished look.
+
+- **Camera & Lens Settings**  
+  35mm wide‑angle lens (short focal length), f/4.0 aperture, 1/60 s shutter speed, ISO 400. Everything in focus from foreground to background; no bokeh or depth‑of‑field blur. The composition is accidental: the frame is slightly tilted, the subject is off‑center, and the edges cut off a bit of the scene for a candid feel.
+
+- **Environment**  
+  A bright, sunlit living room with a large window in the back, a white wall, and a wooden floor. A small portion of a framed picture hangs on the left wall, and a faint silhouette of an older man’s head appears at the top right, suggesting a conversation or shared activity. The time of day is late morning, with warm, diffused sunlight streaming through the window, creating a slight lens flare.
+
+- **Details & Imperfections**  
+  Slight tilt and off‑center framing; partial crop that cuts off a bit of the woman’s left shoulder and the older man’s head. A few stray particles (dust or paper scraps) float in the air near her hair, adding to the candid feel. The jacket’s seams show a little fraying, the cups have a slight wobble, and the bottle caps are scattered randomly—each detail adds realism.
+
+- **Post‑Processing**  
+  No filters, no color grading, no auto‑beauty mode. A subtle auto‑HDR tweak only on exposure to keep the whole scene bright but natural. The final image retains a raw, documentary style with zero studio lighting and zero editorial tone.

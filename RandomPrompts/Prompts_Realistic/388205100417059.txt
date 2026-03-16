@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, slender woman with long, wavy brown hair, wearing a black lace bodysuit with floral motifs and thin straps. She stands in a bright, airy living room, her left hand resting on her hip and right hand near her thigh, fingers slightly curled. Her pose is casual, mid‑movement, as if she just finished a dance or a photo shoot.  
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window on the left creates a soft, warm glow; slight overexposure on the upper body to emphasize the lace texture. No auto‑HDR or beauty filters—raw, unprocessed look. The exposure is slightly uneven, with the lower legs a bit brighter than the upper torso, giving an authentic handheld feel.  
+
+- **Camera & Lens**  
+  35mm wide‑angle lens (short focal length), f/4.0 aperture, 1/125s shutter speed, 1/60Hz flash (optional). Everything in focus—no bokeh, no depth‑of‑field blur. The image is captured with a handheld camera, producing slight motion blur on the subject’s hands and a tiny tilt to the frame.  
+
+- **Composition**  
+  Candid, unposed, spontaneous framing: the shot is off‑center, with the left side of the body slightly cut off by the frame edge. No rule‑of‑thirds intentionality—just a natural, accidental composition that captures the subject’s full figure and part of the background.  
+
+- **Environment**  
+  A bright, modern living room with a large window on the left, a white curtain, a small black trash can on the right, and a vintage camera sitting on a floral‑patterned box labeled “JULIE TA” in the lower left corner. The time of day is late morning, with soft sunlight streaming through the window, creating gentle shadows and highlights.  
+
+- **Details & Imperfections**  
+  Slight motion blur on the hands, a tiny tilt to the frame, and a partial crop that cuts off the top of the head and the lower feet. The lace details are crisp, with visible threadwork and a subtle sheen. The woman’s nails are painted pink, adding a pop of color. A small green circular accessory is visible on her lower torso.  
+
+- **Post‑Processing**  
+  No filters or color grading—just raw, natural colors. Slight overexposure on the upper body gives an authentic, candid feel.  
+
+**Prompt Summary**  
+“Candid, wide‑angle shot of a tall woman in a black lace bodysuit, captured with a 35mm lens at f/4 and 1/125s, handheld with slight motion blur and accidental framing. Natural daylight from a large window creates soft warmth and slight overexposure on the upper body. The scene is set in a bright living room with a vintage camera on a floral box labeled ’JULIE TA’ in the corner, a white curtain, and a black trash can. The composition is off‑center and partially cropped, preserving an authentic, unposed feel.”

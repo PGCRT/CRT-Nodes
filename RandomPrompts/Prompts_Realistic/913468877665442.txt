@@ -1,0 +1,30 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman with long, wavy brown hair, wearing a black lace bra and matching black bikini bottoms, is captured mid‑action on a white quilted bed. She’s pulling a floral‑printed kimono‑style shirt open with both hands, her fingers slightly blurred as if she’s just finished adjusting the fabric. Her gaze is downward, focused on the shirt, giving a candid, unposed feel.
+
+- **Lighting & Exposure**  
+  Natural daylight from a western window, slightly overexposed to keep the scene bright and airy. No auto‑HDR or beauty filters—just raw, unprocessed light. The exposure is a little high, letting soft highlights linger on her skin and the fabric.
+
+- **Camera Settings**  
+  - Lens: 24‑35 mm wide‑angle, short focal length for a “handheld” feel.  
+  - Aperture: f/4–f/5.6 (wide enough that everything—from subject to background—remains sharp).  
+  - Shutter speed: 1/60–1/100 s, producing slight motion blur on the hands and shirt movement.  
+  - ISO: 400–800, depending on ambient light; keep noise low but natural.
+
+- **Composition & Framing**  
+  - No rule‑of‑thirds intentionality—frame the subject slightly off‑center, with the left side of her body cutting close to the left edge of the frame.  
+  - The shot is a “partial crop” that cuts off a bit of the bed’s corner, adding spontaneity.  
+  - Slight tilt (5–10°) to mimic handheld instability.  
+  - Background: a plain white quilted bed with subtle texture; no bokeh—everything in focus from foreground to background.
+
+- **Environment**  
+  Location: a bright, airy bedroom with a white quilted bed and a small window on the left. Time of day: late morning, soft natural light. Weather: clear, no wind, ambient temperature around 22 °C.
+
+- **Technical Details**  
+  - No portrait‑mode depth‑of‑field blur—keep the entire frame sharp.  
+  - Slight overexposure on the subject’s skin and shirt to keep the image luminous.  
+  - Capture “mid‑action” with a natural freeze or slight blur from handheld instability.
+
+- **Prompt Summary**  
+  *“A woman in black lace lingerie pulling a floral kimono shirt open on a white quilted bed, captured with a 24‑35 mm wide‑angle lens at f/5, 1/80 s shutter speed, slight motion blur on the hands, natural daylight from a western window, slightly overexposed, handheld tilt, off‑center framing, everything in focus, raw unprocessed look.”*

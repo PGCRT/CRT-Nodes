@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a messy high‑top bun, wearing a light‑blue camisole and beige overalls, captured mid‑gesture as she touches her chin with one hand while leaning forward at a slight angle. Her head is tilted downward, eyes cast, creating a candid, unposed feel. The framing is off‑center, with the left side of her body partially cropped out, giving an accidental, spontaneous vibe.
+
+- **Motion & Focus**  
+  Slight motion blur on the subject’s hand and face, indicating handheld instability during the snap. Everything remains fully sharp—no bokeh or depth‑of‑field blur; background is in focus. No “portrait mode” isolation; the entire scene is crisp.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle window, producing a mild overexposure on the subject’s face and a subtle highlight on the ceiling tiles. No auto‑HDR or beauty filters—raw, unprocessed look. The lighting creates soft shadows and a slight warm tone.
+
+- **Environment**  
+  Office setting: a white tiled ceiling, a wooden door in the background, a black office chair, and a small desk with a cup, pen holder, and a yellow highlighter on the edge. The time of day is mid‑afternoon, with bright natural light filtering through a window. Weather is clear, ambient conditions are calm.
+
+- **Lens & Technical**  
+  Short focal length (24–35 mm) wide‑angle lens, no bokeh. All elements—subject and background—are in focus. The shot uses a wide‑angle “wide‑lens” capture, with a slight tilt to the camera to emphasize the candid nature. No rule‑of‑thirds intentionality; composition is accidental and spontaneous.
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, no post‑processing aesthetic. Raw image with natural contrast and dynamic range. Slight overexposure on the subject’s face gives a bright, lively feel.
+
+**Prompt Summary**  
+“Candid, unposed photo of a young woman in a light‑blue camisole and beige overalls, mid‑gesture touching her chin, captured with a 24–35 mm wide‑angle lens. Slight motion blur on the subject’s hand and face, everything fully sharp, natural daylight from a high‑angle window creating mild overexposure. Office setting with white tiled ceiling, wooden door, black chair, desk with cup, pen holder, and yellow highlighter. Mid‑afternoon lighting, clear weather. Raw, unprocessed look, no filters or color grading.”

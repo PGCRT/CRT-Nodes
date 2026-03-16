@@ -1,0 +1,27 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair standing mid‑step in a sunlit conifer forest. Her body is bare, slightly turned toward the camera, left leg bent as if caught mid‑walk. Shoulders relaxed, hands hanging naturally by her sides. Her face is turned to the camera but not directly at it—slight off‑center gaze, giving a candid feel.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle, late‑afternoon sun. Slight overexposure on the upper body, creating a warm, soft glow. No auto‑beauty or filter processing; raw, unprocessed look. The exposure is slightly uneven—bright highlights on the chest and face, subtle shadows in the foliage behind her.
+
+- **Camera & Lens**  
+  Wide‑angle lens (24–35 mm). Short focal length to capture a broad view of the scene. Everything in focus—from subject to background—no bokeh, no depth‑of‑field blur. Handheld shake gives a slight motion blur on the subject’s limbs and the surrounding leaves.
+
+- **Composition & Framing**  
+  No rule‑of‑thirds intentionality. The frame is accidental: the woman occupies the central‑right quadrant, with a thick pine trunk on the left and a cluster of green underbrush at the bottom. The shot is slightly tilted, giving an organic, spontaneous feel. The crop is partial—edges cut off at the top and bottom, as if captured in a quick snap.
+
+- **Environment**  
+  Specific real‑world location: a dense evergreen forest with tall pine trees, mossy ground, and a patch of sunlight filtering through the canopy. Time of day: late afternoon, around 4 pm, when the sun is still high but beginning to tilt. Weather: clear, mild, with a light breeze that moves the leaves.
+
+- **Technical Details**  
+  - Focal length: 35 mm (wide‑angle).  
+  - Aperture: f/4–f/5.6 (mid‑range).  
+  - Shutter speed: 1/60 s (slight motion blur).  
+  - ISO: 400–800 (depending on ambient light).  
+  - No portrait mode, no subject isolation—background fully sharp.  
+  - Raw image with auto‑HDR off; no color grading or post‑processing aesthetic.
+
+- **Final Prompt**  
+  “A bare young woman with long wavy brown hair mid‑step in a sunlit conifer forest, captured on a 35 mm wide‑angle lens with slight motion blur and accidental framing. The scene shows a thick pine trunk to the left, mossy ground below, and a cluster of green underbrush at the base. Late‑afternoon sunlight creates a warm overexposed glow on her upper body, while everything remains in focus from foreground to background. The shot is handheld, slightly tilted, and partially cropped, giving a candid, spontaneous feel with no filters or post‑processing.”

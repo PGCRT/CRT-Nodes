@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, athletic woman with a high ponytail and thick black-rimmed glasses stands confidently in an office setting. She wears a dark brown, long‑sleeved bodycon top with a large front cutout, paired with slim black jeans. Her hands rest on her hips, one slightly higher than the other, giving a casual, mid‑action feel. A gold watch glints on her left wrist, and a subtle smile curves her lips as she looks directly at the camera.
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window behind her creates a soft overexposure on the upper body, with a slight warm tint. The exposure is uneven—the foreground is a bit brighter than the background, giving a raw, unprocessed look. No auto‑beauty or filter enhancement; just a handheld, spontaneous capture.
+
+- **Camera & Lens**  
+  Shot on a DSLR or mirrorless with a 24‑mm wide‑angle lens (f/3.5, 1/125 s shutter speed). Everything is in focus—no bokeh or depth‑of‑field blur. The framing is slightly tilted and off‑center, capturing the subject’s full figure from head to toe with a partial crop that includes a portion of the office desk and a city skyline visible through the window.
+
+- **Environment**  
+  The scene is an open‑plan office with white desks, gray filing cabinets, and a large floor‑to‑ceiling window that lets in bright daylight. A small potted plant sits on a desk, and a computer monitor is partially visible. The time of day is mid‑afternoon, around 3 pm, when the sun is high but not directly overhead, casting soft shadows.
+
+- **Composition & Details**  
+  The composition is accidental: the subject’s left hip is slightly lower than the right, and her head is a few centimeters above the center of the frame. The background includes a glimpse of a neighboring office building outside the window, adding context. The image has a slight motion blur on the hands, indicating handheld instability at the moment of capture. No rule‑of‑thirds—everything is captured in one go, with a wide‑angle view that keeps the entire scene sharp.
+
+- **Post‑Processing**  
+  No color grading or filters applied. A quick crop and brightness adjustment were made after the shot, but the overall look remains raw and candid. The final image retains a natural, unposed feel, as if the subject was caught mid‑pose in a real office environment.

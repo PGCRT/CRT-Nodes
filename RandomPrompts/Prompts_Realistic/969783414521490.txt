@@ -1,0 +1,26 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with shoulder‑length brown hair, wearing a light summer blouse and denim shorts, captured mid‑step on a forest trail. Her left hand is raised to her head in a casual, spontaneous gesture; her right hand holds a small wooden crate. She’s smiling slightly, eyes focused forward, as if she just finished a hike and is about to share a story with a friend.  
+
+- **Appearance & Detail**  
+  Skin tone: warm, natural complexion with subtle sun‑kissed highlights. Hair: soft, slightly frizzy texture with a hint of green undertone from the surrounding foliage. Clothing: a loose, cotton blouse in a muted teal color, rolled‑up sleeves, and a faded blue denim short that shows a tiny tear at the left knee for authenticity.  
+
+- **Environment**  
+  Location: a sunlit forest clearing near a small creek, with tall pine trees and mossy rocks lining the path. Time of day: late afternoon, around 4:30 p.m., creating golden ambient light that filters through the canopy. Weather: mild, humid, with a light breeze; leaves are damp from recent rain, adding a subtle sheen to the scene.  
+
+- **Lens & Technical**  
+  Lens: 24‑mm wide‑angle prime, f/2.8, handheld. Focal length: 24 mm (short, wide). Aperture: f/2.8 for a soft but sharp background. Shutter speed: 1/60 s to allow slight motion blur from the subject’s movement. ISO: 400 for clean detail without noise. No bokeh—everything from foreground to background is fully in focus.  
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Slight tilt and off‑center framing create a natural, imperfect composition. The shot is slightly overexposed on the right side to emphasize the bright canopy. No rule‑of‑thirds intentionality; the frame is accidental, as if captured by a passerby.  
+
+- **Realistic Details**  
+  - Slight motion blur on the woman’s left hand, indicating movement.  
+  - Auto‑HDR or auto‑beauty mode off—raw, unprocessed look.  
+  - No filters, no color grading, no post‑processing aesthetic.  
+  - Slight overexposure on the right side to keep ambient light natural.  
+  - Wide lens (24 mm) gives a broad field of view, capturing both subject and environment.  
+
+- **Final Prompt**  
+  “A young woman with shoulder‑length brown hair, wearing a loose teal cotton blouse and faded blue denim shorts, captured mid‑step on a forest trail near a small creek. Her left hand is raised to her head in a casual gesture; her right hand holds a small wooden crate. She’s smiling slightly, eyes focused forward, as if she just finished a hike and is about to share a story with a friend. The scene is set in a sunlit forest clearing at late afternoon, 4:30 p.m., with tall pine trees and mossy rocks lining the path. The weather is mild, humid, with a light breeze; leaves are damp from recent rain, adding a subtle sheen to the scene. Shot on a 24‑mm wide‑angle prime at f/2.8, 1/60 s shutter speed, ISO 400—handheld, slightly overexposed on the right side, everything in focus with no bokeh. The composition is candid and accidental, with slight tilt and off‑center framing, capturing a raw, unprocessed, natural moment.”

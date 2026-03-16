@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy blonde hair, wearing a light‑blue button‑down shirt that is slightly unbuttoned at the front. Her hands are gripping the edges of the shirt, pulling it open as if she’s about to tie a scarf or adjust her top. She looks directly at the camera with a soft, natural expression, lips slightly parted. The shot captures her mid‑movement, with a subtle motion blur around the edges that suggests a handheld, in‑motion capture.
+
+- **Lighting & Exposure**  
+  Ambient daylight from a bright, diffused window—mid‑afternoon, slight overexposure on the upper chest and face, creating a warm, natural glow. No auto‑HDR or beauty filters; the image retains raw, unprocessed detail. The exposure is slightly uneven, giving an authentic, spontaneous feel.
+
+- **Lens & Technical Settings**  
+  24 mm wide‑angle lens, f/3.5 aperture, 1/60 s shutter speed, ISO 400. Everything in focus from foreground to background; no bokeh or depth‑of‑field blur. The composition is intentionally off‑center, with a slight tilt that gives the frame a casual, candid vibe.
+
+- **Environment**  
+  A bright, uncluttered living room with a light‑colored wall and a wooden door visible on the right side. A small portion of a white dresser is seen on the left. The time of day is late afternoon, with soft natural light coming from the left, creating gentle shadows and highlights.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject appears unaware of the camera’s presence at the moment of capture. Slight tilt and partial crop create a raw, real‑life feel. No rule‑of‑thirds intentionality; framing is accidental, as if the photographer was in the middle of a conversation or adjustment.
+
+- **Details & Imperfections**  
+  The shirt’s buttons are slightly uneven, with one button peeking out above the other, adding to the candid aesthetic. The woman’s fingers are loosely gripping the shirt, with a faint smudge on her left hand that hints at natural imperfection. The background is fully sharp, no portrait‑mode isolation.
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, zero post‑processing aesthetic—just raw capture. A slight overexposure on the chest area gives an authentic, spontaneous look.
+
+**Prompt Summary**  
+“Candid photo of a young woman with long blonde hair, wearing a light‑blue button‑down shirt that is partially open, hands pulling the shirt apart as if adjusting it. She looks directly at the camera with a soft expression, lips slightly parted. The image is captured with a 24 mm wide‑angle lens at f/3.5 and 1/60 s shutter speed, ISO 400, in mid‑afternoon daylight. The scene is set in a bright living room with a wooden door and a white dresser visible. The shot has slight motion blur and accidental tilt, everything in focus, no filters or color grading.”

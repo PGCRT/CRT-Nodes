@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework – “Window‑Side Biker”**
+
+- **Subject & Pose**  
+  A woman with voluminous, sun‑kissed curls standing in a bright, narrow hallway. She’s wearing a thin black bikini‑style top and matching bottom, leaning forward with one hand on a tall, white-framed window. Her body is slightly twisted, as if she’s about to step or adjust her position—mid‑action, unposed.
+
+- **Capture Style**  
+  Candid, spontaneous, “in‑the‑moment” shot. Slight handheld jitter and a touch of motion blur on the limbs and background. No rule‑of‑thirds; framing is accidental, off‑center, with a partial crop that cuts off the top of the hallway. The image has a raw, unprocessed look—no filters, no color grading, no post‑processing aesthetic. A hint of overexposure from the bright window light gives a warm, natural glow.
+
+- **Environment**  
+  Location: A narrow, white‑painted hallway with wooden floorboards, a closed white door on the left, and a tall, multi‑pane window on the right. The time of day is late afternoon; the sun is low, casting long, soft shadows across the walls and floor. Ambient light is warm, slightly hazy, with a faint breeze that creates a subtle motion blur. Weather: clear, mild, with a light wind that ruffles the subject’s hair.
+
+- **Lens & Technical**  
+  Use a short focal‑length wide‑angle lens (e.g., 24 mm). Everything is in focus—no bokeh, no depth‑of‑field blur; background and foreground are sharp. No portrait‑mode “subject isolation.” Capture with a handheld camera, slight tilt to the left, and a narrow vertical crop that keeps the subject’s full figure in view but leaves a bit of the hallway above her head cut off.
+
+- **Lighting & Color**  
+  Natural daylight from the window creates a bright, slightly overexposed highlight on the woman’s back and the window frame. The lighting is uneven—warm tones on the right side, cooler tones on the left—giving an authentic, unedited feel. Keep auto‑HDR off; keep “auto‑beauty” off.
+
+- **Details & Imperfections**  
+  Add a faint, natural motion blur to the woman’s legs and the window frame, as if she’s just moved. Slight tilt of the camera adds dynamism. The image should look like a real, spontaneous snapshot—no studio lighting, no professional composition, no editorial tone.
+
+- **Final Prompt**  
+  “A candid, wide‑angle shot of a woman in a black bikini leaning against a tall window in a bright hallway, captured with a short focal‑length lens at late afternoon. The image has slight motion blur and accidental framing, raw and unprocessed, with natural overexposure from the window light. Everything is sharp, no bokeh, no filters—just a real, spontaneous moment frozen in time.”

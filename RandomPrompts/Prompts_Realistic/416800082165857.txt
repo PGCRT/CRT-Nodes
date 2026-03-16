@@ -1,0 +1,34 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark brown hair, wearing a ribbed beige crop‑top and high‑waisted gray leggings, captured mid‑motion while brushing her hair with a black hairbrush. Her left hand holds the brush near the top of her head, fingers slightly curled, nails painted pink. She stands in a bright, modern living room, facing the camera with a subtle, confident gaze.
+
+- **Cinematic Details**  
+  - Slight motion blur on the hairbrush and hands to convey movement.  
+  - Auto‑HDR or auto‑beauty mode off – raw, unprocessed look.  
+  - No filters, no color grading, no post‑processing aesthetic.  
+  - Slight overexposure in the upper right corner to mimic natural daylight.  
+
+- **Lens & Technical**  
+  - Wide‑angle lens (24‑35 mm) – short focal length, wide field of view.  
+  - Everything in focus: background fully sharp, no bokeh, no depth‑of‑field blur.  
+  - Handheld shot with slight tilt and off‑center framing; no rule‑of‑thirds intentionality.  
+
+- **Environment**  
+  - Specific real‑world location: a contemporary living room with a large flat‑screen TV on the wall displaying a colorful sports feed.  
+  - Time of day: late afternoon, soft natural light coming from the west, creating warm highlights and subtle shadows.  
+  - Ambient conditions: mild temperature, gentle breeze (reflected in slight motion blur).  
+
+- **Capture Style**  
+  - Candid, unposed, spontaneous – subject unaware or mid‑action.  
+  - Imperfections encouraged: slight tilt, off‑center framing, partial crop.  
+  - Zero studio lighting, zero professional composition, zero editorial tone.  
+  - Natural motion freeze or slight blur from handheld instability.  
+
+- **Post‑Capture Notes**  
+  - Keep the image raw; no color correction or vignetting.  
+  - Preserve natural contrast and dynamic range.  
+
+**Prompt Summary (for use in a text‑to‑image model)**
+
+> “A young woman with long dark brown hair, wearing a ribbed beige crop‑top and high‑waisted gray leggings, captured mid‑motion while brushing her hair with a black hairbrush. Her left hand holds the brush near the top of her head, fingers slightly curled, nails painted pink. She stands in a bright modern living room, facing the camera with a subtle confident gaze. Slight motion blur on the hairbrush and hands. Wide‑angle lens (24‑35 mm), everything in focus, no bokeh. Handheld shot with slight tilt and off‑center framing. Background shows a large flat‑screen TV displaying a colorful sports feed. Late afternoon natural light from the west. Raw, unprocessed look, no filters, no color grading.”

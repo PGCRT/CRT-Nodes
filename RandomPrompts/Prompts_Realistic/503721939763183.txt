@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail, wearing a pink strap‑top and high‑waisted beige jeans, standing back‑to‑back to the camera in a sunlit living room. Her feet are clad in pink sneakers; she’s mid‑step, left foot slightly ahead, as if she just finished a dance move or is about to grab something from a nearby chair.  
+
+- **Motion & Focus**  
+  Slight motion blur on the lower legs and feet, indicating handheld shake and a quick shutter speed. Everything remains fully sharp—no portrait‑mode depth of field.  
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window on the left; slight overexposure on the upper torso and head, giving a warm, raw feel. No auto‑HDR or beauty filters—just a straightforward exposure.  
+
+- **Lens & Technical**  
+  Wide‑angle lens (24‑35 mm), short focal length, no bokeh. All elements—from the foreground chair to the back wall—are in focus.  
+
+- **Environment**  
+  A bright, informal living room with beige furniture: a tufted armchair, a sofa, and a wooden bookshelf filled with clothes and books. A small potted plant sits atop the shelf. A yellow bottle lies on the floor near the chair. The time of day is mid‑afternoon, with strong sunlight casting soft shadows across the floor.  
+
+- **Composition & Framing**  
+  Accidental, off‑center framing—no rule‑of‑thirds intentionality. The shot is slightly tilted, capturing the subject’s back and the surrounding furniture in a spontaneous, candid manner.  
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, partial crop of the left side of the room, minor motion blur on the lower legs, natural imperfections that give the image a genuine, raw feel.  
+
+- **Prompt for Text‑to‑Image Generation**  
+  “A candid, wide‑angle photograph taken with a 24‑35 mm lens in a sunlit living room at mid‑afternoon. A young woman with a high ponytail, wearing a pink strap‑top and beige high‑waisted jeans, stands back‑to‑back to the camera, mid‑step with her left foot ahead, feet in pink sneakers. Slight motion blur on her lower legs, everything fully sharp. Natural daylight from a large window creates a warm overexposed highlight on her torso. The scene includes a beige tufted armchair in the foreground, a sofa behind her, and a wooden bookshelf filled with clothes and books, a potted plant on top, and a yellow bottle lying on the floor near the chair. The composition is accidental and off‑center, slightly tilted, capturing a spontaneous, raw moment with no filters or post‑processing.”

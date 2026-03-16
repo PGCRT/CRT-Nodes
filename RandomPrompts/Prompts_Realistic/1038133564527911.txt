@@ -1,0 +1,21 @@
+**Realistic Candid Photography Prompt Framework – “Red‑Hair Bath Candid”**
+
+- **Subject & Pose**  
+  A young woman with deep auburn, voluminous curls cascading over her left shoulder, leaning forward on the rim of a classic white claw‑foot bathtub. Her arms are bent at the elbow, one hand gripping the edge while the other rests on her thigh, creating a natural “C” shape that gives a slight, organic tilt to the frame. She’s wearing a single white silk scarf loosely draped around her left shoulder, adding a soft contrast to the warm tones of her skin and hair. Her gaze is directed slightly off‑camera, as if she’s just noticed the photographer, giving a candid, mid‑action feel.
+
+- **Lighting & Exposure**  
+  Natural daylight from a western window, mid‑afternoon (≈ 4:30 pm). The light is warm, slightly harsh, creating a subtle overexposure on the subject’s face and body while leaving faint highlights on the bathtub’s glossy surface. No auto‑HDR or beauty mode – raw, unprocessed look. Slight handheld shake is present, giving a natural motion blur that softens the edges just enough to keep the image feeling spontaneous.
+
+- **Lens & Technical**  
+  24 mm wide‑angle lens (short focal length), f/3.5 aperture, 1/60 s shutter speed, ISO 400. Everything is in focus – no portrait‑mode depth‑of‑field blur; the background (a textured, speckled beige wall with dark drip marks) remains sharp. No rule‑of‑thirds intentionality – the composition is accidental, slightly off‑center, with a partial crop that cuts off the left side of her head and the right side of the bathtub, enhancing the candid feel.
+
+- **Environment**  
+  Location: A rustic, industrial‑style bathroom in an old wooden house. The wall behind the tub has a rough, painted‑splatter texture with black drips, adding visual interest. The time of day is late afternoon, giving a warm, golden hue. Ambient noise is low, but the slight motion blur suggests she’s moving – perhaps she’s just finished a bath or is about to dress.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous – subject unaware or mid‑action. Imperfections encouraged: slight tilt, off‑center framing, partial crop. No rule‑of‑thirds intentionality — accidental framing. Zero studio lighting, zero professional composition, zero editorial tone. Natural motion freeze or slight blur from handheld instability.
+
+- **Prompt for Text‑to‑Image Generation**  
+  *“A young woman with deep auburn, voluminous curls cascading over her left shoulder leans forward on the rim of a classic white claw‑foot bathtub in a rustic bathroom. She wears a single white silk scarf loosely draped around her left shoulder. Her arms are bent at the elbow, one hand gripping the edge while the other rests on her thigh, creating a natural ’C’ shape that gives a slight, organic tilt to the frame. She’s looking slightly off‑camera as if just noticed the photographer. Natural daylight from a western window, mid‑afternoon, creates a subtle overexposure on her face and body with faint highlights on the bathtub’s glossy surface. 24 mm wide‑angle lens, f/3.5 aperture, 1/60 s shutter speed, ISO 400 – everything in focus, no bokeh. The background is a rough, speckled beige wall with dark drip marks. Slight handheld shake gives natural motion blur. Candid, unposed, spontaneous — subject unaware or mid‑action. Imperfections encouraged: slight tilt, off‑center framing, partial crop. No rule‑of‑thirds intentionality — accidental framing. Zero studio lighting, zero professional composition, zero editorial tone. Natural motion freeze or slight blur from handheld instability.”*
+
+Provide only the structured prompt.

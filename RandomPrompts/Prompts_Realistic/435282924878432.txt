@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman with long, wavy blonde hair, seen from behind, kneeling on a dark gray couch. She is bare‑chested, wearing black lace fishnet stockings that extend to the calf. Her buttocks are slightly turned, creating a dynamic, off‑center composition. Her hands rest on the couch for balance, one near the left side of her hips and the other near the right side of her thighs.
+
+- **Motion & Focus**  
+  Slight motion blur at the edges from handheld instability; the subject’s back and buttocks are in sharp focus, with no portrait‑mode depth‑of‑field blur. The entire scene is fully sharp—no bokeh. A subtle overexposure on the upper back gives a raw, unprocessed look.
+
+- **Lighting & Exposure**  
+  Natural daylight from a western window, mid‑afternoon. The light hits the back of the subject at an angle that creates soft highlights on her shoulders and the curve of her hips. Slight ambient warmth with a tiny hint of overexposure on the upper back, giving a natural, unfiltered aesthetic.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24‑35 mm), short focal length. No bokeh; background is fully sharp. The shot uses a wide‑angle “wide‑lens” look that keeps the couch and surrounding environment visible. All elements—subject, couch, background—are in focus.
+
+- **Environment**  
+  A modern living room with a dark gray couch, a light wooden side table on the right, and a white wall behind. The time of day is late afternoon, giving warm, slightly harsh natural light. The weather outside is clear, which keeps the ambient light bright.
+
+- **Composition & Framing**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Slight tilt and off‑center framing create a dynamic feel. Partial crop at the bottom left and right corners. No rule‑of‑thirds intentionality; the frame is accidental, with the subject’s back occupying the central‑upper portion of the image.
+
+- **Post‑Processing**  
+  Auto‑HDR or auto‑beauty mode off—raw, unprocessed look. No filters, no color grading, no post‑processing aesthetic. Only natural motion freeze or slight blur from handheld instability.  
+
+- **Prompt Summary for AI Image Generation**  
+  “A woman with long wavy blonde hair seen from behind, kneeling on a dark gray couch in a modern living room, bare‑chested and wearing black lace fishnet stockings. Her hands rest on the couch for balance, one near the left side of her hips and the other near the right side of her thighs. Slight motion blur at the edges from handheld instability; the back and buttocks are sharply focused with no bokeh. Natural daylight from a western window, mid‑afternoon, creates soft highlights on her shoulders and a subtle overexposure on the upper back. Wide‑angle lens (24‑35 mm), short focal length, all elements fully sharp. Candid, unposed, spontaneous composition with slight tilt and off‑center framing, partial crop at bottom corners. No filters or post‑processing—raw, natural aesthetic.”

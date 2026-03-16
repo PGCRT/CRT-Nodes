@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman with light brown hair tied in a loose ponytail, wearing black lace lingerie (bra and panties) and fish‑net stockings, sitting on a white‑lined bed. Her hands are raised near her shoulders, adjusting the straps of the bra, creating a slight mid‑motion blur. She looks directly at the camera with a soft, natural expression.
+
+- **Lighting & Exposure**  
+  Warm, ambient indoor lighting from a ceiling lamp; slight overexposure on the upper body to keep the scene bright but raw. No auto‑HDR or beauty filters—just a natural, unprocessed look. The exposure is slightly uneven, giving an authentic handheld feel.
+
+- **Camera Settings**  
+  Wide‑angle lens (24‑35 mm), short focal length, handheld. Everything in focus—from the subject to the background—no bokeh or depth‑of‑field blur. Slight tilt and off‑center framing; the composition is accidental, not intentional rule‑of‑thirds.
+
+- **Environment**  
+  A cozy bedroom with a dark headboard, white pillows, and a small green plant on a bedside table. The time of day is late afternoon, with soft natural light mixing with indoor illumination. The background is fully sharp, no studio lighting.
+
+- **Details & Imperfections**  
+  Slight motion blur around the hands and shoulders, indicating mid‑action. Minor tilt of the camera, partial crop that cuts off a bit of the headboard. The image has a raw, candid feel—no post‑processing color grading or filters.
+
+- **Prompt for AI Image Generation**  
+  *“A woman with light brown hair in a loose ponytail, wearing black lace lingerie and fish‑net stockings, sitting on a white‑lined bed, hands raised near her shoulders adjusting the bra straps, looking directly at the camera. Warm ambient indoor lighting from a ceiling lamp, slight overexposure on the upper body. Wide‑angle lens (24‑35 mm), handheld, everything in focus, no bokeh. Slight motion blur around the hands, accidental tilt and off‑center framing. Background shows a dark headboard, white pillows, and a small green plant on a bedside table. Late afternoon natural light mixed with indoor illumination. Raw, unprocessed look, no filters.”*

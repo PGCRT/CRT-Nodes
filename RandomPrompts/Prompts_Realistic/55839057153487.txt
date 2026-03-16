@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman with light‑brown hair tied in a loose, casual ponytail is on all fours on a white quilted bed. She wears a red lace bra and sheer black panty; her back is turned to the camera, hips slightly arched, knees bent, and hands planted on the mattress for balance. Her head is tilted down, eyes focused on something off‑camera, giving an unposed, mid‑action feel.
+
+- **Capture Style**  
+  Candid, spontaneous, “mid‑movement” shot taken with a handheld camera. Slight motion blur at the edges gives a natural, imperfect vibe. The frame is slightly tilted and off‑center, with a partial crop that cuts off part of her left hand and the top of her head—no rule‑of‑thirds intentionality. The image has a raw, auto‑HDR look: no color grading or filters, just the ambient light’s slight overexposure on the white quilt.
+
+- **Environment**  
+  Location: a bright, airy bedroom with a plain gray wall behind the bed. Time of day: late morning, soft natural daylight coming from the left side of the frame, creating gentle highlights on her back and hips. Weather: clear, no wind—quiet ambience. The background is fully sharp, no bokeh; the wall and pillow are in focus.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm) wide‑angle lens. No depth‑of‑field blur—everything from foreground to background is crisp. Slight overexposure on the white quilt, subtle contrast. Auto‑HDR or auto‑beauty mode off. The image has a natural, unprocessed look with zero post‑processing aesthetic.
+
+- **Composition & Framing**  
+  Wide lens captures the entire scene: the bed, pillow, wall, and the woman’s full body. The framing is accidental—she is slightly off‑center, her left hand partially out of frame, her head tilted down. The shot feels spontaneous, as if she was caught mid‑pose.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, partial crop at the top and left side, minor motion blur on the woman’s back and hips. Tiny imperfections: a faint smudge on her left thigh, slight unevenness in the quilt’s stitching. The lighting creates soft shadows under her hips and a subtle highlight on her shoulder blades.
+
+- **Final Prompt**  
+  “A candid, wide‑angle shot of a woman in red lace bra and black panty on all fours on a white quilted bed, captured with a handheld camera at late morning natural light. The frame is slightly tilted and off‑center, with partial crop and slight motion blur, no filters or color grading, everything in focus—raw, auto‑HDR look, zero studio lighting.”

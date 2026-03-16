@@ -1,0 +1,29 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A young woman with long, dark, wavy hair stands in a modern kitchen, mid‑gesture as she holds a smartphone in her left hand and a spoon in her right, appearing to read or type. She wears a light denim jacket over a white crop top, black leggings speckled with colorful paint drips, and a gold necklace. Her expression is focused, slightly downcast, with a natural, unposed candid feel.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject is unaware of the camera or caught in a natural moment. Slight tilt and off‑center framing give an accidental, handheld vibe. The shot has a raw, unprocessed look: no filters, no color grading, no post‑processing aesthetic. A slight overexposure or underexposure depends on ambient light; the image may show a faint haze or soft glow.
+
+- **Environment**  
+  Specific real‑world location: a bright, contemporary kitchen with wooden cabinets, a stainless‑steel refrigerator, and a countertop lined with utensils and a sink. Time of day: late morning, natural daylight streaming through a window, creating soft shadows. Weather or ambient conditions: clear, warm, slightly humid.
+
+- **Lens & Technical**  
+  Short focal length (e.g., 24‑35 mm) wide‑angle lens. No bokeh; background fully sharp — everything in focus, no portrait‑mode depth‑of‑field blur. The composition is not rule‑of‑thirds intentional; it’s a spontaneous, handheld frame that captures the entire scene from head to toe, with slight motion blur from instability.
+
+- **Additional Details**  
+  - Slight motion blur on the subject’s hands and spoon, indicating movement.  
+  - Auto‑HDR or auto‑beauty mode off — raw, unprocessed look.  
+  - No filters, no color grading, no post‑processing aesthetic.  
+  - Slight overexposure or underexposure depending on ambient light.  
+  - Wide lens, short focal length, wide angle.  
+  - Capture style: candid, unposed, spontaneous — subject unaware or mid‑action.  
+  - Imperfections encouraged: slight tilt, off‑center framing, partial crop.  
+  - No rule‑of‑thirds intentionality — accidental framing.  
+  - Zero studio lighting, zero professional composition, zero editorial tone.  
+  - Natural motion freeze or slight blur from handheld instability.  
+
+**Prompt:**
+
+> "A young woman with long dark wavy hair stands in a modern kitchen, mid‑gesture as she holds a smartphone in her left hand and a spoon in her right, appearing to read or type. She wears a light denim jacket over a white crop top, black leggings speckled with colorful paint drips, and a gold necklace. The kitchen has wooden cabinets, a stainless‑steel refrigerator, and a countertop lined with utensils and a sink. Late morning natural daylight streams through a window, creating soft shadows. Capture candidly, unposed, spontaneous — the subject unaware of the camera or caught in a natural moment. Slight tilt and off‑center framing give an accidental handheld vibe. The shot has a raw, unprocessed look: no filters, no color grading, no post‑processing aesthetic. A slight overexposure or underexposure depends on ambient light. Use a short focal length (24‑35 mm) wide‑angle lens. No bokeh; background fully sharp — everything in focus, no portrait‑mode depth‑of‑field blur. The composition is not rule‑of‑thirds intentional; it’s a spontaneous, handheld frame that captures the entire scene from head to toe, with slight motion blur on the subject’s hands and spoon indicating movement."

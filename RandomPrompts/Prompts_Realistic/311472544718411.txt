@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, sun‑kissed hair tied in a loose ponytail, wearing a black halter‑style bikini. She is mid‑step, one foot slightly ahead of the other, leaning forward as if about to dip into a pool. Her left hand rests on the edge of a white tiled deck, her right hand hanging loosely by her side. A subtle smile plays on her lips, eyes bright and engaged with the camera.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle, late‑afternoon sun creates a warm, slightly overexposed glow on her skin. The light hits the front of her bikini, casting soft highlights on her shoulders and chest, while a faint shadow falls behind her left ear. Slight handheld shake is present—tiny motion blur around the edges that gives a candid feel.
+
+- **Environment**  
+  The scene is set at a modern residential poolside. A clear blue pool is visible behind her, with a white tiled deck extending to the right. A tall, slender potted plant stands near the corner of a glass‑door window, its leaves slightly blurred by wind. In the background, a wooden chair and a small table are partially visible through the window’s reflection. The sky above is a pale, unfiltered blue with a few wispy clouds.
+
+- **Lens & Technical**  
+  24 mm wide‑angle lens, f/3.5 aperture, 1/125 s shutter speed, ISO 400. Everything is in focus from foreground to background—no bokeh or depth‑of‑field blur. The framing is off‑center: the subject’s left side is slightly cut off by the frame edge, giving a spontaneous, unposed feel. No rule‑of‑thirds intentionality; the composition is accidental, as if captured in a quick snapshot.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Slight tilt and partial crop create an authentic, raw look. No filters, no color grading, no post‑processing aesthetic. The image retains a natural, unpolished quality with a hint of overexposure that gives it a lively, energetic vibe.
+
+- **Final Prompt**  
+  “A young woman in a black halter bikini captures a candid moment by a residential pool at late afternoon. Her hair is loosely tied, her left hand on the deck, right hand relaxed. Natural daylight creates warm highlights and slight overexposure. 24 mm wide‑angle lens, f/3.5, 1/125 s, ISO 400—everything in focus, no bokeh. Slight handheld shake and off‑center framing give a raw, spontaneous feel. Background includes a blue pool, white tiled deck, a potted plant, and a glass‑door window with a wooden chair and table reflection. No filters or post‑processing—pure, natural realism.”

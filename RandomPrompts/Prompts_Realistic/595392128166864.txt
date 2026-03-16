@@ -1,0 +1,29 @@
+**Realistic Candid Photography Prompt Framework – “Snake‑Tattooed Model in Black Mesh Outfit”**
+
+- **Subject & Pose**  
+  A fit woman with dark, shoulder‑length hair stands back‑to‑camera, hands on hips, slightly turned to the left. She wears a black mesh bodysuit that shows her back and buttocks. Her back is adorned with a large snake‑tattoo that curls down the spine; additional snake tattoos run along both upper arms and thighs.  
+
+- **Physical Details**  
+  The model’s skin has a natural, unretouched texture: slight pores, faint freckles, and a subtle sheen from ambient light. Her muscles are defined but not overly toned. The mesh fabric is thin, with a fine grid pattern that catches the light.  
+
+- **Tattoo & Ink**  
+  The snake tattoo on her back features detailed scales, a stylized head near the top of the spine, and floral motifs at the upper shoulder. The ink is black with subtle gray shading; the tattoo appears slightly raised, as if freshly done.  
+
+- **Environment**  
+  The scene is set in front of a bright green wooden shed with corrugated metal roofing. The shed’s siding shows faint weathered grain, and a single white bulb hangs from the eave. In the foreground, a small patch of dry grass and a few thin branches add texture.  
+
+- **Time of Day & Lighting**  
+  Mid‑afternoon, the sun is high but not directly overhead, creating a soft, warm glow. The light hits the model’s back at an angle that produces a slight overexposure on the shoulders, while the lower part of the body remains slightly underexposed.  
+
+- **Lens & Technical Settings**  
+  Use a wide‑angle lens (24–35 mm). Shoot in raw mode, no auto‑HDR or auto‑beauty. Keep everything in focus – background and subject equally sharp – with a short focal length to capture a broad view. Slight handheld shake is allowed; aim for a natural motion blur that suggests movement.  
+
+- **Composition Notes**  
+  Frame the shot casually: slight tilt, off‑center cropping, no rule‑of‑thirds intentionality. The composition should feel spontaneous, as if the model was caught mid‑pose.  
+
+- **Post‑Processing**  
+  No filters or color grading. Keep the image raw and unprocessed; only basic exposure adjustments.  
+
+**Prompt Summary for AI Image Generation**
+
+> “A fit woman with dark shoulder‑length hair stands back‑to‑camera, hands on hips, slightly turned left, wearing a black mesh bodysuit that shows her back and buttocks. Her back features a large snake‑tattoo that curls down the spine, with a stylized head near the top of the spine and floral motifs at the upper shoulder; additional snake tattoos run along both upper arms and thighs. The scene is set in front of a bright green wooden shed with corrugated metal roofing, a single white bulb hanging from the eave, and a patch of dry grass and thin branches in the foreground. Mid‑afternoon sunlight creates a soft warm glow on the model’s back. Shoot with a wide‑angle lens (24–35 mm) in raw mode, everything in focus, slight handheld motion blur, casual off‑center framing, no filters or color grading.”

@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a short, tousled dark‑hair cut, wearing an oversized light‑green hoodie (with a darker interior lining), captured mid‑turn as she walks through a bustling café. Her face is partially turned toward the window, eyes focused on something outside the frame, giving a spontaneous, “in‑motion” feel.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. Slight tilt and off‑center framing; partial crop that leaves a bit of her left shoulder cut off by the edge of the frame. No rule‑of‑thirds intentionality—accidental composition. Raw, unprocessed look: no filters, no color grading, no post‑processing aesthetic. A hint of slight overexposure in the window area to emphasize ambient daylight.
+
+- **Environment**  
+  Specific real‑world location: a modern coffee shop with exposed brick walls, large floor‑to‑ceiling windows, and a wooden table with a paper cup and glass on it. Time of day: late morning (around 10:30 AM), soft natural light coming from the window, slight haze in the air. Weather: mild, slightly overcast but bright.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm) wide‑angle lens. Everything in focus—no bokeh, no depth‑of‑field blur; background fully sharp. No portrait mode or subject isolation. Slight motion blur from handheld instability, natural freeze or slight blur on the subject’s movement.
+
+- **Composition Notes**  
+  The frame captures the woman’s back and side profile, with a portion of a wooden stool and another patron visible in the background to the right. A brick column and a large window are on the left; a coffee cup sits on a table to the right. The composition is slightly tilted, giving an informal, candid feel.
+
+- **Lighting**  
+  Zero studio lighting—only natural daylight from the window, with a hint of slight overexposure in the upper right corner. Auto‑HDR or auto‑beauty mode off. No post‑processing aesthetic.
+
+- **Final Prompt**  
+  “A young woman with short, tousled dark hair, wearing an oversized light‑green hoodie, captured mid‑turn as she walks through a bustling café. The scene includes exposed brick walls, a large floor‑to‑ceiling window, and a wooden table with a paper cup and glass on it. Late morning natural light creates a slight overexposure in the window area. Use a 24‑35 mm wide‑angle lens; everything is in focus with no bokeh. Capture a candid, unposed moment with slight tilt and off‑center framing, partial crop, and a hint of motion blur from handheld instability. No filters or color grading—raw, raw look.”

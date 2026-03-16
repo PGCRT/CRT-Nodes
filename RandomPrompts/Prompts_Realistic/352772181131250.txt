@@ -1,0 +1,29 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A young woman with dark, thick braids tied with a pink elastic, wearing an off‑white long‑sleeved shirt and a hoop earring, is mid‑bite of a small pastry (or doughnut) while sitting at a wooden desk. Her left hand holds the pastry near her mouth; her right hand rests on a white ceramic mug. She faces a large flat‑panel computer monitor that displays a faint interface, with a keyboard and a notebook beside it.  
+
+- **Pose & Motion**  
+  Slight motion blur on the hand and pastry, indicating a natural, handheld snap. The camera is slightly tilted, creating an off‑center framing that feels spontaneous and unposed.  
+
+- **Environment**  
+  The setting is a bright, sunlit home office or study area. A wooden desk occupies the foreground; behind it, a tall bookshelf filled with colorful spines (red, blue, green) rises to the left. To the right, a small potted succulent sits on a windowsill, next to a stack of books. Natural daylight streams from a window in the upper right, producing a soft overexposure on the subject’s face and a gentle highlight on the pastry.  
+
+- **Time of Day & Ambient Light**  
+  Late morning, around 10:30 AM. The light is warm, slightly hazy, with a natural color temperature that gives the scene an auto‑HDR feel without post‑processing filters.  
+
+- **Lens & Technical Settings**  
+  - Focal length: 24 mm (wide‑angle, short focal length)  
+  - Aperture: f/5.6 – everything from foreground to background is fully sharp, no bokeh.  
+  - Shutter speed: 1/125 s – enough to capture the slight motion blur on the hand.  
+  - ISO: 400 – for clean detail without noise.  
+  - No portrait‑mode depth‑of‑field blur; background remains crisp.  
+
+- **Composition Notes**  
+  The framing is accidental and imperfect: the subject’s head is slightly above the center of the frame, the desk edge cuts off the lower left corner, and the top right corner shows a hint of the window frame. The composition does not follow the rule‑of‑thirds; instead it feels organic and candid.  
+
+- **Style & Aesthetic**  
+  Raw, unprocessed look with no color grading or filters. Slight overexposure on the subject’s face gives a natural glow. The image conveys a “mid‑action” candid moment, as if the woman is caught in the act of eating while working.  
+
+- **Final Prompt**  
+  *“A young woman with dark braids and a pink elastic, wearing an off‑white long‑sleeved shirt and hoop earring, mid‑bite of a pastry at a wooden desk, holding a white mug beside her. She sits in front of a large computer monitor, keyboard, and notebook. Behind her, a tall bookshelf with colorful spines rises to the left; a small potted succulent sits on a windowsill to the right, next to a stack of books. Natural daylight streams from the upper right window, creating soft overexposure. The shot is taken with a 24 mm wide‑angle lens at f/5.6 and 1/125 s shutter speed, producing slight motion blur on her hand. The framing is slightly tilted and off‑center, capturing a candid, unposed moment in a bright home office during late morning. Everything from foreground to background is fully sharp, with no filters or post‑processing.”*

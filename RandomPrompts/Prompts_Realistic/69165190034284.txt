@@ -1,0 +1,28 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A young woman with dark, slightly frizzy hair, wearing an oversized pale‑gray T‑shirt and blue jeans, is captured mid‑turn on a busy city sidewalk. She’s holding a black smartphone in her right hand, as if taking a photo or video, while her left hand rests near her hip. Her back is mostly to the camera, but a small portion of her left ear and the side of her face peek out, giving an accidental, off‑center feel.
+
+- **Pose & Motion**  
+  Slight motion blur at the edges of her hair and hands, indicating handheld instability. The freeze‑frame is not perfectly crisp; there’s a subtle “in‑motion” quality that gives the image spontaneity.
+
+- **Framing & Composition**  
+  Wide‑angle shot with a short focal length (≈24 mm). No rule‑of‑thirds intentionality—framing is accidental, with the subject slightly tilted and cropped on the right side of the frame. Background is fully sharp; no bokeh or depth‑of‑field blur.
+
+- **Lighting & Exposure**  
+  Natural daylight, mid‑afternoon, with a slight overexposure on the upper part of the frame that gives a warm, hazy glow. No auto‑beauty mode; raw, unprocessed look. Slight lens flare from the sun’s angle.
+
+- **Environment**  
+  Specific real‑world location: a bustling downtown street in an American city (likely New York). A yellow sign reading “THE GHWAY, CHILIE, CHNAT SKAD” hangs above the sidewalk, with a small photo of a person on it. A red storefront sign (“KTA”) is visible on the right. Several pedestrians are walking in the background, one carrying a brown tote bag. The street is paved, with white parking lines and a concrete curb.
+
+- **Time of Day & Weather**  
+  Mid‑afternoon, around 3 pm, with bright, slightly harsh sunlight that creates a small lens flare. Weather is clear, with a light haze from the city’s atmosphere.
+
+- **Lens & Technical**  
+  Short focal length (≈24 mm), wide‑angle lens. All elements are in focus—no portrait mode or subject isolation. Slight overexposure on the top of the frame gives a natural, raw feel. No filters, no color grading, no post‑processing aesthetic.
+
+- **Candid Tone**  
+  The image feels spontaneous and unposed; the subject is unaware of the camera at the moment of capture. Imperfections are encouraged: slight tilt, off‑center framing, partial crop, and a hint of motion blur from handheld shooting.
+
+- **Final Prompt**  
+  “A candid, wide‑angle, short‑focal‑length photograph of a young woman on a busy downtown sidewalk, captured mid‑turn while holding a smartphone. Her dark hair is slightly frizzy, her pale‑gray T‑shirt hangs loosely, and she’s in the process of taking a photo. The shot has accidental off‑center framing and slight motion blur from handheld instability. Natural daylight overexposes the upper frame, creating a warm haze. In the background, a yellow sign reads ’THE GHWAY, CHILIE, CHNAT SKAD’ with a small portrait, a red storefront sign is visible, pedestrians walk by, and the street’s concrete surface shows white parking lines. The image is raw, unprocessed, fully sharp, and conveys a spontaneous, unposed moment in a real‑world city setting at mid‑afternoon.”

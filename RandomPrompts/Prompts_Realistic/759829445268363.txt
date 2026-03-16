@@ -1,0 +1,24 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark brown hair, wearing a gray long‑sleeved V‑neck top with front buttons and black leggings, captured mid‑walk on a concrete pathway. Her left hand is slightly bent at the wrist, her right arm relaxed by her side, and she’s smiling softly while looking off to the right. The top has a subtle texture, a faint ribbed detail on the sleeves, and a small, decorative button on each side of the V‑neck.  
+
+- **Motion & Focus**  
+  Slight motion blur at the wrists and fingertips to suggest movement; the rest of the frame is fully sharp—no portrait‑mode bokeh. The lens is handheld, with a slight tilt that gives an accidental, off‑center composition.  
+
+- **Lens & Technical**  
+  24‑mm wide‑angle lens (short focal length), f/4.0 aperture, 1/60 s shutter speed, ISO 400. No auto‑HDR or auto‑beauty—raw, unprocessed look. Slight overexposure in the upper left corner to capture ambient daylight.  
+
+- **Environment**  
+  Location: a quiet suburban park path in late afternoon. The background shows a chain‑link fence on the left, a cluster of green bushes, and a tree with leaves that have turned autumnal. Fallen leaves are scattered on the ground, and the sky is a soft, pale gray‑blue.  
+
+- **Lighting & Color**  
+  Natural daylight from the west, creating a warm, slightly harsh highlight on the subject’s face and upper body. The lighting creates a gentle contrast between the gray top and the green foliage.  
+
+- **Composition Notes**  
+  No rule‑of‑thirds intentionality—framing is spontaneous. The shot is partially cropped on the right side, cutting off part of the pathway to emphasize motion. Everything in focus, from the subject’s face to the background foliage.  
+
+- **Prompt for Text‑to‑Image Generation**  
+  “A candid, handheld photo of a young woman with long dark hair walking on a concrete path in a suburban park, wearing a gray long‑sleeved V‑neck top and black leggings; slight motion blur at the wrists, fully sharp background, 24‑mm wide‑angle lens, f/4.0, 1/60 s, ISO 400, natural daylight from the west, late afternoon, scattered fallen leaves on the ground, chain‑link fence and green bushes in the background, soft overexposure in the upper left corner, accidental off‑center framing, no filters or post‑processing.”  
+
+Provide only the structured prompt.

@@ -1,0 +1,31 @@
+**Realistic Candid Photography Prompt Framework – “Summer Beach Breeze”**
+
+- **Subject & Pose**  
+  A young woman with long, loose brown hair, standing mid‑walk on a sunlit beach at late afternoon. She’s wearing a light, breezy summer dress that swings slightly as she moves. Her left hand is tucked into her pocket, right arm bent at the elbow, fingers relaxed. She’s captured mid‑step, foot lifted off the sand, toes gripping the ground, giving a subtle sense of motion.
+
+- **Lighting & Exposure**  
+  Warm, golden hour light from the west, slightly overexposed on the face and shoulders, creating soft highlights and gentle shadows. The exposure is a little uneven—warmth in the foreground, cooler tones in the background—to keep it raw and unprocessed. No auto‑beauty or filter interference; just natural ambient light.
+
+- **Camera Settings**  
+  - Lens: 24mm wide‑angle (short focal length), handheld.  
+  - Focal length: 24 mm, f/3.5, 1/60 s shutter speed, ISO 400.  
+  - Slight motion blur on the subject’s legs and hands to emphasize movement.  
+  - No bokeh; background (the ocean and a distant dune) is fully sharp, everything in focus.
+
+- **Composition & Framing**  
+  - Candid, unposed framing: the shot is slightly tilted to the right, off‑center, with a partial crop that cuts off the left edge of the frame.  
+  - No rule‑of‑thirds intentionality—just accidental, spontaneous composition.  
+  - The subject occupies the central‑right portion of the frame; her head is near the upper third but not aligned to a grid.
+
+- **Environment**  
+  - Location: A sandy beach with a gentle slope leading to a low dune, the ocean visible in the background.  
+  - Time of day: Late afternoon (golden hour), the sun low on the horizon, casting long shadows.  
+  - Weather: Light sea breeze, a few scattered clouds overhead; the sky is a soft, warm gradient from pale blue to amber.
+
+- **Technical Details**  
+  - Wide‑angle lens gives a slight distortion that adds character.  
+  - No portrait‑mode depth‑of‑field blur—everything from foreground to background is crisp.  
+  - Slight overexposure on the subject’s upper body, underexposed slightly at the lower legs, giving an organic feel.
+
+- **Prompt Summary**  
+  “A young woman with long brown hair walking on a sandy beach at golden hour, captured on a 24mm wide‑angle lens with slight motion blur and overexposure. The shot is candid, slightly tilted, off‑center, with a partial crop that cuts the left edge. The background shows a low dune and ocean, fully sharp. The scene is raw, unprocessed, no filters—just natural light and a spontaneous, handheld capture.”

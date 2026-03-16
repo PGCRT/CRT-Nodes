@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A curvy woman with long, dark hair, wearing a snakeskin‑patterned one‑piece bodysuit and black heeled ankle boots, captured mid‑turn on a rocky outcrop. Her left leg is slightly bent, her right foot planted firmly on a large stone, and her head turned to the side as if she’s just noticed the camera. The pose feels spontaneous—she’s not posing for the photo but rather caught in a natural moment.
+
+- **Lighting & Exposure**  
+  Slight overexposure from bright midday sun, creating soft highlights on her skin and clothing. Auto‑HDR or auto‑beauty mode is off; no filters, no color grading, no post‑processing aesthetic. The exposure is uneven—some parts are a bit blown out, giving a raw, unprocessed look.
+
+- **Camera Settings**  
+  Wide‑angle lens (20–35 mm), short focal length. Handheld shot with slight motion blur from instability. Everything in focus—no bokeh, no depth‑of‑field blur; the background is fully sharp. No portrait mode or subject isolation.
+
+- **Composition & Framing**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Slight tilt and off‑center framing; partial crop that cuts off a bit of the rock formation on the right side. No rule‑of‑thirds intentionality—accidental framing that gives an organic feel.
+
+- **Environment**  
+  Specific real‑world location: a sunlit, dry rocky cliff with a small patch of green succulent plant to the left. Time of day: mid‑afternoon, with strong overhead sunlight and a slight haze. Weather: clear, warm, with a faint wind that creates subtle motion on the subject’s hair and clothing.
+
+- **Details & Imperfections**  
+  Slight motion blur around the edges, especially at the feet and hair. The image has a raw, unprocessed look—no filters, no color grading, no post‑processing aesthetic. A few minor imperfections: a slight vignette from the wide lens, a tiny dust speck on the upper left corner, and an uneven horizon line that gives the shot authenticity.
+
+- **Final Prompt**  
+  “A curvy woman with long dark hair in a snakeskin one‑piece and black heeled boots, caught mid‑turn on a rocky outcrop, slight motion blur from handheld wide‑angle lens, overexposed midday sun, raw unprocessed look, candid spontaneous pose, slight tilt and off‑center framing, partial crop, everything in focus, no bokeh, no depth‑of‑field blur, background fully sharp, small green succulent plant to the left, dry rocky cliff environment, mid‑afternoon bright sunlight, clear warm weather, subtle wind‑induced motion on hair and clothing, slight vignette and dust speck for authenticity.”

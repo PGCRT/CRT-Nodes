@@ -1,0 +1,16 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, athletic woman with long blonde hair, wearing a black fishnet dress and black gloves, holding a wine glass in her right hand. She stands in a bright, sunlit living room, slightly tilted to the left, mid‑step as if just having taken a drink. Her left hand rests casually by her hip. A small “notting hill” tattoo is visible on her upper left chest.
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window, slight overexposure in the upper right corner, giving a warm, soft glow. No auto‑beauty or filter processing—raw, unprocessed look. Slight handheld shake gives a subtle motion blur around the edges.
+
+- **Environment**  
+  A cozy, lived‑in apartment with light‑wood furniture. To the left, a small wooden side table with a potted plant and a framed photo; behind her, a wall‑mounted framed picture of a man in a navy jacket. A shelf with books and a small plant sits on the left wall. The time of day is late afternoon, with golden sunlight streaming in, creating soft shadows and a slight haze.
+
+- **Lens & Technical**  
+  24 mm wide‑angle lens, short focal length, everything in focus—no bokeh. No rule‑of‑thirds intentionality; the frame is off‑center, slightly cropped on the right side. Background is fully sharp, no portrait‑mode subject isolation.
+
+- **Composition Notes**  
+  Capture a candid, unposed moment—subject appears unaware of the camera. Slight tilt and partial crop give an accidental, spontaneous feel. Keep the background fully sharp, no depth‑of‑field blur. The overall tone should feel natural, raw, and unedited.

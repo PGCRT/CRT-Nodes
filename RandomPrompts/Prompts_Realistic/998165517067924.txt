@@ -1,0 +1,16 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with wavy blonde hair, wearing a black‑and‑orange striped halter bikini, crouching on a zebra‑print rug in a bright, sunlit living room. She’s mid‑smile, hands planted on the floor of the rug, body slightly tilted, as if she just finished a playful pose and is catching her breath. Her face is turned toward the camera but not directly aimed—slight off‑center framing.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. The shot has a raw, unprocessed look: no filters, no color grading, no post‑processing aesthetic. A slight overexposure from the bright window light gives a warm, natural glow. The image is captured with a wide‑angle lens (24–35 mm), producing a short focal length that keeps the entire scene in focus—no bokeh, no depth‑of‑field blur, background fully sharp.
+
+- **Environment**  
+  Specific real‑world location: a modern apartment living room with a large window directly behind the subject, letting in bright natural daylight. The time of day is mid‑afternoon, when the sun is high but still warm, creating soft shadows and a slight ambient haze. The weather outside is clear, which contributes to the bright interior lighting.
+
+- **Lens & Technical**  
+  Short focal length, wide angle (24–35 mm). Everything in focus—no portrait mode, no subject isolation. Slight motion blur from handheld instability gives a natural, spontaneous feel. The composition is accidental: no rule‑of‑thirds intentionality, slight tilt and partial crop. Auto‑HDR or auto‑beauty mode off — raw, unprocessed look.
+
+- **Final Prompt**  
+  “A young woman with wavy blonde hair in a black‑and‑orange striped halter bikini crouches on a zebra‑print rug in a bright, sunlit living room. She’s mid‑smile, hands planted on the floor of the rug, body slightly tilted as if she just finished a playful pose and is catching her breath. The shot is candid, unposed, spontaneous—subject unaware or mid‑action—with a slight overexposure from the bright window light. Captured with a wide‑angle lens (24–35 mm), everything in focus—no bokeh, no depth‑of‑field blur, background fully sharp. The time of day is mid‑afternoon, creating soft shadows and a warm natural glow. No filters, no color grading, no post‑processing aesthetic. Slight motion blur from handheld instability gives a raw, realistic candid look.”

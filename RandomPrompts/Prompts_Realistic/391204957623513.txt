@@ -1,0 +1,26 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman in white bikini bottom, holding a clear plastic water bottle with a blue cap in her right hand. She’s mid‑step, slightly turned toward the camera, with a subtle motion blur on her hand and bottle. Her left arm is relaxed by her side. A small cross tattoo sits on her upper chest. Her hair is loose, falling over her shoulders.
+
+- **Body & Detail**  
+  Emphasize natural skin texture, visible pores and slight moisture droplets on her chest and bottle. The water bottle label reads “Fiji” with a blue and white design; the label’s text should be legible but not overly sharp. Her fingernails are painted light pink. A thin gold bracelet adorns her left wrist.
+
+- **Lighting & Exposure**  
+  Use a wide‑angle lens (24–35 mm) at a short focal length. Capture with a slightly overexposed, raw look—no auto‑HDR or beauty mode. The background is an outdoor urban alleyway at dusk; the ambient light is soft, with a faint warm glow from street lamps. The exposure is uneven, giving a natural, handheld feel.
+
+- **Framing & Composition**  
+  Frame the shot with a slight tilt and off‑center crop. The composition is accidental: the subject isn’t centered, and the top of her head cuts off slightly at the upper edge. Keep everything in focus—no portrait mode or depth‑of‑field blur.
+
+- **Environment**  
+  Location: a concrete alleyway in a modern city, with a gray wall and a small window visible behind her. Time of day: late afternoon, just before sunset. Weather: mild, slightly humid; a few droplets of water hang from the bottle, indicating recent rain or a splash.
+
+- **Lens & Technical**  
+  - Focal length: 35 mm (wide‑angle)
+  - Aperture: f/4.0 (sharp background)
+  - Shutter speed: 1/60 s (slight motion blur)
+  - ISO: 400 (raw, unprocessed)
+  - No bokeh; background fully sharp.
+
+- **Post‑Processing**  
+  Keep it minimal—no color grading or filters. Slight vignette from the lens’s natural falloff is acceptable. The final image should feel spontaneous, candid, and unposed.

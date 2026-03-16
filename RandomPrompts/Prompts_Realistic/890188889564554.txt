@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair, wearing a light‑gray halter‑style bikini, standing on a modern balcony. She leans casually against a metal railing, one hand gripping the rail and the other resting on her hip, body angled slightly to the left, face turned toward the camera with a natural, unposed smile. Her left leg is bent at the knee, adding a dynamic, mid‑movement feel.
+
+- **Lighting & Exposure**  
+  Ambient daylight from a high‑angle, late‑afternoon sun creates a soft overexposure on the subject’s upper body, with a slight warm glow. The exposure is intentionally raw—no auto‑HDR or beauty filters, just a natural, unprocessed look. A wide‑angle lens (24‑35 mm) captures the scene with everything in focus, no bokeh, no depth‑of‑field blur.
+
+- **Composition & Framing**  
+  The shot is framed “accidentally”: the balcony railing cuts horizontally across the lower third, a large circular window frames the background, and the subject is slightly off‑center to the left. The composition has a slight tilt, giving it a candid, spontaneous feel. All elements—subject, railing, window, cityscape—are fully sharp.
+
+- **Background & Environment**  
+  Behind the woman, a bright, modern building with a large circular window looks out onto a city skyline. The time of day is late afternoon, with warm, golden light and a faint haze in the air. Weather is clear, with a light breeze that creates slight motion blur on the subject’s hair and clothing.
+
+- **Lens & Technical**  
+  Use a short focal length (24‑35 mm) wide‑angle lens. Shoot at a higher ISO to keep everything in focus, with a fast shutter speed to freeze the motion but allow a hint of blur from handheld instability. No portrait mode or subject isolation—everything is fully sharp, from the woman’s skin to the railing and the city behind her.
+
+- **Final Prompt**  
+  “A young woman with long wavy brown hair in a light‑gray halter bikini leans casually against a metal railing on a modern balcony, one hand gripping the rail, the other on her hip, body angled left, face turned toward camera with a natural smile. Late‑afternoon sun creates soft overexposure on her upper body. The shot is framed accidentally: the railing cuts horizontally across the lower third, a large circular window frames the background, and the woman is slightly off‑center to the left. Behind her, a bright modern building with a circular window looks out onto a city skyline. Late afternoon light, clear weather, slight breeze. Wide‑angle lens (24‑35 mm), everything in focus, raw unprocessed look, slight motion blur from handheld instability.”

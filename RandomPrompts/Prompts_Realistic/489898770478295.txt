@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, curvy woman with a deep‑V black leather bodysuit standing on a dimly lit park pathway at dusk. Her long dark hair is tied in a high ponytail that slightly leans to one side, and she wears large hoop earrings that catch the ambient light. She’s mid‑step, left foot forward, hands relaxed by her sides, eyes focused straight ahead with a subtle, confident expression.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject is unaware of the camera, captured in a natural “mid‑action” moment. The frame is slightly tilted and off‑center, with a partial crop that gives an accidental, handheld feel. No rule‑of‑thirds intentionality; the composition is improvised.
+
+- **Motion & Exposure**  
+  Slight motion blur from a handheld shot, natural freeze or soft blur. Slight overexposure on the subject’s face and upper body to emphasize the warm tones of the leather outfit against the cooler night sky. No auto‑HDR or auto‑beauty mode — raw, unprocessed look.
+
+- **Environment**  
+  Specific real‑world location: a quiet park pathway lined with tall trees, with a low‑angle view that includes a concrete curb on the left and a grassy area on the right. Time of day: twilight (late evening), with the sky still faintly blue and street lamps casting warm glows in the background. Weather: mild, clear, with a light breeze that slightly ruffles the woman’s hair.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm) wide‑angle lens. Everything is fully sharp — no bokeh or depth‑of‑field blur; background remains in focus. No portrait mode or subject isolation. The image has a natural, raw aesthetic with zero post‑processing color grading or filters.
+
+- **Final Prompt**  
+  “A tall woman in a black leather bodysuit stands on a dimly lit park pathway at dusk, her hair tied in a high ponytail and large hoop earrings catching the ambient light. She’s mid‑step, left foot forward, hands by her sides, eyes focused ahead. Slight motion blur from handheld capture, subtle overexposure on the subject, raw unprocessed look. The frame is slightly tilted and off‑center, partial crop. Background shows a concrete curb, grassy area, and warm street lamps, all in focus. Shot with a 24‑35 mm wide‑angle lens, no bokeh, no filters.”

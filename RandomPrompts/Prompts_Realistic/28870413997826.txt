@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A young woman with long, wavy brown hair, wearing a black polka‑dot choker, standing bare‑chested in an open plaza. She is mid‑expression, eyes closed, mouth slightly open as if she just received a kiss or a gentle touch from a man’s hand that enters the frame from the left. Her left arm is relaxed, her right shoulder exposed, and her chest is prominently visible. The woman’s face is turned slightly to the right, capturing a candid moment of intimacy or surprise.
+
+- **Pose & Composition**  
+  The shot is handheld, slightly tilted, with an off‑center framing that gives a spontaneous, unposed feel. The composition is not intentionally rule‑of‑thirds; the subject occupies the central‑right portion of the frame, while the man’s hand and a portion of his forearm appear on the left edge, creating a natural diagonal line. The crop is partial: the woman’s left side is cut off by the frame edge, adding to the candid vibe.
+
+- **Lighting & Exposure**  
+  Natural daylight, mid‑afternoon, with a slight overexposure that softens the ambient light and gives a warm, golden hue. No auto‑HDR or beauty filters; the image retains raw, unprocessed look. Slight motion blur is present on the woman’s hair and the man’s hand, indicating handheld instability during capture.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24 mm) with a short focal length, producing a broad field of view that keeps the background fully sharp—no bokeh or depth‑of‑field blur. Everything in focus: the woman’s face, chest, and the man’s hand, as well as the architectural details behind her. No portrait mode or subject isolation.
+
+- **Environment**  
+  The setting is a historic European plaza with stone arches and a beige building featuring arched windows and a reddish‑brown tiled roof in the background. A few distant figures can be seen walking near the left side of the frame, adding life to the scene. The weather is clear, with a bright sky that suggests a warm, sunny afternoon.
+
+- **Details & Imperfections**  
+  Slight tilt and off‑center framing give the image a casual, spontaneous feel. There are minor imperfections: a faint smudge on the woman’s chest, a slight overexposed highlight on her forehead, and a tiny vibration blur on the man’s hand. The choker’s polka dots are slightly out of alignment, adding to the candid nature.
+
+- **Post‑Processing**  
+  No filters or color grading; the image is raw, with natural contrast and a subtle warm tone. Slight overexposure keeps the lighting natural, while the lack of post‑processing preserves the authenticity of the moment.
+
+- **Final Prompt**  
+  “A candid, handheld shot captured on a wide‑angle lens in a European plaza, featuring a bare‑chested woman with long brown hair and a black polka‑dot choker receiving a gentle touch from a man’s hand. The frame is slightly tilted and off‑center, with natural daylight overexposure and slight motion blur. The background shows a beige building with arched windows and a reddish‑brown roof, all in sharp focus. The image retains raw, unprocessed authenticity, with no filters or color grading, preserving the spontaneous, real‑life feel of the moment.”

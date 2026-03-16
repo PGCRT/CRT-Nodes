@@ -1,0 +1,27 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, curvy woman with long, wavy brown hair sits mid‑pose on a weathered brick staircase. She’s wearing a bright, rainbow‑striped one‑piece swimsuit that drapes elegantly over her torso, paired with white knee‑high boots that have a subtle heel. Her hands are behind her head, elbows out, creating a relaxed, confident look. The outfit’s colors—red, orange, yellow, green, blue, purple—blend into the brick tones, giving a vibrant, summery feel.
+
+- **Lighting & Exposure**  
+  Natural daylight from a slightly overcast sky; the light hits the subject from the front‑left, creating soft highlights on her face and boots while casting gentle shadows in the crevices of the stairs. Slight overexposure on the upper body to keep the colors popping, with no auto‑HDR or beauty filters—just raw, unprocessed capture.
+
+- **Camera Settings**  
+  - Lens: 24‑35 mm wide‑angle (short focal length) for a broad field of view.  
+  - Aperture: f/4.0 – everything from the subject to the background stays fully sharp, no bokeh.  
+  - Shutter speed: 1/60 s – enough to catch a slight motion blur on the subject’s hands and boots, hinting at handheld instability.  
+  - ISO: 400 – for clean detail without noise.
+
+- **Composition & Framing**  
+  The shot is intentionally off‑center; the staircase occupies the left‑hand side of the frame while the woman’s body leans slightly to the right. The composition is spontaneous—no rule‑of‑thirds, just a casual, candid capture. The top of the stairs, a patch of green foliage in the background, and a small metal handrail on the left add context.
+
+- **Environment**  
+  Location: An outdoor brick staircase in a residential courtyard; the bricks are reddish‑brown with visible mortar lines. Time of day: late morning, around 10:30 AM, when the sun is high but not directly overhead. Weather: light cloud cover, mild temperature, no wind.
+
+- **Technical Details**  
+  - No portrait mode or subject isolation; the background (the stairs and a small patch of green plant) is fully in focus.  
+  - Slight tilt to the camera to give a natural, handheld feel.  
+  - The image has a raw, unprocessed look—no color grading or filters, just the original capture with auto‑beauty off.
+
+- **Final Prompt**  
+  “A tall woman with long wavy brown hair sits on a weathered brick staircase, wearing a rainbow‑striped one‑piece swimsuit and white knee‑high boots. Her hands rest behind her head, elbows out, in a relaxed confident pose. Natural daylight from the front‑left creates soft highlights and slight overexposure on the upper body. Shot on a 24‑35 mm wide‑angle lens at f/4.0 and 1/60 s, with everything in focus and a slight motion blur on the hands and boots. The composition is off‑center, spontaneous, with no rule‑of‑thirds. The background shows a patch of green foliage and a metal handrail on the left. Capture style: candid, unposed, raw, no filters—just a realistic, handheld photograph.”

@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with deep brown, slightly frizzy hair tied in a loose braid, wearing an off‑shoulder white tank top and a black hoodie that’s slipped off one shoulder. She stands with her arms crossed, leaning slightly to the right, looking directly at the camera with a soft, unposed expression. Her left hand rests on her hip, fingers curled, adding a casual, mid‑action feel.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject is unaware of the camera’s presence or is caught mid‑gesture. The shot has slight motion blur from handheld instability, with a narrow depth of field that keeps everything in focus (no portrait mode). No rule‑of‑thirds intentionality; the framing is accidental, slightly tilted and off‑center, with a partial crop that cuts off the edges of the background.
+
+- **Environment**  
+  The scene takes place in an office setting during mid‑afternoon. Fluorescent ceiling lights cast a warm, slightly overexposed glow on the subject’s face, while the background shows a white desk, a computer monitor, a filing cabinet, and a stack of papers. A black office chair and a mug sit on the desk, adding to the realism. The time of day is late afternoon, with natural daylight mixing with artificial lighting.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm) wide‑angle lens, no bokeh, background fully sharp. No auto‑HDR or auto‑beauty mode — raw, unprocessed look. Slight overexposure in the highlights to capture the ambient light. The image has zero studio lighting, zero professional composition, zero editorial tone. All elements are in focus, from the subject’s face to the distant office furniture.
+
+- **Post‑Processing**  
+  No filters, no color grading, no post‑processing aesthetic. Keep it natural and raw.
+
+**Prompt Summary:**
+> “A candid, unposed photograph of a young woman with frizzy brown hair in a loose braid, wearing an off‑shoulder white tank top and a black hoodie, standing in an office during mid‑afternoon. The shot uses a short focal length wide‑angle lens, captures slight motion blur and accidental framing, has a raw, unprocessed look with no filters or color grading, and keeps everything in focus from the subject to the background furniture.”

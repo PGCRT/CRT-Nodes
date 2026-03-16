@@ -1,0 +1,26 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with shoulder‑length blonde hair, wearing a black long‑sleeved crop top and no bottom, standing in a dimly lit club or bar. Her arms are crossed over her chest, slightly tilted to the left, as if she’s mid‑conversation or adjusting her clothing. The pose is casual and unposed; she appears unaware of the camera, giving a spontaneous feel.
+
+- **Lighting & Exposure**  
+  Ambient lighting from the venue’s neon lights and a soft overhead lamp creates a slight overexposure on the subject’s face and upper body. The background has a warm, slightly hazy glow with a faint red‑purple hue from a distant light fixture. No auto‑HDR or beauty filters—just raw, unprocessed capture.
+
+- **Camera & Lens Settings**  
+  Wide‑angle lens (24‑35 mm) with a short focal length to keep the entire scene in frame. Aperture set to f/5.6–f/8 for moderate depth of field; everything from foreground to background is fully sharp, no bokeh. Slight handheld shake gives a natural motion blur on the edges, while the center remains crisp.
+
+- **Composition & Framing**  
+  The shot is intentionally off‑center and slightly cropped; the subject’s head is near the upper third of the frame but not exactly on the rule‑of‑thirds line. The framing captures a portion of the bar’s back wall, a few plastic bottles on a side table, and a glimpse of another patron in the background. No deliberate rule‑of‑thirds—this is an accidental, candid composition.
+
+- **Environment & Context**  
+  Location: a dimly lit nightclub or bar with a concrete wall and a small side table. Time of day: evening, around 9 pm, when the venue’s ambient lighting is at its peak. Weather/ambient conditions: indoor, slightly humid air, low‑frequency background music.
+
+- **Technical Details**  
+  - Focal length: 35 mm (wide angle)  
+  - Aperture: f/6.3  
+  - Shutter speed: 1/125 s (slight motion blur from handheld)  
+  - ISO: 400–600 (for clean detail without noise)  
+  - No portrait mode or subject isolation; background remains fully sharp.
+
+- **Final Prompt**  
+  “A candid, unposed photograph of a young woman with blonde hair in a black crop top, standing in a dimly lit club at evening. She crosses her arms over her chest, slightly tilted, mid‑action. The wide‑angle 35 mm lens captures everything in focus from her to the back wall, with a slight handheld blur. Ambient neon lights create a warm, hazy glow; the scene is raw, unfiltered, and fully sharp. The composition is accidental and off‑center, capturing a portion of a side table with plastic bottles and a patron in the background.”

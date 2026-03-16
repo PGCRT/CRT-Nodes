@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, straight brown hair, bare and in motion, captured mid‑step as she leans forward slightly, her left hand resting on a white bed sheet. Her body is angled toward the camera but her face turns back, giving a candid, spontaneous feel. She’s wearing a thin, sheer white skirt that drapes softly over her hips, adding a subtle texture contrast.
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window on the left, creating a warm, slightly overexposed highlight on her back and hip. The light is diffused by a sheer curtain, giving a soft glow without harsh shadows. Slight handheld shake gives a natural motion blur around the edges.
+
+- **Environment**  
+  A bright, airy bedroom with a large window, a white bed, and a green potted plant in the corner. The room has a light beige wall, a wooden floor visible at the bottom right, and a small white bedside table. The time of day is mid‑afternoon, with the sun high but not directly overhead, creating a gentle, even illumination.
+
+- **Lens & Technical**  
+  24 mm wide‑angle lens, f/4.0 aperture, 1/60 s shutter speed, ISO 400. Everything is in focus from foreground to background; no bokeh. The framing is off‑center and slightly tilted, giving a casual, spontaneous feel. No rule‑of‑thirds—just accidental composition.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject appears unaware of the camera, mid‑action. Slight tilt and partial crop create a raw, unprocessed look. No filters, no color grading, no post‑processing aesthetic. The image has a slight overexposure on the left side to emphasize the natural light.
+
+- **Detail & Variation**  
+  Add a faint motion blur around her hips and hands, a subtle “auto‑beauty” effect turned off for raw realism. Include a small reflection of a white pillow on the bed, a hint of a wooden chair in the background, and a faint trace of a green plant leaf peeking out from the corner. The overall tone is warm, natural, and unpolished, with a slight overexposure that gives an airy, dreamy feel.
+
+**Prompt Summary**  
+“Candid photo of a bare young woman with long brown hair leaning on a white bed in a bright bedroom, natural daylight from a large window creating soft overexposure, 24 mm wide‑angle lens, f/4.0, 1/60 s, ISO 400, everything in focus, slight motion blur, off‑center framing, raw unprocessed look, no filters.”

@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A woman with long, wavy brown hair, wearing a bright yellow bikini, stands on a pristine white‑sand beach, back to the camera, hands raised as if adjusting her hair or shielding her eyes from the sun. She is mid‑step, one foot slightly ahead of the other, capturing a spontaneous, candid moment.
+
+- **Pose & Motion**  
+  Slight motion blur at the wrists and feet, indicating handheld instability and a natural freeze‑frame. The image has an auto‑HDR feel but no color grading or post‑processing filters—just raw, ambient light.
+
+- **Lighting & Exposure**  
+  Slight overexposure on the upper part of the frame, giving a warm, sunlit glow; the exposure is uneven, with the sky a bit brighter than the sand. The lighting suggests early afternoon, when the sun is high but not directly overhead.
+
+- **Lens & Technical Settings**  
+  Wide‑angle lens (24‑35 mm), short focal length, everything in focus from foreground to background—no bokeh, no depth‑of‑field blur. No portrait‑mode subject isolation; the background (the white limestone cliffs and turquoise water) remains fully sharp.
+
+- **Composition & Framing**  
+  No intentional rule‑of‑thirds—framing is accidental, slightly tilted, off‑center. The shot captures a partial crop of the woman’s lower back and the beach’s shoreline, with a few scattered pieces of seaweed on the sand in the lower left corner.
+
+- **Environment & Time**  
+  Location: a secluded Mediterranean beach with white limestone cliffs rising behind the shore. Time of day: mid‑afternoon, around 2 pm, with bright, warm sunlight and light wind. Weather: clear, slightly humid, with a faint haze over the water. The sea is a calm turquoise, with small white waves breaking near the shore.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, a handheld “in‑the‑moment” feel. A few stray pieces of seaweed lie on the sand near the woman’s left foot. The woman’s shadow falls to the right, slightly off‑center, adding realism. The image retains a raw, unprocessed look—no filters or color grading, just natural auto‑HDR and auto‑beauty mode off.
+
+- **Final Prompt**  
+  “A candid, wide‑angle shot of a woman in a yellow bikini standing on a white‑sand beach, back to the camera, hands raised as if adjusting her hair. Slight motion blur at the wrists and feet, subtle overexposure on the sky, everything in focus from foreground cliffs to background sea. The scene is set mid‑afternoon under bright, warm sunlight, with a few scattered seaweed pieces on the sand. Capture the raw, unprocessed, auto‑HDR feel of a spontaneous, handheld snapshot.”

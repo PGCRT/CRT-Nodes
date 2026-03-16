@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy blonde hair tied in a loose ponytail, wearing a black lace off‑shoulder top and white cargo pants. She is captured mid‑turn, hand on hip, body angled toward the camera with a slight sideways tilt. Her face is turned away from the lens, giving an unposed, candid feel.
+
+- **Motion & Focus**  
+  Slight motion blur at the edges from handheld shake; everything in focus—no portrait‑mode depth of field. The blur is subtle, preserving sharpness across the frame while adding a natural, spontaneous vibe.
+
+- **Lighting & Exposure**  
+  Natural daylight coming from a large window on the left, creating soft highlights on her back and pants. Slight overexposure in the upper right corner to emphasize ambient light. No auto‑HDR or color grading—raw, unprocessed look.
+
+- **Environment**  
+  A bright, modern living room with a white sofa, wooden floor, and a large window that lets in natural light. The background is fully sharp, no bokeh. The scene is captured at midday, with warm, slightly hazy sunlight.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24‑35 mm), short focal length. No rule‑of‑thirds intentionality—framing is accidental and off‑center. All elements are in focus; no portrait mode or subject isolation.
+
+- **Composition Notes**  
+  The shot is slightly cropped on the right side, giving a partial‑crop effect. The camera is held at eye level, with a slight downward angle to capture the subject’s back and the sofa behind her. The composition feels spontaneous, as if the subject was caught mid‑action.
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, zero post‑processing aesthetic. Only raw, natural details are preserved.

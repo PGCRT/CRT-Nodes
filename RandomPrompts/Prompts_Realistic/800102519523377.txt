@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A pregnant woman in a red string bikini, mid‑stretch on a white bed sheet. Her left hand rests on her belly, fingers slightly curled, nails painted white. The camera is positioned low, almost at eye level, capturing a wide‑angle shot that includes part of her thigh, the curve of her back, and a small portion of a vase with white flowers in the background.  
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the woman appears unaware of the camera, caught mid‑action. Slight tilt and off‑center framing give an accidental, handheld feel. The composition is not intentionally rule‑of‑thirds; it’s a natural, imperfect crop that includes a bit of the bed’s seam and a faint hint of a pillow.  
+
+- **Motion & Focus**  
+  A slight motion blur from a short‑focal‑length wide‑angle lens (24–35 mm) gives a raw, live feel. Everything remains fully sharp — no portrait‑mode depth‑of‑field blur. The background is in focus, including the vase and a hint of a white pillow, creating a truly present‑moment capture.  
+
+- **Lighting & Exposure**  
+  Zero studio lighting; the scene is lit by natural daylight coming from a window on the left. A mild overexposure on the subject’s belly creates a warm, soft glow, while the background stays slightly cooler. No auto‑HDR or beauty filters — just an authentic, unprocessed look.  
+
+- **Environment**  
+  A bright, airy bedroom in the late morning. The time of day is about 10:30 AM, with soft, diffused sunlight. A white vase with two white roses sits on a small side table behind the bed; a pale pillow rests against the headboard. The room’s walls are a light beige, and a wooden frame is visible on the left.  
+
+- **Lens & Technical**  
+  Short focal length (24–35 mm), wide‑angle lens. No bokeh — the background is fully sharp. Aperture set to f/5.6 for moderate depth of field. Slight handheld shake results in a natural blur on the subject’s belly and hand. Exposure compensated for ambient light with a slight overexposure on the foreground.  
+
+- **Post‑Processing**  
+  No filters, no color grading, no auto‑beauty mode. A quick crop and a subtle contrast boost are all that’s applied. The final image retains a raw, candid feel while still looking polished enough to be considered a professional photograph.
+
+**Prompt Summary (for AI image generator)**  
+> “A pregnant woman in a red string bikini stretching on a white bed sheet, low‑angle wide‑angle shot with slight motion blur and accidental framing. Natural daylight from the left, mild overexposure on the subject. Background includes a white vase with two roses and a pale pillow, all in focus. Capture the candid, unposed moment as if the woman is unaware of the camera. No filters or heavy post‑processing — just a raw, authentic photograph.”

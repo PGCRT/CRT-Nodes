@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with light brown hair, mid‑adjustment of a lavender lace bra, hands gently pulling the straps upward. Her face is partially out of frame—only the lower half visible—creating an off‑center, accidental composition. She’s standing on a sunlit beach, toes slightly lifted, body angled toward the camera as if she’s just finished a quick pose or is adjusting her outfit mid‑walk.
+
+- **Clothing & Details**  
+  Lavender lace bra with floral motifs and delicate trim; thin straps that drape over her shoulders. The lace has subtle frayed edges, giving a raw, unprocessed feel. Her skin is tanned, with natural texture and slight imperfections—small moles, faint freckles—captured in a wide‑angle shot that keeps the entire upper body in focus.
+
+- **Environment**  
+  Tropical beach at late afternoon; the sand is light beige, the ocean horizon is visible in the background, the sky is a soft pale blue with a hint of warm golden light. The weather is breezy, with a slight wind moving her hair and the lace straps. The scene is fully sharp—no bokeh, no depth‑of‑field blur—because the wide lens keeps everything in focus.
+
+- **Lens & Technical**  
+  24 mm wide‑angle lens (short focal length). Handheld, slightly unstable, producing a natural motion blur on the subject’s hands and the straps. No auto‑HDR or auto‑beauty mode; the image is raw, with slight overexposure in the sky to capture the ambient light. The framing is accidental—no rule‑of‑thirds intentionality, just a casual, candid snapshot.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—the woman appears unaware of the camera, mid‑action. Slight tilt and partial crop give an authentic, imperfect feel. Zero studio lighting, zero professional composition, zero editorial tone. The entire scene is in focus, from her skin to the sand, with natural motion freeze or slight blur from handheld instability.
+
+- **Post‑Processing**  
+  No filters, no color grading, no post‑processing aesthetic—just a straight capture that preserves the raw texture and natural lighting.  
+
+**Prompt Summary**  
+> “A young woman on a sunlit beach, mid‑adjustment of a lavender lace bra, captured with a 24 mm wide‑angle lens in a candid, unposed shot. The image has slight motion blur from handheld shake, accidental off‑center framing, and full sharpness across the scene. The background shows a clear late‑afternoon sky and ocean horizon, with natural lighting and no post‑processing filters.”

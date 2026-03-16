@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with dark hair tied in a messy high ponytail, wearing a faded denim jacket over a graphic tee that reads “DREAM” with a small portrait print. Her left leg is slightly bent, and she’s mid‑step on a city sidewalk, one foot planted and the other pushing forward. She’s smiling broadly, head tilted to the right, eyes bright, capturing a spontaneous moment of joy.
+
+- **Motion & Focus**  
+  Slight motion blur at the edges from handheld instability; the subject’s face and upper body are in sharp focus while the background remains fully sharp—no bokeh. The image has a raw, unprocessed look: no auto‑HDR or beauty filters, just natural lighting with a hint of overexposure on the upper left to emphasize the ambient daylight.
+
+- **Framing & Composition**  
+  Wide‑angle lens (24–35 mm) capturing a broad view of the scene. The frame is intentionally off‑center: the subject’s left side cuts close to the right edge, creating a casual, candid feel. No rule‑of‑thirds—just spontaneous framing that includes part of a storefront window, a passing pedestrian in the background, and a tree line on the far right.
+
+- **Environment**  
+  Location: a bustling downtown street with a coffee shop front (sign “CAFE” visible), a concrete sidewalk, and a row of brick buildings. Time of day: late afternoon, soft golden light from the west, creating warm highlights on the subject’s jacket. Weather: lightly breezy, with a few leaves blowing across the pavement.
+
+- **Lens & Technical**  
+  Short focal length (30 mm), wide‑angle, all elements in focus—no depth‑of‑field blur. The image is shot in natural daylight with a slightly high‑ISO to keep everything crisp. No studio lighting or post‑processing color grading; the only “filter” is the slight overexposure on the upper left corner that gives a natural, candid feel.
+
+- **Details & Imperfections**  
+  The denim jacket’s cuffs are rolled up, revealing a hint of her bare ankle and strappy sandal. Her hair has a few loose strands caught in the wind. A small portion of another pedestrian’s leg is visible on the far right, adding to the candid vibe. The sidewalk shows a pattern of dark circular pavers, and a faint reflection can be seen in the storefront window.
+
+- **Final Prompt**  
+  “A young woman with dark hair in a messy high ponytail, wearing a faded denim jacket over a graphic tee that reads ’DREAM’, mid‑step on a downtown sidewalk, smiling broadly with head tilted right. Slight motion blur from handheld shake, all elements in focus, wide‑angle 30 mm lens, raw natural daylight with slight overexposure on the upper left. Candid, unposed framing that cuts close to the right edge, including a coffee shop sign and a passing pedestrian’s leg in the background. Late afternoon golden light, breezy weather, concrete pavement with dark pavers, storefront reflection, tree line on the right.”

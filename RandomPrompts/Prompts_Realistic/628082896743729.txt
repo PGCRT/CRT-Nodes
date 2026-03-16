@@ -1,0 +1,23 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, athletic woman with long, wavy brown hair, wearing a bright yellow tie‑front bikini top and matching bottoms, sitting on a white bed. Her arms are slightly bent, one hand resting on the mattress, the other near her hip. She’s smiling softly, eyes focused forward, as if caught mid‑pose in a casual, spontaneous moment.
+
+- **Motion & Focus**  
+  Slight motion blur at the edges from handheld shake; everything in focus—no portrait‑mode depth of field. A subtle overexposure on the face and upper body to keep the ambient light warm.
+
+- **Lighting & Color**  
+  Natural daylight from a side window, mid‑afternoon. Warm, slightly hazy sunlight creates a gentle glow on the subject’s skin and the white bedding. No filters or color grading—raw, unprocessed look.
+
+- **Environment**  
+  A cozy hotel room with a wooden headboard, white pillows, and a small bedside lamp in the background. The wall has a subtle diamond‑pattern wallpaper. The time of day is late afternoon, giving a soft, golden hue.
+
+- **Lens & Technical**  
+  24 mm wide‑angle lens, short focal length. No bokeh—background fully sharp. Slight tilt and off‑center framing; the composition feels accidental, not intentional rule‑of‑thirds. The shot is slightly cropped on the left side to give a candid feel.
+
+- **Style Notes**  
+  Candid, unposed, spontaneous—subject appears unaware of the camera. Imperfections encouraged: slight tilt, off‑center framing, partial crop. Zero studio lighting, zero professional composition, zero editorial tone. Natural motion freeze or slight blur from handheld instability.
+
+**Prompt:**
+
+> “A tall, athletic woman with long wavy brown hair sits on a white bed in a hotel room, wearing a bright yellow tie‑front bikini top and matching bottoms. Her arms are slightly bent, one hand resting on the mattress, the other near her hip; she smiles softly as if caught mid‑pose. Slight motion blur at the edges from handheld shake keeps everything in focus—no portrait mode. Warm natural daylight from a side window hits her face and upper body with a gentle overexposure. The background shows a wooden headboard, white pillows, and a bedside lamp; the wall has a subtle diamond pattern. Shot on a 24 mm wide‑angle lens, with slight tilt and off‑center framing that gives an accidental, candid feel. No filters or color grading—raw, unprocessed look.”

@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair, wearing a cream‑colored, long‑sleeved robe adorned with floral embroidery on the shoulders and cuffs. She is standing behind a rough stone table, leaning slightly forward as if she’s about to arrange or examine the items on it. Her hands are mid‑motion, one hand gently touching a clear crystal, the other near a cluster of polished gemstones. The pose is candid—she appears unaware of the camera, captured in a spontaneous moment.
+
+- **Action & Motion**  
+  Slight motion blur on the hands and the crystals, indicating a handheld shot taken at a natural, moderate shutter speed. The blur is subtle, not excessive, giving the image a raw, unprocessed feel.
+
+- **Lighting & Exposure**  
+  Natural daylight coming from a high‑angle window behind the subject, creating a soft overexposure on the upper part of the frame. The lighting is uneven—slightly brighter at the top, with a gentle gradient that fades into the blue curtains. No auto‑beauty mode; the image retains a natural, unfiltered look.
+
+- **Environment**  
+  The setting is an indoor, rustic room with a stone table, heavy blue curtains tied with tassels on either side, and brass lanterns hanging from the ceiling. The time of day is late morning, as the sunlight casts warm highlights on the woman’s face and the crystals. The weather outside is clear, adding to the bright ambient light.
+
+- **Lens & Technical**  
+  A wide‑angle lens (24 mm) is used, capturing a broad view of the scene with a short focal length. Everything—from the subject to the background—is in focus; no bokeh or depth‑of‑field blur. The framing is accidental: the composition is slightly off‑center, with a slight tilt that gives a candid feel. No rule‑of‑thirds intentionality—everything is captured as it naturally appears.
+
+- **Details & Imperfections**  
+  The image has a raw, unprocessed look: no filters, no color grading, no post‑processing aesthetic. Slight imperfections are present—a tiny smudge on the woman’s robe, a slight tilt of the camera, and a partial crop that cuts off the top left corner of the curtain. The background is fully sharp, with the blue curtains and lanterns clearly visible.
+
+- **Final Prompt**  
+  “A candid, wide‑angle shot of a young woman in a cream embroidered robe leaning over a stone table, arranging crystals and gemstones. Her hands are mid‑motion with slight blur, natural daylight from behind creates soft overexposure, the scene is set in a rustic room with blue curtains and brass lanterns. Capture everything in focus with a 24 mm lens, accidental framing, no filters or post‑processing, raw and unprocessed look.”

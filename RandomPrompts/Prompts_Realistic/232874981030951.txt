@@ -1,0 +1,23 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a warm, natural smile, captured mid‑gesture while holding a disposable coffee cup. Her hair is loosely tied back with a few strands framing her face; she wears an olive‑green field jacket over a white top, and a thin brown leather strap from a shoulder bag is visible across her right shoulder. Her left hand grips the cup, fingers slightly curled, with a subtle motion blur indicating movement. The camera is positioned at a low angle, almost at eye level, creating a wide‑angle, “handheld” feel.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject appears unaware of the camera, caught in a natural moment. Slight tilt and off‑center framing give an accidental, informal composition. The shot is partially cropped on the right side, leaving a small portion of a passerby’s white sleeve out of frame. No rule‑of‑thirds intentionality; the framing is organic and imperfect.
+
+- **Environment**  
+  A bustling city street in the late afternoon. The background shows a brick building with a “Caffè” sign, a sidewalk, and a traffic light that glows orange. A few pedestrians are visible in the distance, blurred slightly due to motion. The time of day is around 4 pm, with soft, warm ambient light that creates a mild overexposure on the subject’s face and a gentle shadow under the coffee cup.
+
+- **Lens & Technical**  
+  Short focal length (20–35 mm) wide‑angle lens, handheld. Everything is in focus from foreground to background; no bokeh or depth‑of‑field blur. The image has a raw, unprocessed look: no filters, no color grading, no post‑processing aesthetic. Slight overexposure on the subject’s face and cup, giving a natural brightness. Auto‑HDR or auto‑beauty mode is off. The overall tone is natural, with a slight warmth from the ambient light.
+
+- **Details & Imperfections**  
+  - Slight motion blur on the coffee cup and the woman’s hand.  
+  - Minor tilt of the camera, making the horizon line slightly diagonal.  
+  - Partial crop on the right side, cutting off part of the background sidewalk.  
+  - Background is fully sharp; no “portrait mode” isolation.  
+  - No studio lighting; all light comes from natural daylight.
+
+- **Final Prompt**  
+  *“A young woman with a warm, natural smile, captured mid‑gesture while holding a disposable coffee cup on a bustling city street at late afternoon. She wears an olive‑green field jacket over a white top, with a brown leather strap from a shoulder bag visible across her right shoulder. Her left hand grips the cup, fingers slightly curled, with a subtle motion blur indicating movement. The camera is positioned at a low angle, almost at eye level, creating a wide‑angle, handheld feel. Candid, unposed, spontaneous — the subject appears unaware of the camera, caught in a natural moment. Slight tilt and off‑center framing give an accidental, informal composition. The shot is partially cropped on the right side, leaving a small portion of a passerby’s white sleeve out of frame. No rule‑of‑thirds intentionality; the framing is organic and imperfect. A bustling city street in the late afternoon provides a brick building with a “Caffè” sign, a sidewalk, and an orange traffic light in the background. A few pedestrians are visible in the distance, blurred slightly due to motion. The time of day is around 4 pm, with soft, warm ambient light that creates a mild overexposure on the subject’s face and a gentle shadow under the coffee cup. Short focal length (20–35 mm) wide‑angle lens, handheld. Everything is in focus from foreground to background; no bokeh or depth‑of‑field blur. The image has a raw, unprocessed look: no filters, no color grading, no post‑processing aesthetic. Slight overexposure on the subject’s face and cup, giving a natural brightness. Auto‑HDR or auto‑beauty mode is off. The overall tone is natural, with a slight warmth from the ambient light.”*

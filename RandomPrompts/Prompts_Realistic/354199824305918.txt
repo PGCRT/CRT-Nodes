@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman with voluminous, sun‑kissed curls standing at a tall, white‑framed window in a bright, minimalist hallway. She’s wearing a thin black bikini tie‑front and thong, leaning forward with one hand on the frame, her face turned slightly downward as if she’s about to step out or catch a reflection. Her body is angled toward the camera but not perfectly centered—slight tilt and off‑center framing give a spontaneous, candid feel.
+
+- **Motion & Focus**  
+  Slight motion blur from handheld instability; everything in focus—no portrait‑mode depth of field. The blur is subtle, just enough to hint at movement while keeping the background fully sharp. No auto‑HDR or auto‑beauty mode—raw, unprocessed look.
+
+- **Lighting & Exposure**  
+  Natural daylight coming from a high‑angle window, creating soft shadows and a gentle overexposed highlight on the woman’s back. Slight ambient warmth suggests late‑afternoon sun. No studio lighting, no color grading, no post‑processing aesthetic.
+
+- **Environment**  
+  A clean, white‑painted hallway with a wooden floor, a closed door on the left, and a large window on the right. The time of day is early evening—warm, golden light fills the space, casting long shadows of the woman onto the wall. Weather is clear, no wind, quiet.
+
+- **Lens & Technical**  
+  Short focal length (≈20 mm) wide‑angle lens; no bokeh, background fully sharp. No rule‑of‑thirds intentionality—accidental framing with a slight crop that keeps the scene natural and spontaneous. All elements in focus: subject, window frame, floor, door, and wall.
+
+- **Composition Notes**  
+  Capture a candid, unposed moment where the subject appears unaware or mid‑action. Encourage imperfections: slight tilt, off‑center framing, partial crop. Keep the composition “zero studio lighting, zero professional composition, zero editorial tone.”  
+
+**Prompt Summary**  
+> “A woman in a black bikini tie‑front and thong leans against a tall white window frame in a bright hallway, captured with a 20 mm wide‑angle lens. Slight motion blur and full focus give a raw, candid feel; the scene is lit by warm late‑afternoon sunlight, casting soft shadows on the white walls and wooden floor. The composition is accidental—slightly tilted, off‑center, partially cropped—with no rule‑of‑thirds, no filters, no post‑processing, everything in focus, creating a realistic, spontaneous photograph.”

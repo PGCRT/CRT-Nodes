@@ -1,0 +1,16 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair standing in a sunlit hallway. She is bare‑shouldered, wearing a simple black skirt that sits at the hips. Her head is slightly tilted, her gaze directed toward the camera but not fully focused—mid‑action, as if she just finished a gesture or is about to speak. The framing is off‑center, with the left side of her torso cut off by the edge of the frame; the composition feels spontaneous and unposed.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. Slight motion blur on the hands and shoulders to suggest handheld shake. No filters, no color grading, no post‑processing aesthetic—raw, natural look. A hint of overexposure in the upper right corner from a bright window, creating a soft halo around her face.
+
+- **Environment**  
+  Specific real‑world location: a narrow, unfinished hallway with plaster walls and a single yellow-painted wooden door frame on the right. Time of day: late afternoon, ambient light coming from a high window, casting warm, diffused sunlight across the scene. Weather or ambient conditions: clear, mild, no wind.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm), wide‑angle lens. No bokeh—background fully sharp, everything in focus. No portrait mode or subject isolation; depth of field is uniform. Slight tilt and partial crop give an accidental, informal feel. All elements are crisp from top to bottom, with a natural motion freeze or slight blur from handheld instability.
+
+- **Prompt Summary**  
+  “A candid, wide‑angle shot of a bare‑shouldered woman with long wavy hair standing in a sunlit hallway, captured with a short focal length lens at late afternoon. The image shows a spontaneous, mid‑action pose with slight motion blur and accidental off‑center framing, raw and unprocessed, with a hint of overexposure from a high window, all in focus with no bokeh.”

@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair standing on a sunlit beach, wearing a dark, one‑piece swimsuit with a deep V‑front and a visible zipper. She is mid‑step, left foot slightly ahead, arms relaxed at her sides, head tilted a little to the right, eyes focused forward. Her expression is natural, unposed, with a subtle smile.
+
+- **Motion & Focus**  
+  Slight motion blur on the lower legs and feet, indicating handheld shake. Everything in the frame — subject, sand, rocks, sea — is fully sharp; no bokeh or depth‑of‑field blur. No “portrait mode” isolation.
+
+- **Lighting & Exposure**  
+  Natural mid‑afternoon sunlight, slightly overexposed on the upper body and face, giving a warm, raw look. No auto‑HDR or auto‑beauty filters. The exposure is uneven: the sky is a bit brighter than the sand, creating a subtle contrast.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24 mm), short focal length. All elements are in focus — no “rule of thirds” intentionality; framing is accidental, slightly off‑center, with a slight tilt. No studio lighting, no post‑processing color grading.
+
+- **Environment**  
+  A rocky beach with large, rounded boulders scattered behind the subject, the ocean visible in the background. The time of day is late afternoon, with warm, golden light casting soft shadows. Weather is clear, with a light breeze evident from the slight ripples on the sand.
+
+- **Composition & Details**  
+  The shot captures the subject from a low angle, making her appear taller and more commanding. The background is fully sharp, no depth‑of‑field blur. The composition is spontaneous: the subject’s left side is slightly cut off by the frame edge, giving an informal, candid feel. The overall tone is naturalistic, as if captured in a casual, everyday moment.
+
+**Prompt:**  
+"A young woman with long wavy brown hair, wearing a dark one‑piece swimsuit with a deep V‑front and visible zipper, stands on a sunlit beach in mid‑step, left foot ahead, arms relaxed, head tilted right, eyes forward. Slight motion blur on the lower legs and feet. Natural mid‑afternoon sunlight, slight overexposure on the upper body and face. Wide‑angle 24 mm lens, everything fully sharp. Rocky beach with large boulders behind, ocean in background, clear weather, late afternoon golden light. Low‑angle shot, accidental off‑center framing, slight tilt. No filters, no auto‑HDR, raw unprocessed look."

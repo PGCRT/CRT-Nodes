@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair, wearing a simple silver necklace and large hoop earrings, leaning casually over a fresh palm frond. Her hands rest gently on the leaf, one hand adorned with a diamond ring, fingers slightly curled as if she just caught the frond mid‑swing. She is bare‑shouldered, in a natural, unposed stance, eyes closed or half‑closed, giving an air of relaxed contemplation.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. Slight tilt and off‑center framing; the composition is accidental, not rule‑of‑thirds. The shot has a raw, unprocessed look: no filters, no color grading, no post‑processing aesthetic. A hint of slight overexposure from ambient daylight gives a warm, natural glow.
+
+- **Motion & Focus**  
+  Slight motion blur from handheld instability, but everything remains fully sharp — no bokeh, no depth‑of‑field blur. The background is completely in focus, preserving every detail.
+
+- **Lens & Technical**  
+  Wide‑angle lens (short focal length, ~24 mm). Auto‑HDR or auto‑beauty mode off. No studio lighting; all light comes from natural daylight. All elements — subject, palm frond, background — are in focus.
+
+- **Environment**  
+  Location: a tropical beach with the ocean visible in the background, a few palm trees swaying, and a bright, slightly hazy sky. Time of day: late morning, around 10:30 AM, when the sun is high but still warm. Weather: light breeze, clear but not cloud‑free, ambient light gives a soft overexposure.
+
+- **Additional Details**  
+  The palm frond is fresh, green, with visible veins; it sits at an angle that creates a natural “L” shape with the woman’s arm. Her necklace has a small pendant that catches the light. The ring on her left hand is a simple solitaire. The background shows a faint silhouette of another palm tree and a hint of the sea, all in focus.
+
+- **Prompt Summary**  
+  *“A young woman with long wavy brown hair, bare‑shouldered, leaning over a fresh palm frond on a tropical beach at late morning. She wears a silver necklace, hoop earrings, and a diamond ring. The shot is candid, slightly tilted, accidental framing, wide‑angle lens, all in focus, slight motion blur from handheld shake, raw unprocessed look with mild overexposure. Background shows ocean and another palm tree, fully sharp.”*

@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, athletic woman with long, straight blonde hair, wearing a tight white long‑sleeved crop top that reveals her midriff and a sheer, skin‑tone skirt that clings to her curves. She stands in a bright, sunlit kitchen, facing the camera at a slight angle, one hand on her hip, the other relaxed by her side. Her expression is casual, almost unaware of the lens—mid‑pose, as if she just finished cooking or is about to.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject appears natural and unscripted, slightly tilted framing that gives a hand‑held feel. The shot has a subtle motion blur on the edges from a handheld camera, with a tiny overexposure in the highlights that keeps the image raw and unprocessed. No filters, no color grading, no post‑processing aesthetic—just the pure, unfiltered moment.
+
+- **Environment**  
+  Location: A modern, open‑concept kitchen with light‑wood cabinets, a white countertop, and a small window that lets in warm, mid‑afternoon sunlight. A vase of pink roses sits on the counter, a kettle is visible in the background, and a small potted plant hangs near the wall. The time of day is late afternoon, around 4:30 pm, with soft, golden light that creates gentle shadows and a slight haze. Weather is clear, with a faint breeze that ruffles her hair.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm) wide‑angle lens, giving a broad field of view that captures the entire scene without cropping too tightly. No bokeh—everything from foreground to background is fully sharp. The depth of field is wide, so all elements are in focus: the subject, the countertop, the vase, the kettle, and the plant. No portrait‑mode “subject isolation” blur; it’s a flat, crisp capture.
+
+- **Composition Notes**  
+  The framing is accidental—no rule‑of‑thirds intentionality. The camera is slightly off‑center, with the subject’s left side cutting close to the left edge of the frame. The top of the image shows a portion of the ceiling light fixture, and the bottom cuts just below her thighs, giving a “full‑body” look. The background is fully sharp, so you can see the kitchen cabinets, the window, and the potted plant in detail.
+
+- **Lighting & Exposure**  
+  Natural daylight from the window creates a warm, slightly overexposed highlight on the subject’s face and upper body. The exposure is a little high in the highlights but still retains detail in the shadows. No auto‑HDR or auto‑beauty mode—just raw, unprocessed light.
+
+- **Final Prompt**  
+  “A tall, athletic woman with long, straight blonde hair, wearing a tight white long‑sleeved crop top and a sheer skin‑tone skirt, standing in a bright, sunlit kitchen at late afternoon. She is mid‑pose, one hand on her hip, the other relaxed by her side, with a casual, unaware expression. The shot is captured on a 24‑35 mm wide‑angle lens, everything fully sharp from foreground to background, with slight motion blur and a tiny overexposure that gives a raw, unprocessed look. The kitchen has light‑wood cabinets, a white countertop, a vase of pink roses, a kettle, and a small potted plant near the wall. The time is 4:30 pm, the light is warm golden, the weather clear with a faint breeze. The framing is accidental, slightly off‑center, no rule‑of‑thirds, capturing the full body from head to toe, with the ceiling light fixture visible at the top and the woman’s thighs extending below the bottom edge.”

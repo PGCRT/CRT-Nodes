@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, athletic woman with long, sun‑kissed blonde hair sitting on a concrete ledge by the sea. She wears a black fishnet bodysuit that clings to her curves, catching the warm light. Her left hand rests on the ledge, right arm bent, head tilted slightly to the side, eyes locked on the camera with a subtle smirk. A thin gold necklace sits around her neck, a small detail that adds contrast.
+
+- **Lighting & Exposure**  
+  Late‑afternoon sunlight creates a soft overexposure on the subject’s face and upper body; the background is lightly underexposed to keep the scene raw. The light comes from the left, casting gentle shadows on her right side. Slight handheld shake gives a natural motion blur around the edges.
+
+- **Environment**  
+  Beach setting on a quiet, windswept morning. The ocean stretches behind her, with small waves breaking near the shore. A faint line of distant hills is visible on the horizon. The sky is a pale, warm gray‑blue, indicating the sun’s low angle. The ground is a rough concrete slab, slightly uneven, with a few cracks and moss patches.
+
+- **Lens & Technical**  
+  24 mm wide‑angle lens, f/4.0 aperture, 1/60 s shutter speed, ISO 400. Everything in focus from foreground to background; no bokeh. No portrait mode or depth‑of‑field blur—just a fully sharp scene captured with a handheld camera.
+
+- **Composition & Framing**  
+  Off‑center candid framing: the subject’s left side is slightly cut off by the frame edge, giving an accidental, spontaneous feel. The shot is not rule‑of‑thirds aligned; the composition is driven by the natural tilt of the camera and the subject’s pose.
+
+- **Post‑Processing**  
+  No filters, no color grading, no auto‑beauty mode. Raw, unprocessed look with only basic white‑balance adjustment. Slight overexposure on the subject, underexposure on the background, preserving the ambient light’s natural tone.
+
+- **Final Prompt**  
+  “A tall woman in a black fishnet bodysuit sits on a concrete ledge by the sea at late afternoon, her left hand resting on the ledge and right arm bent, head tilted to the side with a subtle smirk. She wears a thin gold necklace. The ocean stretches behind her, small waves breaking near the shore, distant hills on the horizon, pale warm gray‑blue sky. Late‑afternoon sunlight creates soft overexposure on her face; background is lightly underexposed. 24 mm wide‑angle lens, f/4.0, 1/60 s, ISO 400—everything in focus. Handheld shake gives natural motion blur. Off‑center candid framing, slight crop on the left side. Raw, unprocessed, no filters.”

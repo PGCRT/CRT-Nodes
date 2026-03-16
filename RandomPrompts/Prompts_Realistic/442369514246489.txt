@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, curvy woman with long brown hair, wearing a teal halter‑style bikini, standing on a sunlit beach. She’s mid‑step, hands on hips, feet planted in the sand, toes slightly turned outward. Her left leg is bent at the knee, right leg straight; her body leans a little to the right, giving a casual, unposed feel. A faint motion blur around her knees and hands suggests she’s just caught in a natural movement.
+
+- **Appearance & Details**  
+  The bikini has small metallic studs along the top strap, catching the light. Her skin is tanned, with a subtle sheen from the sun. A thin, diagonal scar runs from the inner thigh to the knee on each leg—visible but not overly emphasized. She’s barefoot, toes gripping the sand. A faint shadow of her body falls to the left, indicating sunlight coming from the right.
+
+- **Environment**  
+  The beach is wide, with fine, light‑colored sand that has gentle undulations. In the background, a line of tall palm trees leans slightly toward the center, their fronds blowing in the wind. The ocean is visible on the left side, with a few whitecaps and a distant pier. The sky is a bright, clear blue with a single thin cloud near the top left.
+
+- **Time of Day & Lighting**  
+  Mid‑afternoon, around 3 pm, when the sun is high but not directly overhead. The light is warm, slightly overexposed on the subject’s face and upper body, giving a natural, raw look. No color grading or filters—just the ambient daylight.
+
+- **Lens & Technical**  
+  Use a wide‑angle lens (24 mm or 35 mm). Capture everything in focus—from the woman’s feet to the top of the palm trees—no bokeh. Slight handheld shake gives a natural motion blur around the edges. The framing is off‑center; the subject isn’t centered, and the composition is accidental, not rule‑of‑thirds. Keep the background fully sharp, no portrait mode.
+
+- **Capture Style**  
+  Candid, spontaneous—she’s unaware of the camera, mid‑action. Slight tilt in the camera gives a casual, imperfect feel. The shot is a “raw” snapshot, as if taken by an amateur with a smartphone or DSLR, but with high resolution. No post‑processing, no auto‑beauty mode, just a genuine, unfiltered image.
+
+- **Prompt Summary**  
+  *“A tall woman in a teal bikini stands on a sunny beach at mid‑afternoon, hands on hips, barefoot, with a faint scar on each thigh. She’s mid‑step, slightly leaning right. The background shows palm trees and a distant pier under a bright blue sky. Capture with a wide‑angle lens, everything in focus, slight motion blur from handheld shake, accidental off‑center framing, raw, unprocessed look.”*

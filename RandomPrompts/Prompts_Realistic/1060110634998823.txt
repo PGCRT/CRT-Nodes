@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy blonde hair tied in a loose side ponytail, wearing a deep‑V, halter‑style coral jumpsuit that drapes softly over her torso and flows to mid‑calf. She stands on a sunlit stone pathway, hands relaxed at her sides, head tilted slightly upward as if she’s just noticed something in the distance. Her expression is candid—eyes bright, mouth open in a natural smile, a hint of teeth visible. The jumpsuit’s fabric has subtle vertical pleats that catch the light, and a small high‑slit on the side reveals a glimpse of her thigh.
+
+- **Lighting & Exposure**  
+  Warm, golden hour sunlight from the west creates a slight overexposure on the subject’s face and upper body, with a gentle halo effect around her hair. The exposure is slightly uneven—the background is a bit brighter than the foreground, giving a raw, unprocessed look. No auto‑HDR or beauty filters; just natural ambient light with a handheld, slightly unstable shake that gives a mild motion blur to the entire frame.
+
+- **Environment**  
+  The setting is an outdoor garden path lined with tall, spiky palm‑like plants on both sides. The path is made of rectangular stone slabs, slightly uneven and worn, leading into a blurred green backdrop of foliage and trees. The time of day is late afternoon, around 6 pm, when the sun is low but still high enough to keep the background fully sharp. The weather is clear, with a light breeze that ruffles the leaves and the woman’s hair.
+
+- **Lens & Technical**  
+  Use a wide‑angle lens (24–35 mm) with a short focal length to capture a broad view of the scene. Everything—from the subject to the background—is in focus; no portrait‑mode depth‑of‑field blur. The composition is accidental: the frame is slightly tilted, the subject is off‑center, and the crop is partial—no rule‑of‑thirds intentionality. The image has a natural motion freeze or slight blur from handheld instability, giving it a candid, spontaneous feel.
+
+- **Post‑Processing**  
+  No filters, no color grading, no post‑processing aesthetic. Keep the raw, unprocessed look with only basic white‑balance adjustments and a subtle exposure tweak. Preserve the natural tones and textures of the fabric, skin, and foliage.
+
+**Prompt Summary**  
+“Candid photo of a woman in a coral halter jumpsuit standing on a sunlit stone pathway in a garden, late afternoon golden hour light, slight overexposure and handheld blur, wide‑angle lens, everything in focus, accidental framing, raw unprocessed look.”

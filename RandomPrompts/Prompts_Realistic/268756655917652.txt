@@ -1,0 +1,35 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman with long, dark hair, wearing a red polka‑dot bikini, standing in a modern bathroom. She is mid‑turn, one hand on her hip, the other slightly extended, as if she just finished a shower. Her pose is casual and unposed; she appears to be unaware of the camera, giving a spontaneous, candid feel.
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window, slightly overexposed on the right side to keep the scene bright and airy. No auto‑HDR or beauty filters—just raw, unprocessed light. The exposure is a little high on the highlights, giving a subtle halo around her body and the glass shower screen.
+
+- **Camera & Lens Settings**  
+  - Lens: 24 mm wide‑angle, short focal length for a broad field of view.  
+  - Aperture: f/5.6 (handheld, no bokeh).  
+  - Shutter speed: 1/125 s (slight motion blur from handheld instability).  
+  - ISO: 400 (for clean detail without noise).  
+  Everything is in focus—no portrait‑mode depth of field blur; the background (white subway tiles, glass shower screen, small potted plant) remains sharp.
+
+- **Composition & Framing**  
+  - No rule‑of‑thirds intentionality: the frame is slightly tilted, off‑center, and partially cropped on the left and right edges.  
+  - The subject occupies roughly two‑thirds of the vertical space, with her lower body extending near the bottom edge.  
+  - The glass shower screen runs vertically along the left side, creating a subtle leading line.  
+  - A small potted plant sits in a recessed niche on the right wall, adding a touch of green to the white‑tone scene.
+
+- **Environment & Time**  
+  Location: A bright, contemporary bathroom with white subway tiles and a glass shower enclosure.  
+  Time of day: Late morning, when natural light is strong but not harsh.  
+  Weather/ambient conditions: Clear, slightly humid air; the ambient temperature is warm, giving a soft glow to the scene.
+
+- **Technical Details**  
+  - Capture style: Candid, unposed, spontaneous—subject unaware or mid‑action.  
+  - Imperfections encouraged: Slight tilt, off‑center framing, partial crop.  
+  - No rule‑of‑thirds intentionality — accidental framing.  
+  - Natural motion freeze or slight blur from handheld instability.  
+  - Zero studio lighting, zero professional composition, zero editorial tone.
+
+- **Final Prompt**  
+  “A woman with long dark hair in a red polka‑dot bikini stands mid‑turn in a bright, modern bathroom, natural daylight slightly overexposed on the right, captured on a 24 mm wide‑angle lens at f/5.6 and 1/125 s, everything in focus with no bokeh. The frame is slightly tilted and off‑center, partially cropped, with the glass shower screen running vertically along the left side and a small potted plant in a recessed niche on the right wall. The scene is candid and spontaneous, with subtle motion blur from handheld shake, white subway tiles, and a clear late‑morning light that gives a soft halo to the subject.”

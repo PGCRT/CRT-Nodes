@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, slender woman with long, dark wavy hair standing back-to-back against a plain white wall. Her back is slightly arched, arms raised high holding a sheer, translucent chiffon shawl that drapes elegantly over her shoulders and back. The shawl’s edges are softly frayed, catching the light in subtle, shifting highlights. She wears thin, sheer stockings that peek above her heels, adding a delicate detail to the lower leg. Her posture is mid‑movement, as if she just finished a dance or a playful gesture, with a faint motion blur around the edges of the shawl and hair.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the woman appears unaware of the camera, caught in a natural, fleeting moment. Slight tilt and off‑center framing give the shot an accidental, handheld feel. The composition is not intentionally rule‑of‑thirds; the subject occupies the central‑right portion of the frame, with the background extending to the left and right edges.
+
+- **Imperfections & Raw Aesthetic**  
+  Slight motion blur at the top of the shawl and hair, indicating a quick shutter speed. No auto‑HDR or auto‑beauty mode — the image retains a raw, unprocessed look. Minor overexposure on the upper part of the shawl, creating a soft halo. No filters, no color grading, no post‑processing aesthetic. The exposure is slightly uneven, with the white wall appearing a bit bright on the top and the lower legs a little darker, as if captured in natural daylight.
+
+- **Environment**  
+  Location: A minimalist studio or a plain white interior space, likely a gallery or a home studio. Time of day: Late afternoon, with warm, diffused sunlight coming from the left side, casting soft shadows on the wall. Weather or ambient conditions: Clear, calm air; no wind, but the subject’s hair and shawl have a slight motion blur as if she just moved.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm) wide‑angle lens, giving a slightly distorted perspective that enhances the sense of intimacy. No bokeh; the background is fully sharp, with everything in focus from the top of the shawl to the toes. No portrait mode or subject isolation — the entire scene, including the wall and the floor, remains crisp. The depth of field is wide, capturing every detail without a “portrait mode” blur.
+
+- **Final Prompt**  
+  "A tall woman with long dark wavy hair stands back‑to‑back against a plain white wall, arms raised holding a sheer chiffon shawl that drapes over her shoulders and back. She wears thin stockings above her heels. The shot is candid, slightly tilted, off‑center, captured on a 24‑35 mm wide‑angle lens with full sharpness. Slight motion blur surrounds the shawl’s edges, a faint overexposure at the top, no filters or post‑processing. The scene is lit by late afternoon sunlight from the left, creating soft shadows. Everything is in focus, no bokeh, no portrait mode."

@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, sun‑kissed blonde hair standing in a park, wearing a soft pink ribbed tank top and denim shorts. Her head is slightly tilted downward, eyes cast to the side, hands clasped in front of her torso as if she’s about to adjust her shirt or hold a small object. A few strands of hair blow lightly to the left, suggesting a gentle breeze.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject appears unaware of the camera, mid‑action. Slight tilt and off‑center framing give an accidental, handheld feel. The shot is a partial crop that doesn’t follow the rule‑of‑thirds; the composition feels organic and informal.
+
+- **Motion & Exposure**  
+  A subtle motion blur on the hair and hands indicates a slightly shaky handheld capture. The exposure is mildly overexposed, letting the ambient daylight bleed softly across the scene. No auto‑HDR or beauty filters — just raw, unprocessed imagery.
+
+- **Environment**  
+  Location: a sunny mid‑afternoon park with a grassy lawn and a line of mature trees in the background. The time of day is late afternoon, with warm, golden light coming from the west, casting soft shadows on the subject’s face and body. Ambient conditions are lightly breezy, with a few leaves rustling in the background.
+
+- **Lens & Technical**  
+  Use a short focal‑length wide‑angle lens (e.g., 24 mm). Everything is fully sharp — no bokeh or depth‑of‑field blur; the background trees and grass are in focus. No portrait‑mode subject isolation; the entire frame, from foreground to background, remains crisp.
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, zero post‑processing aesthetic. Keep the look natural and raw, preserving the slight overexposure and handheld imperfections.
+
+**Prompt Summary**  
+“Candid photo of a young woman in a pink tank top and denim shorts standing in a sunlit park at late afternoon. Her hair blows lightly to the left, hands clasped in front of her torso, head slightly tilted downward. Capture with a 24 mm wide‑angle lens, everything in focus, slight motion blur on the hair and hands, mild overexposure, no filters — raw, handheld, spontaneous, partial crop, off‑center framing.”

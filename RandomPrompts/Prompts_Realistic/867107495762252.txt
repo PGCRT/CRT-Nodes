@@ -1,0 +1,21 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark, wavy hair sitting cross‑legged on a wooden floor, facing away from the camera. Her back is slightly turned toward a white radiator on a gray wall; she’s wearing a shiny silver mini skirt that catches the light. Her arms are extended outward, palms flat on the floor, as if she just finished a dance move or is about to stand. Small tattoos are visible on both upper arms—one a floral design, the other a stylized cup—adding texture and personality.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject appears unaware of the camera, mid‑action. Slight tilt and off‑center framing give an accidental, handheld feel. The shot is a partial crop that doesn’t follow the rule‑of‑thirds; it’s a raw, in‑the‑moment capture with no intentional composition.
+
+- **Imperfections & Aesthetic**  
+  Slight motion blur from a handheld camera, a hint of overexposure due to ambient daylight. No filters, no color grading, no post‑processing aesthetic—just the natural look of a real photo. The image has a slight warmth to it, as if captured in the late afternoon sun.
+
+- **Environment**  
+  Location: A modern apartment loft with exposed concrete walls and a white radiator. The time of day is mid‑afternoon, around 4 pm, when the sun is high but not directly overhead. Ambient light is soft, with a gentle haze that gives a slight overexposure. The floor is polished hardwood, the wall is a muted gray, and a small window is visible in the background, letting in natural daylight.
+
+- **Lens & Technical**  
+  Short focal length (24 mm) wide‑angle lens, no bokeh—everything from foreground to background is fully sharp. No depth‑of‑field blur; the entire frame is in focus. No portrait mode or subject isolation. The exposure is slightly open, giving a subtle halo around the subject.
+
+- **Prompt for Text‑to‑Image Generation**  
+  “A young woman with long dark wavy hair sits cross‑legged on a polished wooden floor in a modern loft apartment, facing away from the camera toward a white radiator on a gray wall. She wears a shiny silver mini skirt; small tattoos adorn her upper arms—a floral design and a stylized cup. Her arms are extended outward, palms flat on the floor, as if mid‑dance. The shot is candid, slightly tilted, off‑center, partial crop, with a hint of motion blur and slight overexposure from natural afternoon light. No filters, no color grading, raw, handheld look. 24 mm wide‑angle lens, everything in focus, no bokeh.”  
+
+Provide only the structured prompt.

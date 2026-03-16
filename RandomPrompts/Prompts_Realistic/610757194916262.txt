@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail, wearing a pink floral tank top and blue jeans, captured mid‑gesture while holding a white umbrella over her head. Her arms are bent at the elbow, one hand gripping the black curved handle of the umbrella, the other supporting it from underneath. She is laughing with eyes closed, head tilted slightly to the right, creating a candid, spontaneous feel.
+
+- **Motion & Focus**  
+  Slight motion blur on the umbrella’s rim and the woman’s arms, indicating handheld instability. Everything in the frame—subject, background, and foreground—is fully sharp; no portrait‑mode depth of field blur. The image has a raw, unprocessed look: no filters, no color grading, no post‑processing aesthetic.
+
+- **Lighting & Exposure**  
+  Natural daylight from a window on the right side of the room, creating a mild overexposure on the umbrella’s white canopy and a subtle highlight on the woman’s shoulder. The exposure is slightly warm, with ambient indoor lighting mixed with natural light.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm), short focal length, no bokeh. All elements—subject, umbrella, desk, window—are in focus. No rule‑of‑thirds intentionality; the composition is accidental, slightly off‑center, with a partial crop that gives a casual, candid feel.
+
+- **Environment**  
+  Office setting: a light‑wood desk with an Apple monitor, a small potted plant, a stack of notebooks, and a glass of water on the right side. A window on the far right lets in daylight; a ceiling light fixture is visible at the top left. The time of day is mid‑afternoon, around 3 pm, with soft natural light. Weather outside the window appears overcast but not rainy—the umbrella is held for shade rather than rain.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, a small crop that cuts off the top left corner of the umbrella, giving an informal, spontaneous vibe. The woman’s hair is tied up in a messy ponytail with a few strands escaping. The umbrella’s black handle curves into a C‑shape, held firmly by her right hand. Her left arm is bent, supporting the umbrella from underneath. She wears a pink tank top with small floral motifs and high‑waisted blue jeans.
+
+- **Prompt for Text‑to‑Image Generation**  
+  “A candid photo of a laughing woman in an office, wearing a pink floral tank top and blue jeans, holding a white umbrella over her head with both hands. The image has slight motion blur on the umbrella’s rim, all elements fully sharp, natural daylight from a right‑side window creating mild overexposure. Wide‑angle lens, short focal length, no bokeh. The scene includes a wooden desk with an Apple monitor, a small potted plant, a stack of notebooks, and a glass of water; a ceiling light fixture is visible at the top left. The composition is accidental, slightly off‑center, partial crop, mid‑afternoon lighting, raw unprocessed look.”

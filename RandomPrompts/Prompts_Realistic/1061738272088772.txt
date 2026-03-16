@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair, wearing a gray Nike hoodie and gray leggings, sitting cross‑legged on a carpeted floor in a bright classroom. She is mid‑action, tying her white Nike sneakers, left hand gripping the laces, right hand resting on her knee. Her face is turned toward the camera with a warm, candid smile; she appears unaware of the lens, creating a spontaneous feel.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. Slight tilt and off‑center framing, partial crop that cuts off a bit of the background on the right side. No rule‑of‑thirds intentionality; the composition is accidental, as if captured with a handheld camera.
+
+- **Environment**  
+  Specific real‑world location: a sunlit classroom with beige walls, a wooden desk, and a large window that lets in natural daylight. Time of day: late morning, with warm, soft sunlight streaming through the window, creating subtle overexposure on the subject’s face. Weather or ambient conditions: clear, bright sky outside the window; no wind, but the camera’s slight shake produces a natural motion blur.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm) wide‑angle lens. Everything in focus — background fully sharp, no bokeh, no depth‑of‑field blur. No portrait mode or subject isolation. Slight overexposure on the subject’s face due to ambient light; auto‑HDR or auto‑beauty mode off — raw, unprocessed look. No filters, no color grading, no post‑processing aesthetic.
+
+- **Details & Imperfections**  
+  - Slight motion blur from handheld instability.  
+  - Raw, unprocessed look: zero studio lighting, zero professional composition, zero editorial tone.  
+  - Background includes a wooden desk, a person in a black jacket standing near the window, and a bulletin board with posters; all in focus.  
+  - The camera’s slight tilt creates a diagonal line across the image that follows the subject’s body.
+
+- **Prompt for Image Generation**  
+  “A young woman with long wavy brown hair, wearing a gray Nike hoodie and gray leggings, sitting cross‑legged on a carpeted floor in a bright classroom, tying her white Nike sneakers. She is mid‑action, left hand gripping the laces, right hand resting on her knee, smiling candidly. The scene is captured with a 24‑35 mm wide‑angle lens, everything in focus, no bokeh. Slight motion blur from handheld shake, accidental off‑center framing, partial crop. The background shows a wooden desk and a person in a black jacket near a large window that lets in warm late‑morning sunlight, creating subtle overexposure on the subject’s face. No filters, no auto‑HDR, raw, unprocessed look. The composition is spontaneous, handheld, with slight tilt and a diagonal line following the subject’s body.”

@@ -1,0 +1,26 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail, wearing a light‑blue polka‑dot bikini with white ruffled trim, kneeling on a polished wooden floor in a bright, sunlit living room. Her left hand rests on the floor for balance, right hand slightly off the ground, head tilted upward as if she’s about to pick up a glass of wine from a small side table next to her.  
+
+- **Lighting & Exposure**  
+  Natural daylight coming from a large window on the left; slight overexposure in the upper‑right corner to capture the warm glow of the day. No auto‑HDR or beauty filters—raw, unprocessed look.  
+
+- **Camera Settings**  
+  Wide‑angle lens (24‑35 mm), short focal length, handheld. Slight motion blur on the subject’s hands and background to hint at spontaneous movement. Everything in focus—no portrait‑mode depth‑of‑field blur.  
+
+- **Composition & Framing**  
+  Imperfect, off‑center framing: the subject is slightly tilted, the crop cuts off a bit of the window frame on the left and a potted plant on the right. No rule‑of‑thirds intentionality—just a candid, spontaneous snapshot.  
+
+- **Environment**  
+  A bright, airy living room with light wood flooring, a small wooden side table holding a bottle of red wine and a glass, a tall green potted plant in the corner, and a patterned rug partially visible on the right. Time of day: late morning, soft sunlight streaming through the window.  
+
+- **Details & Texture**  
+  Capture the texture of the bikini fabric, the slight sheen on the wood floor, the leaves of the potted plant, and the faint motion blur on the woman’s hands.  
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, no post‑processing aesthetic—just a raw, realistic capture.  
+
+**Prompt:**
+
+> “A young woman with a high ponytail, wearing a light‑blue polka‑dot bikini with white ruffled trim, kneeling on a polished wooden floor in a bright, sunlit living room. Her left hand rests on the floor for balance, right hand slightly off the ground, head tilted upward as if she’s about to pick up a glass of wine from a small side table next to her. Natural daylight coming from a large window on the left; slight overexposure in the upper‑right corner. Wide‑angle lens (24‑35 mm), handheld, short focal length, slight motion blur on the subject’s hands and background, everything in focus. Imperfect, off‑center framing: the subject is slightly tilted, the crop cuts off a bit of the window frame on the left and a potted plant on the right. No rule‑of‑thirds intentionality—just a candid, spontaneous snapshot. Capture the texture of the bikini fabric, the slight sheen on the wood floor, the leaves of the potted plant, and the faint motion blur on the woman’s hands. Late morning sunlight streaming through the window. Zero filters, zero color grading, raw realistic look.”

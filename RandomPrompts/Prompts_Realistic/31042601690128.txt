@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with shoulder‑length brown hair, wearing a plain white ribbed tank top and a short white skirt, sits on a neatly made bed. Her hands are lightly pulling the straps of her top upward, as if she’s about to adjust it—mid‑action, slightly off‑center. She looks directly at the camera with a soft, natural expression; her face is slightly tilted, giving a candid feel.
+
+- **Clothing & Accessories**  
+  The tank top has thin white straps; the skirt falls to mid‑thigh. On her right leg she wears black fishnet stockings that curl slightly at the toe, adding texture. A single black bracelet adorns her left wrist. She’s barefoot, with natural skin tone and a faint mole above her left eyebrow.
+
+- **Setting & Environment**  
+  The bed is covered in crisp white linens, slightly rumpled to suggest recent use. Behind her, a tall, white-framed window lets in bright daylight; the glass shows a blurred exterior view of a brick building and a tree, indicating an urban residential setting. The time of day is mid‑afternoon, with warm, diffused light that creates a slight overexposure on the window’s upper pane.
+
+- **Lighting & Technical**  
+  Use a wide‑angle lens (24–35 mm) to capture the entire scene in one shot. Shoot at a slightly high angle to emphasize the subject’s posture and the bed’s depth. Keep everything in focus—no bokeh or depth‑of‑field blur. The exposure is intentionally a little bright, with a subtle overexposure on the window, but no auto‑beauty or filter processing. Capture the image with handheld stability, allowing a faint motion blur on the subject’s hands and the bedding.
+
+- **Composition & Framing**  
+  Frame the shot so that the subject occupies the left‑center of the frame; the bed extends to the right, and the window forms a vertical backdrop. The composition is accidental—slight tilt and partial crop give it a spontaneous feel. Keep the background fully sharp, no rule‑of‑thirds intentionality.
+
+- **Post‑Processing**  
+  No filters or color grading. Apply auto‑HDR only to enhance brightness and contrast. Preserve raw, unprocessed look with natural color tones.
+
+**Prompt Summary (for AI image generator)**  
+"A young woman with shoulder‑length brown hair sits on a white bed in a bright, mid‑afternoon room. She wears a white ribbed tank top, a short white skirt, black fishnet stockings on her right leg, and a black bracelet on her left wrist. Her hands pull up the straps of her top as if adjusting it; she looks directly at the camera with a slight tilt. Behind her, a tall white window shows a blurred exterior brick building and tree. Capture with a 24–35 mm wide‑angle lens, everything in focus, slight motion blur on the hands and bedding, accidental off‑center framing, subtle overexposure on the window. No filters, auto‑HDR only."

@@ -1,0 +1,30 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with dark, shoulder‑length hair leaning casually against a weathered concrete barrier on a rooftop. She’s wearing a black fishnet bodysuit and classic high‑top Converse sneakers. Her left leg is slightly bent, her right foot planted for balance, and she’s looking off to the side as if mid‑conversation or caught in a spontaneous moment. A few tattoos are visible on her left arm and right thigh, adding texture and personality.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle, late‑afternoon sun creates a soft overexposure on the upper part of the frame. The light is slightly harsh, giving a raw, unprocessed look. No auto‑beauty or filter enhancement—just the genuine ambience of the scene.
+
+- **Camera Settings**  
+  - Lens: 24‑mm wide‑angle, short focal length (wide‑angle “wide‑lens” mode).  
+  - Aperture: f/5.6 – moderate depth of field, everything from foreground to background in focus.  
+  - Shutter speed: 1/125 s – enough to capture a slight motion blur on the subject’s movement.  
+  - ISO: 400 – for clean detail without noise.  
+
+- **Composition & Framing**  
+  The shot is intentionally off‑center, with the subject’s left side slightly tilted. The barrier runs horizontally across the middle of the frame, but it’s not perfectly aligned—this “accidental” framing gives a candid feel. The background shows a range of distant mountains under a pale blue sky with scattered white clouds; the horizon is slightly above the center, creating a wide‑scene look.
+
+- **Environment**  
+  Location: an open rooftop terrace in a suburban city, with a concrete wall and a view of the city’s skyline and far‑off hills. Time of day: late afternoon (around 5 pm), giving warm, golden light. Weather: clear, mild breeze, a few high‑altitude clouds.
+
+- **Technical Details**  
+  - No bokeh; background is fully sharp.  
+  - Slight handheld shake is present—this gives the image a natural, spontaneous vibe.  
+  - The entire scene is in focus, from the subject’s shoes to the distant mountains.  
+  - No portrait‑mode “subject isolation”—the depth of field is even across the frame.
+
+- **Prompt for AI Image Generation**  
+  *“A young woman with dark hair leaning against a weathered concrete barrier on a rooftop, wearing a black fishnet bodysuit and high‑top Converse sneakers. Her left leg is bent, right foot planted, looking off to the side as if mid‑conversation. Natural late‑afternoon sunlight creates soft overexposure on the upper frame. Shot on a 24‑mm wide‑angle lens at f/5.6 and 1/125 s, ISO 400. The scene is fully sharp from foreground to background with slight handheld motion blur. The composition is off‑center, the barrier runs horizontally but slightly tilted, the distant mountains and scattered clouds fill the sky. Raw, unprocessed look, no filters, no color grading.”*
+
+Provide only the structured prompt.

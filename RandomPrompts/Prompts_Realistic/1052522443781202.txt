@@ -1,0 +1,16 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy dark hair standing mid‑walk on a sunlit forest trail. She’s wearing a soft beige ribbed crop‑top with a front knot and high‑waisted blue jeans. Her left hand rests lightly on her hip, right arm bent at the elbow, fingers slightly curled. Head tilted a few degrees to the left, eyes focused forward, mouth smiling softly. Slight motion blur at the wrists and fingertips to suggest movement.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. The frame is slightly off‑center, with a small tilt that gives an accidental, handheld feel. No rule‑of‑thirds intentionality; the composition is organic, as if captured in a fleeting moment.
+
+- **Environment**  
+  Specific real‑world location: a quiet woodland path in late autumn. The background shows tall, slender tree trunks on both sides, scattered fallen leaves on the ground, and a patch of green grass further back. Time of day: early afternoon, with warm, golden sunlight filtering through the canopy, creating soft dappled light. Weather: clear, mild, with a slight breeze that ruffles the woman’s hair.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm) wide‑angle lens. Everything is fully sharp — no bokeh or depth‑of‑field blur; background and foreground are in focus. No portrait‑mode subject isolation. Slight overexposure on the face to keep the ambient light’s warmth, with a raw, unprocessed look (Auto‑HDR off). No filters, no color grading, no post‑processing aesthetic. The image has a natural motion freeze or slight blur from handheld instability.
+
+- **Final Prompt**  
+  “A young woman with long wavy dark hair, wearing a beige ribbed crop‑top with a front knot and high‑waisted blue jeans, mid‑walk on a sunlit forest trail in late autumn. She smiles softly while walking, left hand on hip, right arm bent. Slight motion blur at the wrists. The frame is slightly tilted, off‑center, capturing a candid, spontaneous moment. Background shows tall tree trunks, scattered leaves, and green grass, all fully sharp. Early afternoon golden sunlight filters through the canopy, creating dappled light. Shot on a 24‑35 mm wide‑angle lens, raw, unprocessed, no filters, slight overexposure, handheld blur.”

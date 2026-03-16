@@ -1,0 +1,24 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, sun‑kissed blonde hair, wearing a black bikini bottom and a thin silver bracelet on her left wrist, standing by a crystal‑clear swimming pool. She is mid‑step, one foot slightly ahead of the other, with a relaxed, natural posture that suggests she’s caught in an unplanned moment. Her face is turned toward the camera but not directly at it—slightly off‑center, giving a candid feel.
+
+- **Lighting & Exposure**  
+  Warm, mid‑afternoon sunlight from the west creates a soft overexposure on her shoulders and a subtle highlight on the water’s surface. The exposure is slightly uneven: the background is a bit brighter than the foreground, giving a raw, unprocessed look. No auto‑beauty or filter enhancement—just natural auto‑HDR.
+
+- **Lens & Technical Settings**  
+  24 mm wide‑angle lens, f/3.5, 1/125 s shutter speed, ISO 400. The lens is handheld, producing a slight motion blur on the subject’s hands and a tiny tilt in the frame. Everything—from her skin to the pool tiles—is fully sharp; no portrait‑mode depth‑of‑field blur.
+
+- **Environment**  
+  Location: A private residential pool in a suburban backyard. The pool’s blue‑green water is calm with gentle ripples, bordered by light‑colored tile and a small concrete deck. Behind the pool, a row of tall, leafy trees casts dappled shade. The time of day is late afternoon (around 4 pm), with warm, golden light and a slight haze in the air. Weather is clear, with a faint breeze.
+
+- **Composition & Framing**  
+  The frame is intentionally imperfect: the subject’s left shoulder is slightly cut off by the right edge, and the top of her head touches the upper border—no rule‑of‑thirds intentionality. The composition feels spontaneous, as if she was caught mid‑action while the photographer was walking toward her.
+
+- **Details & Imperfections**  
+  Slight motion blur on her hands and a tiny vignette at the corners. A faint reflection of the trees is visible on the pool’s surface. Her watch has a black strap and a silver face; a small bracelet adorns her right wrist. The background trees are in full focus, no bokeh.
+
+- **Prompt for Text‑to‑Image Generation**  
+  “A young woman with long sun‑kissed blonde hair, wearing a black bikini bottom and a thin silver bracelet on her left wrist, stands by a crystal‑clear swimming pool in a suburban backyard. She is mid‑step, one foot slightly ahead of the other, with a relaxed, natural posture that suggests she’s caught in an unplanned moment. Warm, mid‑afternoon sunlight from the west creates a soft overexposure on her shoulders and a subtle highlight on the water’s surface. The exposure is slightly uneven: the background is a bit brighter than the foreground, giving a raw, unprocessed look. 24 mm wide‑angle lens, f/3.5, 1/125 s shutter speed, ISO 400. The lens is handheld, producing a slight motion blur on her hands and a tiny tilt in the frame. Everything—from her skin to the pool tiles—is fully sharp; no portrait‑mode depth‑of‑field blur. The frame is intentionally imperfect: the subject’s left shoulder is slightly cut off by the right edge, and the top of her head touches the upper border—no rule‑of‑thirds intentionality. The background shows a row of tall, leafy trees casting dappled shade, with a calm pool tile and concrete deck in front. Late afternoon (around 4 pm) warm golden light and a faint haze in the air. Clear weather, slight breeze.”  
+
+Provide only the structured prompt.

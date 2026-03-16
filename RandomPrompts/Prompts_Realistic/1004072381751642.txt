@@ -1,0 +1,32 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark, slightly frizzy hair standing on a sunlit beach. She’s wearing a light‑pink, thin‑strap bikini that she’s in the process of adjusting—her hands are pulling the bottom strap taut, creating a subtle mid‑action cue. Her face is turned toward the camera but not directly at it; her expression is relaxed, almost candid, with a faint smile. The shot should capture a slight tilt and off‑center framing as if she were unaware of the lens, giving an authentic “mid‑motion” feel.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action.  
+  Slight motion blur on the hands and bikini strap to suggest movement.  
+  Auto‑HDR or auto‑beauty mode off — raw, unprocessed look.  
+  No filters, no color grading, no post‑processing aesthetic.  
+  Slight overexposure or underexposure depending on ambient light (choose a warm, midday tone).  
+  Wide lens (24–35 mm) for a short focal length, wide‑angle capture.
+
+- **Environment**  
+  Specific real‑world location: a sandy beach with low‑lying dunes in the background; the sea is visible on the horizon.  
+  Time of day: mid‑afternoon, when the sun is high but not directly overhead—soft, warm light with a slight golden hue.  
+  Weather or ambient conditions: clear, breezy, with a faint haze from the sand.
+
+- **Lens & Technical**  
+  Short focal length, wide angle (24–35 mm).  
+  No bokeh, no depth‑of‑field blur—background fully sharp; everything in focus.  
+  No portrait mode, no subject isolation.  
+  Capture a full‑body shot that includes the subject’s upper body, torso, and lower body, as well as a portion of the sand and sea to give context.  
+  Slight handheld instability is allowed—small jitters and slight crop imperfections for authenticity.
+
+- **Composition Notes**  
+  Avoid rule‑of‑thirds intentionality; frame the subject slightly off‑center, with the left side of her body near the center of the frame and her hands stretching across the lower middle.  
+  Keep the background fully sharp—no depth‑of‑field blur.  
+  Capture a raw, unprocessed look that feels like a spontaneous snapshot rather than a staged portrait.
+
+- **Final Prompt**  
+  “A young woman with long dark hair in a light‑pink bikini adjusts her strap on a sunlit beach at mid‑afternoon; the scene is captured on a wide‑angle lens (24–35 mm) with everything in focus, slight motion blur on the hands, handheld tilt, and no filters or color grading—raw, candid, spontaneous, background fully sharp, background includes sand and sea, subject slightly off‑center, full‑body shot.”

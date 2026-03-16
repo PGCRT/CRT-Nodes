@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wind‑blown dark hair standing on a sunlit beach dune. She’s wearing a black bikini top and frayed denim shorts, accessorized with gold hoop earrings, a chunky gold chain necklace, and several gold bracelets. Her hands are gently pulling her top slightly upward, as if she’s adjusting it mid‑step.  
+
+- **Motion & Focus**  
+  Slight motion blur on the hair and hands to convey movement; everything in the frame is fully sharp—no bokeh, no depth‑of‑field blur. The image has a raw, unprocessed look: no filters, no color grading, no post‑processing aesthetic.  
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle, mid‑afternoon sun creates a soft overexposure on the subject’s face and a subtle shadow cast by the dune grass. The exposure is slightly warm, with a hint of ambient haze.  
+
+- **Environment**  
+  Specific real‑world location: a sandy beach with tall sea‑grass tufts on either side, a shallow water line in the background, and a clear blue sky. Time of day: late afternoon, around 4 pm, giving a golden‑hour glow. Weather: breezy, with light wind ruffling the grass and the woman’s hair.  
+
+- **Lens & Technical**  
+  Short focal length (20–35 mm) wide‑angle lens, handheld shot with a slightly tilted camera to give an accidental, off‑center framing. No rule‑of‑thirds intentionality—everything is in focus, background fully sharp.  
+
+- **Composition Notes**  
+  Candid, unposed, spontaneous — the subject appears unaware of the camera, mid‑action. The frame captures a partial crop of her lower body and the sand beneath her feet, with a slight tilt that gives a natural, informal feel.  
+
+- **Final Prompt**  
+  “A young woman with long, wind‑blown dark hair stands on a sunlit beach dune, wearing a black bikini top and frayed denim shorts, accessorized with gold hoop earrings, a chunky gold chain necklace, and several gold bracelets. Her hands gently pull her top upward as she adjusts it mid‑step. Slight motion blur on the hair and hands; everything in the frame is fully sharp—no bokeh, no depth‑of‑field blur. Natural daylight from a high‑angle, mid‑afternoon sun creates a soft overexposure on the subject’s face and a subtle shadow cast by the dune grass. The scene is set on a sandy beach with tall sea‑grass tufts on either side, a shallow water line in the background, and a clear blue sky. Time of day: late afternoon, around 4 pm, giving a golden‑hour glow. Weather: breezy, with light wind ruffling the grass and the woman’s hair. Shot on a short focal length (20–35 mm) wide‑angle lens, handheld with a slight tilt for accidental, off‑center framing. Candid, unposed, spontaneous — the subject appears unaware of the camera, mid‑action. The frame captures a partial crop of her lower body and the sand beneath her feet, with a slight tilt that gives a natural, informal feel.”

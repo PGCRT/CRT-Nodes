@@ -1,0 +1,26 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  Two women in sheer black lace lingerie, one turned slightly toward the camera with a subtle smile, the other facing forward with a relaxed, candid posture. Their hair is wavy and mid‑length; one has a deep‑brown shade, the other a light‑blonde. They stand side‑by‑side near a large window with vertical blinds, a wooden dresser and a framed tropical poster on the wall in the background.
+
+- **Lighting & Exposure**  
+  Natural daylight from the window creates a slight overexposure on the subjects’ faces and bodies; the exposure is uneven, giving a raw, unprocessed look. The lighting is warm, mid‑afternoon, with soft ambient light that keeps everything in focus—no bokeh or depth‑of‑field blur.
+
+- **Camera Settings**  
+  Wide‑angle lens (24–35 mm), short focal length, handheld. Slight motion blur on the subjects’ limbs to suggest movement. No auto‑HDR or auto‑beauty mode; no filters, color grading, or post‑processing. The image is captured in a single shot with everything fully sharp—background and foreground alike.
+
+- **Composition & Framing**  
+  Imperfect, accidental framing: the composition is not rule‑of‑thirds intentional but rather a spontaneous, off‑center crop that includes the subjects, the window blinds, the dresser, and a portion of the framed poster. The shot is slightly tilted, giving a candid, unposed feel.
+
+- **Environment**  
+  Location: a bright, modern bedroom or studio with a large window, wooden furniture, and a wall poster. Time of day: mid‑afternoon, ambient natural light. Weather: clear, no wind, calm.
+
+- **Technical Details**  
+  - Focal length: 35 mm (wide angle)  
+  - Aperture: f/4–f/5.6 (everything in focus)  
+  - Shutter speed: 1/60–1/100 s (slight motion blur)  
+  - ISO: 400–800 (raw, unprocessed)  
+  - No portrait mode or subject isolation; background fully sharp.
+
+- **Prompt**  
+  “Two women in sheer black lace lingerie pose candidly beside a large window with vertical blinds, a wooden dresser, and a framed tropical poster on the wall. Natural daylight creates a slight overexposure; the wide‑angle lens captures everything in focus with a handheld shake that produces mild motion blur on the subjects. The framing is accidental and off‑center, slightly tilted, preserving a raw, unprocessed look. Capture the scene at mid‑afternoon, with all elements—subjects, blinds, dresser, poster—fully sharp, no filters or color grading applied.”

@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark, wavy hair sitting on a white bed, wearing a bright yellow halter‑style bikini. Her left hand is lightly touching the strap of her top, creating a subtle motion blur as she shifts her weight. She looks directly at the camera with a relaxed, confident expression, slightly tilted head and off‑center framing that gives a candid, spontaneous feel.
+
+- **Lighting & Exposure**  
+  Natural daylight from a western window, mid‑afternoon. Slight overexposure on the face and upper body, giving a warm, soft glow. No auto‑HDR or beauty filters—raw, unprocessed look. The exposure is uneven, with a tiny highlight spill on her shoulder, adding to the handheld feel.
+
+- **Lens & Technical**  
+  24 mm wide‑angle lens, short focal length. Everything in focus—from her face to the background pillows—no bokeh, no depth‑of‑field blur. Slight motion blur at the edges from a handheld shot. The composition is accidental: no rule‑of‑thirds, just a casual, spontaneous frame that captures the subject mid‑action.
+
+- **Environment**  
+  A bright, airy bedroom with a textured beige headboard and white pillows. The background is fully sharp, no portrait‑mode isolation. The time of day is late afternoon, with warm, slightly harsh sunlight casting soft shadows. The weather is clear, with a gentle breeze that creates a faint motion blur on the subject’s hair.
+
+- **Details & Imperfections**  
+  - Slight tilt of the camera, making the frame a little off‑center.  
+  - Partial crop: the left side of her body is slightly cut off by the edge of the frame.  
+  - A tiny ring on her left hand, a delicate gold necklace, and a thin bracelet on her right wrist add subtle detail.  
+  - The bikini straps are tied at the sides, with a small knot that catches the light.  
+  - Her abdomen is slightly exposed, showing a natural curve and a faint belly button.  
+
+- **Prompt for Generation**  
+  “A young woman with long dark wavy hair sits on a white bed in a bright bedroom, wearing a bright yellow halter‑style bikini. Her left hand lightly touches the strap of her top, creating a subtle motion blur as she shifts her weight. She looks directly at the camera with a relaxed, confident expression, slightly tilted head and off‑center framing that gives a candid, spontaneous feel. Natural daylight from a western window, mid‑afternoon, slight overexposure on the face and upper body, raw unprocessed look. 24 mm wide‑angle lens, everything in focus—no bokeh. Slight motion blur at the edges from handheld shot. The background pillows and headboard are fully sharp. The time of day is late afternoon, warm sunlight casting soft shadows. A tiny ring on her left hand, a delicate gold necklace, and a thin bracelet on her right wrist add subtle detail. The bikini straps are tied at the sides, with a small knot that catches the light. Her abdomen is slightly exposed, showing a natural curve and a faint belly button. Slight tilt of the camera, partial crop on the left side. All in focus, no portrait mode.”
+
+Provide only the structured prompt.

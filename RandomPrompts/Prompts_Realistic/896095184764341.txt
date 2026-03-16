@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, curvy woman with long, wavy brown hair walks confidently down a dimly lit hotel corridor. She wears a black lace corset‑style bodysuit with lace detailing on the bust, a laced front, and matching thigh‑high leather boots. Her left hand rests lightly on her hip, right arm relaxed by her side, feet mid‑step as if caught in an unplanned, spontaneous moment.
+
+- **Motion & Focus**  
+  Slight motion blur at the feet and hands to suggest movement; everything remains fully sharp—no portrait‑mode blur. The image has a raw, unprocessed look: no auto‑HDR or beauty filters, just natural ambient light with a hint of overexposure in the ceiling lamp’s glow.
+
+- **Camera & Lens**  
+  Wide‑angle lens (24–35 mm), short focal length, handheld. No bokeh—background is completely in focus. Slight tilt and off‑center framing give an accidental, candid feel; the composition is not intentionally rule‑of‑thirds aligned.
+
+- **Environment**  
+  Location: a narrow hotel hallway with dark blue walls, white baseboards, and a patterned rug that runs lengthwise. The corridor is lit by a recessed ceiling light and a small window at the far end, creating soft shadows. Time of day: late afternoon, ambient light slightly warm; weather: clear, dry.
+
+- **Lighting & Color**  
+  Natural lighting from the ceiling lamp and window; slight overexposure on the lamp’s bulb, subtle color cast in warm neutrals. No post‑processing color grading—just raw capture.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, partial crop that cuts off a bit of the hallway’s far end, a faint smudge on the boot’s toe. The subject’s expression is relaxed, mid‑walk, with a subtle smile. A small bracelet adorns her right wrist; a delicate necklace rests around her neck.
+
+- **Prompt Summary**  
+  “A tall woman in a black lace corset and thigh‑high boots walks down a dimly lit hotel corridor, captured on a wide‑angle handheld lens with slight motion blur at the feet, everything fully sharp, raw unprocessed look, natural ambient lighting, accidental off‑center framing, late afternoon time, clear weather, no bokeh—raw candid photography.”

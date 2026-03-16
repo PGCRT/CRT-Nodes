@@ -1,0 +1,28 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, straight brown hair standing in a bright, airy bedroom. She is wrapped in a crisp white towel tied at the waist, her bare torso exposed to the camera. Her hands rest lightly by her sides, fingers slightly curled, as if she’s about to adjust her towel or reach for something on the dresser. Her gaze is direct, meeting the lens with a calm, confident expression.
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window behind her creates a soft, warm glow. Slight overexposure on the upper body gives a subtle halo effect. No auto‑beauty or filter enhancement—just raw, unprocessed light. The exposure is slightly uneven, with the lower part of the image a little brighter than the top, as if the camera’s meter was off by a fraction of a stop.
+
+- **Camera & Lens Settings**  
+  35 mm wide‑angle lens (short focal length), f/4.0 aperture, 1/125 s shutter speed, ISO 400. Handheld shot with slight instability that produces a gentle motion blur on the edges. Everything from foreground to background is in focus—no portrait‑mode depth of field blur.
+
+- **Composition & Framing**  
+  The frame is intentionally off‑center: the woman’s head sits slightly above the vertical center, her left shoulder leans toward the left edge, and the top of the towel drapes unevenly. No rule‑of‑thirds—this is a candid, spontaneous capture. The composition captures a portion of a white dresser with a mirror on the left, a vase of pink roses, and a framed landscape painting on the right wall. A bed with a floral quilt occupies the lower right corner.
+
+- **Environment & Ambience**  
+  The room is a bright, modern bedroom with light‑colored walls. A tall mirror hangs above the dresser, reflecting a portion of the window. A vase of pink roses sits on the dresser, and a small wooden tray rests beside it. A framed painting of a forest scene hangs on the right wall. The time of day is late morning, with sunlight streaming in from the left, casting soft shadows. The weather outside is clear, as the light is warm and slightly hazy.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera adds a casual feel. The towel’s knot is asymmetrical, giving an authentic, unposed look. The woman’s fingers are loosely curled, not perfectly positioned. A faint motion blur at the edges suggests handheld shooting. The background is fully sharp—no bokeh.
+
+- **Post‑Processing**  
+  No filters or color grading. The image retains its raw, natural look with only minimal adjustments to exposure and contrast.
+
+---
+
+**Prompt Summary (for use in a text‑to‑image model)**  
+
+> “A young woman with long brown hair standing in a bright bedroom, wrapped in a white towel tied at the waist. She stands in front of a white dresser with a mirror, a vase of pink roses, and a framed landscape painting on the wall. A bed with a floral quilt is visible to her right. Natural daylight from a large window creates a soft warm glow with slight overexposure on the upper body. Shot on a 35 mm wide‑angle lens at f/4, 1/125 s, ISO 400, handheld with gentle motion blur. The frame is off‑center and casual, capturing an unposed candid moment. Everything in focus, no filters, raw look.”

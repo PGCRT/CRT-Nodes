@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail, wearing an off‑the‑shoulder white t‑shirt and light denim shorts, mid‑walk on a sunny city sidewalk. Her hands grip the straps of a beige backpack, one hand slightly raised, the other relaxed near her hip. She’s smiling broadly, eyes cast downward as if she’s just read something amusing on a passing sign. A thin silver necklace rests on her collarbone; a red‑band watch sits on her left wrist, and a delicate bracelet adorns her right. Her hair is loosely tied, with a few strands escaping the ponytail, catching the wind.
+
+- **Motion & Focus**  
+  Slight motion blur at the wrists and feet to suggest movement. The entire frame is in focus—no depth‑of‑field blur. Handheld shot with a wide‑angle lens (24‑35 mm), capturing a broad view of the scene.
+
+- **Lighting & Exposure**  
+  Natural midday sunlight, slightly overexposed on the subject’s face and torso, creating soft highlights. No auto‑HDR or beauty filters—raw, unprocessed look. The background is fully sharp, no bokeh.
+
+- **Environment**  
+  A bustling urban street in a modern downtown area. A wooden bench sits to the left, a glass storefront behind her, a red “STOP” sign in the far right background. A few passersby are visible further down the sidewalk, one in a black shirt and jeans, another in a white shirt and red sneakers. Trees line the street, their leaves a bright green, a hint of summer foliage.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm), wide‑angle, no rule‑of‑thirds intentionality—framing is accidental, slightly tilted. All elements—subject, bench, storefront, sign, passersby—are in focus. No portrait‑mode isolation; the entire scene is captured as a single plane.
+
+- **Composition & Style**  
+  Candid, unposed, spontaneous—subject appears unaware of the camera. Slight tilt and off‑center framing give an informal, documentary feel. The prompt should emphasize raw realism: no color grading or post‑processing, just the natural hues and textures of the moment.  
+
+**Prompt Summary**  
+“Candid, wide‑angle, handheld shot of a smiling woman in a white t‑shirt and denim shorts walking on a sunny city sidewalk, carrying a beige backpack, with a wooden bench to her left, a glass storefront behind her, and a red STOP sign in the background. The image has slight motion blur at the wrists and feet, full focus across the frame, natural midday lighting with a touch of overexposure, no filters or post‑processing, all elements sharp, captured on a 24‑35 mm lens.”

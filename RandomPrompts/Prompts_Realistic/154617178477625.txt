@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair standing in a dry, grassy field at golden hour. She wears a light beige short‑sleeved top and blue jeans, hands relaxed by her sides, slightly turned to the left. Her face is turned toward the camera but not directly aimed—mid‑gesture, as if she just finished a step or a walk.  
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Slight tilt and off‑center framing; partial crop that gives a raw, handheld feel. No rule‑of‑thirds intentionality—everything is in focus, no portrait‑mode blur. A faint motion blur on the hands and background to suggest slight instability.  
+
+- **Environment**  
+  Specific real‑world location: a sunlit meadow with scattered dry grass and a few young trees. Time of day: late afternoon, warm golden light with a slight overexposure in the sky. Weather: clear, no wind, ambient light soft but bright.  
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm), wide‑angle lens. No bokeh—background fully sharp, everything in focus. Auto‑HDR or auto‑beauty mode off—raw, unprocessed look. Slight overexposure in the sky to keep the ambient light natural. No filters, no color grading, no post‑processing aesthetic.  
+
+- **Composition Notes**  
+  The frame captures the woman from the knees up, with a portion of the field and a tree trunk visible on the right side. The background is fully sharp, no depth‑of‑field blur. The composition is accidental—slight tilt to the left, the subject’s head slightly off‑center.  
+
+- **Lighting**  
+  Natural sunlight from the west, creating warm highlights on the woman’s face and shoulders. Slight overexposure in the sky gives a soft glow. No studio lighting.  
+
+- **Final Prompt**  
+  “A young woman with long wavy brown hair, wearing a beige short‑sleeved top and blue jeans, stands mid‑step in a dry grassy field at golden hour. The shot is taken with a 24‑35 mm wide‑angle lens, everything in focus, slight motion blur on the hands, accidental tilt and off‑center framing. The background shows scattered dry grass and a young tree, fully sharp. Late afternoon sunlight creates a warm overexposed sky. No filters or post‑processing—raw, candid, spontaneous capture.”

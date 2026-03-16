@@ -1,0 +1,31 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail and a few loose strands framing her face, wearing dark round sunglasses and a faded gray “DKNY” crop‑t‑shirt. Her left hand is mid‑adjust of the sunglasses, fingers slightly curled, creating a subtle motion blur at the fingertips. She’s leaning forward a bit, giving an off‑center, spontaneous feel.
+
+- **Clothing & Accessories**  
+  The t‑shirt has a worn, slightly distressed look with faint stains; the “DKNY” logo is visible on the left chest and “DKNY SHEIL” on the left sleeve. She wears light‑wash denim jeans that sit high on her waist, with the belt loop and front button clearly visible. A black under‑shirt peeks out at the crop line.
+
+- **Hair & Makeup**  
+  Her hair is a light brown with blonde highlights, tied into a messy ponytail that leans to one side. A few strands escape the tie, adding a casual, candid vibe. Her sunglasses have thin metal frames; the lenses are dark, reflecting the ceiling lights.
+
+- **Pose & Motion**  
+  She’s in mid‑movement: her right hand is lifting the sunglasses, creating a slight motion blur around the fingers. Her head is tilted slightly to the right, and her gaze is directed toward the camera but not directly at it—makes it feel like she’s just caught in a snapshot.
+
+- **Environment**  
+  The setting is an office space with a tiled ceiling, fluorescent lights, and a large window that lets in natural daylight. A desk with a computer monitor, a black office chair, and a filing cabinet are visible behind her. A basket of supplies sits on the floor near the corner. Outside the window, trees and a hint of a cityscape can be seen, suggesting an urban environment.
+
+- **Time of Day & Lighting**  
+  The scene is lit by natural daylight coming from the window, with a slight overexposure on the ceiling lights that gives a warm, soft glow. The lighting is uneven—some areas are brighter than others—creating a raw, unprocessed look.
+
+- **Lens & Technical Settings**  
+  Use a wide‑angle lens (e.g., 24mm) with a short focal length to capture the entire subject and environment. Keep everything in focus—no bokeh or depth‑of‑field blur. Shoot at a slightly high ISO to preserve detail in the bright ceiling lights. Capture a small amount of motion blur on the hand and sunglasses to emphasize the candid feel.
+
+- **Composition & Framing**  
+  Frame the shot with an accidental, non‑rule‑of‑thirds composition: the subject is slightly off‑center, the top of the frame cuts off a bit of her hair, and the bottom edge crops the jeans slightly. The camera is handheld, so there’s a subtle tilt that adds to the spontaneous vibe.
+
+- **Post‑Processing**  
+  No filters or color grading—just raw, natural tones. Slight auto‑HDR may be applied to brighten the ceiling lights but keep the overall look unpolished. Keep the background fully sharp; no portrait‑mode blur.
+
+- **Final Prompt Summary**  
+  “A candid, wide‑angle snapshot of a young woman in an office setting, captured with a handheld, short‑focal‑length lens. She’s wearing a faded gray DKNY crop‑t‑shirt and light denim jeans, adjusting her sunglasses mid‑pose. The scene is lit by natural daylight through a window, with a slightly overexposed ceiling. All elements are in focus, creating a raw, unprocessed, spontaneous look.”

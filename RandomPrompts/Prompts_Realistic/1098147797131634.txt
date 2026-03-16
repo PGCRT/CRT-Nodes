@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A fit woman with long, wavy brown hair, wearing a black halter‑style bikini, sitting on a weathered wooden stump. She is mid‑pose, slightly turned toward the camera, one hand resting on the stump and the other near her thigh, legs bent and knees slightly apart. Her gaze is direct, soft and confident, with a subtle smile.  
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle, late‑afternoon sun; slight overexposure in the highlights to give a warm, organic feel. No auto‑HDR or beauty filters—raw, unprocessed look. The exposure is slightly uneven, with the top of the frame a bit brighter than the lower part, creating a natural contrast.  
+
+- **Camera & Lens Settings**  
+  Wide‑angle lens (24–35 mm), short focal length. Handheld, with slight motion blur from a casual shake. Everything in focus—no portrait‑mode depth‑of‑field blur; background fully sharp.  
+
+- **Composition & Framing**  
+  Candid, unposed, spontaneous framing: the shot is slightly tilted, off‑center, and partially cropped on the right side. No rule‑of‑thirds intentionality—just a natural, accidental composition that captures the subject’s full body and the surrounding foliage.  
+
+- **Environment**  
+  Tropical garden setting with tall palm trees and lush ferns in the background. The scene is set in the late afternoon, with warm, golden light filtering through the leaves. The weather is clear, with a few scattered clouds overhead.  
+
+- **Details & Imperfections**  
+  Slight motion blur on the subject’s legs and the stump, indicating a handheld shot. Minor tilt of the camera, a small crop that cuts off the right side of the background, adding to the candid feel. The image has no post‑processing color grading—just raw, natural colors.  
+
+- **Final Prompt**  
+  “A fit woman with long wavy brown hair in a black halter bikini sits on a weathered wooden stump in a tropical garden, late afternoon sunlight creating slight overexposure. Shot on a 35 mm wide‑angle lens, handheld with mild motion blur, everything in focus. Candid, slightly tilted, off‑center framing that partially crops the right side, capturing the subject’s full body and the surrounding palm trees and ferns, all sharp and unprocessed.”

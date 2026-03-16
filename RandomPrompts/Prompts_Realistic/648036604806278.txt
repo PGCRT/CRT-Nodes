@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  Two young women in a casual, informal setting: one in the foreground wearing faded denim overalls, holding a smartphone as if taking a selfie, hair tied up with a red flower; the other in the background, blonde, in a black tank top and denim shorts, leaning against a white table. Both appear mid‑motion, slightly blurred at the edges to convey spontaneity.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subjects unaware or mid‑action. Slight tilt and off‑center framing; partial crop that gives a raw, imperfect feel. No intentional rule‑of‑thirds. The shot is taken with a handheld camera, producing natural motion blur from slight instability.
+
+- **Environment**  
+  A simple, unadorned indoor space: white walls, fluorescent ceiling lights, a few plastic chairs, a cardboard box filled with art supplies on the floor, and a white table with a laptop and a bottle. Time of day is late afternoon, ambient light slightly overexposed, giving a warm, natural tone. Weather or ambient conditions are neutral; no external weather influence since it’s an interior shot.
+
+- **Lens & Technical**  
+  Short focal length (≈20‑35 mm) wide‑angle lens. Everything is in focus — no bokeh or depth‑of‑field blur; background remains sharp. No portrait‑mode subject isolation. Slight auto‑HDR or “auto‑beauty” off for a raw, unprocessed look. No filters, color grading, or post‑processing aesthetics applied. The image has a slight overexposure in the ceiling lights to enhance the natural lighting.
+
+- **Composition Notes**  
+  Wide lens captures the entire scene, including the white plastic chairs on the left, the cardboard box on the right, and the fluorescent lights on the ceiling. The framing is accidental: the subjects are slightly off‑center, the camera is tilted a few degrees, and the crop cuts off part of the background, enhancing candidness.
+
+- **Final Prompt**  
+  “Two young women in a casual indoor setting, one in denim overalls taking a selfie with a smartphone, the other in a black tank top leaning against a white table; slight motion blur and accidental framing; wide‑angle short focal length lens; everything in focus; raw, unprocessed look with no filters or color grading; slight overexposure from ceiling lights; background includes plastic chairs, a cardboard box with art supplies, and fluorescent lighting; late afternoon ambient light; handheld instability captured.”

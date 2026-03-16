@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair, wearing a red‑and‑white striped crop top and light denim shorts, captured mid‑gesture as she lifts her hair with her right hand. Her face is slightly tilted, mouth open in an expressive “oh” or “wow,” eyes wide, conveying spontaneous emotion. She wears a thin gold necklace that catches the light.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. Slight tilt and off‑center framing; partial crop that cuts off the edges of her shoulders and background. No rule‑of‑thirds intentionality — accidental composition. Raw, unprocessed look: no filters, no color grading, no post‑processing aesthetic. Slight overexposure in the highlights to emphasize ambient daylight.
+
+- **Motion & Focus**  
+  Slight motion blur from handheld instability, natural freeze or slight blur on the subject’s hand and hair movement. Everything in focus — background fully sharp, no bokeh, no depth‑of‑field blur. No portrait mode, no subject isolation.
+
+- **Lens & Technical**  
+  Wide‑angle lens (short focal length, ~24 mm). Auto‑HDR or auto‑beauty mode off. No filters, no color grading, no post‑processing aesthetic. Slight overexposure or underexposure depending on ambient light — here, a warm, midday sun.
+
+- **Environment**  
+  Outdoor street fair or market scene on a sunny afternoon. White pop‑up tents line the background, with people milling about, some carrying drinks, others walking. A paved ground, scattered shadows, and a faint hint of green trees in the distance. Time of day: late morning to early midday, bright but not harsh sunlight.
+
+- **Lighting & Composition**  
+  Zero studio lighting, zero professional composition, zero editorial tone. Natural daylight from above, slightly high‑angle. Background fully sharp, no bokeh. The framing captures the subject’s upper body and a portion of her left shoulder, with her right hand lifting hair, creating a dynamic diagonal line.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, partial crop that cuts off the top of her head and the lower part of her thighs. A faint smudge on her left shoulder from a stray droplet of sweat. Her necklace’s pendant is slightly askew. The background includes a man in a red tank top and beige shorts to the left, a woman in a blue shirt to the right, and a white tent with a logo on it.
+
+- **Prompt Summary**  
+  “A candid, wide‑angle shot of a young woman at an outdoor street fair, captured mid‑gesture as she lifts her hair, wearing a red‑and‑white striped crop top and denim shorts, with a thin gold necklace. The image has slight motion blur from handheld shake, accidental off‑center framing, and full sharpness across the background. Shot on a 24 mm wide‑angle lens, raw and unprocessed, with natural midday sunlight creating a slight overexposure in the highlights. The background shows white pop‑up tents, people, and a paved ground, all in focus, no bokeh.”

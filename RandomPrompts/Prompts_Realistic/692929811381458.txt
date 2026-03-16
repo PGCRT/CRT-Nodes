@@ -1,0 +1,16 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail, wearing a bright yellow halter‑style bikini, standing mid‑step on a sunlit park lawn. Her left wrist bears a black smartwatch; she’s smiling slightly, head tilted to the right, one hand relaxed by her thigh, the other near her hip. The pose is spontaneous—she appears unaware of the camera, caught in a natural, unposed moment.
+
+- **Candid Capture Style**  
+  Slight motion blur on the hands and feet to suggest handheld shake; the image has an auto‑HDR feel but no color grading or post‑processing filters. A tiny overexposure at the top of the frame gives it a raw, ambient‑light vibe. The composition is intentionally off‑center: the subject’s left side cuts close to the left edge, and the background is fully sharp with no bokeh.
+
+- **Environment**  
+  Location: a sunny, late‑afternoon park in a suburban town. Tall oak trees line the back of the lawn; a wooden bench sits at the far left, slightly out of focus. The grass is a mix of green and brown patches, with scattered fallen leaves. The time of day is early evening—soft golden light from the west casts long shadows across the lawn. Weather is clear, with a faint haze from the sun’s low angle.
+
+- **Lens & Technical**  
+  Use a short focal‑length wide‑angle lens (24 mm or 35 mm). Everything in focus—from the woman’s face to the distant trees—no portrait‑mode depth‑of‑field blur. The background is fully sharp, but the image has a slight tilt and partial crop that give it a spontaneous feel. Capture with natural daylight; no studio lighting or professional composition rules applied.
+
+- **Final Prompt**  
+  “A young woman in a yellow bikini stands mid‑step on a sunlit park lawn, her black smartwatch visible on her left wrist, smiling slightly as she catches the camera’s glance. The scene is framed by tall oak trees and a wooden bench in the background, with a faint haze of late‑afternoon light. Capture with a 35 mm wide‑angle lens, slight motion blur on the hands and feet, subtle overexposure at the top, and an off‑center, accidental framing that keeps everything in focus—no bokeh, no filters, just raw, candid realism.”

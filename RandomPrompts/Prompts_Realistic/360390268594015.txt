@@ -1,0 +1,29 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark, wavy hair sitting casually on a beige sofa. She’s bare‑armed and bare‑legged, wearing bright red high‑heeled sandals. Her left hand is raised near her chin in a relaxed, slightly awkward gesture; her right hand rests on the couch cushion. Her body is angled toward the camera but not perfectly centered—tilted 15° to the left, creating a spontaneous, candid feel.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject appears mid‑action, as if she just finished a conversation or is about to do something. Slight tilt and off‑center framing give an accidental, handheld vibe. The shot has a raw, unprocessed look: no filters, no color grading, no post‑processing aesthetic. A mild overexposure in the highlights gives a natural, ambient‑light feel.
+
+- **Motion & Focus**  
+  Slight motion blur on the subject’s hand and feet, indicating a handheld shutter speed of about 1/60 s. Everything remains fully sharp—no bokeh or depth‑of‑field blur; background is in focus as well. The lens is a short focal‑length wide‑angle (24–35 mm), capturing a broad view of the scene.
+
+- **Environment**  
+  Location: A modern apartment living room with a plush beige sofa, a light‑colored tile floor, and a plain wall in the background. Time of day: late afternoon, soft natural daylight coming from the west, creating gentle shadows and a slight warm tint. Ambient conditions: mild temperature, no wind, quiet—ideal for a candid capture.
+
+- **Lens & Technical**  
+  - Focal length: 35 mm (wide‑angle, short).  
+  - Aperture: f/4.0 (wide opening, but no portrait‑mode isolation).  
+  - Shutter speed: 1/60 s (slight motion blur).  
+  - ISO: 400 (balanced for natural lighting).  
+  - Auto‑HDR or auto‑beauty mode off.  
+  - No rule‑of‑thirds intentionality—framing is accidental, with the subject slightly off‑center and a partial crop that includes a portion of the couch armrest and a small section of the floor.
+
+- **Composition Notes**  
+  The composition captures the woman’s full upper body, legs, and feet, as well as a good portion of the sofa and a bit of the background wall. The camera is held at eye level, slightly below the subject’s chin, to emphasize the casual pose. The shot includes a faint hint of a ring on her right hand, adding a subtle detail.
+
+- **Prompt for Text‑to‑Image Generation**  
+  “A young woman with long dark wavy hair sitting casually on a beige sofa, bare‑armed and bare‑legged, wearing bright red high‑heeled sandals. Her left hand is raised near her chin in a relaxed gesture; her right hand rests on the couch cushion. The shot is candid, slightly tilted, off‑center, with mild motion blur on the hands and feet. The background shows a modern apartment living room, light‑colored tile floor, plain wall, captured in late afternoon natural daylight. Use a 35 mm wide‑angle lens at f/4.0 and 1/60 s shutter speed, ISO 400, no filters or post‑processing, everything fully sharp.”  
+
+Provide only the structured prompt.

@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with wavy, shoulder‑length blonde hair, wearing a striped, halter‑style bikini, captured mid‑turn as she looks back over her shoulder. Her left hand rests on her hip, a subtle wristwatch visible, and a delicate earring glints in the light. The bikini features horizontal stripes in muted pink, gray, and white, with a tie‑detail on the side. She stands in front of a bright, sheer curtain that diffuses natural daylight, creating soft highlights on her skin and clothing.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject is unaware of the camera as she freezes mid‑motion. Slight tilt and off‑center framing give an accidental, handheld feel. The shot has a raw, unprocessed look: no filters, no color grading, no post‑processing aesthetic. A slight overexposure from ambient light gives a warm, natural glow.
+
+- **Environment**  
+  Location: A bright, airy living room with a sheer white curtain backdrop; the time of day is late morning, when the sun is high but not directly overhead. Ambient conditions are mild, with a gentle breeze that creates slight motion blur on the subject’s hair and clothing. The background is fully sharp—no bokeh or depth‑of‑field blur—because a wide‑angle lens captures everything in focus.
+
+- **Lens & Technical**  
+  Short focal length (24–35 mm) wide‑angle lens, handheld, with a slightly shaky grip that produces natural motion blur. No portrait‑mode subject isolation; the entire frame—from foreground to background—is in focus. The composition is not rule‑of‑thirds intentional; it’s a spontaneous, mid‑action capture that feels genuine and unposed.
+
+- **Post‑Processing**  
+  Auto‑HDR or auto‑beauty mode off. No filters, no color grading, no post‑processing aesthetic—just raw, natural imagery with slight overexposure or underexposure depending on ambient light.
+
+**Prompt Summary**  
+"Mid‑morning candid shot of a blonde woman in a striped bikini turning back, captured on a wide‑angle handheld lens with slight motion blur and accidental framing, in front of a sheer curtain, fully sharp background, raw unprocessed look."

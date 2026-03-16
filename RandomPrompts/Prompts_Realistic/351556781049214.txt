@@ -1,0 +1,27 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail and subtle blonde highlights, wearing an olive‑green short‑sleeved top that reveals a hint of mid‑chest. She’s holding a white ceramic mug in her right hand, elbow bent, arm slightly angled, as if she’re mid‑conversation or about to sip coffee. Her left wrist bears a black watch. The shot captures her from the chest up to the upper torso, with a partial crop that leaves a little space above her head and to the right of her shoulder, giving an off‑center, spontaneous feel.
+
+- **Motion & Focus**  
+  Slight motion blur on the subject’s hand and mug, indicating handheld instability. Everything in the frame — subject, background, and foreground — is fully sharp; no portrait‑mode depth‑of‑field blur. No auto‑HDR or auto‑beauty enhancements; raw, unprocessed look.
+
+- **Lighting & Exposure**  
+  Natural daylight coming from a large window on the left, creating a soft, warm glow with a slight overexposure on the subject’s face and a faint halo of light around her hair. The exposure is slightly uneven, giving an authentic, candid vibe. No color grading or filters applied.
+
+- **Environment**  
+  The scene takes place in a modern café or coffee shop. A large glass window occupies the left side of the frame, through which a white car and a glimpse of a street can be seen. In the background, a man with short brown hair, wearing a gray t‑shirt, sits at a table with a cup of coffee; his face is partially visible, adding to the candid feel. The table is light wood, and a small portion of a black chair is visible on the right. A few framed pictures hang on the wall behind the man.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm) with a short focal length, producing a slightly distorted perspective that enhances the “handheld” feel. No bokeh; background is fully sharp. The composition is accidental: no rule‑of‑thirds intentionality, slight tilt, and a partial crop that cuts off the top of the woman’s head and the right side of her shoulder.
+
+- **Capturing Style**  
+  Candid, unposed, spontaneous — the subject appears unaware or mid‑action. The shot has a raw, natural motion freeze or slight blur from handheld instability. Zero studio lighting, zero professional composition, zero editorial tone.
+
+- **Post‑Processing**  
+  No filters, no color grading, no post‑processing aesthetic. Only minimal adjustments to exposure and contrast to preserve the authentic look.
+
+---  
+
+**Prompt Summary (for image generation)**  
+"A candid, wide‑angle shot of a young woman with a high ponytail holding a coffee mug in a modern café, captured with a short focal length lens. The image shows her from chest up, slightly cropped on the top and right side, with slight motion blur on her hand, fully sharp background, natural daylight from a large window, and a subtle overexposure. In the background, a man sits at a table with a coffee cup. No filters or post‑processing, raw and unprocessed, handheld feel."

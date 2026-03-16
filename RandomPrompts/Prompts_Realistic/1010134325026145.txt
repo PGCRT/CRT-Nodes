@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail, wearing an oversized coral‑colored hoodie and light‑wash jeans, captured mid‑selfie in a mirror. Her hair is slightly messy, her smile relaxed, and she’s holding a white iPhone in her right hand, angled toward the mirror. She’s leaning forward a bit, creating a subtle diagonal line that cuts across the frame.
+
+- **Motion & Focus**  
+  Slight motion blur on the subject’s hand and phone, indicating handheld instability. Everything in the frame—from her face to the bookshelf behind—is fully sharp; no portrait‑mode depth of field blur. The focus is even across the entire composition.
+
+- **Lighting & Exposure**  
+  Natural daylight coming from a window on the right side of the room, creating a soft warm highlight on her hoodie. Slight overexposure in the upper right corner gives a raw, unprocessed look. No auto‑HDR or beauty filters—just a straightforward exposure.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24 mm) with a short focal length, no bokeh. The background is fully sharp, including the wooden bookshelf lined with books and a white mug on a small table. No rule‑of‑thirds intentionality—framing is accidental, slightly tilted.
+
+- **Environment**  
+  A cozy, slightly cluttered home office or study. Wooden bookshelves filled with books, a small table with a white mug, and a window that lets in warm daylight. The time of day is late morning, with soft, diffused light. A few scattered items—another mug, a small plant, a framed photo—add to the candid feel.
+
+- **Composition & Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Imperfections encouraged: slight tilt, off‑center framing, partial crop that cuts off part of her left shoulder. No studio lighting, no professional composition, no editorial tone. The image feels like a real, everyday moment captured with a handheld camera.
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, zero post‑processing aesthetic. Keep the raw, natural look. Slight overexposure or underexposure depending on ambient light—here, a mild warmth in the highlights.
+
+**Prompt Summary**  
+> “A young woman with a high ponytail, wearing an oversized coral hoodie and light‑wash jeans, captured mid‑selfie in a mirror. She holds a white iPhone in her right hand, angled toward the mirror, leaning forward slightly. Slight motion blur on her hand, everything fully sharp. Natural daylight from a window on the right creates a soft warm highlight; slight overexposure in the upper right. Wide‑angle 24 mm lens, short focal length, no bokeh. Setting: cozy home office with wooden bookshelves, books, a white mug on a small table, and a window letting in late‑morning light. Candid, unposed, accidental framing, slight tilt, off‑center crop. No filters, no color grading—raw, natural look.”

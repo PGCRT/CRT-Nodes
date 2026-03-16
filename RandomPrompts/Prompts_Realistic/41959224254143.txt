@@ -1,0 +1,13 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A woman with long, wavy brown hair walking away from the camera down a bright office aisle. She’s wearing a faded denim jacket, high‑waisted black shorts, and blue sneakers. Her back is to the lens, left foot slightly ahead of the right, mid‑step, as if caught in an unplanned, spontaneous moment.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. Slight tilt and off‑center framing; partial crop that gives a raw, handheld feel. No rule‑of‑thirds intentionality. The shot has a slight motion blur from the subject’s movement and the camera’s instability, but everything remains fully sharp—no portrait‑mode depth of field blur.
+
+- **Environment**  
+  Specific real‑world location: a modern office space with white desks, black chairs, and large windows on the right side letting in natural daylight. Time of day: mid‑afternoon (around 3 pm). Ambient light is bright but slightly overexposed at the top, giving a subtle halo to the ceiling lights. A few colleagues are visible in the background, working at computers; one plant sits on a desk, adding a touch of green.
+
+- **Lens & Technical**  
+  Short focal length (24 mm) wide‑angle lens. No bokeh—background fully sharp. Everything in focus, no portrait mode. Auto‑HDR or auto‑beauty mode off — raw, unprocessed look. No filters, no color grading, no post‑processing aesthetic. Slight overexposure at the upper part of the frame to capture the ambient light. The image retains a natural, documentary feel with zero studio lighting and zero professional composition.

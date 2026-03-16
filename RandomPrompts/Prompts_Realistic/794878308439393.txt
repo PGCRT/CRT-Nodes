@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair, bare‑shouldered, standing in a sunlit urban alleyway at dusk. She is mid‑step, one foot slightly ahead of the other, her left hand resting on her hip, head tilted a little to the right as if she’s just noticed the camera. Her expression is natural, unposed, with a soft smile that doesn’t quite reach her eyes—slight tension in the jaw, a hint of candid spontaneity.
+
+- **Lighting & Exposure**  
+  Warm, golden hour light from the west casts a gentle overexposure on her face and upper body; the background is slightly underexposed to keep the scene grounded. The lighting is uneven, with a small highlight on the left side of her chest and a subtle shadow on the right—no auto‑beauty or filter enhancement, just raw, natural exposure.
+
+- **Camera & Lens Settings**  
+  35 mm wide‑angle lens, f/4.0 aperture, 1/125 s shutter speed, ISO 400. Slight handheld shake produces a subtle motion blur on the edges, while the entire frame stays in focus—no bokeh, no depth‑of‑field blur. The composition is accidental: the subject is slightly off‑center, the framing is not rule‑of‑thirds, and the crop is partial, cutting off the top of her head and the lower part of her torso.
+
+- **Environment**  
+  The alleyway is lined with weathered brick walls, a small wooden bench on the left, and a flickering neon sign that reads “Brewery & Bistro” in faded white letters. The time is late afternoon, around 6:30 pm, with the sun low on the horizon. A light breeze ruffles her hair, leaving a slight motion blur at the top of her head. The ambient noise is low, and the background is fully sharp—no portrait‑mode isolation.
+
+- **Details & Imperfections**  
+  The image has a slight tilt to the right, giving it a casual, spontaneous feel. There’s a faint smudge on her left breast, a tiny blemish that adds realism. Her nipples are visible and natural, with a subtle pink hue. The skin tone is warm, with a hint of overexposure on the chest area. The background shows a small patch of green foliage peeking from between the bricks, adding depth.
+
+- **Final Prompt**  
+  “A young woman with long wavy brown hair, bare‑shouldered, standing in a sunlit urban alleyway at dusk, mid‑step with one foot ahead, left hand on hip, head tilted right, natural smile. Warm golden hour light creates slight overexposure on her face and upper body; background underexposed. 35 mm wide‑angle lens, f/4.0, 1/125 s, ISO 400. Slight handheld shake blur, fully sharp background. Alley lined with brick walls, wooden bench, flickering neon sign. Late afternoon 6:30 pm. Slight right tilt, off‑center framing, partial crop. Raw, unprocessed, no filters.”

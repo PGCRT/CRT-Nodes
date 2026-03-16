@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a floral tattoo on her left upper arm and a palm‑tree tattoo on her right thigh, wearing an oversized white tank top and dark lace bikini bottoms. She is mid‑adjustment, pulling the top down with both hands, head tilted slightly downward, eyes cast to the side, hair tied in a loose ponytail that drifts over her left shoulder. Her posture conveys spontaneous motion—mid‑action, unposed, as if caught in a casual, everyday moment.
+
+- **Motion & Focus**  
+  Slight motion blur at the wrists and hands, indicating handheld instability. Everything remains fully sharp—no bokeh, no portrait‑mode isolation. The image has a raw, auto‑HDR feel: a subtle overexposure on the bright white top, with natural ambient light from a large window behind her.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm), short focal length. No rule‑of‑thirds intentionality—framing is accidental, slightly off‑center, with a partial crop that cuts off the top of the window frame. Background is fully in focus: a plain white wall, a glimpse of a green plant, and a bright window that casts natural daylight onto the scene.
+
+- **Environment**  
+  Location: A bright, minimalist bedroom or studio with white walls, a large window on the right, and a potted plant in the corner. Time of day: late morning, soft natural light with a slight warm tint. Weather: clear, sunny, no wind. The room is uncluttered, giving a clean backdrop that keeps the focus on the subject.
+
+- **Capture Style**  
+  Candid, spontaneous—subject unaware or mid‑action. Imperfections encouraged: slight tilt of the camera, off‑center framing, partial crop that cuts the top of the window frame. No rule‑of‑thirds intentionality—accidental framing that gives a natural, documentary feel. Natural motion freeze or slight blur from handheld instability.
+
+- **Lighting & Post‑Processing**  
+  Zero studio lighting, zero professional composition, zero editorial tone. Use auto‑HDR or “auto‑beauty” off for a raw look; no filters, no color grading, no post‑processing aesthetic. Slight overexposure on the white top creates a subtle glow, while the rest of the image stays natural.
+
+- **Prompt Summary**  
+  *“A young woman with a floral tattoo on her left upper arm and a palm‑tree tattoo on her right thigh, wearing an oversized white tank top and dark lace bikini bottoms, mid‑adjustment in a bright, minimalist bedroom. Capture with a wide‑angle, short focal length lens, slight motion blur at the hands, fully sharp background, accidental off‑center framing, natural daylight from a large window, auto‑HDR off, raw unprocessed look.”*

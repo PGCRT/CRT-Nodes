@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with loose, wind‑blown brown hair, wearing an off‑shoulder beige hoodie and faded blue jeans, sitting on a wooden chair at a rustic café table. Her left hand rests on her chin, fingers slightly curled, while her right hand holds a coffee mug; she is mid‑gesture, turning her head to the side as if just having conversation.  
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window behind her creates a soft overexposed highlight on her face and shoulder. Slight handheld shake gives a subtle motion blur around the edges. No auto‑HDR or beauty filters—raw, unprocessed look.  
+
+- **Camera Settings**  
+  Wide‑angle lens (24 mm), f/4.0, 1/60 s shutter speed, ISO 400. Everything in focus from foreground to background; no bokeh.  
+
+- **Composition & Framing**  
+  Off‑center, accidental framing: the subject is slightly tilted, the top of the frame cuts off a bit of her hair, and the bottom edge crops the chair’s backrest. No rule‑of‑thirds intentionality—just a candid snapshot.  
+
+- **Environment**  
+  A cozy, sunlit café in an old wooden building. The background shows a large window with a view of a green park, a stack of magazines on a side table, and a small potted plant on the corner. Time of day: late morning, warm golden light. Weather: clear, breezy.  
+
+- **Details & Imperfections**  
+  Slight tilt in the camera, minor motion blur from handheld instability, natural texture on the hoodie’s fabric, visible thread frays at the sleeve cuff, a small smudge on her mug. The chair’s backrest is partially out of frame.  
+
+- **Post‑Processing**  
+  Zero color grading, no filters—just raw capture. Slight overexposure on the subject’s shoulder to emphasize the natural light.  
+
+**Prompt Summary**  
+> “A young woman in a beige hoodie and blue jeans sits on a wooden chair at a rustic café table, her left hand on her chin and right hand holding a coffee mug. Natural daylight from a large window creates soft overexposure; wide‑angle 24 mm lens at f/4.0, 1/60 s, ISO 400 captures everything in focus with slight handheld blur. The composition is off‑center and accidental, capturing a candid, unposed moment in late morning. Background shows a green park outside the window, a stack of magazines on a side table, and a small potted plant. Raw, unprocessed look with no filters.”

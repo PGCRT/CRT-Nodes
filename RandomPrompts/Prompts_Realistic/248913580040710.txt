@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair, wearing a light‑colored blouse with delicate lace trim and floral embroidery. She is seated at a rustic wooden table, hands gently clasped on the surface, eyes closed in a relaxed, meditative pose. The shot should feel spontaneous—she’s unaware of the camera, caught mid‑breath, as if she just finished a crystal‑casting ritual.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high window, slightly overexposed on the upper part of the frame to give a warm, ethereal glow. No auto‑beauty or filter processing—raw, unedited look. The lighting should create soft highlights on her face and subtle shadows in the recesses of her hair.
+
+- **Composition & Framing**  
+  Wide‑angle lens (24–35 mm), short focal length to capture a broad view of the scene. Everything in focus—no bokeh, no depth‑of‑field blur. The framing is accidental: slightly tilted, off‑center, with a partial crop that gives a candid feel. No rule‑of‑thirds intentionality; the composition should look natural and unposed.
+
+- **Environment**  
+  A dimly lit, cozy interior space that looks like a small studio or a home altar. The background shows a domed ceiling with a circular skylight, string lights hanging in a loose arc, and a few decorative crystals and candles on the table. The time of day is late afternoon, giving a golden hue. Weather or ambient conditions are calm, with a gentle breeze that slightly ruffles her hair.
+
+- **Details & Imperfections**  
+  Include small imperfections: a slight tilt to the camera, a hand‑held shake that leaves a faint motion blur on the subject’s hands. The crystals on the table (pink, blue, green, purple) should be visible and add color contrast. The string lights should appear slightly uneven, enhancing the candid feel.
+
+- **Technical Settings**  
+  - Focal length: 35 mm  
+  - Aperture: f/4.0 (wide, everything in focus)  
+  - Shutter speed: 1/60 s (to capture slight motion blur)  
+  - ISO: 400–800 (depending on ambient light)  
+
+- **Final Prompt**  
+  “A young woman with long wavy brown hair, wearing a light‑colored lace‑trimmed blouse, sits at a rustic wooden table in a dimly lit studio. Her hands are clasped on the table, eyes closed, as if mid‑ritual. Natural daylight from a high window creates a warm overexposed glow. The shot is taken with a 35 mm wide‑angle lens, everything in focus, slightly tilted and handheld‑shaken for a candid feel. Background shows a domed ceiling with a circular skylight, string lights, and decorative crystals. Late afternoon light gives a golden hue. Capture the scene as a raw, unprocessed photograph with no filters or color grading.”

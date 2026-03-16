@@ -1,0 +1,30 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wind‑blown brown hair walking confidently down a bustling city sidewalk. She wears an off‑the‑shoulder white ribbed top and high‑waisted light‑blue jeans, sunglasses perched on her forehead. Her left hand is slightly bent at the wrist, fingers relaxed, as if she’s about to grab a coffee or a bag from a nearby stall. Her face is turned toward the camera but not directly at it—mid‑motion, casual.
+
+- **Motion & Focus**  
+  Slight motion blur on the subject’s hair and hands, indicating handheld instability. Everything in the frame—from her feet to the far end of the street—is fully sharp; no portrait‑mode bokeh. The lens is a short focal‑length wide‑angle (24–35 mm), capturing a broad view of the scene with zero depth‑of‑field blur.
+
+- **Lighting & Exposure**  
+  Natural daylight, mid‑afternoon, with a slight overexposure on the subject’s front to keep the background bright. No auto‑HDR or beauty filters—raw, unprocessed look. The lighting is uneven: the left side of her face is slightly brighter than the right, giving an authentic, spontaneous feel.
+
+- **Environment**  
+  A busy downtown street in a modern city (e.g., Chicago or Boston). The background shows brick buildings with storefronts, a red awning, a passing man in a white t-shirt, and a woman in a blue shirt walking behind her. Trees line the sidewalk, casting dappled shade. The time of day is late afternoon, around 4:30 pm, with warm sunlight hitting the street.
+
+- **Composition & Framing**  
+  No rule‑of‑thirds intentionality—accidental framing that places the subject slightly off‑center to the right. The shot is a wide‑angle capture that includes the sidewalk, the street, and a portion of the building façade. The camera is held at eye level, with a slight tilt upward to include the sky and the top of the storefront sign (“Café”).
+
+- **Technical Settings**  
+  - Focal length: 30 mm (wide‑angle)  
+  - Aperture: f/4.0 (everything in focus)  
+  - Shutter speed: 1/125 s (slight motion blur)  
+  - ISO: 400 (mid‑day brightness)  
+  - No bokeh, no depth‑of‑field blur—background fully sharp.  
+  - Handheld, natural freeze or slight blur from handheld instability.
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, zero post‑processing aesthetic. Slight overexposure on the subject to keep the background bright. The image retains raw, candid feel with no studio lighting or professional composition.
+
+**Prompt Summary (structured)**  
+"Mid‑afternoon city sidewalk, wide‑angle 30 mm lens, handheld shot of a woman in an off‑the‑shoulder white top and high‑waisted jeans walking confidently, slight motion blur on hair/hands, everything sharp, natural daylight with slight overexposure, accidental off‑center framing, background includes brick storefronts, red awning, passing pedestrians, no filters—raw candid photography."

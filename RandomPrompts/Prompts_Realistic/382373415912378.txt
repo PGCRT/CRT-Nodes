@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, athletic woman with long, wavy blonde hair, wearing a white halter‑style bikini, standing in front of a clean, white brick wall. Her hands rest on her hips, body slightly angled toward the camera, head tilted a bit to one side, a natural, unposed smile. The shot should feel spontaneous—like she’s mid‑pose, not staged.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. Slight tilt and off‑center framing; partial crop so the edges cut off the background a little. No rule‑of‑thirds intentionality—just accidental, handheld composition.
+
+- **Motion & Exposure**  
+  Slight motion blur from handheld instability, natural freeze or soft blur. Slight overexposure or underexposure depending on ambient light (choose a bright, midday sun). Auto‑HDR or auto‑beauty mode off — raw, unprocessed look. No filters, no color grading, no post‑processing aesthetic.
+
+- **Environment**  
+  Specific real‑world location: a sunny, open plaza with a white brick wall as backdrop. Time of day: early afternoon, high sun, soft shadows. Weather: clear, mild breeze, slight humidity.
+
+- **Lens & Technical**  
+  Short focal length (e.g., 24–35 mm), wide‑angle lens. No bokeh, no depth‑of‑field blur — background fully sharp; everything in focus. No portrait mode, no subject isolation. Use a standard tripod or handheld, shot with a DSLR or mirrorless camera in RAW.
+
+- **Lighting**  
+  Zero studio lighting, zero professional composition, zero editorial tone. Natural daylight, direct sun from the north‑east, creating soft highlights on the subject’s face and body.
+
+- **Post‑Processing**  
+  Raw file, minimal editing. Keep the image as close to the original capture as possible—only basic white‑balance correction and crop adjustments.  
+
+**Prompt Summary for AI Image Generation**  
+"Generate a realistic candid photo of a tall woman in a white bikini standing before a white brick wall, captured with a wide‑angle lens at early afternoon. The shot should be slightly tilted and off‑center, with accidental framing, slight motion blur from handheld shake, and natural overexposure. The background must be fully sharp, no bokeh. Lighting comes from the north‑east, creating soft highlights. Keep the look raw and unprocessed, no filters or color grading."

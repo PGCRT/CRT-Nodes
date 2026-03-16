@@ -1,0 +1,29 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail, wearing an off‑white cropped hoodie and distressed gray jeans, captured mid‑turn as she walks past a café table. Her back is slightly angled toward the camera, left arm bent, right hand in her pocket, a casual, unposed stance that conveys spontaneous motion.
+
+- **Motion & Focus**  
+  Slight handheld blur at the edges to suggest movement; everything from foreground to background fully sharp—no portrait‑mode depth of field. The lens is set to a short focal length (≈20 mm) wide‑angle, giving a broad view of the scene without any bokeh.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle sun, creating soft overexposure on the subject’s back and subtle shadows under her hoodie. No auto‑HDR or beauty filters—raw, unprocessed look with a slight warm tint from the ambient light.
+
+- **Environment**  
+  Outdoor café patio in an urban plaza; a wooden table, a white wall, a glass window, and a potted plant are visible behind the subject. The time of day is late morning, with the sun high but not directly overhead, casting gentle shadows. A few other patrons are seated at tables, blurred slightly by the wide‑angle lens.
+
+- **Composition & Framing**  
+  Accidental, off‑center framing: the subject occupies the right‑hand third of the frame, slightly tilted to the left. The composition is not rule‑of‑thirds intentional; it’s a candid snapshot that feels spontaneous and informal. The crop is partial—edges cut off at the top and bottom, giving a “in‑motion” feel.
+
+- **Technical Settings**  
+  - Lens: 20 mm prime or equivalent wide‑angle
+  - Aperture: f/5.6 (mid‑range for full focus)
+  - Shutter speed: 1/125 s (for slight motion blur)
+  - ISO: 400–600 (depending on ambient light)
+  - No bokeh, no depth‑of‑field blur—background fully sharp.
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, zero post‑processing aesthetic. Raw image with minimal editing—only basic white‑balance correction and a slight contrast boost to enhance the natural look.
+
+**Prompt Summary**  
+“Candid, wide‑angle shot of a woman in a cropped hoodie and ripped jeans turning mid‑walk on an outdoor café patio, captured at late morning, with slight handheld blur and full sharpness across the frame. The scene includes a wooden table, white wall, glass window, and potted plant in the background. Natural daylight creates soft overexposure on the subject’s back. Composition is accidental and off‑center, with partial crop edges. All elements are in focus, no bokeh, raw, unprocessed look.”

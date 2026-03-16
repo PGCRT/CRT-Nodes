@@ -1,0 +1,31 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy dark hair and striking blue eyes, wearing a black leather zip‑up bodysuit. She is seated on a wooden pool table, leaning slightly forward with one hand near her chin, as if mid‑thought or about to speak. Her left wrist shows a small tattoo that reads “Queen.”  
+
+- **Facial Features & Expression**  
+  Soft, natural makeup with subtle highlight on the cheekbones and a faint kiss‑mark on her lower lip. Slight smirk, eyes half‑closed, giving an air of casual confidence.  
+
+- **Lighting & Exposure**  
+  Warm, ambient daylight from a western window; slight overexposure in the upper right corner to capture the brightness of the room. No auto‑beauty or filter enhancement—raw, unprocessed look.  
+
+- **Camera Settings**  
+  - Lens: 24mm wide‑angle, short focal length.  
+  - Aperture: f/5.6 (mid‑range).  
+  - Shutter speed: 1/125 s (handheld, slight motion blur on the subject’s hand).  
+  - ISO: 400 (for natural grain).  
+
+- **Composition**  
+  Off‑center framing; the subject’s head is slightly tilted to the left, creating a casual, spontaneous feel. The composition is not rule‑of‑thirds‑intentional—she is positioned at the intersection of a natural “L” formed by the pool table and the wall.  
+
+- **Background & Environment**  
+  A dimly lit indoor space with a green pool table in the foreground, a wooden rack of pool cues leaning against the wall on the right, and a small yellow fruit (an orange) on the left side of the table. The background is fully sharp—no bokeh.  
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, partial crop that cuts off the top left corner of the pool table. Tiny imperfections: a faint smudge on her leather jacket’s zipper, a slight blur around her hand, and a small reflection in her eyes from the window.  
+
+- **Post‑Processing**  
+  No filters or color grading—just raw capture. Slight auto‑HDR applied only to the high‑dynamic range of the scene.  
+
+- **Final Prompt Summary**  
+  “A young woman with long wavy dark hair and blue eyes, wearing a black leather zip‑up bodysuit, seated on a wooden pool table in a dimly lit room. She leans forward with one hand near her chin, a subtle smirk on her face. Warm daylight from a western window creates slight overexposure in the upper right. Shot on a 24mm wide‑angle lens at f/5.6 and 1/125 s, handheld, with off‑center, slightly tilted framing. Background includes a green pool table, wooden cue rack, and an orange fruit. Raw, unprocessed look with auto‑HDR, no filters, everything in focus.”

@@ -1,0 +1,16 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman in a turquoise, studded corset with fishnet detailing, mid‑adjustment of the front buckle, hands gripping the waistband. Her nails are painted lavender; her hair is loose and slightly messy. She’s standing in a bright, sunlit kitchen at mid‑afternoon, facing the camera but not posing—her head is tilted a little to the left, giving an accidental off‑center framing.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. Slight motion blur from handheld shake, natural freeze of the moment her hands tighten the buckle. No rule‑of‑thirds intentionality—framing is accidental, a partial crop that cuts off a bit of her left shoulder.
+
+- **Imperfections**  
+  Slight tilt and off‑center composition; a tiny overexposed highlight on the corset’s gold ring. Raw, unprocessed look: no filters, no color grading, no post‑processing aesthetic. The image has a faint natural overexposure in the upper right corner due to ambient light.
+
+- **Environment**  
+  Specific real‑world location: a bright, modern kitchen with white cabinets and a marble countertop. Time of day: late afternoon, soft golden sunlight coming from the west, creating warm highlights on the corset. Weather or ambient conditions: clear, slightly humid air; the background is fully sharp—no bokeh, no depth‑of‑field blur.
+
+- **Lens & Technical**  
+  Short focal length (24 mm), wide‑angle lens. Everything in focus—background and subject. No portrait mode, no subject isolation. Slight motion blur on the hands and corset, indicating handheld instability. Auto‑HDR or auto‑beauty mode off. The image retains a raw, natural look with zero studio lighting and zero professional composition.

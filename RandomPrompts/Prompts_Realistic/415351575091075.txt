@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark, wavy hair standing in a casual, unposed stance, mid‑action while holding a white ceramic cup in each hand. Her body is slightly turned toward the camera, one arm bent at the elbow, the other extended outward, creating a natural diagonal line that gives the frame a dynamic feel. She wears a simple black bikini bottom and a light, breathable top that lets her skin tone shine naturally.
+
+- **Facial Expression & Gaze**  
+  Her face is turned slightly to the side, eyes focused on the cup in her right hand, mouth relaxed with a subtle smile. A faint, natural motion blur surrounds her hands and the cups, indicating a handheld shot captured at a fast shutter speed but with a slight shake.
+
+- **Lighting & Exposure**  
+  The scene is lit by ambient daylight from a high‑angle source; the exposure is slightly overexposed on the subject’s torso, giving a warm, soft glow. No auto‑beauty or filter enhancement—just raw, unprocessed data. The background is a plain, neutral wall with a faint texture, fully sharp with no bokeh.
+
+- **Lens & Technical Settings**  
+  Use a wide‑angle lens (24–35 mm) with a short focal length to capture the full body and environment. Focus is set on the subject’s midsection, keeping everything in focus from head to toe. No portrait mode or depth‑of‑field blur; the background remains crisp.
+
+- **Composition & Framing**  
+  The frame is intentionally off‑center, with the subject’s left side slightly cut off by the edge of the image—a candid, spontaneous feel. The composition does not follow the rule of thirds; instead, it follows the natural line of the subject’s body and the cups she holds.
+
+- **Environment & Time**  
+  The location is a simple indoor space with a light gray wall, captured during mid‑afternoon when the sunlight is warm but not harsh. A faint breeze is visible in the subject’s hair, adding a subtle motion cue.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera adds realism. The cups show a tiny reflection of the ambient light, and the woman’s fingers are slightly curled around the cup rims. Her black bikini bottom has a subtle seam that runs horizontally across her hips. The overall look is raw, unpolished, and candid—like a snapshot taken in a casual, everyday moment.

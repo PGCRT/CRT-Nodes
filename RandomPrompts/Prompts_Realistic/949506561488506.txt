@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark hair and a subtle side‑swept fringe, wearing a white off‑the‑shoulder top with floral embroidery and a matching high‑waist skirt. She’s mid‑turn, one hand lightly touching her hip, a faint smile on her face, and a pair of pink‑tinted sunglasses perched on her forehead. Her earrings are small, beaded, and slightly asymmetrical. The pose is casual, as if she just stepped out of a coffee shop or a street‑style photoshoot.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle, late‑afternoon sun that creates a soft overexposure on the upper body while leaving a gentle underexposed shadow beneath the skirt. The exposure is raw—no auto‑HDR or beauty filters, just a handheld shot with a slight vignette caused by the wide‑angle lens.
+
+- **Motion & Focus**  
+  Slight motion blur at the edges from a shaky handheld camera, but the subject’s face and upper body remain sharply in focus. No portrait‑mode depth‑of‑field blur; everything—from her hair to the background—is crisp.
+
+- **Lens & Technical**  
+  24‑mm wide‑angle lens (short focal length), f/3.5 aperture, 1/60 s shutter speed, ISO 400. The lens is set to “wide” for a broad field of view that captures the entire figure and a portion of the street behind her. No bokeh; background remains fully sharp.
+
+- **Environment**  
+  A quiet corner of an urban plaza in late afternoon. The background shows a blurred brick wall, a passing cyclist, and a small tree with leaves in motion. The time of day is around 5:30 pm, giving warm, golden light that slightly overexposes the upper body and underexposes the lower body.
+
+- **Composition & Framing**  
+  The shot is intentionally off‑center; the subject’s left side is slightly tilted to the right, creating a casual, spontaneous feel. The frame cuts off just above her elbows and below her knees, giving a “partial crop” that emphasizes the mid‑body. No rule‑of‑thirds—this is an accidental, candid composition.
+
+- **Style Notes**  
+  Raw, unprocessed look with zero color grading or filters. A slight tilt in the camera gives a natural sense of movement. The image feels like a real‑life snapshot captured on a smartphone or DSLR, with a wide‑angle “wide‑lens” feel that keeps everything in focus.
+
+- **Prompt Summary**  
+  *“A candid, unposed photo of a woman in a white floral top and skirt, wearing sunglasses, captured with a 24‑mm wide‑angle lens at late afternoon. The shot has slight motion blur from handheld shake but sharp focus on the subject, raw exposure with a soft overexposure on the upper body. The background is a quiet urban plaza with a brick wall and a passing cyclist. The composition is off‑center and partially cropped, giving an accidental, spontaneous feel.”*

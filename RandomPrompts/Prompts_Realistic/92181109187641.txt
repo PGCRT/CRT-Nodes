@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair, wearing a plain white crop‑top and loose white sweatpants, captured mid‑turn as she walks past a metal shelving unit. Her left hand is slightly bent at the wrist, her right arm relaxed by her side, and she’s looking back over her shoulder with a subtle, natural smile. The pose should feel spontaneous—like she’s just paused in a casual, everyday moment.
+
+- **Motion & Focus**  
+  Apply a slight motion blur to the subject’s movement, as if the camera was handheld and slightly unsteady. Keep everything in focus—no depth‑of‑field blur; the background (the shelving unit, boxes, and window) should be crisp. Avoid any “portrait mode” softening; keep the entire frame sharp.
+
+- **Lighting & Exposure**  
+  Use natural daylight from a large window with horizontal blinds. The exposure should be slightly overexposed on the subject’s face and upper body, giving a warm, bright feel, while the lower part of the frame (pants, floor) remains a bit softer. No auto‑HDR or beauty filters—just raw, unprocessed lighting.
+
+- **Lens & Technical**  
+  Shoot with a wide‑angle lens (24–35 mm). Keep the focal length short to capture a broad view of the scene. Since we’re aiming for a “wide” look, keep the background fully sharp; no bokeh. Use a handheld shot that’s slightly tilted, off‑center, and not intentionally composed per the rule‑of‑thirds.
+
+- **Environment**  
+  The setting is an office or storage area with a metal wire shelving unit filled with cardboard boxes, stacks of white paper, and a window with blinds. The time of day is mid‑afternoon, with bright natural light coming from the window, creating soft shadows and subtle highlights on the subject’s face and clothing. The ambient air feels cool, and the scene has a casual, everyday vibe.
+
+- **Composition & Framing**  
+  Frame the shot so the subject occupies roughly the central‑right portion of the frame, with the shelving unit extending to the left and the window to the right. Allow a partial crop at the bottom left corner, letting a bit of a box peek out. The framing should feel accidental—slight tilt and off‑center, as if the photographer was in motion.
+
+- **Final Prompt**  
+  “A candid, spontaneous photograph of a young woman with long brown hair, wearing a white crop‑top and loose sweatpants, captured mid‑turn as she walks past a metal shelving unit filled with boxes and stacks of paper. The image uses a wide‑angle lens (24–35 mm), slight motion blur on the subject, natural daylight from a window with blinds, slightly overexposed on the upper body, everything in focus, no bokeh. The composition is accidental—slightly tilted, off‑center, partial crop at the bottom left—captured in an office/storage area at mid‑afternoon, with a raw, unprocessed, no‑filter look.”

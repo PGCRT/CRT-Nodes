@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A teenage girl in a red jacket and blue jeans stands mid‑step inside a bright, modern classroom, her feet caught in a faint white circular glow on the floor. She’s turning slightly toward a large projection screen that displays a vivid planetary diagram; her face is turned to the side, capturing an unposed, spontaneous moment as she reads or explains the content. Her hair is loosely tied back, a few strands escaping, adding a natural, imperfect detail.
+
+- **Environment**  
+  The setting is a tall, wooden‑ceilings classroom with arched windows that let in warm, late‑afternoon light. The room is furnished with rows of wooden desks, each occupied by students working on laptops; a projector sits on a desk in the foreground. A balcony runs along the left wall, where a teacher leans over a large projection screen showing a historical building. The time of day is early evening, the sun low, casting soft shadows and a slight overexposure that gives the scene an auto‑HDR feel. The weather outside is clear, with a hint of breeze that stirs the curtains.
+
+- **Lens & Technical**  
+  Use a wide‑angle lens (24‑35 mm) with a short focal length to capture the entire space. Shoot everything in focus—no bokeh, no portrait‑mode isolation. Keep the background fully sharp, but introduce slight motion blur on the girl’s feet and the students’ laptops to convey handheld instability. The composition is accidental: the frame is slightly tilted, off‑center, and the rule of thirds is ignored for a more candid feel.
+
+- **Capture Style**  
+  Capture a candid, unposed moment; the girl appears unaware of the camera, mid‑action, as if she’s just finished explaining a concept. Encourage imperfections: a slight tilt to the left, partial crop that cuts off a bit of the balcony railing, and a faint overexposure that gives the image a raw, unprocessed look. No filters, no color grading, no post‑processing aesthetic—just natural light and a genuine moment frozen in time.
+
+- **Lighting & Color**  
+  Natural daylight from the arched windows creates a warm, slightly overexposed tone. The lighting is zero‑studio, zero‑professional; it’s the ambient light of a real classroom. The color palette is muted earth tones with a pop of red from the jacket and a cool blue from the projection screen.
+
+- **Details**  
+  Include the subtle detail of the white circular glow on the floor (a projector’s light trail), the slight blur of the girl’s feet, the students’ laptops, the wooden desks, the projector, the large screen with a planetary diagram, the balcony railing, and the teacher’s hand on the screen. The image should feel like a real, unedited snapshot taken with a handheld camera in a real classroom at late afternoon.

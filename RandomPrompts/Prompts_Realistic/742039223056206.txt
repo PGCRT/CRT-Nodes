@@ -1,0 +1,30 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with shoulder‑length brown hair, wearing a dark ribbed tank top and a gold chain necklace, seated on a beige sofa. She is mid‑smile, head tilted slightly to the right, eyes focused on the camera but not posing—captured in a spontaneous, “in‑the‑moment” stance. Her left arm rests on her thigh, right arm bent at the elbow, creating a natural, relaxed silhouette.
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window to the left of the frame; slight overexposure on the face and upper body, giving a warm, soft glow. No auto‑beauty or filter enhancement—raw, unprocessed look. The exposure is slightly high, but the background remains fully sharp.
+
+- **Camera & Lens Settings**  
+  Wide‑angle lens (24 mm), short focal length, handheld. Slight motion blur from the camera’s instability, natural freeze of the subject’s movement. Everything in focus—no portrait‑mode depth‑of‑field blur; background (a large green plant and a window) is crisp.
+
+- **Composition & Framing**  
+  No rule‑of‑thirds intentionality: the frame is off‑center, slightly tilted, with the subject’s left side cut off by the edge of the image. The composition feels casual, as if captured by a friend with a smartphone or DSLR in a living room.
+
+- **Environment & Ambience**  
+  Location: a bright, modern living room with a beige couch, a large potted plant behind the subject, and a window that lets in natural light. Time of day: late morning, soft sunlight. Weather: clear, no wind—ambient conditions are calm, allowing for subtle motion blur.
+
+- **Technical Details**  
+  - Focal length: 24 mm (wide‑angle)  
+  - Aperture: f/4.0 (mid‑range)  
+  - Shutter speed: 1/60 s (slight motion blur)  
+  - ISO: 400 (natural contrast)  
+  - No bokeh; background fully sharp.  
+  - No portrait mode or subject isolation.  
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, no auto‑beauty mode—just raw capture. Slight overexposure on the subject’s face and upper body, giving a warm, natural feel.
+
+**Prompt Summary**  
+“Candid photo of a smiling woman in a dark tank top and gold chain, seated on a beige sofa in a bright living room. Natural daylight from a window creates slight overexposure; wide‑angle 24 mm lens, handheld shake producing mild motion blur. All elements in focus, no bokeh. Slight tilt and off‑center framing give an accidental, spontaneous feel. Raw, unprocessed, no filters.”

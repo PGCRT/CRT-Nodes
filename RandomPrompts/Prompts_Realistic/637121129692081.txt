@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with wet, slightly frizzy hair standing on a sunlit patio, hands behind her head in a casual, spontaneous pose. She wears a glossy black one‑piece bodysuit with criss‑cross straps, black thigh‑high boots, and matching garters. Her body is angled toward the camera but not perfectly centered; the frame is tilted a few degrees to give an accidental, candid feel.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject appears mid‑action, as if she just finished a shower or a quick dip in a pool. Slight motion blur at the edges from handheld instability, but the subject remains mostly sharp. No filters, no color grading, no post‑processing aesthetic—just raw, auto‑HDR or “auto‑beauty” off.
+
+- **Environment**  
+  Specific real‑world location: an outdoor tiled patio in front of a light‑colored stucco house. A small palm plant is visible to the left, a window and a side door on the right, a low concrete step leading up to the house. The time of day is late morning, with warm, high‑angle sunlight casting soft shadows. Ambient conditions are clear, dry air with a faint haze from moisture on the tiles.
+
+- **Lens & Technical**  
+  Short focal length (20–35 mm), wide‑angle lens. Everything in focus—no bokeh, no depth‑of‑field blur; background fully sharp. No portrait‑mode subject isolation. Slight overexposure on the upper body to capture the sheen of the bodysuit and the wet hair. The exposure is natural, depending on ambient light.
+
+- **Composition Notes**  
+  No rule‑of‑thirds intentionality—accidental framing with a slight tilt. The shot is partially cropped at the top and bottom, giving a “mid‑action” feel. The background is fully sharp, so the entire scene—from the plant to the step—is in focus.
+
+- **Final Prompt**  
+  *“A young woman with wet, slightly frizzy hair stands on a sunlit patio in front of a light‑colored stucco house, hands behind her head, wearing a glossy black one‑piece bodysuit with criss‑cross straps, black thigh‑high boots, and matching garters. The shot is candid and unposed, captured with a short focal length wide‑angle lens, everything in focus with no bokeh. Slight motion blur from handheld instability gives a raw, auto‑HDR look. The time of day is late morning, warm sunlight casting soft shadows on the tiled patio. A small palm plant sits to the left, a window and side door on the right, a low concrete step leading up to the house. The frame is slightly tilted, accidentally cropped at top and bottom, no rule‑of‑thirds, all background sharp.”*

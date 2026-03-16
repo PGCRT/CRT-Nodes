@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework – “Blue‑Tied Back‑View in a Sunlit Bathtub”**
+
+- **Subject & Pose**  
+  A woman with wet, dark hair tied back, wearing a deep‑blue thong‑style swimsuit that shows a subtle “Roxie” tattoo on her lower back. She is kneeling in a white bathtub, facing away from the camera, her left hand gripping the side of the tub and her right hand resting on a small white soap dish. Her hips are slightly turned to the right, creating a dynamic, off‑center composition.
+
+- **Motion & Focus**  
+  Slight motion blur at the edges of the body and water droplets, indicating handheld shake and mid‑action. Everything is fully sharp—no portrait‑mode depth‑of‑field blur; background (the tiled bathroom wall and sheer curtain) remains in focus.
+
+- **Lighting & Exposure**  
+  Natural daylight from a window on the left, producing a soft, slightly overexposed highlight on the woman’s back and a gentle glare on the water droplets. No auto‑beauty mode—raw, unprocessed look. The exposure is a little bright at the top, giving an ambient “sun‑bath” feel.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24‑35 mm), short focal length, no bokeh. All elements—the subject, tub, soap dish, and background tiles—are in focus. Slight tilt to the right, partial crop that cuts off a bit of the left side of the tub, giving a candid, spontaneous vibe.
+
+- **Environment**  
+  A bright, airy bathroom with white tiled floor and a sheer white curtain hanging behind the tub. The time of day is mid‑afternoon, with warm, diffused sunlight streaming through the window. A few water droplets cling to the woman’s back and hair, adding texture.
+
+- **Style Notes**  
+  Candid, unposed, spontaneous—subject appears unaware of the camera. Imperfections are welcome: a slight off‑center framing, a tiny tilt, and a partial crop that gives the image a raw, documentary feel. No rule‑of‑thirds intentionality; the composition is accidental, as if captured mid‑move.
+
+- **Prompt for AI Image Generation**  
+  *“A woman with wet dark hair tied back, wearing a deep‑blue thong swimsuit, kneeling in a white bathtub and facing away from the camera. Her left hand grips the tub’s side, her right hand rests on a small white soap dish. Slight motion blur on her back and water droplets, everything fully sharp. Natural daylight from a window on the left creates soft overexposure. Wide‑angle lens (24‑35 mm), short focal length, no bokeh. The background shows white tiled floor and a sheer white curtain; mid‑afternoon sunlight. Candid, unposed, accidental framing with slight tilt and partial crop.”*

@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A young woman with long, wet hair, wearing a faded lavender t‑shirt and pink bikini bottoms, mid‑wash, holding a blue garden hose in her right hand. She’s tilting her head back, letting the water stream hit her face and shoulders, one arm raised to adjust her hair. Her left hand grips the hose near the nozzle; a few droplets hang from her wrist. The scene captures a spontaneous, unposed moment of self‑care or playfulness in an outdoor setting.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. Slight tilt and off‑center framing; partial crop that gives a raw, handheld feel. No rule‑of‑thirds intentionality. The shot is taken with a wide‑angle lens (35 mm) at a short focal length, producing a natural “wide” view of the environment. All elements are in focus — no bokeh or depth‑of‑field blur; background stays sharp.
+
+- **Environment**  
+  Specific real‑world location: a residential backyard with a wooden deck, a concrete patio, and a white storage unit on the left. A house wall with a window is visible behind her, and a small white bucket sits near the deck railing. Trees and green foliage fill the background, suggesting a sunny afternoon in late summer. The time of day is mid‑afternoon, with warm, slightly harsh ambient light that creates a mild overexposure on the subject’s face and a subtle shadow on the deck. Weather is clear, with a bright blue sky peeking through the leaves.
+
+- **Lens & Technical**  
+  Short focal length (35 mm), wide‑angle, handheld. No bokeh; background fully sharp. Everything in focus — no portrait‑mode isolation. Slight motion blur from the subject’s movement and the hose’s water spray. Auto‑HDR or auto‑beauty mode off — raw, unprocessed look. No filters, no color grading, no post‑processing aesthetic. The exposure is slightly high, giving a bright, natural feel to the image.
+
+- **Composition Notes**  
+  The frame is intentionally imperfect: the subject’s left side cuts slightly beyond the right edge of the frame, and the hose’s blue line curves out of the lower right corner. The wooden deck railing runs diagonally across the background, adding dynamic lines. A small white bucket near the railing adds a contrasting element. The shot captures the entire body of the woman from head to toe, including her wet shirt and bikini bottoms, as well as the hose’s coiled blue line that loops back into the frame.
+
+- **Final Prompt**  
+  “A young woman with long, wet hair, wearing a faded lavender t‑shirt and pink bikini bottoms, mid‑wash, holding a blue garden hose in her right hand, tilting her head back to let water hit her face and shoulders, one arm raised to adjust her hair, left hand gripping the hose near the nozzle; a few droplets hang from her wrist. Candid, unposed, spontaneous — slight tilt and off‑center framing, partial crop. Wide‑angle 35 mm lens, short focal length, handheld. All elements in focus, no bokeh. Background: residential backyard with wooden deck, concrete patio, white storage unit on left, house wall with window, trees and green foliage, bright blue sky peeking through leaves. Time of day: mid‑afternoon, warm ambient light, slight overexposure. Raw, unprocessed look, no filters or color grading. Slight motion blur from subject’s movement and water spray.”

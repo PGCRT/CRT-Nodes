@@ -1,0 +1,16 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark, wavy hair standing in a sunlit meadow, hands gently cupping her chest, wearing faded blue denim shorts with rolled cuffs. Her left shoulder bears a bold tribal-style tattoo that curves along the collarbone. She is mid‑gesture, as if just finishing a playful touch, with a slight tilt to her body and an off‑center framing that gives the shot a spontaneous, candid feel.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject appears unaware of the camera, caught in a natural moment. The image carries a subtle motion blur from handheld instability, suggesting a quick snap during a breezy afternoon. No filters, no color grading, no post‑processing aesthetic; the look is raw and unprocessed, with a slight overexposure that lets the ambient light bleed softly across the scene.
+
+- **Environment**  
+  Location: A grassy field at late afternoon, the sun low on the horizon casting warm golden hues. The background is a mix of green grass and scattered wildflowers, with a faint line of trees in the distance. Weather is mild and slightly windy, adding to the motion blur. Time of day: early evening, as the light softens and the temperature cools.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm) wide‑angle lens, producing a broad field of view that keeps the entire scene in focus—no bokeh or depth‑of‑field blur. The background is fully sharp, with no portrait‑mode isolation. Everything from foreground to background remains crisp, capturing every detail from the texture of the denim to the fine hairs on her arm. The composition is accidental: a slight tilt and partial crop that give the image an organic, unposed feel.  
+
+- **Final Prompt**  
+  “A young woman with long dark wavy hair, hands cupping her chest, wearing faded blue denim shorts with rolled cuffs, standing in a sunlit meadow at late afternoon. She has a bold tribal tattoo on her left shoulder. The shot is candid and spontaneous, captured with a short focal length wide‑angle lens that keeps the entire scene sharp. Slight motion blur from handheld instability adds a raw, unprocessed feel, with a subtle overexposure that lets the ambient light bleed. The background shows green grass and scattered wildflowers, a line of trees in the distance, all fully in focus. The composition is accidental—slightly tilted and off‑center—freezing a natural moment as she moves.”

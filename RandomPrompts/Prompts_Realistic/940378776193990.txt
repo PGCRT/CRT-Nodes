@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy blonde hair sitting on a neatly made bed in a bright, sunlit bedroom. She’s wearing a light gray ribbed crop‑top and matching high‑waist shorts, with white sneakers on her feet. Her left arm is bent, hand resting on the bed, while her right arm leans against the mattress; she has a small tattoo of a sunflower on each forearm and a delicate bracelet on her left wrist. She’s looking directly at the camera with a soft, confident smile, eyes slightly narrowed as if she just finished a pose and is mid‑breath.
+
+- **Lighting & Exposure**  
+  Natural daylight coming from a large window to the left of the frame; the light is slightly overexposed on the upper part of the image, giving a warm, airy feel. The lamp on the bedside table casts a gentle glow, creating subtle highlights on her face and shoulders. No auto‑HDR or beauty filters—just raw, unprocessed exposure.
+
+- **Camera & Lens Settings**  
+  35 mm wide‑angle lens, f/4.0 aperture, 1/125 s shutter speed, ISO 400. Slight handheld shake gives a natural motion blur around the edges. Everything is in focus—from her face to the bed sheets—no depth‑of‑field blur. The composition is accidental: the frame is slightly tilted, the subject is off‑center, and the crop cuts off part of the window view for a candid feel.
+
+- **Environment**  
+  A modern bedroom with a white bed, a small bedside table, a beige lamp, and a large window that lets in bright morning light. The curtains are tied back, revealing a glimpse of a neighboring house outside. The room is tidy but lived‑in, with a few personal items (a small plant on the table, a book on the nightstand) adding realism.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, a tiny off‑center crop that keeps the subject’s left knee slightly out of frame. A faint motion blur around her hands and feet suggests she was mid‑pose when the shutter clicked. The background is fully sharp—no bokeh. The image has no post‑processing color grading; it looks like an instant photo taken with a DSLR in natural light.
+
+- **Prompt for Text‑to‑Image Generation**  
+  “A young woman with long wavy blonde hair sitting on a white bed in a bright, sunlit bedroom, wearing a light gray ribbed crop‑top and matching high‑waist shorts, white sneakers on her feet, a sunflower tattoo on each forearm, a delicate bracelet on her left wrist. She looks directly at the camera with a soft confident smile, hand resting on the bed, other arm leaning against the mattress. Natural daylight from a large window to the left creates slight overexposure on the upper part of the image; a lamp on the bedside table adds warm highlights. 35 mm wide‑angle lens, f/4.0, 1/125 s, ISO 400, handheld shake giving natural motion blur. Everything in focus, background fully sharp. Slight tilt and off‑center framing, accidental crop. The room has a white bed, beige lamp, small bedside table with a plant and book, a large window showing a neighboring house. Capture candid, unposed, spontaneous mood; no filters, no color grading, raw look.”

@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with light‑brown hair tied back, wearing a white tank top, captured mid‑smile while walking through a sunlit garden. Her head is slightly tilted to the left, and her left ear is partially cropped by the frame’s edge. She’s holding a small, translucent glass jar in her right hand, as if she’re about to pour something—maybe a drink or a potion—into a ceramic mug that sits on a wooden table beside her.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the woman appears unaware of the camera, mid‑action. The shot has a slight handheld shake and a faint motion blur around the edges, giving it a raw, unprocessed feel. No filters, no color grading, no post‑processing aesthetic—just natural light and a wide‑angle lens that keeps everything in focus from foreground to background.
+
+- **Environment**  
+  Location: A bright, overcast afternoon in an outdoor garden, with a stone wall and a small fountain in the background. The time of day is late morning, around 10:30 AM, when the sun is high but still soft, creating a gentle ambient glow. The weather is lightly cloudy, with a few scattered clouds overhead, allowing for a slight overexposure on the highlights that gives the image an airy feel.
+
+- **Lens & Technical**  
+  Short focal length (24 mm) wide‑angle lens, no bokeh, no depth‑of‑field blur—everything from the woman’s face to the distant foliage is fully sharp. The composition is accidental: the frame is slightly off‑center, the rule of thirds is ignored, and the shot is a partial crop that cuts off the left side of her ear and the right side of the jar. The background is entirely in focus, with no “portrait mode” isolation.
+
+- **Details & Variation**  
+  Add a subtle, natural motion blur to the woman’s hand as she moves the jar, and a slight overexposure on the top of her head that gives the image a warm, golden hue. Include a faint hint of a purple flower in the upper right corner of the background, and a small, cracked ceramic mug on the table that sits next to a wooden spoon. The stone wall behind her has a rough texture, and the foliage includes a few green leaves and a single pink blossom that peeks into the frame from the right side.
+
+- **Final Prompt**  
+  “A young woman with light‑brown hair tied back, wearing a white tank top, captured mid‑smile while walking through a sunlit garden. She holds a small, translucent glass jar in her right hand, about to pour something into a ceramic mug on a wooden table beside her. The shot is taken with a 24 mm wide‑angle lens, everything in focus from foreground to background, with a slight handheld shake and faint motion blur. The scene is set in a bright, overcast late‑morning afternoon at an outdoor garden, with a stone wall and a small fountain in the back, a purple flower peeking into the frame from the right, and a rough texture on the stone wall. The composition is accidental and off‑center, partially cropping the woman’s left ear and the right side of the jar, with a slight overexposure on the top of her head that gives the image a warm, golden hue.”

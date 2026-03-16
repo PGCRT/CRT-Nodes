@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair that catches the light as she turns her head slightly to the side. She’s wearing a sleek, black, deep‑V dress that clings to her figure, emphasizing a subtle, natural contour. Her hands are relaxed at her sides, one of them lightly touching the lapel of her dress. Her expression is a soft, unposed smile, eyes bright and engaged, as if she’s mid‑conversation or just finished a gesture.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject appears unaware of the camera, caught in a natural moment. Slight tilt and off‑center framing give an accidental, handheld feel. The shot is a partial crop that doesn’t follow the rule‑of‑thirds; the composition feels organic, as if the photographer was moving while shooting.
+
+- **Motion & Focus**  
+  A slight motion blur from handheld instability freezes the subject’s movement, giving a sense of life. Everything in the frame — subject, background, and foreground — is fully sharp, with no portrait‑mode depth‑of‑field blur. No bokeh; the background remains crisp.
+
+- **Lens & Technical**  
+  Short focal length (20–35 mm) wide‑angle lens. Auto‑HDR or auto‑beauty mode off — raw, unprocessed look. Slight overexposure or underexposure depending on ambient light (the lighting is warm, mid‑afternoon). No filters, no color grading, no post‑processing aesthetic.
+
+- **Environment**  
+  A bright, modern hotel lobby with a subtle, textured beige wall and a tall, slender lamp in the background. The time of day is late afternoon; the ambient light is soft but warm, casting gentle shadows. A faint hint of a white chair and a small side table are visible to the right, adding context without distracting.
+
+- **Lighting & Composition**  
+  Zero studio lighting, zero professional composition, zero editorial tone. Natural light from a window on the left creates a slight highlight on the subject’s face and dress. The background is fully sharp, no depth‑of‑field blur. The framing is slightly off‑center, with the subject’s left side cutting close to the edge of the frame.
+
+- **Details & Imperfections**  
+  Slight tilt in the camera angle gives a casual feel. A partial crop cuts off a small portion of the background on the right, enhancing the candid vibe. The dress’s straps are slightly askew, adding realism. The woman’s hair has a subtle reflection from the lamp’s glow.
+
+- **Prompt Summary**  
+  “A young woman in a black deep‑V dress stands in a bright hotel lobby, captured with a handheld wide‑angle lens at late afternoon. Her hair is wavy and brown, her smile natural, her pose mid‑gesture. Slight motion blur and off‑center framing create a candid, raw look. Everything is fully sharp, no filters or auto‑HDR, just a genuine, spontaneous photograph.”

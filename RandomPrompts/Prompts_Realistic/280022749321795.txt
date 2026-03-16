@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy dark hair standing in a modern kitchen, mid‑action while texting on a smartphone. She’s wearing a light‑blue denim jacket over a white crop top, black sheer leggings with colorful paint splashes at the thighs, and a gold necklace. Her left hand holds a spoon as if she just stirred something in a pot or bowl, her right hand gripping the phone. A watch is visible on her left wrist, a bracelet on her right. She’s looking down at the screen, slightly tilted, with a natural, unposed expression.
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window behind the camera, creating a soft overexposure that gives a raw, unprocessed look. Slight handheld shake results in a subtle motion blur around the edges. No auto‑beauty or filter enhancement—just the genuine ambient light.
+
+- **Camera Settings**  
+  Wide‑angle lens (24–35 mm), short focal length, fully sharp background with no bokeh. Aperture set to f/8–f/10 for depth of field control; ISO 400–600 for natural grain. Slight overexposure to keep the scene bright and lively.
+
+- **Composition & Framing**  
+  Candid, spontaneous framing—no rule‑of‑thirds intentionality. The shot is slightly off‑center, with a partial crop that captures the woman from the mid‑thigh up to the top of her head. The background shows a stainless‑steel refrigerator on the left, wooden cabinets above, a white countertop with kitchen utensils and a mug on the right, and a glimpse of a sink. The time of day is late morning, with warm sunlight casting soft shadows.
+
+- **Environment Details**  
+  The kitchen has a modern, yet cozy feel: a stainless‑steel fridge with a water dispenser, light‑wood cabinets with silver handles, a white countertop, and a backsplash in a muted gray tone. A set of wooden spoons and a white mug sit on the counter, a small dishware set is visible near the sink. The floor is tiled, and a small plant is placed on a shelf in the background.
+
+- **Technical Notes**  
+  Everything is in focus—no portrait‑mode blur. The image has a slight tilt to mimic handheld instability. No color grading or post‑processing; just raw, realistic capture. The overall tone is natural, with a hint of warmth from the sunlight.
+
+**Prompt Summary**  
+"Candid, wide‑angle shot of a young woman in a modern kitchen, mid‑texting while holding a spoon, wearing a denim jacket, white crop top, and black sheer leggings with paint splashes. Natural daylight, slight overexposure, handheld shake, fully sharp background, off‑center framing, no filters—raw realistic photography."

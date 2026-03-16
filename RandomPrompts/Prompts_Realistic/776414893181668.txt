@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with light brown, shoulder‑length hair, wearing a red lace bra and matching high‑waist panties, sitting in an ornate, patterned armchair. Her arms are raised behind her head, elbows bent, creating a casual, relaxed pose. She looks directly at the camera with a soft, natural expression, lips slightly parted. The chair has a floral‑leaf motif in muted earth tones; the fabric shows subtle wear and texture.
+
+- **Lighting & Exposure**  
+  Natural daylight from a window on the left side of the room, mid‑afternoon. Slight overexposure on the upper body to highlight the red lace, with a warm, slightly hazy tone. No auto‑HDR or beauty filters—raw, unprocessed look. The exposure is uneven: the lower part of the image is a bit brighter than the top, giving an organic feel.
+
+- **Camera & Lens Settings**  
+  35 mm wide‑angle lens, f/4.0, 1/125 s shutter speed, ISO 400. Handheld shot with slight instability, producing a gentle motion blur on the arms and shoulders. Everything is in focus—no portrait‑mode depth of field blur; background (a plain wall, a closed door, a small window) remains sharp.
+
+- **Composition & Framing**  
+  Candid, unposed, spontaneous framing: the shot is slightly tilted to the right, off‑center, with a partial crop that cuts off the top of the chair back. No rule‑of‑thirds intentionality—just a natural, accidental composition. The subject occupies the central two‑thirdds of the frame, with the chair’s pattern extending to the edges.
+
+- **Environment**  
+  A simple living room: beige walls, a dark wooden door, a small window letting in daylight. The floor is carpeted, a faint hint of a rug visible beneath the chair. Time of day: late afternoon, soft golden light. Weather: clear, no wind.
+
+- **Technical Details**  
+  Short focal length (35 mm) gives a wide‑angle view of the subject and surroundings. No bokeh; background fully sharp. No studio lighting or professional composition—just a genuine, spontaneous snapshot. Slight motion blur on the arms suggests a handheld shot captured mid‑action.
+
+- **Final Prompt**  
+  “A young woman with light brown hair in a red lace bra and high‑waist panties sits casually in an ornate floral armchair, arms raised behind her head, looking directly at the camera. Natural daylight from a left‑side window creates slight overexposure on her upper body. Shot on a 35 mm wide‑angle lens at f/4, 1/125 s, ISO 400, handheld with gentle motion blur. The frame is slightly tilted and off‑center, capturing the chair’s patterned back and a plain wall with a closed door in the background. Everything is in focus, no bokeh, raw and unprocessed, giving a candid, spontaneous feel.”

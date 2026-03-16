@@ -1,0 +1,21 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with dark, braided hair standing in a bright, modern kitchen. She wears a white strap‑top and high‑waisted denim jeans, a thin gold necklace, and large hoop earrings. Her face is turned slightly to the left, mouth open in a casual smile, eyes focused on something off‑camera. The shot captures her mid‑gesture—her right hand is partially out of frame, giving a spontaneous, “in‑motion” feel.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. Slight tilt and off‑center framing; the composition is accidental, not rule‑of‑thirds. The image has a raw, unprocessed look: no filters, no color grading, no post‑processing aesthetic. A hint of overexposure from natural daylight, with a slight motion blur from handheld instability.
+
+- **Environment**  
+  Location: a bright, contemporary kitchen with white cabinets, a wooden countertop, and a small shelving unit on the left. A potted plant sits on the shelf, a coffee maker is visible on the counter, and a wooden stool is partially in frame on the right. Time of day: late morning, soft natural light coming from the west, creating gentle shadows and a warm tone. Weather: clear, slightly humid.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm), wide‑angle lens. Everything is in focus—no bokeh, no depth‑of‑field blur; background fully sharp. No portrait‑mode subject isolation. Slight overexposure or underexposure depending on ambient light, giving a natural, unedited feel. The image uses auto‑HDR or auto‑beauty mode off for a raw look.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, partial crop on the right side, minor motion blur around the hands and hair. The background shows a tiled wall, a white backsplash, and a small window that lets in natural light. The kitchen counter has a few utensils in a container, a jar, and a small plant, adding to the candid vibe.
+
+- **Prompt for Text‑to‑Image Generation**  
+  “A young woman with dark braided hair, wearing a white strap‑top, high‑waisted denim jeans, a thin gold necklace, and large hoop earrings, standing in a bright modern kitchen. She smiles casually, turned slightly left, right hand partially out of frame. The shot is candid, unposed, with slight tilt and off‑center framing, accidental composition. Background includes white cabinets, wooden countertop, shelving unit with a potted plant, coffee maker, and a wooden stool on the right. Late morning natural light from west, clear weather. 24‑35 mm wide‑angle lens, everything in focus, no bokeh, slight motion blur from handheld instability, raw unprocessed look, auto‑HDR off.”  
+
+Provide only the structured prompt.

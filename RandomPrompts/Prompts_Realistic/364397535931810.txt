@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman in a navy blazer with gold laurel embroidery, white shirt, and high‑waist trousers, standing at a wooden desk in a bright office. Her hair is tied back in a sleek ponytail, a few strands framing her face. She’s mid‑gesture, hand on an open textbook that displays a chemistry diagram, a pen resting on the page. The blazer is slightly open, revealing a soft collar and a subtle shine from the fabric’s texture.
+
+- **Lighting & Exposure**  
+  Natural daylight coming from a large window on the left, creating a gentle side‑light that produces slight overexposure on the subject’s face and a warm hue. Slight handheld shake gives a natural motion blur around the edges; the exposure is a little bright at the top but retains depth.
+
+- **Camera Settings**  
+  Wide‑angle lens (24‑35 mm), f/4.0, 1/60 s shutter speed, ISO 400. No bokeh—background is fully sharp. Depth of field covers the entire scene from foreground desk to back whiteboard.
+
+- **Environment**  
+  A modern office space with a large window that shows a blurred cityscape outside. On the wall, a whiteboard displays hand‑drawn chemistry diagrams (flasks and arrows). A stack of thick hardcover books sits on the left side of the desk, an open textbook lies flat in front of her, and a black pen rests on the page. The floor is a light wooden laminate.
+
+- **Composition & Framing**  
+  Off‑center candid framing: the subject’s head is slightly above the center of the frame, her body leans to the right, creating a dynamic angle. The shot is not rule‑of‑thirds aligned; it feels spontaneous and unposed. The crop is partial—her left shoulder extends beyond the right edge, giving an informal, in‑the‑moment feel.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera gives a natural handheld vibe. Tiny imperfections: a faint smudge on the blazer’s lapel, a slight wrinkle in the shirt collar, and a tiny reflection in the window glass. The image has no post‑processing filters—just raw, auto‑HDR‑free capture.
+
+- **Color & Tone**  
+  Warm neutral tones with a hint of yellow from the daylight. The navy blazer contrasts with the white shirt; the gold embroidery catches light. The overall color palette is muted but rich, with subtle contrast between the dark blazer and bright window light.
+
+- **Post‑Capture Notes**  
+  Capture in RAW, then apply auto‑HDR to enhance dynamic range. Keep “auto‑beauty” off for a genuine look. Final image should feel like a spontaneous snapshot of a teacher or professor caught mid‑lecture, with all elements in focus and no studio‑style composition.

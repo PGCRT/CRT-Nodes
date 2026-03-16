@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A young woman with short, tousled brown hair, wearing a white Calvin Klein one‑piece bodysuit and red‑white striped socks, is mid‑drink from a amber glass bottle. Her left hand holds the bottle near her lips, slightly tilted, as if she’s just taken a sip. She sits on a bed with a patterned sheet, legs bent, one knee turned outward. A delicate silver necklace rests on her collarbone.  
+
+- **Pose & Composition**  
+  Candid, unposed, spontaneous — the subject is unaware of the camera, captured in a natural “mid‑action” moment. The frame is slightly off‑center, with a subtle tilt that gives an accidental, handheld feel. The shot uses a wide‑angle lens (20–35 mm) to keep the entire scene in focus; no bokeh or depth‑of‑field blur — background stays sharp.  
+
+- **Lighting & Exposure**  
+  Zero studio lighting, zero professional composition, zero editorial tone. Ambient daylight from a window with horizontal blinds on the left creates a soft, natural illumination. Slight overexposure on the upper part of the frame gives a raw, unprocessed look. No auto‑HDR or auto‑beauty mode — just a straightforward capture.  
+
+- **Environment**  
+  A bedroom with beige walls and a wooden headboard. The window blinds are partially open, letting in warm daylight. The bed has a floral patterned sheet; a small red pillow is visible behind the woman’s left hip. The time of day is mid‑afternoon, around 3 pm, when the light is warm but not harsh.  
+
+- **Lens & Technical**  
+  Short focal length (24–35 mm), wide‑angle, no bokeh, everything in focus. Handheld instability produces a slight motion blur on the subject’s hand and bottle, giving a natural “in‑motion” feel. No portrait‑mode subject isolation — the background is fully sharp.  
+
+- **Post‑Processing**  
+  No filters, no color grading, no post‑processing aesthetic. The image remains raw, with only minimal adjustments to exposure and contrast.  
+
+**Prompt Summary**  
+“Candid, unposed photo of a woman in a white Calvin Klein bodysuit and red‑white socks drinking from an amber bottle on a floral bed, captured with a wide‑angle lens at mid‑afternoon daylight, slight motion blur and accidental framing, raw and unprocessed.”

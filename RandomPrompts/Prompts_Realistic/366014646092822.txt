@@ -1,0 +1,16 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark hair tied in high pigtails, wearing round black‑rimmed glasses and a tight, black leather corset that fastens at the front with a silver zipper. She’s seated in a black office chair, hands pulling the corset slightly open as if mid‑adjustment, a bright smile on her face. Her posture is casual but confident, with a subtle tilt to the left side of the frame.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject appears unaware of the camera, caught in a natural moment. Slight motion blur at the edges gives a handheld feel; the image has a raw, auto‑HDR look without heavy color grading or post‑processing. A tiny overexposure on the right side balances the ambient light.
+
+- **Environment**  
+  The scene is set in a bright, modern office space during mid‑afternoon. A tall green plant stands to the left, a white radiator is visible on the right, and a window lets in natural daylight that slightly overpowers the scene. The background is fully sharp, no bokeh, no depth‑of‑field blur.
+
+- **Lens & Technical**  
+  Use a short focal length wide‑angle lens (24–35 mm). Everything is in focus — no portrait‑mode subject isolation. Capture with a wide‑angle setting to include the plant, chair, radiator, and window in the frame. The composition is accidental: slight off‑center framing, partial crop, no rule‑of‑thirds intentionality.
+
+- **Final Prompt**  
+  “A young woman with long dark hair in high pigtails, wearing round black‑rimmed glasses and a tight black leather corset with a front silver zipper, seated in a black office chair. Her hands pull the corset slightly open as if mid‑adjustment, a bright smile on her face. Candid, unposed, spontaneous capture with slight motion blur and tiny overexposure on the right side. Setting: bright modern office, mid‑afternoon daylight from a window, green plant to the left, white radiator to the right. Wide‑angle short focal length lens, everything in focus, accidental off‑center framing, partial crop.”

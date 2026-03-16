@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, slender woman with long, wavy brown hair that cascades over her left shoulder, standing in a relaxed, natural pose. Her body is bare, with a slight tilt to the right, as if she’s mid‑step or just finished a movement. Her hands hang loosely by her sides, fingers slightly curled. The camera captures her from a low angle, emphasizing her full figure and the gentle curve of her waist.
+
+- **Lighting & Exposure**  
+  Warm, natural daylight coming from the west, creating a soft overexposure on the upper body while keeping the lower body slightly underexposed. The light is diffused by a light haze in the air, giving an auto‑HDR feel without any post‑processing filters. Slight handheld shake is present, adding a subtle motion blur to the edges.
+
+- **Lens & Technical**  
+  24 mm wide‑angle lens, short focal length, no bokeh. Everything from foreground to background is fully sharp—no depth‑of‑field blur. The frame is off‑center, with the subject’s left side slightly cut off by the edge of the frame, giving a spontaneous, candid feel.
+
+- **Environment**  
+  A quiet, sunlit living room in the late afternoon. A light wooden bookshelf stands to the right, filled with a few books and a framed photo; a small white outlet is visible on the wall. The floor is a light beige carpet, and a faint reflection of a window can be seen on the back wall. The time of day is around 5 pm, giving a golden hue to the scene.
+
+- **Composition & Framing**  
+  No rule‑of‑thirds intentionality—framing is accidental, as if the photographer was in a hurry. The shot is slightly cropped at the top and bottom, with the subject’s head near the upper center and her feet near the lower center. The background remains fully sharp, with no portrait‑mode blur.
+
+- **Mood & Details**  
+  The woman’s skin has a natural, unprocessed look—no color grading or filters. Her breasts are full and rounded, with a slight overexposure on the upper chest that gives a warm glow. Her abdomen is flat, and her hips curve gently into her thighs. A small mole is visible on her left breast. The overall mood is candid, raw, and spontaneous, as if she’s caught in a natural moment of confidence.
+
+**Prompt Summary**  
+“Candid, unposed photo of a tall, slender woman with long wavy brown hair standing bare in a sunlit living room at late afternoon. 24 mm wide‑angle lens, slight handheld blur, warm overexposure on the chest, fully sharp background, accidental off‑center framing, no filters—raw, natural look.”

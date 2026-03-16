@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A young woman standing in a cornfield, wearing a light‑pink floral hoodie and blue jeans. She’s holding a smartphone in both hands, looking down at the screen with a slightly surprised or contemplative expression. Her hair is loose, falling over her shoulders, and she’s wearing a hood that sits snugly on her head. The hoodie has a subtle floral pattern with small pink blossoms and green leaves.
+
+- **Pose & Movement**  
+  Slight motion blur at the fingertips and phone, indicating a handheld shot captured mid‑action. Her body is slightly tilted to the left, off‑center framing, giving a casual, spontaneous feel. The crop is partial—her lower legs extend beyond the bottom edge of the frame.
+
+- **Environment & Lighting**  
+  Location: A lush cornfield with tall green stalks on both sides, a weathered wooden fence running horizontally behind her. The background shows a line of trees in the distance, slightly out of focus but still sharp. Time of day: late afternoon, soft diffused light with a hint of overcast sky; ambient light is slightly overexposed on the subject’s face, creating a natural glow. Weather: light rain or drizzle, visible droplets on the hoodie and corn leaves.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm), wide‑angle lens. Everything in focus—no bokeh, no depth‑of‑field blur; background fully sharp. No portrait‑mode subject isolation. Slight overexposure on the subject’s face and upper body to capture the ambient light.
+
+- **Composition & Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Imperfections encouraged: slight tilt, off‑center framing, partial crop. No rule‑of‑thirds intentionality—accidental framing. Zero studio lighting, zero professional composition, zero editorial tone. Natural motion freeze or slight blur from handheld instability.
+
+- **Post‑Processing**  
+  Auto‑HDR or auto‑beauty mode off — raw, unprocessed look. No filters, no color grading, no post‑processing aesthetic. Slight overexposure or underexposure depending on ambient light. Wide lens. Capture style: candid, unposed, spontaneous—subject unaware or mid‑action. Imperfections encouraged: slight tilt, off‑center framing, partial crop. No rule‑of‑thirds intentionality — accidental framing. Zero studio lighting, zero professional composition, zero editorial tone. Natural motion freeze or slight blur from handheld instability.
+
+**Prompt Summary**  
+"A young woman in a light‑pink floral hoodie and blue jeans stands in a cornfield, holding a smartphone with both hands, looking down at the screen. She’s slightly tilted to the left, off‑center framing, with a partial crop that extends her legs beyond the bottom edge. The background features a weathered wooden fence and a line of trees, all in sharp focus. The scene is lit by late afternoon diffused light with a hint of overcast sky; a slight overexposure on her face adds a natural glow. A short focal length wide‑angle lens (24‑35 mm) captures everything in focus without bokeh. The shot has a candid, spontaneous feel with slight motion blur at the fingertips, a raw, unprocessed look, no filters or color grading, and a handheld instability that gives it authenticity."

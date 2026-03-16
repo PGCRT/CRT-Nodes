@@ -1,0 +1,35 @@
+**Realistic Candid Photography Prompt Framework – “Aurora‑Breathe” (New Image)**  
+
+- **Subject & Pose**  
+  - A young woman with long, light‑brown hair tied in a loose braid, wearing a simple white lace blouse and a thin gold necklace. She is seated on a rustic wooden bench in a sunlit meadow, holding a small, translucent pink balloon between her hands. Her left foot is slightly turned, and she leans forward a little, as if mid‑gesture, giving the shot a candid, “in‑action” feel.  
+
+- **Lighting & Exposure**  
+  - Capture at 10:30 AM on a clear, cool‑morning. The sun is high but not directly overhead, producing a soft, slightly overexposed highlight on the subject’s face and a gentle warm glow on the grass.  
+  - Use a wide‑angle lens (24 mm) with a short focal length to keep the entire scene in frame.  
+  - Slight handheld shake: a subtle motion blur on the subject’s hands and the balloon, as if she just released it.  
+
+- **Environment**  
+  - Location: A slightly overgrown meadow near an old stone bridge, with a small stream running parallel to the bench.  
+  - Time of day: Early late‑morning; the light is warm but not harsh, creating a natural “auto‑HDR” feel without post‑processing.  
+  - Weather: Light breeze, no clouds, ambient temperature 18 °C.  
+
+- **Lens & Technical**  
+  - Focal length: 24 mm (wide angle).  
+  - Aperture: f/5.6 – everything from foreground to background is fully sharp; no bokeh.  
+  - Shutter speed: 1/60 s – enough to capture a faint motion blur on the subject’s hands.  
+  - ISO: 400 – for clean, natural detail.  
+  - No portrait‑mode depth‑of‑field blur; all elements in focus.  
+
+- **Composition & Framing**  
+  - The shot is intentionally off‑center: the bench is slightly tilted to the left, the woman’s body occupies the central‑right third of the frame, and the balloon sits just above the center.  
+  - The composition is “accidental” – the camera was handheld, so there is a slight tilt and a partial crop that gives a spontaneous, candid vibe.  
+  - No rule‑of‑thirds intentionality; the framing is natural, as if the photographer stepped in mid‑action.  
+
+- **Style Notes**  
+  - “Auto‑beauty mode” off – raw, unprocessed look.  
+  - Slight overexposure on the subject’s face, giving a warm, natural glow.  
+  - No filters, no color grading, no post‑processing aesthetic.  
+  - The image should feel like a real, in‑moment snapshot: a little imperfect, but genuine.  
+
+- **Final Prompt**  
+  *“A young woman with long, light‑brown hair tied in a loose braid, wearing a simple white lace blouse and a thin gold necklace, seated on a rustic wooden bench in a sunlit meadow, holding a small, translucent pink balloon between her hands. Capture at 10:30 AM on a clear, cool‑morning with the sun high but not directly overhead, producing a soft, slightly overexposed highlight on the subject’s face and a gentle warm glow on the grass. Use a wide‑angle lens (24 mm) with a short focal length to keep the entire scene in frame. Slight handheld shake: a subtle motion blur on the subject’s hands and the balloon, as if she just released it. The location is a slightly overgrown meadow near an old stone bridge, with a small stream running parallel to the bench. Time of day: early late‑morning; the light is warm but not harsh, creating a natural “auto‑HDR” feel without post‑processing. Weather: light breeze, no clouds, ambient temperature 18 °C. Focal length 24 mm, aperture f/5.6 – everything from foreground to background is fully sharp; no bokeh. Shutter speed 1/60 s – enough to capture a faint motion blur on the subject’s hands. ISO 400 – for clean, natural detail. The shot is intentionally off‑center: the bench is slightly tilted to the left, the woman’s body occupies the central‑right third of the frame, and the balloon sits just above the center. The composition is accidental – the camera was handheld, so there is a slight tilt and a partial crop that gives a spontaneous, candid vibe. No rule‑of‑thirds intentionality; the framing is natural,

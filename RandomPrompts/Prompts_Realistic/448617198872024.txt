@@ -1,0 +1,28 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long dark hair tied in a high ponytail, wearing an oversized white hoodie with gray sleeves and black jogger pants, standing barefoot on a wooden floor. She’s mid‑pose, one hand on her hip, the other holding a dark smartphone in front of her face as if taking a selfie. Her head is slightly tilted, capturing a candid, spontaneous feel.
+
+- **Motion & Focus**  
+  Slight motion blur from handheld instability; everything in focus—no portrait‑mode depth blur. A wide‑angle lens (24–35 mm) captures the entire scene with no bokeh. The image has a raw, unprocessed look: slight overexposure on the window’s glare and a natural, ambient light tone.
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window on the left; the sun is high, creating bright highlights on the window and soft shadows on the floor. Slight overexposure on the window’s glass, subtle underexposure on the subject’s lower body for contrast. No auto‑beauty mode—just a straightforward, unfiltered capture.
+
+- **Environment**  
+  Office or study space with a large window on the left, a wooden desk, a bookshelf filled with books and binders, and a black office chair on the right. A small yellow object (maybe a pen or a key) is visible on the floor near the subject’s foot. The time of day is mid‑afternoon, with warm sunlight streaming through the window.
+
+- **Lens & Technical**  
+  Short focal length (24–35 mm), wide‑angle, no bokeh, background fully sharp. No rule‑of‑thirds intentionality—framing is accidental, slightly off‑center. The composition feels spontaneous and informal.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Imperfections encouraged: slight tilt, partial crop, natural motion blur. Zero studio lighting, zero professional composition, zero editorial tone.
+
+- **Post‑Processing**  
+  No filters, no color grading, no post‑processing aesthetic. Keep the raw, authentic feel.
+
+---  
+
+**Prompt Summary (for use in a text‑to‑image model):**
+
+> “A candid selfie of a young woman with long dark hair in a high ponytail, wearing an oversized white hoodie with gray sleeves and black jogger pants, barefoot on a wooden floor. She holds a dark smartphone in front of her face, one hand on hip, mid‑pose. Slight motion blur from handheld, wide‑angle lens (24–35 mm), everything in focus, raw unprocessed look with slight overexposure on the window. Natural daylight from a large window on the left, mid‑afternoon. Background shows an office desk, bookshelf full of books, black office chair, small yellow object on floor. No bokeh, background fully sharp. Accidental off‑center framing, no rule‑of‑thirds. Capture style: candid, spontaneous, unposed. No filters, no color grading.”

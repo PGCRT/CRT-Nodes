@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A muscular man with a neatly trimmed beard and a floral tattoo on his left forearm, wearing a crisp white short‑sleeved henley shirt and dark trousers. He stands slightly angled toward the camera, his right arm wrapped around a pregnant woman who leans her head against his shoulder. The woman has long, wavy brown hair, gold hoop earrings, and a dark dress with red‑gold floral patterns; her left hand rests on his back. Both appear mid‑conversation, as if caught in an unplanned, spontaneous moment.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subjects are unaware of the camera or mid‑action. Slight tilt and off‑center framing give a natural, handheld feel. The shot is partially cropped on the left and right edges, with no intentional rule‑of‑thirds. All elements (faces, tattoos, dress details, background) remain fully sharp; no portrait‑mode blur.
+
+- **Motion & Exposure**  
+  Slight motion blur from handheld instability, a natural freeze of movement. The exposure is mildly overexposed on the bright white shirt and underexposed on the darker dress, creating a raw, unprocessed look. No auto‑HDR or color grading; just ambient daylight.
+
+- **Lens & Technical**  
+  Short focal length (20–35 mm) wide‑angle lens. Everything in focus — no bokeh, no depth‑of‑field blur, background fully sharp. No “portrait mode” isolation.
+
+- **Environment**  
+  A bright, airy living room with light beige walls. A wooden side table with a white lamp and a small potted plant sits to the right; a framed picture hangs on the wall above a beige sofa. A light‑colored dresser is visible on the left. The time of day is late morning, soft natural sunlight coming from the west, creating gentle shadows and a slight warm tint.
+
+- **Details & Imperfections**  
+  - Slight tilt of the camera, making the composition slightly off‑center.  
+  - Partial crop on the left side cuts off part of the man’s left arm, adding spontaneity.  
+  - The woman’s earring catches a small highlight; the man’s tattoo shows a faint smudge from a quick kiss.  
+  - The lamp’s shade is slightly overexposed, while the dress’s dark fabric is underexposed, giving a raw, unprocessed feel.
+
+- **Prompt**  
+  “A muscular man with a neatly trimmed beard and a floral tattoo on his left forearm, wearing a crisp white short‑sleeved henley shirt and dark trousers, stands slightly angled toward the camera, his right arm wrapped around a pregnant woman who leans her head against his shoulder. The woman has long, wavy brown hair, gold hoop earrings, and a dark dress with red‑gold floral patterns; her left hand rests on his back. Both appear mid‑conversation, as if caught in an unplanned, spontaneous moment. Slight tilt and off‑center framing give a natural, handheld feel. The shot is partially cropped on the left and right edges, with no intentional rule‑of‑thirds. All elements remain fully sharp; no portrait‑mode blur. A short focal length wide‑angle lens captures everything in focus. The exposure is mildly overexposed on the bright white shirt and underexposed on the darker dress, creating a raw, unprocessed look. The setting is a bright, airy living room with light beige walls. A wooden side table with a white lamp and a small potted plant sits to the right; a framed picture hangs on the wall above a beige sofa. A light‑colored dresser is visible on the left. The time of day is late morning, soft natural sunlight coming from the west, creating gentle shadows and a slight warm tint.”

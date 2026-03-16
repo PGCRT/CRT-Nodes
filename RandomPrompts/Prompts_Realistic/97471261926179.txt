@@ -1,0 +1,29 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, sun‑kissed brown hair that blows lightly in the wind, captured mid‑turn as she walks along a cobblestone alley. She’s wearing a simple, loose‑fitting linen shirt that drapes over her shoulders, and a thin gold hoop earring catches the light. Her face is turned toward the camera with a natural, unposed smile, eyes bright and relaxed. The shot should feel spontaneous—she’s not looking directly at the camera but rather at something in her hand (a phone or a note), creating a candid “mid‑action” vibe.
+
+- **Capture Style**  
+  • Slight motion blur on the hair and shirt to suggest movement.  
+  • No auto‑HDR or auto‑beauty mode—keep the raw, unprocessed look.  
+  • Slight overexposure in the highlights to give a warm, natural feel.  
+  • No filters, no color grading, no post‑processing aesthetic.  
+  • Wide‑angle lens (24‑35 mm) with a short focal length for a “handheld” feel.  
+
+- **Environment**  
+  The alley is lined with old stone walls and a small wooden bench; a few potted plants hang from a balcony above. The time of day is late morning, the sun high but not directly overhead, casting soft shadows. The weather is lightly breezy, with a faint haze in the air that adds depth.  
+
+- **Lens & Technical**  
+  • Short focal length (24‑35 mm) for wide coverage.  
+  • No bokeh—background fully sharp, everything in focus.  
+  • No portrait mode or subject isolation; keep the entire scene crisp.  
+  • Slight tilt and off‑center framing—no rule‑of‑thirds intentionality.  
+  • Handheld instability gives a natural motion freeze or slight blur.  
+
+- **Composition Notes**  
+  • Capture the subject’s left side of her body, with her hair flowing to the right, creating a dynamic diagonal line.  
+  • Keep the shot “partial crop”—the edges cut off the alley’s corners for a casual feel.  
+  • Ensure the background remains sharp; no depth‑of‑field blur.  
+
+- **Final Prompt**  
+  *“Candid, unposed photograph of a young woman with long brown hair and gold hoop earring, walking along a cobblestone alley in late morning, wearing a loose linen shirt. Capture her mid‑turn with slight motion blur on the hair and shirt, no auto‑HDR or filters, slight overexposure, wide‑angle 24‑35 mm lens, all elements in focus, background fully sharp, slight tilt and off‑center framing, handheld instability. The alley is lined with old stone walls and a small wooden bench; a few potted plants hang from a balcony above. Weather is lightly breezy with a faint haze. Capture the subject’s left side, hair flowing to the right, partial crop, no rule‑of‑thirds.”*

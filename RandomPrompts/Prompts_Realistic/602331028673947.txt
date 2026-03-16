@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, braided hair captured mid‑mirror selfie, holding a smartphone in her right hand. She wears an oversized gray T‑shirt that reads “Don’t Fit” with a graphic of a red figure, paired with high‑waisted, ripped‑knee light denim jeans and black canvas sneakers. Her stance is slightly off‑center, leaning forward a bit as she looks into the mirror; her left foot is turned inward, giving a casual, spontaneous feel.
+
+- **Motion & Focus**  
+  Slight motion blur on the subject’s hands and phone, indicating handheld instability. Everything in frame—from her shoes to the background signage—is fully sharp, no portrait‑mode blur. The focus covers the entire scene, from foreground to background.
+
+- **Lighting & Exposure**  
+  Raw, unprocessed look with auto‑HDR off. Ambient night lighting from a street lamp and an open storefront create a mild overexposure on the subject’s face, while the background remains bright but natural. No color grading or filters—just the raw tones of the moment.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24‑35 mm), short focal length, no bokeh. The composition is accidental: a slight tilt to the left, off‑center framing that doesn’t follow the rule of thirds. All elements are in focus—no subject isolation.
+
+- **Environment**  
+  A bustling urban sidewalk at night, outside a small shop named “EACOISE.” Behind the woman, a wooden sign reads “THE SOULIES” with a blue and white design. A white plastic bag, a maroon sneaker, and a yellow “50$” sign lie on the concrete. In the background, a few people are gathered around a table, one person in a red shirt is pouring something into a cup. The scene is lit by overhead fluorescent lights and a street lamp, giving a warm, slightly hazy glow.
+
+- **Details & Imperfections**  
+  The image has a raw, candid feel: the woman’s hair is slightly messy, her jeans have a small rip at each knee, and her sneakers show a bit of wear. The mirror reflection captures a faint reflection of the shop’s interior, adding depth. A stray piece of paper lies on the ground near her left shoe. The overall tone is spontaneous, unposed, and real.
+
+- **Prompt for Generation**  
+  “A young woman with long braided hair taking a mirror selfie at night on a busy urban sidewalk. She wears an oversized gray T‑shirt that says ’Don’t Fit’ with a red figure graphic, high‑waisted ripped denim jeans, and black canvas sneakers. Her right hand holds a smartphone in a casual, slightly off‑center pose. Slight motion blur on her hands, everything fully sharp. Raw auto‑HDR off, mild overexposure from ambient street lights. Wide‑angle lens, short focal length, no bokeh. Background shows a shop sign ’EACOISE’, a wooden ’THE SOULIES’ sign, a white plastic bag, a maroon sneaker, and a yellow ’50$’ sign on the concrete. A few people are gathered at a table in the back. The scene is lit by fluorescent lights and a street lamp, giving a warm haze. Capture candid, unposed, spontaneous, with accidental tilt and off‑center framing. All elements in focus, no portrait mode.”

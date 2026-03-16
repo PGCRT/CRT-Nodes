@@ -1,0 +1,24 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A curvy woman with long, dark, wavy hair captured mid‑turn in a kitchen. She’s wearing a white mesh bodysuit with thin straps; her back is slightly turned toward the camera, one hand resting on her hip, her left leg bent and her right leg straight, creating a dynamic, off‑center composition.  
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject appears unaware of the camera, caught in a natural, mid‑action moment. Slight tilt and partial crop give an accidental, handheld feel. No rule‑of‑thirds intentionality; framing is organic and imperfect.
+
+- **Motion & Exposure**  
+  Slight motion blur from handheld instability, as if the camera was moving when the shutter clicked. Slight overexposure on the upper body, giving a warm, natural glow. Auto‑HDR or auto‑beauty mode off — raw, unprocessed look. No filters, no color grading, no post‑processing aesthetic.
+
+- **Lens & Technical**  
+  Wide‑angle lens (short focal length, ~24 mm). Everything in focus — background fully sharp, no bokeh, no depth‑of‑field blur. No portrait mode or subject isolation.
+
+- **Environment**  
+  Specific real‑world location: a modern kitchen with light‑colored cabinets and a stainless‑steel countertop visible in the background. Time of day: late afternoon, soft natural light coming from the west, creating subtle shadows and highlights on the subject’s back and hips. Weather or ambient conditions: clear, slightly humid air, mild temperature.
+
+- **Details to Emphasize**  
+  - The texture of the mesh fabric, the slight sheen on the skin, the natural curvature of the buttocks and hips.  
+  - The subtle imperfections of a real‑life capture: a tiny smudge on the wrist, a slight unevenness in the strap alignment.  
+  - Background elements: a faint outline of a stove and a small electrical outlet on the left wall; a hint of a kitchen window in the far back.  
+
+- **Prompt Summary**  
+  “A candid, wide‑angle shot of a woman in a white mesh bodysuit turning in a modern kitchen at late afternoon, captured with handheld instability and slight overexposure, everything in focus, raw and unprocessed, no filters, no auto‑HDR, no portrait mode.”

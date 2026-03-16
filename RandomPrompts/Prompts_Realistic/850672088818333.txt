@@ -1,0 +1,36 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A young woman with long dark hair, wearing a loose white cardigan over a denim top, standing in a dimly lit bedroom. She is mid‑gesture, holding a smartphone in her right hand as if about to take a photo or scroll through a feed. Her back is slightly turned toward the camera, giving an informal, candid feel.
+
+- **Pose & Composition**  
+  - Slight motion blur on the hands and phone, indicating handheld shake.  
+  - The frame is off‑center: the left side cuts off a bit of the bed, the right side captures a nightstand with books.  
+  - No rule‑of‑thirds intentionality — the composition feels spontaneous, as if captured by a passerby.
+
+- **Lighting & Exposure**  
+  - Ambient indoor lighting from a ceiling lamp and a window in the background; slight overexposure on the subject’s back, subtle warmth.  
+  - Auto‑HDR or auto‑beauty mode off — raw, unprocessed look.  
+  - No filters, no color grading, no post‑processing aesthetic.
+
+- **Environment**  
+  - Specific real‑world location: a cozy bedroom with a wooden bed, a nightstand, and a visible doorway leading to a hallway.  
+  - Time of day: late afternoon or early evening; the window light is soft, creating gentle shadows.  
+  - Weather or ambient conditions: calm, no wind, indoor stillness.
+
+- **Lens & Technical**  
+  - Short focal length (e.g., 24‑35 mm) wide‑angle lens.  
+  - No bokeh; background fully sharp — everything in focus from foreground to background.  
+  - No portrait mode or subject isolation; the entire scene is captured with a single exposure.
+
+- **Capture Style**  
+  - Candid, unposed, spontaneous — subject unaware or mid‑action.  
+  - Imperfections encouraged: slight tilt, off‑center framing, partial crop.  
+  - Natural motion freeze or slight blur from handheld instability.
+
+- **Additional Details**  
+  - The woman’s cardigan has visible buttons on the side; her left shoulder is slightly exposed, adding a casual vibe.  
+  - A book lies on the bed near the foot of the mattress, and a small white object (maybe a remote) rests on the nightstand.  
+  - The background shows a dimly lit hallway with a plant visible through the doorway.
+
+**Provide only the structured prompt.**

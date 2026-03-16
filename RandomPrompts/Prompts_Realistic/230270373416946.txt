@@ -1,0 +1,29 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark hair that’s slightly damp, standing in a rustic underground warehouse. She’s wearing tight black denim shorts that cling to her curves, and she’s mid‑step, one foot forward, as if she just stepped out of a doorway or into a new space. Her hands hang loosely at her sides, fingers relaxed, with a faint hint of motion blur on the fingertips.
+
+- **Lighting & Exposure**  
+  Warm, ambient light from a flickering lantern in the background casts a soft glow on her face and body. The exposure is slightly overexposed on the front of her torso, giving a raw, unprocessed look. No auto‑beauty mode—just natural contrast and subtle highlights.
+
+- **Camera Settings**  
+  - Lens: 24mm wide‑angle, short focal length, handheld.  
+  - Focal depth: everything from foreground to background is fully sharp; no bokeh.  
+  - Shutter speed: 1/60 s (slight motion blur on the subject’s hands).  
+  - ISO: 800 (for grainy texture).  
+  - Auto‑HDR off—raw, unprocessed look.
+
+- **Composition & Framing**  
+  The shot is intentionally off‑center; the woman’s left side is slightly tilted to the right, creating a casual, spontaneous feel. The frame cuts off just above her knees, leaving a small portion of the warehouse’s wooden beams visible on both sides. No rule‑of‑thirds—just accidental framing that captures the entire scene in one go.
+
+- **Environment**  
+  Location: An old stone warehouse with exposed wooden beams and a small lantern hanging from the ceiling. The floor is uneven, covered with scattered bricks and old pottery shards. A faint flame glows in the back right corner, adding a warm hue to the scene. The time of day is late afternoon, with the sun low, casting long shadows.
+
+- **Details & Imperfections**  
+  Slight tilt in the camera, a tiny wobble that gives the image a candid feel. The woman’s hair has a few stray strands that catch the light, and her skin shows subtle texture. The background is fully sharp—no depth‑of‑field blur—so every detail from the wooden beams to the stone floor is crisp.
+
+- **Post‑Processing**  
+  No filters, no color grading, no post‑processing aesthetic. Just raw, in‑camera capture with a wide lens and slight overexposure.  
+
+**Prompt Summary**  
+"Capture a candid, unposed photo of a young woman in black denim shorts standing in an old stone warehouse with exposed wooden beams. Use a 24mm wide‑angle lens, handheld, 1/60 s shutter speed, ISO 800, slight overexposure, everything fully sharp. The shot should be slightly tilted and off‑center, capturing the woman mid‑step with a faint motion blur on her hands, while the background shows a glowing lantern and scattered bricks. Keep the exposure raw, no filters or color grading."

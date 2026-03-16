@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A young woman with a messy high ponytail, wearing an oversized beige tank top and faded denim jeans, sits on a wooden chair in a bright office space. She’s mid‑sip from a clear plastic cup filled with a creamy latte, her left hand casually tucked into her pocket, a subtle smile curling on her face as she looks toward a man standing beside her. Her hair is slightly blown by the draft from an open window, and a faint lens flare catches the top of her head.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the woman appears unaware that she’s being photographed, caught in a natural moment. The frame is intentionally off‑center, with a slight tilt that gives a handheld feel. The shot is partially cropped on the right side, leaving a small portion of the man’s ear and shoulder out of frame. No rule‑of‑thirds; the composition is accidental, as if you’re just stepping into the scene.
+
+- **Environment**  
+  Location: A bright, uncluttered office with a white desk, a black rolling chair, and a window that lets in warm mid‑afternoon sunlight. The time of day is late afternoon, around 4:30 pm, when the sun is low but still high enough to create a soft lens flare. The weather outside is clear, with a light breeze that ruffles the woman’s hair.
+
+- **Lens & Technical**  
+  Use a short focal‑length wide‑angle lens (e.g., 24 mm). Capture everything in focus — no bokeh, no depth‑of‑field blur; the background, including the desk and window, remains sharp. Shoot with a wide aperture but keep the entire scene in frame. No auto‑HDR or auto‑beauty mode; keep the raw, unprocessed look. Slight overexposure on the right side to emphasize the ambient light. The image should feel like a snapshot taken with a DSLR or mirrorless camera, handheld, with natural motion freeze or slight blur from instability.
+
+- **Post‑Processing**  
+  No filters, no color grading, no post‑processing aesthetic. Keep the raw tones and natural contrast. If you do edit, keep it minimal — just a subtle vibrancy boost and a tiny curve in the highlights to enhance the sunlight’s warmth.
+
+- **Final Prompt**  
+  “A young woman with a messy high ponytail, wearing an oversized beige tank top and faded denim jeans, sits on a wooden chair in a bright office space. She’s mid‑sip from a clear plastic cup filled with a creamy latte, her left hand casually tucked into her pocket, a subtle smile curling on her face as she looks toward a man standing beside her. The scene is captured with a 24 mm wide‑angle lens, everything in focus, slight overexposure on the right side, handheld instability blur, accidental off‑center framing, and a faint lens flare from the mid‑afternoon sun. No filters, no auto‑HDR, raw look.”

@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman with long, dark, wavy hair sitting on a wooden floor in a living‑room, facing away from the camera. She’s wearing a black mesh off‑shoulder top and matching sheer thong, with fish‑net stockings. Her back is slightly arched, hands resting on the floor beside her hips, knees bent, and feet tucked under the thighs. A small floral tattoo is visible on her left upper back.
+
+- **Motion & Focus**  
+  Slight motion blur from handheld shooting; everything in focus—no portrait‑mode depth of field. Capture a candid, unposed moment as if she’s mid‑movement or just finished a gesture.
+
+- **Lighting & Exposure**  
+  Natural daylight from a window, slightly overexposed on the upper body, giving a warm, soft glow. No auto‑HDR or beauty filters—raw, unprocessed look. The lighting creates subtle highlights on her skin and fabric.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24‑35 mm), short focal length. No bokeh; background is fully sharp. Use a tripod or stable handheld shot.
+
+- **Environment**  
+  A modern living room with a gray sofa in the background, a beige pillow on the left side, and a light‑colored wall. The time of day is late afternoon, giving a warm, slightly golden hue. The scene feels spontaneous, as if captured in a casual, everyday moment.
+
+- **Composition**  
+  Accidental framing—no rule‑of‑thirds intentionality. Slight tilt and off‑center crop. The shot is partially cropped at the bottom, emphasizing the lower body and the floor.  
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, no post‑processing aesthetic. Keep it raw, natural, and realistic.
+
+**Prompt Summary**  
+“Candid photo of a woman in black mesh lingerie sitting on a wooden floor in a living room, back to camera, slight motion blur, wide‑angle lens, natural daylight, raw unprocessed look, accidental framing, everything in focus.”

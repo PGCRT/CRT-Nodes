@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with wavy, shoulder‑length brown hair, wearing a brown spaghetti‑strap crop‑top and light‑wash denim shorts, captured mid‑turn as she steps into a well‑stocked pantry. Her left hand rests on the side of her hip, right arm slightly bent, fingers relaxed. She’s smiling softly, eyes cast to the left, giving a candid, unposed feel.
+
+- **Motion & Focus**  
+  Slight motion blur at the edges from handheld shake; natural freeze‑frame of her movement. Everything in focus—no portrait‑mode depth‑of‑field blur. No auto‑HDR or beauty filters—raw, unprocessed look with subtle overexposure on the bright shelves.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24‑35 mm), short focal length. No bokeh; background fully sharp. Handheld shot with accidental tilt and off‑center framing—no rule‑of‑thirds intentionality. Slight partial crop on the right side, capturing a portion of the pantry shelf and her thigh.
+
+- **Environment**  
+  Location: A bright, white‑paneled kitchen pantry with open shelves stocked with cereal boxes, spice jars, and canned goods. Time of day: late afternoon, natural daylight coming from the left, creating soft shadows. Ambient light is warm, slightly hazy, giving a subtle overexposed glow. Weather: clear, mild—no wind, no rain.
+
+- **Composition & Details**  
+  The shot captures her back‑to‑camera pose, with her left hip slightly turned, showcasing the back of her top and the texture of her denim shorts. Her right wrist is adorned with a thin silver bracelet; a subtle detail that adds realism. The shelves behind her hold recognizable brands: “Tulce,” “Fruit Loop,” “Café” on the top shelf, “Seini” and “Renée” on the middle shelf, and a bottle of olive oil on the lower shelf. A white door frame is visible on the left, framing the scene.
+
+- **Lighting & Post‑Processing**  
+  Zero studio lighting—pure natural light. No color grading or filters; raw, unprocessed aesthetic with slight overexposure in the high‑light areas. The image has a natural, spontaneous vibe, as if she’s mid‑action, slightly unaware of the camera.
+
+- **Final Prompt**  
+  “A candid, wide‑angle shot of a young woman in a bright pantry, captured mid‑turn with slight motion blur and accidental tilt. She wears a brown crop‑top and light denim shorts, smiling to the left while her hand rests on her hip. The shelves behind her are fully stocked with cereal boxes, spice jars, and a bottle of olive oil. Natural late‑afternoon light creates soft shadows and subtle overexposure. Everything is in focus—no bokeh—with a raw, unprocessed look that feels spontaneous and real.”

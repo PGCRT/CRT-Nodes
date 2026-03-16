@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with dark, shoulder‑length hair, wearing a light blue knit sweater, sitting in a worn brown leather armchair. Her left arm is raised behind her head, fingers lightly gripping the back of the chair, while her right hand rests on her chest. She looks directly at the camera with a calm, relaxed expression. A thin silver ring adorns her right ring finger; a small blue earring is visible in her left ear.
+
+- **Lighting & Exposure**  
+  Natural daylight from a western‑facing window, mid‑afternoon. Slight overexposure on the upper body, giving a warm, soft glow. No auto‑beauty or filter processing—raw, unprocessed look. The exposure is slightly uneven, with the lower part of the image a bit brighter than the top.
+
+- **Camera & Lens Settings**  
+  35 mm wide‑angle lens, f/4.0, 1/125 s shutter speed, ISO 400. Handheld shot with slight instability, producing a subtle motion blur on the subject’s arm and background. Everything remains in focus—no portrait‑mode depth of field blur.
+
+- **Composition & Framing**  
+  Candid, unposed, spontaneous framing: the chair is slightly off‑center, the top of the chair leans to the left, creating an accidental, non‑rule‑of‑thirds composition. The shot is a partial crop that cuts off the top of the head and the lower legs, emphasizing the mid‑body.
+
+- **Environment**  
+  A lived‑in bedroom or living room. In the background, a dark wooden dresser with drawers, a small framed photo on a shelf, a basket, and a white towel hanging on a rack. A white electrical outlet is visible on the wall. The floor is carpeted, and a small pile of white fabric lies near the left side of the chair.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, giving a dynamic angle. The leather chair shows natural wear marks and creases. The sweater’s knit texture is visible, with a slight pilling. The woman’s skin has a natural, unretouched tone; her fingers are slightly curled, and her nails are painted a pale pink. A small blue earring catches the light.
+
+- **Post‑Processing**  
+  No color grading or filters—just raw capture. Slight overexposure on the upper body creates a warm, natural highlight. The background remains fully sharp; no bokeh.
+
+- **Final Prompt**  
+  “A young woman with dark shoulder‑length hair, wearing a light blue knit sweater, sits in a worn brown leather armchair in a lived‑in bedroom. Her left arm is raised behind her head, fingers gripping the back of the chair, while her right hand rests on her chest. She looks directly at the camera with a calm, relaxed expression; a thin silver ring adorns her right ring finger and a small blue earring is visible in her left ear. Natural daylight from a western‑facing window hits her mid‑body with slight overexposure. Shot on a 35 mm wide‑angle lens at f/4.0, 1/125 s, ISO 400, handheld with subtle motion blur. The chair is slightly off‑center, creating an accidental, non‑rule‑of‑thirds composition. In the background a dark wooden dresser, a small framed photo on a shelf, a basket, and a white towel hanging on a rack are visible; a white electrical outlet is on the wall. The image has no filters or color grading—raw, unprocessed, everything in focus.”

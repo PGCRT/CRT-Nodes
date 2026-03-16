@@ -1,0 +1,31 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, sun‑kissed blonde hair, wearing a black lace lingerie set (sheer mesh cups and high‑waist bottoms), is captured mid‑movement on a light‑wood floor. Her hands are pulling the straps of her bra upward, creating a slight dynamic angle. She’s kneeling or crouching, with one knee bent and her thighs slightly apart, giving an informal, spontaneous feel.
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window casts soft, warm sunlight across her body; the exposure is slightly overexposed on the right side, giving a subtle halo effect. No auto‑beauty or filter processing—just raw, unedited light. The background shows a white sofa and a small bedside table, all in sharp focus.
+
+- **Camera & Lens Settings**  
+  - Lens: 24‑35 mm wide‑angle (short focal length) for a broad field of view.  
+  - Aperture: f/4–f/5.6 (wide but not too wide; depth of field is fully sharp).  
+  - Shutter speed: 1/125 s to capture slight motion blur from handheld instability.  
+  - ISO: 400–800 depending on ambient light.  
+
+- **Composition & Framing**  
+  The shot is intentionally off‑center, with the subject’s left side slightly cut off by the frame edge. No rule‑of‑thirds—just a casual, candid composition. The camera is held at a low angle, almost at the subject’s knee level, to emphasize the pose and create a sense of intimacy.
+
+- **Environment & Time**  
+  Location: A modern living room with a white couch and a small side table; a window on the left lets in bright natural light. Time of day: late morning, around 10–11 AM, when the sun is high but not too direct. Weather: clear, mild, with no wind.
+
+- **Technical Details**  
+  - No bokeh; background is fully sharp.  
+  - Slight tilt to the camera to add a natural, handheld feel.  
+  - Slight motion blur on the subject’s hands and shoulders to indicate movement.  
+  - All elements in focus: subject, clothing, background objects.  
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, no auto‑beauty mode—just a straightforward capture with basic white‑balance correction.
+
+**Prompt Summary**  
+"Capture a candid, unposed photo of a blonde woman in black lace lingerie kneeling on a light‑wood floor in a modern living room. Use a 24‑35 mm wide‑angle lens at f/5, 1/125 s shutter speed, and slight overexposure for a raw, natural look. Keep the framing off‑center and slightly tilted, with all elements in focus and a hint of motion blur on the subject’s hands. The scene should feel spontaneous and informal, with natural daylight from a window creating warm highlights."

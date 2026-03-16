@@ -1,0 +1,26 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with wet, slightly frizzy hair standing mid‑walk on a rural road. She’s wearing black athletic shorts with white trim and a thin gold necklace. Her posture is casual, one arm relaxed by her side, the other slightly bent as if she just finished a step. Her face is turned toward the camera but not directly at it— a subtle, candid angle that gives a natural “mid‑action” feel.
+
+- **Capture Style**  
+  • Candid, unposed, spontaneous — subject unaware or mid‑motion.  
+  • Slight motion blur on the legs and hands to hint at movement.  
+  • No filters, no color grading, no post‑processing aesthetic— raw, auto‑HDR off.  
+  • Slight overexposure in the sky to keep ambient light natural.  
+  • Wide‑angle lens (24–35 mm) for a short focal length that keeps the entire scene in focus.  
+
+- **Environment**  
+  • Location: A paved country road with a white car parked on the left side, a line of green trees on the far right, and a small grassy field on the right‑hand edge.  
+  • Time of day: Late morning, around 10:30 AM— soft, diffused sunlight with a slight haze in the sky.  
+  • Weather: Light cloud cover, no wind, ambient temperature moderate.  
+
+- **Lens & Technical**  
+  • Short focal length (24–35 mm), wide‑angle, no bokeh.  
+  • Everything in focus— background fully sharp, no depth‑of‑field blur.  
+  • No portrait mode or subject isolation; the frame captures the subject and surrounding environment as a single plane.  
+  • Slight tilt and off‑center framing— accidental composition, no rule‑of‑thirds intentionality.  
+  • Handheld shot with natural instability giving a subtle motion freeze/blur.  
+
+- **Prompt Summary**  
+  “A young woman in black athletic shorts and a gold necklace walks casually on a rural road at late morning, captured on a wide‑angle lens with slight motion blur and accidental framing. The scene includes a parked white car and green trees, all in focus, with a raw, unprocessed look— no filters or color grading, just natural ambient light and a candid, spontaneous vibe.”

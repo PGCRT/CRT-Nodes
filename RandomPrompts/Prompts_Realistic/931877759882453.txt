@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail, wearing a navy‑blue sports bra with a light‑blue “R” emblem and matching shorts, is captured mid‑bend on a wooden bench in a school locker room. Her hands rest on her knees, head tilted slightly forward, eyes focused toward the camera, mouth open as if she’s about to speak or shout. The pose conveys spontaneous motion, with a faint handheld blur around the edges.
+
+- **Lighting & Exposure**  
+  Natural daylight from a western‑side window creates a soft overexposure on the subject’s face and upper body; the exposure is slightly uneven, giving a raw, unprocessed look. No auto‑HDR or beauty filters—just ambient light with a wide‑angle lens.
+
+- **Environment**  
+  The setting is a concrete‑floored locker room at a public school. Behind the woman are four metal lockers, each with a small blue jacket hanging on the leftmost locker. A wooden bench runs along the wall, and a small black bag rests on the far right. The time of day is late morning, with warm, slightly hazy sunlight casting soft shadows.
+
+- **Lens & Technical**  
+  Use a short focal‑length wide‑angle lens (20–35 mm). Capture everything in focus—no bokeh, no depth‑of‑field blur. The background lockers and bench are fully sharp. Shoot handheld with slight instability for a natural motion freeze.
+
+- **Composition & Framing**  
+  The frame is intentionally off‑center; the subject’s left side leans slightly to the right, creating a casual, candid feel. The shot is not rule‑of‑thirds‑aligned—instead, it’s a spontaneous capture that feels “in the moment.” The crop is partial, cutting off the top of the lockers and the lower part of the bench, adding to the raw aesthetic.
+
+- **Post‑Processing**  
+  No filters or color grading. Keep the image raw, with only basic auto‑beauty mode turned off. Slight overexposure on the subject’s face gives a natural, unpolished vibe.  
+
+**Prompt Summary**  
+“Candid photo of a woman in a navy sports bra and shorts bending on a wooden bench in a school locker room, late‑morning natural light with slight overexposure, wide‑angle lens, everything in focus, handheld motion blur, off‑center framing, raw unprocessed look.”

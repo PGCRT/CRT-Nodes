@@ -1,0 +1,16 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy blonde hair, wearing a black‑and‑orange halter‑style bikini, is captured mid‑crouch on a zebra‑print rug in a bright, sunlit living room. Her hands are planted on the floor, one hand slightly off‑center, giving an accidental, candid feel. She’s looking directly at the camera with a soft, engaging smile, eyes slightly shimmering, as if she just finished a playful pose and is still catching her breath.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. Slight tilt and partial crop; no rule‑of‑thirds intentionality. The shot has a raw, unprocessed look: no filters, no color grading, no post‑processing aesthetic. A slight overexposure from the ambient daylight gives a warm, natural glow.
+
+- **Environment**  
+  Specific real‑world location: a bright, airy living room with a large window in the background. Time of day: late morning, soft golden light filtering through the window, creating gentle highlights and subtle shadows. Weather or ambient conditions: clear, sunny, no wind, quiet. The background is fully sharp — no bokeh, no depth‑of‑field blur.
+
+- **Lens & Technical**  
+  Short focal length (24–35 mm), wide‑angle lens. Everything in focus — no portrait mode, no subject isolation. Slight motion blur from handheld instability, giving a natural “in‑motion” feel. Auto‑HDR or auto‑beauty mode off. No rule‑of‑thirds intentionality — accidental framing. The composition is spontaneous and imperfect, with the subject’s hands slightly off‑center and the frame cutting off just above her head, preserving the raw candid vibe.
+
+**Prompt Summary (structured)**  
+`Candid photography of a blonde woman in an orange‑and‑black bikini crouching on a zebra‑print rug in a sunlit living room, late morning light, wide‑angle lens, slight motion blur, accidental framing, no filters or post‑processing, fully sharp background, raw, unprocessed look.`

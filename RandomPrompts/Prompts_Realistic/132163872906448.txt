@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman in her late twenties, with a high ponytail tied with a white band, wearing an oversized white hooded tank and narrow black‑and‑white striped leggings. She is captured mid‑turn, left foot slightly ahead, body angled toward the right side of the frame, head turned to the left as if listening or speaking. Her right arm is bent at the elbow, hand resting on her hip, creating a subtle diagonal line that gives the image dynamism.
+
+- **Motion & Focus**  
+  Slight motion blur on the subject’s torso and hips, indicating a handheld shot taken at a shutter speed of about 1/60 s. The entire scene is in focus—no depth‑of‑field blur; background remains sharp from floor to ceiling. No portrait‑mode “subject isolation” is applied.
+
+- **Lighting & Exposure**  
+  Raw, unprocessed look: no auto‑HDR or auto‑beauty mode. The lighting comes from an overhead fluorescent tube and a side window, producing a mild overexposure on the upper part of the frame that gives a warm, slightly hazy tone. The exposure is uneven—the lower part of the image is a bit darker than the upper part, as if the camera’s metering was off.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24 mm or 35 mm) with a short focal length. No bokeh; everything from foreground to background is fully sharp. The shot uses a slightly tilted, off‑center composition—no rule‑of‑thirds intentionality. The framing is accidental: the subject’s left foot is cut off by the bottom edge, and a portion of a brown leather shoe in the lower right corner intrudes into the frame.
+
+- **Environment**  
+  A bare, industrial‑style room with white walls, a single fluorescent light on the ceiling, and a window on the left that shows a faint reflection of another person. The floor is concrete with visible cracks and stains. The time of day is late afternoon; the ambient light is bright but slightly dim, creating soft shadows. A group of three people stands in the background near the corner, engaged in conversation—one man in a light blue shirt and khaki pants, another man in a dark blazer, and a woman in a black top and jeans—forming a secondary focal point.
+
+- **Candid Elements**  
+  The subject appears unaware of the camera, mid‑action, with a natural, spontaneous feel. Slight tilt of the camera adds a casual, handheld vibe. The composition is imperfect: the left side of the image is cropped by a window frame, and the right side is partially cut off by a brown leather shoe.
+
+- **Post‑Processing**  
+  No filters, no color grading, no post‑processing aesthetic. The image retains its raw, unedited look, with natural contrast and a slight grain from the camera’s sensor.
+
+**Prompt Summary**  
+“Candid shot of a woman in a white hooded tank and striped leggings turning mid‑step in an industrial room, captured on a wide‑angle lens with slight motion blur and uneven exposure; raw, unprocessed, no filters—everything in focus from foreground to background.”

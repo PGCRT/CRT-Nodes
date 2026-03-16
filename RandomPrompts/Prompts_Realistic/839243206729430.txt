@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman with short, layered brown hair and a subtle pearl choker, wearing a white lace corset with floral detailing, stands in a bright, airy sunroom. Her hands are pulling the straps of her corset upward, as if she’s about to fasten it, giving a sense of mid‑action. She has a small tattoo of a rose on her left forearm and a ring on her right hand. Her expression is soft, slightly pouting, with eyes cast downward toward her chest, adding intimacy.
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window behind her creates a slight overexposure on the upper part of the frame, while the lower part remains softly underexposed. The lighting is warm, with a hint of golden hour, giving a raw, unprocessed look. No auto‑HDR or beauty filters—just a handheld, in‑camera capture.
+
+- **Camera & Lens**  
+  Shot on a DSLR or mirrorless with a 24‑mm wide‑angle lens (f/3.5, 1/60 s shutter speed). Everything is fully sharp—no bokeh or depth‑of‑field blur. The background (a large window and a glimpse of greenery outside) is in focus, giving an authentic “wide‑lens” feel.
+
+- **Composition & Framing**  
+  Candid, unposed framing: the shot is slightly tilted, off‑center, with a partial crop that cuts off the top of the window frame. No rule‑of‑thirds intentionality—just spontaneous, handheld composition. The subject occupies the central‑right portion of the frame, with her left hand near the left edge and right hand near the right edge, creating a balanced but casual look.
+
+- **Environment**  
+  Location: a bright, modern sunroom with a large glass window that lets in natural light. Outside the window, a patch of green lawn and a few trees are visible, slightly blurred but still sharp. The time of day is late morning, around 10:30 AM, when the sunlight is warm but not too harsh. Weather is clear, with a light breeze that slightly ruffles her hair.
+
+- **Details & Imperfections**  
+  Slight motion blur on the hands and hair to emphasize the candid feel. A faint tilt in the camera gives an accidental, non‑studio vibe. The image has no post‑processing color grading—just raw, natural tones. Small imperfections are present: a slight smudge on her left hand, a tiny wrinkle in the lace, and a small, natural shadow cast by her body onto the wall.
+
+- **Final Prompt**  
+  “A woman with short brown hair and a pearl choker, wearing a white lace corset, stands in a bright sunroom, pulling her straps upward as if about to fasten them. Natural daylight from a large window creates a slight overexposure on the upper frame and underexposure below. Shot on a 24‑mm wide‑angle lens at f/3.5, 1/60 s, everything in focus with no bokeh. The framing is candid, slightly tilted, off‑center, and partially cropped. The background shows a clear late‑morning view of greenery outside the window. Small motion blur on the hands and hair adds realism. The image retains raw, unprocessed tones, with a faint smudge on her left hand and a subtle wrinkle in the lace, giving it an authentic, spontaneous feel.”

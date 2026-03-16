@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, sun‑kissed blonde hair walking down a bustling European market street. She’s wearing an oversized gray “A”‑printed tee and high‑waisted denim shorts, her head tilted slightly downward as if she’s reading a sign or checking her phone. Her left hand is partially in frame, holding a brown leather tote bag. She’s mid‑step, one foot forward, with a subtle motion blur at the toes to emphasize movement.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the woman appears unaware of the camera, caught in a natural moment. Slight tilt and off‑center framing give an accidental, handheld feel. The shot is a partial crop that cuts off the left side of her face, adding to the informal vibe. No rule‑of‑thirds intentionality; the composition is driven by the flow of the market scene.
+
+- **Environment**  
+  Specific real‑world location: a sunny, mid‑afternoon market in a historic town (think cobblestone lanes, old stone buildings). The time of day is late afternoon, with warm golden light casting long shadows. Ambient conditions include a bright sky with a slight haze, and a few other shoppers in the background — one man in a gray shirt walking left, another woman in a pink top carrying a brown bag. The market has red and blue awnings, wooden tables, and a small wooden stool near the right edge.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm) wide‑angle lens. Everything is fully sharp — no bokeh, no depth‑of‑field blur; background remains in focus. No portrait mode or subject isolation. Slight overexposure on the upper right to capture the bright sky, but the exposure is uneven, giving a raw, unprocessed look. Auto‑HDR and auto‑beauty are off. The image has a natural lens flare near the top left from the sun’s glare.
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, zero post‑processing aesthetic. Only basic white balance correction and a slight contrast boost. The final look is raw, candid, and realistic.
+
+- **Final Prompt Summary**  
+  “A young woman with long, sun‑kissed blonde hair walks down a bustling European market street on a sunny late afternoon. She wears an oversized gray ‘A’ tee and high‑waisted denim shorts, carrying a brown leather tote bag. Her left hand is partially out of frame, her head tilted downward as if reading a sign. The shot is candid, slightly tilted, off‑center, and partially cropped. The background shows a cobblestone lane, red and blue awnings, wooden tables, and a small wooden stool. A man in a gray shirt walks left, a woman in a pink top carries a brown bag, and a few other shoppers are visible. The image is captured on a 24‑35 mm wide‑angle lens, fully sharp with no bokeh, slight overexposure on the upper right, and a natural lens flare near the top left. Auto‑HDR and auto‑beauty are off; no filters or color grading applied.”

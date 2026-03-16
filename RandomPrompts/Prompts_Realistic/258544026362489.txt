@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework – “The Iron‑Belted Mercenary”**
+
+- **Subject & Pose**  
+  A young woman with long, wind‑blown brown hair, wearing a worn, earth‑tone brocade dress with a deep V‑neck and a thick leather belt that cinches her waist. She is mid‑step, left foot slightly ahead, arms bent at the elbows as if she’s just finished a fight or is about to grab a weapon. Her expression is intense, mouth slightly open, eyes focused forward, capturing a spontaneous, “in‑action” moment.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle, late‑afternoon sun that creates a soft overexposure on the upper body while leaving subtle shadows in the crevices of her dress. Slight handheld shake gives a natural motion blur around the edges; no auto‑beauty or filter processing—just raw, unedited capture.
+
+- **Camera & Lens**  
+  35 mm wide‑angle lens (short focal length), f/2.8 aperture, 1/125 s shutter speed, ISO 400. Everything in focus from foreground to background; no bokeh or depth‑of‑field blur—background remains sharp.
+
+- **Framing & Composition**  
+  Candid, unposed framing: the shot is slightly tilted off‑center, with a partial crop that cuts off the left side of her torso and the right side of her foot. No rule‑of‑thirds intentionality—just accidental, spontaneous composition. The background shows a stone archway and two blurred men in medieval‑style clothing, indicating a marketplace or tavern setting.
+
+- **Environment**  
+  Location: an old stone arcade in a medieval town square; time of day: late afternoon (warm, golden light); weather: mild breeze, clear sky. The scene is bustling but the woman remains the focal point.
+
+- **Details & Imperfections**  
+  Slight tilt and off‑center framing give a raw, unposed feel. Tiny imperfections: a stray strand of hair caught in the wind, a small smudge on her belt buckle, slight motion blur at the edges from handheld instability. No studio lighting or professional composition—just a genuine, spontaneous snapshot.
+
+- **Post‑Processing**  
+  Auto‑HDR off; no color grading or filters. Only natural exposure adjustments. The final image retains a slightly overexposed highlight on the woman’s chest and a faint underexposure in the background shadows, preserving the authentic, unpolished look.

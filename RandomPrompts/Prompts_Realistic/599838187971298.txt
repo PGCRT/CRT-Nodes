@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, sun‑kissed blonde hair standing in a rustic, rural setting. She wears a black‑and‑white horizontal‑striped V‑neck knit top and faded denim jeans. Her pose is casual and unposed—she’s mid‑step, slightly turned toward the camera, with a natural, relaxed expression.  
+
+- **Capture Style**  
+  Candid, spontaneous, “mid‑action” shot; subject appears unaware of the camera. Slight handheld shake gives a subtle motion blur around the edges. No rule‑of‑thirds—framing is accidental, slightly off‑center, with a partial crop that keeps the background fully sharp.  
+
+- **Environment**  
+  Location: A grassy field beside an old wooden shed, with tall wildgrass and a small pathway leading into the distance. Time of day: late afternoon, warm golden light from the setting sun casts soft shadows. Weather: clear, breezy, with a faint haze that adds a natural overexposure effect.  
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm), short focal length. All elements in focus—no bokeh, no depth‑of‑field blur. Slight overexposure on the subject’s face to capture the ambient glow. Auto‑HDR or auto‑beauty mode off; no filters, no color grading, no post‑processing aesthetic.  
+
+- **Composition Notes**  
+  The shot is slightly tilted, giving a dynamic, informal feel. Background remains fully sharp, with the shed and field visible from left to right. The composition intentionally avoids deliberate rule‑of‑thirds placement, relying on accidental framing.  
+
+- **Final Prompt**  
+  “A candid, spontaneous portrait of a young woman with long blonde hair, wearing a black‑and‑white striped V‑neck top and denim jeans, standing in a grassy field next to an old wooden shed. Late afternoon sun creates warm golden light and slight overexposure. Wide‑angle lens (24–35 mm) captures everything in focus with no bokeh. Slight handheld motion blur and accidental off‑center framing give a raw, unprocessed look. No filters or color grading—pure, natural realism.”

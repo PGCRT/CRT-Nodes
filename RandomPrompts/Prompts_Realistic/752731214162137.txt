@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A blonde woman with voluminous, wavy hair sitting casually on a weathered stone ledge outside a white‑framed window. She wears a delicate purple lace bodysuit and black high‑heeled shoes, one leg bent, the other extended, hand touching her cheek in a relaxed, mid‑gesture pose. Her expression is natural, slightly uncertain, as if caught mid‑conversation or mid‑thought.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject appears unaware of the camera, frozen in a natural moment. Slight tilt and off‑center framing give an accidental, handheld feel. The composition is not intentionally rule‑of‑thirds; it’s a raw, imperfect snapshot with a partial crop that keeps the edges slightly cut off.
+
+- **Motion & Exposure**  
+  A subtle motion blur from a short‑focal‑length wide‑angle lens, creating a slight sense of movement. The exposure is mildly overexposed on the bright window area, letting ambient daylight bleed softly into the scene. No auto‑HDR or beauty filters — just a raw, unprocessed look.
+
+- **Environment**  
+  A sunlit patio outside a white house with large glass panes; a terracotta planter sits beside the window, a green bush peeks from the corner, and a stone step leads down to the ground. The time of day is late morning, with warm, golden light casting soft shadows. Weather is clear, with a light breeze that ruffles the woman’s hair.
+
+- **Lens & Technical**  
+  Short focal length (20‑35 mm) wide‑angle lens, everything in focus from foreground to background. No bokeh or depth‑of‑field blur — the background remains fully sharp. No portrait‑mode isolation; the entire scene is captured with a single exposure.
+
+- **Post‑Processing**  
+  Zero studio lighting, zero professional composition, zero editorial tone. Slight natural motion freeze or slight blur from handheld instability. The image retains a raw, candid feel with no color grading or filters applied.

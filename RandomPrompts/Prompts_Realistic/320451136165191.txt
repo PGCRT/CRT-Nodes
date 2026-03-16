@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with wavy, sun‑kissed blonde hair, kneeling on a crumpled pink towel in a dimly lit studio. Her body is bare, slightly turned to the left, head tilted down as if she’s about to touch her chest or adjust her hair. Her right arm hangs loosely by her side, fingers curled naturally. The pose should feel spontaneous, mid‑movement, with a faint handheld shake that gives a subtle motion blur around the edges.
+
+- **Lighting & Exposure**  
+  Use a wide‑angle lens (24–35 mm) at a short focal length to capture the entire figure and part of the background. Shoot in “auto‑HDR” or “auto‑beauty” off; keep the look raw, unprocessed. Allow a slight overexposure on the subject’s front side to highlight her skin tone, while letting the background remain slightly darker for contrast. No color grading or filters—just natural ambient light.
+
+- **Composition & Framing**  
+  Capture a candid, unposed moment; the frame should be slightly off‑center and tilted, as if taken by hand. Avoid intentional rule‑of‑thirds—let the composition feel accidental. The background is a plain black backdrop that’s fully sharp (no bokeh), giving depth to the scene without isolating the subject. Keep everything in focus: no portrait mode or subject isolation.
+
+- **Environment**  
+  Location: an indoor studio with a matte black wall behind the subject. Time of day: late afternoon, with warm, soft natural light coming from the left side, creating gentle highlights and subtle shadows. Weather/ambient conditions: mild, slightly humid air that gives a natural grain to the image.
+
+- **Lens & Technical**  
+  Short focal length (24–35 mm), wide‑angle, no bokeh, background fully sharp. Use a handheld camera with slight instability for a natural motion blur. Capture the entire scene in one shot—no zoom or crop later. All elements (subject, towel, backdrop) should be in focus.
+
+- **Final Prompt**  
+  “A young woman with wavy blonde hair kneeling on a pink towel in a dimly lit studio, bare‑bodied and slightly turned left, head tilted down as if adjusting her chest, right arm hanging loosely. Shoot with a 24–35 mm wide‑angle lens at short focal length, using auto‑HDR or auto‑beauty off for a raw look. Allow slight overexposure on the subject, keep background sharp, capture a candid, unposed moment with accidental tilt and handheld blur. The black backdrop is fully in focus; the scene is lit by late‑afternoon natural light from the left. No filters, no color grading—just a realistic, spontaneous photograph.”

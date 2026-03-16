@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail and red‑framed glasses, wearing a black V‑neck top and distressed denim shorts, kneeling on a concrete floor in a hospital ward. Her hands rest on her thighs, knees bent, as she looks directly at the camera with a subtle, confident smile. A man in a blue scrub top and beige trousers stands beside her, his hand lightly touching the back of her head—mid‑gesture, slightly blurred to suggest motion.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—an “in‑moment” snapshot where the subject is unaware of the camera or caught mid‑action. Slight tilt and off‑center framing give an accidental, handheld feel. The composition is not intentionally rule‑of‑thirds; it’s a raw, natural frame that includes a partial crop of the surrounding environment.
+
+- **Motion & Exposure**  
+  Slight motion blur from a handheld shot, with a wide‑angle lens (24–35 mm). The exposure is slightly overexposed on the bright window light, giving a soft, natural glow without any auto‑HDR or beauty filters. No post‑processing color grading—just the raw, unprocessed look of a real‑life photograph.
+
+- **Environment**  
+  A brightly lit hospital ward in the late morning, with a large window letting in natural daylight. A hospital bed and an IV stand are visible in the background, along with a beige curtain and a small white radiator. The floor is a smooth, light‑colored tile that reflects the ambient light.
+
+- **Lens & Technical**  
+  Short focal length (24–35 mm), wide‑angle, no bokeh—everything from foreground to background is fully sharp. No portrait‑mode depth‑of‑field blur; the entire scene stays in focus. The lens is set to a wide aperture but with a flat focus plane, capturing every detail from the subject’s face to the far corner of the room.
+
+- **Final Prompt**  
+  “A young woman with a high ponytail and red‑framed glasses, wearing a black V‑neck top and distressed denim shorts, kneeling on a concrete floor in a hospital ward. Her hands rest on her thighs, knees bent, as she looks directly at the camera with a subtle, confident smile. A man in a blue scrub top and beige trousers stands beside her, his hand lightly touching the back of her head—mid‑gesture, slightly blurred to suggest motion. Candid, unposed, spontaneous—an ‘in‑moment’ snapshot where the subject is unaware of the camera or caught mid‑action. Slight tilt and off‑center framing give an accidental, handheld feel. The composition is not intentionally rule‑of‑thirds; it’s a raw, natural frame that includes a partial crop. Slight motion blur from a wide‑angle lens (24–35 mm). The exposure is slightly overexposed on the bright window light, giving a soft, natural glow without any auto‑HDR or beauty filters. No post‑processing color grading—just the raw, unprocessed look of a real‑life photograph. A hospital bed and an IV stand are visible in the background, along with a beige curtain and a small white radiator. The floor is a smooth, light‑colored tile that reflects the ambient light. Everything from foreground to background is fully sharp, no bokeh.”

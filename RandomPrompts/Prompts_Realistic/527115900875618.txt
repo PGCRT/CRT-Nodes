@@ -1,0 +1,32 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, curvy woman with long, wind‑blown brown hair standing mid‑step in a desert dune field. She’s wearing a thin white bikini bottom that sits low on her hips, catching the light as she pulls it slightly upward with both hands. Her torso is bare, showcasing natural contours and a small belly button piercing. Her face is turned toward the camera but not directly at it—her gaze is off‑center, giving a candid, spontaneous feel.
+
+- **Capture Style**  
+  - Candid, unposed, spontaneous — subject unaware or mid‑action.  
+  - Slight tilt and off‑center framing; partial crop that cuts off the top of her head and the lower part of her legs.  
+  - No rule‑of‑thirds intentionality—accidental framing.  
+  - Natural motion freeze or slight blur from handheld instability.
+
+- **Environment**  
+  - Specific real‑world location: a sunlit desert dune field at mid‑afternoon.  
+  - Time of day: late afternoon, warm golden light with a soft haze in the sky.  
+  - Weather or ambient conditions: breezy, clear sky with a few thin clouds; sand drifts on either side.
+
+- **Lens & Technical**  
+  - Short focal length (24‑35 mm), wide‑angle lens.  
+  - No bokeh—background fully sharp, everything in focus.  
+  - No portrait mode or subject isolation.  
+  - Slight overexposure or underexposure depending on ambient light; raw, unprocessed look.  
+  - Auto‑HDR or auto‑beauty mode off.  
+  - No filters, no color grading, no post‑processing aesthetic.  
+
+- **Composition Notes**  
+  - Capture the subject’s full body from head to toe, but keep the frame slightly crooked.  
+  - Include the dunes on both sides of her legs for context.  
+  - Keep the sky visible above her head and a portion of the sand below her feet.  
+  - Emphasize natural imperfections: slight blur at the edges, minor dust particles in the air.
+
+- **Final Prompt**  
+  “A tall, curvy woman with long, wind‑blown brown hair standing mid‑step in a desert dune field, wearing a thin white bikini bottom that sits low on her hips, catching the light as she pulls it slightly upward with both hands. Her torso is bare, showcasing natural contours and a small belly button piercing. She’s turned toward the camera but not directly at it—her gaze is off‑center, giving a candid, spontaneous feel. The scene is set in a sunlit desert dune field at mid‑afternoon, with a clear sky and a few thin clouds. The shot is taken with a short focal length wide‑angle lens (24‑35 mm), all in focus with no bokeh. Slight tilt and partial crop create accidental framing; the image has a raw, unprocessed look with slight overexposure. Capture the subject’s full body from head to toe, include the dunes on both sides of her legs, keep the sky visible above her head and a portion of the sand below her feet. Emphasize natural imperfections: slight blur at the edges, minor dust particles in the air.”

@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, athletic woman with long, wavy dark hair standing on a sunlit suburban sidewalk. She’s bare‑chested, wearing high‑waisted denim shorts that curl at the hem. Her hands hang loosely by her sides, slightly bent at the elbows, as if she just finished a quick stretch or is about to pick something up. Her face is turned toward the camera but not directly at it— a slight off‑center angle that gives a candid feel.
+
+- **Motion & Focus**  
+  Capture with a handheld camera at a moderate shutter speed that produces a subtle motion blur around the edges, suggesting movement. Keep everything in focus—no depth‑of‑field blur; the background (a line of mature trees and a quiet street) should be crisp from foreground to background.
+
+- **Lens & Technical**  
+  Use a short focal length wide‑angle lens (e.g., 24 mm). Shoot in raw mode, no auto‑HDR or beauty filters applied. Let the ambient daylight create a slight overexposure on the subject’s upper body, letting the warm tones bloom. Keep the composition accidental—no rule‑of‑thirds; frame the scene as it naturally appears, with a slight tilt and partial crop that gives an unposed, spontaneous vibe.
+
+- **Environment**  
+  Location: a quiet residential street lined with mature oak trees, a concrete sidewalk running parallel to the road. Time of day: late afternoon, around 4:30 pm, when the sun is high but slightly to the west, casting soft, warm light. Weather: clear, breezy, with a faint haze from the heat. The background should be fully sharp, no bokeh.
+
+- **Lighting & Color**  
+  Natural daylight, no studio lighting. Allow a slight overexposure on the subject’s torso and face to emphasize the raw, unprocessed look. Keep the color palette natural—no post‑processing filters or heavy color grading. The light should highlight the texture of her skin and the denim’s weave.
+
+- **Capturing Style**  
+  Candid, unposed, spontaneous—an “in‑the‑moment” snapshot that feels like it was caught by chance. Slight tilt and off‑center framing give an informal feel. The shot should look like a real, unedited photograph taken with a DSLR or mirrorless in raw mode.
+
+- **Final Prompt**  
+  *“A tall woman with long wavy hair, bare‑chested and wearing high‑waisted denim shorts, stands on a sunlit suburban sidewalk. Capture with a handheld wide‑angle lens (24 mm) in raw mode, slight motion blur around the edges but everything fully sharp. Shoot at late afternoon, 4:30 pm, with natural daylight creating a soft overexposure on the subject. The background of mature oak trees and a quiet street is crisp. Frame casually with a slight tilt and off‑center composition—no rule‑of‑thirds. Keep the look candid, unposed, spontaneous, raw, unprocessed, no filters or color grading.”*

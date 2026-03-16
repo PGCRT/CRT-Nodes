@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair and a warm, inviting smile is lying on a neatly made bed, her body slightly tilted to the side. She’s bare‑headed, wearing only a light, sheer blanket that drapes loosely over her hip. Her left arm rests on the pillow, while her right arm is extended outward, creating a casual, spontaneous pose. The camera captures her from a low angle, emphasizing the curvature of her back and the softness of her skin.
+
+- **Lighting & Exposure**  
+  Natural daylight coming from a western window creates a slight overexposure on the upper part of the frame, giving the image a warm, golden hue. The exposure is uneven—the top of the bed is slightly brighter than the lower corner, as if the shutter was left open for a few extra moments. No auto‑beauty or filter enhancement; the look remains raw and unprocessed.
+
+- **Lens & Technical Settings**  
+  A wide‑angle lens (24 mm) is used, producing a short focal length that keeps the entire scene in focus—no bokeh, no depth‑of‑field blur. The background (a plain beige wall and a white pillow) stays sharp, giving an accidental, off‑center composition. Slight handheld shake is visible, adding a natural motion blur to the edges.
+
+- **Environment**  
+  The setting is a simple, modern bedroom: a white bed with crisp sheets, a light gray blanket, and a single white pillow. The time of day is late afternoon, as indicated by the warm, slightly diffused sunlight. The weather outside is mild, with a gentle breeze that ruffles the blanket slightly.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. The framing is imperfect: a slight tilt to the left, partial crop that cuts off a bit of the pillow’s edge, and no rule‑of‑thirds intentionality. All elements are in focus, from the woman’s face to the corner of the blanket.
+
+- **Post‑Processing**  
+  Zero studio lighting, zero professional composition, zero editorial tone. The image retains a natural, documentary feel with slight overexposure on the upper half and a faint motion blur from handheld instability. No color grading or filters are applied; the colors remain true to the ambient light.

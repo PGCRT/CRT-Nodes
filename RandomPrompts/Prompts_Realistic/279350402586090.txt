@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, slender woman with a smooth, unadorned back and hips, captured mid‑turn as she gently places her hands on the sides of her thighs. Her posture is slightly off‑center, with a subtle tilt that gives the shot a spontaneous, candid feel. The framing is partial—her left arm extends beyond the top edge, and the bottom of the image cuts off just above her calves, creating an accidental, non‑rule‑of‑thirds composition.
+
+- **Motion & Focus**  
+  Slight motion blur on the hands and lower legs, indicating handheld instability during capture. Everything remains in focus—no portrait‑mode depth‑of‑field blur. The blur is subtle, a soft “breathing” effect that adds life to the image.
+
+- **Lighting & Exposure**  
+  Natural daylight from a western‑facing window, mid‑afternoon. A mild overexposure on the back and hips, with a warm, slightly hazy tone that gives the photo a raw, unprocessed look. No auto‑HDR or beauty filters—just the original exposure.
+
+- **Lens & Technical**  
+  24 mm wide‑angle lens, short focal length. No bokeh; the background is fully sharp, from the textured concrete wall to the floor. The lens is set to a slightly wide aperture (f/4) but the depth of field remains flat.
+
+- **Environment**  
+  Location: A modern loft with exposed brick and concrete walls, a large window on the west side. Time of day: late afternoon, around 4:30 pm. Ambient light is soft but warm, with a faint hint of sunset. The floor is a polished concrete that reflects the subject’s silhouette slightly. Weather: clear, no wind.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Slight tilt and off‑center framing give the shot an accidental, natural feel. No rule‑of‑thirds intentionality; the composition is guided by the subject’s movement. Zero studio lighting, zero professional composition, zero editorial tone.
+
+- **Detailed Prompt**  
+  “A tall woman with a smooth back and curved hips, captured mid‑turn as she places her hands on the sides of her thighs, hands slightly blurred from handheld motion. The shot is framed partially, with her left arm extending beyond the top edge and the bottom cutting off just above her calves. Natural daylight from a western window creates a mild overexposure on her back and hips, giving a warm, raw look. 24 mm wide‑angle lens, everything in focus, no bokeh. The background is a textured concrete wall and polished floor, fully sharp. Late afternoon, clear weather, slight wind. Candid, spontaneous capture with accidental tilt and off‑center framing.”

@@ -1,0 +1,26 @@
+Realistic Candid Photography Prompt Framework
+
+- **Subject & Action**  
+  A young woman with a messy high‑top bun, wearing an oversized denim jacket over a white crop‑top and cargo pants, is mid‑conversation on her smartphone. Her head is tilted slightly to the left, fingers gripping a black phone, mouth open in a laugh or speech, capturing a spontaneous moment. She stands at a wooden desk in a bright, industrial‑style office with concrete walls and large windows covered by horizontal blinds. A striped tabby cat perches on the back of the desk, looking toward the woman’s face, adding a candid, lively element.
+
+- **Lighting & Exposure**  
+  Natural daylight from the window creates a soft overexposed highlight on the woman’s face, with slight ambient glare. The exposure is slightly uneven—warm tones in the foreground, cooler tones in the background—giving a raw, unprocessed feel. No auto‑beauty or filter enhancement; the image retains the natural imperfections of a handheld shot.
+
+- **Camera & Lens Settings**  
+  Wide‑angle lens (24–35 mm) with a short focal length to capture the entire scene in one frame. Everything is fully sharp—no bokeh, no depth‑of‑field blur. The focus is on the woman and the cat, but the background (desk, books, window, blinds) remains crisp. Slight motion blur from handheld instability freezes the moment of conversation.
+
+- **Composition & Framing**  
+  The shot is intentionally off‑center: the woman occupies the left‑central portion of the frame, while the cat is positioned on the right rear, creating a dynamic diagonal relationship. The framing is accidental—no rule‑of‑thirds applied—yet the composition feels spontaneous and candid. The camera is held at eye level, with a slight tilt that gives the image a casual, real‑life vibe.
+
+- **Environment & Time**  
+  The scene takes place in an office or studio space during mid‑afternoon, when the sun is high but not directly overhead. The weather outside the window is clear, with bright sunlight filtering through the blinds, casting soft shadows. The desk holds a stack of books (one titled “LULLABY”), a plastic cup, and a small red notebook, adding contextual detail.
+
+- **Technical Details**  
+  - Focal length: 35 mm (wide‑angle)  
+  - Aperture: f/4.0 (mid‑range for sharpness)  
+  - Shutter speed: 1/60 s (slight motion blur)  
+  - ISO: 400 (natural contrast)  
+  - No post‑processing color grading; raw, unedited look.
+
+- **Final Prompt**  
+  “A candid, wide‑angle shot of a young woman in a denim jacket and cargo pants laughing while talking on her phone, standing at a wooden desk in a bright office with concrete walls and blinds. A striped cat sits on the desk behind her. Natural daylight creates a slight overexposure on the subject’s face. Shot with a 35 mm wide‑angle lens, everything in focus, slight motion blur from handheld shake, accidental off‑center framing, raw unprocessed look, mid‑afternoon lighting.”

@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, curvy woman with a sun‑kissed complexion and a cascade of wavy blonde hair, standing in a bright, airy loft. She’s bare‑chested, wearing a black leather belt with a gold buckle, fishnet leggings that catch the light, and black fingerless gloves. In her right hand she holds a wine glass filled with deep red wine; in her left hand a small black crossbody bag hangs at her hip. A lotus tattoo adorns her upper chest, a rose tattoo on her left bicep, and a second rose near her wrist. Her gaze is direct, confident, slightly tilted as if she’s mid‑conversation or about to sip her wine.
+
+- **Lighting & Exposure**  
+  Natural daylight from a large south‑facing window creates a soft, warm glow. Slight overexposure on the high‑lights gives a raw, unprocessed feel. The exposure is uneven—the left side of the frame is a little brighter than the right, as if the camera’s meter was off by a fraction of a stop. No auto‑beauty mode; the image retains natural imperfections: slight grain, minor dust specks, and a handheld shake that gives a subtle motion blur.
+
+- **Lens & Technical**  
+  24 mm wide‑angle lens, f/3.5, 1/60 s shutter speed, ISO 400. Everything is in focus—from her face to the back of her bag—no portrait‑mode depth‑of‑field blur. The background is a plain concrete wall with a wooden table on the left; it’s fully sharp, no bokeh.
+
+- **Composition & Framing**  
+  Candid, unposed, spontaneous. The frame is slightly off‑center: the subject’s head is a little above the center line, her body leans to the right, and the top of the wine glass touches the upper left corner. The composition has no rule‑of‑thirds intentionality—just an accidental, natural snapshot. A small portion of her left arm goes just beyond the right edge of the frame, giving a partial crop that adds dynamism.
+
+- **Environment**  
+  Location: a bright, industrial‑style loft with exposed brick and concrete walls. Time of day: late morning, when the sun is high but still casts soft shadows. Ambient conditions: a gentle breeze ruffles her hair, a faint motion blur from her slight shift in pose. A small wooden table sits to the left; a plain white wall occupies the right side.
+
+- **Post‑Processing**  
+  No filters, no color grading, no post‑processing aesthetic. The image is raw, with only basic auto‑HDR applied to lift the highlights. Slight overexposure on the high‑lights gives it a natural, candid feel.
+
+**Prompt Summary**  
+“Candid, unposed photo of a tall, curvy woman in a black leather belt, fishnet leggings, and black fingerless gloves, holding a wine glass in her right hand and a small black crossbody bag in her left, bare‑chested with a lotus tattoo on her chest and rose tattoos on her left arm. She stands in a bright loft, natural daylight from a south‑facing window creates a soft warm glow with slight overexposure. 24 mm wide‑angle lens, f/3.5, 1/60 s, ISO 400—everything in focus. The frame is slightly off‑center, partial crop on the right, no rule‑of‑thirds. Raw, unprocessed look with auto‑HDR, slight motion blur from handheld shake.”

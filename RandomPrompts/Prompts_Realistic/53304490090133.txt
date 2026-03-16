@@ -1,0 +1,29 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman in a navy blazer with gold laurel embroidery, white shirt, and high‑waist trousers, standing at a wooden teaching desk in a bright classroom. Her hair is tied back in a sleek ponytail; she’s mid‑gesture, hand near an open textbook, looking slightly off‑camera with a natural, unposed expression. The blazer is slightly open, revealing her chest, and the shirt cuff peeks out from under the jacket.  
+
+- **Lighting & Exposure**  
+  Soft, ambient daylight coming from a large window on the left; slight overexposure in the upper right corner to capture the bright whiteboard behind her. No auto‑beauty or filter processing—raw, unprocessed look. The exposure is a little warm, with a subtle haze that gives an “auto‑HDR” feel without the polished aesthetic.  
+
+- **Camera Settings**  
+  Wide‑angle lens (24–35 mm), short focal length, handheld. Slight motion blur on the subject’s hand and the open books, indicating a casual, spontaneous capture. Everything in focus—no bokeh, no portrait‑mode isolation.  
+
+- **Composition & Framing**  
+  Accidental, off‑center framing: the subject is slightly tilted to the right, the desk extends into the lower left corner, and the whiteboard’s diagrams peek into the upper right. No rule‑of‑thirds intentionality—just a candid, spontaneous crop that includes the window’s blinds, a stack of textbooks on the left, and a blue pen lying on the open book.  
+
+- **Environment**  
+  Classroom setting: a large window with vertical blinds on the left, a wooden desk with an open textbook titled “Advanced Physics” (or similar), a stack of three other books behind it, a whiteboard with diagrams of a flask and a circle in the background, and a small radiator near the floor. Time of day is mid‑morning; natural light creates soft shadows and a slight overexposed highlight on the whiteboard. Weather is clear, with no wind, giving a calm, steady backdrop.  
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, minor handheld shake, partial crop that cuts off the top left corner of the window. The subject’s blazer has a subtle wrinkle at the left shoulder, and her right hand is partially blurred as if she’s about to point at a diagram. The open textbook shows handwritten notes and a diagram of a circuit; a blue pen rests on its page.  
+
+- **Technical Notes**  
+  - Focal length: 35 mm (wide‑angle)  
+  - Aperture: f/4.0 (mid‑range, for sharpness across the frame)  
+  - Shutter speed: 1/60 s (slight motion blur)  
+  - ISO: 400 (for natural contrast)  
+  - No post‑processing color grading—just raw capture.  
+
+**Prompt Summary**  
+“Candid, unposed photograph of a woman in a navy blazer and white shirt standing at a wooden desk in a bright classroom. She’s mid‑gesture near an open ‘Advanced Physics’ textbook, with a stack of books behind her and a whiteboard diagram visible in the background. The scene is lit by natural daylight from a large window on the left, creating slight overexposure on the right. Capture with a 35 mm wide‑angle lens, handheld, slightly blurred motion, everything in focus. Frame accidentally off‑center, tilted, with a partial crop that includes the window blinds and a blue pen on the book. Raw, unprocessed look, no filters—just a realistic, spontaneous capture.”

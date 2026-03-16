@@ -1,0 +1,27 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair, wearing large hoop earrings, standing bare‑against a light‑wood panel wall. Her hands are gently clasped over her chest in a modest, mid‑action gesture, eyes cast downward in a contemplative mood.  
+
+- **Lighting & Exposure**  
+  Natural daylight from a western window, slightly overexposed on the right side to give a warm, soft glow. No auto‑HDR or beauty filters—raw, unprocessed look.  
+
+- **Camera Settings**  
+  - Lens: 24 mm wide‑angle, short focal length.  
+  - Aperture: f/5.6 (mid‑range).  
+  - Shutter speed: 1/60 s (slight motion blur from handheld).  
+  - ISO: 400 (for clean noise).  
+
+- **Composition**  
+  Candid, unposed framing; the shot is slightly tilted and off‑center, with a partial crop that cuts off the left side of the wall. No rule‑of‑thirds intentionality—just accidental, spontaneous composition.  
+
+- **Background & Environment**  
+  A simple, unadorned wooden panel wall with two white electrical outlets visible on the right. The time of day is late morning, with soft, diffused sunlight. Weather is clear, no wind.  
+
+- **Technical Details**  
+  - Everything in focus—no bokeh, no depth‑of‑field blur.  
+  - Background fully sharp, no portrait‑mode isolation.  
+  - Slight overexposure on the right to emphasize the ambient light.  
+
+- **Final Prompt**  
+  “A young woman with long wavy brown hair and large hoop earrings stands bare against a light‑wood panel wall, hands clasped over her chest in a modest mid‑action gesture, eyes cast downward. Natural daylight from a western window slightly overexposes the right side, creating a warm soft glow. Shot on a 24 mm wide‑angle lens at f/5.6 and 1/60 s, with slight motion blur from handheld. Candid, unposed, slightly tilted framing with partial crop. Background is a simple wooden wall with two white outlets on the right, fully sharp. Late morning, clear weather.”

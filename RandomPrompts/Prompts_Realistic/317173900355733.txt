@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with wavy, shoulder‑length brown hair, wearing a brown strappy crop‑top and high‑waisted, frayed denim shorts. She is captured mid‑turn, back to the camera, slightly angled toward the right, with her left hand resting on the back of her thigh. Her posture is casual, as if she’s just finished a quick fit‑check or is about to move to another part of the room.
+
+- **Motion & Focus**  
+  Slight motion blur at the edges from handheld shake; the subject’s back and the surrounding environment are fully sharp with no bokeh. The image has a raw, unprocessed look—no auto‑HDR or beauty filters, just natural exposure (a mild overexposure on the ceiling light).
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm), short focal length, everything in focus from foreground to background. No depth‑of‑field blur; the entire scene is crisp. The framing is accidental—slightly off‑center, a slight tilt that gives a candid feel.
+
+- **Environment**  
+  A bright, cluttered closet or storage room with a skylight on the ceiling. Wooden shelves line both sides, filled with folded clothes, bottles of cleaning supplies, and various containers. A small table holds rolled towels and a basket. The time of day is mid‑afternoon, with natural daylight coming from the skylight and a side window, creating soft shadows and a warm tone.
+
+- **Lighting & Color**  
+  Natural ambient light with a slight overexposure on the ceiling, giving a subtle halo effect. Warm tones from the wood and the woman’s brown top contrast with the cool blue of her denim shorts. The color palette is earthy: browns, blues, and hints of orange from a bottle of cleaning product.
+
+- **Composition & Details**  
+  The prompt emphasizes a “realistic candid” vibe: the subject is unaware of the camera, the framing is imperfect (a slight tilt), and the background is fully sharp. The scene includes a variety of textures—fabric, wood, plastic—and a sense of everyday spontaneity.
+
+- **Prompt for Generation**  
+  *“A young woman with wavy brown hair, wearing a brown strappy crop‑top and high‑waisted frayed denim shorts, captured mid‑turn in a bright closet with wooden shelves and a skylight. The image has slight motion blur from handheld shake but is fully sharp across the frame. Wide‑angle lens, natural ambient daylight, mild overexposure on the ceiling, raw unprocessed look. The composition is accidental—slightly off‑center tilt, no rule‑of‑thirds. Background includes folded clothes, cleaning bottles, and a small table with towels and a basket. Mid‑afternoon lighting, warm tones, earthy color palette, realistic candid photography.”*

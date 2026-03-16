@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A young woman with long, sun‑kissed brown hair, wearing a casual gray t‑shirt, holding a black Kamen DSLR camera in front of her face. She is mid‑smile, slightly tilted to the left, as if caught in an unplanned moment while taking a photo. Her fingers grip the camera’s lens and shutter button, with the camera strap hanging loosely from her right shoulder. The camera’s lens is angled toward the viewer, showing a subtle reflection of the surrounding environment on its glass.
+
+- **Pose & Composition**  
+  Candid, unposed, spontaneous — the subject appears unaware of the camera capturing her. The frame is off‑center, with a slight handheld tilt and partial crop that gives an accidental, natural feel. No rule‑of‑thirds intentionality; the composition is driven by the subject’s movement and the surrounding environment.
+
+- **Lighting & Exposure**  
+  Slight overexposure in the upper right corner, creating a warm, golden halo around the subject’s hair. The exposure is raw, unprocessed, with no auto‑HDR or beauty filters applied. The ambient light suggests late afternoon, with soft sunlight filtering through the leaves and casting gentle shadows on the woman’s face.
+
+- **Lens & Technical**  
+  Short focal length (24–35 mm) wide‑angle lens, producing a fully sharp background without bokeh. Everything in focus — from the camera’s lens to the building’s window and the street behind. No portrait‑mode subject isolation; depth of field is uniform.
+
+- **Environment**  
+  A quiet residential street in an urban neighborhood. The background shows a light‑colored building with a large window, a parked car further down the road, and a patch of greenery peeking through the foliage. The time of day is early evening, as indicated by the warm, slightly overcast sky and long shadows. Weather is mild, with a light breeze that ruffles the woman’s hair.
+
+- **Details & Imperfections**  
+  Slight motion blur on the camera’s lens, indicating handheld instability. The image has no post‑processing color grading; it retains the natural, unfiltered look of a raw photograph. The background remains fully sharp, preserving every detail of the street and building.
+
+- **Final Prompt**  
+  “A young woman with long, sun‑kissed brown hair, wearing a casual gray t‑shirt, holding a black Kamen DSLR camera in front of her face, mid‑smile and slightly tilted, captured on a short focal length wide‑angle lens. The scene is set on a quiet residential street at early evening, with soft sunlight creating a warm halo around her hair. The image is raw, unprocessed, with slight motion blur and accidental framing, all in focus from the camera’s lens to the building’s window behind.”

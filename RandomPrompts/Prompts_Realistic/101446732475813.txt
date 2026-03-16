@@ -1,0 +1,31 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark brown hair, wearing a black sleeveless crop top and high‑waist dark denim jeans, standing in an office setting. She is mid‑turn, left hand on her hip, right arm relaxed by her side, body angled toward the camera but face turned slightly away, creating a dynamic, candid pose. Her expression is neutral, almost contemplative, with a subtle smile.
+
+- **Lighting & Exposure**  
+  Natural daylight coming from a large window on the left, creating a soft, warm glow with slight overexposure on the upper part of the frame. The lighting is uneven, giving a raw, unprocessed look. Slight lens flare is visible near the top right corner.
+
+- **Camera Settings**  
+  - Lens: 24‑35 mm wide‑angle, short focal length.  
+  - Aperture: f/4–f/5.6 (wide opening).  
+  - Shutter speed: 1/60–1/100 s (handheld, slight motion blur).  
+  - ISO: 400–800 (depending on ambient light).  
+  - Focus: everything in focus, no portrait‑mode depth‑of‑field blur.  
+
+- **Composition & Framing**  
+  - No rule‑of‑thirds intentionality; the frame is slightly off‑center, with the subject’s left side cutting close to the right edge.  
+  - The composition captures a portion of a white desk with an open laptop on the left, a white filing cabinet on the right, and a large window that shows a cityscape outside.  
+  - Background is fully sharp; no bokeh.  
+
+- **Environment**  
+  Office space with a white desk, a silver laptop (open, displaying a spreadsheet), a black printer on a white cabinet, and a tall white filing cabinet. A large window lets in natural light, revealing a building across the street. The time of day is late morning, around 10:30 AM, with bright sunlight creating a slight lens flare.
+
+- **Details & Imperfections**  
+  - Slight tilt of the camera, giving a casual, spontaneous feel.  
+  - Minor motion blur on the subject’s hand and the laptop keyboard.  
+  - Small lens flare near the top right, a hint of overexposure on the window area.  
+  - No filters or color grading; raw, unprocessed look.
+
+- **Final Prompt**  
+  “A young woman with long dark brown hair, wearing a black sleeveless crop top and high‑waist dark denim jeans, stands in an office setting. She is mid‑turn, left hand on her hip, right arm relaxed by her side, body angled toward the camera but face turned slightly away, creating a dynamic, candid pose. Natural daylight from a large window on the left creates a soft warm glow with slight overexposure on the upper part of the frame. The shot is taken with a 24‑35 mm wide‑angle lens at f/5, 1/80 s shutter speed, ISO 600. Everything is in focus, no bokeh. The frame captures a portion of a white desk with an open laptop on the left, a black printer on a white cabinet to the right, and a tall white filing cabinet. A large window shows a cityscape outside; the time of day is late morning, around 10:30 AM. Slight tilt of the camera gives a casual, spontaneous feel, with minor motion blur on the hand and laptop keyboard, a small lens flare near the top right, and a hint of overexposure on the window area. No filters or color grading; raw, unprocessed look.”

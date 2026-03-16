@@ -1,0 +1,26 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark hair blowing in the wind, wearing a black mesh bikini, mid‑stride on a tropical beach. Her left arm is slightly bent, her right hand relaxed by her side, capturing a spontaneous, unposed moment as she walks toward the camera.  
+
+- **Motion & Focus**  
+  Slight motion blur on the subject’s legs and the background waves, indicating handheld instability. Everything remains fully sharp—no portrait‑mode depth of field.  
+
+- **Lighting & Exposure**  
+  Natural daylight from a low‑angle sunrise or sunset; slight overexposure on the upper part of the frame to emphasize the warm tones. No auto‑HDR or beauty filters—raw, unprocessed look.  
+
+- **Lens & Technical**  
+  Wide‑angle lens (24‑35 mm), short focal length, no bokeh. All elements—from the subject to the background—are in focus.  
+
+- **Environment**  
+  A tropical beach at dawn, with gentle waves breaking near the shore, a few red umbrellas and wooden lounge chairs scattered along the sand, and a palm tree leaning over the scene. The sky is pale orange‑pink, the sea is a calm blue‑green, and the sand shows footprints and small debris.  
+
+- **Composition**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Slight tilt and off‑center framing; partial crop that cuts off the left side of the umbrella. No rule‑of‑thirds intentionality.  
+
+- **Post‑Processing**  
+  Zero studio lighting, zero professional composition, zero editorial tone. Natural motion freeze or slight blur from handheld instability.  
+
+**Prompt:**
+
+> “A young woman with long dark hair in a black mesh bikini walks toward the camera on a tropical beach at sunrise. Her left arm is slightly bent, right hand relaxed by her side. Slight motion blur on her legs and the background waves, everything fully sharp. Natural daylight from a low‑angle sunrise, slight overexposure on the upper frame. Wide‑angle lens (24‑35 mm), short focal length. Background shows gentle waves, red umbrellas, wooden lounge chairs, and a leaning palm tree. Sand shows footprints and small debris. Candid, unposed, spontaneous—subject unaware or mid‑action. Slight tilt, off‑center framing, partial crop. No filters, no color grading, raw look.”

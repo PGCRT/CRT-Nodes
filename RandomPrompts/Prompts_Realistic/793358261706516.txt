@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, slender woman with long dark hair, bare‑shouldered and wrapped in a light beige towel tied at the waist, standing mid‑step in a sunlit bathroom. Her head is slightly tilted downward, eyes cast to the side, as if she’s about to pick something up from the floor. Bare feet are planted on a glossy tile floor; her left foot is slightly ahead of the right, giving a natural, unposed stance.
+
+- **Motion & Focus**  
+  Slight motion blur at the wrists and toes, indicating handheld shake and mid‑movement. Everything in the frame — subject, background, and foreground — is fully sharp with no portrait‑mode blur. The focus is intentional but casual, capturing every detail from her skin texture to the folds in the towel.
+
+- **Lighting & Exposure**  
+  Natural daylight coming from a large window behind her creates a soft overexposure on her upper body, while the lower part of the frame stays slightly underexposed. No auto‑HDR or beauty filters — just raw, unprocessed light. The exposure is uneven enough to give an authentic, spontaneous feel.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm) with a short focal length. No bokeh; the background is fully sharp. The composition is accidental: the subject is slightly off‑center, the frame tilts a little to the right, and the top of the image cuts off just above her head, giving a partial crop.
+
+- **Environment**  
+  A bright bathroom with a large window draped in sheer blue curtains that hang to the floor. A white radiator sits beneath the window, and a small wooden stool is visible in the lower left corner. Outside the window, a blurred view of a green lawn and a distant house can be seen, suggesting a suburban setting. The time of day is late morning, with warm sunlight streaming in, creating soft shadows and highlights.
+
+- **Details & Imperfections**  
+  The woman’s skin has natural imperfections — a small mole on her left breast, a faint scar on her right knee, and a slight smudge of soap on her wrist. Her towel is slightly wrinkled, and the knot at the waist is uneven. The floor tiles reflect the light, adding a subtle gloss. The overall look is candid, unposed, and spontaneous, as if she’s caught in an everyday moment.
+
+**Prompt Summary**  
+“Candid shot of a tall woman with long dark hair, bare‑shouldered and wrapped in a beige towel, standing mid‑step on a glossy tile floor in a sunlit bathroom. Slight motion blur at the wrists and toes, natural daylight overexposure on the upper body, wide‑angle lens, fully sharp background, accidental off‑center framing, raw unprocessed look.”

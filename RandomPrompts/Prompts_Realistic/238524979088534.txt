@@ -1,0 +1,31 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman in a white nursing uniform (short‑sleeved crop top, high‑waist shorts) sits on a hospital bed, legs slightly apart, one hand resting on the bed rail and the other on her thigh. Her head is tilted a few degrees to the left, eyes focused forward, hair falling loosely over her shoulders. A white nurse’s cap with a red cross sits atop her head. She holds a measuring tape that drapes across her hips and thighs, the numbers visible along the tape.
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window on the left side of the room creates a soft, slightly overexposed highlight on her face and upper body. The exposure is uneven—the left side of the image is brighter than the right, giving a raw, unprocessed look. No auto‑HDR or beauty filters; the scene retains slight grain and minor color cast from the ambient light.
+
+- **Camera & Lens Settings**  
+  - Wide‑angle lens (24 mm) – everything in focus, no bokeh.  
+  - Slight handheld shake: a subtle motion blur on the subject’s hands and the measuring tape, indicating a quick snap with a hand‑held camera.  
+  - No depth‑of‑field blur; background (a white pillow, a bedside table, a window with curtains) remains sharp.
+
+- **Composition & Framing**  
+  - Candid, unposed framing: the shot is slightly off‑center, with the subject’s left side cutting close to the left edge of the frame.  
+  - No rule‑of‑thirds intentionality; the composition feels spontaneous, as if captured mid‑action.  
+  - The top of the frame captures the nurse’s cap and part of the window, while the bottom cuts off just below her knees.
+
+- **Environment**  
+  - Location: a bright hospital room with a large window on the left, a white bedside table, a white pillow, and a beige curtain.  
+  - Time of day: mid‑morning, natural light coming from the west, creating soft shadows.  
+  - Weather: clear, slightly cloudy outside, giving diffused daylight.
+
+- **Details & Imperfections**  
+  - Slight tilt of the camera, making the image a little slanted.  
+  - Minor overexposure on the left side, slight color warmth.  
+  - The measuring tape’s numbers are visible but not perfectly aligned, adding realism.  
+  - The nurse’s cap has a small crease at the front, and her hair shows natural frizz.
+
+- **Prompt for Text‑to‑Image Generation**  
+  *“A young woman in a white nursing uniform sits on a hospital bed, legs apart, one hand on the rail, the other on her thigh. She wears a white nurse’s cap with a red cross. A measuring tape crosses her hips. Natural daylight from a large window on the left creates soft overexposure. Wide‑angle 24 mm lens, handheld shake blur, everything in focus. Candid, off‑center framing, slight tilt, raw unprocessed look. Background includes a white pillow and bedside table. Mid‑morning lighting, clear sky.”*

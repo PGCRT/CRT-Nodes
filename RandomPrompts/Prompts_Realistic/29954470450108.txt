@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A muscular woman with long, wavy brown hair, wearing a white ribbed crop‑top with black thin straps tied at the back and matching white sweatpants. She is mid‑step, left arm slightly bent, right arm relaxed, smiling casually toward the camera. Her pose is spontaneous, as if she’s just stepped out of a storage room or a home office.
+
+- **Lighting & Exposure**  
+  Natural daylight from a window on the left, creating a soft, warm glow with a slight overexposure on the upper body. No auto‑HDR or beauty filters—raw, unprocessed look. The exposure is slightly high‑key, letting the bright white of her outfit stand out against the muted background.
+
+- **Camera & Lens**  
+  Wide‑angle lens (24‑35 mm), short focal length, handheld. Everything in focus—from her face to the back of the shelf—no bokeh; background fully sharp. Slight motion blur on the arms and background to convey casual movement.
+
+- **Composition & Framing**  
+  No rule‑of‑thirds intentionality: the frame is slightly tilted, off‑center, with a partial crop that cuts off the top of the shelf. The subject occupies the central‑right portion of the frame, leaving a small empty space on the left for natural balance.
+
+- **Environment**  
+  A home storage or office space with metal shelving units filled with cardboard boxes, books, and plastic containers. A window with white blinds is visible on the left, letting in bright daylight. The time of day is late morning, with warm, slightly hazy sunlight. Weather is clear, no wind.
+
+- **Details & Imperfections**  
+  Slight tilt and off‑center framing give a candid feel. Minor motion blur on the arms and background adds realism. The image has zero studio lighting, zero professional composition, zero editorial tone—just a natural, spontaneous snapshot.
+
+- **Post‑Processing**  
+  No filters or color grading. Only raw, in‑camera data with auto‑beauty mode off. A subtle auto‑HDR may be applied to brighten the highlights, but the overall look remains natural and unpolished.
+
+**Prompt Summary**  
+> “A muscular woman with long wavy brown hair, wearing a white ribbed crop‑top with black thin straps tied at the back and matching white sweatpants, mid‑step in a home storage room. Natural daylight from a window on the left creates a soft warm glow with slight overexposure. Wide‑angle lens (24‑35 mm), handheld, everything in focus, slight motion blur on the arms and background. Candid, unposed, spontaneous pose; slightly tilted, off‑center framing with partial crop. Metal shelving units filled with cardboard boxes, books, and plastic containers behind her; window with white blinds on the left. Late morning, clear weather. Raw, unprocessed look, no filters, auto‑HDR off.”

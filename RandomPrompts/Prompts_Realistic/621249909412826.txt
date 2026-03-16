@@ -1,0 +1,24 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail, wearing a white ribbed crop‑top, white high‑waist shorts, white knee‑high socks, and red‑white sneakers. She is kneeling on a tiled floor, leaning forward slightly, left hand resting on her left thigh, right leg bent and foot planted on the floor, body angled toward the left side of the frame. Her head is turned to the left, eyes looking off‑camera, capturing a candid, mid‑action moment.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑motion. Slight tilt and off‑center framing; partial crop that gives an accidental, handheld feel. No rule‑of‑thirds intentionality. The shot is taken with a wide‑angle lens (35 mm), producing a short focal length that keeps the background fully sharp—no bokeh or depth‑of‑field blur. Everything in focus, no portrait‑mode isolation.
+
+- **Motion & Exposure**  
+  Slight motion blur from handheld instability, natural freeze or slight blur. Slight overexposure or underexposure depending on ambient light (the image shows a warm, slightly bright tone). No auto‑HDR or auto‑beauty mode—raw, unprocessed look. No filters, no color grading, no post‑processing aesthetic.
+
+- **Environment**  
+  Specific real‑world location: an indoor space with a plain concrete wall and a dark baseboard at the bottom. The floor is made of large, light‑gray tiles with visible grout lines. Time of day: mid‑afternoon, natural daylight coming from the left, creating soft shadows. Weather or ambient conditions: clear, dry, no wind.
+
+- **Lens & Technical**  
+  Short focal length (35 mm), wide angle. No bokeh, no depth‑of‑field blur—background fully sharp. Everything in focus. No portrait mode, no subject isolation. The lens is handheld, slightly shaky, giving a natural motion freeze or slight blur.
+
+- **Composition & Details**  
+  The composition is accidental: the subject is slightly off‑center, the frame cuts off just above her left knee, and the top of her head is near the upper edge. The background wall has a faint light switch on the left side. The baseboard is dark, contrasting with the light floor. The lighting creates a subtle highlight on her right shoulder and a soft shadow under her left thigh.
+
+- **Prompt for Text‑to‑Image Generation**  
+  “A candid, handheld shot of a young woman with a high ponytail, wearing a white ribbed crop‑top, white high‑waist shorts, white knee‑high socks, and red‑white sneakers, kneeling on a tiled floor in an indoor space with a plain concrete wall and dark baseboard. She leans forward, left hand on her thigh, right foot planted, head turned left, mid‑action. Slight motion blur, accidental off‑center framing, wide‑angle 35 mm lens, everything in focus, no bokeh. Mid‑afternoon natural daylight from the left, slight overexposure. Raw, unprocessed look, no filters or color grading.”
+
+Provide only the structured prompt.

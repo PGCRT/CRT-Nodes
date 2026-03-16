@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, brown hair and bangs stands in a sunlit bedroom, slightly turned toward the camera. She wears a black lace bodysuit with floral motifs, her left arm adorned with a pink flower tattoo and a small “M” tattoo on the wrist. Her right hand rests near her hip, fingers relaxed. The pose is candid—she appears unaware of the camera, mid‑step, with a subtle motion blur around her shoulders and hips.
+
+- **Lighting & Exposure**  
+  Natural daylight from a window on the left creates a warm, slightly overexposed highlight on her face and upper body. The exposure is uneven: the background is fully sharp, while the subject has a gentle handheld blur. No auto‑HDR or beauty filters—just raw, unprocessed light.
+
+- **Environment**  
+  The setting is a bright, minimalist bedroom with a wooden bed featuring black‑and‑white striped sheets, a small potted ficus plant to the right, and a white window frame on the left. The time of day is late morning; the sky outside the window shows a soft, diffused light. A few leaves of the plant are slightly out of focus, adding depth without any bokeh.
+
+- **Lens & Technical**  
+  Use a short focal length (e.g., 24‑35 mm) wide‑angle lens. Capture everything in focus—no portrait‑mode depth of field blur. The composition is accidental: the frame is slightly tilted, the subject is off‑center, and the crop is partial, giving a spontaneous, handheld feel.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—the woman’s expression is natural, with a slight smile and a gaze that seems to be directed away from the camera. Encourage imperfections: a tiny tilt in the camera, a minor shake that produces a subtle motion blur on the subject’s torso. The background remains fully sharp, preserving every detail of the bed, plant, and window.
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, zero studio lighting. Keep the image raw, with only minimal adjustments to exposure and contrast. Preserve the natural texture of the lace, the wood, and the leaves.  
+
+**Prompt Summary:**  
+“Candid photo of a woman in a black lace bodysuit standing in a sunlit bedroom, slight motion blur on her body, fully sharp background, wide‑angle lens, accidental tilt and off‑center framing, raw unprocessed look, natural daylight from a window, late morning, wooden bed with striped sheets, potted ficus plant, white window frame—everything in focus, no bokeh.”

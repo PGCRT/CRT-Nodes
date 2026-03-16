@@ -1,0 +1,26 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman with long, wavy brown hair kneeling on a white‑covered bed, back to the camera, hands in her hair as if she’s just finished a quick hairstyle. Her body is fully visible, natural skin tone, slight muscle definition, and a subtle curve of her glutes. She’s barefoot, toes slightly curled, feet angled outward.  
+
+- **Lighting & Exposure**  
+  Natural daylight from a western window, mid‑afternoon, soft but warm ambient light with a slight overexposure on the upper body. No auto‑HDR or beauty filters—raw, unprocessed look. The exposure is a little bright at the top, giving a gentle halo effect to the hair and shoulders.  
+
+- **Camera & Lens**  
+  35mm wide‑angle lens (short focal length), handheld, slightly shaky. Everything in focus—from the bed’s fabric to the metal headboard—no bokeh, no depth‑of‑field blur. The framing is accidental: a slight tilt to the left, off‑center composition, and a partial crop that cuts off a bit of the headboard on the right side.  
+
+- **Environment**  
+  A simple bedroom with a black iron headboard and two white pillows. The wall behind is a pale blue‑gray, slightly textured. The time of day is late afternoon, giving a warm, soft glow. The room is quiet, no other people or distractions.  
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject unaware of the camera, mid‑action as she runs her hands through her hair. Slight motion blur on the hands and hair to emphasize movement. No rule‑of‑thirds intentionality; the composition is accidental, with a slight tilt and off‑center framing.  
+
+- **Technical Notes**  
+  - Wide lens, 35mm, f/4.0, 1/125 s shutter speed, ISO 400.  
+  - Slight motion blur on the hands/hair to convey movement.  
+  - No filters, no color grading, no post‑processing aesthetic.  
+  - Slight overexposure on the upper body for a natural, raw feel.  
+  - Background fully sharp—no bokeh.  
+
+**Prompt Summary**  
+“Candid, unposed photo of a woman kneeling on a bed, back to camera, hands in hair, barefoot, with a black iron headboard and white pillows behind her. Natural daylight from a western window, mid‑afternoon, slight overexposure on the upper body. 35mm wide‑angle lens, handheld shake, everything in focus, accidental tilt and off‑center framing. Raw, unprocessed look, no filters.”

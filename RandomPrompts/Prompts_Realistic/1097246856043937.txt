@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with pastel‑pink hair tied in a high, messy bun, wearing a coral‑colored criss‑cross crop top and black shorts. She is mid‑laugh, head tilted slightly to the left, eyes cast downward toward her hands as if she just received a compliment or is about to say something. Her expression is spontaneous and candid, with a hint of motion blur around her face from handheld shake.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. Slight tilt and off‑center framing; partial crop that cuts off the top of her head and the lower part of her legs. No rule‑of‑thirds intentionality — accidental composition. Natural motion freeze or slight blur from handheld instability.
+
+- **Environment**  
+  A bustling city street in downtown Manhattan during late afternoon. The background shows a two‑story brick building with a storefront on the left, a parked silver SUV, and a sidewalk lined with pedestrians. The time of day is around 5 pm, with warm ambient light casting soft shadows. Weather is clear, with a light breeze creating slight motion in the subject’s hair.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm) wide‑angle lens. Wide‑angle “wide‑lens” effect captures the entire scene with everything in focus — no bokeh, no depth‑of‑field blur. No portrait mode or subject isolation. Slight overexposure on the subject’s face to emphasize the raw, unprocessed look. Auto‑HDR or auto‑beauty mode off. No filters, no color grading, no post‑processing aesthetic.
+
+- **Lighting & Exposure**  
+  Zero studio lighting, zero professional composition, zero editorial tone. Natural daylight with a slight warm tint from the late afternoon sun. Slight overexposure on the subject’s face to give a raw feel; background remains fully sharp.
+
+- **Details & Imperfections**  
+  Slight motion blur around the subject’s hair and hands. The image has a natural “handheld” feel, with minor vignetting and a slight color cast that matches the ambient light. The background pedestrians are in focus, adding depth without any intentional rule‑of‑thirds alignment.
+
+- **Prompt Summary**  
+  *“A young woman with pastel‑pink hair in a high bun, wearing a coral criss‑cross crop top and black shorts, laughing spontaneously on a Manhattan sidewalk at late afternoon. The shot is captured on a 24‑35 mm wide‑angle lens, everything in focus, slight motion blur around the subject’s face and hands, accidental off‑center framing, raw unprocessed look with no filters or auto‑HDR. The background shows a brick storefront, parked silver SUV, and pedestrians, all sharply rendered under warm ambient light with a slight overexposure on the subject.”*

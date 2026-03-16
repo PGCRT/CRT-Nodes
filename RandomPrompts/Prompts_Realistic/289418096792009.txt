@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman standing on a snow‑covered mountain ridge, mid‑step as she adjusts her fur‑lined parka. Her head is slightly tilted to the left, capturing a natural, unposed moment. She’s wearing a tan, zip‑front parka with a fluffy hood, dark gloves, and gray leggings; her long hair peeks out from under the hood. Her hands are in her pockets, one slightly blurred as she moves.
+
+- **Lighting & Exposure**  
+  Slight overexposure from a high‑angle, mid‑afternoon sun that casts soft shadows and a gentle halo on the subject. The exposure is uneven—the foreground is a bit brighter than the background, giving a raw, unprocessed look. No auto‑beauty mode; no filters, no color grading, no post‑processing aesthetic.
+
+- **Camera & Lens Settings**  
+  Wide‑angle lens (24 mm), short focal length, handheld. Everything in focus—no bokeh, no depth‑of‑field blur. Slight motion blur on the subject’s hands and the birds in the background to emphasize movement. The framing is accidental: off‑center, slightly tilted, not following the rule of thirds.
+
+- **Environment**  
+  A rugged, snow‑dusted mountain range with jagged peaks rising on both sides. A small evergreen bush clings to the right side of the ridge. In the background, three bald eagles are in flight—two on the left, one on the right—adding dynamic motion. The sky is a pale blue with scattered white clouds; the time of day is mid‑afternoon, with the sun high but not directly overhead.
+
+- **Details & Imperfections**  
+  Slight tilt and partial crop: the top of the frame cuts off a bit of the mountain peak, giving a candid feel. The subject’s left hand is slightly blurred as she moves her glove. The parka’s zipper is partially open, revealing her chest and a hint of her gray leggings. A few snowflakes are falling, adding a subtle motion cue.
+
+- **Composition Notes**  
+  No rule‑of‑thirds intentionality—everything is framed spontaneously. The background is fully sharp; the mountains, peaks, and birds are all in focus. The scene feels like a real‑world snapshot taken on a windy, snowy ridge.
+
+**Prompt Summary (structured)**  
+"Realistic candid photo of a woman in a tan fur‑lined parka standing on a snow‑covered mountain ridge, mid‑step with slight tilt and accidental framing. She’s wearing dark gloves and gray leggings, one hand slightly blurred from motion. The scene includes three flying bald eagles, a small evergreen bush on the right, and jagged peaks on both sides. Mid‑afternoon sun creates soft shadows and a gentle overexposure. Wide‑angle 24 mm lens, handheld, everything in focus, slight motion blur on the hands and birds. Raw, unprocessed look—no filters or color grading."

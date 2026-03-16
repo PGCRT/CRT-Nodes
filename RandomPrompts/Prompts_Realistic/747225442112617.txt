@@ -1,0 +1,47 @@
+**Realistic Candid Photography Prompt Framework – “Street‑Chic Lollipop Girl”**
+
+- **Subject & Pose**  
+  A young woman with shoulder‑length blonde hair, wearing dark sunglasses, a black fishnet mini skirt, a thin black choker with star motifs, and a small black handbag slung over her left shoulder. She’s mid‑step, holding a rainbow‑colored lollipop in her right hand, mouth open in a playful laugh, head tilted slightly to the right. Her left arm is bent at the elbow, hand relaxed near her hip. The pose feels spontaneous – as if she just caught a joke or is about to say something to a passerby.
+
+- **Clothing & Accessories**  
+  - Black fishnet mini skirt with a high‑waist, thin black waistband, and a subtle triangular cutout at the front.  
+  - Dark sunglasses with a thin metal frame.  
+  - Black choker with three gold star details.  
+  - Small black leather handbag with a silver zipper pull, hanging from her left shoulder.  
+  - A thin gold hoop earring on each ear.
+
+- **Physical Details**  
+  - Skin tone: warm, sun‑kissed; slight freckles across the chest.  
+  - Facial expression: wide smile, eyes bright, head slightly tilted.  
+  - Hair: soft, wavy, blowing lightly to the right from a gentle wind.  
+  - Accessories: small black handbag with a silver zipper pull; thin gold hoop earrings.
+
+- **Lighting & Camera Settings**  
+  - Wide‑angle lens (24–35 mm) on a DSLR or mirrorless camera, handheld.  
+  - Slight motion blur on the subject’s hands and lollipop to suggest movement.  
+  - Auto‑HDR off – raw, unprocessed look.  
+  - Slight overexposure in the upper left quadrant to capture ambient daylight.  
+  - No filters, no color grading, no post‑processing aesthetic.  
+  - Everything in focus – background fully sharp, no bokeh.
+
+- **Environment**  
+  - Location: A busy city street in downtown New York, mid‑afternoon.  
+  - Time of day: Late afternoon (≈ 4:30 pm), warm sunlight coming from the left.  
+  - Weather: Clear, slightly breezy; a few clouds overhead.  
+  - Background details: A line of white sedans parked along the curb, a traffic light glowing red in the distance, a man in a black t-shirt walking away on the right side of the frame, a small green tree on the left sidewalk, and a brick building with a awning behind her.
+
+- **Composition & Framing**  
+  - No rule‑of‑thirds intentionality – the frame is slightly off‑center, capturing the subject’s left side more prominently.  
+  - Slight tilt to the right gives a casual, candid feel.  
+  - Partial crop: the top of her head is cut off by the upper edge of the frame; the bottom of her skirt extends just past the lower edge.  
+  - Background fully sharp – no depth‑of‑field blur.
+
+- **Technical Notes**  
+  - Focal length: 35 mm.  
+  - Aperture: f/4.0 (wide, but not too wide).  
+  - Shutter speed: 1/125 s (slight motion blur).  
+  - ISO: 400 (mid‑range for natural contrast).  
+  - No portrait mode or subject isolation.
+
+- **Final Prompt**  
+  “A young woman with shoulder‑length blonde hair, wearing dark sunglasses, a black fishnet mini skirt, a thin black choker with star motifs, and a small black handbag, walking on a downtown New York street at late afternoon. She holds a rainbow lollipop in her right hand, mid‑step, mouth open in a playful laugh, head tilted slightly to the right. The scene is captured on a 35 mm wide‑angle lens with slight motion blur on the hands, raw unprocessed look, everything in focus, background fully sharp. The frame is slightly off‑center with a casual tilt, partial crop at top and bottom. The lighting comes from the left with a slight overexposure, capturing warm sunlight and a red traffic light in the distance. A man in a black t-shirt walks away on the right, a white car parked along the curb, a green tree on the left sidewalk, and a brick building with an awning behind her.”

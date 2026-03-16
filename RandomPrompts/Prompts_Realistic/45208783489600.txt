@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A fit woman in her late twenties, with long wavy brown hair tied loosely, wearing a black sports bra and gray Nike joggers. She stands mid‑step in a bright gym, left hand relaxed by her thigh, right arm bent at the elbow, as if she just finished a rep on a cable machine. Her gaze is directed slightly off‑camera, giving a candid, unposed feel.
+
+- **Motion & Focus**  
+  Slight motion blur on the subject’s hands and the background, produced by a handheld camera with a 24‑mm wide‑angle lens at f/4, 1/60 s shutter speed. Everything remains sharply in focus—no portrait‑mode depth of field blur. The image has a raw, auto‑HDR look: no filters, no color grading, no post‑processing aesthetic; only natural overexposure from the ambient daylight.
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window behind the subject creates a soft, slightly overexposed highlight on her face and upper body. The ceiling lights cast a gentle glare, adding a subtle halo effect. No studio lighting—just the ambient glow of a morning gym session.
+
+- **Environment**  
+  Location: A modern fitness center with a visible weight rack, dumbbell row, and a blue exercise ball in the background. Time of day: early afternoon, around 10 AM, when the sun is high but not too direct. Weather: clear, bright, with a light breeze that ruffles her hair.
+
+- **Lens & Technical**  
+  Short focal length (24 mm), wide‑angle, no bokeh, background fully sharp. The composition is accidental—slight tilt and off‑center framing, partial crop that cuts off the top of the window frame. No rule‑of‑thirds intentionality; the subject’s head is slightly above the center of the frame.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—an “in‑moment” snapshot where the subject is unaware of the camera. Slight tilt and off‑center framing give a natural, imperfect feel. The image has zero studio lighting, zero professional composition, zero editorial tone.
+
+- **Post‑Processing**  
+  Auto‑HDR or auto‑beauty mode off—raw, unprocessed look. No filters, no color grading, no post‑processing aesthetic. Slight overexposure from the ambient light gives a warm, natural feel.
+
+**Prompt Summary**  
+> “A fit woman in her late twenties, wearing a black sports bra and gray Nike joggers, stands mid‑step in a bright gym, captured on a 24‑mm wide‑angle lens at f/4, 1/60 s. The image has slight motion blur on the hands and background, everything sharply in focus, with natural daylight overexposure. The scene is set early afternoon in a modern fitness center, with a weight rack and blue exercise ball visible. The composition is accidental—slight tilt, off‑center framing, partial crop—no rule‑of‑thirds. Raw, auto‑HDR, no filters.”

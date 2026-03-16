@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail, wearing white lace lingerie, lying on a bed with white pillows. Her hands are gently clasped near her chest, slightly tilted, as if she’s mid‑adjustment or about to do a gentle stretch. The pose is candid and unposed; she appears unaware of the camera, adding spontaneity.
+
+- **Lighting & Exposure**  
+  Natural daylight from a western window, mid‑afternoon. Slight overexposure on the highlights gives a warm, soft glow. No auto‑HDR or beauty filters—raw, unprocessed look. The exposure is slightly uneven, with a subtle vignette from the wide lens.
+
+- **Lens & Technical Settings**  
+  24 mm wide‑angle lens, f/3.5, 1/60 s shutter speed, ISO 400. Everything in focus—no bokeh, no depth‑of‑field blur. Slight handheld shake creates a natural motion blur on the edges.
+
+- **Composition & Framing**  
+  Off‑center framing; the subject’s left side is slightly cut off by the frame edge. No rule‑of‑thirds intentionality—accidental composition. The background (a neutral bedroom wall and a wooden nightstand) is fully sharp, no portrait‑mode isolation.
+
+- **Environment & Ambience**  
+  Location: a bright, uncluttered bedroom with a beige headboard, white pillows, and a wooden bedside table. Time of day: late afternoon, soft natural light. Weather: clear, mild—no wind, no rain. The scene feels intimate and casual.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, partial crop on the right side, tiny smudge on the lens. Her hair has a slight frizz, her skin has natural texture. The lace details on her lingerie are crisp, with visible stitching and small floral motifs. The white pillows show subtle creases from her weight.
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, zero studio lighting. A simple crop and a tiny contrast boost only.  
+
+**Prompt Summary**  
+> “A young woman in white lace lingerie lies on a bed with white pillows, hands clasped near her chest, mid‑adjustment. Natural daylight from a western window, mid‑afternoon, slight overexposure. 24 mm wide‑angle lens, f/3.5, 1/60 s, ISO 400—everything in focus, no bokeh. Off‑center, accidental framing, slight handheld shake. Raw, unprocessed look, no filters.”

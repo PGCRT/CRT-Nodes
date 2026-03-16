@@ -1,0 +1,28 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with shoulder‑length, slightly frizzy brown hair, kneeling on a dark‑blue quilted bedspread in a dimly lit bedroom. She’s wearing thin black bikini bottoms; her torso is bare, and she’s leaning forward with one hand on the bed and the other near her thigh, as if mid‑movement. Her gaze is directed toward the camera but not directly at it—she’s “unposed” and spontaneous.
+
+- **Facial Features & Expression**  
+  Light‑complexion, high‑cheekbones, and a soft, natural smile. Slight motion blur around her face indicates handheld shake. The lighting is uneven: the left side of her face is slightly overexposed while the right side remains a bit darker, giving a raw, unprocessed look.
+
+- **Body & Anatomy**  
+  Her breasts are prominent, with a subtle natural contour; the left breast shows a faint redness from the friction of the bikini strap. Her abdomen is flat, and her thighs are slightly bent, creating a dynamic angle. The image captures a realistic, candid moment without any studio‑style retouching.
+
+- **Clothing & Accessories**  
+  Thin black bikini bottoms with a delicate strap that sits on the side of her waist. No other accessories are worn; she carries a small plastic bottle and a clear glass on the bedside table behind her, adding to the casual, everyday feel.
+
+- **Environment & Setting**  
+  The scene is set in a modest bedroom at dusk. The wall behind the bed is a muted gray‑beige, and a wooden nightstand holds a green‑capped bottle and a transparent glass. A small bowl of red fruit sits on the nightstand, adding a pop of color. The time of day is late afternoon, with ambient light coming from the window, creating soft shadows.
+
+- **Lens & Technical**  
+  Use a wide‑angle lens (24–35 mm) with a short focal length to capture the entire subject and environment in one frame. Keep everything in focus—no bokeh or depth‑of‑field blur. The composition is accidental: the frame is slightly tilted, the subject is off‑center, and the crop is partial. No rule‑of‑thirds; the framing feels spontaneous and handheld.
+
+- **Lighting & Exposure**  
+  Natural ambient light from the window creates a slight overexposure on the left side of the image and a subtle underexposure on the right. The auto‑HDR or auto‑beauty mode is turned off, preserving a raw, unprocessed look. No color grading or post‑processing filters are applied.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject appears unaware or mid‑action. Slight tilt and partial crop give an informal feel. The image has zero studio lighting, zero professional composition, and zero editorial tone. Natural motion blur from handheld instability adds realism.
+
+- **Post‑Capture Notes**  
+  Save the raw file in RAW format, then apply a minimal HDR lift to balance exposure. Keep the color palette natural: warm neutrals with a hint of cool tones from the gray wall. The final image should feel like a genuine snapshot captured in a real-world setting, not a staged portrait.

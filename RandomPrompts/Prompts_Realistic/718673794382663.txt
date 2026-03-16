@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, athletic woman with a lean, muscular build leaning casually against a weathered concrete wall. Her hair is damp and slightly messy, catching the sunlight. She wears a yellow‑and‑white striped bikini that drapes naturally over her shoulders and hips. Her left hand rests on the wall, while her right arm hangs loosely by her side. Her face is turned toward the camera but not directly at it—mid‑glance, as if she’s just been caught in a candid moment.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. Slight tilt and off‑center framing; partial crop that gives an accidental, handheld feel. No rule‑of‑thirds intentionality—everything is framed as it naturally appears.
+
+- **Environment**  
+  Specific real‑world location: a sunlit alleyway in a coastal town, with a rough concrete wall on the left and a patch of green foliage peeking from the right. Time of day: late morning, soft golden light with a slight overexposure on the subject’s face. Weather: clear, warm, with a faint haze that gives an auto‑HDR feel but without any post‑processing color grading.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm), wide‑angle lens. No bokeh—background fully sharp, everything in focus. No portrait mode or subject isolation; depth of field is uniform. Slight motion blur from handheld instability, giving a natural freeze‑frame effect.
+
+- **Lighting & Exposure**  
+  Natural lighting from the sun, slightly overexposed on the subject’s face and body, creating subtle highlights and soft shadows. Auto‑HDR or auto‑beauty mode off—raw, unprocessed look. Zero studio lighting, zero professional composition, zero editorial tone.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, a little off‑center crop that keeps the frame from being perfectly centered. The concrete wall shows faint cracks and texture, adding realism. The woman’s bikini straps are slightly askew, enhancing candidness. Her hair has a few stray strands that catch the light, adding to the raw feel.
+
+- **Final Prompt**  
+  “A tall, athletic woman in a yellow‑and‑white striped bikini leans casually against a weathered concrete wall in a sunlit alleyway, her damp hair catching the late‑morning light. The shot is candid and unposed, slightly tilted and off‑center, captured on a 24‑35 mm wide‑angle lens with everything in focus and a hint of motion blur from handheld instability. Natural overexposure on the subject’s face gives a raw, auto‑HDR feel without any post‑processing color grading. The background concrete and foliage are fully sharp, no bokeh. The scene is a real‑world location at late morning, clear weather with a faint haze, creating a natural freeze‑frame effect. All lighting is natural, no studio lights, no professional composition, no editorial tone.”

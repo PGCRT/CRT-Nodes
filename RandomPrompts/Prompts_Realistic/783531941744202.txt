@@ -1,0 +1,29 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy, honey‑brown hair that catches the light as she turns her head slightly to the left. She’s wearing a black halter‑style dress with subtle sequined detailing along the sides; the dress has a deep V‑cut at the front and a thin choker‑like strap around her neck. Her pose is mid‑step, one foot forward, arms relaxed by her sides, as if she’re just having finished a conversation or about to pick something up from a table. Her expression is natural, a soft smile with a hint of curiosity, eyes focused on something off‑camera.
+
+- **Lighting & Exposure**  
+  Natural daylight coming from a western‑side window; the light is slightly overexposed on the right side of her face, giving a warm, golden hue. The exposure is not perfectly balanced—there’s a mild brightness in the highlights that gives a raw, unprocessed feel. Slight ambient shadows fall on the left side of her dress, adding depth.
+
+- **Camera Settings**  
+  - Lens: 24‑mm wide‑angle (short focal length) for a broad field of view.  
+  - Aperture: f/5.6 – enough to keep the background sharp but not too deep a focus.  
+  - Shutter speed: 1/125 s – enough to freeze the motion while still allowing a hint of handheld shake.  
+  - ISO: 400 – for clean detail without noise.  
+  - No bokeh; everything from foreground to background is in focus, no depth‑of‑field blur.
+
+- **Composition & Framing**  
+  The shot is intentionally off‑center: the subject’s left side is slightly cut off by the frame edge, giving a casual, spontaneous feel. The camera is held at eye level, with a slight tilt to the right. The background shows a softly focused interior—beige curtains on the left, a glimpse of a framed picture on the wall, and a small portion of a sofa on the right. No rule‑of‑thirds; the composition feels accidental, as if the photographer captured it in a moment of motion.
+
+- **Environment**  
+  A bright, airy living room during late afternoon. The time of day is around 5 pm, when the sun is low but still high enough to keep the light warm. The weather outside is clear, which keeps the ambient light crisp. The room’s walls are a neutral beige tone; a small portion of a wooden table is visible behind her left shoulder.
+
+- **Details & Imperfections**  
+  Slight motion blur at the edges of her hair, indicating handheld shake. A faint overexposure on the right side of her face gives a natural, unprocessed look. The dress’s sequins catch the light, creating small bright specks. Her fingers are slightly curled as if she’re about to grasp something. There’s a subtle tilt in the camera that makes the image feel candid and spontaneous.
+
+- **Post‑Processing**  
+  No filters or color grading—just raw, natural tones. The image retains its original contrast and saturation. Slight auto‑HDR is applied to brighten the highlights without over‑processing.
+
+**Prompt Summary (structured)**  
+"Realistic candid photo of a woman in a black sequined halter dress, mid‑step pose, natural daylight from a western window with slight overexposure, captured on a 24‑mm wide‑angle lens at f/5.6 and 1/125 s, ISO 400. The shot is off‑center with accidental framing, background fully sharp, no bokeh. The scene is a bright late‑afternoon living room with beige curtains and a visible sofa. Include slight motion blur and handheld shake for authenticity."

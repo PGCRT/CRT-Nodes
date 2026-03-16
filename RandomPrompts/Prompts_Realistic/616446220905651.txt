@@ -1,0 +1,29 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair standing in a bright, tiled bathroom. She is bare‑headed and mid‑hair‑adjustment, hands raised to the top of her head as if fixing her hair or shielding her face from a sudden light. Her expression is relaxed, slightly smiling, eyes closed or half‑closed, giving a candid, unposed feel.
+
+- **Lighting & Exposure**  
+  Natural daylight coming from a window on the left, creating a soft overexposure on the upper body and a slight warm tint. The lighting is uneven—no auto‑HDR or beauty filters, just raw, in‑camera exposure. A faint halo of light catches the top of her head and the sink area.
+
+- **Camera & Lens**  
+  Wide‑angle lens (24–35 mm), short focal length, handheld. Everything is in focus—no bokeh or depth‑of‑field blur. Slight motion blur on the hands and hair to suggest movement. The frame is slightly tilted and off‑center, a casual, spontaneous composition.
+
+- **Environment**  
+  A clean, modern bathroom with white square tiles covering walls and floor. A white ceramic sink sits on the left, a bottle of hand soap next to it, a blue towel hanging on a rack to the right. The time of day is mid‑afternoon, with bright natural light streaming in from a window just outside the frame. The ambient air feels warm, slightly humid.
+
+- **Details & Imperfections**  
+  - Slight tilt of the camera, making the subject’s head appear a little off‑center.  
+  - Partial crop: the top of her hair extends beyond the upper edge of the frame.  
+  - Tiny dust motes visible in the air, a small smudge on the sink faucet.  
+  - The blue towel’s fold is slightly messy, adding realism.  
+  - The hand soap bottle has a faint reflection of the window.
+
+- **Technical Settings**  
+  - Aperture: f/4.0 (wide, shallow depth but everything stays sharp).  
+  - Shutter speed: 1/60 s (enough for slight motion blur).  
+  - ISO: 400 (for natural contrast).  
+  - No post‑processing filters—raw JPEG with auto‑beauty off.
+
+- **Prompt Summary**  
+  “A candid, wide‑angle shot of a bare‑headed woman in a bright tiled bathroom, mid‑hair‑adjustment, captured with a handheld 35 mm lens at f/4 and 1/60 s. Natural daylight from the left creates a soft overexposure on her upper body. The frame is slightly tilted and off‑center, with a partial crop that includes a white sink, a bottle of hand soap, and a blue towel on a rack. Everything is in focus, with slight motion blur on the hands, giving a raw, unprocessed, spontaneous feel.”

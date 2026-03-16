@@ -1,0 +1,16 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, athletic woman with long, wavy blonde hair standing mid‑step in a casual, spontaneous pose. She’s wearing a rust‑colored, high‑waist dress with a front zipper and a high slit that reveals a hint of her thigh. Her hands grip the sides of the skirt as she lifts it slightly, creating a dynamic, almost playful motion. The dress has a subtle high‑low hem, with the back hem longer than the front, adding a flowing detail to her movement.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the woman appears unaware of the camera, caught mid‑action. Slight tilt and off‑center framing give an accidental, handheld feel. The shot is a wide‑angle capture with a short focal length (20–35 mm), producing a “wide lens” effect that keeps the entire scene in focus—no bokeh or depth‑of‑field blur. A faint motion blur conveys her slight movement, and a mild overexposure gives the image a raw, unprocessed look. No filters, color grading, or post‑processing aesthetics are applied; the exposure is natural, with a hint of ambient light warmth.
+
+- **Environment**  
+  The setting is a sunlit park in late afternoon, with a backdrop of lush green trees and a patch of grass scattered with fallen leaves. The time of day is golden hour, giving a warm, soft glow to the scene. Weather is mild and clear, with a light breeze ruffling the foliage. The background is fully sharp—no portrait‑mode isolation—so the entire environment, from foreground to background, remains in focus.
+
+- **Lens & Technical**  
+  Use a short focal length wide‑angle lens (20–35 mm). Capture everything in focus: subject and background. No bokeh or depth‑of‑field blur; keep the image “raw” with auto‑HDR or auto‑beauty mode off. Slight overexposure or underexposure depending on ambient light is acceptable. The composition is intentionally non‑rule‑of‑thirds, giving an accidental, spontaneous feel.
+
+- **Final Prompt**  
+  *“A tall woman with long wavy blonde hair, wearing a rust‑colored high‑waist dress with a front zipper and high slit, captured mid‑step in a casual pose at a sunlit park during golden hour. The shot is wide‑angle (20–35 mm), fully sharp, slightly blurred for motion, with accidental tilt and off‑center framing. No filters or post‑processing—raw, natural exposure, handheld feel.”*

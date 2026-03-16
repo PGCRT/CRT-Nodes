@@ -1,0 +1,28 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high bun, wearing a lavender hoodie and black ripped jeans, sitting on a beige sofa. Her hands rest on her knee, one hand slightly blurred from motion, as if she’s mid‑gesture or reacting to something. She’s wearing white sneakers, and a small red logo is visible on the side of her shoe.
+
+- **Facial Expression & Motion**  
+  Her eyes are wide, mouth open in a surprised or excited expression. Slight motion blur around her hands and face to convey spontaneous movement. The blur is subtle—about 1–2 px—so the image still looks crisp but natural.
+
+- **Lighting & Exposure**  
+  Ambient indoor lighting from a large window behind the sofa creates a soft, slightly overexposed highlight on her hoodie. No auto‑beauty or filter processing; the exposure is raw, with a tiny hint of grain for authenticity. The background is fully sharp—no bokeh—so the entire scene is in focus.
+
+- **Lens & Technical**  
+  Use a wide‑angle lens (24–35 mm) to capture the full composition. Keep the focal length short to keep the background and foreground equally sharp. Shoot with handheld stability, letting a slight tilt add candid energy. No portrait‑mode depth of field—everything from front to back is crisp.
+
+- **Composition & Framing**  
+  The shot is off‑center: the woman is positioned slightly left of the frame’s center, with a wooden coffee table in the lower right corner. A pink pillow rests on the sofa behind her, and a black remote control lies on the table. A small yellow sticky note and a blue notepad are also visible on the table, adding detail. The framing is accidental—no rule‑of‑thirds intentionality—but the composition feels spontaneous and real.
+
+- **Environment & Time**  
+  The setting is a cozy living room with a beige couch, a wooden coffee table, and a TV in the background. The time of day is late afternoon, as natural light streams in from a large window, casting soft shadows. A framed picture hangs on the wall above the couch, adding depth.
+
+- **Details & Imperfections**  
+  Include subtle imperfections: a slight tilt to the camera, a tiny crop that doesn’t line up perfectly with the rule‑of‑thirds, and a faint motion blur around the subject’s hands. The image should look like a genuine, unposed snapshot captured with a handheld camera.
+
+- **Post‑Processing**  
+  No filters or color grading—just raw, natural tones. A minimal auto‑HDR tweak can be applied to brighten the scene slightly, but keep the overall look unprocessed.  
+
+**Prompt Summary**  
+“Candid photo of a young woman in a lavender hoodie and ripped jeans sitting on a beige sofa in a cozy living room. She’s mid‑gesture with a surprised expression, slight motion blur on her hands, captured with a wide‑angle lens at late afternoon. The scene includes a wooden coffee table with a remote, sticky notes, and a pink pillow on the couch. Everything is fully sharp, no bokeh, raw exposure, handheld tilt, accidental off‑center framing—no filters, just natural, unprocessed realism.”

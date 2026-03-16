@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark brown hair, wearing a light beige ribbed crop‑top and high‑waisted heathered gray leggings. She’s mid‑hair‑tuck: right hand gripping a black smartphone, fingers curling around the device as she pulls a strand of hair from her left shoulder. Her gaze is direct, slightly above camera level, with a soft, natural expression.  
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. Slight tilt and off‑center framing; partial crop that cuts off the top of the TV screen and the lower part of her thighs. No rule‑of‑thirds intentionality.  
+
+- **Motion & Exposure**  
+  Slight motion blur from handheld instability, natural freeze or slight blur. Slight overexposure on the subject’s face and upper body, underexposed background to keep everything in focus.  
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm), wide‑angle lens. No bokeh — background fully sharp, everything in focus. No portrait mode or subject isolation.  
+
+- **Environment**  
+  Specific real‑world location: a modern living room with a large flat‑panel TV on a white cabinet. The TV displays a colorful sports program; the screen shows a stage with bright spotlights and a couple of people in white shirts. A small black speaker sits on the right side of the cabinet. Time of day: late afternoon, warm ambient light with a hint of golden hour. Weather or ambient conditions: clear, no wind.  
+
+- **Lighting**  
+  Zero studio lighting, zero professional composition, zero editorial tone. Natural lighting from a window to the left, creating soft shadows and subtle highlights on the subject’s face and clothing.  
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, partial crop that cuts off the top of the TV screen and lower part of her thighs. No filters, no color grading, no post‑processing aesthetic. Auto‑HDR or auto‑beauty mode off — raw, unprocessed look.  
+
+- **Final Prompt**  
+  “A young woman with long dark brown hair, wearing a light beige ribbed crop‑top and high‑waisted heathered gray leggings, mid‑hair‑tuck with a black smartphone in her right hand, direct gaze slightly above camera level, captured with a 24‑35 mm wide‑angle lens. Slight motion blur from handheld instability, slight overexposure on the subject, natural afternoon lighting from a left window. Background: a large flat‑panel TV on a white cabinet showing a colorful sports program, a small black speaker on the right. Candid, unposed, spontaneous framing with slight tilt and partial crop, everything in focus, no bokeh, raw unprocessed look.”

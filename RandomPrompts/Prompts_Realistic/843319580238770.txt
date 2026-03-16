@@ -1,0 +1,16 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman with long, sun‑kissed hair standing in a lush garden, wearing a black string‑bikini. She is mid‑step, left foot slightly ahead, hands relaxed at her sides, head tilted a little to the right as if she’s just finished a conversation or is about to pick up a flower. Her torso is angled toward the camera but not perfectly centered—slight off‑center framing.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. The shot has a slight handheld shake: a subtle motion blur on the edges that gives a natural, raw feel. No filters, no color grading, no post‑processing aesthetic—just the raw image data from a DSLR or mirrorless with auto‑HDR off. A tiny overexposure in the highlights keeps the ambient light alive.
+
+- **Environment**  
+  Location: A sunlit garden path lined with tall, slender green plants (like yucca or dracaena) and a patch of wildflowers in the background. Time of day: late afternoon, the sun high but not directly overhead, creating soft, warm shadows. Weather: clear, breezy, with a faint haze that adds depth to the foliage.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm) wide‑angle lens. Everything is in focus—no bokeh, no depth‑of‑field blur; background fully sharp. No portrait mode or subject isolation. The composition is accidental: no rule‑of‑thirds intentionality, just a casual, spontaneous frame that captures the subject’s mid‑body from the hips up to the top of her head, with a partial crop that cuts off a bit of the left shoulder, adding to the candid feel.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, a tiny vertical shift that gives the image a dynamic, informal look. The lighting is natural, with a hint of overexposure on the upper chest and shoulders, making the skin glow. The background foliage is fully sharp, giving a sense of depth without any “portrait mode” blur. The overall tone is raw and unprocessed, as if just taken from a handheld camera in a real‑world setting.

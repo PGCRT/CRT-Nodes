@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high bun and loose strands framing her face, wearing an off‑shoulder white knit cardigan with front pockets, black skinny jeans, and a thin spaghetti strap underneath. She’s mid‑step, left arm extended outward as if reaching for something on a white wooden desk, right hand tucked into her pocket, smiling casually at the camera. Her hair is slightly blown by a gentle breeze, giving a subtle motion blur around the top of her head.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject appears unaware of the camera, caught in a natural moment. Slight tilt and off‑center framing create an accidental composition. The shot has a raw, unprocessed look: no filters, no color grading, no post‑processing aesthetic. A hint of overexposure from ambient daylight gives a warm, soft glow.
+
+- **Environment**  
+  A lived‑in bedroom or home office in the late afternoon. A beige CRT TV sits on a wooden stand to the left, a laptop open on its surface. To the right, a white desk holds a silver laptop, a red mug, and a stack of books. A small potted plant perches atop a white cabinet in the background. The room’s walls are a muted off‑white, with a ceiling light fixture casting a gentle overhead illumination. The time of day is around 5 pm, when the sun is low but still bright, creating a warm, slightly hazy atmosphere.
+
+- **Lens & Technical**  
+  Short focal length (24–35 mm) wide‑angle lens, handheld. Everything is in focus — no bokeh or depth‑of‑field blur; background remains sharp. Slight motion blur on the subject’s hair and arm conveys movement. The image uses auto‑HDR or “auto‑beauty” off for a natural look. No rule‑of‑thirds intentionality — the framing is casual, as if captured by a friend who just walked in.
+
+- **Details & Imperfections**  
+  A faint cable drapes across the floor near the left corner. A white stool sits under the desk. A small white box lies on the floor near the couch. The lighting is natural, with a slight overexposure at the top of the frame from the ceiling light. The overall tone is warm, slightly grainy, and unpolished, preserving the authenticity of a real‑life snapshot.
+
+**Prompt Summary**  
+> “A candid, wide‑angle shot of a smiling young woman in an off‑shoulder white cardigan and black jeans, mid‑step on a bright afternoon in a cluttered home office. The scene includes a beige CRT TV, a laptop, a red mug, and a white desk with books, all in sharp focus with slight motion blur on the subject’s hair. Capture the raw, unprocessed feel with natural overexposure, no filters, handheld composition, and accidental framing.”

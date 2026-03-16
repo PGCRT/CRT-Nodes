@@ -1,0 +1,24 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail, wearing a black floral bikini, mid‑adjusting her top while holding a clear plastic bag of red apples in her left hand. Her right hand is on the strap, fingers slightly curled, as if she’s about to lift the bag higher. She looks directly at the camera with a soft, confident smile, eyes bright and relaxed.
+
+- **Motion & Focus**  
+  Slight motion blur on the hands and bag, indicating handheld shake. Everything in frame—subject, background, and foreground—is fully sharp; no portrait‑mode blur. The focus is intentional but casual, capturing a candid moment.
+
+- **Lighting & Exposure**  
+  Natural daylight from an open‑air market, mid‑afternoon. Slight overexposure on the upper part of the frame gives a warm, lively feel. No auto‑HDR or beauty filters—raw, unprocessed look. The lighting is uneven, with some highlights on the subject’s face and a slight shadow under the bag.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24‑35 mm), short focal length. No bokeh; background remains fully sharp. The composition is accidental: the frame is slightly tilted, off‑center, and the shot is partially cropped at the bottom left.
+
+- **Environment**  
+  A bustling outdoor vegetable market under a white canopy. In the background, a man in a gray t‑shirt walks past, a crate of green apples on the left, a basket of leafy greens on the right, and a blue plastic stool near the foreground. The market is lit by natural daylight with a few overhead fluorescent lights visible at the top.
+
+- **Details & Imperfections**  
+  The woman’s hair has a slight messiness, adding realism. Her bikini strap is tied at the side, and her fingers are gripping the bag with a natural grip. The plastic bag shows a subtle reflection of the market lights. A few stray leaves from the green crate peek into the lower right corner.
+
+- **Prompt for Text‑to‑Image Generation**  
+  “A young woman in a black floral bikini, holding a clear plastic bag of red apples, adjusting her top while standing in an outdoor vegetable market. She looks directly at the camera with a soft smile, hands gripping the bag and strap. Slight motion blur on the hands and bag, everything fully sharp. Natural daylight mid‑afternoon, slight overexposure on the upper frame. Wide‑angle lens, short focal length, accidental tilted framing, partial crop. Background shows a man in a gray t‑shirt walking past, crates of apples and leafy greens, blue plastic stool. Raw, unprocessed look, no filters.”
+
+Provide only the structured prompt.

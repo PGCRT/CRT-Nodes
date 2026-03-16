@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with wavy, shoulder‑length brown hair, wearing a white triangle‑style bikini, standing confidently with hands on hips. She wears a delicate gold heart‑shaped necklace and a thin gold bracelet on her left wrist. Her nails are painted a soft pink. The camera captures her from a slightly low angle, emphasizing the curve of her torso and the texture of her skin.
+
+- **Motion & Focus**  
+  Slight motion blur at the edges to suggest handheld shake; the center of the frame is crisp, with everything in focus—no portrait‑mode depth‑of‑field blur. The exposure is mildly overexposed on the highlights, giving a warm, natural daylight feel.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24 mm or 35 mm), short focal length, no bokeh. All elements—from the subject to the background—are sharp. No “rule of thirds” intentionality; the composition is accidental, slightly tilted, and partially cropped.
+
+- **Environment**  
+  The scene is set in a sunlit colonnade: a series of tall, light‑colored stone columns with arched openings, forming a classical architectural backdrop. The ground is a polished stone patio with large rectangular tiles. A patch of green foliage peeks through the arches on the right side, indicating a garden or courtyard. The time of day is mid‑afternoon, with the sun high but slightly to the west, casting soft shadows and a gentle warm glow.
+
+- **Lighting & Color**  
+  Natural daylight, no auto‑HDR or auto‑beauty mode—raw, unprocessed look. Slight overexposure on the highlights gives a subtle halo around the subject. The color palette is warm neutrals: beige stone, white bikini, golden jewelry, and a hint of green foliage.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—an “in‑the‑moment” snapshot where the subject might be unaware of the camera or mid‑action. Imperfections are encouraged: slight tilt, off‑center framing, partial crop. No studio lighting, no professional composition, no editorial tone.
+
+- **Final Prompt**  
+  *“A young woman with wavy brown hair, in a white triangle bikini and gold heart necklace, standing with hands on hips in a sunlit colonnade. Capture with a wide‑angle short focal length lens, everything in focus with slight motion blur at the edges and mild overexposure. The background shows tall stone columns and arched openings, a polished tile floor, and a hint of green foliage. Mid‑afternoon daylight creates warm highlights. Composition is accidental—slightly tilted, off‑center, partially cropped—no rule‑of‑thirds. Raw, unprocessed, candid, spontaneous.”*

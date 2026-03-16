@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman with long, dark brown hair, wearing a blue lace dress and black high‑heeled shoes, captured mid‑movement as she leans forward to adjust a light‑gray armchair. Her left hand grips the back of the chair, right hand on her thigh, body slightly tilted, creating a dynamic, spontaneous feel.
+
+- **Motion & Focus**  
+  Slight motion blur at the edges from handheld shake; everything in focus—no portrait‑mode depth blur. The image has an auto‑HDR “raw” look: no filters, no color grading, just natural exposure with a hint of overexposure from the bright window light.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm), short focal length, no bokeh—background fully sharp. The shot is taken at a low angle to emphasize the chair and the woman’s lower body. Slight tilt and off‑center framing give it a candid, unposed vibe.
+
+- **Environment**  
+  A bright, modern living room with a beige sofa, a small side table, a potted plant, and a framed abstract artwork on the wall. A large window lets in natural daylight, creating soft highlights and subtle shadows. The time of day is mid‑afternoon, with warm, diffused sunlight.
+
+- **Composition & Details**  
+  Capture the scene as if it were a spontaneous snapshot: no rule‑of‑thirds intentionality—framing is accidental, with the chair slightly cut off on the left side and the woman’s legs extending beyond the bottom edge. The background includes a glimpse of a white curtain and a small green plant on a wooden side table. The carpet is a light neutral tone, adding warmth to the overall palette.
+
+- **Prompt for Generation**  
+  “A woman in a blue lace dress and black heels leans forward to adjust a gray armchair in a sunlit living room; capture with a wide‑angle lens, slight motion blur, everything in focus, accidental framing, low‑angle shot, mid‑afternoon natural light, background includes beige sofa, side table, potted plant, and framed artwork; raw auto‑HDR look, no filters—realistic candid photography.”

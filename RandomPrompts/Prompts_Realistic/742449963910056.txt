@@ -1,0 +1,33 @@
+**Realistic Candid Photography Prompt Framework – “Summer Evening on the Balcony”**
+
+- **Subject & Pose**  
+  A young woman with long, sun‑kissed hair sitting casually on a beige couch in a bright, lived‑in living room. She wears a light‑pink floral bikini top and matching high‑waist bottoms, one hand tucked into her hair, the other resting on the couch arm. Her pose is mid‑movement: a slight lean to the left, one knee bent, toes pointed toward the camera, as if she just finished a quick stretch or is about to pick up a remote.
+
+- **Candid Capture Style**  
+  - Slight motion blur at the edges to suggest handheld shake.  
+  - No auto‑HDR or auto‑beauty filters – raw, unprocessed look.  
+  - Minor overexposure on the window’s glare, giving a warm, natural tone.  
+  - Framing is off‑center: the couch arm cuts off the left side of the frame, the window’s top right corner is partially cropped.  
+  - No rule‑of‑thirds intentionality – the composition feels spontaneous, like a snapshot taken in the moment.
+
+- **Environment**  
+  - Location: A sunny balcony or sunlit living room with a tall, white‑framed window on the right and a wooden bookshelf on the left.  
+  - Time of day: Late afternoon, around 5 pm, with golden hour light streaming through the window.  
+  - Ambient conditions: Light breeze, a faint smell of fresh coffee, a potted plant on the shelf, a small framed photo, a stack of books, and a few scattered magazines.  
+  - A small table with a vase of greenery sits in the corner; a floor lamp is visible behind the couch.
+
+- **Lens & Technical**  
+  - Short focal length: 24 mm wide‑angle lens.  
+  - Everything in focus – no depth‑of‑field blur, background fully sharp.  
+  - No bokeh.  
+  - Slight tilt to the camera to capture a natural, unposed angle.  
+  - Exposure set for ambient light: slightly bright highlights on the window, soft shadows on the couch.
+
+- **Details & Imperfections**  
+  - The woman’s left hand is partially hidden behind her ear, creating a subtle “mid‑action” cue.  
+  - A faint smudge on the window glass adds realism.  
+  - The couch fabric shows a slight wrinkle where her hip rests.  
+  - The bookshelf has a small dust collection on the top shelf, and a plant’s leaves peek over the edge of the frame.
+
+- **Final Prompt**  
+  “A young woman in a light‑pink floral bikini sits casually on a beige couch in a sunlit living room, her left hand tucked into her hair and right hand resting on the armrest. The scene is captured with a 24 mm wide‑angle lens, everything in sharp focus with slight motion blur at the edges. The camera is slightly tilted, framing the couch arm and a tall white‑framed window on the right, while a wooden bookshelf with books, a framed photo, and a potted plant line the left side. Late afternoon golden light streams through the window, creating a soft overexposure on the glass. A small table with a vase of greenery sits in the corner, a floor lamp is visible behind the couch. The image has no filters or post‑processing, a raw, candid snapshot of a spontaneous moment.”

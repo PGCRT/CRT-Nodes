@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair standing outdoors on a sunny afternoon. She is bare‑chested, wearing dark denim jeans that sit at the hips. Her pose is casual and unposed—she’s mid‑step, slightly turned toward the camera, with one arm relaxed by her side. The framing is off‑center, a handheld “spontaneous” shot that captures a natural, imperfect look.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. Slight tilt and partial crop; no rule‑of‑thirds intentionality. The image has a raw, auto‑HDR feel with a hint of overexposure from the bright ambient light. No filters, no color grading, no post‑processing aesthetic—just a natural motion freeze or slight blur from handheld instability.
+
+- **Environment**  
+  Location: A tree‑lined sidewalk in an urban park, with a stone bench and a white column visible in the background. Time of day: Late afternoon (around 4 pm), warm sunlight casting soft shadows. Weather: Clear, mild breeze, slight haze from the sun’s angle.
+
+- **Lens & Technical**  
+  Short focal length (20–35 mm) wide‑angle lens. Everything is fully sharp—no bokeh or depth‑of‑field blur; background remains in focus. No portrait mode or subject isolation. Slight overexposure to keep the ambient light’s warmth, with a natural “auto‑beauty” feel turned off.
+
+- **Composition Notes**  
+  The shot is slightly cropped on the left side, leaving a portion of the tree trunk out of frame. The woman’s head is near the upper third of the frame, but not centered. Her jeans’ button and pocket are visible, adding detail. The background includes a blurred white column and green foliage, but all elements remain in focus.
+
+- **Final Prompt**  
+  “A candid, unposed photograph of a bare‑chested woman with long wavy brown hair standing on a sunny afternoon sidewalk in an urban park. She wears dark denim jeans, one arm relaxed by her side, mid‑step and slightly turned toward the camera. The shot is taken with a short focal length wide‑angle lens (20–35 mm), all elements fully sharp, no bokeh. Slight tilt and partial crop create an off‑center, handheld feel. Background shows a stone bench and white column with green foliage, all in focus. Late afternoon sunlight creates a warm overexposed tone. Raw, auto‑HDR look, no filters or post‑processing.”

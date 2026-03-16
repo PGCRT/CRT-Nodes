@@ -1,0 +1,26 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, straight brown hair, wearing a light‑beige ribbed tank top and denim shorts, captured mid‑selfie. She holds a black smartphone in her right hand, angled slightly to the left, with a subtle handheld shake that gives a natural motion blur. Her face is turned toward the camera, a bright, open smile showing teeth, eyes bright and lively. A thin black beaded bracelet adorns her right wrist.
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window behind her creates a soft, slightly overexposed highlight on her forehead and left shoulder. The exposure is not perfectly balanced—there’s a gentle warmth to the scene, with a slight ambient haze that suggests a lazy afternoon in late spring. No auto‑beauty or filter enhancement; the look remains raw and unprocessed.
+
+- **Composition & Framing**  
+  Shot on a wide‑angle lens (24 mm), the frame is intentionally off‑center: the subject’s head sits slightly above the center of the frame, her left shoulder cuts off the right edge, and the top of the phone extends beyond the upper border. The composition is spontaneous—no rule‑of‑thirds intentionality, just a casual, candid capture.
+
+- **Background & Environment**  
+  The background shows a bright, uncurtained window with a view of green trees outside, a small black handbag resting on a surface to the right, and a beige couch behind her. The time of day is mid‑afternoon, with warm, diffused sunlight filtering through the leaves, creating soft dappled light on her face and clothing. Weather is clear, with a gentle breeze that slightly ruffles her hair.
+
+- **Technical Settings**  
+  - Focal length: 24 mm (wide angle)  
+  - Aperture: f/5.6 (everything in focus, no bokeh)  
+  - Shutter speed: 1/125 s (slight motion blur from handheld)  
+  - ISO: 400 (natural contrast)  
+  - No portrait mode or depth‑of‑field blur; background remains sharp.
+
+- **Details & Imperfections**  
+  The image carries a slight tilt, a partial crop that cuts off the right side of her shoulder, and a faint motion blur around her hand and phone. A small black beaded bracelet is visible on her wrist, adding texture. Her tank top shows subtle vertical ribbing, and the fabric drapes naturally over her shoulders. The smartphone’s back panel shows a triple‑camera module.
+
+- **Final Prompt**  
+  “A candid selfie of a smiling young woman with long brown hair, wearing a beige ribbed tank top and denim shorts, holding a black smartphone in her right hand. Captured on a wide‑angle 24 mm lens at f/5.6, 1/125 s, ISO 400, with natural daylight from a bright window creating slight overexposure. The frame is off‑center and slightly tilted, capturing her mid‑action with a subtle motion blur. Background includes a beige couch, a black handbag, and green trees outside the window. All elements in focus, raw unprocessed look, no filters or auto‑beauty.”

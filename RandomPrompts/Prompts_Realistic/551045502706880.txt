@@ -1,0 +1,29 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail and bangs, wearing a white crop‑top and a short leather jacket over a white mini‑skirt, walking confidently down a city street. Her hands are relaxed at her sides, slightly bent, as if she’s mid‑step.  
+
+- **Motion & Focus**  
+  Slight motion blur on the subject’s legs and the background to convey movement, but everything remains fully sharp—no portrait‑mode softening. The lens is a short focal‑length wide‑angle (24–35 mm) with a wide aperture that keeps the entire scene in focus.  
+
+- **Lighting & Exposure**  
+  Natural daylight from a low‑angle sunrise or sunset; the light is slightly overexposed on the subject’s face, giving a warm golden hue, while the background retains subtle contrast. No auto‑HDR or beauty filters—just raw, unprocessed imagery.  
+
+- **Environment**  
+  A bustling urban alleyway lined with brick buildings, a concrete sidewalk, and a parked white car in the background. The time of day is early evening, with long shadows and a soft ambient glow. Light rain or drizzle may be present, adding a subtle sheen to the pavement.  
+
+- **Composition & Framing**  
+  No rule‑of‑thirds intentionality—frame the shot loosely, letting the subject occupy the central‑left portion of the frame with a slight tilt. The composition is accidental and candid; the edges cut off the street’s corner, giving a partial crop feel.  
+
+- **Technical Settings**  
+  - Focal length: 30 mm (wide angle)  
+  - Aperture: f/2.8 (wide, but not too wide—background stays sharp)  
+  - Shutter speed: 1/60 s (enough to capture slight motion blur)  
+  - ISO: 400–800 (depending on ambient light)  
+  - No bokeh or depth‑of‑field blur—everything from foreground to background is in focus.  
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, no post‑processing aesthetic—just a raw, natural look with slight overexposure to the subject’s face and a gentle warmth to the entire scene.
+
+**Prompt Summary (for text‑to‑image generation)**  
+"A young woman with a high ponytail and bangs, wearing a white crop‑top and a short leather jacket over a white mini‑skirt, walking confidently down a city street. Capture the moment with a 30 mm wide‑angle lens at f/2.8 and 1/60 s shutter speed, producing slight motion blur on the legs while keeping the entire scene sharp. The shot is taken at early evening, with natural daylight creating a warm golden overexposure on the subject’s face. The background shows a brick alleyway, a concrete sidewalk, and a parked white car. Frame loosely with a slight tilt, center‑left placement of the subject, accidental partial crop, no rule‑of‑thirds. All elements in focus, no bokeh, no filters—raw, candid, spontaneous photography."

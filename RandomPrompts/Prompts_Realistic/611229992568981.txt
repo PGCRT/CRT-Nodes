@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with shoulder‑length blonde hair, wearing an orange short‑sleeved T‑shirt and a blue polka‑dot apron, is kneeling on a tiled kitchen floor. Her left leg is bent at the knee, foot planted on the tile, while her right leg is raised high, toe pointing upward, as if she’s about to pick something up or balance herself. She looks down at her hands, fingers slightly curled, with a subtle expression of concentration.
+
+- **Motion & Focus**  
+  Slight motion blur on the raised leg and hand, indicating a handheld shot captured mid‑action. Everything is fully sharp—no bokeh, no portrait‑mode isolation—wide‑angle lens (24–35 mm) with a short focal length. No rule‑of‑thirds; framing is accidental, slightly tilted, off‑center.
+
+- **Lighting & Exposure**  
+  Natural daylight from a window on the left, creating a soft, warm illumination with a slight overexposure on the upper part of the image. Auto‑HDR or auto‑beauty mode off—raw, unprocessed look. No filters, no color grading, no post‑processing aesthetic.
+
+- **Environment**  
+  A bright, modern kitchen with light‑green cabinets, stainless‑steel pots on the counter, a small potted plant near the window, and a white electrical outlet on the wall. The time of day is mid‑afternoon, with warm sunlight streaming through the window, casting soft shadows on the floor tiles.
+
+- **Lens & Technical**  
+  Short focal length (24–35 mm), wide‑angle, no bokeh, background fully sharp. Handheld instability gives a slight blur to the raised leg and hand. No portrait mode, no subject isolation. The composition is spontaneous, candid, unposed—subject appears unaware of the camera.
+
+- **Prompt**  
+  “A young woman with shoulder‑length blonde hair, wearing an orange T‑shirt and a blue polka‑dot apron, kneeling on a tiled kitchen floor in mid‑afternoon daylight. Her left leg is bent, right leg raised high, hand near her knee, looking down at her hands as if about to pick something up. Slight motion blur on the raised leg and hand, everything fully sharp, wide‑angle 24–35 mm lens, accidental off‑center framing, slight tilt. Background shows light‑green cabinets, stainless‑steel pots, a small potted plant near the window, and a white electrical outlet on the wall. Natural daylight from the left creates soft warm illumination with a slight overexposure on the upper part of the image. Raw, unprocessed look, no filters, no auto‑HDR, no color grading.”

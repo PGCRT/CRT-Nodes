@@ -1,0 +1,26 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy chestnut hair sits casually in a worn‑in brown leather armchair. She wears a short black leather dress with a large bow at the bust, a gold watch on her left wrist, and subtle hoop earrings. Her hands rest on her lap, fingers slightly curled, and she looks directly at the camera with a calm, confident expression. The chair’s tufted back and rolled arms frame her body in a natural, off‑center composition.
+
+- **Lighting & Exposure**  
+  Warm ambient light from a table lamp in the left background casts a soft glow on her face and dress. Slight overexposure keeps the scene raw; the exposure is a little bright at the top, giving a subtle halo effect. No auto‑HDR or beauty filters—just natural contrast.
+
+- **Camera & Lens**  
+  Shot on a wide‑angle lens (24 mm) with a short focal length, capturing a broad view of the subject and environment. Everything is in focus—from her face to the back of the chair—to the shelves of bottles behind her; no bokeh or depth‑of‑field blur.
+
+- **Environment**  
+  The setting is a cozy bar or lounge area: a wooden table with a lamp, a framed photo, and a shelf lined with various liquor bottles. The time of day is late afternoon, giving warm, golden tones. The background is fully sharp, no studio lighting—just natural daylight mixed with the lamp’s glow.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—an “in‑the‑moment” snapshot where the subject is mid‑pose. Slight tilt and partial crop give an accidental, handheld feel. No rule‑of‑thirds intentionality; the framing is natural and imperfect.
+
+- **Technical Notes**  
+  - Slight motion blur from handheld instability.  
+  - No post‑processing color grading—raw, unfiltered look.  
+  - Wide lens, short focal length, everything in focus.  
+  - No portrait mode or subject isolation.  
+
+**Prompt:**
+
+> “A young woman with long wavy chestnut hair sits casually in a worn brown leather armchair, wearing a short black leather dress with a large bow at the bust and a gold watch on her left wrist. Her hands rest on her lap, fingers slightly curled, as she looks directly at the camera with a calm confidence. The chair’s tufted back and rolled arms frame her body in an off‑center composition. Warm ambient light from a table lamp in the left background casts a soft glow, creating a slight overexposure that gives a raw, unprocessed feel. Shot on a 24 mm wide‑angle lens, everything—from her face to the shelf of liquor bottles behind her—is fully sharp with no bokeh. The setting is a cozy bar or lounge area in late afternoon, capturing a candid, spontaneous moment with slight handheld motion blur and accidental tilt. No filters, no color grading, just natural lighting and a raw, in‑the‑moment aesthetic.”

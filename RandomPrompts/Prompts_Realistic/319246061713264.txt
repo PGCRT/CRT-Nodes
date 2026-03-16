@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, straight brown hair standing in a bright, modern home office. She wears a red lace bra and matching red lace panties, posed mid‑step with one foot slightly ahead of the other, hands relaxed at her sides. Her face is turned toward the camera but not directly aimed—slight tilt and off‑center framing give a candid feel.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. Slight motion blur from handheld instability, no auto‑beauty mode, no filters, no color grading, no post‑processing aesthetic. A hint of overexposure from natural daylight. No rule‑of‑thirds intentionality—accidental framing.
+
+- **Environment**  
+  Specific real‑world location: a bright, contemporary home office with a wooden desk, computer monitor, and a small side table in the background. Time of day: mid‑afternoon, soft natural light from a large window, slight haze from dust particles in the air. Weather or ambient conditions: clear, warm, slightly humid.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm), wide‑angle lens. No bokeh, no depth‑of‑field blur—background fully sharp. Everything in focus. No portrait mode, no subject isolation. Slight overexposure or underexposure depending on ambient light; all settings raw and unprocessed.
+
+- **Composition Notes**  
+  The shot is a full‑body capture, capturing the subject from head to toe, with a partial crop that cuts off a bit of the desk’s left side. The camera is held at eye level, slightly tilted to the right, creating a natural, spontaneous feel. Background remains fully sharp, no blur, no “portrait mode” effect.
+
+- **Final Prompt**  
+  *“A young woman with long brown hair in red lace lingerie stands mid‑step in a bright home office, captured on a 24‑35 mm wide‑angle lens with slight motion blur and accidental framing. The scene is lit by mid‑afternoon natural light, all elements in focus, no filters or post‑processing, raw and candid.”*

@@ -1,0 +1,27 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman in a vibrant red, gold‑embroidered sari, wearing an ornate golden crown and dangling earrings, captured mid‑reading of an antique book. Her face is slightly tilted, eyes focused on the pages, with a subtle tear or water drop on her cheek. She holds the book with both hands, fingers gently curling around the edges; a small ring adorns her left hand.  
+
+- **Lighting & Exposure**  
+  Natural daylight from a bright window, slight overexposure on the upper half of the frame, creating a warm, soft glow. No auto‑HDR or beauty filters—raw, unprocessed look.  
+
+- **Camera Settings**  
+  Wide‑angle lens (24‑35 mm), short focal length, handheld. Slight motion blur from the subject’s gentle movement, background fully sharp with no bokeh. Everything in focus, no portrait‑mode depth‑of‑field blur.  
+
+- **Composition & Framing**  
+  Candid, unposed, spontaneous—subject unaware of camera. Slight tilt and off‑center framing; partial crop that cuts off a bit of the background on the left side. No rule‑of‑thirds intentionality—accidental, natural composition.  
+
+- **Environment**  
+  A dimly lit library or study, late afternoon. The background shows a blurred wooden bookshelf and a faint window, with ambient dust motes dancing in the light. Weather: clear, warm, slightly humid.  
+
+- **Details & Imperfections**  
+  Slight imperfections in focus: a tiny smudge on her earring, a slight wrinkle in the sari’s fabric, a small reflection on the book’s cover. The image has a raw, unpolished feel—no color grading or post‑processing.  
+
+- **Technical Notes**  
+  No bokeh, no depth‑of‑field blur—background fully sharp. Wide lens captures the entire scene, from the woman’s head to the lower part of her sari. All elements in focus: the jewelry, the book, the background details.  
+
+**Prompt:**
+```
+Candid photograph of a young woman in a red gold‑embroidered sari, wearing an ornate golden crown and dangling earrings, reading an antique book. She holds the book with both hands, a ring on her left hand, a tear or water drop on her cheek. Slight motion blur from handheld shooting, subtle overexposure on the upper half. Wide‑angle lens (24‑35 mm), short focal length, everything in focus, background fully sharp. Candid, unposed, spontaneous framing—slight tilt and off‑center crop. Setting: dim library or study, late afternoon, natural daylight from a window, dust motes visible. Raw, unprocessed look, no filters, no color grading.
+```

@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, athletic woman with long, wavy blonde hair sits casually on the edge of a neatly made bed in a bright, modern bedroom. She wears a fitted gray tank top, white shorts with the word “tasty” printed on the waistband, and white sneakers. Her left arm is slightly bent, hand resting on the duvet, while her right hand touches the corner of the bed. A small tattoo is visible on her upper left arm. She smiles softly at the camera, eyes bright, head tilted slightly to one side.
+
+- **Motion & Focus**  
+  Slight motion blur around the hands and feet, as if captured mid‑move. The image has a raw, unprocessed look—no auto‑beauty or filter enhancement. A mild overexposure in the upper right corner lets natural daylight bleed through the sheer curtain, giving an airy, spontaneous feel.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24 mm) with a short focal length, everything in focus from foreground to background. No bokeh; the background—bed, lamp, plant, window—is fully sharp. Slight handheld shake gives a natural, imperfect vibe. The composition is off‑center, not following the rule of thirds, as if captured by a casual photographer.
+
+- **Environment**  
+  Location: A tidy bedroom with a beige headboard, white duvet, and a small green plant on a bedside table. A white lamp sits next to the bed, a framed picture hangs on the wall, and a sheer curtain lets in soft morning light. Time of day: early afternoon, ambient natural light with a warm, slightly hazy tone. Weather: clear, mild—soft sunlight filters through the window, creating gentle highlights and subtle shadows.
+
+- **Lighting & Color**  
+  Natural daylight from the window creates slight overexposure at the top right, while the lower left remains a bit darker, giving depth. Colors are muted but realistic—cool neutrals in the bedding contrast with the warm gray of the tank top. No color grading or post‑processing; the image stays raw and candid.
+
+- **Details & Imperfections**  
+  The bed’s duvet is slightly rumpled, the woman’s sneakers have a tiny dust particle on the sole, and her hair has a stray strand that catches the light. The framing tilts a little to the right, making the subject appear as if she just finished a quick pose. The overall feel is spontaneous, unposed, and real.

@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, athletic woman with long, wavy brown hair, wearing a light‑gray halter‑style bikini, standing on a modern balcony. She leans casually against a polished metal railing, hands gripping the rail on both sides, body angled slightly toward the camera, head tilted to one side, a subtle smile on her face. Her left foot is forward, toes pointing slightly outward; her right foot is back, creating a natural, unposed stance.
+
+- **Motion & Focus**  
+  Slight motion blur at the edges from handheld instability, but the entire frame stays in focus—no portrait‑mode depth of field. The image has an auto‑HDR feel but no color grading or filters; it looks raw and spontaneous. A faint overexposure on the upper part of the frame gives it a bright, airy vibe.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24 mm), short focal length, everything in focus, no bokeh. The composition is accidental: the subject is slightly off‑center, the railing cuts across the lower third, and the circular window behind her is partially cropped. No rule‑of‑thirds intentionality—just a candid snapshot.
+
+- **Environment**  
+  Location: A high‑rise balcony with a large circular window that frames a city skyline. The time of day is late morning; the sky is a soft, pale blue with a gentle haze. Ambient light is natural, slightly overcast, giving a subtle glow to the subject’s skin and the metal rail.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, partial crop on the left side, a faint smudge on the railing. The woman’s bikini straps are tied at the sides, and her abdomen is slightly visible, adding realism. Her fingers grip the rail with a natural tension, and her toes are slightly curled. The background cityscape is fully sharp, no depth‑of‑field blur.
+
+- **Prompt**  
+  “A tall, athletic woman with long wavy brown hair in a light gray halter bikini leans casually against a polished metal railing on a high‑rise balcony. She stands mid‑pose, hands gripping the rail on both sides, body angled slightly toward the camera, head tilted to one side with a subtle smile. Slight motion blur from handheld instability keeps everything in focus—no bokeh, no filters. The wide‑angle 24 mm lens captures a fully sharp city skyline through a large circular window behind her. Late morning natural light gives a faint overexposure on the upper frame. The composition is accidental: subject slightly off‑center, railing cuts across the lower third, partial crop on the left. Raw, spontaneous, candid, unposed.”

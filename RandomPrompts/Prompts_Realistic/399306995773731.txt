@@ -1,0 +1,28 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A teenage girl with long, dark hair tied in a loose ponytail, wearing an off‑shoulder white cotton tee and dark denim jeans, standing mid‑turn in a sunlit classroom. Her left hand rests on her hip, right arm bent, head tilted downward as if she’s about to pick up a pencil or adjust her glasses. She’s wearing black Nike sneakers with white soles.  
+
+- **Pose & Motion**  
+  Slight motion blur at the knees and feet to suggest movement, captured with a handheld camera at a slightly low angle. The blur is subtle—just enough to give a natural, spontaneous feel.  
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window on the left, creating soft highlights on her shirt and a faint overexposure on the ceiling lights. Slight warm tint from the ambient sunlight; no color grading or filters applied.  
+
+- **Environment**  
+  A typical high‑school classroom: a green chalkboard with “Revue” written in white chalk, a small potted plant on a shelf, a wooden desk, and a metal chair. The floor is a light tile, the walls are off‑white, and a window with a sheer curtain lets in bright light.  
+
+- **Time of Day & Weather**  
+  Late morning, around 10:30 AM, with the sun high but not too direct; the sky outside the window is clear, giving a bright, warm atmosphere.  
+
+- **Lens & Technical Settings**  
+  24‑mm wide‑angle lens (short focal length), f/4.5 aperture, 1/125 s shutter speed, ISO 400. Everything in focus from foreground to background; no bokeh or depth‑of‑field blur.  
+
+- **Composition & Framing**  
+  No rule‑of‑thirds intentionality—framing is accidental and slightly off‑center. The shot is a wide, candid capture that includes the subject’s full body, the desk she’s standing next to, a portion of the chalkboard, and a glimpse of the window.  
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, partial crop at the top right corner, minor dust particles on the lens, natural imperfections in the focus and exposure that give the image a raw, unprocessed look.  
+
+- **Final Prompt**  
+  “A teenage girl with long dark hair in a loose ponytail, wearing an off‑shoulder white cotton tee and dark denim jeans, standing mid‑turn in a sunlit classroom. Her left hand rests on her hip, right arm bent, head tilted downward as if she’s about to pick up a pencil or adjust her glasses. She’s wearing black Nike sneakers with white soles. Slight motion blur at the knees and feet, natural daylight from a large window on the left creating soft highlights and faint overexposure on the ceiling lights. The classroom has a green chalkboard with ’Revue’ written in white chalk, a small potted plant on a shelf, a wooden desk, and a metal chair. Late morning, 10:30 AM, clear sky outside the window. 24‑mm wide‑angle lens at f/4.5, 1/125 s shutter speed, ISO 400. Everything in focus, no bokeh. Accidental off‑center framing with a slight tilt and partial crop. Raw, unprocessed look, no filters.”

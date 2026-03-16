@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, athletic woman with long, wet hair cascading over her shoulders, wearing a dark, thin‑strapped bikini. She stands mid‑turn on a sunlit beach, one hand lightly gripping the side of her hip, the other near her waist, as if she just finished a swim or is about to start a dance. Her gaze is directed slightly off‑camera, giving a candid, unposed feel.
+
+- **Motion & Focus**  
+  Slight motion blur at the edges from handheld instability; everything in focus—no portrait‑mode depth of field. The blur is subtle, keeping the background fully sharp.
+
+- **Lighting & Exposure**  
+  Natural mid‑afternoon sunlight with a slight overexposure on the upper body, creating a warm, golden hue. No auto‑HDR or beauty filters—raw, unprocessed look.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24‑35 mm), short focal length. No bokeh; background is fully sharp. Slight tilt and off‑center framing, no rule‑of‑thirds intentionality.
+
+- **Environment**  
+  Specific real‑world location: a sandy beach with gentle waves breaking in the background, the horizon line slightly above the subject’s head. Time of day: late afternoon, ambient light warm and soft. Weather: clear, breezy, with a few scattered clouds.
+
+- **Composition & Style**  
+  Candid, spontaneous—subject appears unaware of the camera. Imperfections encouraged: slight tilt, partial crop, natural motion freeze. Zero studio lighting, zero professional composition, zero editorial tone.  
+
+- **Prompt for Generation**  
+  “A tall woman in a dark bikini stands mid‑turn on a sunlit beach, her wet hair cascading over her shoulders, one hand gripping her hip, the other near her waist, as if she just finished a swim. Slight motion blur at the edges from handheld instability; everything in focus. Natural mid‑afternoon sunlight with a slight overexposure on the upper body. Wide‑angle lens (24‑35 mm), short focal length. No bokeh—background fully sharp. Slight tilt and off‑center framing, no rule‑of‑thirds intentionality. The beach has gentle waves breaking in the background, horizon line slightly above her head. Clear, breezy, scattered clouds. Raw, unprocessed look, zero studio lighting, zero professional composition, candid spontaneous feel.”

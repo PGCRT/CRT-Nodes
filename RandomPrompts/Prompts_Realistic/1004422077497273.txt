@@ -1,0 +1,28 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A young woman with long, sun‑kissed blonde hair, wearing a tight black long‑sleeved V‑neck top and light denim shorts, is mid‑gesture while holding a small object (a piece of food or a toy) between her fingers. Her head is tilted slightly downward, eyes focused on the object, mouth slightly open as if she’s about to speak or laugh. She wears a small stud earring in her left ear.  
+
+- **Pose & Composition**  
+  Candid, unposed, spontaneous — the subject appears unaware of the camera. The frame is off‑center and slightly tilted, with a partial crop that cuts off the left side of her torso, giving an accidental, handheld feel. No rule‑of‑thirds intentionality; the composition is driven by the natural line of the subject’s body and the background elements.  
+
+- **Motion & Focus**  
+  Slight motion blur on the hands and object, indicating a handheld shot captured at a fast shutter speed but with a little instability. Everything in the frame — subject, background, and foreground — is fully sharp; no portrait‑mode depth‑of‑field blur.  
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle window, creating a soft, warm glow on the subject’s face and body. A slight overexposure on the upper chest area gives a raw, unprocessed look. No auto‑HDR or beauty filters; the image retains the genuine ambience of the moment.  
+
+- **Environment**  
+  The setting is a bright, lived‑in bedroom or studio: a white dresser with drawers is visible to the left, a small potted plant sits on a shelf, and a stack of colorful books lines the back wall. A framed picture hangs on the wall behind her, slightly out of focus but still visible. The time of day is late afternoon, with warm, golden light streaming through a window, casting soft shadows.  
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm) wide‑angle lens, no bokeh. All elements — subject, background, foreground — are in focus. The lens is set to a wide aperture but the depth of field is shallow enough that the entire scene remains crisp.  
+
+- **Style & Aesthetic**  
+  Zero studio lighting, zero professional composition, zero editorial tone. The image feels spontaneous and real, with slight imperfections (a tiny smudge on the shirt, a faint dust particle in the air) that add to its authenticity.  
+
+**Prompt for Text‑to‑Image Generation**
+
+> “A candid, unposed photograph of a young woman with long sun‑kissed blonde hair, wearing a tight black long‑sleeved V‑neck top and light denim shorts, mid‑gesture while holding a small object between her fingers. Her head is tilted slightly downward, eyes focused on the object, mouth slightly open. The frame is off‑center and slightly tilted, with a partial crop that cuts off the left side of her torso. Slight motion blur on the hands and object, everything in focus. Natural daylight from a high‑angle window creates a soft warm glow; a slight overexposure on the upper chest. Background shows a white dresser, a potted plant, a stack of colorful books, and a framed picture on the wall. Late afternoon light casts soft shadows. Shot with a short focal length wide‑angle lens (24‑35 mm), all elements fully sharp. Raw, unprocessed look, no filters, no color grading.”
+
+Provide only the structured prompt.

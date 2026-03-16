@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a messy top-knot hairstyle, wearing an olive-green denim jacket over a beige off‑shoulder top and high‑waisted blue jeans. She’s mid‑step, hand on her hip, head turned to the side, eyes cast downward, capturing a spontaneous, unposed moment.
+
+- **Motion & Focus**  
+  Slight motion blur from handheld instability; everything in focus—no bokeh, no portrait‑mode isolation. A wide‑angle lens (24–35 mm) captures the entire scene with ambient natural light, slight overexposure on the bright sunlit side.
+
+- **Lighting & Exposure**  
+  Natural daylight, mid‑afternoon sun creating warm highlights and soft shadows; slight overexposure on the right side of the frame, subtle lens flare from the sun’s angle. No auto‑HDR or beauty filters—raw, unprocessed look.
+
+- **Environment**  
+  Urban streetside setting: a concrete sidewalk, a glass storefront with a “Viennna” sign in the background, a white car parked along the street, and a red awning of a nearby café. Trees and a blue sky peek through the upper right corner; the scene is fully sharp, no depth‑of‑field blur.
+
+- **Lens & Technical**  
+  Short focal length (24–35 mm), wide‑angle, handheld shot with slight tilt and off‑center framing. No rule‑of‑thirds intentionality—accidental composition. All elements in focus, background fully sharp.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Imperfections encouraged: slight tilt, partial crop, natural motion blur. Zero studio lighting, zero professional composition, zero editorial tone.  
+
+- **Prompt Summary for Generation**  
+  “A young woman with a messy top‑knot, olive‑green denim jacket, beige off‑shoulder top, and high‑waisted blue jeans mid‑step on a sunny urban sidewalk, captured on a wide‑angle handheld lens with slight motion blur and accidental framing; background includes a glass storefront with a ‘Viennna’ sign, a white car, and a red awning, all in focus under natural mid‑afternoon light with subtle overexposure.”

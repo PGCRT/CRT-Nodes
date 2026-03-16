@@ -1,0 +1,16 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, athletic woman with long dark hair, wearing a black bikini, captured mid‑movement as she lifts one arm to touch the back of her head. Her left arm is adorned with a detailed floral‑animal tattoo that wraps around the forearm and upper arm; a second tattoo of a rose climbs up her right bicep. She stands in a bright, airy bedroom with a white bedspread and a mustard‑yellow pillow visible behind her.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject appears unaware of the camera, caught in a natural, slightly tilted stance. The frame is off‑center, with a partial crop that gives an accidental, handheld feel. Slight motion blur conveys movement, and a touch of overexposure keeps the ambient light raw and unprocessed.
+
+- **Environment**  
+  Location: A modern, minimalist bedroom in a mid‑tier apartment building. Time of day: late morning, soft natural daylight coming from the west, creating gentle shadows. Weather: clear, mild, with a slight breeze that ruffles the subject’s hair.
+
+- **Lens & Technical**  
+  Short focal length (24 mm) wide‑angle lens, no bokeh — everything from foreground to background is fully sharp. No depth‑of‑field blur or portrait mode; the composition is intentionally “accidental,” with no rule‑of‑thirds adherence. Slight overexposure or underexposure depending on ambient light, no auto‑HDR or auto‑beauty enhancements, no filters or post‑processing.
+
+- **Final Prompt**  
+  *“A tall, athletic woman with long dark hair in a black bikini, mid‑motion as she lifts one arm to touch the back of her head, left arm featuring a detailed floral‑animal tattoo that wraps around the forearm and upper arm, right bicep adorned with a rose tattoo. She stands in a bright, airy bedroom with a white bedspread and mustard‑yellow pillow behind her. Candid, unposed, spontaneous capture; slight motion blur and accidental off‑center framing. Late‑morning natural daylight, clear weather, handheld instability. 24 mm wide‑angle lens, everything fully sharp, no bokeh, no filters, raw exposure.”*

@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with shoulder‑length, sun‑kissed brown hair, wearing a soft beige cardigan over a pastel‑printed crop top and matching high‑waist trousers. She is seated on a light‑colored sofa, leaning slightly forward with one hand resting on her thigh, as if mid‑conversation or caught in a casual moment. Her gaze is directed toward the camera but not directly at it—slight off‑center, giving a candid feel.
+
+- **Motion & Focus**  
+  Capture with a handheld camera at a slightly low angle, using a wide‑angle lens (24–35 mm). Introduce mild motion blur from the camera’s instability, yet keep the entire frame sharp—no portrait‑mode depth of field. The background (a bright window, a potted plant, a wooden side table) is fully in focus, with no bokeh.
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window on the left, creating soft highlights on her face and a subtle lens flare near the top right. Slight overexposure in the upper right corner for a raw, unprocessed look; avoid auto‑HDR or beauty filters. Keep color grading natural—no post‑processing aesthetic.
+
+- **Composition & Framing**  
+  Use accidental framing: the subject is slightly tilted, and the crop is partial—edges cut off at the left and right sides. No rule‑of‑thirds intentionality; the composition feels spontaneous. The background elements (window frame, plant leaves) are fully sharp, giving a true “all‑in‑focus” candid vibe.
+
+- **Environment**  
+  Location: a bright, airy living room with a beige sofa, a wooden coffee table, and a tall green plant in the corner. Time of day: late morning, with warm, diffused sunlight. Weather: clear, slightly humid—ambient light creates soft glare.
+
+- **Lens & Technical**  
+  Short focal length (24–35 mm), wide‑angle. No bokeh, no depth‑of‑field blur—everything in focus. No portrait mode or subject isolation. Use a standard aperture (f/4–f/5.6) to keep the scene natural.
+
+- **Prompt Summary**  
+  “A candid, unposed photo of a woman in a beige cardigan and pastel crop top, seated on a sofa in a sunlit living room, captured with a wide‑angle lens at a low angle. Slight motion blur from handheld shake, but all elements—subject and background—are sharp. Natural daylight from a window creates soft highlights and a subtle flare. The frame is slightly tilted and partially cropped, giving an accidental, spontaneous feel. No filters or post‑processing—just raw, real imagery.”

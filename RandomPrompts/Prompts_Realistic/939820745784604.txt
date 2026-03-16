@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark braided hair standing in a sunlit courtyard. She’s bare‑charged, facing the camera with a relaxed, candid expression, slightly tilted head and shoulders turned to the left. Her left hand rests on her hip, fingers casually curled. Small gold hoop earrings dangle, catching the light. The shot captures her from the mid‑thigh up, keeping the upper body and part of the background in frame.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle, late‑afternoon sun creates a soft overexposure on the subject’s chest and shoulders. Slight ambient glare and a faint halo around her hair. No auto‑beauty or filter enhancement—raw, unprocessed look. The exposure is slightly warm, with a subtle haze that gives an authentic, handheld feel.
+
+- **Camera & Lens Settings**  
+  35 mm wide‑angle lens (f/2.8, 1/60 s shutter speed, ISO 400). Handheld, slight motion blur on the subject’s movement and background. Everything remains in focus—no portrait‑mode depth of field blur. The framing is off‑center, no rule‑of‑thirds intentionality; the composition feels spontaneous, as if captured mid‑action.
+
+- **Environment**  
+  A stone courtyard with a weathered wall on the left and a potted white rose bush on the right. The time of day is early evening, with the sun casting long, warm shadows. The background is fully sharp, no bokeh. A few leaves and a faint flower petal peek into the frame from the right side, adding natural detail.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, a partial crop that cuts off the lower thighs. The subject’s left ear is partially out of frame, giving an informal, candid vibe. Tiny dust particles float in the air, caught by the lens. The image has a natural motion freeze with a hint of blur from handheld instability.
+
+- **Post‑Processing**  
+  No filters, no color grading, no auto‑beauty mode—just raw, straightforward capture. A slight overexposure on the subject’s chest adds a warm glow. The final look is a realistic, unposed photograph that feels like a genuine moment captured in a real world setting.

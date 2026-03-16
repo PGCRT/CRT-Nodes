@@ -1,0 +1,16 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, athletic woman with long, sun‑kissed blonde hair standing in a wild meadow. She wears a shimmering gold bikini that catches the light as she leans slightly forward, one hand on her hip, the other near her waist, as if mid‑step or mid‑turn. Her face is turned toward the camera but not directly at it—she’s “unposed,” a candid moment captured while she’s still adjusting her stance.
+
+- **Lighting & Exposure**  
+  Warm, golden hour sunlight coming from the upper left, creating a soft overexposure on the subject’s left side and a gentle flare in the background. Slight handheld shake gives a natural motion blur around the edges; the exposure is slightly warm but not overly processed—no auto‑beauty or filter enhancements.
+
+- **Environment**  
+  The setting is a sunlit meadow at dusk, with tall, swaying grasses and a scattering of autumn leaves on the ground. A few trees line the background, their foliage blurred only by the wide‑angle lens, not by depth‑of‑field blur—everything remains fully sharp. The sky shows a subtle gradient from pale blue to warm amber, indicating the time of day is late afternoon.
+
+- **Lens & Technical**  
+  Use a short focal length (e.g., 24 mm) wide‑angle lens. Capture everything in focus—no portrait‑mode subject isolation. Keep the framing accidental: slight tilt and off‑center composition, no rule‑of‑thirds intentionality. The shot should feel spontaneous, as if the photographer caught her mid‑action.
+
+- **Post‑Processing**  
+  No filters or color grading—just raw, unprocessed imagery. A mild auto‑HDR may be applied to boost dynamic range, but keep it subtle. The final image should look like a genuine, unposed candid snapshot taken in a real world location, with natural motion blur from handheld instability and a wide‑angle view that keeps the background fully sharp.

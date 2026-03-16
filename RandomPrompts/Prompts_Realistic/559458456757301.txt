@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair, wearing a thin black bikini bottom, sitting on a rustic wooden stool in a dimly lit bar. Her left arm rests on her thigh, her right hand lightly gripping the edge of the stool, and she looks directly at the camera with a soft, contemplative expression. Slight motion blur is present around her hands and shoulders, indicating handheld shake.
+
+- **Lighting & Exposure**  
+  Ambient lighting from a large window to the left, combined with a warm pendant lamp above the bar counter creates a slight overexposure on the subject’s face and upper body. The background has a subtle vignette but remains fully sharp—no portrait‑mode blur. No auto‑beauty or filter enhancements; raw, unprocessed look.
+
+- **Environment**  
+  Location: “Breyo” branded bar with wooden paneling, a row of liquor bottles on shelves, and a neon sign that reads “BREYO” in pink. A small blue circular sign is visible on the left wall. The bar counter has a stainless‑steel top, and a few stools are scattered around. The time of day is late afternoon; natural light from the window mixes with the indoor lamp, creating warm tones and soft shadows.
+
+- **Lens & Technical**  
+  Short focal length (24 mm) wide‑angle lens, no bokeh—everything from foreground to background is in focus. Slight tilt and off‑center framing give a candid, spontaneous feel. The composition is accidental: the subject is slightly left of center, the stool leans a bit askew, and the top of the neon sign cuts off at the right edge of the frame.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Imperfections encouraged: slight tilt, off‑center framing, partial crop. No rule‑of‑thirds intentionality—accidental framing. Natural motion freeze or slight blur from handheld instability.
+
+- **Post‑Processing**  
+  Zero studio lighting, zero professional composition, zero editorial tone. Raw, unprocessed look with no color grading or filters. Slight overexposure on the subject’s face, subtle warmth in the ambient light.
+
+**Prompt Summary**  
+> “A young woman with long wavy brown hair, wearing a thin black bikini bottom, sits on a rustic wooden stool in a dimly lit bar at late afternoon. She looks directly at the camera with a soft expression, her left arm resting on her thigh and her right hand gripping the stool’s edge. The bar features a ‘BREYO’ neon sign, wooden paneling, and a row of liquor bottles on shelves. Warm pendant lamp and natural window light create slight overexposure on the subject. Shot on a 24 mm wide‑angle lens, everything in focus with no bokeh. Slight motion blur and accidental off‑center framing give a candid, raw feel. No filters or color grading—raw, unprocessed look.”

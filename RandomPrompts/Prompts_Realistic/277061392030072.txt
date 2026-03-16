@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail, wearing a green cardigan over a gray crop‑top, standing on a cobblestone street. She is mid‑smile, head tilted slightly to the right, eyes cast toward the left side of the frame, as if she just saw something interesting. Her large hoop earrings catch the light, and a faint motion blur suggests she is moving. The shot is a tight medium‑close up that cuts off just above her elbows, with the top of her head near the upper edge of the frame—no rule‑of‑thirds, just accidental framing.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject appears unaware of the camera, caught in a natural moment. Slight tilt and partial crop give an informal, handheld feel. The image has a raw, unprocessed look: no filters, no color grading, no post‑processing aesthetic. A mild overexposure on the face keeps the tones bright but natural.
+
+- **Environment**  
+  Location: a narrow, historic street lined with colorful storefronts; a red awning is visible on the left, a parked car in the background. Time of day: late morning, soft diffused sunlight from the west, creating gentle shadows on the building facades. Weather: lightly breezy, the scene is slightly hazy, giving an auto‑HDR feel without any intentional HDR look.
+
+- **Lens & Technical**  
+  Short focal length (24–35 mm), wide‑angle lens. Everything is in focus – background and subject – no bokeh or depth‑of‑field blur. The image captures a full‑frame capture with slight handheld instability, producing a subtle motion blur on the subject’s face and hair. No portrait‑mode “subject isolation” – the background remains sharp.
+
+- **Composition Notes**  
+  The composition is intentionally off‑center: the woman’s left eye is slightly above the horizontal midline, her right ear near the right edge. The top of her head touches the upper border, creating a “cut‑off” effect. The bottom of the frame cuts just below her waist, leaving a small portion of her denim shorts visible. The background shows a row of pastel‑colored buildings, a red awning, and a parked car, all in focus.
+
+- **Lighting**  
+  Natural daylight from the west creates a slight overexposure on the subject’s face, while the background remains evenly lit. No studio lighting or professional composition – just a casual, spontaneous snapshot.
+
+- **Final Prompt**  
+  “A young woman with a high ponytail, wearing a green cardigan over a gray crop‑top, stands on a cobblestone street lined with colorful storefronts. She is mid‑smile, head tilted slightly to the right, eyes cast toward the left, as if she just saw something interesting. Her large hoop earrings catch the light, and a faint motion blur suggests she is moving. The shot is a tight medium‑close up that cuts off just above her elbows, with the top of her head near the upper edge of the frame—no rule‑of‑thirds, just accidental framing. Candid, unposed, spontaneous — the subject appears unaware of the camera, caught in a natural moment. Slight tilt and partial crop give an informal, handheld feel. The image has a raw, unprocessed look: no filters, no color grading, no post‑processing aesthetic. A mild overexposure on the face keeps the tones bright but natural. Location: a narrow, historic street lined with colorful storefronts; a red awning is visible on the left, a parked car in the background. Time of day: late morning, soft diffused sunlight from the west, creating gentle shadows on the building facades. Weather: lightly breezy, the scene is slightly hazy, giving an auto‑HDR feel without any intentional HDR look. Short focal length (24–35 mm), wide‑angle lens. Everything is in focus – background and subject – no bokeh or depth‑of‑field blur. The background remains sharp. No portrait‑mode ‘subject isolation’ – the background remains sharp. The composition is intentionally off‑center: the woman’s left eye is slightly above the horizontal midline, her right ear near the right edge. The top of her head touches the upper border, creating a ’cut‑off’ effect. The bottom of the frame cuts just below her waist, leaving a small portion of her denim shorts visible. Natural daylight from the west creates a slight overexposure on the subject’s face, while the background remains evenly lit. No studio lighting or professional composition – just a casual, spontaneous snapshot.”

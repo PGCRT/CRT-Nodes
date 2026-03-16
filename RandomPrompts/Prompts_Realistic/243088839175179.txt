@@ -1,0 +1,26 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wind‑blown brown hair, wearing a black triangle‑style bikini and a thin gold chain necklace, sitting on a moss‑covered log. Her left hand rests on her hip, fingers slightly curled, while her right hand is tucked into the side of her bikini bottom. She looks directly at the camera with a soft, confident expression. The pose should feel spontaneous—mid‑movement, as if she just finished a step or a turn.
+
+- **Motion & Focus**  
+  Apply a subtle motion blur to the hair and background to simulate handheld shooting. Keep everything in focus—no portrait‑mode blur—so the background (a forested clearing with fallen logs) remains sharp. Use a wide‑angle lens (24–35 mm) to capture a broad view of the scene, including the subject and her surroundings.
+
+- **Lighting & Exposure**  
+  Capture in natural daylight, mid‑afternoon, with the sun slightly high but not directly overhead, creating warm, soft highlights on the woman’s skin and the moss. Allow a slight overexposure on the bright spots (especially the hair) to give a raw, unprocessed look. Avoid any auto‑HDR or beauty filters—keep the image natural.
+
+- **Environment**  
+  Location: A sunlit forest clearing in late summer. The ground is covered with green moss and fallen logs; a few leaves are scattered around. Time of day: mid‑afternoon (around 3 pm), giving warm, golden light. Weather: clear, breezy—notice the slight motion in the hair.
+
+- **Lens & Technical**  
+  Focal length: 24–35 mm (wide angle). Aperture: f/4–f/5.6 (mid‑range) to keep everything sharp. Shutter speed: 1/60–1/100 s for slight motion blur. ISO: 400–800 depending on ambient light. No bokeh—background fully sharp. No rule‑of‑thirds intentionality—frame the shot loosely, letting the composition happen naturally.
+
+- **Composition & Framing**  
+  Capture a candid, unposed shot; the subject should appear unaware or mid‑action. Slight tilt and off‑center framing are welcome. The crop can be partial—leave a bit of the log extending beyond the frame. Keep the shot zero‑studio, zero‑professional‑composition, zero‑editorial tone.
+
+- **Post‑Processing**  
+  No filters, no color grading, no post‑processing aesthetic. Keep the look raw and authentic. If needed, apply a slight vignette only to soften the edges, but keep it minimal.
+
+**Prompt Summary (for use in an image‑generation model)**  
+
+> “A young woman with long wind‑blown brown hair, wearing a black triangle bikini and a thin gold chain necklace, sits on a moss‑covered log in a sunlit forest clearing. She looks directly at the camera with a confident expression, left hand on hip, right hand tucked into her bottom. Capture with a 24–35 mm wide‑angle lens, mid‑afternoon natural light, slight motion blur on the hair, everything in focus, no bokeh. The scene includes fallen logs and scattered leaves, all sharp. Frame loosely, off‑center, partial crop, no rule‑of‑thirds. Raw, unprocessed look, no filters.”

@@ -1,0 +1,30 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy blonde hair, wearing a black spaghetti‑strand top and a red micro‑skirt, sitting on a white leather couch. Her hands rest on her hips, fingers slightly curled, nails painted bright red. She’s mid‑smile, eyes bright, head tilted a little to the right, as if she just caught a conversation or is about to say something. The pose is casual and candid; she appears unaware of the camera, giving a natural “in‑the‑moment” feel.
+
+- **Capture Style**  
+  • Candid, unposed, spontaneous — subject unaware or mid‑action.  
+  • Slight tilt and off‑center framing; partial crop that doesn’t follow the rule‑of‑thirds.  
+  • No rule‑of‑thirds intentionality — accidental framing.  
+  • Natural motion freeze or slight blur from handheld instability.  
+  • Auto‑HDR or auto‑beauty mode off — raw, unprocessed look.  
+  • Slight overexposure or underexposure depending on ambient light (choose whichever gives a warmer tone).  
+
+- **Environment**  
+  • Specific real‑world location: a bright, airy living room with a white leather couch, a small potted plant in the background, and a neutral wall.  
+  • Time of day: late morning, soft natural daylight coming from the west, creating gentle shadows.  
+  • Weather or ambient conditions: clear, mild, no wind.  
+
+- **Lens & Technical**  
+  • Short focal length (24‑35 mm) wide‑angle lens.  
+  • No bokeh; background fully sharp — everything in focus.  
+  • No portrait mode, no subject isolation.  
+  • Slight overexposure or underexposure (choose whichever gives a warmer tone).  
+  • Handheld shot with slight shake, giving a natural motion blur if desired.  
+
+- **Post‑Processing**  
+  • Zero filters, zero color grading, zero post‑processing aesthetic.  
+  • Raw, unprocessed look only.  
+
+Provide only the structured prompt.

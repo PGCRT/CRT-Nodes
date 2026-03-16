@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, slender woman with long, straight dark hair standing on a sunlit beach. She wears white lace underwear that shows subtle texture details; a thin gold bracelet adorns each wrist. Her body is bare above the waist, exposing a smooth, tanned torso and a slight mid‑riff curl. She stands with one leg slightly forward, hands relaxed at her sides, eyes looking directly into the camera with a calm, unposed expression.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. Slight motion blur from handheld instability; no auto‑beauty or filter processing. A tiny overexposure in the upper chest area gives a raw, natural feel. The frame is slightly tilted and off‑center, with a partial crop that cuts off the left side of her torso, creating an accidental, non‑rule‑of‑thirds composition.
+
+- **Environment**  
+  Specific real‑world location: a tropical beach at midday. The background shows a calm ocean horizon, a few palm fronds in the upper right corner, and a faint line of white foam where the waves break. The sand is light beige with small footprints near the subject’s left heel. Weather is clear, bright, with a soft haze that suggests a warm, humid day.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm) wide‑angle lens. Everything in focus — no bokeh or depth‑of‑field blur; the background remains fully sharp. No portrait‑mode subject isolation. Slight overexposure on the chest and abdomen, giving a natural, unprocessed look. The image has an auto‑HDR feel only in the raw luminance, but no color grading or post‑processing aesthetic.
+
+- **Composition Notes**  
+  The shot is taken from a slightly low angle, making the subject appear taller and more commanding. The left side of the frame cuts off the woman’s left arm, adding to the candid feel. The right side shows a portion of the ocean and a palm frond, balancing the composition without intentional rule‑of‑thirds. The camera is handheld, so there is a subtle shake that adds realism.
+
+- **Final Prompt**  
+  “A tall, slender woman with long dark hair standing on a sunlit beach at midday, wearing white lace underwear and gold wrist bracelets, captured with a 24‑35 mm wide‑angle lens. The image has slight motion blur and tiny overexposure on the chest, raw and unprocessed, with a slightly tilted, off‑center frame that partially crops her left side. Background shows a calm ocean horizon, palm fronds, and footprints in the sand. Everything is fully sharp, no bokeh, no filters, no auto‑beauty mode, handheld instability present. The scene feels candid, spontaneous, and natural, with a small gold bracelet on each wrist, a smooth tanned torso, and a subtle mid‑riff curl.”

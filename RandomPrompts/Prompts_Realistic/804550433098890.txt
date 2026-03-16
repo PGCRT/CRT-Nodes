@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with voluminous, wavy brown hair sitting on a neatly made bed in a cozy bedroom. She’s wearing an olive‑green cropped T‑shirt that reads “SATALE” in bold white letters and light‑blue bikini bottoms. Her hands are raised to the back of her head as if she’s just finished styling her hair, eyes cast downward in a relaxed, candid mood.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject is mid‑action, slightly unaware of the camera. The shot has a natural “in‑the‑moment” feel with a slight tilt and off‑center framing that gives it an accidental, handheld vibe. No rule‑of‑thirds intentionality; the composition is intentionally imperfect.
+
+- **Motion & Exposure**  
+  Slight motion blur from handheld instability, as if the camera was moving when the shutter was pressed. The exposure is mildly overexposed, letting warm ambient light spill across the scene, creating a raw, unprocessed look without auto‑HDR or beauty filters.
+
+- **Lens & Technical**  
+  Wide‑angle lens (short focal length, ~24 mm) capturing everything in full focus — no bokeh, no depth‑of‑field blur. Background is sharply rendered, from the wooden headboard to the bedside lamp and the textured wall. Everything remains crisp, giving a “realistic” feel.
+
+- **Environment**  
+  Specific real‑world location: a dimly lit bedroom at dusk. A bedside lamp with a warm glow sits on a small wooden table; a white bedspread with subtle folds lies beneath the subject. The time of day is late afternoon/evening, giving soft, ambient light that slightly overexposes the foreground. Weather or ambient conditions are calm, with no wind or noise interfering.
+
+- **Details & Imperfections**  
+  Slight tilt and partial crop on the edges; the frame cuts off a bit of the headboard and lamp, enhancing the candid feel. The subject’s hair has a slight messiness, and her belly button piercing catches the light. The shirt’s text is centered but not perfectly aligned. The bed’s sheets are slightly rumpled, adding realism.
+
+- **Final Prompt**  
+  “A young woman with voluminous wavy brown hair sits on a white bed in a dimly lit bedroom at dusk, wearing an olive‑green cropped T‑shirt that reads ’SATALE’ in bold white letters and light‑blue bikini bottoms. Her hands are raised to the back of her head as if she’s just finished styling her hair, eyes cast downward in a relaxed candid mood. The shot is captured on a wide‑angle lens, everything in full focus with no bokeh, slight motion blur from handheld instability, and a mild overexposure that lets warm ambient light spill across the scene. The framing is slightly tilted and off‑center, with accidental crop that includes a bedside lamp on a wooden table and a wooden headboard, all rendered sharply. The time of day is late afternoon/evening, giving soft ambient lighting. Raw, unprocessed look, no filters or color grading, zero studio lighting, zero professional composition.”

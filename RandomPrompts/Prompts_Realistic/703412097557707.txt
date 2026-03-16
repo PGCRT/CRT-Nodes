@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, curvy woman with long, loose brown hair standing mid‑step on a sun‑bathed desert dune. She’s wearing a thin, translucent white bikini bottom that clings to her curves; her hands are pulling the fabric slightly upward as if she’s about to adjust it. Her face is turned toward the camera with a soft, unposed smile, eyes bright and relaxed. The shot captures her from the knees up, with a focus on her torso, hips, and upper legs.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject appears unaware of the camera, caught mid‑action. Slight tilt and off‑center framing give an accidental, handheld feel. The composition is not rule‑of‑thirds; it’s a natural, imperfect crop that includes a bit of the desert landscape on either side.
+
+- **Motion & Focus**  
+  A slight motion blur at the edges from a handheld shot, but the subject and background remain fully sharp. No portrait‑mode depth‑of‑field blur — everything is in focus, from her skin to the sand beneath her feet.
+
+- **Environment**  
+  Specific real‑world location: a wide, open desert with gentle dunes stretching into the distance. Time of day: late afternoon, the light warm and golden, creating soft shadows and a subtle overexposed highlight on the subject’s chest. Weather: clear, dry, with a faint haze in the air that adds a raw, unprocessed look.
+
+- **Lens & Technical**  
+  Short focal length (20‑35 mm) wide‑angle lens. No bokeh; background is fully sharp. No auto‑HDR or auto‑beauty mode — just a raw, natural image with zero filters, no color grading, and no post‑processing aesthetic. Slight overexposure on the subject’s upper body to capture the ambient light. Wide‑angle gives a sense of spaciousness, while the lack of studio lighting keeps the scene feeling spontaneous.
+
+- **Final Prompt**  
+  “A tall, curvy woman with long, loose brown hair stands mid‑step on a sun‑bathed desert dune, wearing a thin, translucent white bikini bottom that she’s adjusting with both hands. The shot is candid and unposed, slightly tilted and off‑center, captured on a short focal‑length wide‑angle lens. The subject and background are fully sharp with a hint of motion blur from handheld instability. Late afternoon light creates a soft golden overexposure on her chest, while the desert dunes stretch into the distance under a clear, hazy sky. No filters or post‑processing — just raw, natural realism.”

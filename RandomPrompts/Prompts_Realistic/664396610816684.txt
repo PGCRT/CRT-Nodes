@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long brown hair tied in a loose braid, wearing a light‑blue triangle bikini top and matching bottom, sitting on a white‑sheeted bed. She is leaning forward slightly, hands resting on the mattress, head tilted to the left, eyes looking directly at the camera with a soft, natural smile. Her glasses have thin metal frames that catch the light.
+
+- **Lighting & Exposure**  
+  Natural daylight from a western window, mid‑afternoon, creating a warm, slightly overexposed highlight on her chest and left shoulder. The exposure is uneven—soft highlights with a faint vignette at the corners. No auto‑beauty or filter processing; raw, unedited look.
+
+- **Camera & Lens Settings**  
+  35 mm wide‑angle lens, f/4.0 aperture, 1/125 s shutter speed, ISO 400. Slight handheld shake gives a subtle motion blur around the edges. Everything in focus—no portrait‑mode depth‑of‑field blur; background (a wooden headboard and two white pillows) is fully sharp.
+
+- **Composition & Framing**  
+  Candid, unposed framing: the shot is slightly off‑center, with the subject’s left side cutting close to the right edge. The composition has no intentional rule‑of‑thirds; the bed’s corner and headboard create a natural frame. The top of the frame captures the upper part of her head and the wooden headboard, while the bottom cuts just below her knees.
+
+- **Environment**  
+  A simple bedroom with a light‑wood headboard, white pillows, and a plain beige wall. The time of day is late afternoon, giving a warm, slightly hazy ambient light. A faint window glare is visible on the left side of the frame.
+
+- **Technical Details**  
+  Short focal length (35 mm) gives a wide‑angle view that keeps the background fully sharp but keeps the subject prominent. No bokeh—everything from foreground to background is in focus. Slight tilt to the right adds a casual, spontaneous feel. The image has a natural motion freeze or slight blur from handheld instability, giving it a candid vibe.
+
+- **Prompt for Text‑to‑Image Generation**  
+  “A young woman with long brown hair in a loose braid, wearing a light‑blue triangle bikini top and matching bottom, sitting on a white‑sheeted bed, leaning forward with hands on the mattress, head tilted left, glasses on her face, natural smile. Natural daylight from a western window, mid‑afternoon, soft overexposure on chest and shoulder. 35 mm wide‑angle lens at f/4.0, 1/125 s, ISO 400, slight handheld shake. Candid, unposed framing, slightly off‑center, top of frame captures upper head and wooden headboard, bottom just below knees. Simple bedroom with light‑wood headboard, white pillows, beige wall. Everything in focus, no bokeh. Slight tilt right, natural motion blur.”

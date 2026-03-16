@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark brown hair, wearing a sheer white camisole and a light‑colored skirt, leaning back on a beige sofa. Her arms are raised behind her head, elbows bent, creating a casual, relaxed posture. She’s looking slightly off‑camera, as if caught mid‑thought or mid‑conversation.
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window to the left, producing a soft, warm glow with a slight overexposure on the face and upper body. The lamp in the corner casts a gentle backlight, adding subtle highlights. No auto‑beauty or filter processing—raw, unprocessed look.
+
+- **Camera Settings**  
+  Wide‑angle lens (24‑35 mm), short focal length, handheld. Slight motion blur from the camera’s instability, but everything remains fully sharp—no bokeh, no depth‑of‑field blur. No rule‑of‑thirds; framing is accidental, slightly tilted and off‑center.
+
+- **Environment**  
+  A bright, lived‑in living room. A large window with sheer curtains, a wooden lamp with a white shade, a small potted plant on the windowsill, a stack of books, and a white pillow behind the subject. The time of day is late morning, with warm sunlight streaming in. Weather is clear, ambient light is soft.
+
+- **Composition & Details**  
+  Capture a candid, unposed moment—subject appears unaware or mid‑action. Encourage imperfections: slight tilt, partial crop, off‑center framing. Keep background fully sharp; no portrait‑mode isolation. The scene should feel spontaneous, natural, and raw, with zero studio lighting or editorial tone.
+
+- **Prompt for Text‑to‑Image Generation**  
+  “A young woman with long dark brown hair, wearing a sheer white camisole and light skirt, leaning back on a beige sofa in a bright living room. Her arms are raised behind her head, elbows bent, looking slightly off‑camera. Natural daylight from a large window to the left, soft warm glow with slight overexposure on the face. A wooden lamp with a white shade sits in the corner, a potted plant on the windowsill, a stack of books, and a white pillow behind her. Wide‑angle lens (24‑35 mm), handheld shot with slight motion blur but fully sharp background. Capture candid, unposed moment; slight tilt, off‑center framing, accidental composition. No filters or post‑processing—raw, natural look.”

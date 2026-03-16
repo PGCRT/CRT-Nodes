@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail, mid‑smile, standing in front of a white house with wooden trim. She’s bare‑chested, wearing dark jogger pants, hands relaxed at her sides, body slightly angled toward the camera. Her hair is loosely tied, a few strands framing her face.  
+
+- **Motion & Focus**  
+  Slight motion blur from handheld shake; everything in focus—no bokeh, no depth‑of‑field blur. The image has an auto‑HDR feel but no color grading or filters—raw, natural look.  
+
+- **Lighting & Exposure**  
+  Natural daylight, mid‑afternoon, slight overexposure on the face and upper body; ambient light creates soft highlights on her skin and a gentle warm tint.  
+
+- **Lens & Technical**  
+  Wide‑angle lens (24‑35 mm), short focal length, no portrait mode. All elements—subject, background, foreground—are fully sharp.  
+
+- **Environment**  
+  A sunny, mid‑afternoon day in a suburban driveway. The house has a white stucco wall with brown trim, a single window, and a small porch light. Behind the woman, a green lawn, a few spiky plants, and a wooden fence are visible. A second person in a green shirt sits on a chair in the background, slightly out of focus but still sharp.  
+
+- **Composition & Framing**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Slight tilt and off‑center framing; partial crop at the edges. No rule‑of‑thirds intentionality.  
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, zero post‑processing aesthetic. Raw, natural look with slight overexposure or underexposure depending on ambient light.  
+
+- **Prompt for Generation**  
+  “A young woman with a high ponytail, bare‑chested and wearing dark jogger pants, stands in front of a white house with wooden trim on a sunny mid‑afternoon. She’s mid‑smile, hands at her sides, body slightly angled toward the camera. Capture with a wide‑angle lens (24‑35 mm), short focal length, everything in focus, slight motion blur from handheld shake. Natural daylight with soft highlights and a gentle warm tint; slight overexposure on the face. Background includes a green lawn, spiky plants, and a wooden fence; a second person in a green shirt sits on a chair behind her. Candid, unposed, spontaneous framing—slight tilt and off‑center crop, partial edge crop. Raw, unprocessed look, no filters or color grading.”

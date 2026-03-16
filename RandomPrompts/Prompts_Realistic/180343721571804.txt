@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with voluminous, bouncy curls cascading over her shoulders, standing mid‑step in a casual, lived‑in apartment. She’s wearing a black fishnet skirt that clings to her hips and a simple black waistband top; her arms are slightly bent, one hand resting near her hip, the other relaxed by her side. Her face is turned toward the camera but not directly at it—she’s caught in a natural, unposed moment, eyes half‑closed as if she’s just finished a conversation or is about to move.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—an “in‑the‑moment” snapshot where the subject is unaware or mid‑action. The frame is slightly tilted and off‑center, with a partial crop that gives a raw, handheld feel. No rule‑of‑thirds intentionality—just accidental framing that captures the subject’s upper body and part of the background.
+
+- **Imperfections & Aesthetic**  
+  Slight motion blur from a handheld shot; a hint of overexposure in the highlights to keep the look natural. Auto‑HDR or auto‑beauty mode turned off—no filters, no color grading, no post‑processing aesthetic. The image retains a slight warmth from ambient daylight, with a tiny grain that adds realism.
+
+- **Environment**  
+  Specific real‑world location: a bright, slightly cluttered living room. A white shelving unit filled with bottles, a basket, and a red bag sits behind her to the right; a framed picture hangs on the wall to the left. The time of day is late morning, with soft natural light coming from a window out of frame, creating gentle shadows and a subtle highlight on her chest.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm) wide‑angle lens. Everything is fully sharp—no bokeh, no depth‑of‑field blur; the background remains in focus. No portrait mode or subject isolation. The composition is a wide, casual shot that captures the subject’s upper body, part of her lower body, and a portion of the room’s interior.
+
+- **Prompt Summary**  
+  “A young woman with bouncy curls, wearing a black fishnet skirt and a waistband top, stands mid‑step in a bright, cluttered apartment during late morning. The shot is candid, slightly tilted, and partially cropped, captured on a 24‑35 mm wide‑angle lens with full sharpness. Slight motion blur and a hint of overexposure give it a raw, natural feel. Background includes a white shelving unit and a framed picture, all in focus, no filters or post‑processing.”

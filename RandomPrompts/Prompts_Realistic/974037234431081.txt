@@ -1,0 +1,26 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with wavy, shoulder‑length blonde hair, wearing a tight, high‑neck orange bodysuit, captured mid‑step in a casual, spontaneous pose. Her left hand rests on her thigh, right arm extended outward as if she’s about to grab something or balance herself. Slight motion blur at the fingertips and hand suggests natural movement.
+
+- **Facial Expression & Lighting**  
+  She smiles softly, eyes slightly tilted toward the camera, giving an informal, candid feel. The lighting is natural daylight from a large window on the right, creating a mild overexposure on her face and body, with subtle highlights on her shoulder and thigh. No auto‑beauty or filter processing—raw, unedited look.
+
+- **Environment**  
+  The scene is set in a bright, airy interior space: a white brick wall on the left, a tall fiddle‑leaf fig plant behind her, and a small wooden side table with a potted plant on the far left. A large window on the right lets in warm, natural light; the time of day is mid‑afternoon, around 3 pm, with soft, diffused sunlight. The floor is light wood, and a white planter sits near the window.
+
+- **Lens & Technical**  
+  Shot with a wide‑angle lens (24–35 mm), short focal length, everything in focus from foreground to background—no bokeh. Slight handheld shake gives a natural motion blur around the edges. The composition is off‑center and slightly tilted, no rule‑of‑thirds intentionality. No portrait‑mode depth‑of‑field blur; the background (brick wall, plant, window) remains sharp.
+
+- **Color & Tone**  
+  Warm, natural color palette: orange bodysuit, green foliage, white brick, light wood. Slight overexposure on the subject’s upper body, giving a bright, airy feel. No post‑processing color grading—just raw capture.
+
+- **Details to Emulate**  
+  - Slight tilt of the camera, creating a dynamic angle.  
+  - Partial crop: the left edge cuts off a bit of the side table, right edge cuts off part of the window frame.  
+  - Natural motion blur on the hands and arms.  
+  - Background fully sharp, no depth‑of‑field blur.  
+  - No filters or auto‑beauty mode—just a genuine, candid snapshot.
+
+**Prompt Summary**  
+"Mid‑afternoon candid shot of a blonde woman in an orange bodysuit, captured with a wide‑angle lens at 35 mm, slightly tilted and handheld, all elements in focus. She’s mid‑step, hand on thigh, smiling softly, with natural daylight from a window creating mild overexposure. The setting is a bright interior with a white brick wall, fiddle‑leaf fig plant, and wooden side table. Capture raw, unprocessed details—slight motion blur on the hands, off‑center framing, no bokeh."

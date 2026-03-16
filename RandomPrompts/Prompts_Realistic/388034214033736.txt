@@ -1,0 +1,23 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, sun‑kissed hair walking confidently down a cobblestone street in New York’s SoHo district. She wears a loose, camel‑colored tank top and matching drawstring trousers, her hands relaxed at her sides, mid‑step with a subtle motion blur that conveys movement. Her face is turned slightly toward the camera but not directly at it—capturing a candid, unposed moment.
+
+- **Lighting & Exposure**  
+  Warm, golden hour sunlight from the east creates a gentle overexposure on the subject’s face and clothing, with a slight flare in the upper right corner. The exposure is naturally raw—no auto‑HDR or beauty filters—just the ambient light of late afternoon. A wide‑angle lens (24 mm) captures the scene with everything in focus, from the woman to the buildings and pedestrians behind her.
+
+- **Environment & Background**  
+  The background shows a typical SoHo street: brick facades, fire escapes, a few passersby in casual attire, and a patch of green foliage from a nearby tree. The time of day is late afternoon, around 5 pm, giving a soft, warm glow. Weather is clear with a light breeze that ruffles the woman’s hair. The street is lined with red‑brick buildings, and the cobblestones are slightly worn, adding texture.
+
+- **Lens & Technical**  
+  Use a short focal length (24–35 mm) wide‑angle lens. Capture with handheld stability—slight shake and tilt for a natural, spontaneous feel. No bokeh; keep the background fully sharp. Avoid rule‑of‑thirds composition—frame the subject off‑center, letting her appear slightly left of center with the street extending to the right. Keep everything in focus: subject, background, and foreground details.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—an “in‑action” snapshot where the subject is unaware of the camera. Encourage imperfections: a slight tilt in the frame, partial crop that cuts off part of the street, and a hint of motion blur from the subject’s step. No studio lighting or professional composition—just a raw, real‑world moment.
+
+- **Post‑Processing**  
+  Keep it minimal—no filters, no color grading, no auto‑beauty mode. Slight overexposure on the subject to capture the ambient light. The final image should feel like a genuine, unedited photograph taken with a DSLR or mirrorless camera in natural daylight.
+
+**Prompt Summary:**
+
+> “A young woman in a camel tank and drawstring trousers walks down a cobblestone SoHo street at late afternoon, captured on a 24 mm wide‑angle lens with slight motion blur and handheld tilt. Warm golden sunlight creates a gentle overexposure on her face, while the background of brick buildings, fire escapes, and passersby remains fully sharp. The frame is off‑center and partially cropped, preserving a candid, spontaneous feel with no filters or post‑processing—just a raw, natural photograph.”

@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A young woman in a black crop‑top and tan joggers is mid‑step, capturing a selfie with her phone raised. Her hair flows slightly to the side, a subtle motion blur connotes movement. She’s wearing white sneakers with a brown Nike swoosh; her left foot is planted, right foot pushing off. The back of her head is turned toward the camera, giving an informal, candid feel.
+
+- **Pose & Composition**  
+  The shot is taken from a slightly low angle, wide‑angle lens (24–35 mm). The framing is accidental: the subject is off‑center to the right, the top of the frame cuts off a bit of her hair, and the bottom edge crops the toes of her shoe. No rule‑of‑thirds—just a spontaneous, handheld composition.
+
+- **Lighting & Exposure**  
+  Natural daylight, mid‑afternoon, soft but warm ambient light. Slight overexposure on the subject’s back, giving a subtle halo. Auto‑HDR off; no color grading or filters—raw, unprocessed look. The background is fully sharp, no bokeh, no portrait‑mode isolation.
+
+- **Environment**  
+  Outdoor café patio in an urban setting. A concrete floor, a wooden table, a green chair, and a building with large windows behind. A few other patrons are visible: one woman in a white tank top holding a coffee cup, another in a black tank top and jeans, a man in a grey shirt. A potted plant sits on the table, a brown leather bag hangs from a woman’s shoulder. The scene is lively but casual.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, handheld shake, minor overexposure on the back of the subject’s shirt. The phone’s screen shows a preview of the selfie. Her watch is on her left wrist, a black strap. The sneakers have a brown Nike logo. The joggers’ pockets are visible, with a subtle crease at the waistband.
+
+- **Lens & Technical**  
+  Short focal length (24–35 mm), wide‑angle. Everything in focus—no depth‑of‑field blur. No portrait mode. Slight motion blur on the subject’s legs to emphasize movement. The background is fully sharp, no bokeh.
+
+- **Prompt Summary for AI Image Generation**  
+  “A candid, wide‑angle shot of a young woman in a black crop‑top and tan joggers taking a selfie with her phone raised, captured mid‑step on an outdoor café patio. The scene includes other patrons, a wooden table, a green chair, a potted plant, and a building with large windows in the background. Natural daylight, mid‑afternoon, slight overexposure, handheld shake, accidental off‑center framing, no filters or color grading, everything in focus, subtle motion blur on the subject’s legs.”

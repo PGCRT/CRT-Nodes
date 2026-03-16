@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair standing on a sunlit dirt trail in a dry, grassy meadow. She’s bare‑shouldered, wearing high‑waisted beige jeans that sit snugly at the hips. Her hands hang loosely by her sides, slightly curled, as if she just finished a casual gesture or is about to pick up something from the ground. Her face is turned toward the camera but not directly at it—slight off‑center tilt gives a candid feel.
+
+- **Lighting & Exposure**  
+  Warm, golden hour light from the west casts a soft overexposure on her upper body, with a subtle halo around her hair. The exposure is slightly uneven: the background is fully sharp but the foreground has a gentle haze, as if captured with a handheld camera in natural daylight. No auto‑beauty or filter enhancements—just raw, unprocessed imagery.
+
+- **Motion & Focus**  
+  A slight motion blur at the edges of her shoulders and the grass around her feet, indicating a quick shutter speed and a little instability. Everything remains in focus—no portrait‑mode depth‑of‑field blur. The shot is wide‑angled, using a short focal length (≈24 mm) to keep the entire scene crisp.
+
+- **Environment**  
+  The setting is a dry, grassy field with scattered shrubs and a dirt path that runs behind her. The time of day is late afternoon, around sunset, giving a warm, slightly hazy sky. The weather is clear, with a light breeze that ruffles the grass.
+
+- **Lens & Technical**  
+  Short focal length (≈24 mm), wide‑angle lens. No bokeh—background is fully sharp. No rule‑of‑thirds intentionality; framing is accidental and spontaneous. The composition is “mid‑action” candid: she appears to be in the middle of a small movement, perhaps reaching for or placing an object.
+
+- **Prompt Summary**  
+  *“A young woman with long wavy brown hair stands on a sunlit dirt trail in a dry grassy meadow, bare‑shouldered and wearing high‑waisted beige jeans. Her hands hang loosely by her sides, slightly curled. Warm golden hour light casts a soft overexposure on her upper body, with a subtle halo around her hair. The shot is wide‑angled at ~24 mm, capturing everything in focus with slight motion blur at the edges from handheld instability. The background is fully sharp, no bokeh. The time of day is late afternoon sunset, clear weather, light breeze. Capture style: candid, unposed, spontaneous—subject unaware or mid‑action. Imperfections encouraged: slight tilt, off‑center framing, partial crop. No rule‑of‑thirds intentionality — accidental framing. Zero studio lighting, zero professional composition, zero editorial tone. Natural motion freeze or slight blur from handheld instability.”*

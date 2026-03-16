@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A fit, late‑twenties woman with long, wavy brown hair, wearing a navy blue “bell”‑branded bikini, standing on a sunlit beach. Her left hand rests on her hip, right hand lightly touches her chest, body angled slightly to the right, mid‑step as if she just walked into frame.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. Slight tilt and off‑center framing; partial crop that cuts off a bit of the background on the top left. No rule‑of‑thirds intentionality. Handheld shot with natural motion blur and slight overexposure to keep the ambient light warm.
+
+- **Environment**  
+  Specific real‑world location: a tropical beach with palm fronds visible in the upper corners, the ocean stretching across the mid‑background, and a patch of green shrubbery on the lower right. Time of day: early late afternoon, soft golden hour. Weather: clear, humid, with a light breeze.
+
+- **Lens & Technical**  
+  Short focal length (24–35 mm), wide‑angle lens. Everything in focus — no bokeh, no depth‑of‑field blur; background fully sharp. No portrait mode or subject isolation. Slight auto‑HDR or auto‑beauty mode off for a raw, unprocessed look. No filters, no color grading, no post‑processing aesthetic.
+
+- **Composition Notes**  
+  The frame captures the woman from the knees up, with her full torso and upper legs visible. The background includes a hint of the sea’s surface, a few palm leaves at the top left and right, and a small cluster of green plants at the bottom right. The shot is slightly cropped on the left side, giving an accidental, spontaneous feel.
+
+- **Lighting**  
+  Natural sunlight from the west, creating a warm, slightly overexposed highlight on the woman’s face and shoulders. No studio lighting, no professional composition.
+
+- **Final Prompt**  
+  “A fit, late‑twenties woman with long wavy brown hair in a navy blue bell‑branded bikini stands on a sunlit beach, left hand on hip, right hand touching chest, mid‑step into frame. Candid, unposed, spontaneous shot with slight tilt and off‑center framing, partial crop. Background shows ocean, palm fronds, green shrubbery; early late afternoon golden hour. 24–35 mm wide‑angle lens, everything in focus, no bokeh, raw auto‑HDR off, natural motion blur, slight overexposure. No filters, no color grading, no post‑processing.”

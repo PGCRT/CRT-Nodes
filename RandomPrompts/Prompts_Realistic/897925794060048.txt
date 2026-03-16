@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy dark hair, wearing a red sports bra and black bikini bottoms, captured mid‑turn as she holds a red towel in her hand. She’s standing on a concrete bleacher, leaning slightly against the rail, with her body angled toward the camera but her face turned back to look directly at the lens. Her expression is bright, casual, and unposed—like she’s just finished a workout or a game.
+
+- **Candid, Unposed Moment**  
+  The shot should feel spontaneous: the subject is “mid‑action,” as if she’s about to do something or is reacting to an event. Slight tilt and off‑center framing give it that accidental, handheld vibe. No rule‑of‑thirds intentionality—just a natural, imperfect composition.
+
+- **Environment**  
+  Location: An outdoor sports field with white bleachers in the background. The time of day is late afternoon, around 4 pm, giving warm, golden ambient light that slightly overexposes the scene. Weather is clear, with a bright blue sky and a few scattered clouds. A group of people are visible on the bleachers behind her—some in red shirts, some in yellow, all in casual athletic wear—adding depth and context to the setting.
+
+- **Lens & Technical**  
+  Use a wide‑angle lens (e.g., 24–35 mm) with a short focal length to capture a broad view of the scene. Keep everything in focus—no bokeh or subject isolation. Aim for a fully sharp background, but allow a slight motion blur from handheld instability to emphasize movement. Apply auto‑HDR or “auto‑beauty” off; keep the look raw and unprocessed. No filters, no color grading, no post‑processing aesthetic—just natural lighting and a genuine capture.
+
+- **Lighting & Exposure**  
+  Capture with a wide lens in natural daylight. Allow a slight overexposure to brighten the scene, letting the ambient light create a warm glow. Keep the exposure raw; avoid any studio lighting or professional composition.
+
+- **Final Prompt Summary**  
+  “A young woman in a red sports bra and black bikini bottoms stands on a concrete bleacher at an outdoor sports field, holding a red towel as she turns mid‑pose. The scene is captured with a short focal length wide‑angle lens, all elements in focus but with slight motion blur from handheld shake. The background shows a group of people on bleachers under a bright late‑afternoon sky. The image has a raw, unprocessed look—no filters or color grading—with a slight overexposure that gives it a natural, candid feel.”

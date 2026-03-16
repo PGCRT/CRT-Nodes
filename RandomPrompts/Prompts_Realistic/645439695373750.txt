@@ -1,0 +1,29 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with dark, wavy hair tied in a high ponytail, wearing a white ribbed halter crop‑top and matching shorts, sits cross‑legged on a wooden bed. She has a white cat‑ear headband perched on her head, large gold hoop earrings, and a subtle smile. Her left hand rests on her hip, right hand near her waist, creating a casual, spontaneous pose.
+
+- **Lighting & Exposure**  
+  Natural daylight from a window behind the bed casts soft, warm sunlight across the scene. Slight overexposure in the upper left corner gives a raw, unprocessed look. No auto‑HDR or beauty filters—just a handheld shot with a wide‑angle lens.
+
+- **Camera Settings**  
+  - Lens: 24‑35 mm wide‑angle, short focal length.  
+  - Aperture: f/4–f/5.6 (wide opening).  
+  - Shutter speed: 1/60–1/100 s (slight motion blur from handheld).  
+  - ISO: 400–800 (depending on ambient light).  
+  - Focus: everything in focus—background and subject.
+
+- **Composition & Framing**  
+  Candid, unposed framing with a slight tilt; the shot is off‑center, not following the rule of thirds. The bed occupies the lower two‑thirdds of the frame, the window’s curtain appears in the upper left, and a small wooden nightstand with a stack of books sits to the right. No intentional depth‑of‑field blur—everything from foreground to background is sharp.
+
+- **Environment**  
+  A bright, airy bedroom with light‑colored walls and a wooden frame. The time of day is mid‑afternoon, with warm, diffused sunlight filtering through a sheer curtain. The weather outside is clear, adding natural contrast to the interior.
+
+- **Technical Details**  
+  - No bokeh; background fully sharp.  
+  - Slight motion blur on the subject’s hands and hair from handheld instability.  
+  - Raw, unprocessed look—no color grading or filters.  
+  - The image has a slight overexposure in the upper left, giving it an authentic, spontaneous feel.
+
+- **Final Prompt**  
+  “A young woman with dark wavy hair in a high ponytail, wearing a white ribbed halter crop‑top, matching shorts, and a white cat‑ear headband, sits cross‑legged on a wooden bed. She has large gold hoop earrings, her left hand on her hip, right hand near waist. Natural daylight from a window behind the bed casts soft warm sunlight; slight overexposure in the upper left. Shot on a 24‑35 mm wide‑angle lens at f/5, 1/80 s, ISO 600. Candid, unposed framing with a slight tilt, off‑center composition. Everything in focus—bed, window curtain, and a small wooden nightstand with books on the right. Raw, unprocessed look, no filters.”

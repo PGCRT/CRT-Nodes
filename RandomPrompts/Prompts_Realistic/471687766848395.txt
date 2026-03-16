@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, flowing blonde hair sitting on a brown leather couch in a modern living room. She’s wearing a black lace bodysuit with fishnet details and a tied bow at the chest. Her left arm rests on her thigh, right arm extended outward, head tilted slightly to the right, eyes looking off‑camera as if she’s just caught in a spontaneous moment.
+
+- **Motion & Focus**  
+  Slight motion blur on the hair and arms from handheld shake; everything else fully sharp—no bokeh, no portrait‑mode isolation. The image has a raw, unprocessed look: no filters, no auto‑beauty, no color grading. A tiny overexposure at the top left corner gives it an ambient, natural feel.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24 mm), short focal length, everything in focus. No rule‑of‑thirds intentionality—framing is accidental, slightly tilted and off‑center. The background is a neutral gray wall, a white door frame on the left, a small bottle on the couch back right, and a pink bag on the far left corner.
+
+- **Environment**  
+  Location: a contemporary apartment living room. Time of day: late afternoon, soft natural light coming from the west, creating gentle shadows. Weather: clear, mild—no wind but the subject’s hair is caught mid‑swing. Ambient details: a white pillow behind her left shoulder, a black leather bag on the right side of the couch, a plastic water bottle with a red cap on the back right corner.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Imperfections encouraged: slight tilt, off‑center framing, partial crop. Zero studio lighting, zero professional composition, zero editorial tone. Natural motion freeze or slight blur from handheld instability.
+
+- **Prompt Summary for Generation**  
+  “A young woman with long blonde hair in a black lace bodysuit sits on a brown leather couch in a modern living room, captured with a wide‑angle lens at 24 mm. The image has slight motion blur on the hair and arms from handheld shake but everything else is fully sharp—no bokeh. The framing is accidental and slightly tilted, off‑center. The background shows a gray wall, a white door frame, a pink bag, a white pillow, and a water bottle with a red cap. The lighting is late‑afternoon natural light from the west, creating soft shadows and a tiny overexposure at the top left. The scene feels candid and spontaneous, as if caught mid‑action.”

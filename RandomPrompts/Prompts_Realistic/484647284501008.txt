@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high bun and loose strands framing her face, wearing an oversized, distressed beige sweatshirt that’s slightly ripped at the side, holding a small white bowl in her right hand as she reaches for something on a table. She’s mid‑smile, head turned to the left, eyes bright, capturing a spontaneous, “in‑the‑moment” vibe.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject is unaware of the camera, caught in a natural motion. Slight tilt and off‑center framing; the crop is partial, giving an accidental, handheld feel. No rule‑of‑thirds intentionality—everything is framed as if the photographer was just walking past and snapped it.
+
+- **Environment**  
+  A bright, sunlit living room with a large window that looks out onto a city street. The time of day is late morning, with warm, slightly overcast light that gives a soft, natural overexposure. Outside the window, parked cars and brick buildings are visible; the scene is bustling but calm.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm) wide‑angle lens, no bokeh. Everything is fully sharp—no depth‑of‑field blur, just a crisp, hand‑held capture. Slight motion blur from the subject’s movement and the photographer’s instability. Auto‑HDR or auto‑beauty mode off; no filters, no color grading, no post‑processing aesthetic. The image has a raw, unprocessed look with natural contrast.
+
+- **Composition Details**  
+  The composition is accidental: the subject is slightly off‑center to the right, the window frame cuts across the top left, and the couch cushion sits in the lower right. The shot captures a slice of everyday life—no studio lighting, no professional composition, no editorial tone. The background is fully sharp, with the street outside the window in focus.
+
+- **Lighting & Color**  
+  Natural daylight from the window creates a slight overexposure on the subject’s face and a gentle warmth across the scene. The color palette is muted earth tones—beige sweatshirt, brown couch, warm wood tones of the table—and the light has a slight haze that suggests a cloudy but bright morning.
+
+- **Final Prompt**  
+  “A young woman with a high bun and loose strands framing her face, wearing an oversized, distressed beige sweatshirt that’s slightly ripped at the side, holding a small white bowl in her right hand as she reaches for something on a table. She’s mid‑smile, head turned to the left, capturing a spontaneous, ‘in‑the‑moment’ vibe. The shot is taken with a short focal length wide‑angle lens, everything fully sharp, slight motion blur from handheld instability. The scene is a bright, sunlit living room with a large window that looks out onto a city street; it’s late morning, slightly overcast. The composition is accidental—subject off‑center, partial crop, no rule‑of‑thirds intentionality. No filters, no color grading, raw and unprocessed. Capture style: candid, unposed, spontaneous—subject unaware or mid‑action. Environment: specific real‑world location, time of day, weather or ambient conditions.”

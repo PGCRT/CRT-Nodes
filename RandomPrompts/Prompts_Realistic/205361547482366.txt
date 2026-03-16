@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A young woman with light brown hair tied back, wearing a muted green T‑shirt, is mid‑pencil‑stroke on a beige notepad. Her left hand steadies the paper while her right hand holds a wooden pencil with a pink eraser. She’s smiling slightly, eyes focused downward, capturing a spontaneous, “in‑the‑moment” vibe.
+
+- **Pose & Composition**  
+  Candid, unposed, spontaneous — the subject is unaware of the camera, caught in a natural motion. Slight tilt and off‑center framing; the shot is partially cropped on the right side, giving an accidental, handheld feel. No rule‑of‑thirds intentionality—just a casual, raw composition.
+
+- **Lighting & Exposure**  
+  Zero studio lighting, zero professional composition, zero editorial tone. Ambient daylight from a bright window creates a slight overexposure on the subject’s face and a subtle warm glow. Slight motion blur from handheld instability freezes the pencil movement.
+
+- **Lens & Technical**  
+  Short focal length (≈20 mm) wide‑angle lens, everything in focus—no bokeh, no depth‑of‑field blur. No portrait mode or subject isolation; background remains fully sharp. Slight auto‑HDR or auto‑beauty mode off for a raw, unprocessed look. No filters, no color grading, no post‑processing aesthetic.
+
+- **Environment**  
+  Specific real‑world location: a cozy home office or living room. A wooden bookshelf with books and a green plant is visible in the background, along with a rolled blanket and a framed picture on the wall. Time of day: late morning, soft natural light. Weather or ambient conditions: clear, warm, slightly hazy.
+
+- **Details & Imperfections**  
+  Slight tilt, off‑center framing, partial crop. The pencil’s tip is barely pressed into the paper, leaving a faint smudge. Her nails are painted a soft pink, adding a subtle detail. A second pencil lies on the table in the lower right corner, adding context.
+
+- **Prompt Summary**  
+  “A young woman in a muted green T‑shirt, mid‑pencil‑stroke on a beige notepad, captured with a 20 mm wide‑angle lens in a cozy home office. The shot is candid and slightly tilted, with accidental framing and partial crop, ambient daylight causing a soft overexposure. All elements are in focus, no bokeh, no filters—raw, unprocessed realism.”

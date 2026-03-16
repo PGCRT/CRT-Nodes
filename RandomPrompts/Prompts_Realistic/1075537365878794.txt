@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair and round glasses, wearing a mustard‑yellow zip‑up hoodie over a plain white tee, orange high‑waist shorts, and fish‑net leggings with white elastic bands. She’s mid‑step on a sunny urban street, one hand in her pocket, the other slightly raised, body angled toward the camera but not perfectly centered. Her expression is natural, unposed, with a subtle smile.
+
+- **Motion & Focus**  
+  Slight motion blur at the edges from handheld shake; everything in focus—no portrait‑mode depth of field. The image has a raw, auto‑HDR feel: no filters, no color grading, no post‑processing aesthetic. A tiny overexposure on the highlights gives it that ambient‑light vibe.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm), short focal length. No bokeh—background is fully sharp. The composition is accidental: slight tilt, off‑center framing, partial crop. No rule‑of‑thirds intentionality.
+
+- **Environment**  
+  A colorful city alley with blue and orange facades, a small potted plant on a sidewalk, a concrete street, and a manhole cover in the lower right. The scene is captured at midday, with bright, direct sunlight casting soft shadows; the weather is clear, with a hint of haze from the ambient light.
+
+- **Lighting & Exposure**  
+  Natural daylight, slight overexposure on the subject’s face and upper body, subtle contrast. No studio lighting, no professional composition, zero editorial tone—just a candid snapshot.
+
+- **Prompt Summary for Generation**  
+  “A candid, wide‑angle shot of a woman in a mustard hoodie, white tee, orange shorts, and fish‑net leggings on a sunny city alley. Capture her mid‑step with slight motion blur, everything in focus, accidental framing, no filters—raw auto‑HDR look. The background shows blue and orange buildings, a potted plant, and a manhole cover, all sharply rendered under bright midday sun.”

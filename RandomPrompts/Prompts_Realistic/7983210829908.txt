@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark brown hair, wearing a plain white T‑shirt and a delicate gold necklace, captured mid‑gesture as if she’s just finished speaking or is about to say something. Her face is slightly turned toward the camera, eyes half‑closed, mouth open as if caught in an involuntary expression. She holds a small black plush toy in her left hand, which rests on a patterned cushion beside her.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject is unaware of the camera’s presence or is mid‑action. The shot has slight motion blur from handheld instability, with a tiny tilt that gives it an accidental, off‑center feel. No rule‑of‑thirds intentionality; the framing is imperfect and partially cropped at the edges.
+
+- **Environment**  
+  A bright, sunlit living room in the late afternoon. The time of day is roughly 4:30 pm, with warm natural light coming from a window on the right side of the frame. The room contains a wooden desk with a laptop, a small framed photograph on the wall, a bookshelf filled with books and mugs, a green potted plant, and a black plush toy on a floral cushion. The ceiling has a simple white dome light fixture.
+
+- **Lens & Technical**  
+  Short focal length (≈20 mm) wide‑angle lens, no bokeh, everything in focus from foreground to background. No depth‑of‑field blur; the background is fully sharp. Auto‑HDR or auto‑beauty mode off — raw, unprocessed look. Slight overexposure due to ambient light. Wide‑angle captures a broad view of the room, including the ceiling fixture and the window’s glare.
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, zero post‑processing aesthetic. The image retains natural imperfections: slight grain, minor dust specks, and a faint vignette from the wide‑angle lens. The overall tone is warm, slightly hazy, with a natural color palette.
+
+- **Final Prompt**  
+  “A candid, unposed selfie of a young woman in a sunlit living room at late afternoon, captured on a 20 mm wide‑angle lens with slight motion blur and accidental tilt. She wears a white T‑shirt and gold necklace, holds a black plush toy, and stands beside a floral cushion. The background shows a wooden desk with a laptop, a bookshelf, a green plant, and a framed photo on the wall. The scene is fully sharp, raw, unprocessed, with a slight overexposure from natural light. No filters or color grading—just a natural, gritty, handheld snapshot.”

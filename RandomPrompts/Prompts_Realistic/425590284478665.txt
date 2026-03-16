@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail and natural makeup, wearing a tie‑dye orange tank top and distressed denim shorts, sitting cross‑legged on a light‑colored tile floor. Her left hand rests on her thigh, right hand near her knee, body slightly tilted to the left, capturing a casual, mid‑movement candid moment.
+
+- **Lighting & Exposure**  
+  Soft natural daylight from a window on the right side of the room; slight overexposure in the upper right corner to emphasize ambient light. No auto‑HDR or beauty filters—raw, unprocessed look. Slight handheld shake for authenticity.
+
+- **Environment**  
+  A bright, airy bedroom with a beige armchair in the left rear, a dark wooden dresser topped with candles and a vase of red‑pink roses, a white lamp, and a bed with a textured throw on the right. The time of day is late morning; the window lets in warm, diffused light that creates subtle highlights on the subject’s skin and clothing.
+
+- **Lens & Technical**  
+  24 mm wide‑angle lens, short focal length, fully sharp background (no bokeh). All elements in focus—no portrait‑mode isolation. Slight motion blur at the edges to suggest spontaneous movement. Composition is accidental: off‑center framing, no rule‑of‑thirds intentionality, partial crop that cuts off a bit of the armchair for realism.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject appears unaware of the camera. Slight tilt and partial crop give an informal, documentary feel. Natural freeze or slight blur from handheld instability.
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, zero studio lighting. Raw, in‑camera look only.  
+
+**Prompt:**  
+"Realistic candid photo of a woman with a high ponytail, wearing a tie‑dye orange tank top and distressed denim shorts, sitting cross‑legged on a light‑colored tile floor in a bright bedroom. Soft natural daylight from a right‑side window creates slight overexposure. A beige armchair, dark wooden dresser with candles and a vase of red‑pink roses, and a white lamp are visible in the background; a bed with a textured throw lies to the right. Shot on a 24 mm wide‑angle lens, fully sharp background, slight motion blur for authenticity. The composition is accidental—off‑center, partial crop, no rule‑of‑thirds. Raw, unprocessed, no filters."

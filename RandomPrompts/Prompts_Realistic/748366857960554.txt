@@ -1,0 +1,26 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy blonde hair, wearing a sheer white mesh top and matching shorts, captured mid‑movement on a cream‑colored leather couch. She’s leaning forward slightly, one hand on the couch for support, her face turned toward the camera with a natural, unposed smile. Her pose is casual and spontaneous—like she’s caught in a candid moment during a casual photoshoot or a friendly meetup.
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window behind the couch creates a soft, slightly overexposed highlight on her skin and clothing. The exposure is not perfectly balanced; there’s a subtle warmth to the image with a faint haze that gives it a raw, unprocessed feel. No auto‑beauty or filter enhancements—just the raw capture.
+
+- **Camera Settings**  
+  - Lens: 24‑35 mm wide‑angle, short focal length for a broad field of view.  
+  - Aperture: f/4–f/5.6 (wide but not too wide; background stays fully sharp).  
+  - Shutter speed: 1/60–1/125 s, producing a slight motion blur on the subject’s movement and a hint of handheld instability.  
+  - ISO: 400–800, depending on ambient light.  
+  - Focus: everything in frame—subject, couch, background window—is fully sharp; no portrait‑mode depth‑of‑field blur.
+
+- **Composition & Framing**  
+  The shot is intentionally off‑center and slightly tilted, giving it a candid, spontaneous vibe. The framing captures the woman from the mid‑thigh up to the top of her head, with the couch’s backrest and a portion of the window visible. The composition does not follow the rule‑of‑thirds; instead, it feels accidental, as if the photographer was in the middle of adjusting the camera when the shot was taken.
+
+- **Environment**  
+  The scene is set in a bright, modern living room during late morning. A large window lets in natural light that slightly overexposes the upper part of the frame, while the couch’s leather surface reflects the light softly. A few small, natural imperfections—like a faint smudge on the couch or a slight wrinkle in the woman’s top—add realism.
+
+- **Post‑Processing**  
+  No filters, no color grading, no auto‑beauty mode. The image retains its raw, unprocessed look, with only minimal adjustments to exposure and contrast after capture.
+
+- **Final Prompt Summary**  
+  “A candid, wide‑angle shot of a woman in a sheer white mesh top and shorts leaning on a cream leather couch in a bright living room, captured with a 24‑35 mm lens at f/5, 1/80 s shutter speed, natural daylight from a window creating slight overexposure. The frame is slightly tilted and off‑center, everything in focus, no filters or auto‑beauty, raw and spontaneous.”

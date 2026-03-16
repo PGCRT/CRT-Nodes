@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with dark, slightly messy hair tied back, leaning her head on her left hand while sitting in the driver’s seat of a car. She wears an orange crew‑neck T‑shirt that bears a black “GRK Blico BHCS” logo on the chest. Her gaze is direct, relaxed, and unposed; she appears unaware of the camera as she captures a spontaneous moment.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. The shot has slight motion blur from handheld instability, with no filters, color grading, or post‑processing. A mild overexposure is present due to ambient daylight. The framing is off‑center and slightly tilted, giving an accidental, non‑rule‑of‑thirds composition.
+
+- **Environment**  
+  Specific real‑world location: a sunny afternoon in a suburban parking lot, with a clear blue sky and a faint line of trees visible through the car window. The time of day is mid‑afternoon (≈ 3 pm), producing warm, natural light that casts soft shadows inside the car. Weather is clear, with no wind, but the ambient light creates slight overexposure on the subject’s face and shirt.
+
+- **Lens & Technical**  
+  Short focal length (≈ 20 mm) wide‑angle lens; everything in focus, no bokeh, background fully sharp. No portrait‑mode depth‑of‑field blur. The image uses a wide‑angle “wide‑lens” look that keeps the car interior and surrounding environment visible. Slight overexposure or underexposure depending on ambient light is present, giving a raw, unprocessed feel. Auto‑HDR or auto‑beauty mode is off.
+
+- **Composition Notes**  
+  The shot captures a candid, spontaneous moment inside a car, with the subject’s left hand supporting her head and her right shoulder slightly turned toward the camera. The background shows a portion of the car’s interior (seat, window, and a faint outline of trees outside). The composition is intentionally imperfect: slight tilt, partial crop, and no rule‑of‑thirds intentionality.
+
+- **Final Prompt**  
+  “A young woman with dark, slightly messy hair tied back, leaning her head on her left hand while sitting in the driver’s seat of a car, wearing an orange crew‑neck T‑shirt that bears a black ’GRK Blico BHCS’ logo on the chest. Candid, unposed, spontaneous — subject unaware or mid‑action. Slight motion blur from handheld instability, no filters, raw look, mild overexposure. Wide‑angle short focal length (≈ 20 mm), everything in focus, background fully sharp. Environment: sunny mid‑afternoon in a suburban parking lot, clear blue sky, trees visible through the car window. Slight tilt, off‑center framing, accidental composition. No bokeh, no depth‑of‑field blur. Auto‑HDR and auto‑beauty mode off.”

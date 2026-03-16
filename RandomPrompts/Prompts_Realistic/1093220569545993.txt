@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail and loose fringe, wearing an oversized faded denim jacket and dark jeans, seated on a bed in a dimly lit bedroom. She is mid‑smile, looking down at her hands as she fastens the jacket’s front button, fingers slightly curled, elbows bent. Her head tilts a little to the left, creating a subtle off‑center framing.
+
+- **Motion & Focus**  
+  Slight motion blur on the hands and jacket buttons from handheld shake; everything else in sharp focus—no bokeh, no portrait‑mode isolation. The image has a raw, unprocessed look: no filters, no auto‑beauty, no color grading. A tiny overexposure at the top of the frame captures the ambient light from a window, leaving a faint halo around her hair.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24 mm), short focal length, everything in focus. The composition is accidental—no rule‑of‑thirds intentionality. The background shows a wooden nightstand with an open book, a blue cup, and a framed picture on the wall; a small portion of a patterned quilt is visible to the right.
+
+- **Environment**  
+  Location: a cozy, slightly cluttered bedroom in a suburban house. Time of day: late afternoon, soft natural light from a western window. Weather: mild, clear sky outside, gentle breeze. The room has a warm, muted tone palette with cool gray denim and brown wood tones.
+
+- **Lighting & Exposure**  
+  Natural lighting from a side window; slight overexposure at the top of the frame gives a subtle halo. No studio lights, no professional composition. The exposure is slightly high on the highlights but keeps the shadows detailed.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, partial crop that cuts off the top of the head and the lower part of the legs. A few stray strands of hair cling to her jacket collar. The denim has a worn, faded look with visible stitching and button holes. Her hands are in the foreground, slightly blurred, as if she’s just finished fastening the jacket.
+
+- **Prompt Summary**  
+  “A young woman with a high ponytail and loose fringe, wearing an oversized faded denim jacket and dark jeans, seated on a bed in a dimly lit bedroom. She is mid‑smile, looking down at her hands as she fastens the jacket’s front button, fingers slightly curled, elbows bent. Slight motion blur on the hands and jacket buttons from handheld shake; everything else in sharp focus—no bokeh, no portrait‑mode isolation. Wide‑angle lens (24 mm), short focal length, everything in focus. The background shows a wooden nightstand with an open book, a blue cup, and a framed picture on the wall; a small portion of a patterned quilt is visible to the right. Late afternoon natural light from a western window creates a subtle halo at the top of the frame. Raw, unprocessed look, no filters, no auto‑beauty, slight overexposure. Accidental off‑center framing, partial crop, slight tilt.”

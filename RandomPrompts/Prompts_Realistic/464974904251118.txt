@@ -1,0 +1,30 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, athletic woman with long, wavy brown hair, wearing a black triangle‑style bikini, standing on a sunlit beach. She is mid‑gesture: left hand touching the back of her head, right hand on hip, body slightly turned toward the camera, legs apart for a dynamic stance. Her left thigh shows two star‑shaped tattoos (one with a central dot).  
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle, late‑afternoon sun; slight overexposure on the upper body to keep the scene bright and airy. No auto‑HDR or beauty filters—raw, unprocessed look.  
+
+- **Camera Settings**  
+  Wide‑angle lens (24–35 mm), handheld, slightly shaky. Focal length short, background fully sharp (no bokeh). Aperture f/5.6, shutter speed 1/125 s, ISO 400.  
+
+- **Composition**  
+  Candid, unposed, spontaneous framing—slight tilt and off‑center crop. No rule‑of‑thirds intentionality; the composition feels accidental, as if captured mid‑action.  
+
+- **Environment**  
+  Specific real‑world location: a sandy beach with low‑lying dunes and sparse green vegetation in the background. Time of day: late afternoon (golden hour), weather clear with a soft haze.  
+
+- **Technical Details**  
+  Short focal length, wide angle; everything in focus—no portrait mode or subject isolation. Slight motion blur from handheld instability on the subject’s hands and hair.  
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, no post‑processing aesthetic. Only natural contrast and subtle vibrancy.
+
+---
+
+**Prompt for Text‑to‑Image Generation**
+
+```
+A tall, athletic woman with long wavy brown hair in a black triangle bikini stands on a sunlit beach, left hand touching the back of her head, right hand on hip, legs apart. She has two star tattoos on her left thigh. Natural late‑afternoon daylight with slight overexposure on the upper body. Wide‑angle lens (24–35 mm), handheld shake, 1/125 s shutter, f/5.6 aperture, ISO 400. Candid, unposed framing with slight tilt and off‑center crop; background fully sharp, no bokeh. Background shows sandy beach, low dunes, sparse green vegetation. All in focus, raw unprocessed look, slight motion blur on the hands and hair. No filters or color grading.
+```

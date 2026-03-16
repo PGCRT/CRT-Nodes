@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a long blonde braid, wearing a red polka‑dot crop‑top and matching high‑waist pants, layered under a light denim jacket. She is holding two brown paper shopping bags in both hands, slightly tilted as if she’s mid‑step while walking down an aisle. Her face is turned downward, eyes cast slightly to the side, giving a candid, unposed feel.
+
+- **Motion & Focus**  
+  Slight motion blur on the hands and bag handles, indicating handheld instability. Everything in the frame — subject, background shelves, and distant shoppers — is fully sharp; no portrait‑mode depth‑of‑field blur. No auto‑HDR or beauty filters; raw, unprocessed look with natural ambient exposure (slight overexposure on the ceiling lights).
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm), short focal length. No bokeh — background shelves and people are all in focus. Slight tilt and off‑center framing; no rule‑of‑thirds intentionality. The composition feels accidental, like a spontaneous snapshot.
+
+- **Environment**  
+  A brightly lit grocery store aisle at mid‑afternoon. Fluorescent ceiling lights cast a warm, slightly overexposed glow. Shelves on both sides are stocked with canned goods, pasta, and condiments; a few shoppers are visible in the background, one man in a pink shirt and a woman in black, both blurred but still sharp. A small red sign hangs from the ceiling, adding a pop of color.
+
+- **Lighting & Color**  
+  Natural ambient lighting with slight overexposure on the ceiling lights; no color grading or post‑processing. The denim jacket has a subtle shadow on the left side, while the red polka dots catch the light. The overall tone is warm, with a slight yellowish cast from the fluorescent lamps.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, partial crop that cuts off the top of the shopping bags. The woman’s hands are slightly overlapping the bag handles, and her braid has a small frizz at the tip. The denim jacket’s buttons are slightly uneven. The background shelves show a mix of product labels, with a visible “Coca‑Cola” sign on the right.
+
+- **Prompt Summary**  
+  *“A candid, wide‑angle shot of a woman in a red polka‑dot crop‑top, high‑waist pants, and denim jacket, holding two brown paper bags in a grocery aisle at mid‑afternoon. The image has slight motion blur on the hands, full sharpness throughout, natural ambient lighting with mild overexposure, and accidental off‑center framing. Background shelves, fluorescent lights, and distant shoppers are all in focus, creating a raw, unprocessed, realistic candid photograph.”*

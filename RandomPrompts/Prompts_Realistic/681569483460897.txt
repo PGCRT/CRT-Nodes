@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair, wearing a shiny white latex mini‑dress with a front zipper, standing on a city street at night. She is captured mid‑turn, one hand on her hip, looking slightly off‑camera with a relaxed, candid expression. Her pose is spontaneous and unposed; she appears unaware of the camera, as if caught in a casual moment.
+
+- **Lighting & Exposure**  
+  Ambient night lighting from street lamps and passing car lights create a warm, slightly overexposed glow on her dress. The exposure is natural, with no auto‑beauty or filter enhancement—just raw, unprocessed light. A subtle handheld shake gives a slight motion blur to the entire frame.
+
+- **Environment**  
+  Location: a bustling urban street at midnight. Background shows blurred city buildings and a line of car headlights, with a mix of warm yellow and cool blue bokeh. The weather is clear, with a gentle breeze that ruffles her hair. The scene feels real and uncurated, as if captured by a passerby with a handheld camera.
+
+- **Lens & Technical**  
+  Use a wide‑angle lens (24–35 mm) with a short focal length to capture a broad view of the subject and surroundings. Everything is in focus—no portrait‑mode depth‑of‑field blur; the background remains sharp. The composition is accidental: slight tilt, off‑center framing, and a partial crop that gives an informal, candid feel. No rule‑of‑thirds intentionality—just natural, spontaneous framing.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Imperfections are encouraged: slight tilt, off‑center framing, partial crop. The image has a raw, unprocessed look with no filters or color grading. A narrow band of slight overexposure on the subject’s dress adds a natural highlight.
+
+- **Final Prompt**  
+  “A young woman in a white latex mini‑dress stands on a city street at night, captured mid‑turn with one hand on her hip. Her long wavy hair frames her face as she looks slightly off‑camera. The scene is lit by warm street lamps and passing car headlights, creating a subtle overexposed glow. The background shows blurred city buildings and a line of car lights, all in focus with no depth‑of‑field blur. Shot on a 35 mm wide‑angle lens, the image has a slight handheld shake and accidental off‑center framing, giving it a candid, spontaneous feel. No filters or post‑processing—just raw, natural realism.”

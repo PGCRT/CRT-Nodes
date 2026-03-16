@@ -1,0 +1,31 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, straight blonde hair standing in a bright, modern living room. She’s wearing a fitted, long‑sleeved gray top with a deep V‑neck and three front buttons. Her pose is casual and candid—she’s mid‑step, slightly turned toward the camera, with one hand on her hip and the other relaxed by her side. Her face is turned directly at the lens, eyes wide and expressive, mouth slightly open as if she’s about to speak or laugh.
+
+- **Lighting & Exposure**  
+  Natural daylight coming from a large window on the left, creating a soft, warm overexposure that gives a raw, unprocessed look. The exposure is slightly high, letting the background glow while keeping everything in focus. No auto‑beauty mode—just a straightforward, handheld shot.
+
+- **Camera & Lens Settings**  
+  - Lens: 24‑mm wide‑angle, short focal length for a broad field of view.  
+  - Aperture: f/5.6 (mid‑range) to keep the entire scene sharp.  
+  - Shutter speed: 1/125 s, producing a slight motion blur from the subject’s movement and handheld instability.  
+  - ISO: 400–600 for clean detail without noise.
+
+- **Composition & Framing**  
+  The shot is intentionally off‑center; the subject’s head is slightly above the center of the frame, creating a casual, spontaneous feel. The framing is not rule‑of‑thirds— it’s a “mid‑action” candid capture. The background includes a large window with a faint view of greenery outside, a small potted plant on the right, and a framed picture on the wall, all in focus.
+
+- **Environment & Ambience**  
+  Location: A bright, contemporary apartment with light‑colored walls and a large window that lets in natural daylight. Time of day: late morning, when the sun is high but still warm. Weather: clear, slightly breezy, giving a soft ambient glow. The room’s decor includes a simple white curtain, a wooden side table, and a green plant in the corner—adding depth without distracting.
+
+- **Technical Details**  
+  - No bokeh; background is fully sharp.  
+  - No portrait‑mode subject isolation—everything is in focus.  
+  - Slight tilt to the camera adds a natural, handheld feel.  
+  - Slight overexposure on the left side of the frame for a warm, airy look.
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, no auto‑beauty mode—just raw, unprocessed imagery that retains the authenticity of a candid snapshot.
+
+**Prompt Summary (for text‑to‑image generation)**  
+"Generate a realistic candid photo of a young woman with long blonde hair wearing a gray V‑neck top, captured with a 24‑mm wide‑angle lens at f/5.6 and 1/125 s shutter speed. The shot should show her mid‑step, slightly turned toward the camera, with natural daylight coming from a large window on the left creating a soft overexposure. Frame the image off‑center, keeping everything in focus, with a background that includes a window, a potted plant, and a framed picture on the wall—all sharp. The scene is set in a bright modern living room during late morning, with a slight handheld tilt and no post‑processing filters."

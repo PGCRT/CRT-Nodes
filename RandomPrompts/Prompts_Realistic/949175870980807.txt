@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework – “Beach Boudoir, Sunset Glow”**
+
+- **Subject & Pose**  
+  A tall, athletic woman with a high ponytail and a bright, natural smile is captured mid‑gesture, hand raised in a peace sign. She’s wearing a pink triangle bikini with matching thigh‑high socks that have a white stripe at the top. Her body is slightly angled toward the camera, left leg bent, right leg straight, creating a dynamic, off‑center composition.
+
+- **Lighting & Exposure**  
+  Warm, golden hour sunlight comes from the upper left, producing a soft overexposure on the subject’s face and shoulders. The exposure is slightly uneven—the background is a bit brighter than the foreground, giving a raw, unprocessed look. No auto‑beauty or filter enhancement; just natural contrast.
+
+- **Motion & Focus**  
+  A handheld shot with a short focal length (24–35 mm) gives a wide‑angle view of the scene. Slight motion blur is present on the subject’s hand and the background foliage, indicating a casual, spontaneous capture. Everything—from the woman’s skin to the sand grains—is fully sharp, no portrait‑mode depth of field blur.
+
+- **Environment**  
+  The setting is a sunlit beach with a patch of green shrubbery behind the subject. A large, smooth stone sits near the left side of the frame, and a plastic water bottle and a folded pink towel lie on the sand nearby. The time of day is late afternoon, with the sun low enough to cast long shadows and a gentle haze over the scene.
+
+- **Composition & Framing**  
+  The framing is accidental and imperfect: the subject’s head is slightly above the center of the frame, and the left edge cuts off a portion of the shrubbery. No rule‑of‑thirds intentionality—just a candid, in‑the‑moment snapshot. The background foliage and sand are fully in focus, giving a crisp, wide‑angle view.
+
+- **Technical Specs**  
+  - Lens: 35 mm prime, wide‑angle, f/4.0  
+  - Aperture: f/4, shutter speed 1/125 s, ISO 400  
+  - No bokeh; background fully sharp.  
+  - No post‑processing color grading or auto‑HDR—just raw, natural imagery.
+
+- **Prompt for Generation**  
+  “A tall woman with a high ponytail, wearing a pink triangle bikini and thigh‑high socks with a white stripe, poses mid‑gesture on a sunlit beach at late afternoon. She smiles and raises a peace sign with her right hand, left leg bent, right leg straight. Warm golden light hits her from the upper left, creating a soft overexposure. A large stone, a plastic bottle, and a folded pink towel lie on the sand nearby. Green shrubbery backs her, a big tree branch visible at the top right. The shot is taken with a 35 mm wide‑angle lens, handheld, slight motion blur on the hand and background, everything in focus. The framing is accidental, off‑center, no rule‑of‑thirds. Capture a candid, unposed, spontaneous moment with raw, natural colors and no filters.”

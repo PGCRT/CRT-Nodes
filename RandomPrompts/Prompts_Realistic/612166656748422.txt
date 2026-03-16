@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman with long, dark, slightly frizzy hair lying supine on a neatly made bed. She’s wearing black thong underwear; her arms are spread wide, one hand resting on the pillow and the other on the mattress. Her head is tilted back, eyes closed, as if mid‑sleep or just awoken. The camera captures her from a high angle, almost overhead, with the top of the bed taking up most of the frame.
+
+- **Lighting & Exposure**  
+  Natural daylight coming from a window on the left side of the room creates a soft, warm glow across the scene. Slight overexposure on the upper part of the image gives a subtle halo effect around her head and shoulders. No auto‑beauty or filter processing—just raw, unedited light.
+
+- **Camera & Lens Settings**  
+  Wide‑angle lens (24‑35 mm) with a short focal length to keep the entire bed in frame. Aperture set to f/4–f/5.6 for moderate depth of field; everything from foreground to background is fully sharp, no bokeh. Slight handheld shake gives a natural motion blur on the edges, especially around her arms and hair.
+
+- **Composition & Framing**  
+  The shot is intentionally off‑center: the bed’s headboard is slightly cut off at the top left, and the nightstand on the right is partially out of frame. No rule‑of‑thirds—just a spontaneous, candid composition that feels “in the moment.” The pillow rests against the headboard, slightly askew, adding to the casual feel.
+
+- **Environment & Details**  
+  Location: a cozy bedroom with a wooden nightstand on the right, a white bedspread, and a beige patterned pillow. Time of day: late morning, with warm sunlight streaming in. A small digital clock is visible on the nightstand, showing 10:12. The bedsheet has gentle wrinkles, indicating recent movement.
+
+- **Technical Notes**  
+  - Focus: everything in focus—subject, bed, nightstand, pillow.  
+  - No portrait‑mode blur; background remains sharp.  
+  - Slight tilt of the camera adds dynamism.  
+  - No post‑processing color grading—just the natural tones of the scene.
+
+- **Prompt for Generation**  
+  “A woman with long dark hair lying on a white bed, wearing black thong underwear, arms spread wide, one hand on a beige patterned pillow, captured from an overhead angle with a wide‑angle lens. Natural daylight from the left creates a soft warm glow with slight overexposure on the upper part of the frame. The shot has a candid, unposed feel with accidental off‑center framing; the nightstand is partially out of frame. Everything is fully sharp, no bokeh, slight handheld motion blur. The scene includes a wooden nightstand with a digital clock showing 10:12, a white bedspread with gentle wrinkles, and a beige pillow slightly askew against the headboard. Capture in raw, unprocessed style, no filters or auto‑beauty mode.”

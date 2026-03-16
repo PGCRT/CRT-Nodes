@@ -1,0 +1,23 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, athletic woman with long, wavy brown hair standing in a casual, unposed stance. She’s wearing a white lace thong and a thin, sheer blouse that drapes loosely over her shoulders. Her arms are raised above her head, one hand gripping the back of her head, creating a slight tilt in her posture. Her face is turned slightly toward the camera, with a soft, natural expression—no staged pose, just a candid moment captured mid‑action.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle source (mid‑afternoon) creates a warm, slightly overexposed highlight on her skin. The exposure is uneven: the background is a bit brighter than the foreground, giving a raw, unprocessed look. No auto‑HDR or beauty filters—just a straightforward, handheld shot.
+
+- **Environment**  
+  Location: A quiet residential hallway with a plain gray wall and two white plastic chairs on either side. The time of day is late afternoon, with soft, diffused sunlight streaming through a window, casting gentle shadows. Ambient noise is minimal, but the scene feels spontaneous, as if she just stepped out of a bathroom or a dressing room.
+
+- **Lens & Technical**  
+  - Focal length: 24 mm (wide‑angle, short focal length).  
+  - Aperture: f/5.6 (mid‑range, no bokeh).  
+  - Shutter speed: 1/125 s (slight motion blur from handheld instability).  
+  - Focus: everything in focus—foreground and background equally sharp.  
+  - Composition: No rule‑of‑thirds; the frame is slightly off‑center, capturing a partial crop of the subject’s lower body and the chairs. The shot has a slight tilt, giving it a candid feel.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Imperfections are encouraged: slight tilt, off‑center framing, partial crop. No rule‑of‑thirds intentionality—accidental framing that feels natural and raw. The image has a slight motion blur from handheld instability, but the background is fully sharp, with no depth‑of‑field blur.
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, zero post‑processing aesthetic. Keep it raw, with only minimal adjustments to exposure and contrast. The final look should feel like a genuine, unedited snapshot taken in a real‑world setting.

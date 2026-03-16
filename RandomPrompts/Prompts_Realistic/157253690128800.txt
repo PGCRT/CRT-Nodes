@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark brown hair, wearing a thin‑strapped orange bikini, crouching on a sun‑baked beach. Her back is to the camera; her hands are planted in the sand on either side of her hips, toes gripping the grains. The pose feels spontaneous—she’s mid‑movement, as if she just finished a playful dip in the sea or is about to stand.
+
+- **Cinematic Details**  
+  Slight motion blur on the hands and hair, giving a sense of motion. Auto‑HDR or auto‑beauty mode off – the image keeps a raw, unprocessed look. No filters, no color grading, no post‑processing aesthetic. A hint of overexposure in the background to emphasize the bright, warm daylight.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24‑35 mm), short focal length. Everything is fully sharp – no bokeh, no depth‑of‑field blur. The background (large, rounded rocks and a patch of white‑foamy sea) stays in focus. No portrait‑mode subject isolation; the framing is accidental, slightly tilted, off‑center, and partially cropped at the edges.
+
+- **Environment**  
+  Specific real‑world location: a rocky, sandy beach with a small inlet or cove. Time of day: late morning, when the sun is high but still casts soft shadows. Weather: clear, warm, with a light breeze that ruffles the sand and the woman’s hair.
+
+- **Composition**  
+  No rule‑of‑thirds intentionality – the composition is spontaneous, as if captured by a handheld camera in motion. The shot captures a candid, unposed moment; the subject appears unaware of the camera. Slight tilt and partial crop give an informal, documentary feel.
+
+- **Lighting**  
+  Zero studio lighting, zero professional composition, zero editorial tone. Natural sunlight creates a slight overexposure on the background, enhancing the warm tones of the sand and the orange bikini. The lighting is diffuse but bright, with a gentle haze that keeps everything in focus.
+
+- **Final Prompt**  
+  “A young woman with long dark brown hair, in an orange bikini, crouching on a sun‑baked beach, back to camera, hands planted in sand on either side of hips, mid‑movement. Slight motion blur on the hands and hair, raw unprocessed look, wide‑angle lens (24‑35 mm), everything fully sharp, no bokeh. Background of rounded rocks and white‑foamy sea, clear late‑morning sunlight with slight overexposure. Candid, spontaneous, accidental tilt and partial crop, no rule‑of‑thirds. Raw, natural lighting, handheld shot.”

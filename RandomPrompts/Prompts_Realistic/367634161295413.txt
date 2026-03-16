@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair, seen from behind, wearing a light‑denim jacket and gray sweatpants. Her hands are slightly raised as if she’s about to touch or adjust something on a shelf. She stands in the middle of a cluttered warehouse or storage room, her back turned toward the camera, creating an intimate, candid feel.
+
+- **Motion & Focus**  
+  Slight motion blur on the subject’s hands and hair, indicating handheld instability. Everything in the frame is fully sharp—no bokeh, no portrait‑mode isolation. The image has a raw, unprocessed look: no filters, no color grading, no auto‑beauty mode. A tiny overexposure at the top of the frame gives it an ambient, natural feel.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm), short focal length. No rule‑of‑thirds intentionality—framing is accidental, slightly tilted and off‑center. The background is fully sharp, no depth‑of‑field blur. Slight overexposure at the top from a fluorescent light fixture.
+
+- **Environment**  
+  A real‑world warehouse or storage space with metal shelving units on both sides, cardboard boxes, plastic bags, and various tools scattered around. A large window is visible in the background, letting in daylight. The time of day is mid‑afternoon, with soft natural light mixing with indoor lighting. Weather is mild; a few raindrops are visible falling from the ceiling, adding a subtle dynamic element.
+
+- **Capturing Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Imperfections encouraged: slight tilt, off‑center framing, partial crop. Zero studio lighting, zero professional composition, zero editorial tone. Natural motion freeze or slight blur from handheld instability.
+
+- **Prompt Summary for Generation**  
+  “A candid, behind‑the‑back shot of a woman in a denim jacket and gray sweatpants standing in a cluttered warehouse, her hands slightly raised as if about to adjust a shelf. The image is captured on a wide‑angle lens with slight motion blur on the subject’s hands and hair, everything fully sharp, no filters or color grading, a tiny overexposure at the top from a fluorescent light. The background shows metal shelving units, cardboard boxes, plastic bags, and a large window letting in mid‑afternoon daylight, with a few raindrops falling from the ceiling. The framing is accidental and slightly tilted, creating a raw, spontaneous feel.”

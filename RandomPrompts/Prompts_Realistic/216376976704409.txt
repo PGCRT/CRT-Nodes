@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high‑ponytail and a casual denim jacket draped over her shoulder, kneeling on a tiled school hallway floor. She wears a gray crop‑top and loose blue jeans, with a small gold necklace. Her hands rest on her knees, one slightly forward, as if she just finished a task or is about to pick something up. A backpack hangs from her left shoulder.
+
+- **Facial Expression & Motion**  
+  Slight smile, eyes focused ahead, a hint of motion blur around the fingers and hair to suggest spontaneous movement. The blur is subtle—about 1–2 px radius—so the image feels natural, not overly softened.
+
+- **Lighting & Exposure**  
+  Natural daylight from a tall window on the left; slight overexposure in the upper right corner to capture ambient brightness. No auto‑HDR or beauty filters—raw, unprocessed look. The exposure is slightly warm, with a subtle haze that gives an “in‑the‑moment” feel.
+
+- **Lens & Technical**  
+  24 mm wide‑angle lens (short focal length), handheld, all elements in focus. No bokeh; background remains sharp from floor to ceiling. Slight tilt and off‑center framing—no rule‑of‑thirds intentionality. The composition is accidental, capturing the subject mid‑action with a partial crop that includes a cardboard box, a notebook, and a tablet on the floor.
+
+- **Environment**  
+  A bright school hallway at mid‑afternoon. Tall windows let in natural light; a bookshelf lines the left wall, a cardboard box sits to the right, and a tablet and notebook lie on the floor. The time of day is late afternoon, with warm sunlight casting soft shadows. Weather is clear, with a faint haze from the outside.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, a small partial crop that cuts off the top right corner of the hallway. A faint motion blur around the subject’s hands and hair. The background is fully sharp—no depth‑of‑field blur. The image has zero studio lighting, zero professional composition, zero editorial tone.
+
+- **Final Prompt**  
+  “A young woman with a high‑ponytail and a casual denim jacket draped over her shoulder, kneeling on a tiled school hallway floor. She wears a gray crop‑top and loose blue jeans, with a small gold necklace. Her hands rest on her knees, one slightly forward, as if she just finished a task or is about to pick something up. A backpack hangs from her left shoulder. Slight smile, eyes focused ahead, a hint of motion blur around the fingers and hair to suggest spontaneous movement. The lighting comes from a tall window on the left; slight overexposure in the upper right corner for a raw, unprocessed look. 24 mm wide‑angle lens, handheld, all elements in focus—no bokeh. Slight tilt and off‑center framing—accidental composition. Background includes a bookshelf, a cardboard box, and a tablet on the floor. Mid‑afternoon daylight, clear weather, soft shadows. Capture candid, unposed, spontaneous moment with imperfections: slight tilt, partial crop, motion blur.”

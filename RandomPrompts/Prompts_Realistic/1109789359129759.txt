@@ -1,0 +1,41 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark hair, wearing a black lace lingerie set (bra and thong), leaning casually against a modern kitchen counter. She holds a wine glass in her right hand, slightly tilted as if mid‑sip, with a subtle motion blur around the glass to convey movement. Her left hand rests on the countertop, creating a natural, unposed stance.
+
+- **Appearance & Details**  
+  - Skin tone: warm, natural with a slight overexposure in the highlights.  
+  - Makeup: soft pink lipstick, subtle eyeliner.  
+  - Accessories: thin gold necklace, small pendant.  
+  - Clothing: black lace with delicate floral patterns, thin straps, tie‑front bra and matching thong with side ties.  
+  - Expression: confident, slightly upward gaze toward the camera.
+
+- **Environment**  
+  - Location: a contemporary kitchen with light‑wood cabinets, stainless‑steel refrigerator, marble countertop, and a visible backsplash.  
+  - Time of day: late afternoon, soft natural light from the west, creating warm ambient glow.  
+  - Weather: clear, mild; slight wind causing gentle motion in the subject’s hair.
+
+- **Lens & Technical**  
+  - Focal length: 24‑35 mm (wide‑angle).  
+  - Aperture: f/4–f/5.6 (handheld, slightly shallow depth of field but everything remains sharp).  
+  - Shutter speed: 1/60–1/100 s (producing slight motion blur on the wine glass).  
+  - ISO: 400–800 (for natural grain).  
+  - Auto‑HDR or auto‑beauty mode off.  
+  - No filters, no color grading, no post‑processing aesthetic.  
+  - Slight tilt and off‑center framing; partial crop to give a candid feel.
+
+- **Capture Style**  
+  - Candid, unposed, spontaneous — subject unaware or mid‑action.  
+  - Imperfections encouraged: slight tilt, off‑center framing, partial crop.  
+  - No rule‑of‑thirds intentionality — accidental framing.  
+  - Zero studio lighting, zero professional composition, zero editorial tone.  
+  - Natural motion freeze or slight blur from handheld instability.
+
+- **Background & Focus**  
+  - Background fully sharp: kitchen appliances (stove, range hood), visible utensils in a red container, stainless‑steel refrigerator, and a small window with natural light.  
+  - Everything in focus — no portrait mode or subject isolation.
+
+- **Prompt Summary for Generation**  
+  “A young woman with long dark hair, wearing a black lace lingerie set, leans against a modern kitchen counter, holding a wine glass mid‑sip. She has a gold necklace and is resting her left hand on the marble countertop. The scene is set in a contemporary kitchen with light‑wood cabinets, stainless‑steel refrigerator, and a visible backsplash. Late afternoon natural light hits from the west, creating warm ambient glow. Use a 24‑35 mm wide‑angle lens at f/5, 1/80 s shutter speed, ISO 600. Capture candid, unposed, spontaneous moment with slight motion blur on the glass, slight tilt and off‑center framing, partial crop. No filters or post‑processing; everything in focus. Render raw, unprocessed look with natural grain.”
+
+Provide only the structured prompt.

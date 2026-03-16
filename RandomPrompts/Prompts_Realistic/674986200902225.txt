@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail, wearing an oversized beige Nike sweatshirt and gray shorts, captured mid‑gesture as she extends her right arm outward in a casual, spontaneous pose. Her left hand rests near her hip, and her head is slightly turned toward the camera, giving a natural, unposed look.
+
+- **Motion & Focus**  
+  Slight motion blur on the extending arm and head, indicating handheld instability. Everything in the frame — from the woman to the background — is fully sharp with no portrait‑mode depth of field blur. No auto‑HDR or beauty filters; raw, unprocessed aesthetic with a mild overexposure that lets the ambient daylight breathe.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm) with a short focal length. No bokeh; background is completely sharp. The composition is intentionally off‑center and slightly tilted, capturing a candid, spontaneous moment.
+
+- **Environment**  
+  Setting: A residential backyard in the late afternoon. A red brick house with a white window frame sits behind the woman, a wooden fence runs along the side, and a patch of green grass and scattered leaves fill the foreground. The sun is high but slightly to the west, casting warm, natural light that creates soft shadows and a faint lens flare near the top of the frame.
+
+- **Lighting & Color**  
+  Natural daylight with a slight overexposure that keeps the image bright and lively. No color grading or post‑processing; the colors remain true to the scene — muted earth tones for the sweatshirt, warm reds for the brick, and cool greens for the grass. The lighting creates subtle highlights on the woman’s hair and shirt, with a gentle lens flare near the upper left corner.
+
+- **Details & Imperfections**  
+  The frame is partially cropped on the right side, giving an accidental, candid feel. The woman’s hair has a slight wind‑blown texture, and her sweatshirt’s Nike logo is centered but not perfectly aligned. A small portion of a wooden fence and a brick wall are visible behind her, adding depth without any intentional rule‑of‑thirds placement.
+
+- **Final Prompt**  
+  “A young woman in a beige Nike sweatshirt and gray shorts, captured mid‑gesture with an extended arm, stands in a residential backyard at late afternoon. The scene includes a red brick house and wooden fence behind her, with a patch of grass and scattered leaves in the foreground. Slight motion blur on her arm and head conveys handheld instability, while the entire frame stays sharp with no bokeh. Shot on a wide‑angle, short focal length lens, the image has a raw, unprocessed look with mild overexposure and natural daylight. The composition is off‑center and slightly tilted, partially cropped on the right, preserving a candid, spontaneous feel.”

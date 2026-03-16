@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wind‑blown brown hair standing on a sunny beach, wearing a white triangle‑style bikini. She is mid‑turn, slightly tilted to the left, looking toward the camera with a natural, unposed expression. Her left arm hangs relaxed by her side, while her right arm is partially out of frame, giving an off‑center, accidental feel.
+
+- **Capture Style**  
+  Candid, spontaneous — the subject appears unaware of the camera, caught in a moment of motion. Slight handheld shake creates a subtle motion blur around the edges. The shot has a raw, unprocessed look: no filters, no color grading, no post‑processing aesthetic. A tiny overexposure on the sky gives a warm, natural brightness.
+
+- **Environment**  
+  Location: a broad, open beach with gentle waves breaking near the shore. The background shows a line of palm trees in the distance and a bright, partly cloudy sky. Time of day: late afternoon, around 5 pm, where the sun is low but still high enough to keep the scene fully lit. Weather: breezy, with light wind ruffling the hair and water.
+
+- **Lens & Technical**  
+  Use a short focal‑length wide‑angle lens (e.g., 24 mm). Everything is in focus — no bokeh or depth‑of‑field blur; the background remains sharp. The composition is accidental: no rule‑of‑thirds intentionality, just a natural, spontaneous framing that slightly crops the subject’s left side and includes a portion of the sea and sky.
+
+- **Lighting & Exposure**  
+  Natural daylight with slight overexposure on the sky, giving a soft glow. No studio lighting or professional composition. The exposure is balanced for a raw, unprocessed look.
+
+- **Post‑Processing**  
+  Auto‑HDR or auto‑beauty mode off. No filters, no color grading, no post‑processing aesthetic — just the raw image as captured.
+
+- **Final Prompt Summary**  
+  “A young woman in a white bikini stands on a sunny beach at late afternoon, her long brown hair blowing in the wind. The shot is taken with a 24 mm wide‑angle lens, everything in sharp focus, slight handheld blur, accidental off‑center framing, raw and unprocessed, no filters or color grading, natural overexposure on the sky, background of waves and distant palm trees, all captured in a candid, spontaneous moment.”

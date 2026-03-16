@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a shoulder‑length, light‑brown bob, wearing a sheer black lace bra and matching panties, sitting on a white bed. Her hands rest on the mattress on either side of her hips, knees bent, thighs slightly apart. She looks directly at the camera with a neutral, relaxed expression.  
+
+- **Motion & Focus**  
+  Slight motion blur from handheld shooting; natural freeze‑frame or subtle movement. Everything in focus – no portrait‑mode depth‑of‑field blur.  
+
+- **Lighting & Exposure**  
+  Raw, unprocessed look: no filters, no color grading, no post‑processing. Slight overexposure on the bright window light, giving a warm, natural tone.  
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm), short focal length. No bokeh – background fully sharp.  
+
+- **Environment**  
+  A bright, modern bedroom: wooden headboard, white pillows, a small bedside table, and a window letting in natural daylight. Time of day: mid‑afternoon, soft sunlight with a slight haze. Weather: clear, calm.  
+
+- **Composition**  
+  Candid, unposed, spontaneous – the frame is slightly tilted and off‑center, a partial crop that gives an accidental, informal feel. No rule‑of‑thirds intentionality.  
+
+- **Prompt for Generation**  
+  “A young woman with a shoulder‑length light‑brown bob, in a sheer black lace bra and matching panties, sitting on a white bed in a bright modern bedroom. Her hands rest on the mattress on either side of her hips, knees bent, thighs slightly apart, looking directly at the camera with a neutral expression. Slight motion blur from handheld shooting, everything in focus. Raw, unprocessed look with slight overexposure from natural daylight. Wide‑angle lens (24–35 mm), short focal length, no bokeh – background fully sharp. The scene is captured mid‑afternoon, clear weather, soft sunlight. Candid, unposed, spontaneous composition with a slightly tilted, off‑center frame and partial crop.”

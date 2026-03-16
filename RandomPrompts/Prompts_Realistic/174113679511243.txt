@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A fit woman with long, dark brown hair, wearing a plain white sports bra and matching high‑waist bikini bottoms. She stands in a casual, mid‑action pose, hands on hips, slightly turned to the side, head tilted down as if she’s about to pick something up from a cardboard box. Her left wrist bears a silver watch; a delicate necklace hangs around her neck.  
+
+- **Lighting & Exposure**  
+  Natural daylight from a bright, high‑angle sun—slight overexposure on the upper body, subtle underexposure in the lower background. No auto‑HDR or beauty filters; raw, unprocessed look. The exposure is uneven enough to give a handheld, spontaneous feel.  
+
+- **Camera Settings**  
+  Wide‑angle lens (24–35 mm), short focal length, handheld. All elements in focus—no bokeh, no depth‑of‑field blur. Slight motion blur on the subject’s hands and torso to suggest movement.  
+
+- **Composition & Framing**  
+  Imperfect, off‑center framing: the subject is slightly tilted, the crop cuts off a bit of her left hip, giving a candid, unposed vibe. No rule‑of‑thirds intentionality—just accidental, natural composition.  
+
+- **Environment**  
+  Outdoor setting in an urban alleyway or back‑of‑a‑store area. A textured stucco wall on the left, a patterned tile column on the right, and a stack of cardboard boxes and a white plastic bag on the ground. The time of day is mid‑afternoon, with warm, harsh sunlight casting sharp shadows. Weather is clear, slightly dusty air.  
+
+- **Details & Texture**  
+  The woman’s skin shows natural imperfections—slight moles, faint hair, subtle sweat sheen. Her bikini bottoms have a small, faint logo on the lower left side. A green bottle and a white plastic bag sit beside her, adding to the casual clutter.  
+
+- **Post‑Processing**  
+  Zero studio lighting, zero professional composition, zero editorial tone. Only natural motion freeze or slight blur from handheld instability.  
+
+**Prompt Summary**  
+> “A fit woman with long dark hair in a white sports bra and high‑waist bikini bottoms stands casually by a stack of cardboard boxes in an urban alleyway. She’s mid‑action, hands on hips, slightly tilted pose, captured on a wide‑angle handheld lens at mid‑afternoon. Natural daylight creates slight overexposure on her body and underexposure in the background. Raw, unprocessed look with no filters—only natural motion blur and imperfect framing.”

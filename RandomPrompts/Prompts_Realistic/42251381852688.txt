@@ -1,0 +1,16 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A fit woman with long dark hair, wearing a black bikini top and white sneakers, captured mid‑motion as she pulls open a tall glass sliding door. Her back is slightly turned to the camera, one arm extended upward gripping the door frame, her other hand resting on the lower rail. She’s in a bright, airy bedroom with light‑colored walls; a wooden desk and lamp sit to the left, a closed white door is visible behind her. The scene is shot from a low angle, emphasizing her legs and the door’s height.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject appears unaware of the camera, caught in a natural, mid‑action moment. Slight tilt and off‑center framing give an accidental, handheld feel. The composition is not intentionally rule‑of‑thirds; the frame cuts off the top of the door and part of the wall, creating a partial crop that adds raw energy.
+
+- **Environment**  
+  Location: a modern, minimalist bedroom with beige carpet, a simple wooden desk, a white lamp, and a large glass sliding door that opens to an outdoor balcony. Time of day: late morning, soft natural light coming from the window, creating a slight overexposure on the glass and a gentle warm tone across the room. Weather: clear, breezy, with a faint haze outside the door, suggesting a warm, humid afternoon.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm) wide‑angle lens, all elements in focus — no bokeh or depth‑of‑field blur; background is fully sharp. Slight motion blur on the subject’s arm and hand to convey movement. Auto‑HDR or auto‑beauty mode off – raw, unprocessed look. No filters, no color grading, no post‑processing aesthetic. The exposure is slightly high on the glass, giving a bright, almost washed‑out highlight that blends with the natural light.
+
+- **Final Prompt**  
+  “A fit woman with long dark hair in a black bikini top and white sneakers, captured mid‑motion pulling open a tall glass sliding door in a bright, airy bedroom. The scene includes a wooden desk and lamp to the left, a closed white door behind her, and a faint outdoor haze outside the glass. Shot from a low angle with a 24‑35 mm wide‑angle lens, all elements in focus, slight motion blur on the subject’s arm, handheld tilt, off‑center framing, partial crop. Late morning natural light creates a soft overexposure on the glass. No filters, no post‑processing, raw and candid.”

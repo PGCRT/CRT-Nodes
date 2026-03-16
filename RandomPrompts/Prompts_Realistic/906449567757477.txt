@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A young woman with a high ponytail, wearing an oversized two‑tone baseball tee (cream body, navy sleeves) that has a small floral graphic on the back. She is mid‑gesture, holding a smartphone in both hands as if taking a selfie or a photo of something in front of her. Her head is turned slightly to the side, mouth open in a playful smile, and her left ear is partially visible. The camera angle is from behind and to the left, capturing her back and right side, with a slight handheld tilt that gives an accidental, off‑center framing.
+
+- **Motion & Focus**  
+  Slight motion blur on the subject’s hands and phone, indicating a natural freeze or small shake from a handheld camera. Everything in the frame is fully sharp—no portrait‑mode depth‑of‑field blur. No auto‑HDR or auto‑beauty filters; raw, unprocessed look with a hint of slight overexposure due to bright ambient daylight.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm), short focal length, no bokeh. Background is fully sharp, no subject isolation. The image has a natural, unposed candid feel, captured with a DSLR or mirrorless camera in a “raw” file format.
+
+- **Environment**  
+  Urban street scene on a sunny afternoon (late‑afternoon, around 4 pm). Brick buildings line both sides of a one‑way street; parked cars line the curb, and a few pedestrians are visible in the background. A small red awning is attached to a shop on the right side. The sky is bright, with a slight haze that suggests warm ambient light.
+
+- **Composition & Framing**  
+  No rule‑of‑thirds intentionality—framing is accidental and slightly tilted. The shot is partially cropped at the top and bottom, giving a “cut‑in” feel. The background includes a glimpse of a white van and a silver sedan parked on the right side of the street. The overall tone is natural, with no color grading or post‑processing.
+
+- **Lighting**  
+  Natural daylight from the west, creating a soft, warm glow on the subject’s back and a slight overexposure on the upper part of the frame. No studio lighting, no professional composition, zero editorial tone.
+
+- **Final Prompt**  
+  “A candid, unposed photo of a young woman with a high ponytail, wearing an oversized two‑tone baseball tee, holding a smartphone in both hands as if taking a selfie on a sunny afternoon urban street. The image uses a wide‑angle, short focal length lens, with slight motion blur on the hands and fully sharp background. Everything is in focus, no filters or color grading, raw look with a hint of overexposure. The framing is accidental and slightly tilted, capturing the woman’s back and right side, with parked cars and a red awning visible in the background. The scene is natural, unprocessed, and fully sharp.”

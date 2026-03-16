@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A plus‑size woman with long, wavy brown hair, wearing a sheer white lace bodysuit with delicate floral motifs and tie‑front detailing. She stands in a relaxed, candid pose—hand on hip, slight turn to the side—mid‑step, as if caught in a casual walk or dance. Her expression is natural, unposed, with a soft smile and a hint of confidence.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle, midday source; slight overexposure on the upper body to emphasize the sheer fabric. No auto‑HDR or beauty filters—raw, unprocessed look. The exposure is slightly warm, with a subtle haze that gives an ambient, spontaneous feel.
+
+- **Camera & Lens**  
+  Wide‑angle lens (24–35 mm), short focal length, handheld. Everything in focus—no bokeh, no depth‑of‑field blur; background fully sharp. Slight motion blur on the hands and hair to suggest movement. No portrait‑mode subject isolation.
+
+- **Composition & Framing**  
+  Accidental, off‑center framing: the subject is slightly tilted, not following the rule of thirds. The crop is partial—her left hip is cut off by the frame edge, giving a casual, candid vibe. Background is a plain, neutral beige wall with a faint texture; no intentional rule‑of‑thirds placement.
+
+- **Environment**  
+  Location: a quiet residential hallway in a modern apartment building, mid‑afternoon. The walls are a muted beige, the floor is a light wood, and a small potted plant stands in the corner. Time of day: late morning, soft sunlight streaming from a north‑west window, creating gentle shadows.
+
+- **Details & Imperfections**  
+  Slight tilt in the camera angle; the subject’s head is slightly off‑center. Her left hand rests on her hip, fingers curled naturally. The lace details on the bodysuit catch the light, with subtle highlights and a faint overexposure on the chest area. Hair has a slight motion blur, indicating movement. The background remains fully sharp, no depth‑of‑field blur.
+
+- **Technical Settings**  
+  Aperture: f/4.0 (wide, shallow but not too shallow). Shutter speed: 1/60 s (enough for slight motion blur). ISO: 400 (for clean detail). No color grading or filters—raw capture only.
+
+- **Final Prompt**  
+  “A plus‑size woman with long wavy brown hair, wearing a sheer white lace bodysuit with floral motifs and tie‑front, standing in a relaxed candid pose mid‑step in a quiet residential hallway. Natural daylight from a high‑angle midday source creates slight overexposure on the upper body. Wide‑angle lens (24–35 mm), handheld, everything in focus with slight motion blur on the hands and hair. Accidental off‑center framing, partial crop, slight tilt. Background is a plain beige wall with a faint texture; small potted plant in corner. Late‑morning sunlight from a north‑west window. Raw, unprocessed look, no filters.”

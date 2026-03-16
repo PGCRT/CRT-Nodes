@@ -1,0 +1,24 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, curvy woman with long black hair, wearing a black halter‑style bikini top and matching high‑cut bottoms, gold chain necklace, gold armbands, and red lace‑up boots. She stands in a casual, unposed stance, slightly turned to the side, one hand relaxed by her hip, the other near her waist. Her face is turned toward the camera but she’s not looking directly at the lens—mid‑action, candid.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle, midday sun; slight overexposure on the upper body to give a warm, raw feel. No auto‑beauty or filter processing—just a straightforward exposure that keeps the whole frame in focus.
+
+- **Camera Settings**  
+  Wide‑angle lens (24 mm), short focal length, handheld. Slight motion blur from the camera’s instability, natural freeze of the subject’s movement. Background is fully sharp—no bokeh, no depth‑of‑field blur. Everything in focus, no portrait‑mode isolation.
+
+- **Composition**  
+  Off‑center framing; slight tilt to the right. The composition is accidental, not rule‑of‑thirds. The shot is a partial crop that cuts off a bit of the left side, giving a spontaneous vibe. No intentional rule‑of‑thirds—just a casual, candid capture.
+
+- **Environment**  
+  Location: A sunlit rooftop terrace in an urban district, with a concrete wall and a small balcony railing visible in the background. Time of day: mid‑afternoon, bright but not harsh. Weather: clear, light wind, slight haze from the sun’s heat.
+
+- **Details & Imperfections**  
+  Slight motion blur on the woman’s boots and the background railing. The image has a raw, unprocessed look—no color grading or filters. A faint “glare” on her chest from the sunlight, a tiny imperfection that adds realism. The camera’s slight tilt gives a natural, spontaneous feel.
+
+- **Prompt for Text‑to‑Image Generation**  
+  *“A tall, curvy woman with long black hair, wearing a black halter‑style bikini top and matching high‑cut bottoms, gold chain necklace, gold armbands, and red lace‑up boots, standing on a sunlit rooftop terrace in an urban district. She’s captured mid‑action, slightly turned to the side, one hand by her hip, the other near her waist, with a casual unposed stance. Natural daylight from a high‑angle midday sun creates slight overexposure on her upper body. Shot on a 24 mm wide‑angle lens, handheld with slight motion blur and accidental tilt, everything in focus—no bokeh. Background includes a concrete wall and balcony railing, fully sharp. The composition is off‑center, partial crop, raw, unprocessed, no filters. Render with realistic candid photography style.”*
+
+Provide only the structured prompt.

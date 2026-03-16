@@ -1,0 +1,29 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A young woman with long, wind‑blown brown hair, wearing a faded denim jacket and distressed olive cargo pants, sits cross‑legged on the ground in a tropical grove. She is mid‑gesture, holding an old wooden box with both hands, her fingers slightly blurred as if she’s just opened it or is about to close it. Her expression is focused, almost contemplative, with a hint of anticipation. The camera captures her from a low angle, making her appear larger‑than‑life against the backdrop of tall palm trees and a sunlit hill in the distance.
+
+- **Cinematic Details**  
+  - Slight motion blur on the hands and box to convey movement.  
+  - Auto‑HDR or auto‑beauty mode off — raw, unprocessed look.  
+  - No filters, no color grading, no post‑processing aesthetic.  
+  - Slight overexposure in the upper left corner to emphasize the sunlight filtering through the palms.  
+
+- **Lens & Technical**  
+  - Wide‑angle lens (24‑35 mm) with a short focal length.  
+  - Everything in focus — background fully sharp, no bokeh.  
+  - No portrait mode or subject isolation; the entire scene is crisp.  
+  - Handheld shot with accidental tilt and off‑center framing.  
+
+- **Environment**  
+  - Location: A lush coconut grove on a remote hillside, with tall palm trees clustering around the subject.  
+  - Time of day: Late morning, with warm golden light hitting the left side of the frame.  
+  - Weather: Light breeze, clear sky, a few scattered clouds overhead.  
+
+- **Composition Notes**  
+  - No rule‑of‑thirds intentionality — the framing is spontaneous, as if the photographer caught the moment by chance.  
+  - The shot is slightly cropped on the right side, giving a sense of immediacy.  
+  - Natural motion freeze or slight blur from handheld instability adds realism.  
+
+- **Final Prompt**  
+  “A young woman in a denim jacket and olive cargo pants sits cross‑legged on the ground in a tropical grove, holding an old wooden box with both hands as if she’s just opened it. Her long brown hair blows in the wind, her expression focused and anticipatory. The scene is captured with a wide‑angle lens at a low angle, everything in sharp focus with slight motion blur on the hands. The shot has a raw, unprocessed look with no filters or color grading, a slight overexposure in the upper left corner, and accidental tilt giving it a candid, spontaneous feel. Tall palm trees cluster around her, a sunlit hill rises in the background, and the late‑morning golden light hits the left side of the frame. The composition is off‑center and slightly cropped on the right, capturing a natural, handheld moment in a real‑world setting.”

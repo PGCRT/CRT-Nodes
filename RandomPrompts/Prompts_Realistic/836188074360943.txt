@@ -1,0 +1,29 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with wet, slightly frizzy hair, kneeling on a blue towel in a sunlit bedroom. She’s wearing pink bikini bottoms and white socks adorned with small floral patterns. Her back is to the camera, knees bent, feet planted wide, toes pointing slightly outward. The pose captures a natural, unposed moment as if she’re mid‑stretch or about to do a yoga move.
+
+- **Lighting & Exposure**  
+  Warm, natural daylight from a large window on the left, creating soft highlights on her back and buttocks. Slight overexposure in the upper left corner gives a raw, unprocessed feel. No auto‑beauty mode—just a straightforward exposure that keeps everything in focus.
+
+- **Camera Settings**  
+  - Lens: 24‑mm wide‑angle, short focal length, handheld.  
+  - Aperture: f/5.6 (wide opening).  
+  - Shutter speed: 1/125 s (slight motion blur from instability).  
+  - ISO: 400 (for clean detail).  
+  - Focus: everything in frame—subject, towel, window, floor—fully sharp, no bokeh.
+
+- **Composition & Framing**  
+  Accidental, off‑center framing; the composition is not intentionally rule‑of‑thirds aligned. The shot is slightly tilted to the right, with a partial crop that cuts off a bit of the window frame on the left. The blue towel occupies the lower third, the woman’s back and buttocks fill the central area, and the window’s bright pane sits at the upper left.
+
+- **Environment**  
+  A bright, airy bedroom with light wooden flooring. A large window lets in natural sunlight, casting soft shadows. A white radiator is visible on the left wall. The time of day is mid‑afternoon, around 3 pm, when the sun is high but not directly overhead.
+
+- **Details & Imperfections**  
+  Slight motion blur at the edges from handheld shake. The woman’s hair has a few stray strands that catch the light. Her socks show faint floral motifs. The blue towel has a subtle texture, slightly wrinkled. The window’s frame is partially out of frame, giving a candid feel.
+
+- **Post‑Processing**  
+  No filters, no color grading, no auto‑beauty mode—just raw, unprocessed imagery. A minimal exposure adjustment to keep the whole scene crisp.
+
+**Prompt Summary**  
+“Candid, wide‑angle shot of a woman in pink bikini bottoms and floral socks kneeling on a blue towel in a sunlit bedroom, captured with a 24‑mm lens at f/5.6 and 1/125 s shutter speed, slight motion blur from handheld shake, accidental off‑center framing, natural daylight from a large window, everything in focus, raw unprocessed look.”

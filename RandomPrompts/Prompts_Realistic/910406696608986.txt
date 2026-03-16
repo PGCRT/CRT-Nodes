@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair, wearing large gold hoop earrings, captured mid‑turn as she steps onto a sunlit patio. Her back is slightly turned toward the camera, one shoulder exposed, creating a natural, unposed silhouette. She’s bare‑shouldered, with a subtle smile, eyes bright and relaxed.
+
+- **Lighting & Exposure**  
+  Slight overexposure on the upper half of the frame to emphasize the warm, midday sun. Auto‑HDR off; no color grading or post‑processing. The exposure is uneven—warm highlights on her skin, soft shadows in the background.
+
+- **Camera Settings**  
+  Wide‑angle lens (24 mm), short focal length, handheld. Slight motion blur from the subject’s movement and camera shake. Everything in focus—from her face to the background—no portrait‑mode depth of field blur.
+
+- **Composition & Framing**  
+  No rule‑of‑thirds intentionality; the frame is slightly tilted, off‑center. The shot is a partial crop that cuts off the left side of her back, giving a candid, spontaneous feel. Background is fully sharp—no bokeh.
+
+- **Environment**  
+  Location: A rustic stone patio with an ancient column and a wooden bench, surrounded by lush greenery. Time of day: Late afternoon, around 4 pm, with the sun high but not directly overhead. Weather: Light breeze, clear sky, ambient humidity.
+
+- **Details & Imperfections**  
+  Slight tilt in the camera angle, a tiny smudge on her earring, a faint motion blur around her hair. The background shows a mix of stone and foliage, all in focus. The image has a raw, unprocessed look—no filters, no color grading, just natural light and a genuine moment captured in real time.

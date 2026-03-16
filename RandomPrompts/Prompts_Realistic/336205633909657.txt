@@ -1,0 +1,27 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair standing in a modern bathroom. She’s wearing a white ribbed tank top and blue paisley bikini bottoms. Her left hand is slightly curled near her chest, right arm relaxed by her side. She’s mid‑step, one foot forward, as if just finished a shower or about to. A subtle, natural motion blur on the hands and lower body to suggest movement.
+
+- **Lighting & Exposure**  
+  Warm, ambient daylight from a window on the left; slight overexposure on the upper torso to keep the look raw. No auto‑beauty or filter enhancement—just a straightforward, unprocessed capture. The ceiling vent and shower rail are visible, adding context.
+
+- **Camera Settings**  
+  Wide‑angle lens (24‑35 mm), short focal length. Handheld, slightly tilted to the right, creating an off‑center framing that feels spontaneous. Everything in focus—no bokeh, no portrait‑mode isolation. The background (tiles, shower rail, glass door) remains sharp.
+
+- **Environment**  
+  Location: a bright, tiled bathroom with a glass shower enclosure. Time of day: late morning, soft natural light. Weather: clear, mild—ambient conditions produce a gentle haze that gives the image a lived‑in feel.
+
+- **Composition Notes**  
+  No rule‑of‑thirds intentionality—the crop is accidental, capturing the subject’s upper body and part of her thighs, with the shower rail cutting across the frame. Slight partial crop on the right side to emphasize candidness. The shot is centered on the woman’s face but slightly offset to the left, giving a natural, unposed vibe.
+
+- **Technical Details**  
+  - Focal length: 35 mm  
+  - Aperture: f/4 (wide, shallow depth but full sharpness)  
+  - Shutter speed: 1/60 s (producing slight motion blur)  
+  - ISO: 400 (for clean detail without noise)  
+
+- **Prompt for AI Image Generation**  
+  “A young woman with long wavy brown hair, wearing a white ribbed tank top and blue paisley bikini bottoms, standing in a bright tiled bathroom. She’s mid‑step, left hand near chest, right arm relaxed, captured with a 35 mm wide‑angle lens, handheld slight tilt, subtle motion blur on the hands, warm daylight from the left, slight overexposure on torso, everything in focus, no bokeh, accidental off‑center framing, raw unprocessed look, late morning natural light, background includes glass shower rail and ceiling vent, sharp tiles, candid spontaneous pose.”
+
+Provide only the structured prompt.

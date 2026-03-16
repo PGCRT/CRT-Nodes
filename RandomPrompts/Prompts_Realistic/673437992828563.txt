@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair, wearing a rainbow‑colored one‑piece swimsuit and cream‑colored knee‑high boots, captured mid‑step on a concrete staircase. She’s leaning slightly against a black metal handrail, her left foot planted on the third step and her right foot hovering on the fourth, creating a dynamic, off‑center composition. Her gaze is directed toward the camera but not directly at it—mid‑action, candid feel.
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window behind the staircase creates a soft, slightly overexposed highlight on her back and boot. The ambient light is warm, mid‑afternoon, with a gentle haze that gives a raw, unprocessed look. No auto‑HDR or beauty filters—just a straightforward exposure.
+
+- **Environment**  
+  The setting is an urban loft: a brick wall on the left, a large glass window on the right, and a concrete staircase with a black metal rail. The time of day is late afternoon, giving a warm, golden tone to the scene. Weather is clear, with a slight breeze that creates a faint motion blur on the subject’s hair.
+
+- **Lens & Technical**  
+  Use a wide‑angle lens (24–35 mm) with a short focal length to capture the full scene. Everything—from the brick wall to the far window—is in focus; no bokeh or depth‑of‑field blur. The image has slight handheld shake, giving a natural motion freeze or mild blur. No rule‑of‑thirds intentionality—framing is accidental, slightly tilted.
+
+- **Composition Notes**  
+  Capture the scene with a wide, spontaneous shot that includes the brick texture, the metal rail, the staircase, and the window. Keep the background fully sharp. The composition should feel candid and unposed, with the subject’s body slightly off‑center and a partial crop that hints at more space beyond the frame.
+
+- **Post‑Processing**  
+  No filters or color grading—just raw, natural colors. A subtle auto‑beauty mode is off; keep the look genuine. Slight overexposure on the subject’s back adds a warm glow.
+
+**Prompt Summary**  
+“Candid photo of a woman in a rainbow swimsuit and cream boots mid‑step on a concrete staircase, leaning against a black rail next to a brick wall and a large window. Natural late‑afternoon light creates soft overexposure. Wide‑angle lens, everything in focus, slight handheld blur, accidental off‑center framing, raw unprocessed look.”

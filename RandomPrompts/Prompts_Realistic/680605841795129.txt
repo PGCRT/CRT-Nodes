@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail, wearing a beige sports bra and matching high‑waist trousers, captured mid‑turn as she leans back slightly against a modern outdoor sofa. Her left hand rests on her hip, her right arm bent at the elbow, and her head tilted to the side as she looks over her shoulder toward the camera with a subtle, confident smile.
+
+- **Lighting & Exposure**  
+  Natural daylight from a low‑angle, late‑afternoon sun creates a warm, slightly overexposed highlight on her back and shoulders. The light is soft but directional, casting gentle shadows in the crevices of her bra straps and the folds of her trousers. No auto‑HDR or beauty filters—just raw, unprocessed tones.
+
+- **Camera & Lens Settings**  
+  35 mm wide‑angle lens, f/4.0 aperture, 1/125 s shutter speed, handheld. Slight motion blur on the subject’s back and shoulders conveys a sense of movement, while the background remains fully sharp—no bokeh or depth‑of‑field blur. Everything is in focus from foreground to background.
+
+- **Composition & Framing**  
+  The shot is intentionally off‑center: the woman’s left side occupies the right third of the frame, her ponytail extending toward the top corner. The composition is spontaneous—no rule‑of‑thirds intentionality, just a casual, candid capture. A small portion of a wooden coffee table and a potted succulent are visible to the right; a beige sofa and a large window are on the left.
+
+- **Environment**  
+  Outdoor patio of a contemporary house, mid‑afternoon in late summer. The background includes a light‑colored stucco wall, a tall black‑framed window, and a small garden with a potted plant. The weather is clear, with a faint haze from the sun’s low angle.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera adds realism; the image has a partial crop that cuts off the top of her ponytail and the lower edge of her trousers. Tiny imperfections—slight dust on the sofa cushion, a small wrinkle in the bra strap—are preserved. No post‑processing color grading or filters.
+
+- **Final Prompt**  
+  “A candid, wide‑angle shot of a woman in a beige sports bra and high‑waist trousers leaning back against an outdoor sofa, captured with a 35 mm lens at f/4.0 and 1/125 s. The late‑afternoon sun creates a warm overexposure on her back, while the background remains fully sharp. The frame is off‑center and slightly tilted, capturing the woman’s mid‑turn and a glimpse of a wooden coffee table and potted succulent to the right, with a beige sofa and window to the left. All elements are in focus, with slight motion blur on the subject’s back and shoulders, no filters or auto‑HDR, raw and unprocessed.”

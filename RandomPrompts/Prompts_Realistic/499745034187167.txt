@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail, wearing a black ruffled crop‑top and a light‑denim skirt printed with pink‑flower motifs, captured mid‑turn as she faces away from the camera then looks back over her shoulder. Her hair is slightly tousled, and a faint motion blur conveys the sense of movement.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject appears unaware of the camera, caught in a natural, “in‑the‑moment” gesture. The frame is intentionally off‑center, with a slight tilt that gives an accidental, handheld feel. No rule‑of‑thirds; the composition is organic and imperfect.
+
+- **Imperfections & Raw Aesthetic**  
+  Slight overexposure in the upper left corner (ambient daylight) gives a raw, unprocessed look. No filters, no color grading, no post‑processing aesthetics — just the natural tone of the scene. The image has a wide‑angle feel, with everything in focus from foreground to background; no bokeh or depth‑of‑field blur.
+
+- **Environment**  
+  Setting: A simple office‑style room with a light‑wood desk, a laptop, a small potted plant, and a black mug on the surface. A white wall serves as a neutral backdrop, a fluorescent light fixture is visible at the top of the frame. The time of day is mid‑afternoon, with soft natural daylight coming from the left, creating gentle shadows and a slight haze.
+
+- **Lens & Technical**  
+  Use a short focal‑length wide‑angle lens (e.g., 24‑35 mm). Capture everything in focus — foreground, subject, background — no portrait‑mode isolation. The lens is handheld, producing a natural motion freeze or slight blur from instability. No “auto‑beauty” or “auto‑HDR” enhancements; keep the look raw and authentic.
+
+- **Final Prompt**  
+  *“A candid, unposed photo of a young woman in a black ruffled crop‑top and floral denim skirt, captured mid‑turn with her back to the camera and a glance over her shoulder. Her high ponytail is slightly tousled, and a faint motion blur conveys movement. The scene is set in a simple office room with a light‑wood desk, laptop, potted plant, and black mug on it; a fluorescent light fixture is visible at the top. Mid‑afternoon natural daylight comes from the left, creating soft shadows and a slight overexposure in the upper left corner. Capture with a short focal‑length wide‑angle lens (24‑35 mm), everything in focus, no bokeh, handheld slight blur. The frame is off‑center and slightly tilted, giving an accidental, organic composition. No filters or post‑processing — raw, real, spontaneous.”*

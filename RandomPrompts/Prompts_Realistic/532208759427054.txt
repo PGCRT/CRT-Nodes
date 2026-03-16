@@ -1,0 +1,21 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail, wearing black-rimmed glasses and an unbuttoned light‑blue button‑down shirt, sitting on a beige armchair in a bright office. She is mid‑gesture, hand near her face as if adjusting the glasses or touching her cheek, head tilted slightly to the left, eyes downcast with a subtle smile. Her hair is dark brown, loosely tied, a few strands framing her face. The shirt’s front buttons are undone, revealing a hint of her chest, giving a casual, spontaneous vibe.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. Slight tilt and off‑center framing; the composition is accidental, not rule‑of‑thirds. The shot has a raw, unprocessed look: no filters, no color grading, no post‑processing aesthetic. A slight overexposure in the window’s light gives a warm, natural glow.
+
+- **Motion & Focus**  
+  Slight motion blur from handheld instability, but everything remains fully sharp — no bokeh, no depth‑of‑field blur. The background (a wooden desk, a black office chair, a small black trash bin, and a window with daylight) is in focus.
+
+- **Lens & Technical**  
+  Wide‑angle lens, short focal length (~24 mm). Auto‑HDR or auto‑beauty mode off. No studio lighting; all light comes from the window and ambient day. The image captures a real‑world location, midday, with bright natural daylight and a slight haze from the window’s glare.
+
+- **Environment**  
+  Office setting: a wooden desk with a pink notebook, a black office chair, a small black trash bin, and a window that lets in warm daylight. The time of day is late morning; the weather is clear but slightly hazy, giving a soft ambient light.
+
+- **Prompt for Text‑to‑Image Generation**  
+  “A young woman with a high ponytail, wearing black‑rimmed glasses and an unbuttoned light‑blue button‑down shirt, sitting on a beige armchair in a bright office. She is mid‑gesture, hand near her face as if adjusting the glasses or touching her cheek, head tilted slightly to the left, eyes downcast with a subtle smile. Her hair is dark brown, loosely tied, a few strands framing her face. The shirt’s front buttons are undone, revealing a hint of her chest, giving a casual, spontaneous vibe. Slight motion blur from handheld instability, but everything remains fully sharp — no bokeh, no depth‑of‑field blur. Wide‑angle lens, short focal length (~24 mm). Auto‑HDR off, raw unprocessed look, slight overexposure from the window’s daylight. Background includes a wooden desk with a pink notebook, a black office chair, and a small black trash bin, all in focus. The scene is captured at midday in a bright, clear but hazy day, natural lighting only.”  
+
+Provide only the structured prompt.

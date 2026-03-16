@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A fit woman with a high ponytail, wearing a black bikini and a backpack, mid‑step on a sun‑baked beach. She’s angled slightly to the left, face turned toward the camera but not posing—her expression is natural, a subtle smile, sunglasses perched on her eyes. Her right hand rests on her hip, left arm bent, capturing a casual, spontaneous moment.
+
+- **Motion & Focus**  
+  Slight motion blur at the edges from handheld shake; the subject’s body is mostly sharp but not perfectly centered. Everything in focus—no portrait‑mode depth blur. No auto‑HDR or beauty filters—raw, unprocessed look with natural ambient light.
+
+- **Lighting & Exposure**  
+  Wide‑angle lens (24–35 mm) with a short focal length. Slight overexposure on the bright sand, giving a warm, hazy feel. No intentional rule‑of‑thirds—framing is accidental, slightly tilted.
+
+- **Environment**  
+  Specific real‑world location: a sandy dune field at low tide, with a faint line of sea in the background. Time of day: late afternoon, golden hour, ambient light warm and soft. Weather: clear, breezy, with a few scattered clouds overhead.
+
+- **Lens & Technical**  
+  Short focal length, wide‑angle, no bokeh—background fully sharp. No depth‑of‑field blur, no portrait mode. All elements in focus, from the woman’s face to the sand texture.
+
+- **Composition Notes**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Imperfections encouraged: slight tilt, off‑center framing, partial crop. Zero studio lighting, zero professional composition, zero editorial tone. Natural motion freeze or slight blur from handheld instability.
+
+- **Prompt Summary for Generation**  
+  “A fit woman with a high ponytail, wearing a black bikini and a backpack, mid‑step on a sun‑baked beach, slightly tilted framing, natural motion blur, wide‑angle lens, late afternoon golden hour, clear sky, all in focus, raw unprocessed look.”

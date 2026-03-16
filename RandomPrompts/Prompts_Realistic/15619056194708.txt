@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A young woman with shoulder‑length, sun‑kissed hair in a loose braid, wearing an off‑shoulder white camisole layered over a green long‑sleeve shirt and dark jeans. She’s mid‑gesture, hand raised as if she just finished a story or a toast, mouth open in a joyful laugh, body slightly turned toward the camera. Her expression is candid and spontaneous, as if she’s unaware of the lens capturing her.
+
+- **Pose & Composition**  
+  Capture a slight tilt and off‑center framing; the shot should feel accidental, not staged. The composition is wide‑angle, using a short focal length (≈20–35 mm) to keep the entire scene in focus—no bokeh, no subject isolation. The background remains fully sharp, with no depth‑of‑field blur.
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window on the left, creating soft side lighting with a hint of overexposure on the subject’s face and shoulder. Slight ambient glare from the window, slight underexposure on the background to keep the foreground bright. No auto‑HDR or auto‑beauty mode—raw, unprocessed look.
+
+- **Environment**  
+  A casual classroom or study space: a wooden table with a cup and a pen holder, a bookshelf filled with books, a large window that lets in warm sunlight, and a few other students in the background—one on the left seated at the table, another on the right talking on a phone. The time of day is late afternoon, around 4–5 pm, giving a golden hue to the scene. Weather is clear, with a light breeze that ruffles the subject’s hair.
+
+- **Lens & Technical**  
+  Use a wide‑angle lens (20–35 mm) for a natural, handheld feel. Everything in focus—no portrait mode. Slight motion blur from the subject’s movement and the camera’s instability, giving a sense of spontaneity. No rule‑of‑thirds intentionality—frame the scene as it naturally appears.
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, zero post‑processing aesthetic. Keep the image raw, with only basic white balance correction and a slight contrast boost if needed. The final look should feel like a genuine snapshot captured in a real world setting.

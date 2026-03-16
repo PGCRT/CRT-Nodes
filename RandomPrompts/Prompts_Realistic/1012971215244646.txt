@@ -1,0 +1,28 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with shoulder‑length auburn hair, wearing a crisp white lab coat over a teal ribbed tank, is captured mid‑kneel on a tiled floor in a sunlit bedroom. Her left knee is bent, her right leg extended onto a white digital scale, and she holds her thigh with both hands as if checking her weight or preparing for a medical exam. She wears round, thin‑rimmed glasses that catch the light, a delicate gold necklace, and a silver flip‑flop on her right foot. Her expression is neutral but engaged, slightly looking toward the camera as if she’s in the middle of a conversation or a self‑check.
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window behind her creates a soft overexposed highlight on her face and shoulder. The exposure is slightly warm, with a subtle haze that gives an auto‑HDR feel but keeps the raw, unprocessed look. No color grading or filters—just the ambient light’s natural tones.
+
+- **Camera Settings**  
+  - Lens: 24‑mm wide‑angle, short focal length, handheld.  
+  - Focal depth: everything from foreground to background is fully sharp; no bokeh.  
+  - Shutter speed: 1/60 s (slight motion blur on the subject’s hands and legs).  
+  - ISO: 400–600 for clean detail.  
+
+- **Composition & Framing**  
+  The shot is intentionally off‑center, with the woman’s left knee slightly cut off by the frame edge. The composition is spontaneous—no rule‑of‑thirds, just a casual, candid capture. The background shows a light‑wood cabinet on the left, a small vase of orange flowers on a side table, and a bright window that lets in natural sunlight. The camera is tilted slightly, adding to the informal feel.
+
+- **Environment**  
+  Location: A bright, tidy bedroom with beige walls, a wooden cabinet, and a large window that faces south. Time of day: late morning, around 10:30 AM, when the sun is high but not directly overhead. Weather: clear, mild, with a gentle breeze that creates a faint motion blur on the subject’s hair.
+
+- **Technical Details**  
+  - No portrait‑mode depth‑of‑field blur; everything in focus.  
+  - Slight tilt and partial crop for a raw, unposed look.  
+  - Auto‑HDR or auto‑beauty mode off—raw, unprocessed look.  
+  - No filters, no color grading, no post‑processing aesthetic.  
+
+- **Final Prompt**  
+  “A young woman with auburn hair, wearing a white lab coat over a teal ribbed tank, kneeling on a tiled floor in a sunlit bedroom, holding her thigh while standing on a digital scale; she wears round glasses and a gold necklace, with a silver flip‑flop on her right foot. Natural daylight from a large window creates soft overexposure; 24‑mm wide‑angle lens, handheld shutter at 1/60 s, ISO 500, everything in focus. The shot is off‑center and slightly tilted, capturing a candid, spontaneous moment. Background includes a light‑wood cabinet and a vase of orange flowers. No filters or color grading—raw, unprocessed look.”

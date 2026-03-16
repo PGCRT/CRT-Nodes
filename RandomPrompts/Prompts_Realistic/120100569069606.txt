@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with soft, wavy blonde hair standing in a dimly lit bedroom at night. She is wearing an open black cardigan and white underwear, her body slightly turned toward the camera as if she’s mid‑movement. Her face is turned forward, eyes half‑closed, lips parted, giving a candid, unposed feel.
+
+- **Lighting & Exposure**  
+  Slight overexposure from ambient night light; auto‑HDR off. The exposure is a little bright on the highlights but still retains natural contrast. No color grading or filters—just raw, unprocessed tones.
+
+- **Camera Settings**  
+  Wide‑angle lens (24 mm), short focal length, handheld. Slight motion blur from the subject’s movement and camera shake. Everything in focus—no bokeh, no depth‑of‑field blur; background is fully sharp.
+
+- **Composition**  
+  No rule‑of‑thirds intentionality: the frame is slightly off‑center, a partial crop that captures her torso, neck, and upper chest. The shot is spontaneous, as if she’s caught mid‑action.
+
+- **Environment**  
+  Location: a modest bedroom with a white dresser on the left, a small vase of pink roses, and a bed with a dark pillow on the right. Time of day: late evening, ambient night light with a cool tone. Weather: indoor, no external weather influence.
+
+- **Lens & Technical Details**  
+  Short focal length (24 mm) for wide coverage. No bokeh; background fully sharp. All elements in focus—no portrait‑mode isolation. Slight tilt and partial crop for a candid feel.
+
+- **Final Prompt**  
+  “A young woman with soft, wavy blonde hair stands in a dimly lit bedroom at night, wearing an open black cardigan and white underwear. She is mid‑movement, slightly turned toward the camera, eyes half‑closed, lips parted. Slight overexposure from ambient night light, raw unprocessed look, no filters. Wide‑angle 24 mm lens, handheld shake producing mild motion blur. Everything in focus—no bokeh. The frame is off‑center, partial crop capturing her torso, neck, and upper chest. Background shows a white dresser with a vase of pink roses on the left and a bed with a dark pillow on the right. Late evening ambient light, indoor setting. No rule‑of‑thirds, spontaneous candid composition.”

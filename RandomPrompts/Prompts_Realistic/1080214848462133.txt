@@ -1,0 +1,40 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Appearance**  
+  - A young woman with a wet, glossy complexion, her hair slicked back in a casual, messy bun that slightly frays at the sides.  
+  - She wears thick, voluminous false eyelashes in a soft pink hue, paired with a subtle shimmer of tinted eyeshadow that catches the light.  
+  - Her lips are painted a muted nude-pink, slightly parted as if she’s about to speak or just finished talking.  
+  - Gold hoop earrings dangle from her ears, and a thin gold chain rests on her collarbone, adding a subtle jewelry accent.  
+
+- **Lighting & Exposure**  
+  - Capture with a wide‑angle lens (20–35 mm) at a relatively low focal length to keep the background fully sharp.  
+  - Slight overexposure in the highlights gives a raw, unprocessed feel; the exposure is not perfectly balanced—there’s a gentle warmth to the overall tone.  
+  - No auto‑HDR or auto‑beauty mode: keep the look natural and candid.  
+
+- **Motion & Framing**  
+  - Introduce slight motion blur from handheld instability, as if the camera was moving when the shot was taken.  
+  - The framing is off‑center and slightly tilted; the subject’s face is not centered but rather positioned to the left of the frame.  
+  - The crop is partial—only the head, neck, and upper chest are visible, with a bit of the background showing behind her.  
+
+- **Environment**  
+  - Location: A sunlit balcony in an urban apartment building, with a concrete wall and a small potted plant visible in the background.  
+  - Time of day: Late afternoon, around 5 pm, when the sunlight is warm but not too harsh.  
+  - Weather: Light breeze, clear sky, ambient natural light with a slight haze from dust or moisture in the air.  
+
+- **Lens & Technical**  
+  - Short focal length (24–35 mm) for a wide‑angle view that keeps everything in focus—no bokeh, no depth‑of‑field blur.  
+  - All elements are sharp: subject, background, and foreground.  
+  - No portrait mode or subject isolation; the image is a flat, direct capture.  
+
+- **Style & Tone**  
+  - Candid, unposed, spontaneous—subject appears unaware of the camera or mid‑action.  
+  - Encourage imperfections: slight tilt, off‑center framing, partial crop.  
+  - No rule‑of‑thirds intentionality—accidental framing that feels natural and organic.  
+
+- **Post‑Processing**  
+  - Zero filters, zero color grading, zero post‑processing aesthetic.  
+  - Keep the raw look; only minimal adjustments to exposure and focus.
+
+**Prompt Summary (for use in a text‑to‑image model):**
+
+> “A candid close‑up of a young woman with wet hair and glossy skin, wearing pink false lashes, nude‑pink lipstick, gold hoop earrings, and a thin gold chain. Capture with a wide‑angle lens at 24–35 mm, slight motion blur from handheld shake, off‑center tilted framing that partially crops the head and upper chest. The scene is set on a sunlit balcony in an urban apartment at late afternoon, with a concrete wall and a potted plant in the background. All elements are fully sharp—no bokeh. Use natural ambient light with slight overexposure, no filters or post‑processing, raw and unprocessed look.”

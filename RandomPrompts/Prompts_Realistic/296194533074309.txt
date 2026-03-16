@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A fit, sun‑kissed woman with long, wind‑blown blonde hair walking toward the camera on a tropical beach. She wears a green floral bikini with pink flowers, halter‑style top and tie‑side bottoms. Her left arm is slightly bent, right arm relaxed by her side; she’s mid‑step, toes gripping the sand, a natural “mid‑action” candid feel.
+
+- **Motion & Focus**  
+  Slight motion blur on the feet and background to convey handheld movement. Everything in focus – no portrait‑mode bokeh. The lens is a short focal‑length wide‑angle (24–35 mm), giving a “wide‑lens” sense of space while keeping the background fully sharp.
+
+- **Lighting & Exposure**  
+  Raw, unprocessed look: auto‑HDR off, no color grading or filters. The scene is slightly overexposed on the sky and water, letting the ambient daylight bloom. The sun is high but slightly to the left, casting soft shadows on the sand and a gentle highlight on her left shoulder.
+
+- **Environment**  
+  Specific real‑world location: a white‑sand beach with palm trees lining the left side, a resort building in the background, and the ocean stretching to the right. The time of day is late morning, around 10:30 AM, with bright but not harsh sunlight. Weather is clear with a few scattered clouds, giving a warm, tropical ambience.
+
+- **Lens & Technical**  
+  Short focal length (24–35 mm), wide‑angle, no bokeh, no depth‑of‑field blur – background fully sharp. Handheld shot with slight tilt and off‑center framing; the composition is accidental, not rule‑of‑thirds. The camera is at eye level, slightly low to capture the sand’s texture and the subject’s full figure.
+
+- **Candid Details**  
+  The subject is unaware of the camera, mid‑walk, with a natural smile. Slight tilt in the frame gives an informal, spontaneous vibe. The shot has a partial crop feel – the edges cut off the palm fronds and ocean horizon, enhancing the “raw” aesthetic.
+
+- **Post‑Processing**  
+  Zero studio lighting, zero professional composition, zero editorial tone. Only natural light and a simple auto‑HDR toggle off. The final image should look like an authentic, unposed snapshot captured on a handheld camera in a real beach setting.

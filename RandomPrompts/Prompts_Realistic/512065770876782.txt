@@ -1,0 +1,29 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair that falls past the shoulders, standing in a casual, unposed stance. Her body is slightly turned to the side, mid‑movement as if she just finished a step or a turn. She wears a simple denim skirt and a light, breathable top; her arms are relaxed at her sides, with a hint of natural motion blur around the edges.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle source (mid‑afternoon) creates a soft, warm glow on her face and torso. Slight overexposure on the highlights gives a raw, unprocessed look. No auto‑beauty mode—just the natural texture of skin and fabric.
+
+- **Camera Settings**  
+  - Lens: 24‑35 mm wide‑angle (short focal length)  
+  - Aperture: f/4.0 (wide opening for a shallow depth of field, but background stays fully sharp)  
+  - Shutter speed: 1/60 s (enough to capture slight motion blur)  
+  - ISO: 400 (for clean noise level)  
+  - Focus: manual, everything in focus from foreground to background.
+
+- **Composition & Framing**  
+  Candid, spontaneous framing—no rule‑of‑thirds intentionality. The shot is slightly off‑center, with the subject’s left side cutting close to the left edge of the frame. The composition captures a partial crop of her upper body and a portion of her skirt, giving an informal, “in‑the‑moment” feel.
+
+- **Environment**  
+  Location: A quiet, sunlit alleyway in an urban neighborhood; the background shows a concrete wall and a faint hint of a wooden fence. Time of day: late afternoon, with warm, golden light. Weather: clear, mild breeze. The background is fully sharp—no bokeh.
+
+- **Technical Details**  
+  - No filters, no color grading, no post‑processing aesthetic.  
+  - Slight tilt to the camera to enhance the candid feel.  
+  - Handheld instability produces a subtle motion blur around the edges.  
+  - Wide‑angle capture gives a sense of spaciousness without losing detail.
+
+- **Final Prompt**  
+  “A young woman with long, wavy brown hair stands casually in a sunlit urban alleyway, mid‑step, wearing a denim skirt and light top. Natural daylight from above creates a warm glow with slight overexposure on the highlights. Shot on a 24‑35 mm wide‑angle lens at f/4.0, 1/60 s shutter speed, ISO 400—everything in focus. The candid framing is slightly off‑center and tilted, capturing a partial crop of her upper body and a hint of her skirt, with a fully sharp background of concrete wall and wooden fence. No filters or post‑processing—raw, unprocessed realism.”

@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A young woman with a high ponytail, wearing a loose peach‑colored sweater, is mid‑celebration—her right hand raised in a triumphant gesture, left hand holding a paper coffee cup. She’s smiling broadly, eyes bright, head tilted slightly to the right, as if she just received good news or finished a project. Her hair has a few stray strands escaping the ponytail, adding a natural imperfection.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Slight tilt and off‑center framing; partial crop that cuts off a bit of the background on the left side. No rule‑of‑thirds intentionality—just a handheld shot that feels accidental but dynamic.
+
+- **Environment**  
+  Office setting: a bright, airy workspace with large windows on the left, a white ceiling tile, and a desk with a computer monitor visible in the background. The time of day is late afternoon; warm sunlight streams through the window, creating a soft overexposed highlight on the subject’s right shoulder. Ambient light is natural, no studio flash.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm), wide‑angle lens. Everything in focus—no bokeh, no depth‑of‑field blur; background fully sharp. Slight motion blur on the raised hand to suggest movement. Auto‑HDR or auto‑beauty mode off—raw, unprocessed look. No filters, no color grading, no post‑processing aesthetic. Slight overexposure on the window area to give a natural glow.
+
+- **Composition Notes**  
+  The shot is slightly cropped at the top right, leaving a small portion of the ceiling tile visible. The subject’s body occupies roughly two‑thirds of the frame, with her raised hand extending beyond the upper edge, creating a dynamic diagonal line. The coffee cup is held near the lower middle of the frame, adding a subtle foreground element.
+
+- **Final Prompt**  
+  “A young woman with a high ponytail, wearing a loose peach‑colored sweater, mid‑celebration—right hand raised, left hand holding a paper coffee cup—in a bright office with large windows, late afternoon sunlight streaming in. Candid, unposed, slight tilt and off‑center framing, partial crop. Short focal length 24‑35 mm wide‑angle lens, everything in focus, slight motion blur on the raised hand, no bokeh, auto‑HDR off, raw unprocessed look, no filters or color grading. Slight overexposure on the window, natural handheld shot.”

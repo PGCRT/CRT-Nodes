@@ -1,0 +1,16 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A young woman with long, dark hair sitting on a bed in a sunlit bedroom. Her face is slightly tilted upward as a man’s hand enters the frame from the top right, gently touching her forehead. A thin stream of white liquid (milk or cream) drips from her forehead down to her chest, creating a subtle motion blur that suggests movement. She wears a black choker with a small ring pendant. Her body is bare, and a few drops of the white liquid are scattered across her chest and abdomen.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the woman appears unaware of the camera, mid‑action. Slight tilt and off‑center framing give an accidental, handheld feel. The composition is not intentionally rule‑of‑thirds; the frame cuts off the top of the bed and a portion of the window, creating a partial crop that enhances realism.
+
+- **Environment**  
+  Specific real‑world location: a bright, airy bedroom with a large window on the left. The time of day is late morning, with warm natural light streaming in, causing a slight overexposure on the left side of the frame. Ambient conditions include a gentle breeze that creates a faint motion blur on the woman’s hair and the dripping liquid.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm) wide‑angle lens. Everything is in focus — no bokeh or depth‑of‑field blur; the background (bed, window, curtain) remains sharp. No portrait mode or subject isolation. Slight overexposure on the left side gives a raw, unprocessed look. Auto‑HDR and auto‑beauty modes are off. The image has zero filters, no color grading, and no post‑processing aesthetic.
+
+- **Additional Details**  
+  The bed has white sheets that are slightly rumpled, adding to the candid feel. A pillow is visible on the right side of the bed. The window’s frame and a portion of the exterior view are captured, providing context. The man’s hand is only partially in frame, emphasizing the spontaneous nature of the shot. The overall tone is natural, with no studio lighting or professional composition — just a genuine, in‑the‑moment capture.

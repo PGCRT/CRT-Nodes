@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, flowing brown hair, wearing a red lace bikini, standing in a bright, modern kitchen. She is mid‑step, leaning casually against the countertop, one hand on the edge, the other relaxed by her side. Her face is turned slightly toward the camera, a natural smile, eyes bright and engaged. A black wristwatch adorns her left wrist, a delicate gold necklace rests around her neck.  
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window to the right creates a soft, warm glow; slight overexposure on the upper body to emphasize the lace texture. No auto‑HDR or beauty filters—raw, unprocessed look. The exposure is slightly uneven, giving an authentic handheld feel.  
+
+- **Motion & Focus**  
+  Slight motion blur at the edges from a handheld shot, capturing the movement of her hair and the subtle shift of her body. Everything remains in focus: subject, background, and details are crisp.  
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm), short focal length. No bokeh; background is fully sharp. No portrait‑mode depth‑of‑field blur.  
+
+- **Environment**  
+  A bright, contemporary kitchen with white cabinets, a stainless‑steel sink, and a large window that lets in natural light. A small potted plant sits on the counter, a dishware set is visible near the sink, and a green plant hangs from the window frame. The time of day is late morning, with soft sunlight creating gentle shadows.  
+
+- **Composition & Style**  
+  Candid, unposed, spontaneous—subject appears unaware of the camera. Slight tilt and off‑center framing; partial crop that gives an accidental, natural feel. No rule‑of‑thirds intentionality. Zero studio lighting, zero professional composition, zero editorial tone.  
+
+- **Post‑Processing**  
+  No filters, no color grading, no post‑processing aesthetic. Raw, in‑camera look only.  
+
+**Prompt Summary**  
+> “A young woman with long brown hair in a red lace bikini leans casually against a kitchen counter, captured with a wide‑angle lens at late‑morning natural light. The shot has slight motion blur and a small overexposure on the subject, everything in focus, no filters—raw candid photography.”

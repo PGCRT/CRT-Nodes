@@ -1,0 +1,23 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy dark brown hair, wearing a tight white lace‑cap minidress, standing in a bright, neutral‑tone indoor space. She is mid‑step, one foot slightly ahead of the other, hands relaxed at her sides, eyes focused forward with a subtle, natural expression. The dress clings to her curve, highlighting the waist cinch and the lace detail on the shoulders. Her left arm bears a small tattoo near the wrist; her right arm shows a faint mole.  
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — she is unaware of the camera, caught in a natural moment. Slight tilt and off‑center framing give an accidental, handheld feel. The composition is not rule‑of‑thirds‑intentional; the subject is slightly cropped on the right side, giving a “mid‑action” vibe.  
+
+- **Motion & Focus**  
+  Slight motion blur from handheld instability, natural freeze of the subject’s pose. Everything in focus — no portrait‑mode depth‑of‑field blur; background remains sharp.  
+
+- **Environment**  
+  Specific real‑world location: a bright, unadorned hallway with beige walls and a plain white door visible on the right. Time of day: mid‑afternoon, soft natural light coming from the west, creating a gentle warm glow. Weather or ambient conditions: clear, no wind, slight humidity that gives a subtle sheen to the dress.  
+
+- **Lens & Technical**  
+  Short focal length (24–35 mm), wide‑angle lens. No bokeh; background fully sharp. No auto‑HDR or auto‑beauty mode — raw, unprocessed look. Slight overexposure on the upper body to emphasize the light on the dress. Wide‑angle gives a slight distortion that adds to the candid feel.  
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, zero post‑processing aesthetic. Only basic exposure adjustment and minimal contrast boost.  
+
+**Prompt Summary for Generation**
+
+> “A young woman with long wavy dark brown hair, wearing a tight white lace‑cap minidress, stands mid‑step in a bright beige hallway at mid‑afternoon. Capture candidly with a 24–35 mm wide‑angle lens, slight motion blur from handheld shake, everything in focus, no bokeh. The frame is slightly tilted and off‑center, cropping the right side of her body. Her left wrist shows a small tattoo; her right arm has a mole. The scene has a soft warm glow from west‑side natural light. No filters or heavy post‑processing — raw, unprocessed look with slight overexposure on the upper body.”

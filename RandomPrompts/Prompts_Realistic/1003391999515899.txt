@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, straight blonde hair standing in a casual, unposed stance, mid‑step as if she’s just finished a conversation or is about to move. She wears a dark blue, long‑sleeved, button‑front top that fits snugly, highlighting her curves. Her left leg is slightly bent, and her right hand hangs loosely by her side, fingers relaxed. Her head is turned to the right, eyes looking off‑camera, giving a candid, “in‑motion” feel.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle window, slight overexposure on the upper body, creating a soft halo around her hair and shoulders. No auto‑beauty or filter enhancement—raw, unprocessed look. Slight handheld shake gives a subtle motion blur around the edges.
+
+- **Camera & Lens Settings**  
+  Wide‑angle lens (24‑35 mm), f/4.0, 1/60 s shutter speed, ISO 400. Everything in focus—from her face to the patterned fabric behind her—no bokeh, no portrait‑mode isolation.
+
+- **Environment**  
+  A simple indoor setting: a plain concrete wall in the background, a brown patterned blanket or throw draped over a sofa or chair at waist height. The time of day is late morning, with warm, diffused sunlight casting soft shadows.
+
+- **Composition & Framing**  
+  No rule‑of‑thirds intentionality—framing is accidental, slightly off‑center. The shot is cropped tightly around the subject’s torso to mid‑thigh, with a slight tilt to the right. The background is fully sharp, no depth‑of‑field blur.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, minor handheld instability, natural motion freeze. A faint lens flare near the top right corner adds realism. The subject’s fingernails are painted a pale pink, visible as her right hand rests by her side. Her left foot is slightly turned inward, adding dynamism.
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, no auto‑beauty mode—just raw capture. A minimal crop to keep the composition tight, but not too tight; a little space above her head and below her hips for context.
+
+**Prompt Summary (structured)**  
+"Capture a candid, unposed photo of a young woman with long blonde hair in a dark blue button‑front top, standing mid‑step indoors against a plain concrete wall with a brown patterned blanket behind her. Use a wide‑angle lens (24‑35 mm) at f/4.0 and 1/60 s, everything in focus, slight handheld shake producing subtle motion blur. Light from a high window creates a soft halo on her hair. Frame slightly off‑center with a minor tilt, keep background sharp, no filters or auto‑beauty. Preserve natural imperfections: accidental framing, slight tilt, motion freeze, and a faint lens flare near the top right."

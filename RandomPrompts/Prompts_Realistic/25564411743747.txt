@@ -1,0 +1,16 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair standing in a casual, unposed stance, mid‑step as if she’s just finished a dance move or is about to walk. She wears a black thin‑strap top and high‑waisted dark leggings that cling to her frame. Her hands hang loosely by her sides, slightly off‑center, with a faint natural motion blur around the fingertips.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject appears unaware of the camera, caught in a natural moment. Slight tilt and partial crop give an accidental, handheld feel. No rule‑of‑thirds intentionality; framing is imperfect but engaging. The image has a raw, auto‑HDR look with no filters or color grading, only a mild overexposure that lets the ambient light bleed softly across the scene.
+
+- **Environment**  
+  Location: A sunlit alleyway in an urban downtown area, with a concrete wall and a passing street sign visible in the background. Time of day: late afternoon, around 5:30 pm, giving warm golden tones. Weather: lightly breezy, with a faint haze that adds depth to the air.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm) wide‑angle lens, handheld. Everything is in focus — no bokeh or subject isolation. Background remains fully sharp, no portrait‑mode blur. Slight motion blur on the subject’s hands and hair conveys movement. The exposure is slightly high, letting a hint of overexposure soften the entire frame.
+
+- **Composition Notes**  
+  The shot is centered but not symmetrical; the woman’s left side is slightly cut off by the edge of the frame. The background includes a faint outline of a streetlamp and a passing cyclist, adding context without distracting. The overall tone is natural and unpolished, as if captured in a spontaneous, everyday moment.

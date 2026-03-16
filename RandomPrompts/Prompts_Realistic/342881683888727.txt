@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, athletic woman with long, wavy blonde hair, wearing a black lace bra and matching fishnet stockings, standing in a sunlit bedroom. She is mid‑step, one foot slightly ahead of the other, her hands relaxed at her sides, a subtle smile on her face as she looks down toward her knees. Her left wrist bears a sleek black watch.  
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window with white blinds; the light is slightly overexposed on the right side of the frame, giving a warm, soft glow. No auto‑HDR or beauty filters—just raw, unprocessed imagery.  
+
+- **Camera Settings**  
+  Wide‑angle lens (24 mm), handheld, slight motion blur from a casual shake. Everything is in focus—from her face to the floor—no bokeh, no depth‑of‑field blur.  
+
+- **Composition**  
+  Off‑center framing: the subject’s left side is slightly tilted, the crop cuts off a bit of the window blinds on the left and a small portion of a beige sofa on the right. No rule‑of‑thirds intentionality—just a spontaneous, candid snapshot.  
+
+- **Environment**  
+  A bright, airy bedroom with a large window covered by white horizontal blinds; a beige sofa is partially visible on the right. The time of day is late morning, with soft, diffused sunlight streaming through the blinds, creating gentle shadows and highlights. The weather outside is clear, with a light breeze that ruffles the woman’s hair.  
+
+- **Details & Imperfections**  
+  Slight tilt in the camera angle, a tiny crop that cuts off the top of the window frame. The woman’s watch strap is slightly askew, her left toe is partially out of frame. The image has a natural, raw feel—no post‑processing color grading or filters.  
+
+- **Final Prompt**  
+  “A tall, athletic woman with long, wavy blonde hair, wearing a black lace bra and matching fishnet stockings, stands mid‑step in a sunlit bedroom. Natural daylight from a large window with white blinds casts a warm, slightly overexposed glow on her right side. Shot on a 24 mm wide‑angle lens, handheld with slight motion blur, everything in focus. The frame is off‑center and partially cropped: the left side tilts a bit, a small portion of a beige sofa peeks out on the right. Late‑morning sunlight filters through the blinds, creating soft shadows that highlight her posture. No filters or post‑processing—just a raw, candid snapshot.”

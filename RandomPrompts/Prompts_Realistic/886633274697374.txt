@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy dark hair walking confidently down a fashion runway. She’s wearing an elegant, champagne‑colored gown with ruffled sleeves, a deep V‑neck, and delicate gold floral embroidery that trails into a sheer, layered skirt. Her right hand is lightly touching her chest, while her left arm hangs naturally by her side. The pose feels spontaneous—she’s mid‑step, slightly turned toward the camera, as if she’s unaware of the lens capturing her.
+
+- **Motion & Focus**  
+  Slight motion blur on the subject’s feet and the background, indicating a handheld shot at a relatively fast shutter speed. Everything remains fully sharp—no portrait‑mode blur, no depth‑of‑field isolation. The focus is broad, capturing the entire scene from head to toe.
+
+- **Lighting & Exposure**  
+  Natural ambient lighting from a bright, overcast afternoon. The light comes from the front‑left, creating soft highlights on the gown’s fabric and subtle shadows in the crevices of the ruffles. A mild overexposure on the upper body gives a warm, slightly hazy feel, while the lower part of the dress remains a bit darker for contrast.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24 mm) with a short focal length, giving a broad field of view. No bokeh—background is fully sharp, from the runway to the audience seats on either side. The composition is accidental: the frame is slightly tilted, the subject isn’t centered, and the crop cuts off part of her left heel, adding a candid, unposed feel.
+
+- **Environment**  
+  A spacious indoor fashion show venue with a long, polished wooden runway. The background shows blurred audience members seated on either side, a large arched doorway at the far end, and warm wall sconces that add a subtle glow. The time of day is mid‑afternoon, with diffused daylight filtering through high windows, creating a gentle, even illumination.
+
+- **Details & Imperfections**  
+  The image has a raw, unprocessed look—no filters or heavy color grading. Slight tilt and off‑center framing give it a spontaneous vibe. The gown’s ruffles catch the light as she moves, revealing tiny imperfections in the fabric that add realism. The background is fully in focus, with the audience’s faces and the runway’s texture visible.
+
+- **Prompt for Text‑to‑Image Generation**  
+  “A young woman with long wavy dark hair walking down a fashion runway, wearing an elegant champagne‑colored gown with ruffled sleeves, deep V‑neck, and gold floral embroidery that trails into a sheer layered skirt. She touches her chest with her right hand, left arm hanging naturally. Slight motion blur on the feet, everything fully sharp. Natural ambient lighting from a bright overcast afternoon, soft front‑left highlights. Wide‑angle 24 mm lens, short focal length, no bokeh. Candid, unposed, slightly tilted frame, off‑center crop. Background shows audience seats and an arched doorway, polished wooden runway, warm wall sconces. Mid‑afternoon daylight. Raw, unprocessed look, no filters.”

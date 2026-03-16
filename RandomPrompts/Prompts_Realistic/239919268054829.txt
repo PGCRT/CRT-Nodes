@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework – “Summer Festival Portrait”**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair stands in a casual, confident pose at an outdoor summer festival. She wears a red‑and‑white horizontal‑striped crop top and high‑waist bikini bottoms, with gold hoop earrings and a delicate necklace. Her left hand rests on her hip, right hand near her thigh, body slightly turned toward the camera, head tilted a little to the left, eyes looking directly at the lens with a soft smile.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous – the subject is mid‑action, as if she just finished a conversation or is about to grab a drink. Slight tilt and off‑center framing give an accidental, handheld feel. The shot has a tiny motion blur at the edges from a shaky camera, and a slight overexposure that keeps the ambient daylight warm and natural.
+
+- **Environment**  
+  Location: A grassy field at a daytime outdoor festival. In the background, several white, red, and blue pop‑up tents line the horizon, a few people are walking or standing, and a blue plastic bottle hangs from a tent pole. The sky is bright, the sun high, creating a warm, slightly hazy atmosphere.
+
+- **Lens & Technical**  
+  Short focal length (24 mm) wide‑angle lens, all elements in focus – no bokeh, no depth‑of‑field blur. The image uses auto‑HDR off, no color grading or filters, raw and unprocessed. Slight overexposure from the bright midday sun gives a natural contrast. The composition is not rule‑of‑thirds; it’s a spontaneous, handheld frame that captures the subject and background fully sharp.
+
+- **Post‑Processing**  
+  Zero studio lighting, zero professional composition, zero editorial tone. Only natural daylight and slight motion blur from a handheld camera. No portrait mode or subject isolation – everything is in one flat focus plane.
+
+**Prompt Summary (structured)**  
+“Summer festival, midday, wide‑angle 24 mm lens, candid pose of a woman in a red‑white striped crop top and bikini bottoms, gold hoop earrings, necklace, hand on hip, slight tilt, off‑center framing, background of white/red/blue tents, people walking, blue bottle, bright sun, slight motion blur, overexposed natural daylight, all in focus, raw unprocessed, no filters.”

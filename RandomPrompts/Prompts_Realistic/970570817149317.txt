@@ -1,0 +1,26 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a sleek, shoulder‑length dark brown bob, standing mid‑walk in an outdoor courtyard. She wears a black lace‑trimmed dress that drapes softly over her shoulders, capturing a natural, unposed moment as she passes by a terracotta planter and a wooden door. Her face is slightly turned toward the camera, with a subtle smile, and her hair has a faint motion blur indicating movement.
+
+- **Lighting & Exposure**  
+  Ambient daylight from a low‑angle sun, creating a warm, slightly overexposed tone on her face and dress. The exposure is uneven—her front is brighter than the background—giving a raw, unprocessed look. No auto‑beauty or filter enhancement; the image retains natural grain and minor imperfections.
+
+- **Camera Settings**  
+  - Lens: 24 mm wide‑angle, short focal length, handheld.  
+  - Focal depth: everything from subject to background is fully sharp—no bokeh or portrait‑mode isolation.  
+  - Shutter speed: 1/60 s (slight motion blur on the subject’s hair and dress).  
+  - Aperture: f/4.5 (wide opening for ambient light).  
+  - ISO: 400 (for natural noise and detail).
+
+- **Composition & Framing**  
+  The frame is intentionally off‑center, with the woman’s left side cutting close to the top edge, creating a slight tilt. The background includes a beige stucco wall, a terracotta planter on the left, and a wooden door on the right; a small portion of a green plant peeks from the lower left corner. No rule‑of‑thirds—this is a spontaneous, candid capture.
+
+- **Environment & Time**  
+  Location: A sunny, late‑afternoon courtyard in a residential area. The time of day is roughly 4:30 pm, with warm, golden light casting soft shadows. Weather is clear with a light breeze, giving a gentle motion blur to the subject’s hair.
+
+- **Post‑Processing**  
+  No filters or color grading—just raw, in‑camera capture with auto‑HDR off. Slight overexposure on the subject’s front gives a natural, unpolished feel. The image retains all details, from the lace texture on her dress to the roughness of the stucco wall.
+
+- **Final Prompt**  
+  “A young woman in a black lace‑trimmed dress walks casually through a sunlit courtyard at late afternoon, captured on a 24 mm wide‑angle lens with handheld shake. Her dark brown bob shows slight motion blur, while her face is softly overexposed. The background features a beige stucco wall, a terracotta planter, and a wooden door, all in focus. The frame is off‑center and slightly tilted, creating a candid, spontaneous look with no filters or color grading—just raw, natural detail.”

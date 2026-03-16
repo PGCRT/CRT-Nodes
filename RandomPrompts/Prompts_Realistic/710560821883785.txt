@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, curvy woman with long dark hair, mid‑laugh, standing in a lush tropical setting. She wears a black lace bikini with floral motifs; the top is a halter style with thin straps, and the bottom is a high‑cut thong with side ties. Her left hand hangs loosely by her thigh, right arm slightly bent, head tilted back, eyes closed in joy. The pose feels spontaneous, as if she’s caught mid‑gesture.
+
+- **Motion & Focus**  
+  Slight motion blur on the subject’s hands and the background, indicating handheld shake. Everything remains sharply in focus—no portrait‑mode blur. A subtle overexposure on the upper body to highlight the lace texture.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high angle, slightly overcast but with a bright patch of sun hitting the subject’s face and shoulders. The lighting creates soft highlights on the lace and skin, with a faint halo around her hair. No auto‑beauty mode; raw, unprocessed look.
+
+- **Environment**  
+  A verdant jungle clearing with a small waterfall in the background. Tall palm trees frame the left side, ferns cluster at the bottom right, and a gentle stream flows beneath the woman’s feet. The time of day is late morning, around 10:30 AM, giving warm, diffused light. Weather is mild, with a light breeze.
+
+- **Lens & Technical**  
+  24‑mm wide‑angle lens (short focal length), f/4 aperture, 1/125 s shutter speed, ISO 400. No bokeh—background fully sharp. The composition is accidental: the subject is slightly off‑center, the frame tilts a little to the right, and the top of the image cuts off just above her head, giving a partial crop.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Imperfections encouraged: slight tilt, off‑center framing, partial crop. No rule‑of‑thirds intentionality—handheld, natural motion freeze or slight blur from instability. Zero studio lighting, zero professional composition, zero editorial tone.
+
+- **Post‑Processing**  
+  Auto‑HDR off. No color grading or filters. Slight overexposure on the upper body to emphasize lace details. Keep everything in focus; no portrait mode.  
+
+**Prompt Summary**  
+> “A tall woman with long dark hair, wearing a black lace bikini, stands mid‑laugh in a lush tropical clearing with a small waterfall behind her. The scene is captured on a 24‑mm wide‑angle lens at f/4, 1/125 s, ISO 400, with slight motion blur and a subtle overexposure on the upper body. The framing is accidental—slightly tilted and off‑center—with everything in focus, no bokeh, and no post‑processing filters. The lighting is natural late‑morning daylight, creating soft highlights on the lace and skin. The background is fully sharp, showing tall palm trees, ferns, and a gentle stream. Capture style: candid, spontaneous, handheld.”

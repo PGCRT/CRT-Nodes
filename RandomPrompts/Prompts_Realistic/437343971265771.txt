@@ -1,0 +1,29 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A plus‑size woman with long, wavy brown hair, wearing a cream‑colored halter dress with a blue sash tied in a bow at the waist. She stands on a marble‑tiled terrace of a classical pavilion, her left hand lightly touching her hip and her right arm relaxed by her side. Her face is turned slightly toward the camera, a candid smile on her lips, as if she’s mid‑conversation or just finished a pose. A small gold heart‑shaped pendant hangs from her neckline.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle, late‑afternoon sun creates a soft overexposure on the upper part of the frame; the exposure is slightly uneven, giving a raw, unprocessed look. The lighting is warm, with a gentle golden hue that highlights the texture of her dress and the marble columns.
+
+- **Camera & Lens Settings**  
+  - Lens: 24‑mm wide‑angle prime (short focal length).  
+  - Aperture: f/4.0 (wide opening).  
+  - Shutter speed: 1/60 s (slight motion blur from handheld shake).  
+  - ISO: 400 (for natural grain).  
+  - Focus: everything in focus – subject and background.  
+  - No bokeh; depth of field is fully sharp.
+
+- **Composition & Framing**  
+  The shot is intentionally off‑center, with the subject’s left side slightly cut off by the frame edge. The camera is tilted a few degrees to the right, giving a spontaneous, candid feel. The background shows a series of classical marble columns, a white balustrade, and a distant hillside with scattered trees. The sky is bright blue with fluffy white clouds.
+
+- **Environment**  
+  Location: A sunlit terrace of a neoclassical building in a rural setting. The time of day is late afternoon (around 5 pm), giving warm, golden light. Weather is clear with a few high‑altitude clouds. The ground is a polished marble floor, the columns have fluted detailing, and a small balcony railing is visible behind the subject.
+
+- **Details & Imperfections**  
+  Slight motion blur on the subject’s right arm, indicating handheld shake. The image has no filters or color grading; it retains the raw, natural look of a candid snapshot. A faint overexposure at the top of the frame gives a subtle halo effect. The background columns and tiles are fully sharp, no portrait‑mode isolation.
+
+- **Prompt for Text‑to‑Image Generation**  
+  “A plus‑size woman with long wavy brown hair, wearing a cream halter dress with a blue sash tied in a bow at the waist, standing on a marble‑tiled terrace of a classical pavilion. She smiles candidly, left hand on hip, right arm relaxed. Natural late‑afternoon sunlight creates soft overexposure; 24‑mm wide‑angle lens, f/4.0, 1/60 s shutter speed, ISO 400. Everything in focus, slight motion blur from handheld shake. Off‑center framing with a few degrees tilt, spontaneous candid composition. Background shows fluted marble columns, white balustrade, distant hillside, bright blue sky with fluffy clouds. Raw, unprocessed look, no filters.”
+
+Provide only the structured prompt.

@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman in a casual office setting, mid‑phone call, standing slightly off‑center. She’s wearing an oversized white Reebok T‑shirt and high‑waisted denim shorts with rolled cuffs. Her hair is tied up in a loose ponytail that swings as she moves. She holds a black smartphone to her right ear, head tilted slightly downward, eyes focused on the screen. Her left hand rests near her hip, fingers relaxed.
+
+- **Motion & Focus**  
+  Slight motion blur at the edges from handheld shake; the subject’s face and hands are in sharp focus while the background remains fully crisp—no bokeh. The entire frame is captured with a wide‑angle lens (24‑35 mm), giving a “wide‑lens” feel that keeps everything in focus from foreground to background.
+
+- **Lighting & Exposure**  
+  Natural ambient daylight from a high‑ceiling fluorescent lamp, with a subtle overexposure on the upper part of the frame. No auto‑HDR or beauty filters—raw, unprocessed look. Slight color cast of warm white light, giving an authentic, candid feel.
+
+- **Environment**  
+  Office cubicle with a white desk cluttered with laptops, notebooks, and a telephone. A filing cabinet sits in the back right; a small rainbow‑colored object (maybe a stress ball) is visible on the far right. The ceiling tile and a security camera are faintly seen at the top center. The time of day is mid‑afternoon, around 3 pm, with soft natural light mixing with indoor lighting.
+
+- **Lens & Technical**  
+  Short focal length (24–35 mm), wide‑angle, no depth‑of‑field blur—everything from foreground to background is sharp. No portrait‑mode isolation; the composition is accidental and spontaneous. Slight tilt and off‑center framing give a candid vibe. The shot is taken with a handheld camera, producing natural motion freeze or slight blur from instability.
+
+- **Prompt Summary**  
+  “A young woman in a casual office setting, mid‑phone call, standing slightly off‑center, wearing an oversized white Reebok T‑shirt and high‑waisted denim shorts with rolled cuffs. Her hair is tied up in a loose ponytail that swings as she moves. She holds a black smartphone to her right ear, head tilted slightly downward, eyes focused on the screen. Slight motion blur at the edges from handheld shake; the subject’s face and hands are in sharp focus while the background remains fully crisp—no bokeh. The entire frame is captured with a wide‑angle lens (24–35 mm), giving a ‘wide‑lens’ feel that keeps everything in focus from foreground to background. Natural ambient daylight from a high‑ceiling fluorescent lamp, with a subtle overexposure on the upper part of the frame. Office cubicle with a white desk cluttered with laptops, notebooks, and a telephone. A filing cabinet sits in the back right; a small rainbow‑colored object (maybe a stress ball) is visible on the far right. The ceiling tile and a security camera are faintly seen at the top center. Time of day is mid‑afternoon, around 3 pm, with soft natural light mixing with indoor lighting.”

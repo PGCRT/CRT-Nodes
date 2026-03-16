@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy chest‑brown hair, wearing a sheer white lace bikini top, sitting by a swimming pool. She is mid‑smile, head tilted slightly to the right, hands resting on her thighs, body angled toward the camera but not perfectly centered. Her left eye is a touch higher than the right, giving an accidental off‑center framing.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — she appears unaware of the camera, caught in a natural moment. Slight handheld shake gives a subtle motion blur around the edges. The image has a raw, auto‑HDR feel: a mild overexposure on the highlights that keeps the tones bright but unprocessed. No filters, no color grading, no post‑processing aesthetic.
+
+- **Environment**  
+  Location: A sunny afternoon at a resort poolside. The background shows a calm pool surface, a concrete deck, and a blurred palm tree in the distance. The time of day is late morning, with warm, golden ambient light coming from the west, creating soft shadows on her face and body. Weather is clear, with a faint haze in the air that adds depth.
+
+- **Lens & Technical**  
+  Use a wide‑angle lens (24–35 mm). Capture everything in focus — no bokeh or subject isolation. The background is fully sharp, but the depth of field is shallow only enough to keep the entire scene crisp. Shoot with a short focal length for a more intimate feel. Slight overexposure on the highlights gives a natural, unpolished look.
+
+- **Composition Notes**  
+  No rule‑of‑thirds intentionality — frame the subject slightly off‑center, with the pool edge cutting across the lower third of the frame. The composition is accidental and spontaneous. Keep the shot wide to include part of the pool, a portion of the deck, and a palm tree in the background.
+
+- **Final Prompt**  
+  “A young woman with long wavy chest‑brown hair, wearing a sheer white lace bikini top, sitting by a swimming pool on a sunny late‑morning afternoon. She smiles mid‑action, head tilted slightly right, hands on thighs, body angled toward camera but not centered. Candid, unposed, spontaneous capture with slight handheld shake and mild overexposure. Wide‑angle lens (24–35 mm), everything in focus, background fully sharp. Location: resort poolside with concrete deck and a palm tree in the distance. Raw, auto‑HDR look, no filters or color grading. Capture everything in one shot — no rule‑of‑thirds, accidental framing.”

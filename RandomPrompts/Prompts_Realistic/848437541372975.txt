@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a bold, edgy look: long light‑brown hair styled in high twin‑buns, a few strands framing her face. She’s wearing a black leather‑style triangle top and dark denim shorts that sit at the hips, with a subtle tattoo of a winged motif on her left upper arm. Her left hand rests on the back of a white coffee table, right knee slightly bent, body angled toward the camera but not directly facing it—mid‑movement, as if she just stepped forward or is about to lean.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—an “in‑the‑moment” snapshot where the subject is unaware of the lens. Slight tilt and off‑center framing; a partial crop that cuts off a bit of the background on the right side. No rule‑of‑thirds intentionality—just accidental, natural composition.
+
+- **Motion & Exposure**  
+  A hint of motion blur from handheld instability, as if the camera was moving when the shutter clicked. Slight overexposure in the high‑lights (the window’s glare is a bit bright) but no color grading or filters—raw, unprocessed look. The exposure is slightly warm, as though the ambient daylight is still on the scene.
+
+- **Environment**  
+  A modern living room: a white sofa with a light beige cushion sits to the left; behind the woman is a tall white bookshelf filled with books, small potted plants, and decorative items. A large window on the right lets in bright natural light, creating a soft highlight on her shoulder. The time of day is mid‑afternoon, around 3 pm, when the sun is high but not directly overhead. The weather outside is clear, with a faint hint of blue sky visible through the window.
+
+- **Lens & Technical**  
+  Short focal length (20–35 mm) wide‑angle lens, giving a slightly compressed background that remains fully sharp—no bokeh. Everything in focus: subject, sofa, bookshelf, window. No portrait‑mode depth‑of‑field blur; the background is crisp. The image has an auto‑HDR feel but without post‑processing—just raw capture.
+
+- **Composition Notes**  
+  The frame captures the woman from the mid‑thigh up to the top of her head, with a portion of the coffee table and bookshelf visible. The left side of the image shows a corner of the sofa; the right side shows the window’s frame. The camera is held at a slightly low angle, emphasizing the subject’s posture. The overall look is spontaneous, candid, and unposed, as if captured in a casual “mid‑action” moment.
+
+**Prompt Summary (structured)**  
+`Candid, unposed photography of a young woman with twin‑buns hair and a black leather triangle top, wearing dark denim shorts, standing in a modern living room near a white sofa and bookshelf, with a large window to the right letting in mid‑afternoon light. Capture with a short focal length wide‑angle lens, everything in focus, slight motion blur from handheld shake, accidental off‑center framing, raw auto‑HDR look, no filters—spontaneous, mid‑action pose.`

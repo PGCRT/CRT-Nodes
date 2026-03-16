@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with soft, wavy blonde hair catching the light, wearing a floral‑print crop top in pastel pinks and greens, paired with dark high‑waist trousers. She’s mid‑gesture, hand on her hip, head tilted slightly to the right, lips parted as if speaking or singing. Her necklace with a small cross hangs visible against the fabric.  
+
+- **Lighting & Exposure**  
+  Natural daylight from a western window, mid‑afternoon; slight overexposure on the face and upper body, subtle halo effect. No auto‑beauty or filter enhancement—raw, unprocessed look.  
+
+- **Camera Settings**  
+  Wide‑angle lens (24‑35 mm), handheld, 1/60 s shutter speed with a slight motion blur on the subject’s hair and shoulders. Everything in focus—from foreground to background—no portrait‑mode depth‑of‑field blur.  
+
+- **Composition**  
+  Candid, unposed framing: the shot is slightly off‑center, with the subject’s left side cropping close to the edge. No rule‑of‑thirds intentionality; the composition feels spontaneous, as if captured mid‑conversation.  
+
+- **Background & Environment**  
+  A cozy bedroom: a wooden desk cluttered with bottles and jars on the left, a bed with floral sheets on the right, a small yellow bottle on a shelf in the back. The wall is a muted beige, the ceiling visible at the top. The time of day is late afternoon, soft sunlight casting gentle shadows.  
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, natural motion blur on the hair, minor overexposure on the face. A faint hint of a black phone lying on the bed, a crumpled pink shirt nearby. The entire scene is fully sharp—no bokeh, no subject isolation.  
+
+- **Final Prompt**  
+  “A candid, wide‑angle shot of a young woman in a floral crop top and dark trousers, captured mid‑gesture in a cluttered bedroom at late afternoon. Natural daylight creates a slight overexposure on her face, handheld blur on the hair, everything in focus. The composition is off‑center and spontaneous, with a wooden desk and bed visible in the background. Raw, unprocessed, no filters—pure, realistic photography.”

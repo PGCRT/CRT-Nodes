@@ -1,0 +1,16 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with dark hair tied back, wearing a white two‑piece swimsuit featuring red dragon motifs on the top. Her arms are raised behind her head, elbows bent, hands gripping the back of her head in a relaxed, casual pose. She stands in a sunlit park, eyes closed as if savoring the warmth of the day.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject appears unaware of the camera, mid‑action. Slight tilt and off‑center framing give an accidental, handheld feel. The shot is a partial crop that doesn’t follow the rule‑of‑thirds, creating a raw, organic composition.
+
+- **Environment**  
+  Location: A lush green park with tall trees and a small pond in the background. Time of day: Late morning, around 10:30 AM, when the sun is high but not directly overhead, casting soft, warm light. Weather: Clear, slightly humid, with a gentle breeze. The background is fully sharp—no bokeh or depth‑of‑field blur—so all elements are in focus.
+
+- **Lens & Technical**  
+  Use a short focal length wide‑angle lens (e.g., 24 mm). Capture with a handheld camera, allowing slight motion blur from the shake of the hand. No auto‑HDR or auto‑beauty mode; keep the raw, unprocessed look. Avoid any filters, color grading, or post‑processing aesthetics. The exposure is slightly overexposed to let the ambient light bloom. Everything remains in focus—no portrait‑mode subject isolation.
+
+- **Final Prompt**  
+  “A young woman in a white dragon‑embroidered swimsuit stands candidly in a sunlit park at late morning, arms bent behind her head, eyes closed, captured on a 24 mm wide‑angle lens with slight handheld blur. The scene is fully sharp, no filters or auto‑HDR applied, slightly overexposed, framed off‑center and tilted, creating a raw, spontaneous, unposed photograph.”

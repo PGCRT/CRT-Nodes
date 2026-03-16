@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair standing in a grand, marble‑columned courtyard. She wears an ivory, V‑neck dress with black trim and a thin waist belt; her hands hang loosely by her sides, slightly tilted to the left. Her face is turned toward the camera but not directly at it—mid‑gesture, as if she’s about to speak or adjust her dress. The shot captures a subtle motion blur on her right shoulder, indicating handheld shake.
+
+- **Lighting & Exposure**  
+  Warm, golden hour light from the west casts soft highlights on her face and dress; slight overexposure on the upper torso gives a raw, unprocessed feel. No auto‑beauty or filter enhancement—just natural ambient illumination with a wide‑angle lens.
+
+- **Lens & Technical Settings**  
+  24 mm focal length, wide‑angle, f/4.0 aperture, 1/60 s shutter speed, ISO 400. Everything is in focus from foreground to background; no bokeh or depth‑of‑field blur. Slight tilt and off‑center framing create a candid, spontaneous vibe.
+
+- **Environment**  
+  The setting is a sunlit, historic courtyard with tall marble columns and a stone balustrade. The time of day is late afternoon, the sky slightly hazy, the weather calm. A few leaves from a nearby tree are visible at the lower left corner, adding a natural element.
+
+- **Composition Notes**  
+  No rule‑of‑thirds intentionality—framing is accidental, with the subject’s head near the upper third but slightly off‑center. The background columns are fully sharp, giving a sense of depth without any portrait‑mode isolation. The shot feels like a real, unposed moment captured with a handheld camera.
+
+- **Post‑Processing**  
+  Auto‑HDR is off; no color grading or filters applied. Only minimal noise reduction to keep the image raw and authentic.

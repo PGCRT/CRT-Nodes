@@ -1,0 +1,28 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A young woman with dark, slightly wet hair stands in a cornfield, wearing a pink floral hoodie and blue jeans. She is mid‑gesture, holding a smartphone in both hands, looking down at the screen as if texting or taking a photo. Her posture is natural and unposed, with a subtle tilt to her left side that gives the shot a candid feel.
+
+- **Pose & Composition**  
+  The framing is off‑center; the subject occupies the right third of the frame but is not perfectly aligned. The crop is partial—her left hip is cut off by the edge of the image, adding spontaneity. No rule‑of‑thirds intentionality—just a casual, handheld composition.
+
+- **Motion & Focus**  
+  Slight motion blur around her hands and phone, indicating a handheld shot captured in real time. Everything from foreground to background is fully sharp—no portrait‑mode depth‑of‑field blur. The focus is on the subject’s face and upper body, but the cornstalks behind her are also crisp.
+
+- **Lighting & Exposure**  
+  Ambient natural light from a cloudy mid‑afternoon sky creates a soft, diffused illumination. There is a mild overexposure on the subject’s hoodie, giving it a bright, slightly washed‑out pink tone. No auto‑HDR or beauty filters—just raw, unprocessed imagery.
+
+- **Environment**  
+  The setting is a lush cornfield with tall green stalks and a few ears of corn visible above the woman’s head. A wooden fence runs along the left side of the frame, its posts and rail slightly weathered. In the background, a line of trees and a faint horizon are visible under a gray‑blue sky.
+
+- **Lens & Technical**  
+  Shot with a wide‑angle lens (24–35 mm), capturing a broad view of the scene. Focal length is short, keeping the entire scene in focus from foreground to background. No bokeh—every element, from the woman’s hoodie to the cornstalks, is sharp.
+
+- **Color & Tone**  
+  The hoodie’s pink is slightly overexposed, giving a warm, natural tone. The jeans have a subtle blue tint, and the cornfield’s green has a slight yellow‑green hue. No color grading or filters—just the raw colors captured by the camera.
+
+- **Post‑Processing**  
+  Zero post‑processing aesthetic: no LUTs, no color correction, no sharpening or noise reduction. The image retains the natural imperfections of a candid snapshot, including slight handheld jitter and minor overexposure.
+
+- **Final Prompt**  
+  “A young woman with dark, wet hair in a pink floral hoodie and blue jeans stands in a cornfield, holding a smartphone, mid‑gesture, slightly tilted frame, off‑center candid composition, shallow wide‑angle lens, full sharpness, soft natural daylight, mild overexposure, raw unprocessed look, wooden fence on left, lush green cornstalks, gray‑blue sky, no filters—realistic photography.”

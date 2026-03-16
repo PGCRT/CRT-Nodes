@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with wavy auburn hair, wearing a dark gray bra and black lace stockings, sitting casually on a blue couch. Her left hand rests on her hip, right hand near her thigh, legs slightly crossed, body angled toward the camera but not perfectly centered. She looks directly at the lens with a soft, confident expression. A black watch is visible on her left wrist.
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window behind the couch creates a slight overexposure on the upper part of the frame; the exposure is uneven, giving a raw, unprocessed look. The light hits the subject’s face and upper body, leaving subtle highlights and gentle shadows. No auto‑HDR or beauty filters—just a handheld, spontaneous capture.
+
+- **Camera & Lens Settings**  
+  Wide‑angle lens (24–35 mm) with a short focal length. Everything is in focus—from the subject to the background—no bokeh or depth‑of‑field blur. The shot has slight motion blur from handheld instability, especially around the edges.
+
+- **Composition & Framing**  
+  The framing is accidental and off‑center: the couch occupies the lower two‑thirdrs of the frame, the window’s panes are visible in the upper left, and a stack of books sits on the left side of the couch. A single book lies open on the right side of the couch. The composition has no intentional rule‑of‑thirds; it feels candid and spontaneous.
+
+- **Environment**  
+  Location: a bright living room with a large window that lets in natural sunlight. The time of day is mid‑afternoon, as indicated by the warm, slightly harsh daylight. Weather is clear, with no clouds visible outside the window. The room’s decor includes a wooden bookshelf filled with books behind the couch and a small side table to the right.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, partial crop that cuts off the top of the window frame. The subject’s hair has a slight motion blur, indicating movement at the moment of capture. The couch fabric shows a subtle texture, and the books on the couch have visible spines with titles “ONON,” “NHDE M,” “CODLA C,” and “MEODELL.” A black watch is visible on the subject’s left wrist, and her stockings show lace detailing around the thigh.
+
+- **Post‑Processing**  
+  No filters or color grading—just raw, unprocessed imagery. The image retains natural contrast and a slight overexposure in the upper portion, giving it an authentic, candid feel.
+
+**Prompt Summary**  
+“Candid photo of a woman with auburn hair in a gray bra and lace stockings, sitting on a blue couch in a sunlit living room. Wide‑angle lens, short focal length, everything in focus with slight motion blur. Natural daylight from a large window creates a soft overexposure. The frame is off‑center, accidental, with a stack of books on the left and an open book on the right. Raw, unprocessed look, no filters.”

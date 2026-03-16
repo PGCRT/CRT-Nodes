@@ -1,0 +1,16 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, athletic woman with long, sun‑kissed blonde hair standing on a quiet suburban street. She wears an open, light‑blue denim jacket with the sleeves rolled up, revealing a black bikini bottom that bears white “Calvin Klein” lettering. Her pose is casual and mid‑movement: one hand rests near her hip, the other hangs by her side, as if she just finished a step or a turn. Slight motion blur at the edges conveys a natural, handheld feel.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject appears unaware of the camera, caught in a fleeting moment. The frame is slightly tilted and off‑center, with a partial crop that cuts off the left side of her jacket, giving an accidental, informal look. No rule‑of‑thirds intentionality; the composition is guided by the natural line of the street and the subject’s posture.
+
+- **Imperfections & Raw Aesthetic**  
+  Slight overexposure in the highlights, a raw, unprocessed look with no filters or color grading. The image has a faint auto‑HDR tone but retains an underexposed feel in the shadows, as if captured in bright midday light. All elements are fully sharp — no bokeh or depth‑of‑field blur; the background is crisp from a wide‑angle lens.
+
+- **Environment**  
+  A quiet residential street at mid‑afternoon, with a concrete road stretching into the distance and a patch of green lawn on the right. The time of day is late morning, with warm, high‑angle sunlight casting soft shadows. Ambient conditions are clear, with a light breeze that slightly ruffles the jacket’s fabric.
+
+- **Lens & Technical**  
+  Short focal length (24 mm) wide‑angle lens, no bokeh, no subject isolation. Everything is in focus from foreground to background. The shot uses a handheld, steady but imperfect shake that adds a subtle motion blur to the edges. No portrait mode or studio lighting — pure natural light and spontaneous capture.

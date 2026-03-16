@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A young woman with long, dark, wavy hair, wearing a thin‑strapped pink bikini top and light denim shorts, is mid‑bite of a slice of pizza. Her left hand holds the slice near her mouth, fingers slightly curled, as she turns her head to the left, catching a natural side‑profile that’s almost off‑center in the frame. She’s standing at a wooden cafeteria table, leaning slightly forward, with a small smile on her face.
+
+- **Candid Capture Style**  
+  The shot is spontaneous and unposed; the woman appears unaware of the camera, caught in a natural moment. Slight handheld shake gives a subtle motion blur around the edges, while the center remains mostly sharp. The framing is accidental—no rule‑of‑thirds, just a wide‑angle capture that includes part of the table, a tray of pizza, a bottle of soda, and a male companion in the background who’s also eating.
+
+- **Environment**  
+  Location: A bright, no‑frills school cafeteria or college dining hall. The time of day is late afternoon, with warm ambient light coming from the west, creating a slight overexposure on the subject’s back and a gentle highlight on her hair. The weather is clear, with a faint haze from the open windows, giving the scene an airy, natural feel.
+
+- **Lens & Technical**  
+  Use a short focal‑length wide‑angle lens (e.g., 20–35 mm). Capture everything in focus—no bokeh or depth‑of‑field blur; background elements (the table, tray, soda bottle, the man’s face) are all sharp. Shoot in raw mode, no auto‑HDR or beauty filters, just a straightforward, unprocessed look. Slight tilt and partial crop to emphasize the candid nature.
+
+- **Composition Notes**  
+  Keep the composition casual: the subject is slightly off‑center to the right, the table extends horizontally across the frame, and the background includes a glimpse of a window with blinds and a ceiling light fixture. The lighting is natural, with a hint of overexposure on the subject’s back, giving a warm, slightly hazy tone.
+
+- **Final Prompt**  
+  “A young woman with long dark wavy hair, wearing a thin‑strapped pink bikini top and light denim shorts, mid‑bite of a pizza slice, standing at a wooden cafeteria table in a bright late‑afternoon school dining hall. The shot is captured on a short focal‑length wide‑angle lens, everything in focus, slight handheld blur, accidental off‑center framing, raw unprocessed look, natural overexposure, casual candid composition.”

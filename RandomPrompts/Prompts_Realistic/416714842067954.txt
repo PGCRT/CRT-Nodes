@@ -1,0 +1,30 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A young woman with a high ponytail, wearing an oversized beige T‑shirt and gray cargo pants, is mid‑turn on a city sidewalk. Her right hand holds a smartphone to her ear, left hand adjusting her hair, capturing a spontaneous, candid moment as she walks past a shopping cart filled with boxes and a blue tote. She’s smiling, slightly tilted head, eyes focused on the phone screen.
+
+- **Pose & Composition**  
+  Capture a wide‑angle, handheld shot with a short focal length (e.g., 24–35 mm). Frame the scene from a low angle, letting the subject occupy the central‑right third of the frame while the shopping cart and a dark trash bin appear on the left‑back. The composition should feel accidental: slight tilt, off‑center framing, partial crop—no rule‑of‑thirds intentionality. Keep everything in focus; no bokeh or depth‑of‑field blur.
+
+- **Lighting & Exposure**  
+  Use natural daylight, mid‑afternoon (around 4 pm), with a slight overexposure that gives a warm, raw feel. No auto‑HDR or auto‑beauty mode—keep the look unprocessed. The lighting should be soft but not flat; ambient light creates subtle highlights on the subject’s shirt and hair.
+
+- **Environment**  
+  Location: a bustling urban street in a modern suburb. The background includes a concrete sidewalk, a glass‑front storefront, a metal shopping cart, a blue tote, and a black trash bin. A small patch of green grass is visible at the far left corner. Weather is clear, with a light breeze that creates slight motion blur on the subject’s hair.
+
+- **Lens & Technical**  
+  - Lens: 35 mm wide‑angle, handheld.  
+  - Focal length: 35 mm (short, wide).  
+  - Aperture: f/4–f/5.6 (wide opening for sharpness).  
+  - Shutter speed: 1/125 s to capture slight motion blur.  
+  - ISO: 400–800 (depending on ambient light).  
+  - No portrait‑mode or subject isolation; everything in focus.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Encourage imperfections: slight tilt, off‑center framing, partial crop. No rule‑of‑thirds intentionality—accidental framing. Natural motion freeze or slight blur from handheld instability.
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, zero post‑processing aesthetic. Slight overexposure or underexposure depending on ambient light. Keep the image raw and natural.
+
+**Prompt Summary (for AI image generator)**  
+"A young woman with a high ponytail, wearing an oversized beige T‑shirt and gray cargo pants, is mid‑turn on a city sidewalk, holding a smartphone to her ear with her right hand while adjusting her hair with her left. She’s smiling, slightly tilted head, eyes focused on the phone screen. Capture a wide‑angle, handheld shot with a 35 mm lens, low angle, slight tilt and off‑center framing, partial crop. The background includes a metal shopping cart filled with boxes and a blue tote on the left, a dark trash bin on the right, and a glass‑front storefront behind her. Weather is clear mid‑afternoon, soft natural daylight with a slight overexposure. Everything in focus, no bokeh. Encourage imperfections: natural motion blur from handheld instability. No filters or post‑processing—raw, unprocessed look."

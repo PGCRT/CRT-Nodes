@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, straight brown hair, wearing a black ribbed tank top and matching shorts, captured mid‑step in a casual, spontaneous pose. Her left arm is extended outward as if she’s about to grab something from a coffee table, giving the shot a natural, “in‑action” feel. She’s smiling slightly, with a faint motion blur around her hand and face that suggests a handheld, unposed moment.
+
+- **Lighting & Exposure**  
+  Slight overexposure on the right side of the frame to match the ambient daylight coming from a large window. The exposure is raw—no auto‑HDR or beauty filters applied. The lighting is natural, with soft, diffused sunlight creating gentle highlights on her shoulder and the sofa’s fabric.
+
+- **Camera Settings**  
+  Wide‑angle lens (24–35 mm) with a short focal length to keep the entire scene in focus. No bokeh; background remains sharp from foreground to background. Slight tilt and off‑center framing give the image an accidental, candid feel. Everything—from the woman’s face to the far corner of the room—is in focus, as if captured with a handheld camera.
+
+- **Environment**  
+  A bright, lived‑in living room in the late afternoon. A beige sofa with patterned cushions sits on the left, a small wooden side table on the right holds a lamp, a bottle of cleaning product, a small plant, and a black cat curled up in a basket. A large window lets in natural light, and a potted plant sits on the windowsill. Two framed paintings hang on the wall—one of a house at sunset, the other of a forest scene—adding color and depth.
+
+- **Details & Imperfections**  
+  The shot has a slight tilt to the right, a partial crop that cuts off the top left corner of the sofa, and a faint motion blur around the woman’s arm. The framing is not rule‑of‑thirds; it’s accidental, as if the photographer was in the middle of moving. A small portion of a smartphone on the coffee table is visible, along with a white radiator and a black cat in a basket.
+
+- **Composition**  
+  Everything is in focus: the woman, the sofa, the side table, the window, the radiator, the plant, the cat, and the paintings. No portrait‑mode depth of field blur—just a fully sharp, candid snapshot. The composition feels spontaneous, as if the subject was unaware of the camera at the moment the shutter was pressed.
+
+- **Prompt Summary**  
+  “A young woman in a black ribbed tank top and shorts, captured mid‑step in a casual pose inside a bright living room, with a wide‑angle lens that keeps everything sharp from foreground to background. The shot has slight motion blur around her arm, a small overexposure on the right side, and accidental framing that tilts to the right. The room features a beige sofa, a wooden side table with a lamp, a bottle, a plant, a black cat in a basket, and two framed paintings on the wall. Natural daylight from a large window illuminates the scene, creating soft highlights. No filters or post‑processing—just a raw, candid snapshot.”

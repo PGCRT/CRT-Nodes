@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, athletic woman with long, wavy brown hair standing in a casual, unposed stance. Her arms are raised above her head, one hand gripping the back of her head, creating a slight diagonal line that gives the image a dynamic feel. She wears a delicate white lace thong that contrasts with her warm, sun‑kissed skin. Her face is turned slightly toward the camera, eyes focused forward, giving an air of confidence and ease.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle source (mid‑afternoon) creates a soft, diffused illumination on the subject’s body. The exposure is lightly overexposed, letting a faint halo around her shoulders and head, while the background remains fully sharp with no bokeh. No auto‑HDR or beauty filters—just raw, unprocessed detail.
+
+- **Camera & Lens**  
+  Shot on a DSLR or mirrorless with a 24‑mm wide‑angle lens (short focal length). The composition is intentionally off‑center; the subject occupies roughly two‑thirds of the frame, leaving a small margin of empty space on the right side. Everything—from the woman’s skin to the plastic chairs—remains in focus, no portrait‑mode depth‑of‑field blur.
+
+- **Environment**  
+  The scene is set in a simple, uncluttered indoor space: a light gray wall serves as a neutral backdrop, while two white plastic chairs with woven backs sit on either side of the subject. The chairs are slightly tilted, adding to the candid feel. The time of day is late afternoon, giving warm, golden tones; the ambient light is bright but not harsh.
+
+- **Details & Imperfections**  
+  Slight motion blur at the edges of the arms and hair, indicating handheld instability. The framing is accidental—no rule‑of‑thirds intentionality. The image has a raw, unpolished look: a hint of grain, natural color fidelity, and no post‑processing filters.
+
+- **Prompt for Generation**  
+  “A tall woman with long wavy brown hair standing casually in a white lace thong, arms raised above her head, captured on a 24‑mm wide‑angle lens in a bright mid‑afternoon indoor setting. The background is a plain gray wall with two white plastic chairs on either side. Natural daylight creates soft overexposure on the subject while keeping the background fully sharp. Slight motion blur at the arms and hair adds a candid, handheld feel. The composition is off‑center, accidental framing, everything in focus, no filters—raw, unprocessed realism.”

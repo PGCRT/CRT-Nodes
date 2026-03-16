@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with wavy, shoulder‑length brown hair, wearing a purple lace bikini, mid‑adjustment of her top. Her hands are pulling the straps upward, eyes downcast, capturing a spontaneous, “in‑motion” moment.  
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. Slight tilt and off‑center framing; partial crop that gives an accidental, handheld feel. No rule‑of‑thirds intentionality.  
+
+- **Motion & Exposure**  
+  Slight motion blur from handheld instability. Slight overexposure to keep ambient light warm and natural. Auto‑HDR or auto‑beauty mode off — raw, unprocessed look.  
+
+- **Lens & Technical**  
+  Wide‑angle lens (short focal length, ~24 mm). Everything in focus; no bokeh, no depth‑of‑field blur. Background fully sharp.  
+
+- **Environment**  
+  Location: a bright, airy bedroom with a white bed and a window letting in natural daylight. Time of day: late morning, soft sunlight. Weather: clear, mild.  
+
+- **Lighting & Composition**  
+  Zero studio lighting, zero professional composition, zero editorial tone. Natural lighting from the window, slight side‑lighting that creates subtle shadows.  
+
+- **Post‑Processing**  
+  No filters, no color grading, no post‑processing aesthetic. Raw, natural look with only minimal adjustments to exposure and contrast.  
+
+**Prompt Summary**  
+> “A young woman with wavy brown hair, in a purple lace bikini, mid‑adjustment of her top, captured on a wide‑angle lens in a bright bedroom at late morning. Candid, unposed, slight motion blur, accidental tilt, partial crop, everything in focus, raw exposure, no filters — a spontaneous, handheld photograph.”

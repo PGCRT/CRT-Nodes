@@ -1,0 +1,30 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, straight brown hair sitting on a large, smooth river rock in a natural setting. Her hands are clasped together near her chest, fingers slightly curled, as if she’s about to touch something or is simply holding a small object. Her legs are bent at the knees, feet resting on the same rock, toes pointing slightly outward. She looks directly at the camera with a calm, relaxed expression.
+
+- **Clothing & Appearance**  
+  She wears a simple, light‑colored summer dress that falls to mid‑thigh, with thin straps and a loose, breezy fit. The fabric is a soft, natural fiber (linen or cotton) that drapes lightly over her shoulders. Her skin is tanned, with a subtle sun‑kissed glow. Her nails are painted a pale pink, adding a small pop of color.
+
+- **Pose & Motion**  
+  Slight motion blur on the hands and feet, indicating a handheld shot captured at a fast shutter speed but with a little instability. The blur is uneven, giving a candid feel. The camera is held at a slightly low angle, making the subject appear larger‑than‑life.
+
+- **Environment & Lighting**  
+  The scene is set in a quiet, natural riverbank during late afternoon. The sky is a soft, warm golden hue, with the sun low on the horizon, casting long shadows and creating a gentle overexposure on the subject’s face. The background consists of a cluster of similar rocks, slightly out of focus but still sharp, suggesting a wide‑angle lens. The ambient light is natural, with no studio flash or post‑processing filters.
+
+- **Lens & Technical**  
+  - Focal length: 24 mm (wide‑angle)  
+  - Aperture: f/5.6 (mid‑range, keeping the background fully sharp)  
+  - Shutter speed: 1/125 s (slight motion blur)  
+  - ISO: 400 (natural contrast)  
+  - No bokeh; everything from foreground to background is in focus.  
+  - No portrait‑mode depth‑of‑field blur; the shot is a flat, direct capture.
+
+- **Composition & Framing**  
+  The framing is accidental and off‑center: the subject’s left side is slightly cut off by the edge of the frame, giving a spontaneous feel. The camera is tilted a few degrees to the right, adding a casual, unposed vibe. The rule‑of‑thirds is intentionally ignored; the subject occupies the central‑left portion of the frame, with the rocks forming a natural “cushion” around her.
+
+- **Post‑Processing**  
+  No filters or color grading applied. The image retains its raw, unprocessed look, with only basic auto‑HDR to balance the exposure. Slight overexposure on the subject’s face is present, giving a natural, almost candid warmth.
+
+- **Final Prompt Summary**  
+  “A young woman in a light summer dress sits on a large river rock at a quiet bank during late afternoon. Her hands are clasped near her chest, feet resting on the same stone, toes slightly outward. The shot is captured with a 24 mm wide‑angle lens at f/5.6 and 1/125 s shutter speed, producing a slight motion blur on the hands and feet. The background consists of similar rocks, all in focus. The framing is accidental and off‑center, tilted slightly to the right, with no rule‑of‑thirds intentionality. No filters or color grading are applied; only raw auto‑HDR. The scene is natural, unposed, and fully sharp from foreground to background.”

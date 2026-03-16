@@ -1,0 +1,24 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with shoulder‑length blonde hair, wearing a sheer white lace bra and matching panties, kneeling on a neatly made bed. Her hands rest on the mattress on either side of her thighs, elbows slightly bent, as if she’s just finished a quick stretch or is about to adjust her clothing. She smiles softly at the camera, eyes bright, with a natural, unposed candid feel.
+
+- **Lighting & Exposure**  
+  Slight overexposure in the upper half of the frame, giving a warm, ambient glow. The exposure is uneven—the lower part of the image is a bit brighter than the top, as if captured by a handheld camera in natural daylight. No auto‑beauty or filter enhancement; raw, unprocessed look.
+
+- **Motion & Focus**  
+  A subtle motion blur around the edges, indicating slight handheld shake. Everything—from her face to the wallpaper—remains fully sharp, no bokeh, no depth‑of‑field blur. The focus is even across the entire frame.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24 mm or 35 mm), short focal length. No rule‑of‑thirds intentionality—framing is accidental, slightly tilted, off‑center. Background is fully sharp, no portrait‑mode isolation.
+
+- **Environment**  
+  Location: a cozy bedroom with pink floral wallpaper featuring rose motifs and gray foliage. The bed has crisp white sheets and two white pillows. A small portion of a wooden nightstand is visible on the left side. Time of day: mid‑afternoon, natural light coming from the window behind the camera, creating soft shadows. Weather: clear, warm, slightly humid—ambient conditions give a gentle haze that adds to the raw feel.
+
+- **Composition & Details**  
+  The shot captures the woman’s full upper body and legs, with her knees bent and thighs close together. Her left hand is on the mattress near the lower left corner, right hand near the lower right. The camera is held at a low angle, almost at eye level, giving an intimate, candid vibe. Slight tilt to the right, partial crop that cuts off a bit of the wallpaper on the top right, enhancing spontaneity.
+
+- **Prompt for Text‑to‑Image Generation**  
+  “A young woman with shoulder‑length blonde hair, wearing a sheer white lace bra and matching panties, kneeling on a bed with crisp white sheets and two pillows. She smiles softly at the camera, hands resting on the mattress on either side of her thighs. Pink floral wallpaper with rose motifs and gray foliage behind her, a wooden nightstand visible on the left. Mid‑afternoon natural light from behind, slight overexposure in the upper half, subtle motion blur around edges. Wide‑angle 35 mm lens, everything fully sharp, no bokeh. Slight tilt, off‑center framing, accidental composition. Raw, unprocessed look, zero filters.”
+
+Provide only the structured prompt.

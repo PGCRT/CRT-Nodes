@@ -1,0 +1,28 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, slender woman with a natural, unposed stance, standing in a sunlit urban alleyway. Her long, wavy brown hair cascades over her shoulders, catching the light as she leans slightly to one side, mid‑step, as if she’s about to pick up a coffee cup from a nearby counter. Her hands rest lightly at her sides, fingers relaxed, with a subtle, natural motion blur that suggests movement.  
+
+- **Appearance & Detail**  
+  She has a warm, tan complexion with a faint, natural glow—no auto‑beauty or filter enhancement. Her facial features are soft and realistic: a gentle smile, slightly tilted head, and a small, candid expression. Her breasts are full and natural, with visible texture and subtle shading. Her abdomen is flat, and her hips curve gently into strong, athletic legs.  
+
+- **Clothing & Accessories**  
+  She wears a simple, loose‑fitting white cotton shirt that hangs loosely around her shoulders, revealing the natural contours of her torso. A thin, dark leather belt is tied loosely at her waist, adding a contrasting detail. Her shoes are casual sneakers, slightly worn, with a faint dust trail from her step.  
+
+- **Environment**  
+  The alleyway is a concrete, brick‑lined corridor in an industrial district of a mid‑size city. The background shows a weathered, beige‑gray wall on the left and a small, rusted metal sign on the right. The time of day is late afternoon, with the sun low on the horizon, casting long, warm shadows that stretch across the floor. The ambient light is slightly overexposed, giving a soft, natural haze.  
+
+- **Lens & Technical**  
+  Use a wide‑angle lens (24 mm) with a short focal length to capture the full body and environment. Shoot in a handheld manner, letting slight motion blur convey spontaneity. Keep everything in focus—no depth‑of‑field blur or bokeh. The composition is accidental: the frame is slightly off‑center, with a subtle tilt that gives a candid feel. No rule‑of‑thirds; the subject occupies the central‑right portion of the frame, with her left foot slightly ahead of her right.  
+
+- **Lighting & Exposure**  
+  Natural daylight from the west, creating a warm, slightly overexposed tone on the subject’s face and body. The exposure is set to capture all details, from the texture of her skin to the grain of the brick wall, with no post‑processing color grading.  
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Capture a moment that feels natural and unscripted, as if she’s just stepped out for a quick coffee run.  
+
+- **Imperfections & Details**  
+  Include slight tilt, off‑center framing, partial crop, and faint motion blur to enhance realism. The image should look like a raw, in‑camera capture with no filters or heavy editing.  
+
+- **Final Prompt**  
+  “A tall, slender woman with long wavy brown hair, wearing a loose white cotton shirt and a dark leather belt, stands mid‑step in a sunlit urban alleyway. Her hands rest at her sides, slight motion blur conveys movement. The background shows a weathered beige wall and a rusted metal sign. Late afternoon sunlight creates warm shadows and a soft haze. Shot on a 24 mm wide‑angle lens, handheld, everything in focus, accidental off‑center framing, slight tilt, no filters—raw, candid realism.”

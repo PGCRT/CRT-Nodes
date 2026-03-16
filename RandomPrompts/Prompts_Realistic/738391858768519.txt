@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, sun‑kissed blonde hair walking barefoot on a wide, powdery beach. She wears a green floral‑patterned halter bikini that ties at the sides. Her left leg is slightly bent, foot mid‑step, toes gripping the sand; her right arm hangs relaxed by her side, hand loosely holding a small seashell. She looks upward and to her left, eyes catching the light, head tilted slightly, as if she’s just noticed the tide’s rhythm.
+
+- **Motion & Focus**  
+  Slight motion blur at the feet and lower torso, indicating handheld shake and mid‑step movement. Everything remains sharp from foreground to background—no portrait‑mode softness. The focus is on the woman’s full silhouette, from the tip of her toes to the top of her head, with the beach, ocean, and distant buildings in crisp detail.
+
+- **Lighting & Exposure**  
+  Natural daylight, mid‑afternoon, with a warm, golden hue. A mild overexposure on the upper body and face, creating a soft glow; the sky shows a gentle haze of clouds, while the sea’s surface reflects the sun’s brightness. No auto‑HDR or beauty filters—raw, unprocessed look.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24 mm), short focal length, no bokeh. Background fully sharp: palm trees, resort buildings, and the ocean horizon all in focus. Slight tilt to the camera, giving an off‑center, accidental framing that feels spontaneous.
+
+- **Environment**  
+  A tropical beach at a resort town; palm fronds sway, white sand stretches into the distance, gentle waves break near the shore. The time of day is late afternoon, with the sun high but not directly overhead, casting long, soft shadows. Weather is breezy, with light wind ruffling the woman’s hair and the sea’s surface.
+
+- **Composition & Style**  
+  Candid, unposed, spontaneous—subject appears unaware of the camera. Slight tilt and partial crop give a raw, documentary feel. No rule‑of‑thirds intentionality; framing is accidental but balanced. The composition captures the woman’s full figure from head to toe, with the beach, ocean, and buildings forming a rich, layered backdrop.
+
+- **Prompt for Text‑to‑Image Generation**  
+  “A young woman in a green floral bikini walking barefoot on a wide tropical beach, mid‑step with slight motion blur at her feet, head tilted upward looking left, holding a seashell in her right hand. The scene is bathed in warm mid‑afternoon light with mild overexposure on the subject. Wide‑angle 24 mm lens, everything sharp from foreground to background, palm trees and resort buildings in the distance, gentle waves breaking near the shore. Candid, spontaneous composition with slight tilt and accidental framing, no filters or post‑processing.”

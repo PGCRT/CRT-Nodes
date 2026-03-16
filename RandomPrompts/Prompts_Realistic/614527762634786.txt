@@ -1,0 +1,31 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A young woman in a light‑colored T‑shirt and high‑waist denim jeans, mid‑laugh, head tilted back, hair tied in a messy ponytail that’s slightly blown by the wind. She’s holding a smartphone in her right hand, capturing a video or photo of herself and a friend on a laptop screen that sits on a kitchen countertop. Her left arm is bent, elbow curved, as if she just finished a gesture. The camera captures her from a slightly low angle, giving a dynamic, casual feel.
+
+- **Pose & Composition**  
+  Candid, unposed, spontaneous — the subject is unaware of the camera’s presence, caught in an instant of joy. Slight tilt and off‑center framing; the composition is accidental, not rule‑of‑thirds. The shot is partially cropped on the right side, leaving a hint of another person’s striped sleeve at the edge.
+
+- **Motion & Focus**  
+  Slight motion blur from handheld instability, natural freeze of the moment. Everything in focus — no portrait‑mode depth‑of‑field blur; background remains sharp. The lens is wide‑angle, short focal length (≈24 mm), capturing a broad view of the kitchen.
+
+- **Lighting & Exposure**  
+  Auto‑HDR or auto‑beauty mode off — raw, unprocessed look. Slight overexposure on the right side due to bright window light, creating a subtle halo around the subject’s head. No filters, no color grading, no post‑processing aesthetic.
+
+- **Environment**  
+  A bright, homey kitchen at mid‑afternoon. Wooden cabinets, tiled backsplash, a stainless‑steel sink, and a window that lets in natural daylight. A potted plant sits on the windowsill, a jar of dish soap is visible near the sink, and a green oven mitt rests on the counter. The time of day is late afternoon, with warm sunlight casting soft shadows.
+
+- **Lens & Technical**  
+  Short focal length, wide‑angle lens (≈24 mm). No bokeh; background fully sharp. All elements — subject, countertop, laptop, sink, and window — are in focus. No portrait mode or subject isolation.
+
+- **Details to Emphasize**  
+  - The woman’s facial expression: open mouth laugh, eyes bright, slight crinkle at the corner of her eyes.  
+  - The smartphone screen shows a video call with another person; the laptop displays a chat interface.  
+  - A small earring glints on her ear, a thin necklace hangs around her neck.  
+  - Her hair is partially blown by the wind, creating a dynamic streak.  
+  - The kitchen counter has a green oven mitt, a jar of dish soap, and a potted plant with pink flowers.  
+  - A stainless‑steel sink is visible to the right; a window with natural light is behind her.  
+  - A hint of another person’s striped sleeve appears at the lower right edge of the frame.
+
+- **Final Prompt**  
+  “A young woman in a light‑colored T‑shirt and high‑waist denim jeans, mid‑laugh with her head tilted back and hair tied in a messy ponytail slightly blown by the wind, holding a smartphone in her right hand while a laptop on the kitchen countertop displays a video call. The scene is set in a bright, homey kitchen at mid‑afternoon, with wooden cabinets, tiled backsplash, a stainless‑steel sink, and a window that lets in natural daylight. A potted plant sits on the windowsill, a jar of dish soap near the sink, and a green oven mitt rests on the counter. The camera captures the moment from a slightly low angle with a wide‑angle, short focal length lens, producing a candid, unposed, spontaneous image with slight tilt, off‑center framing, and accidental crop. Slight motion blur from handheld instability keeps everything in focus—no bokeh, no filters, raw, unprocessed look—with a subtle overexposure on the right side due to bright window light. All elements—the subject, countertop, laptop, sink, and window—are fully sharp, creating a realistic, natural photograph.”

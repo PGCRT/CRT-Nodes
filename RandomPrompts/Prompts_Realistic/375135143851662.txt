@@ -1,0 +1,35 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Appearance**  
+  - A young woman with long, wavy, light‑brown hair that falls past her shoulders, featuring subtle highlights and a slight fringe.  
+  - She’s wearing a simple white sleeveless top that reveals her midriff, paired with high‑waisted, medium‑wash denim jeans.  
+  - Her pose is natural and candid: she’s standing in a relaxed, slightly tilted stance, hands on her hips, one knee bent, as if caught mid‑step or mid‑pose.  
+  - Facial expression is neutral but engaging, with a soft smile and direct gaze toward the camera.  
+
+- **Lighting & Exposure**  
+  - Ambient natural light from a bright, overcast afternoon; slight overexposure on the upper body to keep the background bright but not washed out.  
+  - No auto‑beauty or filter enhancements – raw, unprocessed look.  
+  - Slight handheld shake gives a subtle motion blur around the edges, adding authenticity.  
+
+- **Lens & Technical Settings**  
+  - 24mm wide‑angle lens (short focal length) for a broad field of view.  
+  - Everything in focus: background and subject equally sharp, no bokeh or depth‑of‑field blur.  
+  - Handheld shot with a slightly off‑center composition; no rule‑of‑thirds intentionality.  
+
+- **Environment**  
+  - Location: a quiet, uncluttered urban alleyway with a concrete wall and a small window, in the late afternoon (around 4 pm).  
+  - Weather: light mist or drizzle, creating soft diffused lighting.  
+  - The background is a plain gray‑white wall that keeps focus on the subject.  
+
+- **Capture Style**  
+  - Candid, unposed, spontaneous – the subject appears unaware of the camera at the moment of capture.  
+  - Imperfections encouraged: slight tilt, off‑center framing, partial crop that cuts off a bit of the left shoulder.  
+  - No rule‑of‑thirds intentionality — accidental framing that feels natural and organic.  
+
+- **Post‑Processing**  
+  - Auto‑HDR off – raw, unprocessed look.  
+  - Slight overexposure on the upper body to keep the background bright but not washed out.  
+  - No color grading or filters; only basic exposure adjustment.  
+
+**Prompt Summary (structured)**  
+"Long‑hair, mid‑riff, denim jeans, white sleeveless top, candid pose, slight tilt, off‑center framing, wide‑angle 24mm lens, everything in focus, natural ambient light from a bright overcast afternoon, subtle motion blur from handheld shake, raw unprocessed look, slight overexposure on the upper body, background is a plain gray‑white wall, late afternoon, light mist or drizzle."

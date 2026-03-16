@@ -1,0 +1,30 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy blonde hair, wearing a simple white silk blouse, sitting on a wooden chair in a sunlit living room. She is mid‑gesture, leaning slightly forward with one hand touching her cheek and the other resting on her lap, as if she just finished a conversation or is about to. Her expression is natural, unposed, with a faint smile and a slight tilt of the head.
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window to the left, creating soft, warm highlights on her face and clothing. Slight overexposure in the upper right corner gives a raw, candid feel. No auto‑HDR or beauty filters—just a straightforward exposure that captures the ambient light’s warmth and the subtle grain of the scene.
+
+- **Camera & Lens**  
+  35 mm wide‑angle lens, handheld, shot at f/4.0 with a 1/60 s shutter speed to freeze the motion while keeping background fully sharp. No bokeh or depth‑of‑field blur—everything from foreground to background is in focus, giving an authentic “in‑the‑moment” look.
+
+- **Composition & Framing**  
+  The frame is intentionally off‑center: the subject’s left side is slightly cut off by the edge of the image, and the top of the frame leans a bit to the right, creating a spontaneous, unposed feel. The composition does not follow the rule‑of‑thirds; instead it follows the natural line of sight and movement of the subject.
+
+- **Environment**  
+  A bright, airy living room with light wood furniture, a green plant in the background, and a white curtain hanging beside the window. The time of day is late morning, with the sun high but not too high, casting soft shadows. The weather outside is clear, adding to the warm, natural ambiance.
+
+- **Technical Details**  
+  - Focal length: 35 mm (wide‑angle)  
+  - Aperture: f/4.0  
+  - Shutter speed: 1/60 s  
+  - ISO: 400  
+  - No portrait mode, no subject isolation—everything is in focus.  
+  - Slight motion blur on the subject’s hand to emphasize candid movement.  
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, zero post‑processing aesthetic. The image retains its raw, natural look with only a subtle crop and a slight vignette to keep the focus on the subject.
+
+**Prompt Summary**  
+"Blonde woman in white silk blouse sitting on a wooden chair, mid‑gesture, natural daylight from left, 35 mm wide‑angle handheld shot at f/4.0, 1/60 s, slight motion blur on hand, off‑center framing, raw unprocessed look, late morning, clear weather, everything in focus."

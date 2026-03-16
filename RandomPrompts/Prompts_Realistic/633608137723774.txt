@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy blonde hair standing barefoot in a meadow, wearing a rust‑colored, floral‑printed maxi dress with a high slit. She is mid‑step, one foot slightly ahead of the other, hands relaxed at her sides, face turned toward the camera but not posing—natural, candid expression.  
+
+- **Motion & Focus**  
+  Slight motion blur on the legs and feet to suggest movement; everything in focus—no bokeh, no portrait‑mode isolation. Handheld shot with a wide‑angle lens (24–35 mm).  
+
+- **Lighting & Exposure**  
+  Raw, unprocessed look: slight overexposure on the upper body to keep the ambient light warm, no auto‑HDR or auto‑beauty filters. The sky is a soft, diffused golden hour glow; the grass is bright, with small white wildflowers scattered around.  
+
+- **Environment**  
+  Specific real‑world location: a sunlit meadow on a mountain slope, with a line of evergreen trees on the left and a distant ridge on the right. Time of day: late afternoon (golden hour), weather: clear, light wind.  
+
+- **Lens & Technical**  
+  Short focal length (24–35 mm), wide‑angle, no depth‑of‑field blur—background fully sharp. No rule‑of‑thirds intentionality; framing is accidental, slightly tilted, off‑center crop.  
+
+- **Composition Notes**  
+  The shot is spontaneous and unposed; the subject’s head is slightly above the center of the frame, her left leg is cut off at the ankle by the bottom edge. The background trees and ridge are fully in focus, giving a natural, documentary feel.  
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, zero post‑processing aesthetic—only raw capture.  
+
+**Prompt Summary**  
+> “Candid, unposed photograph of a woman in a rust‑colored floral maxi dress standing barefoot on a sunlit meadow, with a line of evergreen trees to the left and a distant ridge to the right. Shot on a 24–35 mm wide‑angle lens, handheld, slight motion blur on the legs, everything in focus, raw exposure with a soft golden‑hour glow. The composition is accidental and off‑center, no rule‑of‑thirds, no filters—pure, natural realism.”

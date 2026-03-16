@@ -1,0 +1,21 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark, wavy hair cascading over her left shoulder, standing mid‑step in a casual, unposed stance. She’s wearing light‑wash denim shorts that are slightly frayed at the hem, and she’s bare‑shouldered, exposing her upper torso. Her hands hang loosely by her sides, one slightly bent, as if she’re about to adjust her shirt or grab something from a nearby surface.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. Slight motion blur on the hands and lower body to suggest movement. No filters, no color grading, no post‑processing aesthetic. A hint of overexposure in the upper torso area due to ambient daylight. The frame is slightly tilted, off‑center, with a partial crop that cuts off the left side of her hair, giving an accidental, handheld feel.
+
+- **Environment**  
+  Location: A bright, open‑air market stall in a bustling city plaza. The background shows a blurred array of colorful goods—fresh greens, vibrant pinks, and warm yellows—suggesting a morning market. Time of day: early afternoon, with soft, diffused sunlight filtering through the canopy of nearby trees, creating gentle dappled light on the subject’s skin. Weather: lightly breezy, with a faint haze in the air that adds depth to the scene.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm) wide‑angle lens, handheld. No bokeh; background fully sharp, everything in focus. No portrait mode or subject isolation—everything is captured in a single exposure. Slight overexposure on the torso to emphasize the raw, unprocessed look. The image has a natural, unpolished feel with slight instability from a hand‑held camera.
+
+- **Composition Notes**  
+  - The composition is not rule‑of‑thirds; the subject’s head sits slightly above the center of the frame, and her left shoulder extends beyond the top edge, creating a dynamic, organic crop.  
+  - The background is fully sharp, with no depth‑of‑field blur, ensuring that every detail—from the texture of her denim to the subtle sheen on her skin—is visible.  
+  - The lighting comes from the upper right, casting soft shadows under her breast and a faint highlight on her left shoulder.  
+
+- **Prompt Summary**  
+  “A young woman with long dark wavy hair, bare‑shouldered and wearing frayed denim shorts, stands mid‑step in an early‑afternoon market plaza. The shot is captured on a 24‑35 mm wide‑angle lens, handheld, with slight motion blur on the hands and a tiny overexposure on the torso. The frame is slightly tilted and partially cropped, giving a candid, spontaneous feel. The background shows a blurred array of colorful market goods, fully sharp, with dappled sunlight creating gentle highlights. No filters or post‑processing—just raw, natural realism.”

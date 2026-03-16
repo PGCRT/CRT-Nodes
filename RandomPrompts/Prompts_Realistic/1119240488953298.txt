@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark hair, wearing a sheer white long‑sleeved top and black bottoms, standing in an office hallway. She is mid‑smile, head tilted slightly to the right, hands on her hips, body angled toward the camera but not perfectly centered.  
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject appears unaware of the camera, caught in a natural moment. Slight tilt and off‑center framing; the crop is partial, as if the photographer was handheld and moved. No rule‑of‑thirds intentionality — the composition feels accidental.  
+
+- **Motion & Exposure**  
+  A hint of motion blur from slight handheld shake, with a mild overexposure that gives a raw, unprocessed look. Auto‑HDR or auto‑beauty mode is off; no filters, no color grading, no post‑processing aesthetic.  
+
+- **Lens & Technical**  
+  Short focal length (≈20 mm) wide‑angle lens. Everything is in focus — no bokeh, no depth‑of‑field blur; the background remains sharp.  
+
+- **Environment**  
+  Specific real‑world location: a modern office building, hallway with dark doors, a white desk and a black office chair visible to the left, a glass door and a small window at the back. Time of day: late afternoon, soft natural light coming from the window, creating subtle shadows and a slight warm tone. Weather or ambient conditions: clear, calm, no wind.  
+
+- **Details**  
+  The woman’s necklace is a thin gold chain; her top has a deep V‑neck with a single button at the center. Her black pants are fitted, and she stands on a patterned carpet. In the background, a white desk holds a cup and a pen, a black office chair is partially visible, and a glass door leads to an open office space. The lighting is natural, coming from the window, creating slight overexposure on the subject’s face and a warm glow on her shirt.  
+
+- **Prompt**  
+  “A young woman with long dark hair, wearing a sheer white long‑sleeved top and black bottoms, stands in an office hallway. She smiles mid‑action, hands on hips, head tilted right, body angled toward the camera but not centered. Capture with a short focal length wide‑angle lens, everything in focus, slight motion blur from handheld shake, mild overexposure. The scene is a real office space: dark doors, a white desk with a cup and pen, a black chair, and a glass door leading to an open area. Late afternoon natural light from the window gives warm tones. No filters, no auto‑HDR, no color grading — raw, candid, accidental framing.”

@@ -1,0 +1,42 @@
+**Realistic Candid Photography Prompt Framework – “Summer Picnic in the Meadow”**
+
+- **Subject & Pose**  
+  A young woman with long, sun‑kissed hair sitting cross‑legged on the grass, wearing a teal lace bikini set. She is mid‑smile, head tilted slightly to the right, left hand resting on her thigh, right hand gripping a white can of soda. Her left ear is adorned with a dark, textured earring that catches the light.
+
+- **Candid Capture Style**  
+  - Slight motion blur from handheld shake, as if the camera was moving when the shutter clicked.  
+  - No auto‑HDR or auto‑beauty mode – raw, unprocessed look.  
+  - Minor overexposure in the upper left corner to mimic ambient daylight.  
+  - Wide‑angle lens (24‑35 mm) with a short focal length, giving a “close‑but‑wide” feel.  
+  - No rule‑of‑thirds intentionality – framing is accidental, slightly off‑center.  
+  - Everything in focus; no portrait‑mode depth‑of‑field blur.
+
+- **Environment**  
+  - Location: A sunlit meadow with tall, dry grasses and a line of green trees on the horizon.  
+  - Time of day: Late afternoon, around 5 pm, warm golden light from the west.  
+  - Weather: Light breeze, clear sky, a few scattered clouds near the top left.  
+  - Ambient details: A black backpack and a white plastic bag lie behind her left shoulder; a brown tote and a red can sit to her right. A small orange cloth is tucked beside her thigh.
+
+- **Lens & Technical**  
+  - Focal length: 30 mm (wide‑angle, short).  
+  - Aperture: f/4.5 – moderate depth of field, background fully sharp.  
+  - ISO: 400 – balanced exposure with slight grain.  
+  - No bokeh; no subject isolation.  
+  - Slight tilt in the camera’s grip for a natural, spontaneous feel.
+
+- **Composition Notes**  
+  - The subject occupies the central‑right quadrant of the frame, but the composition is not deliberately balanced – her left side leans slightly toward the center.  
+  - The background grass and trees extend across the top third, creating a natural “cushion” that keeps the scene grounded.  
+  - A faint, accidental crop cuts off the lower right corner, giving an informal, candid vibe.
+
+- **Lighting & Color**  
+  - Natural daylight from the west casts soft shadows to the left of the subject.  
+  - Slight overexposure in the upper left corner gives a warm, golden hue.  
+  - Colors: teal bikini, green grass, brown tote, white can, red can, orange cloth – all with a subtle natural color grade.
+
+- **Post‑Processing**  
+  - No filters, no color grading, no post‑processing aesthetic – just raw capture.  
+  - Slight motion blur and minor overexposure are the only “effects.”  
+
+**Prompt Summary (for use in an image‑generation model)**  
+> “A young woman with long sun‑kissed hair sits cross‑legged on grass in a summer meadow, wearing a teal lace bikini set. She smiles mid‑action, left hand on thigh, right hand holding a white soda can. A black backpack and white bag sit behind her; a brown tote and red can are to her side, an orange cloth tucked near her thigh. The scene is captured with a 30 mm wide‑angle lens at f/4.5, ISO 400, slight motion blur and minor overexposure in the upper left corner. The framing is accidental, off‑center, everything in focus. Late afternoon golden light shines from the west, casting soft shadows. No filters or post‑processing – raw, candid, spontaneous.”

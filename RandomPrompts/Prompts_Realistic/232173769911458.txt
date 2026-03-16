@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair standing in a bright, lived‑in bedroom. She’s wearing high‑waisted, light‑wash denim jeans that sit snugly at the hips and a plain white tank top that drapes naturally over her shoulders. Her left hand rests lightly on her hip, while her right arm hangs relaxed by her side. She’s mid‑step, one foot slightly ahead of the other, as if she just finished a quick dance move or is about to pick something up from a nearby surface.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject appears unaware of the camera, caught in a natural, “in‑the‑moment” expression. Slight tilt and off‑center framing give the shot an accidental, handheld feel. The composition is not intentionally rule‑of‑thirds; the frame cuts off the top of her left breast and the lower part of her right thigh, creating a partial crop that adds dynamism.
+
+- **Motion & Focus**  
+  Slight motion blur on the subject’s hands and the background, indicating a handheld shot taken at a relatively low shutter speed. Everything remains fully sharp — no portrait‑mode depth‑of‑field blur; the background is in focus from wall to floor.
+
+- **Lighting & Exposure**  
+  Natural daylight coming from a window on the right side of the room creates a soft, warm glow. The exposure is slightly overexposed on the subject’s face, giving a raw, unprocessed look without auto‑HDR or beauty mode. No color grading or filters are applied; the image retains the ambient light’s subtle imperfections.
+
+- **Environment**  
+  A bright, cluttered bedroom with a wooden dresser on the left, a small potted plant on a shelf, and a white radiator on the right wall. A white basket sits on the floor near the radiator. The time of day is late morning, with sunlight streaming through a tall window, casting soft shadows across the room.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm) wide‑angle lens, no bokeh. All elements — subject and background — are in focus. The shot uses a wide‑angle perspective that captures a broad view of the room, from the top of the dresser to the base of the radiator.
+
+- **Post‑Processing**  
+  Zero studio lighting, zero professional composition, zero editorial tone. No filters or color grading applied; only raw, natural exposure with slight overexposure on the subject’s face and a faint motion blur from handheld instability.  
+
+**Prompt Summary:**  
+“Candid, unposed photo of a young woman in a bright bedroom, wearing high‑waisted denim jeans and a white tank top, captured with a short focal length wide‑angle lens. The shot has slight motion blur and accidental framing, natural daylight overexposure, and a fully sharp background. No filters or post‑processing — just a raw, spontaneous capture.”

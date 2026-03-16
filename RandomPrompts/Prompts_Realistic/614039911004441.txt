@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework – “Street‑Portrait in an Urban Alleyway”**
+
+- **Subject & Action**  
+  A young woman with a high ponytail, wearing a black crop‑top and high‑waisted denim jeans, is mid‑turn while taking a selfie with her smartphone. Her head is slightly tilted, her left hand holds the phone at eye level, her right hand is raised in a casual “stop” gesture. She stands on a concrete sidewalk next to a white wooden fence; a passing man in a blue shirt is visible in the background, blurred only by motion.
+
+- **Pose & Composition**  
+  Candid, unposed, spontaneous — the subject is unaware of the camera’s presence and appears mid‑action. Slight tilt and off‑center framing give an accidental, handheld feel. The shot uses a wide‑angle lens (35 mm) with a short focal length, capturing a broad view of the scene. Everything is in focus – no portrait‑mode depth‑of‑field blur; the background remains sharp from foreground to background.
+
+- **Lighting & Exposure**  
+  Natural daylight, mid‑afternoon, soft sunlight coming from the left, creating gentle highlights on the subject’s back and a slight overexposure on the bright white fence. No auto‑HDR or auto‑beauty mode – raw, unprocessed look. Slight motion blur from handheld instability freezes the movement of the subject’s hand and the background man’s foot.
+
+- **Environment**  
+  Specific real‑world location: an urban alleyway with a white wooden fence on the left, a concrete sidewalk, a small green plant in the corner, and a passing pedestrian in the distance. Time of day: late afternoon (≈ 4 pm), warm ambient light. Weather: clear, slightly humid, no wind.
+
+- **Lens & Technical**  
+  Short focal length (35 mm), wide‑angle, no bokeh, no depth‑of‑field blur – background fully sharp. All elements in focus. No rule‑of‑thirds intentionality – accidental framing. Zero studio lighting, zero professional composition, zero editorial tone.
+
+- **Post‑Processing**  
+  Slight motion blur on the subject’s hand and background pedestrian. No filters, no color grading, no post‑processing aesthetic. The image retains a raw, natural look with subtle overexposure on the bright white fence.  
+
+**Prompt Summary**  
+> “A young woman in a black crop‑top and denim jeans takes a selfie on a concrete sidewalk next to a white wooden fence, mid‑turn with a slight tilt and off‑center framing. Her left hand holds a smartphone at eye level, her right hand is raised in a casual ‘stop’ gesture. A man in a blue shirt passes by in the background. Shot with a 35 mm wide‑angle lens, everything in focus, natural daylight mid‑afternoon, slight motion blur from handheld instability, raw unprocessed look, no filters.”

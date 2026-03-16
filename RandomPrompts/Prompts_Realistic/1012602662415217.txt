@@ -1,0 +1,29 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair standing in a sunlit meadow, wearing a thin‑strapped white bikini top and light denim shorts. She is mid‑step, one foot slightly ahead of the other, hands relaxed at her sides, face turned toward the camera but not posing—natural, candid expression.  
+
+- **Lighting & Exposure**  
+  Warm golden‑hour sunlight from the west creates a soft overexposed highlight on her chest and shoulders; slight underexposure in the lower legs for a raw, unprocessed look. No auto‑beauty or filter enhancement—just natural ambient light.  
+
+- **Motion & Focus**  
+  Slight handheld shake: a subtle motion blur around the edges, but everything remains fully sharp—no portrait‑mode depth of field. The lens is a short‑focal‑length wide‑angle (24‑35 mm) that captures the entire scene in one shot.  
+
+- **Background & Environment**  
+  A grassy field with tall wildflowers and a line of trees in the distance; the time of day is late afternoon, with the sun low on the horizon casting long shadows. The weather is clear, with a light breeze ruffling the grass.  
+
+- **Composition & Framing**  
+  No rule‑of‑thirds intentionality—framing is accidental, slightly off‑center, with a partial crop that cuts off the top of her head and the lower part of her legs. The shot is wide, capturing the subject’s full figure and a good portion of the surrounding environment.  
+
+- **Technical Specs**  
+  - Lens: 35 mm prime, wide‑angle, short focal length.  
+  - Aperture: f/4.0 (wide opening).  
+  - Shutter speed: 1/60 s (enough to capture slight motion blur).  
+  - ISO: 400 (for natural grain).  
+  - No bokeh; background fully in focus.  
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, no auto‑HDR—just a raw, candid snapshot with a slight overexposure on the upper body and a faint underexposure on the lower body, preserving the authenticity of the moment.
+
+**Prompt Summary**  
+"Mid‑afternoon golden‑hour candid shot of a woman in a white bikini top and denim shorts standing in a grassy meadow, captured on a 35 mm wide‑angle lens at f/4 and 1/60 s, with slight handheld motion blur and accidental off‑center framing. The image shows her full figure from head to toe, with a fully sharp background of tall wildflowers and trees, all in natural light without any filters or color grading."

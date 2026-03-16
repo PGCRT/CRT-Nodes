@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman in a brown leather jacket and ripped jeans, mid‑step on a stone floor, boots slightly off‑center. Her hair is loose, a few strands catching the light. She’s standing inside an old alchemy workshop, with a glowing magical circle projected on the ground beneath her feet.
+
+- **Motion & Focus**  
+  Slight motion blur from handheld shake; everything in focus—no portrait‑mode blur. The image has a raw, unprocessed look: no filters, no color grading, just natural exposure (slight overexposure on the light source).  
+
+- **Lighting & Exposure**  
+  Warm ambient light from a lantern hanging overhead, with a faint green flare from a furnace in the background. The exposure is slightly high, giving a soft glow to the entire scene.  
+
+- **Environment**  
+  Location: An ancient alchemy workshop inside a stone building; the walls are rough limestone, the ceiling has exposed beams and a single lantern. Shelves on either side hold bottles of colored liquids, tools, and a small clock. A man is working at a furnace on the left, another man is stirring a cauldron on the right, and an older figure stands on a balcony above. The time of day is late afternoon, the sky outside the window shows a warm golden hue. Weather: mild, slightly humid; the air carries a faint smoky scent.  
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm), wide‑angle lens. No bokeh—background fully sharp. All elements are in focus, from the woman’s boots to the distant clock.  
+
+- **Composition Notes**  
+  Candid, unposed, spontaneous framing: the shot is slightly tilted, the subject is off‑center, and the composition feels accidental. The rule of thirds is ignored; the frame captures a wide view of the workshop, with the magical circle on the floor anchoring the scene.  
+
+- **Final Prompt**  
+  “A young woman in a brown leather jacket and ripped jeans stands mid‑step on a stone floor inside an old alchemy workshop, boots slightly off‑center, with a glowing magical circle projected on the ground beneath her feet. Slight motion blur from handheld shake keeps everything in focus—no filters, no color grading, just raw exposure. Warm ambient light from a lantern overhead casts a soft glow, with a faint green flare from a furnace in the background. The workshop’s limestone walls feature shelves of colored bottles, tools, and a small clock; a man works at a furnace on the left, another stirs a cauldron on the right, and an older figure stands on a balcony above. Late afternoon light streams through a window, giving the scene a golden hue. Use a short focal length wide‑angle lens (24‑35 mm), capture all elements in focus, keep the background sharp. Capture a candid, unposed, spontaneous shot with slight tilt and off‑center framing, ignoring the rule of thirds.”

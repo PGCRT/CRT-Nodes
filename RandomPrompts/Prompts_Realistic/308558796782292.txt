@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, athletic woman with long, wavy brown hair, wearing a black halter‑style bikini, sitting on a weathered wooden post in a lush tropical setting. Her left hand rests on her thigh, right hand on the post, body slightly angled toward the camera, eyes focused forward with a subtle, natural gaze.  
+
+- **Motion & Focus**  
+  Slight motion blur from handheld shooting; everything in focus—no portrait‑mode depth of field. A tiny overexposure on the highlights to capture ambient daylight.  
+
+- **Lens & Technical**  
+  Wide‑angle lens (24 mm), short focal length, no bokeh, background fully sharp. No rule‑of‑thirds—framing is accidental, slightly tilted and off‑center.  
+
+- **Environment**  
+  Location: a dense tropical forest clearing with palm fronds and ferns behind the subject; a small stream runs parallel to the post. Time of day: late morning, soft golden light filtering through canopy. Weather: mild humidity, light wind.  
+
+- **Lighting & Post‑Processing**  
+  Zero studio lighting—natural daylight only. Auto‑HDR off, no color grading, no filters. Slight natural contrast and subtle grain from a raw camera setting.  
+
+- **Composition Notes**  
+  The shot is candid and spontaneous; the subject appears unaware of the camera mid‑pose. Background includes a fallen log and a patch of green moss on the ground. The composition intentionally lacks perfect alignment—slight tilt and partial crop give it a genuine, documentary feel.  
+
+**Prompt Summary**  
+> “A tall woman in a black halter bikini sits on a wooden post in a tropical forest clearing, late morning light, slight motion blur, wide‑angle 24 mm lens, everything in focus, accidental framing with a tiny tilt, natural daylight, no filters—raw candid photography.”

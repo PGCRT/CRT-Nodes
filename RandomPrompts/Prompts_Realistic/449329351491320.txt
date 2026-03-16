@@ -1,0 +1,16 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail, wearing a navy blazer embroidered with gold laurel details over a white blouse, stands at a wooden desk in an office. Her hands rest on an open notebook filled with handwritten diagrams and equations; a stack of thick textbooks lies beside her. She is mid‑gesture, as if explaining or debating a concept, with a slight tilt to her body that gives the shot a spontaneous feel.
+
+- **Lighting & Exposure**  
+  Natural daylight comes from a window on the left, creating a soft overexposure on the subject’s face and a subtle highlight on the blazer’s lapel. The exposure is slightly uneven—warm tones dominate the foreground while the background remains fully sharp with no bokeh. No auto‑beauty or filter processing; the image retains raw, unprocessed texture.
+
+- **Environment**  
+  The setting is a bright, uncluttered office space. A whiteboard on the right displays hand‑drawn flowcharts and geometric sketches, including a triangle labeled “O‑Box” and a circle labeled “MOM.” A radiator sits beneath the window, and a black chair back peeks into frame on the far right. The time of day is mid‑afternoon, with diffused sunlight casting gentle shadows.
+
+- **Lens & Technical**  
+  Shot on a wide‑angle lens (24 mm) with a short focal length, capturing a broad view that keeps everything in focus—from the desk’s surface to the whiteboard—without any depth‑of‑field blur. The composition is accidental: the frame is slightly off‑center, and the subject’s head is not perfectly centered, giving an unposed, candid feel. Slight motion blur is present on the subject’s hands, indicating handheld instability at the moment of capture.
+
+- **Details & Imperfections**  
+  The notebook’s pages show a mix of handwritten text and diagrams, with visible ink stains and slight creases. The blazer’s gold embroidery catches the light, adding texture. The window’s blinds are partially open, letting in natural light that creates a subtle halo around the subject. The overall look is raw, unprocessed, and spontaneously candid—no rule‑of‑thirds intentionality, just a genuine snapshot of a busy moment.

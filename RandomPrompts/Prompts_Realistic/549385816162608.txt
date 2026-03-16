@@ -1,0 +1,29 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with tousled, wind‑blown brown hair standing mid‑step in a cluttered warehouse. She’s bare‑chested, wearing loose gray sweat shorts and a black knee‑sleeve; her hands are clasped over her chest as if she’re about to adjust something. Her expression is neutral, slightly dazed, caught between a spontaneous movement and an unposed moment.
+
+- **Motion & Focus**  
+  Slight motion blur on the subject’s hands and hair, indicating handheld instability. Everything in the frame — from her face to the back wall — is fully sharp; no portrait‑mode bokeh. The lens is a short focal‑length wide‑angle (24‑35 mm), giving a “wide‑lens” feel with minimal distortion but still crisp background detail.
+
+- **Lighting & Exposure**  
+  Natural daylight coming from a tall, multi‑paned window on the left; the light is slightly overexposed at the top right, creating a warm halo around her head. No auto‑HDR or beauty filters — raw, unprocessed look. The exposure is a little bright at the top, giving a subtle flare and a hint of lens glare.
+
+- **Environment**  
+  A real‑world industrial space: a warehouse with exposed wooden beams, corrugated metal roof, and a fluorescent tube light hanging from the ceiling. Cardboard boxes stack along the right wall, a large canvas bag rests on a pallet near the window, and a small plastic bin sits on the floor. The time of day is late morning; the sun is high but not directly overhead, casting soft shadows.
+
+- **Composition & Framing**  
+  No rule‑of‑thirds intentionality — the frame is slightly tilted, off‑center, capturing the subject’s left side more prominently. The crop is partial: the top of her head cuts off a bit at the upper edge, and the lower leg is partially out of frame at the bottom right. The background is fully sharp; no depth‑of‑field blur.
+
+- **Technical Specs**  
+  - Lens: 35 mm, wide‑angle, f/2.8 (or f/4)  
+  - Aperture: f/4 (wide, but everything stays in focus)  
+  - Shutter speed: 1/60 s (enough to capture slight blur)  
+  - ISO: 400–600 (for natural grain and dynamic range)  
+  - No bokeh, no portrait‑mode isolation — all elements from foreground to background are in focus.
+
+- **Style Notes**  
+  Candid, unposed, spontaneous — the subject appears unaware of the camera, mid‑action. Imperfections are encouraged: slight tilt, off‑center framing, partial crop. Zero studio lighting, zero professional composition, zero editorial tone. The image should feel like a genuine snapshot captured in a real environment.
+
+**Prompt Summary (for AI image generator)**  
+> “A young woman with tousled brown hair, bare‑chested and wearing loose gray sweat shorts and a black knee‑sleeve, stands mid‑step in a cluttered warehouse. Her hands are clasped over her chest as if adjusting something. Slight motion blur on her hands and hair, everything fully sharp, captured on a 35 mm wide‑angle lens. Natural daylight from a tall window on the left creates a warm halo at the top right; the exposure is slightly overexposed. The warehouse has exposed wooden beams, a corrugated metal roof, fluorescent tube light, stacked cardboard boxes along the right wall, a canvas bag on a pallet near the window, and a plastic bin on the floor. Late morning sun, high but not directly overhead. The frame is slightly tilted, off‑center, partial crop at top and bottom. No bokeh, no portrait mode — all elements in focus. Candid, unposed, spontaneous, raw, unprocessed look.”

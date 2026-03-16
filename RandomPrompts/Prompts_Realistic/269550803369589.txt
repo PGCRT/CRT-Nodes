@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman with long, wavy brown hair standing in a bright bedroom, facing away from the camera. She’s wearing a delicate pink lace bra and matching pink lace panties. Her hands rest lightly at her sides, fingers slightly curled, as if she’s about to adjust her clothing or reach for something on the bed. The back of her body is fully visible, showcasing the natural curve of her waist and hips, with a subtle hint of a small bow detail on the center of her panties.
+
+- **Lighting & Exposure**  
+  Natural daylight coming from a tall window on the right side of the room creates a soft, slightly overexposed highlight on her back and hair. The exposure is not perfectly balanced—there’s a gentle warmth to the image, with a slight haze that gives it an auto‑HDR feel without any post‑processing filters. The lighting is uneven, as if the camera was handheld during the day, giving a raw, candid vibe.
+
+- **Environment**  
+  The setting is a cozy, unstyled bedroom with a white bed on the left and a tall window on the right. A beige pillow rests against the headboard, and a rolled towel sits on the bed’s corner. The walls are a light neutral tone, and a thin wooden frame of the window is visible. The time of day is late afternoon, as indicated by the warm, slightly golden hue of the sunlight.
+
+- **Lens & Technical**  
+  A wide‑angle lens (24 mm) is used, capturing a broad view of the scene with everything in focus—no bokeh or depth‑of‑field blur. The focal length is short, giving a “close‑up” feel to the image while still including enough surrounding detail for context. The shot has slight motion blur from handheld instability, and the framing is off‑center, not following the rule of thirds. The composition feels spontaneous, as if the photographer caught the moment by chance.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. There’s a slight tilt to the camera, and the crop is partial, cutting off the top left corner of the bed. The image has no intentional rule‑of‑thirds placement; everything is in focus, with a fully sharp background. No portrait mode or subject isolation is applied—just a raw, natural look.
+
+- **Post‑Processing**  
+  Auto‑HDR or auto‑beauty mode off—no filters, no color grading, no post‑processing aesthetic. The final image retains the slight overexposure from the window light and a faint motion blur that gives it a genuine, handheld feel.  
+
+**Prompt Summary**  
+> “A woman with long wavy brown hair in pink lace lingerie stands in a bright bedroom, facing away from the camera. Natural daylight from a tall window creates soft overexposure on her back. The scene includes a white bed with a beige pillow and a rolled towel, all captured on a 24 mm wide‑angle lens with slight motion blur and off‑center framing. Everything is in focus, no filters applied, raw candid look.”

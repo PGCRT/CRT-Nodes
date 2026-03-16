@@ -1,0 +1,31 @@
+**Realistic Candid Photography Prompt Framework – “Summer Afternoon in a Sunlit Living Room”**
+
+- **Subject & Pose**  
+  A young woman with light‑blonde, slightly messy hair, wearing denim shorts and a bare top, is crouched on a polished wooden floor. Her left hand supports her head while her right hand rests on the floor for balance. She looks directly at the camera with a soft, candid expression, as if caught mid‑pose in a spontaneous moment.
+
+- **Lighting & Exposure**  
+  Warm, natural daylight from a large window casts a gentle overexposure on the upper part of the frame; the exposure is slightly uneven, giving a raw, unprocessed feel. The light hits the subject’s face and shoulder, creating subtle highlights and soft shadows. No auto‑HDR or beauty filters – just a straightforward, handheld shot.
+
+- **Camera Settings**  
+  - Lens: 24‑35 mm wide‑angle (short focal length)  
+  - Aperture: f/4–f/5.6 (wide opening, but background stays fully sharp)  
+  - Shutter speed: 1/60–1/100 s (slight motion blur from handheld instability)  
+  - ISO: 400–800 (depending on ambient light)  
+  - Focus: everything in focus – no portrait‑mode depth‑of‑field blur.
+
+- **Composition & Framing**  
+  The frame is intentionally off‑center and slightly tilted, giving a casual, spontaneous feel. The subject occupies the central‑left portion of the frame; the right side leaves a small negative space that contains a stack of books and a white cushion. No rule‑of‑thirds intentionality – it’s an accidental, candid composition.
+
+- **Background & Environment**  
+  The setting is a bright, lived‑in living room. A large window on the left lets in natural light, with a potted plant perched on the windowsill. Behind the subject, a beige sofa and a small side table are visible. A few books lie on the floor near the subject’s right hand, and a white cushion rests against the sofa. The floor is polished hardwood, reflecting the daylight.
+
+- **Details & Imperfections**  
+  Slight motion blur around the edges, especially at the hands and hair, conveys a handheld feel. The image has a natural color palette – warm tones from the sunlight, cool neutrals from the furniture – with no post‑processing color grading. Minor imperfections such as a slight vignette and a tiny dust speck near the left ear add realism.
+
+- **Post‑Processing**  
+  No filters or heavy color grading – just raw, in‑camera capture. A minimal crop may be applied later to tighten the frame, but the original shot should retain its spontaneous character.
+
+---  
+
+**Prompt Summary (for a new image generation tool)**  
+> “A young woman with light‑blonde hair, wearing denim shorts and a bare top, crouched on polished wooden floor in a sunlit living room. She supports her head with one hand, rests the other on the floor, looks directly at the camera. Warm natural daylight from a large window creates slight overexposure on the upper frame. Shot on a 24‑35 mm wide‑angle lens at f/5, 1/80 s, ISO 600. Everything in focus, background fully sharp. Composition is off‑center, slightly tilted, spontaneous candid pose. Background includes a beige sofa, a potted plant on the windowsill, a stack of books on the floor, and a white cushion. Slight motion blur from handheld instability, no filters, raw look.”

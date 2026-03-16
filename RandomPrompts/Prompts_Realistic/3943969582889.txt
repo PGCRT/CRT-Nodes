@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with light brown hair, wearing a bright yellow halter‑style bikini, standing on a sunny beach. She is mid‑adjustment: both hands are raised to the back of her head, fingers gripping the top of her hair as if she’s just finished a quick ponytail or is shielding her eyes from the sun. Her face is turned slightly toward the camera, with a natural, unposed expression—eyes wide and mouth relaxed. The bikini has thin side ties that are loosely knotted at the waist.
+
+- **Lighting & Exposure**  
+  Slight overexposure on the upper part of the frame to capture the bright midday sun; the exposure is uneven, giving a raw, unprocessed look. No auto‑beauty mode—just natural contrast. The lighting comes from the upper left, creating soft shadows under her chin and along the side of her body.
+
+- **Motion & Focus**  
+  A handheld shot with a short focal length lens (24–35 mm). There is a subtle motion blur around the edges caused by slight camera shake, but the background remains fully sharp—no portrait‑mode depth of field blur. Everything from foreground to background is in focus.
+
+- **Composition & Framing**  
+  The frame is intentionally off‑center: the subject’s left side leans slightly to the right, and the top of the frame cuts off just above her head, giving a partial crop. No rule‑of‑thirds intentionality—this is a spontaneous, candid composition. The shot captures a wide angle that includes the sandy beach, a small blue bucket and a green bottle on a folding chair to the right, a white cliff face in the background on the left, and the ocean with gentle waves breaking near the shore.
+
+- **Environment**  
+  Location: a coastal cliffside beach with white limestone cliffs on the left, a stretch of golden sand, and the sea in the distance. Time of day: mid‑afternoon, with bright, high‑angle sunlight that creates a slight haze. Weather: clear, with a few scattered clouds overhead; the sky is a pale blue.
+
+- **Lens & Technical**  
+  Short focal length (30 mm), wide‑angle lens. No bokeh—background is fully sharp. The image has no filters, no color grading, and no post‑processing aesthetic. A slight tilt to the right adds a casual, spontaneous feel. The exposure is slightly uneven, with the upper part of the image a bit brighter than the lower part.
+
+- **Final Prompt**  
+  “A young woman in a yellow bikini stands on a sunny beach, hands gripping the back of her head as she adjusts her hair. The shot is taken with a 30 mm wide‑angle lens at mid‑afternoon, capturing a slightly overexposed, raw look with subtle motion blur from handheld shake. The background shows a white cliff on the left, a blue bucket and green bottle on a folding chair to the right, and the ocean’s gentle waves near the shore. Everything is in focus, the frame is off‑center and partially cropped, creating a candid, spontaneous composition without any intentional rule‑of‑thirds or studio lighting.”

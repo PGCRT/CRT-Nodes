@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework – “Neon‑Brewery Portrait”**
+
+- **Subject & Pose**  
+  A young woman with long, light‑brown hair that falls over her shoulders, wearing a tight black long‑sleeved crop top and matching black leggings. She stands with a relaxed, slightly tilted posture, hands clasped in front of her, smiling softly at the camera as if caught mid‑conversation. Her face is slightly overexposed, giving a warm, natural glow.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous – the subject appears unaware of the camera, frozen in a casual moment. The shot has slight motion blur from handheld instability, no auto‑beauty or filter enhancement, raw and unprocessed. A wide‑angle lens (24 mm) captures everything in focus, with no bokeh or depth‑of‑field isolation – the background remains sharp.
+
+- **Environment**  
+  The scene is set inside a cozy, modern brewery or pub. Large windows on the left let in daylight, while a neon “Budweiser” sign glows on the back wall. Wooden tables, metal‑top stools, and a small TV screen are visible. A few patrons are seen in the background, one in a white t‑shirt and another in a red shirt, adding life to the scene. The time of day is late afternoon, with soft natural light mixing with indoor lighting.
+
+- **Lens & Technical**  
+  Short focal length (24 mm) wide‑angle lens, no bokeh, everything in focus. Slight overexposure on the subject’s face to emphasize the ambient light. No rule‑of‑thirds intentionality – the framing is accidental, slightly off‑center. The composition feels spontaneous, with a partial crop that keeps the edges cut off by the frame.
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, zero studio lighting. The image retains a raw, natural look with only basic auto‑HDR applied to brighten the exposure. Slight motion blur is present throughout, giving a sense of movement.  
+
+**Prompt Summary (for AI image generator)**  
+> “A candid, wide‑angle photograph of a young woman in a black crop top and leggings standing inside a cozy brewery pub. She smiles softly, hands clasped, slightly tilted posture, with a raw, unprocessed look and slight motion blur. The background shows wooden tables, metal stools, a neon Budweiser sign, and patrons in the distance. Late afternoon natural light mixes with indoor lighting; everything is in focus, no bokeh. Capture with a 24 mm wide‑angle lens, accidental off‑center framing, partial crop, slight overexposure on the subject.”

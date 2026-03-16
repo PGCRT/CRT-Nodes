@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman in a casual, sporty look—wearing a loose, heather‑gray V‑neck T‑shirt and matching sweatpants—standing in an office space. Her arms are crossed over her chest, head tilted slightly downward, eyes cast to the side as if she’s mid‑conversation or laughing. A subtle motion blur at the edges suggests handheld shake, while her hair has a slight messiness that adds realism.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. The frame is intentionally off‑center and slightly tilted, with a partial crop that cuts off part of her left shoulder, giving an accidental, natural feel. No rule‑of‑thirds intentionality; the composition is guided by the subject’s position in the scene.
+
+- **Environment**  
+  Specific real‑world location: a modern office with a long desk, computer monitors, and a keyboard visible behind her. The time of day is mid‑afternoon, with ambient daylight coming from a window on the left, creating a soft overexposure on the subject’s face and a slight highlight on the ceiling lights. Weather or ambient conditions are clear, with no wind, but the handheld camera introduces a faint blur.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm) wide‑angle lens, producing a wide field of view that keeps the background fully sharp—no bokeh, no depth‑of‑field blur. Everything in focus from foreground to background. No portrait mode or subject isolation; the entire scene is captured in one shot.
+
+- **Post‑Processing**  
+  Slight auto‑HDR or auto‑beauty mode off—raw, unprocessed look. No filters, no color grading, no post‑processing aesthetic. The image retains natural contrast and a slight overexposure on the subject’s face due to ambient light.  
+
+- **Final Prompt**  
+  “A young woman in a casual, sporty look—wearing a loose, heather‑gray V‑neck T‑shirt and matching sweatpants—standing in an office space. Her arms are crossed over her chest, head tilted slightly downward, eyes cast to the side as if she’s mid‑conversation or laughing. The frame is intentionally off‑center and slightly tilted, with a partial crop that cuts off part of her left shoulder, giving an accidental, natural feel. The background shows a long desk with computer monitors and a keyboard behind her, mid‑afternoon daylight from a window on the left creating a soft overexposure on the subject’s face. Use a 24‑35 mm wide‑angle lens; everything in focus, no bokeh. Capture with slight handheld blur for realism. No filters or post‑processing—raw, auto‑HDR off.”

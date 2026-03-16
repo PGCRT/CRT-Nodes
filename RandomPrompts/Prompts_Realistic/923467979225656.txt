@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark, slightly frizzy hair standing in a casual indoor setting, holding a worn‑looking smartphone in her right hand as she takes a mirror selfie. She’s wearing a black thin‑strap top and gray sweatpants with a drawstring, a silver watch on her left wrist. Her expression is bright, mid‑smile, eyes focused on the phone screen. The camera is held at a slightly tilted angle, creating an off‑center, spontaneous composition.
+
+- **Motion & Focus**  
+  Slight motion blur from handheld instability; everything in focus—no portrait‑mode depth of field. A subtle overexposure that gives the image a raw, unprocessed feel. No auto‑beauty or filter enhancements—just natural lighting.
+
+- **Lens & Technical**  
+  Wide‑angle lens (short focal length, ~24 mm), no bokeh, background fully sharp. The shot is captured with a standard DSLR or mirrorless camera, no “rule of thirds” intentionality—framing is accidental and casual.
+
+- **Environment**  
+  A cozy café or lounge area with exposed brick walls, a large window that looks out onto a street scene with parked cars and a “Best Pi… HO” sign. A beige sofa sits to the left, a wooden table with a bottle, cup, and plate is on the right, and a man in a gray t‑shirt and baseball cap is visible in the background, looking at his phone. The time of day is mid‑afternoon, soft natural light coming from the window, slight ambient haze.
+
+- **Lighting & Color**  
+  Natural daylight with a slight warm tint; no color grading or post‑processing. The lighting is uneven—slight overexposure on the subject’s face, underexposed shadows in the background, giving a candid, unpolished look.
+
+- **Composition Notes**  
+  The frame is slightly crooked, the subject is not centered, and the crop is partial—makes it feel spontaneous. The background is fully sharp, no bokeh. The overall vibe is “realistic candid photography”—a genuine moment captured in a real‑world setting.

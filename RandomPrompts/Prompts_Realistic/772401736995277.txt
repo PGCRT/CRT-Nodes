@@ -1,0 +1,31 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman with wet, slightly frizzy hair standing in a bright, modern bathroom. She’s mid‑action, washing her lower back and buttocks with a thick lather of soap that drips down her spine. Her left hand is curled into a gentle grip on the foam, creating a small “C” shape. A delicate gold necklace rests on her neck, catching the light.  
+
+- **Tattoos & Detail**  
+  On her upper back, a black‑ink seahorse tattoo curls toward the center of her spine. On her left hip, a detailed rose with a bud and leaves is visible, adding an organic contrast to the smooth skin.  
+
+- **Foam & Water**  
+  The soap foam is thick, bubbly, and slightly uneven, as if she’s just lifted it from a bath. Small droplets of water run off her back into the tub, creating a subtle streaks of wetness that reflect the ambient light.  
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window casts a soft, warm glow on the scene. The exposure is slightly overexposed on the upper body, giving a bright, airy feel. No auto‑beauty mode—just raw, unprocessed imagery.  
+
+- **Camera Settings**  
+  - Lens: 24‑mm wide‑angle, short focal length.  
+  - Focal depth: everything from the subject to the background is fully sharp; no bokeh.  
+  - Shutter speed: 1/60 s, producing a slight motion blur on the foam and water droplets.  
+  - ISO: 400 for clean detail.  
+
+- **Composition & Framing**  
+  The shot is handheld, slightly tilted, and off‑center. The frame captures the woman’s back, her left hip, and a portion of the bathtub’s edge. The background shows a plain white curtain and a chrome faucet, keeping the focus on the subject.  
+
+- **Environment**  
+  Location: A bright, contemporary bathroom with a white tub and chrome fixtures. Time of day: late morning, when the sun is high but not too direct. Ambient conditions: mild humidity, a gentle breeze from the window.  
+
+- **Post‑Processing**  
+  No filters or color grading—just raw capture. Slight overexposure on the upper body to emphasize the wetness and foam.  
+
+**Prompt Summary**  
+“Candid, unposed photo of a woman washing her lower back in a bright bathroom, captured with a 24‑mm wide‑angle lens at 1/60 s, ISO 400. The image shows her wet hair, gold necklace, seahorse tattoo on her spine, and a rose tattoo on her hip, with thick soap foam dripping down her back. Natural daylight creates a warm, slightly overexposed look. Everything is in focus, background sharp, handheld tilt gives an accidental, spontaneous feel.”

@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair, wearing a pink lace bra and matching high‑waist skirt, standing mid‑step on a white marble coffee table in a plush, pink‑toned living room. Her left leg is bent, foot lifted off the table, toes pointed slightly inward, as if she’s about to pick up a glass or adjust a cushion. She wears silver high‑heeled sandals and a thin gold bracelet on her right wrist. Her gaze is directed toward the camera but not directly at it—slight candid unposed look.
+
+- **Motion & Focus**  
+  Slight motion blur on the lower leg and foot, indicating handheld shake and mid‑action. Everything in the frame is fully sharp—no portrait‑mode bokeh. The focus covers the entire scene from foreground to background.
+
+- **Lighting & Exposure**  
+  Natural daylight coming from a large window on the left side of the room, creating soft overexposure on the upper body and slight shadows under the table. No auto‑HDR or color grading—raw, unprocessed look. The chandelier above casts a warm glow; the lamps on the sofa add ambient light.
+
+- **Environment**  
+  A cozy, pink‑colored living room with a tufted velvet sofa in gold‑trimmed wood, a crystal chandelier hanging from the ceiling, a vase of pink roses on a side table, and a fluffy pink rug covering the floor. A white marble coffee table sits in front of the sofa; a small glass of water and a red notebook rest on it. A window with a white frame lets in daylight, and a tall floor lamp with a white shade stands beside the sofa.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24 mm) with short focal length, no bokeh—background fully sharp. Slight tilt to the camera, off‑center framing, partial crop that cuts off the left side of the sofa. No rule‑of‑thirds intentionality; the composition feels spontaneous and casual.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Imperfections encouraged: slight tilt, off‑center framing, partial crop. Zero studio lighting, zero professional composition, zero editorial tone. Natural motion freeze or slight blur from handheld instability.
+
+- **Prompt for AI Image Generation**  
+  “A young woman with long wavy brown hair, wearing a pink lace bra and high‑waist skirt, standing mid‑step on a white marble coffee table in a plush pink living room. She is captured with slight motion blur on her foot, natural daylight from a left‑side window creating soft overexposure, a crystal chandelier above, a tufted velvet sofa with gold trim beside her, a vase of pink roses on a side table, and a fluffy pink rug on the floor. Wide‑angle lens, 24 mm, everything in focus, slight tilt and off‑center framing, candid spontaneous capture, raw unprocessed look.”

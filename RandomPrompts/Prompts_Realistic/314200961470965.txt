@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, flowing brown hair standing on a sunlit dirt path in a rural park. She is nude, mid‑step, slightly turned toward the camera, hands relaxed near her thighs. Her face is turned to the viewer with a soft, natural smile; her eyes are open, catching the light of a full moon high in the sky. Her posture is casual and candid—no staged pose, just a moment captured in motion.
+
+- **Motion & Focus**  
+  Slight motion blur on the lower half of the body from handheld shake, but the background remains fully sharp. No portrait‑mode depth‑of‑field blur; everything from foreground to background is in focus. The image has an auto‑HDR feel but no color grading or filters—just raw, unprocessed light.
+
+- **Lighting & Exposure**  
+  Natural daylight with a slight overexposure on the upper body, creating a warm glow. The moon is visible in the sky, adding a subtle halo effect. No studio lighting; the scene is lit entirely by ambient day and moonlight.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24 mm), short focal length. No bokeh—background is crisp. The framing is accidental: the subject is slightly off‑center, the horizon is not perfectly level, and the crop is partial, giving a spontaneous feel.
+
+- **Environment**  
+  Location: a quiet park with tall grasses on either side of a dirt trail. A large tree stands to the left, its leaves partially obscuring the sky. In the background, a line of trees forms a soft wall, and a bright full moon hangs high in the sky. The time of day is late afternoon, just before dusk, with warm sunlight and a hint of cool evening air. Weather is clear, with a light breeze that ruffles the woman’s hair.
+
+- **Composition & Style**  
+  Candid, unposed, spontaneous—subject appears unaware of the camera. Slight tilt and partial crop give an informal feel. No rule‑of‑thirds intentionality; the composition is accidental but natural. The image has a raw, in‑camera look with no post‑processing aesthetic.
+
+- **Prompt for Text‑to‑Image Generation**  
+  “A nude young woman with long brown hair standing on a sunlit dirt path in a rural park, mid‑step with hands near thighs, slightly turned toward the camera and smiling. Slight motion blur on her lower body from handheld shake, background fully sharp. Natural daylight with a bright full moon high in the sky; slight overexposure on the upper body. Wide‑angle 24 mm lens, short focal length, no bokeh. The scene includes a tall tree to the left and a line of trees in the background. Time of day is late afternoon before dusk, clear weather with a light breeze. Candid, unposed, accidental framing, slightly off‑center crop, partial crop, raw unprocessed look, auto‑HDR feel, no filters.”

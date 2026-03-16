@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A young woman with a vibrant pink ponytail, wearing a black crop‑top and denim overalls, stands at a wooden coffee‑shop counter. She’s mid‑pour, holding a ceramic mug, her back slightly turned toward the camera, one hand on the mug, the other reaching for a stack of paper cups. Her dark leather boots are rooted in the floor, casting a soft shadow that stretches across the concrete.  
+
+- **Pose & Movement**  
+  Slight motion blur at the wrists and hands, indicating a handheld shot captured in motion. The blur is subtle—just enough to give the image a raw, unprocessed feel.  
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window on the left creates a warm, slightly overexposed highlight on the woman’s back and the counter. The exposure is uneven: the foreground is brighter than the background, giving an auto‑HDR effect without any post‑processing filters.  
+
+- **Lens & Technical**  
+  Wide‑angle lens (24‑35 mm), short focal length, everything in focus from foreground to background. No bokeh—background remains sharp. Slight tilt and off‑center framing; the composition is accidental, not rule‑of‑thirds.  
+
+- **Environment**  
+  A bustling coffee shop in an urban setting. Large windows on the left let in bright daylight, a potted plant hangs near the corner, a coffee machine sits on the counter, and a few other patrons are visible in the background: a man in a baseball cap, a woman with long hair, and another person partially cut off at the right edge. The floor is polished concrete, the counter is light wood with metal handles, and a stack of paper cups sits next to a water bottle.  
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, partial crop that cuts off the left side of the scene. The image has no filters, no color grading, no post‑processing aesthetic—just raw, natural light and a candid moment.  
+
+- **Final Prompt**  
+  “A young woman with a vibrant pink ponytail, wearing a black crop‑top and denim overalls, stands at a wooden coffee‑shop counter pouring a drink. She holds a ceramic mug in her right hand, reaches for a stack of paper cups with her left, and casts a soft shadow across the concrete floor. Slight motion blur at the wrists, natural daylight from a large window on the left creates a warm overexposure, wide‑angle lens (24‑35 mm) keeps everything sharp, slight tilt and off‑center framing, accidental composition. In the background, a man in a baseball cap, a woman with long hair, and a partially visible patron stand near a coffee machine and a potted plant. The scene is raw, unprocessed, no filters—just a candid, spontaneous snapshot captured with a handheld camera.”

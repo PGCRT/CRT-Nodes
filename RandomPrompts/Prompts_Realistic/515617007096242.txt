@@ -1,0 +1,35 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  - A young woman with long, dark brown hair walking away from the camera down a modern office aisle.  
+  - She’s wearing an oversized light‑blue denim jacket, ripped at the hem, and dark blue sneakers.  
+  - Her back is to the lens; her left hand is slightly bent as if she’s reaching for something on a desk.  
+  - Capture her mid‑step, with a subtle motion blur on her feet to convey movement.
+
+- **Pose & Composition**  
+  - Frame her off‑center, slightly tilted, as if the camera was handheld and not perfectly level.  
+  - Use a wide‑angle lens (24–35 mm) to keep the entire scene in focus—no bokeh, no depth‑of‑field blur.  
+  - Keep the composition accidental: the desk on the left, the office chair on the right, and the glass partition in the background should all be sharply rendered.
+
+- **Lighting & Exposure**  
+  - Natural daylight from a north‑west window; slight overexposure on the upper part of the frame to give a raw, unprocessed look.  
+  - Auto‑HDR or auto‑beauty mode off.  
+  - No color grading or filters—just the native tones of the camera’s sensor.
+
+- **Environment**  
+  - A contemporary office space with white desks, black chairs, and glass partitions.  
+  - Several colleagues are visible in the background, working at computers; one is on a phone call, another is typing.  
+  - The floor is a polished concrete with a faint crack running along the aisle.  
+  - Time of day: late morning, soft ambient light with a slight haze from the window.
+
+- **Lens & Technical**  
+  - Short focal length (24–35 mm), wide‑angle, all elements in focus.  
+  - Slight handheld shake captured in the final shot.  
+  - No portrait‑mode subject isolation—everything from foreground to background is sharp.
+
+- **Post‑Processing**  
+  - Raw file with no LUTs or color grading.  
+  - Light exposure adjustment only; keep the image naturalistic.  
+
+**Prompt Summary (for AI image generator)**  
+"Back view of a young woman in a denim jacket and sneakers walking away down an office aisle, captured with a wide‑angle lens at late morning, slight motion blur on her feet, accidental off‑center framing, all elements sharply in focus, raw unprocessed look with slight overexposure, natural daylight from a north‑west window, office environment with desks, chairs, glass partitions, and colleagues in the background, concrete floor with a crack, no filters or color grading."

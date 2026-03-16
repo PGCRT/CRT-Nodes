@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with voluminous, curly brown hair, wearing a sheer black bra and matching panties that read “VIXEN” on the straps. She’s kneeling on a white bed, hands placed on the sheets, body slightly tilted, mid‑movement as if she just finished a dance or a stretch. Her expression is natural, unposed, with a soft smile and a hint of confidence.
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window to the left, creating a warm, slightly overexposed highlight on her face and upper body. The exposure is uneven—brighter at the top, softer at the bottom—to give a raw, handheld feel. No auto‑HDR or beauty filters; just a single shutter click.
+
+- **Environment**  
+  A bright, airy bedroom with a large window that shows a green garden outside. The bed has white linens and a beige headboard. A curtain hangs to the side, partially drawn. The room is uncluttered, but the framing is accidental—no rule‑of‑thirds, just a casual, off‑center crop that captures the subject’s full figure and a portion of the window.
+
+- **Lens & Technical**  
+  24‑mm wide‑angle lens, short focal length, everything in focus from foreground to background. No bokeh; the background (window, headboard, curtain) is sharply rendered. Slight motion blur on the subject’s hands and hair to suggest movement. Handheld shot with a slight tilt.
+
+- **Capture Style**  
+  Candid, spontaneous, “mid‑action” pose. The image feels like a snapshot taken by a friend who caught the moment before a photoshoot. Slight imperfections are welcome: a tiny smudge on the chin, a faint wrinkle in the sheet, a slight overexposed highlight.
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, no auto‑beauty mode. A single exposure, raw JPEG with natural contrast. The final image retains the authentic, unpolished look of a real‑life snapshot.

@@ -1,0 +1,35 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  Two young women standing side‑by‑side in a bustling urban café, mid‑conversation. The woman on the left is holding a smartphone, scrolling through a message; the woman on the right has her hand on a coffee cup, looking down at a menu board. Both have natural, unposed expressions—slight tilt and off‑center framing give a candid, spontaneous feel.
+
+- **Appearance & Style**  
+  *Left woman:* dark hoodie, white denim shorts, hair tied in a high ponytail, subtle makeup, faint motion blur around her hands as she scrolls.  
+  *Right woman:* floral cardigan over a white crop top, bright yellow leggings, dreadlocks loosely tied, holding a black tote bag.  
+
+- **Environment**  
+  Location: a casual café with large industrial‑style windows on the left and a wooden sign that reads “BUNCO” on the back wall. The time of day is late afternoon; warm sunlight streams through the window, creating soft highlights and slight overexposure on the subjects’ faces. Ambient noise from other patrons is visible in the background, but everything remains fully sharp—no bokeh.
+
+- **Lens & Technical**  
+  - Short focal length (24‑35 mm) wide‑angle lens.  
+  - Handheld shot with slight instability: natural motion blur on the subjects’ hands and a tiny shake in the framing.  
+  - Auto‑HDR off; raw, unprocessed look.  
+  - No color grading or filters—just the natural tones of the scene.  
+  - Wide‑angle “wide lens” gives a slightly compressed background that keeps all elements in focus.  
+
+- **Composition & Framing**  
+  - No rule‑of‑thirds intentionality; the frame is accidental, with the subjects occupying the central‑left and central‑right portions of the image.  
+  - Slight tilt to the left, creating a dynamic, candid feel.  
+  - Partial crop: the top of the café’s sign is cut off, as is the lower edge of the window, adding to the “in‑the‑moment” vibe.  
+
+- **Lighting**  
+  - Natural daylight from the left window; slight overexposure on the subjects’ faces, subtle shadows cast by the window frame.  
+  - Zero studio lighting—only ambient light.  
+
+- **Details & Imperfections**  
+  - Slight motion blur around the hands and phone screen.  
+  - Minor dust particles visible in the air, adding realism.  
+  - Background fully sharp: the café’s interior, the wooden sign, the window reflection of a passerby, all in focus.  
+
+- **Prompt Summary (for AI image generator)**  
+  “Two young women in a bustling urban café, late afternoon sunlight through a large industrial window. Left woman in a dark hoodie and white denim shorts scrolling on a phone; right woman in a floral cardigan, yellow leggings, holding a coffee cup. Candid, unposed expressions, slight tilt and off‑center framing, accidental partial crop. Wide‑angle short focal length lens, handheld motion blur on the hands, raw unprocessed look, no filters, everything in focus. Background includes a ‘BUNCO’ sign and a passerby reflection. Natural lighting, no bokeh.”

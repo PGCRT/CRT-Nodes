@@ -1,0 +1,16 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair, wearing a sheer black crop‑top and high‑waisted black shorts, standing in a cozy bedroom. She is mid‑step, one hand lightly touching her hip, a subtle smile on her face, as if caught in an unplanned, spontaneous moment. Her pose has a slight tilt and off‑center framing; the shot is partially cropped at the edges for a raw, handheld feel.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject appears unaware of the camera, mid‑action. The image carries a faint motion blur from a handheld shutter, with a slight overexposure that gives it an auto‑HDR, auto‑beauty‑off, unprocessed look. No filters, no color grading, no post‑processing aesthetic. The exposure is slightly warm, reflecting the ambient daylight of late morning.
+
+- **Environment**  
+  Specific real‑world location: a tidy bedroom with a wooden headboard, a bedside table, and a lamp in the background. The bed is covered with a floral quilt in soft pinks and greens; a small framed picture hangs on the wall. Time of day: early afternoon, natural light coming from a window on the left, creating soft highlights and gentle shadows. Weather or ambient conditions: clear, mild, with a slight breeze that ruffles the subject’s hair.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm), wide‑angle lens. No bokeh; background is fully sharp, everything in focus. No portrait mode or subject isolation. The composition intentionally avoids rule‑of‑thirds, relying on accidental framing that places the subject slightly off‑center and captures a partial crop of her lower body and the bed’s corner. The image has a natural motion freeze or slight blur from handheld instability, giving it a genuine, documentary feel.
+
+**Prompt Summary**  
+> “A young woman with long wavy brown hair, in a sheer black crop‑top and high‑waisted black shorts, stands mid‑step in a cozy bedroom, one hand on her hip, smiling casually. The shot is candid, slightly tilted, partially cropped, with a faint motion blur from handheld shooting. The exposure is warm and slightly overexposed, no filters or post‑processing. The background shows a wooden headboard, bedside table, lamp, floral quilt, and a wall picture. Late morning natural light shines from the left. Use a 24‑35 mm wide‑angle lens; everything in focus, no bokeh. Capture the raw, unposed moment with accidental framing.”

@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A young woman with long, straight brown hair, wearing a light‑denim jacket over a white top and ripped brown jeans, sits cross‑legged on a stone bench in a tropical grove. She is mid‑gesture, pulling a thin piece of natural fiber (like hemp or sisal) taut between her fingers while holding a small, handcrafted wooden crate with a hinged lid. Her eyes are gently closed, as if she’s feeling the texture or preparing to weave, giving a candid, “in‑the‑moment” feel.
+
+- **Pose & Composition**  
+  The shot is slightly tilted to the left, off‑center framing that gives an accidental, spontaneous vibe. The composition is not rule‑of‑thirds‑intentional; the subject occupies the central‑left quadrant, with her hands and the crate forming a small triangle in the lower middle of the frame. The crop is partial—her knees and the bottom of the bench extend beyond the lower edge, creating a natural “crop” that invites movement.
+
+- **Motion & Focus**  
+  A subtle motion blur surrounds her fingers and the fiber, indicating a handheld, slightly unsteady capture. Everything—from her face to the background foliage—is fully sharp; no portrait‑mode depth‑of‑field blur is present. The focus covers the entire scene, from foreground to background.
+
+- **Lighting & Exposure**  
+  Ambient daylight from a high‑angle, late‑afternoon sun creates a slight overexposure on the subject’s face and a warm glow on the wooden crate. The exposure is raw, without auto‑HDR or beauty filters; a natural, unprocessed look that retains slight contrast and grain.
+
+- **Lens & Technical**  
+  A short focal length (20–35 mm) wide‑angle lens is used, capturing a broad view of the scene while keeping the background fully sharp—no bokeh. The lens’s wide angle allows the palm trees, green undergrowth, and a portion of a wooden fence to be visible in the background, all in focus.
+
+- **Environment**  
+  The setting is a real‑world tropical location: a small, sunlit grove with tall palm trees and lush green plants. The time of day is mid‑afternoon, with warm, golden light that casts soft shadows. Weather is clear, with a gentle breeze that slightly ruffles the leaves, adding to the candid feel.
+
+- **Post‑Processing**  
+  No filters or color grading are applied. The image retains its raw, unprocessed aesthetic, with only minimal adjustments to exposure and contrast. The final look is naturalistic, as if captured on a handheld camera in a real‑life setting.

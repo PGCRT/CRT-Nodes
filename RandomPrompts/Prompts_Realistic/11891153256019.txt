@@ -1,0 +1,26 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, straight blonde hair standing in a bright, lived‑in bedroom. She’s bare‑chested, wearing light denim jeans, her torso slightly tilted to the left as if she just finished a quick stretch or is about to pick something up from a white shelving unit behind her. Her face is turned toward the camera but not directly at it—her eyes are slightly off‑center, giving a candid, spontaneous feel.
+
+- **Lighting & Exposure**  
+  Natural daylight coming from a window on the left side of the room, creating a soft, warm overexposure that gives the image a raw, unprocessed look. The exposure is slightly high, with a gentle haze across the whole frame; no auto‑HDR or beauty filters applied. The lighting is uneven, as if the camera was handheld and the shutter was pressed while the subject was in motion.
+
+- **Camera Settings**  
+  - Lens: 24‑35 mm wide‑angle, short focal length, “wide lens” for a broad field of view.  
+  - Focal depth: everything from foreground to background is fully sharp—no bokeh or portrait‑mode isolation.  
+  - Focus: manual focus, slightly soft but consistent across the frame.  
+  - Shutter speed: 1/60 s (or similar) to capture a slight motion blur from the subject’s movement.  
+  - ISO: 400–800, depending on ambient light; no post‑processing color grading.
+
+- **Composition & Framing**  
+  The frame is intentionally off‑center and slightly tilted. The subject occupies roughly the central‑right portion of the image, with a small portion of a white bed and a black garment hanging on the right edge. On the left, a white shelving unit holds various items: a black bag, a pink bottle, a small potted plant, a stack of books, and a yellow box labeled “MO.” A white dresser with silver knobs sits at the bottom left. The top of the frame shows a portion of a white ceiling and a faint outline of a window.
+
+- **Environment & Details**  
+  The room appears to be a personal space, maybe a bedroom or a studio, with a white bed on the right, a small potted plant on the shelf, and a few beauty or household items. A black bag sits on the top shelf, a pink bottle, a small green plant, a stack of books, and a yellow box labeled “MO” are visible on the lower shelf. The background is fully sharp, no depth‑of‑field blur. The time of day is mid‑afternoon, as indicated by the warm, slightly overcast daylight.
+
+- **Texture & Imperfections**  
+  Slight motion blur around the subject’s shoulders and arms, indicating a handheld shot. The image has a raw, unprocessed look with no filters or color grading. There are minor imperfections: a slight tilt of the camera, an off‑center crop that cuts off a bit of the left side of the room, and a faint overexposure that gives the photo a natural, candid feel.
+
+- **Final Prompt**  
+  “A young woman with long blonde hair, bare‑chested and wearing light denim jeans, stands in a bright bedroom, slightly tilted to the left as if mid‑stretch. Natural daylight from a left‑side window creates a soft, warm overexposure. Shot on a 24‑35 mm wide‑angle lens, everything from foreground to background is fully sharp with a slight motion blur from handheld instability. The frame captures her in a candid, unposed stance, with a white shelving unit behind her holding a black bag, pink bottle, small potted plant, books, and a yellow ‘MO’ box; a white bed and a hanging black garment appear on the right. The image is raw, unprocessed, with no filters or color grading, featuring slight tilt and off‑center framing that give it an authentic, spontaneous feel.”

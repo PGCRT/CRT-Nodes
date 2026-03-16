@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair, a small tattoo on her left upper arm that reads “the bone,” is crouching on a sandy beach. She’s nude, leaning forward on her hands with her knees bent, toes slightly curled, and her head tilted to the side as if she just finished a playful dip into the sand. Her gaze is direct, almost indifferent, giving a candid, mid‑action feel.
+
+- **Lighting & Exposure**  
+  Slight overexposure from a bright midday sun, creating soft highlights on her skin and a subtle halo around her hair. No auto‑beauty or filter processing—just raw, natural tones with a tiny hint of warmth. The exposure is slightly uneven, giving an authentic handheld feel.
+
+- **Motion & Focus**  
+  A gentle motion blur at the edges from a short‑focal‑length wide‑angle lens (24 mm), capturing the subject’s movement and the surrounding environment in one sharp frame. Everything—from her skin to the rocks—remains fully in focus, no portrait‑mode depth‑of‑field blur.
+
+- **Environment**  
+  The scene is a rugged beach with large, moss‑covered boulders scattered behind her. The sand is light beige with small footprints and a few scattered shells. The time of day is late afternoon, the sun high but slightly to the west, casting long, soft shadows. The weather is clear, with a faint breeze ruffling her hair.
+
+- **Lens & Technical**  
+  Short focal length (24 mm), wide‑angle, no bokeh—background fully sharp. No rule‑of‑thirds intentionality; the framing is accidental, slightly tilted, and off‑center. The composition feels spontaneous, as if the photographer caught her in a natural, unposed moment.
+
+- **Prompt Summary**  
+  “A nude woman with a ‘the bone’ tattoo on her left arm crouches on a sandy beach at late afternoon, leaning forward on her hands with a candid, mid‑action pose. The image has slight motion blur from a 24 mm wide‑angle lens, soft overexposure from bright midday sun, and a fully sharp background of mossy boulders and scattered shells. All elements are in focus, no filters or auto‑beauty processing, capturing a raw, handheld, spontaneous moment.”

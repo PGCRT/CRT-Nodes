@@ -1,0 +1,32 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high, voluminous blonde updo and loose curl‑accents, wearing an off‑shoulder white lace bra with gold leaf embroidery and black lace panties. She’s seated on a plush bed, leaning slightly forward with one hand resting on the mattress, her face turned toward the camera but not directly posing—mid‑movement, as if she just finished a gentle stretch or is about to adjust her hair. Her expression is soft, almost contemplative, with a subtle smile and a hint of confidence.
+
+- **Lighting & Exposure**  
+  Natural daylight from a western window, mid‑afternoon (around 4 pm). The light is slightly warm, with a mild overexposure that gives a gentle halo around the subject’s face and shoulders. No auto‑HDR or beauty filters—just raw, unprocessed capture.
+
+- **Camera & Lens Settings**  
+  - Camera: DSLR or mirrorless (e.g., Canon EOS 5D Mark IV)  
+  - Lens: 24‑mm wide‑angle prime (or 35‑mm if a slightly tighter framing is desired)  
+  - Aperture: f/4.0 – shallow but still keeps the background fully sharp  
+  - Shutter speed: 1/60 s – enough to capture slight motion blur from handheld instability  
+  - ISO: 400–600 – for natural grain and depth
+
+- **Composition & Framing**  
+  - Candid, unposed, spontaneous—subject unaware or mid‑action.  
+  - Slight tilt and off‑center framing; the shot is not intentionally rule‑of‑thirds aligned but rather a casual, handheld composition.  
+  - Partial crop: the top of the bed headboard is cut off at the upper edge, giving an intimate, “in‑the‑moment” feel.  
+  - Background: a tufted, beige‑brown headboard with white pillows; the background is fully sharp, no bokeh.
+
+- **Environment**  
+  A cozy, slightly cluttered bedroom. The bed has a tufted headboard and white pillows; a small side table with a lamp is visible in the left corner. The room’s walls are painted a muted gray‑beige, and a window lets in warm daylight. The time of day is mid‑afternoon, giving a soft, golden hue. The weather outside is mild, with a light breeze that may be captured by the subject’s hair movement.
+
+- **Technical Details**  
+  - Wide lens (24 mm) captures the entire scene without cropping too tightly.  
+  - No depth‑of‑field blur—everything from foreground to background is in focus.  
+  - Slight motion blur on the subject’s hand and hair, indicating handheld shake.  
+  - Raw image with no color grading or post‑processing; only basic white balance and exposure adjustments.
+
+- **Final Prompt**  
+  “A candid, unposed photograph of a woman with a high blonde updo and loose curl‑accents, wearing an off‑shoulder white lace bra with gold leaf embroidery and black lace panties, seated on a plush bed in a cozy bedroom. She leans slightly forward, one hand resting on the mattress, mid‑movement. Natural daylight from a western window at mid‑afternoon creates a warm, slight overexposure. Shot on a 24‑mm wide‑angle prime lens at f/4.0 and 1/60 s, with ISO 400–600. The composition is slightly tilted and off‑center, partially cropped, capturing a raw, handheld feel. The background shows a tufted beige headboard, white pillows, and a small side table with a lamp; everything is fully sharp. The scene is captured in real time, with slight motion blur from handheld instability, no filters or post‑processing.”

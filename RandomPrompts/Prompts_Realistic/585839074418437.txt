@@ -1,0 +1,24 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair, wearing a black crop‑top and denim shorts, seated at an outdoor café table. She is mid‑gesture, hand near her chest, slightly leaning forward as if she’s about to pick up a menu or a drink. Her face is turned toward the camera but not directly aimed— a natural, candid expression with a subtle smile.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. Slight tilt and off‑center framing; partial crop that gives a “handheld” feel. No rule‑of‑thirds intentionality. All elements are in focus; no portrait‑mode depth‑of‑field blur.
+
+- **Motion & Exposure**  
+  Slight motion blur from handheld instability, natural freeze or soft blur. Slight overexposure to keep the ambient daylight warm and lively. Auto‑HDR or auto‑beauty mode off — raw, unprocessed look. No filters, no color grading, no post‑processing aesthetic.
+
+- **Lens & Technical**  
+  Short focal length (≈20–35 mm), wide‑angle lens. Wide‑angle gives a broad field of view that captures the café environment and the subject in one shot. Everything is fully sharp — no bokeh, no subject isolation. No “rule‑of‑thirds” composition; accidental framing.
+
+- **Environment**  
+  Specific real‑world location: an outdoor café on a sunny afternoon. The background shows other patrons, a yellow umbrella with “Cafe” written on it, a stone wall, and a small fountain in the distance. Time of day: late morning (≈10:30 am), warm ambient light with soft shadows. Weather: clear, slightly breezy.
+
+- **Details & Imperfections**  
+  Slight tilt, off‑center framing, partial crop. The camera is held at a slightly low angle to emphasize the subject’s posture and the café’s table setting. The image has natural imperfections: a faint smudge on the lens, a slight vibration in the frame, and a small overexposed highlight on the umbrella.
+
+- **Prompt for Generation**  
+  “A young woman with long wavy brown hair, black crop‑top, denim shorts, seated at an outdoor café table, hand near chest, slight lean forward, candid expression, mid‑gesture. Slight motion blur, handheld tilt, off‑center framing, partial crop. Wide‑angle short focal length (20–35 mm), everything in focus. Background shows other patrons, yellow ‘Cafe’ umbrella, stone wall, small fountain. Late morning sunny afternoon, clear weather, soft shadows. Raw, unprocessed look, no filters, auto‑HDR off, slight overexposure. All elements sharp, no bokeh.”
+
+Provide only the structured prompt.

@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy auburn hair leaning casually against a white bathtub, eyes closed in a relaxed, mid‑motion pose. She wears large gold hoop earrings and a thin gold bracelet on her left wrist. Her body is partially submerged in water, creating a natural “wet” texture that catches the light.  
+
+- **Lighting & Exposure**  
+  Slight overexposure from a bright, ambient daylight source (mid‑afternoon). The exposure is uneven—soft highlights on her skin and subtle shadows in the background. No auto‑beauty or filter processing; raw, unedited look.  
+
+- **Camera Settings**  
+  Wide‑angle lens (24–35 mm), short focal length, handheld. Slight motion blur from a casual shake, natural freeze of the subject’s movement. Everything in focus—no portrait‑mode depth‑of‑field blur; background remains sharp.  
+
+- **Composition & Framing**  
+  Candid, unposed, spontaneous framing: slight tilt and off‑center crop. No rule‑of‑thirds intentionality—accidental composition that captures the subject’s face, torso, and a portion of the bathtub interior.  
+
+- **Environment**  
+  Location: an industrial‑style bathroom with a concrete wall that shows peeling white paint. Time of day: late afternoon, soft natural light with a warm hue. Weather: clear, no wind, ambient stillness.  
+
+- **Details & Imperfections**  
+  Slight tilt in the camera angle, partial crop that cuts off the lower edge of the bathtub. Small imperfections: a faint smudge on her earring, a slight wrinkle in her hair, natural motion blur around her arm.  
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, zero studio lighting. Raw, unprocessed image with only basic auto‑HDR applied for dynamic range.  
+
+- **Final Prompt Summary**  
+  “A young woman with long auburn hair leans against a white bathtub in a concrete‑wall bathroom, captured with a wide‑angle handheld lens at mid‑afternoon. Slight motion blur and overexposure give a raw, candid feel; everything stays in focus while the background remains sharp. The composition is accidental—slightly tilted and off‑center—with natural imperfections like a smudge on her earring and a partial crop of the bathtub edge. No filters or studio lighting, just a straightforward, realistic photograph.”

@@ -1,0 +1,33 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail, wearing an oversized white sweatshirt and tan shorts, standing at a city‑street window. Her back is to the camera; she’s mid‑turn, left hand on a small white book titled “SSIA” that rests on a wooden windowsill. A clear plastic cup sits beside the book. She’s holding a smartphone in her right hand, about to take a photo of the street outside.
+
+- **Lighting & Exposure**  
+  Slight overexposure from bright midday sun, creating soft highlights on her sweatshirt and the window glass. Auto‑HDR off – raw, unprocessed look. No color grading or post‑processing; only natural contrast.
+
+- **Camera Settings**  
+  Wide‑angle lens (24–35 mm), short focal length. Handheld, slight motion blur from instability. Everything in focus – no bokeh, no depth‑of‑field blur; background fully sharp. No portrait‑mode subject isolation.
+
+- **Composition & Framing**  
+  Candid, unposed, spontaneous – the shot is slightly tilted and off‑center. The frame captures the woman’s back, the window sill, a white taxi outside, a yellow city bus in the distance, and a street sign that reads “ONE WAY.” A small portion of a pedestrian’s leg is visible on the right edge. No rule‑of‑thirds intentionality – accidental framing.
+
+- **Environment**  
+  Specific real‑world location: a busy city street in New York City, at a coffee shop or office building with a large glass window. Time of day: mid‑afternoon (sun high, shadows short). Weather: clear, bright, slight haze from dust or pollen.
+
+- **Lens & Technical**  
+  Short focal length, wide angle. No bokeh, no depth‑of‑field blur – background fully sharp. Everything in focus. No portrait mode, no subject isolation.
+
+- **Details to Include**  
+  - The woman’s hair is tied up in a high ponytail with a black elastic band; a few strands escape the tie, adding motion.  
+  - Her sweatshirt is slightly loose, revealing a hint of her waist.  
+  - The white book on the sill has visible text “SSIA” and a small logo.  
+  - A clear plastic cup sits next to the book, half‑filled with a white beverage.  
+  - A smartphone is held in her right hand, screen facing the street.  
+  - Outside the window: a white taxi (Toyota Corolla) parked at an intersection, a yellow bus further away, a traffic light showing green, and a “ONE WAY” sign.  
+  - A pedestrian’s leg in jeans is partially visible on the far right.  
+  - The window reflects the street, adding a subtle glare.  
+  - The scene is captured through a large glass window that shows the city’s buildings and a concrete sidewalk.
+
+- **Final Prompt**  
+  “A candid, unposed shot of a young woman with a high ponytail, wearing an oversized white sweatshirt and tan shorts, standing at a city‑street window. She’s mid‑turn, left hand on a small white book titled ’SSIA’ that rests on a wooden windowsill, right hand holding a smartphone. A clear plastic cup sits beside the book. Outside the window, a white taxi and a yellow bus are parked at an intersection under a green traffic light, with a ’ONE WAY’ sign visible. The scene is captured on a wide‑angle lens (24–35 mm) with slight motion blur from handheld instability, slight overexposure from bright midday sun, everything in focus, no bokeh, no post‑processing. The frame is slightly tilted and off‑center, capturing the woman’s back, the window sill, the taxi, the bus, the traffic light, and a partial view of a pedestrian’s leg on the right. The image has raw, natural lighting, no filters, no color grading, and no editorial tone.”

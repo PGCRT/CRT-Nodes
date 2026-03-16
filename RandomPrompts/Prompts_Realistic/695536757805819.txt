@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A fit woman in her late twenties, with a high ponytail and sunglasses perched on her head, is mid‑movement in a bright gym. She’s wearing an off‑shoulder white top, a black jacket tied around her waist, and light denim jeans. Her back is slightly turned toward the camera as she lifts a barbell overhead, arms bent, muscles tense. The shot captures the subtle tension in her shoulders and the slight sway of her hips as she holds the weight.
+
+- **Motion & Focus**  
+  Slight motion blur on the arms and barbell to convey mid‑action, while the background remains fully sharp—no bokeh, no portrait‑mode isolation. The entire frame is in focus, captured with a wide‑angle lens (24‑35 mm). Handheld instability gives the image a natural, spontaneous feel; a tiny tilt to the left and a slight off‑center crop.
+
+- **Lighting & Exposure**  
+  Auto‑HDR or auto‑beauty mode off—raw, unprocessed look. The gym’s ambient daylight comes from large windows on the left, creating a soft overexposure on the subject’s back and a gentle highlight on her hair. Slight natural contrast with no color grading or filters.
+
+- **Environment**  
+  A modern, sunlit fitness center in the late afternoon. Large glass windows let in warm natural light; a treadmill and a weight rack are visible in the background. The floor is a polished concrete, reflecting the subject’s silhouette. A few other gymgoers are visible in the distance, blurred but still in focus.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm), wide‑angle, no bokeh, everything in focus. The lens is set to a slightly wide aperture (f/4–f/5.6) for a full‑frame capture. The camera is handheld, with a slight shake that adds realism.
+
+- **Composition & Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Imperfections encouraged: slight tilt, off‑center framing, partial crop. No rule‑of‑thirds intentionality—accidental framing. Zero studio lighting, zero professional composition, zero editorial tone. The final image feels like a snapshot taken in a real gym at sunset, with all the imperfections that give it life.

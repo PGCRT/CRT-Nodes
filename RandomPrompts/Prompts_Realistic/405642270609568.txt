@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail, wearing white jeans and a plain gray t‑shirt, sits on a wooden stool in the middle of a small clothing boutique. She turns her head to the left, smiling broadly at the camera, her hair slightly blowing from a gentle breeze. Her left hand rests on the back of the stool, while her right hand is partially hidden behind her thigh. The shot captures her mid‑motion, with a subtle handheld blur around the edges.
+
+- **Candid, Unposed Feel**  
+  The woman appears unaware that she is being photographed—her expression is natural and spontaneous. The framing is off‑center, slightly tilted, and the crop is imperfect, giving the image a raw, documentary vibe. No rule‑of‑thirds is followed; the composition feels accidental, as if the photographer was just passing by and caught this moment.
+
+- **Environment**  
+  Location: A narrow, brightly lit clothing store with racks of shirts and jackets on both sides. The back wall features a small mirror and a sign that reads “NEW COLLECTION.” The time of day is late afternoon, with warm, diffused daylight coming from the north‑west window. Ambient sound is faint, but the air feels cool and crisp.
+
+- **Lens & Technical**  
+  Use a wide‑angle lens (24‑35 mm) to capture the entire scene in one shot. Keep everything in focus—no depth‑of‑field blur, no portrait mode. The exposure is slightly overexposed on the bright white jeans, but the overall tone remains natural, unprocessed. No auto‑HDR or auto‑beauty filters are applied; the image retains a slight grain and minor color cast from the ambient light.
+
+- **Capture Style**  
+  Capture the moment with a handheld camera, letting a little motion blur creep in around the edges. The focus is steady, but the camera isn’t perfectly level—this “imperfect” tilt adds to the candid feel. The background remains fully sharp, so the racks of clothes and the mirror are all in focus, creating a rich, detailed environment.
+
+- **Final Prompt**  
+  *“A young woman with a high ponytail, wearing white jeans and a plain gray t‑shirt, sits on a wooden stool in the middle of a small clothing boutique. She turns her head to the left, smiling broadly at the camera, her left hand resting on the back of the stool while her right hand is partially hidden behind her thigh. The shot captures her mid‑motion, with a subtle handheld blur around the edges. Candid, unposed, spontaneous—subject unaware or mid‑action. Imperfections encouraged: slight tilt, off‑center framing, partial crop. No rule‑of‑thirds intentionality — accidental framing. Zero studio lighting, zero professional composition, zero editorial tone. Natural motion freeze or slight blur from handheld instability. Environment: narrow, brightly lit clothing store with racks of shirts and jackets on both sides, a small mirror and a sign that reads ’NEW COLLECTION’ on the back wall. Time of day: late afternoon, warm diffused daylight from the north‑west window. Lens & Technical: wide‑angle lens (24‑35 mm), everything in focus, no bokeh, no depth‑of‑field blur, slight overexposure on the white jeans, raw unprocessed look.”*

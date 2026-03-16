@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with dark, braided hair tied in a loose ponytail, wearing an oversized denim jacket over a white graphic tee and distressed denim shorts. She is captured mid‑gesture, hand raised near her face, body angled slightly to the right, knees bent, sitting on a wooden chair in a sunlit office space. Her expression is playful, mouth open as if she’s about to speak or laugh.
+
+- **Candid, Unposed Feel**  
+  The shot should feel spontaneous and unposed—subject unaware of the camera, caught in a natural moment. Slight tilt and off‑center framing; the composition is accidental, not intentional rule‑of‑thirds. A partial crop that cuts off a bit of the background for a raw, handheld vibe.
+
+- **Motion & Focus**  
+  Apply a subtle motion blur to convey slight handheld instability. Everything in focus—no bokeh, no depth‑of‑field blur—background fully sharp. No “portrait mode” isolation; keep the entire scene crisp.
+
+- **Lighting & Exposure**  
+  Use wide‑angle lens (20–35 mm) with a short focal length. Capture ambient daylight from a large window on the left, creating a slight overexposure in the highlights but keeping the overall exposure raw—no auto‑beauty or filter processing. Keep auto‑HDR off.
+
+- **Environment**  
+  Office setting: a white bookshelf filled with colorful spines, a stack of papers on a desk, and a window that lets in bright natural light. The time of day is mid‑afternoon, with warm, slightly harsh sunlight creating soft shadows. Weather is clear, no wind.
+
+- **Lens & Technical**  
+  Short focal length (24–35 mm), wide‑angle. No bokeh—background fully sharp. All elements in focus. Use a handheld camera with slight shake for realism. Capture in a single exposure; avoid post‑processing color grading or auto‑HDR.
+
+- **Final Prompt**  
+  “A young woman with dark braided hair in a loose ponytail, wearing an oversized denim jacket over a white graphic tee and distressed denim shorts, sitting on a wooden chair in a sunlit office. She is mid‑gesture with her hand near her face, body angled to the right, knees bent, mouth open as if about to speak. The shot is candid, unposed, slightly tilted, off‑center framing with accidental crop. Apply subtle motion blur for handheld feel. Everything in focus—no bokeh. Wide‑angle short focal length (24–35 mm). Natural daylight from a large window on the left, mid‑afternoon, clear weather. Background includes a white bookshelf with colorful spines and a stack of papers on a desk. Capture raw, unprocessed, no filters or auto‑HDR.”

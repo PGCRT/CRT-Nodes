@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, slender woman with long dark hair, wearing a black lace bra, matching fishnet stockings, and black leather thigh‑high boots, standing on a rugged cliff edge. Her hands are raised to the back of her head, slightly tilted, as if she’s just finished a dance move or is about to jump. She’s mid‑motion, with a faint blur around her limbs that suggests a handheld shot captured in real time.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject appears unaware of the camera, caught in a natural moment. The frame is slightly off‑center, with a small tilt that gives an accidental, informal feel. The composition is not intentionally rule‑of‑thirds; the subject occupies the right‑hand side of the frame while the left side opens into the sky and clouds.
+
+- **Imperfections & Raw Aesthetic**  
+  Slight motion blur on the woman’s boots and hands, indicating a quick shutter speed. No auto‑HDR or beauty filters — the image retains a raw, unprocessed look. There is a mild overexposure in the sky that lets the white clouds appear bright but not overly saturated. The exposure varies slightly across the frame, giving it an ambient, natural feel.
+
+- **Environment**  
+  Location: A steep, moss‑covered cliff on the coast of a Mediterranean island (or a rocky outcrop in a mountain range). Time of day: Late afternoon, around 5 pm, with warm, golden light from the west. Weather: Light breeze, scattered cumulus clouds drifting across a bright blue sky. The background is fully sharp — no bokeh, no depth‑of‑field blur — everything from the cliff to the sky is in focus.
+
+- **Lens & Technical**  
+  Use a wide‑angle lens (24 mm or 35 mm) with a short focal length to capture a broad view of the scene. The lens is handheld, producing slight instability that adds to the candid feel. No portrait mode or subject isolation; the background remains crisp. The entire frame — subject and environment — is in focus, captured at a high resolution with an auto‑focus that locks onto the whole scene.
+
+- **Final Prompt**  
+  “A tall woman with long dark hair, in a black lace bra, fishnet stockings, and black leather thigh‑high boots, standing on a rugged cliff edge. Her hands are raised to the back of her head, slightly tilted, mid‑motion blur on her boots and hands. Candid, unposed, spontaneous capture; slight tilt and off‑center framing. Raw, unprocessed look with mild overexposure in the sky. Late afternoon light from the west, scattered cumulus clouds across a bright blue sky. Wide‑angle lens (24–35 mm), handheld, everything fully sharp.”

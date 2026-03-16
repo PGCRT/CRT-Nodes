@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with light brown hair tied in a loose ponytail, wearing a cream‑colored, frayed‑edge cropped jacket. She’s mid‑selfie: left hand holding a beige smartphone at an angle that captures a slight diagonal tilt of the frame. Her face is turned toward the camera with a bright, candid smile; her eyes are slightly focused on the phone’s screen. A small hoop earring glints on her left ear.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle window, creating a soft lens flare across the upper right of the frame. Slight overexposure on the top of the image gives a warm, raw feel. No auto‑beauty or filter enhancement—just the raw, unprocessed look of a handheld shot.
+
+- **Camera & Lens Settings**  
+  Wide‑angle lens (24‑35 mm), short focal length. Handheld, with natural motion blur from slight instability. Everything in focus—no portrait‑mode depth‑of‑field blur; background remains sharp.
+
+- **Composition & Framing**  
+  Accidental, off‑center framing: the subject occupies the right‑hand side of the frame, leaving a small empty space on the left. The composition is not rule‑of‑thirds intentional; it’s a spontaneous, candid capture. The shot is partially cropped at the bottom right, hinting that the phone was held slightly out of frame.
+
+- **Environment**  
+  An office or studio setting: concrete walls, fluorescent ceiling lights, and a visible sign that reads “NMD” on the right side. A small yellow ball and a pair of sneakers lie on the floor in the lower right corner. The time of day is mid‑afternoon, with bright natural light streaming from a high window.
+
+- **Details & Imperfections**  
+  Slight motion blur around the phone’s camera module, a tiny lens flare streak across the top right, and a faint, natural overexposure that gives the image an authentic, raw feel. The background is fully sharp—no bokeh or subject isolation. The overall tone is zero‑studio, zero‑editorial, purely candid.
+
+**Prompt Summary (structured)**  
+“Candid selfie of a young woman in a cream frayed jacket, mid‑pose with a beige smartphone, captured on a wide‑angle handheld lens. Natural daylight from above creates soft flare and slight overexposure. Raw, unprocessed look, no filters. Slight motion blur from instability, everything in focus. Off‑center framing, partial crop at bottom right. Background: concrete office walls, fluorescent lights, ‘NMD’ sign, yellow ball, sneakers. Mid‑afternoon lighting. All details sharp, no bokeh.”

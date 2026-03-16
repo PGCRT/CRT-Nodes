@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark hair tied in a loose ponytail, wearing an off‑shoulder pink blouse and a black denim mini skirt. She is mid‑step on a city sidewalk, arms crossed, head tilted slightly downward as if she’s about to say something or react to a conversation. Her expression is candid—half‑smile, eyes focused forward—captured in a spontaneous, unposed moment.
+
+- **Motion & Focus**  
+  Slight motion blur at the edges from handheld instability; the subject’s face and upper body are fully sharp with no portrait‑mode depth‑of‑field blur. The background is entirely in focus, preserving every detail of the urban setting.
+
+- **Lighting & Exposure**  
+  Natural daylight, mid‑afternoon sun casting soft shadows and a gentle overexposure on the subject’s front side. No auto‑HDR or beauty filters—raw, unprocessed look with subtle ambient glare.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24‑35 mm), short focal length, no bokeh. All elements—from the woman to the street behind—are in focus. Slight tilt and off‑center framing give an accidental, spontaneous feel.
+
+- **Environment**  
+  A bustling city street in downtown Manhattan. The scene includes a glass storefront on the left, a concrete sidewalk, a traffic light in the distance, and a few passersby in the background. The time of day is late afternoon, with warm sunlight creating a slight haze. A white car is parked along the curb, and a traffic signal shows red.
+
+- **Composition Notes**  
+  No rule‑of‑thirds intentionality—framing is casual, with the subject slightly cut off at the top and bottom. The composition captures a “mid‑action” moment: the woman’s arms are crossed, her head is tilted, and her hair is blowing lightly in the wind.
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, zero studio lighting. A natural, raw aesthetic with only minimal adjustments to exposure and contrast.
+
+**Prompt Summary**  
+> “A young woman with long dark hair in a loose ponytail, wearing an off‑shoulder pink blouse and black denim mini skirt, captured mid‑step on a Manhattan sidewalk. Slight motion blur from handheld shooting, fully sharp background, natural daylight overexposure, wide‑angle lens, casual off‑center framing, no filters—raw candid photography.”

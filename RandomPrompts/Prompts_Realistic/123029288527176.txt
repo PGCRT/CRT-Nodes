@@ -1,0 +1,28 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair standing in a rustic wooden barn, wearing a light beige cardigan that is slightly open at the front. She is mid‑smile, head tilted a little to the right, hands tucked into her cardigan’s pockets, body angled toward the camera but not perfectly centered. Her left shoulder is partially obscured by a thick tree trunk that leans against the barn’s wall, creating a natural frame.
+
+- **Lighting & Exposure**  
+  Warm, golden hour sunlight comes from the left, casting soft highlights on her face and clothing with a slight overexposure in the upper right corner. The exposure is uneven—the lower part of the image is a bit brighter than the top, giving a raw, unprocessed look. No auto‑HDR or beauty filters; just natural ambient light.
+
+- **Camera Settings**  
+  - Lens: 24 mm wide‑angle, short focal length, handheld.  
+  - Focal depth: everything from foreground to background is fully sharp—no bokeh, no portrait‑mode isolation.  
+  - Shutter speed: 1/60 s, producing a slight motion blur on the subject’s hair and the tree bark, indicating a casual, spontaneous capture.  
+  - ISO: 400–600 for natural grain.
+
+- **Composition & Framing**  
+  The shot is intentionally off‑center; the subject’s left side cuts close to the frame edge, and the tree trunk partially covers her right shoulder, giving an accidental, candid feel. The barn’s wooden beams and a small window in the background are visible, adding depth. The composition has no rule‑of‑thirds intentionality—just a natural, spontaneous framing.
+
+- **Environment**  
+  Location: A weathered wooden barn with exposed beams, a rough tree trunk leaning against the wall, and a small window that lets in the golden light. Time of day: late afternoon, just before sunset. Weather: clear, slightly breezy, with a faint haze in the air that adds subtle texture.
+
+- **Technical Details**  
+  - No filters, no color grading, no post‑processing aesthetic.  
+  - Slight tilt to the camera, creating a slight diagonal line across the image.  
+  - Background is fully sharp—no depth‑of‑field blur.  
+  - Everything in focus from the foreground (the woman’s face) to the background (barn walls and tree).  
+
+- **Final Prompt**  
+  “A young woman with long wavy brown hair, wearing a light beige cardigan, stands inside a rustic wooden barn at golden hour. She smiles softly while leaning slightly to the right, her left shoulder partially hidden by a thick tree trunk that leans against the barn’s wall. Warm sunlight from the left creates a slight overexposure in the upper right corner. Shot on a 24 mm wide‑angle lens, handheld at 1/60 s, ISO 500, everything fully sharp with no bokeh. The composition is intentionally off‑center and accidental, capturing a candid, spontaneous moment with a slight tilt and minor motion blur on the hair. The background shows exposed wooden beams and a small window, all in focus.”

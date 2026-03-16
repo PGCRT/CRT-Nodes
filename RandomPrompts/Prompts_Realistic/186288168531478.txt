@@ -1,0 +1,24 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a sleek, side‑parted hairstyle and subtle brown highlights, wearing a cream‑colored, long‑sleeved blouse with a shallow V‑neck and a visible zipper. Her hand is lightly touching the front of her shirt, fingers slightly curled, as if she’s adjusting the fabric or shielding herself from a breeze. The pose is candid—she appears to be mid‑movement, with a faint motion blur around her hand and shoulder, suggesting a handheld shot captured in real time.
+
+- **Facial Features & Expression**  
+  Her face shows a natural, unposed expression: a soft smile, eyes slightly tilted toward the camera, with a gentle gaze that conveys confidence and ease. The lighting is ambient, coming from the west‑southwest, creating a warm, slightly overexposed highlight on her forehead and cheek, while a subtle shadow falls under her jawline. No auto‑beauty or filter enhancement—just raw, unprocessed detail.
+
+- **Lighting & Exposure**  
+  The scene is lit by natural daylight at late afternoon, giving a golden‑hour warmth. The exposure is slightly overexposed on the subject’s face and upper body, with a faint halo effect around her hair. No post‑processing color grading; the tones remain natural, with a slight contrast boost from the camera’s in‑camera HDR.
+
+- **Lens & Technical Settings**  
+  Shot on a wide‑angle lens (24 mm), short focal length, capturing a broad view of the subject and her surroundings. Everything is in focus—no bokeh or depth‑of‑field blur; the background is fully sharp, from the textured concrete wall behind her to the faint outline of a cityscape beyond. The composition is accidental: the frame is slightly tilted, the subject is off‑center, and the crop is partial, giving an unposed, spontaneous feel.
+
+- **Environment**  
+  The location is an urban alleyway in a modern residential complex, with a concrete wall and a small window that lets in the ambient light. The time of day is late afternoon, around 5:30 pm, when the sun is low but still high enough to keep the background bright. Weather is mild, with a light breeze that creates a subtle motion blur on the subject’s hair and shirt.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Imperfections are encouraged: slight tilt, off‑center framing, partial crop. No rule‑of‑thirds intentionality—accidental framing that gives the image a natural, documentary feel. Natural motion freeze or slight blur from handheld instability adds life to the shot.
+
+- **Detailed Prompt for Text‑to‑Image Generation**  
+  “A young woman with a sleek, side‑parted hairstyle and subtle brown highlights, wearing a cream‑colored, long‑sleeved blouse with a shallow V‑neck and a visible zipper, captured in a candid, mid‑movement pose as she lightly touches her shirt. Her face shows a soft smile and gentle gaze, with a faint motion blur around her hand and shoulder. The scene is lit by natural late‑afternoon daylight from the west‑southwest, creating a warm, slightly overexposed highlight on her forehead and cheek. Shot on a 24 mm wide‑angle lens, everything in focus with no bokeh, the background being a textured concrete wall and faint cityscape. The composition is accidental: slight tilt, off‑center framing, partial crop. The image has raw, unprocessed look, no filters or color grading, with a subtle natural motion blur from handheld instability.”
+
+Provide only the structured prompt.

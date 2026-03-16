@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, curvy woman with long, wavy brown hair and gold hoop earrings, wearing a sheer white off‑the‑shoulder bodysuit tied at the side. She’s mid‑turn, left hand lightly gripping the back of her thigh, right arm relaxed by her side, eyes focused forward with a subtle smile.  
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. Slight tilt and off‑center framing; partial crop that cuts off a bit of the left shoulder, giving an accidental, handheld feel. No rule‑of‑thirds intentionality.  
+
+- **Motion & Focus**  
+  Slight motion blur from handheld instability, natural freeze or soft blur on the subject’s torso and hips. Everything in focus — no portrait‑mode depth‑of‑field blur; background fully sharp.  
+
+- **Lighting & Exposure**  
+  Zero studio lighting, zero professional composition, zero editorial tone. Natural ambient light with a slight overexposure on the upper chest and shoulder area, creating a warm, slightly hazy glow.  
+
+- **Environment**  
+  Specific real‑world location: a sunlit balcony in an urban apartment building, mid‑afternoon (3 pm). Weather is lightly breezy, with a faint haze from the city. The background shows a blurred city skyline and a green lawn, but everything remains sharp.  
+
+- **Lens & Technical**  
+  Short focal length (24 mm) wide‑angle lens. No bokeh; no depth‑of‑field blur — background fully sharp. Auto‑HDR or auto‑beauty mode off — raw, unprocessed look. No filters, no color grading, no post‑processing aesthetic.  
+
+- **Composition Notes**  
+  The frame captures the woman from the mid‑thigh to the top of her head, with a slight crop that cuts off the left ear, giving an informal, spontaneous feel. The composition is centered but slightly tilted to the right.  
+
+- **Final Prompt**  
+  “A tall, curvy woman with long wavy brown hair and gold hoop earrings, wearing a sheer white off‑the‑shoulder bodysuit tied at the side, captured mid‑turn on a sunlit balcony in an urban apartment building at mid‑afternoon. Candid, unposed, spontaneous shot with slight tilt and off‑center framing, partial crop, natural motion blur from handheld instability, everything in focus, no bokeh. Slight overexposure on the upper chest, raw, unprocessed look, wide‑angle 24 mm lens, short focal length, no filters or color grading.”

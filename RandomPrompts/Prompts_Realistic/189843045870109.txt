@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman in her late twenties, with long wavy hair tied into a high ponytail, stands mid‑mirror selfie in a bright office space. She’s wearing an oversized gray “RIT EXHIBITS” t-shirt, fitted gray leggings, and beige sneakers. Her left hand holds a silver smartphone at chest height, capturing the shot; her right hand rests on her hip. Slight motion blur is present around the phone and hands, indicating handheld instability.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject appears unaware of the camera’s presence, caught in a natural, everyday moment. The framing is slightly tilted and off‑center, with a partial crop that cuts off the left side of the room. No rule‑of‑thirds intentionality; the composition feels accidental, like a quick snapshot.
+
+- **Imperfections & Aesthetic**  
+  Slight overexposure on the window’s glare, giving a raw, unprocessed look. Auto‑HDR or auto‑beauty mode is off. No filters, no color grading, no post‑processing aesthetic. The image has a natural, in‑camera feel with zero studio lighting and zero professional composition.
+
+- **Environment**  
+  Specific real‑world location: a modern office with light wood desks, a coffee maker, a white mug, a stack of notebooks, and a window that lets in bright daylight. Time of day: mid‑afternoon, as indicated by the warm, slightly harsh sunlight streaming through the window. Weather or ambient conditions: clear, sunny, with a faint haze from the outside.
+
+- **Lens & Technical**  
+  Short focal length (24–35 mm), wide‑angle lens. No bokeh; background is fully sharp—everything in focus, no portrait‑mode subject isolation. The depth of field is flat, capturing the entire scene from foreground to background.
+
+- **Composition Details**  
+  The shot captures the woman from head to toe, with her full body visible. The background shows a colleague at a desk, a coffee pot, a white mug, a stack of notebooks, and a window that reflects the outside sky. A bookshelf filled with books and office supplies is visible behind her. The camera’s horizon is slightly tilted to the right, giving an informal feel.
+
+- **Prompt for Generation**  
+  “A young woman in her late twenties, long wavy hair tied into a high ponytail, stands mid‑mirror selfie in a bright office space. She wears an oversized gray ’RIT EXHIBITS’ t-shirt, fitted gray leggings, and beige sneakers. Her left hand holds a silver smartphone at chest height; her right hand rests on her hip. Slight motion blur around the phone and hands. Candid, unposed, spontaneous — subject unaware of camera. Slight overexposure on the window’s glare, raw, unprocessed look. Auto‑HDR off, no filters, no color grading, no post‑processing. Wide lens, short focal length (24–35 mm), everything in focus, no bokeh. Background shows a colleague at a desk, coffee maker, white mug, stack of notebooks, and a window that lets in bright daylight. Time of day: mid‑afternoon. Specific real‑world location: modern office with light wood desks, bookshelf, coffee pot, white mug, stack of notebooks, window. Slight tilt, off‑center framing, partial crop. No rule‑of‑thirds intentionality — accidental framing. Zero studio lighting, zero professional composition, zero editorial tone. Natural motion freeze or slight blur from handheld instability.”

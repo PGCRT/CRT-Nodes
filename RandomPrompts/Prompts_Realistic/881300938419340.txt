@@ -1,0 +1,35 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark brown hair, wearing a red‑and‑white horizontal‑striped tank top and denim shorts, captured mid‑gesture as she runs a hand through her hair. Her face is slightly tilted, mouth open in an expressive “wow” or “surprise” pose, eyes wide, conveying spontaneous energy. She wears a thin gold necklace with a small circular pendant and a black bracelet on her left wrist.  
+
+- **Cinematic Details**  
+  - Slight motion blur on the hand‑to‑hair movement, indicating handheld shake.  
+  - Auto‑HDR or auto‑beauty mode off – raw, unprocessed look.  
+  - No filters, no color grading, no post‑processing aesthetic.  
+  - Slight overexposure in the highlights to emphasize ambient daylight.  
+
+- **Lens & Technical**  
+  - Wide‑angle lens (24–35 mm) with a short focal length.  
+  - Everything in focus – background fully sharp, no bokeh, no depth‑of‑field blur.  
+  - No portrait‑mode subject isolation; the entire scene is crisp.  
+
+- **Capture Style**  
+  - Candid, unposed, spontaneous — subject unaware or mid‑action.  
+  - Imperfections encouraged: slight tilt, off‑center framing, partial crop.  
+  - No rule‑of‑thirds intentionality – accidental framing that feels natural and organic.  
+  - Natural motion freeze or slight blur from handheld instability.  
+
+- **Environment**  
+  - Outdoor market or festival setting on a sunny summer afternoon.  
+  - White canopy tent in the background, with other attendees and vendor stalls visible.  
+  - Trees and blue sky peeking above the tents; ambient light creates soft shadows.  
+  - Time of day: mid‑afternoon, high‑sun, warm daylight.  
+
+- **Composition Notes**  
+  - Frame the subject slightly off‑center to the right, with her left hand raised near her head.  
+  - Keep the background fully sharp – no depth‑of‑field blur, just a crisp, real‑world scene.  
+  - Capture the full width of the scene, including the white tent, the woman’s torso, and a portion of the street or pavement below.  
+
+- **Prompt Summary**  
+  “A young woman with long brown hair, wearing a red‑and‑white striped tank top and denim shorts, captured mid‑gesture as she runs a hand through her hair at an outdoor summer market. The image has slight motion blur on the hand, raw unprocessed look, no filters, slight overexposure, wide‑angle lens, everything in focus, candid spontaneous pose with accidental off‑center framing, background fully sharp, white canopy tent and other attendees visible under a bright mid‑afternoon sky.”

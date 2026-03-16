@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, straight brown hair, wearing a black ribbed tank top and matching shorts, captured mid‑step in a casual, spontaneous pose. Her left arm is extended outward as if she’s about to grab something from a coffee table, giving the shot a natural, “in‑action” feel. She’s smiling slightly, with a faint motion blur around her hand and face that conveys the handheld, imperfect nature of the capture.
+
+- **Lighting & Exposure**  
+  Natural daylight coming from a bright window on the right side of the frame creates a soft, slightly overexposed highlight on her shoulder and the wall behind her. The exposure is not perfectly balanced—there’s a subtle warmth to the overall tone, as if the camera’s auto‑HDR was turned off and the image remained raw. No color grading or filters were applied; the look is purely documentary.
+
+- **Environment**  
+  The scene takes place in a cozy, lived‑in living room. A beige sofa with patterned cushions sits to the left, while a small wooden side table holds a lamp, a bottle of cleaning product, and a potted plant. On the wall behind the subject hang two framed paintings—one depicting a sunset over a house, the other a forest waterfall—adding depth and context. A black cat is curled up on the side table, and a white radiator is visible near the window. The window lets in bright natural light that slightly overpowers the interior shadows, creating a gentle halo effect around the subject.
+
+- **Lens & Technical**  
+  A wide‑angle lens (24 mm or 35 mm) is used to capture the entire scene in one shot. Everything—from the foreground of the subject’s arm to the background elements—is fully sharp, with no bokeh or depth‑of‑field blur. The framing is intentionally off‑center and slightly tilted, giving the image a candid, spontaneous feel. The composition does not follow the rule of thirds; instead, it feels accidental, as if the photographer was in the middle of moving when the shutter was pressed.
+
+- **Captured Details**  
+  - Slight motion blur on the subject’s hand and the arm extending outward.  
+  - A faint “auto‑beauty” effect is off; the image retains a raw, unprocessed look.  
+  - The overall exposure has a slight overexposure on the right side, creating a warm glow.  
+  - No post‑processing filters or color grading are applied.  
+
+- **Final Prompt**  
+  *“A young woman with long brown hair, wearing a black ribbed tank top and shorts, captured mid‑step in a casual pose inside a cozy living room. Natural daylight from a bright window creates a soft overexposure on the right side of the frame. A beige sofa, wooden side table with a lamp, cleaning bottle, plant, two framed paintings on the wall, a curled black cat, and a white radiator are all visible. Use a wide‑angle lens (24–35 mm) to keep everything sharp, with slight motion blur on the subject’s hand and an accidental, off‑center framing that gives the shot a candid, spontaneous feel.”*

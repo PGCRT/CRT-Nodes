@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with shoulder‑length blonde hair, wearing a beige denim jacket over a white V‑neck top and dark jeans, carrying a small brown leather handbag. She is mid‑walk, slightly turned toward the camera, with a subtle smile and a natural, unposed expression. Her left foot is ahead, suggesting forward motion.
+
+- **Motion & Focus**  
+  Slight handheld shake with a natural freeze‑frame effect; the image has a faint motion blur around the edges to emphasize movement. Everything in the frame—from the woman’s face to the far end of the aisle—is fully sharp, no portrait‑mode depth‑of‑field blur. No auto‑HDR or beauty filters—raw, unprocessed look with slight overexposure on the highlights to capture ambient daylight.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm), short focal length, no bokeh. All elements are in focus: subject and background. The composition is accidental—no rule‑of‑thirds intentionality; the frame is slightly tilted and off‑center, giving a candid feel.
+
+- **Environment**  
+  Location: A brightly lit grocery store aisle, with shelves stocked with fresh produce on both sides (apples, oranges, bananas on the right; canned goods and spices on the left). The aisle is lined with fluorescent tube lights overhead, casting a cool‑warm ambient glow. Time of day: late morning, around 10:30 AM, with natural daylight filtering through the windows. Weather: clear, mild, with a light breeze that lifts the woman’s jacket slightly as she walks.
+
+- **Lighting & Color**  
+  Natural daylight with a slight overexposure on the highlights; no color grading or post‑processing. The lighting is uneven—some areas are brighter than others, giving a raw, spontaneous feel. The color palette is muted earth tones: beige, white, dark blue, and the green of the produce shelves.
+
+- **Details & Imperfections**  
+  The woman’s jacket has a subtle crease at the left shoulder, indicating she is in motion. Her handbag hangs slightly to one side, adding asymmetry. The background shows other shoppers: a man in a gray shirt pushing a red shopping cart on the left, another shopper in a blue shirt on the right. The floor tiles reflect the overhead lights, adding a faint glare.
+
+- **Final Prompt**  
+  “A candid, wide‑angle shot of a young woman walking through a brightly lit grocery aisle, captured with a handheld, slightly shaky camera. She wears a beige denim jacket over a white V‑neck top, dark jeans, and carries a brown leather handbag. Her blonde hair swings slightly as she moves. The image is fully sharp, with a faint motion blur around the edges, no filters or auto‑HDR, slight overexposure on the highlights. The background shows shelves of fresh produce and other shoppers, all in focus. The scene is lit by natural daylight from late morning, with a cool‑warm glow from fluorescent lights. The composition is accidental—tilted, off‑center, no rule‑of‑thirds.”

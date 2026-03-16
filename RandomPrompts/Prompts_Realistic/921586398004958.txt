@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair, a subtle “charlotte” tattoo on her left upper back, standing in a casual, unposed stance. She is nude, with her body slightly turned to the side, one hand resting near her thigh, the other near her hip, as if mid‑movement. Her head is tilted down, eyes closed, giving an intimate, candid feel.
+
+- **Motion & Focus**  
+  Slight motion blur on the hands and lower back, indicating handheld instability. Everything remains in focus—no portrait‑mode depth of field. The image has a raw, unprocessed look: no filters, no color grading, no auto‑beauty mode. A hint of overexposure at the top of the frame from ambient daylight.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24 mm), short focal length, no bokeh. Background is fully sharp—no subject isolation. The composition is accidental: slight tilt, off‑center framing, partial crop that cuts off a bit of the left side. No rule‑of‑thirds intentionality.
+
+- **Environment**  
+  Location: A modern kitchen with a retro red refrigerator on the left, a white cabinet below it, and a light beige wall behind. The time of day is late morning, soft natural light coming from the west, creating gentle shadows. Weather: clear, slightly humid.
+
+- **Lighting & Color**  
+  Natural daylight, slight overexposure at the top, warm tones with a hint of pink from the refrigerator. No studio lighting. The color palette is muted but lively—warm reds, beige, and skin tones.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, partial crop that cuts off a bit of the left side, small smudge on the refrigerator door, natural imperfections in the subject’s pose. The image feels spontaneous, as if captured mid‑action.
+
+- **Prompt for AI Image Generation**  
+  “A young woman with long wavy brown hair, nude, standing in a kitchen next to a red retro refrigerator, slight motion blur on her hands and lower back, everything in focus, wide‑angle lens 24 mm, accidental off‑center framing, slight tilt, partial crop, late morning natural light, raw unprocessed look, no filters, no color grading, no auto‑beauty mode, background fully sharp, small smudge on the fridge door, warm reds and beige tones, spontaneous candid pose.”

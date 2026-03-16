@@ -1,0 +1,16 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark hair blowing in the wind, wearing bright yellow sunglasses, a bare mid‑section, and a pair of red wide‑leg trousers. She is seated on a large, rough boulder, legs spread, one foot slightly forward, wearing black lace‑up boots with floral detailing. Her head tilts upward as if she’s just caught in a sudden gust, capturing a spontaneous, “mid‑action” moment.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject appears unaware of the camera, frozen mid‑gesture. Slight tilt and off‑center framing give an accidental, handheld feel. No rule‑of‑thirds intentionality; the composition is natural and imperfect. The shot has a slight motion blur from the wind and the camera’s instability, but everything remains fully sharp — no portrait‑mode depth of field blur.
+
+- **Environment**  
+  A sunlit desert canyon, with layered sandstone cliffs rising behind her. Small green shrubs cling to the rocks, and a patch of dry grass is visible in the upper right. The time of day is late morning, with warm, golden light casting soft shadows. Ambient conditions are breezy and slightly overcast, creating a natural overexposure that gives the image a raw, unprocessed look.
+
+- **Lens & Technical**  
+  Use a short focal‑length wide‑angle lens (e.g., 24 mm). Capture everything in focus — background and subject — with no bokeh. No auto‑HDR or auto‑beauty mode; keep the image raw, without filters or color grading. Slight overexposure may be applied to enhance the natural light. The shot is taken with a handheld camera, producing slight motion blur from the wind and the camera’s instability, but overall clarity remains high.  
+
+- **Final Prompt**  
+  “A young woman with long dark hair blowing in the wind, wearing yellow sunglasses, a bare mid‑section, red wide‑leg trousers, and black lace‑up boots with floral detail, seated on a large boulder in a sunlit desert canyon, small green shrubs and dry grass nearby, late morning light, breezy slightly overcast ambient conditions, candid unposed spontaneous capture, slight tilt off‑center framing, accidental handheld shot, short focal‑length wide‑angle lens, everything fully sharp, slight motion blur from wind and instability, raw unprocessed look, no filters or color grading.”

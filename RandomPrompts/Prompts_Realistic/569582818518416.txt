@@ -1,0 +1,29 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy dark hair standing in a bright, airy living room. She wears an ivory satin robe with gold embroidery and lace trim; the robe is open at the front, revealing a subtle hint of skin beneath. Her hands hang loosely by her sides, slightly tilted to one side, as if she just finished a gesture or is about to do something. The pose is candid and unposed, capturing a natural, spontaneous moment.
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window on the left, creating a soft overexposure that gives a warm, slightly hazy feel. The exposure is a little too bright at the top, but the bottom remains crisp. No auto‑HDR or beauty filters—just raw, unprocessed light.
+
+- **Camera Settings**  
+  - Lens: 24mm wide‑angle (short focal length)  
+  - Aperture: f/5.6 (mid‑range for depth, not too shallow)  
+  - Shutter speed: 1/60 s (slight motion blur from handheld shake)  
+  - ISO: 400 (for clean noise and dynamic range)  
+  - Focus: everything in focus—background and subject equally sharp.
+
+- **Composition & Framing**  
+  The frame is intentionally off‑center, with the subject’s left side slightly cut off by the edge of the image. No rule‑of‑thirds intentionality; the composition feels accidental, like a quick snapshot. The background shows a light‑colored wall and a wooden floor, with a faint outline of a sofa in the corner.
+
+- **Environment**  
+  Location: A modern, minimally furnished living room with a large window on the left, a wooden floor, and a light‑colored wall. Time of day: late morning, when the sun is high but not too direct. Weather: clear, bright, with a gentle breeze that slightly ruffles the robe’s fabric.
+
+- **Details & Imperfections**  
+  Slight motion blur on the woman’s hands and the edges of the robe, indicating handheld instability. The robe’s gold trim shows subtle texture and slight fraying at the edges. Her earrings catch the light, adding a small sparkle. A faint shadow is cast on the wall behind her, from the window’s glare.
+
+- **Post‑Processing**  
+  No filters or color grading—just raw capture. Slight natural contrast and a hint of warmth from the daylight. The image retains all the imperfections of a real, candid shot: minor dust particles in the air, slight vignetting at the corners, and a faint grain that adds realism.
+
+- **Final Prompt**  
+  “A young woman with long wavy dark hair, wearing an ivory satin robe with gold embroidery and lace trim, stands candidly in a bright living room. Natural daylight from a large window creates a soft overexposure. Shot on a 24mm wide‑angle lens at f/5.6, 1/60 s, ISO 400—everything in focus. The frame is off‑center, slightly tilted, with accidental framing that cuts the left side of her body. Slight motion blur from handheld shake, raw unprocessed look, no filters. Background shows a light‑colored wall and wooden floor, a faint sofa outline. The scene is captured at late morning, clear weather, gentle breeze ruffling the robe. All details are sharp, including subtle texture on the robe’s gold trim, sparkling earring, and a faint shadow on the wall.”

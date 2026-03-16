@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy blonde hair standing on a city sidewalk, wearing a sheer white long‑sleeved top that shows a subtle sheen. She’s captured mid‑gesture, head tilted slightly upward, eyes looking toward the sky, one hand near her chest, as if about to touch her face or adjust her necklace. Her left ear is adorned with a thin hoop earring; a delicate chain necklace with a circular pendant rests on her collarbone.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle, late‑afternoon sun creates a soft overexposure on the subject’s face and upper body. The exposure is slightly uneven—warm highlights on the hair and cool tones in the background—giving a raw, unprocessed look. No auto‑beauty or filter enhancement; the image retains the natural grain and minor imperfections of a handheld shot.
+
+- **Lens & Technical Settings**  
+  24 mm wide‑angle lens, f/3.5 aperture, 1/60 s shutter speed, ISO 400. The lens is set to a short focal length for a “wide” feel, producing a background that remains fully sharp (no bokeh). The focus covers the entire frame—subject and background—in a single exposure. Slight motion blur is present on the subject’s hair, indicating a casual, spontaneous capture.
+
+- **Composition & Framing**  
+  The shot is intentionally off‑center: the woman occupies the left‑third of the frame, while the right‑third shows a blurred city street with a traffic light and a passing car. The framing is accidental—no rule‑of‑thirds intentionality—yet the composition captures a candid moment as if the subject was unaware of the camera. A partial crop at the top right corner gives a sense of movement.
+
+- **Environment**  
+  The location is a busy urban street in a downtown area, with brick buildings and a traffic signal visible in the background. The time of day is late afternoon, around 5 pm, when the sun is low but still high enough to cast warm highlights. The weather is clear, with a light breeze that creates slight motion in the hair.
+
+- **Details & Imperfections**  
+  The image has a natural, unpolished feel: a slight tilt to the camera, minor vibration blur on the subject’s hair, and a faint overexposure on the face. The background remains fully sharp, with no depth‑of‑field blur. No post‑processing or color grading is applied—just raw, realistic photography.
+
+- **Prompt for Text‑to‑Image Generation**  
+  “A candid photograph of a young woman with long wavy blonde hair, wearing a sheer white long‑sleeved top and a delicate chain necklace with a circular pendant, standing on an urban sidewalk at late afternoon. She is captured mid‑gesture, head tilted upward, eyes looking toward the sky, one hand near her chest. The image uses a 24 mm wide‑angle lens, f/3.5 aperture, 1/60 s shutter speed, ISO 400. Natural daylight creates a soft overexposure on the subject’s face and upper body. The background shows brick buildings and a traffic light, fully sharp with no bokeh. Slight motion blur on the hair indicates handheld instability. The composition is off‑center, with the woman occupying the left‑third of the frame and a partial crop at the top right corner. No filters or post‑processing—raw, realistic photography.”

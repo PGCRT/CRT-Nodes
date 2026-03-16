@@ -1,0 +1,26 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with shoulder‑length, wavy light‑brown hair standing in a sunlit urban garden. She wears a black off‑the‑shoulder crop top with a large front cutout and dark denim jeans. Her hands are lightly raised near her shoulders, fingers curled as if she’s about to adjust her shirt or hold an invisible object. A subtle, natural smile is on her face; her head is slightly tilted to the left, giving a candid, mid‑action feel.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject appears unaware of the camera, caught in a natural moment. Slight tilt and off‑center framing create an accidental composition. The shot is a wide‑angle capture with a short focal length (≈20 mm), ensuring that the entire scene — from her head to her hips and the background — remains fully sharp. No rule‑of‑thirds intentionality; the frame is slightly crooked, as if taken handheld.
+
+- **Environment**  
+  Location: A bright, overcast afternoon in a city park with a stone wall and a multi‑story building visible in the background. Lush green shrubs line the left side of the frame, while a small patch of grass and a concrete bench appear on the right. The time of day is mid‑afternoon, with soft, diffused sunlight creating gentle highlights on the subject’s face and clothing.
+
+- **Lens & Technical**  
+  - Lens: 20 mm wide‑angle prime, short focal length.  
+  - Aperture: f/4.5 (wide opening).  
+  - Shutter speed: 1/60 s (slight motion blur from handheld instability).  
+  - ISO: 400 (natural contrast).  
+  - Auto‑HDR or auto‑beauty mode off — raw, unprocessed look.  
+  - No filters, no color grading, no post‑processing aesthetic.  
+  - Slight overexposure on the subject’s front, balancing the ambient light.  
+  - Everything in focus: background fully sharp, no bokeh, no depth‑of‑field blur.
+
+- **Post‑Processing**  
+  Zero studio lighting, zero professional composition, zero editorial tone. The image retains a natural, documentary feel. Slight motion blur is present on the subject’s hands and the background foliage, indicating a handheld shot. No portrait‑mode subject isolation; the entire scene remains crisp.  
+
+**Prompt Summary**  
+> “Candid, wide‑angle, 20 mm shot of a young woman in a black off‑the‑shoulder crop top and dark jeans, standing in a sunlit urban garden during mid‑afternoon. Her hair is wavy, her hands lightly raised near her shoulders, a subtle smile on her face, slight tilt and off‑center framing. Background includes a stone wall, green shrubs, and a multi‑story building. Capture with f/4.5, 1/60 s shutter speed, ISO 400, no filters or auto‑HDR, everything in focus, slight motion blur from handheld.”

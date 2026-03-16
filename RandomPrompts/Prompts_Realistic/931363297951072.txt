@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with voluminous, wavy light‑brown hair lying on a neatly made bed, wearing a thin white camisole with buttoned front. She is mid‑gesture, making a peace sign with her right hand near her cheek, head slightly tilted, eyes bright and engaged. Her left shoulder is exposed, showing a subtle natural curve; her arm is bent at the elbow, creating a slight diagonal line that breaks the horizontal composition.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject appears unaware of the camera, caught in a natural moment. Slight tilt and off‑center framing give an accidental, handheld feel. The shot is partially cropped on the left side, leaving a small margin of empty wall space that adds to the informal vibe.
+
+- **Environment**  
+  Location: a simple, unadorned bedroom with a plain beige wall and a wooden headboard visible in the upper left corner. Time of day: late morning, soft natural daylight coming from the window on the right, creating gentle highlights on the subject’s face and shoulder. Ambient light is slightly overexposed at the top, giving a warm, airy feel.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm) wide‑angle lens, all elements in focus — background, subject, and foreground are sharp with no bokeh. No depth‑of‑field blur; the entire frame is crisp. Slight motion blur on the subject’s hand, indicating handheld instability. Auto‑HDR or auto‑beauty mode off — raw, unprocessed look. No filters, no color grading, no post‑processing aesthetic.
+
+- **Composition Notes**  
+  Wide lens captures a broad view of the scene; the bed’s white sheet occupies the lower third, the wall and headboard form the upper third, and the subject’s body spans the center‑right. No rule‑of‑thirds intentionality — framing is accidental, with the subject’s head slightly off‑center to the right. The shot has a natural, spontaneous feel as if captured mid‑action.
+
+- **Final Prompt**  
+  “A young woman with voluminous wavy light‑brown hair lying on a neatly made bed, wearing a thin white camisole with buttoned front. She is mid‑gesture, making a peace sign near her cheek, head slightly tilted, eyes bright. Candid, unposed, spontaneous capture with slight tilt and off‑center framing, partially cropped on the left. Environment: simple bedroom with beige wall and wooden headboard, late morning natural daylight from the right. Short focal length wide‑angle lens, all in focus, slight motion blur on the hand, raw unprocessed look, no filters or auto‑HDR.”

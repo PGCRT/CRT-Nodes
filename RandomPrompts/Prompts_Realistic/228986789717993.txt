@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair, wearing a rich red satin corset‑style dress adorned with gold and black embroidery. She is mid‑gesture, pointing to her left with her right hand, a subtle smile on her face. Her head is slightly tilted, and she wears a delicate gold headpiece with a red gem, plus matching earrings and a thin necklace with a red pendant.  
+
+- **Lighting & Exposure**  
+  Natural daylight from a bright, diffused window; slight overexposure in the upper left corner to capture ambient warmth. No auto‑beauty or filter processing—raw, unprocessed look.  
+
+- **Camera Settings**  
+  Wide‑angle lens (24–35 mm), handheld, slightly shaky. Focal length short, everything in focus, no bokeh. Shutter speed fast enough to freeze the motion but with a hint of blur for spontaneity. ISO set for natural contrast.  
+
+- **Composition**  
+  Candid, unposed framing: the subject is off‑center, the crop is partial, and the shot has a slight tilt. No rule‑of‑thirds intentionality—just accidental, spontaneous composition.  
+
+- **Environment**  
+  A modern office lobby with a light beige wall, a glass partition, and a small potted plant in the background. Time of day: late morning, soft sunlight. Weather: clear, no wind.  
+
+- **Technical Details**  
+  Short focal length, wide angle; background fully sharp—no depth‑of‑field blur. No portrait mode or subject isolation. Slight motion blur on the hand gesture to emphasize movement.  
+
+- **Prompt for Generation**  
+  “A young woman with long wavy brown hair, wearing a red satin corset dress with gold and black embroidery, gold headpiece, earrings, and a red‑pendant necklace, pointing to her left while smiling. She is captured mid‑gesture in a candid, unposed shot with slight tilt and partial crop. Natural daylight from a bright window creates a soft overexposure in the upper left. Shot on a 30 mm wide‑angle lens, handheld with slight shake, everything in focus, subtle motion blur on the hand. Background is a modern office lobby with a beige wall, glass partition, and a small potted plant. Late morning, clear weather. Raw, unprocessed look, no filters.”

@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, sun‑kissed hair leaning casually against a tall palm tree, one hand gripping the trunk, body angled slightly toward the camera, legs bent at the knee, hips tilted, creating a dynamic, mid‑motion stance. She wears a black lace bikini that catches the light, with subtle sheen on her skin. Her face is turned to the camera but not directly facing it—slight off‑center, giving a candid feel.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—analog “in‑the‑moment” shot where the subject appears unaware of the lens. Slight tilt and partial crop; the frame isn’t intentionally rule‑of‑thirds composed but rather a natural, handheld capture. The image has a raw, auto‑HDR feel with no filters or color grading—only ambient exposure (slight overexposure on the sky, underexposed shadows in the foliage).
+
+- **Environment**  
+  Tropical beach setting: a tall palm tree in the foreground, lush green shrubs to the right, the ocean visible in the background. The scene is bathed in bright mid‑afternoon sunlight; the sky is a soft, pale blue with a hint of haze. Weather is breezy, with leaves slightly moving, giving a subtle motion blur to the foliage.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm), short focal length. Everything in focus—no bokeh, no depth‑of‑field blur; background and foreground both sharp. No portrait‑mode “subject isolation.” Slight handheld shake results in a natural motion freeze or slight blur on the subject’s body and the palm trunk. Auto‑HDR or auto‑beauty mode off—raw, unprocessed look.
+
+- **Composition Notes**  
+  The palm tree occupies the left side of the frame; the woman’s body is slightly off‑center to the right, leaning against the tree. The ocean horizon sits near the top third but not exactly at a third line. The shot captures a “mid‑action” moment as she holds her pose, with a hint of movement in her hair and the leaves.
+
+- **Post‑Processing**  
+  Zero studio lighting, zero professional composition, zero editorial tone. Only natural light and a simple, raw HDR lift to enhance contrast. No color grading—just the natural tones of the scene.  
+
+**Prompt Summary for Text‑to‑Image Generation**  
+“Candid photo of a woman in a black lace bikini leaning against a palm tree on a tropical beach, mid‑afternoon sun, slight handheld blur, wide‑angle lens, everything sharp, raw auto‑HDR, no filters, natural motion freeze, off‑center framing, background fully sharp, no bokeh.”

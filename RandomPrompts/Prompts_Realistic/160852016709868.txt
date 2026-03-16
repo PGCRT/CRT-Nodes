@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A young woman with auburn hair tied in a high ponytail, wearing a light‑blue short‑sleeved tee and a cream‑colored midi skirt, stands in an office cubicle. She’s mid‑gesture, holding a clear plastic water bottle in her right hand, bringing it to her mouth as if about to drink. Her left hand is near her face, fingers slightly curled, suggesting a casual, spontaneous moment.  
+
+- **Pose & Movement**  
+  Slight motion blur on the hands and bottle, indicating a handheld shot captured at a fast shutter speed but with a little instability. The body is angled toward the camera but not perfectly centered; the frame is off‑center, giving an accidental, candid feel.  
+
+- **Lighting & Exposure**  
+  Natural daylight from a high window above the cubicle creates a soft, slightly overexposed highlight on the subject’s back and the water bottle. The exposure is uneven—brighter at the top, softer at the bottom—reflecting ambient light without any post‑processing color grading or auto‑beauty mode.  
+
+- **Environment**  
+  Office setting: a modern open‑plan workspace with white cubicle partitions, a black rolling chair, a small potted plant on a desk, and a computer monitor in the background. A pair of sneakers sits on the floor near a cabinet. The time of day is mid‑afternoon, around 3 pm, when the sun is high but not directly overhead, casting soft shadows.  
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm) with a short focal length, set to a wide aperture that keeps the entire scene in focus—no bokeh. The depth of field is full, background fully sharp. No portrait‑mode isolation; everything from foreground to background remains crisp.  
+
+- **Composition & Framing**  
+  No rule‑of‑thirds intentionality—the framing is accidental, with the subject slightly tilted and the crop cutting off a bit of the background on the right side. The shot feels spontaneous, as if captured mid‑action without posing.  
+
+- **Post‑Processing**  
+  Raw, unprocessed look: no filters, no color grading, no auto‑beauty mode. Only natural slight overexposure from the ambient light, with a hint of grain from a handheld camera.  
+
+- **Final Prompt**  
+  “A young woman with auburn ponytail, in a light‑blue tee and cream midi skirt, stands in an office cubicle, holding a water bottle near her mouth as if about to drink. She’s mid‑gesture with slight motion blur on her hands, captured on a wide‑angle lens at 30 mm. The scene is bathed in natural mid‑afternoon daylight from above, creating soft overexposure on the back and bottle. The office background includes a black chair, a potted plant, and a computer monitor; a pair of sneakers rests on the floor near a cabinet. The shot is raw, unprocessed, with accidental off‑center framing and full sharpness across the frame.”

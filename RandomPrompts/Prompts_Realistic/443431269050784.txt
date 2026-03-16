@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, athletic woman with long, sun‑kissed hair standing on a concrete staircase in an urban alleyway. She’s wearing a rainbow‑striped one‑piece swimsuit with a deep V‑neck and a central zipper, paired with knee‑high white leather boots. Her hands are behind her head, elbows bent, creating a casual “self‑confident” pose that looks like she’s just finished a workout or is about to step into a photo shoot.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle, mid‑afternoon sun; slight overexposure on the upper body to keep the scene bright and airy. No auto‑HDR or beauty filters—just raw, unprocessed light with a tiny hint of haze from the ambient atmosphere.
+
+- **Camera Settings**  
+  Wide‑angle lens (24‑35 mm), f/4.0 aperture, 1/125 s shutter speed, ISO 400. Slight handheld shake gives a natural motion blur on the edges, while the background stays fully sharp—no bokeh or portrait‑mode isolation.
+
+- **Composition**  
+  Candid, unposed framing: the shot is slightly tilted to the right, off‑center, and partially cropped at the top and bottom. The subject occupies the central third of the frame but isn’t strictly aligned to the rule‑of‑thirds. The staircase railing runs diagonally across the image, adding dynamic lines.
+
+- **Environment**  
+  A brick‑walled alley with a concrete stairway, metal handrails on both sides, and a small side‑wall window visible in the background. The time of day is late afternoon, with warm, golden light casting soft shadows. Light rain or mist may be present, giving a subtle texture to the air.
+
+- **Details & Imperfections**  
+  Slight tilt and off‑center framing give the image a spontaneous feel. Tiny imperfections—like a faint smudge on the boot’s toe or a slight overexposed highlight on the woman’s shoulder—add realism. The background is fully in focus, no depth‑of‑field blur.
+
+- **Final Prompt**  
+  “A tall, athletic woman with long, sun‑kissed hair stands on a concrete staircase in an urban alleyway, wearing a rainbow‑striped one‑piece swimsuit with a deep V‑neck and a central zipper, paired with knee‑high white leather boots. Her hands are behind her head, elbows bent, creating a casual “self‑confident” pose that looks like she’s just finished a workout or is about to step into a photo shoot. Natural daylight from a high‑angle, mid‑afternoon sun gives slight overexposure on the upper body; wide‑angle lens at 24‑35 mm, f/4.0, 1/125 s, ISO 400. Slight handheld shake produces natural motion blur, while the background stays fully sharp. Candid, unposed framing: slightly tilted to the right, off‑center, partially cropped at top and bottom. The brick‑walled alley with a concrete stairway, metal handrails on both sides, and a small side‑wall window in the background. Late afternoon light casts soft shadows; a hint of mist adds texture. All elements in focus—no bokeh or portrait mode.”

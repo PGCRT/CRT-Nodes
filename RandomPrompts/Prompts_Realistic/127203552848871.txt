@@ -1,0 +1,16 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, curvy woman with long, straight blonde hair standing in a dimly lit bedroom. She’s bare‑headed, wearing only a thin gold necklace, her body slightly turned toward the camera as if she’re mid‑step or just finished a movement. Her hands hang loosely at her sides, one slightly bent, giving a natural, unposed feel.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. Slight motion blur on the limbs to suggest movement. No filters, no color grading, no post‑processing aesthetic. A hint of overexposure in the center of the frame to keep the ambient light raw. The shot is taken with a wide‑angle lens (24‑35 mm), producing a short focal length that keeps the entire scene sharp—no bokeh, no depth‑of‑field blur.
+
+- **Environment**  
+  Specific real‑world location: a modest bedroom with a white dresser on the left, a small shelf holding books and a bottle of lotion, a bed with a white sheet and a gray pillow on the right. The time of day is late afternoon; the window behind her shows a faint daylight glow, creating soft shadows. Weather or ambient conditions are mild, with a slight breeze that gives a natural motion blur to the subject’s hair.
+
+- **Lens & Technical**  
+  Short focal length, wide angle (24‑35 mm). Everything in focus—background fully sharp, no portrait mode, no subject isolation. Slight tilt and off‑center framing; partial crop so the edges cut off a bit of the room, enhancing the candid feel. No rule‑of‑thirds intentionality—accidental framing that feels spontaneous.
+
+- **Post‑Processing**  
+  Auto‑HDR or auto‑beauty mode off — raw, unprocessed look. Slight overexposure in the center to keep the ambient light natural. No color grading, no filters. The final image should look like a real, handheld snapshot taken with a DSLR or mirrorless camera in a real room.

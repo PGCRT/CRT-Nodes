@@ -1,0 +1,32 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy light‑brown hair, wearing a red lace bodysuit with floral motifs and criss‑cross straps. She is seated on a plush teal sofa, leaning slightly to her left, one arm resting on her knee, the other extended outward as if she just finished a gesture or is about to touch something. Her face is turned toward the camera but not directly at it—she’s mid‑expression, a subtle smile with lips parted, eyes half‑closed as if caught in a moment of casual confidence. A small gold necklace rests on her collarbone, and a detailed wing‑tattoo adorns her left upper arm.
+
+- **Lighting & Exposure**  
+  Natural daylight from a window behind the sofa casts a soft, warm glow across the scene. The exposure is slightly overexposed on the highlights, giving a raw, unprocessed look. No auto‑beauty or filter enhancement—just the camera’s native sensor capturing the light.
+
+- **Camera Settings**  
+  - Lens: 24‑mm wide‑angle, short focal length, handheld.  
+  - Focal depth: everything from the subject to the background is fully sharp; no bokeh.  
+  - Shutter speed: 1/60 s (or 1/80 s) with a slight motion blur on the subject’s hair and arms, indicating spontaneous movement.  
+  - ISO: 400–600 for natural grain.
+
+- **Composition & Framing**  
+  The shot is intentionally off‑center; the subject’s left side extends beyond the frame’s right edge, creating a partial crop. The camera is tilted slightly to the right, giving an accidental, candid feel. No rule‑of‑thirds—framing is spontaneous, as if the photographer was in the middle of a conversation or adjusting a pose.
+
+- **Background & Environment**  
+  Behind the sofa, a window with sheer curtains lets in natural light; a small potted plant sits on a side table, and a floral pillow rests against the back of the sofa. The time of day is late afternoon, around 5 pm, when the sun is low but still bright. The weather outside is clear, with a gentle breeze that ruffles the woman’s hair.
+
+- **Details & Imperfections**  
+  - Slight tilt and partial crop give a raw, unposed vibe.  
+  - The subject’s arm is slightly blurred, indicating motion.  
+  - A faint reflection on her skin from the window’s light adds realism.  
+  - The tattoo on her arm shows fine lines and shading that are crisp in focus.
+
+- **Post‑Processing**  
+  No color grading or filters—just a straight capture with auto‑HDR off. The image retains the camera’s native dynamic range, preserving all details from foreground to background.
+
+**Prompt Summary for AI Image Generation**
+
+> “A candid, wide‑angle photograph of a young woman in a red lace bodysuit sitting on a teal sofa, captured with a 24‑mm lens at 1/60 s shutter speed. The scene is lit by late‑afternoon natural light from a window behind the sofa, producing a slight overexposure. The camera is handheld, slightly tilted, and everything—from the subject to the floral pillow and plant in the background—is fully sharp with no bokeh. The woman’s hair is wavy, her left arm bears a wing‑tattoo, and she wears a gold necklace. She leans to her left, one arm extended, a subtle smile on her face as if mid‑gesture. The exposure is raw, unprocessed, with a slight motion blur on the subject’s hair and arm. The composition is off‑center and partially cropped, giving an accidental, spontaneous feel. No filters or color grading are applied.”

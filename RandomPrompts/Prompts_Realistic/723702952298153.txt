@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with light brown hair tied in a loose ponytail, wearing a bright yellow ribbed crop‑top and matching high‑waist shorts, sitting on a white wooden dresser. Her left leg is bent, foot resting on the drawer, while her right leg hangs free. She’s holding a handheld microphone on a small tripod, mid‑speech, with a slight tilt to her head as if caught in an unplanned moment. A thin black bracelet adorns her right wrist, and a simple ring is visible on her left ring finger. Her bare feet are slightly angled, one toe peeking out from the drawer’s edge.
+
+- **Lighting & Exposure**  
+  Natural daylight coming from a window on the right side of the frame creates a soft overexposure on the subject’s right shoulder and a subtle shadow on the left side of her torso. The exposure is slightly uneven—warm, golden tones with a hint of brightness in the window’s glare. No auto‑HDR or beauty filters; the image retains raw, unprocessed texture.
+
+- **Camera Settings**  
+  Wide‑angle lens (24‑35 mm), f/4.0 aperture, 1/125 s shutter speed, handheld shake producing a slight motion blur on the subject’s hand and microphone. Everything from foreground to background is fully sharp—no portrait‑mode depth of field blur. The focus is intentional but casual, capturing the entire scene in one shot.
+
+- **Composition & Framing**  
+  The composition is accidental: the subject is slightly off‑center, with the left side of the frame cut off by a white door and a folded blanket on the dresser. The tripod’s legs intrude into the right side of the frame, adding to the candid feel. No rule‑of‑thirds intentionality—just a spontaneous, real‑life snapshot.
+
+- **Environment**  
+  A bright, sunlit bedroom or dressing room with pale yellow walls and a white paneled door on the left. A window on the right lets in natural light, casting soft shadows. A small tripod stands near the window, and a folded blanket rests on the dresser’s top left corner. The time of day is mid‑afternoon, around 3 pm, when the sun is high but not directly overhead.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, a partial crop that cuts off the top right corner of the window frame. The microphone’s cable drapes loosely across the tripod’s leg. The woman’s expression is neutral, almost as if she’s mid‑sentence or mid‑song. A faint wristwatch band is visible on her left wrist. The image has no post‑processing color grading—just raw, natural tones.
+
+- **Final Prompt**  
+  “A young woman in a yellow crop‑top and shorts sits on a white dresser in a sunlit bedroom, holding a microphone on a tripod, captured with a wide‑angle lens at f/4 and 1/125 s, handheld shake producing slight motion blur. Natural daylight from a right‑side window creates soft overexposure. The frame is accidentally off‑center, with a white door and folded blanket on the left, and the tripod’s leg intruding on the right. Everything is fully sharp, no filters—raw, candid, spontaneous photography.”

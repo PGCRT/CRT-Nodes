@@ -1,0 +1,26 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy dark hair sitting on a bed in a bright, cozy bedroom. She is wearing pink sweatpants and a pink tank top, her hands lightly gripping the edges of her shirt as she looks directly at the camera with a subtle, confident expression. Her pose is casual and candid—mid‑action, as if she just finished a quick selfie or is about to shift position.
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window on the left side of the room creates a soft, warm glow. Slight overexposure on the upper left quadrant gives a gentle halo effect. No auto‑beauty filter—raw, unprocessed look. The exposure is slightly uneven, with a tiny hint of brightness in the window’s reflection, giving an authentic handheld feel.
+
+- **Camera Settings**  
+  - Lens: 24‑mm wide‑angle, short focal length, handheld.  
+  - Focal depth: everything from the subject to the back wall is fully sharp—no bokeh.  
+  - Shutter speed: 1/60 s (slight motion blur on the subject’s hands and hair).  
+  - Aperture: f/4.5 (wide opening for maximum light).  
+  - ISO: 400 (for balanced noise).
+
+- **Composition & Framing**  
+  The shot is intentionally off‑center; the subject’s left side leans slightly to the right, creating a casual diagonal line. The frame captures the bed, a small vase of sunflowers on a nightstand, and two framed flamingo prints on the wall. No rule‑of‑thirds—this is an accidental, spontaneous composition.
+
+- **Environment**  
+  Location: A bright, modern bedroom with light pink walls and a wooden headboard. The time of day is late morning, with sunlight streaming through a large window. A small vase of sunflowers sits on a wooden nightstand to the left; two framed flamingo prints hang above the bed. The room feels lived‑in, with a slight texture in the wall paint and a faint reflection on the window.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera adds a natural, unposed feel. The subject’s hair has a tiny motion blur, indicating she is moving slightly. The pink sweatpants have a subtle wrinkle at the thigh, adding realism. The bed sheet shows a faint crease from her seat. The sunflowers’ petals are slightly out of focus but still visible, giving depth without losing sharpness.
+
+- **Post‑Processing**  
+  No filters or color grading—just raw capture. A tiny auto‑HDR tweak on the highlights to balance the natural light. The final image retains a slight grain from the camera’s sensor, preserving the authentic, candid vibe.

@@ -1,0 +1,32 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark wavy hair, standing in a casual, spontaneous pose. Her hands are raised behind her head, slightly tilted, creating an off‑center framing that feels natural and unposed. She wears a delicate white lace lingerie set that drapes softly over her curves; the lace details catch the light with a subtle sheen.
+
+- **Lighting & Exposure**  
+  Natural daylight from a side window, mid‑afternoon, giving a warm, slightly overexposed tone to the scene. No auto‑HDR or beauty filters—just raw, unprocessed light that gives a gentle halo around the subject. The exposure is a little bright at the edges, creating a slight flare that adds to the candid feel.
+
+- **Camera & Lens Settings**  
+  - Lens: 24‑mm wide‑angle, short focal length for a broad field of view.  
+  - Aperture: f/5.6 (handheld, no bokeh).  
+  - Shutter speed: 1/125 s (slight motion blur from handheld instability).  
+  - ISO: 400 – balanced for the ambient light.  
+  Everything is in focus; background remains sharp with no depth‑of‑field blur.
+
+- **Environment**  
+  A simple, uncluttered living room with a muted blue wall and a beige armchair behind the subject. The floor is hardwood, visible at the bottom of the frame. A small wooden shelf is partially visible on the right side, adding a subtle detail. The time of day is late afternoon, with soft, diffused sunlight creating gentle shadows.
+
+- **Composition & Framing**  
+  - No rule‑of‑thirds intentionality—framing is accidental, slightly crooked.  
+  - Wide lens captures the entire figure and a good portion of the background.  
+  - Slight tilt gives a dynamic, candid feel.  
+  - The shot is a partial crop; the edges cut off a bit of the background, enhancing spontaneity.
+
+- **Technical Details**  
+  - Slight motion blur on the subject’s hands and hair, indicating handheld shake.  
+  - No bokeh; background fully sharp.  
+  - Zero studio lighting, zero professional composition, zero editorial tone.  
+  - Auto‑beauty mode off—raw, natural look.
+
+- **Final Prompt**  
+  “A young woman with long dark wavy hair stands casually in a blue‑walled living room, hands behind her head, wearing white lace lingerie. Natural mid‑afternoon light creates a warm overexposure. Shot on a 24‑mm wide‑angle lens at f/5.6 and 1/125 s, handheld blur present, everything in focus. The composition is accidental, slightly tilted, partial crop, with a beige chair and wooden shelf in the background. No filters, no auto‑HDR—raw candid photography.”

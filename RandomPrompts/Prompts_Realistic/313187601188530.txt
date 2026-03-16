@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with shoulder‑length, sun‑kissed blonde hair, wearing a fitted black short‑sleeve athletic shirt and dark leggings, captured mid‑stride as she walks toward the camera in a residential alleyway. Her left wrist bears a black sport watch; her right hand is slightly bent at the elbow, suggesting natural motion. She’s smiling loosely, eyes forward, appearing unaware of the camera—candid, spontaneous, unposed.
+
+- **Motion & Focus**  
+  Slight handheld shake with a natural freeze‑frame effect; subtle motion blur around the edges to emphasize movement. Everything in the frame—from her face to the far end of the alley—is fully sharp, no portrait‑mode depth‑of‑field blur. No rule‑of‑thirds intentionality—framing is accidental, slightly off‑center, with a slight tilt that gives a raw, unprocessed feel.
+
+- **Lighting & Exposure**  
+  Auto‑HDR or auto‑beauty mode turned off. The scene is lit by overcast mid‑afternoon light; the sky is a soft gray‑white, casting even illumination across the subject and environment. A hint of slight overexposure on the highlights gives a natural, unfiltered look. No color grading or post‑processing aesthetic—just raw capture.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24‑35 mm) with a short focal length. No bokeh; background is fully sharp. The composition uses a wide‑angle “wide‑lens” perspective that captures the entire alley, including the neighboring houses, potted plants, and a wooden bench on the right side.
+
+- **Environment**  
+  A residential back‑alley in a suburban neighborhood. The ground is wet concrete, reflecting the overcast sky. On the left, a row of potted green plants lines the wall; on the right, a wooden bench holds a white plastic bag and a small white container. In the background, a two‑story house with brown shingles and beige stucco stands behind a parked dark sedan. The time of day is mid‑afternoon, with diffused light that keeps shadows soft. Weather is lightly cloudy, no rain but the pavement still glistens, suggesting recent moisture.
+
+- **Details & Imperfections**  
+  Slight tilt and partial crop: the top of the frame cuts off a bit of the sky, and the bottom edge slightly truncates the pavement, reinforcing the “no rule‑of‑thirds” vibe. The subject’s left wrist watch is visible; her right hand is open, as if she’ll soon grip something or gesture. A small white plastic bag sits on the bench, a faint clue of everyday life. The overall tone is natural, unposed, and spontaneous—like a snapshot taken by a passerby who happened to be filming.
+
+- **Prompt Summary**  
+  “A candid, wide‑angle shot of a woman in black athletic wear walking toward the camera in a residential alleyway, captured with slight handheld motion blur and accidental framing. The scene is lit by mid‑afternoon overcast light, everything fully sharp, no filters or color grading, raw and unprocessed. The background includes potted plants, a parked car, and a two‑story house; a wooden bench with a white plastic bag sits to the right. The composition is slightly tilted and off‑center, preserving a natural, spontaneous feel.”

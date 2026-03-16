@@ -1,0 +1,26 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a high ponytail, wearing a sparkling diamond choker and dangling earrings, captured mid‑turn as she walks through a sunlit café alley. Her face is slightly tilted, her eyes catching the light as she looks toward the camera with a natural, unposed expression.  
+
+- **Lighting & Exposure**  
+  Slight overexposure from ambient daylight; no auto‑HDR or beauty filters—raw, unprocessed look. The exposure is a little bright at the highlights, giving a warm, golden hue that slightly bleeds into the background.  
+
+- **Camera Settings**  
+  Wide‑angle lens (24 mm), short focal length, handheld. All elements in focus—no bokeh or depth‑of‑field blur; background fully sharp. Slight motion blur from the subject’s movement and the photographer’s hand.  
+
+- **Composition & Framing**  
+  No rule‑of‑thirds intentionality—accidental framing that places the subject slightly off‑center, with a partial crop that cuts off the top of her head and the lower part of her torso. The shot feels candid, spontaneous, as if she’s unaware of the camera.  
+
+- **Environment**  
+  A narrow, cobblestone alley in an old town, mid‑afternoon. The alley is lined with wooden shutters and a small glass storefront; the background shows a faint silhouette of a brick wall and a passing cat. The weather is clear, with a soft, diffused sunlight that creates gentle highlights on the subject’s skin and jewelry.  
+
+- **Technical Details**  
+  - Focal length: 24 mm (wide angle)  
+  - Aperture: f/5.6 (mid‑range)  
+  - Shutter speed: 1/125 s (slight motion blur)  
+  - ISO: 400 (natural contrast)  
+  - No portrait mode or subject isolation—everything in focus.  
+
+- **Final Prompt**  
+  “A young woman with a high ponytail, wearing a sparkling diamond choker and dangling earrings, captured mid‑turn as she walks through a sunlit café alley. Her face is slightly tilted, her eyes catching the light as she looks toward the camera with a natural, unposed expression. Slight overexposure from ambient daylight gives a warm golden hue; wide‑angle 24 mm lens, handheld shot with slight motion blur. All elements in focus—no bokeh. The alley is lined with wooden shutters and a small glass storefront; a brick wall and a passing cat form the background. The shot is candid, accidental framing that cuts off the top of her head and lower torso, no rule‑of‑thirds. Mid‑afternoon sunlight, clear weather, soft diffused light.”

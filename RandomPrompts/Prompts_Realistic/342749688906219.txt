@@ -1,0 +1,18 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman standing in a bright, sunlit kitchen, mid‑mirror selfie. Her hair is tied up in a messy high ponytail, a few strands escaping to frame her face. She’s holding a black smartphone with both hands, capturing the shot, eyes focused on the screen. She wears an oversized, long‑sleeved plaid shirt in muted earthy tones (browns, greens, and hints of red) with a classic button‑front design, paired with cargo pants that have visible side pockets. A subtle lens flare sits just below her chest, hinting at the natural overexposure of the moment.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — she’s unaware she’s being photographed, caught in a natural “mid‑action” freeze. Slight tilt and off‑center framing give the image an accidental, handheld feel. The composition is not rule‑of‑thirds; it’s a partial crop that includes a portion of the window frame, a lamp, and a small potted plant on the windowsill.
+
+- **Environment**  
+  Specific real‑world location: a bright kitchen with a large, double‑pane window that lets in warm, natural daylight. The time of day is late morning, when the sun is high but still low enough to create a soft lens flare. Weather is clear, with a light breeze that leaves a faint motion blur on the subject’s hair. Ambient details include a white lamp on a wooden stand, a small potted plant, and a glimpse of a garden outside the window.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm) wide‑angle lens, no bokeh — everything from foreground to background is fully sharp. No depth‑of‑field blur; the entire scene is in focus. No portrait‑mode subject isolation. Slight overexposure on the window area gives a raw, unprocessed look. Auto‑HDR or auto‑beauty mode is off. The image has a natural, unfiltered aesthetic with no post‑processing color grading.
+
+- **Additional Details**  
+  A faint lens flare sits just below the subject’s chest, created by the bright daylight. Slight motion blur on the subject’s hair suggests a handheld shot captured in motion. The phone’s camera module is visible, indicating a selfie. The background includes a white lamp, a small potted plant, and a wooden table with a few items on it. The overall tone is warm, with natural sunlight creating a slight haze and a gentle green‑blue tint.
+
+**Provide only the structured prompt.**

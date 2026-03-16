@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Action**  
+  A young woman with long, wavy dark hair, wearing a light‑denim jacket over a white crop‑top and black leggings speckled with colorful paint drips, stands in a modern kitchen. She’s mid‑gesture, holding a smartphone in her left hand and a spoon in her right, as if she’re about to taste or prepare something. Her gaze is downcast, focused on the phone screen, giving a candid, unposed feel.
+
+- **Capture Style**  
+  Candid, spontaneous — the subject appears unaware of the camera, caught in a natural moment. Slight tilt and off‑center framing; the composition is accidental, not rule‑of‑thirds. The shot has a raw, unprocessed look: no filters, no color grading, no post‑processing aesthetic. A hint of slight overexposure or underexposure depending on ambient light gives it authenticity.
+
+- **Environment**  
+  Location: A bright, contemporary kitchen with wooden cabinets, a stainless‑steel refrigerator, and a countertop lined with kitchen utensils (wooden spoons, metal canister, etc.). Time of day: late morning, soft natural daylight coming from the window, creating gentle highlights on the subject’s face and clothing. Weather or ambient conditions: clear, mild, slightly humid—ambient light creates subtle glare and warm tones.
+
+- **Lens & Technical**  
+  Short focal length (≈20‑35 mm) wide‑angle lens. Everything is in focus — no bokeh, no depth‑of‑field blur; background remains sharp. Slight motion blur from handheld instability captures the “mid‑action” feel. Auto‑HDR or auto‑beauty mode off. No portrait‑mode subject isolation; the entire scene, including the kitchen backdrop, stays crisp.
+
+- **Post‑Processing**  
+  Zero studio lighting, zero professional composition, zero editorial tone. Keep it natural: raw exposure, minimal contrast, slight grain, and a faint hint of color cast from the ambient daylight.  
+
+**Prompt Summary**  
+“Candid shot of a woman in a modern kitchen, wearing a denim jacket and paint‑speckled leggings, holding a phone and spoon mid‑action. Wide‑angle lens, everything sharp, slight motion blur, accidental framing, raw exposure, natural daylight, no filters.”

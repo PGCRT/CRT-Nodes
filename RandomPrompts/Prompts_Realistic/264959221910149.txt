@@ -1,0 +1,24 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy blonde hair standing mid‑step in a sunlit forest clearing. She’s wearing a short, mustard‑yellow floral dress that falls just above the knees, with delicate pink and green blossoms scattered across the fabric. Her hands are lightly raised to the back of her head, fingers curling into the hair as if she’re about to adjust her hat or simply pose casually. Her face is turned slightly toward the camera, a soft smile on her lips, eyes bright and engaged. The dress’s V‑neck adds a subtle hint of elegance, while the fabric’s light ripples catch the ambient light.
+
+- **Lighting & Exposure**  
+  Capture with a wide‑angle lens (24–35 mm) at a slightly high angle to emphasize the subject’s full silhouette. Use natural daylight from late morning—soft, warm sunlight filtering through the canopy creates gentle highlights on her dress and skin. Allow a slight overexposure of about 0.7 EV to keep the scene luminous but not blown out; keep auto‑HDR off for a raw, unprocessed look.
+
+- **Motion & Focus**  
+  Shoot with handheld stability, letting a faint motion blur linger on the subject’s hands and the surrounding leaves—this gives the image a candid, “in‑motion” feel. Keep everything in focus: background trees, fallen leaves, and the ground all sharp, no portrait‑mode depth‑of‑field blur. Use a wide aperture (f/4–f/5.6) to keep the background fully sharp while still allowing a subtle sense of depth.
+
+- **Environment**  
+  The setting is a mixed‑conifer forest in early autumn. Tall pine and oak trees line the clearing, their bark rough and brown, with a carpet of fallen leaves in shades of amber, rust, and brown covering the ground. A small stream of sunlight pierces through the canopy, creating a bright patch around the subject’s feet. The time of day is mid‑morning (around 10:30 AM), giving warm, golden illumination.
+
+- **Lens & Technical**  
+  Use a short focal length (24–35 mm) to capture a wide view of the scene. Keep the lens set to a slightly tilted angle for an off‑center framing that feels spontaneous. No rule‑of‑thirds intentionality—frame the shot as if you’re casually composing it on the spot. The background is fully sharp, no bokeh; all elements from foreground to background are in focus.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—an “in‑the‑moment” snapshot where the subject appears unaware of the camera or mid‑action. Encourage imperfections: a slight tilt in the frame, a partial crop that cuts off a bit of the tree trunk on the left side, and a small motion blur around the hands. The image should feel natural, raw, and unfiltered—no color grading or post‑processing aesthetic.
+
+- **Post‑Processing**  
+  Keep it minimal: no filters, no color grading, no heavy edits. Slight overexposure (0.7 EV) is all that’s needed to brighten the scene. Save the image in RAW format for later refinement if necessary, but deliver the final output as a straight, unprocessed photograph.
+
+**Deliverable**: A single, high‑resolution JPEG that captures the above elements in one frame—ready for use in a portfolio or social media post.

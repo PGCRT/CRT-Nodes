@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A woman with long, dark, wavy hair standing on a sandy beach, wearing a sheer black bikini. She is mid‑turn, slightly angled toward the camera, with one hand resting near her hip and the other hanging by her side. Her left arm bears a rose tattoo that is partially visible. She wears gold hoop earrings and a ring on her left ring finger. Her expression is neutral, almost candid, as if she’s caught in a natural moment.
+
+- **Lighting & Exposure**  
+  Slight overexposure from the mid‑afternoon sun, creating soft highlights on her skin and a subtle halo around her hair. No auto‑beauty or filter enhancement—raw, unprocessed look. The exposure is slightly warm, with a gentle haze that gives an ambient, natural feel.
+
+- **Motion & Focus**  
+  Slight motion blur from handheld shooting, giving a sense of movement. Everything in the frame—from her face to the waves behind—is fully sharp, no portrait‑mode depth‑of‑field blur. The focus is intentional but not staged; the composition feels accidental, with a slight tilt and off‑center framing.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24–35 mm), short focal length. No bokeh—background (the ocean and sky) remains fully sharp. No rule‑of‑thirds intentionality; the frame is a spontaneous, casual crop that captures the subject’s full figure and part of the beach environment.
+
+- **Environment**  
+  Specific real‑world location: a sunny beach with gentle waves breaking in the background. Time of day: mid‑afternoon, around 3 pm, when the light is warm but not harsh. Weather: clear, with a few scattered clouds; the sky is a pale blue with a hint of white. The sand is light brown, slightly textured, and the beach is unpaved, giving an authentic feel.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Imperfections encouraged: slight tilt, off‑center framing, partial crop. No rule‑of‑thirds intentionality — accidental framing. Zero studio lighting, zero professional composition, zero editorial tone. Natural motion freeze or slight blur from handheld instability.
+
+- **Post‑Processing**  
+  Auto‑HDR or auto‑beauty mode off—raw, unprocessed look. Slight overexposure or underexposure depending on ambient light. No filters, no color grading, no post‑processing aesthetic.
+
+**Prompt Summary (structured)**  
+"A woman with long dark wavy hair in a sheer black bikini stands on a sandy beach at mid‑afternoon, wearing gold hoop earrings and a ring on her left hand. Her left arm shows a rose tattoo. She is mid‑turn, slightly angled toward the camera, one hand near her hip, the other by her side. The image has slight motion blur from handheld shooting, everything in focus, wide‑angle lens (24–35 mm), no bokeh, accidental off‑center framing with a slight tilt. Background shows gentle waves and a pale blue sky with scattered clouds. Lighting is warm with slight overexposure, raw unprocessed look, no filters or auto‑beauty. Capture style: candid, spontaneous, zero studio lighting, natural motion freeze."

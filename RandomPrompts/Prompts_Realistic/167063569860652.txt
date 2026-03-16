@@ -1,0 +1,24 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, straight brown hair, wearing a light‑brown, button‑front crop top and high‑waisted denim jeans, standing mid‑step in an abandoned industrial hallway. Her feet are slightly off the center of the frame, one foot ahead of the other, as if she’s about to move or just finished a gesture. She’s looking directly at the camera with a neutral expression, no posed studio stance—just a natural, candid moment.
+
+- **Motion & Focus**  
+  Slight motion blur on the subject’s feet and the floor, indicating handheld shake and a quick shutter speed. Everything in the frame—from her shoes to the far wall—is fully sharp, no portrait‑mode bokeh. The focus is even across the entire scene, captured with a wide‑angle lens (24–35 mm).
+
+- **Lighting & Exposure**  
+  Auto‑HDR or auto‑beauty mode off—raw, unprocessed look. The hallway’s fluorescent lights create a mild overexposure on the ceiling and a subtle reflection on the concrete floor. Ambient light is a mix of artificial and natural daylight from an open window at the far end, giving a slightly warm, neutral tone.
+
+- **Environment**  
+  Specific real‑world location: an old warehouse or factory corridor with a tiled ceiling, a metal door on the left, and a large roll‑up door at the back. The time of day is late afternoon, with soft sunlight streaming in from the rear, casting long shadows. Weather is clear, no wind, a quiet moment before dusk.
+
+- **Lens & Technical**  
+  Short focal length (35 mm), wide‑angle, no bokeh, background fully sharp. No depth‑of‑field blur—everything from foreground to background is in focus. No rule‑of‑thirds intentionality—accidental framing with a slight tilt and partial crop that gives the image a spontaneous feel.
+
+- **Composition Notes**  
+  The camera is held at eye level, slightly tilted to the right, capturing the subject’s full body from head to toe. The left side of the frame shows a door with a sign that reads “DULIANIANS—SUPPORT & SERVICES,” and a small plant growing out of a crack in the floor adds a touch of organic imperfection. The right side reveals a rusted metal wall and a red light fixture, adding contrast.
+
+- **Prompt for Text‑to‑Image Generation**  
+  *“A candid, unposed photograph of a young woman with long brown hair, wearing a light‑brown button‑front crop top and high‑waisted denim jeans, standing mid‑step in an abandoned industrial hallway. The image has slight motion blur on her feet and the concrete floor, all elements fully sharp captured on a 35 mm wide‑angle lens. The scene is lit by warm late‑afternoon sunlight streaming from a back window, with ambient fluorescent ceiling lights creating a mild overexposure. The hallway features a tiled ceiling, a metal door on the left labeled ’DULIANIANS—SUPPORT & SERVICES’, and a rusted metal wall with a red light fixture on the right. A small plant grows from a crack in the floor, adding organic imperfection. The camera is held at eye level with a slight right‑hand tilt and partial crop, no rule‑of‑thirds, accidental framing, zero studio lighting, zero professional composition, zero editorial tone.”*
+
+Provide only the structured prompt.

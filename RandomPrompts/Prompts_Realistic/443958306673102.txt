@@ -1,0 +1,27 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair, wearing a delicate pink lace lingerie set (tran­sparent bra with floral motifs and matching high‑waist bottoms with side ties). She is captured mid‑movement, leaning forward slightly as if she’s about to pick something up from a kitchen counter. Her head is tilted downward, eyes cast toward her hands, giving an unposed, spontaneous feel.
+
+- **Lighting & Exposure**  
+  Natural daylight coming from a large window on the left, creating a soft overexposure on the upper body while keeping the lower part of the frame slightly underexposed. No auto‑HDR or beauty filters—just raw, unprocessed light. The exposure is uneven enough to hint at handheld instability.
+
+- **Camera & Lens Settings**  
+  Wide‑angle lens (24–35 mm) with a short focal length, set to f/4.8 for a wide aperture but with everything in focus—no bokeh. Depth of field is fully sharp from foreground to background. Slight motion blur on the subject’s torso and arms to emphasize movement.
+
+- **Composition & Framing**  
+  The shot is intentionally off‑center: the subject’s left side cuts close to the right edge, creating a partial crop that feels casual and spontaneous. The frame is slightly tilted, giving a dynamic, non‑rule‑of‑thirds feel. Background includes a white window with multiple panes on the left and a light blue wall on the right; a white door with a silver handle is visible in the upper right corner.
+
+- **Environment & Time**  
+  Location: A bright, modern kitchen with a large, multi‑pane window and a light blue painted wall. The time of day is mid‑afternoon, with warm natural light streaming in from the window, creating soft highlights on the subject’s skin and lingerie. Weather is clear, with no wind, but the handheld camera introduces slight shake.
+
+- **Technical Details**  
+  - Focal length: 35 mm (wide angle)  
+  - Aperture: f/4.8  
+  - Shutter speed: 1/60 s (to capture slight motion blur)  
+  - ISO: 400 (for natural contrast)  
+  - No portrait‑mode depth‑of‑field blur—background is fully sharp.  
+  - No post‑processing filters or color grading; raw, unprocessed look with a hint of slight overexposure on the upper body.
+
+- **Final Prompt**  
+  “A young woman in pink lace lingerie captured mid‑motion leaning forward in a bright kitchen, natural daylight from a large window creating soft overexposure, wide‑angle 35 mm lens at f/4.8, slight motion blur on the torso, handheld tilt, off‑center framing that partially crops the subject, fully sharp background with a white door and light blue wall, mid‑afternoon lighting, raw unprocessed look.”

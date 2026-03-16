@@ -1,0 +1,26 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark brown hair sitting on a beige sofa in a sunlit living room. She’s wearing a pink floral bikini top and matching bottoms, one hand lightly touching her hair, the other resting on the couch. Her head is slightly tilted downward, eyes cast to the side, as if she’s just finished a conversation or is about to pick up a remote.  
+
+- **Motion & Focus**  
+  Slight motion blur from handheld shooting; natural freeze of mid‑action. Everything in focus—no bokeh, no depth‑of‑field blur.  
+
+- **Lighting & Exposure**  
+  Auto‑HDR off. Slight overexposure on the window’s bright side, subtle underexposure on the interior shadows. Wide‑angle lens (24–35 mm) captures a wide field with all elements sharp.  
+
+- **Environment**  
+  A cozy living room with a wooden bookshelf filled with colorful spines, a small potted plant atop the shelf, a teddy‑bear figurine on the top shelf, and a framed picture of a fruit on the wall. A window on the left lets in natural daylight; the time of day is late morning, soft golden light.  
+
+- **Lens & Technical**  
+  Short focal length (35 mm), wide‑angle. No bokeh—background fully sharp. No portrait mode, no subject isolation.  
+
+- **Composition Notes**  
+  Candid, unposed, spontaneous framing—slight tilt and off‑center crop. No rule‑of‑thirds intentionality; the shot feels accidental, like a snapshot captured mid‑moment.  
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, zero post‑processing aesthetic. Raw, unprocessed look with natural slight overexposure or underexposure depending on ambient light.  
+
+**Prompt:**
+
+> “A young woman with long dark brown hair sits on a beige sofa in a sunlit living room, wearing a pink floral bikini top and matching bottoms. One hand lightly touches her hair, the other rests on the couch. She’s mid‑action, head slightly tilted downward, eyes cast to the side. Slight motion blur from handheld shooting; everything in focus—no bokeh. Auto‑HDR off, slight overexposure on the window’s bright side, subtle underexposure on interior shadows. Wide‑angle 35 mm lens captures a wide field with all elements sharp. Background includes a wooden bookshelf filled with colorful spines, a small potted plant atop the shelf, a teddy‑bear figurine on the top shelf, and a framed picture of a fruit on the wall. A window on the left lets in natural daylight; late morning soft golden light. Candid, unposed, spontaneous framing—slight tilt and off‑center crop. No rule‑of‑thirds intentionality; accidental framing. Zero filters, zero color grading, zero post‑processing aesthetic. Raw, unprocessed look with natural slight overexposure or underexposure depending on ambient light.”

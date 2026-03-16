@@ -1,0 +1,18 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, sun‑kissed blonde hair, wearing a pink halter‑style bikini top and matching low‑cut bottoms. She’s accessorized with a gold chain that drapes across her midsection, a pink wristband on each wrist, and a delicate gold necklace. Her left hand is raised to the side of her head, fingers lightly gripping a strand of hair, as if she’re about to adjust her hair or touch her face. A small tattoo is visible on the left side of her neck. She’s standing in a bright, lived‑in bedroom that has a plaid curtain hanging beside a window, a wooden table corner, and a beige sofa in the background. The scene feels spontaneous, as if she’re mid‑pose while taking a selfie or checking her outfit in a mirror.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. Slight tilt and off‑center framing; partial crop that cuts off a bit of the left side of the room. No rule‑of‑thirds intentionality. The image has a raw, unprocessed look: no filters, no color grading, no post‑processing aesthetic. A hint of slight overexposure from natural daylight coming through the window gives the photo a warm, soft glow.
+
+- **Environment**  
+  Specific real‑world location: a cozy, slightly cluttered bedroom in a suburban house. Time of day: late morning, with bright natural light streaming through the window, creating soft highlights on the subject’s skin and clothing. Weather or ambient conditions: clear, sunny, with a gentle breeze that makes the hair move slightly.
+
+- **Lens & Technical**  
+  Short focal length (20–35 mm) wide‑angle lens. No bokeh; background fully sharp — everything in focus, from the subject to the curtain and sofa. No depth‑of‑field blur or portrait mode. Slight motion blur from handheld instability captures a natural, lively feel. Auto‑HDR or auto‑beauty mode off. The prompt should emphasize “wide lens” and “natural motion freeze or slight blur”.
+
+**Prompt Text**  
+"A young woman with long, sun‑kissed blonde hair, wearing a pink halter‑style bikini top and matching low‑cut bottoms, accessorized with a gold chain across her midsection, a pink wristband on each wrist, and a delicate gold necklace. Her left hand is raised to the side of her head, fingers lightly gripping a strand of hair. A small tattoo is visible on the left side of her neck. She’s standing in a bright, lived‑in bedroom that has a plaid curtain beside a window, a wooden table corner, and a beige sofa in the background. The scene feels spontaneous, as if she’re mid‑pose while taking a selfie or checking her outfit in a mirror. Candid, unposed, slight tilt and off‑center framing; partial crop. No rule‑of‑thirds intentionality. Raw, unprocessed look: no filters, no color grading, no post‑processing aesthetic. Slight overexposure from natural daylight. Short focal length (20–35 mm) wide‑angle lens. No bokeh; background fully sharp — everything in focus. Slight motion blur from handheld instability."
+
+Provide only the structured prompt.

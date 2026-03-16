@@ -1,0 +1,16 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with dark, glossy hair tied in a loose, casual ponytail, a few strands framing her face. She’s wearing a strapless, neutral‑tone top and high‑waisted cargo pants, accessorized with a delicate gold necklace and small hoop earring. Her body is turned to the side, back slightly arched, left arm bent at the elbow, hand resting on her hip, as if she’re about to adjust her clothing or grip a railing. Her head tilts to the right, eyes cast toward an unseen point beyond the frame, giving a candid, mid‑action feel.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑motion. Slight tilt and off‑center framing; partial crop that cuts off a bit of her left shoulder, creating a dynamic, handheld feel. No rule‑of‑thirds intentionality — the composition is accidental, as if captured with a quick snap on a smartphone or DSLR.
+
+- **Environment**  
+  Specific real‑world location: a sunlit courtyard outside a modern residential house. The background shows a beige stucco wall with a tall, narrow window, a concrete patio, and a small succulent plant in a planter. A palm tree’s fronds peek into the upper right corner, adding natural depth. Time of day: late afternoon, golden hour, warm ambient light with a slight overexposure on the subject’s back. Weather: clear, breezy, no clouds.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm) wide‑angle lens. No bokeh — background fully sharp, everything in focus. No portrait mode or subject isolation. Slight motion blur on the subject’s back and arm to hint at movement. Auto‑HDR or auto‑beauty mode off — raw, unprocessed look. No filters, no color grading, no post‑processing aesthetic. The exposure is slightly high, giving a warm glow to the skin and clothing.
+
+- **Final Prompt**  
+  “A young woman with dark, glossy hair in a loose ponytail, wearing a strapless neutral top and high‑waisted cargo pants, accessorized with a delicate gold necklace and small hoop earring, captured mid‑action on a sunlit courtyard outside a modern house. The scene includes a beige stucco wall with a tall window, concrete patio, and a succulent plant in a planter, with a palm tree frond peeking into the upper right corner. Late afternoon golden hour lighting creates slight overexposure on the subject’s back. Use a 24‑35 mm wide‑angle lens, handheld shot with slight tilt and off‑center framing, partial crop, no rule‑of‑thirds. Capture candid, unposed, spontaneous vibe with slight motion blur on the back and arm. Auto‑HDR off, raw, unprocessed look, no filters, no color grading, everything in focus, background fully sharp.”

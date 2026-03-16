@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy auburn hair, wearing simple gold hoop earrings, leaning forward on the edge of a white bathtub. Her hands are clasped together near the rim, fingers slightly curled, as if she’s about to lift her head or adjust her position. She is nude, with natural skin texture and subtle moisture on her body. Her face is turned downward, eyes closed, giving a relaxed, candid feel.
+
+- **Lighting & Exposure**  
+  Natural daylight from a side window, mid‑afternoon, soft but warm. Slight overexposure on the subject’s front, creating a gentle halo effect. No auto‑HDR or beauty filters—raw, unprocessed look. Slight handheld shake gives a natural motion blur around the edges.
+
+- **Camera & Lens**  
+  Wide‑angle lens (24 mm), short focal length, everything in focus from foreground to background. No bokeh; background is fully sharp. No portrait mode or subject isolation—just a flat, direct capture.
+
+- **Composition & Framing**  
+  Off‑center, accidental framing: the bathtub occupies the lower third of the frame, the woman’s torso and head are slightly tilted, her left shoulder is a bit off‑center. The composition is not rule‑of‑thirds; it feels spontaneous, as if she was caught mid‑movement.
+
+- **Environment**  
+  Location: an industrial‑style bathroom with concrete walls that have peeling white paint in irregular patches. The wall behind the bathtub shows rough texture and a small metal fixture (a drain or valve) on the left side. Time of day: late afternoon, ambient light is warm and slightly hazy. Weather: clear, no wind.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, partial crop that cuts off a bit of the woman’s left hip. The bathtub’s rim is visible on the lower edge, with a small reflection of the woman’s arm in the water. Her earring catches a tiny highlight. The paint patches on the wall create organic shapes that contrast with the clean line of the tub.
+
+- **Technical Settings**  
+  Aperture: f/4 (wide), shutter speed: 1/60 s (handheld shake), ISO: 400. No depth‑of‑field blur—everything from foreground to background is sharp. No post‑processing color grading; only raw capture.
+
+- **Prompt Summary**  
+  “A candid, wide‑angle shot of a nude woman with auburn hair leaning on a white bathtub in a concrete bathroom with peeling paint. Natural daylight, slight overexposure, handheld shake, everything in focus, off‑center framing, no filters—raw, spontaneous realism.”

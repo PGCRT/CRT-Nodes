@@ -1,0 +1,16 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, straight brown hair, wearing a black V‑neck crop top and light‑wash denim shorts, standing in a bright, lived‑in bedroom. She is mid‑step, left foot slightly ahead, hands relaxed at her sides, a natural, unposed smile on her face. Her body is angled toward the camera but not perfectly centered—slight off‑center framing gives a candid feel.
+
+- **Motion & Focus**  
+  Slight motion blur around the edges from handheld instability; the subject’s face and upper body are in sharp focus, while the background remains fully sharp with no bokeh. The image has a raw, unprocessed look: no filters, no color grading, no auto‑beauty mode—just natural ambient light with a hint of slight overexposure on the window’s glare.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24‑35 mm), short focal length, everything in focus from foreground to background. No portrait‑mode depth‑of‑field blur; the entire scene is crisp. Slight tilt in the camera’s horizon adds spontaneity.
+
+- **Environment**  
+  Location: a cozy, sunlit bedroom with a wooden bed, a bookshelf filled with books and decorative items, a small white nightstand, and a window that lets in natural daylight. Time of day: late morning, soft golden light filtering through the window, creating subtle shadows and a warm tone. Weather: clear, mild, with a gentle breeze that slightly ruffles the woman’s hair.
+
+- **Composition & Aesthetic**  
+  Candid, unposed, spontaneous—subject unaware or mid‑action. Imperfections encouraged: slight tilt, off‑center framing, partial crop. No rule‑of‑thirds intentionality—accidental framing that feels natural. Zero studio lighting, zero professional composition, zero editorial tone. The image captures a genuine moment in everyday life, with a wide lens that keeps the entire scene sharp and detailed.

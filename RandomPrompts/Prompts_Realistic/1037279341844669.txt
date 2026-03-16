@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with shoulder‑length brown hair, wearing dark sunglasses and a light summer blouse, lying on her stomach in the sand. Her left arm is bent, hand touching the side of her head, creating a slight tilt and off‑center framing. She has a small tattoo of a rose on her left forearm and a small star tattoo near her right shoulder. Her body is slightly angled toward the camera, with one knee bent and the other leg extended, giving a casual, mid‑action feel.
+
+- **Motion & Focus**  
+  Slight motion blur on the subject’s hand and head, indicating handheld instability. Everything in the frame — subject, sand, sea, rocks — is fully sharp; no portrait‑mode depth‑of‑field blur. No auto‑HDR or auto‑beauty mode; raw, unprocessed look with natural overexposure due to bright midday sun.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24‑35 mm), short focal length. No bokeh; background (ocean, rocks, sky) fully sharp. Natural daylight, mid‑afternoon, high‑ambient light. Slight overexposure on the upper part of the frame, subtle color warmth.
+
+- **Environment**  
+  Beach setting on a sunny mid‑afternoon. Ocean waves break in the background, small white foam visible. Rocky outcrops rise from the water near the horizon. The sky is a pale blue with scattered white clouds. Sand is light beige with small pebbles and footprints.
+
+- **Composition & Style**  
+  Candid, unposed, spontaneous — subject appears unaware of the camera. Slight tilt and partial crop; no rule‑of‑thirds intentionality. Zero studio lighting, zero professional composition, zero editorial tone. The frame captures a natural, accidental moment with a wide lens that keeps everything in focus.
+
+- **Post‑Processing**  
+  No filters, no color grading, no post‑processing aesthetic. Raw, natural look only.

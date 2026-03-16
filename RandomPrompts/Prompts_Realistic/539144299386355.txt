@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, sun‑kissed blonde hair, wearing a white sports bra and matching white leggings, captured mid‑stretch on an asphalt road. She’s bent forward, hands planted on the ground, toes gripping the surface, head tilted down as if she’re about to perform a yoga flow or a sprint warm‑up. Her expression is focused, slightly pained, natural, unposed.
+
+- **Motion & Focus**  
+  Slight motion blur at the fingertips and toes, indicating handheld shake and mid‑action. Everything in frame is fully sharp—no portrait‑mode depth of field. The lens is a short focal‑length wide‑angle (24–35 mm), giving a “wide‑lens” feel with no bokeh; background stays crisp.
+
+- **Lighting & Exposure**  
+  Raw, auto‑HDR off, no color grading or filters. Ambient sunlight from the late‑afternoon sun creates a soft overexposure on the subject’s shoulders and a gentle warm glow on her hair. Slight tilt in the camera angle for an accidental, off‑center framing.
+
+- **Environment**  
+  Specific real‑world location: a quiet residential street with a concrete sidewalk, a white lamppost in the background, and a patch of green shrubbery on the side. Time of day: late afternoon (around 5 pm), warm golden light, low‑angle sun. Weather: clear, dry, no wind.
+
+- **Lens & Technical**  
+  Short focal length (30 mm), wide‑angle, handheld. No bokeh—background fully sharp. No rule‑of‑thirds intentionality; the composition is spontaneous and slightly tilted. The shot has a natural “mid‑action” feel, as if the subject just caught her breath after a stretch.
+
+- **Prompt Summary**  
+  *“A candid, wide‑angle, handheld shot of a woman in white workout gear stretching on a residential street at late afternoon. Slight motion blur on her hands and feet, full sharpness across the frame, raw auto‑HDR off, natural overexposure, accidental tilt, no filters—everything in focus, background crisp.”*

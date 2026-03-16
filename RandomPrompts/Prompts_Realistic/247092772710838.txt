@@ -1,0 +1,29 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wind‑blown brown hair, wearing faded denim shorts and red high‑top sneakers, crouching low on a concrete floor. Her left hand is extended forward as if she’s about to grasp something, her right arm bent at the elbow, creating a dynamic, mid‑motion silhouette. She wears a thin gold necklace that catches the light, and a subtle smile plays on her lips.
+
+- **Lighting & Exposure**  
+  Natural daylight from a large window behind her creates a slight overexposure on her face and upper body; the exposure is uneven, giving a raw, unprocessed feel. The light hits her left shoulder more brightly, while the right side remains slightly softer, as if captured by a handheld camera with no auto‑beauty or filter interference.
+
+- **Camera Settings**  
+  - Lens: 24 mm wide‑angle, short focal length, no bokeh.  
+  - Focal depth: everything in focus—from her toes to the top of her head—no portrait‑mode blur.  
+  - Shutter speed: 1/60 s, producing a slight motion blur on her moving hand and hair.  
+  - ISO: 400–600 for natural grain.  
+  - Composition: off‑center framing, slight tilt, no rule‑of‑thirds intentionality; the shot feels spontaneous and candid.
+
+- **Environment**  
+  The scene is set in a loft‑style room with a large, floor‑to‑ceiling window that looks out onto an urban skyline. The time of day is late morning, with soft, diffused sunlight filtering through the glass. Outside the window, a few brick buildings are visible, and the sky is a pale, overcast blue. The floor is a smooth, light‑colored concrete, and a small wooden stool sits in the corner.
+
+- **Details & Imperfections**  
+  - Slight tilt of the camera creates a dynamic angle on the subject’s face and body.  
+  - The framing is partial: her left foot is cut off at the bottom edge, adding to the candid feel.  
+  - Her hair has a slight motion blur, indicating movement.  
+  - A faint reflection on her sneaker’s laces shows the window’s glare.
+
+- **Post‑Processing**  
+  No filters or color grading; the image retains its raw, unprocessed look. The only adjustments are exposure compensation and minor cropping after capture.
+
+**Prompt Summary**  
+> “A young woman with long brown hair, denim shorts, and red high‑top sneakers crouches on a concrete floor in a loft room, her left hand extended forward as if reaching for something. Natural daylight from a large window behind her creates a slight overexposure on her face, while a 24 mm wide‑angle lens keeps everything in focus with a 1/60 s shutter speed that gives a subtle motion blur to her hand and hair. The shot is captured handheld with a slight tilt and off‑center framing, no rule‑of‑thirds, no filters—raw, candid, spontaneous. Outside the window, urban buildings rise against a pale blue sky; a small wooden stool sits in the corner. The image retains its raw, unprocessed look, with everything from her toes to the top of her head fully sharp.”

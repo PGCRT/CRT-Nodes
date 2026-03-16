@@ -1,0 +1,28 @@
+**Realistic Candid Photography Prompt Framework – “Beach Biker”**
+
+- **Subject & Pose**  
+  A young woman with long, wind‑blown dark hair, wearing a black bikini top and frayed denim shorts, crouching low on a sandy dune. Her hands are gently clasped over her chest, fingers slightly blurred as if she’s just finished a quick stretch or is about to pick up a beach ball. She looks upward toward the camera with a casual, confident expression, eyes bright, lips parted slightly. A gold chain adorns her neck, and a thin bracelet rests on her right wrist; a small ring glints on her left hand. Her bare feet are planted in the sand, toes curling into the grains.
+
+- **Motion & Focus**  
+  Slight motion blur at the fingertips and hair, indicating a handheld shot captured mid‑action. The entire frame is in focus – no portrait‑mode bokeh; background remains sharp from the dune to the grassy ridge behind her.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle, late‑afternoon sun creates a warm, slightly overexposed highlight on her shoulder and chest. The sky shows a soft white‑blue hue with a few scattered clouds; the sand reflects the light, giving a subtle glare. No auto‑beauty or filter processing – raw, unedited look.
+
+- **Environment**  
+  Location: A coastal dune field on a quiet beach, with tall sea‑grass tufts rising behind her and a low ridge of sand in the foreground. Time of day: early evening (golden hour), weather: light breeze, clear sky. The background includes a few scattered shells and a small patch of seaweed, adding texture.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24 mm) with a short focal length, handheld, slightly tilted. No rule‑of‑thirds – the composition is accidental, off‑center, with the subject’s left side cutting close to the frame edge. Everything from foreground to background is fully sharp; no depth‑of‑field blur.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous – the woman appears unaware of the camera, caught mid‑gesture. Slight tilt and partial crop give a raw, documentary feel. The shot has zero studio lighting, zero professional composition, zero editorial tone.
+
+- **Post‑Processing**  
+  Auto‑HDR off; no color grading or filters. Only natural exposure adjustments.
+
+---
+
+**Prompt for Text‑to‑Image Generation**
+
+> “A young woman with long dark hair, wearing a black bikini top and frayed denim shorts, crouching low on a sandy dune at late afternoon on a quiet beach. She is mid‑gesture, hands clasped over her chest, looking upward with a confident expression. A gold chain hangs around her neck, a bracelet on her right wrist, a ring on her left hand. Slight motion blur on her fingertips and hair, entire frame in focus, wide‑angle lens (24 mm), handheld tilt, accidental off‑center framing. Natural daylight from high angle creates warm overexposure on her shoulder; sky is white‑blue with scattered clouds, tall sea‑grass behind her, small patch of seaweed in foreground. No filters, no auto‑HDR, raw look. Everything sharp from foreground to background.”

@@ -1,0 +1,28 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark hair tied in a high ponytail sits candidly on a plush gray sofa in a cozy living room. Her body is bare, and she’s caught mid‑gesture as she reaches for a remote or a cup, one hand resting on the back of the couch, the other near her thigh. Her face is turned slightly toward the camera but not directly at it— a natural, unposed look.
+
+- **Lighting & Exposure**  
+  Warm, ambient daylight from a tall floor lamp in the corner creates a soft, slight overexposure on the subject’s upper body. The lighting is uneven, with a gentle gradient from the lamp’s glow to the cooler tones of the room—no auto‑beauty or filter enhancement, just raw, in‑camera capture.
+
+- **Camera Settings**  
+  - Lens: 24‑mm wide‑angle, short focal length, handheld.  
+  - Focal depth: everything from the subject to the background is fully sharp—no bokeh, no portrait mode.  
+  - Exposure: slightly overexposed on the subject’s torso, underexposed in the corners, giving a natural, imperfect look.  
+  - Shutter speed: 1/60 s, producing a slight motion blur on the subject’s hands and the background.
+
+- **Composition & Framing**  
+  The shot is off‑center, with the woman’s left side slightly cut off by the frame edge. The couch takes up about two‑thirds of the width, leaving a small margin on the right for the lamp and a shelf. No rule‑of‑thirds intentionality—just spontaneous framing.
+
+- **Environment**  
+  A modern living room with a tall floor lamp on the left, a wooden shelf on the back wall holding a framed photo and a skull print. The walls are a muted beige, the couch is a soft gray fabric, and a blue pillow rests against the back. The time of day is late afternoon, with natural light coming from the west, creating warm highlights and subtle shadows.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, a tiny wobble in the focus, and a partial crop that cuts off the top of the lamp shade. The subject’s hair has a slight frizz, her skin shows natural texture, and there are faint specks of dust in the air caught by the lens.
+
+- **Post‑Processing**  
+  No filters or color grading—just the raw image data from the camera. A minimal auto‑HDR tweak is applied only to the exposure, preserving the dynamic range.
+
+**Prompt Summary**  
+"Capture a candid, unposed photo of a bare young woman with a high ponytail sitting on a gray sofa in a cozy living room. Use a 24‑mm wide‑angle lens, handheld, with slight motion blur and a small overexposure on the subject’s torso. The scene should include a floor lamp and a shelf with a framed photo and skull print in the background. Keep everything fully sharp, no bokeh, and frame the shot off‑center for a natural, spontaneous look."

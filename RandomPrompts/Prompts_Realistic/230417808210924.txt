@@ -1,0 +1,24 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A tall, athletic woman with wet hair, standing mid‑step in a shallow, sunlit lake. She wears a black bikini bottom with white trim; her torso is bare, and a few water droplets cling to her skin. Her hands hang loosely at her sides, slightly bent, as if she just lifted her foot from the water. Her gaze is direct, almost indifferent, giving a candid, unposed feel.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. Slight tilt and off‑center framing; partial crop that cuts off a bit of the background on the right side. No rule‑of‑thirds intentionality — accidental composition. Slight motion blur from handheld instability, natural freeze or slight blur.
+
+- **Environment**  
+  Location: A calm lake at mid‑afternoon, with a faint line of distant trees and a small dock visible in the background. Weather: bright, hazy sunlight with a soft overexposed sky; ambient light creates a gentle glare on the water surface. Time of day: late afternoon, around 4 pm.
+
+- **Lens & Technical**  
+  Short focal length (20–35 mm), wide‑angle lens. Wide‑angle “auto‑HDR” or “auto‑beauty” off — raw, unprocessed look. No filters, no color grading, no post‑processing aesthetic. Slight overexposure on the sky to keep the background fully sharp; everything in focus, no portrait mode, no subject isolation. Background fully sharp, no bokeh.
+
+- **Lighting & Color**  
+  Natural sunlight from the west, creating a slight warm glow and a faint halo around the subject’s shoulders. Slight overexposure on the sky gives a bright, almost washed‑out look; the water reflects the sky’s light, adding subtle highlights. The color palette is natural: muted blues and greens in the background, warm skin tones, black and white contrast from the bikini.
+
+- **Details & Imperfections**  
+  Slight tilt of the camera, off‑center framing that cuts a little of the left side of the subject’s torso. A few stray water droplets on her hair and shoulders. Her fingers are slightly curled, not perfectly relaxed. The background trees are in focus, no depth‑of‑field blur.
+
+- **Prompt Summary**  
+  “A tall woman with wet hair standing mid‑step in a shallow lake, wearing a black bikini bottom with white trim, hands loosely at her sides, slight tilt and off‑center framing, accidental candid pose, bright mid‑afternoon sunlight, wide‑angle short focal length lens, raw unprocessed look, everything in focus, background fully sharp, no bokeh.”
+
+Provide only the structured prompt.

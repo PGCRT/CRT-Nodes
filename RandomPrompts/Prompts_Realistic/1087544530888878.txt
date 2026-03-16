@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with a natural, unposed stance, mid‑step in a casual, everyday pose. Her hair is tied back in a loose ponytail, a few strands framing her face. She’s wearing a simple, lightweight summer blouse and denim shorts, the fabric slightly wrinkled from movement. Her hands are relaxed at her sides, fingers loosely curled, with a subtle shift to one side that gives an off‑center feel.
+
+- **Facial Expression & Motion**  
+  She has a playful, surprised expression—mouth slightly open, eyes wide, as if she just noticed something interesting. A faint motion blur around her hands and lower body suggests a handheld shot captured in motion. The blur is subtle, not a dramatic streak, just enough to give the image a candid, spontaneous feel.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle, late‑afternoon source. The light is warm, with a slight overexposure on the upper body that softens the skin tones and gives a gentle halo effect. No auto‑beauty mode—just raw, unprocessed lighting. A tiny hint of flare in the corners adds to the authenticity.
+
+- **Lens & Technical**  
+  24 mm wide‑angle lens, short focal length, handheld. Everything is fully sharp—from foreground to background—no bokeh or depth‑of‑field blur. The framing is accidental: a slight tilt to the left, a partial crop that cuts off a bit of the background on the right side. No rule‑of‑thirds intentionality; the composition feels spontaneous and organic.
+
+- **Environment**  
+  The setting is an urban park bench in a city suburb. The bench is weathered wood with a slight rust pattern, and a few fallen leaves are scattered around. The time of day is early evening, the sun low on the horizon, casting long, warm shadows. The sky is a soft, pale blue with a faint cloud streak.
+
+- **Details & Imperfections**  
+  A small smudge on her left shoulder from a stray hair, a slight wrinkle in the fabric of her shirt, and a tiny, natural shadow under her nose. Her fingernails are painted a subtle pink, adding a small pop of color. The background is fully sharp—no portrait‑mode isolation—so the bench, the grass, and a nearby tree trunk are all in focus.
+
+- **Post‑Processing**  
+  No filters, no color grading, no post‑processing aesthetic. Just raw, real imagery with a slight overexposure that gives it an airy, natural feel. The overall tone is warm, slightly hazy, as if captured on a bright, humid afternoon.
+
+- **Final Prompt Summary**  
+  “A young woman in a casual summer outfit stands mid‑step on a weathered park bench, her face expressive and hands relaxed, captured with a 24 mm wide‑angle lens in early evening daylight. The image has a slight motion blur around her lower body, accidental off‑center framing, and a fully sharp background, all rendered in raw, unprocessed detail with a subtle overexposure that conveys a candid, spontaneous vibe.”

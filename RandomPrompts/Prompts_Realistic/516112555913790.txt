@@ -1,0 +1,25 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, dark brown hair, wearing pink cotton shorts and no top, sitting on a bed with pink sheets. Her hands are gently placed over her chest, fingers slightly curled, as if she’s adjusting her shirt or protecting herself from the cool air. She looks directly at the camera with a soft, confident expression, eyes wide and bright, a hint of a smile.  
+
+- **Lighting & Exposure**  
+  Natural daylight coming from a window on the left side of the room, creating a slight overexposure on the subject’s face and upper body. The exposure is slightly uneven—warm tones dominate the foreground while the background remains softly lit. No auto‑beauty mode; the image retains raw, unprocessed texture.  
+
+- **Camera Settings**  
+  Wide‑angle lens (24 mm) with a short focal length, handheld, giving a slight motion blur around the edges. Everything is in focus—no bokeh, no depth‑of‑field blur. The focus is intentional but not overly deliberate; the composition feels spontaneous and imperfect.  
+
+- **Framing & Composition**  
+  The shot is off‑center, with the subject’s left side slightly cut off by the frame edge. The camera tilts a little to the right, capturing a candid moment as if the woman was mid‑gesture. The background shows a wall painted in a light beige tone, adorned with two framed paintings of pink flamingos and a vase of yellow sunflowers on a bedside table.  
+
+- **Environment**  
+  A cozy bedroom in the late afternoon, with warm ambient light filtering through a window. The time of day is around 4 pm, giving a golden hue to the scene. The weather outside is clear, as the sunlight is bright but not harsh.  
+
+- **Details & Imperfections**  
+  Slight tilt and partial crop create a natural, unposed feel. The subject’s hair has a few stray strands that catch the light, adding realism. The pink shorts have a visible button at the front, and the fabric shows subtle creases from her pose. The bed sheet is slightly rumpled, indicating recent movement.  
+
+- **Post‑Processing**  
+  No filters or color grading—just raw capture. A mild auto‑HDR effect is applied to balance the brightness, but the overall look remains natural and unpolished.  
+
+**Prompt Summary**  
+> “A young woman with long dark brown hair, wearing pink cotton shorts and no top, sits on a bed with pink sheets in a cozy bedroom. Her hands gently cover her chest as she looks at the camera with a soft confidence. Natural daylight from a left‑side window creates a slight overexposure on her face and upper body. Shot on a 24 mm wide‑angle lens handheld, everything is in focus with no bokeh. The frame is off‑center and slightly tilted, capturing a candid moment as the woman adjusts her shirt. Background features two flamingo paintings and a vase of sunflowers. Slight motion blur from handheld instability adds realism. No filters—raw, auto‑HDR only.”

@@ -1,0 +1,24 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy dark hair standing in a casual, unposed stance, mid‑step as if she’s just finished a conversation or is about to move. Her body is slightly angled toward the camera, with a subtle tilt that gives an accidental, handheld feel. She wears a shiny gold satin bra top and matching high‑waist skirt; the fabric reflects the ambient light with a soft gloss. Her expression is neutral but lively, eyes focused forward, lips slightly parted.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑angle source (mid‑afternoon) creates a slight overexposure on the subject’s face and upper body, giving a warm, raw look. No auto‑HDR or beauty filters—just a straightforward exposure that keeps everything in focus. The background is a plain, light‑colored wall with faint texture, fully sharp, no bokeh.
+
+- **Lens & Technical**  
+  24 mm wide‑angle lens (short focal length), handheld, 1/60 s shutter speed, f/4 aperture. Everything in focus—no portrait‑mode depth of field blur. Slight motion blur on the subject’s hair and skirt to emphasize movement.
+
+- **Environment**  
+  Location: a bright, uncluttered indoor space (e.g., a studio or a simple office) with a neutral off‑white wall. Time of day: mid‑afternoon, soft natural light. Weather: clear, no wind. The scene feels spontaneous and candid, as if captured in a casual snapshot.
+
+- **Composition**  
+  No rule‑of‑thirds intentionality—framing is accidental, with the subject slightly off‑center. The crop is partial; the top of her head and lower legs are barely within frame. Background remains fully sharp, no depth‑of‑field blur.
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, zero professional composition. Raw, unprocessed look with a hint of slight overexposure.  
+
+**Prompt:**
+```
+Candid photography of a young woman in gold satin outfit, long wavy hair, mid‑step pose, natural daylight from above, slight overexposure, 24mm wide‑angle lens, handheld shake, everything in focus, accidental off‑center framing, raw unprocessed look, plain white wall background, mid‑afternoon lighting.
+```

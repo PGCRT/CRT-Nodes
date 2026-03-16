@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair, wearing a strapless black leather dress, seated on a wooden chair in a bustling café. Her hands are clasped together on her lap, and she is looking slightly off-camera with a subtle, natural smile. The pose should feel spontaneous—mid‑gesture, as if she just finished a conversation or is about to stand.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the subject should appear unaware of the camera or caught in a natural moment. Encourage slight tilt and off‑center framing; allow partial crop so the edges are not perfectly aligned. No rule‑of‑thirds intentionality—frame it as if captured by a handheld camera in motion.
+
+- **Environment**  
+  Location: A cozy, dimly lit café with wooden furniture, exposed brick walls, and a small window that lets in warm ambient light. Time of day: late afternoon, around 5 pm, when the sun is low, creating soft, golden illumination. Weather: clear, mild, with a gentle breeze that slightly ruffles the subject’s hair. The background should show other patrons blurred but still sharp, giving a sense of activity without distracting.
+
+- **Lens & Technical**  
+  Use a short focal length wide‑angle lens (e.g., 20–35 mm). Capture everything in focus—no portrait‑mode depth‑of‑field blur; the background should be fully sharp but still have a subtle natural softness from the ambient light. Aim for slight overexposure or underexposure depending on the ambient lighting, giving a raw, unprocessed look. Apply auto‑HDR or auto‑beauty mode off—no filters, no color grading, no post‑processing aesthetic.
+
+- **Lighting & Composition**  
+  Zero studio lighting; rely solely on natural light from the window and ambient indoor illumination. The composition should feel accidental: slight tilt, off‑center framing, and a partial crop that gives an intimate, candid feel. Keep the background fully sharp, but keep the overall image in focus.
+
+- **Final Prompt**  
+  “Candid shot of a young woman with long wavy brown hair, wearing a strapless black leather dress, seated on a wooden chair in a bustling café. Her hands are clasped on her lap, she looks slightly off‑camera with a natural smile. The scene is set in late afternoon, warm golden light from a window casts soft illumination on the subject and the background patrons. Use a short focal length wide‑angle lens (20–35 mm), capture everything in focus, apply slight overexposure for a raw look. No filters or post‑processing—just a realistic, unposed, spontaneous capture with accidental tilt and off‑center framing.”

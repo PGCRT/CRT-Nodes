@@ -1,0 +1,30 @@
+**Realistic Candid Photography Prompt Framework – “Night‑Time Urban Fitness Capture”**
+
+- **Subject & Pose**  
+  A muscular woman in a black bikini, mid‑squat or lunge pose, captured in a spontaneous, unposed moment. Her hair is tied back, a few strands blowing in the wind; her right arm is bent with a clenched fist, left arm extended for balance. The shot should show subtle motion blur on the limbs to emphasize movement, while keeping the entire frame sharply in focus (wide‑angle, no portrait‑mode depth of field).
+
+- **Lighting & Exposure**  
+  Use a wide‑angle lens (e.g., 24–35 mm) at night. Capture with a slightly overexposed setting to let the ambient city lights bleed into the frame; avoid any auto‑HDR or beauty filters – keep the raw, unprocessed look. The exposure should feel natural, as if taken by hand in low‑light conditions, with no color grading or post‑processing.
+
+- **Environment**  
+  Location: a concrete rooftop parking lot at dusk/night. A dark car is parked in the background on the left; a distant city skyline glows with red and white lights. The ground is wet, reflecting the city lights and the subject’s silhouette. The time of day is late evening (around 9 pm), with ambient light fading but still bright enough for a clear shot. Weather: mild, slightly windy (indicated by hair movement).
+
+- **Lens & Technical**  
+  - Focal length: 24–35 mm (short, wide‑angle).  
+  - Aperture: f/4–f/5.6 (wide opening for sharpness).  
+  - Shutter speed: 1/60–1/100 s (to allow slight motion blur).  
+  - ISO: 800–1600 (for night clarity).  
+  - No bokeh; background fully sharp.  
+  - Handheld, slightly tilted framing – no rule‑of‑thirds intentionality; the composition should feel accidental and candid.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous – the subject appears unaware of the camera or mid‑action. Encourage imperfections: slight tilt, off‑center framing, partial crop. The shot should look like a real, raw photograph taken in a real world setting, with natural motion freeze or slight blur from handheld instability.
+
+- **Post‑Processing**  
+  Zero filters, zero color grading, zero studio lighting, zero professional composition, zero editorial tone. Keep the image raw and authentic; only minor adjustments to exposure and focus may be applied after capture.
+
+---
+
+**Prompt Summary (for a text‑to‑image model)**  
+
+> “A muscular woman in a black bikini captured mid‑squat on a concrete rooftop at night. Her hair blows in the wind, right fist clenched, left arm extended. The background shows a parked car and distant city lights; the ground is wet and reflective. Use a 24–35 mm wide‑angle lens, slightly overexposed, handheld with slight motion blur but full sharpness across the frame. No filters or post‑processing – raw, candid, spontaneous capture.”

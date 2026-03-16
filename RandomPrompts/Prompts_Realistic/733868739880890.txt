@@ -1,0 +1,22 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  *A young woman with long, straight blonde hair, wearing a black strapless top and a quilted black handbag with a gold logo, walking casually down a sunny city street. She is mid‑step, slightly turned toward the camera, with one hand on her hip and the other holding the bag strap. Her expression is natural, unposed, with a subtle smile and eyes cast upward as if she’s looking at something in the distance.*
+
+- **Motion & Focus**  
+  *Slight motion blur on the subject’s legs and the background to convey handheld movement. Everything remains fully sharp—no portrait‑mode blur. The focus is intentional on the subject, but the framing is accidental: a slight tilt and off‑center crop that gives a candid feel.*
+
+- **Lighting & Exposure**  
+  *Auto‑HDR or auto‑beauty mode turned off. The image has a raw, unprocessed look with a mild overexposure in the highlights, capturing the bright midday sun and the soft glow of the yellow umbrellas. No color grading or post‑processing filters are applied.*
+
+- **Lens & Technical**  
+  *Short focal length (≈20 mm) wide‑angle lens. No bokeh; the background is fully sharp, from the white patio chairs to the green hedge behind. The depth of field covers the entire scene—subject, background, and foreground—in one plane.*
+
+- **Environment**  
+  *A bustling outdoor café on a sunny afternoon in an urban setting. Yellow umbrellas, white tables, and a red “STOP” sign are visible in the background. A few people are seated at the café, one person is walking by, and a green hedge lines the back of the scene. The time of day is mid‑afternoon, with warm, high‑angle sunlight casting soft shadows.*
+
+- **Composition & Style**  
+  *Candid, unposed, spontaneous—subject unaware or mid‑action. Imperfections are encouraged: slight tilt, off‑center framing, partial crop. No rule‑of‑thirds intentionality—accidental framing that gives the image a natural, documentary feel. Zero studio lighting, zero professional composition, zero editorial tone.*
+
+- **Final Prompt**  
+  *“A young woman with long blonde hair, wearing a black strapless top and a quilted black handbag, walks casually down a sunny city street. She is mid‑step, slightly turned toward the camera, one hand on her hip, the other holding the bag strap. Slight motion blur on her legs and the background conveys handheld movement; everything remains fully sharp. The image has a raw, unprocessed look with mild overexposure from the bright midday sun. Shot on a short focal length wide‑angle lens (≈20 mm), no bokeh—background fully sharp from white patio chairs to green hedge. In the background, yellow umbrellas and a red STOP sign are visible; a few people sit at the café, one walks by. The scene is captured at mid‑afternoon on a sunny day. Candid, unposed, spontaneous—subject unaware or mid‑action. Imperfections encouraged: slight tilt, off‑center framing, partial crop. No rule‑of‑thirds intentionality—accidental framing. Zero studio lighting, zero professional composition, zero editorial tone.”*

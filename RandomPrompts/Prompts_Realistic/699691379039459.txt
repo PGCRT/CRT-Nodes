@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, straight brown hair, wearing a ribbed, dark‑gray, long‑sleeved V‑neck top and high‑waisted light‑blue denim jeans. She is captured mid‑step, slightly turned to her right, head tilted downward with a subtle smile, as if she’s just finished a conversation or is about to pick something up. Her left hand hangs loosely by her side, fingers relaxed. The pose is casual and unposed; she appears unaware of the camera, giving a natural candid feel.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — subject unaware or mid‑action. Slight tilt and off‑center framing, partial crop that cuts off a bit of the background on the left side. No rule‑of‑thirds intentionality; the composition is accidental, as if taken with a handheld camera in motion.
+
+- **Environment**  
+  Location: A bright, unadorned concrete wall in an urban loft or warehouse space. The wall has a faint texture of small imperfections and a slight unevenness, giving a raw, real‑world feel. Time of day: Late afternoon, with warm, soft natural light coming from the west, creating a gentle backlight that slightly overexposes the upper part of the frame. Weather: Light breeze, ambient temperature is comfortable, the ambient light is diffused but not overly bright.
+
+- **Lens & Technical**  
+  Short focal length (24‑35 mm) wide‑angle lens. Wide‑angle gives a slight distortion that enhances the candid feel. No bokeh; background is fully sharp, everything in focus. No depth‑of‑field blur, no portrait mode. Slight motion blur from handheld instability, giving a sense of movement. Auto‑HDR or auto‑beauty mode off — raw, unprocessed look. No filters, no color grading, no post‑processing aesthetic. Slight overexposure on the upper part of the image due to ambient light.
+
+- **Composition & Details**  
+  The frame captures the woman from the mid‑thigh up to the top of her head, with a small portion of the concrete wall visible above her head and a little space below her hips. The left side of the frame is slightly cut off, adding to the accidental feel. The right side shows a bit of her jeans pocket and the belt loop, giving a realistic detail. The lighting creates soft shadows on her face and clothing, emphasizing texture.
+
+- **Final Prompt**  
+  “Candid, unposed photograph of a young woman with long brown hair, wearing a dark‑gray ribbed V‑neck top and high‑waisted light‑blue jeans, captured mid‑step in a bright concrete loft at late afternoon. Use a short focal length wide‑angle lens (24‑35 mm), capture slight motion blur from handheld instability, keep background fully sharp, no filters or auto‑HDR, slight overexposure on the upper frame. Composition is accidental: slightly tilted, off‑center, partial crop on the left, no rule‑of‑thirds. All elements in focus, raw and unprocessed look.”

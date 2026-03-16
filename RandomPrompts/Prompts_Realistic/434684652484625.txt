@@ -1,0 +1,28 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with shoulder‑length blonde hair, wearing an oversized heather‑gray hooded sweatshirt and distressed beige shorts, captured mid‑laugh while holding a pen in her right hand. She is seated on a black office chair, knees bent, one leg crossed over the other, body slightly tilted to the left, creating a casual, spontaneous feel.
+
+- **Action & Motion**  
+  Slight motion blur at the fingertips and pen tip, indicating a natural, handheld snap. The blur is subtle—just enough to suggest movement but not to obscure details. The subject’s face is turned upward, eyes bright, mouth open in a joyful laugh, capturing an unposed, candid moment.
+
+- **Lighting & Exposure**  
+  Natural daylight from a high‑window above, creating a soft, slightly overexposed highlight on the subject’s forehead and a gentle lens flare near the left eye. The exposure is uneven—warm midday light with a slight haze, giving a raw, unprocessed look. No auto‑beauty or filter enhancement; the image retains the natural grain and color fidelity of a DSLR or mirrorless camera.
+
+- **Lens & Technical**  
+  Wide‑angle lens (24‑35 mm) with a short focal length, set to f/4.0, producing a fully sharp background with no bokeh. Depth of field is deep—everything from the subject to the back wall is in focus. Slight handheld shake is present, adding authenticity.
+
+- **Environment**  
+  The setting is a bright, modern office or study space. A whiteboard on the right wall displays handwritten math equations; a small stack of notebooks sits on a wooden desk. A window with blinds is visible at the top left, letting in natural light that creates a subtle lens flare. The floor is tiled, and a black office chair is partially visible beneath the subject.
+
+- **Composition & Framing**  
+  The frame is intentionally off‑center: the subject’s head is slightly above the center line, her left shoulder leans toward the right edge, and the bottom of the image cuts off just below her knees. No rule‑of‑thirds intentionality—this is a spontaneous, “in‑the‑moment” capture. The composition includes a partial crop of the whiteboard and a glimpse of a laptop on the desk, adding context without deliberate staging.
+
+- **Color & Tone**  
+  Warm, natural tones with a slight greenish tint from the window light. The color palette is muted: gray hoodie, beige shorts, whiteboard, wooden desk, and a hint of blue from the laptop. Slight overexposure on the subject’s face gives a bright, airy feel.
+
+- **Post‑Processing**  
+  No filters or heavy color grading. A minimal amount of auto‑HDR is applied to balance highlights and shadows, but the overall look remains raw and unpolished. The image retains the natural noise and grain of a camera’s sensor, preserving authenticity.
+
+- **Final Prompt Summary**  
+  “A candid, wide‑angle shot of a laughing woman in a gray hoodie and distressed beige shorts, seated on a black chair in a bright office space. She holds a pen in her right hand, slightly blurred motion at the fingertips, natural daylight from a high window creating soft overexposure and lens flare. The background shows a whiteboard with equations and a wooden desk with a laptop. Capture with a 24‑35 mm lens at f/4.0, everything in focus, slight handheld shake, off‑center framing, no rule‑of‑thirds, raw, unprocessed look with minimal auto‑HDR.”

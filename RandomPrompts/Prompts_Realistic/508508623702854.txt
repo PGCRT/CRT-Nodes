@@ -1,0 +1,24 @@
+Realistic Candid Photography Prompt Framework
+
+- **Subject & Pose**  
+  A young woman with long, wavy brown hair, wearing a black satin‑velvet pantsuit and black ankle boots, standing mid‑step on a dimly lit dance floor. Her left hand rests lightly on her hip, right arm bent at the elbow, fingers slightly curled. She’s looking directly at the camera with a subtle, confident smile. The shot should capture a faint motion blur around her hands and feet to suggest movement.
+
+- **Lighting & Exposure**  
+  Use a wide‑angle lens (24–35 mm) set to a relatively high ISO (800–1600) for a raw, unprocessed look. Slight overexposure on the upper half of the frame to keep the ambient lights bright, but avoid any color grading or filters—just natural contrast. The background should be fully sharp, no portrait‑mode blur.
+
+- **Composition & Framing**  
+  Capture a candid, spontaneous moment; the framing is intentionally off‑center and slightly tilted. The subject occupies roughly the central‑right third of the frame, but the edges are not perfectly aligned—this “accidental” composition gives the image a genuine, handheld feel. Keep everything in focus: foreground, mid‑ground, and background.
+
+- **Environment**  
+  Location: an indoor nightclub or party venue with a polished wooden floor. The time of day is late evening (around 9 pm), with ambient lighting from overhead spotlights and a soft glow from a nearby window. A few other patrons are visible in the background, blurred slightly but still sharp, creating a lively, busy atmosphere.
+
+- **Lens & Technical**  
+  Short focal length (24–35 mm) for a wide‑angle view. No bokeh—everything from the foreground to the back wall is crisp. Use a handheld shot with slight instability to add natural motion blur. Capture the scene in a single exposure, no post‑processing or auto‑beauty mode.
+
+- **Details to Emphasize**  
+  - The texture of the satin pants and the sheen of the boots.  
+  - The subtle reflection of the overhead lights on her hair.  
+  - Slight tilt of the camera that gives a dynamic angle.  
+  - Background people in casual wear, some in motion, adding depth.  
+
+Provide only the structured prompt.

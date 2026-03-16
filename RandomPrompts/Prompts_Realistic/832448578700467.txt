@@ -1,0 +1,19 @@
+**Realistic Candid Photography Prompt Framework**
+
+- **Subject & Pose**  
+  A young woman with long, wavy blonde hair standing in a lush green park, wearing a tight, long‑sleeved emerald‑green bodysuit that clings to her curves. She is mid‑step, slightly turned toward the camera, eyes closed as if feeling the rain or wind, one hand relaxed by her side. The outfit has a deep V‑neck and a small side cutout at the hip, adding a modern, casual flair.
+
+- **Capture Style**  
+  Candid, unposed, spontaneous — the woman appears unaware of the camera, caught in a natural moment. Slight tilt and off‑center framing give an accidental, handheld feel. The shot is a partial crop that does not follow the rule‑of‑thirds; the composition is intentional only in its spontaneity.
+
+- **Environment**  
+  Location: A sunlit meadow with dense green foliage behind her, a small stream or path visible in the background. Time of day: late morning, soft golden light with a slight overexposure on the face and body. Weather: light rain or drizzle adds subtle motion blur to the hair and clothing.
+
+- **Lens & Technical**  
+  Use a short focal‑length wide‑angle lens (e.g., 24‑35 mm). Everything is in focus — no bokeh or depth‑of‑field blur; the background remains sharp. No portrait‑mode subject isolation. Slight overexposure on the subject to keep the raw, unprocessed look. Auto‑HDR or auto‑beauty mode off. No filters, no color grading, no post‑processing aesthetic.
+
+- **Lighting & Exposure**  
+  Natural lighting from a high‑angle sun, creating soft highlights on the woman’s face and shoulders. Slight handheld shake gives a natural motion freeze or slight blur. The exposure is slightly warm, with a hint of ambient light flare.
+
+- **Post‑Processing**  
+  Zero studio lighting, zero professional composition, zero editorial tone. Keep it raw and authentic. No filters, no color grading, no post‑processing aesthetic — just a straightforward capture that feels like a genuine moment frozen in time.
