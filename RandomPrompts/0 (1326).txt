@@ -1,0 +1,1 @@
+A star-mapper, Lyra, on a solo deep-space charting mission, finds a star that blinks in a perfect, repeating mathematical sequence. | She decodes the blinking and realizes it's not a message, but a countdown timer. | She calculates the timer's end date and her blood runs cold: it's scheduled to hit zero in exactly 24 hours.
