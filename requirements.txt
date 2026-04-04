@@ -1,0 +1,9 @@
+opencv-contrib-python
+scipy
+ultralytics
+color-matcher
+spandrel
+pedalboard
+wordcloud
+librosa
+imageio-ffmpeg
