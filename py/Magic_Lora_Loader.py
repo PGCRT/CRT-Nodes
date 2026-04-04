@@ -135,7 +135,7 @@ def get_model_info_file_data(file: str, model_type, default=None):
 
 NODE_NAME = "Magic LoRA Loader"
 _PRESETS_FILE = None
-_MODEL_TYPES = {"Flux2Klein", "LTX2.3"}
+_MODEL_TYPES = {"Flux2Klein", "LTX2.3", "ZImageTurbo"}
 _DEFAULT_MT = "Flux2Klein"
 
 
@@ -168,7 +168,85 @@ def _key_block_weight(key: str, block_weights: dict) -> float:
         weights = block_weights.get("transformer", [])
         return float(weights[idx]) if idx < len(weights) else 1.0
 
+    m = re.search(r"(?:^|\.|\b)layers[._](\d+)[._]", key)
+    if m:
+        idx = int(m.group(1))
+        weights = block_weights.get("layers", [])
+        return float(weights[idx]) if idx < len(weights) else 1.0
+
     return 1.0
+
+
+def _compute_merged_lora(model, pre_patch_counts: dict) -> dict:
+    """Compute merged LoRA delta tensors from patches added since pre_patch_counts snapshot.
+    Returns {model_state_dict_key: 2D_delta_float32_tensor}.
+    Keys whose delta element count does not match the stored weight are silently skipped
+    (this happens with FP8-packed weights whose logical shape differs from the LoRA expectation)."""
+    import torch
+
+    # Collect actual weight shapes for validation (cheap — just metadata, no tensor copies).
+    weight_numel = {}
+    try:
+        sd = model.model_state_dict()
+        weight_numel = {k: v.numel() for k, v in sd.items()}
+    except Exception:
+        pass
+
+    merged = {}
+    all_patches = getattr(model, "patches", None) or {}
+    for key, patch_list in all_patches.items():
+        pre = pre_patch_counts.get(key, 0)
+        new_patches = patch_list[pre:]
+        if not new_patches:
+            continue
+        delta = None
+        for p in new_patches:
+            strength = float(p[0])
+            v = p[1]
+            try:
+                if hasattr(v, "name") and hasattr(v, "weights"):
+                    w = v.weights
+                    if v.name != "lora":
+                        log_node_warn(NODE_NAME, f"Unsupported adapter '{v.name}' on {key} — skipping (only standard LoRA supported).")
+                        continue
+                    mat1 = w[0].float()
+                    mat2 = w[1].float()
+                    alpha_val = w[2]
+                    mid = w[3]
+                    dora_scale = w[4]
+                    if mid is not None:
+                        log_node_warn(NODE_NAME, f"Tucker/LoCon mid weight on {key} — skipping (not supported in merge).")
+                        continue
+                    if dora_scale is not None:
+                        log_node_warn(NODE_NAME, f"DoRA scale on {key} — skipping (DoRA merge requires base weights, not supported).")
+                        continue
+                    scale = float(alpha_val) / mat2.shape[0] if alpha_val is not None else 1.0
+                    d = strength * scale * torch.mm(
+                        mat1.flatten(start_dim=1), mat2.flatten(start_dim=1)
+                    )
+                elif isinstance(v, tuple) and len(v) >= 2 and v[0] == "diff":
+                    raw = v[1][0].float()
+                    d = strength * raw.reshape(raw.shape[0], -1)
+                else:
+                    log_node_warn(NODE_NAME, f"Unknown patch format on {key} — skipping.")
+                    continue
+                delta = d if delta is None else delta + d
+            except Exception as e:
+                log_node_warn(NODE_NAME, f"merge skip {key}: {e}")
+        if delta is None:
+            continue
+        # Skip keys where the LoRA delta is incompatible with the stored weight shape.
+        # This occurs with FP8 quantized models that pack weights into a different layout.
+        if key in weight_numel and delta.numel() != weight_numel[key]:
+            log_node_warn(
+                NODE_NAME,
+                f"Skipping {key}: LoRA delta {list(delta.shape)} ({delta.numel()} el) "
+                f"does not match weight ({weight_numel[key]} el) — "
+                f"LoRA was trained for a different shape and cannot be applied to this layer.",
+            )
+            continue
+        merged[key] = delta.cpu()
+    return merged
 
 
 def _scale_new_patches(patcher, block_weights: dict, pre_counts: dict):
@@ -229,14 +307,36 @@ class MagicLoraLoader:
                     "clip": ("CLIP",),
                 },
             ),
-            "hidden": {},
+            "hidden": {"unique_id": "UNIQUE_ID", "prompt": "PROMPT"},
         }
 
-    RETURN_TYPES = ("MODEL", "CLIP")
-    RETURN_NAMES = ("MODEL", "CLIP")
+    RETURN_TYPES = ("MODEL", "CLIP", "MERGED_LORA")
+    RETURN_NAMES = ("MODEL", "CLIP", "merged_lora")
     FUNCTION = "load_loras"
 
-    def load_loras(self, model=None, clip=None, **kwargs):
+    @classmethod
+    def IS_CHANGED(cls, unique_id=None, prompt=None, **kwargs):
+        # When the merged_lora output is connected, return NaN so ComfyUI
+        # never serves a stale cached {} from a previous disconnected run.
+        if cls._merged_lora_output_is_connected(unique_id, prompt):
+            return float("nan")
+        return 0
+
+    @staticmethod
+    def _merged_lora_output_is_connected(unique_id, prompt) -> bool:
+        """Return True if output slot 2 (merged_lora) is wired to at least one node."""
+        try:
+            uid = str(unique_id)
+            for node_data in prompt.values():
+                for val in node_data.get("inputs", {}).values():
+                    if isinstance(val, list) and len(val) == 2 and str(val[0]) == uid and val[1] == 2:
+                        return True
+        except Exception:
+            pass
+        return False
+
+    def load_loras(self, model=None, clip=None, unique_id=None, prompt=None, **kwargs):
+        pre_patch_counts = {k: len(v) for k, v in (getattr(model, "patches", None) or {}).items()} if model is not None else {}
         wet = 1.0
         wet_raw = kwargs.pop("wet", None)
         if isinstance(wet_raw, dict) and wet_raw.get("__pgc_wet"):
@@ -332,7 +432,11 @@ class MagicLoraLoader:
                                 model, clip, lora, strength_model, strength_clip
                             )
 
-        return (model, clip)
+        if model is not None and self._merged_lora_output_is_connected(unique_id, prompt):
+            merged_lora = _compute_merged_lora(model, pre_patch_counts)
+        else:
+            merged_lora = {}
+        return (model, clip, merged_lora)
 
     @classmethod
     def get_enabled_loras_from_prompt_node(
@@ -381,6 +485,122 @@ class MagicLoraLoader:
                 if (wi and (w := wi["word"]))
             ]
         return trained_words
+
+
+class SaveMergedLora:
+    """Save merged LoRA deltas from Magic LoRA Loader as a single .safetensors file."""
+
+    NAME = "Save Merged LoRA"
+    CATEGORY = "CRT/LoRA"
+
+    @classmethod
+    def INPUT_TYPES(cls):
+        return {
+            "required": {
+                "merged_lora": ("MERGED_LORA",),
+                "filename": ("STRING", {"default": "merged_lora"}),
+                "save_to": (["loras folder", "output folder"],),
+                "rank": (
+                    "INT",
+                    {
+                        "default": 64,
+                        "min": 0,
+                        "max": 512,
+                        "step": 8,
+                        "tooltip": (
+                            "SVD rank for compression. "
+                            "0 = lossless diff format (larger file). "
+                            ">0 = LoRA format with SVD at this rank."
+                        ),
+                    },
+                ),
+            }
+        }
+
+    RETURN_TYPES = ("STRING",)
+    RETURN_NAMES = ("filepath",)
+    OUTPUT_NODE = True
+    FUNCTION = "save"
+
+    def save(self, merged_lora, filename, save_to, rank):
+        import torch
+        import safetensors.torch
+        from comfy.utils import ProgressBar
+
+        if not merged_lora:
+            log_node_warn(NODE_NAME, "No merged LoRA data to save.")
+            return ("",)
+
+        if save_to == "loras folder":
+            base_dir = folder_paths.get_folder_paths("loras")[0]
+        else:
+            base_dir = folder_paths.get_output_directory()
+
+        save_path = os.path.join(base_dir, f"{filename}.safetensors")
+        dir_path = os.path.dirname(save_path)
+        if dir_path:
+            os.makedirs(dir_path, exist_ok=True)
+
+        import comfy.model_management as mm
+        device = mm.get_torch_device()
+
+        total = len(merged_lora)
+        fmt = "diff" if rank == 0 else f"rank-{rank} LoRA"
+        print(f"[crt-pll] Magic Save Merged LoRA: processing {total} keys ({fmt}) on {device}...")
+        pbar = ProgressBar(total)
+
+        # Upload all deltas to GPU in one pass, run all SVDs, then pull results to CPU.
+        # This keeps the GPU saturated and avoids per-key sync stalls.
+        keys = list(merged_lora.keys())
+        lora_sd = {}
+        skipped = 0
+
+        if rank == 0:
+            for i, model_key in enumerate(keys):
+                base_key = model_key[: -len(".weight")] if model_key.endswith(".weight") else model_key
+                print(f"[crt-pll]   [{i + 1}/{total}] {model_key}")
+                lora_sd[f"{base_key}.diff"] = merged_lora[model_key].to(torch.float16)
+                pbar.update(1)
+        else:
+            # Phase 1 — upload & SVD on GPU
+            print(f"[crt-pll]   Phase 1/2: SVD on {device}...")
+            gpu_results = {}
+            for i, model_key in enumerate(keys):
+                base_key = model_key[: -len(".weight")] if model_key.endswith(".weight") else model_key
+                print(f"[crt-pll]   [{i + 1}/{total}] {model_key}")
+                try:
+                    delta = merged_lora[model_key]
+                    r = min(rank, min(delta.shape))
+                    d_gpu = delta.to(device=device, dtype=torch.float32)
+                    U, S, Vh = torch.linalg.svd(d_gpu, full_matrices=False)
+                    gpu_results[base_key] = (
+                        (U[:, :r] * S[:r]).contiguous(),
+                        Vh[:r, :].contiguous(),
+                        r,
+                    )
+                    del d_gpu, U, S, Vh
+                except Exception as e:
+                    log_node_warn(NODE_NAME, f"SVD failed for {model_key}: {e}")
+                    skipped += 1
+                pbar.update(1)
+
+            # Phase 2 — move results to CPU fp16 (one transfer, GPU already idle)
+            print(f"[crt-pll]   Phase 2/2: transferring {len(gpu_results)} tensors to CPU...")
+            for base_key, (up, down, r) in gpu_results.items():
+                lora_sd[f"{base_key}.lora_up.weight"] = up.to(device="cpu", dtype=torch.float16)
+                lora_sd[f"{base_key}.lora_down.weight"] = down.to(device="cpu", dtype=torch.float16)
+                lora_sd[f"{base_key}.alpha"] = torch.tensor(float(r))
+            del gpu_results
+
+        if not lora_sd:
+            log_node_warn(NODE_NAME, "Merged LoRA is empty after processing, nothing saved.")
+            return ("",)
+
+        print(f"[crt-pll]   Writing {save_path} ...")
+        safetensors.torch.save_file(lora_sd, save_path)
+        keys_saved = total - skipped
+        print(f"[crt-pll] Done — saved {keys_saved}/{total} keys → {save_path}")
+        return (save_path,)
 
 
 def _load_presets_raw():
@@ -441,6 +661,11 @@ _ARCH = {
                 r"(?:diffusion_model[._])?transformer_blocks[._](\d+)[._]",
                 48,
             ),
+        ],
+    },
+    "ZImageTurbo": {
+        "block_types": [
+            ("layers", r"layers[._](\d+)[._]", 30),
         ],
     },
 }

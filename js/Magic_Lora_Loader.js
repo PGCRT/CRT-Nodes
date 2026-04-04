@@ -316,12 +316,93 @@ class RgthreeLoraInfoDialog extends EventTarget {
   show() { LORA_INFO_SERVICE.getInfo(this.loraName, true).then((info) => { if (info) console.log(info); }); return this; }
 }
 function showLoraChooser(event, callback, currentValue, loras) {
-  const options = ["None", ...loras].map((name) => ({ content: name, value: name }));
-  new LiteGraph.ContextMenu(options, {
-    event: rgthree.lastCanvasMouseEvent || event,
-    title: "Choose a lora",
-    callback: (value) => callback(value?.value ?? value?.content ?? value),
+  const existing = document.getElementById("pgc-lora-picker");
+  if (existing) existing.remove();
+
+  const ev = rgthree.lastCanvasMouseEvent || event;
+  const originX = ev?.clientX ?? 200;
+  const originY = ev?.clientY ?? 200;
+
+  const overlay = document.createElement("div");
+  overlay.id = "pgc-lora-picker";
+
+  const search = document.createElement("input");
+  search.type = "text";
+  search.className = "pgc-lora-picker-search";
+  search.placeholder = "Search…";
+
+  const ul = document.createElement("ul");
+  ul.className = "pgc-lora-picker-list";
+
+  function renderList(filter) {
+    ul.innerHTML = "";
+    const q = filter.toLowerCase();
+    const filtered = q ? loras.filter((n) => n.toLowerCase().includes(q)) : loras;
+    for (const name of filtered) {
+      const li = document.createElement("li");
+      li.className = "pgc-lora-picker-item" + (name === currentValue ? " active" : "");
+      li.tabIndex = -1;
+      const _esc = (s) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+      const _sep = name.search(/[/\\][^/\\]*$/);
+      li.innerHTML = _sep === -1
+        ? _esc(name)
+        : `<span class="pgc-lora-picker-folder">${_esc(name.slice(0, _sep + 1))}</span>${_esc(name.slice(_sep + 1))}`;
+      li.title = name;
+      li.addEventListener("click", () => { overlay.remove(); callback(name); });
+      ul.appendChild(li);
+    }
+    if (!filtered.length) {
+      const li = document.createElement("li");
+      li.className = "pgc-lora-picker-empty";
+      li.textContent = "No results";
+      ul.appendChild(li);
+    }
+  }
+
+  search.addEventListener("input", () => renderList(search.value));
+  search.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") { overlay.remove(); return; }
+    if (e.key === "ArrowDown") {
+      e.preventDefault();
+      ul.querySelector(".pgc-lora-picker-item")?.focus();
+    }
   });
+  ul.addEventListener("keydown", (e) => {
+    const items = [...ul.querySelectorAll(".pgc-lora-picker-item")];
+    const idx = items.indexOf(document.activeElement);
+    if (e.key === "ArrowDown") { e.preventDefault(); items[Math.min(idx + 1, items.length - 1)]?.focus(); }
+    else if (e.key === "ArrowUp") { e.preventDefault(); idx <= 0 ? search.focus() : items[idx - 1]?.focus(); }
+    else if (e.key === "Enter" && idx >= 0) { items[idx].click(); }
+    else if (e.key === "Escape") { overlay.remove(); }
+  });
+
+  overlay.appendChild(search);
+  overlay.appendChild(ul);
+  document.body.appendChild(overlay);
+
+  const pickerW = 300;
+  const pickerMaxH = 340;
+  const vw = window.innerWidth, vh = window.innerHeight;
+  let left = originX, top = originY + 6;
+  if (left + pickerW > vw - 8) left = vw - pickerW - 8;
+  if (top + pickerMaxH > vh - 8) top = Math.max(8, originY - pickerMaxH - 6);
+  overlay.style.left = left + "px";
+  overlay.style.top = top + "px";
+
+  renderList("");
+
+  const onOutside = (e) => {
+    if (!overlay.contains(e.target)) {
+      overlay.remove();
+      document.removeEventListener("pointerdown", onOutside, true);
+      document.removeEventListener("mousedown", onOutside, true);
+    }
+  };
+  setTimeout(() => {
+    document.addEventListener("pointerdown", onOutside, true);
+    document.addEventListener("mousedown", onOutside, true);
+  }, 0);
+  search.focus();
 }
 
 // ---------------------------------------------------------------------------
@@ -349,7 +430,7 @@ const _NW = 38;
 const WET_WIDGET_TOTAL = _AW + _IM + _NW + _IM + _AW;
 
 // Supported model types and their block architectures
-const MODEL_TYPES = ["Flux2Klein", "LTX2.3"];
+const MODEL_TYPES = ["Flux2Klein", "LTX2.3", "ZImageTurbo"];
 const BLOCK_CONFIGS = {
   "Flux2Klein": [
     { key: "double",      label: "Double Blocks (0–7)",        count: 8  },
@@ -357,6 +438,9 @@ const BLOCK_CONFIGS = {
   ],
   "LTX2.3": [
     { key: "transformer", label: "Transformer Blocks (0–47)",  count: 48 },
+  ],
+  "ZImageTurbo": [
+    { key: "layers",      label: "Layers (0–29)",              count: 30 },
   ],
 };
 
@@ -622,6 +706,44 @@ function _injectStyles() {
     .pgc-heat-fill { position: absolute; bottom: 0; left: 0; right: 0; transition: height 0.18s, background-color 0.18s; }
     .pgc-heat-val  { display: block; font-size: 8px; color: rgba(255,255,255,0.55); line-height: 1; }
     .pgc-heat-note { font-size: 10px; color: rgba(255,255,255,0.3); text-align: center; padding: 4px 0 2px; font-style: italic; }
+
+    /* ---- LoRA searchable picker ---- */
+    #pgc-lora-picker {
+      position: fixed; z-index: 10000;
+      background: #1a1825;
+      border: 1px solid rgba(124,107,255,0.5);
+      border-radius: 7px;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.7);
+      display: flex; flex-direction: column;
+      width: 300px; overflow: hidden;
+      font-family: sans-serif;
+    }
+    .pgc-lora-picker-search {
+      padding: 7px 10px; border: none;
+      border-bottom: 1px solid rgba(124,107,255,0.25);
+      background: rgba(0,0,0,0.5); color: #fff;
+      font-size: 12px; outline: none; flex-shrink: 0;
+    }
+    .pgc-lora-picker-search::placeholder { color: rgba(255,255,255,0.3); }
+    .pgc-lora-picker-search:focus { border-bottom-color: #7c6bff; }
+    .pgc-lora-picker-list {
+      list-style: none; margin: 0; padding: 4px 0;
+      overflow-y: auto; max-height: 320px;
+    }
+    .pgc-lora-picker-item {
+      padding: 5px 10px; cursor: pointer;
+      font-size: 12px; color: #ccc;
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+      outline: none;
+    }
+    .pgc-lora-picker-item:hover,
+    .pgc-lora-picker-item:focus { background: rgba(124,107,255,0.25); color: #fff; }
+    .pgc-lora-picker-item.active { color: #a89aff; font-weight: 600; }
+    .pgc-lora-picker-empty {
+      padding: 8px 10px; font-size: 11px;
+      color: rgba(255,255,255,0.3); font-style: italic;
+    }
+    .pgc-lora-picker-folder { color: #4cff6e; }
   `;
   document.head.appendChild(s);
 }
@@ -1975,9 +2097,12 @@ class MagicLoraLoaderWidget extends RgthreeBaseWidget {
 
   onToggleDown(event, pos, node) { this.value.on = !this.value.on; this.cancelMouseDown(); return true; }
   onLoraClick(event, pos, node) {
-    showLoraChooser(event, (value) => {
-      if (typeof value === "string") { this.value.lora = value; this.loraInfo = null; this.getLoraInfo(); }
-      node.setDirtyCanvas(true, true);
+    rgthreeApi.getLoras().then((lorasDetails) => {
+      const loras = lorasDetails.map((l) => l.file);
+      showLoraChooser(event, (value) => {
+        if (typeof value === "string") { this.value.lora = value; this.loraInfo = null; this.getLoraInfo(); }
+        node.setDirtyCanvas(true, true);
+      }, this.value.lora, loras);
     });
     this.cancelMouseDown();
   }

@@ -1,7 +1,7 @@
 """
 @author: CRT
 @title: CRT-Nodes
-@version: 2.2.4
+@version: 2.2.5
 @project: "https://github.com/PGCRT/CRT-Nodes",
 @description: Set of nodes for ComfyUI
 https://discord.gg/8wYS9MBQqp
@@ -124,6 +124,7 @@ if "CRT_NODES_INITIALIZED" not in globals():
         print(f"[CRT-Nodes] Warning: Tiny Flux2 VAE nodes unavailable: {e}")
     SaveImageBase64 = None
     MagicLoraLoader = None
+    SaveMergedLora = None
     _crt_pll_setup_routes = None
     try:
         from .py.Save_Image_Base64 import SaveImageBase64
@@ -132,6 +133,7 @@ if "CRT_NODES_INITIALIZED" not in globals():
     try:
         from .py.Magic_Lora_Loader import (
             MagicLoraLoader,
+            SaveMergedLora,
             setup_routes as _crt_pll_setup_routes,
         )
     except Exception as e:
@@ -356,6 +358,10 @@ if SaveImageBase64 is not None:
 if MagicLoraLoader is not None:
     NODE_CLASS_MAPPINGS["Magic LoRA Loader"] = MagicLoraLoader
     NODE_DISPLAY_NAME_MAPPINGS["Magic LoRA Loader"] = "Magic LoRA Loader (CRT)"
+
+if SaveMergedLora is not None:
+    NODE_CLASS_MAPPINGS["Magic Save Merged LoRA"] = SaveMergedLora
+    NODE_DISPLAY_NAME_MAPPINGS["Magic Save Merged LoRA"] = "Magic Save Merged LoRA (CRT)"
 
 if globals().get("_tiny_flux2_vae_available", False):
     NODE_CLASS_MAPPINGS.update(
