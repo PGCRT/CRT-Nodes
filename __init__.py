@@ -1,7 +1,7 @@
 """
 @author: CRT
 @title: CRT-Nodes
-@version: 2.2.5
+@version: 2.2.6
 @project: "https://github.com/PGCRT/CRT-Nodes",
 @description: Set of nodes for ComfyUI
 https://discord.gg/8wYS9MBQqp
@@ -9,6 +9,10 @@ https://discord.gg/8wYS9MBQqp
 
 import folder_paths
 import os
+import sys
+
+sys.modules["crt_nodes"] = sys.modules[__name__]
+__package__ = "crt_nodes"
 
 if "CRT_NODES_INITIALIZED" not in globals():
     globals()["CRT_NODES_INITIALIZED"] = True
