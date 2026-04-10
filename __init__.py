@@ -1,7 +1,7 @@
 """
 @author: CRT
 @title: CRT-Nodes
-@version: 2.2.6
+@version: 2.2.7
 @project: "https://github.com/PGCRT/CRT-Nodes",
 @description: Set of nodes for ComfyUI
 https://discord.gg/8wYS9MBQqp
@@ -114,6 +114,8 @@ if "CRT_NODES_INITIALIZED" not in globals():
     from .py.Save_Jpeg_Websocket import SaveJpegWebsocket
     from .py.Seamless_Tile import Flux2KleinSeamlessTile
     from .py.Tile_Checker import ImageTileChecker
+    from .py.Scale_Latent_To_Megapixels import ScaleLatentToMegapixels
+    from .py.Resolution_By_Side import ResolutionBySide
 
     try:
         from .py.Tiny_Flux2_VAE import (
@@ -260,6 +262,8 @@ NODE_CLASS_MAPPINGS = {
     "SaveJpegWebsocket": SaveJpegWebsocket,
     "Flux2KleinSeamlessTile": Flux2KleinSeamlessTile,
     "ImageTileChecker": ImageTileChecker,
+    "ScaleLatentToMegapixels": ScaleLatentToMegapixels,
+    "ResolutionBySide": ResolutionBySide,
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
@@ -353,6 +357,8 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "SaveJpegWebsocket": "Save JPEG Websocket (CRT)",
     "Flux2KleinSeamlessTile": "Flux2Klein Seamless Tile (CRT)",
     "ImageTileChecker": "Image Tile Checker (CRT)",
+    "ScaleLatentToMegapixels": "Scale Latent To Megapixels (CRT)",
+    "ResolutionBySide": "Resolution By Side (CRT)",
 }
 
 if SaveImageBase64 is not None:
