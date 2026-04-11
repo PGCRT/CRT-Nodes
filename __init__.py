@@ -1,7 +1,7 @@
 """
 @author: CRT
 @title: CRT-Nodes
-@version: 2.2.7
+@version: 2.2.8
 @project: "https://github.com/PGCRT/CRT-Nodes",
 @description: Set of nodes for ComfyUI
 https://discord.gg/8wYS9MBQqp
@@ -41,6 +41,9 @@ if "CRT_NODES_INITIALIZED" not in globals():
     from .py.Pony_Upscale_Sampler_With_Injection import PonyUpscaleSamplerWithInjection
     from .py.Pony_Face_Enhancement_Pipeline_With_Injection import (
         PonyFaceEnhancementPipelineWithInjection as FaceEnhancementWithInjection,
+    )
+    from .py.SEGS_Enhancer_Multi import (
+        FaceEnhancementWithInjectionSEGS,
     )
     from .py.Sampler_Scheduler_Selector import SamplerSchedulerSelector
     from .py.Sampler_Scheduler_Crawler import SamplerSchedulerCrawler
@@ -190,6 +193,7 @@ NODE_CLASS_MAPPINGS = {
     "FluxControlnetSamplerWithInjection": FluxControlnetSamplerWithInjection,
     "PonyUpscaleSamplerWithInjection": PonyUpscaleSamplerWithInjection,
     "FaceEnhancementWithInjection": FaceEnhancementWithInjection,
+    "FaceEnhancementWithInjectionSEGS": FaceEnhancementWithInjectionSEGS,
     "SamplerSchedulerSelector": SamplerSchedulerSelector,
     "SamplerSchedulerCrawler": SamplerSchedulerCrawler,
     "Resolution": Resolution,
@@ -285,6 +289,7 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "FluxControlnetSamplerWithInjection": "Flux Controlnet Sampler with Injection (CRT)",
     "PonyUpscaleSamplerWithInjection": "Pony Upscale Sampler with Injection & Tiling (CRT)",
     "FaceEnhancementWithInjection": "Face Enhancement with Injection (CRT)",
+    "FaceEnhancementWithInjectionSEGS": "SEGS Enhancer (Multi)",
     "SamplerSchedulerSelector": "Sampler & Scheduler Selector (CRT)",
     "SamplerSchedulerCrawler": "Sampler & Scheduler Crawler (CRT)",
     "Resolution": "Resolution (CRT)",
@@ -371,7 +376,9 @@ if MagicLoraLoader is not None:
 
 if SaveMergedLora is not None:
     NODE_CLASS_MAPPINGS["Magic Save Merged LoRA"] = SaveMergedLora
-    NODE_DISPLAY_NAME_MAPPINGS["Magic Save Merged LoRA"] = "Magic Save Merged LoRA (CRT)"
+    NODE_DISPLAY_NAME_MAPPINGS["Magic Save Merged LoRA"] = (
+        "Magic Save Merged LoRA (CRT)"
+    )
 
 if globals().get("_tiny_flux2_vae_available", False):
     NODE_CLASS_MAPPINGS.update(
