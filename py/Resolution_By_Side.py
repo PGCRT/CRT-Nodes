@@ -1,4 +1,6 @@
 import math
+import torch
+import comfy.model_management
 
 
 class ResolutionBySide:
@@ -10,7 +12,11 @@ class ResolutionBySide:
                     ["Shorter Side", "Longer Side"],
                     {"default": "Longer Side"},
                 ),
-                "side_pixels": ("INT", {"default": 1024, "min": 64, "max": 16384, "step": 1}),
+                "side_pixels": (
+                    "INT",
+                    {"default": 1024, "min": 64, "max": 16384, "step": 1},
+                ),
+                "latent_channels": (["4", "16"], {"default": "4"}),
                 "aspect_ratio": (
                     [
                         "1:1 (Square)",
@@ -36,16 +42,21 @@ class ResolutionBySide:
                     ],
                     {"default": "3:2 (Landscape)"},
                 ),
-                "divisible_by": ("INT", {"default": 8, "min": 1, "max": 256, "step": 1}),
+                "divisible_by": (
+                    "INT",
+                    {"default": 8, "min": 1, "max": 256, "step": 1},
+                ),
             }
         }
 
-    RETURN_TYPES = ("INT", "INT", "FLOAT")
-    RETURN_NAMES = ("width", "height", "megapixels")
+    RETURN_TYPES = ("INT", "INT", "LATENT")
+    RETURN_NAMES = ("width", "height", "latent")
     FUNCTION = "calculate_dimensions"
     CATEGORY = "CRT/Utils/Logic & Values"
 
-    def calculate_dimensions(self, side_mode, side_pixels, aspect_ratio, divisible_by):
+    def calculate_dimensions(
+        self, side_mode, side_pixels, latent_channels, aspect_ratio, divisible_by
+    ):
         ratio_str = aspect_ratio.split(" ")[0]
 
         try:
@@ -77,15 +88,28 @@ class ResolutionBySide:
                 raw_width = side_pixels * w_ratio / h_ratio
 
         if divisible_by > 1:
-            final_width = max(divisible_by, round(raw_width / divisible_by) * divisible_by)
-            final_height = max(divisible_by, round(raw_height / divisible_by) * divisible_by)
+            final_width = max(
+                divisible_by, round(raw_width / divisible_by) * divisible_by
+            )
+            final_height = max(
+                divisible_by, round(raw_height / divisible_by) * divisible_by
+            )
         else:
             final_width = max(1, round(raw_width))
             final_height = max(1, round(raw_height))
+        channels = int(latent_channels)
 
-        megapixels = round(final_width * final_height / 1_000_000, 3)
+        latent = torch.zeros(
+            [1, channels, final_height // 8, final_width // 8],
+            device=comfy.model_management.intermediate_device(),
+            dtype=comfy.model_management.intermediate_dtype(),
+        )
 
-        return (final_width, final_height, megapixels)
+        return (
+            final_width,
+            final_height,
+            {"samples": latent, "downscale_ratio_spacial": 8},
+        )
 
 
 NODE_CLASS_MAPPINGS = {

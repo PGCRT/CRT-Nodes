@@ -1,4 +1,5 @@
 import torch
+import comfy.model_management
 
 
 class CRT_DynamicPromptScheduler:
@@ -24,15 +25,27 @@ class CRT_DynamicPromptScheduler:
     CATEGORY = "CRT/Conditioning"
 
     def schedule(self, clip, **kwargs):
+        # Ensure CLIP weights are materialized on a real device
+        # before tokenization/encoding to avoid meta-tensor copy errors.
+        if hasattr(clip, "patcher"):
+            try:
+                comfy.model_management.load_models_gpu(
+                    [clip.patcher], force_full_load=True
+                )
+            except Exception:
+                comfy.model_management.load_model_gpu(clip.patcher)
+
         prompt_image_pairs = []
 
         # Sort keys to ensure deterministic order based on prompt ID
-        prompt_keys = sorted([key for key in kwargs.keys() if key.startswith('prompt_')])
+        prompt_keys = sorted(
+            [key for key in kwargs.keys() if key.startswith("prompt_")]
+        )
 
         for prompt_key in prompt_keys:
             prompt_value = kwargs.get(prompt_key)
-            prompt_id = prompt_key.split('_')[1]
-            image_key = f'image_{prompt_id}'
+            prompt_id = prompt_key.split("_")[1]
+            image_key = f"image_{prompt_id}"
             image_value = kwargs.get(image_key)
 
             if isinstance(prompt_value, str) and prompt_value.strip():
@@ -49,7 +62,15 @@ class CRT_DynamicPromptScheduler:
 
         for idx, (prompt, image) in enumerate(prompt_image_pairs):
             tokens = clip.tokenize(prompt)
-            cond, pooled = clip.encode_from_tokens(tokens, return_pooled=True)
+            try:
+                cond, pooled = clip.encode_from_tokens(tokens, return_pooled=True)
+            except NotImplementedError as e:
+                if "meta tensor" in str(e):
+                    raise ValueError(
+                        "Dynamic Prompt Scheduler: connected CLIP has missing/meta weights. "
+                        "Reconnect a valid CLIP/Text Encoder checkpoint (logs often show 'clip missing: ...')."
+                    ) from e
+                raise
 
             cond_list.append(cond)
 
@@ -58,7 +79,9 @@ class CRT_DynamicPromptScheduler:
                 # Create zero tensor if CLIP didn't return one
                 # cond shape: [Batch, Seq, Dim]. We want [Batch, Dim]
                 dim = cond.shape[-1]
-                pooled = torch.zeros(cond.shape[0], dim, device=cond.device, dtype=cond.dtype)
+                pooled = torch.zeros(
+                    cond.shape[0], dim, device=cond.device, dtype=cond.dtype
+                )
 
             pooled_list.append(pooled)
 
@@ -67,7 +90,9 @@ class CRT_DynamicPromptScheduler:
                 if image.shape[0] > 0:
                     image_list.append(image[0:1])
                 else:
-                    blank = torch.zeros((1, 64, 64, 3), dtype=image.dtype, device=image.device)
+                    blank = torch.zeros(
+                        (1, 64, 64, 3), dtype=image.dtype, device=image.device
+                    )
                     image_list.append(blank)
             else:
                 # Default blank image if missing

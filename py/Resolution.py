@@ -1,4 +1,6 @@
 import math
+import torch
+import comfy.model_management
 
 
 class Resolution:
@@ -6,7 +8,11 @@ class Resolution:
     def INPUT_TYPES(cls):
         return {
             "required": {
-                "megapixels": ("FLOAT", {"default": 1.0, "min": 0.1, "max": 32.0, "step": 0.1}),
+                "megapixels": (
+                    "FLOAT",
+                    {"default": 1.0, "min": 0.1, "max": 32.0, "step": 0.1},
+                ),
+                "latent_channels": (["4", "16"], {"default": "4"}),
                 "aspect_ratio": (
                     [
                         "1:1 (Square)",
@@ -32,20 +38,25 @@ class Resolution:
                     ],
                     {"default": "3:2 (Landscape)"},
                 ),
-                "divisible_by": ("INT", {"default": 8, "min": 1, "max": 256, "step": 1}),
+                "divisible_by": (
+                    "INT",
+                    {"default": 8, "min": 1, "max": 256, "step": 1},
+                ),
             }
         }
 
-    RETURN_TYPES = ("INT", "INT", "INT")
-    RETURN_NAMES = ("width", "height", "megapixels")
+    RETURN_TYPES = ("INT", "INT", "LATENT")
+    RETURN_NAMES = ("width", "height", "latent")
     FUNCTION = "calculate_dimensions"
     CATEGORY = "CRT/Utils/Logic & Values"
 
-    def calculate_dimensions(self, megapixels, aspect_ratio, divisible_by):
-        ratio_str = aspect_ratio.split(' ')[0]
+    def calculate_dimensions(
+        self, megapixels, latent_channels, aspect_ratio, divisible_by
+    ):
+        ratio_str = aspect_ratio.split(" ")[0]
 
         try:
-            width_ratio, height_ratio = map(int, ratio_str.split(':'))
+            width_ratio, height_ratio = map(int, ratio_str.split(":"))
         except ValueError:
             width_ratio, height_ratio = 1, 1
 
@@ -64,8 +75,19 @@ class Resolution:
 
         final_width = int(quantized_width)
         final_height = int(quantized_height)
+        channels = int(latent_channels)
 
-        return (final_width, final_height, megapixels)
+        latent = torch.zeros(
+            [1, channels, final_height // 8, final_width // 8],
+            device=comfy.model_management.intermediate_device(),
+            dtype=comfy.model_management.intermediate_dtype(),
+        )
+
+        return (
+            final_width,
+            final_height,
+            {"samples": latent, "downscale_ratio_spacial": 8},
+        )
 
 
 NODE_CLASS_MAPPINGS = {

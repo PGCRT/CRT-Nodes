@@ -319,6 +319,9 @@ function showLoraChooser(event, callback, currentValue, loras) {
   const existing = document.getElementById("pgc-lora-picker");
   if (existing) existing.remove();
 
+  // Only show .safetensors files
+  loras = loras.filter((n) => n.toLowerCase().endsWith(".safetensors"));
+
   const ev = rgthree.lastCanvasMouseEvent || event;
   const originX = ev?.clientX ?? 200;
   const originY = ev?.clientY ?? 200;
@@ -380,9 +383,13 @@ function showLoraChooser(event, callback, currentValue, loras) {
   overlay.appendChild(ul);
   document.body.appendChild(overlay);
 
-  const pickerW = 300;
   const pickerMaxH = 340;
   const vw = window.innerWidth, vh = window.innerHeight;
+  const _measureCtx = document.createElement("canvas").getContext("2d");
+  _measureCtx.font = "12px sans-serif";
+  const _longestPx = loras.reduce((max, n) => Math.max(max, _measureCtx.measureText(n).width), 0);
+  const pickerW = Math.min(Math.max(300, Math.ceil(_longestPx) + 24), vw - 16);
+  overlay.style.width = pickerW + "px";
   let left = originX, top = originY + 6;
   if (left + pickerW > vw - 8) left = vw - pickerW - 8;
   if (top + pickerMaxH > vh - 8) top = Math.max(8, originY - pickerMaxH - 6);
@@ -430,7 +437,7 @@ const _NW = 38;
 const WET_WIDGET_TOTAL = _AW + _IM + _NW + _IM + _AW;
 
 // Supported model types and their block architectures
-const MODEL_TYPES = ["Flux2Klein", "LTX2.3", "ZImageTurbo"];
+const MODEL_TYPES = ["Flux2Klein", "LTX2.3", "ZImageTurbo", "WAN2.2"];
 const BLOCK_CONFIGS = {
   "Flux2Klein": [
     { key: "double",      label: "Double Blocks (0–7)",        count: 8  },
@@ -441,6 +448,9 @@ const BLOCK_CONFIGS = {
   ],
   "ZImageTurbo": [
     { key: "layers",      label: "Layers (0–29)",              count: 30 },
+  ],
+  "WAN2.2": [
+    { key: "blocks",      label: "Blocks (0–39)",              count: 40 },
   ],
 };
 
@@ -525,6 +535,9 @@ function _injectStyles() {
     .pgc-pll-btn-save:hover { color: #a2f0b0; }
     .pgc-pll-btn-del  { color: #d88f7f; padding: 2px 6px; }
     .pgc-pll-btn-del:hover { color: #f0a89a; }
+    .pgc-pll-btn-normalize { color: #bbb; }
+    .pgc-pll-btn-normalize.active { color: #7fd88f; border-color: rgba(127,216,143,0.5); background: rgba(60,120,70,0.35); }
+    .pgc-pll-btn-normalize.active:hover { background: rgba(80,150,90,0.5); border-color: #7fd88f; }
 
     /* ---- Block editor panel ---- */
     .pgc-blocks-panel {
@@ -715,7 +728,7 @@ function _injectStyles() {
       border-radius: 7px;
       box-shadow: 0 6px 24px rgba(0,0,0,0.7);
       display: flex; flex-direction: column;
-      width: 300px; overflow: hidden;
+      overflow: hidden;
       font-family: sans-serif;
     }
     .pgc-lora-picker-search {
@@ -733,7 +746,7 @@ function _injectStyles() {
     .pgc-lora-picker-item {
       padding: 5px 10px; cursor: pointer;
       font-size: 12px; color: #ccc;
-      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+      white-space: nowrap;
       outline: none;
     }
     .pgc-lora-picker-item:hover,
@@ -1185,15 +1198,19 @@ function _computeStackProfile(node, profiles) {
   const cfg = BLOCK_CONFIGS[modelType] || BLOCK_CONFIGS["Flux2Klein"];
   const result = {};
   for (const { key, count } of cfg) result[key] = Array(count).fill(0);
+  const wetWidget = (node.widgets || []).find(w => w.value?.__pgc_wet === true);
+  const wet = Math.max(0, Math.min(2, wetWidget?.value?.value ?? 1.0));
+  const globalBlocks = node._pllGlobalBlocksWidget?._blocks ?? {};
   const loraWidgets = (node.widgets || []).filter(w => w.name?.startsWith("lora_") && w.value?.lora);
   loraWidgets.forEach((w, i) => {
     if (!w.value?.on) return;
     const profile = profiles?.[i];  // null = automix not run yet; use uniform 1.0
-    const strength = Math.abs(w.value?.strength ?? 1.0);
+    const strength = Math.abs(w.value?.strength ?? 1.0) * wet;
     const blocks = w.value?.blocks;
     for (const { key, count } of cfg) {
       for (let b = 0; b < count; b++) {
-        result[key][b] += strength * (blocks?.[key]?.[b] ?? 1.0) * (profile ? (profile[key]?.[b] ?? 1.0) : 1.0);
+        const gb = globalBlocks[key]?.[b] ?? 1.0;
+        result[key][b] += strength * (blocks?.[key]?.[b] ?? 1.0) * (profile ? (profile[key]?.[b] ?? 1.0) : 1.0) * gb;
       }
     }
   });
@@ -1374,7 +1391,7 @@ const _stackHeatmapPanel = new PgcStackHeatmapPanel();
 async function _autoMix(node) {
   console.log("[crt-pll] Auto Mix clicked");
   const loraWidgets = (node.widgets || []).filter(
-    (w) => w.name?.startsWith("lora_") && w.value?.lora
+    (w) => w.name?.startsWith("lora_") && w.value?.lora && w.value?.on
   );
   console.log("[crt-pll] lora widgets:", loraWidgets.length);
   if (loraWidgets.length === 0) {
@@ -1420,6 +1437,26 @@ async function _autoMix(node) {
       for (const { key } of cfg) blocks[key] = (bw[key] || []).map(scale);
       loraWidgets[i].value.blocks = blocks;
     });
+
+    // Normalize AFTER reduction: scale per-block so Σ(|strength_i| × block_weight_i[b]) ≤ cap
+    if (node._pllNormalize) {
+      const cap = Math.max(0.01, node._pllNormalizeCap ?? 1.0);
+      const strengths = loraWidgets.map((w) => Math.abs(w.value.strength ?? 1.0));
+      for (const { key, count } of cfg) {
+        for (let b = 0; b < count; b++) {
+          const total = loraWidgets.reduce(
+            (sum, w, i) => sum + strengths[i] * (w.value.blocks?.[key]?.[b] ?? 1.0), 0
+          );
+          if (total > cap + 1e-9) {
+            const factor = cap / total;
+            loraWidgets.forEach((w) => {
+              if (w.value.blocks?.[key]?.[b] != null)
+                w.value.blocks[key][b] = Math.round(w.value.blocks[key][b] * factor * 1000) / 1000;
+            });
+          }
+        }
+      }
+    }
 
     node.setDirtyCanvas(true, true);
     console.log("[crt-pll] Auto Mix applied");
@@ -1524,7 +1561,35 @@ function _buildAutomixControlsDomWidget(node) {
     });
   });
 
-  container.append(label, reductionInput, stackBtn, globalBlocksBtn);
+  const normalizeBtn = document.createElement("button");
+  normalizeBtn.className = "pgc-pll-btn pgc-pll-btn-normalize";
+  normalizeBtn.textContent = "⊜ Normalize";
+  normalizeBtn.title = "When ON: after Auto Mix, scale per-block so Σ(|strength_i| × weight_i) ≤ cap";
+  const _updateNormalizeBtn = () => {
+    normalizeBtn.classList.toggle("active", !!node._pllNormalize);
+  };
+  normalizeBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    node._pllNormalize = !node._pllNormalize;
+    _updateNormalizeBtn();
+  });
+  _updateNormalizeBtn();
+
+  const normCapInput = document.createElement("input");
+  normCapInput.type  = "number";
+  normCapInput.min   = "0.01"; normCapInput.max = "10"; normCapInput.step = "0.05";
+  normCapInput.value = (node._pllNormalizeCap ?? 1.0).toFixed(2);
+  normCapInput.className = "pgc-pll-input";
+  normCapInput.style.cssText = "flex: 0 0 54px; width: 54px; text-align: center;";
+  normCapInput.title = "Normalize cap — maximum allowed combined block contribution (default 1.0)";
+  normCapInput.addEventListener("change", () => {
+    node._pllNormalizeCap = Math.max(0.01, parseFloat(normCapInput.value) || 1.0);
+    normCapInput.value = node._pllNormalizeCap.toFixed(2);
+  });
+  normCapInput.addEventListener("click",    (e) => e.stopPropagation());
+  normCapInput.addEventListener("mousedown", (e) => e.stopPropagation());
+
+  container.append(label, reductionInput, stackBtn, globalBlocksBtn, normalizeBtn, normCapInput);
   const widget = node.addDOMWidget("pgc_automix_ctrl", "div", container, { serialize: false });
   widget.computeSize = (w) => [Math.max(120, (w ?? node.size?.[0] ?? 380) - 20), 22];
   return widget;
@@ -1818,7 +1883,7 @@ class PgcGlobalBlocksWidget extends RgthreeBaseWidget {
   set value(v) {
     if (v?.__pgc_global_blocks === true) {
       const blocks = {};
-      for (const key of ["double", "single", "transformer"]) {
+      for (const key of ["double", "single", "transformer", "layers", "blocks"]) {
         if (v[key]?.length) blocks[key] = Array.from(v[key]);
       }
       if (Object.keys(blocks).length) this._blocks = blocks;
@@ -2108,7 +2173,9 @@ class MagicLoraLoaderWidget extends RgthreeBaseWidget {
   }
   onBlocksClick(event, pos, node) {
     const currentBlocks = this.value.blocks ? JSON.parse(JSON.stringify(this.value.blocks)) : _defaultBlocks(node._pllModelType);
-    const loraShort = this.value.lora ? this.value.lora.split(/[/\\]/).pop() : "LoRA";
+    const loraShort = this.value.lora
+      ? this.value.lora.split(/[/\\]/).pop().replace(/\.safetensors$/i, "").slice(0, 20)
+      : "LoRA";
     _blockEditorPanel.show({
       blocks: currentBlocks,
       title: loraShort,
@@ -2224,7 +2291,7 @@ class CrtMagicLoraLoaderNode extends RgthreeBaseServerNode {
         savedCapPct = Math.round(Math.max(0, Math.min(200, (v.value ?? 0) * 100)));
       } else if (v?.__pgc_global_blocks === true) {
         const blocks = {};
-        for (const key of ["double", "single", "transformer"]) {
+        for (const key of ["double", "single", "transformer", "layers", "blocks"]) {
           if (v[key]?.length) blocks[key] = Array.from(v[key]);
         }
         if (Object.keys(blocks).length) savedGlobalBlocks = blocks;

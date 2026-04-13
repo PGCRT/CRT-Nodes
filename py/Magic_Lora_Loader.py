@@ -135,7 +135,7 @@ def get_model_info_file_data(file: str, model_type, default=None):
 
 NODE_NAME = "Magic LoRA Loader"
 _PRESETS_FILE = None
-_MODEL_TYPES = {"Flux2Klein", "LTX2.3", "ZImageTurbo"}
+_MODEL_TYPES = {"Flux2Klein", "LTX2.3", "ZImageTurbo", "WAN2.2"}
 _DEFAULT_MT = "Flux2Klein"
 
 
@@ -172,6 +172,12 @@ def _key_block_weight(key: str, block_weights: dict) -> float:
     if m:
         idx = int(m.group(1))
         weights = block_weights.get("layers", [])
+        return float(weights[idx]) if idx < len(weights) else 1.0
+
+    m = re.search(r"(?:^|[._])(?<!double_)(?<!single_)blocks[._](\d+)[._]", key)
+    if m:
+        idx = int(m.group(1))
+        weights = block_weights.get("blocks", [])
         return float(weights[idx]) if idx < len(weights) else 1.0
 
     return 1.0
@@ -358,7 +364,7 @@ class MagicLoraLoader:
         kwargs.pop("global_blocks", None)
         if isinstance(gb_raw, dict) and gb_raw.get("__pgc_global_blocks") is True:
             candidate = {}
-            for bkey in ("double", "single", "transformer"):
+            for bkey in ("double", "single", "transformer", "layers", "blocks"):
                 raw_vals = gb_raw.get(bkey)
                 if raw_vals:
                     candidate[bkey] = [float(v) for v in raw_vals]
@@ -668,6 +674,11 @@ _ARCH = {
             ("layers", r"layers[._](\d+)[._]", 30),
         ],
     },
+    "WAN2.2": {
+        "block_types": [
+            ("blocks", r"(?:^|[._])(?<!double_)(?<!single_)blocks[._](\d+)[._]", 40),
+        ],
+    },
 }
 
 
@@ -830,6 +841,7 @@ def setup_routes(base_dir: str):
 
             valid = [p if p is not None else dict(flat) for p in profiles]
             weights = _competitive_weights(valid, model_type=model_type)
+
             return web.json_response(
                 {
                     "profiles": [_normalise_profile(p) for p in valid],

@@ -18,14 +18,14 @@ from PIL.PngImagePlugin import PngInfo
 
 
 class Log:
-    HEADER = '\033[95m'
-    CYAN = '\033[96m'
-    GREEN = '\033[92m'
-    YELLOW = '\033[93m'
-    RED = '\033[91m'
-    BLUE = '\033[94m'
-    ENDC = '\033[0m'
-    BOLD = '\033[1m'
+    HEADER = "\033[95m"
+    CYAN = "\033[96m"
+    GREEN = "\033[92m"
+    YELLOW = "\033[93m"
+    RED = "\033[91m"
+    BLUE = "\033[94m"
+    ENDC = "\033[0m"
+    BOLD = "\033[1m"
 
     @staticmethod
     def info(msg):
@@ -45,14 +45,16 @@ class Log:
 
     @staticmethod
     def header(msg):
-        print(f"\n{Log.HEADER}{Log.BOLD}{'='*60}\n{msg}\n{'='*60}{Log.ENDC}")
+        print(f"\n{Log.HEADER}{Log.BOLD}{'=' * 60}\n{msg}\n{'=' * 60}{Log.ENDC}")
 
     @staticmethod
     def vram(label):
         if torch.cuda.is_available():
             allocated = torch.cuda.memory_allocated() / 1024**3
             reserved = torch.cuda.memory_reserved() / 1024**3
-            print(f"{Log.YELLOW}[VRAM {label}]{Log.ENDC} Allocated: {allocated:.2f}GB | Reserved: {reserved:.2f}GB")
+            print(
+                f"{Log.YELLOW}[VRAM {label}]{Log.ENDC} Allocated: {allocated:.2f}GB | Reserved: {reserved:.2f}GB"
+            )
 
 
 def set_shift(model, sigma_shift):
@@ -103,11 +105,9 @@ class CRT_WAN_BatchSampler:
                 ),
                 "positive": (
                     "CONDITIONING",
-                    {"tooltip": "Positive prompt conditioning. Describes what you want to generate."},
-                ),
-                "negative": (
-                    "CONDITIONING",
-                    {"tooltip": "Negative prompt conditioning. Describes what you want to avoid."},
+                    {
+                        "tooltip": "Positive prompt conditioning. Describes what you want to generate."
+                    },
                 ),
                 "width": (
                     "INT",
@@ -144,7 +144,6 @@ class CRT_WAN_BatchSampler:
                         "default": 3,
                         "min": 1,
                         "max": 128,
-                        "forceInput": True,
                         "tooltip": "Number of items to generate with different seeds. Higher values = more VRAM in parallel mode.",
                     },
                 ),
@@ -229,7 +228,10 @@ class CRT_WAN_BatchSampler:
                 ),
                 "enable_vae_decode": (
                     "BOOLEAN",
-                    {"default": True, "tooltip": "Decode latents to images. Disable to only output latents."},
+                    {
+                        "default": True,
+                        "tooltip": "Decode latents to images. Disable to only output latents.",
+                    },
                 ),
                 "enable_vae_tiled_decode": (
                     "BOOLEAN",
@@ -280,15 +282,24 @@ class CRT_WAN_BatchSampler:
                 ),
                 "create_comparison_grid": (
                     "BOOLEAN",
-                    {"default": True, "tooltip": "Create a side-by-side comparison grid of all batch outputs."},
+                    {
+                        "default": True,
+                        "tooltip": "Create a side-by-side comparison grid of all batch outputs.",
+                    },
                 ),
                 "save_videos_images": (
                     "BOOLEAN",
-                    {"default": True, "tooltip": "Save outputs to disk. Disable to only use outputs in workflow."},
+                    {
+                        "default": True,
+                        "tooltip": "Save outputs to disk. Disable to only use outputs in workflow.",
+                    },
                 ),
                 "save_folder_path": (
                     "STRING",
-                    {"default": output_dir, "tooltip": "Root folder where outputs will be saved."},
+                    {
+                        "default": output_dir,
+                        "tooltip": "Root folder where outputs will be saved.",
+                    },
                 ),
                 "save_subfolder_name": (
                     "STRING",
@@ -329,6 +340,12 @@ class CRT_WAN_BatchSampler:
                 ),
             },
             "optional": {
+                "negative": (
+                    "CONDITIONING",
+                    {
+                        "tooltip": "Optional negative conditioning. If disconnected, empty negative conditioning is auto-generated from positive."
+                    },
+                ),
                 "vae": (
                     "VAE",
                     {
@@ -357,24 +374,35 @@ class CRT_WAN_BatchSampler:
     CATEGORY = "CRT/Sampling"
 
     def _save_image(
-        self, image_tensor, folder_path, subfolder_name, filename_prefix, seed, prompt=None, extra_pnginfo=None
+        self,
+        image_tensor,
+        folder_path,
+        subfolder_name,
+        filename_prefix,
+        seed,
+        prompt=None,
+        extra_pnginfo=None,
     ):
         try:
             # FIX: Clean the subfolder name before joining the path
-            cleaned_subfolder = subfolder_name.strip().lstrip('/\\')
+            cleaned_subfolder = subfolder_name.strip().lstrip("/\\")
             final_dir = os.path.join(folder_path, cleaned_subfolder)
             os.makedirs(final_dir, exist_ok=True)
 
             # FIX: Clean the filename prefix before using it in the f-string
-            cleaned_prefix = filename_prefix.strip().lstrip('/\\')
+            cleaned_prefix = filename_prefix.strip().lstrip("/\\")
             base_filename = f"{cleaned_prefix}_{seed}"
             image_filepath = os.path.join(final_dir, f"{base_filename}.png")
             counter = 1
             while os.path.exists(image_filepath):
-                image_filepath = os.path.join(final_dir, f"{base_filename}_{counter}.png")
+                image_filepath = os.path.join(
+                    final_dir, f"{base_filename}_{counter}.png"
+                )
                 counter += 1
 
-            pil_image = Image.fromarray((image_tensor.cpu().numpy() * 255).astype(np.uint8))
+            pil_image = Image.fromarray(
+                (image_tensor.cpu().numpy() * 255).astype(np.uint8)
+            )
             metadata = PngInfo()
             if prompt is not None:
                 metadata.add_text("prompt", json.dumps(prompt))
@@ -387,21 +415,31 @@ class CRT_WAN_BatchSampler:
             Log.error(f"Failed to save image (seed {seed}): {e}")
 
     def _save_video(
-        self, images, folder_path, subfolder_name, filename_prefix, seed, fps, prompt=None, extra_pnginfo=None
+        self,
+        images,
+        folder_path,
+        subfolder_name,
+        filename_prefix,
+        seed,
+        fps,
+        prompt=None,
+        extra_pnginfo=None,
     ):
         try:
             # FIX: Clean the subfolder name before joining the path
-            cleaned_subfolder = subfolder_name.strip().lstrip('/\\')
+            cleaned_subfolder = subfolder_name.strip().lstrip("/\\")
             final_dir = os.path.join(folder_path, cleaned_subfolder)
             os.makedirs(final_dir, exist_ok=True)
 
             # FIX: Clean the filename prefix before using it in the f-string
-            cleaned_prefix = filename_prefix.strip().lstrip('/\\')
+            cleaned_prefix = filename_prefix.strip().lstrip("/\\")
             base_filename = f"{cleaned_prefix}_{seed}"
             video_filepath = os.path.join(final_dir, f"{base_filename}.mp4")
             counter = 1
             while os.path.exists(video_filepath):
-                video_filepath = os.path.join(final_dir, f"{base_filename}_{counter}.mp4")
+                video_filepath = os.path.join(
+                    final_dir, f"{base_filename}_{counter}.mp4"
+                )
                 counter += 1
 
             frames = (images.cpu().numpy() * 255).astype(np.uint8)
@@ -410,9 +448,19 @@ class CRT_WAN_BatchSampler:
 
             with tempfile.TemporaryDirectory() as temp_dir:
                 for i, frame in enumerate(frames):
-                    cv2.imwrite(os.path.join(temp_dir, f"frame_{i:06d}.png"), cv2.cvtColor(frame, cv2.COLOR_RGB2BGR))
+                    cv2.imwrite(
+                        os.path.join(temp_dir, f"frame_{i:06d}.png"),
+                        cv2.cvtColor(frame, cv2.COLOR_RGB2BGR),
+                    )
 
-                ffmpeg_cmd = ["ffmpeg", "-y", "-framerate", str(fps), "-i", os.path.join(temp_dir, "frame_%06d.png")]
+                ffmpeg_cmd = [
+                    "ffmpeg",
+                    "-y",
+                    "-framerate",
+                    str(fps),
+                    "-i",
+                    os.path.join(temp_dir, "frame_%06d.png"),
+                ]
 
                 video_metadata = {}
                 if prompt is not None:
@@ -458,12 +506,22 @@ class CRT_WAN_BatchSampler:
             sliced_tensor = sliced_tensor.to(device)
         return [[sliced_tensor, conditioning[0][1]]]
 
-    def _prepare_i2v_conditioning(self, start_image_single, vae, frame_count, width, height):
+    def _prepare_i2v_conditioning(
+        self, start_image_single, vae, frame_count, width, height
+    ):
         s_image = comfy.utils.common_upscale(
-            start_image_single[:frame_count].movedim(-1, 1), width, height, "bilinear", "center"
+            start_image_single[:frame_count].movedim(-1, 1),
+            width,
+            height,
+            "bilinear",
+            "center",
         ).movedim(1, -1)
         image_padded = (
-            torch.ones((frame_count, height, width, s_image.shape[-1]), device=s_image.device, dtype=s_image.dtype)
+            torch.ones(
+                (frame_count, height, width, s_image.shape[-1]),
+                device=s_image.device,
+                dtype=s_image.dtype,
+            )
             * 0.5
         )
         image_padded[: s_image.shape[0]] = s_image
@@ -471,7 +529,13 @@ class CRT_WAN_BatchSampler:
 
         latent_length = ((frame_count - 1) // 4) + 1
         mask = torch.ones(
-            (1, 1, latent_length, concat_latent_image.shape[-2], concat_latent_image.shape[-1]),
+            (
+                1,
+                1,
+                latent_length,
+                concat_latent_image.shape[-2],
+                concat_latent_image.shape[-1],
+            ),
             device=concat_latent_image.device,
             dtype=s_image.dtype,
         )
@@ -490,7 +554,6 @@ class CRT_WAN_BatchSampler:
         model_high_noise,
         model_low_noise,
         positive,
-        negative,
         width,
         height,
         frame_count,
@@ -518,16 +581,23 @@ class CRT_WAN_BatchSampler:
         fps,
         processing_mode,
         offload_conditioning,
+        negative=None,
         vae=None,
         start_image=None,
         prompt=None,
         extra_pnginfo=None,
     ):
 
-        force_model_unload = True
+        boundary_is_edge = abs(boundary) < 1e-9 or abs(boundary - 1.0) < 1e-9
+        force_model_unload = not boundary_is_edge
 
         Log.header("CRT WAN BATCH SAMPLER")
         Log.vram("Start")
+
+        if negative is None:
+            negative = []
+            for t in positive:
+                negative.append([torch.zeros_like(t[0]), t[1].copy()])
 
         # I2V setup
         use_i2v = start_image is not None
@@ -546,7 +616,9 @@ class CRT_WAN_BatchSampler:
             elif num_start_images == 1:
                 start_images_list = [start_image] * batch_count
             else:
-                Log.error(f"Start image batch ({num_start_images}) must be 1 or match batch_count ({batch_count})")
+                Log.error(
+                    f"Start image batch ({num_start_images}) must be 1 or match batch_count ({batch_count})"
+                )
                 return (None,) * 5
 
             _, img_height, img_width, _ = start_images_list[0].shape
@@ -557,7 +629,9 @@ class CRT_WAN_BatchSampler:
         quantized_width = (width // 16) * 16
         quantized_height = (height // 16) * 16
         if quantized_width != width or quantized_height != height:
-            Log.info(f"Dimensions quantized: {width}x{height} â†’ {quantized_width}x{quantized_height}")
+            Log.info(
+                f"Dimensions quantized: {width}x{height} â†’ {quantized_width}x{quantized_height}"
+            )
 
         # Pre-encode I2V images
         if use_i2v:
@@ -591,7 +665,9 @@ class CRT_WAN_BatchSampler:
 
         # Calculate boundary switching step
         temp_model = set_shift(model_high_noise.clone(), sigma_shift)
-        sigmas = comfy.samplers.calculate_sigmas(temp_model.get_model_object("model_sampling"), scheduler, steps)
+        sigmas = comfy.samplers.calculate_sigmas(
+            temp_model.get_model_object("model_sampling"), scheduler, steps
+        )
         switching_step = steps
         for j, t in enumerate(sigmas[1:], 1):
             if t < boundary:
@@ -603,7 +679,9 @@ class CRT_WAN_BatchSampler:
         # Determine processing mode
         latents_for_handoff_list = []
         final_latent_list = []
-        run_sequential = processing_mode == 'Sequential' or use_i2v or offload_conditioning
+        run_sequential = (
+            processing_mode == "Sequential" or use_i2v or offload_conditioning
+        )
 
         # PARALLEL MODE
         if not run_sequential:
@@ -611,7 +689,9 @@ class CRT_WAN_BatchSampler:
 
             pos_batch = self._pad_conditioning(positive, batch_count)
             neg_batch = self._pad_conditioning(negative, batch_count)
-            noise = torch.cat([comfy.sample.prepare_noise(base_latent, s) for s in seeds], dim=0)
+            noise = torch.cat(
+                [comfy.sample.prepare_noise(base_latent, s) for s in seeds], dim=0
+            )
 
             Log.info(f"Processing {batch_count} items in parallel...")
             Log.vram("Before High-Noise")
@@ -667,7 +747,9 @@ class CRT_WAN_BatchSampler:
                     latents_for_handoff,
                     start_step=switching_step,
                     last_step=steps,
-                    callback=latent_preview.prepare_callback(ml_clone, steps - switching_step),
+                    callback=latent_preview.prepare_callback(
+                        ml_clone, steps - switching_step
+                    ),
                 )
                 Log.vram("After Low-Noise Sampling (PEAK)")
 
@@ -679,13 +761,19 @@ class CRT_WAN_BatchSampler:
                 Log.info("Switching at max step, skipping low-noise phase")
                 final_latents = latents_for_handoff
 
-            latents_for_handoff_list = [latents_for_handoff[i : i + 1] for i in range(batch_count)]
+            latents_for_handoff_list = [
+                latents_for_handoff[i : i + 1] for i in range(batch_count)
+            ]
             final_latent_list = [final_latents[i : i + 1] for i in range(batch_count)]
 
         # SEQUENTIAL MODE
         else:
-            mode_reason = "I2V" if use_i2v else ("Offload" if offload_conditioning else "Sequential")
-            if processing_mode == 'Parallel':
+            mode_reason = (
+                "I2V"
+                if use_i2v
+                else ("Offload" if offload_conditioning else "Sequential")
+            )
+            if processing_mode == "Parallel":
                 Log.header(f"SEQUENTIAL MODE (Fallback: {mode_reason})")
             else:
                 Log.header("SEQUENTIAL MODE")
@@ -698,14 +786,20 @@ class CRT_WAN_BatchSampler:
             Log.vram("After High-Noise Model Load")
 
             for i in range(batch_count):
-                Log.info(f"High-noise pass {i+1}/{batch_count} (Seed: {seeds[i]})")
+                Log.info(f"High-noise pass {i + 1}/{batch_count} (Seed: {seeds[i]})")
                 device = comfy.model_management.get_torch_device()
 
-                pos = self._slice_conditioning(positive_offloaded, i, device if offload_conditioning else None)
-                neg = self._slice_conditioning(negative_offloaded, i, device if offload_conditioning else None)
+                pos = self._slice_conditioning(
+                    positive_offloaded, i, device if offload_conditioning else None
+                )
+                neg = self._slice_conditioning(
+                    negative_offloaded, i, device if offload_conditioning else None
+                )
 
                 if use_i2v:
-                    i2v_values = {k: v.to(device) for k, v in i2v_encoded_cache[i].items()}
+                    i2v_values = {
+                        k: v.to(device) for k, v in i2v_encoded_cache[i].items()
+                    }
                     pos = conditioning_set_values(pos, i2v_values)
                     neg = conditioning_set_values(neg, i2v_values)
 
@@ -749,14 +843,20 @@ class CRT_WAN_BatchSampler:
                 Log.vram("After Low-Noise Model Load")
 
                 for i in range(batch_count):
-                    Log.info(f"Low-noise pass {i+1}/{batch_count} (Seed: {seeds[i]})")
+                    Log.info(f"Low-noise pass {i + 1}/{batch_count} (Seed: {seeds[i]})")
                     device = comfy.model_management.get_torch_device()
 
-                    pos = self._slice_conditioning(positive_offloaded, i, device if offload_conditioning else None)
-                    neg = self._slice_conditioning(negative_offloaded, i, device if offload_conditioning else None)
+                    pos = self._slice_conditioning(
+                        positive_offloaded, i, device if offload_conditioning else None
+                    )
+                    neg = self._slice_conditioning(
+                        negative_offloaded, i, device if offload_conditioning else None
+                    )
 
                     if use_i2v:
-                        i2v_values = {k: v.to(device) for k, v in i2v_encoded_cache[i].items()}
+                        i2v_values = {
+                            k: v.to(device) for k, v in i2v_encoded_cache[i].items()
+                        }
                         pos = conditioning_set_values(pos, i2v_values)
                         neg = conditioning_set_values(neg, i2v_values)
 
@@ -773,7 +873,9 @@ class CRT_WAN_BatchSampler:
                         latents_for_handoff_list[i],
                         start_step=switching_step,
                         last_step=steps,
-                        callback=latent_preview.prepare_callback(ml_clone, steps - switching_step),
+                        callback=latent_preview.prepare_callback(
+                            ml_clone, steps - switching_step
+                        ),
                     )
                     final_latent_list.append(final_latent)
 
@@ -796,7 +898,7 @@ class CRT_WAN_BatchSampler:
             Log.vram("Before VAE Decode")
 
             for i in range(batch_count):
-                Log.info(f"Decoding item {i+1}/{batch_count} (Seed: {seeds[i]})")
+                Log.info(f"Decoding item {i + 1}/{batch_count} (Seed: {seeds[i]})")
                 latent = final_latent_list[i].to(vae.device)
 
                 if enable_vae_tiled_decode:

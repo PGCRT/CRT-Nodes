@@ -4,16 +4,16 @@ app.registerExtension({
   name: "CRT.LineSpot",
   async beforeRegisterNodeDef(nodeType, nodeData) {
     if (nodeData.name === "Text Box line spot") {
+
       const onNodeCreated = nodeType.prototype.onNodeCreated;
       nodeType.prototype.onNodeCreated = function () {
         const r = onNodeCreated?.apply(this, arguments);
-        const widget = this.widgets.find((w) => w.name === "text");
+        const widget = this.widgets?.find((w) => w.name === "text");
         if (!widget || !widget.inputEl) return r;
 
         const textarea = widget.inputEl;
         const highlighter = document.createElement("div");
 
-        // Force identical style to prevent shifting
         const commonStyle = {
           fontFamily: "monospace",
           fontSize: "14px",
@@ -32,11 +32,9 @@ app.registerExtension({
         textarea.style.zIndex = "2";
 
         const update = () => {
-          // SAFETY GUARD: Check if parent exists before appending
           if (!highlighter.parentNode && textarea.parentNode) {
             textarea.parentNode.appendChild(highlighter);
           }
-          
           if (!highlighter.parentNode) return;
 
           const comp = window.getComputedStyle(textarea);
@@ -58,7 +56,6 @@ app.registerExtension({
             boxSizing: "border-box",
           });
 
-          // Logical line break logic: Split by \n
           const paragraphs = textarea.value.split("\n");
           highlighter.innerHTML = paragraphs
             .map((para, i) => {
@@ -70,15 +67,14 @@ app.registerExtension({
           highlighter.scrollTop = textarea.scrollTop;
         };
 
-        // Listeners
+        this._crtUpdate = update;
+
         textarea.addEventListener("input", update);
         textarea.addEventListener("scroll", () => (highlighter.scrollTop = textarea.scrollTop));
 
-        // Sync on resize
         const ro = new ResizeObserver(() => update());
         ro.observe(textarea);
 
-        // Selection style fix
         if (!document.getElementById("crt-selection-style")) {
           const style = document.createElement("style");
           style.id = "crt-selection-style";
@@ -94,6 +90,23 @@ app.registerExtension({
         setTimeout(update, 100);
         return r;
       };
+
+      const onExecuted = nodeType.prototype.onExecuted;
+      nodeType.prototype.onExecuted = function (message) {
+        onExecuted?.apply(this, arguments);
+        console.log("[CRT.LineSpot] message:", JSON.stringify(message));
+        if (!message?.text) return;
+        const val = Array.isArray(message.text) ? message.text[0] : message.text;
+        console.log("[CRT.LineSpot] val:", val, "| textarea exists:", !!this.widgets?.find(w=>w.name==="text")?.inputEl);
+        // rAF runs after ComfyUI's native handler so we don't get overwritten
+        requestAnimationFrame(() => {
+          const widget = this.widgets?.find((w) => w.name === "text");
+          if (!widget?.inputEl) return;
+          widget.inputEl.value = val;
+          this._crtUpdate?.();
+        });
+      };
+
     }
   },
 });

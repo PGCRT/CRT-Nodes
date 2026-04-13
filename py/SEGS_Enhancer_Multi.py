@@ -645,7 +645,7 @@ class FaceEnhancementWithInjectionSEGS:
                 "edit_model_flux2klein": (
                     "BOOLEAN",
                     {
-                        "default": True,
+                        "default": False,
                         "tooltip": "Enable per-crop reference latent conditioning for edit models like flux2klein",
                     },
                 ),
@@ -1553,5 +1553,5 @@ NODE_CLASS_MAPPINGS = {
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
-    "FaceEnhancementWithInjectionSEGS": "SEGS Enhancer (Multi)"
+    "FaceEnhancementWithInjectionSEGS": "SEGS Enhancer Multi (CRT)"
 }

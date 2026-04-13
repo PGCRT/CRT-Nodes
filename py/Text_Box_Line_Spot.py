@@ -6,10 +6,21 @@ class CRT_LineSpot:
     def INPUT_TYPES(s):
         return {
             "required": {
-                "text": ("STRING", {"multiline": True, "default": ""}),
+                "text": (
+                    "STRING",
+                    {
+                        "default": "",
+                        "multiline": True,
+                        "forceInput": False,
+                        "print_to_screen": True,
+                    },
+                ),
             },
             "optional": {
-                "passthrough": ("STRING", {"forceInput": True, "default": ""}),
+                "passthrough": (
+                    "STRING",
+                    {"default": "", "multiline": True, "forceInput": True},
+                ),
             },
         }
 
@@ -20,6 +31,8 @@ class CRT_LineSpot:
     CATEGORY = "CRT/Text"
 
     def execute(self, text="", passthrough=""):
-        # Use passthrough if connected, otherwise use the internal text
-        display_text = passthrough if passthrough != "" else text
-        return {"ui": {"text": [display_text]}, "result": (display_text,)}
+        if passthrough != "":
+            text = passthrough
+            return {"ui": {"text": [text]}, "result": (text,)}
+        else:
+            return (text,)

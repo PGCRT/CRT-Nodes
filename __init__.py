@@ -1,7 +1,7 @@
 """
 @author: CRT
 @title: CRT-Nodes
-@version: 2.2.8
+@version: 2.2.9
 @project: "https://github.com/PGCRT/CRT-Nodes",
 @description: Set of nodes for ComfyUI
 https://discord.gg/8wYS9MBQqp
@@ -23,7 +23,6 @@ if "CRT_NODES_INITIALIZED" not in globals():
     from .py.Video_Duration_Calculator import VideoDurationCalculator
     from .py.Post_Process_Node import CRTPostProcessNode
     from .py.Flux_Lora_Blocks_Patcher import FluxLoraBlocksPatcher
-    from .py.Flux_Tiled_Sampler_Custom import FluxTiledSamplerCustomAdvanced
     from .py.Fancy_Note_Node import FancyNoteNode
     from .py.Text_Loader_Crawl import TextLoaderCrawl
     from .py.Image_Loader_Crawl import ImageLoaderCrawl
@@ -32,16 +31,9 @@ if "CRT_NODES_INITIALIZED" not in globals():
     from .py.Mask_Pass_Or_Placeholder import MaskPassOrPlaceholder
     from .py.Latent_Injection_Sampler import LatentNoiseInjectionSampler
     from .py.Face_Enhancement_Pipeline_With_Injection import (
-        FaceEnhancementPipelineWithInjection as Flux1CnetFaceEnhancementWithInjection,
-    )
-    from .py.Flux_Controlnet_Sampler import FluxControlnetSampler
-    from .py.Flux_Controlnet_Sampler_With_Injection import (
-        FluxControlnetSamplerWithInjection,
+        UltralyticsEnhancer as FaceEnhancementWithInjection,
     )
     from .py.Pony_Upscale_Sampler_With_Injection import PonyUpscaleSamplerWithInjection
-    from .py.Pony_Face_Enhancement_Pipeline_With_Injection import (
-        PonyFaceEnhancementPipelineWithInjection as FaceEnhancementWithInjection,
-    )
     from .py.SEGS_Enhancer_Multi import (
         FaceEnhancementWithInjectionSEGS,
     )
@@ -180,7 +172,6 @@ NODE_CLASS_MAPPINGS = {
     "Video Duration Calculator": VideoDurationCalculator,
     "CRT Post-Process Suite": CRTPostProcessNode,
     "FluxLoraBlocksPatcher": FluxLoraBlocksPatcher,
-    "FluxTiledSamplerCustomAdvanced": FluxTiledSamplerCustomAdvanced,
     "FancyNoteNode": FancyNoteNode,
     "TextLoaderCrawl": TextLoaderCrawl,
     "ImageLoaderCrawl": ImageLoaderCrawl,
@@ -188,9 +179,6 @@ NODE_CLASS_MAPPINGS = {
     "MaskEmptyFloatNode": MaskEmptyFloatNode,
     "MaskPassOrPlaceholder": MaskPassOrPlaceholder,
     "LatentNoiseInjectionSampler": LatentNoiseInjectionSampler,
-    "Flux1CnetFaceEnhancementWithInjection": Flux1CnetFaceEnhancementWithInjection,
-    "FluxControlnetSampler": FluxControlnetSampler,
-    "FluxControlnetSamplerWithInjection": FluxControlnetSamplerWithInjection,
     "PonyUpscaleSamplerWithInjection": PonyUpscaleSamplerWithInjection,
     "FaceEnhancementWithInjection": FaceEnhancementWithInjection,
     "FaceEnhancementWithInjectionSEGS": FaceEnhancementWithInjectionSEGS,
@@ -276,7 +264,6 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "Video Duration Calculator": "Video Duration Calculator (CRT)",
     "CRT Post-Process Suite": "Post-Process Suite (CRT)",
     "FluxLoraBlocksPatcher": "Flux LoRA Blocks Patcher (CRT)",
-    "FluxTiledSamplerCustomAdvanced": "Flux Tiled Sampler Advanced (CRT)",
     "FancyNoteNode": "Fancy Note (CRT)",
     "TextLoaderCrawl": "Text Loader Crawl (CRT)",
     "ImageLoaderCrawl": "Image Loader Crawl (CRT)",
@@ -284,12 +271,9 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "MaskEmptyFloatNode": "Mask Empty Float (CRT)",
     "MaskPassOrPlaceholder": "Mask Pass or Placeholder (CRT)",
     "LatentNoiseInjectionSampler": "Latent Noise Injection Sampler (CRT)",
-    "Flux1CnetFaceEnhancementWithInjection": "Flux.1 Cnet Face Enhancement with Injection (CRT)",
-    "FluxControlnetSampler": "Flux Controlnet Sampler (CRT)",
-    "FluxControlnetSamplerWithInjection": "Flux Controlnet Sampler with Injection (CRT)",
-    "PonyUpscaleSamplerWithInjection": "Pony Upscale Sampler with Injection & Tiling (CRT)",
-    "FaceEnhancementWithInjection": "Face Enhancement with Injection (CRT)",
-    "FaceEnhancementWithInjectionSEGS": "SEGS Enhancer (Multi)",
+    "PonyUpscaleSamplerWithInjection": "Image Upscale Sampler (CRT)",
+    "FaceEnhancementWithInjection": "Ultralytics Enhancer (CRT)",
+    "FaceEnhancementWithInjectionSEGS": "SEGS Enhancer Multi (CRT)",
     "SamplerSchedulerSelector": "Sampler & Scheduler Selector (CRT)",
     "SamplerSchedulerCrawler": "Sampler & Scheduler Crawler (CRT)",
     "Resolution": "Resolution (CRT)",
