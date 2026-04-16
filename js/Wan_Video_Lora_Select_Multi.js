@@ -1,5 +1,38 @@
 import { app } from "/scripts/app.js";
 
+const WAN_VIDEO_STYLE_ID = "crt-wan-video-lora-select-multi-styles-v2";
+const WAN_VIDEO_PRESETS_KEY = "crt:nodes:wan-video-lora-select-multi:presets:v2";
+const LEGACY_WAN_VIDEO_PRESETS_KEY = "WanLoraFinal2025";
+
+function loadWanVideoPresets() {
+    const parseStorage = (key) => {
+        const rawValue = localStorage.getItem(key);
+        if (!rawValue) {
+            return null;
+        }
+
+        try {
+            return new Map(JSON.parse(rawValue));
+        } catch (error) {
+            console.warn(`[WanVideoLoraSelect] Failed to parse presets from "${key}"`, error);
+            return null;
+        }
+    };
+
+    const namespacedPresets = parseStorage(WAN_VIDEO_PRESETS_KEY);
+    if (namespacedPresets) {
+        return namespacedPresets;
+    }
+
+    const legacyPresets = parseStorage(LEGACY_WAN_VIDEO_PRESETS_KEY);
+    if (legacyPresets) {
+        localStorage.setItem(WAN_VIDEO_PRESETS_KEY, JSON.stringify(Array.from(legacyPresets.entries())));
+        return legacyPresets;
+    }
+
+    return new Map();
+}
+
 app.registerExtension({
     name: "Comfy.WanVideoLoraSelectMulti",
 
@@ -23,9 +56,19 @@ app.registerExtension({
                 }
             }
 
-            setTimeout(() => {
+            clearTimeout(this._wanVideoCreateTimeout);
+            this._wanVideoCreateTimeout = setTimeout(() => {
+                this.ui?.destroy?.();
                 this.ui = new WanVideoLoraSelectMultiUI(this);
             }, 0);
+
+            const originalOnRemoved = this.onRemoved;
+            this.onRemoved = function () {
+                clearTimeout(this._wanVideoCreateTimeout);
+                clearTimeout(this._wanVideoConfigureTimeout);
+                this.ui?.destroy?.();
+                return originalOnRemoved?.apply(this, arguments);
+            };
         };
 
         nodeType.prototype.computeSize = function () {
@@ -39,7 +82,8 @@ app.registerExtension({
         const onConfigure = nodeType.prototype.onConfigure;
         nodeType.prototype.onConfigure = function (info) {
             onConfigure?.apply(this, arguments);
-            setTimeout(() => {
+            clearTimeout(this._wanVideoConfigureTimeout);
+            this._wanVideoConfigureTimeout = setTimeout(() => {
                 if (!this.ui) this.ui = new WanVideoLoraSelectMultiUI(this);
                 else this.ui.rebuild();
             }, 50);
@@ -53,7 +97,23 @@ class WanVideoLoraSelectMultiUI {
         this.rows = [];
         this.loras = [];
         this.presets = new Map();
+        this.documentClickHandler = null;
+        this.dropdown = null;
+        this.dropdownCallback = null;
+        this.dropdownInput = null;
+        this.currentInput = null;
+        this.syncTimeout = null;
         this.init();
+    }
+
+    destroy() {
+        if (this.syncTimeout) {
+            clearTimeout(this.syncTimeout);
+            this.syncTimeout = null;
+        }
+
+        this.closeDropdown();
+        this.container = null;
     }
 
     async init() {
@@ -64,13 +124,13 @@ class WanVideoLoraSelectMultiUI {
         this.parse();
         this.render();
         
-        setTimeout(() => this.sync(), 100);
+        this.syncTimeout = setTimeout(() => this.sync(), 100);
     }
 
     injectCSS() {
-        if (document.getElementById("wan-final-css")) return;
+        if (document.getElementById(WAN_VIDEO_STYLE_ID)) return;
         const s = document.createElement("style");
-        s.id = "wan-final-css";
+        s.id = WAN_VIDEO_STYLE_ID;
         s.textContent = `
             @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Inter:wght@400;500&display=swap');
             .wan-wrap{background:transparent;padding:16px 20px;margin:0 18px 0 14px;width:calc(100% - 32px);font-family:'Inter',sans-serif;color:#eee;box-sizing:border-box;user-select:none;pointer-events:none;}
@@ -132,10 +192,10 @@ class WanVideoLoraSelectMultiUI {
     }
 
     loadPresets() {
-        try { this.presets = new Map(JSON.parse(localStorage.getItem("WanLoraFinal2025")||"[]")); }
+        try { this.presets = loadWanVideoPresets(); }
         catch { this.presets = new Map(); }
     }
-    savePresets() { localStorage.setItem("WanLoraFinal2025", JSON.stringify(Array.from(this.presets.entries()))); }
+    savePresets() { localStorage.setItem(WAN_VIDEO_PRESETS_KEY, JSON.stringify(Array.from(this.presets.entries()))); }
 
     parse() {
         const w = this.node.widgets?.find(x => x.name === "lora_batch_config");
@@ -342,7 +402,7 @@ class WanVideoLoraSelectMultiUI {
     }
 
     showDropdown(input, callback) {
-        if (this.dropdown) this.dropdown.remove();
+        this.closeDropdown();
         this.dropdown = document.createElement("div");
         this.dropdown.className = "wan-drop";
         this.dropdownCallback = callback;
@@ -363,24 +423,21 @@ class WanVideoLoraSelectMultiUI {
         this.dropdown.onclick = (e) => {
             if (e.target.hasAttribute("data-val")) {
                 callback(e.target.getAttribute("data-val"));
-                this.dropdown.remove();
-                this.dropdown = null;
-                this.currentInput = null;
-                this.dropdownInput = null;
+                this.closeDropdown();
             }
         };
 
-        const close = (e) => {
-            // Don't close if clicking on the input field that owns this dropdown
+        this.documentClickHandler = (e) => {
             if (this.dropdown && !this.dropdown.contains(e.target) && e.target !== input && e.target !== this.dropdownInput) {
-                this.dropdown.remove();
-                this.dropdown = null;
-                this.currentInput = null;
-                this.dropdownInput = null;
-                document.removeEventListener("click", close);
+                this.closeDropdown();
             }
         };
-        setTimeout(() => document.addEventListener("click", close), 10);
+
+        setTimeout(() => {
+            if (this.documentClickHandler) {
+                document.addEventListener("click", this.documentClickHandler);
+            }
+        }, 10);
     }
 
     updateDropdownFilter(input) {
@@ -398,11 +455,24 @@ class WanVideoLoraSelectMultiUI {
                 if (this.dropdownCallback) {
                     this.dropdownCallback(e.target.getAttribute("data-val"));
                 }
-                this.dropdown.remove();
-                this.dropdown = null;
-                this.currentInput = null;
+                this.closeDropdown();
             }
         };
+    }
+
+    closeDropdown() {
+        if (this.dropdown) {
+            this.dropdown.remove();
+            this.dropdown = null;
+        }
+
+        if (this.documentClickHandler) {
+            document.removeEventListener("click", this.documentClickHandler);
+            this.documentClickHandler = null;
+        }
+
+        this.currentInput = null;
+        this.dropdownInput = null;
     }
 
     getWidgetValue(name, def) {

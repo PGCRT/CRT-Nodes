@@ -1,5 +1,45 @@
 import { app } from "../../scripts/app.js";
 
+const DEBUG_WAN_COMPARE = false;
+const WAN_COMPARE_STYLE_ID = "crt-wan-compare-styles-v2";
+const WAN_COMPARE_PRESETS_KEY = "crt:nodes:wan-compare:presets:v2";
+const LEGACY_WAN_COMPARE_PRESETS_KEY = "wanComparePresets";
+
+const debugLog = (...args) => {
+    if (DEBUG_WAN_COMPARE) {
+        console.log(...args);
+    }
+};
+
+function loadWANComparePresets() {
+    const parseStorage = (key) => {
+        const rawValue = localStorage.getItem(key);
+        if (!rawValue) {
+            return null;
+        }
+
+        try {
+            return new Map(JSON.parse(rawValue));
+        } catch (error) {
+            console.warn(`[WANCompareUI] Failed to parse presets from "${key}"`, error);
+            return null;
+        }
+    };
+
+    const namespacedPresets = parseStorage(WAN_COMPARE_PRESETS_KEY);
+    if (namespacedPresets) {
+        return namespacedPresets;
+    }
+
+    const legacyPresets = parseStorage(LEGACY_WAN_COMPARE_PRESETS_KEY);
+    if (legacyPresets) {
+        localStorage.setItem(WAN_COMPARE_PRESETS_KEY, JSON.stringify(Array.from(legacyPresets.entries())));
+        return legacyPresets;
+    }
+
+    return new Map();
+}
+
 const WANCompareExtension = {
     name: "Comfy.WANCompareUI.CRT",
 
@@ -14,7 +54,9 @@ const WANCompareExtension = {
                 this.color = "transparent";
                 this.nodeData = nodeData;
 
-                setTimeout(() => {
+                clearTimeout(this._wanCompareCreateTimeout);
+                this._wanCompareCreateTimeout = setTimeout(() => {
+                    this.WANCompareUIInstance?.destroy();
                     this.WANCompareUIInstance = new WANCompareUI(this);
                 }, 10);
                 
@@ -45,6 +87,14 @@ const WANCompareExtension = {
                 };
 
                 this.size = [1900, 300];
+
+                const originalOnRemoved = this.onRemoved;
+                this.onRemoved = function() {
+                    clearTimeout(this._wanCompareCreateTimeout);
+                    clearTimeout(this._wanCompareConfigureTimeout);
+                    this.WANCompareUIInstance?.destroy();
+                    return originalOnRemoved?.apply(this, arguments);
+                };
             };
 
             const onConfigure = nodeType.prototype.onConfigure;
@@ -53,7 +103,8 @@ const WANCompareExtension = {
                 
                 this.nodeData = nodeData;
 
-                setTimeout(() => {
+                clearTimeout(this._wanCompareConfigureTimeout);
+                this._wanCompareConfigureTimeout = setTimeout(() => {
                     if (!this.WANCompareUIInstance) {
                         this.WANCompareUIInstance = new WANCompareUI(this);
                     }
@@ -72,11 +123,27 @@ class WANCompareUI {
         this.activePromptPopup = null;
         this.presets = new Map();
         this.draggedItem = null;
+        this.abortController = new AbortController();
+        this.resizeTimeouts = [];
         this.initialize();
     }
 
+    destroy() {
+        this.abortController.abort();
+        this.resizeTimeouts.forEach(clearTimeout);
+        this.resizeTimeouts = [];
+        this.closeActiveDropdown();
+        this.closePromptPopup();
+        this.container = null;
+    }
+
+    scheduleResize(delay) {
+        const timeoutId = setTimeout(() => this.forceNodeResize(), delay);
+        this.resizeTimeouts.push(timeoutId);
+    }
+
     async initialize() {
-        console.log('[WANCompareUI] Initializing UI...');
+        debugLog('[WANCompareUI] Initializing UI...');
         try {
             this.injectStyles();
             await this.fetchLoRAList();
@@ -86,19 +153,25 @@ class WANCompareUI {
             this.parseConfigFromWidget();
             this.render();
             
-            console.log('[WANCompareUI] UI initialized successfully');
+            debugLog('[WANCompareUI] UI initialized successfully');
             
-            setTimeout(() => this.forceNodeResize(), 100);
-            setTimeout(() => this.forceNodeResize(), 500);
-            setTimeout(() => this.forceNodeResize(), 1000);
-            
+            this.scheduleResize(100);
+            this.scheduleResize(500);
+            this.scheduleResize(1000);
+
             document.addEventListener('mousedown', (e) => {
                 if (this.activePromptPopup && 
                     !this.activePromptPopup.contains(e.target) && 
                     !e.target.classList.contains('wan-prompt-btn')) {
                     this.closePromptPopup();
                 }
-            });
+            }, { signal: this.abortController.signal });
+
+            document.addEventListener('click', (e) => {
+                if (this.activeDropdown && !e.target.closest('.wan-lora-select-container')) {
+                    this.closeActiveDropdown();
+                }
+            }, { signal: this.abortController.signal });
         } catch (error) {
             console.error('[WANCompareUI] Failed to initialize:', error);
         }
@@ -106,7 +179,7 @@ class WANCompareUI {
 
     async fetchLoRAList() {
         try {
-            console.log('[WANCompareUI] Starting robust LoRA fetch...');
+            debugLog('[WANCompareUI] Starting robust LoRA fetch...');
             let finalLoras = [];
             
             try {
@@ -177,17 +250,12 @@ class WANCompareUI {
     }
 
     loadPresets() {
-        const savedPresets = localStorage.getItem('wanComparePresets');
-        if (savedPresets) {
-            this.presets = new Map(JSON.parse(savedPresets));
-        } else {
-            this.presets = new Map();
-        }
+        this.presets = loadWANComparePresets();
     }
 
     savePresets() {
         const presetData = JSON.stringify(Array.from(this.presets.entries()));
-        localStorage.setItem('wanComparePresets', presetData);
+        localStorage.setItem(WAN_COMPARE_PRESETS_KEY, presetData);
     }
 
     savePreset(name, config) {
@@ -289,9 +357,9 @@ class WANCompareUI {
     }
 
     injectStyles() {
-        if (document.getElementById('wan-compare-styles-crt')) return;
+        if (document.getElementById(WAN_COMPARE_STYLE_ID)) return;
         const style = document.createElement("style");
-        style.id = "wan-compare-styles-crt";
+        style.id = WAN_COMPARE_STYLE_ID;
         style.innerHTML = `
             @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
             @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
@@ -370,7 +438,7 @@ class WANCompareUI {
     createCustomDOM() {
         if (this.container) return;
 
-        console.log('[WANCompareUI] Creating custom DOM...');
+        debugLog('[WANCompareUI] Creating custom DOM...');
 
         if (this.node.widgets) {
             this.node.widgets.forEach(w => { 
@@ -509,12 +577,6 @@ class WANCompareUI {
         } catch (error) {
             console.error('[WANCompareUI] Error adding widgets:', error);
         }
-        
-        document.addEventListener('click', (e) => {
-            if (this.activeDropdown && !e.target.closest('.wan-lora-select-container')) {
-                this.closeActiveDropdown();
-            }
-        });
     }
 
     createSection(title, icon) {
@@ -596,9 +658,7 @@ class WANCompareUI {
     }
 
     updateNodeSize() {
-        setTimeout(() => {
-            this.forceNodeResize();
-        }, 10);
+        this.scheduleResize(10);
     }
 
     setWidgetValue(name, value) {

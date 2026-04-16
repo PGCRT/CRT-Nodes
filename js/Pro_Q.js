@@ -1,6 +1,19 @@
 import { app } from "../../scripts/app.js";
 
-console.log("pro_q_ui.js: Professional Parametric EQ UI loading...");
+const PRO_Q_DEBUG = false;
+const PRO_Q_STYLE_ID = "parametric-eq-styles";
+const PRO_Q_FONT_ID = "crt-parametric-eq-font";
+const PRO_Q_FONT_HREF = "https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap";
+const PRO_Q_PRESETS_KEY = "crt:parametric-eq:presets:v2";
+const PRO_Q_PRESETS_LEGACY_KEY = "parametric_eq_presets";
+const PRO_Q_STATE_KEY_PREFIX = "crt:parametric-eq:state:v2:";
+const PRO_Q_STATE_LEGACY_PREFIX = "parametric_eq_state_";
+
+function proQLog(...args) {
+    if (PRO_Q_DEBUG) {
+        console.log("[ParametricEQUI]", ...args);
+    }
+}
 
 // ... (Your entire CSS string remains unchanged here) ...
 const CSS_STYLES_PARAMETRIC_EQ = `
@@ -395,9 +408,11 @@ class ParametricEQUI {
         this.retryCount = 0;
         this.maxRetries = 5;
         this.isInitialized = false;
+        this._retryTimeout = null;
         this.resizeObserver = null;
         this.animationFrameId = null;
-        this.stateKey = `parametric_eq_state_${node.id}`;
+        this.stateKey = `${PRO_Q_STATE_KEY_PREFIX}${node.id}`;
+        this.legacyStateKey = `${PRO_Q_STATE_LEGACY_PREFIX}${node.id}`;
         this.presets = this.loadPresets();
         this.presetSelect = null;
         
@@ -422,13 +437,13 @@ class ParametricEQUI {
 
     initializeWithRetry() {
         if (this.isInitialized) return;
-        
-        console.log(`[ParametricEQUI] Attempting to initialize UI for node ${this.node.id}, retry ${this.retryCount}`);
+
+        proQLog(`Attempting to initialize UI for node ${this.node.id}, retry ${this.retryCount}`);
         
         if (document.readyState === 'loading' || !this.node.widgets) {
             if (this.retryCount < this.maxRetries) {
                 this.retryCount++;
-                setTimeout(() => this.initializeWithRetry(), Math.min(500 * this.retryCount, 2000));
+                this._retryTimeout = setTimeout(() => this.initializeWithRetry(), Math.min(500 * this.retryCount, 2000));
                 return;
             } else {
                 console.error(`[ParametricEQUI] Failed to initialize after ${this.maxRetries} retries`);
@@ -441,20 +456,20 @@ class ParametricEQUI {
             this.setWidgetDefaults();
             this.initializeUI();
             this.isInitialized = true;
-            console.log(`[ParametricEQUI] UI initialized successfully for node ${this.node.id}`);
+            proQLog(`UI initialized successfully for node ${this.node.id}`);
         } catch (err) {
             console.error(`[ParametricEQUI] Error initializing for node ${this.node.id}:`, err);
             if (this.retryCount < this.maxRetries) {
                 this.retryCount++;
-                setTimeout(() => this.initializeWithRetry(), 1000);
+                this._retryTimeout = setTimeout(() => this.initializeWithRetry(), 1000);
             }
         }
     }
 
     setWidgetDefaults() {
         if (!this.node.widgets) return;
-        
-        console.log(`[ParametricEQUI] Setting widget defaults for node ${this.node.id}`);
+
+        proQLog(`Setting widget defaults for node ${this.node.id}`);
         
         const defaults = {
             'sample_rate': 44100,
@@ -493,16 +508,17 @@ class ParametricEQUI {
     }
 
     injectStyles() {
-        if (!document.getElementById('parametric-eq-styles')) {
+        if (!document.getElementById(PRO_Q_STYLE_ID)) {
             const styleSheet = document.createElement('style');
-            styleSheet.id = 'parametric-eq-styles';
+            styleSheet.id = PRO_Q_STYLE_ID;
             styleSheet.textContent = CSS_STYLES_PARAMETRIC_EQ;
             document.head.appendChild(styleSheet);
         }
 
-        if (!document.querySelector('link[href*="Orbitron"]')) {
+        if (!document.getElementById(PRO_Q_FONT_ID)) {
             const fontLink = document.createElement("link");
-            fontLink.href = "https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;&display=swap";
+            fontLink.id = PRO_Q_FONT_ID;
+            fontLink.href = PRO_Q_FONT_HREF;
             fontLink.rel = "stylesheet";
             document.head.appendChild(fontLink);
         }
@@ -523,7 +539,7 @@ class ParametricEQUI {
     }
 
     createCustomDOM() {
-        console.log(`[ParametricEQUI] Creating custom DOM for node ${this.node.id}`);
+        proQLog(`Creating custom DOM for node ${this.node.id}`);
         
         if (this.container) {
             this.container.remove();
@@ -745,7 +761,7 @@ class ParametricEQUI {
                 "Modern Pop": this.createModernPopPreset()
             };
             this.savePresets();
-            console.log('[ParametricEQUI] Basic presets initialized');
+            proQLog("Basic presets initialized");
         }
     }
 
@@ -848,7 +864,7 @@ class ParametricEQUI {
         
         // 4. Save state
         this.saveState();
-        console.log(`[ParametricEQUI] Preset "${presetName}" loaded.`);
+        proQLog(`Preset "${presetName}" loaded.`);
     }
 
     deletePreset() {
@@ -862,8 +878,33 @@ class ParametricEQUI {
         this.presetSelect.value = '';
     }
 
-    loadPresets() { try { return JSON.parse(localStorage.getItem('parametric_eq_presets')) || {}; } catch (e) { return {}; } }
-    savePresets() { try { localStorage.setItem('parametric_eq_presets', JSON.stringify(this.presets)); } catch (e) { console.warn("Failed to save presets"); } }
+    loadPresets() {
+        try {
+            const raw = localStorage.getItem(PRO_Q_PRESETS_KEY);
+            if (raw) {
+                return JSON.parse(raw) || {};
+            }
+
+            const legacyRaw = localStorage.getItem(PRO_Q_PRESETS_LEGACY_KEY);
+            if (!legacyRaw) {
+                return {};
+            }
+
+            const legacyPresets = JSON.parse(legacyRaw) || {};
+            localStorage.setItem(PRO_Q_PRESETS_KEY, JSON.stringify(legacyPresets));
+            return legacyPresets;
+        } catch {
+            return {};
+        }
+    }
+
+    savePresets() {
+        try {
+            localStorage.setItem(PRO_Q_PRESETS_KEY, JSON.stringify(this.presets));
+        } catch {
+            console.warn("[ParametricEQUI] Failed to save presets");
+        }
+    }
 
     drawEQCanvas() {
         if (!this.ctx || !this.canvas) return;
@@ -1138,11 +1179,53 @@ class ParametricEQUI {
         if (updateEnabled && enabledWidget) { enabledWidget.value = band.enabled; enabledWidget.callback?.(band.enabled); }
     }
 
-    saveState() { try { localStorage.setItem(this.stateKey, JSON.stringify(this.serialize())); } catch (e) {} }
-    loadState() { try { const state = JSON.parse(localStorage.getItem(this.stateKey)); if(state) { this.deserialize(state); return true; } } catch(e) {} return false; }
+    saveState() {
+        try {
+            localStorage.setItem(this.stateKey, JSON.stringify(this.serialize()));
+        } catch {
+            // Ignore storage failures.
+        }
+    }
+
+    loadState() {
+        try {
+            const raw = localStorage.getItem(this.stateKey);
+            if (raw) {
+                const state = JSON.parse(raw);
+                if (state) {
+                    this.deserialize(state);
+                    return true;
+                }
+            }
+
+            const legacyRaw = localStorage.getItem(this.legacyStateKey);
+            if (legacyRaw) {
+                const legacyState = JSON.parse(legacyRaw);
+                if (legacyState) {
+                    this.deserialize(legacyState);
+                    localStorage.setItem(this.stateKey, JSON.stringify(legacyState));
+                    return true;
+                }
+            }
+        } catch {
+            // Ignore deserialization errors.
+        }
+        return false;
+    }
     setNodeSizeOptimal() { this.node.setSize([920, 10]); }
     setupResizeObserver() { if (this.resizeObserver) this.resizeObserver.disconnect(); if (this.container) { this.resizeObserver = new ResizeObserver(() => this.handleResize()); this.resizeObserver.observe(this.container); } }
-    handleResize() { requestAnimationFrame(() => { if(this.canvas) { this.drawEQCanvas(); this.updateStatusDisplay(); } }); }
+    handleResize() {
+        if (this.animationFrameId) {
+            cancelAnimationFrame(this.animationFrameId);
+        }
+        this.animationFrameId = requestAnimationFrame(() => {
+            this.animationFrameId = null;
+            if (this.canvas) {
+                this.drawEQCanvas();
+                this.updateStatusDisplay();
+            }
+        });
+    }
 
     syncStateFromWidgets() {
         if (!this.node.widgets || !this.isInitialized) return;
@@ -1171,7 +1254,24 @@ class ParametricEQUI {
 
     serialize() { return { eqBands: this.eqBands.map(band => ({ ...band })) }; }
     deserialize(data) { if (data?.eqBands) { this.eqBands = data.eqBands.map(b => ({...b})); this.syncStateFromWidgets(); } }
-    destroy() { if (this.resizeObserver) this.resizeObserver.disconnect(); if (this.container) this.container.remove(); }
+    destroy() {
+        if (this._retryTimeout) {
+            clearTimeout(this._retryTimeout);
+            this._retryTimeout = null;
+        }
+        if (this.animationFrameId) {
+            cancelAnimationFrame(this.animationFrameId);
+            this.animationFrameId = null;
+        }
+        if (this.resizeObserver) {
+            this.resizeObserver.disconnect();
+            this.resizeObserver = null;
+        }
+        if (this.container) {
+            this.container.remove();
+            this.container = null;
+        }
+    }
 }
 
 app.registerExtension({

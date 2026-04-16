@@ -1,7 +1,50 @@
 import { app } from "../../scripts/app.js";
 import { api } from "../../scripts/api.js";
 
-console.log("Loading CRT_Post_Process_Suite.js");
+const DEBUG_POST_PROCESS_SUITE = false;
+const POST_PROCESS_STYLE_ID = "crt-postprocess-styles-v2";
+const POST_PROCESS_FONT_LINK_ID = "crt-postprocess-orbitron-font";
+const POST_PROCESS_PRESETS_KEY = "crt:nodes:post-process-suite:presets:v2";
+const LEGACY_POST_PROCESS_PRESETS_KEY = "crtPostProcessPresets";
+
+const debugLog = (...args) => {
+    if (DEBUG_POST_PROCESS_SUITE) {
+        console.log(...args);
+    }
+};
+
+function loadJSONStorage(primaryKey, legacyKey, fallbackValue) {
+    const tryParse = (storageKey) => {
+        const rawValue = localStorage.getItem(storageKey);
+        if (!rawValue) {
+            return null;
+        }
+
+        try {
+            return JSON.parse(rawValue);
+        } catch (error) {
+            console.warn(`Failed to parse localStorage key "${storageKey}"`, error);
+            return null;
+        }
+    };
+
+    const primaryValue = tryParse(primaryKey);
+    if (primaryValue !== null) {
+        return primaryValue;
+    }
+
+    const legacyValue = legacyKey ? tryParse(legacyKey) : null;
+    if (legacyValue !== null) {
+        localStorage.setItem(primaryKey, JSON.stringify(legacyValue));
+        return legacyValue;
+    }
+
+    return fallbackValue;
+}
+
+function saveJSONStorage(primaryKey, value) {
+    localStorage.setItem(primaryKey, JSON.stringify(value));
+}
 
 const CSS_STYLES = `
 @font-face {
@@ -514,22 +557,19 @@ const CSS_STYLES = `
 `;
 
 function injectStyles() {
-    if (!document.getElementById('postprocess-styles-orbitron-sliders')) { 
+    if (!document.getElementById(POST_PROCESS_STYLE_ID)) {
         const styleSheet = document.createElement('style');
-        styleSheet.id = 'postprocess-styles-orbitron-sliders';
+        styleSheet.id = POST_PROCESS_STYLE_ID;
         styleSheet.textContent = CSS_STYLES;
         document.head.appendChild(styleSheet);
-        console.log("CSS styles (Orbitron Title & Fancy Sliders) injected successfully");
-        
-        if (!document.querySelector('link[href*="Orbitron"]')) {
-            const fontLink = document.createElement("link");
-            fontLink.href = "https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap";
-            fontLink.rel = "stylesheet";
-            document.head.appendChild(fontLink);
-        }
+    }
 
-    } else {
-        console.log("CSS styles (Orbitron Title & Fancy Sliders) already injected");
+    if (!document.getElementById(POST_PROCESS_FONT_LINK_ID)) {
+        const fontLink = document.createElement("link");
+        fontLink.id = POST_PROCESS_FONT_LINK_ID;
+        fontLink.href = "https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap";
+        fontLink.rel = "stylesheet";
+        document.head.appendChild(fontLink);
     }
 }
 
@@ -716,17 +756,38 @@ class ProfessionalPostProcessUI {
         this.enabledSections = new Set();
         this.presetSelect = null;
         this.presets = this.loadPresets();
-        console.log("ProfessionalPostProcessUI instance created for node:", this.node);
+        this.setupRetryTimeout = null;
+        this.pendingResizeTimeout = null;
+        this.postInitTimeout = null;
+        debugLog("ProfessionalPostProcessUI instance created for node:", this.node);
         this.setupUI();
     }
 
+    destroy() {
+        if (this.setupRetryTimeout) {
+            clearTimeout(this.setupRetryTimeout);
+            this.setupRetryTimeout = null;
+        }
+
+        if (this.pendingResizeTimeout) {
+            clearTimeout(this.pendingResizeTimeout);
+            this.pendingResizeTimeout = null;
+        }
+
+        if (this.postInitTimeout) {
+            clearTimeout(this.postInitTimeout);
+            this.postInitTimeout = null;
+        }
+
+        this.container = null;
+    }
+
     loadPresets() {
-        const presets = localStorage.getItem('crtPostProcessPresets');
-        return presets ? JSON.parse(presets) : {};
+        return loadJSONStorage(POST_PROCESS_PRESETS_KEY, LEGACY_POST_PROCESS_PRESETS_KEY, {});
     }
 
     savePresets() {
-        localStorage.setItem('crtPostProcessPresets', JSON.stringify(this.presets));
+        saveJSONStorage(POST_PROCESS_PRESETS_KEY, this.presets);
     }
 
     updatePresetDropdown() {
@@ -750,7 +811,7 @@ class ProfessionalPostProcessUI {
     }
 
     setupUI(attempt = 1) {
-        console.log(`Attempting UI setup (attempt ${attempt})...`);
+        debugLog(`Attempting UI setup (attempt ${attempt})...`);
         if (!this.node || !this.node.widgets || this.node.widgets.length === 0) {
             console.warn(`Node or widgets not available, retrying (attempt ${attempt})`);
             if (attempt > 10) {
@@ -758,7 +819,7 @@ class ProfessionalPostProcessUI {
                 this.initializeUI();
                 return;
             }
-            setTimeout(() => this.setupUI(attempt + 1), 100);
+            this.setupRetryTimeout = setTimeout(() => this.setupUI(attempt + 1), 100);
             return;
         }
 
@@ -776,7 +837,7 @@ class ProfessionalPostProcessUI {
         });
 
         if (allWidgetsReady) {
-            console.log("All widgets ready, initializing UI");
+            debugLog("All widgets ready, initializing UI");
             this.initializeUI();
         } else {
             console.warn(`Widgets not fully loaded, retrying (attempt ${attempt})`);
@@ -785,12 +846,17 @@ class ProfessionalPostProcessUI {
                 this.initializeUI();
                 return;
             }
-            setTimeout(() => this.setupUI(attempt + 1), 100);
+            this.setupRetryTimeout = setTimeout(() => this.setupUI(attempt + 1), 100);
         }
     }
 
     initializeUI() {
-        console.log("Initializing UI... Initial widget values:", this.getAllWidgetValues());
+        if (this.setupRetryTimeout) {
+            clearTimeout(this.setupRetryTimeout);
+            this.setupRetryTimeout = null;
+        }
+
+        debugLog("Initializing UI... Initial widget values:", this.getAllWidgetValues());
         this.hideOriginalWidgets();
         this.createCustomUI();
         this.updateEnabledSections();
@@ -800,14 +866,14 @@ class ProfessionalPostProcessUI {
         });
 
         this.node.setSize([650, 220]);
-        console.log("Node size set to 650x220");
+        debugLog("Node size set to 650x220");
 
-        setTimeout(() => {
-            console.log("Triggering initial tab switch to:", this.activeTab);
+        this.postInitTimeout = setTimeout(() => {
+            debugLog("Triggering initial tab switch to:", this.activeTab);
             this.syncUIWithWidgets();
             this.switchTab(this.activeTab);
             this.node.setDirtyCanvas(true, true);
-            console.log("Canvas marked as dirty for redraw");
+            debugLog("Canvas marked as dirty for redraw");
         }, 200);
     }
 
@@ -838,15 +904,19 @@ class ProfessionalPostProcessUI {
                 widget.serialize = true;
                 if (widget.element) {
                     widget.element.remove();
-                    console.log(`Hiding widget by removal: ${widget.name}`);
+                    debugLog(`Hiding widget by removal: ${widget.name}`);
                 }
             }
         });
-        console.log("Original widgets hidden");
+        debugLog("Original widgets hidden");
     }
 
     createCustomUI() {
-        console.log("Creating custom UI...");
+        if (this.container?.isConnected) {
+            return;
+        }
+
+        debugLog("Creating custom UI...");
         this.container = document.createElement('div');
         this.container.className = 'postprocess-container';
 
@@ -862,7 +932,7 @@ class ProfessionalPostProcessUI {
         if (this.node.addDOMWidget) {
             try {
                 this.node.addDOMWidget('postprocess_ui', 'div', this.container);
-                console.log("Custom UI added via addDOMWidget");
+                debugLog("Custom UI added via addDOMWidget");
             } catch (error) {
                 console.error("Failed to add DOM widget:", error);
             }
@@ -916,7 +986,7 @@ class ProfessionalPostProcessUI {
         presetControls.appendChild(deleteButton);
 
         this.container.appendChild(presetControls);
-        console.log("Preset controls created");
+        debugLog("Preset controls created");
     }
 
     savePreset(presetName) {
@@ -924,7 +994,7 @@ class ProfessionalPostProcessUI {
         this.presets[presetName] = values;
         this.savePresets();
         this.updatePresetDropdown();
-        console.log(`Preset "${presetName}" saved`, values);
+        debugLog(`Preset "${presetName}" saved`, values);
     }
 
     loadPreset() {
@@ -962,7 +1032,7 @@ class ProfessionalPostProcessUI {
         });
         this.switchTab(this.activeTab);
         this.node.setDirtyCanvas(true, true);
-        console.log(`Preset "${presetName}" loaded`, preset);
+        debugLog(`Preset "${presetName}" loaded`, preset);
     }
 
     deletePreset() {
@@ -975,7 +1045,7 @@ class ProfessionalPostProcessUI {
         delete this.presets[presetName];
         this.savePresets();
         this.updatePresetDropdown();
-        console.log(`Preset "${presetName}" deleted`);
+        debugLog(`Preset "${presetName}" deleted`);
     }
 
     createTabs() {
@@ -999,7 +1069,7 @@ class ProfessionalPostProcessUI {
         });
 
         this.container.appendChild(tabsContainer);
-        console.log("Tabs created");
+        debugLog("Tabs created");
     }
 
     createSections() {
@@ -1073,7 +1143,7 @@ class ProfessionalPostProcessUI {
             section.appendChild(paramsContainer);
             this.container.appendChild(section);
         });
-        console.log("Sections created");
+        debugLog("Sections created");
     }
 
     createParameterControls(groupName, container) {
@@ -1098,7 +1168,7 @@ class ProfessionalPostProcessUI {
             this.createParameterRows(subgroups[subgroupName], paramGroup);
             container.appendChild(paramGroup);
         });
-        console.log(`Parameter controls created for group: ${groupName}`);
+        debugLog(`Parameter controls created for group: ${groupName}`);
     }
 
     createParameterRows(params, container) {
@@ -1142,7 +1212,7 @@ class ProfessionalPostProcessUI {
                 }
 
                 if (!options.includes(widget.value) && options.length > 0) {
-                    console.log(`Setting default value for ${paramName}: ${options[0]}`);
+                    debugLog(`Setting default value for ${paramName}: ${options[0]}`);
                     widget.value = options[0];
                 }
 
@@ -1253,7 +1323,7 @@ class ProfessionalPostProcessUI {
                 if (row) {
                     const widget = this.findWidget(paramName);
                     if (widget && widget.value !== undefined) {
-                        console.log(`Syncing ${paramName}: widget.value=${widget.value}, default=${DEFAULTS[paramName]}`);
+                        debugLog(`Syncing ${paramName}: widget.value=${widget.value}, default=${DEFAULTS[paramName]}`);
                         const slider = row.querySelector('.parameter-slider');
                         const input = row.querySelector('.parameter-input');
                         const select = row.querySelector('.dropdown-select');
@@ -1302,7 +1372,7 @@ class ProfessionalPostProcessUI {
                 }
             }
         });
-        console.log("UI synced with widgets, enabled sections:", Array.from(this.enabledSections));
+        debugLog("UI synced with widgets, enabled sections:", Array.from(this.enabledSections));
     }
 
     switchTab(tabName) {
@@ -1342,7 +1412,11 @@ class ProfessionalPostProcessUI {
     updateNodeSize() {
         const activeSection = this.container.querySelector('.postprocess-section.active');
         if (activeSection) {
-            setTimeout(() => {
+            if (this.pendingResizeTimeout) {
+                clearTimeout(this.pendingResizeTimeout);
+            }
+
+            this.pendingResizeTimeout = setTimeout(() => {
                 const paramsContainer = activeSection.querySelector('.parameters-grid');
                 const isCollapsed = paramsContainer && paramsContainer.style.display === 'none';
                 const paramsHeight = isCollapsed ? 0 : (paramsContainer?.scrollHeight || 100);
@@ -1353,7 +1427,7 @@ class ProfessionalPostProcessUI {
                 const padding = 110;
                 const newHeight = paramsHeight + headerHeight + tabsHeight + titleHeight + presetControlsHeight + padding;
 
-                console.log(`updateNodeSize: paramsHeight=${paramsHeight}, headerHeight=${headerHeight}, tabsHeight=${tabsHeight}, titleHeight=${titleHeight}, presetControlsHeight=${presetControlsHeight}, newHeight=${newHeight}`);
+                debugLog(`updateNodeSize: paramsHeight=${paramsHeight}, headerHeight=${headerHeight}, tabsHeight=${tabsHeight}, titleHeight=${titleHeight}, presetControlsHeight=${presetControlsHeight}, newHeight=${newHeight}`);
 
                 this.node.setSize([650, Math.max(220, newHeight)]);
                 this.node.setDirtyCanvas(true, true);
@@ -1380,11 +1454,11 @@ class ProfessionalPostProcessUI {
 			if (enableLargeGlowWidget) {
 				enableLargeGlowWidget.value = isEnabled;
 				enableLargeGlowWidget.serialize = true; // ensure this is serialized
-				console.log(`Set enable_large_glow to ${isEnabled} for GLOWS group`);
+				debugLog(`Set enable_large_glow to ${isEnabled} for GLOWS group`);
 			} else {
 				console.error("enable_large_glow widget not found; large glow will not be enabled/disabled");
 			}
-			console.log(`GLOWS group toggled: enable_small_glow=${enableWidget.value}, enable_large_glow=${enableLargeGlowWidget?.value}`);
+			debugLog(`GLOWS group toggled: enable_small_glow=${enableWidget.value}, enable_large_glow=${enableLargeGlowWidget?.value}`);
 		}
 
 		const sanitizedId = this.sanitizeId(groupName);
@@ -1421,7 +1495,7 @@ class ProfessionalPostProcessUI {
                 let value;
                 if (paramName === 'upscale_model_path' && widget.options?.values && widget.options.values.length > 0) {
                     value = widget.options.values[0];
-                    console.log(`Resetting ${paramName} to first valid option: ${value}`);
+                    debugLog(`Resetting ${paramName} to first valid option: ${value}`);
                 } else if (DEFAULTS[paramName] !== undefined) {
                     const isNumber = typeof DEFAULTS[paramName] === 'number';
                     value = isNumber ? parseFloat(DEFAULTS[paramName].toFixed(3)) : DEFAULTS[paramName];
@@ -1503,7 +1577,7 @@ class ProfessionalPostProcessUI {
                 this.enabledSections.add(groupName);
             }
         });
-        console.log("Enabled sections updated:", Array.from(this.enabledSections));
+        debugLog("Enabled sections updated:", Array.from(this.enabledSections));
     }
 }
 
@@ -1511,19 +1585,20 @@ app.registerExtension({
     name: "Comfy.ProfessionalPostProcess.UI",
     async nodeCreated(node) {
         if (node.comfyClass === "CRT Post-Process Suite") {
-            console.log("CRT Post-Process Suite node created:", node);
             node.color = "#000000";
             node.bgcolor = "#000000";
             if (!node.postProcessUI) {
                 node.postProcessUI = new ProfessionalPostProcessUI(node);
-            } else {
-                console.log("postProcessUI already exists on node");
             }
+
+            const originalOnRemoved = node.onRemoved;
+            node.onRemoved = function() {
+                node.postProcessUI?.destroy();
+                return originalOnRemoved?.apply(this, arguments);
+            };
         }
     },
     async setup() {
-        console.log("ProfessionalPostProcess extension setup started");
         injectStyles();
-        console.log("ProfessionalPostProcess extension setup completed");
     }
 });

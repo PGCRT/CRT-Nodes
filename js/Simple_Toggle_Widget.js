@@ -1,5 +1,317 @@
 import { app } from "../../scripts/app.js";
 
+const STYLE_ID = "crt-simple-toggle-style";
+const FONT_ID = "crt-simple-toggle-font";
+
+function ensureAssets() {
+    if (!document.getElementById(FONT_ID)) {
+        const fontLink = document.createElement("link");
+        fontLink.id = FONT_ID;
+        fontLink.rel = "stylesheet";
+        fontLink.href = "https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap";
+        document.head.appendChild(fontLink);
+    }
+
+    if (document.getElementById(STYLE_ID)) return;
+
+    const style = document.createElement("style");
+    style.id = STYLE_ID;
+    style.textContent = `
+        .simple-toggle-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 200px;
+            height: 120px;
+            position: relative;
+            top: -65px;
+            left: -10px;
+            background: transparent;
+            min-width: 220px;
+            min-height: 120px;
+            max-width: 220px;
+            max-height: 120px;
+            font-family: 'Orbitron', monospace;
+            user-select: none;
+            pointer-events: none;
+        }
+
+        .simple-toggle-header {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            padding: 0px;
+            box-sizing: border-box;
+            pointer-events: none;
+        }
+
+        .simple-toggle-settings-btn {
+            position: absolute;
+            top: 45px;
+            left: 5px;
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--toggle-color, #888);
+            border: 1px solid var(--toggle-color, #888);
+            border-radius: 8px;
+            width: 28px;
+            height: 28px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            pointer-events: auto;
+        }
+
+        .simple-toggle-settings-btn:hover {
+            background: var(--toggle-color, #888);
+            color: white;
+            transform: scale(1.1);
+            box-shadow: 0 0 15px var(--toggle-color, #888);
+        }
+
+        .simple-toggle-title {
+            color: var(--toggle-color, #888);
+            font-family: 'Orbitron', monospace;
+            font-size: 16px;
+            font-weight: bold;
+            position: absolute;
+            bottom: -5px;
+            text-shadow: 0 0 8px var(--toggle-color, #888);
+            pointer-events: none;
+        }
+
+        .toggle-switch {
+            width: 120px;
+            height: 60px;
+            background: linear-gradient(145deg, #2a2a2a, #1a1a1a);
+            border-radius: 30px;
+            position: relative;
+            cursor: pointer;
+            border: 3px solid var(--toggle-color, #888);
+            transition: all 0.3s ease;
+            pointer-events: auto;
+            box-shadow:
+                inset 0 0 20px rgba(0, 0, 0, 0.8),
+                0 8px 20px rgba(0, 0, 0, 0.6);
+        }
+
+        .toggle-switch:hover {
+            transform: scale(1.05);
+            box-shadow:
+                inset 0 0 20px rgba(0, 0, 0, 0.8),
+                0 12px 25px rgba(0, 0, 0, 0.7),
+                0 0 15px var(--toggle-color, #888);
+        }
+
+        .toggle-switch-handle {
+            width: 48px;
+            height: 48px;
+            background: radial-gradient(circle at 30% 30%, #ffffff, #cccccc);
+            border-radius: 50%;
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            border: 2px solid var(--toggle-color, #888);
+        }
+
+        .toggle-switch.on .toggle-switch-handle {
+            left: 63px;
+            box-shadow: 0 0 15px var(--toggle-color, #888);
+        }
+
+        .toggle-switch-text {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 12px;
+            font-weight: bold;
+            color: var(--toggle-color, #888);
+            text-shadow: 0 0 5px var(--toggle-color, #888);
+            transition: all 0.3s ease;
+            pointer-events: none;
+        }
+
+        .toggle-switch-text.on-text { left: 15px; opacity: 0; }
+        .toggle-switch-text.off-text { right: 10px; opacity: 1; }
+        .toggle-switch.on .toggle-switch-text.on-text { opacity: 1; }
+        .toggle-switch.on .toggle-switch-text.off-text { opacity: 0; }
+
+        .toggle-button {
+            width: 120px;
+            height: 60px;
+            background: linear-gradient(145deg, #2a2a2a, #1a1a1a);
+            border: 3px solid var(--toggle-color, #888);
+            border-radius: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            pointer-events: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            font-weight: bold;
+            color: var(--toggle-color, #888);
+            text-shadow: 0 0 8px var(--toggle-color, #888);
+            box-shadow:
+                inset 0 0 20px rgba(0, 0, 0, 0.8),
+                0 8px 20px rgba(0, 0, 0, 0.6);
+        }
+
+        .toggle-button:hover {
+            transform: scale(1.05);
+            box-shadow:
+                inset 0 0 20px rgba(0, 0, 0, 0.8),
+                0 12px 25px rgba(0, 0, 0, 0.7),
+                0 0 15px var(--toggle-color, #888);
+        }
+
+        .toggle-button.on {
+            background: linear-gradient(145deg, var(--toggle-color, #888), var(--toggle-color-dark, #666));
+            color: white;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+        }
+
+        .toggle-checkbox {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(145deg, #2a2a2a, #1a1a1a);
+            border: 3px solid var(--toggle-color, #888);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            pointer-events: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            box-shadow:
+                inset 0 0 20px rgba(0, 0, 0, 0.8),
+                0 8px 20px rgba(0, 0, 0, 0.6);
+        }
+
+        .toggle-checkbox:hover {
+            transform: scale(1.05);
+            box-shadow:
+                inset 0 0 20px rgba(0, 0, 0, 0.8),
+                0 12px 25px rgba(0, 0, 0, 0.7),
+                0 0 15px var(--toggle-color, #888);
+        }
+
+        .toggle-checkbox-check {
+            font-size: 30px;
+            color: var(--toggle-color, #888);
+            opacity: 0;
+            transition: all 0.3s ease;
+            text-shadow: 0 0 10px var(--toggle-color, #888);
+        }
+
+        .toggle-checkbox.on .toggle-checkbox-check {
+            opacity: 1;
+            transform: scale(1.2);
+        }
+
+        .simple-toggle-modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            z-index: 10000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(5px);
+        }
+
+        .simple-toggle-modal {
+            background: linear-gradient(145deg, #2a2a2a, #1a1a1a);
+            border: 2px solid #888;
+            border-radius: 15px;
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            min-width: 350px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
+            font-family: 'Orbitron', monospace;
+        }
+
+        .simple-toggle-modal-row {
+            display: grid;
+            grid-template-columns: 100px 1fr;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .simple-toggle-modal-row label {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .simple-toggle-modal-row input, .simple-toggle-modal-row select {
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid #888;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-family: 'Orbitron', monospace;
+            transition: all 0.3s ease;
+        }
+
+        .simple-toggle-modal-row input:focus, .simple-toggle-modal-row select:focus {
+            outline: none;
+            border-color: #ffffff;
+            box-shadow: 0 0 10px #888;
+        }
+
+        .simple-toggle-modal-buttons {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .simple-toggle-modal-button {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid #888;
+            border-radius: 6px;
+            color: #888;
+            padding: 8px 16px;
+            cursor: pointer;
+            font-size: 12px;
+            font-family: 'Orbitron', monospace;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+        }
+
+        .simple-toggle-modal-button:hover { background: #888; color: white; }
+        .simple-toggle-modal-button.save { background: #888; color: white; }
+
+        .simple-toggle-modal-title {
+            color: #888;
+            font-size: 16px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+    `;
+    document.head.appendChild(style);
+}
+
 const SimpleToggleExtension = {
     name: "CRT.SimpleToggle.UI",
 
@@ -9,353 +321,28 @@ const SimpleToggleExtension = {
 
             nodeType.prototype.onNodeCreated = function () {
                 onNodeCreated?.apply(this, arguments);
+                ensureAssets();
 
-                // Make node background and title transparent
                 this.bgcolor = "transparent";
                 this.color = "transparent";
                 this.title = "";
 
-                // Find the original boolean widget so we can read/write its value
-                const valueWidget = this.widgets.find(w => w.name === "value");
+                const valueWidget = this.widgets?.find(w => w.name === "value");
+                if (!valueWidget) return;
 
-                // Hide the original widget. We are replacing it with our own UI.
                 valueWidget.hidden = true;
+                valueWidget.computeSize = () => [0, -4];
 
-                // Initialize properties on the node itself. This is how settings are saved.
                 this.properties = this.properties || {};
                 this.properties.title = this.properties.title || "";
                 this.properties.color_on = this.properties.color_on || "#00ff88";
                 this.properties.color_off = this.properties.color_off || "#ff4444";
-                this.properties.style = this.properties.style || "switch"; // switch, button, checkbox
+                this.properties.style = this.properties.style || "switch";
                 this.properties.on_text = this.properties.on_text || "ON";
                 this.properties.off_text = this.properties.off_text || "OFF";
 
-                // --- UI Construction ---
                 const wrapper = document.createElement("div");
                 wrapper.className = "simple-toggle-wrapper";
-                
-                const style = document.createElement("style");
-                style.textContent = `
-                    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap');
-                    
-                    .simple-toggle-wrapper { 
-                        display: flex; 
-                        flex-direction: column; 
-                        align-items: center; 
-                        justify-content: center; 
-                        width: 200px; 
-                        height: 120px; 
-                        position: relative; 
-                        top: -65px;
-						left: -10px;
-                        background: transparent;
-                        min-width: 220px;
-                        min-height: 120px;
-                        max-width: 220px;
-                        max-height: 120px;
-                        font-family: 'Orbitron', monospace;
-                        user-select: none;
-                        pointer-events: none;
-                    }
-                    
-                    .simple-toggle-header { 
-                        display: flex; 
-                        justify-content: flex-end; 
-                        align-items: center; 
-                        width: 100%; 
-                        position: absolute; 
-                        top: 0; 
-                        padding: 0px; 
-                        box-sizing: border-box; 
-                        pointer-events: none;
-                    }
-                    
-                    /* UPDATED SETTINGS BUTTON STYLE TO MATCH KNOB */
-                    .simple-toggle-settings-btn { 
-                        position: absolute;
-                        top: 45px; 
-                        left: 5px;
-                        background: rgba(255, 255, 255, 0.1); 
-                        color: var(--toggle-color, #888); 
-                        border: 1px solid var(--toggle-color, #888); 
-                        border-radius: 8px; 
-                        width: 28px; 
-                        height: 28px; 
-                        cursor: pointer; 
-                        font-size: 16px; 
-                        transition: all 0.3s ease;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        pointer-events: auto;
-                    }
-                    
-                    .simple-toggle-settings-btn:hover { 
-                        background: var(--toggle-color, #888); 
-                        color: white; 
-                        transform: scale(1.1);
-                        box-shadow: 0 0 15px var(--toggle-color, #888);
-                    }
-                    
-                    .simple-toggle-title { 
-                        color: var(--toggle-color, #888); 
-                        font-family: 'Orbitron', monospace;
-                        font-size: 16px; 
-                        font-weight: bold; 
-                        position: absolute; 
-                        bottom: -5px; 
-                        text-shadow: 0 0 8px var(--toggle-color, #888);
-                        pointer-events: none;
-                    }
-                    
-                    /* Switch Style */
-                    .toggle-switch {
-                        width: 120px;
-                        height: 60px;
-                        background: linear-gradient(145deg, #2a2a2a, #1a1a1a);
-                        border-radius: 30px;
-                        position: relative;
-                        cursor: pointer;
-                        border: 3px solid var(--toggle-color, #888);
-                        transition: all 0.3s ease;
-                        pointer-events: auto;
-                        box-shadow: 
-                            inset 0 0 20px rgba(0, 0, 0, 0.8),
-                            0 8px 20px rgba(0, 0, 0, 0.6);
-                    }
-                    
-                    .toggle-switch:hover {
-                        transform: scale(1.05);
-                        box-shadow: 
-                            inset 0 0 20px rgba(0, 0, 0, 0.8),
-                            0 12px 25px rgba(0, 0, 0, 0.7),
-                            0 0 15px var(--toggle-color, #888);
-                    }
-                    
-                    .toggle-switch-handle {
-                        width: 48px;
-                        height: 48px;
-                        background: radial-gradient(circle at 30% 30%, #ffffff, #cccccc);
-                        border-radius: 50%;
-                        position: absolute;
-                        top: 3px;
-                        left: 3px;
-                        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-                        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-                        border: 2px solid var(--toggle-color, #888);
-                    }
-                    
-                    .toggle-switch.on .toggle-switch-handle {
-                        left: 63px;
-                        box-shadow: 0 0 15px var(--toggle-color, #888);
-                    }
-                    
-                    .toggle-switch-text {
-                        position: absolute;
-                        top: 50%;
-                        transform: translateY(-50%);
-                        font-size: 12px;
-                        font-weight: bold;
-                        color: var(--toggle-color, #888);
-                        text-shadow: 0 0 5px var(--toggle-color, #888);
-                        transition: all 0.3s ease;
-                        pointer-events: none;
-                    }
-                    
-                    .toggle-switch-text.on-text {
-                        left: 15px;
-                        opacity: 0;
-                    }
-                    
-                    .toggle-switch-text.off-text {
-                        right: 10px;
-                        opacity: 1;
-                    }
-                    
-                    .toggle-switch.on .toggle-switch-text.on-text {
-                        opacity: 1;
-                    }
-                    
-                    .toggle-switch.on .toggle-switch-text.off-text {
-                        opacity: 0;
-                    }
-                    
-                    /* Button Style */
-                    .toggle-button {
-                        width: 120px;
-                        height: 60px;
-                        background: linear-gradient(145deg, #2a2a2a, #1a1a1a);
-                        border: 3px solid var(--toggle-color, #888);
-                        border-radius: 15px;
-                        cursor: pointer;
-                        transition: all 0.3s ease;
-                        pointer-events: auto;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        font-size: 16px;
-                        font-weight: bold;
-                        color: var(--toggle-color, #888);
-                        text-shadow: 0 0 8px var(--toggle-color, #888);
-                        box-shadow: 
-                            inset 0 0 20px rgba(0, 0, 0, 0.8),
-                            0 8px 20px rgba(0, 0, 0, 0.6);
-                    }
-                    
-                    .toggle-button:hover {
-                        transform: scale(1.05);
-                        box-shadow: 
-                            inset 0 0 20px rgba(0, 0, 0, 0.8),
-                            0 12px 25px rgba(0, 0, 0, 0.7),
-                            0 0 15px var(--toggle-color, #888);
-                    }
-                    
-                    .toggle-button.on {
-                        background: linear-gradient(145deg, var(--toggle-color, #888), var(--toggle-color-dark, #666));
-                        color: white;
-                        text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
-                    }
-                    
-                    /* Checkbox Style */
-                    .toggle-checkbox {
-                        width: 60px;
-                        height: 60px;
-                        background: linear-gradient(145deg, #2a2a2a, #1a1a1a);
-                        border: 3px solid var(--toggle-color, #888);
-                        border-radius: 10px;
-                        cursor: pointer;
-                        transition: all 0.3s ease;
-                        pointer-events: auto;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        position: relative;
-                        box-shadow: 
-                            inset 0 0 20px rgba(0, 0, 0, 0.8),
-                            0 8px 20px rgba(0, 0, 0, 0.6);
-                    }
-                    
-                    .toggle-checkbox:hover {
-                        transform: scale(1.05);
-                        box-shadow: 
-                            inset 0 0 20px rgba(0, 0, 0, 0.8),
-                            0 12px 25px rgba(0, 0, 0, 0.7),
-                            0 0 15px var(--toggle-color, #888);
-                    }
-                    
-                    .toggle-checkbox-check {
-                        font-size: 30px;
-                        color: var(--toggle-color, #888);
-                        opacity: 0;
-                        transition: all 0.3s ease;
-                        text-shadow: 0 0 10px var(--toggle-color, #888);
-                    }
-                    
-                    .toggle-checkbox.on .toggle-checkbox-check {
-                        opacity: 1;
-                        transform: scale(1.2);
-                    }
-                    
-                    /* Modal Styles */
-                    .simple-toggle-modal-overlay { 
-                        position: fixed; 
-                        top: 0; 
-                        left: 0; 
-                        width: 100%; 
-                        height: 100%; 
-                        background: rgba(0,0,0,0.8); 
-                        z-index: 10000; 
-                        display: none; 
-                        align-items: center; 
-                        justify-content: center; 
-                        backdrop-filter: blur(5px);
-                    }
-                    
-                    .simple-toggle-modal { 
-                        background: linear-gradient(145deg, #2a2a2a, #1a1a1a); 
-                        border: 2px solid #888; 
-                        border-radius: 15px; 
-                        padding: 25px; 
-                        display: flex; 
-                        flex-direction: column; 
-                        gap: 15px; 
-                        min-width: 350px;
-                        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
-                        font-family: 'Orbitron', monospace;
-                    }
-                    
-                    .simple-toggle-modal-row { 
-                        display: grid; 
-                        grid-template-columns: 100px 1fr; 
-                        align-items: center; 
-                        gap: 15px; 
-                    }
-                    
-                    .simple-toggle-modal-row label { 
-                        color: rgba(255, 255, 255, 0.8); 
-                        font-size: 12px; 
-                        font-weight: 500;
-                    }
-                    
-                    .simple-toggle-modal-row input, .simple-toggle-modal-row select { 
-                        background: rgba(0, 0, 0, 0.5); 
-                        border: 1px solid #888; 
-                        color: white; 
-                        padding: 8px 12px; 
-                        border-radius: 6px; 
-                        font-size: 12px;
-                        font-family: 'Orbitron', monospace;
-                        transition: all 0.3s ease;
-                    }
-                    
-                    .simple-toggle-modal-row input:focus, .simple-toggle-modal-row select:focus {
-                        outline: none;
-                        border-color: #ffffff;
-                        box-shadow: 0 0 10px #888;
-                    }
-                    
-                    .simple-toggle-modal-buttons { 
-                        display: flex; 
-                        justify-content: flex-end; 
-                        gap: 10px; 
-                        margin-top: 10px; 
-                    }
-                    
-                    .simple-toggle-modal-button {
-                        background: rgba(255, 255, 255, 0.1);
-                        border: 1px solid #888;
-                        border-radius: 6px;
-                        color: #888;
-                        padding: 8px 16px;
-                        cursor: pointer;
-                        font-size: 12px;
-                        font-family: 'Orbitron', monospace;
-                        font-weight: 600;
-                        transition: all 0.3s ease;
-                        text-transform: uppercase;
-                    }
-                    
-                    .simple-toggle-modal-button:hover {
-                        background: #888;
-                        color: white;
-                    }
-                    
-                    .simple-toggle-modal-button.save {
-                        background: #888;
-                        color: white;
-                    }
-                    
-                    .simple-toggle-modal-title {
-                        color: #888;
-                        font-size: 16px;
-                        font-weight: 700;
-                        text-align: center;
-                        margin-bottom: 10px;
-                        text-transform: uppercase;
-                        letter-spacing: 1px;
-                    }
-                `;
-                wrapper.appendChild(style);
 
                 const header = document.createElement("div");
                 header.className = "simple-toggle-header";
@@ -366,7 +353,6 @@ const SimpleToggleExtension = {
                 
                 header.appendChild(settingsBtn);
 
-                // Create toggle element based on style
                 const toggleElement = document.createElement("div");
                 this.updateToggleStyle(toggleElement);
                 
@@ -377,35 +363,29 @@ const SimpleToggleExtension = {
                 wrapper.appendChild(toggleElement);
                 wrapper.appendChild(titleDisplay);
                 
-                // Add the custom UI as a DOMWidget
                 const domWidget = this.addDOMWidget("simple_toggle_ui", "div", wrapper, {
                     serialize: false,
                     computeSize: () => [220, 10]
                 });
                 domWidget.wrapper = wrapper;
 
-                // Force fixed size
                 this.size = [220, 10];
                 this.resizable = false;
 
-                // --- Modal for Settings ---
                 const modalOverlay = document.createElement("div");
                 modalOverlay.className = "simple-toggle-modal-overlay";
                 const modal = this.buildModal(modalOverlay);
                 document.body.appendChild(modalOverlay);
 
-                // --- Logic and Event Handling ---
                 const updateToggleVisuals = () => {
                     const isOn = valueWidget.value;
                     const color = isOn ? this.properties.color_on : this.properties.color_off;
                     
                     wrapper.style.setProperty("--toggle-color", color);
                     
-                    // Create darker variant for gradients
                     const darkColor = this.darkenColor(color, 0.3);
                     wrapper.style.setProperty("--toggle-color-dark", darkColor);
-                    
-                    // Update toggle state
+
                     if (this.properties.style === "switch") {
                         toggleElement.classList.toggle("on", isOn);
                     } else if (this.properties.style === "button") {
@@ -428,7 +408,6 @@ const SimpleToggleExtension = {
                     updateToggleVisuals();
                 };
                 
-                // Toggle click handler
                 toggleElement.addEventListener("click", (e) => {
                     toggleValue();
                     e.preventDefault();
@@ -442,11 +421,11 @@ const SimpleToggleExtension = {
                     e.stopPropagation();
                 });
 
-                updateAllVisuals(); // Initial setup
+                updateAllVisuals();
 
-                // Store references
                 this.syncToggleUI = updateAllVisuals;
                 this.toggleElement = toggleElement;
+                this._simpleToggleOverlay = modalOverlay;
             };
             
             // Helper method to update toggle style
@@ -587,6 +566,15 @@ const SimpleToggleExtension = {
                 if (this.syncToggleUI) {
                     this.syncToggleUI();
                 }
+            };
+
+            const onRemoved = nodeType.prototype.onRemoved;
+            nodeType.prototype.onRemoved = function() {
+                this._simpleToggleOverlay?.remove();
+                this._simpleToggleOverlay = null;
+                this.syncToggleUI = null;
+                this.toggleElement = null;
+                onRemoved?.apply(this, arguments);
             };
         }
     }

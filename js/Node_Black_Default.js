@@ -1,12 +1,16 @@
-import { app } from "../../scripts/app.js";
+import { app } from "/scripts/app.js";
 
 const CRT_NODE_COLOR = "#111111";
 const CRT_NODE_BGCOLOR = "#000000";
 
 function applyBlackTheme(node) {
-  if (!node) return;
+  if (!node) {
+    return;
+  }
+
   const color = String(node.color || "").toLowerCase();
   const bgcolor = String(node.bgcolor || "").toLowerCase();
+
   if (
     color === "transparent" ||
     bgcolor === "transparent" ||
@@ -36,7 +40,16 @@ app.registerExtension({
     const originalOnConfigure = nodeType.prototype.onConfigure;
     nodeType.prototype.onConfigure = function () {
       const result = originalOnConfigure?.apply(this, arguments);
-      applyBlackTheme(this);
+
+      const isCrtOrEmpty = (v) => {
+        const s = String(v || "").toLowerCase();
+        return !s || s === CRT_NODE_COLOR || s === CRT_NODE_BGCOLOR || s === "transparent" || s === "rgba(0,0,0,0)";
+      };
+
+      if (isCrtOrEmpty(this.color) && isCrtOrEmpty(this.bgcolor)) {
+        applyBlackTheme(this);
+      }
+
       return result;
     };
   },

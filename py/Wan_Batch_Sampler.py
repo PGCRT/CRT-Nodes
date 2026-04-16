@@ -1,4 +1,5 @@
 import torch
+import threading
 import numpy as np
 import comfy.sample
 import comfy.samplers
@@ -88,9 +89,17 @@ def conditioning_set_values(conditioning, values):
 class CRT_WAN_BatchSampler:
     @classmethod
     def INPUT_TYPES(cls):
-        output_dir = folder_paths.get_output_directory()
         return {
             "required": {
+                "batch_count": (
+                    "INT",
+                    {
+                        "default": 3,
+                        "min": 1,
+                        "max": 128,
+                        "tooltip": "Number of items to generate with different seeds. Higher values = more VRAM in parallel mode.",
+                    },
+                ),
                 "model_high_noise": (
                     "MODEL",
                     {
@@ -112,7 +121,7 @@ class CRT_WAN_BatchSampler:
                 "width": (
                     "INT",
                     {
-                        "default": 960,
+                        "default": 480,
                         "min": 16,
                         "max": 4096,
                         "step": 16,
@@ -122,7 +131,7 @@ class CRT_WAN_BatchSampler:
                 "height": (
                     "INT",
                     {
-                        "default": 1536,
+                        "default": 832,
                         "min": 16,
                         "max": 4096,
                         "step": 16,
@@ -136,15 +145,6 @@ class CRT_WAN_BatchSampler:
                         "min": 1,
                         "max": 4096,
                         "tooltip": "Number of frames to generate. Use 1 for images, >1 for videos.",
-                    },
-                ),
-                "batch_count": (
-                    "INT",
-                    {
-                        "default": 3,
-                        "min": 1,
-                        "max": 128,
-                        "tooltip": "Number of items to generate with different seeds. Higher values = more VRAM in parallel mode.",
                     },
                 ),
                 "seed": (
@@ -175,11 +175,21 @@ class CRT_WAN_BatchSampler:
                 "boundary": (
                     "FLOAT",
                     {
-                        "default": 0.875,
+                        "default": 0.5,
                         "min": 0.0,
                         "max": 1.0,
                         "step": 0.001,
                         "tooltip": "Sigma value where switching from high-noise to low-noise model occurs. Lower = earlier switch.",
+                    },
+                ),
+                "sigma_shift": (
+                    "FLOAT",
+                    {
+                        "default": 1.0,
+                        "min": 0.0,
+                        "max": 100.0,
+                        "step": 0.01,
+                        "tooltip": "Shifts the noise schedule. Higher values = more denoising emphasis on high-frequency details.",
                     },
                 ),
                 "cfg_high_noise": (
@@ -205,25 +215,15 @@ class CRT_WAN_BatchSampler:
                 "sampler_name": (
                     comfy.samplers.KSampler.SAMPLERS,
                     {
-                        "default": "res_multistep",
+                        "default": "euler",
                         "tooltip": "Sampling algorithm. Different samplers have different quality/speed tradeoffs.",
                     },
                 ),
                 "scheduler": (
                     comfy.samplers.KSampler.SCHEDULERS,
                     {
-                        "default": "bong_tangent",
+                        "default": "simple",
                         "tooltip": "Noise schedule that controls how denoising steps are distributed.",
-                    },
-                ),
-                "sigma_shift": (
-                    "FLOAT",
-                    {
-                        "default": 5.0,
-                        "min": 0.0,
-                        "max": 100.0,
-                        "step": 0.01,
-                        "tooltip": "Shifts the noise schedule. Higher values = more denoising emphasis on high-frequency details.",
                     },
                 ),
                 "enable_vae_decode": (
@@ -231,53 +231,6 @@ class CRT_WAN_BatchSampler:
                     {
                         "default": True,
                         "tooltip": "Decode latents to images. Disable to only output latents.",
-                    },
-                ),
-                "enable_vae_tiled_decode": (
-                    "BOOLEAN",
-                    {
-                        "default": False,
-                        "tooltip": "Use tiled VAE decoding to reduce VRAM usage. Useful for high resolutions.",
-                    },
-                ),
-                "tile_size": (
-                    "INT",
-                    {
-                        "default": 512,
-                        "min": 64,
-                        "max": 4096,
-                        "step": 32,
-                        "tooltip": "Tile size for tiled VAE decode (spatial). Smaller = less VRAM but slower.",
-                    },
-                ),
-                "tile_overlap": (
-                    "INT",
-                    {
-                        "default": 64,
-                        "min": 0,
-                        "max": 4096,
-                        "step": 32,
-                        "tooltip": "Overlap between tiles for tiled VAE decode. Higher = fewer seams but slower.",
-                    },
-                ),
-                "temporal_tile_size": (
-                    "INT",
-                    {
-                        "default": 64,
-                        "min": 8,
-                        "max": 4096,
-                        "step": 4,
-                        "tooltip": "Tile size for tiled VAE decode (temporal/frames). Only relevant for video generation.",
-                    },
-                ),
-                "temporal_tile_overlap": (
-                    "INT",
-                    {
-                        "default": 8,
-                        "min": 4,
-                        "max": 4096,
-                        "step": 4,
-                        "tooltip": "Overlap between temporal tiles. Only relevant for video generation.",
                     },
                 ),
                 "create_comparison_grid": (
@@ -297,7 +250,7 @@ class CRT_WAN_BatchSampler:
                 "save_folder_path": (
                     "STRING",
                     {
-                        "default": output_dir,
+                        "default": ".\\ComfyUI\\output",
                         "tooltip": "Root folder where outputs will be saved.",
                     },
                 ),
@@ -568,11 +521,6 @@ class CRT_WAN_BatchSampler:
         scheduler,
         sigma_shift,
         enable_vae_decode,
-        enable_vae_tiled_decode,
-        tile_size,
-        tile_overlap,
-        temporal_tile_size,
-        temporal_tile_overlap,
         create_comparison_grid,
         save_videos_images,
         save_folder_path,
@@ -674,6 +622,10 @@ class CRT_WAN_BatchSampler:
                 switching_step = j - 1
                 break
         del temp_model
+        # Guard: switching_step=0 means phase 1 would do zero steps — clamp to at least 1
+        if switching_step == 0:
+            switching_step = 1
+            Log.warn(f"Boundary {boundary:.3f} resolved to step 0 with sigma_shift={sigma_shift} — clamped to 1. Lower sigma_shift or boundary to get a meaningful split.")
         Log.info(f"Boundary {boundary:.3f} â†’ switch at step {switching_step}/{steps}")
 
         # Determine processing mode
@@ -683,7 +635,7 @@ class CRT_WAN_BatchSampler:
             processing_mode == "Sequential" or use_i2v or offload_conditioning
         )
 
-        # PARALLEL MODE
+        # PARALLEL MODE — true GPU batching with background carousel preview
         if not run_sequential:
             Log.header("PARALLEL BATCH MODE")
 
@@ -693,7 +645,55 @@ class CRT_WAN_BatchSampler:
                 [comfy.sample.prepare_noise(base_latent, s) for s in seeds], dim=0
             )
 
-            Log.info(f"Processing {batch_count} items in parallel...")
+            def _make_carousel_callback(model, n_steps, n_items):
+                try:
+                    previewer = latent_preview.get_previewer(
+                        comfy.model_management.get_torch_device(),
+                        model.model.latent_format,
+                    )
+                except Exception:
+                    previewer = None
+                pbar = comfy.utils.ProgressBar(n_steps)
+                _state = {"previews": [None] * n_items, "step": 0, "total": n_steps}
+                _lock = threading.Lock()
+                _stop = threading.Event()
+
+                def _carousel():
+                    idx = 0
+                    while not _stop.is_set():
+                        with _lock:
+                            preview = _state["previews"][idx % n_items]
+                            step = _state["step"]
+                            total = _state["total"]
+                        if preview is not None:
+                            try:
+                                pbar.update_absolute(step, total, preview)
+                            except Exception:
+                                pass
+                        idx = (idx + 1) % n_items
+                        _stop.wait(0.3)
+
+                _thread = threading.Thread(target=_carousel, daemon=True)
+                _thread.start()
+
+                def callback(step, x0, x, total_steps):
+                    if previewer and x0 is not None:
+                        n = min(n_items, x0.shape[0])
+                        decoded = []
+                        for i in range(n):
+                            try:
+                                decoded.append(previewer.decode_latent_to_preview_image("JPEG", x0[i : i + 1]))
+                            except Exception:
+                                decoded.append(None)
+                        with _lock:
+                            _state["previews"][:n] = decoded
+                            _state["step"] = step + 1
+                            _state["total"] = total_steps
+                    else:
+                        pbar.update_absolute(step + 1, total_steps, None)
+
+                return callback, _stop, _thread
+
             Log.vram("Before High-Noise")
 
             # HIGH-NOISE PHASE
@@ -701,6 +701,7 @@ class CRT_WAN_BatchSampler:
             mh_clone = set_shift(model_high_noise.clone(), sigma_shift)
             Log.vram("After High-Noise Model Load")
 
+            cb, _stop, _thread = _make_carousel_callback(mh_clone, switching_step, batch_count)
             latents_for_handoff = comfy.sample.sample(
                 mh_clone,
                 noise,
@@ -715,8 +716,9 @@ class CRT_WAN_BatchSampler:
                 last_step=switching_step,
                 force_full_denoise=True,
                 disable_noise=(switching_step >= steps),
-                callback=latent_preview.prepare_callback(mh_clone, switching_step),
+                callback=cb,
             )
+            _stop.set(); _thread.join(timeout=1.0)
             Log.vram("After High-Noise Sampling")
 
             del mh_clone
@@ -735,6 +737,7 @@ class CRT_WAN_BatchSampler:
                 ml_clone = set_shift(model_low_noise.clone(), sigma_shift)
                 Log.vram("After Low-Noise Model Load")
 
+                cb, _stop, _thread = _make_carousel_callback(ml_clone, steps - switching_step, batch_count)
                 final_latents = comfy.sample.sample(
                     ml_clone,
                     noise,
@@ -747,10 +750,9 @@ class CRT_WAN_BatchSampler:
                     latents_for_handoff,
                     start_step=switching_step,
                     last_step=steps,
-                    callback=latent_preview.prepare_callback(
-                        ml_clone, steps - switching_step
-                    ),
+                    callback=cb,
                 )
+                _stop.set(); _thread.join(timeout=1.0)
                 Log.vram("After Low-Noise Sampling (PEAK)")
 
                 del ml_clone
@@ -761,9 +763,7 @@ class CRT_WAN_BatchSampler:
                 Log.info("Switching at max step, skipping low-noise phase")
                 final_latents = latents_for_handoff
 
-            latents_for_handoff_list = [
-                latents_for_handoff[i : i + 1] for i in range(batch_count)
-            ]
+            latents_for_handoff_list = [latents_for_handoff[i : i + 1] for i in range(batch_count)]
             final_latent_list = [final_latents[i : i + 1] for i in range(batch_count)]
 
         # SEQUENTIAL MODE
@@ -893,29 +893,14 @@ class CRT_WAN_BatchSampler:
 
         # DECODE & SAVE
         decoded_images_list = []
-        if (enable_vae_decode or enable_vae_tiled_decode) and vae:
+        if enable_vae_decode and vae:
             Log.header("PHASE 3: VAE DECODING & SAVING")
             Log.vram("Before VAE Decode")
 
             for i in range(batch_count):
                 Log.info(f"Decoding item {i + 1}/{batch_count} (Seed: {seeds[i]})")
                 latent = final_latent_list[i].to(vae.device)
-
-                if enable_vae_tiled_decode:
-                    try:
-                        decoded = vae.decode_tiled(
-                            latent,
-                            tile_x=tile_size // 8,
-                            tile_y=tile_size // 8,
-                            overlap=tile_overlap // 8,
-                            tile_t=temporal_tile_size,
-                            overlap_t=temporal_tile_overlap,
-                        )
-                    except Exception as e:
-                        Log.warn(f"Tiled decode failed: {e}. Using standard decode")
-                        decoded = vae.decode(latent)
-                else:
-                    decoded = vae.decode(latent)
+                decoded = vae.decode(latent)
 
                 frames = decoded.squeeze(0).cpu()
 

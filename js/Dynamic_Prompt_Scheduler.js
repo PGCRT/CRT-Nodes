@@ -1,89 +1,105 @@
 import { app } from "/scripts/app.js";
 
 app.registerExtension({
-	name: "CRT.DynamicPromptScheduler",
-	async beforeRegisterNodeDef(nodeType, nodeData, app) {
-		if (nodeData.name === "CRT_DynamicPromptScheduler") {
-			const onNodeCreated = nodeType.prototype.onNodeCreated;
-			nodeType.prototype.onNodeCreated = function () {
-				onNodeCreated?.apply(this, arguments);
+  name: "CRT.DynamicPromptScheduler",
+  async beforeRegisterNodeDef(nodeType, nodeData) {
+    if (nodeData.name !== "CRT_DynamicPromptScheduler") {
+      return;
+    }
 
-                const synchronizeInputs = () => {
-                    const targetCount = this.batch_count;
-                    const imagesEnabled = this.images_enabled;
+    const originalOnNodeCreated = nodeType.prototype.onNodeCreated;
+    nodeType.prototype.onNodeCreated = function () {
+      originalOnNodeCreated?.apply(this, arguments);
 
-                    // --- Step 1: Remove all existing dynamic inputs ---
-                    // This is the only guaranteed way to ensure a correct final order.
-                    // We create a copy of the array to iterate over, as removing items while iterating can cause issues.
-                    const inputsToRemove = [...(this.inputs || [])];
-                    for (const input of inputsToRemove) {
-                        if (input.name.startsWith("prompt_") || input.name.startsWith("image_")) {
-                            this.removeInput(this.findInputSlot(input.name));
-                        }
-                    }
+      const syncSize = () => {
+        this.size = this.computeSize();
+        this.setDirtyCanvas(true, true);
+      };
 
-                    // --- Step 2: Re-add all inputs in the correct interleaved order ---
-                    for (let i = 1; i <= targetCount; i++) {
-                        // Add the prompt input first
-                        this.addInput(`prompt_${i}`, "STRING", { multiline: true, default: "" });
+      const getWidget = (name, createWidget) => {
+        const widget = this.widgets?.find((entry) => entry.name === name);
+        return widget ?? createWidget();
+      };
 
-                        // If images are enabled, add the corresponding image input immediately after
-                        if (imagesEnabled) {
-                            this.addInput(`image_${i}`, "IMAGE");
-                        }
-                    }
+      const synchronizeInputs = () => {
+        const targetCount = Math.max(1, Math.round(this.batch_count ?? 1));
+        const imagesEnabled = Boolean(this.images_enabled);
 
-                    this.size = this.computeSize();
-                    this.setDirtyCanvas(true, true);
-                };
+        for (const input of [...(this.inputs ?? [])]) {
+          if (!input?.name) {
+            continue;
+          }
 
-                // --- Find or Create Widgets ---
-                let batchCountWidget = this.widgets?.find(w => w.name === "batch_count");
-                if (!batchCountWidget) {
-                     batchCountWidget = this.addWidget(
-                        "number", "batch_count", 1, () => {},
-                        { min: 1, max: 128, step: 1, precision: 0 }
-                    );
-                }
+          if (input.name.startsWith("prompt_") || input.name.startsWith("image_")) {
+            const slotIndex = this.findInputSlot(input.name);
+            if (slotIndex !== -1) {
+              this.removeInput(slotIndex);
+            }
+          }
+        }
 
-                let imageToggleWidget = this.widgets?.find(w => w.name === "batch_images");
-                if (!imageToggleWidget) {
-                    imageToggleWidget = this.addWidget(
-                        "toggle", "batch_images", false, () => {},
-                        { on: "Enabled", off: "Disabled" }
-                    );
-                }
+        for (let index = 1; index <= targetCount; index += 1) {
+          this.addInput(`prompt_${index}`, "STRING", { multiline: true, default: "" });
+          if (imagesEnabled) {
+            this.addInput(`image_${index}`, "IMAGE");
+          }
+        }
 
-                // --- Initialize State ---
-                const initialPromptCount = this.inputs?.filter(i => i.name.startsWith("prompt_")).length || 1;
-                const initialImageState = this.inputs?.some(i => i.name.startsWith("image_")) || false;
+        syncSize();
+      };
 
-                this.batch_count = batchCountWidget.value ?? initialPromptCount;
-                this.images_enabled = imageToggleWidget.value ?? initialImageState;
+      const batchCountWidget = getWidget("batch_count", () =>
+        this.addWidget("number", "batch_count", 1, () => {}, {
+          min: 1,
+          max: 128,
+          step: 1,
+          precision: 0,
+        })
+      );
+      const imageToggleWidget = getWidget("batch_images", () =>
+        this.addWidget("toggle", "batch_images", false, () => {}, {
+          on: "Enabled",
+          off: "Disabled",
+        })
+      );
 
-                batchCountWidget.value = this.batch_count;
-                imageToggleWidget.value = this.images_enabled;
+      const initialPromptCount = this.inputs?.filter((input) => input.name.startsWith("prompt_")).length || 1;
+      const initialImageState = this.inputs?.some((input) => input.name.startsWith("image_")) || false;
+      const originalBatchCountCallback = batchCountWidget.callback;
+      const originalImageToggleCallback = imageToggleWidget.callback;
 
-                // --- Assign Callbacks ---
-                batchCountWidget.callback = (v) => {
-                    const newCount = Math.max(1, Math.round(v));
-                    if (this.batch_count !== newCount) {
-                        this.batch_count = newCount;
-                        batchCountWidget.value = this.batch_count;
-                        synchronizeInputs();
-                    }
-                };
+      this.batch_count = Math.max(1, Math.round(batchCountWidget.value ?? initialPromptCount));
+      this.images_enabled = Boolean(imageToggleWidget.value ?? initialImageState);
+      batchCountWidget.value = this.batch_count;
+      imageToggleWidget.value = this.images_enabled;
 
-                imageToggleWidget.callback = (v) => {
-                    if (this.images_enabled !== v) {
-                        this.images_enabled = v;
-                        synchronizeInputs();
-                    }
-                };
+      batchCountWidget.callback = (value, ...args) => {
+        const nextValue = Math.max(1, Math.round(value ?? 1));
+        batchCountWidget.value = nextValue;
+        originalBatchCountCallback?.call(batchCountWidget, nextValue, ...args);
 
-                // --- Initial Build ---
-                synchronizeInputs();
-			};
-		}
-	},
+        if (this.batch_count === nextValue) {
+          return;
+        }
+
+        this.batch_count = nextValue;
+        synchronizeInputs();
+      };
+
+      imageToggleWidget.callback = (value, ...args) => {
+        const nextValue = Boolean(value);
+        imageToggleWidget.value = nextValue;
+        originalImageToggleCallback?.call(imageToggleWidget, nextValue, ...args);
+
+        if (this.images_enabled === nextValue) {
+          return;
+        }
+
+        this.images_enabled = nextValue;
+        synchronizeInputs();
+      };
+
+      synchronizeInputs();
+    };
+  },
 });

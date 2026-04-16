@@ -1,5 +1,16 @@
 import { app } from "/scripts/app.js";
 
+const COMPRESSOR_DEBUG = false;
+const COMPRESSOR_STYLE_ID = "compressor-ui-styles-enhanced";
+const COMPRESSOR_FONT_ID = "crt-compressor-ui-font";
+const COMPRESSOR_FONT_HREF = "https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap";
+
+function compressorLog(...args) {
+    if (COMPRESSOR_DEBUG) {
+        console.log("[CompressorUI]", ...args);
+    }
+}
+
 const CSS = `
 @font-face {
     font-family: 'Orbitron';
@@ -510,6 +521,7 @@ class CompressorUI {
         this.knobs = {};
         this.container = null;
         this.isInitialized = false;
+        this._cleanupFns = [];
         
         // Set node appearance
         this.node.title = "";
@@ -517,6 +529,17 @@ class CompressorUI {
         this.node.color = "transparent";
         
         this.initializeUI();
+    }
+
+    addCleanup(fn) {
+        if (typeof fn === "function") {
+            this._cleanupFns.push(fn);
+        }
+    }
+
+    addDocumentListener(eventName, handler, options) {
+        document.addEventListener(eventName, handler, options);
+        this.addCleanup(() => document.removeEventListener(eventName, handler, options));
     }
 
     initializeUI() {
@@ -528,17 +551,18 @@ class CompressorUI {
 
     createUI() {
         // Inject enhanced styles
-        if (!document.getElementById('compressor-ui-styles-enhanced')) {
+        if (!document.getElementById(COMPRESSOR_STYLE_ID)) {
             const style = document.createElement('style');
-            style.id = 'compressor-ui-styles-enhanced';
+            style.id = COMPRESSOR_STYLE_ID;
             style.textContent = CSS;
             document.head.appendChild(style);
         }
 
         // Ensure Orbitron font is loaded
-        if (!document.querySelector('link[href*="Orbitron"]')) {
+        if (!document.getElementById(COMPRESSOR_FONT_ID)) {
             const fontLink = document.createElement("link");
-            fontLink.href = "https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;&display=swap";
+            fontLink.id = COMPRESSOR_FONT_ID;
+            fontLink.href = COMPRESSOR_FONT_HREF;
             fontLink.rel = "stylesheet";
             document.head.appendChild(fontLink);
         }
@@ -570,7 +594,7 @@ class CompressorUI {
         
         this.node.addDOMWidget("compressor_ui", "div", wrapper, { serialize: false });
         
-        console.log("[CompressorUI] Enhanced UI created successfully");
+        compressorLog("Enhanced UI created successfully");
     }
 
     createMeterSection() {
@@ -621,7 +645,7 @@ class CompressorUI {
             }
             this.drawCompressionCurve();
             this.node.setDirtyCanvas(true, true);
-            console.log(`[CompressorUI] Loaded preset: ${p.name}`);
+            compressorLog(`Loaded preset: ${p.name}`);
         };
         
         // Enhanced meter background
@@ -742,8 +766,8 @@ class CompressorUI {
                 document.body.style.cursor = 'ns-resize';
                 e.preventDefault();
             };
-            
-            document.addEventListener("mousemove", e => {
+
+            const onMouseMove = (e) => {
                 if (!isDragging) return;
                 
                 const { min = 0, max = 1 } = widget.options || {};
@@ -754,12 +778,15 @@ class CompressorUI {
                 updateVisuals(widget.value);
                 this.node.setDirtyCanvas(true, true);
                 lastY = e.clientY;
-            });
-            
-            document.addEventListener("mouseup", () => {
+            };
+
+            const onMouseUp = () => {
                 isDragging = false;
                 document.body.style.cursor = 'default';
-            });
+            };
+
+            this.addDocumentListener("mousemove", onMouseMove);
+            this.addDocumentListener("mouseup", onMouseUp);
             
             knob.addEventListener('wheel', e => {
                 e.preventDefault();
@@ -808,7 +835,7 @@ class CompressorUI {
                 widget.value = checkbox.checked ? "ON" : "OFF";
                 if (widget.callback) widget.callback(widget.value);
                 this.node.setDirtyCanvas(true, true);
-                console.log(`[CompressorUI] ${widgetName} set to: ${widget.value}`);
+                compressorLog(`${widgetName} set to: ${widget.value}`);
             };
         }
         
@@ -957,10 +984,21 @@ class CompressorUI {
     }
 
     destroy() {
+        this._cleanupFns.forEach((fn) => {
+            try {
+                fn();
+            } catch {
+                // ignore cleanup errors
+            }
+        });
+        this._cleanupFns = [];
+        document.body.style.cursor = 'default';
+
         if (this.container) {
             this.container.remove();
+            this.container = null;
         }
-        console.log(`[CompressorUI] UI destroyed for node ${this.node.id}`);
+        compressorLog(`UI destroyed for node ${this.node.id}`);
     }
 }
 
@@ -975,15 +1013,24 @@ app.registerExtension({
             }
             
             // Create new enhanced instance
-            setTimeout(() => {
+            if (node._compressorInitTimer) {
+                clearTimeout(node._compressorInitTimer);
+            }
+
+            node._compressorInitTimer = setTimeout(() => {
                 node.compressorUIInstance = new CompressorUI(node);
 				node.setSize([520, 10]);
-                console.log(`[CompressorUI] Enhanced compressor UI created for node ${node.id}`);
+                compressorLog(`Enhanced compressor UI created for node ${node.id}`);
+                node._compressorInitTimer = null;
             }, 100);
             
             // Handle node removal
             const originalOnRemove = node.onRemove;
             node.onRemove = function() {
+                if (this._compressorInitTimer) {
+                    clearTimeout(this._compressorInitTimer);
+                    this._compressorInitTimer = null;
+                }
                 if (this.compressorUIInstance) {
                     this.compressorUIInstance.destroy();
                 }

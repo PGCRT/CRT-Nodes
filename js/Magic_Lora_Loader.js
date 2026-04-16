@@ -13,6 +13,14 @@ import { app } from "../../scripts/app.js";
 import { ComfyWidgets } from "../../scripts/widgets.js";
 import { api } from "../../scripts/api.js";
 
+const PLL_DEBUG = false;
+
+function pllDebug(...args) {
+  if (PLL_DEBUG) {
+    console.log(...args);
+  }
+}
+
 class LogSession {
   constructor(name) { this.name = name; }
   errorParts(message, ...args) { return ["error", [`${this.name} ${message}`, ...args]]; }
@@ -313,7 +321,7 @@ const LORA_INFO_SERVICE = {
 };
 class RgthreeLoraInfoDialog extends EventTarget {
   constructor(loraName) { super(); this.loraName = loraName; }
-  show() { LORA_INFO_SERVICE.getInfo(this.loraName, true).then((info) => { if (info) console.log(info); }); return this; }
+  show() { LORA_INFO_SERVICE.getInfo(this.loraName, true).then((info) => { if (info) pllDebug(info); }); return this; }
 }
 function showLoraChooser(event, callback, currentValue, loras) {
   const existing = document.getElementById("pgc-lora-picker");
@@ -1092,9 +1100,9 @@ class BlockEditorPanel {
         return;
       }
       const p = data.profile;
-      console.log("[pgc-pll] block_profile response:", p);
-      console.log("[pgc-pll] _inputs keys:", Object.keys(this._inputs));
-      console.log("[pgc-pll] _blocks:", this._blocks);
+      pllDebug("[pgc-pll] block_profile response:", p);
+      pllDebug("[pgc-pll] _inputs keys:", Object.keys(this._inputs));
+      pllDebug("[pgc-pll] _blocks:", this._blocks);
       const reduction = Math.max(0, parseFloat(this._reductionInput?.value) || 1.0);
       const scale = (w) => Math.round(Math.max(0.0, 1.0 - reduction * (1.0 - w)) * 1000) / 1000;
       let applied = 0;
@@ -1109,7 +1117,7 @@ class BlockEditorPanel {
           if (num) { this._setOne(type, i, val, num); applied++; }
         });
       }
-      console.log(`[pgc-pll] block_profile applied to ${applied} blocks`);
+      pllDebug(`[pgc-pll] block_profile applied to ${applied} blocks`);
       if (applied === 0) console.warn("[pgc-pll] block_profile: no blocks updated — check _inputs state");
     } catch (e) {
       console.error("[pgc-pll] block_profile fetch exception:", e);
@@ -1389,11 +1397,11 @@ const _stackHeatmapPanel = new PgcStackHeatmapPanel();
 // Auto-mix helper
 // ---------------------------------------------------------------------------
 async function _autoMix(node) {
-  console.log("[crt-pll] Auto Mix clicked");
+  pllDebug("[crt-pll] Auto Mix clicked");
   const loraWidgets = (node.widgets || []).filter(
     (w) => w.name?.startsWith("lora_") && w.value?.lora && w.value?.on
   );
-  console.log("[crt-pll] lora widgets:", loraWidgets.length);
+  pllDebug("[crt-pll] lora widgets:", loraWidgets.length);
   if (loraWidgets.length === 0) {
     console.warn("[crt-pll] Auto Mix aborted: no selected loras");
     return;
@@ -1418,7 +1426,7 @@ async function _autoMix(node) {
       return;
     }
     const data = await r.json();
-    console.log("[crt-pll] automix response:", data);
+    pllDebug("[crt-pll] automix response:", data);
 
     if (data.error) { console.error("[pgc-pll] automix:", data.error); return; }
     if (data.errors?.length) console.warn("[pgc-pll] automix warnings:", data.errors);
@@ -1459,7 +1467,7 @@ async function _autoMix(node) {
     }
 
     node.setDirtyCanvas(true, true);
-    console.log("[crt-pll] Auto Mix applied");
+    pllDebug("[crt-pll] Auto Mix applied");
   } catch (e) {
     console.error("[pgc-pll] automix fetch:", e);
   } finally {

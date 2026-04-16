@@ -2,8 +2,46 @@ import { app } from "../../scripts/app.js";
 
 const MAX_SINGLE_BLOCKS = 38;
 const MAX_DOUBLE_BLOCKS = 19;
+const DEBUG_FLUX_LORA_PATCHER = false;
+const FLUX_LORA_STYLE_ID = "crt-flux-lora-patcher-styles-v5";
+const FLUX_LORA_FONT_LINK_ID = "crt-flux-lora-patcher-orbitron-font";
+const FLUX_LORA_PRESETS_KEY = "crt:nodes:flux-lora-blocks-patcher:presets:v5";
+const LEGACY_FLUX_LORA_PRESETS_KEY = "fluxLoraPatcherPresets_v4_enhanced";
 
-console.log("FluxLoraBlocksPatcher_UI.js (Style V5 - Compact Layout): Script loading...");
+const debugLog = (...args) => {
+    if (DEBUG_FLUX_LORA_PATCHER) {
+        console.log(...args);
+    }
+};
+
+function loadFluxLoraPresets() {
+    const parseStorage = (key) => {
+        const rawValue = localStorage.getItem(key);
+        if (!rawValue) {
+            return null;
+        }
+
+        try {
+            return JSON.parse(rawValue);
+        } catch (error) {
+            console.warn(`[FluxLoraPatcherUI] Failed to parse presets from "${key}"`, error);
+            return null;
+        }
+    };
+
+    const namespacedPresets = parseStorage(FLUX_LORA_PRESETS_KEY);
+    if (namespacedPresets !== null) {
+        return namespacedPresets;
+    }
+
+    const legacyPresets = parseStorage(LEGACY_FLUX_LORA_PRESETS_KEY);
+    if (legacyPresets !== null) {
+        localStorage.setItem(FLUX_LORA_PRESETS_KEY, JSON.stringify(legacyPresets));
+        return legacyPresets;
+    }
+
+    return {};
+}
 
 const CSS_STYLES_FLUX_LORA_ENHANCED = `
 @font-face {
@@ -425,16 +463,30 @@ class FluxLoraBlocksPatcherUI {
         this.valueLabel = null;
         this.minRandomInput = null;
         this.maxRandomInput = null;
-        setTimeout(() => this.initializeUI(), 150);
+        this.initializeTimeout = setTimeout(() => this.initializeUI(), 150);
+        this.postInitResizeTimeout = null;
+    }
+
+    destroy() {
+        if (this.initializeTimeout) {
+            clearTimeout(this.initializeTimeout);
+            this.initializeTimeout = null;
+        }
+
+        if (this.postInitResizeTimeout) {
+            clearTimeout(this.postInitResizeTimeout);
+            this.postInitResizeTimeout = null;
+        }
+
+        this.container = null;
     }
 
     loadLocalPresets() {
-        const presets = localStorage.getItem('fluxLoraPatcherPresets_v4_enhanced');
-        return presets ? JSON.parse(presets) : {};
+        return loadFluxLoraPresets();
     }
 
     saveLocalPresets() {
-        localStorage.setItem('fluxLoraPatcherPresets_v4_enhanced', JSON.stringify(this.presets));
+        localStorage.setItem(FLUX_LORA_PRESETS_KEY, JSON.stringify(this.presets));
     }
 
     updatePresetDropdown() {
@@ -454,16 +506,22 @@ class FluxLoraBlocksPatcherUI {
     
     initializeUI() {
         if (!this.node.widgets || this.node.widgets.length < Math.max(MAX_SINGLE_BLOCKS, MAX_DOUBLE_BLOCKS)) {
-            setTimeout(() => this.initializeUI(), 250);
+            this.initializeTimeout = setTimeout(() => this.initializeUI(), 250);
             return;
         }
+
+        if (this.initializeTimeout) {
+            clearTimeout(this.initializeTimeout);
+            this.initializeTimeout = null;
+        }
+
         try {
             this.hideOriginalWidgets();
             this.createCustomDOM(); 
             this.syncInternalStateFromWidgets(); 
             this.updateAllUISliders();         
             this.switchTab(this.activeTab);
-            setTimeout(() => { 
+            this.postInitResizeTimeout = setTimeout(() => { 
                 this.updateNodeSize(); 
                 this.node.setDirtyCanvas(true, true); 
             }, 200);
@@ -482,15 +540,19 @@ class FluxLoraBlocksPatcherUI {
     }
 
     createCustomDOM() { 
-        if (!document.getElementById('flux-lora-patcher-styles-enhanced-v4')) { 
+        if (this.container?.isConnected) {
+            return;
+        }
+
+        if (!document.getElementById(FLUX_LORA_STYLE_ID)) { 
             const styleSheet = document.createElement('style');
-            styleSheet.id = 'flux-lora-patcher-styles-enhanced-v4';
+            styleSheet.id = FLUX_LORA_STYLE_ID;
             styleSheet.textContent = CSS_STYLES_FLUX_LORA_ENHANCED;
             document.head.appendChild(styleSheet);
         }
-        // Ensure Orbitron font is loaded
-        if (!document.querySelector('link[href*="Orbitron"]')) {
+        if (!document.getElementById(FLUX_LORA_FONT_LINK_ID)) {
             const fontLink = document.createElement("link");
+            fontLink.id = FLUX_LORA_FONT_LINK_ID;
             fontLink.href = "https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap";
             fontLink.rel = "stylesheet";
             document.head.appendChild(fontLink);
@@ -959,6 +1021,12 @@ app.registerExtension({
                 node.fluxLoraPatcherUIInstance = new FluxLoraBlocksPatcherUI(node);
             }
 
+            const originalOnRemoved = node.onRemoved;
+            node.onRemoved = function() {
+                node.fluxLoraPatcherUIInstance?.destroy();
+                return originalOnRemoved?.apply(this, arguments);
+            };
+
             const originalOnSerialize = node.onSerialize;
             node.onSerialize = function() {
                 let comfyData = originalOnSerialize ? originalOnSerialize.call(node) : {};
@@ -981,8 +1049,8 @@ app.registerExtension({
         }
     },
     async setup() { 
-        console.log("[FluxLoraPatcher Ext EnhancedV4 Global Setup] Extension registered.");
+        debugLog("[FluxLoraPatcher Ext EnhancedV4 Global Setup] Extension registered.");
     }
 });
 
-console.log("FluxLoraBlocksPatcher_UI.js (Enhanced Style V4 - Compact Layout): Script fully loaded.");
+debugLog("FluxLoraBlocksPatcher_UI.js (Enhanced Style V4 - Compact Layout): Script fully loaded.");

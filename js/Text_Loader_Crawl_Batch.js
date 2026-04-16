@@ -1,53 +1,67 @@
 import { app } from "/scripts/app.js";
 
 app.registerExtension({
-	name: "CRT.FileLoaderCrawlBatch",
-	async beforeRegisterNodeDef(nodeType, nodeData, app) {
-		if (nodeData.name === "FileLoaderCrawlBatch") {
-			const onNodeCreated = nodeType.prototype.onNodeCreated;
-			nodeType.prototype.onNodeCreated = function () {
-				onNodeCreated?.apply(this, arguments);
+  name: "CRT.FileLoaderCrawlBatch",
+  async beforeRegisterNodeDef(nodeType, nodeData) {
+    if (nodeData.name !== "FileLoaderCrawlBatch") {
+      return;
+    }
 
-				this.batch_count = 1; // Initial value
+    const originalOnNodeCreated = nodeType.prototype.onNodeCreated;
+    nodeType.prototype.onNodeCreated = function () {
+      originalOnNodeCreated?.apply(this, arguments);
 
-				const updateOutputs = () => {
-					// Remove existing dynamic outputs
-					const currentOutputs = [...this.outputs]; // Clone to iterate
-					for (let i = currentOutputs.length - 1; i >= 0; i--) {
-						const output = currentOutputs[i];
-						if (output.name.startsWith("text_output_") || output.name.startsWith("file_name_")) {
-							this.removeOutput(i);
-						}
-					}
+      const syncSize = () => {
+        this.size = this.computeSize();
+        this.setDirtyCanvas(true, true);
+      };
 
-					// Add new outputs based on current batch_count
-					for (let i = 0; i < this.batch_count; i++) {
-						this.addOutput(`text_output_${i + 1}`, "STRING");
-					}
-					for (let i = 0; i < this.batch_count; i++) {
-						this.addOutput(`file_name_${i + 1}`, "STRING");
-					}
+      const synchronizeOutputs = () => {
+        const targetCount = Math.max(1, Math.round(this.batch_count ?? 1));
 
-					this.setDirtyCanvas(true, true);
-					this.size = this.computeSize();
-				};
+        for (let index = (this.outputs?.length ?? 0) - 1; index >= 0; index -= 1) {
+          const output = this.outputs[index];
+          if (!output?.name) {
+            continue;
+          }
 
-				// Find the 'batch_count' widget and attach a callback
-				const batchCountWidget = this.widgets.find(w => w.name === "batch_count");
-				if (batchCountWidget) {
-					// Store the original callback if it exists
-					const originalCallback = batchCountWidget.callback;
-					batchCountWidget.callback = (v) => {
-						this.batch_count = v;
-						updateOutputs();
-						originalCallback?.(v); // Call original callback if it existed
-					};
-				}
+          if (output.name.startsWith("text_output_") || output.name.startsWith("file_name_")) {
+            this.removeOutput(index);
+          }
+        }
 
-				// Initial update of outputs when the node is created
-				this.batch_count = batchCountWidget ? batchCountWidget.value : 1;
-				updateOutputs();
-			};
-		}
-	},
+        for (let index = 1; index <= targetCount; index += 1) {
+          this.addOutput(`text_output_${index}`, "STRING");
+        }
+
+        for (let index = 1; index <= targetCount; index += 1) {
+          this.addOutput(`file_name_${index}`, "STRING");
+        }
+
+        syncSize();
+      };
+
+      const batchCountWidget = this.widgets?.find((widget) => widget.name === "batch_count");
+      const originalBatchCountCallback = batchCountWidget?.callback;
+
+      this.batch_count = Math.max(1, Math.round(batchCountWidget?.value ?? 1));
+      if (batchCountWidget) {
+        batchCountWidget.value = this.batch_count;
+        batchCountWidget.callback = (value, ...args) => {
+          const nextValue = Math.max(1, Math.round(value ?? 1));
+          batchCountWidget.value = nextValue;
+          originalBatchCountCallback?.call(batchCountWidget, nextValue, ...args);
+
+          if (this.batch_count === nextValue) {
+            return;
+          }
+
+          this.batch_count = nextValue;
+          synchronizeOutputs();
+        };
+      }
+
+      synchronizeOutputs();
+    };
+  },
 });

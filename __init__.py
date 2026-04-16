@@ -26,6 +26,7 @@ if "CRT_NODES_INITIALIZED" not in globals():
     from .py.Fancy_Note_Node import FancyNoteNode
     from .py.Text_Loader_Crawl import TextLoaderCrawl
     from .py.Image_Loader_Crawl import ImageLoaderCrawl
+    from .py.Image_Loader_Crawl_Batch import CRT_ImageLoaderCrawlBatch
     from .py.Audio_Loader_Crawl import AudioLoaderCrawl
     from .py.Mask_Empty_Float_Node import MaskEmptyFloatNode
     from .py.Mask_Pass_Or_Placeholder import MaskPassOrPlaceholder
@@ -111,6 +112,21 @@ if "CRT_NODES_INITIALIZED" not in globals():
     from .py.Tile_Checker import ImageTileChecker
     from .py.Scale_Latent_To_Megapixels import ScaleLatentToMegapixels
     from .py.Resolution_By_Side import ResolutionBySide
+    from .py.LTX23_Unified_Sampler import (
+        CRT_LTX23USConfig,
+        CRT_LTX23USModelsPipe,
+        CRT_LTX23UnifiedSampler,
+    )
+
+    CRT_LTX23AutoDownload = None
+    LTX23AutoDownloadAPI = None
+    try:
+        from .py.LTX23_AutoDownload import (
+            CRT_LTX23AutoDownload,
+            LTX23AutoDownloadAPI,
+        )
+    except Exception as e:
+        print(f"[CRT-Nodes] Warning: LTX23 AutoDownload node unavailable: {e}")
 
     try:
         from .py.Tiny_Flux2_VAE import (
@@ -139,6 +155,12 @@ if "CRT_NODES_INITIALIZED" not in globals():
         )
     except Exception as e:
         print(f"[CRT-Nodes] Warning: Magic LoRA Loader node unavailable: {e}")
+
+    CRT_AudioTranscript = None
+    try:
+        from .py.Audio_Transcript import CRT_AudioTranscript
+    except Exception as e:
+        print(f"[CRT-Nodes] Warning: Audio Transcript node unavailable: {e}")
 
     print("[CRT-Nodes __init__] Registering custom model paths...")
     try:
@@ -175,6 +197,7 @@ NODE_CLASS_MAPPINGS = {
     "FancyNoteNode": FancyNoteNode,
     "TextLoaderCrawl": TextLoaderCrawl,
     "ImageLoaderCrawl": ImageLoaderCrawl,
+    "CRT_ImageLoaderCrawlBatch": CRT_ImageLoaderCrawlBatch,
     "AudioLoaderCrawl": AudioLoaderCrawl,
     "MaskEmptyFloatNode": MaskEmptyFloatNode,
     "MaskPassOrPlaceholder": MaskPassOrPlaceholder,
@@ -256,6 +279,10 @@ NODE_CLASS_MAPPINGS = {
     "ImageTileChecker": ImageTileChecker,
     "ScaleLatentToMegapixels": ScaleLatentToMegapixels,
     "ResolutionBySide": ResolutionBySide,
+    "CRT_LTX23USModelsPipe": CRT_LTX23USModelsPipe,
+    "CRT_LTX23USConfig": CRT_LTX23USConfig,
+    "CRT_LTX23UnifiedSampler": CRT_LTX23UnifiedSampler,
+    "CRT_LTX23AutoDownload": CRT_LTX23AutoDownload,
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
@@ -267,6 +294,7 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "FancyNoteNode": "Fancy Note (CRT)",
     "TextLoaderCrawl": "Text Loader Crawl (CRT)",
     "ImageLoaderCrawl": "Image Loader Crawl (CRT)",
+    "CRT_ImageLoaderCrawlBatch": "Image Loader Crawl Batch (CRT)",
     "AudioLoaderCrawl": "Audio Loader Crawl (CRT)",
     "MaskEmptyFloatNode": "Mask Empty Float (CRT)",
     "MaskPassOrPlaceholder": "Mask Pass or Placeholder (CRT)",
@@ -348,6 +376,10 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "ImageTileChecker": "Image Tile Checker (CRT)",
     "ScaleLatentToMegapixels": "Scale Latent To Megapixels (CRT)",
     "ResolutionBySide": "Resolution By Side (CRT)",
+    "CRT_LTX23USModelsPipe": "LTX 2.3 US Models Pipe (CRT)",
+    "CRT_LTX23USConfig": "LTX 2.3 US Config (CRT)",
+    "CRT_LTX23UnifiedSampler": "LTX 2.3 Unified Sampler (CRT)",
+    "CRT_LTX23AutoDownload": "LTX 2.3 AutoDownload (CRT)",
 }
 
 if SaveImageBase64 is not None:
@@ -364,6 +396,10 @@ if SaveMergedLora is not None:
         "Magic Save Merged LoRA (CRT)"
     )
 
+if CRT_AudioTranscript is not None:
+    NODE_CLASS_MAPPINGS["CRT_AudioTranscript"] = CRT_AudioTranscript
+    NODE_DISPLAY_NAME_MAPPINGS["CRT_AudioTranscript"] = "Audio Transcript (CRT)"
+
 if globals().get("_tiny_flux2_vae_available", False):
     NODE_CLASS_MAPPINGS.update(
         {
@@ -379,6 +415,52 @@ if globals().get("_tiny_flux2_vae_available", False):
             "TinyFlux2VAEDecode": "Tiny FLUX.2 VAE Decode (CRT)",
         }
     )
+
+# Filter out None values from mappings
+NODE_CLASS_MAPPINGS = {k: v for k, v in NODE_CLASS_MAPPINGS.items() if v is not None}
+NODE_DISPLAY_NAME_MAPPINGS = {
+    k: v for k, v in NODE_DISPLAY_NAME_MAPPINGS.items() if v is not None
+}
+
+# Setup LTX23 AutoDownload API routes
+if LTX23AutoDownloadAPI is not None:
+    try:
+        import server
+        from aiohttp import web
+
+        @server.PromptServer.instance.routes.post("/crt/ltx23/check_models")
+        async def api_check_models(request):
+            try:
+                result = LTX23AutoDownloadAPI.check_models()
+                return web.json_response(result)
+            except Exception as e:
+                return web.json_response({"error": str(e)}, status=500)
+
+        @server.PromptServer.instance.routes.post("/crt/ltx23/download_model")
+        async def api_download_model(request):
+            try:
+                data = await request.json()
+                model_type = data.get("model_type")
+                result = LTX23AutoDownloadAPI.download_model_endpoint(model_type)
+                return web.json_response(result)
+            except Exception as e:
+                return web.json_response({"error": str(e)}, status=500)
+
+        @server.PromptServer.instance.routes.post("/crt/ltx23/download_status")
+        async def api_download_status(request):
+            try:
+                data = await request.json()
+                model_type = data.get("model_type")
+                result = LTX23AutoDownloadAPI.get_download_status_endpoint(model_type)
+                return web.json_response(result)
+            except Exception as e:
+                return web.json_response({"error": str(e)}, status=500)
+
+        print("[CRT-Nodes] LTX23 AutoDownload API routes registered.")
+    except Exception as e:
+        print(
+            f"[CRT-Nodes] Warning: Could not setup LTX23 AutoDownload API routes: {e}"
+        )
 
 WEB_DIRECTORY = "./js"
 __all__ = ["NODE_CLASS_MAPPINGS", "NODE_DISPLAY_NAME_MAPPINGS", "WEB_DIRECTORY"]

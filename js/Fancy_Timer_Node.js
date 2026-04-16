@@ -1,6 +1,10 @@
 import { app } from "/scripts/app.js";
 import { api } from "/scripts/api.js";
 
+const STYLE_ID = "crt-fancy-timer-style";
+const FONT_ID = "crt-fancy-timer-font";
+let eventsBound = false;
+
 // --- The Global Timer Manager ---
 const GlobalTimer = {
     startTime: 0,
@@ -61,8 +65,13 @@ const FancyTimerNodeExtension = {
     
     async beforeRegisterNodeDef(nodeType, nodeData, app) {
         if (nodeData.name === "FancyTimerNode") {
+            const originalOnNodeCreated = nodeType.prototype.onNodeCreated;
+            const originalOnRemoved = nodeType.prototype.onRemoved;
+            const originalOnSerialize = nodeType.prototype.onSerialize;
+            const originalOnConfigure = nodeType.prototype.onConfigure;
             
             nodeType.prototype.onNodeCreated = function () {
+                originalOnNodeCreated?.apply(this, arguments);
                 this.bgcolor = "#000000";
                 this.color = "#000000";
                 this.title = "Execution Timer";
@@ -82,9 +91,17 @@ const FancyTimerNodeExtension = {
                 GlobalTimer.registerNode(this);
             };
             
-            nodeType.prototype.onRemoved = function() { GlobalTimer.unregisterNode(this); };
-            nodeType.prototype.onSerialize = function(o) { o.properties = this.properties; };
+            nodeType.prototype.onRemoved = function() {
+                GlobalTimer.unregisterNode(this);
+                this.timerDisplay = null;
+                originalOnRemoved?.apply(this, arguments);
+            };
+            nodeType.prototype.onSerialize = function(o) {
+                originalOnSerialize?.apply(this, arguments);
+                o.properties = this.properties;
+            };
             nodeType.prototype.onConfigure = function(info) {
+                originalOnConfigure?.apply(this, arguments);
                 this.properties = info.properties || {};
                 if (this.timerDisplay) {
                     this.timerDisplay.textContent = this.properties.elapsed_time_str || "00:00:000";
@@ -94,43 +111,46 @@ const FancyTimerNodeExtension = {
     },
     
     setup() {
-        const style = document.createElement("style");
-        style.innerText = `
-            @keyframes fancy-text-glow-pulse {
-                0%, 100% { text-shadow: 0 0 25px var(--glow-color); }
-                50% { text-shadow: 0 0 35px var(--glow-color); }
-            }
-            .fancy-timer-display {
-                text-align: center; width: 100%; height: 100%; position: absolute;
-                top: 0; left: 0; background: transparent; border: none;
-                color: var(--text-color);
-                /* --- FONT CORRECTION: Restored your preferred font stack --- */
-                font-family: 'Courier New', 'Consolas', 'Monaco', monospace;
-                box-sizing: border-box; outline: none; margin: 0;
-                overflow: hidden; display: flex; justify-content: center;
-                align-items: center; font-size: 50px;
-                animation: fancy-text-glow-pulse 10s infinite ease-in-out;
-                transition: color 0.5s ease-in-out;
-                font-variant-numeric: tabular-nums;
-                letter-spacing: 0.1em;
-                white-space: nowrap;
-                font-weight: bold;
-            }
-        `;
-        document.head.appendChild(style);
+        if (!document.getElementById(STYLE_ID)) {
+            const style = document.createElement("style");
+            style.id = STYLE_ID;
+            style.innerText = `
+                @keyframes fancy-text-glow-pulse {
+                    0%, 100% { text-shadow: 0 0 25px var(--glow-color); }
+                    50% { text-shadow: 0 0 35px var(--glow-color); }
+                }
+                .fancy-timer-display {
+                    text-align: center; width: 100%; height: 100%; position: absolute;
+                    top: 0; left: 0; background: transparent; border: none;
+                    color: var(--text-color);
+                    font-family: 'Orbitron', 'Courier New', 'Consolas', 'Monaco', monospace;
+                    box-sizing: border-box; outline: none; margin: 0;
+                    overflow: hidden; display: flex; justify-content: center;
+                    align-items: center; font-size: 50px;
+                    animation: fancy-text-glow-pulse 10s infinite ease-in-out;
+                    transition: color 0.5s ease-in-out;
+                    font-variant-numeric: tabular-nums;
+                    letter-spacing: 0.1em;
+                    white-space: nowrap;
+                    font-weight: bold;
+                }
+            `;
+            document.head.appendChild(style);
+        }
 
-        // Load Orbitron font (optional)
-        if (!document.querySelector('link[href*="Orbitron"]')) {
+        if (!document.getElementById(FONT_ID)) {
             const fontLink = document.createElement("link");
+            fontLink.id = FONT_ID;
             fontLink.href = "https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap";
             fontLink.rel = "stylesheet";
             document.head.appendChild(fontLink);
         }
 
-        // Modern ComfyUI event API (replaces deprecated WebSocket approach)
+        if (eventsBound) return;
+        eventsBound = true;
+
         api.addEventListener("execution_start", () => GlobalTimer.start());
         api.addEventListener("executing", ({ detail }) => {
-            // detail is null when execution completes
             if (detail === null) GlobalTimer.stop();
         });
         api.addEventListener("execution_error", () => GlobalTimer.stop());

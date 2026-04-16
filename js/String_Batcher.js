@@ -1,69 +1,81 @@
 import { app } from "/scripts/app.js";
 
 app.registerExtension({
-	name: "CRT.StringBatcher",
-	async beforeRegisterNodeDef(nodeType, nodeData, app) {
-		if (nodeData.name === "CRT_StringBatcher") {
-			const onNodeCreated = nodeType.prototype.onNodeCreated;
-			nodeType.prototype.onNodeCreated = function () {
-				onNodeCreated?.apply(this, arguments);
+  name: "CRT.StringBatcher",
+  async beforeRegisterNodeDef(nodeType, nodeData) {
+    if (nodeData.name !== "CRT_StringBatcher") {
+      return;
+    }
 
-                // --- Logic for dynamic string inputs ---
-                const synchronizeInputs = () => {
-                    const targetCount = this.batch_count;
-                    const currentInputs = this.inputs?.filter(i => i.name.startsWith("string_")) || [];
-                    const currentCount = currentInputs.length;
+    const originalOnNodeCreated = nodeType.prototype.onNodeCreated;
+    nodeType.prototype.onNodeCreated = function () {
+      originalOnNodeCreated?.apply(this, arguments);
 
-                    if (currentCount < targetCount) {
-                        for (let i = currentCount + 1; i <= targetCount; i++) {
-                            this.addInput(`string_${i}`, "STRING", { multiline: true, default: "" });
-                        }
-                    } else if (currentCount > targetCount) {
-                        for (let i = currentCount; i > targetCount; i--) {
-                            this.removeInput(this.findInputSlot(`string_${i}`));
-                        }
-                    }
+      const syncSize = () => {
+        this.size = this.computeSize();
+        this.setDirtyCanvas(true, true);
+      };
 
-                    this.size = this.computeSize();
-                    this.setDirtyCanvas(true, true);
-                };
+      const hideWidget = (name) => {
+        const widget = this.widgets?.find((entry) => entry.name === name);
+        if (widget) {
+          widget.hidden = true;
+        }
+      };
 
-                let batchCountWidget = this.widgets?.find(w => w.name === "batch_count");
-                if (!batchCountWidget) {
-                     batchCountWidget = this.addWidget(
-                        "number", "batch_count", 1, () => {},
-                        { min: 1, max: 256, step: 1, precision: 0 }
-                    );
-                }
-                
-                const initialStringCount = this.inputs?.filter(i => i.name.startsWith("string_")).length || 1;
-                this.batch_count = batchCountWidget.value ?? initialStringCount;
-                batchCountWidget.value = this.batch_count;
+      const synchronizeInputs = () => {
+        const targetCount = Math.max(1, Math.round(this.batch_count ?? 1));
+        const currentInputs = this.inputs?.filter((input) => input.name.startsWith("string_")) || [];
+        const currentCount = currentInputs.length;
 
-                batchCountWidget.callback = (v) => {
-                    const newCount = Math.max(1, Math.round(v));
-                    if (this.batch_count !== newCount) {
-                        this.batch_count = newCount;
-                        batchCountWidget.value = this.batch_count;
-                        synchronizeInputs();
-                    }
-                };
+        if (currentCount < targetCount) {
+          for (let index = currentCount + 1; index <= targetCount; index += 1) {
+            this.addInput(`string_${index}`, "STRING", { multiline: true, default: "" });
+          }
+        } else if (currentCount > targetCount) {
+          for (let index = currentCount; index > targetCount; index -= 1) {
+            const slotIndex = this.findInputSlot(`string_${index}`);
+            if (slotIndex !== -1) {
+              this.removeInput(slotIndex);
+            }
+          }
+        }
 
-                synchronizeInputs();
-                
-                const seedWidget = this.widgets.find(w => w.name === "seed");
-                if (seedWidget) {
-                    seedWidget.hidden = true;
-                }
-                
-                const controlWidget = this.widgets.find(w => w.name === "control_after_generate");
-                if (controlWidget) {
-                    controlWidget.hidden = true;
-                }
+        syncSize();
+      };
 
-                this.computeSize();
-                this.setDirtyCanvas(true, true);
-			};
-		}
-	},
+      let batchCountWidget = this.widgets?.find((widget) => widget.name === "batch_count");
+      if (!batchCountWidget) {
+        batchCountWidget = this.addWidget("number", "batch_count", 1, () => {}, {
+          min: 1,
+          max: 256,
+          step: 1,
+          precision: 0,
+        });
+      }
+
+      const initialStringCount = this.inputs?.filter((input) => input.name.startsWith("string_")).length || 1;
+      const originalBatchCountCallback = batchCountWidget.callback;
+
+      this.batch_count = Math.max(1, Math.round(batchCountWidget.value ?? initialStringCount));
+      batchCountWidget.value = this.batch_count;
+      batchCountWidget.callback = (value, ...args) => {
+        const nextValue = Math.max(1, Math.round(value ?? 1));
+        batchCountWidget.value = nextValue;
+        originalBatchCountCallback?.call(batchCountWidget, nextValue, ...args);
+
+        if (this.batch_count === nextValue) {
+          return;
+        }
+
+        this.batch_count = nextValue;
+        synchronizeInputs();
+      };
+
+      synchronizeInputs();
+      hideWidget("seed");
+      hideWidget("control_after_generate");
+      syncSize();
+    };
+  },
 });
