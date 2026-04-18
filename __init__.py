@@ -1,7 +1,7 @@
 """
 @author: CRT
 @title: CRT-Nodes
-@version: 2.2.9
+@version: 2.3.0
 @project: "https://github.com/PGCRT/CRT-Nodes",
 @description: Set of nodes for ComfyUI
 https://discord.gg/8wYS9MBQqp
@@ -31,6 +31,8 @@ if "CRT_NODES_INITIALIZED" not in globals():
     from .py.Mask_Empty_Float_Node import MaskEmptyFloatNode
     from .py.Mask_Pass_Or_Placeholder import MaskPassOrPlaceholder
     from .py.Latent_Injection_Sampler import LatentNoiseInjectionSampler
+    from .py.Flux1_Cnet_Sampler_With_Injection import FluxControlnetSamplerWithInjection
+    from .py.Flux1_Cnet_Ultralytics_Multi import Flux1CnetUltralyticMulti
     from .py.Face_Enhancement_Pipeline_With_Injection import (
         UltralyticsEnhancer as FaceEnhancementWithInjection,
     )
@@ -38,9 +40,11 @@ if "CRT_NODES_INITIALIZED" not in globals():
     from .py.SEGS_Enhancer_Multi import (
         FaceEnhancementWithInjectionSEGS,
     )
+    from .py.Mask_Censor import MaskCensor
     from .py.Sampler_Scheduler_Selector import SamplerSchedulerSelector
     from .py.Sampler_Scheduler_Crawler import SamplerSchedulerCrawler
     from .py.Resolution import Resolution
+    from .py.Solid_Color import SolidColor
     from .py.Simple_Knob import SimpleKnobNode
     from .py.Simple_Toggle import SimpleToggleNode
     from .py.Upscale_Model_Adv import CRT_UpscaleModelAdv
@@ -96,6 +100,7 @@ if "CRT_NODES_INITIALIZED" not in globals():
     from .py.Image_Dimensions_From_MP_Alt import ImageDimensionsFromMegaPixelsAlt
     from .py.Wan_Video_Lora_Select_Multi_Improved import WanVideoLoraSelectMultiImproved
     from .py.Ksampler_Batch import CRT_KSamplerBatch
+    from .py.Ksampler_Batch_Advanced import CRT_KSamplerBatchAdvanced
     from .py.String_Line_Counter import CRT_StringLineCounter
     from .py.Text_Box_Line_Spot import CRT_LineSpot
     from .py.Remove_Lines import CRT_RemoveLines
@@ -202,12 +207,16 @@ NODE_CLASS_MAPPINGS = {
     "MaskEmptyFloatNode": MaskEmptyFloatNode,
     "MaskPassOrPlaceholder": MaskPassOrPlaceholder,
     "LatentNoiseInjectionSampler": LatentNoiseInjectionSampler,
+    "FluxControlnetSamplerWithInjection": FluxControlnetSamplerWithInjection,
+    "Flux1CnetUltralyticMulti": Flux1CnetUltralyticMulti,
     "PonyUpscaleSamplerWithInjection": PonyUpscaleSamplerWithInjection,
     "FaceEnhancementWithInjection": FaceEnhancementWithInjection,
     "FaceEnhancementWithInjectionSEGS": FaceEnhancementWithInjectionSEGS,
+    "MaskCensor": MaskCensor,
     "SamplerSchedulerSelector": SamplerSchedulerSelector,
     "SamplerSchedulerCrawler": SamplerSchedulerCrawler,
     "Resolution": Resolution,
+    "SolidColor": SolidColor,
     "SimpleKnobNode": SimpleKnobNode,
     "SimpleToggleNode": SimpleToggleNode,
     "CRT_UpscaleModelAdv": CRT_UpscaleModelAdv,
@@ -263,6 +272,7 @@ NODE_CLASS_MAPPINGS = {
     "ImageDimensionsFromMegaPixelsAlt": ImageDimensionsFromMegaPixelsAlt,
     "WanVideoLoraSelectMultiImproved": WanVideoLoraSelectMultiImproved,
     "CRT_KSamplerBatch": CRT_KSamplerBatch,
+    "CRT_KSamplerBatchAdvanced": CRT_KSamplerBatchAdvanced,
     "CRT_StringLineCounter": CRT_StringLineCounter,
     "Text Box line spot": CRT_LineSpot,
     "CRT_RemoveLines": CRT_RemoveLines,
@@ -299,9 +309,12 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "MaskEmptyFloatNode": "Mask Empty Float (CRT)",
     "MaskPassOrPlaceholder": "Mask Pass or Placeholder (CRT)",
     "LatentNoiseInjectionSampler": "Latent Noise Injection Sampler (CRT)",
+    "FluxControlnetSamplerWithInjection": "Flux1 Cnet Sampler with Injection (CRT)",
+    "Flux1CnetUltralyticMulti": "Flux1 Cnet Ultralytics Multi (CRT)",
     "PonyUpscaleSamplerWithInjection": "Image Upscale Sampler (CRT)",
     "FaceEnhancementWithInjection": "Ultralytics Enhancer (CRT)",
     "FaceEnhancementWithInjectionSEGS": "SEGS Enhancer Multi (CRT)",
+    "MaskCensor": "Mask Censor (CRT)",
     "SamplerSchedulerSelector": "Sampler & Scheduler Selector (CRT)",
     "SamplerSchedulerCrawler": "Sampler & Scheduler Crawler (CRT)",
     "Resolution": "Resolution (CRT)",
@@ -360,6 +373,7 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "ImageDimensionsFromMegaPixelsAlt": "Image Dimensions From MP alt (CRT)",
     "WanVideoLoraSelectMultiImproved": "Wan Video Multi-LoRA Select (CRT)",
     "CRT_KSamplerBatch": "KSampler Batch (CRT)",
+    "CRT_KSamplerBatchAdvanced": "KSampler Batch Advanced (CRT)",
     "CRT_StringLineCounter": "String Line Counter (CRT)",
     "Text Box line spot": "Text Box line spot (CRT)",
     "CRT_RemoveLines": "Remove Lines (CRT)",

@@ -2,6 +2,12 @@ import math
 import torch
 import comfy.model_management
 
+MODEL_PRESETS = {
+    "SDXL":                        {"channels": 4,   "downscale": 8},
+    "Flux 1, Z-image, Qwen-Image": {"channels": 16,  "downscale": 8},
+    "Flux 2, ERNIE":               {"channels": 128, "downscale": 16},
+}
+
 
 class ResolutionBySide:
     @classmethod
@@ -16,7 +22,7 @@ class ResolutionBySide:
                     "INT",
                     {"default": 1024, "min": 64, "max": 16384, "step": 1},
                 ),
-                "latent_channels": (["4", "16"], {"default": "4"}),
+                "model": (list(MODEL_PRESETS.keys()), {"default": "Flux 2, ERNIE"}),
                 "aspect_ratio": (
                     [
                         "1:1 (Square)",
@@ -55,7 +61,7 @@ class ResolutionBySide:
     CATEGORY = "CRT/Utils/Logic & Values"
 
     def calculate_dimensions(
-        self, side_mode, side_pixels, latent_channels, aspect_ratio, divisible_by
+        self, side_mode, side_pixels, model, aspect_ratio, divisible_by
     ):
         ratio_str = aspect_ratio.split(" ")[0]
 
@@ -97,10 +103,12 @@ class ResolutionBySide:
         else:
             final_width = max(1, round(raw_width))
             final_height = max(1, round(raw_height))
-        channels = int(latent_channels)
+        preset = MODEL_PRESETS[model]
+        channels = preset["channels"]
+        downscale = preset["downscale"]
 
         latent = torch.zeros(
-            [1, channels, final_height // 8, final_width // 8],
+            [1, channels, final_height // downscale, final_width // downscale],
             device=comfy.model_management.intermediate_device(),
             dtype=comfy.model_management.intermediate_dtype(),
         )
@@ -108,7 +116,7 @@ class ResolutionBySide:
         return (
             final_width,
             final_height,
-            {"samples": latent, "downscale_ratio_spacial": 8},
+            {"samples": latent, "downscale_ratio_spacial": downscale},
         )
 
 

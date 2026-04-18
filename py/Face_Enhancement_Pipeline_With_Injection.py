@@ -484,6 +484,83 @@ class _SimpleSeg:
         self.cropped_mask = cropped_mask
 
 
+def _mask_tensor_to_2d(mask, target_h, target_w):
+    if mask is None:
+        return None
+
+    if not isinstance(mask, torch.Tensor):
+        mask = torch.from_numpy(np.array(mask))
+
+    m = mask.detach().float().cpu()
+
+    if m.dim() == 4 and m.shape[-1] == 1:
+        m = m.squeeze(-1)
+    if m.dim() == 4 and m.shape[1] == 1:
+        m = m.squeeze(1)
+    if m.dim() == 3:
+        m = m[0]
+    if m.dim() != 2:
+        return None
+
+    if m.shape[0] != target_h or m.shape[1] != target_w:
+        m = (
+            F_interpolate(
+                m.unsqueeze(0).unsqueeze(0),
+                size=(target_h, target_w),
+                mode="bilinear",
+                align_corners=False,
+            )
+            .squeeze(0)
+            .squeeze(0)
+        )
+
+    return torch.clamp(m, 0.0, 1.0).numpy().astype(np.float32)
+
+
+def _mask_to_seg_entries(mask_2d, grow_crop):
+    if mask_2d is None:
+        return []
+
+    h, w = mask_2d.shape
+    binary = (mask_2d > 0.5).astype(np.uint8)
+    if binary.sum() == 0:
+        return []
+
+    contours_info = cv2.findContours(binary * 255, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+    if len(contours_info) == 3:
+        _img, contours, _hier = contours_info
+    else:
+        contours, _hier = contours_info
+
+    seg_entries = []
+    for contour in contours:
+        x, y, bw, bh = cv2.boundingRect(contour)
+        if bw <= 1 or bh <= 1:
+            continue
+
+        x1 = x - grow_crop
+        y1 = y - grow_crop
+        x2 = x + bw + grow_crop
+        y2 = y + bh + grow_crop
+
+        x1 = max(0, min(x1, w - 1))
+        y1 = max(0, min(y1, h - 1))
+        x2 = max(x1 + 1, min(x2, w))
+        y2 = max(y1 + 1, min(y2, h))
+        if x2 <= x1 or y2 <= y1:
+            continue
+
+        contour_mask = np.zeros((h, w), dtype=np.float32)
+        cv2.drawContours(contour_mask, [contour], -1, 1.0, thickness=-1)
+        cropped_mask = contour_mask[y1:y2, x1:x2]
+        if cropped_mask.size == 0 or float(cropped_mask.max()) <= 0.0:
+            continue
+
+        seg_entries.append(_SimpleSeg([x1, y1, x2, y2], cropped_mask))
+
+    return seg_entries
+
+
 class FaceEnhancementPipelineWithInjection:
     def __init__(self):
         self.detectors = {}
@@ -683,6 +760,8 @@ class UltralyticsEnhancer:
         face_segm_model = kwargs["face_segm_model"]
         segm_threshold = kwargs["segm_threshold"]
         grow_crop = int(kwargs.get("grow_crop", 0))
+        h, w = image.shape[1:3]
+        seg_entries = []
 
         segm_filename_only = face_segm_model.split("/")[-1]
         segm_full_path = folder_paths.get_full_path(
@@ -698,8 +777,6 @@ class UltralyticsEnhancer:
         )
         segmasks = create_segmasks(detected_results)
 
-        h, w = image.shape[1:3]
-        seg_entries = []
         for bbox, mask, _confidence in segmasks:
             x1, y1, x2, y2 = [int(round(v)) for v in bbox]
             if grow_crop > 0:

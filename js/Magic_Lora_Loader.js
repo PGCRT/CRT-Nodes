@@ -445,7 +445,7 @@ const _NW = 38;
 const WET_WIDGET_TOTAL = _AW + _IM + _NW + _IM + _AW;
 
 // Supported model types and their block architectures
-const MODEL_TYPES = ["Flux2Klein", "LTX2.3", "ZImageTurbo", "WAN2.2"];
+const MODEL_TYPES = ["Flux2Klein", "LTX2.3", "ZImageTurbo", "WAN2.2", "ERNIEImage"];
 const BLOCK_CONFIGS = {
   "Flux2Klein": [
     { key: "double",      label: "Double Blocks (0–7)",        count: 8  },
@@ -459,6 +459,9 @@ const BLOCK_CONFIGS = {
   ],
   "WAN2.2": [
     { key: "blocks",      label: "Blocks (0–39)",              count: 40 },
+  ],
+  "ERNIEImage": [
+    { key: "layers", label: "Layers (0–35)", count: 36 },
   ],
 };
 

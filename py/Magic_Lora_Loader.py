@@ -135,7 +135,7 @@ def get_model_info_file_data(file: str, model_type, default=None):
 
 NODE_NAME = "Magic LoRA Loader"
 _PRESETS_FILE = None
-_MODEL_TYPES = {"Flux2Klein", "LTX2.3", "ZImageTurbo", "WAN2.2"}
+_MODEL_TYPES = {"Flux2Klein", "LTX2.3", "ZImageTurbo", "WAN2.2", "ERNIEImage"}
 _DEFAULT_MT = "Flux2Klein"
 
 
@@ -677,6 +677,11 @@ _ARCH = {
     "WAN2.2": {
         "block_types": [
             ("blocks", r"(?:^|[._])(?<!double_)(?<!single_)blocks[._](\d+)[._]", 40),
+        ],
+    },
+    "ERNIEImage": {
+        "block_types": [
+            ("layers", r"layers[._](\d+)[._]", 36),
         ],
     },
 }

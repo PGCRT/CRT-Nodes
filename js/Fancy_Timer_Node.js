@@ -14,10 +14,21 @@ const GlobalTimer = {
 
     formatTime(ms) {
         if (ms < 0) ms = 0;
-        const minutes = String(Math.floor(ms / 60000)).padStart(2, '0');
-        const seconds = String(Math.floor((ms % 60000) / 1000)).padStart(2, '0');
+        const minutes     = String(Math.floor(ms / 60000)).padStart(2, '0');
+        const seconds     = String(Math.floor((ms % 60000) / 1000)).padStart(2, '0');
         const milliseconds = String(ms % 1000).padStart(3, '0');
-        return `${minutes}:${seconds}:${milliseconds}`;
+        return { str: `${minutes}:${seconds}:${milliseconds}`, minutes, seconds, milliseconds };
+    },
+
+    setDisplay(node, time) {
+        if (!node.timerDisplay) return;
+        if (node._segMin) {
+            node._segMin.textContent = time.minutes;
+            node._segSec.textContent = time.seconds;
+            node._segMs.textContent  = time.milliseconds;
+        } else {
+            node.timerDisplay.textContent = time.str;
+        }
     },
     
     start() {
@@ -31,10 +42,8 @@ const GlobalTimer = {
 
         this.intervalId = setInterval(() => {
             const elapsed = Date.now() - this.startTime;
-            const timeString = this.formatTime(elapsed);
-            this.activeNodes.forEach(node => {
-                if (node.timerDisplay) node.timerDisplay.textContent = timeString;
-            });
+            const time = this.formatTime(elapsed);
+            this.activeNodes.forEach(node => this.setDisplay(node, time));
         }, 33);
     },
 
@@ -43,15 +52,14 @@ const GlobalTimer = {
         this.isRunning = false;
         clearInterval(this.intervalId);
         
-        const finalTime = Date.now() - this.startTime;
-        const finalTimeString = this.formatTime(finalTime);
-        
+        const finalTime = this.formatTime(Date.now() - this.startTime);
+
         this.activeNodes.forEach(node => {
             if (node.timerDisplay) {
-                node.timerDisplay.textContent = finalTimeString;
+                this.setDisplay(node, finalTime);
                 node.timerDisplay.style.color = 'var(--text-color, #7300ff)';
             }
-            node.properties.elapsed_time_str = finalTimeString;
+            node.properties.elapsed_time_str = finalTime.str;
         });
     },
 
@@ -83,7 +91,26 @@ const FancyTimerNodeExtension = {
 
                 this.timerDisplay = document.createElement("div");
                 this.timerDisplay.className = "fancy-timer-display";
-                this.timerDisplay.textContent = this.properties.elapsed_time_str || "00:00:000";
+
+                // Fixed-width segments so colons never shift
+                this._segMin   = document.createElement("span");
+                this._segMin.className = "fancy-timer-seg";
+                const _col1    = document.createElement("span");
+                _col1.className = "fancy-timer-sep";
+                _col1.textContent = ":";
+                this._segSec   = document.createElement("span");
+                this._segSec.className = "fancy-timer-seg";
+                const _col2    = document.createElement("span");
+                _col2.className = "fancy-timer-sep";
+                _col2.textContent = ":";
+                this._segMs    = document.createElement("span");
+                this._segMs.className = "fancy-timer-seg fancy-timer-seg-ms";
+                this.timerDisplay.append(this._segMin, _col1, this._segSec, _col2, this._segMs);
+
+                const saved = (this.properties.elapsed_time_str || "00:00:000").split(":");
+                this._segMin.textContent = saved[0] || "00";
+                this._segSec.textContent = saved[1] || "00";
+                this._segMs.textContent  = saved[2] || "000";
                 
                 container.appendChild(this.timerDisplay);
                 this.addDOMWidget("fancyTimer", "Fancy Timer", container, { serialize: false });
@@ -103,8 +130,11 @@ const FancyTimerNodeExtension = {
             nodeType.prototype.onConfigure = function(info) {
                 originalOnConfigure?.apply(this, arguments);
                 this.properties = info.properties || {};
-                if (this.timerDisplay) {
-                    this.timerDisplay.textContent = this.properties.elapsed_time_str || "00:00:000";
+                if (this._segMin) {
+                    const parts = (this.properties.elapsed_time_str || "00:00:000").split(":");
+                    this._segMin.textContent = parts[0] || "00";
+                    this._segSec.textContent = parts[1] || "00";
+                    this._segMs.textContent  = parts[2] || "000";
                 }
             };
         }
@@ -130,9 +160,23 @@ const FancyTimerNodeExtension = {
                     animation: fancy-text-glow-pulse 10s infinite ease-in-out;
                     transition: color 0.5s ease-in-out;
                     font-variant-numeric: tabular-nums;
-                    letter-spacing: 0.1em;
+                    letter-spacing: 0;
                     white-space: nowrap;
                     font-weight: bold;
+                }
+                .fancy-timer-seg {
+                    display: inline-block;
+                    width: 2ch;
+                    text-align: center;
+                }
+                .fancy-timer-seg-ms {
+                    width: 3ch;
+                }
+                .fancy-timer-sep {
+                    display: inline-block;
+                    width: 0.5ch;
+                    text-align: center;
+                    opacity: 0.5;
                 }
             `;
             document.head.appendChild(style);
