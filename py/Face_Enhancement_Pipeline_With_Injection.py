@@ -624,31 +624,27 @@ class FaceEnhancementPipelineWithInjection:
     CATEGORY = "CRT/Sampling"
 
     def execute(self, **kwargs):
+        def pack_preview(images, fallback):
+            if not images:
+                return fallback
+            h0, w0 = images[0].shape[1:3]
+            if all(img.shape[1] == h0 and img.shape[2] == w0 for img in images):
+                return torch.cat(images, dim=0)
+            return images[0]
+
         image = kwargs["image"]
         face_segm_model = kwargs["face_segm_model"]
         segm_threshold = kwargs["segm_threshold"]
         control_net = kwargs["control_net"]
         controlnet_strength = kwargs["controlnet_strength"]
         control_end = kwargs["control_end"]
-
         positive = kwargs["positive"]
         negative = kwargs.get("negative", None)
         if negative is None:
             negative = []
             for t in positive:
                 negative.append([torch.zeros_like(t[0]), t[1].copy()])
-
         vae = kwargs.get("vae", None)
-        cnet_positive, cnet_negative = apply_controlnet_advanced(
-            positive,
-            negative,
-            control_net,
-            image,
-            controlnet_strength,
-            0.0,
-            control_end,
-            vae,
-        )
 
         segm_filename_only = face_segm_model.split("/")[-1]
         segm_full_path = folder_paths.get_full_path(
@@ -680,24 +676,105 @@ class FaceEnhancementPipelineWithInjection:
                 continue
             seg_entries.append(_SimpleSeg([x1, y1, x2, y2], cropped_mask))
 
-        segs = (None, seg_entries)
+        if not seg_entries:
+            fallback = torch.zeros_like(image)
+            return (image, fallback, fallback, fallback, fallback)
 
-        call_kwargs = {}
-        for name in self._segs_execute_sig.parameters:
-            if name == "self":
+        working_image = image
+        enhanced_faces = []
+        cropped_faces = []
+        enhanced_alphas = []
+        base_alphas = []
+
+        for seg in seg_entries:
+            x1, y1, x2, y2 = [int(v) for v in seg.crop_region]
+            control_image = working_image[:, y1:y2, x1:x2, :]
+            if control_image.numel() == 0:
                 continue
-            if name == "segs":
-                call_kwargs[name] = segs
-            elif name == "edit_model_flux2klein":
-                call_kwargs[name] = False
-            elif name == "positive":
-                call_kwargs[name] = cnet_positive
-            elif name == "negative":
-                call_kwargs[name] = cnet_negative
-            elif name in kwargs:
-                call_kwargs[name] = kwargs[name]
 
-        return self.segs_enhancer.execute(**call_kwargs)
+            cnet_positive, cnet_negative = apply_controlnet_advanced(
+                positive,
+                negative,
+                control_net,
+                control_image,
+                controlnet_strength,
+                0.0,
+                control_end,
+                vae,
+            )
+
+            call_kwargs = {}
+            for name in self._segs_execute_sig.parameters:
+                if name == "self":
+                    continue
+                if name == "image":
+                    call_kwargs[name] = working_image
+                elif name == "resize_back_to_original":
+                    call_kwargs[name] = True
+                elif name == "segs":
+                    call_kwargs[name] = (None, [seg])
+                elif name == "edit_model_flux2klein":
+                    call_kwargs[name] = False
+                elif name == "positive":
+                    call_kwargs[name] = cnet_positive
+                elif name == "negative":
+                    call_kwargs[name] = cnet_negative
+                elif name in kwargs:
+                    call_kwargs[name] = kwargs[name]
+
+            (
+                working_image,
+                enhanced_face,
+                cropped_face,
+                enhanced_alpha,
+                base_alpha,
+            ) = self.segs_enhancer.execute(**call_kwargs)
+            enhanced_faces.append(enhanced_face.cpu())
+            cropped_faces.append(cropped_face.cpu())
+            enhanced_alphas.append(enhanced_alpha.cpu())
+            base_alphas.append(base_alpha.cpu())
+
+        preview_fallback = torch.zeros_like(image)
+        final_image = working_image
+        if not bool(kwargs.get("resize_back_to_original", False)):
+            target_area = max(0.1, float(kwargs.get("upscale_megapixel", 1.0))) * 1_000_000.0
+            pre_crop_factor = float(kwargs.get("pre_crop_factor", 1.0))
+            strategy = kwargs.get("multi_face_resolution_strategy", "optimal")
+            orig_h, orig_w = image.shape[1:3]
+
+            scales = []
+            for seg in seg_entries:
+                x1, y1, x2, y2 = [int(v) for v in seg.crop_region]
+                seg_w = max(1, x2 - x1)
+                seg_h = max(1, y2 - y1)
+                target_w = max(2, int(round(seg_w * pre_crop_factor)))
+                target_h = max(2, int(round(seg_h * pre_crop_factor)))
+                crop_area = max(1.0, float(target_w * target_h))
+                scales.append(max(1.0, float(np.sqrt(target_area / crop_area))))
+
+            if scales:
+                min_scale = min(scales)
+                max_scale = max(scales)
+                if strategy == "fit to smallest":
+                    global_scale = max_scale
+                elif strategy == "fit to largest":
+                    global_scale = min_scale
+                else:
+                    global_scale = (min_scale + max_scale) / 2.0
+
+                canvas_w = max(orig_w, int(round(orig_w * global_scale)))
+                canvas_h = max(orig_h, int(round(canvas_w * orig_h / max(1, orig_w))))
+                final_image = ImageResize().execute(
+                    working_image, canvas_w, canvas_h, method="stretch"
+                )
+
+        return (
+            final_image,
+            pack_preview(enhanced_faces, preview_fallback),
+            pack_preview(cropped_faces, preview_fallback),
+            pack_preview(enhanced_alphas, preview_fallback),
+            pack_preview(base_alphas, preview_fallback),
+        )
 
 
 class UltralyticsEnhancer:
@@ -811,11 +888,9 @@ class UltralyticsEnhancer:
 
 
 NODE_CLASS_MAPPINGS = {
-    "FaceEnhancementPipelineWithInjection": FaceEnhancementPipelineWithInjection,
     "UltralyticsEnhancer": UltralyticsEnhancer,
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
-    "FaceEnhancementPipelineWithInjection": "Flux.1 Cnet Ultralytics Enhancer (CRT)",
     "UltralyticsEnhancer": "Ultralytics Enhancer (CRT)",
 }

@@ -1,7 +1,7 @@
 """
 @author: CRT
 @title: CRT-Nodes
-@version: 2.3.2
+@version: 2.3.4
 @project: "https://github.com/PGCRT/CRT-Nodes",
 @description: Set of nodes for ComfyUI
 https://discord.gg/8wYS9MBQqp
@@ -31,8 +31,6 @@ if "CRT_NODES_INITIALIZED" not in globals():
     from .py.Mask_Empty_Float_Node import MaskEmptyFloatNode
     from .py.Mask_Pass_Or_Placeholder import MaskPassOrPlaceholder
     from .py.Latent_Injection_Sampler import LatentNoiseInjectionSampler
-    from .py.Flux1_Cnet_Sampler_With_Injection import FluxControlnetSamplerWithInjection
-    from .py.Flux1_Cnet_Ultralytics_Multi import Flux1CnetUltralyticMulti
     from .py.Face_Enhancement_Pipeline_With_Injection import (
         UltralyticsEnhancer as FaceEnhancementWithInjection,
     )
@@ -122,6 +120,20 @@ if "CRT_NODES_INITIALIZED" not in globals():
         CRT_LTX23USModelsPipe,
         CRT_LTX23UnifiedSampler,
     )
+    from .py.CRT_Isolate import (
+        CRT_IsolateInput,
+        CRT_IsolateOutput,
+    )
+
+    CRT_IsolateInputTBG = None
+    CRT_IsolateOutputTBG = None
+    try:
+        from .py.CRT_Isolate_TBG import (
+            CRT_IsolateInputTBG,
+            CRT_IsolateOutputTBG,
+        )
+    except Exception as e:
+        print(f"[CRT-Nodes] Warning: Isolate TBG nodes unavailable: {e}")
 
     CRT_LTX23AutoDownload = None
     LTX23AutoDownloadAPI = None
@@ -207,8 +219,6 @@ NODE_CLASS_MAPPINGS = {
     "MaskEmptyFloatNode": MaskEmptyFloatNode,
     "MaskPassOrPlaceholder": MaskPassOrPlaceholder,
     "LatentNoiseInjectionSampler": LatentNoiseInjectionSampler,
-    "FluxControlnetSamplerWithInjection": FluxControlnetSamplerWithInjection,
-    "Flux1CnetUltralyticMulti": Flux1CnetUltralyticMulti,
     "PonyUpscaleSamplerWithInjection": PonyUpscaleSamplerWithInjection,
     "FaceEnhancementWithInjection": FaceEnhancementWithInjection,
     "FaceEnhancementWithInjectionSEGS": FaceEnhancementWithInjectionSEGS,
@@ -293,6 +303,10 @@ NODE_CLASS_MAPPINGS = {
     "CRT_LTX23USConfig": CRT_LTX23USConfig,
     "CRT_LTX23UnifiedSampler": CRT_LTX23UnifiedSampler,
     "CRT_LTX23AutoDownload": CRT_LTX23AutoDownload,
+    "CRT_IsolateInput":  CRT_IsolateInput,
+    "CRT_IsolateOutput": CRT_IsolateOutput,
+    "CRT_IsolateInputTBG":  CRT_IsolateInputTBG,
+    "CRT_IsolateOutputTBG": CRT_IsolateOutputTBG,
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
@@ -309,8 +323,6 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "MaskEmptyFloatNode": "Mask Empty Float (CRT)",
     "MaskPassOrPlaceholder": "Mask Pass or Placeholder (CRT)",
     "LatentNoiseInjectionSampler": "Latent Noise Injection Sampler (CRT)",
-    "FluxControlnetSamplerWithInjection": "Flux1 Cnet Sampler with Injection (CRT)",
-    "Flux1CnetUltralyticMulti": "Flux1 Cnet Ultralytics Multi (CRT)",
     "PonyUpscaleSamplerWithInjection": "Image Upscale Sampler (CRT)",
     "FaceEnhancementWithInjection": "Ultralytics Enhancer (CRT)",
     "FaceEnhancementWithInjectionSEGS": "SEGS Enhancer Multi (CRT)",
@@ -394,6 +406,10 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "CRT_LTX23USConfig": "LTX 2.3 US Config (CRT)",
     "CRT_LTX23UnifiedSampler": "LTX 2.3 Unified Sampler (CRT)",
     "CRT_LTX23AutoDownload": "LTX 2.3 AutoDownload (CRT)",
+    "CRT_IsolateInput":    "Isolate Input SAM3.1 (CRT)",
+    "CRT_IsolateOutput":   "Isolate Output SAM3.1 (CRT)",
+    "CRT_IsolateInputTBG":  "Isolate Input tbg-sam3 (CRT)",
+    "CRT_IsolateOutputTBG": "Isolate Output tbg-sam3 (CRT)",
 }
 
 if SaveImageBase64 is not None:

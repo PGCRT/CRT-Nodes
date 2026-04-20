@@ -1231,7 +1231,6 @@ class FaceEnhancementWithInjectionSEGS:
             colored_print(
                 f"   📏 Normalize Noise: {normalize_injected_noise}", Colors.CYAN
             )
-        segment_items = []
         for i, (seg, padded_region, original_region) in enumerate(valid_segments):
             seed_for_seg = actual_seed + i
 
@@ -1361,31 +1360,6 @@ class FaceEnhancementWithInjectionSEGS:
                 seg_positive = positive
                 seg_negative = negative
 
-            segment_items.append(
-                {
-                    "seed": seed_for_seg,
-                    "x1": x1,
-                    "y1": y1,
-                    "crop_w": crop_w,
-                    "crop_h": crop_h,
-                    "upscaled_face": upscaled_face,
-                    "feathered_mask": feathered_mask,
-                    "face_latent": face_latent,
-                    "seg_positive": seg_positive,
-                    "seg_negative": seg_negative,
-                }
-            )
-
-        colored_print(
-            f"   Precomputed segment references: {len(segment_items)}", Colors.GREEN
-        )
-
-        for item in segment_items:
-            seed_for_seg = item["seed"]
-            face_latent = item["face_latent"]
-            seg_positive = item["seg_positive"]
-            seg_negative = item["seg_negative"]
-
             if enable_noise_injection == "enable":
                 stage1_latent = run_custom_sample(
                     face_latent,
@@ -1438,15 +1412,7 @@ class FaceEnhancementWithInjectionSEGS:
                     disable_noise=False,
                 )
 
-            item["enhanced_latent"] = enhanced_latent
-
-        for item in segment_items:
-            upscaled_face = item["upscaled_face"]
-            feathered_mask = item["feathered_mask"]
-            x1, y1 = item["x1"], item["y1"]
-            crop_w, crop_h = item["crop_w"], item["crop_h"]
-
-            enhanced_face_image = vae.decode(item["enhanced_latent"]["samples"])
+            enhanced_face_image = vae.decode(enhanced_latent["samples"])
 
             if (
                 enhanced_face_image.shape[1] != upscaled_face.shape[1]
@@ -1476,8 +1442,8 @@ class FaceEnhancementWithInjectionSEGS:
             else:
                 color_matched_face = enhanced_face_image
 
-            enhanced_faces_for_output.append(color_matched_face)
-            cropped_faces_for_output.append(upscaled_face)
+            enhanced_faces_for_output.append(color_matched_face.cpu())
+            cropped_faces_for_output.append(upscaled_face.cpu())
 
             alpha_mask_enhanced = F_interpolate(
                 feathered_mask.unsqueeze(1),
@@ -1497,8 +1463,8 @@ class FaceEnhancementWithInjectionSEGS:
             )
             alpha_mask_base = torch.clamp(alpha_mask_base, 0.0, 1.0).movedim(1, -1)
 
-            enhanced_alpha_for_output.append(color_matched_face * alpha_mask_enhanced)
-            base_alpha_for_output.append(upscaled_face * alpha_mask_base)
+            enhanced_alpha_for_output.append((color_matched_face * alpha_mask_enhanced).cpu())
+            base_alpha_for_output.append((upscaled_face * alpha_mask_base).cpu())
 
             enhanced_pil = tensor2pil(color_matched_face[0])
             paste_mask_pil = to_pil_image(feathered_mask.squeeze()).convert("L")
@@ -1510,6 +1476,12 @@ class FaceEnhancementWithInjectionSEGS:
                 (crop_w, crop_h), Image.Resampling.LANCZOS
             )
             final_pil.paste(enhanced_pil_resized, (x1, y1), paste_mask_pil_resized)
+
+            del face_latent, enhanced_latent, enhanced_face_image
+            if enable_noise_injection == "enable":
+                del stage1_latent, injected_latent, injected_latent_samples, new_noise
+            if torch.cuda.is_available():
+                torch.cuda.empty_cache()
 
         colored_print("🖼️ Compositing final image...", Colors.HEADER)
         final_image_tensor = pil2tensor(final_pil)
