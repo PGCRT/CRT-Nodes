@@ -137,6 +137,7 @@ NODE_NAME = "Magic LoRA Loader"
 _PRESETS_FILE = None
 _MODEL_TYPES = {"Flux2Klein", "LTX2.3", "ZImageTurbo", "WAN2.2", "ERNIEImage"}
 _DEFAULT_MT = "Flux2Klein"
+_ROUTES_REGISTERED = globals().get("_ROUTES_REGISTERED", False)
 
 
 def _is_all_ones(block_weights: dict) -> bool:
@@ -761,8 +762,11 @@ def _competitive_weights(profiles, model_type=_DEFAULT_MT):
 
 
 def setup_routes(base_dir: str):
-    global _PRESETS_FILE
+    global _PRESETS_FILE, _ROUTES_REGISTERED
     _PRESETS_FILE = os.path.join(base_dir, "magic_lora_loader_presets.json")
+
+    if _ROUTES_REGISTERED:
+        return
 
     from aiohttp import web
     from server import PromptServer
@@ -887,3 +891,5 @@ def setup_routes(base_dir: str):
         print("[crt-pll] presets + automix routes registered")
     except RuntimeError:
         pass
+
+    _ROUTES_REGISTERED = True

@@ -1,7 +1,7 @@
 """
 @author: CRT
 @title: CRT-Nodes
-@version: 2.3.5
+@version: 2.3.6
 @project: "https://github.com/PGCRT/CRT-Nodes",
 @description: Set of nodes for ComfyUI
 https://discord.gg/8wYS9MBQqp
@@ -14,10 +14,8 @@ import sys
 sys.modules["crt_nodes"] = sys.modules[__name__]
 __package__ = "crt_nodes"
 
-if "CRT_NODES_INITIALIZED" not in globals():
-    globals()["CRT_NODES_INITIALIZED"] = True
+if True:
 
-    print("[CRT-Nodes __init__] Importing node classes...")
     from .py.Remove_Trailing_Comma_Node import RemoveTrailingCommaNode
     from .py.Boolean_Transform_Node import BooleanTransformNode
     from .py.Video_Duration_Calculator import VideoDurationCalculator
@@ -120,6 +118,12 @@ if "CRT_NODES_INITIALIZED" not in globals():
         CRT_LTX23USModelsPipe,
         CRT_LTX23UnifiedSampler,
     )
+    from .py.Isolate import (
+        CRT_IsolateInput,
+        CRT_IsolateOutput,
+    )
+    from .py.Isolate_CLIPSeg import CRT_IsolateInputCLIPSeg
+
     CRT_LTX23AutoDownload = None
     LTX23AutoDownloadAPI = None
     try:
@@ -159,12 +163,12 @@ if "CRT_NODES_INITIALIZED" not in globals():
         print(f"[CRT-Nodes] Warning: Magic LoRA Loader node unavailable: {e}")
 
     CRT_AudioTranscript = None
+    CRT_AudioTranscriptPipeOut = None
     try:
-        from .py.Audio_Transcript import CRT_AudioTranscript
+        from .py.Audio_Transcript import CRT_AudioTranscript, CRT_AudioTranscriptPipeOut
     except Exception as e:
         print(f"[CRT-Nodes] Warning: Audio Transcript node unavailable: {e}")
 
-    print("[CRT-Nodes __init__] Registering custom model paths...")
     try:
         comfy_dir = os.path.dirname(folder_paths.__file__)
         models_dir = os.path.join(comfy_dir, "models")
@@ -173,10 +177,8 @@ if "CRT_NODES_INITIALIZED" not in globals():
 
         if os.path.isdir(bbox_path):
             folder_paths.add_model_folder_path("ultralytics_bbox", bbox_path)
-            print("... 'ultralytics_bbox' path registered.")
         if os.path.isdir(segm_path):
             folder_paths.add_model_folder_path("ultralytics_segm", segm_path)
-            print("... 'ultralytics_segm' path registered.")
     except Exception as e:
         print(f"[CRT-Nodes] Warning: Could not register ultralytics paths. Error: {e}")
 
@@ -186,9 +188,8 @@ if "CRT_NODES_INITIALIZED" not in globals():
         except Exception as e:
             print(f"[CRT-Nodes] Warning: Could not setup CRT PLL routes. Error: {e}")
 
-    print("[CRT-Nodes __init__] INITIALIZATION COMPLETE.")
 else:
-    print("[CRT-Nodes __init__] Already initialized, skipping...")
+    pass
 
 NODE_CLASS_MAPPINGS = {
     "Remove Trailing Comma": RemoveTrailingCommaNode,
@@ -288,6 +289,9 @@ NODE_CLASS_MAPPINGS = {
     "CRT_LTX23USConfig": CRT_LTX23USConfig,
     "CRT_LTX23UnifiedSampler": CRT_LTX23UnifiedSampler,
     "CRT_LTX23AutoDownload": CRT_LTX23AutoDownload,
+    "CRT_IsolateInput": CRT_IsolateInput,
+    "CRT_IsolateOutput": CRT_IsolateOutput,
+    "CRT_IsolateInputCLIPSeg": CRT_IsolateInputCLIPSeg,
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
@@ -387,6 +391,9 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "CRT_LTX23USConfig": "LTX 2.3 US Config (CRT)",
     "CRT_LTX23UnifiedSampler": "LTX 2.3 Unified Sampler (CRT)",
     "CRT_LTX23AutoDownload": "LTX 2.3 AutoDownload (CRT)",
+    "CRT_IsolateInput": "Isolate Input SAM3.1 (CRT)",
+    "CRT_IsolateOutput": "Isolate Output (CRT)",
+    "CRT_IsolateInputCLIPSeg": "Isolate Input CLIPSeg (CRT)",
 }
 
 if SaveImageBase64 is not None:
@@ -406,6 +413,12 @@ if SaveMergedLora is not None:
 if CRT_AudioTranscript is not None:
     NODE_CLASS_MAPPINGS["CRT_AudioTranscript"] = CRT_AudioTranscript
     NODE_DISPLAY_NAME_MAPPINGS["CRT_AudioTranscript"] = "Audio Transcript (CRT)"
+
+if CRT_AudioTranscriptPipeOut is not None:
+    NODE_CLASS_MAPPINGS["CRT_AudioTranscriptPipeOut"] = CRT_AudioTranscriptPipeOut
+    NODE_DISPLAY_NAME_MAPPINGS["CRT_AudioTranscriptPipeOut"] = (
+        "Audio Transcript Pipe Out (CRT)"
+    )
 
 if globals().get("_tiny_flux2_vae_available", False):
     NODE_CLASS_MAPPINGS.update(
@@ -430,7 +443,8 @@ NODE_DISPLAY_NAME_MAPPINGS = {
 }
 
 # Setup LTX23 AutoDownload API routes
-if LTX23AutoDownloadAPI is not None:
+_LTX23_API_ROUTES_REGISTERED = globals().get("_LTX23_API_ROUTES_REGISTERED", False)
+if LTX23AutoDownloadAPI is not None and not _LTX23_API_ROUTES_REGISTERED:
     try:
         import server
         from aiohttp import web
@@ -463,7 +477,8 @@ if LTX23AutoDownloadAPI is not None:
             except Exception as e:
                 return web.json_response({"error": str(e)}, status=500)
 
-        print("[CRT-Nodes] LTX23 AutoDownload API routes registered.")
+        _LTX23_API_ROUTES_REGISTERED = True
+
     except Exception as e:
         print(
             f"[CRT-Nodes] Warning: Could not setup LTX23 AutoDownload API routes: {e}"

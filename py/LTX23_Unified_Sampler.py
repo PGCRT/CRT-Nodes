@@ -1,10 +1,13 @@
+import gc
 import math
+import time
 import builtins
 import logging
 from contextlib import redirect_stderr, redirect_stdout
 from contextlib import contextmanager
 import io
 
+import numpy as np
 import torch
 import torch.nn as nn
 
@@ -42,6 +45,44 @@ from comfy_extras.nodes_lt_audio import (
     LTXVEmptyLatentAudio,
 )
 from comfy_extras.nodes_lt_upsampler import LTXVLatentUpsampler
+
+from ._cache_fingerprint import stable_fingerprint
+from .Isolate import (
+    SAM31_DEFAULT_CHECKPOINT,
+    _load_sam31,
+    _release_sam31,
+    _resize_batch_masks_to_shape,
+    _scale_for_sam_detection,
+    _segment_batch,
+)
+
+
+_LTX_MOUTH_MASK_CACHE = {}
+_LTX_MOUTH_MASK_CACHE_ORDER = []
+_LTX_MOUTH_MASK_CACHE_LIMIT = 0
+_LTX23_DEPTH_PREVIEW_ROUTE_REGISTERED = globals().get("_LTX23_DEPTH_PREVIEW_ROUTE_REGISTERED", False)
+
+# ── Depth preview storage + API route ────────────────────────────────────────
+_ltx23_depth_preview = None  # PIL Image of last depth guide first-frame
+
+try:
+    from server import PromptServer
+    from aiohttp import web as _aiohttp_web
+
+    if not _LTX23_DEPTH_PREVIEW_ROUTE_REGISTERED:
+        @PromptServer.instance.routes.get("/crt/ltx23/depth_preview")
+        async def _ltx23_depth_preview_route(request):
+            global _ltx23_depth_preview
+            if _ltx23_depth_preview is None:
+                return _aiohttp_web.Response(status=404, text="No depth preview yet - run the sampler first.")
+            buf = io.BytesIO()
+            _ltx23_depth_preview.save(buf, format="PNG")
+            buf.seek(0)
+            return _aiohttp_web.Response(body=buf.read(), content_type="image/png")
+
+        _LTX23_DEPTH_PREVIEW_ROUTE_REGISTERED = True
+except Exception as _route_e:
+    print(f"[CRT LTX23] depth_preview route not registered: {_route_e}")
 
 
 class _CRTPreviewState:
@@ -359,6 +400,8 @@ class CRT_LTX23USConfig:
         framerate_value = 24.0
 
         image = kwargs.get("Image I2V / V2V FirstFrame", None)
+        if image is not None and image.shape[0] > 1:
+            image = image[:1]
         video = kwargs.get("Video (V2V image batch)", None)
 
         pipe = {
@@ -377,6 +420,10 @@ class CRT_LTX23UnifiedSampler:
     COLOR_WARN = "\033[38;5;208m"
     COLOR_OK = "\033[38;5;120m"
     COLOR_RESET = "\033[0m"
+    MOUTH_DETECT_MEGAPIXELS_FAST = 0.25
+    MOUTH_DETECT_SINGLE_ITEM = True
+    MOUTH_DETECT_CHUNK_SIZE = 10
+    MOUTH_MASK_MAX_COVERAGE = 0.20
     ASPECT_RATIOS = [
         "1:1 (Square)",
         "2:3 (Portrait)",
@@ -407,6 +454,63 @@ class CRT_LTX23UnifiedSampler:
     CFG_DEFAULT = 1.0
     I2V_STRENGTH = 1.0
     I2V_PREPROCESS_COMPRESSION = 25
+
+    @classmethod
+    def IS_CHANGED(
+        cls,
+        models_pipe,
+        config_pipe,
+        workflow_mode,
+        hq,
+        live_preview,
+        frame_count_from_audio,
+        vae_decode_tiled,
+        megapixels_target,
+        aspect_ratio,
+        frame_count,
+        v2v_mode,
+        v2v_guide_strength,
+        depth_megapixels,
+        v2v_aspect_ratio,
+        sampler_main,
+        sampler_refine,
+        steps,
+        generated_audio_gain_db,
+        firstframe_strength,
+        depth_mouth_mask,
+        mouth_detect_megapixels,
+        mouth_single_item,
+        mouth_detect_chunk_size,
+        mouth_mask_expand,
+        mouth_mask_blur,
+    ):
+        return stable_fingerprint(
+            models_pipe,
+            config_pipe,
+            workflow_mode,
+            bool(hq),
+            bool(live_preview),
+            bool(frame_count_from_audio),
+            bool(vae_decode_tiled),
+            float(megapixels_target),
+            aspect_ratio,
+            int(frame_count),
+            v2v_mode,
+            float(v2v_guide_strength),
+            float(depth_megapixels),
+            v2v_aspect_ratio,
+            sampler_main,
+            sampler_refine,
+            int(steps),
+            float(generated_audio_gain_db),
+            float(firstframe_strength),
+            bool(depth_mouth_mask),
+            float(mouth_detect_megapixels),
+            bool(mouth_single_item),
+            int(mouth_detect_chunk_size),
+            int(mouth_mask_expand),
+            float(mouth_mask_blur),
+        )
 
     @classmethod
     def INPUT_TYPES(cls):
@@ -470,15 +574,6 @@ class CRT_LTX23UnifiedSampler:
                     ["Depth Control", "Outpaint"],
                     {"default": "Depth Control"},
                 ),
-                "v2v_condition_strength": (
-                    "FLOAT",
-                    {
-                        "default": 0.8,
-                        "min": 0.0,
-                        "max": 1.0,
-                        "step": 0.01,
-                    },
-                ),
                 "v2v_guide_strength": (
                     "FLOAT",
                     {
@@ -527,6 +622,21 @@ class CRT_LTX23UnifiedSampler:
                         "step": 0.1,
                     },
                 ),
+                "firstframe_strength": (
+                    "FLOAT",
+                    {
+                        "default": 1.0,
+                        "min": 0.0,
+                        "max": 1.0,
+                        "step": 0.01,
+                    },
+                ),
+                "depth_mouth_mask": ("BOOLEAN", {"default": False}),
+                "mouth_detect_megapixels": ("FLOAT", {"default": 0.25, "min": 0.0, "max": 8.0, "step": 0.05, "tooltip": "Deprecated compatibility input. Ignored; mouth detection uses hardcoded fast mode."}),
+                "mouth_single_item": ("BOOLEAN", {"default": True, "tooltip": "Deprecated compatibility input. Ignored; hardcoded internally."}),
+                "mouth_detect_chunk_size": ("INT", {"default": 10, "min": 0, "max": 4096, "step": 1, "tooltip": "Deprecated compatibility input. Ignored; hardcoded internally."}),
+                "mouth_mask_expand": ("INT",   {"default": 8,   "min": 0, "max": 100, "step": 1, "tooltip": "Expands the mouth mask before applying it to the depth guide so lip motion influence covers a larger area."}),
+                "mouth_mask_blur":   ("FLOAT", {"default": 8.0, "min": 0.0, "max": 100.0, "step": 0.5, "tooltip": "Softens the mouth mask edges to avoid harsh transitions in the depth guide."}),
             }
         }
 
@@ -560,6 +670,14 @@ class CRT_LTX23UnifiedSampler:
 
         return (result,)
 
+    _DA3_SUPPRESS_PREFIXES = (
+        "[DepthAnythingV3]",
+        "[VRAM",
+        "[build]",
+        "Model input size",
+        "Input image size",
+    )
+
     @staticmethod
     @contextmanager
     def _quiet_depthanything_logs():
@@ -568,8 +686,9 @@ class CRT_LTX23UnifiedSampler:
 
         def filtered_print(*args, **kwargs):
             text = " ".join(str(a) for a in args)
-            if "[DepthAnythingV3]" in text:
-                return
+            for pfx in CRT_LTX23UnifiedSampler._DA3_SUPPRESS_PREFIXES:
+                if pfx in text:
+                    return
             return original_print(*args, **kwargs)
 
         builtins.print = filtered_print
@@ -596,6 +715,55 @@ class CRT_LTX23UnifiedSampler:
             for logger, level, propagate in tracked:
                 logger.setLevel(level)
                 logger.propagate = propagate
+
+    @classmethod
+    def _timed_log(cls, label, fn, level="info"):
+        _t0 = time.monotonic()
+        result = fn()
+        cls._log(f"{label} ({time.monotonic() - _t0:.1f}s)", level=level)
+        return result
+
+    @classmethod
+    def _detect_mouth_masks(cls, images, detect_megapixels=0.0, single_item=True, detect_chunk_size=10):
+        batch = int(images.shape[0]) if hasattr(images, "shape") else 0
+        pbar = comfy.utils.ProgressBar(max(1, batch))
+        detect_mp = float(detect_megapixels)
+        single_item = bool(single_item)
+        detect_chunk_size = int(max(0, detect_chunk_size))
+
+        try:
+            cls._log(f"[Mouth Mask] Loading SAM3.1 checkpoint: {SAM31_DEFAULT_CHECKPOINT}")
+            model, clip = _load_sam31(SAM31_DEFAULT_CHECKPOINT)
+            try:
+                cls._log(f"[Mouth Mask] Model loaded. Segmenting {batch} frames...")
+                detect_images = _scale_for_sam_detection(images, detect_mp)
+                masks = _segment_batch(
+                    model,
+                    clip,
+                    detect_images,
+                    "mouth",
+                    0.3,
+                    0,
+                    single_item=single_item,
+                    chunk_size_override=detect_chunk_size,
+                )
+                masks = _resize_batch_masks_to_shape(
+                    masks,
+                    int(images.shape[1]),
+                    int(images.shape[2]),
+                )
+            finally:
+                _release_sam31(model, clip)
+
+            if masks is None:
+                return None
+
+            pbar.update_absolute(max(1, batch), max(1, batch), None)
+            cls._log(f"[Mouth Mask] loaded {masks.shape} nonzero={masks.sum():.0f}", level="ok")
+            return masks.cpu()
+        except Exception as e:
+            cls._log(f"[Mouth Mask] Detection failed: {e}", level="warn")
+            return None
 
     @staticmethod
     def _offload_da3_model(da3_model):
@@ -630,7 +798,6 @@ class CRT_LTX23UnifiedSampler:
         if suppress_output:
             with (
                 CRT_LTX23UnifiedSampler._quiet_depthanything_logs(),
-                redirect_stdout(io.StringIO()),
                 redirect_stderr(io.StringIO()),
             ):
                 return fn(**kwargs)
@@ -1051,12 +1218,37 @@ class CRT_LTX23UnifiedSampler:
         if samples is None or not hasattr(samples, "shape") or len(samples.shape) != 4:
             return audio_latent
 
-        target_latents = int(
-            audio_vae.num_of_latents_from_frames(
-                int(frame_count),
-                max(1, int(round(frame_rate))),
+        fps_i = max(1, int(round(frame_rate)))
+        if hasattr(audio_vae, "num_of_latents_from_frames"):
+            target_latents = int(
+                audio_vae.num_of_latents_from_frames(
+                    int(frame_count),
+                    fps_i,
+                )
             )
-        )
+        else:
+            probe = cls._result_tuple(
+                LTXVEmptyLatentAudio.execute(
+                    int(frame_count),
+                    fps_i,
+                    1,
+                    audio_vae,
+                )
+            )
+            if len(probe) == 0 or not isinstance(probe[0], dict):
+                raise RuntimeError(
+                    "Could not infer target audio latent length for source_audio fitting."
+                )
+            probe_samples = probe[0].get("samples", None)
+            if (
+                probe_samples is None
+                or not hasattr(probe_samples, "shape")
+                or len(probe_samples.shape) != 4
+            ):
+                raise RuntimeError(
+                    "Audio latent length probe returned invalid samples for source_audio fitting."
+                )
+            target_latents = int(probe_samples.shape[2])
         target_latents = max(1, target_latents)
 
         current_latents = int(samples.shape[2])
@@ -1116,14 +1308,14 @@ class CRT_LTX23UnifiedSampler:
                         level="ok",
                     )
                     return encoded_latent
-            except Exception as exc:
-                cls._log(
-                    (
-                        "Failed to encode source_audio with LTXV Audio VAE Encode "
-                        f"({exc}). Falling back to empty latent audio."
-                    ),
-                    level="warn",
+                raise RuntimeError(
+                    "LTXV Audio VAE Encode returned no latent outputs for source_audio."
                 )
+            except Exception as exc:
+                raise RuntimeError(
+                    "source_audio is connected but encoding failed in LTXV Audio VAE Encode: "
+                    f"{exc}"
+                ) from exc
 
         return cls._result_tuple(
             LTXVEmptyLatentAudio.execute(
@@ -1177,6 +1369,41 @@ class CRT_LTX23UnifiedSampler:
             frames = 1
         return max(1, frames)
 
+    @staticmethod
+    def _fit_audio_to_frame_count(audio, frame_count, fps):
+        if not isinstance(audio, dict):
+            return audio
+        waveform = audio.get("waveform")
+        sample_rate = audio.get("sample_rate")
+        if waveform is None or sample_rate is None:
+            return audio
+
+        if not isinstance(waveform, torch.Tensor):
+            waveform = torch.as_tensor(waveform)
+
+        try:
+            sample_rate = int(sample_rate)
+        except Exception:
+            return audio
+
+        if sample_rate <= 0:
+            return audio
+
+        target_samples = int(round((float(frame_count) / float(max(1e-6, fps))) * float(sample_rate)))
+        target_samples = max(1, target_samples)
+        current_samples = int(waveform.shape[-1])
+
+        if current_samples == target_samples:
+            return audio
+
+        out = dict(audio)
+        if current_samples > target_samples:
+            out["waveform"] = waveform[..., :target_samples]
+        else:
+            pad = target_samples - current_samples
+            out["waveform"] = torch.nn.functional.pad(waveform, (0, pad), value=0.0)
+        return out
+
     def _inject_i2v_condition(
         self,
         vae,
@@ -1191,8 +1418,9 @@ class CRT_LTX23UnifiedSampler:
             conditioned_image = self._result_tuple(
                 LTXVPreprocess.execute(image, int(compression))
             )[0]
-        conditioned = self._result_tuple(
-            LTXVImgToVideoInplace.execute(
+        return self._result_tuple(
+            self._run_external_node(
+                "LTXVImgToVideoConditionOnly",
                 vae=vae,
                 image=conditioned_image,
                 latent=latent,
@@ -1200,7 +1428,6 @@ class CRT_LTX23UnifiedSampler:
                 bypass=False,
             )
         )[0]
-        return conditioned
 
     @staticmethod
     def _dilate_latent_sparse(latent, horizontal_scale, vertical_scale):
@@ -1258,95 +1485,23 @@ class CRT_LTX23UnifiedSampler:
             latent,
             latent_downscale_factor,
         )
-        scale_factors = vae.downscale_index_formula
-        latent_image = latent["samples"]
-        noise_mask = latent.get("noise_mask", None)
-        if noise_mask is None:
-            batch_size, _, latent_length, _, _ = latent_image.shape
-            noise_mask = torch.ones(
-                (batch_size, 1, latent_length, 1, 1),
-                dtype=torch.float32,
-                device=latent_image.device,
+        return self._result_tuple(
+            self._run_external_node(
+                "LTXAddVideoICLoRAGuide",
+                positive=positive,
+                negative=negative,
+                vae=vae,
+                latent=latent,
+                image=guide_image,
+                frame_idx=0,
+                strength=float(guide_strength),
+                latent_downscale_factor=float(effective_downscale),
+                crop="disabled",
+                use_tiled_encode=False,
+                tile_size=256,
+                tile_overlap=64,
             )
-        else:
-            noise_mask = noise_mask.clone()
-
-        _, _, latent_length, latent_height, latent_width = latent_image.shape
-        time_scale_factor, width_scale_factor, height_scale_factor = scale_factors
-        num_frames_to_keep = (
-            (int(guide_image.shape[0]) - 1) // int(time_scale_factor)
-        ) * int(time_scale_factor) + 1
-        guide_image = guide_image[:num_frames_to_keep]
-
-        target_width = int(
-            latent_width * width_scale_factor / float(effective_downscale)
         )
-        target_height = int(
-            latent_height * height_scale_factor / float(effective_downscale)
-        )
-        guide_pixels = comfy.utils.common_upscale(
-            guide_image.movedim(-1, 1),
-            target_width,
-            target_height,
-            "bilinear",
-            "disabled",
-        ).movedim(1, -1)
-        guide_latent = vae.encode(guide_pixels[:, :, :, :3])
-        guide_orig_shape = list(guide_latent.shape[2:])
-
-        guide_mask = None
-        if effective_downscale > 1:
-            if (
-                latent_width % effective_downscale != 0
-                or latent_height % effective_downscale != 0
-            ):
-                raise ValueError(
-                    f"Latent spatial size {latent_width}x{latent_height} must be divisible by latent_downscale_factor {effective_downscale}"
-                )
-            dilated = self._dilate_latent_sparse(
-                {"samples": guide_latent},
-                horizontal_scale=int(effective_downscale),
-                vertical_scale=int(effective_downscale),
-            )
-            guide_mask = dilated.get("noise_mask", None)
-            guide_latent = dilated["samples"]
-
-        frame_idx, latent_idx = LTXVAddGuide.get_latent_index(
-            positive,
-            latent_length,
-            int(guide_pixels.shape[0]),
-            0,
-            scale_factors,
-        )
-        if latent_idx + guide_latent.shape[2] > latent_length:
-            raise ValueError("Guide frames exceed latent sequence length.")
-
-        positive, negative, latent_image, noise_mask = LTXVAddGuide.append_keyframe(
-            positive,
-            negative,
-            frame_idx,
-            latent_image,
-            noise_mask,
-            guide_latent,
-            float(guide_strength),
-            scale_factors,
-            guide_mask=guide_mask,
-            latent_downscale_factor=effective_downscale,
-            causal_fix=True,
-        )
-
-        pre_filter_count = (
-            guide_latent.shape[2] * guide_latent.shape[3] * guide_latent.shape[4]
-        )
-        positive, negative = _append_guide_attention_entry(
-            positive,
-            negative,
-            pre_filter_count,
-            guide_orig_shape,
-            strength=1.0,
-        )
-
-        return positive, negative, {"samples": latent_image, "noise_mask": noise_mask}
 
     def _run_i2v_or_t2v(
         self,
@@ -1373,6 +1528,7 @@ class CRT_LTX23UnifiedSampler:
         source_audio,
         use_tiled_vae_decode,
         preview_enabled,
+        firstframe_strength=1.0,
     ):
         total_steps = 5 if not hq else 7
         self._progress(1, total_steps, f"Preparing {mode} inputs")
@@ -1421,7 +1577,7 @@ class CRT_LTX23UnifiedSampler:
                     vae,
                     target_image,
                     video_latent,
-                    self.I2V_STRENGTH,
+                    firstframe_strength,
                     self.I2V_PREPROCESS_COMPRESSION,
                 )
                 av_latent = self._result_tuple(
@@ -1475,7 +1631,7 @@ class CRT_LTX23UnifiedSampler:
                     vae,
                     stage1_image,
                     stage1_video_latent,
-                    self.I2V_STRENGTH,
+                    firstframe_strength,
                     self.I2V_PREPROCESS_COMPRESSION,
                 )
 
@@ -1513,12 +1669,16 @@ class CRT_LTX23UnifiedSampler:
                     vae,
                     target_image,
                     upsampled_video,
-                    self.I2V_STRENGTH,
+                    firstframe_strength,
                     self.I2V_PREPROCESS_COMPRESSION,
                 )
 
+            refine_audio_latent = stage1_audio_out
+            if source_audio is not None:
+                refine_audio_latent = stage1_audio_latent
+
             refined_av_latent = self._result_tuple(
-                LTXVConcatAVLatent.execute(upsampled_video, stage1_audio_out)
+                LTXVConcatAVLatent.execute(upsampled_video, refine_audio_latent)
             )[0]
 
             self._progress(5, total_steps, "Sampling stage 2")
@@ -1571,7 +1731,6 @@ class CRT_LTX23UnifiedSampler:
         sigmas_refine,
         megapixels_target,
         depth_megapixels,
-        v2v_condition_strength,
         v2v_guide_strength,
         latent_downscale_factor,
         generated_audio_gain_db,
@@ -1584,6 +1743,13 @@ class CRT_LTX23UnifiedSampler:
         preview_enabled=True,
         is_outpaint_mode=False,
         v2v_aspect_ratio="16:9 (Landscape)",
+        firstframe_strength=1.0,
+        depth_mouth_mask=False,
+        mouth_detect_megapixels=0.25,
+        mouth_single_item=True,
+        mouth_detect_chunk_size=10,
+        mouth_mask_expand=8,
+        mouth_mask_blur=8.0,
     ):
         if hq:
             self._log(
@@ -1613,18 +1779,11 @@ class CRT_LTX23UnifiedSampler:
                 )
 
         input_video_frames = int(video.shape[0])
-        frame_limit = int(max(1, frame_count_limit))
-        frame_count = min(input_video_frames, frame_limit)
-        if frame_count < input_video_frames:
-            self._log(
-                f"V2V frame count limited by user value: {frame_count}/{input_video_frames}",
-                level="ok",
-            )
-        else:
-            self._log(
-                f"V2V frame count from input video: {frame_count}",
-                level="ok",
-            )
+        frame_count = input_video_frames
+        self._log(
+            f"V2V frame count from input video: {frame_count}",
+            level="ok",
+        )
 
         video_frames = video[:frame_count]
 
@@ -1673,6 +1832,21 @@ class CRT_LTX23UnifiedSampler:
         target_image = self._scale_total_pixels(video_frames, megapixels_target)
         depth_input = self._scale_total_pixels(video_frames, depth_megapixels)
 
+        mouth_masks = None
+        if depth_mouth_mask and not is_outpaint_mode:
+            self._log("[Mouth Mask] Detecting mouth region via SAM3.1...")
+            _t0 = time.monotonic()
+            mouth_masks = self._detect_mouth_masks(
+                video_frames,
+                detect_megapixels=mouth_detect_megapixels,
+                single_item=mouth_single_item,
+                detect_chunk_size=mouth_detect_chunk_size,
+            )
+            if mouth_masks is not None:
+                self._log(f"[Mouth Mask] Done ({time.monotonic() - _t0:.1f}s)", level="ok")
+            else:
+                self._log(f"[Mouth Mask] Failed ({time.monotonic() - _t0:.1f}s), skipping", level="warn")
+
         self._progress(2, total_steps, "Estimating depth (quiet)")
         depth_result = self._run_external_node(
             "DepthAnything_V3",
@@ -1687,12 +1861,51 @@ class CRT_LTX23UnifiedSampler:
         self._offload_da3_model(da3_model)
         depth_image = self._result_tuple(depth_result)[0]
 
+        # Match the reference V2V graph: resize DA3 output back to the target
+        # guide resolution using a plain nearest/stretch resize before snapping
+        # to the latent multiple.
         depth_resized = self._resize_image(
             depth_image,
             int(target_image.shape[2]),
             int(target_image.shape[1]),
-            method="lanczos",
+            method="nearest-exact",
         )
+
+        if mouth_masks is not None:
+            import torch.nn.functional as _F
+
+            self._log("Applying mouth mask to depth guide...")
+            _mask_device = torch.device("cuda") if torch.cuda.is_available() else depth_resized.device
+
+            def _apply_depth_mouth_mask():
+                dh, dw = depth_resized.shape[1], depth_resized.shape[2]
+                batch = int(mouth_masks.shape[0])
+                chunk_size = 8 if _mask_device.type == "cuda" else 1
+                pbar = comfy.utils.ProgressBar(max(1, batch))
+                alpha_chunks = []
+                for start in range(0, batch, chunk_size):
+                    end = min(batch, start + chunk_size)
+                    m = mouth_masks[start:end].unsqueeze(1).float().to(_mask_device, non_blocking=True)
+                    if mouth_mask_expand > 0:
+                        m = _F.max_pool2d(m, kernel_size=2 * mouth_mask_expand + 1, stride=1, padding=mouth_mask_expand)
+                    if mouth_mask_blur > 0.0:
+                        _radius = max(1, int(math.ceil(mouth_mask_blur)))
+                        _sigma = max(0.1, mouth_mask_blur / 3.0)
+                        _k = 2 * _radius + 1
+                        _x = torch.arange(_k, dtype=torch.float32, device=m.device) - _radius
+                        _gauss = torch.exp(-_x.pow(2) / (2.0 * _sigma * _sigma))
+                        _gauss = _gauss / _gauss.sum()
+                        m = _F.conv2d(m, _gauss.view(1, 1, _k, 1), padding=(_radius, 0))
+                        m = _F.conv2d(m, _gauss.view(1, 1, 1, _k), padding=(0, _radius))
+                    masks_up = _F.interpolate(m, size=(dh, dw), mode="bilinear", align_corners=False).squeeze(1).clamp(0.0, 1.0)
+                    alpha_chunk = ((1.0 - masks_up) if mouth_mask_blur > 0.0 else (masks_up <= 0.5).float()).unsqueeze(-1)
+                    alpha_chunks.append(alpha_chunk.to(depth_resized.device))
+                    pbar.update_absolute(end, max(1, batch), None)
+                alpha = torch.cat(alpha_chunks, dim=0)
+                self._log(f"[Mouth Mask] depth_resized shape={depth_resized.shape} masked pixels={(alpha < 0.999).sum().item()}")
+                return depth_resized * alpha
+
+            depth_resized = self._timed_log("Mouth mask applied to depth guide", _apply_depth_mouth_mask, level="ok")
 
         multiple = max(1, int(round(float(latent_downscale_factor) * 32.0)))
         guide_full = self._scale_to_multiple_cover(depth_resized, multiple, "lanczos")
@@ -1701,6 +1914,17 @@ class CRT_LTX23UnifiedSampler:
             frame_count,
             label="V2V guide",
         )
+
+        try:
+            global _ltx23_depth_preview
+            preview_np = guide_full[0].detach().float().cpu().clamp(0.0, 1.0).numpy()
+            if preview_np.ndim == 2:
+                preview_np = np.repeat(preview_np[..., None], 3, axis=-1)
+            elif preview_np.shape[-1] == 1:
+                preview_np = np.repeat(preview_np, 3, axis=-1)
+            _ltx23_depth_preview = Image.fromarray((preview_np[..., :3] * 255.0).astype(np.uint8))
+        except Exception as preview_e:
+            self._log(f"Depth preview update failed: {preview_e}", level="warn")
 
         self._progress(3, total_steps, "Building IC-LoRA guide")
 
@@ -1715,8 +1939,6 @@ class CRT_LTX23UnifiedSampler:
                 )
             )[0]
 
-            # Depth-only V2V path: do not inject RGB video conditioning.
-
             if use_firstframe:
                 ff = self._prepare_v2v_firstframe(
                     firstframe_image,
@@ -1727,7 +1949,7 @@ class CRT_LTX23UnifiedSampler:
                     vae,
                     ff,
                     latent_video,
-                    self.I2V_STRENGTH,
+                    firstframe_strength,
                     self.I2V_PREPROCESS_COMPRESSION,
                     use_preprocess=False,
                 )
@@ -1818,7 +2040,7 @@ class CRT_LTX23UnifiedSampler:
                     vae,
                     ff_s1,
                     stage1_video_latent,
-                    self.I2V_STRENGTH,
+                    firstframe_strength,
                     self.I2V_PREPROCESS_COMPRESSION,
                     use_preprocess=False,
                 )
@@ -1899,7 +2121,7 @@ class CRT_LTX23UnifiedSampler:
                     vae,
                     ff_s2,
                     upsampled_video,
-                    self.I2V_STRENGTH,
+                    firstframe_strength,
                     self.I2V_PREPROCESS_COMPRESSION,
                     use_preprocess=False,
                 )
@@ -1919,10 +2141,14 @@ class CRT_LTX23UnifiedSampler:
                 model_union_control,
             )
 
+            refine_audio_latent = stage1_audio_out
+            if source_audio is not None:
+                refine_audio_latent = stage1_audio_latent
+
             refined_av_latent = self._result_tuple(
                 LTXVConcatAVLatent.execute(
                     latent_video_guided_stage2,
-                    stage1_audio_out,
+                    refine_audio_latent,
                 )
             )[0]
 
@@ -2153,7 +2379,6 @@ class CRT_LTX23UnifiedSampler:
         aspect_ratio,
         frame_count,
         v2v_mode,
-        v2v_condition_strength,
         v2v_guide_strength,
         depth_megapixels,
         v2v_aspect_ratio,
@@ -2161,6 +2386,13 @@ class CRT_LTX23UnifiedSampler:
         sampler_refine,
         steps,
         generated_audio_gain_db,
+        firstframe_strength,
+        depth_mouth_mask,
+        mouth_detect_megapixels,
+        mouth_single_item,
+        mouth_detect_chunk_size,
+        mouth_mask_expand,
+        mouth_mask_blur,
     ):
         mode = str(workflow_mode)
         if mode not in ("I2V", "T2V", "V2V"):
@@ -2227,6 +2459,7 @@ class CRT_LTX23UnifiedSampler:
         video = config["video"]
         source_audio = config["source_audio"]
         target_fps = max(1.0, float(config["framerate"]))
+        target_output_frames = int(max(1, frame_count))
 
         audio_connected = source_audio is not None
         effective_source_audio = source_audio if audio_connected else None
@@ -2255,6 +2488,14 @@ class CRT_LTX23UnifiedSampler:
                     level="ok",
                 )
 
+        if mode_internal == "V2V" and video is not None:
+            try:
+                target_output_frames = int(video.shape[0])
+            except Exception:
+                target_output_frames = int(max(1, frame_count))
+        else:
+            target_output_frames = int(max(1, frame_count))
+
         sigmas_main, sigmas_refine = self._build_parametric_sigma_texts(steps)
 
         if mode_internal in ("I2V", "T2V"):
@@ -2282,6 +2523,7 @@ class CRT_LTX23UnifiedSampler:
                 source_audio=effective_source_audio,
                 use_tiled_vae_decode=bool(vae_decode_tiled),
                 preview_enabled=live_preview,
+                firstframe_strength=float(firstframe_strength),
             )
         else:
             if is_outpaint_mode:
@@ -2312,7 +2554,6 @@ class CRT_LTX23UnifiedSampler:
                 sigmas_refine=sigmas_refine,
                 megapixels_target=megapixels_target,
                 depth_megapixels=float(depth_megapixels),
-                v2v_condition_strength=float(v2v_condition_strength),
                 v2v_guide_strength=1.0 if is_outpaint_mode else float(v2v_guide_strength),
                 latent_downscale_factor=latent_downscale_factor,
                 generated_audio_gain_db=float(generated_audio_gain_db),
@@ -2325,11 +2566,22 @@ class CRT_LTX23UnifiedSampler:
                 preview_enabled=live_preview,
                 is_outpaint_mode=is_outpaint_mode,
                 v2v_aspect_ratio=v2v_aspect_ratio,
+                firstframe_strength=float(firstframe_strength),
+                depth_mouth_mask=bool(depth_mouth_mask),
+                mouth_detect_megapixels=float(mouth_detect_megapixels),
+                mouth_single_item=bool(mouth_single_item),
+                mouth_detect_chunk_size=int(mouth_detect_chunk_size),
+                mouth_mask_expand=int(mouth_mask_expand),
+                mouth_mask_blur=float(mouth_mask_blur),
             )
 
         if effective_source_audio is not None:
-            audio = effective_source_audio
-            self._log("Using source audio from config input", level="ok")
+            audio = self._fit_audio_to_frame_count(
+                effective_source_audio,
+                target_output_frames,
+                target_fps,
+            )
+            self._log("Using source audio from config input (fitted to output duration)", level="ok")
         else:
             self._log("Using generated audio (no source audio connected)", level="ok")
 

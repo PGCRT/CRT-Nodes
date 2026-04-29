@@ -1,4 +1,5 @@
 __pycache__/
 *.zip
 *.rar
+*.mp4
 magic_lora_loader_presets.json

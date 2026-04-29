@@ -11,20 +11,20 @@ const WORKFLOW_MODES = ["I2V", "T2V", "V2V"];
 const V2V_MODES = ["Depth Control", "Outpaint"];
 
 const MODE_FIELDS = {
-  I2V: [],
+  I2V: ["firstframe_strength"],
   T2V: ["aspect_ratio"],
   V2V: [],
 };
 
 const V2V_MODE_FIELDS = {
-  "Depth Control": ["depth_megapixels", "v2v_condition_strength", "v2v_guide_strength"],
+  "Depth Control": ["depth_megapixels", "firstframe_strength", "v2v_guide_strength"],
   "Outpaint": ["v2v_aspect_ratio"],
 };
 
 const ADVANCED_GROUPS = [
   {
     title: "Generation",
-    fields: ["megapixels_target", "frame_count", "steps"],
+    fields: ["megapixels_target", "frame_count", "steps", "sampler_main", "sampler_refine"],
   },
   {
     title: "Audio",
@@ -42,15 +42,18 @@ const FIELD_LABELS = {
   frame_count: "Frames",
   steps: "Steps",
   aspect_ratio: "Aspect",
+  firstframe_strength: "FirstFrame Strength",
   sampler_main: "Sampler",
   sampler_refine: "Refiner (LD)",
   v2v_mode: "V2V Mode",
-  v2v_condition_strength: "Depth Condition",
   v2v_guide_strength: "Guide",
   v2v_aspect_ratio: "Aspect",
   frame_count_from_audio: "Audio Frame Count Override",
   vae_decode_tiled: "VAE Decode (Tiled)",
   generated_audio_gain_db: "Gain (dB)",
+  depth_mouth_mask: "Mouth Mask",
+  mouth_mask_expand: "Mouth Expand",
+  mouth_mask_blur: "Mouth Blur",
 };
 
 function log(...args) {
@@ -789,6 +792,26 @@ class LTX23UnifiedSamplerUI {
     if (this.domWidget) {
       this.domWidget.computeSize = () => [0, 0];
     }
+    this.syncDOMHitbox();
+  }
+
+  syncDOMHitbox() {
+    const parent = this.container?.parentElement;
+    const elements = [
+      this.domWidget?.element,
+      this.container,
+    ];
+    if (parent && parent !== document.body && parent.children?.length === 1) {
+      elements.push(parent);
+    }
+    for (const element of elements) {
+      if (!element?.style) continue;
+      element.style.pointerEvents = "none";
+      element.style.overflow = "visible";
+    }
+    if (this.container?.style) {
+      this.container.style.height = "0px";
+    }
   }
 
   buildLayout() {
@@ -861,6 +884,7 @@ class LTX23UnifiedSamplerUI {
 
     this.buildPanels();
     this.container.appendChild(shell);
+    this.syncDOMHitbox();
   }
 
   buildPanels() {
@@ -891,6 +915,20 @@ class LTX23UnifiedSamplerUI {
         for (const name of v2vFields) {
           const row = this.buildFieldRow(name);
           if (row) panel.appendChild(row);
+        }
+
+        // Depth Control extras
+        if (currentV2vMode === "Depth Control") {
+          const mmRow = this.buildFieldRow("depth_mouth_mask");
+          if (mmRow) panel.appendChild(mmRow);
+          const mouthOn = Boolean(getWidget(this.node, "depth_mouth_mask")?.value);
+          if (mouthOn) {
+            const expandRow = this.buildFieldRow("mouth_mask_expand");
+            if (expandRow) panel.appendChild(expandRow);
+            const blurRow = this.buildFieldRow("mouth_mask_blur");
+            if (blurRow) panel.appendChild(blurRow);
+          }
+          panel.appendChild(this.buildDepthPreviewSection());
         }
       }
 
@@ -965,10 +1003,20 @@ class LTX23UnifiedSamplerUI {
     row.appendChild(controlWrap);
 
     const options = getComboOptions(widget);
+    const hasNumericRange = Boolean(
+      widget?.options &&
+      (typeof widget.options.min === "number" ||
+        typeof widget.options.max === "number" ||
+        typeof widget.options.step === "number")
+    );
     const isBool = typeof widget.value === "boolean" || widget.type === "toggle";
     const isCombo = options.length > 0 || widget.type === "combo";
 
-    if (isBool) {
+    // Prefer number controls when a widget has numeric metadata,
+    // even if stale workflow values temporarily look boolean.
+    if (hasNumericRange) {
+      controlWrap.appendChild(this.makeNumber(name, widget));
+    } else if (isBool) {
       controlWrap.appendChild(this.makeBool(name, widget));
     } else if (isCombo) {
       const selectWrap = document.createElement("div");
@@ -1061,6 +1109,20 @@ class LTX23UnifiedSamplerUI {
       const row = this.buildFieldRow(name);
       if (row) v2vPanel.appendChild(row);
     }
+
+    // Depth Control extras
+    if (currentV2vMode === "Depth Control") {
+      const mmRow = this.buildFieldRow("depth_mouth_mask");
+      if (mmRow) v2vPanel.appendChild(mmRow);
+      const mouthOn = Boolean(getWidget(this.node, "depth_mouth_mask")?.value);
+      if (mouthOn) {
+        const expandRow = this.buildFieldRow("mouth_mask_expand");
+        if (expandRow) v2vPanel.appendChild(expandRow);
+        const blurRow = this.buildFieldRow("mouth_mask_blur");
+        if (blurRow) v2vPanel.appendChild(blurRow);
+      }
+      v2vPanel.appendChild(this.buildDepthPreviewSection());
+    }
   }
 
   makeString(name, widget) {
@@ -1146,7 +1208,9 @@ class LTX23UnifiedSamplerUI {
     const input = document.createElement("input");
     input.type = "text";
     input.className = "crt-ltx23-num-input";
-    input.value = String(widget.value ?? "");
+    const defaultNumber = typeof widget?.options?.default === "number" ? widget.options.default : 0;
+    const initialNumber = typeof widget.value === "number" ? widget.value : defaultNumber;
+    input.value = formatNumberForField(name, initialNumber);
 
     const plus = document.createElement("button");
     plus.type = "button";
@@ -1168,7 +1232,7 @@ class LTX23UnifiedSamplerUI {
     };
 
     const applyDelta = (deltaSteps) => {
-      const current = Number(widget.value ?? input.value ?? 0);
+      const current = typeof widget.value === "number" ? widget.value : Number(input.value ?? defaultNumber);
       const next = parseNumber(current + deltaSteps * step, {
         ...widget,
         value: current,
@@ -1282,6 +1346,56 @@ class LTX23UnifiedSamplerUI {
     return wrap;
   }
 
+  buildDepthPreviewSection() {
+    const section = document.createElement("div");
+    section.style.cssText = "display:flex;flex-direction:column;align-items:center;gap:8px;margin-top:6px;width:100%;";
+
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "crt-ltx23-preview-toggle";
+    btn.textContent = "Depth Preview: OFF";
+
+    const img = document.createElement("img");
+    img.style.cssText = "display:none;max-width:100%;border-radius:8px;border:1px solid var(--border-subtle);";
+    img.alt = "Depth Preview";
+
+    let shown = false;
+    let blobUrl = null;
+
+    btn.addEventListener("click", async () => {
+      shown = !shown;
+      if (shown) {
+        try {
+          const res = await fetch(`/crt/ltx23/depth_preview?t=${Date.now()}`);
+          if (res.ok) {
+            const blob = await res.blob();
+            if (blobUrl) URL.revokeObjectURL(blobUrl);
+            blobUrl = URL.createObjectURL(blob);
+            img.src = blobUrl;
+            img.style.display = "block";
+            btn.textContent = "Depth Preview: ON";
+            btn.classList.add("on");
+          } else {
+            shown = false;
+            btn.textContent = "Depth Preview: No data yet";
+            setTimeout(() => { btn.textContent = "Depth Preview: OFF"; }, 2000);
+          }
+        } catch {
+          shown = false;
+        }
+      } else {
+        img.style.display = "none";
+        btn.textContent = "Depth Preview: OFF";
+        btn.classList.remove("on");
+      }
+      this.scheduleResize();
+    });
+
+    section.appendChild(btn);
+    section.appendChild(img);
+    return section;
+  }
+
   writeWidget(name, widget, value) {
     const previous = widget.value;
     widget.value = value;
@@ -1305,6 +1419,10 @@ class LTX23UnifiedSamplerUI {
     }
     if (name === "v2v_mode") {
       this.refresh();
+    }
+    if (name === "depth_mouth_mask") {
+      this.rebuildPanels();
+      this.scheduleResize();
     }
     if (name === "hq") {
       this.updateHQButton();
@@ -1626,6 +1744,7 @@ class LTX23UnifiedSamplerUI {
   }
 
   updateSize() {
+    this.syncDOMHitbox();
     const targetWidth = MIN_WIDTH;
     const targetHeight =
       typeof this.node._ltx23CompactHeight === "function"

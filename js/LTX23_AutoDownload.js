@@ -75,10 +75,12 @@ function ensureStyles() {
   style.textContent = `
     .crt-ltx23-ad-root {
       width: 100%;
+      height: 0;
       box-sizing: border-box;
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
       user-select: none;
       -webkit-user-select: none;
+      pointer-events: none;
     }
 
     .crt-ltx23-ad-shell {
@@ -485,6 +487,26 @@ class LTX23AutoDownloadUI {
       // Stop DOM widget from contributing to node backend height
       this.domWidget.computeSize = () => [0, 0];
     }
+    this.syncDOMHitbox();
+  }
+
+  syncDOMHitbox() {
+    const parent = this.container?.parentElement;
+    const elements = [
+      this.domWidget?.element,
+      this.container,
+    ];
+    if (parent && parent !== document.body && parent.children?.length === 1) {
+      elements.push(parent);
+    }
+    for (const element of elements) {
+      if (!element?.style) continue;
+      element.style.pointerEvents = "none";
+      element.style.overflow = "visible";
+    }
+    if (this.container?.style) {
+      this.container.style.height = "0px";
+    }
   }
 
   buildLayout() {
@@ -524,6 +546,7 @@ class LTX23AutoDownloadUI {
     this.shell.appendChild(hint);
 
     this.container.appendChild(this.shell);
+    this.syncDOMHitbox();
   }
 
   createModelRow(modelKey, def) {
@@ -800,6 +823,7 @@ class LTX23AutoDownloadUI {
   rebuild() {
     this.hideNativeWidgets();
     this.buildLayout();
+    this.syncDOMHitbox();
     if (this.status === "checked") {
       // Restore state
       for (const [key, present] of Object.entries(this.modelStatus)) {

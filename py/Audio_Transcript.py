@@ -1,10 +1,6 @@
-import importlib.util
 import logging
 import os
-import sys
 import tempfile
-import types
-import urllib.request
 import wave
 
 import numpy as np
@@ -16,23 +12,26 @@ import whisper
 import folder_paths
 
 from comfy import model_management as mm
-from comfy.utils import ProgressBar, load_torch_file
+from comfy.utils import ProgressBar
+
+from ._cache_fingerprint import stable_fingerprint
+from .audio_transcript_runtime import OMNIVOICE_LANGUAGES
+from .audio_transcript_runtime.melband_runtime import (
+    MELBAND_DEFAULT_MODEL,
+    load_melband_model,
+)
+from .audio_transcript_runtime.omnivoice_runtime import generate_voice_clone
 
 
 LOGGER = logging.getLogger(__name__)
-
-MELBAND_DEFAULT_MODEL = "MelBandRoformer_fp16.safetensors"
-MELBAND_DOWNLOAD_URL = (
-    "https://huggingface.co/Kijai/MelBandRoFormer_comfy/resolve/main/"
-    "MelBandRoformer_fp16.safetensors"
-)
+FIXED_AUDIO_TRANSCRIPT_SEED = 0
 
 WHISPER_MODEL_SUBDIR = os.path.join("stt", "whisper")
 
 WHISPER_MODEL_CACHE = {}
-MELBAND_MODEL_CACHE = {}
-MELBAND_CLASS_CACHE = {"class": None}
 WHISPER_LANGS_BY_NAME = None
+
+EMPTY_AUDIO_CACHE = {}
 
 
 def _save_audio_as_wav(path, audio):
@@ -79,141 +78,30 @@ def _get_windowing_array(window_size, fade_size, device):
     return window.to(device)
 
 
-def _custom_nodes_dir():
-    return os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-
-
-def _load_melband_class():
-    cached = MELBAND_CLASS_CACHE.get("class", None)
-    if cached is not None:
-        return cached
-
-    plugin_model_dir = os.path.join(
-        _custom_nodes_dir(), "ComfyUI-MelBandRoFormer", "model"
-    )
-    mel_converter_path = os.path.join(plugin_model_dir, "mel_converter.py")
-    mel_model_path = os.path.join(plugin_model_dir, "mel_band_roformer.py")
-
-    if not os.path.isfile(mel_converter_path) or not os.path.isfile(mel_model_path):
-        raise FileNotFoundError(
-            "MelBandRoFormer runtime sources were not found. "
-            "Expected: custom_nodes/ComfyUI-MelBandRoFormer/model/*.py"
-        )
-
-    pkg_name = "_crt_melband_runtime"
-    if pkg_name not in sys.modules:
-        pkg = types.ModuleType(pkg_name)
-        pkg.__path__ = [plugin_model_dir]
-        sys.modules[pkg_name] = pkg
-
-    converter_mod_name = f"{pkg_name}.mel_converter"
-    if converter_mod_name not in sys.modules:
-        converter_spec = importlib.util.spec_from_file_location(
-            converter_mod_name,
-            mel_converter_path,
-        )
-        converter_mod = importlib.util.module_from_spec(converter_spec)
-        sys.modules[converter_mod_name] = converter_mod
-        converter_spec.loader.exec_module(converter_mod)
-
-    model_mod_name = f"{pkg_name}.mel_band_roformer"
-    model_spec = importlib.util.spec_from_file_location(
-        model_mod_name,
-        mel_model_path,
-    )
-    model_mod = importlib.util.module_from_spec(model_spec)
-    sys.modules[model_mod_name] = model_mod
-    model_spec.loader.exec_module(model_mod)
-
-    mel_class = getattr(model_mod, "MelBandRoformer", None)
-    if mel_class is None:
-        raise RuntimeError("Failed to import MelBandRoformer class.")
-
-    MELBAND_CLASS_CACHE["class"] = mel_class
-    return mel_class
-
-
-def _ensure_melband_model_file(model_name, auto_download):
-    model_path = folder_paths.get_full_path("diffusion_models", model_name)
-    if model_path and os.path.isfile(model_path):
-        return model_path
-
-    fallback = os.path.join(folder_paths.models_dir, "diffusion_models", model_name)
-    if os.path.isfile(fallback):
-        return fallback
-
-    if not auto_download:
-        raise FileNotFoundError(
-            f"MelBand model file not found and auto-download disabled: {model_name}"
-        )
-
-    if model_name != MELBAND_DEFAULT_MODEL:
-        raise FileNotFoundError(
-            "Auto-download is only supported for the default MelBand model "
-            f"({MELBAND_DEFAULT_MODEL}). Missing: {model_name}"
-        )
-
-    os.makedirs(os.path.dirname(fallback), exist_ok=True)
-    tmp_path = f"{fallback}.part"
-    LOGGER.info("Downloading MelBand model: %s", MELBAND_DOWNLOAD_URL)
-    print(f"[CRT Audio Transcript] Downloading {model_name}...")
-
-    req = urllib.request.Request(
-        MELBAND_DOWNLOAD_URL,
-        headers={"User-Agent": "CRT-Nodes AudioTranscript/1.0"},
-    )
-    with urllib.request.urlopen(req) as response, open(tmp_path, "wb") as out:
-        while True:
-            chunk = response.read(1024 * 1024)
-            if not chunk:
-                break
-            out.write(chunk)
-
-    os.replace(tmp_path, fallback)
-    print(f"[CRT Audio Transcript] Model downloaded: {fallback}")
-    return fallback
-
-
-def _melband_config():
+def _empty_audio(sample_rate):
+    sample_rate = int(sample_rate or 44100)
+    cached = EMPTY_AUDIO_CACHE.get(sample_rate)
+    if cached is None:
+        cached = {
+            "waveform": torch.zeros((1, 2, 1), dtype=torch.float32),
+            "sample_rate": sample_rate,
+        }
+        EMPTY_AUDIO_CACHE[sample_rate] = cached
     return {
-        "dim": 384,
-        "depth": 6,
-        "stereo": True,
-        "num_stems": 1,
-        "time_transformer_depth": 1,
-        "freq_transformer_depth": 1,
-        "num_bands": 60,
-        "dim_head": 64,
-        "heads": 8,
-        "attn_dropout": 0,
-        "ff_dropout": 0,
-        "flash_attn": True,
-        "dim_freqs_in": 1025,
-        "sample_rate": 44100,
-        "stft_n_fft": 2048,
-        "stft_hop_length": 441,
-        "stft_win_length": 2048,
-        "stft_normalized": False,
-        "mask_estimator_depth": 2,
-        "multi_stft_resolution_loss_weight": 1.0,
-        "multi_stft_resolutions_window_sizes": (4096, 2048, 1024, 512, 256),
-        "multi_stft_hop_size": 147,
-        "multi_stft_normalized": False,
+        "waveform": cached["waveform"].clone(),
+        "sample_rate": cached["sample_rate"],
     }
 
 
-def _load_melband_model(model_name, auto_download):
-    model_path = _ensure_melband_model_file(model_name, auto_download)
-    cached = MELBAND_MODEL_CACHE.get(model_path, None)
-    if cached is not None:
-        return cached
-
-    mel_class = _load_melband_class()
-    model = mel_class(**_melband_config()).eval()
-    model.load_state_dict(load_torch_file(model_path), strict=True)
-    MELBAND_MODEL_CACHE[model_path] = model
-    return model
-
+def _apply_fixed_seed(seed=FIXED_AUDIO_TRANSCRIPT_SEED):
+    seed = int(seed)
+    torch.manual_seed(seed)
+    if torch.cuda.is_available():
+        try:
+            torch.cuda.manual_seed(seed)
+            torch.cuda.manual_seed_all(seed)
+        except Exception:
+            pass
 
 def _whisper_language_options():
     return ["auto"] + [
@@ -257,12 +145,47 @@ def _get_whisper_model(model_name):
 
 
 class CRT_AudioTranscript:
+    TRANSLATED_PREFIX = "The subject says : "
+    @classmethod
+    def IS_CHANGED(
+        cls,
+        audio,
+        isolate_voice,
+        enable_translation=False,
+        translation_language="French",
+        enable_omnivoice=False,
+        whisper_model="large-v3-turbo",
+        melband_model_name=MELBAND_DEFAULT_MODEL,
+        auto_download_melband=True,
+        language="auto",
+        prompt="",
+        prefix='The subject says: "',
+        suffix='"',
+    ):
+        return stable_fingerprint(
+            audio,
+            bool(isolate_voice),
+            bool(enable_translation),
+            translation_language,
+            bool(enable_omnivoice),
+            whisper_model,
+            melband_model_name,
+            bool(auto_download_melband),
+            language,
+            prompt,
+            prefix,
+            suffix,
+        )
+
     @classmethod
     def INPUT_TYPES(cls):
         return {
             "required": {
                 "audio": ("AUDIO",),
                 "isolate_voice": ("BOOLEAN", {"default": False}),
+                "enable_translation": ("BOOLEAN", {"default": False}),
+                "translation_language": (OMNIVOICE_LANGUAGES, {"default": "French"}),
+                "enable_omnivoice": ("BOOLEAN", {"default": False}),
             },
             "hidden": {
                 "whisper_model": (
@@ -290,12 +213,23 @@ class CRT_AudioTranscript:
             },
         }
 
-    RETURN_TYPES = ("AUDIO", "STRING", "AUDIO", "AUDIO")
-    RETURN_NAMES = ("source_audio", "text", "vocals", "instruments")
+    RETURN_TYPES = ("CRT_AUDIO_TRANSCRIPT_PIPE",)
+    RETURN_NAMES = ("pipe",)
     FUNCTION = "run"
     CATEGORY = "CRT/Audio"
 
+    def _translate_with_llama_cpp(self, text, target_language):
+        if not str(text or "").strip():
+            return ""
+        from .audio_transcript_runtime.llama_runtime import translate_text
+
+        return translate_text(text, target_language)
+
+    def _generate_with_omnivoice(self, reference_audio, reference_text, text, language):
+        return generate_voice_clone(reference_audio, reference_text, text, language)
+
     def _run_melband(self, model, audio):
+        _apply_fixed_seed()
         audio_input = audio["waveform"]
         sample_rate = int(audio["sample_rate"])
 
@@ -393,6 +327,8 @@ class CRT_AudioTranscript:
     def _run_whisper(self, audio, whisper_model_name, language, prompt):
         global WHISPER_LANGS_BY_NAME
 
+        _apply_fixed_seed()
+
         whisper_model = _get_whisper_model(whisper_model_name)
         load_device = mm.get_torch_device()
         offload_device = mm.unet_offload_device()
@@ -437,6 +373,9 @@ class CRT_AudioTranscript:
         self,
         audio,
         isolate_voice,
+        enable_translation=False,
+        translation_language="French",
+        enable_omnivoice=False,
         whisper_model="large-v3-turbo",
         melband_model_name=MELBAND_DEFAULT_MODEL,
         auto_download_melband=True,
@@ -445,32 +384,63 @@ class CRT_AudioTranscript:
         prefix='The subject says: "',
         suffix='"',
     ):
+        _apply_fixed_seed()
         offload_device = mm.unet_offload_device()
+        sample_rate = int(audio.get("sample_rate", 44100))
+        translated_text = ""
+        translated_for_voice = ""
+        omnivoice_audio = _empty_audio(sample_rate)
+        status_parts = []
 
         # Only load MelBand model if isolate_voice is enabled
         if bool(isolate_voice):
-            mel_model = _load_melband_model(
+            mel_model = load_melband_model(
                 melband_model_name,
                 bool(auto_download_melband),
             )
             vocals, instruments = self._run_melband(mel_model, audio)
             transcript_audio = vocals
+            status_parts.append("voice isolation on")
         else:
-            # Skip MelBand processing - return empty audio placeholders
             transcript_audio = audio
-            sample_rate = int(audio.get("sample_rate", 44100))
-            empty_waveform = torch.zeros((1, 2, 1))  # Minimal empty audio
-            vocals = {"waveform": empty_waveform, "sample_rate": sample_rate}
-            instruments = {"waveform": empty_waveform, "sample_rate": sample_rate}
+            vocals = _empty_audio(sample_rate)
+            instruments = _empty_audio(sample_rate)
+            status_parts.append("voice isolation off")
+
+        raw_text = ""
 
         try:
-            text = self._run_whisper(
+            raw_text = self._run_whisper(
                 transcript_audio,
                 whisper_model,
                 language,
                 prompt,
             )
-            text = f"{prefix}{text}{suffix}"
+            text = f"{prefix}{raw_text}{suffix}"
+            status_parts.append("whisper transcript ready")
+
+            if bool(enable_translation):
+                translated_for_voice = self._translate_with_llama_cpp(
+                    raw_text,
+                    translation_language,
+                )
+                translated_text = f"{self.TRANSLATED_PREFIX}{translated_for_voice}".strip()
+                status_parts.append(
+                    f"translated to {translation_language.lower()}"
+                )
+            else:
+                translated_text = text
+
+            if bool(enable_omnivoice):
+                target_text = translated_for_voice if bool(enable_translation) else raw_text
+                target_language = translation_language if bool(enable_translation) else "auto"
+                omnivoice_audio, omnivoice_status = self._generate_with_omnivoice(
+                    transcript_audio,
+                    raw_text,
+                    target_text,
+                    target_language,
+                )
+                status_parts.append(omnivoice_status)
         finally:
             # Ensure Whisper model is offloaded after use
             whisper_m = WHISPER_MODEL_CACHE.get(whisper_model, None)
@@ -481,22 +451,81 @@ class CRT_AudioTranscript:
                     pass
             # Ensure MelBand model is offloaded after use
             if bool(isolate_voice):
-                model_path = _ensure_melband_model_file(melband_model_name, False)
-                mel_m = MELBAND_MODEL_CACHE.get(model_path, None)
-                if mel_m is not None:
-                    try:
-                        mel_m.to(offload_device)
-                    except Exception:
-                        pass
+                try:
+                    mel_model.to(offload_device)
+                except Exception:
+                    pass
             mm.soft_empty_cache()
 
-        return (audio, text, vocals, instruments)
+        if not bool(enable_translation):
+            status_parts.append("translation off")
+        if not bool(enable_omnivoice):
+            status_parts.append("omnivoice off")
+
+        status_text = " | ".join(status_parts)
+        pipe = {
+            "source_audio": audio,
+            "text": text,
+            "vocals": vocals,
+            "instruments": instruments,
+            "translated_text": translated_text,
+            "omnivoice_audio": omnivoice_audio,
+            "status": status_text,
+        }
+        return (pipe,)
+
+
+class CRT_AudioTranscriptPipeOut:
+    @classmethod
+    def INPUT_TYPES(cls):
+        return {
+            "required": {
+                "pipe": ("CRT_AUDIO_TRANSCRIPT_PIPE",),
+            }
+        }
+
+    RETURN_TYPES = (
+        "AUDIO",
+        "STRING",
+        "AUDIO",
+        "AUDIO",
+        "STRING",
+        "AUDIO",
+        "STRING",
+    )
+    RETURN_NAMES = (
+        "source_audio",
+        "text",
+        "vocals",
+        "instruments",
+        "translated_text",
+        "omnivoice_audio",
+        "status",
+    )
+    FUNCTION = "unpack"
+    CATEGORY = "CRT/Audio"
+
+    def unpack(self, pipe):
+        if not isinstance(pipe, dict):
+            raise ValueError("Invalid Audio Transcript pipe.")
+
+        return (
+            pipe.get("source_audio"),
+            pipe.get("text", ""),
+            pipe.get("vocals"),
+            pipe.get("instruments"),
+            pipe.get("translated_text", ""),
+            pipe.get("omnivoice_audio"),
+            pipe.get("status", ""),
+        )
 
 
 NODE_CLASS_MAPPINGS = {
     "CRT_AudioTranscript": CRT_AudioTranscript,
+    "CRT_AudioTranscriptPipeOut": CRT_AudioTranscriptPipeOut,
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
     "CRT_AudioTranscript": "Audio Transcript (CRT)",
+    "CRT_AudioTranscriptPipeOut": "Audio Transcript Pipe Out (CRT)",
 }

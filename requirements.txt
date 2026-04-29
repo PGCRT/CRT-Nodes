@@ -7,3 +7,8 @@ pedalboard
 wordcloud
 librosa
 imageio-ffmpeg
+huggingface_hub
+einops
+rotary-embedding-torch
+llama-cpp-python
+omnivoice>=0.1.0
