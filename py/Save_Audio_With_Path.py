@@ -2,7 +2,27 @@ import os
 import torch
 import numpy as np
 import folder_paths
+import wave
 from scipy.io.wavfile import write as write_wav
+
+
+CLIP_CEILING_DBFS = -1.0
+CLIP_CEILING = 10 ** (CLIP_CEILING_DBFS / 20.0)
+
+
+def _write_pcm24_wav(path, sample_rate, audio_data):
+    if audio_data.ndim == 1:
+        audio_data = audio_data[:, None]
+
+    audio_i24 = np.round(audio_data * 8388607.0).astype("<i4")
+    audio_i24 = np.clip(audio_i24, -8388608, 8388607)
+    packed = audio_i24.reshape(-1, 1).view(np.uint8).reshape(-1, 4)[:, :3]
+
+    with wave.open(path, "wb") as wav:
+        wav.setnchannels(audio_data.shape[1])
+        wav.setsampwidth(3)
+        wav.setframerate(int(sample_rate))
+        wav.writeframes(packed.tobytes())
 
 
 class SaveAudioWithPath:
@@ -31,12 +51,17 @@ class SaveAudioWithPath:
                 ),
                 "suffix": ("STRING", {"default": "", "tooltip": "Optional suffix to append to the filename."}),
                 "sample_rate": (
-                    "INT",
+                    ["44100", "48000", "88200", "96000", "192000"],
                     {
-                        "default": 44100,
-                        "min": 1,
-                        "max": 192000,
+                        "default": "44100",
                         "tooltip": "Fallback audio sample rate in Hz if not in audio data.",
+                    },
+                ),
+                "bit_depth": (
+                    ["24-bit PCM", "32-bit float"],
+                    {
+                        "default": "24-bit PCM",
+                        "tooltip": "WAV encoding. 24-bit PCM is the default; 32-bit float can preserve over-full-scale samples when normalization is disabled.",
                     },
                 ),
                 "overwrite": (
@@ -44,6 +69,13 @@ class SaveAudioWithPath:
                     {
                         "default": True,
                         "tooltip": "If enabled, existing files will be overwritten. If disabled, a numbered suffix is added.",
+                    },
+                ),
+                "normalize_clipping": (
+                    "BOOLEAN",
+                    {
+                        "default": True,
+                        "tooltip": "If enabled, peak-normalizes clipped audio. If disabled, 24-bit PCM hard-clips to -1 dBFS while 32-bit float saves over-full-scale samples.",
                     },
                 ),
             }
@@ -54,7 +86,18 @@ class SaveAudioWithPath:
     CATEGORY = "CRT/Save"
     DESCRIPTION = "Saves audio to a specified folder with a subfolder as an uncompressed WAV file."
 
-    def save_audio(self, audio, folder_path, subfolder_name, filename, suffix, sample_rate, overwrite):
+    def save_audio(
+        self,
+        audio,
+        folder_path,
+        subfolder_name,
+        filename,
+        suffix,
+        sample_rate,
+        bit_depth,
+        overwrite,
+        normalize_clipping=True,
+    ):
         if audio is None:
             print("❌ ERROR: No input audio provided to SaveAudioWithPath.")
             return ()
@@ -102,7 +145,7 @@ class SaveAudioWithPath:
                 )
 
             waveform_tensor = audio['waveform']
-            sr_to_use = audio.get('sample_rate', sample_rate)
+            sr_to_use = int(audio.get('sample_rate', sample_rate))
 
             if waveform_tensor is None or waveform_tensor.nelement() == 0:
                 print("❌ ERROR: The 'waveform' tensor in the audio input is empty.")
@@ -111,13 +154,22 @@ class SaveAudioWithPath:
             audio_data = waveform_tensor[0].cpu().numpy()
             audio_data = audio_data.T
 
-            if np.any(np.abs(audio_data) > 1.0):
-                print("⚠️ Warning: Audio data is clipping. It will be normalized.")
-                audio_data /= np.max(np.abs(audio_data))
+            peak = np.max(np.abs(audio_data))
+            if peak > 1.0:
+                if normalize_clipping:
+                    print("⚠️ Warning: Audio data is clipping. It will be normalized.")
+                    audio_data /= peak
+                elif bit_depth == "32-bit float":
+                    print("⚠️ Warning: Audio data is clipping. Saving over-full-scale samples as 32-bit float.")
+                else:
+                    print("⚠️ Warning: Audio data is clipping. Hard-clipping peaks to -1 dBFS.")
+                    audio_data = np.clip(audio_data, -CLIP_CEILING, CLIP_CEILING)
 
-            audio_pcm = (audio_data * 32767).astype(np.int16)
-
-            write_wav(final_filepath, sr_to_use, audio_pcm)
+            if bit_depth == "32-bit float":
+                write_wav(final_filepath, sr_to_use, audio_data.astype(np.float32))
+            else:
+                audio_data = np.clip(audio_data, -1.0, 1.0)
+                _write_pcm24_wav(final_filepath, sr_to_use, audio_data)
             print(f"✅ Saved audio successfully to: {final_filepath}")
             return ()
 
