@@ -1089,13 +1089,13 @@ class CRT_IsolateInput:
             "required": {
                 "images":            ("IMAGE",),
                 "what_to_detect":    ("STRING",  {"default": "face",  "multiline": False, "tooltip": "Text prompt used for subject detection, for example 'face' or 'person'."}),
-                "performance_preset": (ISOLATE_PERFORMANCE_PRESETS, {"default": "Balanced", "tooltip": "Fast = quickest detection, Balanced = default tradeoff, Quality = highest available quality in the current custom-node path and slower processing. The SAM path still uses a model-safe square working resolution."}),
-                "single_item":       ("BOOLEAN", {"default": True, "tooltip": "Limit detection to one item per frame. Enable this when you only want the main face/subject."}),
-                "detect_chunk_size": ("INT",     {"default": 10,  "min": 0,   "max": 4096, "step": 1, "tooltip": "Detection batch size. 0 = process the whole batch at once, 1 = per-image processing, 2+ = fixed chunk size."}),
+                "performance_preset": (ISOLATE_PERFORMANCE_PRESETS, {"default": "Quality", "tooltip": "Fast = quickest detection, Balanced = default tradeoff, Quality = highest available quality in the current custom-node path and slower processing. The SAM path still uses a model-safe square working resolution."}),
+                "single_item":       ("BOOLEAN", {"default": False, "tooltip": "Limit detection to one item per frame. Enable this when you only want the main face/subject."}),
+                "detect_chunk_size": ("INT",     {"default": 0,  "min": 0,   "max": 4096, "step": 1, "tooltip": "Detection batch size. 0 = process the whole batch at once, 1 = per-image processing, 2+ = fixed chunk size."}),
                 "padding":           ("INT",     {"default": 512, "min": 0,   "max": 2048, "step": 64, "tooltip": "Extra border added around the input batch before detection so subjects near the edges are not cropped too tightly."}),
-                "threshold":         ("FLOAT",   {"default": 0.30, "min": 0.0, "max": 1.0,  "step": 0.01, "tooltip": "Detection confidence threshold. Lower values find more masks, higher values are stricter."}),
+                "threshold":         ("FLOAT",   {"default": 0.50, "min": 0.0, "max": 1.0,  "step": 0.01, "tooltip": "Detection confidence threshold. Lower values find more masks, higher values are stricter."}),
                 "bbox_expansion":    ("FLOAT",   {"default": 1.0,  "min": 0.5, "max": 4.0,  "step": 0.05, "tooltip": "Expands the detected crop box around the subject. Higher values give a looser crop."}),
-                "crop_smooth_alpha": ("FLOAT",   {"default": 0.65, "min": 0.0, "max": 1.0,  "step": 0.05, "tooltip": "Temporal smoothing for crop position. Lower = steadier crop, higher = follows motion more closely."}),
+                "crop_smooth_alpha": ("FLOAT",   {"default": 1.0, "min": 0.0, "max": 1.0,  "step": 0.05, "tooltip": "Temporal smoothing for crop position. Lower = steadier crop, higher = follows motion more closely."}),
                 "crop_megapixels":   ("FLOAT",   {"default": 1.0,  "min": 0.0, "max": 8.0,  "step": 0.25, "tooltip": "Target resolution for the cropped output images. 0 disables crop rescaling."}),
             }
         }
@@ -1207,7 +1207,7 @@ class CRT_IsolateInput:
                 # 4. Detect face in the crop (pre-inference) for compositing later
                 face_mask_groups = _segment_batch_instances(
                     model, clip, detect_cropped, what_to_detect,
-                    float(threshold), int(refine_iterations), True,
+                    float(threshold), int(refine_iterations), False,
                     chunk_size_override=int(detect_chunk_size),
                 )
                 del detect_cropped
@@ -1219,7 +1219,12 @@ class CRT_IsolateInput:
                 face_masks = []
                 for i, group in enumerate(face_mask_groups):
                     if group.shape[0] > 0:
-                        mask = (group > 0).any(dim=0).float()
+                        reference = crop_masks[i].to(group.device, dtype=torch.float32)
+                        candidates = (group > 0).float()
+                        overlaps = (candidates * reference.unsqueeze(0)).flatten(1).sum(dim=1)
+                        areas = candidates.flatten(1).sum(dim=1) + reference.sum().clamp_min(1e-8) - overlaps
+                        best_idx = torch.argmax(overlaps / areas.clamp_min(1e-8)).item()
+                        mask = candidates[best_idx].float()
                     else:
                         mask = crop_masks[i].float()
                     face_masks.append(mask)
@@ -1273,20 +1278,28 @@ class CRT_IsolateOutput:
                 "smooth_range":         ("INT",   {"default": 5,    "min": 0,   "max": 32,    "step": 1}),
                 "expand_mask":          ("INT",   {"default": 8,    "min": 0,   "max": 100,   "step": 1}),
                 "blur_radius":          ("FLOAT", {"default": 16.0, "min": 0.0, "max": 100.0, "step": 0.5}),
-                "border_blending":      ("FLOAT", {"default": 0.0,  "min": 0.0, "max": 1.0,   "step": 0.01}),
-                "color_match_method":   (_CM_METHODS, {"default": "none"}),
+                "border_blending":      ("FLOAT", {"default": 0.20,  "min": 0.0, "max": 1.0,   "step": 0.01}),
+                "color_match_method":   (_CM_METHODS, {"default": "mkl"}),
                 "color_match_strength": ("FLOAT", {"default": 1.0,  "min": 0.0, "max": 1.0,   "step": 0.05}),
+                "resize_back_to_original": (
+                    "BOOLEAN",
+                    {
+                        "default": False,
+                        "tooltip": "If disabled, upscale the original canvas to keep enhanced crop detail",
+                    },
+                ),
             }
         }
 
-    RETURN_TYPES  = ("IMAGE",)
-    RETURN_NAMES  = ("images_batch",)
+    RETURN_TYPES  = ("IMAGE", "IMAGE")
+    RETURN_NAMES  = ("images_batch", "enhanced_images_masked")
     FUNCTION      = "execute"
     CATEGORY      = "CRT/Utils/Isolate"
 
     def execute(self, enhanced_images, pipe, smooth_range,
                 expand_mask, blur_radius, border_blending,
-                color_match_method, color_match_strength):
+                color_match_method, color_match_strength,
+                resize_back_to_original=True):
         start_time = time.perf_counter()
         original_images = pipe["original_images"]
         original_crops  = pipe["original_crops"]
@@ -1321,16 +1334,60 @@ class CRT_IsolateOutput:
             )
             original_images = original_images[:target_frame_count]
 
-        # 1. Match enhanced resolution to original crop size
-        ch, cw = original_crops.shape[1], original_crops.shape[2]
+        # 1. Match working resolution. Current behavior downsamples enhanced crops;
+        # optionally upscale the original canvas instead to preserve enhanced detail.
+        base_ch, base_cw = original_crops.shape[1], original_crops.shape[2]
         eh, ew = enhanced_images.shape[1], enhanced_images.shape[2]
-        if eh != ch or ew != cw:
+        if bool(resize_back_to_original):
+            target_h, target_w = base_ch, base_cw
+            scale_y, scale_x = 1.0, 1.0
+        else:
+            target_h, target_w = eh, ew
+            scale_y = float(eh) / float(max(1, base_ch))
+            scale_x = float(ew) / float(max(1, base_cw))
+
+        if eh != target_h or ew != target_w:
             enh = F.interpolate(
                 enhanced_images.permute(0, 3, 1, 2),
-                size=(ch, cw), mode="bilinear", align_corners=False,
+                size=(target_h, target_w), mode="bilinear", align_corners=False,
             ).permute(0, 2, 3, 1)
         else:
             enh = enhanced_images
+
+        ch, cw = target_h, target_w
+        if original_crops.shape[1] != ch or original_crops.shape[2] != cw:
+            original_crops = F.interpolate(
+                original_crops.permute(0, 3, 1, 2),
+                size=(ch, cw), mode="bilinear", align_corners=False,
+            ).permute(0, 2, 3, 1)
+
+        if not bool(resize_back_to_original):
+            target_canvas_h = max(1, int(round(int(original_images.shape[1]) * scale_y)))
+            target_canvas_w = max(1, int(round(int(original_images.shape[2]) * scale_x)))
+            if target_canvas_h != int(original_images.shape[1]) or target_canvas_w != int(original_images.shape[2]):
+                original_images = F.interpolate(
+                    original_images.permute(0, 3, 1, 2),
+                    size=(target_canvas_h, target_canvas_w), mode="bilinear", align_corners=False,
+                ).permute(0, 2, 3, 1)
+            bboxes = [
+                (
+                    int(round(float(x) * scale_x)),
+                    int(round(float(y) * scale_y)),
+                    max(1, int(round(float(w) * scale_x))),
+                    max(1, int(round(float(h) * scale_y))),
+                )
+                for x, y, w, h in bboxes
+            ]
+            if crop_edge_pads is not None:
+                crop_edge_pads = [
+                    (
+                        int(round(float(pl) * scale_x)),
+                        int(round(float(pr) * scale_x)),
+                        int(round(float(pt) * scale_y)),
+                        int(round(float(pb) * scale_y)),
+                    )
+                    for pl, pr, pt, pb in crop_edge_pads
+                ]
 
         # 2. Color match enhanced → reference is original crop (pre-inference)
         enh = _color_match(original_crops, enh, color_match_method, float(color_match_strength))
@@ -1354,6 +1411,7 @@ class CRT_IsolateOutput:
 
         # 3. Grow + blur
         composited_chunks = []
+        enhanced_masked_chunks = []
         for start in range(0, face_masks.shape[0], chunk_size):
             end = min(face_masks.shape[0], start + chunk_size)
             mask_chunk = face_masks[start:end]
@@ -1362,13 +1420,19 @@ class CRT_IsolateOutput:
             mask_chunk = _grow_blur_mask(mask_chunk, int(expand_mask), float(blur_radius))
             alpha = mask_chunk.unsqueeze(-1)
             composited_chunk = enh_chunk * alpha + crop_chunk * (1.0 - alpha)
+            enhanced_masked_chunk = enh_chunk * alpha + (1.0 - alpha)
             composited_chunks.append(composited_chunk.cpu())
+            enhanced_masked_chunks.append(enhanced_masked_chunk.cpu())
         composited = torch.cat(composited_chunks, dim=0)
+        enhanced_images_masked = torch.cat(enhanced_masked_chunks, dim=0)
 
         # 5. Uncrop back into canvas. padding=0 means bboxes are in original image
         # coordinates and no stripping is needed — just use original_images directly.
-        if padding > 0:
-            canvas = _pad(original_images, padding)
+        canvas_padding = int(padding)
+        if padding > 0 and not bool(resize_back_to_original):
+            canvas_padding = int(round(float(padding) * max(scale_x, scale_y)))
+        if canvas_padding > 0:
+            canvas = _pad(original_images, canvas_padding)
         else:
             canvas = original_images
         original_images = None
@@ -1382,8 +1446,17 @@ class CRT_IsolateOutput:
         del canvas
 
         # 6. Strip padding (only when canvas was pre-padded)
-        if padding > 0:
-            result = uncropped[:, padding:padding+orig_h, padding:padding+orig_w, :]
+        if canvas_padding > 0 and bool(resize_back_to_original):
+            result = uncropped[:, canvas_padding:canvas_padding+orig_h, canvas_padding:canvas_padding+orig_w, :]
+        elif canvas_padding > 0:
+            scaled_orig_w = int(round(float(orig_w) * scale_x))
+            scaled_orig_h = int(round(float(orig_h) * scale_y))
+            result = uncropped[
+                :,
+                canvas_padding:canvas_padding+scaled_orig_h,
+                canvas_padding:canvas_padding+scaled_orig_w,
+                :,
+            ]
         else:
             result = uncropped
 
@@ -1391,7 +1464,7 @@ class CRT_IsolateOutput:
         _print_timing("Isolate Output", elapsed, result.shape[0])
         return {
             **_timing_ui("Isolate Output", elapsed, result.shape[0]),
-            "result": (result,),
+            "result": (result, enhanced_images_masked),
         }
 
 
