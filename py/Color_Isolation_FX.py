@@ -7,13 +7,13 @@ class ColorIsolationFX:
         return {
             "required": {
                 "image": ("IMAGE",),
-                "target_color": ("COLOR", {"default": "#FF0000"}),
+                "target_color": ("COLOR", {"default": "#DE827B"}),
                 "hue_shift": ("FLOAT", {"default": 0.0, "min": -0.5, "max": 0.5, "step": 0.01, "display": "slider"}),
                 "window_function": (["Gauss", "Triangle"],),
-                "hue_width": ("FLOAT", {"default": 0.3, "min": 0.001, "max": 2.0, "step": 0.001, "display": "slider"}),
+                "hue_width": ("FLOAT", {"default": 0.07, "min": 0.001, "max": 2.0, "step": 0.001, "display": "slider"}),
                 "curve_steepness": (
                     "FLOAT",
-                    {"default": 1.0, "min": 0.0, "max": 10.0, "step": 0.01, "display": "slider"},
+                    {"default": 0.4, "min": 0.0, "max": 10.0, "step": 0.01, "display": "slider"},
                 ),
                 "mode": (["Isolate", "Reject"],),
                 "output_mode": (["Final Image", "Show Mask"],),
@@ -92,48 +92,42 @@ class ColorIsolationFX:
         output_mode,
     ):
         device = image.device
+        dtype = image.dtype
         batch_size, height, width, channels = image.shape
-        result_images = []
 
-        luma_weights = torch.tensor([0.2126, 0.7151, 0.0721], device=device).view(1, 1, 1, 3)
+        luma_weights = torch.tensor([0.2126, 0.7151, 0.0721], device=device, dtype=dtype).view(1, 1, 1, 3)
 
         r = int(target_color[1:3], 16) / 255.0
         g = int(target_color[3:5], 16) / 255.0
         b = int(target_color[5:7], 16) / 255.0
-        target_rgb_tensor = torch.tensor([r, g, b], device=device).view(1, 1, 1, 3)
+        target_rgb_tensor = torch.tensor([r, g, b], device=device, dtype=dtype).view(1, 1, 1, 3)
         target_hue = self._rgb_to_hsv(target_rgb_tensor)[0, 0, 0, 0]
 
-        for i in range(batch_size):
-            img_tensor = image[i : i + 1]
-            hsv = self._rgb_to_hsv(img_tensor)
-            hue = hsv[..., 0]
+        hsv = self._rgb_to_hsv(image)
+        hue = hsv[..., 0]
 
-            offset = target_hue
+        mask1 = self._calculate_mask(hue, curve_steepness, target_hue, hue_width, window_function)
+        mask2 = self._calculate_mask(hue - 1.0, curve_steepness, target_hue, hue_width, window_function)
+        mask3 = self._calculate_mask(hue + 1.0, curve_steepness, target_hue, hue_width, window_function)
 
-            mask1 = self._calculate_mask(hue, curve_steepness, offset, hue_width, window_function)
-            mask2 = self._calculate_mask(hue - 1.0, curve_steepness, offset, hue_width, window_function)
-            mask3 = self._calculate_mask(hue + 1.0, curve_steepness, offset, hue_width, window_function)
+        final_mask = (mask1 + mask2 + mask3).clamp(0.0, 1.0)
 
-            final_mask = (mask1 + mask2 + mask3).clamp(0.0, 1.0)
+        if mode == "Reject":
+            final_mask = 1.0 - final_mask
 
-            if mode == "Reject":
-                final_mask = 1.0 - final_mask
+        final_mask_expanded = final_mask.unsqueeze(-1)
 
-            final_mask_expanded = final_mask.unsqueeze(-1)
+        if output_mode == "Show Mask":
+            final_image = final_mask_expanded.expand(batch_size, height, width, channels)
+        else:
+            luma = torch.sum(image * luma_weights, dim=-1, keepdim=True)
 
-            if output_mode == "Show Mask":
-                final_image = final_mask_expanded.repeat(1, 1, 1, channels)
-            else:
-                luma = torch.sum(img_tensor * luma_weights, dim=-1, keepdim=True)
+            isolated_color = image
+            if abs(hue_shift) > 1e-6:
+                shifted_hsv = hsv.clone()
+                shifted_hsv[..., 0] = torch.fmod(shifted_hsv[..., 0] + hue_shift + 1.0, 1.0)
+                isolated_color = self._hsv_to_rgb(shifted_hsv)
 
-                isolated_color = img_tensor
-                if abs(hue_shift) > 1e-6:
-                    shifted_hsv = hsv.clone()
-                    shifted_hsv[..., 0] = torch.fmod(shifted_hsv[..., 0] + hue_shift + 1.0, 1.0)
-                    isolated_color = self._hsv_to_rgb(shifted_hsv)
+            final_image = torch.lerp(luma, isolated_color, final_mask_expanded)
 
-                final_image = torch.lerp(luma, isolated_color, final_mask_expanded)
-
-            result_images.append(final_image.clamp(0.0, 1.0))
-
-        return (torch.cat(result_images, dim=0),)
+        return (final_image.clamp(0.0, 1.0),)

@@ -1,6 +1,13 @@
 import torch
 
 
+_MAX_TORCH_SEED = 0x7FFFFFFFFFFFFFFF
+
+
+def _safe_seed(seed):
+    return int(seed) % _MAX_TORCH_SEED
+
+
 class FilmGrainFX:
     @classmethod
     def INPUT_TYPES(cls):
@@ -58,55 +65,48 @@ class FilmGrainFX:
     ):
 
         device = image.device
+        dtype = image.dtype
         batch_size, height, width, _ = image.shape
-        result_images = []
 
-        luma_coeff = torch.tensor([0.299, 0.587, 0.114], device=device).view(1, 3, 1, 1)
+        original_image = image.permute(0, 3, 1, 2)
+        luma_coeff = torch.tensor([0.299, 0.587, 0.114], device=device, dtype=dtype).view(1, 3, 1, 1)
+        luma = torch.sum(original_image * luma_coeff, dim=1, keepdim=True)
 
-        for i in range(batch_size):
-            original_image = image[i : i + 1].permute(0, 3, 1, 2)
-            luma = torch.sum(original_image * luma_coeff, dim=1, keepdim=True)
+        generator = torch.Generator(device=device)
+        generator.manual_seed(_safe_seed(seed))
 
-            generator = torch.Generator(device=device)
-            generator.manual_seed(seed + i)
+        low_res_h = max(1, int(height / grain_size)) if grain_size > 0 else height
+        low_res_w = max(1, int(width / grain_size)) if grain_size > 0 else width
 
-            low_res_h = int(height / grain_size) if grain_size > 0 else height
-            low_res_w = int(width / grain_size) if grain_size > 0 else width
+        noise = torch.rand(batch_size, 3, low_res_h, low_res_w, generator=generator, device=device, dtype=dtype)
+        noise = torch.nn.functional.interpolate(noise, size=(height, width), mode='bicubic', align_corners=False)
+        noise = (noise * 2.0) - 1.0
 
-            noise = torch.rand(1, 3, low_res_h, low_res_w, generator=generator, device=device)
-            noise = torch.nn.functional.interpolate(noise, size=(height, width), mode='bicubic', align_corners=False)
-            noise = (noise * 2.0) - 1.0
+        noise *= grain_intensity
 
-            noise *= grain_intensity
+        density_factor = max(11.1 - grain_density, 0.1)
+        noise = torch.pow(noise.abs(), density_factor) * noise.sign()
 
-            density_factor = max(11.1 - grain_density, 0.1)
-            noise = torch.pow(noise.abs(), density_factor) * noise.sign()
+        luma_faded = self._fade(luma)
+        shadow_intensity = torch.tensor(intensity_shadows, device=device, dtype=dtype)
+        highlight_intensity = torch.tensor(intensity_highlights, device=device, dtype=dtype)
+        noise *= torch.lerp(shadow_intensity, highlight_intensity, luma_faded)
 
-            luma_faded = self._fade(luma)
-            noise *= torch.lerp(
-                torch.tensor(intensity_shadows, device=device),
-                torch.tensor(intensity_highlights, device=device),
-                luma_faded,
-            )
+        if negative_noise_in_highlights:
+            neg_noise = -noise.abs()
+            neg_noise = neg_noise[:, [2, 0, 1], :, :]
+            noise = torch.lerp(noise, neg_noise, luma * luma)
 
-            if negative_noise_in_highlights:
-                neg_noise = -noise.abs()
-                neg_noise = neg_noise[:, [2, 0, 1], :, :]
-                noise = torch.lerp(noise, neg_noise, luma * luma)
+        mono_noise = torch.mean(noise, dim=1, keepdim=True)
+        noise = torch.lerp(mono_noise, noise, grain_color)
 
-            mono_noise = torch.mean(noise, dim=1, keepdim=True)
-            noise = torch.lerp(mono_noise, noise, grain_color)
+        noisy_image = original_image + noise * grain_amount
 
-            noisy_image = original_image + noise * grain_amount
+        if preserve_original_color:
+            noisy_luma = torch.sum(noisy_image.clamp(0.0, 1.0) * luma_coeff, dim=1, keepdim=True)
+            luma_diff = noisy_luma - luma
+            final_image_bchw = (original_image + luma_diff).clamp(0.0, 1.0)
+        else:
+            final_image_bchw = noisy_image.clamp(0.0, 1.0)
 
-            if preserve_original_color:
-                noisy_luma = torch.sum(noisy_image.clamp(0.0, 1.0) * luma_coeff, dim=1, keepdim=True)
-                luma_diff = noisy_luma - luma
-                final_image_bchw = (original_image + luma_diff).clamp(0.0, 1.0)
-            else:
-                final_image_bchw = noisy_image.clamp(0.0, 1.0)
-
-            final_image_bhwc = final_image_bchw.permute(0, 2, 3, 1)
-            result_images.append(final_image_bhwc)
-
-        return (torch.cat(result_images, dim=0),)
+        return (final_image_bchw.permute(0, 2, 3, 1),)

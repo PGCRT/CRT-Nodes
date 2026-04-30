@@ -41,66 +41,49 @@ class ArcaneBloomFX:
         self, image: torch.Tensor, intensity, threshold, smoothing, radius_multiplier, saturation, exposure
     ):
         device = image.device
+        dtype = image.dtype
         batch_size, height, width, _ = image.shape
-        result_images = []
 
-        luma_weights = torch.tensor([0.2126, 0.7152, 0.0722], device=device).view(1, 3, 1, 1)
+        luma_weights = torch.tensor([0.2126, 0.7152, 0.0722], device=device, dtype=dtype).view(1, 3, 1, 1)
+        img_tensor_bchw = image.permute(0, 3, 1, 2)
 
-        for i in range(batch_size):
-            img_tensor_bchw = image[i : i + 1].permute(0, 3, 1, 2)
+        luma = torch.sum(img_tensor_bchw * luma_weights, dim=1, keepdim=True)
 
-            # --- Threshold and Soft-Knee Method ---
-            luma = torch.sum(img_tensor_bchw * luma_weights, dim=1, keepdim=True)
+        soft_knee = threshold * smoothing + 1e-5
+        soft_threshold = torch.clamp(luma - threshold + soft_knee, 0.0, soft_knee * 2.0)
+        soft_threshold = (soft_threshold * soft_threshold) / (soft_knee * 4.0 + 1e-7)
+        hard_threshold = torch.relu(luma - threshold)
+        bloom_mask = soft_threshold + hard_threshold
+        bloom_source = img_tensor_bchw * bloom_mask
 
-            soft_knee = threshold * smoothing + 1e-5
+        pyramid = []
+        current_level = bloom_source
+        for _ in range(6):
+            if current_level.shape[2] < 4 or current_level.shape[3] < 4:
+                break
+            downsampled = F.interpolate(current_level, scale_factor=0.5, mode='bilinear', align_corners=False)
+            pyramid.append(downsampled)
+            current_level = downsampled
 
-            soft_threshold = torch.clamp(luma - threshold + soft_knee, 0.0, soft_knee * 2.0)
-            soft_threshold = (soft_threshold * soft_threshold) / (soft_knee * 4.0 + 1e-7)
+        if not pyramid:
+            return (image,)
 
-            hard_threshold = torch.relu(luma - threshold)
+        last_level = self._gaussian_blur(pyramid[-1], radius_multiplier)
 
-            bloom_mask = soft_threshold + hard_threshold
+        for j in range(len(pyramid) - 2, -1, -1):
+            upscaled = F.interpolate(
+                last_level, size=(pyramid[j].shape[2], pyramid[j].shape[3]), mode='bilinear', align_corners=False
+            )
+            combined = upscaled + pyramid[j]
+            last_level = self._gaussian_blur(combined, radius_multiplier)
 
-            bloom_source = img_tensor_bchw * bloom_mask
+        bloom_texture = F.interpolate(last_level, size=(height, width), mode='bilinear', align_corners=False)
 
-            # --- Pyramid Generation ---
-            pyramid = []
-            current_level = bloom_source
-            for _ in range(6):
-                if current_level.shape[2] < 4 or current_level.shape[3] < 4:
-                    break
-                downsampled = F.interpolate(current_level, scale_factor=0.5, mode='bilinear', align_corners=False)
-                pyramid.append(downsampled)
-                current_level = downsampled
+        if saturation != 1.0:
+            bloom_luma = torch.sum(bloom_texture * luma_weights, dim=1, keepdim=True)
+            bloom_texture = torch.lerp(bloom_luma, bloom_texture, saturation)
 
-            if not pyramid:
-                result_images.append(image[i : i + 1])
-                continue
+        bloom_texture *= intensity * exposure
+        final_image = 1.0 - (1.0 - img_tensor_bchw) * (1.0 - bloom_texture)
 
-            # --- Correct Additive Upscale ---
-            last_level = self._gaussian_blur(pyramid[-1], radius_multiplier)
-
-            for j in range(len(pyramid) - 2, -1, -1):
-                upscaled = F.interpolate(
-                    last_level, size=(pyramid[j].shape[2], pyramid[j].shape[3]), mode='bilinear', align_corners=False
-                )
-                combined = upscaled + pyramid[j]
-                last_level = self._gaussian_blur(combined, radius_multiplier)
-
-            bloom_texture = F.interpolate(last_level, size=(height, width), mode='bilinear', align_corners=False)
-
-            # --- Apply modifications only to the bloom overlay ---
-            if saturation != 1.0:
-                bloom_luma = torch.sum(bloom_texture * luma_weights, dim=1, keepdim=True)
-                bloom_texture = torch.lerp(bloom_luma, bloom_texture, saturation)
-
-            bloom_texture *= intensity
-            bloom_texture *= exposure
-
-            # --- Final Composite ---
-            # Screen blend mode: 1 - (1 - base) * (1 - overlay)
-            final_image = 1.0 - (1.0 - img_tensor_bchw) * (1.0 - bloom_texture)
-
-            result_images.append(final_image.permute(0, 2, 3, 1))
-
-        return (torch.cat(result_images, dim=0).clamp(0.0, 1.0),)
+        return (final_image.permute(0, 2, 3, 1).clamp(0.0, 1.0),)

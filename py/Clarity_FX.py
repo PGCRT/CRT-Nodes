@@ -1,7 +1,5 @@
 import torch
 import torch.nn.functional as F
-import numpy as np
-from PIL import Image
 
 
 class ClarityFX:
@@ -55,105 +53,82 @@ class ClarityFX:
         ClarityDarkIntensity,
         ClarityLightIntensity,
     ):
-        if image.is_cuda:
-            image = image.cpu()
+        device = image.device
+        dtype = image.dtype
 
-        batch_size, height, width, _ = image.shape
-        result_images = []
+        luma = (
+            image[..., 0] * 0.32786885
+            + image[..., 1] * 0.655737705
+            + image[..., 2] * 0.0163934436
+        ).unsqueeze(-1)
+        chroma = image / (luma + 1e-6)
+        luma_for_conv = luma.permute(0, 3, 1, 2)
 
-        for i in range(batch_size):
-            original_rgb = image[i]
+        sigma = (ClarityRadius + 1) * ClarityOffset
+        if sigma > 0:
+            radius = max(1, int(sigma * 2))
+            coords = torch.arange(-radius, radius + 1, dtype=dtype, device=device)
+            kernel = torch.exp(-(coords * coords) / (2 * sigma**2))
+            kernel /= kernel.sum()
+            kernel_h = kernel.view(1, 1, 1, 2 * radius + 1)
+            kernel_v = kernel.view(1, 1, 2 * radius + 1, 1)
 
-            luma = (
-                original_rgb[..., 0] * 0.32786885
-                + original_rgb[..., 1] * 0.655737705
-                + original_rgb[..., 2] * 0.0163934436
-            ).unsqueeze(-1)
-            chroma = original_rgb / (luma + 1e-6)
+            blurred_luma_h = F.conv2d(F.pad(luma_for_conv, (radius, radius, 0, 0), mode='replicate'), kernel_h)
+            blurred_luma_tensor = F.conv2d(F.pad(blurred_luma_h, (0, 0, radius, radius), mode='replicate'), kernel_v)
+        else:
+            blurred_luma_tensor = luma_for_conv
 
-            luma_for_conv = luma.permute(2, 0, 1).unsqueeze(0)
+        blurred_luma = blurred_luma_tensor.permute(0, 2, 3, 1)
 
-            sigma = (ClarityRadius + 1) * ClarityOffset
-            if sigma > 0:
-                radius = int(sigma * 2)
+        sharp = 0.5 * (luma + 1.0 - blurred_luma)
+        clamped_sharp = sharp.clamp(0.0, 1.0)
+        sharp_min = torch.lerp(sharp, clamped_sharp, ClarityDarkIntensity)
+        sharp_max = torch.lerp(sharp, clamped_sharp, ClarityLightIntensity)
+        sharp = torch.where(sharp > 0.5, sharp_max, sharp_min)
 
-                kernel_h = torch.exp(
-                    -torch.pow(torch.arange(-radius, radius + 1, dtype=torch.float32), 2) / (2 * sigma**2)
-                )
-                kernel_h /= kernel_h.sum()
-                kernel_h = kernel_h.view(1, 1, 1, 2 * radius + 1)
+        if ClarityBlendMode == "Soft Light":
+            sharp = torch.where(
+                sharp < 0.5,
+                2 * luma * sharp + luma**2 * (1 - 2 * sharp),
+                torch.sqrt(luma.clamp(min=0)) * (2 * sharp - 1) + 2 * luma * (1 - sharp),
+            )
+        elif ClarityBlendMode == "Overlay":
+            sharp = torch.where(luma < 0.5, 2 * luma * sharp, 1 - 2 * (1 - luma) * (1 - sharp))
+        elif ClarityBlendMode == "Hard Light":
+            sharp = torch.where(sharp < 0.5, 2 * luma * sharp, 1 - 2 * (1 - luma) * (1 - sharp))
+        elif ClarityBlendMode == "Multiply":
+            sharp = torch.clamp(2 * luma * sharp, 0, 1)
+        elif ClarityBlendMode == "Vivid Light":
+            sharp = torch.where(
+                sharp < 0.5,
+                1 - (1 - luma) / (2 * sharp + 1e-6),
+                luma / (2 * (1 - sharp) + 1e-6),
+            )
+        elif ClarityBlendMode == "Linear Light":
+            sharp = torch.clamp(luma + 2.0 * sharp - 1.0, 0, 1)
+        elif ClarityBlendMode == "Addition":
+            sharp = torch.clamp(luma + sharp - 0.5, 0, 1)
 
-                kernel_v = torch.exp(
-                    -torch.pow(torch.arange(-radius, radius + 1, dtype=torch.float32), 2) / (2 * sigma**2)
-                )
-                kernel_v /= kernel_v.sum()
-                kernel_v = kernel_v.view(1, 1, 2 * radius + 1, 1)
+        if ClarityBlendIfDark > 0 or ClarityBlendIfLight < 255:
+            mix_val = torch.mean(image, dim=-1, keepdim=True)
+            mask = torch.ones_like(mix_val)
 
-                # Correct blurring with manual padding
-                padding_h = (radius, radius, 0, 0)
-                padded_luma_h = F.pad(luma_for_conv, padding_h, mode='replicate')
-                blurred_luma_h = F.conv2d(padded_luma_h, kernel_h, padding=0)
+            if ClarityBlendIfDark > 0:
+                blend_if_d = ClarityBlendIfDark / 255.0
+                edge0 = blend_if_d - (blend_if_d * 0.2)
+                edge1 = blend_if_d + (blend_if_d * 0.2)
+                mask = self._smoothstep(edge0, edge1, mix_val)
 
-                padding_v = (0, 0, radius, radius)
-                padded_luma_v = F.pad(blurred_luma_h, padding_v, mode='replicate')
-                blurred_luma_tensor = F.conv2d(padded_luma_v, kernel_v, padding=0)
-            else:
-                blurred_luma_tensor = luma_for_conv.clone()
+            if ClarityBlendIfLight < 255:
+                blend_if_l = ClarityBlendIfLight / 255.0
+                edge0 = blend_if_l - (blend_if_l * 0.2)
+                edge1 = blend_if_l + (blend_if_l * 0.2)
+                mask = mask * (1.0 - self._smoothstep(edge0, edge1, mix_val))
 
-            blurred_luma = blurred_luma_tensor.squeeze(0).permute(1, 2, 0)
+            sharp = torch.lerp(luma, sharp, mask)
 
-            sharp = 1.0 - blurred_luma
-            sharp = (luma + sharp) * 0.5
-
-            clamped_sharp = torch.clamp(sharp, 0.0, 1.0)
-            sharpMin = torch.lerp(sharp, clamped_sharp, ClarityDarkIntensity)
-            sharpMax = torch.lerp(sharp, clamped_sharp, ClarityLightIntensity)
-            sharp = torch.where(sharp > 0.5, sharpMax, sharpMin)
-
-            # Blend Modes
-            if ClarityBlendMode == "Soft Light":
-                sharp = torch.where(
-                    sharp < 0.5,
-                    2 * luma * sharp + luma**2 * (1 - 2 * sharp),
-                    torch.sqrt(luma.clamp(min=0)) * (2 * sharp - 1) + 2 * luma * (1 - sharp),
-                )
-            elif ClarityBlendMode == "Overlay":
-                sharp = torch.where(luma < 0.5, 2 * luma * sharp, 1 - 2 * (1 - luma) * (1 - sharp))
-            elif ClarityBlendMode == "Hard Light":
-                sharp = torch.where(sharp < 0.5, 2 * luma * sharp, 1 - 2 * (1 - luma) * (1 - sharp))
-            elif ClarityBlendMode == "Multiply":
-                sharp = torch.clamp(2 * luma * sharp, 0, 1)
-            elif ClarityBlendMode == "Vivid Light":
-                sharp = torch.where(sharp < 0.5, 1 - (1 - luma) / (2 * sharp + 1e-6), luma / (2 * (1 - sharp) + 1e-6))
-            elif ClarityBlendMode == "Linear Light":
-                sharp = torch.clamp(luma + 2.0 * sharp - 1.0, 0, 1)
-            elif ClarityBlendMode == "Addition":
-                sharp = torch.clamp(luma + sharp - 0.5, 0, 1)
-
-            # Blend If Masking
-            if ClarityBlendIfDark > 0 or ClarityBlendIfLight < 255:
-                mix_val = torch.mean(original_rgb, dim=-1, keepdim=True)
-                mask = torch.ones_like(mix_val)
-
-                if ClarityBlendIfDark > 0:
-                    blend_if_d = ClarityBlendIfDark / 255.0
-                    edge0 = blend_if_d - (blend_if_d * 0.2)
-                    edge1 = blend_if_d + (blend_if_d * 0.2)
-                    mask = self._smoothstep(edge0, edge1, mix_val)
-
-                if ClarityBlendIfLight < 255:
-                    blend_if_l = ClarityBlendIfLight / 255.0
-                    edge0 = blend_if_l - (blend_if_l * 0.2)
-                    edge1 = blend_if_l + (blend_if_l * 0.2)
-                    mask = mask * (1.0 - self._smoothstep(edge0, edge1, mix_val))
-
-                sharp = torch.lerp(luma, sharp, mask)
-
-            final_luma = torch.lerp(luma, sharp, ClarityStrength)
-            final_rgb = torch.clamp(final_luma * chroma, 0, 1)
-            result_images.append(final_rgb)
-
-        return (torch.stack(result_images, dim=0),)
+        final_luma = torch.lerp(luma, sharp, ClarityStrength)
+        return ((final_luma * chroma).clamp(0, 1),)
 
 
 NODE_CLASS_MAPPINGS = {"ClarityFX": ClarityFX}

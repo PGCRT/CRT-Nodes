@@ -24,50 +24,46 @@ class SmartDeNoiseFX:
     FUNCTION = "apply_smart_denoise"
     CATEGORY = "CRT/FX"
 
+    def _gaussian_kernel(self, sigma, radius, device, dtype):
+        x = torch.arange(-radius, radius + 1, device=device, dtype=dtype)
+        kernel = torch.exp(-(x * x) / (2.0 * sigma * sigma + 1e-6))
+        return kernel / kernel.sum()
+
+    def _separable_blur(self, image_bchw, sigma, radius):
+        if radius <= 0:
+            return image_bchw
+
+        batch, channels, _, _ = image_bchw.shape
+        kernel = self._gaussian_kernel(sigma, radius, image_bchw.device, image_bchw.dtype)
+        kernel_h = kernel.view(1, 1, 1, -1).expand(channels, 1, 1, -1)
+        kernel_v = kernel.view(1, 1, -1, 1).expand(channels, 1, -1, 1)
+
+        blurred = F.conv2d(
+            F.pad(image_bchw, (radius, radius, 0, 0), mode='replicate'),
+            kernel_h,
+            groups=channels,
+        )
+        blurred = F.conv2d(
+            F.pad(blurred, (0, 0, radius, radius), mode='replicate'),
+            kernel_v,
+            groups=channels,
+        )
+        return blurred
+
     def apply_smart_denoise(self, image: torch.Tensor, sigma, threshold, radius_multiplier):
-        device = image.device
-        batch_size, height, width, _ = image.shape
-        result_images = []
+        image_bchw = image.permute(0, 3, 1, 2)
+        radius = int(round(max(0.0, radius_multiplier) * sigma * 2.0))
+        if radius <= 0:
+            return (image.clamp(0.0, 1.0),)
 
-        radius = int(round(radius_multiplier * sigma))
+        max_radius = max(1, min(image_bchw.shape[-2], image_bchw.shape[-1]) // 2)
+        radius = min(radius, max_radius)
 
-        inv_sigma_sqx2 = 0.5 / (sigma * sigma + 1e-6)
-        inv_threshold_sqx2 = 0.5 / (threshold * threshold + 1e-6)
+        blurred = self._separable_blur(image_bchw, max(float(sigma), 1e-3), radius)
+        detail = (image_bchw - blurred).abs().mean(dim=1, keepdim=True)
 
-        for i in range(batch_size):
-            img_tensor_bhwc = image[i : i + 1]
-
-            padded_img = F.pad(
-                img_tensor_bhwc.permute(0, 3, 1, 2), (radius, radius, radius, radius), mode='replicate'
-            ).permute(0, 2, 3, 1)
-
-            a_buff = torch.zeros_like(img_tensor_bhwc)
-            z_buff = torch.zeros_like(img_tensor_bhwc)
-
-            for y_offset in range(-radius, radius + 1):
-                for x_offset in range(-radius, radius + 1):
-
-                    dist_sq = float(x_offset**2 + y_offset**2)
-                    if dist_sq > radius**2:
-                        continue
-
-                    y_slice = slice(radius + y_offset, radius + y_offset + height)
-                    x_slice = slice(radius + x_offset, radius + x_offset + width)
-                    walk_px = padded_img[:, y_slice, x_slice, :]
-
-                    dc_sq = torch.sum((walk_px - img_tensor_bhwc) ** 2, dim=-1, keepdim=True)
-
-                    spatial_weight_val = -dist_sq * inv_sigma_sqx2
-                    spatial_weight = torch.exp(torch.tensor(spatial_weight_val, device=device))
-
-                    color_weight = torch.exp(-dc_sq * inv_threshold_sqx2)
-
-                    weight = spatial_weight * color_weight
-
-                    a_buff += walk_px * weight
-                    z_buff += weight
-
-            final_image = a_buff / (z_buff + 1e-6)
-            result_images.append(final_image.clamp(0.0, 1.0))
-
-        return (torch.cat(result_images, dim=0),)
+        # Preserve edges by reducing blur where the local detail exceeds the threshold.
+        threshold = max(float(threshold), 1e-6)
+        edge_preserve = torch.exp(-(detail * detail) / (2.0 * threshold * threshold))
+        final_image = torch.lerp(image_bchw, blurred, edge_preserve)
+        return (final_image.permute(0, 2, 3, 1).clamp(0.0, 1.0),)

@@ -41,39 +41,35 @@ class Technicolor2FX:
     ):
 
         device = image.device
-        batch_size, _, _, _ = image.shape
-        result_images = []
+        dtype = image.dtype
 
         color_strength_tensor = torch.tensor(
-            [color_strength_r, color_strength_g, color_strength_b], device=device
+            [color_strength_r, color_strength_g, color_strength_b], device=device, dtype=dtype
         ).view(1, 1, 1, 3)
 
-        for i in range(batch_size):
-            color = image[i : i + 1].clamp(0.0, 1.0)
+        color = image.clamp(0.0, 1.0)
 
-            inv_color = 1.0 - color
+        inv_color = 1.0 - color
 
-            target1_a = torch.cat((inv_color[..., 1:2], inv_color[..., 0:1], inv_color[..., 1:2]), dim=-1)
-            target2_a = torch.cat((inv_color[..., 2:3], inv_color[..., 2:3], inv_color[..., 0:1]), dim=-1)
+        target1_a = torch.cat((inv_color[..., 1:2], inv_color[..., 0:1], inv_color[..., 1:2]), dim=-1)
+        target2_a = torch.cat((inv_color[..., 2:3], inv_color[..., 2:3], inv_color[..., 0:1]), dim=-1)
 
-            processed_color = color * target1_a
-            processed_color *= target2_a
+        processed_color = color * target1_a
+        processed_color *= target2_a
 
-            temp_cs = processed_color * color_strength_tensor
-            temp_b = processed_color * brightness
+        temp_cs = processed_color * color_strength_tensor
+        temp_b = processed_color * brightness
 
-            target1_b = torch.cat((temp_cs[..., 1:2], temp_cs[..., 0:1], temp_cs[..., 1:2]), dim=-1)
-            target2_b = torch.cat((temp_cs[..., 2:3], temp_cs[..., 2:3], temp_cs[..., 0:1]), dim=-1)
+        target1_b = torch.cat((temp_cs[..., 1:2], temp_cs[..., 0:1], temp_cs[..., 1:2]), dim=-1)
+        target2_b = torch.cat((temp_cs[..., 2:3], temp_cs[..., 2:3], temp_cs[..., 0:1]), dim=-1)
 
-            final_color = color - target1_b
-            final_color += temp_b
-            final_color = final_color - target2_b
+        final_color = color - target1_b
+        final_color += temp_b
+        final_color = final_color - target2_b
 
-            color = torch.lerp(color, final_color, strength)
+        color = torch.lerp(color, final_color, strength)
 
-            luma = torch.sum(color * 0.33333, dim=-1, keepdim=True)
-            color = torch.lerp(luma, color, saturation)
+        luma = torch.mean(color, dim=-1, keepdim=True)
+        color = torch.lerp(luma, color, saturation)
 
-            result_images.append(color)
-
-        return (torch.cat(result_images, dim=0),)
+        return (color.clamp(0.0, 1.0),)

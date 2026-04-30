@@ -145,8 +145,8 @@ class AdvancedBloomFX:
     ):
 
         device = image.device
-        batch_size, _, _, _ = image.shape
-        result_images = []
+        dtype = image.dtype
+        _, height, width, _ = image.shape
 
         color_filter = torch.tensor(
             [
@@ -155,6 +155,7 @@ class AdvancedBloomFX:
                 int(color_filter[5:7], 16) / 255.0,
             ],
             device=device,
+            dtype=dtype,
         )
         split_shadows = torch.tensor(
             [
@@ -163,6 +164,7 @@ class AdvancedBloomFX:
                 int(split_shadows[5:7], 16) / 255.0,
             ],
             device=device,
+            dtype=dtype,
         )
         split_highlights = torch.tensor(
             [
@@ -171,6 +173,7 @@ class AdvancedBloomFX:
                 int(split_highlights[5:7], 16) / 255.0,
             ],
             device=device,
+            dtype=dtype,
         )
         smh_shadow_color = torch.tensor(
             [
@@ -179,6 +182,7 @@ class AdvancedBloomFX:
                 int(smh_shadow_color[5:7], 16) / 255.0,
             ],
             device=device,
+            dtype=dtype,
         )
         smh_midtone_color = torch.tensor(
             [
@@ -187,6 +191,7 @@ class AdvancedBloomFX:
                 int(smh_midtone_color[5:7], 16) / 255.0,
             ],
             device=device,
+            dtype=dtype,
         )
         smh_highlight_color = torch.tensor(
             [
@@ -195,89 +200,88 @@ class AdvancedBloomFX:
                 int(smh_highlight_color[5:7], 16) / 255.0,
             ],
             device=device,
+            dtype=dtype,
         )
 
-        for i in range(batch_size):
-            img_tensor = image[i].clone()
+        luma_weights = torch.tensor([0.299, 0.587, 0.114], device=device, dtype=dtype).view(1, 1, 1, 3)
+        img_tensor = image.clone() * exposure
 
-            img_tensor *= exposure
+        if bloom_intensity > 0:
+            knee = bloom_threshold * bloom_smoothing + 1e-5
+            curve = torch.tensor([bloom_threshold - knee, knee * 2.0, 0.25 / knee], device=device, dtype=dtype)
+            luma = torch.sum(img_tensor * luma_weights, dim=-1, keepdim=True)
 
-            if bloom_intensity > 0:
-                knee = bloom_threshold * bloom_smoothing + 1e-5
-                curve = torch.tensor([bloom_threshold - knee, knee * 2.0, 0.25 / knee], device=device)
+            response_curve = torch.clamp(luma - curve[0], 0.0, curve[1])
+            response_curve = curve[2] * response_curve * response_curve
 
-                luma = torch.sum(img_tensor * torch.tensor([0.299, 0.587, 0.114], device=device), dim=-1, keepdim=True)
-
-                response_curve = torch.clamp(luma - curve[0], 0.0, curve[1])
-                response_curve = curve[2] * response_curve * response_curve
-
-                bloom_mask = torch.max(response_curve, luma - bloom_threshold) / torch.max(
-                    luma, torch.tensor(1e-10, device=device)
-                )
-                brights = img_tensor * bloom_mask
-
-                radius_val = int(bloom_radius)
-                if radius_val % 2 == 0:
-                    radius_val += 1
-
-                blurred_brights = TF.gaussian_blur(
-                    brights.permute(2, 0, 1), kernel_size=(radius_val, radius_val), sigma=bloom_radius / 3.0
-                ).permute(1, 2, 0)
-
-                img_tensor += blurred_brights * bloom_intensity
-
-            img_tensor = torch.clamp(img_tensor + lightness, 0.0, 1.0)
-
-            if saturation != 0.0 or hue_shift != 0.0:
-                hsv = self._rgb_to_hsv(img_tensor)
-                hsv[..., 1] *= 1.0 + saturation
-                hsv[..., 0] += hue_shift
-                hsv[..., 0] = torch.fmod(hsv[..., 0] + 1.0, 1.0)
-                img_tensor = self._hsv_to_rgb(hsv.clamp(0.0, 1.0))
-
-            if contrast != 0.0:
-                img_tensor = torch.clamp(0.5 + (img_tensor - 0.5) * (1.0 + contrast), 0.0, 1.0)
-
-            img_tensor *= color_filter
-
-            if temperature != 0.0 or tint != 0.0:
-                temp_scale = torch.exp(torch.tensor(temperature * 0.1, device=device))
-                tint_matrix = torch.tensor(
-                    [[1.0, 0.0, 0.0], [0.0, 1.0 - tint * 0.5, 0.0], [0.0, 0.0, 1.0 / (1.0 + tint * 0.5)]], device=device
-                )
-                img_tensor *= torch.tensor([temp_scale, 1.0, 1.0 / temp_scale], device=device)
-                img_tensor = torch.matmul(img_tensor.view(-1, 3), tint_matrix.T).view_as(img_tensor)
-
-            if not torch.all(split_shadows == 0.5) or not torch.all(split_highlights == 0.5):
-                luma = torch.sum(img_tensor * torch.tensor([0.299, 0.587, 0.114], device=device), dim=-1, keepdim=True)
-                balance_point = 0.5 + split_balance * 0.25
-                shadow_mask = torch.clamp(1.0 - luma / balance_point, 0.0, 1.0)
-                highlight_mask = torch.clamp((luma - balance_point) / (1.0 - balance_point), 0.0, 1.0)
-                img_tensor = img_tensor + shadow_mask * (split_shadows - 0.5)
-                img_tensor = img_tensor + highlight_mask * (split_highlights - 0.5)
-
-            luma = torch.sum(img_tensor * torch.tensor([0.299, 0.587, 0.114], device=device), dim=-1, keepdim=True)
-            shadow_mask = self._smoothstep(smh_shadow_start, smh_shadow_end, luma)
-            highlight_mask = self._smoothstep(smh_highlight_start, smh_highlight_end, luma)
-
-            mid_mask = (1.0 - shadow_mask) * (
-                1.0 - (1.0 - highlight_mask)
-            )  # This is incorrect logic, it should be a bandpass
-
-            smh_shadow_range = smh_shadow_end - smh_shadow_start
-            smh_highlight_range = smh_highlight_end - smh_highlight_start
-
-            shadow_w = 1.0 - self._smoothstep(smh_shadow_start, smh_shadow_end, luma)
-            highlight_w = self._smoothstep(smh_highlight_start, smh_highlight_end, luma)
-            mid_w = 1.0 - shadow_w - highlight_w
-
-            img_tensor = (
-                img_tensor * shadow_w * smh_shadow_color
-                + img_tensor * mid_w * smh_midtone_color
-                + img_tensor * highlight_w * smh_highlight_color
+            bloom_mask = torch.max(response_curve, luma - bloom_threshold) / torch.maximum(
+                luma, torch.tensor(1e-10, device=device, dtype=dtype)
             )
+            brights = img_tensor * bloom_mask
 
-            img_tensor = self._aces_film(img_tensor)
-            result_images.append(img_tensor.clamp(0.0, 1.0))
+            radius_val = int(bloom_radius)
+            if radius_val % 2 == 0:
+                radius_val += 1
+            max_kernel = min(height, width)
+            if max_kernel % 2 == 0:
+                max_kernel -= 1
+            radius_val = min(radius_val, max_kernel)
 
-        return (torch.stack(result_images, dim=0),)
+            if radius_val >= 3:
+                blurred_brights = TF.gaussian_blur(
+                    brights.permute(0, 3, 1, 2), kernel_size=(radius_val, radius_val), sigma=bloom_radius / 3.0
+                ).permute(0, 2, 3, 1)
+            else:
+                blurred_brights = brights
+
+            img_tensor += blurred_brights * bloom_intensity
+
+        img_tensor = torch.clamp(img_tensor + lightness, 0.0, 1.0)
+
+        if saturation != 0.0 or hue_shift != 0.0:
+            hsv = self._rgb_to_hsv(img_tensor)
+            hsv[..., 1] *= 1.0 + saturation
+            hsv[..., 0] += hue_shift
+            hsv[..., 0] = torch.fmod(hsv[..., 0] + 1.0, 1.0)
+            img_tensor = self._hsv_to_rgb(hsv.clamp(0.0, 1.0))
+
+        if contrast != 0.0:
+            img_tensor = torch.clamp(0.5 + (img_tensor - 0.5) * (1.0 + contrast), 0.0, 1.0)
+
+        img_tensor *= color_filter.view(1, 1, 1, 3)
+
+        if temperature != 0.0 or tint != 0.0:
+            temp_scale = torch.exp(torch.tensor(temperature * 0.1, device=device, dtype=dtype))
+            img_tensor *= torch.stack([temp_scale, torch.ones_like(temp_scale), 1.0 / temp_scale]).view(1, 1, 1, 3)
+            tint_matrix = torch.tensor(
+                [[1.0, 0.0, 0.0], [0.0, 1.0 - tint * 0.5, 0.0], [0.0, 0.0, 1.0 / (1.0 + tint * 0.5)]],
+                device=device,
+                dtype=dtype,
+            )
+            img_tensor = torch.matmul(img_tensor.reshape(-1, 3), tint_matrix.T).reshape_as(img_tensor)
+
+        split_neutral = torch.full_like(split_shadows, 128.0 / 255.0)
+        if not torch.allclose(split_shadows, split_neutral) or not torch.allclose(split_highlights, split_neutral):
+            luma = torch.sum(img_tensor * luma_weights, dim=-1, keepdim=True)
+            balance_point = 0.5 + split_balance * 0.25
+            shadow_mask = torch.clamp(1.0 - luma / balance_point, 0.0, 1.0)
+            highlight_mask = torch.clamp((luma - balance_point) / (1.0 - balance_point), 0.0, 1.0)
+            img_tensor = img_tensor + shadow_mask * (split_shadows.view(1, 1, 1, 3) - split_neutral.view(1, 1, 1, 3))
+            img_tensor = img_tensor + highlight_mask * (split_highlights.view(1, 1, 1, 3) - split_neutral.view(1, 1, 1, 3))
+
+        luma = torch.sum(img_tensor * luma_weights, dim=-1, keepdim=True)
+        shadow_w = 1.0 - self._smoothstep(smh_shadow_start, smh_shadow_end, luma)
+        highlight_w = self._smoothstep(smh_highlight_start, smh_highlight_end, luma)
+        mid_w = (1.0 - shadow_w - highlight_w).clamp(0.0, 1.0)
+        weight_sum = (shadow_w + mid_w + highlight_w).clamp_min(1e-6)
+        shadow_w = shadow_w / weight_sum
+        mid_w = mid_w / weight_sum
+        highlight_w = highlight_w / weight_sum
+
+        img_tensor = img_tensor * (
+            shadow_w * smh_shadow_color.view(1, 1, 1, 3)
+            + mid_w * smh_midtone_color.view(1, 1, 1, 3)
+            + highlight_w * smh_highlight_color.view(1, 1, 1, 3)
+        )
+
+        return (self._aces_film(img_tensor).clamp(0.0, 1.0),)

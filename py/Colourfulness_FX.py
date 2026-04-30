@@ -29,47 +29,29 @@ class ColourfulnessFX:
         return (w.abs() * torch.sqrt(a.abs()) + (1 - w).abs() * torch.sqrt(b.abs())) ** 2
 
     def apply_colourfulness(self, image: torch.Tensor, colourfulness, luma_limit):
-        if image.is_cuda:
-            device = image.device
-        else:
-            device = torch.device("cpu")
+        device = image.device
+        dtype = image.dtype
 
-        batch_size, height, width, _ = image.shape
-        result_images = []
+        luma_coeff = torch.tensor([0.2558, 0.6511, 0.0931], device=device, dtype=dtype).view(1, 1, 1, 3)
+        c0 = image.clamp(0.0, 1.0)
 
-        luma_coeff = torch.tensor([0.2558, 0.6511, 0.0931], device=device).view(1, 1, 3)
+        luma = torch.sqrt(torch.sum(c0 * c0.abs() * luma_coeff, dim=-1, keepdim=True).clamp_min(0.0))
+        diff_luma = c0 - luma
+        c_diff = diff_luma * colourfulness
 
-        for i in range(batch_size):
-            c0 = image[i].clamp(0.0, 1.0)
+        if colourfulness > 0.0:
+            rlc_diff = torch.clamp((c_diff * 1.2) + c0, -0.0001, 1.0001) - c0
 
-            # --- Luma Calculation (fast method from shader) ---
-            luma = torch.sqrt(torch.sum(c0 * c0.abs() * luma_coeff, dim=-1, keepdim=True))
+            max_rgb = torch.max(diff_luma, dim=-1, keepdim=True)[0]
+            min_rgb = torch.min(diff_luma, dim=-1, keepdim=True)[0]
 
-            # --- Calculate saturation change ---
-            diff_luma = c0 - luma
-            c_diff = diff_luma * colourfulness
+            poslim = (1.0002 - luma) / (max_rgb.abs() + 1e-7)
+            neglim = (luma + 0.0002) / (min_rgb.abs() + 1e-7)
 
-            # --- Smart Limiting to Prevent Clipping ---
-            if colourfulness > 0.0:
-                # 1. Reference limited change
-                rlc_diff = torch.clamp((c_diff * 1.2) + c0, -0.0001, 1.0001) - c0
+            diffmax_scale = torch.min(poslim, neglim).clamp(max=32.0)
+            diffmax = diff_luma * diffmax_scale - diff_luma
 
-                # 2. Calculate max possible saturation increase
-                max_rgb = torch.max(diff_luma, dim=-1, keepdim=True)[0]
-                min_rgb = torch.min(diff_luma, dim=-1, keepdim=True)[0]
+            limit = self._wpmean(diffmax, rlc_diff, torch.tensor(luma_limit, device=device, dtype=dtype))
+            c_diff = self._soft_lim(c_diff, limit.clamp(min=1e-7))
 
-                poslim = (1.0002 - luma) / (max_rgb.abs() + 1e-7)
-                neglim = (luma + 0.0002) / (min_rgb.abs() + 1e-7)
-
-                diffmax_scale = torch.min(poslim, neglim).clamp(max=32.0)
-                diffmax = diff_luma * diffmax_scale - diff_luma
-
-                # 3. Blend the limiting methods and apply smoothly
-                limit = self._wpmean(diffmax, rlc_diff, torch.tensor(luma_limit, device=device))
-                c_diff = self._soft_lim(c_diff, limit.clamp(min=1e-7))
-
-            # --- Final Combination ---
-            final_rgb = (c0 + c_diff).clamp(0.0, 1.0)
-            result_images.append(final_rgb)
-
-        return (torch.stack(result_images, dim=0),)
+        return ((c0 + c_diff).clamp(0.0, 1.0),)
