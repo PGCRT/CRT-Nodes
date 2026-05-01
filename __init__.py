@@ -1,7 +1,7 @@
 """
 @author: CRT
 @title: CRT-Nodes
-@version: 2.3.9
+@version: 2.4.0
 @project: "https://github.com/PGCRT/CRT-Nodes",
 @description: Set of nodes for ComfyUI
 https://discord.gg/8wYS9MBQqp
@@ -486,3 +486,4 @@ if LTX23AutoDownloadAPI is not None and not _LTX23_API_ROUTES_REGISTERED:
 
 WEB_DIRECTORY = "./js"
 __all__ = ["NODE_CLASS_MAPPINGS", "NODE_DISPLAY_NAME_MAPPINGS", "WEB_DIRECTORY"]
+

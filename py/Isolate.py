@@ -589,7 +589,7 @@ def _batch_crop_per_item(images, masks_by_frame, crop_size_mult=1.0, smooth_alph
     )
 
 
-def _batch_uncrop_grouped(original, cropped, bboxes, source_indices, border_blending=0.0, crop_edge_pads=None):
+def _batch_uncrop_grouped(original, cropped, bboxes, source_indices, border_blending=0.0, crop_edge_pads=None, alpha_masks=None):
     if border_blending <= 0.0:
         result = original.clone()
         for i, ((bx, by, bw, bh), source_idx) in enumerate(zip(bboxes, source_indices)):
@@ -605,6 +605,9 @@ def _batch_uncrop_grouped(original, cropped, bboxes, source_indices, border_blen
                 continue
 
             crop_i = cropped[i : i + 1].permute(0, 3, 1, 2)
+            mask_i = None
+            if alpha_masks is not None:
+                mask_i = alpha_masks[i : i + 1].unsqueeze(1)
             if crop_edge_pads is not None:
                 pl, pr, pt, pb = crop_edge_pads[i]
                 ch_c, cw_c = crop_i.shape[2], crop_i.shape[3]
@@ -615,6 +618,12 @@ def _batch_uncrop_grouped(original, cropped, bboxes, source_indices, border_blen
                     pt : (ch_c - pb) if pb > 0 else ch_c,
                     pl : (cw_c - pr) if pr > 0 else cw_c,
                 ]
+                if mask_i is not None:
+                    mask_i = mask_i[
+                        :, :,
+                        pt : (ch_c - pb) if pb > 0 else ch_c,
+                        pl : (cw_c - pr) if pr > 0 else cw_c,
+                    ]
 
             crop_resized = F.interpolate(
                 crop_i,
@@ -622,24 +631,52 @@ def _batch_uncrop_grouped(original, cropped, bboxes, source_indices, border_blen
                 mode="bilinear",
                 align_corners=False,
             ).permute(0, 2, 3, 1)[0]
-            result[source_idx, y0:y1, x0:x1, :] = crop_resized.to(result.device, dtype=result.dtype)
+            crop_resized = crop_resized.to(result.device, dtype=result.dtype)
+            if mask_i is not None:
+                mask_resized = F.interpolate(
+                    mask_i,
+                    size=(ph, pw),
+                    mode="bilinear",
+                    align_corners=False,
+                ).permute(0, 2, 3, 1)[0].to(result.device, dtype=result.dtype).clamp_(0.0, 1.0)
+                region = result[source_idx, y0:y1, x0:x1, :]
+                result[source_idx, y0:y1, x0:x1, :] = crop_resized * mask_resized + region * (1.0 - mask_resized)
+            else:
+                result[source_idx, y0:y1, x0:x1, :] = crop_resized
         return result
 
     orig_pil = _t2pil(original)
     crop_pil = _t2pil(cropped)
+    mask_pil = None
+    if alpha_masks is not None:
+        mask_pil = [
+            Image.fromarray((m.cpu().float().numpy() * 255).clip(0, 255).astype(np.uint8), mode="L")
+            for m in alpha_masks
+        ]
     result = [img.copy() for img in orig_pil]
 
-    for crop, (bx, by, bw, bh), source_idx in zip(crop_pil, bboxes, source_indices):
+    for i, (crop, (bx, by, bw, bh), source_idx) in enumerate(zip(crop_pil, bboxes, source_indices)):
         img = result[source_idx]
         r = (max(0, bx), max(0, by), min(img.size[0], bx+bw), min(img.size[1], by+bh))
         pw, ph = r[2] - r[0], r[3] - r[1]
         if pw <= 0 or ph <= 0:
             continue
 
+        if crop_edge_pads is not None:
+            pl, pr, pt, pb = crop_edge_pads[i]
+            crop = crop.crop((pl, pt, crop.size[0] - pr if pr > 0 else crop.size[0], crop.size[1] - pb if pb > 0 else crop.size[1]))
+
         crop_r = crop.resize((pw, ph), Image.LANCZOS).convert("RGB")
         blend_ratio = (max(pw, ph) / 2) * float(border_blending)
         mask = Image.new("L", img.size, 0)
-        blk = Image.new("L", (pw, ph), 255)
+        if mask_pil is not None:
+            blk_src = mask_pil[i]
+            if crop_edge_pads is not None:
+                pl, pr, pt, pb = crop_edge_pads[i]
+                blk_src = blk_src.crop((pl, pt, blk_src.size[0] - pr if pr > 0 else blk_src.size[0], blk_src.size[1] - pb if pb > 0 else blk_src.size[1]))
+            blk = blk_src.resize((pw, ph), Image.LANCZOS)
+        else:
+            blk = Image.new("L", (pw, ph), 255)
         if blend_ratio > 0:
             bw_px = round(blend_ratio / 2)
             ImageDraw.Draw(blk).rectangle((0, 0, pw - 1, ph - 1), outline=0, width=bw_px)
@@ -1093,8 +1130,8 @@ class CRT_IsolateInput:
                 "single_item":       ("BOOLEAN", {"default": False, "tooltip": "Limit detection to one item per frame. Enable this when you only want the main face/subject."}),
                 "detect_chunk_size": ("INT",     {"default": 0,  "min": 0,   "max": 4096, "step": 1, "tooltip": "Detection batch size. 0 = process the whole batch at once, 1 = per-image processing, 2+ = fixed chunk size."}),
                 "padding":           ("INT",     {"default": 512, "min": 0,   "max": 2048, "step": 64, "tooltip": "Extra border added around the input batch before detection so subjects near the edges are not cropped too tightly."}),
-                "threshold":         ("FLOAT",   {"default": 0.50, "min": 0.0, "max": 1.0,  "step": 0.01, "tooltip": "Detection confidence threshold. Lower values find more masks, higher values are stricter."}),
-                "bbox_expansion":    ("FLOAT",   {"default": 1.0,  "min": 0.5, "max": 4.0,  "step": 0.05, "tooltip": "Expands the detected crop box around the subject. Higher values give a looser crop."}),
+                "threshold":         ("FLOAT",   {"default": 0.30, "min": 0.0, "max": 1.0,  "step": 0.01, "tooltip": "Detection confidence threshold. Lower values find more masks, higher values are stricter."}),
+                "bbox_expansion":    ("FLOAT",   {"default": 0.75,  "min": 0.5, "max": 4.0,  "step": 0.05, "tooltip": "Expands the detected crop box around the subject. Higher values give a looser crop."}),
                 "crop_smooth_alpha": ("FLOAT",   {"default": 1.0, "min": 0.0, "max": 1.0,  "step": 0.05, "tooltip": "Temporal smoothing for crop position. Lower = steadier crop, higher = follows motion more closely."}),
                 "crop_megapixels":   ("FLOAT",   {"default": 1.0,  "min": 0.0, "max": 8.0,  "step": 0.25, "tooltip": "Target resolution for the cropped output images. 0 disables crop rescaling."}),
             }
@@ -1276,8 +1313,8 @@ class CRT_IsolateOutput:
                 "enhanced_images":      ("IMAGE",),
                 "pipe":                 ("CRT_ISOLATE_PIPE",),
                 "smooth_range":         ("INT",   {"default": 5,    "min": 0,   "max": 32,    "step": 1}),
-                "expand_mask":          ("INT",   {"default": 8,    "min": 0,   "max": 100,   "step": 1}),
-                "blur_radius":          ("FLOAT", {"default": 16.0, "min": 0.0, "max": 100.0, "step": 0.5}),
+                "expand_mask":          ("INT",   {"default": 32,   "min": 0,   "max": 100,   "step": 1}),
+                "blur_radius":          ("FLOAT", {"default": 64.0, "min": 0.0, "max": 100.0, "step": 0.5}),
                 "border_blending":      ("FLOAT", {"default": 0.20,  "min": 0.0, "max": 1.0,   "step": 0.01}),
                 "color_match_method":   (_CM_METHODS, {"default": "mkl"}),
                 "color_match_strength": ("FLOAT", {"default": 1.0,  "min": 0.0, "max": 1.0,   "step": 0.05}),
@@ -1412,6 +1449,7 @@ class CRT_IsolateOutput:
         # 3. Grow + blur
         composited_chunks = []
         enhanced_masked_chunks = []
+        final_mask_chunks = []
         for start in range(0, face_masks.shape[0], chunk_size):
             end = min(face_masks.shape[0], start + chunk_size)
             mask_chunk = face_masks[start:end]
@@ -1423,8 +1461,10 @@ class CRT_IsolateOutput:
             enhanced_masked_chunk = enh_chunk * alpha + (1.0 - alpha)
             composited_chunks.append(composited_chunk.cpu())
             enhanced_masked_chunks.append(enhanced_masked_chunk.cpu())
+            final_mask_chunks.append(mask_chunk.cpu())
         composited = torch.cat(composited_chunks, dim=0)
         enhanced_images_masked = torch.cat(enhanced_masked_chunks, dim=0)
+        final_masks = torch.cat(final_mask_chunks, dim=0)
 
         # 5. Uncrop back into canvas. padding=0 means bboxes are in original image
         # coordinates and no stripping is needed — just use original_images directly.
@@ -1442,6 +1482,7 @@ class CRT_IsolateOutput:
             source_indices,
             border_blending=float(border_blending),
             crop_edge_pads=crop_edge_pads,
+            alpha_masks=final_masks,
         )
         del canvas
 
