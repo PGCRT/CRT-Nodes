@@ -17,6 +17,7 @@ dependencies = [
     "huggingface_hub",
     "einops",
     "rotary-embedding-torch",
+    "openai-whisper",
     "omnivoice>=0.1.0",
 ]
 
