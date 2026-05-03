@@ -118,11 +118,11 @@ def _load_vae_kj_style(vae_name, device="main_device", weight_dtype="bf16"):
 
 def _load_sage_func(sage_attention):
     try:
-        from sageattention import sageattn
+        # Reuse CRT's wrapped attention implementation that matches
+        # ComfyUI optimized_attention override call semantics.
+        from .Models_Auto_DL import _get_sage_func as _crt_get_sage_func
 
-        if sage_attention in ("auto", "sageattn_qk_int8_pv_fp16_cuda"):
-            return sageattn
-        return sageattn
+        return _crt_get_sage_func(sage_attention)
     except Exception as e:
         LOGGER.warning("sage_attention=%s unavailable, falling back to default attention: %s", sage_attention, e)
         return None
@@ -195,9 +195,6 @@ class CRT_LTX23BaseModelAutoLoader:
             new_attention = _load_sage_func(sage_attention)
             if new_attention is not None:
                 def attention_override_sage(func, *args_, **kwargs_):
-                    wrapped = getattr(new_attention, "__wrapped__", None)
-                    if callable(wrapped):
-                        return wrapped(*args_, **kwargs_)
                     return new_attention(*args_, **kwargs_)
 
                 model.model_options["transformer_options"]["optimized_attention_override"] = attention_override_sage
