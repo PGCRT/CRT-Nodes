@@ -1,7 +1,7 @@
 """
 @author: CRT
 @title: CRT-Nodes
-@version: 2.4.6
+@version: 2.4.7
 @project: "https://github.com/PGCRT/CRT-Nodes",
 @description: Set of nodes for ComfyUI
 https://discord.gg/8wYS9MBQqp
@@ -100,6 +100,7 @@ if True:
     from .py.String_Line_Counter import CRT_StringLineCounter
     from .py.Text_Box_Line_Spot import CRT_LineSpot
     from .py.Textbox import CRT_Textbox
+    from .py.Join_Strings import CRT_JoinStrings
     from .py.Remove_Lines import CRT_RemoveLines
     from .py.Mono_To_Stereo_Converter import MonoToStereoConverter
     from .py.Any_Trigger import AnyTrigger
@@ -292,6 +293,7 @@ NODE_CLASS_MAPPINGS = {
     "CRT_StringLineCounter": CRT_StringLineCounter,
     "Text Box line spot": CRT_LineSpot,
     "CRT_Textbox": CRT_Textbox,
+    "CRT_JoinStrings": CRT_JoinStrings,
     "CRT_RemoveLines": CRT_RemoveLines,
     "MonoToStereoConverter": MonoToStereoConverter,
     "AnyTrigger": AnyTrigger,
@@ -410,6 +412,7 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "CRT_StringLineCounter": "String Line Counter (CRT)",
     "Text Box line spot": "Text Box line spot (CRT)",
     "CRT_Textbox": "Textbox (CRT)",
+    "CRT_JoinStrings": "Join Strings (CRT)",
     "CRT_RemoveLines": "Remove Lines (CRT)",
     "MonoToStereoConverter": "Mono to Stereo Converter (CRT)",
     "AnyTrigger": "Any Trigger (CRT)",
