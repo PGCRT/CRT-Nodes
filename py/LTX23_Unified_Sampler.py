@@ -387,7 +387,31 @@ class CRT_LTX23USConfig:
             "optional": {
                 "Image I2V / V2V FirstFrame": ("IMAGE",),
                 "Video (V2V image batch)": ("IMAGE",),
+                "V2V Depth (override)": (
+                    "IMAGE",
+                    {"tooltip": "Optional precomputed depth guide for V2V Depth Control. When connected, skips DepthAnything inference."},
+                ),
                 "source_audio": ("AUDIO",),
+                "MegaPixels (override)": (
+                    "FLOAT",
+                    {"default": 0.0, "min": 0.0, "max": 1024.0, "step": 0.1, "forceInput": True},
+                ),
+                "Frames (override)": (
+                    "INT",
+                    {"default": 0, "min": 0, "max": 4096, "step": 1, "forceInput": True},
+                ),
+                "Width T2V (override)": (
+                    "INT",
+                    {"default": 0, "min": 0, "max": 8192, "step": 1, "forceInput": True},
+                ),
+                "Height T2V (override)": (
+                    "INT",
+                    {"default": 0, "min": 0, "max": 8192, "step": 1, "forceInput": True},
+                ),
+                "HQ (override)": (
+                    "BOOLEAN",
+                    {"default": False, "forceInput": True},
+                ),
             },
         }
 
@@ -403,6 +427,35 @@ class CRT_LTX23USConfig:
         if image is not None and image.shape[0] > 1:
             image = image[:1]
         video = kwargs.get("Video (V2V image batch)", None)
+        v2v_depth_override = kwargs.get("V2V Depth (override)", None)
+        override_megapixels = kwargs.get("MegaPixels (override)", None)
+        override_frames = kwargs.get("Frames (override)", None)
+        override_t2v_width = kwargs.get("Width T2V (override)", None)
+        override_t2v_height = kwargs.get("Height T2V (override)", None)
+        override_hq = kwargs.get("HQ (override)", None)
+
+        def _optional_int(v):
+            if v is None:
+                return None
+            try:
+                iv = int(v)
+            except Exception:
+                return None
+            return iv if iv > 0 else None
+
+        def _optional_float(v):
+            if v is None:
+                return None
+            try:
+                fv = float(v)
+            except Exception:
+                return None
+            return fv if fv > 0 else None
+
+        def _optional_bool(v):
+            if v is None:
+                return None
+            return bool(v)
 
         pipe = {
             "prompt": str(prompt),
@@ -410,7 +463,13 @@ class CRT_LTX23USConfig:
             "framerate": framerate_value,
             "image": image,
             "video": video,
+            "v2v_depth_override": v2v_depth_override,
             "source_audio": source_audio,
+            "override_megapixels": _optional_float(override_megapixels),
+            "override_frames": _optional_int(override_frames),
+            "override_t2v_width": _optional_int(override_t2v_width),
+            "override_t2v_height": _optional_int(override_t2v_height),
+            "override_hq": _optional_bool(override_hq),
         }
         return (pipe,)
 
@@ -897,6 +956,7 @@ class CRT_LTX23UnifiedSampler:
         seed = int(pipe.get("seed", 0))
         image = pipe.get("image", None)
         video = pipe.get("video", None)
+        v2v_depth_override = pipe.get("v2v_depth_override", None)
         source_audio = pipe.get("source_audio", None)
         framerate = pipe.get("framerate", pipe.get("fps", 24.0))
         if framerate is None:
@@ -908,8 +968,14 @@ class CRT_LTX23UnifiedSampler:
             "seed": seed,
             "image": image,
             "video": video,
+            "v2v_depth_override": v2v_depth_override,
             "source_audio": source_audio,
             "framerate": framerate,
+            "override_megapixels": pipe.get("override_megapixels", None),
+            "override_frames": pipe.get("override_frames", None),
+            "override_t2v_width": pipe.get("override_t2v_width", None),
+            "override_t2v_height": pipe.get("override_t2v_height", None),
+            "override_hq": pipe.get("override_hq", None),
         }
 
     @staticmethod
@@ -1529,6 +1595,8 @@ class CRT_LTX23UnifiedSampler:
         use_tiled_vae_decode,
         preview_enabled,
         firstframe_strength=1.0,
+        t2v_width_override=None,
+        t2v_height_override=None,
     ):
         total_steps = 5 if not hq else 7
         self._progress(1, total_steps, f"Preparing {mode} inputs")
@@ -1550,6 +1618,13 @@ class CRT_LTX23UnifiedSampler:
                 aspect_ratio,
                 divisible_by=32 if hq else 16,
             )
+            if t2v_width_override is not None:
+                target_width = int(t2v_width_override)
+            if t2v_height_override is not None:
+                target_height = int(t2v_height_override)
+            _div = 32 if hq else 16
+            target_width = max(_div, round(float(target_width) / _div) * _div)
+            target_height = max(_div, round(float(target_height) / _div) * _div)
             target_image = None
 
         noise_obj = self._make_noise(seed)
@@ -1737,6 +1812,7 @@ class CRT_LTX23UnifiedSampler:
         spatial_upscale_model,
         da3_model,
         video,
+        v2v_depth_override=None,
         firstframe_image=None,
         source_audio=None,
         use_tiled_vae_decode=False,
@@ -1774,8 +1850,13 @@ class CRT_LTX23UnifiedSampler:
             )
         else:
             if da3_model is None:
-                raise ValueError(
-                    "V2V Depth Control mode requires da3_model in models_pipe."
+                if v2v_depth_override is None:
+                    raise ValueError(
+                        "V2V Depth Control mode requires da3_model in models_pipe unless 'V2V Depth (override)' is connected."
+                    )
+                self._log(
+                    "V2V Depth override connected -> skipping DepthAnything model requirement/inference.",
+                    level="ok",
                 )
 
         input_video_frames = int(video.shape[0])
@@ -1830,7 +1911,7 @@ class CRT_LTX23UnifiedSampler:
         use_firstframe = firstframe_image is not None
 
         target_image = self._scale_total_pixels(video_frames, megapixels_target)
-        depth_input = self._scale_total_pixels(video_frames, depth_megapixels)
+        depth_input = None if v2v_depth_override is not None else self._scale_total_pixels(video_frames, depth_megapixels)
 
         mouth_masks = None
         if depth_mouth_mask and not is_outpaint_mode:
@@ -1847,19 +1928,30 @@ class CRT_LTX23UnifiedSampler:
             else:
                 self._log(f"[Mouth Mask] Failed ({time.monotonic() - _t0:.1f}s), skipping", level="warn")
 
-        self._progress(2, total_steps, "Estimating depth (quiet)")
-        depth_result = self._run_external_node(
-            "DepthAnything_V3",
-            suppress_output=True,
-            da3_model=da3_model,
-            images=depth_input,
-            normalization_mode="V2-Style",
-            resize_method="resize",
-            invert_depth=False,
-            keep_model_size=False,
-        )
-        self._offload_da3_model(da3_model)
-        depth_image = self._result_tuple(depth_result)[0]
+        if v2v_depth_override is not None:
+            self._progress(2, total_steps, "Using connected V2V depth override")
+            depth_image = v2v_depth_override
+            depth_frames = int(depth_image.shape[0])
+            if depth_frames <= 0:
+                raise ValueError("V2V Depth (override) must contain at least one image.")
+            if depth_frames < frame_count:
+                repeat_count = math.ceil(frame_count / depth_frames)
+                depth_image = depth_image.repeat(repeat_count, 1, 1, 1)
+            depth_image = depth_image[:frame_count]
+        else:
+            self._progress(2, total_steps, "Estimating depth (quiet)")
+            depth_result = self._run_external_node(
+                "DepthAnything_V3",
+                suppress_output=True,
+                da3_model=da3_model,
+                images=depth_input,
+                normalization_mode="V2-Style",
+                resize_method="resize",
+                invert_depth=False,
+                keep_model_size=False,
+            )
+            self._offload_da3_model(da3_model)
+            depth_image = self._result_tuple(depth_result)[0]
 
         # Match the reference V2V graph: resize DA3 output back to the target
         # guide resolution using a plain nearest/stretch resize before snapping
@@ -2418,6 +2510,14 @@ class CRT_LTX23UnifiedSampler:
         models = self._unpack_models_pipe(models_pipe)
         config = self._unpack_config_pipe(config_pipe)
 
+        override_hq = config.get("override_hq", None)
+        if override_hq is not None:
+            hq = not bool(override_hq)
+            self._log(
+                f"Overriding hq from US Config -> {bool(override_hq)}",
+                level="ok",
+            )
+
         model = models["model"]
         vae = models["vae"]
         audio_vae = models["audio_vae"]
@@ -2457,8 +2557,28 @@ class CRT_LTX23UnifiedSampler:
         cfg = float(self.CFG_DEFAULT)
         image = config["image"]
         video = config["video"]
+        v2v_depth_override = config["v2v_depth_override"]
         source_audio = config["source_audio"]
         target_fps = max(1.0, float(config["framerate"]))
+
+        override_megapixels = config.get("override_megapixels", None)
+        if override_megapixels is not None:
+            megapixels_target = round(float(override_megapixels) * 10.0) / 10.0
+            self._log(
+                f"Overriding megapixels_target from US Config -> {megapixels_target}",
+                level="ok",
+            )
+
+        override_frames = config.get("override_frames", None)
+        if override_frames is not None:
+            frame_count = int(max(1, int(override_frames)))
+            self._log(
+                f"Overriding frame_count from US Config -> {frame_count}",
+                level="ok",
+            )
+
+        override_t2v_width = config.get("override_t2v_width", None)
+        override_t2v_height = config.get("override_t2v_height", None)
         target_output_frames = int(max(1, frame_count))
 
         audio_connected = source_audio is not None
@@ -2524,6 +2644,8 @@ class CRT_LTX23UnifiedSampler:
                 use_tiled_vae_decode=bool(vae_decode_tiled),
                 preview_enabled=live_preview,
                 firstframe_strength=float(firstframe_strength),
+                t2v_width_override=override_t2v_width,
+                t2v_height_override=override_t2v_height,
             )
         else:
             if is_outpaint_mode:
@@ -2560,6 +2682,7 @@ class CRT_LTX23UnifiedSampler:
                 spatial_upscale_model=spatial_upscale_model,
                 da3_model=da3_model,
                 video=video,
+                v2v_depth_override=v2v_depth_override,
                 firstframe_image=image,
                 source_audio=effective_source_audio,
                 use_tiled_vae_decode=bool(vae_decode_tiled),

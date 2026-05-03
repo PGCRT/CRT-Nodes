@@ -1,7 +1,7 @@
 """
 @author: CRT
 @title: CRT-Nodes
-@version: 2.4.3
+@version: 2.4.4
 @project: "https://github.com/PGCRT/CRT-Nodes",
 @description: Set of nodes for ComfyUI
 https://discord.gg/8wYS9MBQqp
@@ -99,6 +99,7 @@ if True:
     from .py.Ksampler_Batch_Advanced import CRT_KSamplerBatchAdvanced
     from .py.String_Line_Counter import CRT_StringLineCounter
     from .py.Text_Box_Line_Spot import CRT_LineSpot
+    from .py.Textbox import CRT_Textbox
     from .py.Remove_Lines import CRT_RemoveLines
     from .py.Mono_To_Stereo_Converter import MonoToStereoConverter
     from .py.Any_Trigger import AnyTrigger
@@ -106,6 +107,7 @@ if True:
     from .py.Audio_Frame_Adjuster import AudioFrameAdjuster
     from .py.Batch_Brightness_Curve import BatchBrightnessCurve
     from .py.Image_Scale_Range_From_MP import ImageScaleRangeFromMp
+    from .py.Int_Value import CRT_IntValue
     from .py.Load_Image_Base64 import LoadImageBase64
     from .py.Reference_Latent_Batch import ReferenceLatentBatch
     from .py.Save_Jpeg_Websocket import SaveJpegWebsocket
@@ -117,6 +119,24 @@ if True:
         CRT_LTX23USConfig,
         CRT_LTX23USModelsPipe,
         CRT_LTX23UnifiedSampler,
+    )
+    from .py.LTX23_Model_Loaders import (
+        CRT_LTX23AudioVAEAutoLoader,
+        CRT_LTX23BaseModelAutoLoader,
+        CRT_LTX23DualCLIPAutoLoader,
+        CRT_LTX23ICLoRAOutpaintAutoLoader,
+        CRT_LTX23ICLoRAUnionAutoLoader,
+        CRT_LTX23LatentUpscaleModelAutoLoader,
+        CRT_LTX23VideoVAEAutoLoader,
+    )
+    from .py.Models_Auto_DL import (
+        Flux2KleinClipAutoDownload,
+        Flux2KleinLoRAHDR360AutoDownload,
+        Flux2KleinModelAutoDownload,
+        Flux2KleinVAEAutoDownload,
+        ZImageTurboClipAutoDownload,
+        ZImageTurboModelAutoDownload,
+        ZImageTurboVAEAutoDownload,
     )
     from .py.Isolate import (
         CRT_IsolateInput,
@@ -271,6 +291,7 @@ NODE_CLASS_MAPPINGS = {
     "CRT_KSamplerBatchAdvanced": CRT_KSamplerBatchAdvanced,
     "CRT_StringLineCounter": CRT_StringLineCounter,
     "Text Box line spot": CRT_LineSpot,
+    "CRT_Textbox": CRT_Textbox,
     "CRT_RemoveLines": CRT_RemoveLines,
     "MonoToStereoConverter": MonoToStereoConverter,
     "AnyTrigger": AnyTrigger,
@@ -278,6 +299,7 @@ NODE_CLASS_MAPPINGS = {
     "AudioFrameAdjuster": AudioFrameAdjuster,
     "BatchBrightnessCurve": BatchBrightnessCurve,
     "ImageScaleRangeFromMp": ImageScaleRangeFromMp,
+    "CRT_IntValue": CRT_IntValue,
     "LoadImageBase64": LoadImageBase64,
     "ReferenceLatentBatch": ReferenceLatentBatch,
     "SaveJpegWebsocket": SaveJpegWebsocket,
@@ -288,7 +310,21 @@ NODE_CLASS_MAPPINGS = {
     "CRT_LTX23USModelsPipe": CRT_LTX23USModelsPipe,
     "CRT_LTX23USConfig": CRT_LTX23USConfig,
     "CRT_LTX23UnifiedSampler": CRT_LTX23UnifiedSampler,
+    "CRT_LTX23BaseModelAutoLoader": CRT_LTX23BaseModelAutoLoader,
+    "CRT_LTX23VideoVAEAutoLoader": CRT_LTX23VideoVAEAutoLoader,
+    "CRT_LTX23AudioVAEAutoLoader": CRT_LTX23AudioVAEAutoLoader,
+    "CRT_LTX23DualCLIPAutoLoader": CRT_LTX23DualCLIPAutoLoader,
+    "CRT_LTX23LatentUpscaleModelAutoLoader": CRT_LTX23LatentUpscaleModelAutoLoader,
+    "CRT_LTX23ICLoRAUnionAutoLoader": CRT_LTX23ICLoRAUnionAutoLoader,
+    "CRT_LTX23ICLoRAOutpaintAutoLoader": CRT_LTX23ICLoRAOutpaintAutoLoader,
     "CRT_LTX23AutoDownload": CRT_LTX23AutoDownload,
+    "Flux2KleinModelAutoDownload": Flux2KleinModelAutoDownload,
+    "ZImageTurboModelAutoDownload": ZImageTurboModelAutoDownload,
+    "Flux2KleinClipAutoDownload": Flux2KleinClipAutoDownload,
+    "ZImageTurboClipAutoDownload": ZImageTurboClipAutoDownload,
+    "Flux2KleinVAEAutoDownload": Flux2KleinVAEAutoDownload,
+    "ZImageTurboVAEAutoDownload": ZImageTurboVAEAutoDownload,
+    "Flux2KleinLoRAHDR360AutoDownload": Flux2KleinLoRAHDR360AutoDownload,
     "CRT_IsolateInput": CRT_IsolateInput,
     "CRT_IsolateOutput": CRT_IsolateOutput,
     "CRT_IsolateInputCLIPSeg": CRT_IsolateInputCLIPSeg,
@@ -373,6 +409,7 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "CRT_KSamplerBatchAdvanced": "KSampler Batch Advanced (CRT)",
     "CRT_StringLineCounter": "String Line Counter (CRT)",
     "Text Box line spot": "Text Box line spot (CRT)",
+    "CRT_Textbox": "Textbox (CRT)",
     "CRT_RemoveLines": "Remove Lines (CRT)",
     "MonoToStereoConverter": "Mono to Stereo Converter (CRT)",
     "AnyTrigger": "Any Trigger (CRT)",
@@ -380,6 +417,7 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "AudioFrameAdjuster": "Audio Frame Adjuster (CRT)",
     "BatchBrightnessCurve": "Batch Brightness Curve (U-Shape) (CRT)",
     "ImageScaleRangeFromMp": "Image Scale Range From MP (CRT)",
+    "CRT_IntValue": "Int Value (CRT)",
     "LoadImageBase64": "Load Image Base64 (CRT)",
     "ReferenceLatentBatch": "Reference Latent Batch (CRT)",
     "SaveJpegWebsocket": "Save JPEG Websocket (CRT)",
@@ -390,7 +428,21 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "CRT_LTX23USModelsPipe": "LTX 2.3 US Models Pipe (CRT)",
     "CRT_LTX23USConfig": "LTX 2.3 US Config (CRT)",
     "CRT_LTX23UnifiedSampler": "LTX 2.3 Unified Sampler (CRT)",
+    "CRT_LTX23BaseModelAutoLoader": "LTX 2.3 Base Model Auto Loader (CRT)",
+    "CRT_LTX23VideoVAEAutoLoader": "LTX 2.3 VAE VIDEO Auto Loader (CRT)",
+    "CRT_LTX23AudioVAEAutoLoader": "LTX 2.3 VAE AUDIO Auto Loader (CRT)",
+    "CRT_LTX23DualCLIPAutoLoader": "LTX 2.3 DualCLIP Auto Loader (CRT)",
+    "CRT_LTX23LatentUpscaleModelAutoLoader": "LTX 2.3 Latent Upscale Auto Loader (CRT)",
+    "CRT_LTX23ICLoRAUnionAutoLoader": "LTX 2.3 IC-LoRA Union Auto Loader (CRT)",
+    "CRT_LTX23ICLoRAOutpaintAutoLoader": "LTX 2.3 IC-LoRA Outpaint Auto Loader (CRT)",
     "CRT_LTX23AutoDownload": "LTX 2.3 AutoDownload (CRT)",
+    "Flux2KleinModelAutoDownload": "Flux2Klein Model download (CRT)",
+    "ZImageTurboModelAutoDownload": "ZImageTurbo Model download (CRT)",
+    "Flux2KleinClipAutoDownload": "Flux2Klein Clip download (CRT)",
+    "ZImageTurboClipAutoDownload": "ZImageTurbo Clip download (CRT)",
+    "Flux2KleinVAEAutoDownload": "Flux2Klein VAE download (CRT)",
+    "ZImageTurboVAEAutoDownload": "ZImageTurbo VAE download (CRT)",
+    "Flux2KleinLoRAHDR360AutoDownload": "Flux2Klein LoRA HDR 360 download (CRT)",
     "CRT_IsolateInput": "Isolate Input SAM3.1 (CRT)",
     "CRT_IsolateOutput": "Isolate Output (CRT)",
     "CRT_IsolateInputCLIPSeg": "Isolate Input CLIPSeg (CRT)",

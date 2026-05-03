@@ -529,44 +529,39 @@ app.registerExtension({
       node.flags.clip_area = false;
       node._crtAtCompactHeight = () => clampNodeBounds(node);
 
-      if (!node._crtAtOriginalSetSize) {
+      if (!node._crtAtVisualsPatched) {
+        node._crtAtVisualsPatched = true;
         node._crtAtOriginalSetSize = node.setSize;
-      }
-      if (!node._crtAtOriginalComputeSize) {
         node._crtAtOriginalComputeSize = node.computeSize;
-      }
-      if (!node._crtAtOriginalOnDrawForeground) {
         node._crtAtOriginalOnDrawForeground = node.onDrawForeground;
-      }
-      if (!node._crtAtOriginalOnDrawBackground) {
         node._crtAtOriginalOnDrawBackground = node.onDrawBackground;
+
+        node.computeSize = function (out) {
+          const size = [MIN_WIDTH, compactHeightForNode(this)];
+          if (out) {
+            out[0] = size[0];
+            out[1] = size[1];
+            return out;
+          }
+          return size;
+        };
+
+        node.setSize = function () {
+          const clamped = [MIN_WIDTH, compactHeightForNode(this)];
+          this.size = clamped;
+          return clamped;
+        };
+
+        node.onDrawBackground = function () {
+          clampNodeBounds(this);
+          return this._crtAtOriginalOnDrawBackground?.apply(this, arguments);
+        };
+
+        node.onDrawForeground = function () {
+          clampNodeBounds(this);
+          return this._crtAtOriginalOnDrawForeground?.apply(this, arguments);
+        };
       }
-
-      node.computeSize = function (out) {
-        const size = [MIN_WIDTH, compactHeightForNode(this)];
-        if (out) {
-          out[0] = size[0];
-          out[1] = size[1];
-          return out;
-        }
-        return size;
-      };
-
-      node.setSize = function () {
-        const clamped = [MIN_WIDTH, compactHeightForNode(this)];
-        this.size = clamped;
-        return clamped;
-      };
-
-      node.onDrawBackground = function () {
-        clampNodeBounds(this);
-        return this._crtAtOriginalOnDrawBackground?.apply(this, arguments);
-      };
-
-      node.onDrawForeground = function () {
-        clampNodeBounds(this);
-        return this._crtAtOriginalOnDrawForeground?.apply(this, arguments);
-      };
 
       clampNodeBounds(node);
       node.setDirtyCanvas?.(true, true);
@@ -616,6 +611,7 @@ app.registerExtension({
         this._crtAtOriginalOnDrawForeground = null;
       }
       this._crtAtCompactHeight = null;
+      this._crtAtVisualsPatched = false;
       this.__crtAudioTranscriptUI = null;
       return originalOnRemoved?.apply(this, arguments);
     };

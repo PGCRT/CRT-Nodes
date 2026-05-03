@@ -895,46 +895,39 @@ function applyNodeVisuals(node) {
   // Store compact height function for UI use
   node._ltx23ADCompactHeight = () => clampNodeBounds(node);
 
-  // Override computeSize
-  if (!node._ltx23ADOriginalComputeSize) {
+  if (!node._ltx23ADVisualsPatched) {
+    node._ltx23ADVisualsPatched = true;
     node._ltx23ADOriginalComputeSize = node.computeSize;
-  }
-  node.computeSize = function(out) {
-    const size = [MIN_WIDTH, compactHeightForNode(this)];
-    if (out) {
-      out[0] = size[0];
-      out[1] = size[1];
-      return out;
-    }
-    return size;
-  };
-
-  // Override setSize
-  if (!node._ltx23ADOriginalSetSize) {
     node._ltx23ADOriginalSetSize = node.setSize;
-  }
-  node.setSize = function() {
-    const clamped = [MIN_WIDTH, compactHeightForNode(this)];
-    this.size = clamped;
-    return clamped;
-  };
-
-  // Override draw hooks to enforce clamp
-  if (!node._ltx23ADOriginalOnDrawBackground) {
     node._ltx23ADOriginalOnDrawBackground = node.onDrawBackground;
-  }
-  node.onDrawBackground = function() {
-    clampNodeBounds(this);
-    return this._ltx23ADOriginalOnDrawBackground?.apply(this, arguments);
-  };
-
-  if (!node._ltx23ADOriginalOnDrawForeground) {
     node._ltx23ADOriginalOnDrawForeground = node.onDrawForeground;
+
+    node.computeSize = function(out) {
+      const size = [MIN_WIDTH, compactHeightForNode(this)];
+      if (out) {
+        out[0] = size[0];
+        out[1] = size[1];
+        return out;
+      }
+      return size;
+    };
+
+    node.setSize = function() {
+      const clamped = [MIN_WIDTH, compactHeightForNode(this)];
+      this.size = clamped;
+      return clamped;
+    };
+
+    node.onDrawBackground = function() {
+      clampNodeBounds(this);
+      return this._ltx23ADOriginalOnDrawBackground?.apply(this, arguments);
+    };
+
+    node.onDrawForeground = function() {
+      clampNodeBounds(this);
+      return this._ltx23ADOriginalOnDrawForeground?.apply(this, arguments);
+    };
   }
-  node.onDrawForeground = function() {
-    clampNodeBounds(this);
-    return this._ltx23ADOriginalOnDrawForeground?.apply(this, arguments);
-  };
 
   // Apply initial clamp
   clampNodeBounds(node);
@@ -1004,6 +997,7 @@ app.registerExtension({
         this._ltx23ADOriginalOnDrawForeground = null;
       }
       this._ltx23ADCompactHeight = null;
+      this._ltx23ADVisualsPatched = false;
 
       return originalOnRemoved?.apply(this, arguments);
     };
