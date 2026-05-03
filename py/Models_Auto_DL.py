@@ -96,7 +96,11 @@ SAGE_MODES = [
 
 
 def _get_sage_func(sage_attention):
-    from sageattention import sageattn
+    try:
+        from sageattention import sageattn
+    except Exception as e:
+        logging.warning("sage_attention=%s unavailable, falling back to default attention: %s", sage_attention, e)
+        return None
 
     if sage_attention == "auto":
         def sage_func(q, k, v, is_causal=False, attn_mask=None, tensor_layout="NHD"):
@@ -215,13 +219,16 @@ def _load_model_with_kj_features(model_name, weight_dtype, compute_dtype, patch_
 
     if sage_attention != "disabled":
         new_attention = _get_sage_func(sage_attention)
+        if new_attention is not None:
+            def attention_override(func, *args, **kwargs):
+                wrapped = getattr(new_attention, "__wrapped__", None)
+                if callable(wrapped):
+                    return wrapped(*args, **kwargs)
+                return new_attention(*args, **kwargs)
 
-        def attention_override(func, *args, **kwargs):
-            return new_attention.__wrapped__(*args, **kwargs)
+            model.model_options["transformer_options"]["optimized_attention_override"] = attention_override
 
-        model.model_options["transformer_options"]["optimized_attention_override"] = attention_override
-
-    logging.info("Loaded %s with CRT local KJ-compatible loader", model_name)
+    logging.info("Loaded %s with CRT standalone loader", model_name)
     return model
 
 

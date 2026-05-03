@@ -118,22 +118,14 @@ def _load_vae_kj_style(vae_name, device="main_device", weight_dtype="bf16"):
 
 def _load_sage_func(sage_attention):
     try:
-        kj_nodes_dir = os.path.join(
-            os.path.dirname(os.path.dirname(os.path.dirname(__file__))),
-            "ComfyUI-KJNodes",
-            "nodes",
-        )
-        import importlib.util
+        from sageattention import sageattn
 
-        spec = importlib.util.spec_from_file_location(
-            "crt_kj_model_optimization_nodes",
-            os.path.join(kj_nodes_dir, "model_optimization_nodes.py"),
-        )
-        module = importlib.util.module_from_spec(spec)
-        spec.loader.exec_module(module)
-        return module.get_sage_func(sage_attention)
+        if sage_attention in ("auto", "sageattn_qk_int8_pv_fp16_cuda"):
+            return sageattn
+        return sageattn
     except Exception as e:
-        raise RuntimeError(f"sage_attention={sage_attention} requested but KJ sage attention helper could not load: {e}") from e
+        LOGGER.warning("sage_attention=%s unavailable, falling back to default attention: %s", sage_attention, e)
+        return None
 
 
 def _load_lora_model_only(model, model_type, strength_model):
@@ -201,11 +193,14 @@ class CRT_LTX23BaseModelAutoLoader:
             model.force_cast_weights = False
         if sage_attention != "disabled":
             new_attention = _load_sage_func(sage_attention)
+            if new_attention is not None:
+                def attention_override_sage(func, *args_, **kwargs_):
+                    wrapped = getattr(new_attention, "__wrapped__", None)
+                    if callable(wrapped):
+                        return wrapped(*args_, **kwargs_)
+                    return new_attention(*args_, **kwargs_)
 
-            def attention_override_sage(func, *args_, **kwargs_):
-                return new_attention.__wrapped__(*args_, **kwargs_)
-
-            model.model_options["transformer_options"]["optimized_attention_override"] = attention_override_sage
+                model.model_options["transformer_options"]["optimized_attention_override"] = attention_override_sage
         return (model,)
 
 
