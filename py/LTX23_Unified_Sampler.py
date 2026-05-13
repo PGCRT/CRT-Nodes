@@ -303,18 +303,17 @@ class CRT_LTX23USModelsPipe:
                         "tooltip": "V2V Depth Control: model already merged with UnionControl / IC-LoRA guide support.",
                     },
                 ),
-                "model_outpaint": (
-                    "MODEL",
-                    {
-                        "forceInput": True,
-                        "tooltip": "V2V Outpaint mode: model merged with IC-LoRA Outpaint.",
-                    },
-                ),
                 "vae": ("VAE",),
                 "audio_vae": ("VAE",),
                 "clip": ("CLIP",),
             },
             "optional": {
+                "model_outpaint": (
+                    "MODEL",
+                    {
+                        "tooltip": "Optional V2V Outpaint mode model merged with IC-LoRA Outpaint.",
+                    },
+                ),
                 "spatial_upscale_model": ("LATENT_UPSCALE_MODEL",),
                 "da3_model": ("DA3MODEL",),
                 "latent_downscale_factor": (
@@ -339,10 +338,10 @@ class CRT_LTX23USModelsPipe:
         self,
         model,
         model_union_control,
-        model_outpaint,
         vae,
         audio_vae,
         clip,
+        model_outpaint=None,
         spatial_upscale_model=None,
         da3_model=None,
         latent_downscale_factor=1.0,

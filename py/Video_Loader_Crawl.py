@@ -1,8 +1,47 @@
 import os
+import re
+import subprocess
 from pathlib import Path
 import torch
 import cv2
 import numpy as np
+
+
+def get_audio_from_video(file_path):
+    try:
+        res = subprocess.run(
+            ["ffmpeg", "-i", file_path, "-f", "f32le", "-"],
+            capture_output=True,
+        )
+        if res.returncode != 0 and len(res.stdout) == 0:
+            raise RuntimeError(res.stderr.decode("utf-8", errors="backslashreplace"))
+
+        audio = torch.from_numpy(np.frombuffer(res.stdout, dtype=np.float32).copy())
+        stderr = res.stderr.decode("utf-8", errors="backslashreplace")
+        match = re.search(r",\s*(\d+)\s*Hz,\s*(\w+),\s*", stderr)
+        if match:
+            ar = int(match.group(1))
+            channel_desc = match.group(2)
+            if channel_desc == "mono":
+                ac = 1
+            elif channel_desc == "stereo":
+                ac = 2
+            else:
+                ac = 2
+        else:
+            ar = 44100
+            ac = 2
+
+        if audio.numel() == 0:
+            silent_waveform = torch.zeros(1, 1, 1)
+            return {"waveform": silent_waveform, "sample_rate": ar}
+
+        audio = audio.reshape((-1, ac)).transpose(0, 1).unsqueeze(0)
+        return {"waveform": audio, "sample_rate": ar}
+    except Exception as e:
+        print(f"⚠️ Warning: Could not extract audio from video: {e}")
+        silent_waveform = torch.zeros(1, 1, 1)
+        return {"waveform": silent_waveform, "sample_rate": 44100}
 
 
 class VideoLoaderCrawl:
@@ -23,7 +62,7 @@ class VideoLoaderCrawl:
                 ),
                 "frames_limit": (
                     "INT",
-                    {"default": 16, "min": -1, "max": 10000, "tooltip": "Max frames to load. -1 for all frames."},
+                    {"default": -1, "min": -1, "max": 10000, "tooltip": "Max frames to load. -1 for all frames."},
                 ),
                 "framerate": (
                     "FLOAT",
@@ -38,8 +77,8 @@ class VideoLoaderCrawl:
             }
         }
 
-    RETURN_TYPES = ("IMAGE", "STRING", "STRING", "FLOAT", "INT")
-    RETURN_NAMES = ("image_output", "file_name", "file_path", "framerate", "framerate_int")
+    RETURN_TYPES = ("IMAGE", "STRING", "STRING", "FLOAT", "INT", "AUDIO")
+    RETURN_NAMES = ("image_output", "file_name", "file_path", "framerate", "framerate_int", "audio")
     FUNCTION = "load_video_file"
     CATEGORY = "CRT/Load"
 
@@ -47,7 +86,8 @@ class VideoLoaderCrawl:
         # Create a blank image batch as a fallback to prevent crashes
         def create_blank_output():
             blank_frame = torch.zeros((1, 64, 64, 3), dtype=torch.float32)
-            return (blank_frame, "Error: See console for details", "", 0.0, 0)
+            silent_audio = {"waveform": torch.zeros(1, 1, 1), "sample_rate": 44100}
+            return (blank_frame, "Error: See console for details", "", 0.0, 0, silent_audio)
 
         if not folder_path or not folder_path.strip():
             print("❌ Error: Folder path is empty.")
@@ -138,12 +178,14 @@ class VideoLoaderCrawl:
             file_name = selected_file.stem if remove_extension else selected_file.name
 
             print(f"✅ Loaded {selected_file.name} with {len(frames)} frames")
+            audio = get_audio_from_video(str(selected_file))
             return (
                 video_tensor,
                 file_name,
                 str(selected_file.parent.resolve()),
                 float(output_fps),
                 int(round(output_fps)),
+                audio,
             )
 
         except FileNotFoundError:

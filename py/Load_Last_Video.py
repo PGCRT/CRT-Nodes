@@ -1,14 +1,52 @@
 import os
+import re
+import subprocess
 import cv2
 import torch
 import numpy as np
-import re
 
 
 def natural_sort_key(filename):
     # Split filename into parts, converting numeric parts to integers for natural sorting
     parts = re.split(r'(\d+)', filename)
     return [int(part) if part.isdigit() else part.lower() for part in parts]
+
+
+def get_audio_from_video(file_path):
+    try:
+        res = subprocess.run(
+            ["ffmpeg", "-i", file_path, "-f", "f32le", "-"],
+            capture_output=True,
+        )
+        if res.returncode != 0 and len(res.stdout) == 0:
+            raise RuntimeError(res.stderr.decode("utf-8", errors="backslashreplace"))
+
+        audio = torch.from_numpy(np.frombuffer(res.stdout, dtype=np.float32).copy())
+        stderr = res.stderr.decode("utf-8", errors="backslashreplace")
+        match = re.search(r",\s*(\d+)\s*Hz,\s*(\w+),\s*", stderr)
+        if match:
+            ar = int(match.group(1))
+            channel_desc = match.group(2)
+            if channel_desc == "mono":
+                ac = 1
+            elif channel_desc == "stereo":
+                ac = 2
+            else:
+                ac = 2
+        else:
+            ar = 44100
+            ac = 2
+
+        if audio.numel() == 0:
+            silent_audio = {"waveform": torch.zeros(1, 1, 1), "sample_rate": ar}
+            return silent_audio
+
+        audio = audio.reshape((-1, ac)).transpose(0, 1).unsqueeze(0)
+        return {"waveform": audio, "sample_rate": ar}
+    except Exception as e:
+        print(f"⚠️ Warning: Could not extract audio from video: {e}")
+        silent_audio = {"waveform": torch.zeros(1, 1, 1), "sample_rate": 44100}
+        return silent_audio
 
 
 class CRTLoadLastVideo:
@@ -26,8 +64,8 @@ class CRTLoadLastVideo:
         }
 
     CATEGORY = "CRT/Load"
-    RETURN_TYPES = ("IMAGE",)
-    RETURN_NAMES = ("IMAGE",)
+    RETURN_TYPES = ("IMAGE", "AUDIO")
+    RETURN_NAMES = ("IMAGE", "audio")
     FUNCTION = "load_last_video"
 
     def _create_dummy_image(self):
@@ -48,7 +86,8 @@ class CRTLoadLastVideo:
         dummy_frame = cv2.cvtColor(dummy_frame, cv2.COLOR_BGR2RGB)
         dummy_frame = np.array(dummy_frame, dtype=np.float32) / 255.0
         images = torch.from_numpy(np.expand_dims(dummy_frame, axis=0))
-        return (images,)
+        silent_audio = {"waveform": torch.zeros(1, 1, 1), "sample_rate": 44100}
+        return (images, silent_audio)
 
     def load_last_video(self, folder_path, sort_by, invert_order, frame_load_cap, skip_first_frames, select_every_nth):
         # Fallback if folder path is invalid or does not exist
@@ -116,7 +155,8 @@ class CRTLoadLastVideo:
             return self._create_dummy_image()
 
         images = torch.from_numpy(np.stack(frames, axis=0))
-        return (images,)
+        audio = get_audio_from_video(video_path)
+        return (images, audio)
 
     @classmethod
     def IS_CHANGED(cls, folder_path, **kwargs):
