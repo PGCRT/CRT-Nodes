@@ -1,7 +1,7 @@
 """
 @author: CRT
 @title: CRT-Nodes
-@version: 2.4.8
+@version: 2.4.9
 @project: "https://github.com/PGCRT/CRT-Nodes",
 @description: Set of nodes for ComfyUI
 https://discord.gg/8wYS9MBQqp
@@ -126,6 +126,10 @@ if True:
         CRT_IsolateOutput,
     )
     from .py.Isolate_CLIPSeg import CRT_IsolateInputCLIPSeg
+    from .py.AutoDL_Nodes import (
+        NODE_CLASS_MAPPINGS as CRT_AUTODL_NODE_CLASS_MAPPINGS,
+        NODE_DISPLAY_NAME_MAPPINGS as CRT_AUTODL_NODE_DISPLAY_NAME_MAPPINGS,
+    )
 
     CRT_LTX23AutoDownload = None
     LTX23AutoDownloadAPI = None
@@ -404,6 +408,9 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "CRT_IsolateOutput": "Isolate Output (CRT)",
     "CRT_IsolateInputCLIPSeg": "Isolate Input CLIPSeg (CRT)",
 }
+
+NODE_CLASS_MAPPINGS.update(CRT_AUTODL_NODE_CLASS_MAPPINGS)
+NODE_DISPLAY_NAME_MAPPINGS.update(CRT_AUTODL_NODE_DISPLAY_NAME_MAPPINGS)
 
 if SaveImageBase64 is not None:
     NODE_CLASS_MAPPINGS["SaveImageBase64"] = SaveImageBase64
