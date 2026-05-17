@@ -32,7 +32,7 @@ const ADVANCED_GROUPS = [
   },
   {
     title: "Output",
-    fields: ["vae_decode_tiled"],
+    fields: ["vae_decode_tiled", "unload_model_before_vae_decode"],
   },
 ];
 
@@ -42,7 +42,7 @@ const FIELD_LABELS = {
   frame_count: "Frames",
   steps: "Steps",
   aspect_ratio: "Aspect",
-  firstframe_strength: "FirstFrame Strength",
+  firstframe_strength: "Reference Strength",
   sampler_main: "Sampler",
   sampler_refine: "Refiner (LD)",
   v2v_mode: "V2V Mode",
@@ -50,6 +50,7 @@ const FIELD_LABELS = {
   v2v_aspect_ratio: "Aspect",
   frame_count_from_audio: "Audio Frame Count Override",
   vae_decode_tiled: "VAE Decode (Tiled)",
+  unload_model_before_vae_decode: "Unload Model Before VAE",
   generated_audio_gain_db: "Gain (dB)",
   depth_mouth_mask: "Mouth Mask",
   mouth_mask_expand: "Mouth Expand",

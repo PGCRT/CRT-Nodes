@@ -28,6 +28,7 @@ if True:
     from .py.Audio_Loader_Crawl import AudioLoaderCrawl
     from .py.Mask_Empty_Float_Node import MaskEmptyFloatNode
     from .py.Mask_Pass_Or_Placeholder import MaskPassOrPlaceholder
+    from .py.Mask_Temporal_Enhancer import MaskTemporalEnhancer
     from .py.Latent_Injection_Sampler import LatentNoiseInjectionSampler
     from .py.Face_Enhancement_Pipeline_With_Injection import (
         UltralyticsEnhancer as FaceEnhancementWithInjection,
@@ -52,6 +53,7 @@ if True:
     from .py.Smart_Preprocessor import SmartPreprocessor
     from .py.Chroma_Key_Overlay import CRTChromaKeyOverlay
     from .py.Get_First_Last_Frame import CRTFirstLastFrameSelector
+    from .py.Even_Batch_Picker import CRTEvenBatchPicker
     from .py.Advanced_String_Replace import AdvancedStringReplace
     from .py.Seamless_Loop_Blender import SeamlessLoopBlender
     from .py.Crop_By_Percent import CRTPctCropCalculator
@@ -211,6 +213,7 @@ NODE_CLASS_MAPPINGS = {
     "AudioLoaderCrawl": AudioLoaderCrawl,
     "MaskEmptyFloatNode": MaskEmptyFloatNode,
     "MaskPassOrPlaceholder": MaskPassOrPlaceholder,
+    "MaskTemporalEnhancer": MaskTemporalEnhancer,
     "LatentNoiseInjectionSampler": LatentNoiseInjectionSampler,
     "PonyUpscaleSamplerWithInjection": PonyUpscaleSamplerWithInjection,
     "FaceEnhancementWithInjection": FaceEnhancementWithInjection,
@@ -231,6 +234,7 @@ NODE_CLASS_MAPPINGS = {
     "SmartPreprocessor": SmartPreprocessor,
     "CRTChromaKeyOverlay": CRTChromaKeyOverlay,
     "CRTFirstLastFrameSelector": CRTFirstLastFrameSelector,
+    "CRTEvenBatchPicker": CRTEvenBatchPicker,
     "AdvancedStringReplace": AdvancedStringReplace,
     "SeamlessLoopBlender": SeamlessLoopBlender,
     "CRTPctCropCalculator": CRTPctCropCalculator,
@@ -317,6 +321,7 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "AudioLoaderCrawl": "Audio Loader Crawl (CRT)",
     "MaskEmptyFloatNode": "Mask Empty Float (CRT)",
     "MaskPassOrPlaceholder": "Mask Pass or Placeholder (CRT)",
+    "MaskTemporalEnhancer": "Mask Temporal Enhancer (CRT)",
     "LatentNoiseInjectionSampler": "Latent Noise Injection Sampler (CRT)",
     "PonyUpscaleSamplerWithInjection": "Image Upscale Sampler (CRT)",
     "FaceEnhancementWithInjection": "Ultralytics Enhancer (CRT)",
@@ -336,6 +341,7 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "SmartPreprocessor": "Smart Preprocessor (CRT)",
     "CRTChromaKeyOverlay": "Chroma Key Overlay (CRT)",
     "CRTFirstLastFrameSelector": "Get First & Last Frame (CRT)",
+    "CRTEvenBatchPicker": "Even Batch Picker (CRT)",
     "AdvancedStringReplace": "Advanced String Replace (CRT)",
     "SeamlessLoopBlender": "Seamless Loop Blender (CRT)",
     "CRTPctCropCalculator": "Percentage Crop Calculator (CRT)",

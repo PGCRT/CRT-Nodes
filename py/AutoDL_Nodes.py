@@ -103,6 +103,31 @@ MODELS = {
         "filename": "Klein_9B - HDRI_360_panoramic.safetensors",
         "url": "https://huggingface.co/PGCRYPT/Flux2Klein_9B-HDRI/resolve/main/Klein_9B%20-%20HDRI_360_panoramic.safetensors",
     },
+    "ernie_turbo_model": {
+        "folder": "diffusion_models",
+        "filename": "ernie-image-turbo-fp8.safetensors",
+        "url": "https://huggingface.co/Bedovyy/ERNIE-Image-Quantized/resolve/main/ernie-image-turbo-fp8.safetensors",
+    },
+    "ernie_turbo_nvfp4_model": {
+        "folder": "diffusion_models",
+        "filename": "ernie-image-turbo-nvfp4.safetensors",
+        "url": "https://huggingface.co/Bedovyy/ERNIE-Image-Quantized/resolve/main/ernie-image-turbo-nvfp4.safetensors",
+    },
+    "ernie_model": {
+        "folder": "diffusion_models",
+        "filename": "ernie-image-fp8.safetensors",
+        "url": "https://huggingface.co/Bedovyy/ERNIE-Image-Quantized/resolve/main/ernie-image-fp8.safetensors",
+    },
+    "ernie_turbo_clip": {
+        "folder": "text_encoders",
+        "filename": "ministral-3-3b.safetensors",
+        "url": "https://huggingface.co/Comfy-Org/ERNIE-Image/resolve/82d237fcf02a10b75154717487d07a724a25dc5b/text_encoders/ministral-3-3b.safetensors",
+    },
+    "ernie_turbo_vae": {
+        "folder": "vae",
+        "filename": "flux2-vae.safetensors",
+        "url": "https://huggingface.co/Comfy-Org/flux2-dev/resolve/main/split_files/vae/flux2-vae.safetensors",
+    },
 }
 
 
@@ -211,6 +236,10 @@ def _load_diffusion_model(path, weight_dtype="bf16", compute_dtype="bf16"):
         model_options["dtype"] = dtype
     sd, metadata = comfy.utils.load_torch_file(path, return_metadata=True)
     model = comfy.sd.load_diffusion_model_state_dict(sd, model_options=model_options, metadata=metadata)
+    if model is None:
+        model = comfy.sd.load_diffusion_model(path, model_options=model_options)
+    if model is None:
+        raise RuntimeError(f"[{TAG}] Failed to load diffusion model from: {path}")
     compute = _dtype_map(compute_dtype)
     if compute is not None:
         model.set_model_compute_dtype(compute)
@@ -478,6 +507,32 @@ class Flux2KleinHDRILoRA(_FixedLoRALoader):
     MODEL_KEY = "fluxklein_hdri_lora"
 
 
+class ErnieTurboModel(_FixedDiffusionLoader):
+    CATEGORY = "CRT/AutoDL/ERNIE"
+    MODEL_KEY = "ernie_turbo_model"
+
+
+class ErnieTurboNVFP4Model(_FixedDiffusionLoader):
+    CATEGORY = "CRT/AutoDL/ERNIE"
+    MODEL_KEY = "ernie_turbo_nvfp4_model"
+
+
+class ErnieModel(_FixedDiffusionLoader):
+    CATEGORY = "CRT/AutoDL/ERNIE"
+    MODEL_KEY = "ernie_model"
+
+
+class ErnieVAE(_CoreVAELoader):
+    CATEGORY = "CRT/AutoDL/ERNIE"
+    MODEL_KEY = "ernie_turbo_vae"
+
+
+class ErnieCLIP(_FixedCLIPLoader):
+    CATEGORY = "CRT/AutoDL/ERNIE"
+    MODEL_KEY = "ernie_turbo_clip"
+    CLIP_TYPE = "flux2"
+
+
 NODE_CLASS_MAPPINGS = {
     "CRTAutoDLLTX23Model": LTX23Model,
     "CRTAutoDLLTX23AudioVAE": LTX23AudioVAE,
@@ -493,6 +548,11 @@ NODE_CLASS_MAPPINGS = {
     "CRTAutoDLFlux2KleinVAE": Flux2KleinVAE,
     "CRTAutoDLFlux2KleinCLIP": Flux2KleinCLIP,
     "CRTAutoDLFlux2KleinHDRILoRA": Flux2KleinHDRILoRA,
+    "CRTAutoDLErnieTurboModel": ErnieTurboModel,
+    "CRTAutoDLErnieTurboNVFP4Model": ErnieTurboNVFP4Model,
+    "CRTAutoDLErnieModel": ErnieModel,
+    "CRTAutoDLErnieVAE": ErnieVAE,
+    "CRTAutoDLErnieCLIP": ErnieCLIP,
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
@@ -510,4 +570,9 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "CRTAutoDLFlux2KleinVAE": "Flux2Klein VAE (CRT AutoDL)",
     "CRTAutoDLFlux2KleinCLIP": "Flux2Klein CLIP (CRT AutoDL)",
     "CRTAutoDLFlux2KleinHDRILoRA": "Flux2Klein HDRI LoRA (CRT AutoDL)",
+    "CRTAutoDLErnieTurboModel": "ERNIE_Turbo Model (CRT AutoDL)",
+    "CRTAutoDLErnieTurboNVFP4Model": "ERNIE_Turbo NVFP4 Model (CRT AutoDL)",
+    "CRTAutoDLErnieModel": "ERNIE Model (CRT AutoDL)",
+    "CRTAutoDLErnieVAE": "ERNIE VAE (CRT AutoDL)",
+    "CRTAutoDLErnieCLIP": "ERNIE CLIP (CRT AutoDL)",
 }

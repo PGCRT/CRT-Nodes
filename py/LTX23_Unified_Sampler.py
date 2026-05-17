@@ -38,6 +38,8 @@ from comfy_extras.nodes_lt import (
     LTXVImgToVideoInplace,
     LTXVPreprocess,
     LTXVSeparateAVLatent,
+    _append_guide_attention_entry,
+    get_noise_mask,
 )
 from comfy_extras.nodes_lt_audio import (
     LTXVAudioVAEDecode,
@@ -423,8 +425,6 @@ class CRT_LTX23USConfig:
         framerate_value = 24.0
 
         image = kwargs.get("Image I2V / V2V FirstFrame", None)
-        if image is not None and image.shape[0] > 1:
-            image = image[:1]
         video = kwargs.get("Video (V2V image batch)", None)
         v2v_depth_override = kwargs.get("V2V Depth (override)", None)
         override_megapixels = kwargs.get("MegaPixels (override)", None)
@@ -523,6 +523,7 @@ class CRT_LTX23UnifiedSampler:
         live_preview,
         frame_count_from_audio,
         vae_decode_tiled,
+        unload_model_before_vae_decode,
         megapixels_target,
         aspect_ratio,
         frame_count,
@@ -550,6 +551,7 @@ class CRT_LTX23UnifiedSampler:
             bool(live_preview),
             bool(frame_count_from_audio),
             bool(vae_decode_tiled),
+            bool(unload_model_before_vae_decode),
             float(megapixels_target),
             aspect_ratio,
             int(frame_count),
@@ -574,12 +576,12 @@ class CRT_LTX23UnifiedSampler:
     def INPUT_TYPES(cls):
         sampler_names = list(comfy.samplers.SAMPLER_NAMES)
         sampler_main_default = (
-            "euler_ancestral_cfg_pp"
-            if "euler_ancestral_cfg_pp" in sampler_names
+            "euler"
+            if "euler" in sampler_names
             else sampler_names[0]
         )
         sampler_refine_default = (
-            "euler_cfg_pp" if "euler_cfg_pp" in sampler_names else sampler_names[0]
+            "euler" if "euler" in sampler_names else sampler_names[0]
         )
 
         return {
@@ -606,6 +608,10 @@ class CRT_LTX23UnifiedSampler:
                     "BOOLEAN",
                     {"default": False},
                 ),
+                "unload_model_before_vae_decode": (
+                    "BOOLEAN",
+                    {"default": True, "advanced": True},
+                ),
                 "megapixels_target": (
                     "FLOAT",
                     {
@@ -617,7 +623,7 @@ class CRT_LTX23UnifiedSampler:
                 ),
                 "aspect_ratio": (
                     cls.ASPECT_RATIOS,
-                    {"default": "3:2 (Landscape)"},
+                    {"default": "16:9 (Landscape)"},
                 ),
                 "frame_count": (
                     "INT",
@@ -833,6 +839,46 @@ class CRT_LTX23UnifiedSampler:
             mm.soft_empty_cache()
         except Exception:
             pass
+
+    @staticmethod
+    def _offload_sampling_model(model):
+        errors = []
+        target = model
+        if isinstance(target, dict):
+            target = target.get("model", target)
+
+        try:
+            if hasattr(target, "model"):
+                inner = getattr(target, "model")
+                if inner is not None and hasattr(inner, "to"):
+                    inner.to(mm.unet_offload_device())
+            elif target is not None and hasattr(target, "to"):
+                target.to(mm.unet_offload_device())
+        except Exception as e:
+            errors.append(f"model.to(offload) failed: {e}")
+
+        try:
+            mm.unload_all_models()
+        except Exception as e:
+            errors.append(f"unload_all_models failed: {e}")
+
+        try:
+            mm.cleanup_models_gc()
+        except Exception as e:
+            errors.append(f"cleanup_models_gc failed: {e}")
+
+        try:
+            mm.free_memory(1e30, mm.get_torch_device())
+        except Exception as e:
+            errors.append(f"free_memory failed: {e}")
+
+        try:
+            gc.collect()
+            mm.soft_empty_cache()
+        except Exception as e:
+            errors.append(f"soft_empty_cache failed: {e}")
+
+        return errors
 
     @staticmethod
     def _run_external_node(node_name, suppress_output=False, **kwargs):
@@ -1156,8 +1202,17 @@ class CRT_LTX23UnifiedSampler:
 
     @staticmethod
     def _build_conditioning(clip, prompt, frame_rate):
+        positive, negative = CRT_LTX23UnifiedSampler._build_text_conditioning(clip, prompt)
+        return CRT_LTX23UnifiedSampler._apply_ltxv_conditioning(positive, negative, frame_rate)
+
+    @staticmethod
+    def _build_text_conditioning(clip, prompt):
         positive = nodes.CLIPTextEncode().encode(clip, prompt)[0]
         negative = nodes.ConditioningZeroOut().zero_out(positive)[0]
+        return positive, negative
+
+    @staticmethod
+    def _apply_ltxv_conditioning(positive, negative, frame_rate):
         conditioned = LTXVConditioning.execute(positive, negative, frame_rate)
         conditioned = CRT_LTX23UnifiedSampler._result_tuple(conditioned)
         return conditioned[0], conditioned[1]
@@ -1217,6 +1272,7 @@ class CRT_LTX23UnifiedSampler:
         latent,
         frame_rate=None,
         preview_enabled=True,
+        output_index=0,
     ):
         if preview_enabled:
             ensure_crt_previewer()
@@ -1227,8 +1283,9 @@ class CRT_LTX23UnifiedSampler:
 
         sampled = SamplerCustomAdvanced.execute(noise, guider, sampler, sigmas, latent)
         sampled = cls._result_tuple(sampled)
-        # SamplerCustomAdvanced output[0] is the sampled latent used by standard workflows.
-        # output[1] is denoised output and can preserve conditioning structure too strongly.
+        output_index = int(max(0, output_index))
+        if len(sampled) > output_index:
+            return sampled[output_index]
         return sampled[0] if len(sampled) > 0 else latent
 
     @staticmethod
@@ -1494,6 +1551,150 @@ class CRT_LTX23UnifiedSampler:
             )
         )[0]
 
+    def _inject_i2v_inplace(
+        self,
+        vae,
+        image,
+        latent,
+        strength,
+        compression,
+        use_preprocess=True,
+    ):
+        conditioned_image = image
+        if use_preprocess:
+            conditioned_image = self._result_tuple(
+                LTXVPreprocess.execute(image, int(compression))
+            )[0]
+        return self._result_tuple(
+            LTXVImgToVideoInplace.execute(
+                vae=vae,
+                image=conditioned_image,
+                latent=latent,
+                strength=float(strength),
+                bypass=False,
+            )
+        )[0]
+
+    @staticmethod
+    def _compute_reference_frame_indices(batch_size, frame_count):
+        batch_size = int(max(1, batch_size))
+        frame_count = int(max(1, frame_count))
+        if batch_size <= 1 or frame_count <= 1:
+            return [0]
+        last_frame = frame_count - 1
+        if batch_size == 2:
+            return [0, -1]
+        indices = []
+        for i in range(batch_size):
+            t = float(i) / float(batch_size - 1)
+            idx = int(round(t * last_frame))
+            if indices and idx <= indices[-1]:
+                idx = min(last_frame, indices[-1] + 1)
+            indices.append(idx)
+        indices[0] = 0
+        indices[-1] = -1
+        return indices
+
+    def _inject_i2v_multi_reference(
+        self,
+        vae,
+        image_batch,
+        latent,
+        positive,
+        negative,
+        frame_count,
+        strength,
+        compression,
+    ):
+        if image_batch is None:
+            return positive, negative, latent
+
+        try:
+            batch_size = int(image_batch.shape[0])
+        except Exception:
+            batch_size = 1
+
+        if batch_size <= 1:
+            conditioned_latent = self._inject_i2v_condition(
+                vae,
+                image_batch,
+                latent,
+                strength,
+                compression,
+            )
+            return positive, negative, conditioned_latent
+
+        frame_indices = self._compute_reference_frame_indices(batch_size, frame_count)
+
+        scale_factors = vae.downscale_index_formula
+        latent_image = latent["samples"]
+        noise_mask = get_noise_mask(latent)
+        _, _, latent_length, latent_height, latent_width = latent_image.shape
+
+        added_guides = []
+        for i in range(batch_size):
+            frame_idx = int(frame_indices[i])
+            try:
+                ref_image = image_batch[i : i + 1]
+                ref_image = self._result_tuple(
+                    LTXVPreprocess.execute(ref_image, int(compression))
+                )[0]
+
+                _, guiding_latent = LTXVAddGuide.encode(
+                    vae,
+                    latent_width,
+                    latent_height,
+                    ref_image,
+                    scale_factors,
+                )
+                resolved_frame_idx, latent_idx = LTXVAddGuide.get_latent_index(
+                    positive,
+                    latent_length,
+                    int(ref_image.shape[0]),
+                    frame_idx,
+                    scale_factors,
+                )
+                assert latent_idx + guiding_latent.shape[2] <= latent_length, (
+                    "Conditioning frames exceed the length of the latent sequence."
+                )
+
+                positive, negative, latent_image, noise_mask = LTXVAddGuide.append_keyframe(
+                    positive,
+                    negative,
+                    resolved_frame_idx,
+                    latent_image,
+                    noise_mask,
+                    guiding_latent,
+                    float(strength),
+                    scale_factors,
+                )
+
+                pre_filter_count = (
+                    guiding_latent.shape[2]
+                    * guiding_latent.shape[3]
+                    * guiding_latent.shape[4]
+                )
+                guide_latent_shape = list(guiding_latent.shape[2:])
+                positive, negative = _append_guide_attention_entry(
+                    positive,
+                    negative,
+                    pre_filter_count,
+                    guide_latent_shape,
+                    strength=float(strength),
+                )
+                added_guides.append(resolved_frame_idx)
+            except Exception as e:
+                self._log(
+                    f"Skipped I2V reference index {i} at frame {frame_idx}: {e}",
+                    level="warn",
+                )
+
+        self._log(
+            f"I2V multi-reference: batch={batch_size}, mapped={frame_indices}, added={added_guides}",
+            level="ok",
+        )
+        return positive, negative, {"samples": latent_image, "noise_mask": noise_mask}
+
     @staticmethod
     def _dilate_latent_sparse(latent, horizontal_scale, vertical_scale):
         horizontal_scale = int(max(1, horizontal_scale))
@@ -1592,6 +1793,7 @@ class CRT_LTX23UnifiedSampler:
         image,
         source_audio,
         use_tiled_vae_decode,
+        unload_model_before_vae_decode,
         preview_enabled,
         firstframe_strength=1.0,
         t2v_width_override=None,
@@ -1611,6 +1813,10 @@ class CRT_LTX23UnifiedSampler:
             target_image = self._scale_to_multiple_cover(target_image, 32 if hq else 16)
             target_width = int(target_image.shape[2])
             target_height = int(target_image.shape[1])
+            try:
+                i2v_ref_batch_size = int(target_image.shape[0])
+            except Exception:
+                i2v_ref_batch_size = 1
         else:
             target_width, target_height = self._dims_from_megapixels_aspect(
                 megapixels_target,
@@ -1625,6 +1831,7 @@ class CRT_LTX23UnifiedSampler:
             target_width = max(_div, round(float(target_width) / _div) * _div)
             target_height = max(_div, round(float(target_height) / _div) * _div)
             target_image = None
+            i2v_ref_batch_size = 0
 
         noise_obj = self._make_noise(seed)
         sampler_main_obj = self._make_sampler(sampler_main)
@@ -1633,7 +1840,12 @@ class CRT_LTX23UnifiedSampler:
         sigmas_refine_obj = self._make_sigmas(sigmas_refine)
 
         self._progress(2, total_steps, "Building conditioning")
-        positive, negative = self._build_conditioning(clip, prompt, frame_rate)
+        positive, negative = self._build_text_conditioning(clip, prompt)
+        use_i2v_guides = is_i2v and i2v_ref_batch_size > 1
+        if not use_i2v_guides:
+            positive, negative = self._apply_ltxv_conditioning(
+                positive, negative, frame_rate
+            )
 
         if not hq:
             self._progress(3, total_steps, "Sampling main pass")
@@ -1647,13 +1859,28 @@ class CRT_LTX23UnifiedSampler:
             )
 
             if is_i2v:
-                video_latent = self._inject_i2v_condition(
-                    vae,
-                    target_image,
-                    video_latent,
-                    firstframe_strength,
-                    self.I2V_PREPROCESS_COMPRESSION,
-                )
+                if use_i2v_guides:
+                    positive, negative, video_latent = self._inject_i2v_multi_reference(
+                        vae=vae,
+                        image_batch=target_image,
+                        latent=video_latent,
+                        positive=positive,
+                        negative=negative,
+                        frame_count=frame_count,
+                        strength=firstframe_strength,
+                        compression=self.I2V_PREPROCESS_COMPRESSION,
+                    )
+                    positive, negative = self._apply_ltxv_conditioning(
+                        positive, negative, frame_rate
+                    )
+                else:
+                    video_latent = self._inject_i2v_condition(
+                        vae,
+                        target_image,
+                        video_latent,
+                        firstframe_strength,
+                        self.I2V_PREPROCESS_COMPRESSION,
+                    )
                 av_latent = self._result_tuple(
                     LTXVConcatAVLatent.execute(
                         video_latent,
@@ -1677,6 +1904,10 @@ class CRT_LTX23UnifiedSampler:
             separated = self._result_tuple(LTXVSeparateAVLatent.execute(sampled))
             final_video_latent = separated[0]
             final_audio_latent = separated[1]
+            if is_i2v and i2v_ref_batch_size > 1:
+                _, _, final_video_latent = self._result_tuple(
+                    LTXVCropGuides.execute(positive, negative, final_video_latent)
+                )
             self._progress(4, total_steps, "Decoding video/audio")
         else:
             self._progress(3, total_steps, "Sampling stage 1")
@@ -1698,16 +1929,31 @@ class CRT_LTX23UnifiedSampler:
             )
 
             if is_i2v:
-                stage1_image = self._resize_image(
-                    target_image, stage1_width, stage1_height
-                )
-                stage1_video_latent = self._inject_i2v_condition(
-                    vae,
-                    stage1_image,
-                    stage1_video_latent,
-                    firstframe_strength,
-                    self.I2V_PREPROCESS_COMPRESSION,
-                )
+                if use_i2v_guides:
+                    positive, negative, stage1_video_latent = self._inject_i2v_multi_reference(
+                        vae=vae,
+                        image_batch=target_image,
+                        latent=stage1_video_latent,
+                        positive=positive,
+                        negative=negative,
+                        frame_count=frame_count,
+                        strength=firstframe_strength,
+                        compression=self.I2V_PREPROCESS_COMPRESSION,
+                    )
+                    positive, negative = self._apply_ltxv_conditioning(
+                        positive, negative, frame_rate
+                    )
+                else:
+                    stage1_image = self._resize_image(
+                        target_image, stage1_width, stage1_height
+                    )
+                    stage1_video_latent = self._inject_i2v_condition(
+                        vae,
+                        stage1_image,
+                        stage1_video_latent,
+                        firstframe_strength,
+                        self.I2V_PREPROCESS_COMPRESSION,
+                    )
 
             stage1_av_latent = self._result_tuple(
                 LTXVConcatAVLatent.execute(stage1_video_latent, stage1_audio_latent)
@@ -1732,6 +1978,11 @@ class CRT_LTX23UnifiedSampler:
             stage1_video_out = separated_stage1[0]
             stage1_audio_out = separated_stage1[1]
 
+            if use_i2v_guides:
+                positive, negative, stage1_video_out = self._result_tuple(
+                    LTXVCropGuides.execute(positive, negative, stage1_video_out)
+                )
+
             upsampled_video = LTXVLatentUpsampler().upsample_latent(
                 stage1_video_out,
                 spatial_upscale_model,
@@ -1739,9 +1990,9 @@ class CRT_LTX23UnifiedSampler:
             )[0]
 
             if is_i2v:
-                upsampled_video = self._inject_i2v_condition(
+                upsampled_video = self._inject_i2v_inplace(
                     vae,
-                    target_image,
+                    target_image[:1] if use_i2v_guides else target_image,
                     upsampled_video,
                     firstframe_strength,
                     self.I2V_PREPROCESS_COMPRESSION,
@@ -1767,6 +2018,7 @@ class CRT_LTX23UnifiedSampler:
                 latent=refined_av_latent,
                 frame_rate=frame_rate,
                 preview_enabled=preview_enabled,
+                output_index=1,
             )
 
             separated_final = self._result_tuple(
@@ -1775,6 +2027,14 @@ class CRT_LTX23UnifiedSampler:
             final_video_latent = separated_final[0]
             final_audio_latent = separated_final[1]
             self._progress(6, total_steps, "Decoding video/audio")
+
+        if unload_model_before_vae_decode:
+            self._log("Unload-before-decode enabled: attempting model unload", level="ok")
+            unload_errors = self._offload_sampling_model(model)
+            if unload_errors:
+                self._log("Unload-before-decode warnings: " + " | ".join(unload_errors), level="warn")
+            else:
+                self._log("Unload-before-decode complete", level="ok")
 
         images = self._decode_video_latent(
             final_video_latent,
@@ -1815,6 +2075,7 @@ class CRT_LTX23UnifiedSampler:
         firstframe_image=None,
         source_audio=None,
         use_tiled_vae_decode=False,
+        unload_model_before_vae_decode=False,
         preview_enabled=True,
         is_outpaint_mode=False,
         v2v_aspect_ratio="16:9 (Landscape)",
@@ -1901,6 +2162,7 @@ class CRT_LTX23UnifiedSampler:
                 spatial_upscale_model=spatial_upscale_model,
                 source_audio=source_audio,
                 use_tiled_vae_decode=use_tiled_vae_decode,
+                unload_model_before_vae_decode=unload_model_before_vae_decode,
                 preview_enabled=preview_enabled,
                 v2v_aspect_ratio=v2v_aspect_ratio,
                 total_steps=total_steps,
@@ -2274,6 +2536,14 @@ class CRT_LTX23UnifiedSampler:
             final_video_latent = cropped_final[2]
             self._progress(7, total_steps, "Decoding video/audio")
 
+        if unload_model_before_vae_decode:
+            self._log("Unload-before-decode enabled: attempting model unload", level="ok")
+            unload_errors = self._offload_sampling_model(model)
+            if unload_errors:
+                self._log("Unload-before-decode warnings: " + " | ".join(unload_errors), level="warn")
+            else:
+                self._log("Unload-before-decode complete", level="ok")
+
         images = self._decode_video_latent(
             final_video_latent,
             vae,
@@ -2313,6 +2583,7 @@ class CRT_LTX23UnifiedSampler:
         spatial_upscale_model,
         source_audio,
         use_tiled_vae_decode,
+        unload_model_before_vae_decode,
         preview_enabled,
         v2v_aspect_ratio,
         total_steps,
@@ -2441,6 +2712,14 @@ class CRT_LTX23UnifiedSampler:
 
         self._progress(5, total_steps, "Decoding video/audio")
 
+        if unload_model_before_vae_decode:
+            self._log("Unload-before-decode enabled: attempting model unload", level="ok")
+            unload_errors = self._offload_sampling_model(model)
+            if unload_errors:
+                self._log("Unload-before-decode warnings: " + " | ".join(unload_errors), level="warn")
+            else:
+                self._log("Unload-before-decode complete", level="ok")
+
         images = self._decode_video_latent(
             final_video_latent,
             vae,
@@ -2466,6 +2745,7 @@ class CRT_LTX23UnifiedSampler:
         live_preview,
         frame_count_from_audio,
         vae_decode_tiled,
+        unload_model_before_vae_decode,
         megapixels_target,
         aspect_ratio,
         frame_count,
@@ -2555,6 +2835,13 @@ class CRT_LTX23UnifiedSampler:
         seed = int(config["seed"])
         cfg = float(self.CFG_DEFAULT)
         image = config["image"]
+        image_v2v_firstframe = image
+        if image_v2v_firstframe is not None:
+            try:
+                if int(image_v2v_firstframe.shape[0]) > 1:
+                    image_v2v_firstframe = image_v2v_firstframe[:1]
+            except Exception:
+                pass
         video = config["video"]
         v2v_depth_override = config["v2v_depth_override"]
         source_audio = config["source_audio"]
@@ -2641,6 +2928,7 @@ class CRT_LTX23UnifiedSampler:
                 image=image,
                 source_audio=effective_source_audio,
                 use_tiled_vae_decode=bool(vae_decode_tiled),
+                unload_model_before_vae_decode=bool(unload_model_before_vae_decode),
                 preview_enabled=live_preview,
                 firstframe_strength=float(firstframe_strength),
                 t2v_width_override=override_t2v_width,
@@ -2682,9 +2970,10 @@ class CRT_LTX23UnifiedSampler:
                 da3_model=da3_model,
                 video=video,
                 v2v_depth_override=v2v_depth_override,
-                firstframe_image=image,
+                firstframe_image=image_v2v_firstframe,
                 source_audio=effective_source_audio,
                 use_tiled_vae_decode=bool(vae_decode_tiled),
+                unload_model_before_vae_decode=bool(unload_model_before_vae_decode),
                 preview_enabled=live_preview,
                 is_outpaint_mode=is_outpaint_mode,
                 v2v_aspect_ratio=v2v_aspect_ratio,

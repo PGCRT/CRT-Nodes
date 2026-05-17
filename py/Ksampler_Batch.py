@@ -222,6 +222,12 @@ class CRT_KSamplerBatch:
         prompt=None,
         extra_pnginfo=None,
     ):
+        if model is None:
+            raise RuntimeError(
+                "[CRT KSampler Batch] MODEL input is None. Connect a valid diffusion MODEL node "
+                "(for ERNIE_Turbo use CRTAutoDLErnieTurboModel), not a CLIP/text encoder node."
+            )
+
         # VAE geometry — used to create correctly-shaped latents
         vae_channels  = getattr(vae, "latent_channels", 4)
         vae_downscale = getattr(vae, "downscale_ratio", 8)
