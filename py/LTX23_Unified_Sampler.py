@@ -1,3 +1,4 @@
+import copy
 import gc
 import math
 import time
@@ -513,6 +514,12 @@ class CRT_LTX23UnifiedSampler:
     I2V_STRENGTH = 1.0
     I2V_PREPROCESS_COMPRESSION = 25
 
+    # Conditioning caches to avoid re-encoding the same prompt
+    _CLIP_TEXT_CACHE = {}
+    _CLIP_TEXT_CACHE_MAX_SIZE = 5
+    _CONDITIONING_CACHE = {}
+    _CONDITIONING_CACHE_MAX_SIZE = 5
+
     @classmethod
     def IS_CHANGED(
         cls,
@@ -524,6 +531,7 @@ class CRT_LTX23UnifiedSampler:
         frame_count_from_audio,
         vae_decode_tiled,
         unload_model_before_vae_decode,
+        low_vram,
         megapixels_target,
         aspect_ratio,
         frame_count,
@@ -552,6 +560,7 @@ class CRT_LTX23UnifiedSampler:
             bool(frame_count_from_audio),
             bool(vae_decode_tiled),
             bool(unload_model_before_vae_decode),
+            bool(low_vram),
             float(megapixels_target),
             aspect_ratio,
             int(frame_count),
@@ -611,6 +620,10 @@ class CRT_LTX23UnifiedSampler:
                 "unload_model_before_vae_decode": (
                     "BOOLEAN",
                     {"default": True, "advanced": True},
+                ),
+                "low_vram": (
+                    "BOOLEAN",
+                    {"default": True, "tooltip": "When enabled, unloads the text encoder after conditioning and the VAE before sampling to reduce VRAM usage. The VAE is reloaded before decoding."},
                 ),
                 "megapixels_target": (
                     "FLOAT",
@@ -879,6 +892,184 @@ class CRT_LTX23UnifiedSampler:
             errors.append(f"soft_empty_cache failed: {e}")
 
         return errors
+
+    @classmethod
+    def _offload_vae(cls, vae, label="vae"):
+        try:
+            if vae is None:
+                return False
+
+            target = mm.unet_offload_device()
+            offloaded = False
+
+            # Try multiple nested paths
+            candidates = []
+            if hasattr(vae, "first_stage_model"):
+                candidates.append(("first_stage_model", vae.first_stage_model))
+            if hasattr(vae, "model"):
+                candidates.append(("model", vae.model))
+            if hasattr(vae, "patcher"):
+                p = vae.patcher
+                if hasattr(p, "model"):
+                    candidates.append(("patcher.model", p.model))
+
+            for name, obj in candidates:
+                try:
+                    if obj is not None and hasattr(obj, "to"):
+                        obj.to(target)
+                        offloaded = True
+                except Exception:
+                    pass
+
+            # Walk one level deeper for wrappers
+            for name, obj in list(candidates):
+                try:
+                    if hasattr(obj, "model"):
+                        inner = obj.model
+                        if inner is not None and hasattr(inner, "to"):
+                            inner.to(target)
+                            offloaded = True
+                except Exception:
+                    pass
+
+            if hasattr(vae, "to"):
+                try:
+                    vae.to(target)
+                    offloaded = True
+                except Exception:
+                    pass
+
+            gc.collect()
+            mm.soft_empty_cache()
+            try:
+                mm.free_memory(1e30, mm.get_torch_device())
+            except Exception:
+                pass
+
+            if offloaded:
+                cls._log(f"{label} offloaded to CPU", level="ok")
+            else:
+                cls._log(f"{label} offload: no valid path found", level="warn")
+            return offloaded
+        except Exception as e:
+            cls._log(f"Failed to offload {label}: {e}", level="warn")
+        return False
+
+    @classmethod
+    def _reload_vae(cls, vae, label="vae"):
+        try:
+            if vae is None:
+                return False
+
+            device = mm.get_torch_device()
+            reloaded = False
+
+            candidates = []
+            if hasattr(vae, "first_stage_model"):
+                candidates.append(("first_stage_model", vae.first_stage_model))
+            if hasattr(vae, "model"):
+                candidates.append(("model", vae.model))
+            if hasattr(vae, "patcher"):
+                p = vae.patcher
+                if hasattr(p, "model"):
+                    candidates.append(("patcher.model", p.model))
+
+            for name, obj in candidates:
+                try:
+                    if obj is not None and hasattr(obj, "to"):
+                        obj.to(device)
+                        reloaded = True
+                except Exception:
+                    pass
+
+            # Walk one level deeper for wrappers
+            for name, obj in list(candidates):
+                try:
+                    if hasattr(obj, "model"):
+                        inner = obj.model
+                        if inner is not None and hasattr(inner, "to"):
+                            inner.to(device)
+                            reloaded = True
+                except Exception:
+                    pass
+
+            if hasattr(vae, "to"):
+                try:
+                    vae.to(device)
+                    reloaded = True
+                except Exception:
+                    pass
+
+            if reloaded:
+                cls._log(f"{label} reloaded to GPU", level="ok")
+            return reloaded
+        except Exception as e:
+            cls._log(f"Failed to reload {label}: {e}", level="warn")
+        return False
+
+    @classmethod
+    def _offload_clip(cls, clip):
+        try:
+            if clip is None:
+                return False
+
+            target = mm.unet_offload_device()
+            offloaded = False
+
+            # Try multiple nested paths that ComfyUI might use
+            candidates = []
+            if hasattr(clip, "cond_stage_model"):
+                candidates.append(("cond_stage_model", clip.cond_stage_model))
+            if hasattr(clip, "model"):
+                candidates.append(("model", clip.model))
+            if hasattr(clip, "patcher"):
+                p = clip.patcher
+                if hasattr(p, "model"):
+                    candidates.append(("patcher.model", p.model))
+
+            for name, obj in candidates:
+                try:
+                    if obj is not None and hasattr(obj, "to"):
+                        obj.to(target)
+                        offloaded = True
+                except Exception:
+                    pass
+
+            # Walk one level deeper for wrappers like ModelPatcher / CondStageModel
+            for name, obj in list(candidates):
+                try:
+                    if hasattr(obj, "model"):
+                        inner = obj.model
+                        if inner is not None and hasattr(inner, "to"):
+                            inner.to(target)
+                            offloaded = True
+                except Exception:
+                    pass
+
+            # Direct .to() on the clip object itself as a fallback
+            if hasattr(clip, "to"):
+                try:
+                    clip.to(target)
+                    offloaded = True
+                except Exception:
+                    pass
+
+            # Aggressive memory flush so tensors actually leave VRAM
+            gc.collect()
+            mm.soft_empty_cache()
+            try:
+                mm.free_memory(1e30, mm.get_torch_device())
+            except Exception:
+                pass
+
+            if offloaded:
+                cls._log("CLIP offloaded to CPU", level="ok")
+            else:
+                cls._log("CLIP offload: no valid path found", level="warn")
+            return offloaded
+        except Exception as e:
+            cls._log(f"Failed to offload CLIP: {e}", level="warn")
+        return False
 
     @staticmethod
     def _run_external_node(node_name, suppress_output=False, **kwargs):
@@ -1200,15 +1391,76 @@ class CRT_LTX23UnifiedSampler:
         out["waveform"] = waveform * gain
         return out
 
+    @classmethod
+    def _get_clip_text_from_cache(cls, clip, prompt):
+        cache_key = (str(prompt), id(clip))
+        if cache_key in cls._CLIP_TEXT_CACHE:
+            positive, negative = cls._CLIP_TEXT_CACHE[cache_key]
+            try:
+                return copy.deepcopy(positive), copy.deepcopy(negative)
+            except Exception:
+                del cls._CLIP_TEXT_CACHE[cache_key]
+                return None
+        return None
+
+    @classmethod
+    def _cache_clip_text(cls, clip, prompt, positive, negative):
+        cache_key = (str(prompt), id(clip))
+        try:
+            cls._CLIP_TEXT_CACHE[cache_key] = (copy.deepcopy(positive), copy.deepcopy(negative))
+            while len(cls._CLIP_TEXT_CACHE) > cls._CLIP_TEXT_CACHE_MAX_SIZE:
+                oldest_key = next(iter(cls._CLIP_TEXT_CACHE))
+                del cls._CLIP_TEXT_CACHE[oldest_key]
+        except Exception:
+            pass
+
+    @classmethod
+    def _get_conditioning_from_cache(cls, clip, prompt, frame_rate):
+        cache_key = (str(prompt), id(clip), float(frame_rate))
+        if cache_key in cls._CONDITIONING_CACHE:
+            positive, negative = cls._CONDITIONING_CACHE[cache_key]
+            try:
+                return copy.deepcopy(positive), copy.deepcopy(negative)
+            except Exception:
+                del cls._CONDITIONING_CACHE[cache_key]
+                return None
+        return None
+
+    @classmethod
+    def _cache_conditioning(cls, clip, prompt, frame_rate, positive, negative):
+        cache_key = (str(prompt), id(clip), float(frame_rate))
+        try:
+            cls._CONDITIONING_CACHE[cache_key] = (copy.deepcopy(positive), copy.deepcopy(negative))
+            while len(cls._CONDITIONING_CACHE) > cls._CONDITIONING_CACHE_MAX_SIZE:
+                oldest_key = next(iter(cls._CONDITIONING_CACHE))
+                del cls._CONDITIONING_CACHE[oldest_key]
+        except Exception:
+            pass
+
     @staticmethod
     def _build_conditioning(clip, prompt, frame_rate):
+        cached = CRT_LTX23UnifiedSampler._get_conditioning_from_cache(clip, prompt, frame_rate)
+        if cached is not None:
+            CRT_LTX23UnifiedSampler._log("Conditioning cache HIT - skipping CLIP + LTXV conditioning", level="ok")
+            return cached
+
         positive, negative = CRT_LTX23UnifiedSampler._build_text_conditioning(clip, prompt)
-        return CRT_LTX23UnifiedSampler._apply_ltxv_conditioning(positive, negative, frame_rate)
+        result = CRT_LTX23UnifiedSampler._apply_ltxv_conditioning(positive, negative, frame_rate)
+
+        CRT_LTX23UnifiedSampler._cache_conditioning(clip, prompt, frame_rate, result[0], result[1])
+        return result
 
     @staticmethod
     def _build_text_conditioning(clip, prompt):
+        cached = CRT_LTX23UnifiedSampler._get_clip_text_from_cache(clip, prompt)
+        if cached is not None:
+            CRT_LTX23UnifiedSampler._log("CLIP text encoding cache HIT - skipping CLIP forward pass", level="ok")
+            return cached
+
         positive = nodes.CLIPTextEncode().encode(clip, prompt)[0]
         negative = nodes.ConditioningZeroOut().zero_out(positive)[0]
+
+        CRT_LTX23UnifiedSampler._cache_clip_text(clip, prompt, positive, negative)
         return positive, negative
 
     @staticmethod
@@ -1798,6 +2050,7 @@ class CRT_LTX23UnifiedSampler:
         firstframe_strength=1.0,
         t2v_width_override=None,
         t2v_height_override=None,
+        low_vram=False,
     ):
         total_steps = 5 if not hq else 7
         self._progress(1, total_steps, f"Preparing {mode} inputs")
@@ -1847,6 +2100,11 @@ class CRT_LTX23UnifiedSampler:
                 positive, negative, frame_rate
             )
 
+        if low_vram:
+            self._log("Low VRAM: unloading CLIP after conditioning", level="ok")
+            self._offload_clip(clip)
+            mm.soft_empty_cache()
+
         if not hq:
             self._progress(3, total_steps, "Sampling main pass")
             video_latent, audio_latent, av_latent = self._build_initial_av_latent(
@@ -1887,6 +2145,12 @@ class CRT_LTX23UnifiedSampler:
                         audio_latent,
                     )
                 )[0]
+
+            if low_vram:
+                self._log("Low VRAM: unloading VAEs before sampling", level="ok")
+                self._offload_vae(vae)
+                self._offload_vae(audio_vae, "audio_vae")
+                mm.soft_empty_cache()
 
             sampled = self._sample_latent(
                 model=model,
@@ -2006,6 +2270,12 @@ class CRT_LTX23UnifiedSampler:
                 LTXVConcatAVLatent.execute(upsampled_video, refine_audio_latent)
             )[0]
 
+            if low_vram:
+                self._log("Low VRAM: unloading VAEs before stage 2 sampling", level="ok")
+                self._offload_vae(vae)
+                self._offload_vae(audio_vae, "audio_vae")
+                mm.soft_empty_cache()
+
             self._progress(5, total_steps, "Sampling stage 2")
             final_sample = self._sample_latent(
                 model=model,
@@ -2035,6 +2305,11 @@ class CRT_LTX23UnifiedSampler:
                 self._log("Unload-before-decode warnings: " + " | ".join(unload_errors), level="warn")
             else:
                 self._log("Unload-before-decode complete", level="ok")
+
+        if low_vram:
+            self._log("Low VRAM: reloading VAEs for decode", level="ok")
+            self._reload_vae(vae)
+            self._reload_vae(audio_vae, "audio_vae")
 
         images = self._decode_video_latent(
             final_video_latent,
@@ -2086,6 +2361,7 @@ class CRT_LTX23UnifiedSampler:
         mouth_detect_chunk_size=10,
         mouth_mask_expand=8,
         mouth_mask_blur=8.0,
+        low_vram=False,
     ):
         if hq:
             self._log(
@@ -2138,6 +2414,11 @@ class CRT_LTX23UnifiedSampler:
             clip, prompt, frame_rate
         )
 
+        if low_vram:
+            self._log("Low VRAM: unloading CLIP after conditioning", level="ok")
+            self._offload_clip(clip)
+            mm.soft_empty_cache()
+
         if is_outpaint_mode:
             # Outpaint mode: pad video to target aspect ratio
             return self._run_v2v_outpaint(
@@ -2166,6 +2447,7 @@ class CRT_LTX23UnifiedSampler:
                 preview_enabled=preview_enabled,
                 v2v_aspect_ratio=v2v_aspect_ratio,
                 total_steps=total_steps,
+                low_vram=low_vram,
             )
 
         # Original Depth Control mode
@@ -2330,6 +2612,12 @@ class CRT_LTX23UnifiedSampler:
             av_latent = self._result_tuple(
                 LTXVConcatAVLatent.execute(latent_video_guided, audio_latent)
             )[0]
+
+            if low_vram:
+                self._log("Low VRAM: unloading VAEs before sampling", level="ok")
+                self._offload_vae(vae)
+                self._offload_vae(audio_vae, "audio_vae")
+                mm.soft_empty_cache()
 
             sampled = self._sample_latent(
                 model=model,
@@ -2505,6 +2793,12 @@ class CRT_LTX23UnifiedSampler:
                 )
             )[0]
 
+            if low_vram:
+                self._log("Low VRAM: unloading VAEs before stage 2 sampling", level="ok")
+                self._offload_vae(vae)
+                self._offload_vae(audio_vae, "audio_vae")
+                mm.soft_empty_cache()
+
             self._progress(6, total_steps, "Refining final latent")
 
             final_sample = self._sample_latent(
@@ -2543,6 +2837,11 @@ class CRT_LTX23UnifiedSampler:
                 self._log("Unload-before-decode warnings: " + " | ".join(unload_errors), level="warn")
             else:
                 self._log("Unload-before-decode complete", level="ok")
+
+        if low_vram:
+            self._log("Low VRAM: reloading VAEs for decode", level="ok")
+            self._reload_vae(vae)
+            self._reload_vae(audio_vae, "audio_vae")
 
         images = self._decode_video_latent(
             final_video_latent,
@@ -2587,6 +2886,7 @@ class CRT_LTX23UnifiedSampler:
         preview_enabled,
         v2v_aspect_ratio,
         total_steps,
+        low_vram=False,
     ):
         """Outpaint V2V workflow: pad video to target aspect ratio instead of using depth."""
         self._progress(1, total_steps, "Preparing Outpaint inputs")
@@ -2681,6 +2981,12 @@ class CRT_LTX23UnifiedSampler:
             LTXVConcatAVLatent.execute(latent_video_guided, audio_latent)
         )[0]
 
+        if low_vram:
+            self._log("Low VRAM: unloading VAEs before sampling", level="ok")
+            self._offload_vae(vae)
+            self._offload_vae(audio_vae, "audio_vae")
+            mm.soft_empty_cache()
+
         self._progress(4, total_steps, "Running Outpaint main sampler")
 
         sampled = self._sample_latent(
@@ -2720,6 +3026,11 @@ class CRT_LTX23UnifiedSampler:
             else:
                 self._log("Unload-before-decode complete", level="ok")
 
+        if low_vram:
+            self._log("Low VRAM: reloading VAEs for decode", level="ok")
+            self._reload_vae(vae)
+            self._reload_vae(audio_vae, "audio_vae")
+
         images = self._decode_video_latent(
             final_video_latent,
             vae,
@@ -2746,6 +3057,7 @@ class CRT_LTX23UnifiedSampler:
         frame_count_from_audio,
         vae_decode_tiled,
         unload_model_before_vae_decode,
+        low_vram,
         megapixels_target,
         aspect_ratio,
         frame_count,
@@ -2933,6 +3245,7 @@ class CRT_LTX23UnifiedSampler:
                 firstframe_strength=float(firstframe_strength),
                 t2v_width_override=override_t2v_width,
                 t2v_height_override=override_t2v_height,
+                low_vram=bool(low_vram),
             )
         else:
             if is_outpaint_mode:
@@ -2984,6 +3297,7 @@ class CRT_LTX23UnifiedSampler:
                 mouth_detect_chunk_size=int(mouth_detect_chunk_size),
                 mouth_mask_expand=int(mouth_mask_expand),
                 mouth_mask_blur=float(mouth_mask_blur),
+                low_vram=bool(low_vram),
             )
 
         if effective_source_audio is not None:

@@ -1,6 +1,8 @@
+import importlib
 import json
 import logging
 import os
+import sys
 import tempfile
 import urllib.request
 
@@ -66,6 +68,16 @@ MODELS = {
         "folder": "loras",
         "filename": "ltx-2.3-22b-ic-lora-outpaint.safetensors",
         "url": "https://huggingface.co/oumoumad/LTX-2.3-22b-IC-LoRA-Outpaint/resolve/main/ltx-2.3-22b-ic-lora-outpaint.safetensors",
+    },
+    "ltx23_gguf_q4": {
+        "folder": "unet_gguf",
+        "filename": "ltx-2.3-22b-distilled-1.1-UD-Q4_K_M.gguf",
+        "url": "https://huggingface.co/unsloth/LTX-2.3-GGUF/resolve/main/distilled-1.1/ltx-2.3-22b-distilled-1.1-UD-Q4_K_M.gguf",
+    },
+    "ltx23_gguf_q5": {
+        "folder": "unet_gguf",
+        "filename": "ltx-2.3-22b-distilled-1.1-UD-Q5_K_M.gguf",
+        "url": "https://huggingface.co/unsloth/LTX-2.3-GGUF/resolve/main/distilled-1.1/ltx-2.3-22b-distilled-1.1-UD-Q5_K_M.gguf",
     },
     "zimage_model": {
         "folder": "diffusion_models",
@@ -470,6 +482,136 @@ class LTX23ICOutpaintLoRA(_FixedLoRALoader):
     MODEL_KEY = "ltx23_outpaint_lora"
 
 
+class _GGUFModelLoader:
+    RETURN_TYPES = ("MODEL",)
+    RETURN_NAMES = ("MODEL",)
+    FUNCTION = "load_gguf_model"
+
+    @classmethod
+    def _get_gguf_module(cls):
+        for key, mod in sys.modules.items():
+            if key.endswith("ComfyUI-GGUF") or key.endswith("comfyui-gguf"):
+                if hasattr(mod, "ops") and hasattr(mod, "nodes") and hasattr(mod, "loader"):
+                    return mod
+        gguf_path = os.path.join(folder_paths.folder_names_and_paths["custom_nodes"][0][0], "ComfyUI-GGUF")
+        for module_name in ["ComfyUI-GGUF", "custom_nodes.ComfyUI-GGUF", "comfyui-gguf", "custom_nodes.comfyui-gguf", gguf_path, gguf_path.lower()]:
+            try:
+                module = importlib.import_module(module_name)
+                if hasattr(module, "ops") and hasattr(module, "nodes") and hasattr(module, "loader"):
+                    return module
+            except ImportError:
+                continue
+        raise ImportError(
+            "ComfyUI-GGUF is required for GGUF model loading. "
+            "Please install it from: https://github.com/city96/ComfyUI-GGUF"
+        )
+
+    @classmethod
+    def INPUT_TYPES(cls):
+        return {
+            "required": {
+                "patch_cublaslinear": ("BOOLEAN", {"default": False}),
+                "sage_attention": (SAGE_ATTENTION_MODES, {"default": "auto"}),
+                "enable_fp16_accumulation": ("BOOLEAN", {"default": True}),
+                "dequant_dtype": (["default", "target", "float32", "float16", "bfloat16"], {"default": "default"}),
+                "patch_dtype": (["default", "target", "float32", "float16", "bfloat16"], {"default": "default"}),
+                "patch_on_device": ("BOOLEAN", {"default": False}),
+            }
+        }
+
+    def load_gguf_model(self, patch_cublaslinear, sage_attention, enable_fp16_accumulation, dequant_dtype, patch_dtype, patch_on_device):
+        if patch_cublaslinear:
+            args.fast.add("cublas_ops")
+        else:
+            args.fast.discard("cublas_ops")
+        if hasattr(torch.backends.cuda.matmul, "allow_fp16_accumulation"):
+            torch.backends.cuda.matmul.allow_fp16_accumulation = enable_fp16_accumulation
+
+        gguf_nodes = self._get_gguf_module()
+        ops = gguf_nodes.ops.GGMLOps()
+
+        def set_linear_dtype(attr, value):
+            if value == "default":
+                setattr(ops.Linear, attr, None)
+            elif value == "target":
+                setattr(ops.Linear, attr, value)
+            else:
+                setattr(ops.Linear, attr, getattr(torch, value))
+
+        set_linear_dtype("dequant_dtype", dequant_dtype)
+        set_linear_dtype("patch_dtype", patch_dtype)
+
+        model_path = ensure_model(self.MODEL_KEY)
+        try:
+            sd, extra = gguf_nodes.loader.gguf_sd_loader(model_path)
+        except TypeError:
+            sd = gguf_nodes.loader.gguf_sd_loader(model_path)
+            extra = {}
+
+        model = comfy.sd.load_diffusion_model_state_dict(
+            sd, model_options={"custom_operations": ops}, metadata=extra.get("metadata", {})
+        )
+        if model is None:
+            raise RuntimeError(f"[{TAG}] Failed to load GGUF model from: {model_path}")
+
+        model = gguf_nodes.nodes.GGUFModelPatcher.clone(model)
+        model.patch_on_device = patch_on_device
+
+        if sage_attention == "auto":
+            from sageattention import sageattn
+
+            def sage_func(q, k, v, is_causal=False, attn_mask=None, tensor_layout="NHD"):
+                return sageattn(q, k, v, is_causal=is_causal, attn_mask=attn_mask, tensor_layout=tensor_layout)
+
+            sage_func = torch.compiler.disable()(sage_func)
+
+            def attention_sage(q, k, v, heads, mask=None, attn_precision=None, skip_reshape=False, skip_output_reshape=False, **kwargs):
+                if kwargs.get("low_precision_attention", True) is False:
+                    return attention_pytorch(q, k, v, heads, mask=mask, skip_reshape=skip_reshape, skip_output_reshape=skip_output_reshape, **kwargs)
+                in_dtype = v.dtype
+                if q.dtype == torch.float32 or k.dtype == torch.float32 or v.dtype == torch.float32:
+                    q, k, v = q.to(torch.float16), k.to(torch.float16), v.to(torch.float16)
+                if skip_reshape:
+                    b, _, _, dim_head = q.shape
+                    tensor_layout = "HND"
+                else:
+                    b, _, dim_head = q.shape
+                    dim_head //= heads
+                    q, k, v = map(lambda t: t.view(b, -1, heads, dim_head), (q, k, v))
+                    tensor_layout = "NHD"
+                if mask is not None:
+                    if mask.ndim == 2:
+                        mask = mask.unsqueeze(0)
+                    if mask.ndim == 3:
+                        mask = mask.unsqueeze(1)
+                out = sage_func(q, k, v, attn_mask=mask, is_causal=False, tensor_layout=tensor_layout).to(in_dtype)
+                if tensor_layout == "HND":
+                    if not skip_output_reshape:
+                        out = out.transpose(1, 2).reshape(b, -1, heads * dim_head)
+                elif skip_output_reshape:
+                    out = out.transpose(1, 2)
+                else:
+                    out = out.reshape(b, -1, heads * dim_head)
+                return out
+
+            def attention_override_sage(func, *args, **kwargs):
+                return attention_sage(*args, **kwargs)
+
+            model.model_options.setdefault("transformer_options", {})["optimized_attention_override"] = attention_override_sage
+
+        return (model,)
+
+
+class LTX23ModelGGUFQ4(_GGUFModelLoader):
+    CATEGORY = "CRT/AutoDL/LTX2.3"
+    MODEL_KEY = "ltx23_gguf_q4"
+
+
+class LTX23ModelGGUFQ5(_GGUFModelLoader):
+    CATEGORY = "CRT/AutoDL/LTX2.3"
+    MODEL_KEY = "ltx23_gguf_q5"
+
+
 class ZImageTurboModel(_FixedDiffusionLoader):
     CATEGORY = "CRT/AutoDL/ZIMAGETURBO"
     MODEL_KEY = "zimage_model"
@@ -541,6 +683,8 @@ NODE_CLASS_MAPPINGS = {
     "CRTAutoDLLTX23LatentUpscaler": LTX23LatentUpscaler,
     "CRTAutoDLLTX23ICLoRA": LTX23ICLoRA,
     "CRTAutoDLLTX23ICOutpaintLoRA": LTX23ICOutpaintLoRA,
+    "CRTAutoDLLTX23ModelGGUFQ4": LTX23ModelGGUFQ4,
+    "CRTAutoDLLTX23ModelGGUFQ5": LTX23ModelGGUFQ5,
     "CRTAutoDLZImageTurboModel": ZImageTurboModel,
     "CRTAutoDLZImageTurboVAE": ZImageTurboVAE,
     "CRTAutoDLZImageTurboCLIP": ZImageTurboCLIP,
@@ -563,6 +707,8 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "CRTAutoDLLTX23LatentUpscaler": "LTX2.3 Latent Upscaler (CRT AutoDL)",
     "CRTAutoDLLTX23ICLoRA": "LTX2.3 IC Cnet LoRA (CRT AutoDL)",
     "CRTAutoDLLTX23ICOutpaintLoRA": "LTX2.3 IC Outpaint LoRA (CRT AutoDL)",
+    "CRTAutoDLLTX23ModelGGUFQ4": "LTX2.3 Model GGUF Q4_K_M (CRT AutoDL)",
+    "CRTAutoDLLTX23ModelGGUFQ5": "LTX2.3 Model GGUF Q5_K_M (CRT AutoDL)",
     "CRTAutoDLZImageTurboModel": "ZImageTurbo Model (CRT AutoDL)",
     "CRTAutoDLZImageTurboVAE": "ZImageTurbo VAE (CRT AutoDL)",
     "CRTAutoDLZImageTurboCLIP": "ZImageTurbo CLIP (CRT AutoDL)",

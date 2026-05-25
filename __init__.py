@@ -1,7 +1,7 @@
 """
 @author: CRT
 @title: CRT-Nodes
-@version: 2.4.9
+@version: 2.5.0
 @project: "https://github.com/PGCRT/CRT-Nodes",
 @description: Set of nodes for ComfyUI
 https://discord.gg/8wYS9MBQqp
@@ -132,6 +132,17 @@ if True:
         NODE_CLASS_MAPPINGS as CRT_AUTODL_NODE_CLASS_MAPPINGS,
         NODE_DISPLAY_NAME_MAPPINGS as CRT_AUTODL_NODE_DISPLAY_NAME_MAPPINGS,
     )
+
+    # Add GGUF unet folder path if not already registered
+    try:
+        import folder_paths
+        comfy_dir = os.path.dirname(folder_paths.__file__)
+        models_dir = os.path.join(comfy_dir, "models")
+        unet_gguf_path = os.path.join(models_dir, "unet_gguf")
+        if os.path.isdir(unet_gguf_path):
+            folder_paths.add_model_folder_path("unet_gguf", unet_gguf_path)
+    except Exception:
+        pass
 
     CRT_LTX23AutoDownload = None
     LTX23AutoDownloadAPI = None

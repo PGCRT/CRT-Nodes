@@ -32,7 +32,7 @@ const ADVANCED_GROUPS = [
   },
   {
     title: "Output",
-    fields: ["vae_decode_tiled", "unload_model_before_vae_decode"],
+    fields: ["vae_decode_tiled", "unload_model_before_vae_decode", "low_vram"],
   },
 ];
 
@@ -51,6 +51,7 @@ const FIELD_LABELS = {
   frame_count_from_audio: "Audio Frame Count Override",
   vae_decode_tiled: "VAE Decode (Tiled)",
   unload_model_before_vae_decode: "Unload Model Before VAE",
+  low_vram: "Low VRAM",
   generated_audio_gain_db: "Gain (dB)",
   depth_mouth_mask: "Mouth Mask",
   mouth_mask_expand: "Mouth Expand",
