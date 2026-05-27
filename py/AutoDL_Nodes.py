@@ -69,6 +69,11 @@ MODELS = {
         "filename": "ltx-2.3-22b-ic-lora-outpaint.safetensors",
         "url": "https://huggingface.co/oumoumad/LTX-2.3-22b-IC-LoRA-Outpaint/resolve/main/ltx-2.3-22b-ic-lora-outpaint.safetensors",
     },
+    "ltx23_nvfp4": {
+        "folder": "diffusion_models",
+        "filename": "ltx-2.3-22b-distilled_transformer_only_NVFP4.safetensors",
+        "url": "https://huggingface.co/Winnougan/LTX-2.3-INT8/resolve/main/ltx-2.3-22b-distilled_transformer_only_NVFP4.safetensors",
+    },
     "ltx23_gguf_q4": {
         "folder": "unet_gguf",
         "filename": "ltx-2.3-22b-distilled-1.1-UD-Q4_K_M.gguf",
@@ -442,6 +447,11 @@ class LTX23Model(_FixedDiffusionLoader):
     MODEL_KEY = "ltx23_model"
 
 
+class LTX23ModelNVFP4(_FixedDiffusionLoader):
+    CATEGORY = "CRT/AutoDL/LTX2.3"
+    MODEL_KEY = "ltx23_nvfp4"
+
+
 class LTX23AudioVAE(_FixedVAELoader):
     CATEGORY = "CRT/AutoDL/LTX2.3"
     MODEL_KEY = "ltx23_audio_vae"
@@ -677,6 +687,7 @@ class ErnieCLIP(_FixedCLIPLoader):
 
 NODE_CLASS_MAPPINGS = {
     "CRTAutoDLLTX23Model": LTX23Model,
+    "CRTAutoDLLTX23ModelNVFP4": LTX23ModelNVFP4,
     "CRTAutoDLLTX23AudioVAE": LTX23AudioVAE,
     "CRTAutoDLLTX23VideoVAE": LTX23VideoVAE,
     "CRTAutoDLLTX23CLIP": LTX23CLIP,
@@ -701,6 +712,7 @@ NODE_CLASS_MAPPINGS = {
 
 NODE_DISPLAY_NAME_MAPPINGS = {
     "CRTAutoDLLTX23Model": "LTX2.3 Model (CRT AutoDL)",
+    "CRTAutoDLLTX23ModelNVFP4": "LTX2.3 Model NVFP4 (CRT AutoDL)",
     "CRTAutoDLLTX23AudioVAE": "LTX2.3 AUDIO VAE (CRT AutoDL)",
     "CRTAutoDLLTX23VideoVAE": "LTX2.3 VIDEO VAE (CRT AutoDL)",
     "CRTAutoDLLTX23CLIP": "LTX2.3 CLIP (CRT AutoDL)",
