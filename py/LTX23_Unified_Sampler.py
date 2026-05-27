@@ -2373,11 +2373,6 @@ class CRT_LTX23UnifiedSampler:
         total_steps = 6 if not hq else 8
         self._progress(1, total_steps, "Preparing V2V inputs")
 
-        if video is None:
-            raise ValueError(
-                "V2V mode requires 'Video (V2V image batch)' connected in the Config node."
-            )
-
         # Outpaint mode doesn't use depth or first frame
         if is_outpaint_mode:
             self._log(
@@ -2395,14 +2390,28 @@ class CRT_LTX23UnifiedSampler:
                     level="ok",
                 )
 
-        input_video_frames = int(video.shape[0])
-        frame_count = input_video_frames
-        self._log(
-            f"V2V frame count from input video: {frame_count}",
-            level="ok",
-        )
+        # Video is optional when depth override is provided
+        if video is None and v2v_depth_override is None:
+            raise ValueError(
+                "V2V mode requires either 'Video (V2V image batch)' or 'V2V Depth (override)' connected in the Config node."
+            )
 
-        video_frames = video[:frame_count]
+        if video is not None:
+            input_video_frames = int(video.shape[0])
+            frame_count = input_video_frames
+            self._log(
+                f"V2V frame count from input video: {frame_count}",
+                level="ok",
+            )
+            video_frames = video[:frame_count]
+        else:
+            # Depth override only: infer frame count from depth override
+            frame_count = int(v2v_depth_override.shape[0])
+            self._log(
+                f"V2V frame count from depth override: {frame_count}",
+                level="ok",
+            )
+            video_frames = None
 
         noise_obj = self._make_noise(seed)
         sampler_main_obj = self._make_sampler(sampler_main)
@@ -2453,11 +2462,16 @@ class CRT_LTX23UnifiedSampler:
         # Original Depth Control mode
         use_firstframe = firstframe_image is not None
 
-        target_image = self._scale_total_pixels(video_frames, megapixels_target)
-        depth_input = None if v2v_depth_override is not None else self._scale_total_pixels(video_frames, depth_megapixels)
+        if video_frames is not None:
+            target_image = self._scale_total_pixels(video_frames, megapixels_target)
+            depth_input = None if v2v_depth_override is not None else self._scale_total_pixels(video_frames, depth_megapixels)
+        else:
+            # Depth override only: use override dimensions as target
+            target_image = v2v_depth_override
+            depth_input = None
 
         mouth_masks = None
-        if depth_mouth_mask and not is_outpaint_mode:
+        if depth_mouth_mask and not is_outpaint_mode and video_frames is not None:
             self._log("[Mouth Mask] Detecting mouth region via SAM3.1...")
             _t0 = time.monotonic()
             mouth_masks = self._detect_mouth_masks(
