@@ -69,6 +69,11 @@ MODELS = {
         "filename": "ltx-2.3-22b-ic-lora-outpaint.safetensors",
         "url": "https://huggingface.co/oumoumad/LTX-2.3-22b-IC-LoRA-Outpaint/resolve/main/ltx-2.3-22b-ic-lora-outpaint.safetensors",
     },
+    "ltx23_upscale_ic_lora": {
+        "folder": "loras",
+        "filename": "ltx2.3_upscale_ic-lora_06250.safetensors",
+        "url": "https://huggingface.co/Zlikwid/LTX_2.3_Upscale_IC_Lora/resolve/main/ltx2.3_upscale_ic-lora_06250.safetensors",
+    },
     "ltx23_nvfp4": {
         "folder": "diffusion_models",
         "filename": "ltx-2.3-22b-distilled_transformer_only_NVFP4.safetensors",
@@ -492,6 +497,11 @@ class LTX23ICOutpaintLoRA(_FixedLoRALoader):
     MODEL_KEY = "ltx23_outpaint_lora"
 
 
+class LTX23ICUpscaleLoRA(_FixedLoRALoader):
+    CATEGORY = "CRT/AutoDL/LTX2.3"
+    MODEL_KEY = "ltx23_upscale_ic_lora"
+
+
 class _GGUFModelLoader:
     RETURN_TYPES = ("MODEL",)
     RETURN_NAMES = ("MODEL",)
@@ -694,6 +704,7 @@ NODE_CLASS_MAPPINGS = {
     "CRTAutoDLLTX23LatentUpscaler": LTX23LatentUpscaler,
     "CRTAutoDLLTX23ICLoRA": LTX23ICLoRA,
     "CRTAutoDLLTX23ICOutpaintLoRA": LTX23ICOutpaintLoRA,
+    "CRTAutoDLLTX23ICUpscaleLoRA": LTX23ICUpscaleLoRA,
     "CRTAutoDLLTX23ModelGGUFQ4": LTX23ModelGGUFQ4,
     "CRTAutoDLLTX23ModelGGUFQ5": LTX23ModelGGUFQ5,
     "CRTAutoDLZImageTurboModel": ZImageTurboModel,
@@ -719,6 +730,7 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "CRTAutoDLLTX23LatentUpscaler": "LTX2.3 Latent Upscaler (CRT AutoDL)",
     "CRTAutoDLLTX23ICLoRA": "LTX2.3 IC Cnet LoRA (CRT AutoDL)",
     "CRTAutoDLLTX23ICOutpaintLoRA": "LTX2.3 IC Outpaint LoRA (CRT AutoDL)",
+    "CRTAutoDLLTX23ICUpscaleLoRA": "LTX2.3 IC Upscale LoRA (CRT AutoDL)",
     "CRTAutoDLLTX23ModelGGUFQ4": "LTX2.3 Model GGUF Q4_K_M (CRT AutoDL)",
     "CRTAutoDLLTX23ModelGGUFQ5": "LTX2.3 Model GGUF Q5_K_M (CRT AutoDL)",
     "CRTAutoDLZImageTurboModel": "ZImageTurbo Model (CRT AutoDL)",

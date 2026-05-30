@@ -299,22 +299,27 @@ class CRT_LTX23USModelsPipe:
         return {
             "required": {
                 "model": ("MODEL",),
-                "model_union_control": (
-                    "MODEL",
-                    {
-                        "forceInput": True,
-                        "tooltip": "V2V Depth Control: model already merged with UnionControl / IC-LoRA guide support.",
-                    },
-                ),
                 "vae": ("VAE",),
                 "audio_vae": ("VAE",),
                 "clip": ("CLIP",),
             },
             "optional": {
+                "model_union_control": (
+                    "MODEL",
+                    {
+                        "tooltip": "Optional V2V Depth Control: model already merged with UnionControl / IC-LoRA guide support.",
+                    },
+                ),
                 "model_outpaint": (
                     "MODEL",
                     {
                         "tooltip": "Optional V2V Outpaint mode model merged with IC-LoRA Outpaint.",
+                    },
+                ),
+                "model_upscale": (
+                    "MODEL",
+                    {
+                        "tooltip": "Optional V2V Upscale mode model merged with IC-LoRA Upscale.",
                     },
                 ),
                 "spatial_upscale_model": ("LATENT_UPSCALE_MODEL",),
@@ -340,11 +345,12 @@ class CRT_LTX23USModelsPipe:
     def build_pipe(
         self,
         model,
-        model_union_control,
         vae,
         audio_vae,
         clip,
+        model_union_control=None,
         model_outpaint=None,
+        model_upscale=None,
         spatial_upscale_model=None,
         da3_model=None,
         latent_downscale_factor=1.0,
@@ -358,6 +364,7 @@ class CRT_LTX23USModelsPipe:
             "da3_model": da3_model,
             "model_union_control": model_union_control,
             "model_outpaint": model_outpaint,
+            "model_upscale": model_upscale,
             "latent_downscale_factor": float(latent_downscale_factor),
         }
         return (pipe,)
@@ -648,7 +655,7 @@ class CRT_LTX23UnifiedSampler:
                     },
                 ),
                 "v2v_mode": (
-                    ["Depth Control", "Outpaint"],
+                    ["Depth Control", "Outpaint", "Upscale"],
                     {"default": "Depth Control"},
                 ),
                 "v2v_guide_strength": (
@@ -1181,6 +1188,7 @@ class CRT_LTX23UnifiedSampler:
             "da3_model": da3_model,
             "model_union_control": model_union_control,
             "model_outpaint": pipe.get("model_outpaint", None),
+            "model_upscale": pipe.get("model_upscale", None),
             "latent_downscale_factor": float(pipe.get("latent_downscale_factor", 1.0)),
         }
 
@@ -2353,6 +2361,7 @@ class CRT_LTX23UnifiedSampler:
         unload_model_before_vae_decode=False,
         preview_enabled=True,
         is_outpaint_mode=False,
+        is_upscale_mode=False,
         v2v_aspect_ratio="16:9 (Landscape)",
         firstframe_strength=1.0,
         depth_mouth_mask=False,
@@ -2373,10 +2382,11 @@ class CRT_LTX23UnifiedSampler:
         total_steps = 6 if not hq else 8
         self._progress(1, total_steps, "Preparing V2V inputs")
 
-        # Outpaint mode doesn't use depth or first frame
-        if is_outpaint_mode:
+        # Outpaint and Upscale modes don't use depth or first frame
+        if is_outpaint_mode or is_upscale_mode:
+            mode_label = "Outpaint" if is_outpaint_mode else "Upscale"
             self._log(
-                "V2V Outpaint mode: skipping depth estimation and first frame processing",
+                f"V2V {mode_label} mode: skipping depth estimation and first frame processing",
                 level="ok",
             )
         else:
@@ -2427,6 +2437,36 @@ class CRT_LTX23UnifiedSampler:
             self._log("Low VRAM: unloading CLIP after conditioning", level="ok")
             self._offload_clip(clip)
             mm.soft_empty_cache()
+
+        if is_upscale_mode:
+            # Upscale mode: use input video as guide for upscaling
+            return self._run_v2v_upscale(
+                hq=hq,
+                model=model,
+                vae=vae,
+                audio_vae=audio_vae,
+                positive_base=positive_base,
+                negative_base=negative_base,
+                video_frames=video_frames,
+                frame_count=frame_count,
+                frame_rate=frame_rate,
+                noise_obj=noise_obj,
+                sampler_main_obj=sampler_main_obj,
+                sigmas_main_obj=sigmas_main_obj,
+                sampler_refine_obj=sampler_refine_obj,
+                sigmas_refine_obj=sigmas_refine_obj,
+                megapixels_target=megapixels_target,
+                v2v_guide_strength=v2v_guide_strength,
+                latent_downscale_factor=latent_downscale_factor,
+                generated_audio_gain_db=generated_audio_gain_db,
+                spatial_upscale_model=spatial_upscale_model,
+                source_audio=source_audio,
+                use_tiled_vae_decode=use_tiled_vae_decode,
+                unload_model_before_vae_decode=unload_model_before_vae_decode,
+                preview_enabled=preview_enabled,
+                total_steps=total_steps,
+                low_vram=low_vram,
+            )
 
         if is_outpaint_mode:
             # Outpaint mode: pad video to target aspect ratio
@@ -2873,6 +2913,151 @@ class CRT_LTX23UnifiedSampler:
 
         return images, generated_audio
 
+    def _run_v2v_upscale(
+        self,
+        hq,
+        model,
+        vae,
+        audio_vae,
+        positive_base,
+        negative_base,
+        video_frames,
+        frame_count,
+        frame_rate,
+        noise_obj,
+        sampler_main_obj,
+        sigmas_main_obj,
+        sampler_refine_obj,
+        sigmas_refine_obj,
+        megapixels_target,
+        v2v_guide_strength,
+        latent_downscale_factor,
+        generated_audio_gain_db,
+        spatial_upscale_model,
+        source_audio,
+        use_tiled_vae_decode,
+        unload_model_before_vae_decode,
+        preview_enabled,
+        total_steps,
+        low_vram=False,
+    ):
+        """Upscale V2V workflow: use input video as guide for upscaling."""
+        self._progress(1, total_steps, "Preparing Upscale inputs")
+
+        # Scale input video to megapixels target
+        scaled_video = self._scale_total_pixels(video_frames, megapixels_target)
+        target_height, target_width = scaled_video.shape[1], scaled_video.shape[2]
+
+        self._log(
+            f"Upscale target dimensions: {target_width}x{target_height}",
+            level="ok",
+        )
+
+        self._progress(2, total_steps, "Building IC-LoRA guide for upscale")
+
+        # Create empty latent for target size
+        latent_video = self._result_tuple(
+            EmptyLTXVLatentVideo.execute(
+                target_width,
+                target_height,
+                frame_count,
+                1,
+            )
+        )[0]
+
+        # Apply IC-LoRA guide with scaled video as guide
+        cfg = float(self.CFG_DEFAULT)
+
+        positive_guided, negative_guided, latent_video_guided = self._apply_v2v_guide(
+            positive_base,
+            negative_base,
+            vae,
+            latent_video,
+            scaled_video,
+            v2v_guide_strength,
+            latent_downscale_factor,
+            model,
+        )
+
+        self._progress(3, total_steps, "Building audio latent")
+
+        audio_latent = self._build_audio_latent(
+            frame_count,
+            frame_rate,
+            audio_vae,
+            source_audio=source_audio,
+        )
+
+        av_latent = self._result_tuple(
+            LTXVConcatAVLatent.execute(latent_video_guided, audio_latent)
+        )[0]
+
+        if low_vram:
+            self._log("Low VRAM: unloading VAEs before sampling", level="ok")
+            self._offload_vae(vae)
+            self._offload_vae(audio_vae, "audio_vae")
+            mm.soft_empty_cache()
+
+        self._progress(4, total_steps, "Running Upscale main sampler")
+
+        sampled = self._sample_latent(
+            model=model,
+            positive=positive_guided,
+            negative=negative_guided,
+            cfg=cfg,
+            noise=noise_obj,
+            sampler=sampler_main_obj,
+            sigmas=sigmas_main_obj,
+            latent=av_latent,
+            frame_rate=frame_rate,
+            preview_enabled=preview_enabled,
+        )
+
+        separated = self._result_tuple(LTXVSeparateAVLatent.execute(sampled))
+        sampled_video_latent = separated[0]
+        sampled_audio_latent = separated[1]
+
+        cropped = self._result_tuple(
+            LTXVCropGuides.execute(
+                positive_guided,
+                negative_guided,
+                sampled_video_latent,
+            )
+        )
+        final_video_latent = cropped[2]
+        final_audio_latent = sampled_audio_latent
+
+        self._progress(5, total_steps, "Decoding video/audio")
+
+        if unload_model_before_vae_decode:
+            self._log("Unload-before-decode enabled: attempting model unload", level="ok")
+            unload_errors = self._offload_sampling_model(model)
+            if unload_errors:
+                self._log("Unload-before-decode warnings: " + " | ".join(unload_errors), level="warn")
+            else:
+                self._log("Unload-before-decode complete", level="ok")
+
+        if low_vram:
+            self._log("Low VRAM: reloading VAEs for decode", level="ok")
+            self._reload_vae(vae)
+            self._reload_vae(audio_vae, "audio_vae")
+
+        images = self._decode_video_latent(
+            final_video_latent,
+            vae,
+            use_tiled_decode=bool(use_tiled_vae_decode),
+        )
+
+        generated_audio = self._decode_audio_latent(final_audio_latent, audio_vae)
+        generated_audio = self._apply_audio_gain(
+            generated_audio,
+            generated_audio_gain_db,
+        )
+
+        self._progress(total_steps, total_steps, "Upscale complete")
+
+        return images, generated_audio
+
     def _run_v2v_outpaint(
         self,
         hq,
@@ -3131,14 +3316,22 @@ class CRT_LTX23UnifiedSampler:
         da3_model = models["da3_model"]
         model_union_control = models["model_union_control"]
         model_outpaint = models["model_outpaint"]
+        model_upscale = models["model_upscale"]
         latent_downscale_factor = float(models["latent_downscale_factor"])
 
         # V2V mode selection
         v2v_mode_str = str(v2v_mode)
         is_outpaint_mode = mode == "V2V" and v2v_mode_str == "Outpaint"
+        is_upscale_mode = mode == "V2V" and v2v_mode_str == "Upscale"
 
         if mode == "V2V":
-            if is_outpaint_mode:
+            if is_upscale_mode:
+                model_for_v2v = model_upscale
+                if model_for_v2v is None:
+                    raise ValueError(
+                        "V2V Upscale mode requires 'model_upscale' connected in LTX 2.3 US Models Pipe (CRT)."
+                    )
+            elif is_outpaint_mode:
                 model_for_v2v = model_outpaint
                 if model_for_v2v is None:
                     raise ValueError(
@@ -3150,12 +3343,12 @@ class CRT_LTX23UnifiedSampler:
                     raise ValueError(
                         "V2V Depth Control mode requires 'model_union_control' connected in LTX 2.3 US Models Pipe (CRT)."
                     )
-            if model_union_control is model:
-                raise ValueError(
-                    "V2V is wired with base model as model_union_control. "
-                    "Connect the MODEL output from LTXICLoRALoaderModelOnly "
-                    "to 'model_union_control' in LTX 2.3 US Models Pipe (CRT)."
-                )
+                if model_union_control is model:
+                    raise ValueError(
+                        "V2V is wired with base model as model_union_control. "
+                        "Connect the MODEL output from LTXICLoRALoaderModelOnly "
+                        "to 'model_union_control' in LTX 2.3 US Models Pipe (CRT)."
+                    )
 
         prompt = config["prompt"]
         seed = int(config["seed"])
@@ -3262,7 +3455,12 @@ class CRT_LTX23UnifiedSampler:
                 low_vram=bool(low_vram),
             )
         else:
-            if is_outpaint_mode:
+            if is_upscale_mode:
+                self._log(
+                    "V2V using model_upscale (upscale mode - video guide upscaling).",
+                    level="ok",
+                )
+            elif is_outpaint_mode:
                 self._log(
                     "V2V using model_outpaint (outpaint mode - pad video to target aspect ratio).",
                     level="ok",
@@ -3290,7 +3488,7 @@ class CRT_LTX23UnifiedSampler:
                 sigmas_refine=sigmas_refine,
                 megapixels_target=megapixels_target,
                 depth_megapixels=float(depth_megapixels),
-                v2v_guide_strength=1.0 if is_outpaint_mode else float(v2v_guide_strength),
+                v2v_guide_strength=1.0 if (is_outpaint_mode or is_upscale_mode) else float(v2v_guide_strength),
                 latent_downscale_factor=latent_downscale_factor,
                 generated_audio_gain_db=float(generated_audio_gain_db),
                 spatial_upscale_model=spatial_upscale_model,
@@ -3303,6 +3501,7 @@ class CRT_LTX23UnifiedSampler:
                 unload_model_before_vae_decode=bool(unload_model_before_vae_decode),
                 preview_enabled=live_preview,
                 is_outpaint_mode=is_outpaint_mode,
+                is_upscale_mode=is_upscale_mode,
                 v2v_aspect_ratio=v2v_aspect_ratio,
                 firstframe_strength=float(firstframe_strength),
                 depth_mouth_mask=bool(depth_mouth_mask),

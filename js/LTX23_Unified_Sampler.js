@@ -8,7 +8,7 @@ const MIN_WIDTH = 450;
 const MIN_HEIGHT = 1;
 const DEBUG = false;
 const WORKFLOW_MODES = ["I2V", "T2V", "V2V"];
-const V2V_MODES = ["Depth Control", "Outpaint"];
+const V2V_MODES = ["Depth Control", "Outpaint", "Upscale"];
 
 const MODE_FIELDS = {
   I2V: ["firstframe_strength"],
@@ -19,6 +19,7 @@ const MODE_FIELDS = {
 const V2V_MODE_FIELDS = {
   "Depth Control": ["depth_megapixels", "firstframe_strength", "v2v_guide_strength"],
   "Outpaint": ["v2v_aspect_ratio"],
+  "Upscale": [],
 };
 
 const ADVANCED_GROUPS = [
@@ -1420,6 +1421,7 @@ class LTX23UnifiedSamplerUI {
       this.refresh();
     }
     if (name === "v2v_mode") {
+      this.rebuildPanels();
       this.refresh();
     }
     if (name === "depth_mouth_mask") {
@@ -1572,6 +1574,9 @@ class LTX23UnifiedSamplerUI {
 
   rebuild() {
     this.hideNativeWidgets();
+    this.controls.clear();
+    this.buildPanels();
+    this.syncFromWidgets();
     this.refresh();
   }
 
