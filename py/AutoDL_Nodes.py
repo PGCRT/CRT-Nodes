@@ -104,6 +104,26 @@ MODELS = {
         "filename": "qwen_3_4b_fp8_mixed.safetensors",
         "url": "https://huggingface.co/Comfy-Org/z_image_turbo/resolve/main/split_files/text_encoders/qwen_3_4b_fp8_mixed.safetensors",
     },
+    "krea2_turbo_model": {
+        "folder": "diffusion_models",
+        "filename": "krea2_turbo_fp8_scaled.safetensors",
+        "url": "https://huggingface.co/Comfy-Org/Krea-2/resolve/main/diffusion_models/krea2_turbo_fp8_scaled.safetensors",
+    },
+    "krea2_raw_model": {
+        "folder": "diffusion_models",
+        "filename": "krea2_raw_fp8_scaled.safetensors",
+        "url": "https://huggingface.co/Comfy-Org/Krea-2/resolve/main/diffusion_models/krea2_raw_fp8_scaled.safetensors",
+    },
+    "krea2_clip": {
+        "folder": "text_encoders",
+        "filename": "qwen3vl_4b_fp8_scaled.safetensors",
+        "url": "https://huggingface.co/Comfy-Org/Krea-2/resolve/main/text_encoders/qwen3vl_4b_fp8_scaled.safetensors",
+    },
+    "krea2_vae": {
+        "folder": "vae",
+        "filename": "qwen_image_vae.safetensors",
+        "url": "https://huggingface.co/Comfy-Org/Krea-2/resolve/main/vae/qwen_image_vae.safetensors",
+    },
     "fluxklein_vae": {
         "folder": "vae",
         "filename": "flux2-vae.safetensors",
@@ -648,6 +668,27 @@ class ZImageTurboCLIP(_FixedCLIPLoader):
     CLIP_TYPE = "lumina2"
 
 
+class Krea2TurboModel(_FixedDiffusionLoader):
+    CATEGORY = "CRT/AutoDL/KREA2"
+    MODEL_KEY = "krea2_turbo_model"
+
+
+class Krea2RawModel(_FixedDiffusionLoader):
+    CATEGORY = "CRT/AutoDL/KREA2"
+    MODEL_KEY = "krea2_raw_model"
+
+
+class Krea2VAE(_CoreVAELoader):
+    CATEGORY = "CRT/AutoDL/KREA2"
+    MODEL_KEY = "krea2_vae"
+
+
+class Krea2CLIP(_FixedCLIPLoader):
+    CATEGORY = "CRT/AutoDL/KREA2"
+    MODEL_KEY = "krea2_clip"
+    CLIP_TYPE = "krea2"
+
+
 class Flux2KleinModel(_FixedDiffusionLoader):
     CATEGORY = "CRT/AutoDL/FLUXKLEIN"
     MODEL_KEY = "fluxklein_model"
@@ -710,6 +751,10 @@ NODE_CLASS_MAPPINGS = {
     "CRTAutoDLZImageTurboModel": ZImageTurboModel,
     "CRTAutoDLZImageTurboVAE": ZImageTurboVAE,
     "CRTAutoDLZImageTurboCLIP": ZImageTurboCLIP,
+    "CRTAutoDLKrea2TurboModel": Krea2TurboModel,
+    "CRTAutoDLKrea2RawModel": Krea2RawModel,
+    "CRTAutoDLKrea2VAE": Krea2VAE,
+    "CRTAutoDLKrea2CLIP": Krea2CLIP,
     "CRTAutoDLFlux2KleinModel": Flux2KleinModel,
     "CRTAutoDLFlux2KleinVAE": Flux2KleinVAE,
     "CRTAutoDLFlux2KleinCLIP": Flux2KleinCLIP,
@@ -736,6 +781,10 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "CRTAutoDLZImageTurboModel": "ZImageTurbo Model (CRT AutoDL)",
     "CRTAutoDLZImageTurboVAE": "ZImageTurbo VAE (CRT AutoDL)",
     "CRTAutoDLZImageTurboCLIP": "ZImageTurbo CLIP (CRT AutoDL)",
+    "CRTAutoDLKrea2TurboModel": "Krea 2 Turbo Model (CRT AutoDL)",
+    "CRTAutoDLKrea2RawModel": "Krea 2 Raw Model (CRT AutoDL)",
+    "CRTAutoDLKrea2VAE": "Krea 2 VAE (CRT AutoDL)",
+    "CRTAutoDLKrea2CLIP": "Krea 2 CLIP (CRT AutoDL)",
     "CRTAutoDLFlux2KleinModel": "Flux2Klein Model (CRT AutoDL)",
     "CRTAutoDLFlux2KleinVAE": "Flux2Klein VAE (CRT AutoDL)",
     "CRTAutoDLFlux2KleinCLIP": "Flux2Klein CLIP (CRT AutoDL)",

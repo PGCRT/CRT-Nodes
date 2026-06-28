@@ -1,7 +1,7 @@
 """
 @author: CRT
 @title: CRT-Nodes
-@version: 2.5.3
+@version: 2.5.4
 @project: "https://github.com/PGCRT/CRT-Nodes",
 @description: Set of nodes for ComfyUI
 https://discord.gg/8wYS9MBQqp
@@ -48,6 +48,8 @@ if True:
     from .py.Smart_Controlnet_Apply import SmartControlNetApply
     from .py.Smart_Style_Model_Apply_Dual import SmartStyleModelApplyDual
     from .py.CLIP_Text_Encode_Flux_Merged import CLIPTextEncodeFluxMerged
+    from .py.CLIP_Text_Encode_Unload import CRTCLIPTextEncode
+    from .py.Ideogram4_Flash_Attention import CRTIdeogram4FlashAttention
     from .py.Load_Image_Resize import LoadImageResize
     from .py.Autoprompt_Processor import AutopromptProcessor
     from .py.Smart_Preprocessor import SmartPreprocessor
@@ -240,6 +242,8 @@ NODE_CLASS_MAPPINGS = {
     "SmartControlNetApply": SmartControlNetApply,
     "SmartStyleModelApplyDual": SmartStyleModelApplyDual,
     "CLIPTextEncodeFluxMerged": CLIPTextEncodeFluxMerged,
+    "CRTCLIPTextEncode": CRTCLIPTextEncode,
+    "CRTIdeogram4FlashAttention": CRTIdeogram4FlashAttention,
     "LoadImageResize": LoadImageResize,
     "AutopromptProcessor": AutopromptProcessor,
     "SmartPreprocessor": SmartPreprocessor,
@@ -347,6 +351,8 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "SmartControlNetApply": "Smart ControlNet Apply (CRT)",
     "SmartStyleModelApplyDual": "Smart Style Model Apply DUAL (CRT)",
     "CLIPTextEncodeFluxMerged": "CLIP Text Encode FLUX Merged (CRT)",
+    "CRTCLIPTextEncode": "CLIP Text Encode + Unload (CRT)",
+    "CRTIdeogram4FlashAttention": "Ideogram 4 FlashAttention (CRT)",
     "LoadImageResize": "Load Image Resize (CRT)",
     "AutopromptProcessor": "AutopromptProcessor (CRT)",
     "SmartPreprocessor": "Smart Preprocessor (CRT)",

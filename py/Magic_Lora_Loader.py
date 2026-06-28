@@ -135,7 +135,15 @@ def get_model_info_file_data(file: str, model_type, default=None):
 
 NODE_NAME = "Magic LoRA Loader"
 _PRESETS_FILE = None
-_MODEL_TYPES = {"Flux2Klein", "LTX2.3", "ZImageTurbo", "WAN2.2", "ERNIEImage"}
+_MODEL_TYPES = {
+    "Flux2Klein",
+    "LTX2.3",
+    "ZImageTurbo",
+    "WAN2.2",
+    "ERNIEImage",
+    "Ideogram4",
+    "Krea2Turbo",
+}
 _DEFAULT_MT = "Flux2Klein"
 _ROUTES_REGISTERED = globals().get("_ROUTES_REGISTERED", False)
 
@@ -271,6 +279,45 @@ def _scale_new_patches(patcher, block_weights: dict, pre_counts: dict):
         if not new_entries:
             continue
         patches[key] = entries[:pre] + [(e[0] * weight,) + e[1:] for e in new_entries]
+
+
+def _extract_block_index(key: str) -> int | None:
+    for pattern in (
+        r"double_blocks\.(\d+)\.",
+        r"single_blocks\.(\d+)\.",
+        r"(?:diffusion_model\.)?transformer_blocks\.(\d+)\.",
+        r"(?:^|\.|\b)layers[._](\d+)[._]",
+        r"(?:^|[._])(?<!double_)(?<!single_)blocks[._](\d+)[._]",
+    ):
+        m = re.search(pattern, key)
+        if m:
+            return int(m.group(1))
+    return None
+
+
+def _parse_keep_blocks(value: str) -> set[int] | None:
+    value = (value or "").strip()
+    if not value:
+        return None
+
+    blocks = set()
+    for token in re.split(r"[,\s]+", value):
+        if not token:
+            continue
+        if re.fullmatch(r"\d+", token):
+            blocks.add(int(token))
+            continue
+        m = re.fullmatch(r"(\d+)\s*-\s*(\d+)", token)
+        if m:
+            start, end = int(m.group(1)), int(m.group(2))
+            if start > end:
+                start, end = end, start
+            blocks.update(range(start, end + 1))
+            continue
+        raise ValueError(
+            f"Invalid keep_blocks token '{token}'. Use comma-separated block numbers, e.g. 0,1,2,16-27."
+        )
+    return blocks
 
 
 def load_lora_with_blocks(
@@ -506,6 +553,16 @@ class SaveMergedLora:
             "required": {
                 "merged_lora": ("MERGED_LORA",),
                 "filename": ("STRING", {"default": "merged_lora"}),
+                "keep_blocks": (
+                    "STRING",
+                    {
+                        "default": "",
+                        "tooltip": (
+                            "Comma-separated block indexes to keep in the saved LoRA. "
+                            "Empty = save all blocks. Supports ranges like 0-13,16,17,26,27."
+                        ),
+                    },
+                ),
                 "save_to": (["loras folder", "output folder"],),
                 "rank": (
                     "INT",
@@ -529,7 +586,13 @@ class SaveMergedLora:
     OUTPUT_NODE = True
     FUNCTION = "save"
 
-    def save(self, merged_lora, filename, save_to, rank):
+    @classmethod
+    def IS_CHANGED(cls, **kwargs):
+        # This is a file-writing output node. Always re-run when queued instead
+        # of letting ComfyUI reuse a cached filepath/empty result.
+        return float("nan")
+
+    def save(self, merged_lora, filename, keep_blocks, save_to, rank):
         import torch
         import safetensors.torch
         from comfy.utils import ProgressBar
@@ -537,6 +600,22 @@ class SaveMergedLora:
         if not merged_lora:
             log_node_warn(NODE_NAME, "No merged LoRA data to save.")
             return ("",)
+
+        keep = _parse_keep_blocks(keep_blocks)
+        if keep is not None:
+            before = len(merged_lora)
+            merged_lora = {
+                key: delta
+                for key, delta in merged_lora.items()
+                if (idx := _extract_block_index(key)) is not None and idx in keep
+            }
+            print(
+                f"[crt-pll] Magic Save Merged LoRA: keeping blocks {sorted(keep)} "
+                f"({len(merged_lora)}/{before} tensors)."
+            )
+            if not merged_lora:
+                log_node_warn(NODE_NAME, "No merged LoRA tensors matched keep_blocks; nothing saved.")
+                return ("",)
 
         if save_to == "loras folder":
             base_dir = folder_paths.get_folder_paths("loras")[0]
@@ -556,8 +635,8 @@ class SaveMergedLora:
         print(f"[crt-pll] Magic Save Merged LoRA: processing {total} keys ({fmt}) on {device}...")
         pbar = ProgressBar(total)
 
-        # Upload all deltas to GPU in one pass, run all SVDs, then pull results to CPU.
-        # This keeps the GPU saturated and avoids per-key sync stalls.
+        # Keep GPU memory bounded. Each tensor is uploaded, decomposed, moved
+        # back to CPU, then all GPU intermediates are released before the next key.
         keys = list(merged_lora.keys())
         lora_sd = {}
         skipped = 0
@@ -569,9 +648,7 @@ class SaveMergedLora:
                 lora_sd[f"{base_key}.diff"] = merged_lora[model_key].to(torch.float16)
                 pbar.update(1)
         else:
-            # Phase 1 — upload & SVD on GPU
-            print(f"[crt-pll]   Phase 1/2: SVD on {device}...")
-            gpu_results = {}
+            print(f"[crt-pll]   Streaming SVD on {device} (CPU offload per tensor)...")
             for i, model_key in enumerate(keys):
                 base_key = model_key[: -len(".weight")] if model_key.endswith(".weight") else model_key
                 print(f"[crt-pll]   [{i + 1}/{total}] {model_key}")
@@ -580,24 +657,21 @@ class SaveMergedLora:
                     r = min(rank, min(delta.shape))
                     d_gpu = delta.to(device=device, dtype=torch.float32)
                     U, S, Vh = torch.linalg.svd(d_gpu, full_matrices=False)
-                    gpu_results[base_key] = (
-                        (U[:, :r] * S[:r]).contiguous(),
-                        Vh[:r, :].contiguous(),
-                        r,
+                    lora_sd[f"{base_key}.lora_up.weight"] = (
+                        U[:, :r] * S[:r]
+                    ).contiguous().to(device="cpu", dtype=torch.float16)
+                    lora_sd[f"{base_key}.lora_down.weight"] = Vh[:r, :].contiguous().to(
+                        device="cpu", dtype=torch.float16
                     )
+                    lora_sd[f"{base_key}.alpha"] = torch.tensor(float(r))
                     del d_gpu, U, S, Vh
                 except Exception as e:
                     log_node_warn(NODE_NAME, f"SVD failed for {model_key}: {e}")
                     skipped += 1
+                finally:
+                    if getattr(device, "type", str(device)) == "cuda":
+                        torch.cuda.empty_cache()
                 pbar.update(1)
-
-            # Phase 2 — move results to CPU fp16 (one transfer, GPU already idle)
-            print(f"[crt-pll]   Phase 2/2: transferring {len(gpu_results)} tensors to CPU...")
-            for base_key, (up, down, r) in gpu_results.items():
-                lora_sd[f"{base_key}.lora_up.weight"] = up.to(device="cpu", dtype=torch.float16)
-                lora_sd[f"{base_key}.lora_down.weight"] = down.to(device="cpu", dtype=torch.float16)
-                lora_sd[f"{base_key}.alpha"] = torch.tensor(float(r))
-            del gpu_results
 
         if not lora_sd:
             log_node_warn(NODE_NAME, "Merged LoRA is empty after processing, nothing saved.")
@@ -683,6 +757,16 @@ _ARCH = {
     "ERNIEImage": {
         "block_types": [
             ("layers", r"layers[._](\d+)[._]", 36),
+        ],
+    },
+    "Ideogram4": {
+        "block_types": [
+            ("layers", r"layers[._](\d+)[._]", 34),
+        ],
+    },
+    "Krea2Turbo": {
+        "block_types": [
+            ("blocks", r"(?:^|[._])(?<!double_)(?<!single_)blocks[._](\d+)[._]", 28),
         ],
     },
 }

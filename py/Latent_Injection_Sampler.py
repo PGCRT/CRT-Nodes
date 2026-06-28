@@ -549,6 +549,13 @@ class LatentNoiseInjectionSampler:
             )
 
         decoded_image = vae.decode(final_latent["samples"])
+        if len(decoded_image.shape) == 5:
+            decoded_image = decoded_image.reshape(
+                -1,
+                decoded_image.shape[-3],
+                decoded_image.shape[-2],
+                decoded_image.shape[-1],
+            )
         return (final_latent, decoded_image)
 
 

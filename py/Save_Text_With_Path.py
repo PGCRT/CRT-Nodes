@@ -17,6 +17,13 @@ class SaveTextWithPath:
                     {"default": "output", "tooltip": "File name for the text file (without extension)"},
                 ),
                 "suffix": ("STRING", {"default": "", "tooltip": "Optional suffix appended to filename."}),
+                "overwrite": (
+                    "BOOLEAN",
+                    {
+                        "default": True,
+                        "tooltip": "If enabled, existing files will be overwritten. If disabled, a numbered suffix like _001 is added.",
+                    },
+                ),
             }
         }
 
@@ -26,7 +33,7 @@ class SaveTextWithPath:
     OUTPUT_NODE = True
     DESCRIPTION = "Saves a text string to a specified folder path with a subfolder as a .txt file."
 
-    def save_text(self, text, folder_path, subfolder_name, filename, suffix):
+    def save_text(self, text, folder_path, subfolder_name, filename, suffix, overwrite=True):
         """
         Saves the provided text to a .txt file with UTF-8 encoding.
         """
@@ -37,11 +44,19 @@ class SaveTextWithPath:
         if full_folder_path and not os.path.exists(full_folder_path):
             os.makedirs(full_folder_path, exist_ok=True)
 
-        # Ensure the filename is clean and add the .txt extension
-        clean_filename = f"{filename}{suffix.strip()}.txt"
+        # Keep the stem separate so numbered copies are always inserted before .txt.
+        filename_stem = f"{filename}{suffix.strip()}"
+        clean_filename = f"{filename_stem}.txt"
 
         # Construct the full file path
         full_path = os.path.join(full_folder_path, clean_filename)
+
+        if not overwrite and os.path.exists(full_path):
+            counter = 1
+            while os.path.exists(full_path):
+                numbered_filename = f"{filename_stem}_{counter:03d}.txt"
+                full_path = os.path.join(full_folder_path, numbered_filename)
+                counter += 1
 
         try:
             # Write the text to the file with UTF-8 encoding

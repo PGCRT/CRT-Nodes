@@ -4,7 +4,7 @@
  * Features:
  *   - Dry/Wet multiplier (0–200%) applied globally to all lora strengths
  *   - Global Σ strength indicator in the header
- *   - Global block weights (Flux double_blocks 0–18, single_blocks 0–37)
+ *   - Model-specific global and per-LoRA block weights
  *   - Per-LoRA block weight overrides
  *   - Preset saver / loader (server-side JSON)
  */
@@ -445,7 +445,7 @@ const _NW = 38;
 const WET_WIDGET_TOTAL = _AW + _IM + _NW + _IM + _AW;
 
 // Supported model types and their block architectures
-const MODEL_TYPES = ["Flux2Klein", "LTX2.3", "ZImageTurbo", "WAN2.2", "ERNIEImage"];
+const MODEL_TYPES = ["Flux2Klein", "LTX2.3", "ZImageTurbo", "WAN2.2", "ERNIEImage", "Ideogram4", "Krea2Turbo"];
 const BLOCK_CONFIGS = {
   "Flux2Klein": [
     { key: "double",      label: "Double Blocks (0–7)",        count: 8  },
@@ -462,6 +462,12 @@ const BLOCK_CONFIGS = {
   ],
   "ERNIEImage": [
     { key: "layers", label: "Layers (0–35)", count: 36 },
+  ],
+  "Ideogram4": [
+    { key: "layers", label: "Layers (0–33)", count: 34 },
+  ],
+  "Krea2Turbo": [
+    { key: "blocks", label: "Blocks (0–27)", count: 28 },
   ],
 };
 
@@ -510,6 +516,7 @@ function _injectStyles() {
       white-space: nowrap; flex-shrink: 0;
       font-family: sans-serif; pointer-events: none;
     }
+    .pgc-pll-automix-ctrl.compact { gap: 4px; }
     .pgc-pll-select {
       flex: 1 1 0; min-width: 0;
       background: #000;
@@ -529,6 +536,12 @@ function _injectStyles() {
       font-size: 11px; outline: none;
       font-family: sans-serif; transition: border-color 0.15s;
     }
+    .pgc-pll-automix-ctrl .pgc-pll-input {
+      flex: 0 0 54px;
+      min-width: 0;
+      box-sizing: border-box;
+      padding: 2px 4px;
+    }
     .pgc-pll-input::placeholder { color: rgba(255,255,255,0.28); }
     .pgc-pll-input:focus { border-color: #7c6bff; }
     .pgc-pll-btn {
@@ -547,6 +560,7 @@ function _injectStyles() {
     .pgc-pll-btn-del  { color: #d88f7f; padding: 2px 6px; }
     .pgc-pll-btn-del:hover { color: #f0a89a; }
     .pgc-pll-btn-normalize { color: #bbb; }
+    .pgc-pll-automix-ctrl.compact .pgc-pll-btn { padding: 2px 6px; }
     .pgc-pll-btn-normalize.active { color: #7fd88f; border-color: rgba(127,216,143,0.5); background: rgba(60,120,70,0.35); }
     .pgc-pll-btn-normalize.active:hover { background: rgba(80,150,90,0.5); border-color: #7fd88f; }
 
@@ -649,10 +663,31 @@ function _injectStyles() {
     }
     .pgc-blocks-num:focus { border-color: #7c6bff; color: #fff; }
     .pgc-blocks-footer {
-      display: flex; gap: 6px; flex-wrap: wrap;
+      display: flex; flex-direction: column; gap: 7px;
       padding: 7px 14px;
       border-top: 1px solid rgba(124,107,255,0.2);
       flex-shrink: 0;
+    }
+    .pgc-blocks-fine {
+      display: flex; align-items: center; gap: 7px;
+      width: 100%; box-sizing: border-box;
+    }
+    .pgc-blocks-fine-label {
+      flex: 0 0 auto; color: rgba(255,255,255,0.55);
+      font-size: 10px; white-space: nowrap;
+    }
+    .pgc-blocks-fine-slider {
+      flex: 1 1 auto; min-width: 0;
+      accent-color: #7c6bff;
+    }
+    .pgc-blocks-fine-value {
+      flex: 0 0 34px; text-align: right;
+      color: rgba(255,255,255,0.55); font-size: 10px;
+      font-variant-numeric: tabular-nums;
+    }
+    .pgc-blocks-footer-buttons {
+      display: flex; gap: 6px; flex-wrap: wrap;
+      width: 100%;
     }
     .pgc-blocks-fbtn {
       flex: 1;
@@ -838,6 +873,9 @@ class BlockEditorPanel {
     this._footerEl        = null;
     this._builtModelType  = null;
     this._modelType       = "Flux2Klein";
+    this._fineTuneInput   = null;
+    this._fineTuneValueEl = null;
+    this._fineTuneValue   = 0;
   }
 
   _ensureBuilt() {
@@ -908,6 +946,35 @@ class BlockEditorPanel {
     footer.className = "pgc-blocks-footer";
     this._footerEl = footer;
 
+    const fineRow = document.createElement("div");
+    fineRow.className = "pgc-blocks-fine";
+    const fineLabel = document.createElement("span");
+    fineLabel.className = "pgc-blocks-fine-label";
+    fineLabel.textContent = "Fine Tune";
+    this._fineTuneInput = document.createElement("input");
+    this._fineTuneInput.type = "range";
+    this._fineTuneInput.min = "-1";
+    this._fineTuneInput.max = "1";
+    this._fineTuneInput.step = "0.01";
+    this._fineTuneInput.value = "0";
+    this._fineTuneInput.className = "pgc-blocks-fine-slider";
+    this._fineTuneInput.title = "Relative block fine tune: drag left/right to subtract/add from all current block strengths.";
+    this._fineTuneValueEl = document.createElement("span");
+    this._fineTuneValueEl.className = "pgc-blocks-fine-value";
+    this._fineTuneValueEl.textContent = "0.00";
+    this._fineTuneInput.addEventListener("input", () => this._applyFineTune(parseFloat(this._fineTuneInput.value) || 0));
+    const resetFine = () => this._resetFineTuneControl();
+    this._fineTuneInput.addEventListener("change", resetFine);
+    this._fineTuneInput.addEventListener("pointerup", resetFine);
+    this._fineTuneInput.addEventListener("mouseup", resetFine);
+    this._fineTuneInput.addEventListener("touchend", resetFine);
+    this._fineTuneInput.addEventListener("click", (e) => e.stopPropagation());
+    this._fineTuneInput.addEventListener("mousedown", (e) => e.stopPropagation());
+    fineRow.append(fineLabel, this._fineTuneInput, this._fineTuneValueEl);
+
+    const footerButtons = document.createElement("div");
+    footerButtons.className = "pgc-blocks-footer-buttons";
+
     const resetBtn = document.createElement("button");
     resetBtn.className = "pgc-blocks-fbtn";
     resetBtn.textContent = "Reset All";
@@ -937,7 +1004,8 @@ class BlockEditorPanel {
     this._intensityBtn.style.display = "none";
     this._intensityBtn.addEventListener("click", () => this._applyIntensity());
 
-    footer.append(resetBtn, disableBtn, invertBtn, this._intensityBtn, this._useGlobBtn);
+    footerButtons.append(resetBtn, disableBtn, invertBtn, this._intensityBtn, this._useGlobBtn);
+    footer.append(fineRow, footerButtons);
     el.append(hdr, footer);
     document.body.appendChild(el);
     _makeDraggable(el, hdr);
@@ -1040,13 +1108,37 @@ class BlockEditorPanel {
     return sec;
   }
 
-  _setOne(type, i, val, num) {
+  _setOne(type, i, val, num, notify = true) {
     if (!this._blocks[type]) this._blocks[type] = [];
     this._blocks[type][i] = val;
     num.value = val.toFixed(2);
     const fill = num._fill;
     fill.style.width = (val / 2 * 100) + "%";
     fill.style.background = val === 0 ? "#444" : val < 1.0 ? "#a89aff" : "#7c6bff";
+    if (notify) this._onChange?.(this._blocks);
+  }
+
+  _resetFineTuneControl() {
+    this._fineTuneValue = 0;
+    if (this._fineTuneInput) this._fineTuneInput.value = "0";
+    if (this._fineTuneValueEl) this._fineTuneValueEl.textContent = "0.00";
+  }
+
+  _applyFineTune(nextValue) {
+    const next = Math.max(-1, Math.min(1, nextValue));
+    const delta = next - this._fineTuneValue;
+    this._fineTuneValue = next;
+    if (this._fineTuneValueEl) this._fineTuneValueEl.textContent = next.toFixed(2);
+    if (Math.abs(delta) < 1e-6) return;
+
+    for (const [type, inputs] of Object.entries(this._inputs)) {
+      inputs.forEach((num, i) => {
+        if (!num) return;
+        const current = this._blocks[type]?.[i] ?? 1.0;
+        const val = Math.round(Math.max(0, Math.min(2, current + delta)) * 100) / 100;
+        this._setOne(type, i, val, num, false);
+      });
+    }
     this._onChange?.(this._blocks);
   }
 
@@ -1160,6 +1252,7 @@ class BlockEditorPanel {
     this._reductionWrap.style.display = isPerLora ? "flex" : "none";
     if (this._reductionInput) this._reductionInput.value = (reduction ?? 1.0).toFixed(1);
     this._refreshInputs();
+    this._resetFineTuneControl();
 
     this._el.style.display = "flex";
 
@@ -1525,7 +1618,7 @@ function _applyPreset(presetData, node) {
 function _buildAutomixControlsDomWidget(node) {
   _injectStyles();
   const container = document.createElement("div");
-  container.className = "pgc-pll-presets";
+  container.className = "pgc-pll-presets pgc-pll-automix-ctrl";
 
   const label = document.createElement("span");
   label.className  = "pgc-pll-presets-label";
@@ -1536,7 +1629,7 @@ function _buildAutomixControlsDomWidget(node) {
   reductionInput.min   = "0"; reductionInput.max = "5"; reductionInput.step = "0.1";
   reductionInput.value = (node._pllReductionMult ?? 1.0).toFixed(1);
   reductionInput.className = "pgc-pll-input";
-  reductionInput.style.cssText = "flex: 0 0 54px; width: 54px; text-align: center;";
+  reductionInput.style.cssText = "width: 54px; text-align: center;";
   reductionInput.title = "Reduction multiplier: 0 = no change, 1 = automix as-is, 2 = double the reduction, etc.";
   reductionInput.addEventListener("change", () => {
     node._pllReductionMult = Math.max(0, parseFloat(reductionInput.value) || 1);
@@ -1588,17 +1681,31 @@ function _buildAutomixControlsDomWidget(node) {
 
   const normCapInput = document.createElement("input");
   normCapInput.type  = "number";
-  normCapInput.min   = "0.01"; normCapInput.max = "10"; normCapInput.step = "0.05";
-  normCapInput.value = (node._pllNormalizeCap ?? 1.0).toFixed(2);
+  normCapInput.min   = "0.1"; normCapInput.max = "10"; normCapInput.step = "0.1";
+  normCapInput.value = (node._pllNormalizeCap ?? 1.0).toFixed(1);
   normCapInput.className = "pgc-pll-input";
-  normCapInput.style.cssText = "flex: 0 0 54px; width: 54px; text-align: center;";
+  normCapInput.style.cssText = "width: 54px; text-align: center;";
   normCapInput.title = "Normalize cap — maximum allowed combined block contribution (default 1.0)";
   normCapInput.addEventListener("change", () => {
-    node._pllNormalizeCap = Math.max(0.01, parseFloat(normCapInput.value) || 1.0);
-    normCapInput.value = node._pllNormalizeCap.toFixed(2);
+    node._pllNormalizeCap = Math.max(0.1, parseFloat(normCapInput.value) || 1.0);
+    normCapInput.value = node._pllNormalizeCap.toFixed(1);
   });
   normCapInput.addEventListener("click",    (e) => e.stopPropagation());
   normCapInput.addEventListener("mousedown", (e) => e.stopPropagation());
+
+  const updateCompact = () => {
+    const compact = container.getBoundingClientRect().width < 520;
+    container.classList.toggle("compact", compact);
+    label.textContent = compact ? "Red ×" : "Reduction ×";
+    stackBtn.textContent = compact ? "Stack" : "📊 Stack";
+    globalBlocksBtn.textContent = compact ? "Global" : "⊞ Global";
+    normalizeBtn.textContent = compact ? "Norm" : "⊜ Normalize";
+  };
+  requestAnimationFrame(updateCompact);
+  if (typeof ResizeObserver !== "undefined") {
+    container._pllCompactObserver = new ResizeObserver(updateCompact);
+    container._pllCompactObserver.observe(container);
+  }
 
   container.append(label, reductionInput, stackBtn, globalBlocksBtn, normalizeBtn, normCapInput);
   const widget = node.addDOMWidget("pgc_automix_ctrl", "div", container, { serialize: false });
@@ -2250,7 +2357,7 @@ class MagicLoraLoaderWidget extends RgthreeBaseWidget {
 // CrtMagicLoraLoaderNode — main node
 // ---------------------------------------------------------------------------
 var _a;
-const CRT_PLL_MIN_WIDTH = 380;
+const CRT_PLL_MIN_WIDTH = 520;
 
 class CrtMagicLoraLoaderNode extends RgthreeBaseServerNode {
   constructor(title = NODE_CLASS.title) {
@@ -2483,7 +2590,7 @@ class CrtMagicLoraLoaderNode extends RgthreeBaseServerNode {
       <ul>
         <li><p><strong>Dry / Wet</strong> — global multiplier (0–200%) applied to all strengths.</p></li>
         <li><p><strong>Strength Cap</strong> — clamps the absolute value of every LoRA strength to this limit after wet is applied. 0 = OFF (no cap).</p></li>
-        <li><p><strong>Global Blocks</strong> — per-block strength multipliers for FLUX.2 Klein (double blocks 0–7, single blocks 0–23).
+        <li><p><strong>Global Blocks</strong> — model-specific per-block strength multipliers.
             Click ⚙ Configure to edit. Applies to all LoRAs unless overridden per-LoRA.</p></li>
         <li><p><strong>⊞ icon per LoRA</strong> — click to set per-LoRA block overrides.
             Grey = using global; accent = custom blocks set. "Use Global" clears the override.</p></li>

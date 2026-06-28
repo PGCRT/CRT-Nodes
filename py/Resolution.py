@@ -6,6 +6,7 @@ import comfy.model_management
 MODEL_PRESETS = {
     "SDXL":                        {"channels": 4,   "downscale": 8},
     "Flux 1, Z-image, Qwen-Image": {"channels": 16,  "downscale": 8},
+    "Krea 2":                      {"channels": 16,  "downscale": 8},
     "Flux 2, ERNIE":               {"channels": 128, "downscale": 16},
 }
 
