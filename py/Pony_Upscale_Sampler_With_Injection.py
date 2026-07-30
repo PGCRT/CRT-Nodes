@@ -48,14 +48,14 @@ def attach_reference_latent(conditioning, ref_samples):
 class ColorMatch:
     def colormatch(self, image_ref, image_target, method, strength=1.0):
         colored_print(
-            f"🎨 Applying color matching (method: {method}, strength: {strength:.2f})...",
+            f" Applying color matching (method: {method}, strength: {strength:.2f})...",
             Colors.CYAN,
         )
 
         try:
             from color_matcher import ColorMatcher
         except Exception:
-            colored_print("❌ ERROR: 'color-matcher' library not found.", Colors.RED)
+            colored_print("[ERROR] ERROR: 'color-matcher' library not found.", Colors.RED)
             raise Exception(
                 "ColorMatch requires 'color-matcher'. Please 'pip install color-matcher'"
             )
@@ -64,7 +64,7 @@ class ColorMatch:
         image_ref, image_target = image_ref.cpu(), image_target.cpu()
 
         batch_size = image_target.size(0)
-        colored_print(f"   🔄 Processing {batch_size} image(s)...", Colors.BLUE)
+        colored_print(f"    Processing {batch_size} image(s)...", Colors.BLUE)
 
         for i in range(batch_size):
             target_np, ref_np = (
@@ -81,13 +81,13 @@ class ColorMatch:
 
             final_mean = np.mean(result, axis=(0, 1))
             colored_print(
-                f"   📊 Image {i + 1}: Target RGB({target_mean[0]:.3f},{target_mean[1]:.3f},{target_mean[2]:.3f}) → Final RGB({final_mean[0]:.3f},{final_mean[1]:.3f},{final_mean[2]:.3f})",
+                f"    Image {i + 1}: Target RGB({target_mean[0]:.3f},{target_mean[1]:.3f},{target_mean[2]:.3f}) -> Final RGB({final_mean[0]:.3f},{final_mean[1]:.3f},{final_mean[2]:.3f})",
                 Colors.BLUE,
             )
 
             out.append(torch.from_numpy(result))
 
-        colored_print("✅ Color matching completed!", Colors.GREEN)
+        colored_print("[OK] Color matching completed!", Colors.GREEN)
         return (torch.stack(out, dim=0).to(torch.float32).clamp_(0, 1),)
 
 
@@ -324,24 +324,24 @@ class PonyUpscaleSamplerWithInjection:
 
     def _upscale_image(self, image, method, model_name, target_scale):
         """Upscale image using AI model or simple resize."""
-        colored_print(f"🚀 Starting image upscaling ({method})...", Colors.CYAN)
+        colored_print(f" Starting image upscaling ({method})...", Colors.CYAN)
 
         input_h, input_w = image.shape[1], image.shape[2]
         target_h = int(input_h * target_scale)
         target_w = int(input_w * target_scale)
 
         colored_print(
-            f"   📐 Input: {input_w}x{input_h} → Target: {target_w}x{target_h} ({target_scale:.1f}x)",
+            f"    Input: {input_w}x{input_h} -> Target: {target_w}x{target_h} ({target_scale:.1f}x)",
             Colors.BLUE,
         )
 
         if method == "simple_resize":
-            colored_print("   🔄 Using simple Lanczos resize...", Colors.CYAN)
+            colored_print("    Using simple Lanczos resize...", Colors.CYAN)
             upscaled_image = comfy.utils.lanczos(
                 image.permute(0, 3, 1, 2), target_w, target_h
             ).permute(0, 2, 3, 1)
             colored_print(
-                f"   ✅ Simple resize completed: {upscaled_image.shape[2]}x{upscaled_image.shape[1]}",
+                f"   [OK] Simple resize completed: {upscaled_image.shape[2]}x{upscaled_image.shape[1]}",
                 Colors.GREEN,
             )
             return upscaled_image
@@ -350,14 +350,14 @@ class PonyUpscaleSamplerWithInjection:
             try:
                 upscale_model = self.upscale_loader.load_model(model_name)[0]
                 colored_print(
-                    f"   ✅ Upscale model '{model_name}' loaded successfully",
+                    f"   [OK] Upscale model '{model_name}' loaded successfully",
                     Colors.GREEN,
                 )
             except Exception as e:
-                colored_print(f"   ❌ Failed to load upscale model: {e}", Colors.RED)
+                colored_print(f"   [ERROR] Failed to load upscale model: {e}", Colors.RED)
                 raise
             model_scale = self._get_model_scale_factor(model_name)
-            colored_print(f"   🔍 Model scale factor: {model_scale}x", Colors.BLUE)
+            colored_print(f"   [INFO] Model scale factor: {model_scale}x", Colors.BLUE)
             device = mm.get_torch_device()
             upscale_model.to(device)
 
@@ -365,10 +365,10 @@ class PonyUpscaleSamplerWithInjection:
                 upscaled_image = self.image_upscaler.upscale(upscale_model, image)[0]
 
             current_h, current_w = upscaled_image.shape[1], upscaled_image.shape[2]
-            colored_print(f"   📊 Model output: {current_w}x{current_h}", Colors.BLUE)
+            colored_print(f"    Model output: {current_w}x{current_h}", Colors.BLUE)
             if current_h != target_h or current_w != target_w:
                 colored_print(
-                    "   🔄 Final resize to exact target using Lanczos...", Colors.CYAN
+                    "    Final resize to exact target using Lanczos...", Colors.CYAN
                 )
                 upscaled_image = comfy.utils.lanczos(
                     upscaled_image.permute(0, 3, 1, 2), target_w, target_h
@@ -378,7 +378,7 @@ class PonyUpscaleSamplerWithInjection:
                 torch.cuda.empty_cache()
 
             colored_print(
-                f"   ✅ Model upscaling completed: {upscaled_image.shape[2]}x{upscaled_image.shape[1]}",
+                f"   [OK] Model upscaling completed: {upscaled_image.shape[2]}x{upscaled_image.shape[1]}",
                 Colors.GREEN,
             )
             return upscaled_image
@@ -386,7 +386,7 @@ class PonyUpscaleSamplerWithInjection:
     def _upscale_latent_simple(self, latent_samples, target_scale):
         """Simple upscale of latent using interpolation."""
         colored_print(
-            f"🚀 Starting latent upscaling (simple resize {target_scale:.1f}x)...",
+            f" Starting latent upscaling (simple resize {target_scale:.1f}x)...",
             Colors.CYAN,
         )
 
@@ -395,10 +395,10 @@ class PonyUpscaleSamplerWithInjection:
         target_w = int(w_latent * target_scale)
 
         colored_print(
-            f"   📐 Latent: {w_latent}x{h_latent} → {target_w}x{target_h}", Colors.BLUE
+            f"    Latent: {w_latent}x{h_latent} -> {target_w}x{target_h}", Colors.BLUE
         )
         colored_print(
-            f"   📐 Pixel equivalent: {w_latent * 8}x{h_latent * 8} → {target_w * 8}x{target_h * 8}",
+            f"    Pixel equivalent: {w_latent * 8}x{h_latent * 8} -> {target_w * 8}x{target_h * 8}",
             Colors.BLUE,
         )
 
@@ -410,7 +410,7 @@ class PonyUpscaleSamplerWithInjection:
         )
 
         colored_print(
-            f"   ✅ Latent upscaling completed: {upscaled_latent.shape[2]}x{upscaled_latent.shape[3]}",
+            f"   [OK] Latent upscaling completed: {upscaled_latent.shape[2]}x{upscaled_latent.shape[3]}",
             Colors.GREEN,
         )
         return upscaled_latent
@@ -463,7 +463,7 @@ class PonyUpscaleSamplerWithInjection:
 
         method = "model" if use_model else "simple_resize"
         colored_print(
-            f"📈 Tile-wise upscaling ({method}) at ~{target_tile_megapixels:.2f} MP/tile ({scale:.3f}x)",
+            f" Tile-wise upscaling ({method}) at ~{target_tile_megapixels:.2f} MP/tile ({scale:.3f}x)",
             Colors.HEADER,
         )
 
@@ -559,7 +559,7 @@ class PonyUpscaleSamplerWithInjection:
         normalize_injected_noise,
     ):
         """Perform tiled sampling using proper overlapping tiles with blend masks."""
-        colored_print("🧩 Starting tiled sampling...", Colors.HEADER)
+        colored_print(" Starting tiled sampling...", Colors.HEADER)
 
         device = mm.get_torch_device()
         latent_samples = working_latent["samples"].clone().to(device)
@@ -567,7 +567,7 @@ class PonyUpscaleSamplerWithInjection:
         rows, columns = self._grid_to_dimensions(tile_grid)
         total_tiles = rows * columns
         colored_print(
-            f"   📐 Grid configuration: {tile_grid} = {rows}x{columns} = {total_tiles} tiles",
+            f"    Grid configuration: {tile_grid} = {rows}x{columns} = {total_tiles} tiles",
             Colors.BLUE,
         )
         base_tile_h = h_latent // rows
@@ -576,11 +576,11 @@ class PonyUpscaleSamplerWithInjection:
         overlap_w = int(base_tile_w * (tile_padding / 100.0))
 
         colored_print(
-            f"   📋 Base tile size: {base_tile_w}x{base_tile_h} latent ({base_tile_w * 8}x{base_tile_h * 8} pixels)",
+            f"    Base tile size: {base_tile_w}x{base_tile_h} latent ({base_tile_w * 8}x{base_tile_h * 8} pixels)",
             Colors.BLUE,
         )
         colored_print(
-            f"   🎨 Overlap: {tile_padding:.1f}% = {overlap_w}x{overlap_h} latent ({overlap_w * 8}x{overlap_h * 8} pixels)",
+            f"    Overlap: {tile_padding:.1f}% = {overlap_w}x{overlap_h} latent ({overlap_w * 8}x{overlap_h * 8} pixels)",
             Colors.BLUE,
         )
         samples = torch.zeros_like(latent_samples, device=device)
@@ -598,7 +598,7 @@ class PonyUpscaleSamplerWithInjection:
                 tile_w = x_end - x_start
 
                 colored_print(
-                    f"   🔄 Processing tile {y + 1},{x + 1}: {tile_w}x{tile_h} latent (seed: {tile_seed})",
+                    f"    Processing tile {y + 1},{x + 1}: {tile_w}x{tile_h} latent (seed: {tile_seed})",
                     Colors.YELLOW,
                 )
                 section = latent_samples[:, :, y_start:y_end, x_start:x_end].clone()
@@ -696,7 +696,7 @@ class PonyUpscaleSamplerWithInjection:
                 pbar.update(1)
 
         colored_print(
-            f"   ✅ Tiled sampling completed with {total_tiles} tiles!", Colors.GREEN
+            f"   [OK] Tiled sampling completed with {total_tiles} tiles!", Colors.GREEN
         )
         return {"samples": samples}
 
@@ -740,7 +740,7 @@ class PonyUpscaleSamplerWithInjection:
     ):
 
         colored_print(
-            "\n🐎 Starting Pony Upscale Sampler with Injection, Tiling & Color Matching...",
+            "\n Starting Pony Upscale Sampler with Injection, Tiling & Color Matching...",
             Colors.HEADER,
         )
 
@@ -752,28 +752,28 @@ class PonyUpscaleSamplerWithInjection:
             negative = []
             for t in positive:
                 negative.append([torch.zeros_like(t[0]), t[1].copy()])
-        colored_print("🎲 Seed Configuration:", Colors.HEADER)
+        colored_print(" Seed Configuration:", Colors.HEADER)
         colored_print(f"   Base Seed: {seed}", Colors.BLUE)
         colored_print(f"   Seed Shift: {seed_shift:+d}", Colors.BLUE)
         colored_print(f"   Final Seed: {actual_seed}", Colors.GREEN)
         if image is None and latent is None:
             colored_print(
-                "❌ ERROR: PonyUpscaleSampler requires either an 'image' or a 'latent' input.",
+                "[ERROR] ERROR: PonyUpscaleSampler requires either an 'image' or a 'latent' input.",
                 Colors.RED,
             )
             raise ValueError(
                 "PonyUpscaleSampler requires either an 'image' or a 'latent' input."
             )
         if image is not None:
-            colored_print("🖼️  Using provided image input...", Colors.CYAN)
+            colored_print("  Using provided image input...", Colors.CYAN)
             source_image = image
             h, w = image.shape[1], image.shape[2]
-            colored_print(f"   📐 Source image dimensions: {w}x{h}", Colors.BLUE)
+            colored_print(f"    Source image dimensions: {w}x{h}", Colors.BLUE)
         else:
-            colored_print("🎯 Decoding latent to image...", Colors.CYAN)
+            colored_print(" Decoding latent to image...", Colors.CYAN)
             source_image = vae.decode(latent["samples"])
             h, w = source_image.shape[1], source_image.shape[2]
-            colored_print(f"   📐 Decoded image dimensions: {w}x{h}", Colors.BLUE)
+            colored_print(f"    Decoded image dimensions: {w}x{h}", Colors.BLUE)
         rows, columns = self._grid_to_dimensions(tile_grid)
         tile_w_base = max(1.0, float(w) / float(columns))
         tile_h_base = max(1.0, float(h) / float(rows))
@@ -784,7 +784,7 @@ class PonyUpscaleSamplerWithInjection:
         tile_ref_latents = None
         if edit_model_flux2klein:
             colored_print(
-                "🧠 Precomputing per-tile reference latents before tile upscale...",
+                " Precomputing per-tile reference latents before tile upscale...",
                 Colors.CYAN,
             )
             tile_ref_latents = []
@@ -795,7 +795,7 @@ class PonyUpscaleSamplerWithInjection:
         original_image_for_color_match = None
         if color_match_strength > 0:
             colored_print(
-                "🎨 Storing original image for color matching...", Colors.CYAN
+                " Storing original image for color matching...", Colors.CYAN
             )
             original_image_for_color_match = source_image.clone()
             orig_h, orig_w = (
@@ -803,12 +803,12 @@ class PonyUpscaleSamplerWithInjection:
                 original_image_for_color_match.shape[2],
             )
             colored_print(
-                f"   📐 Reference image stored: {orig_w}x{orig_h}", Colors.BLUE
+                f"    Reference image stored: {orig_w}x{orig_h}", Colors.BLUE
             )
         can_use_upscale_model = bool(upscale_model_name)
         if enable_upscale_model and not can_use_upscale_model:
             colored_print(
-                "⚠️ No upscale model selected/available. Falling back to no model upscaling.",
+                "[WARN] No upscale model selected/available. Falling back to no model upscaling.",
                 Colors.YELLOW,
             )
 
@@ -825,36 +825,36 @@ class PonyUpscaleSamplerWithInjection:
                 upscale_model_name,
             )
             h, w = source_image.shape[1], source_image.shape[2]
-            colored_print(f"   📐 Final source dimensions: {w}x{h}", Colors.GREEN)
+            colored_print(f"    Final source dimensions: {w}x{h}", Colors.GREEN)
         else:
             colored_print(
-                "🚫 Upscaling skipped (target tile size <= current)", Colors.YELLOW
+                " Upscaling skipped (target tile size <= current)", Colors.YELLOW
             )
 
-        colored_print("🔄 Encoding image to latent space...", Colors.CYAN)
+        colored_print(" Encoding image to latent space...", Colors.CYAN)
         mm.load_model_gpu(vae.patcher)
         latent_samples = vae.encode(source_image)
         working_latent = {"samples": latent_samples}
         b, c, h_latent, w_latent = latent_samples.shape
         colored_print(
-            f"   📐 Encoded latent dimensions: {w_latent}x{h_latent} (channels: {c})",
+            f"    Encoded latent dimensions: {w_latent}x{h_latent} (channels: {c})",
             Colors.BLUE,
         )
-        colored_print("⚙️  Sampling Configuration:", Colors.HEADER)
-        colored_print(f"   🎲 Seed: {actual_seed}", Colors.BLUE)
+        colored_print("  Sampling Configuration:", Colors.HEADER)
+        colored_print(f"    Seed: {actual_seed}", Colors.BLUE)
         colored_print(
-            f"   📊 Sampler: {sampler_name} | Scheduler: {scheduler}", Colors.BLUE
+            f"    Sampler: {sampler_name} | Scheduler: {scheduler}", Colors.BLUE
         )
         colored_print(
-            f"   🔄 Steps: {steps} | CFG: {cfg:.1f} | Denoise: {denoise:.2f}",
+            f"    Steps: {steps} | CFG: {cfg:.1f} | Denoise: {denoise:.2f}",
             Colors.BLUE,
         )
         colored_print(
-            f"   🧩 Tiling: enabled | Grid: {tile_grid} (operates in latent space)",
+            f"    Tiling: enabled | Grid: {tile_grid} (operates in latent space)",
             Colors.CYAN,
         )
         colored_print(
-            f"   💉 Noise Injection: {enable_noise_injection}",
+            f"    Noise Injection: {enable_noise_injection}",
             Colors.CYAN if enable_noise_injection == "enable" else Colors.YELLOW,
         )
 
@@ -921,11 +921,11 @@ class PonyUpscaleSamplerWithInjection:
 
         use_tiled_sampling = True
         colored_print(
-            f"   🎨 Color Matching: {'Enabled' if color_match_strength > 0 else 'Disabled'} (strength: {color_match_strength:.2f})",
+            f"    Color Matching: {'Enabled' if color_match_strength > 0 else 'Disabled'} (strength: {color_match_strength:.2f})",
             Colors.CYAN if color_match_strength > 0 else Colors.YELLOW,
         )
         if use_tiled_sampling:
-            colored_print(f"\n🧩 Using tiled sampling ({tile_grid})...", Colors.GREEN)
+            colored_print(f"\n Using tiled sampling ({tile_grid})...", Colors.GREEN)
             final_latent = self._sample_tiled(
                 model,
                 positive,
@@ -979,7 +979,7 @@ class PonyUpscaleSamplerWithInjection:
                     original_std = injected_latent_samples.std().item()
                     original_mean = injected_latent_samples.mean().item()
                     colored_print(
-                        f"   📊 Original latent - Mean: {original_mean:.4f}, Std: {original_std:.4f}",
+                        f"    Original latent - Mean: {original_mean:.4f}, Std: {original_std:.4f}",
                         Colors.BLUE,
                     )
                     if original_std > 1e-6:
@@ -1000,7 +1000,7 @@ class PonyUpscaleSamplerWithInjection:
                     disable_noise=True,
                 )
             else:
-                colored_print("\n🔥 Starting standard sampling...", Colors.GREEN)
+                colored_print("\n Starting standard sampling...", Colors.GREEN)
                 final_latent = run_custom_sample(
                     model,
                     working_latent,
@@ -1012,7 +1012,7 @@ class PonyUpscaleSamplerWithInjection:
                     actual_seed,
                     disable_noise=False,
                 )
-        colored_print("🎨 Decoding final latent to image...", Colors.CYAN)
+        colored_print(" Decoding final latent to image...", Colors.CYAN)
         if vae_decode_tiled:
             decode_tile = int(
                 round(math.sqrt(max(0.1, tile_size_megapixels) * 1_000_000.0))
@@ -1021,7 +1021,7 @@ class PonyUpscaleSamplerWithInjection:
             decode_overlap = int(round(decode_tile * max(0.0, tile_padding) / 100.0))
             decode_overlap = max(0, min(decode_tile // 4, (decode_overlap // 32) * 32))
             colored_print(
-                f"   🧩 Using tiled decode: tile={decode_tile}, overlap={decode_overlap}",
+                f"    Using tiled decode: tile={decode_tile}, overlap={decode_overlap}",
                 Colors.BLUE,
             )
             final_image = VAEDecodeTiled().decode(
@@ -1033,20 +1033,20 @@ class PonyUpscaleSamplerWithInjection:
         else:
             final_image = vae.decode(final_latent["samples"])
         final_h, final_w = final_image.shape[1], final_image.shape[2]
-        colored_print(f"   📐 Final image dimensions: {final_w}x{final_h}", Colors.BLUE)
+        colored_print(f"    Final image dimensions: {final_w}x{final_h}", Colors.BLUE)
         if color_match_strength > 0 and original_image_for_color_match is not None:
             colored_print(
-                "🎨 Applying color matching to final result...", Colors.HEADER
+                " Applying color matching to final result...", Colors.HEADER
             )
             if original_image_for_color_match.shape[1:3] != final_image.shape[1:3]:
                 colored_print(
-                    "   🔄 Resizing reference image for color matching...", Colors.CYAN
+                    "    Resizing reference image for color matching...", Colors.CYAN
                 )
                 ref_resized = comfy.utils.lanczos(
                     original_image_for_color_match.permute(0, 3, 1, 2), final_w, final_h
                 ).permute(0, 2, 3, 1)
                 colored_print(
-                    f"   📐 Reference resized to: {ref_resized.shape[2]}x{ref_resized.shape[1]}",
+                    f"    Reference resized to: {ref_resized.shape[2]}x{ref_resized.shape[1]}",
                     Colors.BLUE,
                 )
             else:
@@ -1056,19 +1056,19 @@ class PonyUpscaleSamplerWithInjection:
             )[0]
 
             colored_print(
-                f"   ✅ Color matching applied with strength: {color_match_strength:.2f}",
+                f"   [OK] Color matching applied with strength: {color_match_strength:.2f}",
                 Colors.GREEN,
             )
             final_image = color_matched_result
         elif color_match_strength > 0:
             colored_print(
-                "🚫 Color matching skipped - no reference image available",
+                " Color matching skipped - no reference image available",
                 Colors.YELLOW,
             )
         else:
-            colored_print("🚫 Color matching disabled (strength = 0)", Colors.YELLOW)
+            colored_print(" Color matching disabled (strength = 0)", Colors.YELLOW)
         colored_print(
-            "\n✅ Pony Upscale Sampler with Injection, Tiling & Color Matching completed!",
+            "\n[OK] Pony Upscale Sampler with Injection, Tiling & Color Matching completed!",
             Colors.HEADER,
         )
 
@@ -1078,31 +1078,31 @@ class PonyUpscaleSamplerWithInjection:
                 int(final_h / upscale_by),
             )
             colored_print(
-                f"   🎯 Process: {original_w}x{original_h} → {final_w}x{final_h} ({upscale_by:.1f}x, {'model' if do_model_upscale else 'lanczos'})",
+                f"    Process: {original_w}x{original_h} -> {final_w}x{final_h} ({upscale_by:.1f}x, {'model' if do_model_upscale else 'lanczos'})",
                 Colors.GREEN,
             )
         else:
             colored_print(
-                f"   🎯 Process: {final_w}x{final_h} (no upscaling)", Colors.GREEN
+                f"    Process: {final_w}x{final_h} (no upscaling)", Colors.GREEN
             )
 
         colored_print(
-            f"   📈 Upscaling: {'Applied' if do_resize else 'Skipped'}",
+            f"    Upscaling: {'Applied' if do_resize else 'Skipped'}",
             Colors.GREEN,
         )
         colored_print(
-            "   🧩 Tiling: Applied (latent space)",
+            "    Tiling: Applied (latent space)",
             Colors.GREEN,
         )
         colored_print(
-            f"   💉 Noise Injection: {'Applied' if enable_noise_injection == 'enable' else 'Skipped'}",
+            f"    Noise Injection: {'Applied' if enable_noise_injection == 'enable' else 'Skipped'}",
             Colors.GREEN,
         )
         colored_print(
-            f"   🎨 Color Matching: {'Applied' if color_match_strength > 0 and original_image_for_color_match is not None else 'Skipped'}",
+            f"    Color Matching: {'Applied' if color_match_strength > 0 and original_image_for_color_match is not None else 'Skipped'}",
             Colors.GREEN,
         )
-        colored_print(f"   🎲 Seed used: {actual_seed}", Colors.GREEN)
+        colored_print(f"    Seed used: {actual_seed}", Colors.GREEN)
 
         return (final_image, final_latent)
 

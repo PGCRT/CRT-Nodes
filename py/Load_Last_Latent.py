@@ -39,7 +39,7 @@ class LoadLastLatent:
     def load_last_latent(self, folder_path, sort_by, invert_order):
         # Validate the folder path
         if not folder_path or not os.path.isdir(folder_path):
-            print(f"LoadLastLatent: Folder not found at '{folder_path}', returning None.")
+            print(f"[CRT Load Last Latent][WARN] Folder not found at '{folder_path}', returning None.")
             return (None,)
 
         # Supported latent extension
@@ -53,12 +53,12 @@ class LoadLastLatent:
                 if os.path.isfile(os.path.join(folder_path, f)) and f.lower().endswith(latent_extension)
             ]
         except Exception as e:
-            print(f"LoadLastLatent: Error reading directory '{folder_path}': {e}. Returning None.")
+            print(f"[CRT Load Last Latent][ERROR] Could not read directory '{folder_path}': {e}. Returning None.")
             return (None,)
 
         # 3. Check if any latent files were found
         if not latent_files:
-            print(f"LoadLastLatent: No '.safetensors' files found in '{folder_path}', returning None.")
+            print(f"[CRT Load Last Latent][WARN] No '.safetensors' files found in '{folder_path}', returning None.")
             return (None,)
 
         # Sort files based on user preference
@@ -78,22 +78,22 @@ class LoadLastLatent:
 
         # Load the latent using safetensors
         try:
-            print(f"LoadLastLatent: Loading '{latent_filename}'...")
+            print(f"[CRT Load Last Latent][INFO] Loading '{latent_filename}'...")
             latent_data = load_file(latent_path)
             latent_tensor = latent_data.get("latent")
 
             if latent_tensor is None:
-                print(f"LoadLastLatent: ERROR - No 'latent' key found in safetensors file '{latent_filename}'.")
+                print(f"[CRT Load Last Latent][ERROR] No 'latent' key found in safetensors file '{latent_filename}'.")
                 return (None,)
 
             # Prepare the latent for ComfyUI
             latent_output = {"samples": latent_tensor.detach().clone()}
 
-            print(f"LoadLastLatent: Successfully loaded latent from '{latent_filename}'.")
+            print(f"[CRT Load Last Latent][OK] Loaded latent from '{latent_filename}'.")
             return (latent_output,)
 
         except Exception as e:
-            print(f"LoadLastLatent: ERROR - Failed to load file '{latent_filename}': {e}")
+            print(f"[CRT Load Last Latent][ERROR] Failed to load file '{latent_filename}': {e}")
             return (None,)
 
     @classmethod

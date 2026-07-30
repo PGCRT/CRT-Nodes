@@ -1,7 +1,7 @@
 import torch
 import numpy as np
 import folder_paths
-import soundfile as sf  # ← this is already present in ComfyUI embedded Python
+import soundfile as sf  # <- this is already present in ComfyUI embedded Python
 import random
 import os
 
@@ -43,7 +43,7 @@ class AudioPreviewer:
             if loaded_file and loaded_file.strip():
                 try:
                     file_path = folder_paths.get_annotated_filepath(loaded_file)
-                    # ──────────────── CHANGE: use soundfile instead of torchaudio ────────────────
+                    # ---------------- CHANGE: use soundfile instead of torchaudio ----------------
                     data, sample_rate = sf.read(file_path, dtype='float32')
                     # Convert to torch tensor in correct shape (channels, samples)
                     waveform = torch.from_numpy(data.T) if data.ndim == 2 else torch.from_numpy(data).unsqueeze(0)
@@ -108,7 +108,7 @@ class AudioPreviewer:
                     meter = pyln.Meter(sample_rate)
                     lufs = meter.integrated_loudness(audio_np.T)
                 except Exception as e:
-                    print(f"AudioPreviewer: Could not calculate LUFS. Error: {e}")
+                    print(f"[CRT Audio Previewer][WARN] Could not calculate LUFS: {e}")
 
         metrics = {
             "peak": f"{peak_dbfs:.1f}",

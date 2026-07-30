@@ -34,15 +34,15 @@ class Log:
 
     @staticmethod
     def success(msg):
-        print(f"{Log.GREEN}[âœ“] {msg}{Log.ENDC}")
+        print(f"{Log.GREEN}[[OK]] {msg}{Log.ENDC}")
 
     @staticmethod
     def warn(msg):
-        print(f"{Log.YELLOW}[âš ] {msg}{Log.ENDC}")
+        print(f"{Log.YELLOW}[[WARN]] {msg}{Log.ENDC}")
 
     @staticmethod
     def error(msg):
-        print(f"{Log.RED}[âœ—] {msg}{Log.ENDC}")
+        print(f"{Log.RED}[[ERROR]] {msg}{Log.ENDC}")
 
     @staticmethod
     def header(msg):
@@ -622,10 +622,10 @@ class CRT_WAN_BatchSampler:
                 switching_step = j - 1
                 break
         del temp_model
-        # Guard: switching_step=0 means phase 1 would do zero steps — clamp to at least 1
+        # Guard: switching_step=0 means phase 1 would do zero steps - clamp to at least 1
         if switching_step == 0:
             switching_step = 1
-            Log.warn(f"Boundary {boundary:.3f} resolved to step 0 with sigma_shift={sigma_shift} — clamped to 1. Lower sigma_shift or boundary to get a meaningful split.")
+            Log.warn(f"Boundary {boundary:.3f} resolved to step 0 with sigma_shift={sigma_shift} - clamped to 1. Lower sigma_shift or boundary to get a meaningful split.")
         Log.info(f"Boundary {boundary:.3f} â†’ switch at step {switching_step}/{steps}")
 
         # Determine processing mode
@@ -635,7 +635,7 @@ class CRT_WAN_BatchSampler:
             processing_mode == "Sequential" or use_i2v or offload_conditioning
         )
 
-        # PARALLEL MODE — true GPU batching with background carousel preview
+        # PARALLEL MODE - true GPU batching with background carousel preview
         if not run_sequential:
             Log.header("PARALLEL BATCH MODE")
 

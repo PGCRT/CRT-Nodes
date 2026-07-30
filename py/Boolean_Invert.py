@@ -13,9 +13,9 @@ class BooleanInvert:
     FUNCTION = "invert_boolean"
 
     def invert_boolean(self, input_boolean):
-        print(f"📌 BooleanInvert: Starting execution, input_boolean={input_boolean}")
+        print(f"[INFO] BooleanInvert: Starting execution, input_boolean={input_boolean}")
         output = not input_boolean
-        print(f"📌 Output: {output}")
+        print(f"[INFO] Output: {output}")
         return (output,)
 
     @classmethod

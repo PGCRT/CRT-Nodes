@@ -7,6 +7,8 @@ import folder_paths
 import numpy as np
 import torch
 
+from ..download_progress import snapshot_download_with_progress
+
 
 DEFAULT_MODEL_ID = "k2-fsa/OmniVoice"
 FIXED_OMNIVOICE_SEED = 0
@@ -111,10 +113,12 @@ def ensure_model(model_id, model_cache_root):
 
     os.makedirs(model_cache_root, exist_ok=True)
     try:
-        from huggingface_hub import snapshot_download
-
-        _log("INFO", f"Downloading model '{model_id}' to {local_dir}")
-        snapshot_download(repo_id=model_id, local_dir=local_dir)
+        snapshot_download_with_progress(
+            repo_id=model_id,
+            local_dir=local_dir,
+            label=f"OmniVoice {model_id}",
+            console_prefix="CRT OmniVoice",
+        )
     except Exception as e:
         raise RuntimeError(
             "Failed to download OmniVoice model from Hugging Face. "

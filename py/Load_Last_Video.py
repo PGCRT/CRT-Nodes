@@ -44,7 +44,7 @@ def get_audio_from_video(file_path):
         audio = audio.reshape((-1, ac)).transpose(0, 1).unsqueeze(0)
         return {"waveform": audio, "sample_rate": ar}
     except Exception as e:
-        print(f"⚠️ Warning: Could not extract audio from video: {e}")
+        print(f"[CRT Load Last Video][WARN] Warning: Could not extract audio from video: {e}")
         silent_audio = {"waveform": torch.zeros(1, 1, 1), "sample_rate": 44100}
         return silent_audio
 
@@ -92,7 +92,7 @@ class CRTLoadLastVideo:
     def load_last_video(self, folder_path, sort_by, invert_order, frame_load_cap, skip_first_frames, select_every_nth):
         # Fallback if folder path is invalid or does not exist
         if not folder_path or not os.path.isdir(folder_path):
-            print(f"⚠️ Invalid or non-existent folder path: {folder_path}. Returning dummy image.")
+            print(f"[CRT Load Last Video][WARN] Invalid or non-existent folder path: {folder_path}. Returning dummy image.")
             return self._create_dummy_image()
 
         # Supported video extensions
@@ -106,7 +106,7 @@ class CRTLoadLastVideo:
 
         # Fallback if no video files are found in the folder
         if not video_files:
-            print(f"⚠️ No video files found in {folder_path}. Returning dummy image.")
+            print(f"[CRT Load Last Video][WARN] No video files found in {folder_path}. Returning dummy image.")
             return self._create_dummy_image()
 
         if sort_by == "date":
@@ -144,14 +144,14 @@ class CRTLoadLastVideo:
                     if frame_load_cap > 0 and frames_added >= frame_load_cap:
                         break
         except Exception as e:
-            print(f"ERROR: Could not process video {video_path}. Reason: {e}. Returning dummy image.")
+            print(f"[CRT Load Last Video][ERROR] Could not process video {video_path}. Reason: {e}. Returning dummy image.")
             return self._create_dummy_image()
         finally:
             if video_cap is not None and video_cap.isOpened():
                 video_cap.release()
 
         if not frames:
-            print(f"⚠️ No frames loaded from {video_path}, possibly due to settings. Returning dummy image.")
+            print(f"[CRT Load Last Video][WARN] No frames loaded from {video_path}, possibly due to settings. Returning dummy image.")
             return self._create_dummy_image()
 
         images = torch.from_numpy(np.stack(frames, axis=0))

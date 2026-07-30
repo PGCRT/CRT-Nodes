@@ -183,8 +183,20 @@ class CRT_AudioTranscript:
             "required": {
                 "audio": ("AUDIO",),
                 "isolate_voice": ("BOOLEAN", {"default": False}),
-                "enable_translation": ("BOOLEAN", {"default": False}),
-                "translation_language": (OMNIVOICE_LANGUAGES, {"default": "French"}),
+                "enable_translation": (
+                    "BOOLEAN",
+                    {
+                        "default": False,
+                        "tooltip": "Translate the Whisper transcript with the optional local llama.cpp runtime. Requires a separately installed llama-cpp-python package.",
+                    },
+                ),
+                "translation_language": (
+                    OMNIVOICE_LANGUAGES,
+                    {
+                        "default": "French",
+                        "tooltip": "Target language used when translation is enabled and for translated OmniVoice output.",
+                    },
+                ),
                 "enable_omnivoice": ("BOOLEAN", {"default": False}),
             },
             "hidden": {

@@ -20,6 +20,7 @@ import comfy.model_management
 import folder_paths
 
 from ._cache_fingerprint import stable_fingerprint
+from .download_progress import snapshot_download_with_progress
 from .Isolate import (
     ISOLATE_PERFORMANCE_PRESETS,
     _effective_chunk_size,
@@ -60,10 +61,13 @@ def _ensure_clipseg_model(model_id):
 
     os.makedirs(_clipseg_cache_root(), exist_ok=True)
     try:
-        from huggingface_hub import snapshot_download
-
-        print(f"[CRT CLIPSeg] Downloading model '{model_id}' to {local_dir}")
-        snapshot_download(repo_id=model_id, local_dir=local_dir, local_dir_use_symlinks=False)
+        snapshot_download_with_progress(
+            repo_id=model_id,
+            local_dir=local_dir,
+            label=f"CLIPSeg {model_id}",
+            console_prefix="CRT CLIPSeg",
+            local_dir_use_symlinks=False,
+        )
     except Exception as e:
         raise RuntimeError(
             "[CRT CLIPSeg] Failed to download model from Hugging Face. "
@@ -276,7 +280,7 @@ class CRT_IsolateInputCLIPSeg:
             }
 
         batch_size, orig_h, orig_w, _ = images.shape
-        # Detect directly on original images — avoids allocating a giant padded
+        # Detect directly on original images - avoids allocating a giant padded
         # tensor that can exhaust RAM on large video batches.
         detect_input = _scale_for_detection(images, float(detect_megapixels))
         device = _preferred_compute_device()

@@ -1,5 +1,5 @@
 """
-load_image_base64.py  –  ComfyUI node: Load Image (Base64)
+load_image_base64.py  -  ComfyUI node: Load Image (Base64)
 ===========================================================
 Accepts a base64-encoded image string (JPEG, PNG, etc.) directly as input,
 bypassing ComfyUI's file-upload endpoint entirely.

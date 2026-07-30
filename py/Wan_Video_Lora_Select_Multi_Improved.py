@@ -19,7 +19,7 @@ class WanVideoLoraSelectMultiImproved:
     RETURN_TYPES = ("WANVIDLORA", "WANVIDLORA")
     RETURN_NAMES = ("high_lora_stack", "low_lora_stack")
     FUNCTION = "get_lora_stack"
-    CATEGORY = "WanVideo/Loaders"
+    CATEGORY = "CRT/LoRA"
 
     def get_lora_stack(self, lora_batch_config, merge_loras, low_mem_load, blocks={}):
         if not merge_loras:
@@ -97,10 +97,10 @@ class WanVideoLoraSelectMultiImproved:
                     )
 
             except ValueError as e:
-                print(f"WanVideoLoraSelectMultiImproved: Error parsing row '{row}': {e}")
+                print(f"[CRT Wan Video Multi-LoRA][ERROR] Could not parse row '{row}': {e}")
                 continue
             except Exception as e:
-                print(f"WanVideoLoraSelectMultiImproved: Error processing LoRA '{high_name or low_name}': {e}")
+                print(f"[CRT Wan Video Multi-LoRA][ERROR] Could not process LoRA '{high_name or low_name}': {e}")
                 continue
 
         return (high_lora_stack, low_lora_stack)

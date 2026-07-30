@@ -24,7 +24,7 @@ for module_path, mappings_attr, options_attr in import_attempts:
         if AUX_NODE_MAPPINGS and PREPROCESSOR_OPTIONS:
             CONTROLNET_AUX_AVAILABLE = True
             AVAILABLE_PREPROCESSORS = PREPROCESSOR_OPTIONS
-            print(f"✅ ControlNet Aux loaded from '{module_path}' with {len(PREPROCESSOR_OPTIONS)} preprocessors")
+            print(f"[OK] ControlNet Aux loaded from '{module_path}' with {len(PREPROCESSOR_OPTIONS)} preprocessors")
             break
     except (ImportError, AttributeError) as e:
         continue
@@ -39,8 +39,8 @@ if not CONTROLNET_AUX_AVAILABLE:
         aux_modules = [name for name in sys.modules.keys() if 'controlnet' in name.lower() and 'aux' in name.lower()]
 
         if aux_modules:
-            print(f"🔍 Found ControlNet Aux modules: {aux_modules}")
-            print("   But couldn't import AUX_NODE_MAPPINGS - checking alternative paths...")
+            print(f"[INFO] Found ControlNet Aux modules: {aux_modules}")
+            print("[CRT Smart Preprocessor][WARN] AUX_NODE_MAPPINGS unavailable; checking alternative paths.")
 
             # Try to find the actual mappings in any of these modules
             for module_name in aux_modules:
@@ -52,21 +52,23 @@ if not CONTROLNET_AUX_AVAILABLE:
                         CONTROLNET_AUX_AVAILABLE = True
                         AVAILABLE_PREPROCESSORS = PREPROCESSOR_OPTIONS
                         print(
-                            f"✅ ControlNet Aux loaded from existing module '{module_name}' with {len(PREPROCESSOR_OPTIONS)} preprocessors"
+                            f"[OK] ControlNet Aux loaded from existing module '{module_name}' with {len(PREPROCESSOR_OPTIONS)} preprocessors"
                         )
                         break
                 except Exception:
                     continue
 
     except Exception as e:
-        pass
+        print(
+            f"[CRT Smart Preprocessor][WARN] ControlNet Aux detection failed: {e}"
+        )
 
 if not CONTROLNET_AUX_AVAILABLE:
     print("\n" + "=" * 80)
-    print("🚨 IMPORTANT: **comfyui_controlnet_aux** is not installed or not detectable!")
-    print("   Install it via ComfyUI Manager for full preprocessor support.")
-    print("   Fallback: Only 'none' and 'canny' preprocessors available.")
-    print("   GitHub: https://github.com/Fannovel16/comfyui_controlnet_aux")
+    print("[CRT Smart Preprocessor][WARN] comfyui_controlnet_aux is not installed or detectable.")
+    print("[CRT Smart Preprocessor][INFO] Install it via ComfyUI Manager for full preprocessor support.")
+    print("[CRT Smart Preprocessor][INFO] Fallback: only 'none' and 'canny' are available.")
+    print("[CRT Smart Preprocessor][INFO] https://github.com/Fannovel16/comfyui_controlnet_aux")
     print("=" * 80 + "\n")
 
 
@@ -118,19 +120,19 @@ class PreprocessorCache:
             weak_ref = self.cache[key]
             result = weak_ref()
             if result is not None:
-                colored_print(f"   💾 Cache HIT for {preprocessor} (key: {key[:8]}...)", Colors.GREEN)
+                colored_print(f"    Cache HIT for {preprocessor} (key: {key[:8]}...)", Colors.GREEN)
                 return result
             else:
                 if key in self._strong_refs:
                     result = self._strong_refs[key]
-                    colored_print(f"   💾 Cache HIT (strong ref) for {preprocessor} (key: {key[:8]}...)", Colors.GREEN)
+                    colored_print(f"    Cache HIT (strong ref) for {preprocessor} (key: {key[:8]}...)", Colors.GREEN)
                     return result
                 else:
                     del self.cache[key]
                     if key in self.access_order:
                         self.access_order.remove(key)
 
-        colored_print(f"   💾 Cache MISS for {preprocessor} (key: {key[:8]}...)", Colors.YELLOW)
+        colored_print(f"    Cache MISS for {preprocessor} (key: {key[:8]}...)", Colors.YELLOW)
         return None
 
     def put(self, image, preprocessor, resolution, result, **kwargs):
@@ -150,14 +152,14 @@ class PreprocessorCache:
         self._strong_refs[key] = result.clone() if hasattr(result, 'clone') else result
         self.access_order.append(key)
 
-        colored_print(f"   💾 Cached result for {preprocessor} (cache size: {len(self.cache)})", Colors.CYAN)
+        colored_print(f"    Cached result for {preprocessor} (cache size: {len(self.cache)})", Colors.CYAN)
 
     def clear(self):
         """Clear all cached results."""
         self.cache.clear()
         self.access_order.clear()
         self._strong_refs.clear()
-        colored_print("   💾 Cache cleared", Colors.BLUE)
+        colored_print("    Cache cleared", Colors.BLUE)
 
 
 _preprocessor_cache = PreprocessorCache()
@@ -228,11 +230,11 @@ class SmartPreprocessor:
             edges_tensor = torch.from_numpy(edges_rgb.astype(np.float32) / 255.0)
             edges_tensor = edges_tensor.unsqueeze(0)  # Add batch dimension
 
-            colored_print("   🔧 Applied fallback Canny edge detection", Colors.CYAN)
+            colored_print("    Applied fallback Canny edge detection", Colors.CYAN)
             return edges_tensor
 
         except Exception as e:
-            colored_print(f"   ❌ Fallback Canny failed: {str(e)}", Colors.RED)
+            colored_print(f"   [ERROR] Fallback Canny failed: {str(e)}", Colors.RED)
             return image
 
     def _run_preprocessor(self, image, preprocessor, resolution):
@@ -246,13 +248,13 @@ class SmartPreprocessor:
                 return self._run_canny_fallback(image, resolution)
             else:
                 colored_print(
-                    f"   ⚠️ ControlNet Aux not available, cannot run '{preprocessor}' - returning original image",
+                    f"   [WARN] ControlNet Aux not available, cannot run '{preprocessor}' - returning original image",
                     Colors.YELLOW,
                 )
                 return image
 
         if preprocessor not in AUX_NODE_MAPPINGS:
-            colored_print(f"   ❌ Preprocessor '{preprocessor}' not found in AUX_NODE_MAPPINGS", Colors.RED)
+            colored_print(f"   [ERROR] Preprocessor '{preprocessor}' not found in AUX_NODE_MAPPINGS", Colors.RED)
             available_list = list(AUX_NODE_MAPPINGS.keys())[:10]  # Show first 10
             colored_print(
                 f"   Available preprocessors: {available_list}{'...' if len(AUX_NODE_MAPPINGS) > 10 else ''}",
@@ -307,41 +309,41 @@ class SmartPreprocessor:
             _preprocessor_cache.put(image, preprocessor, resolution, processed_image, **preprocessor_params)
 
             processing_time = time.time() - start_time
-            colored_print(f"   🖼️ Preprocessed with {preprocessor} in {processing_time:.2f}s", Colors.GREEN)
+            colored_print(f"    Preprocessed with {preprocessor} in {processing_time:.2f}s", Colors.GREEN)
 
             return processed_image
 
         except Exception as e:
-            colored_print(f"   ❌ Preprocessing failed for '{preprocessor}': {str(e)}", Colors.RED)
-            colored_print("   🔄 Returning original image instead", Colors.YELLOW)
+            colored_print(f"   [ERROR] Preprocessing failed for '{preprocessor}': {str(e)}", Colors.RED)
+            colored_print("    Returning original image instead", Colors.YELLOW)
             return image
 
     def smart_preprocess(self, image, preprocessor, resolution, controlnet_strength, enable_bypass):
         """
         Smart preprocessing with strength-based bypassing.
         """
-        colored_print("\n🔧 Smart Preprocessor", Colors.HEADER)
+        colored_print("\n Smart Preprocessor", Colors.HEADER)
         colored_print(
-            f"   📊 Preprocessor: {preprocessor} | Resolution: {resolution} | CN Strength: {controlnet_strength:.3f}",
+            f"    Preprocessor: {preprocessor} | Resolution: {resolution} | CN Strength: {controlnet_strength:.3f}",
             Colors.BLUE,
         )
 
         # Check if we should bypass preprocessing
         if enable_bypass and controlnet_strength == 0.0:
-            colored_print("   ⚡ BYPASSED - ControlNet strength is 0, skipping preprocessing", Colors.YELLOW)
+            colored_print("    BYPASSED - ControlNet strength is 0, skipping preprocessing", Colors.YELLOW)
             return (image,)
 
         # Check if preprocessor is available and warn if not
         if not CONTROLNET_AUX_AVAILABLE and preprocessor not in ["none", "canny"]:
             colored_print(
-                f"   ⚠️ ControlNet Aux not installed - '{preprocessor}' not available, returning original image",
+                f"   [WARN] ControlNet Aux not installed - '{preprocessor}' not available, returning original image",
                 Colors.YELLOW,
             )
             return (image,)
         elif (
             CONTROLNET_AUX_AVAILABLE and preprocessor not in AUX_NODE_MAPPINGS and preprocessor not in ["none", "canny"]
         ):
-            colored_print(f"   ⚠️ Preprocessor '{preprocessor}' not available in current installation", Colors.YELLOW)
+            colored_print(f"   [WARN] Preprocessor '{preprocessor}' not available in current installation", Colors.YELLOW)
             return (image,)
 
         # Run preprocessing
@@ -349,7 +351,7 @@ class SmartPreprocessor:
         processed_image = self._run_preprocessor(image, preprocessor, resolution)
 
         total_time = time.time() - start_time
-        colored_print(f"   ✅ Smart preprocessing completed in {total_time:.2f}s", Colors.GREEN)
+        colored_print(f"   [OK] Smart preprocessing completed in {total_time:.2f}s", Colors.GREEN)
 
         return (processed_image,)
 
@@ -360,5 +362,5 @@ NODE_CLASS_MAPPINGS = {
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
-    "SmartPreprocessor": "🔧 Smart Preprocessor",
+    "SmartPreprocessor": " Smart Preprocessor",
 }

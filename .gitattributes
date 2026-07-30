@@ -1,0 +1,14 @@
+* text=auto
+.gitattributes text eol=lf
+
+*.py text eol=lf
+*.js text eol=lf
+*.md text eol=lf
+*.toml text eol=lf
+*.txt text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+
+*.png binary
+*.otf binary
+*.ttf binary

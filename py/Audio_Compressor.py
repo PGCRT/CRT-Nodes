@@ -19,10 +19,9 @@ except Exception as e:
     PEDALBOARD_ERROR = f"pedalboard cannot be loaded (CPU may lack AVX2 support): {str(e)}"
 
 if not PEDALBOARD_AVAILABLE:
-    print("------------------------------------------------------------------")
-    print("AudioCompressor node disabled:")
-    print(PEDALBOARD_ERROR)
-    print("------------------------------------------------------------------")
+    print(
+        f"[CRT Audio Compressor][WARN] Node unavailable: {PEDALBOARD_ERROR}"
+    )
 
 
 class AudioCompressor:
@@ -102,7 +101,7 @@ class AudioCompressor:
 
         if not PEDALBOARD_AVAILABLE:
             error_msg = f"AudioCompressor is unavailable: {PEDALBOARD_ERROR}"
-            print(f"[AudioCompressor] {error_msg}")
+            print(f"[CRT Audio Compressor][ERROR] {error_msg}")
             # Return a dummy output to prevent workflow errors
             if audio is not None:
                 return (audio, "{}")

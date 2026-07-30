@@ -1,11 +1,12 @@
 import logging
 import os
-import urllib.request
 import urllib.error
 import threading
 from typing import Dict, List, Tuple, Optional
 
 import folder_paths
+
+from .download_progress import download_url_with_progress
 
 LOGGER = logging.getLogger(__name__)
 
@@ -105,28 +106,26 @@ def download_model(model_type: str, progress_callback=None) -> Tuple[bool, str]:
         LOGGER.info(f"Downloading {info['filename']} from {info['url']}")
         print(f"[LTX23 AutoDownload] Starting download: {info['filename']}")
 
-        headers = {"User-Agent": "CRT-LTX23-AutoDownload/1.0"}
-        req = urllib.request.Request(info["url"], headers=headers)
+        def report_progress(downloaded, total_size):
+            if total_size > 0 and progress_callback:
+                progress = (downloaded / total_size) * 100
+                progress_callback(
+                    model_type,
+                    progress,
+                    downloaded,
+                    total_size,
+                )
 
-        with urllib.request.urlopen(req, timeout=60) as response:
-            total_size = int(response.headers.get("Content-Length", 0))
-            downloaded = 0
-            chunk_size = 1024 * 1024  # 1MB chunks
-
-            with open(temp_path, "wb") as f:
-                while True:
-                    chunk = response.read(chunk_size)
-                    if not chunk:
-                        break
-                    f.write(chunk)
-                    downloaded += len(chunk)
-
-                    if total_size > 0 and progress_callback:
-                        progress = (downloaded / total_size) * 100
-                        progress_callback(model_type, progress, downloaded, total_size)
-
-        # Move temp file to final location
-        os.replace(temp_path, target_path)
+        download_url_with_progress(
+            info["url"],
+            target_path,
+            label=info["filename"],
+            user_agent="CRT-LTX23-AutoDownload/1.0",
+            timeout=60,
+            temp_path=temp_path,
+            progress_callback=report_progress,
+            console_prefix="LTX23 AutoDownload",
+        )
 
         print(f"[LTX23 AutoDownload] Download complete: {info['filename']}")
         return True, "Download complete"

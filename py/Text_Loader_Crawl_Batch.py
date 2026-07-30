@@ -63,7 +63,7 @@ class TextLoaderCrawlBatch:
     def load_text_files_batch(self, folder_path, batch_count, seed, file_extension, max_words, crawl_subfolders):
         safe_return = tuple([""] * (batch_count * 2))
         if not folder_path or not Path(folder_path).is_dir():
-            print(f"❌ Error: Folder '{folder_path}' not found or is not a directory.")
+            print(f"[ERROR] Error: Folder '{folder_path}' not found or is not a directory.")
             return safe_return
 
         try:
@@ -84,7 +84,7 @@ class TextLoaderCrawlBatch:
             all_files = sorted(file_list, key=self.natural_sort_key)
 
             if not all_files:
-                print(f"❌ Warning: No files with extension '{file_ext}' found.")
+                print(f"[ERROR] Warning: No files with extension '{file_ext}' found.")
                 return safe_return
 
             # --- Batch Selection Logic (Increment Mode Only) ---
@@ -92,7 +92,7 @@ class TextLoaderCrawlBatch:
             num_available = len(all_files)
 
             start_index = (seed * batch_count) % num_available
-            print(f"▶️ Loading Batch: Seed {seed} -> Start Index {start_index}")
+            print(f"[INFO] Loading Batch: Seed {seed} -> Start Index {start_index}")
             for i in range(batch_count):
                 current_index = (start_index + i) % num_available
                 selected_files.append(all_files[current_index])
@@ -117,5 +117,5 @@ class TextLoaderCrawlBatch:
             return tuple(outputs + file_names)
 
         except Exception as e:
-            print(f"❌ An unexpected error occurred: {e}")
+            print(f"[ERROR] An unexpected error occurred: {e}")
             return safe_return

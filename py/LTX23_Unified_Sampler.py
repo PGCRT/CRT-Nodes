@@ -65,7 +65,7 @@ _LTX_MOUTH_MASK_CACHE_ORDER = []
 _LTX_MOUTH_MASK_CACHE_LIMIT = 0
 _LTX23_DEPTH_PREVIEW_ROUTE_REGISTERED = globals().get("_LTX23_DEPTH_PREVIEW_ROUTE_REGISTERED", False)
 
-# ── Depth preview storage + API route ────────────────────────────────────────
+# -- Depth preview storage + API route ----------------------------------------
 _ltx23_depth_preview = None  # PIL Image of last depth guide first-frame
 
 try:
@@ -322,8 +322,14 @@ class CRT_LTX23USModelsPipe:
                         "tooltip": "Optional V2V Upscale mode model merged with IC-LoRA Upscale.",
                     },
                 ),
-                "spatial_upscale_model": ("LATENT_UPSCALE_MODEL",),
-                "da3_model": ("DA3MODEL",),
+                "spatial_upscale_model": (
+                    "LATENT_UPSCALE_MODEL",
+                    {"tooltip": "Optional latent upscaler used by HQ generation and V2V Upscale mode."},
+                ),
+                "da3_model": (
+                    "DA3MODEL",
+                    {"tooltip": "Depth Anything V3 model used to build V2V depth guides when no precomputed depth override is connected."},
+                ),
                 "latent_downscale_factor": (
                     "FLOAT",
                     {
@@ -332,6 +338,7 @@ class CRT_LTX23USModelsPipe:
                         "max": 16.0,
                         "step": 1.0,
                         "forceInput": True,
+                        "tooltip": "Compression/downscale factor reported by the latent upscaler LoRA. Connect the loader output rather than guessing this value.",
                     },
                 ),
             },
@@ -341,6 +348,7 @@ class CRT_LTX23USModelsPipe:
     RETURN_NAMES = ("models_pipe",)
     FUNCTION = "build_pipe"
     CATEGORY = "CRT/LTX2.3"
+    DESCRIPTION = "Bundles the LTX 2.3 model, video/audio VAEs, CLIP, and optional mode-specific models for the unified sampler."
 
     def build_pipe(
         self,
@@ -394,32 +402,41 @@ class CRT_LTX23USConfig:
                 ),
             },
             "optional": {
-                "Image I2V / V2V FirstFrame": ("IMAGE",),
-                "Video (V2V image batch)": ("IMAGE",),
+                "Image I2V / V2V FirstFrame": (
+                    "IMAGE",
+                    {"tooltip": "Starting image for I2V, or an optional first-frame anchor for V2V."},
+                ),
+                "Video (V2V image batch)": (
+                    "IMAGE",
+                    {"tooltip": "Input video represented as an IMAGE batch. Required for V2V modes."},
+                ),
                 "V2V Depth (override)": (
                     "IMAGE",
                     {"tooltip": "Optional precomputed depth guide for V2V Depth Control. When connected, skips DepthAnything inference."},
                 ),
-                "source_audio": ("AUDIO",),
+                "source_audio": (
+                    "AUDIO",
+                    {"tooltip": "Optional source audio used for conditioning and, when enabled, to derive the output frame count."},
+                ),
                 "MegaPixels (override)": (
                     "FLOAT",
-                    {"default": 0.0, "min": 0.0, "max": 1024.0, "step": 0.1, "forceInput": True},
+                    {"default": 0.0, "min": 0.0, "max": 1024.0, "step": 0.1, "forceInput": True, "tooltip": "Values above 0 override the sampler megapixels_target; 0 keeps the sampler setting."},
                 ),
                 "Frames (override)": (
                     "INT",
-                    {"default": 0, "min": 0, "max": 4096, "step": 1, "forceInput": True},
+                    {"default": 0, "min": 0, "max": 4096, "step": 1, "forceInput": True, "tooltip": "Values above 0 override the sampler frame_count; 0 keeps the sampler setting."},
                 ),
                 "Width T2V (override)": (
                     "INT",
-                    {"default": 0, "min": 0, "max": 8192, "step": 1, "forceInput": True},
+                    {"default": 0, "min": 0, "max": 8192, "step": 1, "forceInput": True, "tooltip": "T2V width override. Use 0 to derive dimensions from megapixels and aspect ratio."},
                 ),
                 "Height T2V (override)": (
                     "INT",
-                    {"default": 0, "min": 0, "max": 8192, "step": 1, "forceInput": True},
+                    {"default": 0, "min": 0, "max": 8192, "step": 1, "forceInput": True, "tooltip": "T2V height override. Use 0 to derive dimensions from megapixels and aspect ratio."},
                 ),
                 "HQ (override)": (
                     "BOOLEAN",
-                    {"default": False, "forceInput": True},
+                    {"default": False, "forceInput": True, "tooltip": "Config-pipe HQ override. When true it enables HQ even if the sampler widget is off."},
                 ),
             },
         }
@@ -428,6 +445,7 @@ class CRT_LTX23USConfig:
     RETURN_NAMES = ("config_pipe",)
     FUNCTION = "build_pipe"
     CATEGORY = "CRT/LTX2.3"
+    DESCRIPTION = "Collects the prompt, seed, optional image/video/audio inputs, and per-workflow overrides for the unified sampler."
 
     def build_pipe(self, prompt, seed, source_audio=None, **kwargs):
         framerate_value = 24.0
@@ -606,31 +624,38 @@ class CRT_LTX23UnifiedSampler:
                 "config_pipe": ("LTX23_US_CONFIG_PIPE",),
                 "workflow_mode": (
                     ["I2V", "T2V", "V2V"],
-                    {"default": "I2V"},
+                    {"default": "I2V", "tooltip": "Select image-to-video, text-to-video, or video-to-video execution. Required config inputs depend on this mode."},
                 ),
                 "hq": (
                     "BOOLEAN",
-                    {"default": False},
+                    {"default": False, "tooltip": "Run the optional latent upscale/refinement stage. Requires spatial_upscale_model in the models pipe."},
                 ),
                 "live_preview": (
                     "BOOLEAN",
-                    {"default": False},
+                    {"default": False, "tooltip": "Decode intermediate previews during sampling. Useful for monitoring but adds decode overhead."},
                 ),
                 "frame_count_from_audio": (
                     "BOOLEAN",
-                    {"default": False},
+                    {"default": False, "tooltip": "When source audio is connected, derive the video length from its duration instead of frame_count."},
                 ),
                 "vae_decode_tiled": (
                     "BOOLEAN",
-                    {"default": False},
+                    {"default": False, "tooltip": "Decode video latents in tiles to reduce peak VRAM at the cost of additional processing time."},
                 ),
                 "unload_model_before_vae_decode": (
                     "BOOLEAN",
-                    {"default": True, "advanced": True},
+                    {
+                        "default": True,
+                        "advanced": True,
+                        "tooltip": "Unload the diffusion model after sampling and before VAE decode to reduce decode-time VRAM.",
+                    },
                 ),
                 "low_vram": (
                     "BOOLEAN",
-                    {"default": True, "tooltip": "When enabled, unloads the text encoder after conditioning and the VAE before sampling to reduce VRAM usage. The VAE is reloaded before decoding."},
+                    {
+                        "default": True,
+                        "tooltip": "Unload CLIP after conditioning and VAEs before sampling, then reload VAEs for decode. Depth Anything V3 is always unloaded immediately after depth estimation.",
+                    },
                 ),
                 "megapixels_target": (
                     "FLOAT",
@@ -639,6 +664,7 @@ class CRT_LTX23UnifiedSampler:
                         "min": 0.1,
                         "max": 16.0,
                         "step": 0.1,
+                        "tooltip": "Target output area in megapixels before model-specific dimension quantization.",
                     },
                 ),
                 "aspect_ratio": (
@@ -656,7 +682,7 @@ class CRT_LTX23UnifiedSampler:
                 ),
                 "v2v_mode": (
                     ["Depth Control", "Outpaint", "Upscale"],
-                    {"default": "Depth Control"},
+                    {"default": "Depth Control", "tooltip": "Depth Control follows scene depth; Outpaint expands the canvas; Upscale performs guided video enlargement. Each optional mode needs its matching model pipe input."},
                 ),
                 "v2v_guide_strength": (
                     "FLOAT",
@@ -665,6 +691,7 @@ class CRT_LTX23UnifiedSampler:
                         "min": 0.0,
                         "max": 1.0,
                         "step": 0.01,
+                        "tooltip": "Strength of the V2V depth guide. Higher values follow the source structure more closely.",
                     },
                 ),
                 "depth_megapixels": (
@@ -674,6 +701,7 @@ class CRT_LTX23UnifiedSampler:
                         "min": 0.05,
                         "max": 8.0,
                         "step": 0.05,
+                        "tooltip": "Resolution used only for DA3 depth estimation. DA3 is offloaded before the main V2V sampler starts.",
                     },
                 ),
                 "v2v_aspect_ratio": (
@@ -682,11 +710,11 @@ class CRT_LTX23UnifiedSampler:
                 ),
                 "sampler_main": (
                     sampler_names,
-                    {"default": sampler_main_default},
+                    {"default": sampler_main_default, "tooltip": "Sampler used for the main generation stage."},
                 ),
                 "sampler_refine": (
                     sampler_names,
-                    {"default": sampler_refine_default},
+                    {"default": sampler_refine_default, "tooltip": "Sampler used for the HQ refinement stage."},
                 ),
                 "steps": (
                     "INT",
@@ -704,6 +732,7 @@ class CRT_LTX23UnifiedSampler:
                         "min": -60.0,
                         "max": 24.0,
                         "step": 0.1,
+                        "tooltip": "Gain applied to generated audio after decode, in decibels.",
                     },
                 ),
                 "firstframe_strength": (
@@ -713,9 +742,13 @@ class CRT_LTX23UnifiedSampler:
                         "min": 0.0,
                         "max": 1.0,
                         "step": 0.01,
+                        "tooltip": "Influence of the connected first-frame anchor. Zero disables anchoring; one applies full strength.",
                     },
                 ),
-                "depth_mouth_mask": ("BOOLEAN", {"default": False}),
+                "depth_mouth_mask": (
+                    "BOOLEAN",
+                    {"default": False, "tooltip": "Detect and suppress the mouth region in V2V depth guidance so generated lip motion is less constrained by source depth."},
+                ),
                 "mouth_detect_megapixels": ("FLOAT", {"default": 0.25, "min": 0.0, "max": 8.0, "step": 0.05, "tooltip": "Deprecated compatibility input. Ignored; mouth detection uses hardcoded fast mode."}),
                 "mouth_single_item": ("BOOLEAN", {"default": True, "tooltip": "Deprecated compatibility input. Ignored; hardcoded internally."}),
                 "mouth_detect_chunk_size": ("INT", {"default": 10, "min": 0, "max": 4096, "step": 1, "tooltip": "Deprecated compatibility input. Ignored; hardcoded internally."}),
@@ -838,6 +871,15 @@ class CRT_LTX23UnifiedSampler:
                 )
             finally:
                 _release_sam31(model, clip)
+                _, unload_errors = cls._unload_patchers_from_vram(
+                    (model, getattr(clip, "patcher", None))
+                )
+                if unload_errors:
+                    cls._log(
+                        "[Mouth Mask] SAM cleanup warnings: "
+                        + " | ".join(unload_errors),
+                        level="warn",
+                    )
 
             if masks is None:
                 return None
@@ -850,15 +892,88 @@ class CRT_LTX23UnifiedSampler:
             return None
 
     @staticmethod
-    def _offload_da3_model(da3_model):
+    def _unload_patchers_from_vram(patchers):
+        """Targeted unload for ComfyUI ModelPatchers, with raw-module fallback."""
+        unloaded = 0
+        errors = []
+        seen = set()
+
+        for patcher in patchers:
+            if patcher is None or id(patcher) in seen:
+                continue
+            seen.add(id(patcher))
+
+            try:
+                is_patcher = (
+                    hasattr(patcher, "clone_base_uuid")
+                    and hasattr(patcher, "model")
+                )
+                unload_fn = getattr(mm, "unload_model_and_clones", None)
+                if is_patcher and callable(unload_fn):
+                    try:
+                        unload_fn(patcher, all_devices=True)
+                    except TypeError:
+                        # Compatibility with ComfyUI versions without all_devices.
+                        unload_fn(patcher)
+                    unloaded += 1
+                elif hasattr(patcher, "to"):
+                    patcher.to(mm.unet_offload_device())
+                    unloaded += 1
+                elif hasattr(patcher, "model") and hasattr(patcher.model, "to"):
+                    patcher.model.to(mm.unet_offload_device())
+                    unloaded += 1
+                else:
+                    errors.append(
+                        f"unsupported unload target: {type(patcher).__name__}"
+                    )
+            except Exception as e:
+                errors.append(f"{type(patcher).__name__}: {e}")
+
         try:
-            if isinstance(da3_model, dict):
-                model = da3_model.get("model")
-                if model is not None and hasattr(model, "to"):
-                    model.to(mm.unet_offload_device())
+            gc.collect()
             mm.soft_empty_cache()
-        except Exception:
-            pass
+        except Exception as e:
+            errors.append(f"cache cleanup: {e}")
+
+        return unloaded, errors
+
+    @classmethod
+    def _offload_da3_model(cls, da3_model):
+        """Unload the real cached DA3 patcher used by current DA3 integrations.
+
+        Current DepthAnything V3 loaders pass a JSON-safe config dict and keep the
+        actual ModelPatcher in their own module cache. Find that patcher in
+        ComfyUI's loaded-model registry instead of expecting config["model"].
+        """
+        candidates = []
+        errors = []
+
+        # Legacy integrations may still pass a model or patcher directly.
+        direct = da3_model.get("model") if isinstance(da3_model, dict) else da3_model
+        if direct is not None:
+            candidates.append(direct)
+
+        try:
+            for patcher in list(mm.loaded_models()):
+                options = getattr(patcher, "model_options", {}) or {}
+                model_obj = getattr(patcher, "model", None)
+                identity = (
+                    f"{type(model_obj).__module__}.{type(model_obj).__name__}"
+                    .replace("_", "")
+                    .lower()
+                )
+                if (
+                    "da3_model_key" in options
+                    or "depthanything3" in identity
+                    or "depthanythingv3" in identity
+                ):
+                    candidates.append(patcher)
+        except Exception as e:
+            errors.append(f"loaded-model lookup: {e}")
+
+        unloaded, unload_errors = cls._unload_patchers_from_vram(candidates)
+        errors.extend(unload_errors)
+        return unloaded, errors
 
     @staticmethod
     def _offload_sampling_model(model):
@@ -2537,18 +2652,41 @@ class CRT_LTX23UnifiedSampler:
             depth_image = depth_image[:frame_count]
         else:
             self._progress(2, total_steps, "Estimating depth (quiet)")
-            depth_result = self._run_external_node(
-                "DepthAnything_V3",
-                suppress_output=True,
-                da3_model=da3_model,
-                images=depth_input,
-                normalization_mode="V2-Style",
-                resize_method="resize",
-                invert_depth=False,
-                keep_model_size=False,
-            )
-            self._offload_da3_model(da3_model)
-            depth_image = self._result_tuple(depth_result)[0]
+            depth_result = None
+            try:
+                depth_result = self._run_external_node(
+                    "DepthAnything_V3",
+                    suppress_output=True,
+                    da3_model=da3_model,
+                    images=depth_input,
+                    normalization_mode="V2-Style",
+                    resize_method="resize",
+                    invert_depth=False,
+                    keep_model_size=False,
+                )
+                depth_outputs = self._result_tuple(depth_result)
+                if not depth_outputs or not isinstance(depth_outputs[0], torch.Tensor):
+                    raise RuntimeError("DepthAnything V3 returned no depth image.")
+                # DA3 currently returns CPU images, but enforce that contract and
+                # detach from any inference graph before releasing the model.
+                depth_image = depth_outputs[0].detach().cpu()
+                del depth_outputs
+            finally:
+                del depth_result
+                del depth_input
+                unloaded, unload_errors = self._offload_da3_model(da3_model)
+                if unloaded:
+                    self._log(
+                        f"DepthAnything V3 offloaded from VRAM ({unloaded} model patcher(s))",
+                        level="ok",
+                    )
+                elif not unload_errors:
+                    self._log("DepthAnything V3 cleanup found no loaded patcher", level="warn")
+                if unload_errors:
+                    self._log(
+                        "DepthAnything V3 cleanup warnings: " + " | ".join(unload_errors),
+                        level="warn",
+                    )
 
         # Match the reference V2V graph: resize DA3 output back to the target
         # guide resolution using a plain nearest/stretch resize before snapping

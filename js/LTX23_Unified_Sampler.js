@@ -3,7 +3,7 @@ import { api } from "../../scripts/api.js";
 
 const NODE_NAME = "CRT_LTX23UnifiedSampler";
 const NODE_ALIASES = new Set(["LTX 2.3 Unified Sampler (CRT)", "CRT_LTX23UnifiedSampler"]);
-const STYLE_ID = "crt-ltx23-unified-sampler-v8";
+const STYLE_ID = "crt-ltx23-unified-sampler-v9";
 const MIN_WIDTH = 450;
 const MIN_HEIGHT = 1;
 const DEBUG = false;
@@ -21,6 +21,13 @@ const V2V_MODE_FIELDS = {
   "Outpaint": ["v2v_aspect_ratio"],
   "Upscale": [],
 };
+const V2V_DYNAMIC_FIELDS = new Set([
+  ...Object.values(V2V_MODE_FIELDS).flat(),
+  "depth_mouth_mask",
+  "mouth_mask_expand",
+  "mouth_mask_blur",
+]);
+
 
 const ADVANCED_GROUPS = [
   {
@@ -750,6 +757,9 @@ class LTX23UnifiedSamplerUI {
     this.tabs = new Map();
     this.resizeTimer = null;
     this.previewUrl = null;
+    this.depthPreviewUrl = null;
+    this.depthPreviewAbortController = null;
+    this.depthPreviewShown = false;
     this.previewHandler = null;
     this.previewMetaHandler = null;
     this.livePreviewButton = null;
@@ -892,6 +902,7 @@ class LTX23UnifiedSamplerUI {
 
   buildPanels() {
     this.panelHost.innerHTML = "";
+    this.disposeDepthPreviewResources();
     this.panels.clear();
 
     for (const mode of WORKFLOW_MODES) {
@@ -995,6 +1006,11 @@ class LTX23UnifiedSamplerUI {
 
     const row = document.createElement("div");
     row.className = "crt-ltx23-field";
+    const tooltip = widget?.options?.tooltip;
+    if (tooltip) {
+      row.title = String(tooltip);
+      row.setAttribute("aria-label", `${fieldLabel(name)}: ${tooltip}`);
+    }
 
     const label = document.createElement("div");
     label.className = "crt-ltx23-label";
@@ -1097,6 +1113,11 @@ class LTX23UnifiedSamplerUI {
     if (!v2vPanel) return;
 
     // Clear V2V panel
+    this.disposeDepthPreviewResources();
+    for (const name of V2V_DYNAMIC_FIELDS) {
+      this.controls.delete(name);
+    }
+
     v2vPanel.innerHTML = "";
 
     // Rebuild V2V panel with current mode
@@ -1349,6 +1370,18 @@ class LTX23UnifiedSamplerUI {
     return wrap;
   }
 
+  disposeDepthPreviewResources() {
+    if (this.depthPreviewAbortController) {
+      this.depthPreviewAbortController.abort();
+      this.depthPreviewAbortController = null;
+    }
+    if (this.depthPreviewUrl) {
+      URL.revokeObjectURL(this.depthPreviewUrl);
+      this.depthPreviewUrl = null;
+    }
+    this.depthPreviewShown = false;
+  }
+
   buildDepthPreviewSection() {
     const section = document.createElement("div");
     section.style.cssText = "display:flex;flex-direction:column;align-items:center;gap:8px;margin-top:6px;width:100%;";
@@ -1362,36 +1395,58 @@ class LTX23UnifiedSamplerUI {
     img.style.cssText = "display:none;max-width:100%;border-radius:8px;border:1px solid var(--border-subtle);";
     img.alt = "Depth Preview";
 
-    let shown = false;
-    let blobUrl = null;
-
     btn.addEventListener("click", async () => {
-      shown = !shown;
-      if (shown) {
-        try {
-          const res = await fetch(`/crt/ltx23/depth_preview?t=${Date.now()}`);
-          if (res.ok) {
-            const blob = await res.blob();
-            if (blobUrl) URL.revokeObjectURL(blobUrl);
-            blobUrl = URL.createObjectURL(blob);
-            img.src = blobUrl;
-            img.style.display = "block";
-            btn.textContent = "Depth Preview: ON";
-            btn.classList.add("on");
-          } else {
-            shown = false;
-            btn.textContent = "Depth Preview: No data yet";
-            setTimeout(() => { btn.textContent = "Depth Preview: OFF"; }, 2000);
-          }
-        } catch {
-          shown = false;
-        }
-      } else {
+      if (this.depthPreviewShown) {
+        this.disposeDepthPreviewResources();
+        img.removeAttribute("src");
         img.style.display = "none";
         btn.textContent = "Depth Preview: OFF";
         btn.classList.remove("on");
+        this.scheduleResize();
+        return;
       }
-      this.scheduleResize();
+
+      this.disposeDepthPreviewResources();
+      this.depthPreviewShown = true;
+      const controller = new AbortController();
+      this.depthPreviewAbortController = controller;
+      btn.textContent = "Depth Preview: Loading...";
+      btn.disabled = true;
+
+      try {
+        const response = await api.fetchApi(
+          `/crt/ltx23/depth_preview?t=${Date.now()}`,
+          { signal: controller.signal },
+        );
+        if (controller !== this.depthPreviewAbortController || !this.depthPreviewShown) return;
+
+        if (!response.ok) {
+          this.depthPreviewShown = false;
+          btn.textContent = "Depth Preview: No data yet";
+          return;
+        }
+
+        const blob = await response.blob();
+        if (controller !== this.depthPreviewAbortController || !this.depthPreviewShown) return;
+
+        this.depthPreviewUrl = URL.createObjectURL(blob);
+        img.src = this.depthPreviewUrl;
+        img.style.display = "block";
+        btn.textContent = "Depth Preview: ON";
+        btn.classList.add("on");
+      } catch (error) {
+        if (error?.name !== "AbortError") {
+          this.depthPreviewShown = false;
+          btn.textContent = "Depth Preview: Failed";
+          log("depth preview request failed", error);
+        }
+      } finally {
+        if (controller === this.depthPreviewAbortController) {
+          this.depthPreviewAbortController = null;
+        }
+        btn.disabled = false;
+        this.scheduleResize();
+      }
     });
 
     section.appendChild(btn);
@@ -1764,6 +1819,7 @@ class LTX23UnifiedSamplerUI {
   }
 
   destroy() {
+    this.disposeDepthPreviewResources();
     this._unbindNodeImgs();
     window.clearTimeout(this.resizeTimer);
     this.resizeTimer = null;

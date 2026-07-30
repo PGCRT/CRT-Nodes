@@ -12,7 +12,7 @@ class SaveJpegWebsocket:
     RETURN_TYPES = ()
     FUNCTION = "save_images"
     OUTPUT_NODE = True
-    CATEGORY = "image"
+    CATEGORY = "CRT/Save"
 
     def save_images(self, images):
         s = comfy_server.PromptServer.instance

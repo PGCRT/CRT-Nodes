@@ -63,7 +63,7 @@ class CRT_StringSplitter:
             parts = [p for p in parts if p]
             print(f"{node_name} Found {len(parts)} non-empty parts.")
         else:
-            print(f"\033[93m{node_name} ⚠ Warning: Input text is empty.\033[0m")
+            print(f"\033[93m{node_name} [WARN] Input text is empty.\033[0m")
 
         active_outputs = []
         for i in range(split_count):
@@ -75,7 +75,7 @@ class CRT_StringSplitter:
         padded_outputs = active_outputs + [""] * (self.MAX_SPLITS - len(active_outputs))
 
         print(
-            f"\032[92m{node_name} ✓ Complete - Returning tuple of size {len(padded_outputs)} ({split_count} active).\033[0m"
+            f"\033[92m{node_name} [OK] Complete - Returning tuple of size {len(padded_outputs)} ({split_count} active).\033[0m"
         )
 
         return tuple(padded_outputs)

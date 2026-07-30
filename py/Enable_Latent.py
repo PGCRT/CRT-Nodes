@@ -17,28 +17,28 @@ class EnableLatent:
     FUNCTION = "enable_latent"
 
     def enable_latent(self, latent, enable):
-        print(f"📌 EnableLatent: Starting execution, enable={enable}")
+        print(f"[INFO] EnableLatent: Starting execution, enable={enable}")
 
         # If enable is False, return None
         if not enable:
-            print("⚠️ enable is False. Returning None.")
+            print("[WARN] enable is False. Returning None.")
             return (None,)
 
         # Validate latent input
         if latent is None:
-            print("⚠️ Received None as latent input. Returning None.")
+            print("[WARN] Received None as latent input. Returning None.")
             return (None,)
 
         # Ensure latent is in the correct format (dict with samples or tensor)
         if isinstance(latent, dict) and "samples" in latent and isinstance(latent["samples"], torch.Tensor):
-            print(f"📌 Passing through latent with tensor shape: {latent['samples'].shape}")
+            print(f"[INFO] Passing through latent with tensor shape: {latent['samples'].shape}")
             return (latent,)
         elif isinstance(latent, torch.Tensor):
-            print(f"📌 Passing through raw tensor latent with shape: {latent.shape}")
+            print(f"[INFO] Passing through raw tensor latent with shape: {latent.shape}")
             return ({"samples": latent},)
         else:
             print(
-                f"❌ Invalid latent input type: {type(latent)}. Expected dict with 'samples' or torch.Tensor. Returning None."
+                f"[ERROR] Invalid latent input type: {type(latent)}. Expected dict with 'samples' or torch.Tensor. Returning None."
             )
             return (None,)
 

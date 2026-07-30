@@ -32,13 +32,39 @@ class ImageScaleRangeFromMp:
         elif current_mp > max_megapixels:
             target_mp = max_megapixels
         else:
-            return (image, int(w), int(h))
+            target_mp = None
 
-        total = target_mp * 1024 * 1024
-        scale_by = math.sqrt(total / (w * h))
-        new_w = round(w * scale_by / resolution_steps) * resolution_steps
-        new_h = round(h * scale_by / resolution_steps) * resolution_steps
+        # Resize both axes by one scale factor. Quantizing each target axis before
+        # this resize would change the aspect ratio and stretch the image.
+        if target_mp is not None:
+            total = target_mp * 1024 * 1024
+            scale_by = math.sqrt(total / (w * h))
+            resized_w = max(1, round(w * scale_by))
+            resized_h = max(1, round(h * scale_by))
+            samples = comfy.utils.common_upscale(
+                samples, resized_w, resized_h, upscale_method, "disabled"
+            )
+        else:
+            resized_w = int(w)
+            resized_h = int(h)
 
-        s = comfy.utils.common_upscale(samples, int(new_w), int(new_h), upscale_method, "disabled")
-        s = s.movedim(1, -1)
-        return (s, int(new_w), int(new_h))
+        # Quantize with a centered crop, never with a second resize. Cropping
+        # downward means the final MP can be slightly below the selected bound.
+        step = max(1, int(resolution_steps))
+        cropped_w = (resized_w // step) * step
+        cropped_h = (resized_h // step) * step
+
+        # A dimension smaller than the requested step has no positive,
+        # step-aligned crop. Keep that dimension instead of returning an empty
+        # image; normal image sizes are expected to be at least one full step.
+        if cropped_w == 0:
+            cropped_w = resized_w
+        if cropped_h == 0:
+            cropped_h = resized_h
+
+        left = (resized_w - cropped_w) // 2
+        top = (resized_h - cropped_h) // 2
+        samples = samples[:, :, top : top + cropped_h, left : left + cropped_w]
+
+        result = samples.movedim(1, -1)
+        return (result, int(cropped_w), int(cropped_h))

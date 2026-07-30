@@ -1,5 +1,5 @@
 """
-CRT Isolate Input / Isolate Output — SAM 3.1 edition
+CRT Isolate Input / Isolate Output - SAM 3.1 edition
 Standalone subject-isolation nodes. Zero dependency on any custom node.
 Requires:  ComfyUI with SAM3 support (PR #13408 or later)
            sam3.1_multiplex_fp16.safetensors  in  models/checkpoints/
@@ -10,7 +10,6 @@ import gc
 import math
 import os
 import time
-import urllib.request
 import numpy as np
 import torch
 import torch.nn.functional as F
@@ -22,8 +21,9 @@ import comfy.sd
 import comfy.utils
 import comfy.model_management
 from ._cache_fingerprint import stable_fingerprint
+from .download_progress import download_url_with_progress
 
-# ─── Sanity check – warn early if SAM3 support is missing ─────────────────────
+# --- Sanity check - warn early if SAM3 support is missing ---------------------
 try:
     import comfy.ldm.sam3  # noqa: F401
     _SAM31_OK = True
@@ -47,10 +47,10 @@ _SAM31_INPUT_CACHE_ORDER = []
 _SAM31_INPUT_CACHE_LIMIT = 0
 
 
-# ─── Helpers: tensor ↔ PIL ────────────────────────────────────────────────────
+# --- Helpers: tensor <-> PIL ----------------------------------------------------
 
 def _t2pil(t):
-    """(B,H,W,C) float[0-1] → list of PIL RGB images."""
+    """(B,H,W,C) float[0-1] -> list of PIL RGB images."""
     return [
         Image.fromarray((f.cpu().float().numpy() * 255).clip(0, 255).astype(np.uint8))
         for f in t
@@ -147,7 +147,7 @@ def _resolve_isolate_preset(preset_name, detect_megapixels=0.5, reuse_first_pass
     return resolved
 
 
-# ─── SAM3.1 – model loading / release ────────────────────────────────────────
+# --- SAM3.1 - model loading / release ----------------------------------------
 
 def _list_sam3_checkpoints():
     all_ckpts = folder_paths.get_filename_list("checkpoints")
@@ -169,26 +169,14 @@ def _download_sam31_checkpoint(checkpoint_name):
 
     os.makedirs(checkpoints_dir, exist_ok=True)
     tmp_path = f"{target_path}.part"
-    print(f"[CRT Isolate] Downloading SAM3.1 checkpoint: {checkpoint_name}")
-
-    request = urllib.request.Request(
+    download_url_with_progress(
         SAM31_DEFAULT_DOWNLOAD_URL,
-        headers={"User-Agent": "CRT-Nodes Isolate/1.0"},
+        target_path,
+        label=checkpoint_name,
+        user_agent="CRT-Nodes Isolate/1.0",
+        temp_path=tmp_path,
+        console_prefix="CRT Isolate",
     )
-    try:
-        with urllib.request.urlopen(request) as response, open(tmp_path, "wb") as out:
-            while True:
-                chunk = response.read(1024 * 1024)
-                if not chunk:
-                    break
-                out.write(chunk)
-        os.replace(tmp_path, target_path)
-    finally:
-        if os.path.exists(tmp_path):
-            try:
-                os.remove(tmp_path)
-            except OSError:
-                pass
 
     print(f"[CRT Isolate] SAM3.1 checkpoint downloaded: {target_path}")
     return target_path
@@ -302,13 +290,13 @@ def _parse_max_detections(text, single_item=False):
     return max_detections
 
 
-# ─── SAM3.1 – text encoding ───────────────────────────────────────────────────
+# --- SAM3.1 - text encoding ---------------------------------------------------
 
 def _encode_text(clip, text, device, dtype, single_item=False):
     """
     Encode a plain-text prompt for SAM3 detection.
     Returns list of  (embeddings, attention_mask, max_detections).
-    Supports the 'subject:N' syntax (e.g. 'face:3' → detect up to 3 faces).
+    Supports the 'subject:N' syntax (e.g. 'face:3' -> detect up to 3 faces).
     """
     clip.load_model()
     tokens = clip.tokenize(text)
@@ -336,7 +324,7 @@ def _encode_text(clip, text, device, dtype, single_item=False):
     return [(cond, mask, parsed_max_detections[0])]
 
 
-# ─── SAM3.1 – mask refinement (from PR nodes_sam3.py) ────────────────────────
+# --- SAM3.1 - mask refinement (from PR nodes_sam3.py) ------------------------
 
 def _refine_mask(sam3, orig_hwc, coarse_mask, box_xyxy, H, W, device, dtype, iterations=2):
     """Refine a coarse detector mask with the SAM decoder. Returns [1, H, W]."""
@@ -380,7 +368,7 @@ def _refine_mask(sam3, orig_hwc, coarse_mask, box_xyxy, H, W, device, dtype, ite
     return (full[0] > 0).float()
 
 
-# ─── SAM3.1 – batch segmentation ─────────────────────────────────────────────
+# --- SAM3.1 - batch segmentation ---------------------------------------------
 
 def _segment_batch_instances(model, clip, images, text, threshold, refine_iters, single_item=False, chunk_size_override=0):
     """
@@ -695,7 +683,7 @@ def _batch_uncrop_grouped(original, cropped, bboxes, source_indices, border_blen
     return torch.stack(all_masks)   # (B, H, W)
 
 
-# ─── Image padding ────────────────────────────────────────────────────────────
+# --- Image padding ------------------------------------------------------------
 
 def _pad(images, padding):
     if padding == 0:
@@ -706,7 +694,7 @@ def _pad(images, padding):
     return out
 
 
-# ─── Batch crop (KJNodes BatchCropFromMaskAdvanced logic, inlined) ─────────────
+# --- Batch crop (KJNodes BatchCropFromMaskAdvanced logic, inlined) -------------
 
 def _batch_crop(images, masks, crop_size_mult=1.0, smooth_alpha=1.0):
     """
@@ -808,10 +796,10 @@ def _batch_crop(images, masks, crop_size_mult=1.0, smooth_alpha=1.0):
     )
 
 
-# ─── Grow + blur mask (KJNodes GrowMaskWithBlur logic, inlined) ───────────────
+# --- Grow + blur mask (KJNodes GrowMaskWithBlur logic, inlined) ---------------
 
 def _grow_blur_mask(mask, expand, blur_radius):
-    """mask: (B,H,W) → (B,H,W)"""
+    """mask: (B,H,W) -> (B,H,W)"""
     if expand == 0 and blur_radius == 0:
         return mask
 
@@ -899,7 +887,7 @@ def _temporal_smooth_mask(mask, source_indices, radius):
     return out.clamp_(0.0, 1.0).to(dtype=mask.dtype)
 
 
-# ─── Batch uncrop (KJNodes BatchUncropAdvanced logic, inlined) ────────────────
+# --- Batch uncrop (KJNodes BatchUncropAdvanced logic, inlined) ----------------
 
 def _batch_uncrop(original, cropped, bboxes, border_blending=0.0):
     """Paste `cropped` back into `original` at each bbox, with optional edge blend."""
@@ -957,7 +945,7 @@ def _batch_uncrop(original, cropped, bboxes, border_blending=0.0):
     return _pil2t(result)
 
 
-# ─── Color matching ──────────────────────────────────────────────────────────
+# --- Color matching ----------------------------------------------------------
 
 _CM_METHODS = ["none", "mkl", "hm", "reinhard", "mvgd", "hm-mkl-hm", "hm-mvgd-hm"]
 
@@ -972,7 +960,7 @@ def _color_match(image_ref, image_target, method, strength):
     try:
         from color_matcher import ColorMatcher
     except ImportError:
-        print("[CRT Isolate] WARNING: 'color-matcher' not installed — skipping color match. "
+        print("[CRT Isolate] WARNING: 'color-matcher' not installed - skipping color match. "
               "Run: pip install color-matcher")
         return image_target
 
@@ -997,7 +985,7 @@ def _color_match(image_ref, image_target, method, strength):
     return torch.stack(out).clamp_(0, 1).to(image_target.dtype)
 
 
-# ─── Megapixel rescale ───────────────────────────────────────────────────────
+# --- Megapixel rescale -------------------------------------------------------
 
 def _scale_to_mp(images, megapixels):
     """Scale (B,H,W,C) to target megapixels, preserving aspect ratio. 0 = no-op."""
@@ -1112,7 +1100,7 @@ def _effective_chunk_size(batch_size, height, width, device, requested_chunk_siz
     return _chunk_size_for_batch(batch_size, height, width, device)
 
 
-# ─── Node: CRT_IsolateInput ───────────────────────────────────────────────────
+# --- Node: CRT_IsolateInput ---------------------------------------------------
 
 class CRT_IsolateInput:
     """
@@ -1206,13 +1194,13 @@ class CRT_IsolateInput:
 
         B, H, W, C = images.shape
 
-        # Detect directly on original images — avoids allocating a giant padded
+        # Detect directly on original images - avoids allocating a giant padded
         # tensor that can exhaust RAM on large video batches. Edge subjects near
         # the frame border get slightly tighter crops; for subjects within the
         # frame this produces identical results.
         detect_input = _scale_for_sam_detection(images, float(detect_megapixels))
 
-        # 2. Load SAM3.1 once — detect then crop, then unload
+        # 2. Load SAM3.1 once - detect then crop, then unload
         model, clip = _load_sam31(sam3_checkpoint)
         try:
             pad_mask_groups = _segment_batch_instances(
@@ -1298,11 +1286,11 @@ class CRT_IsolateInput:
         }
 
 
-# ─── Node: CRT_IsolateOutput ──────────────────────────────────────────────────
+# --- Node: CRT_IsolateOutput --------------------------------------------------
 
 class CRT_IsolateOutput:
     """
-    Pure compositing — no SAM3 inference.
+    Pure compositing - no SAM3 inference.
     Uses the face_masks pre-computed by CRT_IsolateInput on the original crop.
     """
 
@@ -1426,7 +1414,7 @@ class CRT_IsolateOutput:
                     for pl, pr, pt, pb in crop_edge_pads
                 ]
 
-        # 2. Color match enhanced → reference is original crop (pre-inference)
+        # 2. Color match enhanced -> reference is original crop (pre-inference)
         enh = _color_match(original_crops, enh, color_match_method, float(color_match_strength))
 
         work_device = _preferred_compute_device()
@@ -1467,7 +1455,7 @@ class CRT_IsolateOutput:
         final_masks = torch.cat(final_mask_chunks, dim=0)
 
         # 5. Uncrop back into canvas. padding=0 means bboxes are in original image
-        # coordinates and no stripping is needed — just use original_images directly.
+        # coordinates and no stripping is needed - just use original_images directly.
         canvas_padding = int(padding)
         if padding > 0 and not bool(resize_back_to_original):
             canvas_padding = int(round(float(padding) * max(scale_x, scale_y)))
@@ -1509,7 +1497,7 @@ class CRT_IsolateOutput:
         }
 
 
-# ─── Registration ──────────────────────────────────────────────────────────────
+# --- Registration --------------------------------------------------------------
 
 NODE_CLASS_MAPPINGS = {
     "CRT_IsolateInput":  CRT_IsolateInput,

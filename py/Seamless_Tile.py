@@ -29,7 +29,7 @@ def _blend_seam(image, blend_width, tile_x, tile_y):
     B, H, W, _ = img.shape
 
     if tile_x and 0 < blend_width < W // 2:
-        # ramp: 0.0 at the very edge → 1.0 at blend_width pixels in
+        # ramp: 0.0 at the very edge -> 1.0 at blend_width pixels in
         ramp = torch.linspace(0.0, 1.0, blend_width, device=img.device).view(1, 1, blend_width, 1)
 
         left  = img[:, :, :blend_width,  :].clone()

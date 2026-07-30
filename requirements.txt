@@ -8,8 +8,13 @@ wordcloud
 librosa
 imageio-ffmpeg
 soundfile
-huggingface_hub
-einops
+huggingface_hub>=0.27
+einops>=0.6
 rotary-embedding-torch
 openai-whisper
 omnivoice>=0.1.0
+accelerate>=1.0
+sentencepiece>=0.1.99
+timm>=0.9
+transformers>=4.48.3
+tqdm>=4.66

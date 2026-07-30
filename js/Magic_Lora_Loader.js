@@ -2594,6 +2594,9 @@ class CrtMagicLoraLoaderNode extends RgthreeBaseServerNode {
             Click ⚙ Configure to edit. Applies to all LoRAs unless overridden per-LoRA.</p></li>
         <li><p><strong>⊞ icon per LoRA</strong> — click to set per-LoRA block overrides.
             Grey = using global; accent = custom blocks set. "Use Global" clears the override.</p></li>
+        <li><p><strong>LoRA Stack Info output</strong> — JSON text describing the model type,
+            global wet/cap/block settings, every applied LoRA's configured and effective weights,
+            per-LoRA and effective block weights, and any skipped entries.</p></li>
         <li><p><strong>Σ</strong> (header) — combined effective strength (sum × wet).</p></li>
         <li><p><strong>Presets</strong> — Load / Save / Delete via the dropdown.</p></li>
       </ul>`;

@@ -30,7 +30,7 @@ class SaveImageWithPath:
                     },
                 ),
                 "suffix": ("STRING", {"default": "", "tooltip": "Optional suffix appended to filename."}),
-                "extension": (["png", "jpg", "jpeg"], {"default": "png", "tooltip": "Image file extension."}),
+                "extension": (["png", "jpg"], {"default": "png", "tooltip": "Image file extension."}),
             }
         }
 
@@ -82,13 +82,16 @@ class SaveImageWithPath:
                 pil_img = Image.fromarray((image[i].cpu().numpy() * 255).astype(np.uint8))
 
                 # Save the image
-                pil_img.save(final_filepath)
-                print(f"✅ Saved image to: {final_filepath}")
+                if extension == "jpg":
+                    pil_img.save(final_filepath, quality=98, subsampling="4:4:4")
+                else:
+                    pil_img.save(final_filepath)
+                print(f"[OK] Saved image to: {final_filepath}")
 
             return ()
 
         except Exception as e:
-            print(f"❌ ERROR in SaveImageWithPath: {str(e)}")
+            print(f"[ERROR] ERROR in SaveImageWithPath: {str(e)}")
             raise e
 
 

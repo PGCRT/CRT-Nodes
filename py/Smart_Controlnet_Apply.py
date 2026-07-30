@@ -88,7 +88,7 @@ class SmartControlNetApply:
             else:
                 control_net.set_extra_arg("control_type", [])
         except ImportError:
-            colored_print("   ⚠️ Union ControlNet types not available", Colors.YELLOW)
+            colored_print("   [WARN] Union ControlNet types not available", Colors.YELLOW)
 
         return control_net
 
@@ -107,7 +107,7 @@ class SmartControlNetApply:
         ).round()
         masked_image = image * mask_apply.movedim(1, -1).repeat(1, 1, 1, image.shape[3])
 
-        colored_print("   🎭 Applied inpainting mask", Colors.CYAN)
+        colored_print("    Applied inpainting mask", Colors.CYAN)
         return masked_image, [mask]
 
     def apply_smart_controlnet(
@@ -126,9 +126,9 @@ class SmartControlNetApply:
         Smart ControlNet application with intelligent bypassing.
         Expects preprocessed images as input.
         """
-        colored_print("\n🎨 Smart ControlNet Processing", Colors.HEADER)
+        colored_print("\n Smart ControlNet Processing", Colors.HEADER)
         colored_print(
-            f"   📊 Strength: {strength:.3f} | End: {end_percent:.3f}", Colors.BLUE
+            f"    Strength: {strength:.3f} | End: {end_percent:.3f}", Colors.BLUE
         )
 
         start_time = time.time()
@@ -141,14 +141,14 @@ class SmartControlNetApply:
         # Early exit if strength is 0
         if strength == 0.0:
             colored_print(
-                "   ⚡ BYPASSED - Strength is 0, skipping all processing", Colors.YELLOW
+                "    BYPASSED - Strength is 0, skipping all processing", Colors.YELLOW
             )
             return (positive, negative, image)
 
         # Set union type
         control_net = self._set_union_controlnet_type(control_net, union_type)
         if union_type != "auto":
-            colored_print(f"   🔗 Union type: {union_type}", Colors.CYAN)
+            colored_print(f"    Union type: {union_type}", Colors.CYAN)
 
         # Use input image as-is (assumes it's already preprocessed)
         processed_image = image
@@ -161,7 +161,7 @@ class SmartControlNetApply:
             )
 
         # Apply ControlNet
-        colored_print("   🎮 Applying ControlNet...", Colors.GREEN)
+        colored_print("    Applying ControlNet...", Colors.GREEN)
         try:
             if extra_concat:
                 result = self.controlnet_applier.apply_controlnet(
@@ -189,13 +189,13 @@ class SmartControlNetApply:
 
             total_time = time.time() - start_time
             colored_print(
-                f"   ✅ Smart ControlNet completed in {total_time:.2f}s", Colors.GREEN
+                f"   [OK] Smart ControlNet completed in {total_time:.2f}s", Colors.GREEN
             )
 
             return (result[0], result[1], processed_image)
 
         except Exception as e:
-            colored_print(f"   ❌ ControlNet application failed: {str(e)}", Colors.RED)
+            colored_print(f"   [ERROR] ControlNet application failed: {str(e)}", Colors.RED)
             return (positive, negative, processed_image)
 
 
@@ -205,5 +205,5 @@ NODE_CLASS_MAPPINGS = {
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
-    "SmartControlNetApply": "🎨 Smart ControlNet Apply",
+    "SmartControlNetApply": " Smart ControlNet Apply",
 }

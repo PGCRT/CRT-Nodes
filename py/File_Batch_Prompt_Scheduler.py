@@ -61,11 +61,11 @@ class CRT_FileBatchPromptScheduler:
             except Exception as e:
                 print(f"[CRT] File loading error: {e}")
 
-        # ── Text output ─────────────────────────────────────
+        # -- Text output -------------------------------------
         lines = [f"Prompt {i+1} : {p}" if print_index else p for i, p in enumerate(prompts)]
         final_text = "\n\n".join(lines)
 
-        # ── Conditioning (always with valid pooled_output) ─────────────────────────────────────
+        # -- Conditioning (always with valid pooled_output) -------------------------------------
         cond_list = []
         pooled_list = []
 
@@ -74,7 +74,7 @@ class CRT_FileBatchPromptScheduler:
             cond, pooled = clip.encode_from_tokens(tokens, return_pooled=True)
             cond_list.append(cond)
 
-            # ←←← ALWAYS provide pooled_output (zero tensor if None)
+            # <-<-<- ALWAYS provide pooled_output (zero tensor if None)
             if pooled is None:
                 hidden_size = cond.shape[-1]
                 pooled = torch.zeros(cond.shape[0], hidden_size, device=cond.device, dtype=cond.dtype)

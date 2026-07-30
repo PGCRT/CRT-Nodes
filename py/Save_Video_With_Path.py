@@ -46,11 +46,11 @@ class SaveVideoWithPath:
         extra_pnginfo=None,
     ):
         if not activate:
-            print("💡 SaveVideoWithPath is deactivated. Skipping video save.")
+            print("[INFO] SaveVideoWithPath is deactivated. Skipping video save.")
             return ()
 
         if image is None:
-            print("❌ ERROR: No input image provided to SaveVideoWithPath.")
+            print("[ERROR] ERROR: No input image provided to SaveVideoWithPath.")
             return ()
 
         try:
@@ -131,9 +131,9 @@ class SaveVideoWithPath:
                 if result.returncode != 0:
                     raise RuntimeError(f"FFmpeg failed: {result.stderr}")
 
-            print(f"✅ Video saved successfully to: {final_filepath}")
+            print(f"[OK] Video saved successfully to: {final_filepath}")
             return ({"ui": {"text": ["Video saved (Lossless)."]}},)
 
         except Exception as e:
-            print(f"❌ ERROR in SaveVideoWithPath: {str(e)}")
+            print(f"[ERROR] ERROR in SaveVideoWithPath: {str(e)}")
             raise e

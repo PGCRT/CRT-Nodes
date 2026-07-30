@@ -51,12 +51,12 @@ class TextLoaderCrawl:
         safe_return = ("", "", "")
 
         if not folder_path or not folder_path.strip():
-            print("❌ Error: Folder path is empty.")
+            print("[ERROR] Error: Folder path is empty.")
             return safe_return
 
         folder = Path(folder_path.strip())
         if not folder.is_dir():
-            print(f"❌ Error: Folder '{folder}' not found or is not a directory.")
+            print(f"[ERROR] Error: Folder '{folder}' not found or is not a directory.")
             return safe_return
 
         file_extension = file_extension.strip().lower()
@@ -69,7 +69,7 @@ class TextLoaderCrawl:
             current_mtime = folder.stat().st_mtime
 
             if cache_key not in self.cache or self.cache[cache_key]['mtime'] != current_mtime:
-                print(f"🔎 Folder changed or not cached. Scanning '{folder}' for '{file_extension}' files...")
+                print(f"[INFO] Folder changed or not cached. Scanning '{folder}' for '{file_extension}' files...")
                 if crawl_subfolders:
                     files = sorted([f for f in folder.rglob(f'*{file_extension}') if f.is_file()])
                 else:
@@ -77,13 +77,13 @@ class TextLoaderCrawl:
                     files = sorted([f for f in folder.glob(f'*{file_extension}') if f.is_file()])
 
                 self.cache[cache_key] = {'files': files, 'mtime': current_mtime}
-                print(f"✅ Cached {len(files)} files.")
+                print(f"[OK] Cached {len(files)} files.")
 
             files = self.cache[cache_key]['files']
             # --- End Caching Logic ---
 
             if not files:
-                print(f"❌ Warning: No files with extension '{file_extension}' found in '{folder}'.")
+                print(f"[ERROR] Warning: No files with extension '{file_extension}' found in '{folder}'.")
                 return safe_return
 
             # --- Deterministic and Safe Selection ---
@@ -92,7 +92,7 @@ class TextLoaderCrawl:
             selected_file = files[selected_index]
             # --- End Selection ---
 
-            print(f"✅ Seed {seed} → File {selected_index + 1}/{num_files}: '{selected_file.name}'")
+            print(f"[OK] Seed {seed} -> File {selected_index + 1}/{num_files}: '{selected_file.name}'")
 
             with open(selected_file, 'r', encoding='utf-8', errors='ignore') as file:
                 content = file.read()
@@ -102,5 +102,5 @@ class TextLoaderCrawl:
             return (limited_content, file_name, str(selected_file.parent.resolve()))
 
         except Exception as e:
-            print(f"❌ An unexpected error occurred in TextLoaderCrawl: {str(e)}")
+            print(f"[ERROR] An unexpected error occurred in TextLoaderCrawl: {str(e)}")
             return safe_return

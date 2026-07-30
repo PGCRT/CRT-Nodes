@@ -164,7 +164,7 @@ class CRT_UpscaleModelAdv:
         if len(cls._cache) > cls._max_cache_size:
             keys_to_remove = list(cls._cache.keys())[: -cls._max_cache_size]
             for key in keys_to_remove:
-                colored_print("  🗑️ Removing old cache entry", Colors.YELLOW)
+                colored_print("   Removing old cache entry", Colors.YELLOW)
                 del cls._cache[key]
 
     def _cleanup_memory(self):
@@ -240,13 +240,13 @@ class CRT_UpscaleModelAdv:
 
     def _process_with_tiling(self, model, image, tile_size_px, model_scale, dtype, device):
         """Process image using tiling for memory efficiency (no overlap)."""
-        colored_print(f"🧩 Processing with {tile_size_px}px tiles (no overlap)...", Colors.CYAN)
+        colored_print(f" Processing with {tile_size_px}px tiles (no overlap)...", Colors.CYAN)
         tiles, positions = self._split_image_into_tiles(image, tile_size_px)
         processed_tiles = []
 
-        colored_print(f"  📋 Split into {len(tiles)} tiles", Colors.BLUE)
+        colored_print(f"   Split into {len(tiles)} tiles", Colors.BLUE)
         for i, tile in enumerate(tiles):
-            colored_print(f"  🔄 Processing tile {i+1}/{len(tiles)} ({tile.shape[1]}x{tile.shape[2]})", Colors.YELLOW)
+            colored_print(f"   Processing tile {i+1}/{len(tiles)} ({tile.shape[1]}x{tile.shape[2]})", Colors.YELLOW)
 
             tile = tile.to(dtype)
             with torch.no_grad():
@@ -259,7 +259,7 @@ class CRT_UpscaleModelAdv:
             processed_tiles.append(processed_tile)
         B, H, W, C = image.shape
         output_shape = (B, H * model_scale, W * model_scale, C)
-        colored_print(f"  🔗 Merging tiles into {output_shape[1]}x{output_shape[2]} image...", Colors.CYAN)
+        colored_print(f"   Merging tiles into {output_shape[1]}x{output_shape[2]} image...", Colors.CYAN)
         result = self._merge_tiles(processed_tiles, positions, output_shape, model_scale)
 
         return result
@@ -293,45 +293,45 @@ class CRT_UpscaleModelAdv:
 
         # Check cache only if caching is enabled
         if not disable_cache and cache_key in self._cache:
-            colored_print("🚀 [Cache Hit] Reusing cached upscale result", Colors.GREEN)
+            colored_print(" [Cache Hit] Reusing cached upscale result", Colors.GREEN)
             cached_result = self._cache[cache_key]
             cached_width = cached_result.shape[2]
             cached_height = cached_result.shape[1]
-            colored_print(f"  📄 Model: {upscale_model_name}", Colors.BLUE)
-            colored_print(f"  📐 Cached resolution: {cached_width}x{cached_height}", Colors.BLUE)
+            colored_print(f"   Model: {upscale_model_name}", Colors.BLUE)
+            colored_print(f"   Cached resolution: {cached_width}x{cached_height}", Colors.BLUE)
             return (cached_result, cached_width, cached_height)
 
         if disable_cache:
-            colored_print("🔧 [Cache Disabled] Processing upscale without caching", Colors.YELLOW)
+            colored_print(" [Cache Disabled] Processing upscale without caching", Colors.YELLOW)
         else:
-            colored_print("🔧 [Cache Miss] Processing upscale", Colors.YELLOW)
+            colored_print(" [Cache Miss] Processing upscale", Colors.YELLOW)
 
         device = mm.get_torch_device()
         offload_device = mm.unet_offload_device() if offload_model else device
 
-        colored_print("🚀 [CRT Upscale Advanced] Starting upscale process", Colors.HEADER)
-        colored_print(f"  📄 Model: {upscale_model_name}", Colors.BLUE)
-        colored_print(f"  📐 Input resolution: {image.shape[2]}x{image.shape[1]}", Colors.BLUE)
+        colored_print(" [CRT Upscale Advanced] Starting upscale process", Colors.HEADER)
+        colored_print(f"   Model: {upscale_model_name}", Colors.BLUE)
+        colored_print(f"   Input resolution: {image.shape[2]}x{image.shape[1]}", Colors.BLUE)
         try:
             upscale_model = self.upscale_loader.load_model(upscale_model_name)[0]
-            colored_print("  ✅ Model loaded successfully", Colors.GREEN)
+            colored_print("  [OK] Model loaded successfully", Colors.GREEN)
         except Exception as e:
-            colored_print(f"  ❌ Failed to load model: {e}", Colors.RED)
+            colored_print(f"  [ERROR] Failed to load model: {e}", Colors.RED)
             raise
 
         model_scale = self._get_model_scale_factor(upscale_model_name)
-        colored_print(f"  🔍 Detected model scale: {model_scale}x", Colors.CYAN)
+        colored_print(f"  [INFO] Detected model scale: {model_scale}x", Colors.CYAN)
 
         input_h, input_w = image.shape[1], image.shape[2]
 
         if use_fixed_resolution:
             target_h, target_w = fixed_height, fixed_width
-            colored_print(f"  🎯 Target resolution (fixed): {target_w}x{target_h}", Colors.CYAN)
+            colored_print(f"   Target resolution (fixed): {target_w}x{target_h}", Colors.CYAN)
         else:
             target_h = int(input_h * output_multiplier)
             target_w = int(input_w * output_multiplier)
             colored_print(
-                f"  🎯 Target resolution (multiplier {output_multiplier}x): {target_w}x{target_h}", Colors.CYAN
+                f"   Target resolution (multiplier {output_multiplier}x): {target_w}x{target_h}", Colors.CYAN
             )
 
         tile_count_int = int(tile_count)
@@ -341,26 +341,26 @@ class CRT_UpscaleModelAdv:
 
         if use_tiling:
             colored_print(
-                f"  🧩 Using tiled processing ({tile_count}x{tile_count} = {tile_count_int*tile_count_int} tiles)",
+                f"   Using tiled processing ({tile_count}x{tile_count} = {tile_count_int*tile_count_int} tiles)",
                 Colors.YELLOW,
             )
-            colored_print(f"    📋 Each tile: ~{tile_size_px}px (no overlap)", Colors.BLUE)
+            colored_print(f"     Each tile: ~{tile_size_px}px (no overlap)", Colors.BLUE)
         else:
-            colored_print("  🖼️ Using single-pass processing (no tiling)", Colors.GREEN)
+            colored_print("   Using single-pass processing (no tiling)", Colors.GREEN)
 
-        colored_print(f"  📦 Batch processing: {batch_size} image(s) per batch", Colors.BLUE)
+        colored_print(f"   Batch processing: {batch_size} image(s) per batch", Colors.BLUE)
         dtype = self._determine_dtype(precision, device)
-        colored_print(f"  🎛️ Processing precision: {str(dtype).split('.')[-1]}", Colors.BLUE)
+        colored_print(f"   Processing precision: {str(dtype).split('.')[-1]}", Colors.BLUE)
         try:
             upscale_model.to(device)
             upscale_model = upscale_model.to(dtype)
             image_batches = torch.split(image, batch_size)
             processed_batches = []
 
-            colored_print(f"  📦 Processing {len(image_batches)} batch(es) of size {batch_size}", Colors.BLUE)
+            colored_print(f"   Processing {len(image_batches)} batch(es) of size {batch_size}", Colors.BLUE)
 
             for batch_idx, batch in enumerate(image_batches):
-                colored_print(f"  🔄 Processing batch {batch_idx + 1}/{len(image_batches)}", Colors.YELLOW)
+                colored_print(f"   Processing batch {batch_idx + 1}/{len(image_batches)}", Colors.YELLOW)
 
                 if use_tiling:
                     processed_batch = self._process_with_tiling(
@@ -385,7 +385,7 @@ class CRT_UpscaleModelAdv:
         current_h, current_w = full_upscaled.shape[1], full_upscaled.shape[2]
 
         if current_h != target_h or current_w != target_w:
-            colored_print(f"  🔄 Resizing from {current_w}x{current_h} to {target_w}x{target_h} (Lanczos)", Colors.CYAN)
+            colored_print(f"   Resizing from {current_w}x{current_h} to {target_w}x{target_h} (Lanczos)", Colors.CYAN)
             full_upscaled = comfy.utils.lanczos(full_upscaled.permute(0, 3, 1, 2), target_w, target_h).permute(
                 0, 2, 3, 1
             )
@@ -400,15 +400,15 @@ class CRT_UpscaleModelAdv:
         final_width = final_result.shape[2]
         final_height = final_result.shape[1]
 
-        colored_print(f"  ✅ Upscaling complete! Output: {final_width}x{final_height}", Colors.GREEN)
+        colored_print(f"  [OK] Upscaling complete! Output: {final_width}x{final_height}", Colors.GREEN)
 
         if not disable_cache:
-            colored_print("  💾 Result cached for future use", Colors.CYAN)
+            colored_print("   Result cached for future use", Colors.CYAN)
         else:
-            colored_print("  🚫 Caching disabled - result not stored", Colors.YELLOW)
+            colored_print("   Caching disabled - result not stored", Colors.YELLOW)
 
         if offload_model:
-            colored_print("  💾 Model offloaded to save VRAM", Colors.BLUE)
+            colored_print("   Model offloaded to save VRAM", Colors.BLUE)
 
         return (final_result, final_width, final_height)
 
@@ -419,4 +419,4 @@ class CRT_UpscaleModelAdv:
 
 NODE_CLASS_MAPPINGS = {"CRT_UpscaleModelAdv": CRT_UpscaleModelAdv}
 
-NODE_DISPLAY_NAME_MAPPINGS = {"CRT_UpscaleModelAdv": "Upscale using model adv (CRT)"}
+NODE_DISPLAY_NAME_MAPPINGS = {"CRT_UpscaleModelAdv": "Upscale Model Advanced (CRT)"}

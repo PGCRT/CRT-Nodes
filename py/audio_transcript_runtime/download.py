@@ -1,6 +1,6 @@
 import logging
 import os
-import urllib.request
+from ..download_progress import download_url_with_progress
 
 
 LOGGER = logging.getLogger(__name__)
@@ -10,27 +10,15 @@ def download_file(url, dest_path, label, user_agent="CRT-Nodes AudioTranscript/1
     if os.path.isfile(dest_path):
         return dest_path
 
-    os.makedirs(os.path.dirname(dest_path), exist_ok=True)
-    tmp_path = f"{dest_path}.part"
     LOGGER.info("Downloading %s from %s", label, url)
-    print(f"[CRT Audio Transcript] Downloading {label}...")
-
-    req = urllib.request.Request(url, headers={"User-Agent": user_agent})
-
-    try:
-        with urllib.request.urlopen(req) as response, open(tmp_path, "wb") as out:
-            while True:
-                chunk = response.read(1024 * 1024)
-                if not chunk:
-                    break
-                out.write(chunk)
-        os.replace(tmp_path, dest_path)
-    finally:
-        if os.path.exists(tmp_path):
-            try:
-                os.remove(tmp_path)
-            except OSError:
-                pass
+    download_url_with_progress(
+        url,
+        dest_path,
+        label=label,
+        user_agent=user_agent,
+        temp_path=f"{dest_path}.part",
+        console_prefix="CRT Audio Transcript",
+    )
 
     print(f"[CRT Audio Transcript] Model downloaded: {dest_path}")
     return dest_path

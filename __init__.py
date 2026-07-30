@@ -1,7 +1,7 @@
 """
 @author: CRT
 @title: CRT-Nodes
-@version: 2.5.4
+@version: 2.6.0
 @project: "https://github.com/PGCRT/CRT-Nodes",
 @description: Set of nodes for ComfyUI
 https://discord.gg/8wYS9MBQqp
@@ -130,6 +130,8 @@ if True:
         CRT_IsolateOutput,
     )
     from .py.Isolate_CLIPSeg import CRT_IsolateInputCLIPSeg
+    from .py.ERNIE_Image_Aesthetic_Scorer import ErnieImageAestheticScore
+    from .py.Unsloth_Studio_Bridge import UnslothLLM
     from .py.AutoDL_Nodes import (
         NODE_CLASS_MAPPINGS as CRT_AUTODL_NODE_CLASS_MAPPINGS,
         NODE_DISPLAY_NAME_MAPPINGS as CRT_AUTODL_NODE_DISPLAY_NAME_MAPPINGS,
@@ -321,6 +323,8 @@ NODE_CLASS_MAPPINGS = {
     "CRT_IsolateInput": CRT_IsolateInput,
     "CRT_IsolateOutput": CRT_IsolateOutput,
     "CRT_IsolateInputCLIPSeg": CRT_IsolateInputCLIPSeg,
+    "ErnieImageAestheticScore": ErnieImageAestheticScore,
+    "UnslothLLM": UnslothLLM,
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
@@ -345,9 +349,10 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "SamplerSchedulerSelector": "Sampler & Scheduler Selector (CRT)",
     "SamplerSchedulerCrawler": "Sampler & Scheduler Crawler (CRT)",
     "Resolution": "Resolution (CRT)",
+    "SolidColor": "Solid Color (CRT)",
     "SimpleKnobNode": "K",
     "SimpleToggleNode": "T",
-    "CRT_UpscaleModelAdv": "Upscale using model adv (CRT)",
+    "CRT_UpscaleModelAdv": "Upscale Model Advanced (CRT)",
     "SmartControlNetApply": "Smart ControlNet Apply (CRT)",
     "SmartStyleModelApplyDual": "Smart Style Model Apply DUAL (CRT)",
     "CLIPTextEncodeFluxMerged": "CLIP Text Encode FLUX Merged (CRT)",
@@ -388,7 +393,7 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "LensDistortFX": "Lens Distort FX (CRT)",
     "SmartDeNoiseFX": "Smart DeNoise FX (CRT)",
     "ArcaneBloomFX": "Arcane Bloom FX (CRT)",
-    "FancyTimerNode": "Fancy Timer Node",
+    "FancyTimerNode": "Fancy Timer (CRT)",
     "WAN2.2 LoRA Compare Sampler": "WAN 2.2 LoRA Compare Sampler (CRT)",
     "CRT_AddSettingsAndPrompt": "Add Settings and Prompt (CRT)",
     "CRT_WAN_BatchSampler": "WAN 2.2 Batch Sampler (CRT)",
@@ -430,6 +435,8 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "CRT_IsolateInput": "Isolate Input SAM3.1 (CRT)",
     "CRT_IsolateOutput": "Isolate Output (CRT)",
     "CRT_IsolateInputCLIPSeg": "Isolate Input CLIPSeg (CRT)",
+    "ErnieImageAestheticScore": "ERNIE Image Aesthetic Score (CRT)",
+    "UnslothLLM": "Unsloth Studio Bridge (CRT)",
 }
 
 NODE_CLASS_MAPPINGS.update(CRT_AUTODL_NODE_CLASS_MAPPINGS)

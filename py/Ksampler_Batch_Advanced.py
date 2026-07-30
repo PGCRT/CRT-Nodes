@@ -13,7 +13,7 @@ from PIL import Image
 from PIL.PngImagePlugin import PngInfo
 
 
-# ── Reference latent helper ───────────────────────────────────────────────────
+# -- Reference latent helper ---------------------------------------------------
 
 def _attach_reference_latent(conditioning, ref_samples):
     if conditioning is None or isinstance(conditioning, str):
@@ -25,7 +25,7 @@ def _attach_reference_latent(conditioning, ref_samples):
     )
 
 
-# ── Sigma helpers ─────────────────────────────────────────────────────────────
+# -- Sigma helpers -------------------------------------------------------------
 
 def _split_sigmas_at_injection(sigmas, injection_point):
     """Split sigmas into two stages at the injection_point ratio (0..1)."""
@@ -48,7 +48,7 @@ def _multiply_sigmas(sigmas, factor, start, end):
     return out
 
 
-# ── Detail Daemon helpers ─────────────────────────────────────────────────────
+# -- Detail Daemon helpers -----------------------------------------------------
 
 def _make_detail_daemon_schedule(
     steps, start, end, bias, amount, exponent,
@@ -172,14 +172,14 @@ def _build_dd_sampler(
     )
 
 
-# ── Node ──────────────────────────────────────────────────────────────────────
+# -- Node ----------------------------------------------------------------------
 
 class CRT_KSamplerBatchAdvanced:
     @classmethod
     def INPUT_TYPES(cls):
         return {
             "required": {
-                # ── Core (same as KSampler Batch) ─────────────────────────────
+                # -- Core (same as KSampler Batch) -----------------------------
                 "model":          ("MODEL",),
                 "vae":            ("VAE",),
                 "positive":       ("CONDITIONING",),
@@ -236,7 +236,7 @@ class CRT_KSamplerBatchAdvanced:
                 "save_folder_path":     ("STRING",  {"default": ".\\ComfyUI\\output"}),
                 "save_subfolder_name":  ("STRING",  {"default": "KSAMPLER_BATCH_ADV"}),
                 "save_filename_prefix": ("STRING",  {"default": "output"}),
-                # ── Sigma settings ────────────────────────────────────────────
+                # -- Sigma settings --------------------------------------------
                 "stage1_sigma_factor": (
                     "FLOAT",
                     {"default": 1.005, "min": 0.0, "max": 100.0, "step": 0.001},
@@ -261,7 +261,7 @@ class CRT_KSamplerBatchAdvanced:
                     "FLOAT",
                     {"default": 0.7, "min": 0.0, "max": 1.0, "step": 0.001},
                 ),
-                # ── Detail Daemon ─────────────────────────────────────────────
+                # -- Detail Daemon ---------------------------------------------
                 "details_amount_stage1": (
                     "FLOAT",
                     {"default": 0.5, "min": -5.0, "max": 5.0, "step": 0.01},
@@ -270,7 +270,7 @@ class CRT_KSamplerBatchAdvanced:
                     "FLOAT",
                     {"default": 0.15, "min": -5.0, "max": 5.0, "step": 0.01},
                 ),
-                # ── Noise Injection ───────────────────────────────────────────
+                # -- Noise Injection -------------------------------------------
                 "enable_noise_injection": (
                     ["disable", "enable"],
                     {"default": "enable"},
@@ -317,7 +317,7 @@ class CRT_KSamplerBatchAdvanced:
     FUNCTION      = "sample_batch"
     CATEGORY      = "CRT/Sampling"
 
-    # ── Helpers (identical to KSampler Batch) ─────────────────────────────────
+    # -- Helpers (identical to KSampler Batch) ---------------------------------
 
     def _resize_to_megapixels(self, images, megapixels, quantize_to):
         B, H, W, C = images.shape
@@ -378,7 +378,7 @@ class CRT_KSamplerBatchAdvanced:
         except Exception as e:
             print(f"[CRT KSampler Batch Adv] Failed to save image (seed {seed}): {e}")
 
-    # ── Noise injection helper ─────────────────────────────────────────────────
+    # -- Noise injection helper -------------------------------------------------
 
     def _inject_noise(self, latent_tensor, seed, strength, normalize):
         """Return a new tensor with scaled random noise blended in."""
@@ -392,7 +392,7 @@ class CRT_KSamplerBatchAdvanced:
                 new_noise = new_noise * orig_std + orig_mean
         return out + new_noise * strength
 
-    # ── Main ──────────────────────────────────────────────────────────────────
+    # -- Main ------------------------------------------------------------------
 
     def sample_batch(
         self,
@@ -435,7 +435,7 @@ class CRT_KSamplerBatchAdvanced:
         prompt=None,
         extra_pnginfo=None,
     ):
-        # Detail Daemon parameters — fixed defaults, not exposed in UI
+        # Detail Daemon parameters - fixed defaults, not exposed in UI
         dd_start, dd_end, dd_bias = 0.0, 1.0, 0.5
         dd_exponent               = 1.0
         dd_start_offset           = 0.0
@@ -445,11 +445,11 @@ class CRT_KSamplerBatchAdvanced:
         dd_smooth                 = True
         dd_cfg_scale_override     = 1.0
 
-        # ── VAE geometry ──────────────────────────────────────────────────────
+        # -- VAE geometry ------------------------------------------------------
         vae_channels  = getattr(vae, "latent_channels", 4)
         vae_downscale = getattr(vae, "downscale_ratio",  8)
 
-        # ── Resolve samples & reference (identical to KSampler Batch) ────────
+        # -- Resolve samples & reference (identical to KSampler Batch) --------
         ref_latents = None
         samples     = None
         B_cond      = positive[0][0].shape[0] if positive else 1
@@ -480,7 +480,7 @@ class CRT_KSamplerBatchAdvanced:
 
         else:
             print(
-                "[CRT KSampler Batch Adv] WARNING: no image or latent_image connected — "
+                "[CRT KSampler Batch Adv] WARNING: no image or latent_image connected - "
                 "generating dummy 64x64 empty latent"
             )
             target_batch = B_cond
@@ -501,7 +501,7 @@ class CRT_KSamplerBatchAdvanced:
 
         seeds = [seed + i if increment_seed else seed for i in range(target_batch)]
 
-        # ── Conditioning ──────────────────────────────────────────────────────
+        # -- Conditioning ------------------------------------------------------
         positive = self._fix_conditioning(positive, target_batch)
         if negative:
             negative = self._fix_conditioning(negative, target_batch)
@@ -511,7 +511,7 @@ class CRT_KSamplerBatchAdvanced:
             zero_pooled = torch.zeros(target_batch, ref.shape[-1], device=ref.device, dtype=ref.dtype)
             negative    = [[zero_cond, {"pooled_output": zero_pooled}]]
 
-        # ── Build sigma schedules ─────────────────────────────────────────────
+        # -- Build sigma schedules ---------------------------------------------
         ksampler_plan = comfy.samplers.KSampler(
             model,
             steps=steps,
@@ -529,7 +529,7 @@ class CRT_KSamplerBatchAdvanced:
         # Used when noise injection is disabled (single-pass with stage1 sigma shaping)
         full_sigmas   = _multiply_sigmas(sigmas_full, stage1_sigma_factor, stage1_sigma_start, stage1_sigma_end)
 
-        # ── Build Detail Daemon samplers ──────────────────────────────────────
+        # -- Build Detail Daemon samplers --------------------------------------
         base_sampler   = comfy.samplers.sampler_object(sampler_name)
         sampler_stage1 = _build_dd_sampler(
             base_sampler, details_amount_stage1,
@@ -542,7 +542,7 @@ class CRT_KSamplerBatchAdvanced:
             dd_start_offset, dd_end_offset, dd_fade_stage2, dd_smooth, dd_cfg_scale_override,
         )
 
-        # ── Reference conditioning for parallel edit mode ─────────────────────
+        # -- Reference conditioning for parallel edit mode ---------------------
         pos_for_parallel = positive
         neg_for_parallel = negative
         if edit_model_flux2klein and ref_latents is not None and mode == "Batch (Parallel)":
@@ -553,7 +553,7 @@ class CRT_KSamplerBatchAdvanced:
 
         disable_pbar = not comfy.utils.PROGRESS_BAR_ENABLED
 
-        # ── Sampling ──────────────────────────────────────────────────────────
+        # -- Sampling ----------------------------------------------------------
         if mode == "Sequential":
             latents_out = []
             for i in range(target_batch):
@@ -697,7 +697,7 @@ class CRT_KSamplerBatchAdvanced:
             _stop.set()
             _thread.join(timeout=1.0)
 
-        # ── VAE Decode ────────────────────────────────────────────────────────
+        # -- VAE Decode --------------------------------------------------------
         images_out = None
         grid_out   = None
 

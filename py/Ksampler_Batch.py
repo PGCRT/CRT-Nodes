@@ -123,7 +123,59 @@ class CRT_KSamplerBatch:
     FUNCTION = "sample_batch"
     CATEGORY = "CRT/Sampling"
 
-    # ── Helpers ───────────────────────────────────────────────────────────────
+    # -- Helpers ---------------------------------------------------------------
+
+    @staticmethod
+    def _get_vae_spatial_downscale(vae):
+        """Return a numeric spatial compression factor for 2D and video VAEs."""
+        ratio = None
+        for method_name in ("spacial_compression_encode", "spatial_compression_encode"):
+            getter = getattr(vae, method_name, None)
+            if callable(getter):
+                ratio = getter()
+                break
+
+        if ratio is None:
+            ratio = getattr(vae, "downscale_ratio", 8)
+        if isinstance(ratio, (tuple, list)):
+            ratio = ratio[-1]
+
+        try:
+            ratio = int(ratio)
+        except (TypeError, ValueError, OverflowError) as exc:
+            raise TypeError(
+                f"Unsupported VAE spatial downscale ratio: {ratio!r}"
+            ) from exc
+        if ratio <= 0:
+            raise ValueError(f"VAE spatial downscale ratio must be positive, got {ratio}")
+        return ratio
+
+
+    @staticmethod
+    def _vae_encode_images(vae, images):
+        """Encode an image batch without treating the batch as video frames."""
+        if (
+            getattr(vae, "latent_dim", 2) == 3
+            and images.ndim == 4
+            and images.shape[0] > 1
+        ):
+            latents = [vae.encode(images[i:i + 1]) for i in range(images.shape[0])]
+            return torch.cat(latents, dim=0)
+        return vae.encode(images)
+
+    @staticmethod
+    def _vae_decode_images(vae, samples):
+        """Decode independent one-frame video latents back to an IMAGE batch."""
+        decoded = vae.decode(samples)
+        if decoded.ndim == 5:
+            if decoded.shape[1] != 1:
+                raise RuntimeError(
+                    "CRT KSampler Batch expected one decoded frame per batch item, "
+                    f"but the VAE returned {decoded.shape[1]} frames."
+                )
+            decoded = decoded[:, 0]
+        return decoded
+
 
     def _resize_to_megapixels(self, images, megapixels, quantize_to):
         """Resize [B, H, W, C] to target megapixels preserving AR, quantized to quantize_to."""
@@ -192,7 +244,7 @@ class CRT_KSamplerBatch:
         except Exception as e:
             print(f"[CRT KSampler Batch] Failed to save image (seed {seed}): {e}")
 
-    # ── Main ──────────────────────────────────────────────────────────────────
+    # -- Main ------------------------------------------------------------------
 
     def sample_batch(
         self,
@@ -228,15 +280,15 @@ class CRT_KSamplerBatch:
                 "(for ERNIE_Turbo use CRTAutoDLErnieTurboModel), not a CLIP/text encoder node."
             )
 
-        # VAE geometry — used to create correctly-shaped latents
+        # VAE geometry - used to create correctly-shaped latents
         vae_channels  = getattr(vae, "latent_channels", 4)
-        vae_downscale = getattr(vae, "downscale_ratio", 8)
+        vae_downscale = self._get_vae_spatial_downscale(vae)
 
-        # ── Resolve samples & reference ───────────────────────────────────────
-        ref_latents = None   # [B, C, latH, latW] — only set in edit mode
-        samples     = None   # [B, C, latH, latW] — starting latent for sampling
+        # -- Resolve samples & reference ---------------------------------------
+        ref_latents = None   # [B, C, latH, latW] - only set in edit mode
+        samples     = None   # [B, C, latH, latW] - starting latent for sampling
 
-        # target_batch = max(input_B, cond_B) — both cycle to fill the other
+        # target_batch = max(input_B, cond_B) - both cycle to fill the other
         B_cond = positive[0][0].shape[0] if positive else 1
 
         if image is not None:
@@ -249,7 +301,7 @@ class CRT_KSamplerBatch:
 
             if edit_model_flux2klein:
                 # Encode images as reference latents, then cycle to target_batch
-                ref_latents = vae.encode(imgs[:, :, :, :3])  # [B_img, C, latH, latW]
+                ref_latents = self._vae_encode_images(vae, imgs[:, :, :, :3])
 
                 # Empty latent: model generates from noise, guided by reference
                 samples = torch.zeros(
@@ -257,12 +309,12 @@ class CRT_KSamplerBatch:
                     device=comfy.model_management.intermediate_device(),
                 )
                 samples = comfy.sample.fix_empty_latent_channels(model, samples)
-                denoise = 1.0  # force full denoising — edit model fills from scratch
+                denoise = 1.0  # force full denoising - edit model fills from scratch
                 print("[CRT KSampler Batch] edit_model_flux2klein: denoise forced to 1.0")
 
             else:
                 # Normal img2img: encode image as starting latent
-                samples = vae.encode(imgs[:, :, :, :3])  # [B_img, C, latH, latW]
+                samples = self._vae_encode_images(vae, imgs[:, :, :, :3])
 
         elif latent_image is not None:
             samples = latent_image["samples"]
@@ -270,9 +322,9 @@ class CRT_KSamplerBatch:
             target_batch = max(samples.shape[0], B_cond)
 
         else:
-            # No input — generate a dummy empty latent and warn
+            # No input - generate a dummy empty latent and warn
             print(
-                "[CRT KSampler Batch] WARNING: no image or latent_image connected — "
+                "[CRT KSampler Batch] WARNING: no image or latent_image connected - "
                 "generating dummy 64x64 empty latent"
             )
             target_batch = B_cond
@@ -295,7 +347,7 @@ class CRT_KSamplerBatch:
 
         seeds = [seed + i if increment_seed else seed for i in range(target_batch)]
 
-        # ── Conditioning ──────────────────────────────────────────────────────
+        # -- Conditioning ------------------------------------------------------
         positive = self._fix_conditioning(positive, target_batch)
 
         if negative:
@@ -315,14 +367,14 @@ class CRT_KSamplerBatch:
             if reference_mode == "shared":
                 ref_pos = ref_latents[0:1]                    # broadcast to whole batch
             else:
-                ref_pos = ref_latents                         # [B, C, H, W] — one per item
+                ref_pos = ref_latents                         # [B, C, H, W] - one per item
             ref_neg = torch.zeros_like(ref_pos)
             pos_for_parallel = _attach_reference_latent(positive, ref_pos)
             neg_for_parallel = _attach_reference_latent(negative, ref_neg)
 
         disable_pbar = not comfy.utils.PROGRESS_BAR_ENABLED
 
-        # ── Sampling ──────────────────────────────────────────────────────────
+        # -- Sampling ----------------------------------------------------------
         if mode == "Sequential":
             latents_out = []
             for i in range(target_batch):
@@ -385,7 +437,11 @@ class CRT_KSamplerBatch:
                     idx = (idx + 1) % target_batch
                     _stop.wait(0.3)
 
-            _thread = threading.Thread(target=_carousel, daemon=True)
+            _thread = threading.Thread(
+                target=_carousel,
+                name="crt-ksampler-preview",
+                daemon=True,
+            )
             _thread.start()
 
             def batch_callback(step, x0, x, total_steps):
@@ -404,24 +460,25 @@ class CRT_KSamplerBatch:
                 else:
                     pbar.update_absolute(step + 1, total_steps, None)
 
-            samples_out = comfy.sample.sample(
-                model, noise, steps, cfg, sampler_name, scheduler,
-                pos_for_parallel, neg_for_parallel, samples,
-                denoise=denoise,
-                seed=seeds[0],
-                callback=batch_callback,
-                disable_pbar=disable_pbar,
-            )
+            try:
+                samples_out = comfy.sample.sample(
+                    model, noise, steps, cfg, sampler_name, scheduler,
+                    pos_for_parallel, neg_for_parallel, samples,
+                    denoise=denoise,
+                    seed=seeds[0],
+                    callback=batch_callback,
+                    disable_pbar=disable_pbar,
+                )
+            finally:
+                _stop.set()
+                _thread.join(timeout=1.0)
 
-            _stop.set()
-            _thread.join(timeout=1.0)
-
-        # ── VAE Decode ────────────────────────────────────────────────────────
+        # -- VAE Decode --------------------------------------------------------
         images_out = None
         grid_out   = None
 
         if enable_vae_decode:
-            decoded    = vae.decode(samples_out)   # [B, H, W, C]
+            decoded    = self._vae_decode_images(vae, samples_out)
             images_out = decoded
 
             if save_images:
@@ -432,7 +489,7 @@ class CRT_KSamplerBatch:
                     )
 
             if create_comparison_grid and target_batch > 1:
-                # Concat horizontally: [B, H, W, C] → [1, H, B*W, C]
+                # Concat horizontally: [B, H, W, C] -> [1, H, B*W, C]
                 grid_out = torch.cat(list(decoded.unbind(0)), dim=1).unsqueeze(0)
 
         # Preserve noise_mask if latent_image had one

@@ -11,7 +11,7 @@ class ReferenceLatentBatch:
     The original node wraps the entire latent["samples"] tensor [N,C,H,W] as a
     single entry in the reference_latents list.  Downstream code computes token
     counts per list entry from spatial dims only, so a batch of N is treated as
-    one image → N-1 frames are silently ignored and KV-cache slicing is wrong.
+    one image -> N-1 frames are silently ignored and KV-cache slicing is wrong.
 
     This node iterates over the batch dimension and appends each [1,C,H,W] slice
     individually, making a batch of N exactly equivalent to chaining N nodes.
@@ -20,7 +20,7 @@ class ReferenceLatentBatch:
       1. Sorting frames by SHA-1 of their full content (collision-free for any
          set of distinct latents, unlike a partial-value key).
       2. Calling .contiguous() after reindexing so every permutation produces a
-         tensor with identical memory strides — eliminating the nondeterministic
+         tensor with identical memory strides - eliminating the nondeterministic
          CUDA results that arise when the same logical values sit at different
          memory offsets.
     """
@@ -62,7 +62,7 @@ class ReferenceLatentBatch:
             samples = samples[idx].contiguous()
 
         for i in range(N):
-            frame = samples[i : i + 1]       # [1, C, H, W]  — keeps batch dim
+            frame = samples[i : i + 1]       # [1, C, H, W]  - keeps batch dim
             conditioning = node_helpers.conditioning_set_values(
                 conditioning,
                 {"reference_latents": [frame]},

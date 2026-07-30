@@ -146,6 +146,7 @@ _MODEL_TYPES = {
 }
 _DEFAULT_MT = "Flux2Klein"
 _ROUTES_REGISTERED = globals().get("_ROUTES_REGISTERED", False)
+_BLOCK_KEYS = ("double", "single", "transformer", "layers", "blocks")
 
 
 def _is_all_ones(block_weights: dict) -> bool:
@@ -156,6 +157,49 @@ def _is_all_ones(block_weights: dict) -> bool:
             if float(w) != 1.0:
                 return False
     return True
+
+
+def _copy_block_weights(raw) -> dict:
+    """Return the supported block arrays as plain JSON-safe floats."""
+    if not isinstance(raw, dict):
+        return {}
+    result = {}
+    for block_key in _BLOCK_KEYS:
+        values = raw.get(block_key)
+        if values:
+            result[block_key] = [float(value) for value in values]
+    return result
+
+
+def _json_number(value) -> float:
+    """Keep report numbers readable without changing values used by the loader."""
+    rounded = round(float(value), 10)
+    return 0.0 if rounded == 0 else rounded
+
+
+def _report_block_weights(raw) -> dict:
+    return {
+        block_key: [_json_number(value) for value in values]
+        for block_key, values in _copy_block_weights(raw).items()
+    }
+
+
+def _combine_block_weights(per_lora: dict, global_blocks: dict) -> dict:
+    """Combine per-LoRA weights with active global multipliers."""
+    merged = {}
+    for block_key in set(per_lora) | set(global_blocks):
+        per_values = per_lora.get(block_key, [])
+        global_values = global_blocks.get(block_key, [])
+        if per_values and global_values:
+            merged[block_key] = [
+                value * (global_values[index] if index < len(global_values) else 1.0)
+                for index, value in enumerate(per_values)
+            ]
+        elif per_values:
+            merged[block_key] = list(per_values)
+        elif global_values:
+            merged[block_key] = list(global_values)
+    return merged
 
 
 def _key_block_weight(key: str, block_weights: dict) -> float:
@@ -199,7 +243,7 @@ def _compute_merged_lora(model, pre_patch_counts: dict) -> dict:
     (this happens with FP8-packed weights whose logical shape differs from the LoRA expectation)."""
     import torch
 
-    # Collect actual weight shapes for validation (cheap — just metadata, no tensor copies).
+    # Collect actual weight shapes for validation (cheap - just metadata, no tensor copies).
     weight_numel = {}
     try:
         sd = model.model_state_dict()
@@ -222,7 +266,7 @@ def _compute_merged_lora(model, pre_patch_counts: dict) -> dict:
                 if hasattr(v, "name") and hasattr(v, "weights"):
                     w = v.weights
                     if v.name != "lora":
-                        log_node_warn(NODE_NAME, f"Unsupported adapter '{v.name}' on {key} — skipping (only standard LoRA supported).")
+                        log_node_warn(NODE_NAME, f"Unsupported adapter '{v.name}' on {key} - skipping (only standard LoRA supported).")
                         continue
                     mat1 = w[0].float()
                     mat2 = w[1].float()
@@ -230,10 +274,10 @@ def _compute_merged_lora(model, pre_patch_counts: dict) -> dict:
                     mid = w[3]
                     dora_scale = w[4]
                     if mid is not None:
-                        log_node_warn(NODE_NAME, f"Tucker/LoCon mid weight on {key} — skipping (not supported in merge).")
+                        log_node_warn(NODE_NAME, f"Tucker/LoCon mid weight on {key} - skipping (not supported in merge).")
                         continue
                     if dora_scale is not None:
-                        log_node_warn(NODE_NAME, f"DoRA scale on {key} — skipping (DoRA merge requires base weights, not supported).")
+                        log_node_warn(NODE_NAME, f"DoRA scale on {key} - skipping (DoRA merge requires base weights, not supported).")
                         continue
                     scale = float(alpha_val) / mat2.shape[0] if alpha_val is not None else 1.0
                     d = strength * scale * torch.mm(
@@ -243,7 +287,7 @@ def _compute_merged_lora(model, pre_patch_counts: dict) -> dict:
                     raw = v[1][0].float()
                     d = strength * raw.reshape(raw.shape[0], -1)
                 else:
-                    log_node_warn(NODE_NAME, f"Unknown patch format on {key} — skipping.")
+                    log_node_warn(NODE_NAME, f"Unknown patch format on {key} - skipping.")
                     continue
                 delta = d if delta is None else delta + d
             except Exception as e:
@@ -256,7 +300,7 @@ def _compute_merged_lora(model, pre_patch_counts: dict) -> dict:
             log_node_warn(
                 NODE_NAME,
                 f"Skipping {key}: LoRA delta {list(delta.shape)} ({delta.numel()} el) "
-                f"does not match weight ({weight_numel[key]} el) — "
+                f"does not match weight ({weight_numel[key]} el) - "
                 f"LoRA was trained for a different shape and cannot be applied to this layer.",
             )
             continue
@@ -364,8 +408,8 @@ class MagicLoraLoader:
             "hidden": {"unique_id": "UNIQUE_ID", "prompt": "PROMPT"},
         }
 
-    RETURN_TYPES = ("MODEL", "CLIP", "MERGED_LORA")
-    RETURN_NAMES = ("MODEL", "CLIP", "merged_lora")
+    RETURN_TYPES = ("MODEL", "CLIP", "MERGED_LORA", "STRING")
+    RETURN_NAMES = ("MODEL", "CLIP", "merged_lora", "lora_stack_info")
     FUNCTION = "load_loras"
 
     @classmethod
@@ -391,6 +435,8 @@ class MagicLoraLoader:
 
     def load_loras(self, model=None, clip=None, unique_id=None, prompt=None, **kwargs):
         pre_patch_counts = {k: len(v) for k, v in (getattr(model, "patches", None) or {}).items()} if model is not None else {}
+        model_connected = model is not None
+        clip_connected = clip is not None
         wet = 1.0
         wet_raw = kwargs.pop("wet", None)
         if isinstance(wet_raw, dict) and wet_raw.get("__pgc_wet"):
@@ -405,92 +451,207 @@ class MagicLoraLoader:
         elif isinstance(cap_raw, (int, float)):
             cap = max(0.0, float(cap_raw))
 
-        kwargs.pop("pgc_model_type", None)
+        model_type = _DEFAULT_MT
+        model_type_raw = kwargs.pop("pgc_model_type", None)
+        if isinstance(model_type_raw, dict) and model_type_raw.get("__pgc_model_type") is True:
+            candidate_model_type = model_type_raw.get("value")
+            if candidate_model_type in _MODEL_TYPES:
+                model_type = candidate_model_type
+        elif model_type_raw in _MODEL_TYPES:
+            model_type = model_type_raw
 
         global_blocks = None
         gb_raw = kwargs.pop("pgc_global_blocks", None)
         kwargs.pop("global_blocks", None)
         if isinstance(gb_raw, dict) and gb_raw.get("__pgc_global_blocks") is True:
-            candidate = {}
-            for bkey in ("double", "single", "transformer", "layers", "blocks"):
-                raw_vals = gb_raw.get(bkey)
-                if raw_vals:
-                    candidate[bkey] = [float(v) for v in raw_vals]
+            candidate = _copy_block_weights(gb_raw)
             if candidate and any(v != 1.0 for vals in candidate.values() for v in vals):
                 global_blocks = candidate
 
-        for key, value in kwargs.items():
-            key = key.upper()
-            if (
-                key.startswith("LORA_")
+        configured_global_blocks = _copy_block_weights(gb_raw)
+        stack_info = {
+            "schema": "crt.magic_lora_loader.stack_info.v1",
+            "model_type": model_type,
+            "inputs": {
+                "model_connected": model_connected,
+                "clip_connected": clip_connected,
+            },
+            "global_dry_wet": {
+                "wet_multiplier": _json_number(wet),
+                "wet_percent": _json_number(wet * 100.0),
+            },
+            "strength_cap": {
+                "enabled": cap > 0.0,
+                "value": _json_number(cap),
+            },
+            "global_block_weights": _report_block_weights(configured_global_blocks),
+            "used_lora_stacks": [],
+            "skipped_loras": [],
+        }
+        configured_count = 0
+        enabled_count = 0
+
+        for input_name, value in kwargs.items():
+            if not (
+                input_name.upper().startswith("LORA_")
+                and isinstance(value, dict)
                 and "on" in value
                 and "lora" in value
                 and "strength" in value
             ):
-                strength_model = value["strength"] * wet
-                strength_clip_raw = value.get("strengthTwo")
+                continue
 
-                if clip is None:
-                    if strength_clip_raw is not None and strength_clip_raw != 0:
-                        log_node_warn(
-                            NODE_NAME,
-                            "Received clip strength even though no clip supplied!",
-                        )
-                    strength_clip = 0
-                else:
-                    strength_clip = (
-                        strength_clip_raw * wet
-                        if strength_clip_raw is not None
-                        else strength_model
+            configured_count += 1
+            stack_position = configured_count
+            lora_name = value.get("lora")
+
+            if not value["on"]:
+                stack_info["skipped_loras"].append(
+                    {
+                        "stack_position": stack_position,
+                        "input_name": input_name,
+                        "lora": lora_name,
+                        "reason": "disabled",
+                    }
+                )
+                continue
+
+            enabled_count += 1
+            configured_model_weight = float(value["strength"])
+            configured_clip_weight = value.get("strengthTwo")
+            if configured_clip_weight is None:
+                configured_clip_weight = configured_model_weight
+            else:
+                configured_clip_weight = float(configured_clip_weight)
+
+            strength_model = configured_model_weight * wet
+            strength_clip_raw = value.get("strengthTwo")
+
+            if not clip_connected:
+                if strength_clip_raw is not None and strength_clip_raw != 0:
+                    log_node_warn(
+                        NODE_NAME,
+                        "Received clip strength even though no clip supplied!",
                     )
+                strength_clip = 0
+            else:
+                strength_clip = (
+                    float(strength_clip_raw) * wet
+                    if strength_clip_raw is not None
+                    else strength_model
+                )
 
-                if cap > 0.0:
-                    strength_model = max(-cap, min(cap, strength_model))
-                    if clip is not None:
-                        strength_clip = max(-cap, min(cap, strength_clip))
+            if cap > 0.0:
+                strength_model = max(-cap, min(cap, strength_model))
+                if clip_connected:
+                    strength_clip = max(-cap, min(cap, strength_clip))
 
-                if value["on"] and (strength_model != 0 or strength_clip != 0):
-                    lora = get_lora_by_filename(value["lora"], log_node=self.NAME)
-                    if model is not None and lora is not None:
-                        per_lora_blocks = value.get("blocks")
-                        if isinstance(per_lora_blocks, dict):
-                            merged = {}
-                            all_keys = set(per_lora_blocks.keys()) | (
-                                set(global_blocks.keys()) if global_blocks else set()
-                            )
-                            for bkey in all_keys:
-                                pl = [float(v) for v in per_lora_blocks.get(bkey, [])]
-                                if global_blocks:
-                                    gb = [float(v) for v in global_blocks.get(bkey, [])]
-                                    if pl and gb:
-                                        merged[bkey] = [
-                                            pl[i] * (gb[i] if i < len(gb) else 1.0)
-                                            for i in range(len(pl))
-                                        ]
-                                    elif pl:
-                                        merged[bkey] = pl
-                                    elif gb:
-                                        merged[bkey] = gb
-                                else:
-                                    merged[bkey] = pl
-                            blocks = merged if merged else None
-                        else:
-                            blocks = global_blocks
+            if strength_model == 0 and strength_clip == 0:
+                stack_info["skipped_loras"].append(
+                    {
+                        "stack_position": stack_position,
+                        "input_name": input_name,
+                        "lora": lora_name,
+                        "reason": "zero_effective_weight",
+                    }
+                )
+                continue
 
-                        if blocks is not None:
-                            model, clip = load_lora_with_blocks(
-                                model, clip, lora, strength_model, strength_clip, blocks
-                            )
-                        else:
-                            model, clip = LoraLoader().load_lora(
-                                model, clip, lora, strength_model, strength_clip
-                            )
+            if not lora_name:
+                stack_info["skipped_loras"].append(
+                    {
+                        "stack_position": stack_position,
+                        "input_name": input_name,
+                        "lora": lora_name,
+                        "reason": "no_lora_selected",
+                    }
+                )
+                continue
+
+            lora = get_lora_by_filename(lora_name, log_node=self.NAME)
+            if lora is None:
+                stack_info["skipped_loras"].append(
+                    {
+                        "stack_position": stack_position,
+                        "input_name": input_name,
+                        "lora": lora_name,
+                        "reason": "lora_not_found",
+                    }
+                )
+                continue
+
+            if not model_connected:
+                stack_info["skipped_loras"].append(
+                    {
+                        "stack_position": stack_position,
+                        "input_name": input_name,
+                        "lora": lora_name,
+                        "resolved_lora": lora,
+                        "reason": "model_not_connected",
+                    }
+                )
+                continue
+
+            per_lora_blocks = _copy_block_weights(value.get("blocks"))
+            if per_lora_blocks:
+                blocks = _combine_block_weights(per_lora_blocks, global_blocks or {})
+            else:
+                blocks = global_blocks
+
+            if per_lora_blocks and global_blocks:
+                block_weights_mode = "per_lora_x_global"
+            elif per_lora_blocks:
+                block_weights_mode = "per_lora"
+            elif global_blocks:
+                block_weights_mode = "global"
+            else:
+                block_weights_mode = "default"
+
+            if blocks is not None:
+                model, clip = load_lora_with_blocks(
+                    model, clip, lora, strength_model, strength_clip, blocks
+                )
+            else:
+                model, clip = LoraLoader().load_lora(
+                    model, clip, lora, strength_model, strength_clip
+                )
+
+            effective_blocks = _report_block_weights(blocks)
+            if not effective_blocks and configured_global_blocks:
+                effective_blocks = _report_block_weights(configured_global_blocks)
+            stack_info["used_lora_stacks"].append(
+                {
+                    "stack_position": stack_position,
+                    "input_name": input_name,
+                    "lora": lora_name,
+                    "resolved_lora": lora,
+                    "configured_weights": {
+                        "model": _json_number(configured_model_weight),
+                        "clip": _json_number(configured_clip_weight),
+                    },
+                    "effective_weights": {
+                        "model": _json_number(strength_model),
+                        "clip": _json_number(strength_clip) if clip_connected else None,
+                    },
+                    "automix_reduction": _json_number(value.get("reduction", 1.0)),
+                    "block_weights_mode": block_weights_mode,
+                    "per_lora_block_weights": _report_block_weights(per_lora_blocks) or None,
+                    "effective_block_weights": effective_blocks,
+                }
+            )
 
         if model is not None and self._merged_lora_output_is_connected(unique_id, prompt):
             merged_lora = _compute_merged_lora(model, pre_patch_counts)
         else:
             merged_lora = {}
-        return (model, clip, merged_lora)
+        stack_info["summary"] = {
+            "configured_lora_count": configured_count,
+            "enabled_lora_count": enabled_count,
+            "used_lora_count": len(stack_info["used_lora_stacks"]),
+            "skipped_lora_count": len(stack_info["skipped_loras"]),
+        }
+        lora_stack_info = json.dumps(stack_info, indent=2, ensure_ascii=False)
+        return (model, clip, merged_lora, lora_stack_info)
 
     @classmethod
     def get_enabled_loras_from_prompt_node(
@@ -680,7 +841,7 @@ class SaveMergedLora:
         print(f"[crt-pll]   Writing {save_path} ...")
         safetensors.torch.save_file(lora_sd, save_path)
         keys_saved = total - skipped
-        print(f"[crt-pll] Done — saved {keys_saved}/{total} keys → {save_path}")
+        print(f"[crt-pll] Done - saved {keys_saved}/{total} keys -> {save_path}")
         return (save_path,)
 
 

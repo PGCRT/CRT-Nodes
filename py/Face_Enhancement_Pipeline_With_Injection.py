@@ -35,17 +35,17 @@ def colored_print(message, color=Colors.ENDC):
 
 
 def load_yolo(model_path: str):
-    colored_print(f"🔄 Loading YOLO model from: {model_path}", Colors.CYAN)
+    colored_print(f" Loading YOLO model from: {model_path}", Colors.CYAN)
     from ultralytics import YOLO
 
     # Fixed: Compatibility layer for ultralytics 8.x
     try:
         # Try modern ultralytics approach first
         model = YOLO(model_path)
-        colored_print("✅ YOLO model loaded successfully!", Colors.GREEN)
+        colored_print("[OK] YOLO model loaded successfully!", Colors.GREEN)
     except Exception as e:
         colored_print(
-            f"⚠️ Modern YOLO loading failed, trying legacy approach: {e}", Colors.YELLOW
+            f"[WARN] Modern YOLO loading failed, trying legacy approach: {e}", Colors.YELLOW
         )
         # Fallback for older ultralytics versions if nn.tasks exists
         try:
@@ -61,7 +61,7 @@ def load_yolo(model_path: str):
                 nn_tasks.torch_safe_load = unsafe_pt_loader
                 model = YOLO(model_path)
                 colored_print(
-                    "✅ YOLO model loaded successfully with legacy method!",
+                    "[OK] YOLO model loaded successfully with legacy method!",
                     Colors.GREEN,
                 )
             finally:
@@ -69,7 +69,7 @@ def load_yolo(model_path: str):
         except ImportError:
             # Final fallback - direct loading
             model = YOLO(model_path)
-            colored_print("✅ YOLO model loaded with direct method!", Colors.GREEN)
+            colored_print("[OK] YOLO model loaded with direct method!", Colors.GREEN)
     return model
 
 
@@ -98,7 +98,7 @@ def dilate_masks(segmasks, dilation_factor):
     dilated_segmasks = []
     kernel = np.ones((dilation_factor, dilation_factor), np.uint8)
     colored_print(
-        f"   🔧 Applying dilation with {dilation_factor}x{dilation_factor} kernel",
+        f"    Applying dilation with {dilation_factor}x{dilation_factor} kernel",
         Colors.BLUE,
     )
     for bbox, mask, confidence in segmasks:
@@ -115,13 +115,13 @@ def create_segmasks(results):
     for i in range(len(segms)):
         item = (bboxs[i], segms[i].astype(np.float32), confidence[i])
         output.append(item)
-    colored_print(f"   📊 Created {len(output)} segmentation mask(s)", Colors.BLUE)
+    colored_print(f"    Created {len(output)} segmentation mask(s)", Colors.BLUE)
     return output
 
 
 def inference_bbox(model, image: Image.Image, confidence: float = 0.3):
     colored_print(
-        f"   🔍 Running bbox detection (confidence: {confidence:.2f})", Colors.BLUE
+        f"   [INFO] Running bbox detection (confidence: {confidence:.2f})", Colors.BLUE
     )
     pred = model(image, conf=confidence)
     if (
@@ -130,11 +130,11 @@ def inference_bbox(model, image: Image.Image, confidence: float = 0.3):
         or pred[0].boxes is None
         or pred[0].boxes.xyxy.nelement() == 0
     ):
-        colored_print("   ⚠️ No detections found", Colors.YELLOW)
+        colored_print("   [WARN] No detections found", Colors.YELLOW)
         return [[], [], [], []]
 
     bboxes = pred[0].boxes.xyxy.cpu().numpy()
-    colored_print(f"   ✅ Found {len(bboxes)} bounding box(es)", Colors.GREEN)
+    colored_print(f"   [OK] Found {len(bboxes)} bounding box(es)", Colors.GREEN)
 
     cv2_gray = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2GRAY)
     segms = []
@@ -153,7 +153,7 @@ def inference_bbox(model, image: Image.Image, confidence: float = 0.3):
 
 def inference_segm(model, image: Image.Image, confidence: float = 0.3):
     colored_print(
-        f"   🔍 Running segmentation detection (confidence: {confidence:.2f})",
+        f"   [INFO] Running segmentation detection (confidence: {confidence:.2f})",
         Colors.BLUE,
     )
     pred = model(image, conf=confidence)
@@ -163,12 +163,12 @@ def inference_segm(model, image: Image.Image, confidence: float = 0.3):
         or pred[0].masks is None
         or pred[0].masks.data.nelement() == 0
     ):
-        colored_print("   ⚠️ No segmentation masks found", Colors.YELLOW)
+        colored_print("   [WARN] No segmentation masks found", Colors.YELLOW)
         return [[], [], [], []]
 
     bboxes = pred[0].boxes.xyxy.cpu().numpy()
     segms = pred[0].masks.data.cpu().numpy()
-    colored_print(f"   ✅ Found {len(bboxes)} segmentation mask(s)", Colors.GREEN)
+    colored_print(f"   [OK] Found {len(bboxes)} segmentation mask(s)", Colors.GREEN)
 
     results = [[], [], [], []]
     for i in range(bboxes.shape[0]):
@@ -189,16 +189,16 @@ def inference_segm(model, image: Image.Image, confidence: float = 0.3):
 class UltraDetector:
     def __init__(self, model_path, detection_type):
         colored_print(
-            f"🤖 Initializing {detection_type.upper()} detector...", Colors.CYAN
+            f" Initializing {detection_type.upper()} detector...", Colors.CYAN
         )
         self.model = load_yolo(model_path)
         self.type = detection_type
-        colored_print(f"✅ {detection_type.upper()} detector ready!", Colors.GREEN)
+        colored_print(f"[OK] {detection_type.upper()} detector ready!", Colors.GREEN)
 
     def detect_combined(self, image, threshold, dilation):
-        colored_print(f"🔍 Running {self.type.upper()} detection...", Colors.CYAN)
+        colored_print(f"[INFO] Running {self.type.upper()} detection...", Colors.CYAN)
         pil_image = tensor2pil(image)
-        colored_print(f"   📐 Detection image size: {pil_image.size}", Colors.BLUE)
+        colored_print(f"    Detection image size: {pil_image.size}", Colors.BLUE)
 
         if self.type == "bbox":
             detected_results = inference_bbox(self.model, pil_image, threshold)
@@ -206,22 +206,22 @@ class UltraDetector:
             detected_results = inference_segm(self.model, pil_image, threshold)
 
         if not detected_results or not detected_results[0]:
-            colored_print("   ❌ No faces detected", Colors.YELLOW)
+            colored_print("   [ERROR] No faces detected", Colors.YELLOW)
             return torch.zeros((pil_image.height, pil_image.width), dtype=torch.float32)
 
         segmasks = create_segmasks(detected_results)
         if not segmasks:
-            colored_print("   ❌ No valid segmentation masks created", Colors.YELLOW)
+            colored_print("   [ERROR] No valid segmentation masks created", Colors.YELLOW)
             return torch.zeros((pil_image.height, pil_image.width), dtype=torch.float32)
 
         if dilation > 0:
-            colored_print(f"   🔧 Applying dilation factor: {dilation}", Colors.BLUE)
+            colored_print(f"    Applying dilation factor: {dilation}", Colors.BLUE)
             segmasks = dilate_masks(segmasks, dilation)
 
         final_mask = combine_masks(segmasks)
         mask_coverage = final_mask.sum().item() / (final_mask.numel())
         colored_print(
-            f"   📊 Final mask coverage: {mask_coverage * 100:.2f}%", Colors.GREEN
+            f"    Final mask coverage: {mask_coverage * 100:.2f}%", Colors.GREEN
         )
 
         return final_mask
@@ -230,7 +230,7 @@ class UltraDetector:
 class ImageResize:
     def execute(self, image, width, height, method="stretch", interpolation="lanczos"):
         _, oh, ow, _ = image.shape
-        colored_print(f"🔄 Resizing image from {ow}x{oh}...", Colors.CYAN)
+        colored_print(f" Resizing image from {ow}x{oh}...", Colors.CYAN)
 
         if method == "keep proportion":
             if ow > oh:
@@ -239,36 +239,36 @@ class ImageResize:
                 ratio = height / oh
             width, height = round(ow * ratio), round(oh * ratio)
             colored_print(
-                f"   📐 Keeping proportions - Target: {width}x{height} (ratio: {ratio:.3f})",
+                f"    Keeping proportions - Target: {width}x{height} (ratio: {ratio:.3f})",
                 Colors.BLUE,
             )
         else:
             width, height = (width if width > 0 else ow), (height if height > 0 else oh)
-            colored_print(f"   📐 Direct resize to: {width}x{height}", Colors.BLUE)
+            colored_print(f"    Direct resize to: {width}x{height}", Colors.BLUE)
 
         outputs = image.permute(0, 3, 1, 2)
         if interpolation == "lanczos":
-            colored_print("   🎯 Using Lanczos interpolation", Colors.BLUE)
+            colored_print("    Using Lanczos interpolation", Colors.BLUE)
             outputs = comfy.utils.lanczos(outputs, width, height)
         else:
-            colored_print(f"   🎯 Using {interpolation} interpolation", Colors.BLUE)
+            colored_print(f"    Using {interpolation} interpolation", Colors.BLUE)
             outputs = F.interpolate(outputs, size=(height, width), mode=interpolation)
 
-        colored_print(f"✅ Image resize completed: {width}x{height}", Colors.GREEN)
+        colored_print(f"[OK] Image resize completed: {width}x{height}", Colors.GREEN)
         return torch.clamp(outputs.permute(0, 2, 3, 1), 0, 1)
 
 
 class ColorMatch:
     def colormatch(self, image_ref, image_target, method, strength=1.0):
         colored_print(
-            f"🎨 Applying color matching (method: {method}, strength: {strength:.2f})...",
+            f" Applying color matching (method: {method}, strength: {strength:.2f})...",
             Colors.CYAN,
         )
 
         try:
             from color_matcher import ColorMatcher
         except Exception:
-            colored_print("❌ ERROR: 'color-matcher' library not found.", Colors.RED)
+            colored_print("[ERROR] ERROR: 'color-matcher' library not found.", Colors.RED)
             raise Exception(
                 "ColorMatch requires 'color-matcher'. Please 'pip install color-matcher'"
             )
@@ -277,7 +277,7 @@ class ColorMatch:
         image_ref, image_target = image_ref.cpu(), image_target.cpu()
 
         batch_size = image_target.size(0)
-        colored_print(f"   🔄 Processing {batch_size} image(s)...", Colors.BLUE)
+        colored_print(f"    Processing {batch_size} image(s)...", Colors.BLUE)
 
         for i in range(batch_size):
             target_np, ref_np = (
@@ -294,20 +294,20 @@ class ColorMatch:
 
             final_mean = np.mean(result, axis=(0, 1))
             colored_print(
-                f"   📊 Image {i + 1}: Target RGB({target_mean[0]:.3f},{target_mean[1]:.3f},{target_mean[2]:.3f}) → Final RGB({final_mean[0]:.3f},{final_mean[1]:.3f},{final_mean[2]:.3f})",
+                f"    Image {i + 1}: Target RGB({target_mean[0]:.3f},{target_mean[1]:.3f},{target_mean[2]:.3f}) -> Final RGB({final_mean[0]:.3f},{final_mean[1]:.3f},{final_mean[2]:.3f})",
                 Colors.BLUE,
             )
 
             out.append(torch.from_numpy(result))
 
-        colored_print("✅ Color matching completed!", Colors.GREEN)
+        colored_print("[OK] Color matching completed!", Colors.GREEN)
         return (torch.stack(out, dim=0).to(torch.float32).clamp_(0, 1),)
 
 
 class GrowMaskWithBlur:
     def expand_mask(self, mask, expand, tapered_corners, blur_radius, taper_radius=0):
         colored_print(
-            f"🎭 Processing mask (expand: {expand}, blur: {blur_radius}, taper: {taper_radius})...",
+            f" Processing mask (expand: {expand}, blur: {blur_radius}, taper: {taper_radius})...",
             Colors.CYAN,
         )
 
@@ -320,7 +320,7 @@ class GrowMaskWithBlur:
 
             if expand != 0:
                 colored_print(
-                    f"   🔧 Applying {abs(expand)} iterations of {'dilation' if expand > 0 else 'erosion'}",
+                    f"    Applying {abs(expand)} iterations of {'dilation' if expand > 0 else 'erosion'}",
                     Colors.BLUE,
                 )
                 for _ in range(abs(round(expand))):
@@ -331,7 +331,7 @@ class GrowMaskWithBlur:
 
             final_coverage = np.sum(output) / output.size
             colored_print(
-                f"   📊 Mask coverage: {original_coverage * 100:.2f}% → {final_coverage * 100:.2f}%",
+                f"    Mask coverage: {original_coverage * 100:.2f}% -> {final_coverage * 100:.2f}%",
                 Colors.BLUE,
             )
 
@@ -346,7 +346,7 @@ class GrowMaskWithBlur:
 
             if t > 0:
                 colored_print(
-                    f"   🖼️ Applying border taper fade (radius: {t}px)", Colors.BLUE
+                    f"    Applying border taper fade (radius: {t}px)", Colors.BLUE
                 )
 
                 v_fade = torch.ones((h, 1), dtype=torch.float32)
@@ -362,20 +362,20 @@ class GrowMaskWithBlur:
 
         if blur_radius > 0:
             colored_print(
-                f"   🌫️ Applying Gaussian blur (radius: {blur_radius})", Colors.BLUE
+                f"    Applying Gaussian blur (radius: {blur_radius})", Colors.BLUE
             )
             pil_img = to_pil_image(final_mask)
             pil_img = pil_img.filter(ImageFilter.GaussianBlur(blur_radius))
             final_mask = to_tensor(pil_img)
 
-        colored_print("✅ Mask processing completed!", Colors.GREEN)
+        colored_print("[OK] Mask processing completed!", Colors.GREEN)
         return (final_mask, 1.0 - final_mask)
 
 
 class BoundedImageCropWithMask:
     def crop(self, image, mask, top, bottom, left, right):
         colored_print(
-            f"✂️ Cropping image with padding (t:{top}, b:{bottom}, l:{left}, r:{right})...",
+            f" Cropping image with padding (t:{top}, b:{bottom}, l:{left}, r:{right})...",
             Colors.CYAN,
         )
 
@@ -389,7 +389,7 @@ class BoundedImageCropWithMask:
             current_mask = mask[i if len(mask) == len(image) else 0]
             if current_mask.sum() == 0:
                 colored_print(
-                    f"   ⚠️ Empty mask for image {i + 1}, skipping", Colors.YELLOW
+                    f"   [WARN] Empty mask for image {i + 1}, skipping", Colors.YELLOW
                 )
                 continue
 
@@ -397,7 +397,7 @@ class BoundedImageCropWithMask:
 
             if not torch.any(rows) or not torch.any(cols):
                 colored_print(
-                    f"   ⚠️ No valid mask regions for image {i + 1}, skipping",
+                    f"   [WARN] No valid mask regions for image {i + 1}, skipping",
                     Colors.YELLOW,
                 )
                 continue
@@ -412,14 +412,14 @@ class BoundedImageCropWithMask:
 
             if rmax < rmin or cmax < cmin:
                 colored_print(
-                    f"   ❌ Invalid crop region for image {i + 1} (zero or negative size), skipping",
+                    f"   [ERROR] Invalid crop region for image {i + 1} (zero or negative size), skipping",
                     Colors.RED,
                 )
                 continue
 
             crop_w, crop_h = cmax - cmin + 1, rmax - rmin + 1
             colored_print(
-                f"   📐 Crop {i + 1}: {crop_w}x{crop_h} at ({cmin},{rmin})", Colors.BLUE
+                f"    Crop {i + 1}: {crop_w}x{crop_h} at ({cmin},{rmin})", Colors.BLUE
             )
 
             all_bounds.append([rmin, rmax, cmin, cmax])
@@ -427,12 +427,12 @@ class BoundedImageCropWithMask:
 
         if cropped_images:
             colored_print(
-                f"✅ Successfully cropped {len(cropped_images)} region(s)!",
+                f"[OK] Successfully cropped {len(cropped_images)} region(s)!",
                 Colors.GREEN,
             )
             return (torch.stack(cropped_images), all_bounds)
         else:
-            colored_print("❌ No valid crops produced", Colors.RED)
+            colored_print("[ERROR] No valid crops produced", Colors.RED)
             return (None, None)
 
 
@@ -440,12 +440,12 @@ def apply_controlnet_advanced(
     positive, negative, control_net, image, strength, start_percent, end_percent, vae
 ):
     colored_print(
-        f"🎮 Applying ControlNet (strength: {strength:.3f}, range: {start_percent:.3f}-{end_percent:.3f})...",
+        f" Applying ControlNet (strength: {strength:.3f}, range: {start_percent:.3f}-{end_percent:.3f})...",
         Colors.CYAN,
     )
 
     if strength == 0:
-        colored_print("   🚫 ControlNet strength is 0, skipping", Colors.YELLOW)
+        colored_print("    ControlNet strength is 0, skipping", Colors.YELLOW)
         return (positive, negative)
 
     control_hint = image.movedim(-1, 1)
@@ -460,20 +460,20 @@ def apply_controlnet_advanced(
             prev_cnet = d.get("control", None)
             if prev_cnet in cnets:
                 c_net = cnets[prev_cnet]
-                colored_print("   🔗 Reusing ControlNet instance", Colors.BLUE)
+                colored_print("    Reusing ControlNet instance", Colors.BLUE)
             else:
                 c_net = control_net.copy().set_cond_hint(
                     control_hint, strength, (start_percent, end_percent), vae=vae
                 )
                 c_net.set_previous_controlnet(prev_cnet)
                 cnets[prev_cnet] = c_net
-                colored_print("   🆕 Created new ControlNet instance", Colors.BLUE)
+                colored_print("    Created new ControlNet instance", Colors.BLUE)
             d["control"], d["control_apply_to_uncond"] = c_net, False
             c.append([t[0], d])
         out.append(c)
 
     colored_print(
-        f"✅ ControlNet applied to {conditioning_count} conditioning(s)!", Colors.GREEN
+        f"[OK] ControlNet applied to {conditioning_count} conditioning(s)!", Colors.GREEN
     )
     return (out[0], out[1])
 

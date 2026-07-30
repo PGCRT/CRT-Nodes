@@ -77,12 +77,12 @@ class AudioLoaderCrawl:
         safe_return = (silent_audio, "", "")
 
         if not folder_path or not folder_path.strip():
-            print("❌ Error: Folder path is empty.")
+            print("[ERROR] Error: Folder path is empty.")
             return safe_return
 
         folder = Path(folder_path.strip())
         if not folder.is_dir():
-            print(f"❌ Error: Folder '{folder}' not found or is not a directory.")
+            print(f"[ERROR] Error: Folder '{folder}' not found or is not a directory.")
             return safe_return
 
         # Ensure file extension has a dot
@@ -95,7 +95,7 @@ class AudioLoaderCrawl:
             current_mtime = folder.stat().st_mtime
 
             if cache_key not in self.cache or self.cache[cache_key]['mtime'] != current_mtime:
-                print(f"🔎 Folder changed or not cached. Scanning '{folder}' for '{file_extension}' files...")
+                print(f"[INFO] Folder changed or not cached. Scanning '{folder}' for '{file_extension}' files...")
                 pattern = f'*{file_extension}'
                 if crawl_subfolders:
                     files = sorted([f for f in folder.rglob(pattern) if f.is_file()])
@@ -103,13 +103,13 @@ class AudioLoaderCrawl:
                     files = sorted([f for f in folder.glob(pattern) if f.is_file()])
 
                 self.cache[cache_key] = {'files': files, 'mtime': current_mtime}
-                print(f"✅ Cached {len(files)} files.")
+                print(f"[OK] Cached {len(files)} files.")
 
             files = self.cache[cache_key]['files']
             # --- End Caching Logic ---
 
             if not files:
-                print(f"❌ Warning: No files with extension '{file_extension}' found in '{folder}'.")
+                print(f"[ERROR] Warning: No files with extension '{file_extension}' found in '{folder}'.")
                 return safe_return
 
             # --- Deterministic and Safe Selection ---
@@ -118,7 +118,7 @@ class AudioLoaderCrawl:
             selected_file = files[selected_index]
             # --- End Selection ---
 
-            print(f"✅ Seed {seed} → File {selected_index + 1}/{num_files}: '{selected_file.name}'")
+            print(f"[OK] Seed {seed} -> File {selected_index + 1}/{num_files}: '{selected_file.name}'")
 
             # --- Load and Process Audio ---
             waveform, sample_rate = torchaudio.load(str(selected_file))
@@ -129,7 +129,7 @@ class AudioLoaderCrawl:
                 if offset_samples < waveform.shape[1]:
                     waveform = waveform[:, offset_samples:]
                 else:
-                    print("⚠️ Warning: Start offset is beyond the audio duration. Returning silent audio.")
+                    print("[WARN] Warning: Start offset is beyond the audio duration. Returning silent audio.")
                     return safe_return
 
             # Apply max length
@@ -155,7 +155,7 @@ class AudioLoaderCrawl:
             return (audio_out, file_name, file_path_str)
 
         except Exception as e:
-            print(f"❌ An unexpected error occurred in AudioLoaderCrawl: {str(e)}")
+            print(f"[ERROR] An unexpected error occurred in AudioLoaderCrawl: {str(e)}")
             return safe_return
 
 

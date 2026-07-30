@@ -1,5 +1,5 @@
 """
-save_image_base64.py  –  ComfyUI node: Save Image (Base64)
+save_image_base64.py  -  ComfyUI node: Save Image (Base64)
 ===========================================================
 Encodes an IMAGE tensor to a base64 string, bypassing disk writes entirely.
 The inverse of LoadImageBase64.

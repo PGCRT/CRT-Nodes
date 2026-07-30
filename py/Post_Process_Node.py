@@ -9,7 +9,7 @@ import folder_paths
 from spandrel import ModelLoader, ImageModelDescriptor
 import logging
 
-print("Loading crt-nodes module")
+print("[CRT Post Process][INFO] Loading module")
 
 
 class Colors:
@@ -24,7 +24,11 @@ class Colors:
 
 
 def colored_print(message, color=Colors.ENDC):
-    print(f"{color}{message}{Colors.ENDC}")
+    prefix = "[CRT Post Process]"
+    rendered = str(message)
+    if prefix not in rendered:
+        rendered = f"{prefix} {rendered}"
+    print(f"{color}{rendered}{Colors.ENDC}")
 
 
 logging.basicConfig(level=logging.INFO)
@@ -275,7 +279,7 @@ class CRTPostProcessNode:
         self.unlock = False
         self.loaded_upscale_model = None
         self.current_model_path = None
-        colored_print("🎨 CRT Post-Process Suite initialized!", Colors.HEADER)
+        colored_print(" CRT Post-Process Suite initialized!", Colors.HEADER)
 
     def _count_enabled_effects(self, kwargs):
         """Count how many effects are enabled"""
@@ -376,57 +380,57 @@ class CRTPostProcessNode:
     def load_upscale_model(self, model_path):
         if model_path == "None" or not model_path:
             if self.loaded_upscale_model is not None:
-                colored_print("🗑️ Clearing upscale model (None selected)", Colors.YELLOW)
+                colored_print(" Clearing upscale model (None selected)", Colors.YELLOW)
             self.loaded_upscale_model = None
             self.current_model_path = None
             return None
 
         if self.current_model_path == model_path and self.loaded_upscale_model is not None:
-            colored_print(f"🎯 [Cache Hit] Reusing upscale model: {model_path}", Colors.GREEN)
+            colored_print(f" [Cache Hit] Reusing upscale model: {model_path}", Colors.GREEN)
             return self.loaded_upscale_model
 
-        colored_print(f"📦 Loading upscale model: {model_path}", Colors.CYAN)
+        colored_print(f" Loading upscale model: {model_path}", Colors.CYAN)
 
         try:
             model_full_path = folder_paths.get_full_path_or_raise("upscale_models", model_path)
-            colored_print(f"   📁 Full path: {model_full_path}", Colors.BLUE)
+            colored_print(f"    Full path: {model_full_path}", Colors.BLUE)
 
             sd = comfy.utils.load_torch_file(model_full_path, safe_load=True)
             if "module.layers.0.residual_group.blocks.0.norm1.weight" in sd:
-                colored_print("   🔧 Applying state dict prefix replacement", Colors.BLUE)
+                colored_print("    Applying state dict prefix replacement", Colors.BLUE)
                 sd = comfy.utils.state_dict_prefix_replace(sd, {"module.": ""})
 
             out = ModelLoader().load_from_state_dict(sd).eval()
 
             if not isinstance(out, ImageModelDescriptor):
                 colored_print(
-                    "❌ ERROR: Model must be a single-image model (Spandrel ImageModelDescriptor)", Colors.RED
+                    "[ERROR] ERROR: Model must be a single-image model (Spandrel ImageModelDescriptor)", Colors.RED
                 )
                 raise ValueError("Upscale model must be a single-image model (Spandrel ImageModelDescriptor).")
 
             self.loaded_upscale_model = out
             self.current_model_path = model_path
-            colored_print("✅ Upscale model loaded successfully!", Colors.GREEN)
-            colored_print(f"   📊 Model scale: {out.scale}x", Colors.GREEN)
+            colored_print("[OK] Upscale model loaded successfully!", Colors.GREEN)
+            colored_print(f"    Model scale: {out.scale}x", Colors.GREEN)
             return self.loaded_upscale_model
 
         except Exception as e:
-            colored_print(f"❌ Failed to load upscale model: {e}", Colors.RED)
+            colored_print(f"[ERROR] Failed to load upscale model: {e}", Colors.RED)
             self.loaded_upscale_model = None
             self.current_model_path = None
             return None
 
     def reset_operation(self, operation_name):
-        colored_print(f"🔄 Reset operation '{operation_name}' called", Colors.YELLOW)
-        colored_print("   ⚠️ This function relies on UI widget interaction", Colors.YELLOW)
+        colored_print(f" Reset operation '{operation_name}' called", Colors.YELLOW)
+        colored_print("   [WARN] This function relies on UI widget interaction", Colors.YELLOW)
 
     def process(self, image, **kwargs):
-        colored_print("\n🎨 Starting CRT Post-Process Pipeline...", Colors.HEADER)
+        colored_print("\n Starting CRT Post-Process Pipeline...", Colors.HEADER)
 
         device = comfy.model_management.get_torch_device()
         image_input = image.to(device)
         batch_size, height, width, channels = image_input.shape
-        colored_print("📐 Input Analysis:", Colors.BLUE)
+        colored_print(" Input Analysis:", Colors.BLUE)
         colored_print(f"   Batch Size: {batch_size}", Colors.BLUE)
         colored_print(f"   Dimensions: {width}x{height}", Colors.BLUE)
         colored_print(f"   Channels: {channels}", Colors.BLUE)
@@ -435,24 +439,24 @@ class CRTPostProcessNode:
         enabled_count = self._count_enabled_effects(kwargs)
         enabled_effects = self._get_enabled_effects_list(kwargs)
 
-        colored_print("🎭 Effect Configuration:", Colors.HEADER)
+        colored_print(" Effect Configuration:", Colors.HEADER)
         colored_print(f"   Enabled Effects: {enabled_count}", Colors.BLUE)
         if enabled_effects:
             for i, effect in enumerate(enabled_effects, 1):
                 colored_print(f"   {i}. {effect}", Colors.CYAN)
         else:
-            colored_print("   🚫 No effects enabled - passthrough mode", Colors.YELLOW)
+            colored_print("    No effects enabled - passthrough mode", Colors.YELLOW)
             return (image_input,)
         if kwargs.get('enable_upscale', False):
             model_path = kwargs.get('upscale_model_path', "None")
-            colored_print("📦 Upscale Model Loading:", Colors.HEADER)
+            colored_print(" Upscale Model Loading:", Colors.HEADER)
             self.load_upscale_model(model_path)
-        colored_print(f"🔄 Processing {batch_size} frame(s)...", Colors.HEADER)
+        colored_print(f" Processing {batch_size} frame(s)...", Colors.HEADER)
         processed_frames = []
 
         for i in range(image_input.shape[0]):
             if batch_size > 1:
-                colored_print(f"   🖼️ Processing frame {i+1}/{batch_size}...", Colors.CYAN)
+                colored_print(f"    Processing frame {i+1}/{batch_size}...", Colors.CYAN)
 
             frame = image_input[i : i + 1].clone()
             processed_frame = self._process_single_frame(frame, device, i + 1, batch_size, **kwargs)
@@ -460,9 +464,9 @@ class CRTPostProcessNode:
 
         result = torch.cat(processed_frames, dim=0)
         final_h, final_w = result.shape[1:3]
-        colored_print("\n✅ CRT Post-Processing completed successfully!", Colors.HEADER)
-        colored_print("   🎯 Process Summary:", Colors.GREEN)
-        colored_print(f"     Input: {width}x{height} → Output: {final_w}x{final_h}", Colors.GREEN)
+        colored_print("\n[OK] CRT Post-Processing completed successfully!", Colors.HEADER)
+        colored_print("    Process Summary:", Colors.GREEN)
+        colored_print(f"     Input: {width}x{height} -> Output: {final_w}x{final_h}", Colors.GREEN)
         colored_print(f"     Effects Applied: {enabled_count}", Colors.GREEN)
         colored_print(f"     Frames Processed: {batch_size}", Colors.GREEN)
 
@@ -473,58 +477,58 @@ class CRTPostProcessNode:
         effect_count = 0
         if kwargs.get('enable_upscale', False):
             effect_count += 1
-            colored_print(f"   📈 [{effect_count}] Applying Upscaling...", Colors.CYAN)
+            colored_print(f"    [{effect_count}] Applying Upscaling...", Colors.CYAN)
             img = self._apply_upscale(img, device, **kwargs)
 
         if kwargs.get('enable_lens_distortion', False):
             effect_count += 1
-            colored_print(f"   🔍 [{effect_count}] Applying Lens Distortion...", Colors.CYAN)
+            colored_print(f"   [INFO] [{effect_count}] Applying Lens Distortion...", Colors.CYAN)
             img = self._apply_lens_distortion(img, kwargs)
 
         if kwargs.get('enable_chromatic_aberration', False):
             effect_count += 1
-            colored_print(f"   🌈 [{effect_count}] Applying Chromatic Aberration...", Colors.CYAN)
+            colored_print(f"    [{effect_count}] Applying Chromatic Aberration...", Colors.CYAN)
             img = self._apply_chromatic_aberration(img, kwargs)
 
         if kwargs.get('enable_temp_tint', False):
             effect_count += 1
-            colored_print(f"   🌡️ [{effect_count}] Applying Temperature & Tint...", Colors.CYAN)
+            colored_print(f"    [{effect_count}] Applying Temperature & Tint...", Colors.CYAN)
             img = self._apply_temperature_tint(img, kwargs)
 
         if kwargs.get('enable_levels', False):
             effect_count += 1
-            colored_print(f"   📊 [{effect_count}] Applying Levels...", Colors.CYAN)
+            colored_print(f"    [{effect_count}] Applying Levels...", Colors.CYAN)
             img = self._apply_levels(img, kwargs)
 
         if kwargs.get('enable_color_wheels', False):
             effect_count += 1
-            colored_print(f"   🎨 [{effect_count}] Applying Color Wheels...", Colors.CYAN)
+            colored_print(f"    [{effect_count}] Applying Color Wheels...", Colors.CYAN)
             img = self._apply_color_wheels(img, kwargs)
 
         if kwargs.get('enable_sharpen', False):
             effect_count += 1
-            colored_print(f"   ⚡ [{effect_count}] Applying Sharpening...", Colors.CYAN)
+            colored_print(f"    [{effect_count}] Applying Sharpening...", Colors.CYAN)
             img = self._apply_sharpening(img, kwargs)
 
         if kwargs.get('enable_small_glow', False):
             effect_count += 1
-            colored_print(f"   ✨ [{effect_count}] Applying Small Glow...", Colors.CYAN)
+            colored_print(f"    [{effect_count}] Applying Small Glow...", Colors.CYAN)
             img = self._apply_glow(img, kwargs, 'small')
 
         if kwargs.get('enable_large_glow', False):
             effect_count += 1
-            colored_print(f"   🌟 [{effect_count}] Applying Large Glow...", Colors.CYAN)
+            colored_print(f"    [{effect_count}] Applying Large Glow...", Colors.CYAN)
             img = self._apply_glow(img, kwargs, 'large')
 
         if kwargs.get('enable_glare', False):
             effect_count += 1
-            colored_print(f"   ⭐ [{effect_count}] Applying Glare/Flares...", Colors.CYAN)
+            colored_print(f"    [{effect_count}] Applying Glare/Flares...", Colors.CYAN)
             img = self._apply_glare(img, kwargs)
 
         if kwargs.get('enable_radial_blur', False):
             effect_count += 1
             blur_type = kwargs.get('radial_blur_type', self.DEFAULTS['radial_blur_type'])
-            colored_print(f"   🌀 [{effect_count}] Applying Radial Blur ({blur_type})...", Colors.CYAN)
+            colored_print(f"    [{effect_count}] Applying Radial Blur ({blur_type})...", Colors.CYAN)
             if blur_type == 'zoom':
                 img = self._apply_zoom_blur(img, kwargs)
             elif blur_type == 'spin':
@@ -532,16 +536,16 @@ class CRTPostProcessNode:
 
         if kwargs.get('enable_vignette', False):
             effect_count += 1
-            colored_print(f"   🎭 [{effect_count}] Applying Vignette...", Colors.CYAN)
+            colored_print(f"    [{effect_count}] Applying Vignette...", Colors.CYAN)
             img = self._apply_vignette(img, kwargs)
 
         if kwargs.get('enable_film_grain', False):
             effect_count += 1
-            colored_print(f"   📹 [{effect_count}] Applying Film Grain...", Colors.CYAN)
+            colored_print(f"    [{effect_count}] Applying Film Grain...", Colors.CYAN)
             img = self._apply_film_grain(img, kwargs)
 
         if total_frames > 1:
-            colored_print(f"   ✅ Frame {frame_num} completed ({effect_count} effects applied)", Colors.GREEN)
+            colored_print(f"   [OK] Frame {frame_num} completed ({effect_count} effects applied)", Colors.GREEN)
 
         return img
 
@@ -550,20 +554,20 @@ class CRTPostProcessNode:
         rescale_method = kwargs.get('rescale_method', self.DEFAULTS['rescale_method'])
         precision_str = kwargs.get('precision', self.DEFAULTS['precision'])
 
-        colored_print("      📈 Upscale Configuration:", Colors.BLUE)
+        colored_print("       Upscale Configuration:", Colors.BLUE)
         colored_print(f"         Model: {kwargs.get('upscale_model_path', 'None')}", Colors.BLUE)
         colored_print(f"         Downscale Factor: {downscale_by:.2f}", Colors.BLUE)
         colored_print(f"         Rescale Method: {rescale_method}", Colors.BLUE)
         colored_print(f"         Precision: {precision_str}", Colors.BLUE)
 
         if self.loaded_upscale_model is None:
-            colored_print("      ❌ No upscale model loaded, skipping upscale step", Colors.RED)
+            colored_print("      [ERROR] No upscale model loaded, skipping upscale step", Colors.RED)
             return img
 
         original_device = img.device
         original_dtype = img.dtype
         original_h, original_w = img.shape[1], img.shape[2]
-        colored_print(f"      📐 Input: {original_w}x{original_h}, {original_dtype}@{original_device}", Colors.BLUE)
+        colored_print(f"       Input: {original_w}x{original_h}, {original_dtype}@{original_device}", Colors.BLUE)
         processing_dtype = torch.float32
         if precision_str == "auto":
             if current_device.type == 'cuda':
@@ -577,15 +581,15 @@ class CRTPostProcessNode:
             processing_dtype = torch.bfloat16
 
         if processing_dtype == torch.float16 and current_device.type != 'cuda':
-            colored_print("      ⚠️ float16 not supported on non-CUDA, using bfloat16", Colors.YELLOW)
+            colored_print("      [WARN] float16 not supported on non-CUDA, using bfloat16", Colors.YELLOW)
             processing_dtype = torch.bfloat16
 
-        colored_print(f"      🔧 Processing dtype: {processing_dtype}", Colors.BLUE)
+        colored_print(f"       Processing dtype: {processing_dtype}", Colors.BLUE)
 
         upscale_model_execution_device = comfy.model_management.get_torch_device()
 
         model_descriptor = self.loaded_upscale_model.to(upscale_model_execution_device)
-        colored_print(f"      🚀 Model scale: {model_descriptor.scale}x", Colors.GREEN)
+        colored_print(f"       Model scale: {model_descriptor.scale}x", Colors.GREEN)
 
         in_img_bchw = (
             img.permute(0, 3, 1, 2).contiguous().to(dtype=processing_dtype, device=upscale_model_execution_device)
@@ -602,7 +606,7 @@ class CRTPostProcessNode:
 
         while oom and retries < max_retries:
             try:
-                colored_print(f"      🔄 Attempt {retries + 1}: tile={tile}, overlap={overlap}", Colors.BLUE)
+                colored_print(f"       Attempt {retries + 1}: tile={tile}, overlap={overlap}", Colors.BLUE)
                 pbar_steps = in_img_bchw.shape[0] * comfy.utils.get_tiled_scale_steps(
                     in_img_bchw.shape[3], in_img_bchw.shape[2], tile_x=tile, tile_y=tile, overlap=overlap
                 )
@@ -630,31 +634,31 @@ class CRTPostProcessNode:
                     pbar=pbar,
                 )
                 oom = False
-                colored_print("      ✅ Upscaling successful!", Colors.GREEN)
+                colored_print("      [OK] Upscaling successful!", Colors.GREEN)
             except comfy.model_management.OOM_EXCEPTION as e:
-                colored_print(f"      ⚠️ OOM detected with tile size {tile}, reducing...", Colors.YELLOW)
+                colored_print(f"      [WARN] OOM detected with tile size {tile}, reducing...", Colors.YELLOW)
                 tile //= 2
                 if tile < 64:
-                    colored_print(f"      ❌ Tile size too small ({tile}), cannot upscale", Colors.RED)
+                    colored_print(f"      [ERROR] Tile size too small ({tile}), cannot upscale", Colors.RED)
                     return img
                 comfy.model_management.soft_empty_cache()
             retries += 1
 
         if oom or s is None:
-            colored_print("      ❌ Failed to upscale after multiple retries", Colors.RED)
+            colored_print("      [ERROR] Failed to upscale after multiple retries", Colors.RED)
             return img
 
         s_bhwc = s.permute(0, 2, 3, 1).contiguous()
         s_bhwc = torch.clamp(s_bhwc, min=0.0, max=1.0)
         upscaled_h, upscaled_w = s_bhwc.shape[1], s_bhwc.shape[2]
-        colored_print(f"      📈 Upscaled to: {upscaled_w}x{upscaled_h}", Colors.GREEN)
+        colored_print(f"       Upscaled to: {upscaled_w}x{upscaled_h}", Colors.GREEN)
         if downscale_by < 1.0:
             target_h = round(s_bhwc.shape[1] * downscale_by)
             target_w = round(s_bhwc.shape[2] * downscale_by)
             if target_h < 1 or target_w < 1:
-                colored_print(f"      ⚠️ Downscale target too small ({target_h}x{target_w}), skipping", Colors.YELLOW)
+                colored_print(f"      [WARN] Downscale target too small ({target_h}x{target_w}), skipping", Colors.YELLOW)
             else:
-                colored_print(f"      📉 Downscaling to: {target_w}x{target_h} using {rescale_method}", Colors.BLUE)
+                colored_print(f"       Downscaling to: {target_w}x{target_h} using {rescale_method}", Colors.BLUE)
                 s_bhwc_permuted = s_bhwc.permute(0, 3, 1, 2).contiguous()
                 s_interpolated = F.interpolate(
                     s_bhwc_permuted,
@@ -668,7 +672,7 @@ class CRTPostProcessNode:
             s_bhwc = s_bhwc.to(dtype=original_dtype, device=original_device)
 
         final_h, final_w = s_bhwc.shape[1], s_bhwc.shape[2]
-        colored_print(f"      🎯 Final result: {final_w}x{final_h}", Colors.GREEN)
+        colored_print(f"       Final result: {final_w}x{final_h}", Colors.GREEN)
         return s_bhwc
 
     def _apply_temperature_tint(self, img, kwargs):
@@ -676,11 +680,11 @@ class CRTPostProcessNode:
         tint = kwargs.get('tint', 0.0) / 100.0
 
         colored_print(
-            f"      🌡️ Temperature: {kwargs.get('temperature', 0.0)}, Tint: {kwargs.get('tint', 0.0)}", Colors.BLUE
+            f"       Temperature: {kwargs.get('temperature', 0.0)}, Tint: {kwargs.get('tint', 0.0)}", Colors.BLUE
         )
 
         if temp == 0.0 and tint == 0.0:
-            colored_print("      🚫 No adjustment needed (both values are 0)", Colors.YELLOW)
+            colored_print("       No adjustment needed (both values are 0)", Colors.YELLOW)
             return img
 
         img_copy = img.clone()
@@ -689,20 +693,20 @@ class CRTPostProcessNode:
             if temp > 0:
                 img_copy[..., 0] = img_copy[..., 0] * (1.0 + temp * 0.3)
                 img_copy[..., 2] = img_copy[..., 2] * (1.0 - temp * 0.2)
-                colored_print(f"      🔥 Warmer: R+{temp*0.3:.3f}, B-{temp*0.2:.3f}", Colors.BLUE)
+                colored_print(f"       Warmer: R+{temp*0.3:.3f}, B-{temp*0.2:.3f}", Colors.BLUE)
             else:
                 img_copy[..., 0] = img_copy[..., 0] * (1.0 + temp * 0.2)
                 img_copy[..., 2] = img_copy[..., 2] * (1.0 - temp * 0.3)
-                colored_print(f"      ❄️ Cooler: R{temp*0.2:.3f}, B{temp*0.3:.3f}", Colors.BLUE)
+                colored_print(f"       Cooler: R{temp*0.2:.3f}, B{temp*0.3:.3f}", Colors.BLUE)
 
         if tint != 0.0:
             if tint > 0:
                 img_copy[..., 1] = img_copy[..., 1] * (1.0 + tint * 0.3)
-                colored_print(f"      💚 Green tint: G+{tint*0.3:.3f}", Colors.BLUE)
+                colored_print(f"       Green tint: G+{tint*0.3:.3f}", Colors.BLUE)
             else:
                 img_copy[..., 0] = img_copy[..., 0] * (1.0 - tint * 0.15)
                 img_copy[..., 2] = img_copy[..., 2] * (1.0 - tint * 0.15)
-                colored_print(f"      💜 Magenta tint: R&B{tint*0.15:.3f}", Colors.BLUE)
+                colored_print(f"       Magenta tint: R&B{tint*0.15:.3f}", Colors.BLUE)
 
         return torch.clamp(img_copy, 0, 1)
 
@@ -714,7 +718,7 @@ class CRTPostProcessNode:
         saturation = kwargs.get('saturation', 1.0)
         vibrance = kwargs.get('vibrance', 0.0)
 
-        colored_print("      📊 Levels Config:", Colors.BLUE)
+        colored_print("       Levels Config:", Colors.BLUE)
         colored_print(f"         Exposure: {exposure:.2f}, Gamma: {gamma:.2f}", Colors.BLUE)
         colored_print(f"         Brightness: {brightness:.2f}, Contrast: {contrast:.2f}", Colors.BLUE)
         colored_print(f"         Saturation: {saturation:.2f}, Vibrance: {vibrance:.2f}", Colors.BLUE)
@@ -723,33 +727,33 @@ class CRTPostProcessNode:
 
         if exposure != 0.0:
             img_copy = img_copy * (2.0**exposure)
-            colored_print(f"      ☀️ Applied exposure: {2.0**exposure:.3f}x multiplier", Colors.BLUE)
+            colored_print(f"       Applied exposure: {2.0**exposure:.3f}x multiplier", Colors.BLUE)
 
         if gamma != 1.0 and gamma > 0:
             img_copy = torch.pow(torch.clamp(img_copy, 1e-6, 1.0), 1.0 / gamma)
-            colored_print(f"      🔆 Applied gamma: 1/{gamma:.3f} = {1.0/gamma:.3f}", Colors.BLUE)
+            colored_print(f"       Applied gamma: 1/{gamma:.3f} = {1.0/gamma:.3f}", Colors.BLUE)
 
         if brightness != 0.0:
             img_copy = img_copy + brightness
-            colored_print(f"      💡 Applied brightness: {brightness:+.3f}", Colors.BLUE)
+            colored_print(f"      [INFO] Applied brightness: {brightness:+.3f}", Colors.BLUE)
 
         if contrast != 1.0:
             img_copy = (img_copy - 0.5) * contrast + 0.5
-            colored_print(f"      ⚫ Applied contrast: {contrast:.3f}x", Colors.BLUE)
+            colored_print(f"       Applied contrast: {contrast:.3f}x", Colors.BLUE)
 
         img_copy = torch.clamp(img_copy, 0, 1)
 
         if saturation != 1.0:
             gray = torch.mean(img_copy, dim=-1, keepdim=True)
             img_copy = gray + (img_copy - gray) * saturation
-            colored_print(f"      🌈 Applied saturation: {saturation:.3f}x", Colors.BLUE)
+            colored_print(f"       Applied saturation: {saturation:.3f}x", Colors.BLUE)
 
         if vibrance != 0.0:
             gray = torch.mean(img_copy, dim=-1, keepdim=True)
             current_sat_approx = torch.abs(img_copy - gray).max(dim=-1, keepdim=True)[0]
             vibrance_mask = 1.0 - torch.clamp(current_sat_approx * 2.0, 0, 1)
             img_copy = gray + (img_copy - gray) * (1.0 + vibrance * vibrance_mask)
-            colored_print(f"      ✨ Applied vibrance: {vibrance:+.3f} (selective)", Colors.BLUE)
+            colored_print(f"       Applied vibrance: {vibrance:+.3f} (selective)", Colors.BLUE)
 
         return torch.clamp(img_copy, 0, 1)
 
@@ -772,7 +776,7 @@ class CRTPostProcessNode:
             dtype=img.dtype,
         )
 
-        colored_print("      🎨 Color Wheels Config:", Colors.BLUE)
+        colored_print("       Color Wheels Config:", Colors.BLUE)
         colored_print(f"         Lift RGB: ({lift[0]:.3f}, {lift[1]:.3f}, {lift[2]:.3f})", Colors.BLUE)
         colored_print(f"         Gamma RGB: ({gamma_adj[0]:.3f}, {gamma_adj[1]:.3f}, {gamma_adj[2]:.3f})", Colors.BLUE)
         colored_print(f"         Gain RGB: ({gain[0]:.3f}, {gain[1]:.3f}, {gain[2]:.3f})", Colors.BLUE)
@@ -781,17 +785,17 @@ class CRTPostProcessNode:
         if lift.abs().sum() > 1e-6:
             img_copy = img_copy + lift * (1.0 - img_copy)
             img_copy = torch.clamp(img_copy, 0, 1)
-            colored_print("      🌑 Lift applied to shadows", Colors.BLUE)
+            colored_print("       Lift applied to shadows", Colors.BLUE)
         if (gamma_adj - 1.0).abs().sum() > 1e-6:
             safe_gamma_adj = torch.where(
                 gamma_adj <= 1e-6, torch.tensor(1e-6, device=img.device, dtype=img.dtype), gamma_adj
             )
             img_copy = torch.pow(torch.clamp(img_copy, 1e-6, 1.0), 1.0 / safe_gamma_adj)
             img_copy = torch.clamp(img_copy, 0, 1)
-            colored_print("      🌗 Gamma applied to midtones", Colors.BLUE)
+            colored_print("       Gamma applied to midtones", Colors.BLUE)
         if (gain - 1.0).abs().sum() > 1e-6:
             img_copy = img_copy * gain
-            colored_print("      🌕 Gain applied to highlights", Colors.BLUE)
+            colored_print("       Gain applied to highlights", Colors.BLUE)
 
         return torch.clamp(img_copy, 0, 1)
 
@@ -801,12 +805,12 @@ class CRTPostProcessNode:
         threshold = kwargs.get('sharpen_threshold', 0.0)
 
         colored_print(
-            f"      ⚡ Sharpen Config: strength={strength:.3f}, radius={radius:.2f}, threshold={threshold:.3f}",
+            f"       Sharpen Config: strength={strength:.3f}, radius={radius:.2f}, threshold={threshold:.3f}",
             Colors.BLUE,
         )
 
         if strength == 0.0:
-            colored_print("      🚫 No sharpening (strength = 0)", Colors.YELLOW)
+            colored_print("       No sharpening (strength = 0)", Colors.YELLOW)
             return img
 
         img_conv = img.permute(0, 3, 1, 2)
@@ -814,7 +818,7 @@ class CRTPostProcessNode:
         kernel_size = max(3, int(radius * 6) | 1)
         sigma_val = radius
 
-        colored_print(f"      🔧 Kernel size: {kernel_size}, sigma: {sigma_val:.3f}", Colors.BLUE)
+        colored_print(f"       Kernel size: {kernel_size}, sigma: {sigma_val:.3f}", Colors.BLUE)
 
         coords = torch.arange(kernel_size, dtype=img.dtype, device=img.device)
         coords = coords - kernel_size // 2
@@ -835,7 +839,7 @@ class CRTPostProcessNode:
             mask = torch.abs(unsharp_mask) > threshold
             affected_pixels = mask.float().mean().item()
             unsharp_mask = unsharp_mask * mask.float()
-            colored_print(f"      🎯 Threshold applied: {affected_pixels*100:.1f}% of pixels affected", Colors.BLUE)
+            colored_print(f"       Threshold applied: {affected_pixels*100:.1f}% of pixels affected", Colors.BLUE)
 
         return torch.clamp(img + unsharp_mask * strength, 0, 1)
 
@@ -850,12 +854,12 @@ class CRTPostProcessNode:
             threshold = kwargs.get('large_glow_threshold', 0.8)
 
         colored_print(
-            f"      ✨ {glow_type.title()} Glow: intensity={intensity:.3f}, radius={radius:.2f}, threshold={threshold:.3f}",
+            f"       {glow_type.title()} Glow: intensity={intensity:.3f}, radius={radius:.2f}, threshold={threshold:.3f}",
             Colors.BLUE,
         )
 
         if intensity == 0.0 or radius == 0.0:
-            colored_print(f"      🚫 No {glow_type} glow (intensity or radius = 0)", Colors.YELLOW)
+            colored_print(f"       No {glow_type} glow (intensity or radius = 0)", Colors.YELLOW)
             return img
 
         img_conv = img.permute(0, 3, 1, 2)
@@ -881,7 +885,7 @@ class CRTPostProcessNode:
         glow_mask = torch.clamp((brightness - threshold) / (1.0 - threshold + 1e-6), 0, 1)
         mask_coverage = (glow_mask > 0.1).float().mean().item()
 
-        colored_print(f"      🌟 Glow mask coverage: {mask_coverage*100:.1f}% of image", Colors.BLUE)
+        colored_print(f"       Glow mask coverage: {mask_coverage*100:.1f}% of image", Colors.BLUE)
 
         glow_component = blurred_bhwc * glow_mask
         return torch.clamp(img + glow_component * intensity, 0, 1)
@@ -895,13 +899,13 @@ class CRTPostProcessNode:
         quality = kwargs.get('glare_quality', 16)
         ray_width = kwargs.get('glare_ray_width', self.DEFAULTS['glare_ray_width'])
 
-        colored_print("      ⭐ Glare Config:", Colors.BLUE)
+        colored_print("       Glare Config:", Colors.BLUE)
         colored_print(f"         Type: {glare_type}, Intensity: {intensity:.3f}", Colors.BLUE)
         colored_print(f"         Length: {length:.2f}, Angle: {angle:.1f}°", Colors.BLUE)
         colored_print(f"         Threshold: {threshold:.3f}, Quality: {quality}", Colors.BLUE)
 
         if intensity == 0.0 or length == 0.0:
-            colored_print("      🚫 No glare (intensity or length = 0)", Colors.YELLOW)
+            colored_print("       No glare (intensity or length = 0)", Colors.YELLOW)
             return img
 
         brightness = torch.mean(img, dim=-1, keepdim=True)
@@ -909,7 +913,7 @@ class CRTPostProcessNode:
         glare_source = img * glare_mask
 
         mask_coverage = (glare_mask > 0.1).float().mean().item()
-        colored_print(f"      ✨ Glare source coverage: {mask_coverage*100:.1f}% of image", Colors.BLUE)
+        colored_print(f"       Glare source coverage: {mask_coverage*100:.1f}% of image", Colors.BLUE)
 
         glare_source_bchw = glare_source.permute(0, 3, 1, 2)
         h, w = glare_source_bchw.shape[2], glare_source_bchw.shape[3]
@@ -918,18 +922,18 @@ class CRTPostProcessNode:
 
         if 'star' in glare_type:
             rays = int(glare_type.split('_')[1])
-            colored_print(f"      🌟 Creating {rays}-ray star glare", Colors.BLUE)
+            colored_print(f"       Creating {rays}-ray star glare", Colors.BLUE)
             glare_effect_bchw = self._create_star_glare(
                 glare_source_bchw, rays, length, angle, h, w, quality, ray_width
             )
         elif glare_type == 'anamorphic_h':
-            colored_print("      📏 Creating horizontal anamorphic glare", Colors.BLUE)
+            colored_print("       Creating horizontal anamorphic glare", Colors.BLUE)
             if angle != 0.0:
-                colored_print(f"      ⚠️ Angle {angle}° not applied for anamorphic glare", Colors.YELLOW)
+                colored_print(f"      [WARN] Angle {angle}° not applied for anamorphic glare", Colors.YELLOW)
             glare_effect_bchw = self._create_anamorphic_glare(glare_source_bchw, length, angle, h, w, quality)
 
         if torch.isnan(glare_effect_bchw).any() or torch.isinf(glare_effect_bchw).any():
-            colored_print("      ❌ NaN or Inf detected in glare effect, skipping", Colors.RED)
+            colored_print("      [ERROR] NaN or Inf detected in glare effect, skipping", Colors.RED)
             return img
 
         glare_effect_bhwc = glare_effect_bchw.permute(0, 2, 3, 1)
@@ -976,7 +980,7 @@ class CRTPostProcessNode:
             kernel += profile_across_ray * profile_along_ray
 
         if kernel.sum() < 1e-6:
-            colored_print("      ⚠️ Star glare kernel sum near zero, skipping", Colors.YELLOW)
+            colored_print("      [WARN] Star glare kernel sum near zero, skipping", Colors.YELLOW)
             return torch.zeros_like(img_bchw)
 
         kernel = kernel / (kernel.sum() + 1e-6)
@@ -1030,12 +1034,12 @@ class CRTPostProcessNode:
         enable_hue_shift = kwargs.get('enable_ca_hue_shift', False)
         hue_shift_degrees = kwargs.get('ca_hue_shift_degrees', 0.0)
 
-        colored_print(f"      🌈 CA Config: strength={strength:.4f}, falloff={edge_falloff:.2f}", Colors.BLUE)
+        colored_print(f"       CA Config: strength={strength:.4f}, falloff={edge_falloff:.2f}", Colors.BLUE)
         if enable_hue_shift:
             colored_print(f"         Hue shift: {hue_shift_degrees:.1f}°", Colors.BLUE)
 
         if strength == 0.0:
-            colored_print("      🚫 No chromatic aberration (strength = 0)", Colors.YELLOW)
+            colored_print("       No chromatic aberration (strength = 0)", Colors.YELLOW)
             return img
 
         b, h, w, c = img.shape
@@ -1043,7 +1047,7 @@ class CRTPostProcessNode:
         dtype = img.dtype
 
         if c != 3 and enable_hue_shift:
-            colored_print(f"      ⚠️ Hue shift disabled for {c}-channel image", Colors.YELLOW)
+            colored_print(f"      [WARN] Hue shift disabled for {c}-channel image", Colors.YELLOW)
             enable_hue_shift = False
 
         y_coords_1d = torch.linspace(-1, 1, h, device=device, dtype=dtype)
@@ -1055,7 +1059,7 @@ class CRTPostProcessNode:
         ca_displacement_scaler = strength * (dist_from_center_normalized**edge_falloff)
 
         max_displacement = ca_displacement_scaler.max().item()
-        colored_print(f"      📊 Max displacement: {max_displacement:.4f}", Colors.BLUE)
+        colored_print(f"       Max displacement: {max_displacement:.4f}", Colors.BLUE)
 
         r_disp_x = ca_displacement_scaler * grid_x
         r_disp_y = ca_displacement_scaler * grid_y
@@ -1081,7 +1085,7 @@ class CRTPostProcessNode:
         )
 
         if enable_hue_shift and c == 3 and hue_shift_degrees != 0.0:
-            colored_print(f"      🎨 Applying hue shift: {hue_shift_degrees:.1f}°", Colors.BLUE)
+            colored_print(f"       Applying hue shift: {hue_shift_degrees:.1f}°", Colors.BLUE)
             base_red_color_vec = torch.tensor([1.0, 0.0, 0.0], device=device, dtype=dtype)
             base_blue_color_vec = torch.tensor([0.0, 0.0, 1.0], device=device, dtype=dtype)
 
@@ -1114,11 +1118,11 @@ class CRTPostProcessNode:
         softness = kwargs.get('vignette_softness', 0.5)
 
         colored_print(
-            f"      🎭 Vignette: strength={strength:.3f}, radius={radius:.2f}, softness={softness:.2f}", Colors.BLUE
+            f"       Vignette: strength={strength:.3f}, radius={radius:.2f}, softness={softness:.2f}", Colors.BLUE
         )
 
         if strength == 0.0:
-            colored_print("      🚫 No vignette (strength = 0)", Colors.YELLOW)
+            colored_print("       No vignette (strength = 0)", Colors.YELLOW)
             return img
 
         b, h, w, c = img.shape
@@ -1137,7 +1141,7 @@ class CRTPostProcessNode:
 
         vignette_mask = 1.0 - strength * (1.0 - vignette_val)
         mask_coverage = (vignette_mask < 0.9).float().mean().item()
-        colored_print(f"      📊 Vignette affects {mask_coverage*100:.1f}% of image", Colors.BLUE)
+        colored_print(f"       Vignette affects {mask_coverage*100:.1f}% of image", Colors.BLUE)
 
         return img * vignette_mask.unsqueeze(0).unsqueeze(-1)
 
@@ -1149,12 +1153,12 @@ class CRTPostProcessNode:
         num_samples = kwargs.get('radial_blur_samples', 16)
 
         colored_print(
-            f"      🔍 Zoom Blur: strength={strength:.4f}, center=({center_x_norm:.2f},{center_y_norm:.2f}), samples={num_samples}",
+            f"      [INFO] Zoom Blur: strength={strength:.4f}, center=({center_x_norm:.2f},{center_y_norm:.2f}), samples={num_samples}",
             Colors.BLUE,
         )
 
         if strength == 0.0 or num_samples <= 0:
-            colored_print("      🚫 No zoom blur (strength = 0 or samples <= 0)", Colors.YELLOW)
+            colored_print("       No zoom blur (strength = 0 or samples <= 0)", Colors.YELLOW)
             return img
 
         b, h, w, c = img.shape
@@ -1208,12 +1212,12 @@ class CRTPostProcessNode:
         num_samples = kwargs.get('radial_blur_samples', 16)
 
         colored_print(
-            f"      🌀 Spin Blur: strength={strength_rad:.4f}, center=({center_x_norm:.2f},{center_y_norm:.2f}), samples={num_samples}",
+            f"       Spin Blur: strength={strength_rad:.4f}, center=({center_x_norm:.2f},{center_y_norm:.2f}), samples={num_samples}",
             Colors.BLUE,
         )
 
         if strength_rad == 0.0 or num_samples <= 0:
-            colored_print("      🚫 No spin blur (strength = 0 or samples <= 0)", Colors.YELLOW)
+            colored_print("       No spin blur (strength = 0 or samples <= 0)", Colors.YELLOW)
             return img
 
         b, h, w, c = img.shape
@@ -1269,10 +1273,10 @@ class CRTPostProcessNode:
     def _apply_lens_distortion(self, img, kwargs):
         distortion_coeff = kwargs.get('barrel_distortion', 0.0)
 
-        colored_print(f"      🔍 Lens Distortion: coefficient={distortion_coeff:.4f}", Colors.BLUE)
+        colored_print(f"      [INFO] Lens Distortion: coefficient={distortion_coeff:.4f}", Colors.BLUE)
 
         if distortion_coeff == 0.0:
-            colored_print("      🚫 No lens distortion (coefficient = 0)", Colors.YELLOW)
+            colored_print("       No lens distortion (coefficient = 0)", Colors.YELLOW)
             return img
 
         b, h, w, c = img.shape
@@ -1304,9 +1308,9 @@ class CRTPostProcessNode:
         distorted_bchw = F.grid_sample(img_bchw, grid, mode='bilinear', padding_mode='border', align_corners=True)
 
         if distortion_coeff > 0:
-            colored_print("      📦 Applied barrel distortion", Colors.BLUE)
+            colored_print("       Applied barrel distortion", Colors.BLUE)
         else:
-            colored_print("      📐 Applied pincushion distortion", Colors.BLUE)
+            colored_print("       Applied pincushion distortion", Colors.BLUE)
 
         return distorted_bchw.permute(0, 2, 3, 1)
 
@@ -1316,11 +1320,11 @@ class CRTPostProcessNode:
         color_amount = kwargs.get('grain_color_amount', 0.0)
 
         colored_print(
-            f"      📹 Film Grain: intensity={intensity:.4f}, size={grain_s:.2f}, color={color_amount:.2f}", Colors.BLUE
+            f"       Film Grain: intensity={intensity:.4f}, size={grain_s:.2f}, color={color_amount:.2f}", Colors.BLUE
         )
 
         if intensity == 0.0:
-            colored_print("      🚫 No film grain (intensity = 0)", Colors.YELLOW)
+            colored_print("       No film grain (intensity = 0)", Colors.YELLOW)
             return img
 
         b, h, w, c = img.shape
@@ -1330,14 +1334,14 @@ class CRTPostProcessNode:
         grain_h = max(1, math.ceil(h / grain_s))
         grain_w = max(1, math.ceil(w / grain_s))
 
-        colored_print(f"      🎲 Noise grid: {grain_w}x{grain_h} (original: {w}x{h})", Colors.BLUE)
+        colored_print(f"       Noise grid: {grain_w}x{grain_h} (original: {w}x{h})", Colors.BLUE)
 
         if c == 3 and color_amount > 0.0:
             num_noise_channels = 3
-            colored_print("      🌈 Using color noise", Colors.BLUE)
+            colored_print("       Using color noise", Colors.BLUE)
         else:
             num_noise_channels = 1
-            colored_print("      ⚫ Using monochrome noise", Colors.BLUE)
+            colored_print("       Using monochrome noise", Colors.BLUE)
 
         noise = torch.randn(b, grain_h, grain_w, num_noise_channels, device=device, dtype=dtype)
 
@@ -1347,7 +1351,7 @@ class CRTPostProcessNode:
             mono_version_of_color_noise = torch.mean(noise, dim=-1, keepdim=True).expand_as(noise)
             noise = mono_version_of_color_noise * (1.0 - color_amount) + noise * color_amount
             colored_print(
-                f"      🎨 Mixed {color_amount*100:.0f}% color with {(1-color_amount)*100:.0f}% mono", Colors.BLUE
+                f"       Mixed {color_amount*100:.0f}% color with {(1-color_amount)*100:.0f}% mono", Colors.BLUE
             )
 
         if grain_h != h or grain_w != w:
@@ -1359,7 +1363,7 @@ class CRTPostProcessNode:
         grain_mask = 4.0 * img_lightness * (1.0 - img_lightness)
 
         avg_grain_strength = (grain_mask * intensity).mean().item()
-        colored_print(f"      📊 Average grain strength: {avg_grain_strength:.4f}", Colors.BLUE)
+        colored_print(f"       Average grain strength: {avg_grain_strength:.4f}", Colors.BLUE)
 
         grained_img = img + noise * intensity * grain_mask
 

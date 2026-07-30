@@ -22,14 +22,14 @@ class SaveLatentWithPath:
     CATEGORY = "CRT/Save"
 
     def save_latent(self, latent, folder_path, filename, suffix, subfolder_name):
-        print("📌 SaveLatentWithPath: Starting execution")
+        print("[INFO] SaveLatentWithPath: Starting execution")
         print(
-            f"📌 Input parameters: folder_path={folder_path}, filename={filename}, suffix={suffix}, subfolder_name={subfolder_name}"
+            f"[INFO] Input parameters: folder_path={folder_path}, filename={filename}, suffix={suffix}, subfolder_name={subfolder_name}"
         )
 
         # Validate latent input
         if latent is None:
-            print("⚠️ Received None as latent input. Skipping save and returning None.")
+            print("[WARN] Received None as latent input. Skipping save and returning None.")
             return (None,)
 
         latent_tensor = None
@@ -39,11 +39,11 @@ class SaveLatentWithPath:
             latent_tensor = latent
         else:
             print(
-                f"❌ Invalid latent input type: {type(latent)}. Expected dict with 'samples' or torch.Tensor. Skipping save."
+                f"[ERROR] Invalid latent input type: {type(latent)}. Expected dict with 'samples' or torch.Tensor. Skipping save."
             )
             return (None,)
 
-        print(f"📌 Latent tensor shape: {latent_tensor.shape}")
+        print(f"[INFO] Latent tensor shape: {latent_tensor.shape}")
 
         # Validate folder path
         full_output_folder = folder_path
@@ -53,7 +53,7 @@ class SaveLatentWithPath:
         try:
             os.makedirs(full_output_folder, exist_ok=True)
         except Exception as e:
-            print(f"❌ Failed to create directory {full_output_folder}: {str(e)}")
+            print(f"[ERROR] Failed to create directory {full_output_folder}: {str(e)}")
             return (None,)
 
         # Ensure filename ends with .safetensors
@@ -61,25 +61,25 @@ class SaveLatentWithPath:
         if not filename.endswith(".safetensors"):
             filename = f"{filename}.safetensors"
         final_filepath = os.path.join(full_output_folder, filename)
-        print(f"📌 Saving to: {final_filepath}")
+        print(f"[INFO] Saving to: {final_filepath}")
 
         # Check write access
         try:
             with open(final_filepath, 'wb') as f:
                 pass  # Test write access
         except Exception as e:
-            print(f"❌ Failed to access file {final_filepath}: {str(e)}. Cannot save latent.")
+            print(f"[ERROR] Failed to access file {final_filepath}: {str(e)}. Cannot save latent.")
             return (None,)
 
         # Save the latent tensor
         try:
             save_file({"latent": latent_tensor}, final_filepath)
-            print(f"📌 Successfully saved latent to {final_filepath}")
+            print(f"[INFO] Successfully saved latent to {final_filepath}")
         except Exception as e:
-            print(f"❌ Error saving latent to {final_filepath}: {str(e)}")
+            print(f"[ERROR] Error saving latent to {final_filepath}: {str(e)}")
             return (None,)
 
-        print("📌 SaveLatentWithPath: Execution complete")
+        print("[INFO] SaveLatentWithPath: Execution complete")
         return (latent,)
 
     @classmethod

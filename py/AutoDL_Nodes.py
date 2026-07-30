@@ -3,16 +3,16 @@ import json
 import logging
 import os
 import sys
-import tempfile
-import urllib.request
-
 import comfy.model_management as model_management
+import comfy.clip_vision
 import comfy.sd
 import comfy.utils
 import folder_paths
 import torch
 from comfy.cli_args import args
 from comfy.ldm.modules.attention import attention_pytorch, wrap_attn
+
+from .download_progress import download_url_with_progress
 
 
 TAG = "crt-autodl"
@@ -170,6 +170,36 @@ MODELS = {
         "filename": "flux2-vae.safetensors",
         "url": "https://huggingface.co/Comfy-Org/flux2-dev/resolve/main/split_files/vae/flux2-vae.safetensors",
     },
+    "chronoedit_model": {
+        "folder": "diffusion_models",
+        "filename": "ChronoEdit_fp8_e4m3fn_scaled_VAI.safetensors",
+        "url": "https://huggingface.co/vantagewithai/ChronoEdit-fp8-scaled/resolve/main/ChronoEdit_fp8_e4m3fn_scaled_VAI.safetensors",
+    },
+    "chronoedit_distill_lora": {
+        "folder": "loras",
+        "filename": "chronoedit_distill_lora.safetensors",
+        "url": "https://huggingface.co/nvidia/ChronoEdit-14B-Diffusers/resolve/main/lora/chronoedit_distill_lora.safetensors",
+    },
+    "chronoedit_upscaler_lora": {
+        "folder": "loras",
+        "filename": "upsample_lora_diffusers.safetensors",
+        "url": "https://huggingface.co/nvidia/ChronoEdit-14B-Diffusers-Upscaler-Lora/resolve/main/upsample_lora_diffusers.safetensors",
+    },
+    "chronoedit_vae": {
+        "folder": "vae",
+        "filename": "wan_2.1_vae.safetensors",
+        "url": "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/vae/wan_2.1_vae.safetensors",
+    },
+    "chronoedit_clip": {
+        "folder": "text_encoders",
+        "filename": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+        "url": "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/text_encoders/umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+    },
+    "chronoedit_clip_vision": {
+        "folder": "clip_vision",
+        "filename": "clip_vision_h.safetensors",
+        "url": "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/clip_vision/clip_vision_h.safetensors",
+    },
 }
 
 
@@ -182,24 +212,13 @@ def _target_path(spec):
 
 
 def _download(url, target):
-    os.makedirs(os.path.dirname(target), exist_ok=True)
-    fd, tmp = tempfile.mkstemp(prefix=os.path.basename(target) + ".", suffix=".tmp", dir=os.path.dirname(target))
-    os.close(fd)
-    try:
-        req = urllib.request.Request(url, headers={"User-Agent": "CRT-AutoDL/1.0"})
-        with urllib.request.urlopen(req) as response, open(tmp, "wb") as out_file:
-            while True:
-                chunk = response.read(1024 * 1024)
-                if not chunk:
-                    break
-                out_file.write(chunk)
-        os.replace(tmp, target)
-    except Exception:
-        try:
-            os.remove(tmp)
-        except OSError:
-            pass
-        raise
+    return download_url_with_progress(
+        url,
+        target,
+        label=os.path.basename(target),
+        user_agent="CRT-AutoDL/1.0",
+        console_prefix="CRT AutoDL",
+    )
 
 
 def ensure_model(key):
@@ -384,6 +403,25 @@ class _FixedCLIPLoader:
             model_options={},
         )
         return (clip,)
+
+
+class _FixedCLIPVisionLoader:
+    RETURN_TYPES = ("CLIP_VISION",)
+    RETURN_NAMES = ("CLIP_VISION",)
+    FUNCTION = "load_clip_vision"
+
+    @classmethod
+    def INPUT_TYPES(cls):
+        return {"required": {}}
+
+    def load_clip_vision(self):
+        clip_vision = comfy.clip_vision.load(ensure_model(self.MODEL_KEY))
+        if clip_vision is None:
+            raise RuntimeError(
+                f"[{TAG}] CLIP Vision file is invalid and does not contain a valid vision model: "
+                f"{MODELS[self.MODEL_KEY]['filename']}"
+            )
+        return (clip_vision,)
 
 
 class LTX23CLIP:
@@ -736,6 +774,37 @@ class ErnieCLIP(_FixedCLIPLoader):
     CLIP_TYPE = "flux2"
 
 
+class ChronoEditModel(_FixedDiffusionLoader):
+    CATEGORY = "CRT/AutoDL/ChronoEdit"
+    MODEL_KEY = "chronoedit_model"
+
+
+class ChronoEditDistillLoRA(_FixedLoRALoader):
+    CATEGORY = "CRT/AutoDL/ChronoEdit"
+    MODEL_KEY = "chronoedit_distill_lora"
+
+
+class ChronoEditUpscalerLoRA(_FixedLoRALoader):
+    CATEGORY = "CRT/AutoDL/ChronoEdit"
+    MODEL_KEY = "chronoedit_upscaler_lora"
+
+
+class ChronoEditVAE(_CoreVAELoader):
+    CATEGORY = "CRT/AutoDL/ChronoEdit"
+    MODEL_KEY = "chronoedit_vae"
+
+
+class ChronoEditCLIP(_FixedCLIPLoader):
+    CATEGORY = "CRT/AutoDL/ChronoEdit"
+    MODEL_KEY = "chronoedit_clip"
+    CLIP_TYPE = "wan"
+
+
+class ChronoEditCLIPVision(_FixedCLIPVisionLoader):
+    CATEGORY = "CRT/AutoDL/ChronoEdit"
+    MODEL_KEY = "chronoedit_clip_vision"
+
+
 NODE_CLASS_MAPPINGS = {
     "CRTAutoDLLTX23Model": LTX23Model,
     "CRTAutoDLLTX23ModelNVFP4": LTX23ModelNVFP4,
@@ -764,6 +833,12 @@ NODE_CLASS_MAPPINGS = {
     "CRTAutoDLErnieModel": ErnieModel,
     "CRTAutoDLErnieVAE": ErnieVAE,
     "CRTAutoDLErnieCLIP": ErnieCLIP,
+    "CRTAutoDLChronoEditModel": ChronoEditModel,
+    "CRTAutoDLChronoEditDistillLoRA": ChronoEditDistillLoRA,
+    "CRTAutoDLChronoEditUpscalerLoRA": ChronoEditUpscalerLoRA,
+    "CRTAutoDLChronoEditVAE": ChronoEditVAE,
+    "CRTAutoDLChronoEditCLIP": ChronoEditCLIP,
+    "CRTAutoDLChronoEditCLIPVision": ChronoEditCLIPVision,
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
@@ -778,9 +853,9 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "CRTAutoDLLTX23ICUpscaleLoRA": "LTX2.3 IC Upscale LoRA (CRT AutoDL)",
     "CRTAutoDLLTX23ModelGGUFQ4": "LTX2.3 Model GGUF Q4_K_M (CRT AutoDL)",
     "CRTAutoDLLTX23ModelGGUFQ5": "LTX2.3 Model GGUF Q5_K_M (CRT AutoDL)",
-    "CRTAutoDLZImageTurboModel": "ZImageTurbo Model (CRT AutoDL)",
-    "CRTAutoDLZImageTurboVAE": "ZImageTurbo VAE (CRT AutoDL)",
-    "CRTAutoDLZImageTurboCLIP": "ZImageTurbo CLIP (CRT AutoDL)",
+    "CRTAutoDLZImageTurboModel": "Z-Image Turbo Model (CRT AutoDL)",
+    "CRTAutoDLZImageTurboVAE": "Z-Image Turbo VAE (CRT AutoDL)",
+    "CRTAutoDLZImageTurboCLIP": "Z-Image Turbo CLIP (CRT AutoDL)",
     "CRTAutoDLKrea2TurboModel": "Krea 2 Turbo Model (CRT AutoDL)",
     "CRTAutoDLKrea2RawModel": "Krea 2 Raw Model (CRT AutoDL)",
     "CRTAutoDLKrea2VAE": "Krea 2 VAE (CRT AutoDL)",
@@ -789,9 +864,15 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "CRTAutoDLFlux2KleinVAE": "Flux2Klein VAE (CRT AutoDL)",
     "CRTAutoDLFlux2KleinCLIP": "Flux2Klein CLIP (CRT AutoDL)",
     "CRTAutoDLFlux2KleinHDRILoRA": "Flux2Klein HDRI LoRA (CRT AutoDL)",
-    "CRTAutoDLErnieTurboModel": "ERNIE_Turbo Model (CRT AutoDL)",
-    "CRTAutoDLErnieTurboNVFP4Model": "ERNIE_Turbo NVFP4 Model (CRT AutoDL)",
+    "CRTAutoDLErnieTurboModel": "ERNIE Turbo Model (CRT AutoDL)",
+    "CRTAutoDLErnieTurboNVFP4Model": "ERNIE Turbo NVFP4 Model (CRT AutoDL)",
     "CRTAutoDLErnieModel": "ERNIE Model (CRT AutoDL)",
     "CRTAutoDLErnieVAE": "ERNIE VAE (CRT AutoDL)",
     "CRTAutoDLErnieCLIP": "ERNIE CLIP (CRT AutoDL)",
+    "CRTAutoDLChronoEditModel": "ChronoEdit Model (CRT AutoDL)",
+    "CRTAutoDLChronoEditDistillLoRA": "ChronoEdit Distill LoRA (CRT AutoDL)",
+    "CRTAutoDLChronoEditUpscalerLoRA": "ChronoEdit Upscaler LoRA (CRT AutoDL)",
+    "CRTAutoDLChronoEditVAE": "ChronoEdit VAE (CRT AutoDL)",
+    "CRTAutoDLChronoEditCLIP": "ChronoEdit CLIP - WAN (CRT AutoDL)",
+    "CRTAutoDLChronoEditCLIPVision": "ChronoEdit CLIP Vision (CRT AutoDL)",
 }

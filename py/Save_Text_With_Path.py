@@ -62,9 +62,9 @@ class SaveTextWithPath:
             # Write the text to the file with UTF-8 encoding
             with open(full_path, 'w', encoding='utf-8') as f:
                 f.write(text)
-            print(f"✅ Saved text to: {full_path}")
+            print(f"[OK] Saved text to: {full_path}")
         except Exception as e:
-            print(f"❌ Error saving text to {full_path}: {e}")
+            print(f"[ERROR] Error saving text to {full_path}: {e}")
 
         return ()
 

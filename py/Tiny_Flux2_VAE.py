@@ -1,15 +1,15 @@
 """
-tiny_flux2_vae.py  –  ComfyUI custom nodes for FLUX.2-Tiny-AutoEncoder
+tiny_flux2_vae.py  -  ComfyUI custom nodes for FLUX.2-Tiny-AutoEncoder
 =======================================================================
 Nodes:
-  • Tiny FLUX.2 VAE Loader  –  loads diffusion_pytorch_model.safetensors
-  • Tiny FLUX.2 VAE Encode  –  IMAGE  →  LATENT  (128-ch, 16× downscale)
-  • Tiny FLUX.2 VAE Decode  –  LATENT →  IMAGE
+  • Tiny FLUX.2 VAE Loader  -  loads diffusion_pytorch_model.safetensors
+  • Tiny FLUX.2 VAE Encode  -  IMAGE  ->  LATENT  (128-ch, 16× downscale)
+  • Tiny FLUX.2 VAE Decode  -  LATENT ->  IMAGE
 
 Architecture notes
 ------------------
 fal/FLUX.2-Tiny-AutoEncoder wraps diffusers AutoencoderTiny (32-ch, 8×)
-with an extra stride-2 Conv2d that maps 32 → 128 channels (+2× spatial),
+with an extra stride-2 Conv2d that maps 32 -> 128 channels (+2× spatial),
 giving a final 128-channel latent at H/16 × W/16.
 This matches the FLUX.2 (Klein) full-VAE latent format.
 """
@@ -194,7 +194,7 @@ class TinyFlux2VAELoader:
 # ---------------------------------------------------------------------------
 class TinyFlux2VAEEncode:
     """
-    Fast approximate encode: IMAGE → LATENT (128-ch, 16× downscale).
+    Fast approximate encode: IMAGE -> LATENT (128-ch, 16× downscale).
     Equivalent to the full FLUX.2 VAE Encode, but ~10× faster.
     """
 
@@ -235,7 +235,7 @@ class TinyFlux2VAEEncode:
 # ---------------------------------------------------------------------------
 class TinyFlux2VAEDecode:
     """
-    Fast approximate decode: LATENT (128-ch) → IMAGE.
+    Fast approximate decode: LATENT (128-ch) -> IMAGE.
     Equivalent to the full FLUX.2 VAE Decode, but ~10× faster.
     """
 
@@ -265,7 +265,7 @@ class TinyFlux2VAEDecode:
         with torch.no_grad():
             img = tiny_vae.model.decode(latent)           # (B, C, H, W) [-1, 1]
 
-        # → (B, H, W, C) [0, 1]
+        # -> (B, H, W, C) [0, 1]
         img = (img.clamp(-1.0, 1.0) + 1.0) / 2.0
         img = img.permute(0, 2, 3, 1).cpu().float()
         return (img,)

@@ -1,53 +1,282 @@
+from concurrent.futures import Future, ThreadPoolExecutor
 import re
+import threading
 from pathlib import Path
 
 import numpy as np
 import torch
-import comfy.utils
-from PIL import Image
+from PIL import Image, ImageOps
 
 
-VALID_EXTENSIONS = {'.png', '.jpg', '.jpeg', '.bmp', '.tif', '.tiff', '.gif', '.webp'}
+VALID_EXTENSIONS = {
+    ".png",
+    ".jpg",
+    ".jpeg",
+    ".bmp",
+    ".tif",
+    ".tiff",
+    ".gif",
+    ".webp",
+}
 
 
 class CRT_ImageLoaderCrawlBatch:
     def __init__(self):
         self.cache = {}
+        self._prefetch_executor = ThreadPoolExecutor(
+            max_workers=1,
+            thread_name_prefix="crt-image-prefetch",
+        )
+        self._prefetch_future: Future | None = None
+        self._prefetch_key = None
+        self._prefetch_lock = threading.Lock()
 
-    # ── Helpers ───────────────────────────────────────────────────────────────
+    # -- Helpers ---------------------------------------------------------------
 
     @staticmethod
-    def natural_sort_key(p):
-        return [int(t) if t.isdigit() else t.lower() for t in re.split(r'([0-9]+)', p.name)]
+    def natural_sort_key(path):
+        return [
+            int(token) if token.isdigit() else token.lower()
+            for token in re.split(r"([0-9]+)", path.name)
+        ]
 
-    def _resize_to_megapixels(self, t, megapixels, quantize=8):
-        """Resize [1, H, W, C] to target megapixels preserving AR, quantized to `quantize`."""
-        _, H, W, _ = t.shape
-        scale = (megapixels * 1_000_000 / (H * W)) ** 0.5
-        new_H = max(quantize, round(H * scale / quantize) * quantize)
-        new_W = max(quantize, round(W * scale / quantize) * quantize)
-        if new_H == H and new_W == W:
-            return t
-        return comfy.utils.common_upscale(
-            t.movedim(-1, 1), new_W, new_H, "lanczos", "disabled"
-        ).movedim(1, -1)
+    @staticmethod
+    def _target_dimensions(width, height, megapixels, quantize=8):
+        scale = (megapixels * 1_000_000 / (height * width)) ** 0.5
+        target_height = max(
+            quantize,
+            round(height * scale / quantize) * quantize,
+        )
+        target_width = max(
+            quantize,
+            round(width * scale / quantize) * quantize,
+        )
+        return target_width, target_height
 
-    def _center_crop(self, t, target_H, target_W):
-        """Center-crop [1, H, W, C] to (target_H, target_W)."""
-        _, H, W, _ = t.shape
-        top  = (H - target_H) // 2
-        left = (W - target_W) // 2
-        return t[:, top:top + target_H, left:left + target_W, :]
+    @staticmethod
+    def _decode_rgb(path):
+        with Image.open(path) as opened:
+            transposed = ImageOps.exif_transpose(opened)
+            rgb = transposed.convert("RGB")
+            rgb.load()
+            return rgb
 
-    def _resize_exact(self, t, target_H, target_W):
-        """Resize [1, H, W, C] to exact (target_H, target_W)."""
-        if t.shape[1] == target_H and t.shape[2] == target_W:
-            return t
-        return comfy.utils.common_upscale(
-            t.movedim(-1, 1), target_W, target_H, "lanczos", "disabled"
-        ).movedim(1, -1)
+    @staticmethod
+    def _resize(image, width, height):
+        if image.size == (width, height):
+            return image
+        return image.resize(
+            (width, height),
+            resample=Image.Resampling.LANCZOS,
+            reducing_gap=3.0,
+        )
 
-    # ── Node definition ───────────────────────────────────────────────────────
+    @staticmethod
+    def _to_tensor(image):
+        # Convert only the final-sized uint8 image to float32. This avoids
+        # allocating a full-resolution float32 NumPy array before resizing.
+        array = np.array(image, dtype=np.uint8, copy=True)
+        tensor = torch.from_numpy(array).to(dtype=torch.float32)
+        tensor.mul_(1.0 / 255.0)
+        return tensor.unsqueeze(0)
+
+    @staticmethod
+    def _pad_without_resizing(image, target_width, target_height):
+        if image.size == (target_width, target_height):
+            return image
+        canvas = Image.new("RGB", (target_width, target_height))
+        left = (target_width - image.width) // 2
+        top = (target_height - image.height) // 2
+        canvas.paste(image, (left, top))
+        return canvas
+
+    def _prepare_batch(self, files, selected_indices, megapixels, no_resize):
+        images = []
+        errors = []
+
+        for index in selected_indices:
+            path = files[index]
+            try:
+                image = self._decode_rgb(path)
+                if not no_resize:
+                    width, height = self._target_dimensions(
+                        image.width,
+                        image.height,
+                        megapixels,
+                    )
+                    image = self._resize(image, width, height)
+                images.append(image)
+                errors.append(None)
+            except Exception as exc:
+                images.append(Image.new("RGB", (64, 64)))
+                errors.append(str(exc))
+
+        shapes = {(image.height, image.width) for image in images}
+        mixed_shapes = len(shapes) > 1
+
+        if mixed_shapes and no_resize:
+            # ComfyUI IMAGE batches require a common H/W. Preserve every source
+            # pixel and center-pad smaller images instead of resampling them.
+            target_width = max(image.width for image in images)
+            target_height = max(image.height for image in images)
+            images = [
+                self._pad_without_resizing(
+                    image,
+                    target_width,
+                    target_height,
+                )
+                for image in images
+            ]
+        elif mixed_shapes:
+            aspect_ratios = [
+                image.width / image.height
+                for image in images
+            ]
+            average_aspect_ratio = sum(aspect_ratios) / len(aspect_ratios)
+            target_height = max(
+                8,
+                round(
+                    (
+                        megapixels
+                        * 1_000_000
+                        / average_aspect_ratio
+                    )
+                    ** 0.5
+                    / 8
+                )
+                * 8,
+            )
+            target_width = max(
+                8,
+                round(
+                    target_height
+                    * average_aspect_ratio
+                    / 8
+                )
+                * 8,
+            )
+
+            unified = []
+            for image in images:
+                current_aspect_ratio = image.width / image.height
+                if current_aspect_ratio > average_aspect_ratio:
+                    crop_width = max(
+                        1,
+                        min(
+                            round(image.height * average_aspect_ratio),
+                            image.width,
+                        ),
+                    )
+                    left = (image.width - crop_width) // 2
+                    image = image.crop(
+                        (left, 0, left + crop_width, image.height)
+                    )
+                elif current_aspect_ratio < average_aspect_ratio:
+                    crop_height = max(
+                        1,
+                        min(
+                            round(image.width / average_aspect_ratio),
+                            image.height,
+                        ),
+                    )
+                    top = (image.height - crop_height) // 2
+                    image = image.crop(
+                        (0, top, image.width, top + crop_height)
+                    )
+
+                unified.append(
+                    self._resize(
+                        image,
+                        target_width,
+                        target_height,
+                    )
+                )
+            images = unified
+
+        tensors = [self._to_tensor(image) for image in images]
+        return tensors, errors, mixed_shapes
+
+    @staticmethod
+    def _batch_key(files, selected_indices, megapixels, no_resize):
+        return (
+            tuple(str(files[index]) for index in selected_indices),
+            float(megapixels),
+            bool(no_resize),
+        )
+
+    def _consume_prefetch_or_load(
+        self,
+        key,
+        files,
+        selected_indices,
+        megapixels,
+        no_resize,
+    ):
+        with self._prefetch_lock:
+            if (
+                self._prefetch_key == key
+                and self._prefetch_future is not None
+            ):
+                future = self._prefetch_future
+                self._prefetch_key = None
+                self._prefetch_future = None
+            else:
+                future = None
+
+        if future is not None:
+            try:
+                return future.result()
+            except Exception as exc:
+                print(
+                    "[CRT Image Loader Crawl Batch] "
+                    f"Prefetch fallback: {exc}"
+                )
+
+        return self._prepare_batch(
+            files,
+            selected_indices,
+            megapixels,
+            no_resize,
+        )
+
+    def _schedule_prefetch(
+        self,
+        key,
+        files,
+        selected_indices,
+        megapixels,
+        no_resize,
+    ):
+        with self._prefetch_lock:
+            if self._prefetch_future is not None:
+                self._prefetch_future.cancel()
+
+            self._prefetch_key = key
+            self._prefetch_future = self._prefetch_executor.submit(
+                self._prepare_batch,
+                files,
+                selected_indices,
+                megapixels,
+                no_resize,
+            )
+
+    def _cancel_prefetch(self):
+        with self._prefetch_lock:
+            if self._prefetch_future is not None:
+                self._prefetch_future.cancel()
+            self._prefetch_key = None
+            self._prefetch_future = None
+
+    def __del__(self):
+        try:
+            self._prefetch_executor.shutdown(
+                wait=False,
+                cancel_futures=True,
+            )
+        except Exception:
+            pass
+
+    # -- Node definition -------------------------------------------------------
 
     @classmethod
     def INPUT_TYPES(cls):
@@ -60,7 +289,10 @@ class CRT_ImageLoaderCrawlBatch:
                         "default": 1,
                         "min": 1,
                         "max": 128,
-                        "tooltip": "Number of images to load. Window starts at seed × batch_count and wraps around the folder.",
+                        "tooltip": (
+                            "Number of images to load. Window starts at "
+                            "seed × batch_count and wraps around the folder."
+                        ),
                     },
                 ),
                 "seed": (
@@ -69,7 +301,10 @@ class CRT_ImageLoaderCrawlBatch:
                         "default": 0,
                         "min": 0,
                         "max": 0xFFFFFFFFFFFFFFFF,
-                        "tooltip": "Selects the starting image: index = (seed × batch_count) % total_images.",
+                        "tooltip": (
+                            "Selects the starting image: "
+                            "index = (seed × batch_count) % total_images."
+                        ),
                     },
                 ),
                 "megapixels": (
@@ -79,29 +314,65 @@ class CRT_ImageLoaderCrawlBatch:
                         "min": 0.1,
                         "max": 16.0,
                         "step": 0.05,
-                        "tooltip": "Target resolution in megapixels. Each image is resized (lanczos) "
-                                   "preserving its aspect ratio. If the batch contains mixed aspect ratios, "
-                                   "images are center-cropped to the average AR before batching.",
+                        "tooltip": (
+                            "Target resolution in megapixels. Ignored when "
+                            "No resize is enabled."
+                        ),
+                    },
+                ),
+                "No resize": (
+                    "BOOLEAN",
+                    {
+                        "default": False,
+                        "tooltip": (
+                            "Bypass resampling. Mixed-size batches are "
+                            "center-padded to the largest image."
+                        ),
                     },
                 ),
                 "crawl_subfolders": ("BOOLEAN", {"default": False}),
                 "remove_extension": ("BOOLEAN", {"default": False}),
                 "print_index": (
                     "BOOLEAN",
-                    {"default": True, "tooltip": "Print each selected file index and name to the console."},
+                    {
+                        "default": True,
+                        "tooltip": (
+                            "Print each selected file index and name "
+                            "to the console."
+                        ),
+                    },
                 ),
             }
         }
 
     RETURN_TYPES = ("IMAGE", "STRING", "STRING", "INT", "INT")
-    RETURN_NAMES = ("images", "file_names", "file_paths", "batch_count", "total_images")
+    RETURN_NAMES = (
+        "images",
+        "file_names",
+        "file_paths",
+        "batch_count",
+        "total_images",
+    )
     FUNCTION = "load_batch"
     CATEGORY = "CRT/Load"
 
-    # ── Main ──────────────────────────────────────────────────────────────────
+    # -- Main ------------------------------------------------------------------
 
-    def load_batch(self, folder_path, batch_count, seed, megapixels, crawl_subfolders, remove_extension, print_index):
-        TAG = "[CRT Image Loader Crawl Batch]"
+    def load_batch(
+        self,
+        folder_path,
+        batch_count,
+        seed,
+        megapixels,
+        crawl_subfolders,
+        remove_extension,
+        print_index,
+        **kwargs,
+    ):
+        tag = "[CRT Image Loader Crawl Batch]"
+        no_resize = bool(
+            kwargs.get("No resize", kwargs.get("no_resize", False))
+        )
 
         def blank():
             return torch.zeros(1, 64, 64, 3, dtype=torch.float32)
@@ -109,111 +380,126 @@ class CRT_ImageLoaderCrawlBatch:
         if not folder_path or not folder_path.strip():
             return (blank(), "Error: folder path is empty", "", 0, 0)
 
-        folder = Path(folder_path.strip())
+        folder = Path(folder_path.strip()).expanduser()
         if not folder.is_dir():
-            print(f"{TAG} ERROR: Folder '{folder}' not found.")
+            print(f"{tag} ERROR: Folder '{folder}' not found.")
             return (blank(), "Error: folder not found", "", 0, 0)
+        folder = folder.resolve()
 
-        # ── Cache ─────────────────────────────────────────────────────────────
-        cache_key   = str(folder.resolve()) + ("_sub" if crawl_subfolders else "")
-        cur_mtime   = folder.stat().st_mtime
+        # -- File-list cache ---------------------------------------------------
+        cache_key = str(folder) + ("_sub" if crawl_subfolders else "")
+        current_mtime = folder.stat().st_mtime_ns
 
-        if cache_key not in self.cache or self.cache[cache_key]["mtime"] != cur_mtime:
-            print(f"{TAG} Scanning '{folder}'...")
+        if (
+            cache_key not in self.cache
+            or self.cache[cache_key]["mtime"] != current_mtime
+        ):
+            print(f"{tag} Scanning '{folder}'...")
             try:
-                it    = folder.rglob("*") if crawl_subfolders else folder.glob("*")
+                iterator = (
+                    folder.rglob("*")
+                    if crawl_subfolders
+                    else folder.glob("*")
+                )
                 files = sorted(
-                    [p for p in it if p.is_file() and p.suffix.lower() in VALID_EXTENSIONS],
+                    (
+                        path
+                        for path in iterator
+                        if path.is_file()
+                        and path.suffix.lower() in VALID_EXTENSIONS
+                    ),
                     key=self.natural_sort_key,
                 )
-                self.cache[cache_key] = {"files": files, "mtime": cur_mtime}
-                print(f"{TAG} Found {len(files)} images.")
-            except Exception as e:
-                print(f"{TAG} ERROR scanning: {e}")
+                self.cache[cache_key] = {
+                    "files": files,
+                    "mtime": current_mtime,
+                }
+                self._cancel_prefetch()
+                print(f"{tag} Found {len(files)} images.")
+            except Exception as exc:
+                print(f"{tag} ERROR scanning: {exc}")
                 self.cache.pop(cache_key, None)
-                return (blank(), f"Error: {e}", "", 0, 0)
+                self._cancel_prefetch()
+                return (blank(), f"Error: {exc}", "", 0, 0)
 
         files = self.cache[cache_key]["files"]
         total = len(files)
 
         if total == 0:
-            print(f"{TAG} No images found in '{folder}'.")
+            print(f"{tag} No images found in '{folder}'.")
             return (blank(), "No images found", "", 0, 0)
 
-        # ── Select batch window ───────────────────────────────────────────────
-        start           = (seed * batch_count) % total
-        selected_indices = [(start + i) % total for i in range(batch_count)]
+        # -- Select and load batch ---------------------------------------------
+        start = (seed * batch_count) % total
+        selected_indices = [
+            (start + index) % total
+            for index in range(batch_count)
+        ]
+        current_key = self._batch_key(
+            files,
+            selected_indices,
+            megapixels,
+            no_resize,
+        )
+        tensors, errors, mixed_shapes = self._consume_prefetch_or_load(
+            current_key,
+            files,
+            selected_indices,
+            megapixels,
+            no_resize,
+        )
 
-        # ── Load & resize ─────────────────────────────────────────────────────
-        tensors = []
-        names   = []
-        paths   = []
+        if mixed_shapes:
+            if no_resize:
+                print(
+                    f"{tag} Mixed resolutions detected - "
+                    "center-padding without resampling."
+                )
+            else:
+                print(
+                    f"{tag} Mixed resolutions detected - "
+                    "center-cropping to a uniform size."
+                )
 
-        for idx in selected_indices:
-            f = files[idx]
-            try:
-                with Image.open(f) as img:
-                    if img.mode != "RGB":
-                        img = img.convert("RGB")
-                    t = torch.from_numpy(
-                        np.array(img).astype(np.float32) / 255.0
-                    ).unsqueeze(0)   # [1, H, W, C]
-
-                t = self._resize_to_megapixels(t, megapixels)
-                tensors.append(t)
-
-                name = f.stem if remove_extension else f.name
-                names.append(name)
-                paths.append(str(f.resolve()))
-
+        names = []
+        paths = []
+        for position, index in enumerate(selected_indices):
+            path = files[index]
+            error = errors[position]
+            if error is None:
+                name = path.stem if remove_extension else path.name
                 if print_index:
-                    print(f"{TAG} [{idx + 1}/{total}] {name}")
+                    print(f"{tag} [{index + 1}/{total}] {name}")
+            else:
+                print(f"{tag} ERROR loading '{path}': {error}")
+                name = f"Error: {path.name}"
 
-            except Exception as e:
-                print(f"{TAG} ERROR loading '{f}': {e}")
-                # Insert blank so batch count stays correct
-                tensors.append(blank())
-                names.append(f"Error: {f.name}")
-                paths.append(str(f.resolve()))
+            names.append(name)
+            paths.append(str(path))
 
-        # ── Mixed aspect ratio fallback ───────────────────────────────────────
-        shapes = [(t.shape[1], t.shape[2]) for t in tensors]   # (H, W)
+        batch = torch.cat(tensors, dim=0)
 
-        if len(set(shapes)) > 1:
-            print(
-                f"{TAG} Mixed resolutions detected — computing average AR "
-                f"and center-cropping to a uniform size."
-            )
-
-            ars     = [W / H for H, W in shapes]
-            avg_ar  = sum(ars) / len(ars)
-
-            # Target size: ~megapixels MP at avg_ar, quantized to 8
-            H_tgt = max(8, round((megapixels * 1_000_000 / avg_ar) ** 0.5 / 8) * 8)
-            W_tgt = max(8, round(H_tgt * avg_ar / 8) * 8)
-
-            unified = []
-            for t in tensors:
-                _, H, W, _ = t.shape
-                cur_ar = W / H
-
-                if cur_ar > avg_ar:
-                    # Too wide → crop width to match avg_ar
-                    crop_W = max(1, min(round(H * avg_ar), W))
-                    t = self._center_crop(t, H, crop_W)
-                elif cur_ar < avg_ar:
-                    # Too tall → crop height to match avg_ar
-                    crop_H = max(1, min(round(W / avg_ar), H))
-                    t = self._center_crop(t, crop_H, W)
-
-                # Final exact resize so every tensor is identical
-                t = self._resize_exact(t, H_tgt, W_tgt)
-                unified.append(t)
-
-            tensors = unified
-
-        # ── Stack ─────────────────────────────────────────────────────────────
-        batch = torch.cat(tensors, dim=0)   # [B, H, W, C]
+        # Predict the next sequential seed. During the rest of the workflow,
+        # its decode/resize can overlap GPU inference. Only one future batch is
+        # retained, so memory use stays bounded.
+        next_start = ((seed + 1) * batch_count) % total
+        next_indices = [
+            (next_start + index) % total
+            for index in range(batch_count)
+        ]
+        next_key = self._batch_key(
+            files,
+            next_indices,
+            megapixels,
+            no_resize,
+        )
+        self._schedule_prefetch(
+            next_key,
+            files,
+            next_indices,
+            megapixels,
+            no_resize,
+        )
 
         return (
             batch,
@@ -224,5 +510,10 @@ class CRT_ImageLoaderCrawlBatch:
         )
 
 
-NODE_CLASS_MAPPINGS       = {"CRT_ImageLoaderCrawlBatch": CRT_ImageLoaderCrawlBatch}
-NODE_DISPLAY_NAME_MAPPINGS = {"CRT_ImageLoaderCrawlBatch": "Image Loader Crawl Batch (CRT)"}
+NODE_CLASS_MAPPINGS = {
+    "CRT_ImageLoaderCrawlBatch": CRT_ImageLoaderCrawlBatch,
+}
+
+NODE_DISPLAY_NAME_MAPPINGS = {
+    "CRT_ImageLoaderCrawlBatch": "Image Loader Crawl Batch (CRT)",
+}

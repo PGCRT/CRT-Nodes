@@ -34,18 +34,18 @@ class AudioOrManualFrameCount:
         else:
             # --- Audio calculation logic ---
             if not isinstance(audio, dict) or "waveform" not in audio or "sample_rate" not in audio:
-                print("Warning (Frame Count Node): Invalid audio data format. Returning 0 frames.")
+                print("[CRT Audio Frame Count][WARN] Invalid audio data format. Returning 0 frames.")
                 return (0,)
 
             waveform = audio.get("waveform")
             sample_rate = audio.get("sample_rate")
 
             if not isinstance(waveform, torch.Tensor) or not isinstance(sample_rate, int):
-                print("Warning (Frame Count Node): Invalid audio data types. Returning 0 frames.")
+                print("[CRT Audio Frame Count][WARN] Invalid audio data types. Returning 0 frames.")
                 return (0,)
 
             if waveform.numel() == 0 or sample_rate == 0:
-                print("Warning (Frame Count Node): Empty audio data or zero sample rate. Returning 0 frames.")
+                print("[CRT Audio Frame Count][WARN] Empty audio data or zero sample rate. Returning 0 frames.")
                 return (0,)
 
             num_samples = waveform.shape[-1]

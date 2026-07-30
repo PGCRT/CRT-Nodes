@@ -1,7 +1,7 @@
 [project]
 name = "crt-nodes"
 description = "CRT-Nodes is a collection of custom nodes for ComfyUI"
-version = "2.5.4"
+version = "2.6.0"
 license = {file = "LICENSE"}
 dependencies = [
     "opencv-contrib-python",
@@ -13,11 +13,17 @@ dependencies = [
     "wordcloud",
     "librosa",
     "imageio-ffmpeg",
-    "huggingface_hub",
-    "einops",
+    "soundfile",
+    "huggingface_hub>=0.27",
+    "einops>=0.6",
     "rotary-embedding-torch",
-    "llama-cpp-python",
+    "openai-whisper",
     "omnivoice>=0.1.0",
+    "accelerate>=1.0",
+    "sentencepiece>=0.1.99",
+    "timm>=0.9",
+    "transformers>=4.48.3",
+    "tqdm>=4.66",
 ]
 
 [project.urls]

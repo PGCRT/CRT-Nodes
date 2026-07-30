@@ -9,7 +9,7 @@ class CRT_IntValue:
 
     RETURN_TYPES = ("INT",)
     FUNCTION = "get_value"
-    CATEGORY = "CRT/Utils/LogicValues"
+    CATEGORY = "CRT/Utils/Logic & Values"
 
     def get_value(self, value):
         return (int(value),)
