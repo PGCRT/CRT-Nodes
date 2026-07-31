@@ -4,6 +4,7 @@ import math
 import time
 import builtins
 import logging
+import os
 from contextlib import redirect_stderr, redirect_stdout
 from contextlib import contextmanager
 import io
@@ -544,6 +545,14 @@ class CRT_LTX23UnifiedSampler:
     _CLIP_TEXT_CACHE_MAX_SIZE = 5
     _CONDITIONING_CACHE = {}
     _CONDITIONING_CACHE_MAX_SIZE = 5
+    DEPTH_CACHE_MODES = (
+        "No depth cache",
+        "Cache to RAM",
+        "Cache to temp disk",
+    )
+    _DEPTH_FRAME_CACHE_KEY = None
+    _DEPTH_FRAME_CACHE_VALUE = None
+    _DEPTH_DISK_CACHE_PATH = None
 
     @classmethod
     def IS_CHANGED(
@@ -557,6 +566,7 @@ class CRT_LTX23UnifiedSampler:
         vae_decode_tiled,
         unload_model_before_vae_decode,
         low_vram,
+        depth_cache_mode,
         megapixels_target,
         aspect_ratio,
         frame_count,
@@ -586,6 +596,7 @@ class CRT_LTX23UnifiedSampler:
             bool(vae_decode_tiled),
             bool(unload_model_before_vae_decode),
             bool(low_vram),
+            str(depth_cache_mode),
             float(megapixels_target),
             aspect_ratio,
             int(frame_count),
@@ -657,6 +668,7 @@ class CRT_LTX23UnifiedSampler:
                         "tooltip": "Unload CLIP after conditioning and VAEs before sampling, then reload VAEs for decode. Depth Anything V3 is always unloaded immediately after depth estimation.",
                     },
                 ),
+
                 "megapixels_target": (
                     "FLOAT",
                     {
@@ -754,6 +766,13 @@ class CRT_LTX23UnifiedSampler:
                 "mouth_detect_chunk_size": ("INT", {"default": 10, "min": 0, "max": 4096, "step": 1, "tooltip": "Deprecated compatibility input. Ignored; hardcoded internally."}),
                 "mouth_mask_expand": ("INT",   {"default": 8,   "min": 0, "max": 100, "step": 1, "tooltip": "Expands the mouth mask before applying it to the depth guide so lip motion influence covers a larger area."}),
                 "mouth_mask_blur":   ("FLOAT", {"default": 8.0, "min": 0.0, "max": 100.0, "step": 0.5, "tooltip": "Softens the mouth mask edges to avoid harsh transitions in the depth guide."}),
+                "depth_cache_mode": (
+                    cls.DEPTH_CACHE_MODES,
+                    {
+                        "default": "Cache to temp disk",
+                        "tooltip": "V2V Depth Control only. Disable reuse, keep the latest DA3 depth frames in RAM, or store them in ComfyUI's session temp directory. Temp files are cleared by ComfyUI at startup and graceful shutdown.",
+                    },
+                ),
             }
         }
 
@@ -974,6 +993,241 @@ class CRT_LTX23UnifiedSampler:
         unloaded, unload_errors = cls._unload_patchers_from_vram(candidates)
         errors.extend(unload_errors)
         return unloaded, errors
+
+    @classmethod
+    def _clear_ram_depth_cache(cls):
+        cls._DEPTH_FRAME_CACHE_KEY = None
+        cls._DEPTH_FRAME_CACHE_VALUE = None
+
+    @classmethod
+    def _depth_disk_cache_directory(cls):
+        return os.path.join(folder_paths.get_temp_directory(), "crt_ltx23")
+
+    @classmethod
+    def _clear_disk_depth_cache(cls, keep_path=None):
+        cache_dir = cls._depth_disk_cache_directory()
+        if not os.path.isdir(cache_dir):
+            cls._DEPTH_DISK_CACHE_PATH = None
+            return
+
+        keep_path = os.path.abspath(keep_path) if keep_path else None
+        for name in os.listdir(cache_dir):
+            if not (name.startswith("depth_") and name.endswith(".pt")):
+                continue
+            path = os.path.abspath(os.path.join(cache_dir, name))
+            if keep_path is not None and path == keep_path:
+                continue
+            try:
+                os.remove(path)
+            except FileNotFoundError:
+                pass
+            except OSError as error:
+                cls._log(
+                    f"Could not remove old depth temp cache {name}: {error}",
+                    level="warn",
+                )
+        cls._DEPTH_DISK_CACHE_PATH = keep_path
+
+    @classmethod
+    def _load_disk_depth_cache(cls, cache_key):
+        cache_dir = cls._depth_disk_cache_directory()
+        cache_path = os.path.join(cache_dir, f"depth_{cache_key}.pt")
+        if not os.path.isfile(cache_path):
+            return None
+
+        try:
+            try:
+                payload = torch.load(
+                    cache_path,
+                    map_location="cpu",
+                    weights_only=True,
+                    mmap=True,
+                )
+                mapped = True
+            except TypeError:
+                payload = torch.load(
+                    cache_path,
+                    map_location="cpu",
+                    weights_only=True,
+                )
+                mapped = False
+
+            depth_image = payload.get("depth") if isinstance(payload, dict) else None
+            if not isinstance(depth_image, torch.Tensor):
+                raise ValueError("cache file contains no depth tensor")
+            if depth_image.ndim != 4 or int(depth_image.shape[0]) <= 0:
+                raise ValueError(f"invalid cached depth shape: {tuple(depth_image.shape)}")
+
+            cls._DEPTH_DISK_CACHE_PATH = cache_path
+            size_mib = os.path.getsize(cache_path) / (1024.0 * 1024.0)
+            load_mode = "memory-mapped" if mapped else "loaded"
+            cls._log(
+                (
+                    f"Depth temp-disk cache HIT - {load_mode} "
+                    f"{int(depth_image.shape[0])} frame(s), {size_mib:.1f} MiB; "
+                    "Depth Anything V3 load/inference skipped"
+                ),
+                level="ok",
+            )
+            return depth_image
+        except Exception as error:
+            cls._log(
+                f"Depth temp-disk cache could not be loaded; recomputing: {error}",
+                level="warn",
+            )
+            try:
+                os.remove(cache_path)
+            except OSError:
+                pass
+            return None
+
+    @classmethod
+    def _store_disk_depth_cache(cls, cache_key, depth_image):
+        cache_dir = cls._depth_disk_cache_directory()
+        os.makedirs(cache_dir, exist_ok=True)
+        cache_path = os.path.join(cache_dir, f"depth_{cache_key}.pt")
+        temp_path = f"{cache_path}.{os.getpid()}.{time.time_ns()}.tmp"
+        try:
+            torch.save({"depth": depth_image}, temp_path)
+            os.replace(temp_path, cache_path)
+        finally:
+            try:
+                if os.path.exists(temp_path):
+                    os.remove(temp_path)
+            except OSError:
+                pass
+
+        cls._clear_disk_depth_cache(keep_path=cache_path)
+        size_mib = os.path.getsize(cache_path) / (1024.0 * 1024.0)
+        cls._log(
+            (
+                f"Depth temp-disk cache stored {int(depth_image.shape[0])} "
+                f"frame(s), {size_mib:.1f} MiB"
+            ),
+            level="ok",
+        )
+
+    @classmethod
+    def _estimate_depth(cls, da3_model, depth_input, cache_mode):
+        """Run DA3 with optional single-entry RAM or ComfyUI temp-disk reuse."""
+        cache_mode = str(cache_mode)
+        if cache_mode not in cls.DEPTH_CACHE_MODES:
+            cls._log(
+                f"Unknown depth cache mode {cache_mode!r}; disabling cache",
+                level="warn",
+            )
+            cache_mode = "No depth cache"
+
+        cache_key = None
+        if cache_mode == "No depth cache":
+            cls._clear_ram_depth_cache()
+            cls._clear_disk_depth_cache()
+            cls._log("Depth cache disabled - running Depth Anything V3 inference")
+        else:
+            cache_key = stable_fingerprint(
+                "ltx23-da3-depth-v2",
+                da3_model,
+                depth_input,
+                "V2-Style",
+                "resize",
+                False,
+                False,
+            )
+
+            if cache_mode == "Cache to RAM":
+                cls._clear_disk_depth_cache()
+                cached = cls._DEPTH_FRAME_CACHE_VALUE
+                if (
+                    cache_key == cls._DEPTH_FRAME_CACHE_KEY
+                    and isinstance(cached, torch.Tensor)
+                ):
+                    size_mib = (
+                        cached.numel()
+                        * cached.element_size()
+                        / (1024.0 * 1024.0)
+                    )
+                    cls._log(
+                        (
+                            "Depth RAM cache HIT - reusing "
+                            f"{int(cached.shape[0])} frame(s), {size_mib:.1f} MiB; "
+                            "Depth Anything V3 load/inference skipped"
+                        ),
+                        level="ok",
+                    )
+                    return cached
+            else:
+                cls._clear_ram_depth_cache()
+                cached = cls._load_disk_depth_cache(cache_key)
+                if cached is not None:
+                    return cached
+
+            cls._log(
+                f"Depth {cache_mode.removeprefix('Cache to ').lower()} cache MISS "
+                "- running Depth Anything V3 inference"
+            )
+
+        depth_result = None
+        try:
+            depth_result = cls._run_external_node(
+                "DepthAnything_V3",
+                suppress_output=True,
+                da3_model=da3_model,
+                images=depth_input,
+                normalization_mode="V2-Style",
+                resize_method="resize",
+                invert_depth=False,
+                keep_model_size=False,
+            )
+            depth_outputs = cls._result_tuple(depth_result)
+            if not depth_outputs or not isinstance(depth_outputs[0], torch.Tensor):
+                raise RuntimeError("DepthAnything V3 returned no depth image.")
+            depth_image = depth_outputs[0].detach().cpu().contiguous()
+            del depth_outputs
+        finally:
+            del depth_result
+            unloaded, unload_errors = cls._offload_da3_model(da3_model)
+            if unloaded:
+                cls._log(
+                    f"DepthAnything V3 offloaded from VRAM ({unloaded} model patcher(s))",
+                    level="ok",
+                )
+            elif not unload_errors:
+                cls._log(
+                    "DepthAnything V3 cleanup found no loaded patcher",
+                    level="warn",
+                )
+            if unload_errors:
+                cls._log(
+                    "DepthAnything V3 cleanup warnings: "
+                    + " | ".join(unload_errors),
+                    level="warn",
+                )
+
+        if cache_mode == "Cache to RAM":
+            cls._DEPTH_FRAME_CACHE_KEY = cache_key
+            cls._DEPTH_FRAME_CACHE_VALUE = depth_image
+            size_mib = (
+                depth_image.numel()
+                * depth_image.element_size()
+                / (1024.0 * 1024.0)
+            )
+            cls._log(
+                (
+                    f"Depth RAM cache stored {int(depth_image.shape[0])} "
+                    f"frame(s), {size_mib:.1f} MiB"
+                ),
+                level="ok",
+            )
+        elif cache_mode == "Cache to temp disk":
+            try:
+                cls._store_disk_depth_cache(cache_key, depth_image)
+            except Exception as error:
+                cls._log(
+                    f"Depth temp-disk cache write failed; continuing without cache: {error}",
+                    level="warn",
+                )
+
+        return depth_image
 
     @staticmethod
     def _offload_sampling_model(model):
@@ -2463,6 +2717,7 @@ class CRT_LTX23UnifiedSampler:
         sigmas_refine,
         megapixels_target,
         depth_megapixels,
+        depth_cache_mode,
         v2v_guide_strength,
         latent_downscale_factor,
         generated_audio_gain_db,
@@ -2651,42 +2906,15 @@ class CRT_LTX23UnifiedSampler:
                 depth_image = depth_image.repeat(repeat_count, 1, 1, 1)
             depth_image = depth_image[:frame_count]
         else:
-            self._progress(2, total_steps, "Estimating depth (quiet)")
-            depth_result = None
+            self._progress(2, total_steps, "Resolving depth guide")
             try:
-                depth_result = self._run_external_node(
-                    "DepthAnything_V3",
-                    suppress_output=True,
-                    da3_model=da3_model,
-                    images=depth_input,
-                    normalization_mode="V2-Style",
-                    resize_method="resize",
-                    invert_depth=False,
-                    keep_model_size=False,
+                depth_image = self._estimate_depth(
+                    da3_model,
+                    depth_input,
+                    depth_cache_mode,
                 )
-                depth_outputs = self._result_tuple(depth_result)
-                if not depth_outputs or not isinstance(depth_outputs[0], torch.Tensor):
-                    raise RuntimeError("DepthAnything V3 returned no depth image.")
-                # DA3 currently returns CPU images, but enforce that contract and
-                # detach from any inference graph before releasing the model.
-                depth_image = depth_outputs[0].detach().cpu()
-                del depth_outputs
             finally:
-                del depth_result
                 del depth_input
-                unloaded, unload_errors = self._offload_da3_model(da3_model)
-                if unloaded:
-                    self._log(
-                        f"DepthAnything V3 offloaded from VRAM ({unloaded} model patcher(s))",
-                        level="ok",
-                    )
-                elif not unload_errors:
-                    self._log("DepthAnything V3 cleanup found no loaded patcher", level="warn")
-                if unload_errors:
-                    self._log(
-                        "DepthAnything V3 cleanup warnings: " + " | ".join(unload_errors),
-                        level="warn",
-                    )
 
         # Match the reference V2V graph: resize DA3 output back to the target
         # guide resolution using a plain nearest/stretch resize before snapping
@@ -3395,6 +3623,7 @@ class CRT_LTX23UnifiedSampler:
         vae_decode_tiled,
         unload_model_before_vae_decode,
         low_vram,
+        depth_cache_mode,
         megapixels_target,
         aspect_ratio,
         frame_count,
@@ -3626,6 +3855,7 @@ class CRT_LTX23UnifiedSampler:
                 sigmas_refine=sigmas_refine,
                 megapixels_target=megapixels_target,
                 depth_megapixels=float(depth_megapixels),
+                depth_cache_mode=str(depth_cache_mode),
                 v2v_guide_strength=1.0 if (is_outpaint_mode or is_upscale_mode) else float(v2v_guide_strength),
                 latent_downscale_factor=latent_downscale_factor,
                 generated_audio_gain_db=float(generated_audio_gain_db),

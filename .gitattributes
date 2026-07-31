@@ -1,5 +1,6 @@
 * text=auto
 .gitattributes text eol=lf
+.tracking text eol=lf
 
 *.py text eol=lf
 *.js text eol=lf

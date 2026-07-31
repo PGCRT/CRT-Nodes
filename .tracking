@@ -2,7 +2,6 @@ __init__.py
 .gitattributes
 .github/workflows/publish_action.yml
 .gitignore
-CHANGELOG.md
 Fonts/1_CreatoDisplay.otf
 Fonts/Angel wish.ttf
 Fonts/Avenue de Madison.ttf
@@ -169,9 +168,11 @@ workflows/Batch Processing/Batch AnyProcess VIDEO.png
 workflows/Batch Processing/Batch AnyProcess.png
 workflows/Batch Processing/Batch Caption.png
 workflows/Batch Processing/Batch DetectAndCrop.png
+workflows/ChronoEdit_Upscale.png
+workflows/FLUX2KLEIN.png
+workflows/KREA2.png
 workflows/LTX2.3 Unified Sampler I2V.png
 workflows/LTX2.3 Unified Sampler_V2V_EDIT.png
 workflows/LTX2.3 Unified Sampler_V2V_ISOLATE_TRANSLATE.png
-workflows/LTX2.3 Unified Sampler_V2V_ISOLATE.png
 workflows/LTX2.3 Unified Sampler.png
 workflows/WAN 2.2 LORA COMPARE.png
