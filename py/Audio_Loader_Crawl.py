@@ -1,7 +1,47 @@
 import os
 from pathlib import Path
+
 import torch
-import torchaudio
+
+
+def _load_audio_file(path):
+    """Decode audio -> (waveform [channels, samples] float32, sample_rate).
+
+    Mirrors ComfyUI core's own audio loader (comfy_extras/nodes_audio.py):
+    pure PyAV, no torchaudio — torchaudio 2.11+ hard-requires torchcodec,
+    which is not installed in this environment.
+    """
+    import av
+
+    with av.open(str(path)) as af:
+        if not af.streams.audio:
+            raise ValueError("No audio stream found in the file.")
+
+        stream = af.streams.audio[0]
+        sample_rate = stream.codec_context.sample_rate
+        n_channels = stream.channels
+
+        frames = []
+        for frame in af.decode(streams=stream.index):
+            buf = torch.from_numpy(frame.to_ndarray())
+            if buf.shape[0] != n_channels:
+                buf = buf.view(-1, n_channels).t()
+            frames.append(buf)
+
+        if not frames:
+            raise ValueError("No audio frames decoded.")
+
+        waveform = torch.cat(frames, dim=1)
+
+    # f32 PCM conversion (as in core's f32_pcm)
+    if waveform.dtype == torch.int16:
+        waveform = waveform.float() / (2 ** 15)
+    elif waveform.dtype == torch.int32:
+        waveform = waveform.float() / (2 ** 31)
+    elif not waveform.dtype.is_floating_point:
+        raise ValueError(f"Unsupported wav dtype: {waveform.dtype}")
+
+    return waveform, int(sample_rate)
 
 
 class AudioLoaderCrawl:
@@ -70,11 +110,10 @@ class AudioLoaderCrawl:
         start_offset_seconds,
         gain_db,
     ):
-        # Create a single sample of silence for safe returns.
-        # This prevents crashes in downstream nodes that cannot handle zero-length tensors.
-        silent_waveform = torch.zeros(1, 1, 1)  # [batch, channels, samples]
-        silent_audio = {"waveform": silent_waveform, "sample_rate": 44100}  # Use a common default sample rate
-        safe_return = (silent_audio, "", "")
+        # Failure returns None for audio: downstream reference nodes (e.g. MiniMax H3)
+        # skip None audio cleanly. Do NOT substitute fake silence here — a tiny silent
+        # tensor resamples to 0 samples at 32 kHz and crashes the audio VAE instead.
+        safe_return = (None, "", "")
 
         if not folder_path or not folder_path.strip():
             print("[ERROR] Error: Folder path is empty.")
@@ -120,8 +159,8 @@ class AudioLoaderCrawl:
 
             print(f"[OK] Seed {seed} -> File {selected_index + 1}/{num_files}: '{selected_file.name}'")
 
-            # --- Load and Process Audio ---
-            waveform, sample_rate = torchaudio.load(str(selected_file))
+            # --- Load and Process Audio (pure PyAV, like core LoadAudio) ---
+            waveform, sample_rate = _load_audio_file(selected_file)
 
             # Apply start offset
             if start_offset_seconds > 0:
@@ -129,7 +168,7 @@ class AudioLoaderCrawl:
                 if offset_samples < waveform.shape[1]:
                     waveform = waveform[:, offset_samples:]
                 else:
-                    print("[WARN] Warning: Start offset is beyond the audio duration. Returning silent audio.")
+                    print("[WARN] Warning: Start offset is beyond the audio duration. Returning no audio.")
                     return safe_return
 
             # Apply max length
@@ -158,8 +197,7 @@ class AudioLoaderCrawl:
             print(f"[ERROR] An unexpected error occurred in AudioLoaderCrawl: {str(e)}")
             return safe_return
 
-
-# Node mappings for ComfyUI
+# Node mappings
 NODE_CLASS_MAPPINGS = {"AudioLoaderCrawl": AudioLoaderCrawl}
 
 NODE_DISPLAY_NAME_MAPPINGS = {"AudioLoaderCrawl": "Audio Loader Crawl (CRT)"}

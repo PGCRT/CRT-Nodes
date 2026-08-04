@@ -1,60 +1,141 @@
-import os
-import re
+import math
 import subprocess
+import time
 from pathlib import Path
-import torch
+
 import cv2
 import numpy as np
+import torch
 
 
-def get_audio_from_video(file_path):
+VIDEO_EXTENSIONS = {".mp4", ".webm", ".mkv", ".avi", ".mov"}
+
+
+def _silent_audio(sample_rate=44100):
+    return {"waveform": torch.zeros(1, 1, 1), "sample_rate": int(sample_rate)}
+
+
+def _probe_audio_stream(file_path):
     try:
-        res = subprocess.run(
-            ["ffmpeg", "-i", file_path, "-f", "f32le", "-"],
-            capture_output=True,
+        result = subprocess.run(
+            [
+                "ffprobe",
+                "-v",
+                "error",
+                "-select_streams",
+                "a:0",
+                "-show_entries",
+                "stream=sample_rate,channels",
+                "-of",
+                "default=noprint_wrappers=1",
+                str(file_path),
+            ],
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            text=True,
+            check=False,
         )
-        if res.returncode != 0 and len(res.stdout) == 0:
-            raise RuntimeError(res.stderr.decode("utf-8", errors="backslashreplace"))
+        if result.returncode != 0:
+            return None
 
-        audio = torch.from_numpy(np.frombuffer(res.stdout, dtype=np.float32).copy())
-        stderr = res.stderr.decode("utf-8", errors="backslashreplace")
-        match = re.search(r",\s*(\d+)\s*Hz,\s*(\w+),\s*", stderr)
-        if match:
-            ar = int(match.group(1))
-            channel_desc = match.group(2)
-            if channel_desc == "mono":
-                ac = 1
-            elif channel_desc == "stereo":
-                ac = 2
-            else:
-                ac = 2
-        else:
-            ar = 44100
-            ac = 2
+        values = {}
+        for line in result.stdout.splitlines():
+            key, separator, value = line.partition("=")
+            if separator:
+                values[key.strip()] = value.strip()
+        sample_rate = int(values.get("sample_rate", 0))
+        channels = int(values.get("channels", 0))
+        if sample_rate > 0 and channels > 0:
+            return sample_rate, channels
+    except (OSError, TypeError, ValueError):
+        pass
+    return None
 
-        if audio.numel() == 0:
-            silent_waveform = torch.zeros(1, 1, 1)
-            return {"waveform": silent_waveform, "sample_rate": ar}
 
-        audio = audio.reshape((-1, ac)).transpose(0, 1).unsqueeze(0)
-        return {"waveform": audio, "sample_rate": ar}
-    except Exception as e:
-        print(f"[WARN] Warning: Could not extract audio from video: {e}")
-        silent_waveform = torch.zeros(1, 1, 1)
-        return {"waveform": silent_waveform, "sample_rate": 44100}
+def get_audio_from_video(file_path, max_duration=None):
+    started = time.perf_counter()
+    duration_label = (
+        f" (first {max_duration:.2f}s)"
+        if max_duration is not None and max_duration > 0
+        else ""
+    )
+    print(
+        f"[CRT Video Loader] Extracting audio from '{Path(file_path).name}'"
+        f"{duration_label}..."
+    )
+    audio_info = _probe_audio_stream(file_path)
+    if audio_info is None:
+        print("[CRT Video Loader] No readable audio stream; returning silence.")
+        return _silent_audio()
+
+    sample_rate, channels = audio_info
+    try:
+        command = [
+            "ffmpeg",
+            "-nostdin",
+            "-hide_banner",
+            "-loglevel",
+            "error",
+            "-i",
+            str(file_path),
+            "-map",
+            "0:a:0",
+            "-vn",
+            "-sn",
+            "-dn",
+        ]
+        if max_duration is not None and max_duration > 0:
+            command.extend(["-t", f"{float(max_duration):.6f}"])
+        command.extend(["-c:a", "pcm_f32le", "-f", "f32le", "pipe:1"])
+        result = subprocess.run(
+            command,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            check=False,
+        )
+        if result.returncode != 0 and not result.stdout:
+            error = result.stderr.decode("utf-8", errors="backslashreplace").strip()
+            raise RuntimeError(error or f"ffmpeg exited with code {result.returncode}")
+
+        raw_audio = bytearray(result.stdout)
+        result = None
+        sample_count = len(raw_audio) // np.dtype(np.float32).itemsize
+        sample_count -= sample_count % channels
+        if sample_count <= 0:
+            return _silent_audio(sample_rate)
+        del raw_audio[sample_count * np.dtype(np.float32).itemsize :]
+
+        audio = torch.frombuffer(raw_audio, dtype=torch.float32, count=sample_count)
+        audio = audio.reshape((-1, channels)).transpose(0, 1).unsqueeze(0)
+        elapsed = time.perf_counter() - started
+        duration = sample_count / float(channels * sample_rate)
+        print(
+            f"[CRT Video Loader] Audio ready: {duration:.2f}s, "
+            f"{sample_rate} Hz, {channels} channel(s) in {elapsed:.2f}s"
+        )
+        return {"waveform": audio, "sample_rate": sample_rate}
+    except Exception as error:
+        print(f"[CRT Video Loader] Warning: could not extract audio: {error}")
+        return _silent_audio(sample_rate)
 
 
 class VideoLoaderCrawl:
     def __init__(self):
-        # Instance-level cache to store file lists and folder modification times.
+        # This cache intentionally contains only paths, never decoded tensors.
         self.cache = {}
 
     @classmethod
     def INPUT_TYPES(cls):
         return {
             "required": {
-                "folder_path": ("STRING", {"default": "C:\\videos", "tooltip": "Path to video files"}),
-                "seed": ("INT", {"default": 0, "min": 0, "max": 0xFFFFFFFFFFFFFFFF}),
+                "folder_path": (
+                    "STRING",
+                    {"default": "C:\\videos", "tooltip": "Path to video files"},
+                ),
+                "seed": (
+                    "INT",
+                    {"default": 0, "min": 0, "max": 0xFFFFFFFFFFFFFFFF},
+                ),
                 "crawl_subfolders": ("BOOLEAN", {"default": False}),
                 "remove_extension": (
                     "BOOLEAN",
@@ -62,7 +143,12 @@ class VideoLoaderCrawl:
                 ),
                 "frames_limit": (
                     "INT",
-                    {"default": -1, "min": -1, "max": 10000, "tooltip": "Max frames to load. -1 for all frames."},
+                    {
+                        "default": -1,
+                        "min": -1,
+                        "max": 10000,
+                        "tooltip": "Maximum number of output frames. Use -1 to load the complete video.",
+                    },
                 ),
                 "framerate": (
                     "FLOAT",
@@ -71,114 +157,298 @@ class VideoLoaderCrawl:
                         "min": -1.0,
                         "max": 240.0,
                         "step": 0.1,
-                        "tooltip": "-1 keeps original framerate. Lower values skip frames. Higher than source keeps source framerate.",
+                        "tooltip": "-1 keeps the source rate. Lower values retain evenly spaced frames; values above the source rate keep the source rate.",
+                    },
+                ),
+                "even_batch_picker": (
+                    "INT",
+                    {
+                        "default": -1,
+                        "min": -1,
+                        "max": 10000,
+                        "step": 1,
+                        "tooltip": "After Frames limit, retain this many frames evenly across that range using the same selection as Even Batch Picker (CRT). -1 or 0 keeps the complete limited range.",
+                    },
+                ),
+                "megapixels": (
+                    "FLOAT",
+                    {
+                        "default": 1.0,
+                        "min": 0.1,
+                        "max": 16.0,
+                        "step": 0.05,
+                        "tooltip": "After even-frame selection, resize only the retained frames to this target area with Lanczos while preserving aspect ratio.",
                     },
                 ),
             }
         }
 
     RETURN_TYPES = ("IMAGE", "STRING", "STRING", "FLOAT", "INT", "AUDIO")
-    RETURN_NAMES = ("image_output", "file_name", "file_path", "framerate", "framerate_int", "audio")
+    RETURN_NAMES = (
+        "image_output",
+        "file_name",
+        "file_path",
+        "framerate",
+        "framerate_int",
+        "audio",
+    )
     FUNCTION = "load_video_file"
     CATEGORY = "CRT/Load"
 
-    def load_video_file(self, folder_path, seed, crawl_subfolders, remove_extension, frames_limit, framerate):
-        # Create a blank image batch as a fallback to prevent crashes
-        def create_blank_output():
-            blank_frame = torch.zeros((1, 64, 64, 3), dtype=torch.float32)
-            silent_audio = {"waveform": torch.zeros(1, 1, 1), "sample_rate": 44100}
-            return (blank_frame, "Error: See console for details", "", 0.0, 0, silent_audio)
+    @staticmethod
+    def _blank_output():
+        blank_frame = torch.zeros((1, 64, 64, 3), dtype=torch.float32)
+        return (
+            blank_frame,
+            "Error: See console for details",
+            "",
+            0.0,
+            0,
+            _silent_audio(),
+        )
 
+    @staticmethod
+    def _even_positions(batch_size, count):
+        batch_size = max(0, int(batch_size))
+        count = int(count)
+        if batch_size <= 1 or count <= 0 or count >= batch_size:
+            return list(range(batch_size))
+        if count == 1:
+            return [0]
+        return [
+            int((index * (batch_size - 1)) / (count - 1))
+            for index in range(count)
+        ]
+
+    @staticmethod
+    def _target_dimensions(width, height, megapixels, quantize=8):
+        width = max(1, int(width))
+        height = max(1, int(height))
+        megapixels = max(0.001, float(megapixels))
+        scale = math.sqrt(megapixels * 1_000_000.0 / (width * height))
+        target_width = max(quantize, round(width * scale / quantize) * quantize)
+        target_height = max(quantize, round(height * scale / quantize) * quantize)
+        return int(target_width), int(target_height)
+
+    @staticmethod
+    def _print_decode_progress(source_index, source_total, retained, started, next_percent):
+        elapsed = max(1e-6, time.perf_counter() - started)
+        if source_total > 0:
+            percent = min(100, int(source_index * 100 / source_total))
+            if percent < next_percent:
+                return next_percent
+            speed = source_index / elapsed
+            remaining = max(0, source_total - source_index)
+            eta = remaining / speed if speed > 0 else 0.0
+            print(
+                f"[CRT Video Loader] Decoding {percent:3d}% - "
+                f"{retained} frame(s) retained - {speed:.1f} source fps - ETA {eta:.1f}s"
+            )
+            return ((percent // 10) + 1) * 10
+
+        if source_index % 250 == 0:
+            print(
+                f"[CRT Video Loader] Decoded {source_index} source frame(s), "
+                f"retained {retained} - {source_index / elapsed:.1f} source fps"
+            )
+        return next_percent
+
+    def load_video_file(
+        self,
+        folder_path,
+        seed,
+        crawl_subfolders,
+        remove_extension,
+        frames_limit,
+        framerate,
+        even_batch_picker,
+        megapixels,
+    ):
         if not folder_path or not folder_path.strip():
-            print("[ERROR] Error: Folder path is empty.")
-            return create_blank_output()
+            print("[CRT Video Loader] Error: folder path is empty.")
+            return self._blank_output()
 
         folder = Path(folder_path.strip())
         if not folder.is_dir():
-            print(f"[ERROR] Error: Folder '{folder}' not found.")
-            return create_blank_output()
+            print(f"[CRT Video Loader] Error: folder '{folder}' was not found.")
+            return self._blank_output()
 
-        # --- Smart Caching Logic ---
         cache_key = str(folder.resolve()) + ("_sub" if crawl_subfolders else "")
         current_mtime = folder.stat().st_mtime
 
-        if cache_key not in self.cache or self.cache[cache_key]['mtime'] != current_mtime:
-            print(f"[INFO] Folder changed or not cached. Scanning '{folder}' for videos...")
-            valid_extensions = {'.mp4', '.webm', '.mkv', '.avi', '.mov'}
+        if cache_key not in self.cache or self.cache[cache_key]["mtime"] != current_mtime:
+            print(f"[CRT Video Loader] Scanning '{folder}' for videos...")
             try:
-                path_iterator = folder.rglob('*') if crawl_subfolders else folder.glob('*')
-                files = sorted([f for f in path_iterator if f.is_file() and f.suffix.lower() in valid_extensions])
+                path_iterator = folder.rglob("*") if crawl_subfolders else folder.glob("*")
+                files = sorted(
+                    path
+                    for path in path_iterator
+                    if path.is_file() and path.suffix.lower() in VIDEO_EXTENSIONS
+                )
+                self.cache[cache_key] = {"files": files, "mtime": current_mtime}
+                print(f"[CRT Video Loader] Cached {len(files)} video path(s).")
+            except Exception as error:
+                print(f"[CRT Video Loader] Error accessing '{folder}': {error}")
+                self.cache.pop(cache_key, None)
+                return self._blank_output()
 
-                self.cache[cache_key] = {'files': files, 'mtime': current_mtime}
-                print(f"[OK] Cached {len(files)} video files from '{folder}'")
-            except Exception as e:
-                print(f"[ERROR] Error accessing folder '{folder}': {str(e)}")
-                if cache_key in self.cache:
-                    del self.cache[cache_key]
-                return create_blank_output()
-
-        files = self.cache[cache_key]['files']
-
+        files = self.cache[cache_key]["files"]
         if not files:
-            print(f"[ERROR] Warning: No valid video files found in '{folder}'.")
-            return create_blank_output()
+            print(f"[CRT Video Loader] No supported video files found in '{folder}'.")
+            return self._blank_output()
 
-        # --- Deterministic File Selection using Seed ---
-        num_files = len(files)
-        selected_index = seed % num_files
+        selected_index = int(seed) % len(files)
         selected_file = files[selected_index]
+        print(
+            f"[CRT Video Loader] Seed {seed} -> video {selected_index + 1}/{len(files)}: "
+            f"'{selected_file.name}'"
+        )
 
-        print(f"[INFO] Seed {seed} -> Video {selected_index + 1}/{num_files}: '{selected_file.name}'")
-
+        cap = None
         try:
             cap = cv2.VideoCapture(str(selected_file))
             if not cap.isOpened():
-                print(f"[ERROR] Video open failed: {selected_file}")
-                return create_blank_output()
+                print(f"[CRT Video Loader] Could not open '{selected_file}'.")
+                return self._blank_output()
 
-            source_fps = float(cap.get(cv2.CAP_PROP_FPS) or 0.0)
-            if source_fps < 0:
-                source_fps = 0.0
-
-            if framerate <= 0 or source_fps <= 0:
-                frame_step = 1
-                output_fps = source_fps
-            elif framerate >= source_fps:
+            source_fps = max(0.0, float(cap.get(cv2.CAP_PROP_FPS) or 0.0))
+            source_total = max(0, int(cap.get(cv2.CAP_PROP_FRAME_COUNT) or 0))
+            if framerate <= 0 or source_fps <= 0 or framerate >= source_fps:
                 frame_step = 1
                 output_fps = source_fps
             else:
                 frame_step = max(1, int(round(source_fps / framerate)))
                 output_fps = source_fps / frame_step
 
-            frames = []
-            count = 0
+            if source_total <= 0:
+                print(
+                    "[CRT Video Loader] Container has no frame count; "
+                    "counting frames once before selection..."
+                )
+                while cap.grab():
+                    source_total += 1
+                cap.release()
+                cap = cv2.VideoCapture(str(selected_file))
+                if not cap.isOpened():
+                    raise RuntimeError("Could not reopen video after frame counting")
+
+            candidate_total = int(math.ceil(source_total / float(frame_step)))
+            limited_count = (
+                candidate_total
+                if frames_limit < 0
+                else min(candidate_total, max(0, int(frames_limit)))
+            )
+            selected_positions = self._even_positions(
+                limited_count, even_batch_picker
+            )
+            if not selected_positions:
+                raise RuntimeError(
+                    "Frames limit / Even batch picker selected zero frames"
+                )
+            selected_source_indices = [
+                position * frame_step for position in selected_positions
+            ]
+            selected_total = len(selected_source_indices)
+            decode_total = selected_source_indices[-1] + 1
+
+            print(
+                f"[CRT Video Loader] Stage 1/3 - Frames limit: "
+                f"{limited_count}/{candidate_total} frame(s) at {output_fps:.3f} fps"
+            )
+            print(
+                f"[CRT Video Loader] Stage 2/3 - Even batch picker: "
+                f"{selected_total}/{limited_count} frame(s) retained"
+            )
+            print(
+                f"[CRT Video Loader] Stage 3/3 - Lanczos resize target: "
+                f"{float(megapixels):.3f} MP"
+            )
+
+            frame_buffer = None
+            retained = 0
             source_index = 0
-            while cap.isOpened() and (frames_limit == -1 or count < frames_limit):
-                ret, frame = cap.read()
-                if not ret:
+            selected_cursor = 0
+            next_percent = 10
+            started = time.perf_counter()
+
+            while cap.isOpened() and selected_cursor < selected_total:
+                if not cap.grab():
                     break
-                take_frame = (source_index % frame_step) == 0
+                current_source_index = source_index
                 source_index += 1
-                if not take_frame:
-                    continue
-                # Convert frame from BGR (OpenCV default) to RGB
-                frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-                # Normalize to [0, 1] float32
-                frame_normalized = frame_rgb.astype(np.float32) / 255.0
-                frames.append(frame_normalized)
-                count += 1
-            cap.release()
+                if current_source_index == selected_source_indices[selected_cursor]:
+                    retrieved, frame = cap.retrieve()
+                    if not retrieved or frame is None:
+                        break
 
-            if not frames:
-                print(f"[ERROR] No frames could be read from video: {selected_file}")
-                return create_blank_output()
+                    source_height, source_width = frame.shape[:2]
+                    target_width, target_height = self._target_dimensions(
+                        source_width,
+                        source_height,
+                        megapixels,
+                    )
+                    if (target_width, target_height) != (source_width, source_height):
+                        frame = cv2.resize(
+                            frame,
+                            (target_width, target_height),
+                            interpolation=cv2.INTER_LANCZOS4,
+                        )
 
-            # Stack frames into a single tensor (batch of images)
-            video_tensor = torch.from_numpy(np.stack(frames))
+                    if frame_buffer is None:
+                        frame_buffer = np.empty(
+                            (selected_total, target_height, target_width, 3),
+                            dtype=np.float32,
+                        )
+                    elif frame_buffer.shape[1:3] != (target_height, target_width):
+                        raise RuntimeError("Video dimensions changed during decoding")
+
+                    # Normalize only the selected, resized frame directly into
+                    # the final ComfyUI batch. Full-resolution float frames are
+                    # never allocated.
+                    np.multiply(
+                        frame[:, :, ::-1],
+                        np.float32(1.0 / 255.0),
+                        out=frame_buffer[retained],
+                        casting="unsafe",
+                    )
+                    retained += 1
+                    selected_cursor += 1
+
+                next_percent = self._print_decode_progress(
+                    source_index,
+                    decode_total,
+                    retained,
+                    started,
+                    next_percent,
+                )
+
+            if frame_buffer is None or retained == 0:
+                raise RuntimeError("No selected frames could be decoded")
+            if retained != selected_total:
+                print(
+                    f"[CRT Video Loader] Warning: requested {selected_total} selected "
+                    f"frames but decoded {retained}; container frame metadata may be inaccurate."
+                )
+
+            video_tensor = torch.from_numpy(frame_buffer[:retained])
+            elapsed = time.perf_counter() - started
+            memory_gib = video_tensor.numel() * video_tensor.element_size() / (1024**3)
+            print(
+                f"[CRT Video Loader] Video ready: {retained} frame(s), "
+                f"{video_tensor.shape[2]}x{video_tensor.shape[1]}, {memory_gib:.2f} GiB "
+                f"in {elapsed:.2f}s"
+            )
+
             file_name = selected_file.stem if remove_extension else selected_file.name
-
-            print(f"[OK] Loaded {selected_file.name} with {len(frames)} frames")
-            audio = get_audio_from_video(str(selected_file))
+            loaded_duration = (
+                limited_count / output_fps
+                if frames_limit >= 0 and output_fps > 0
+                else None
+            )
+            audio = get_audio_from_video(
+                selected_file,
+                max_duration=loaded_duration,
+            )
             return (
                 video_tensor,
                 file_name,
@@ -190,11 +460,14 @@ class VideoLoaderCrawl:
 
         except FileNotFoundError:
             print(
-                f"[ERROR] Error: File '{selected_file}' was in cache but not found on disk. Invalidating cache for next run."
+                f"[CRT Video Loader] '{selected_file}' disappeared; "
+                "invalidating the folder cache."
             )
-            if cache_key in self.cache:
-                del self.cache[cache_key]
-            return create_blank_output()
-        except Exception as e:
-            print(f"[ERROR] Error loading video '{selected_file}': {str(e)}")
-            return create_blank_output()
+            self.cache.pop(cache_key, None)
+            return self._blank_output()
+        except Exception as error:
+            print(f"[CRT Video Loader] Error loading '{selected_file}': {error}")
+            return self._blank_output()
+        finally:
+            if cap is not None:
+                cap.release()

@@ -21,10 +21,23 @@ class ImageLoaderCrawl:
             }
         }
 
-    RETURN_TYPES = ("IMAGE", "STRING", "STRING", "INT")
-    RETURN_NAMES = ("image_output", "file_name", "file_path", "total_images")
+    RETURN_TYPES = ("IMAGE", "STRING", "STRING", "INT", "STRING")
+    RETURN_NAMES = ("image_output", "file_name", "file_path", "total_images", "sidecar_txt_prompt")
     FUNCTION = "load_image_incrementally"
     CATEGORY = "CRT/Load"
+
+    @staticmethod
+    def _load_sidecar_txt(image_path):
+        """Return the contents of the .txt file sharing the image's name,
+        or a placeholder message when no sidecar file exists."""
+        sidecar = image_path.with_suffix(".txt")
+        if not sidecar.is_file():
+            return "No corresponding text file found"
+        try:
+            return sidecar.read_text(encoding="utf-8", errors="replace").strip()
+        except Exception as e:
+            print(f"[ERROR] Error reading sidecar '{sidecar}': {str(e)}")
+            return "No corresponding text file found"
 
     def load_image_incrementally(self, folder_path, seed, crawl_subfolders, remove_extension):
         # Create a blank image as fallback
@@ -33,12 +46,12 @@ class ImageLoaderCrawl:
             return torch.from_numpy(blank)[None,]
 
         if not folder_path or not folder_path.strip():
-            return (create_blank_image(), "Error: Folder path is empty", "", 0)
+            return (create_blank_image(), "Error: Folder path is empty", "", 0, "")
 
         folder = Path(folder_path.strip())
         if not folder.is_dir():
             print(f"[ERROR] Error: Folder '{folder}' not found.")
-            return (create_blank_image(), "Error: Folder not found", "", 0)
+            return (create_blank_image(), "Error: Folder not found", "", 0, "")
 
         # --- Smart Caching Logic ---
         cache_key = str(folder.resolve()) + ("_sub" if crawl_subfolders else "")
@@ -60,14 +73,14 @@ class ImageLoaderCrawl:
                 # Clear bad cache entry if it exists
                 if cache_key in self.cache:
                     del self.cache[cache_key]
-                return (create_blank_image(), "Error accessing folder", "", 0)
+                return (create_blank_image(), "Error accessing folder", "", 0, "")
 
         # Retrieve the list of files from the (now guaranteed to be up-to-date) cache
         files = self.cache[cache_key]['files']
 
         if not files:
             print(f"[ERROR] Warning: No valid image files found in '{folder}'.")
-            return (create_blank_image(), "No images found", "", 0)
+            return (create_blank_image(), "No images found", "", 0, "")
 
         num_files = len(files)
         selected_index = seed % num_files
@@ -81,9 +94,10 @@ class ImageLoaderCrawl:
                 img_tensor = torch.from_numpy(img_array)[None,]
 
             base_name = selected_file.stem if remove_extension else selected_file.name
+            sidecar_txt = self._load_sidecar_txt(selected_file)
             print(f"[OK] Seed {seed} -> Image {selected_index + 1}/{num_files}: '{base_name}' from '{selected_file.name}'")
 
-            return (img_tensor, base_name, str(selected_file.parent.resolve()), num_files)
+            return (img_tensor, base_name, str(selected_file.parent.resolve()), num_files, sidecar_txt)
         # Self-healing: If a file is in the cache but was deleted just before loading, this will catch it.
         except FileNotFoundError:
             print(
@@ -92,10 +106,10 @@ class ImageLoaderCrawl:
             # Forcing a rescan on the next execution by removing the invalid cache entry.
             if cache_key in self.cache:
                 del self.cache[cache_key]
-            return (create_blank_image(), "Error: Cached file not found", "", 0)
+            return (create_blank_image(), "Error: Cached file not found", "", 0, "")
         except Exception as e:
             print(f"[ERROR] Error loading image '{selected_file}': {str(e)}")
-            return (create_blank_image(), "Error loading image", "", 0)
+            return (create_blank_image(), "Error loading image", "", 0, "")
 
 
 # Node mappings

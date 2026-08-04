@@ -1,4 +1,5 @@
 import os
+import secrets
 import torch
 from safetensors.torch import save_file
 
@@ -56,6 +57,12 @@ class SaveLatentWithPath:
             print(f"[ERROR] Failed to create directory {full_output_folder}: {str(e)}")
             return (None,)
 
+        # Empty filename: auto-generate a unique name (never block the save).
+        filename = filename.strip()
+        if not filename:
+            filename = f"latent_{secrets.token_hex(16)}"
+            print(f"[INFO] No filename given. Using auto-generated name: {filename}")
+
         # Ensure filename ends with .safetensors
         filename = f"{filename}{suffix.strip()}"
         if not filename.endswith(".safetensors"):
@@ -84,6 +91,9 @@ class SaveLatentWithPath:
 
     @classmethod
     def IS_CHANGED(cls, latent, folder_path, filename, suffix, subfolder_name, **kwargs):
+        # Auto-generated (random) filename: always re-execute.
+        if not filename or not filename.strip():
+            return secrets.token_hex(16)
         # Use a unique identifier based on inputs to detect changes
         full_output_folder = folder_path
         if subfolder_name:
@@ -103,8 +113,6 @@ class SaveLatentWithPath:
             full_output_folder = os.path.join(folder_path, subfolder_name)
         if not folder_path:
             return "Folder path cannot be empty"
-        if not filename:
-            return "Filename cannot be empty"
         try:
             os.makedirs(full_output_folder, exist_ok=True)
             test_filepath = os.path.join(full_output_folder, "test_access")

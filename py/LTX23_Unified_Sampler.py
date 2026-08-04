@@ -13,7 +13,6 @@ import numpy as np
 import torch
 import torch.nn as nn
 
-import comfy.samplers
 import comfy.model_management as mm
 import comfy.utils
 import latent_preview
@@ -51,19 +50,13 @@ from comfy_extras.nodes_lt_audio import (
 from comfy_extras.nodes_lt_upsampler import LTXVLatentUpsampler
 
 from ._cache_fingerprint import stable_fingerprint
-from .Isolate import (
-    SAM31_DEFAULT_CHECKPOINT,
-    _load_sam31,
-    _release_sam31,
-    _resize_batch_masks_to_shape,
-    _scale_for_sam_detection,
-    _segment_batch,
+from ._ltx23_inference import (
+    DISTILLED_MAIN_SIGMAS_TEXT,
+    DISTILLED_REFINEMENT_SIGMAS_TEXT,
+    normalize_dimension,
+    normalize_frame_count as normalize_ltx_frame_count,
 )
 
-
-_LTX_MOUTH_MASK_CACHE = {}
-_LTX_MOUTH_MASK_CACHE_ORDER = []
-_LTX_MOUTH_MASK_CACHE_LIMIT = 0
 _LTX23_DEPTH_PREVIEW_ROUTE_REGISTERED = globals().get("_LTX23_DEPTH_PREVIEW_ROUTE_REGISTERED", False)
 
 # -- Depth preview storage + API route ----------------------------------------
@@ -505,10 +498,6 @@ class CRT_LTX23UnifiedSampler:
     COLOR_WARN = "\033[38;5;208m"
     COLOR_OK = "\033[38;5;120m"
     COLOR_RESET = "\033[0m"
-    MOUTH_DETECT_MEGAPIXELS_FAST = 0.25
-    MOUTH_DETECT_SINGLE_ITEM = True
-    MOUTH_DETECT_CHUNK_SIZE = 10
-    MOUTH_MASK_MAX_COVERAGE = 0.20
     ASPECT_RATIOS = [
         "1:1 (Square)",
         "2:3 (Portrait)",
@@ -532,10 +521,9 @@ class CRT_LTX23UnifiedSampler:
         "21:9 (Landscape)",
     ]
 
-    SIGMAS_MAIN_DEFAULT = (
-        "1.0, 0.99375, 0.9875, 0.98125, 0.975, 0.909375, 0.725, 0.421875, 0.0"
-    )
-    SIGMAS_REFINE_DEFAULT = "0.85, 0.7250, 0.4219, 0.0"
+    SIGMAS_MAIN_DEFAULT = DISTILLED_MAIN_SIGMAS_TEXT
+    SIGMAS_REFINE_DEFAULT = DISTILLED_REFINEMENT_SIGMAS_TEXT
+    SAMPLER_NAME = "euler"
     CFG_DEFAULT = 1.0
     I2V_STRENGTH = 1.0
     I2V_PREPROCESS_COMPRESSION = 25
@@ -574,17 +562,17 @@ class CRT_LTX23UnifiedSampler:
         v2v_guide_strength,
         depth_megapixels,
         v2v_aspect_ratio,
-        sampler_main,
-        sampler_refine,
+        legacy_sampler_main,
+        legacy_sampler_refine,
         steps,
         generated_audio_gain_db,
         firstframe_strength,
-        depth_mouth_mask,
-        mouth_detect_megapixels,
-        mouth_single_item,
-        mouth_detect_chunk_size,
-        mouth_mask_expand,
-        mouth_mask_blur,
+        legacy_compat_1,
+        legacy_compat_2,
+        legacy_compat_3,
+        legacy_compat_4,
+        legacy_compat_5,
+        legacy_compat_6,
     ):
         return stable_fingerprint(
             models_pipe,
@@ -604,31 +592,12 @@ class CRT_LTX23UnifiedSampler:
             float(v2v_guide_strength),
             float(depth_megapixels),
             v2v_aspect_ratio,
-            sampler_main,
-            sampler_refine,
-            int(steps),
             float(generated_audio_gain_db),
             float(firstframe_strength),
-            bool(depth_mouth_mask),
-            float(mouth_detect_megapixels),
-            bool(mouth_single_item),
-            int(mouth_detect_chunk_size),
-            int(mouth_mask_expand),
-            float(mouth_mask_blur),
         )
 
     @classmethod
     def INPUT_TYPES(cls):
-        sampler_names = list(comfy.samplers.SAMPLER_NAMES)
-        sampler_main_default = (
-            "euler"
-            if "euler" in sampler_names
-            else sampler_names[0]
-        )
-        sampler_refine_default = (
-            "euler" if "euler" in sampler_names else sampler_names[0]
-        )
-
         return {
             "required": {
                 "models_pipe": ("LTX23_US_MODELS_PIPE",),
@@ -639,7 +608,7 @@ class CRT_LTX23UnifiedSampler:
                 ),
                 "hq": (
                     "BOOLEAN",
-                    {"default": False, "tooltip": "Run the optional latent upscale/refinement stage. Requires spatial_upscale_model in the models pipe."},
+                    {"default": False, "tooltip": "Generate directly at full resolution in one sampling pass for maximum quality. Disable HQ to use the faster two-stage path: half-resolution generation followed by latent upscale and refinement."},
                 ),
                 "live_preview": (
                     "BOOLEAN",
@@ -689,7 +658,8 @@ class CRT_LTX23UnifiedSampler:
                         "default": 161,
                         "min": 1,
                         "max": 4096,
-                        "step": 1,
+                        "step": 8,
+                        "tooltip": "Requested output length. LTX requires 8k+1 frames; invalid values are normalized automatically and reported in the console.",
                     },
                 ),
                 "v2v_mode": (
@@ -720,21 +690,27 @@ class CRT_LTX23UnifiedSampler:
                     cls.ASPECT_RATIOS,
                     {"default": "16:9 (Landscape)"},
                 ),
-                "sampler_main": (
-                    sampler_names,
-                    {"default": sampler_main_default, "tooltip": "Sampler used for the main generation stage."},
+                # Inert positional slots retain old workflow widget alignment.
+                # The custom frontend never renders them and the backend ignores them.
+                "legacy_sampler_main": (
+                    "STRING",
+                    {"default": "euler", "tooltip": "Reserved compatibility value; ignored."},
                 ),
-                "sampler_refine": (
-                    sampler_names,
-                    {"default": sampler_refine_default, "tooltip": "Sampler used for the HQ refinement stage."},
+                "legacy_sampler_refine": (
+                    "STRING",
+                    {"default": "euler", "tooltip": "Reserved compatibility value; ignored."},
                 ),
+                # Positional compatibility slot for workflows saved before the
+                # fixed distilled schedule. The custom frontend hides it and
+                # the backend deliberately ignores its value.
                 "steps": (
                     "INT",
                     {
                         "default": 9,
-                        "min": 4,
-                        "max": 128,
+                        "min": 9,
+                        "max": 9,
                         "step": 1,
+                        "tooltip": "Legacy compatibility value. LTX 2.3 distilled inference now always uses its fixed trained sigma schedule.",
                     },
                 ),
                 "generated_audio_gain_db": (
@@ -757,15 +733,14 @@ class CRT_LTX23UnifiedSampler:
                         "tooltip": "Influence of the connected first-frame anchor. Zero disables anchoring; one applies full strength.",
                     },
                 ),
-                "depth_mouth_mask": (
-                    "BOOLEAN",
-                    {"default": False, "tooltip": "Detect and suppress the mouth region in V2V depth guidance so generated lip motion is less constrained by source depth."},
-                ),
-                "mouth_detect_megapixels": ("FLOAT", {"default": 0.25, "min": 0.0, "max": 8.0, "step": 0.05, "tooltip": "Deprecated compatibility input. Ignored; mouth detection uses hardcoded fast mode."}),
-                "mouth_single_item": ("BOOLEAN", {"default": True, "tooltip": "Deprecated compatibility input. Ignored; hardcoded internally."}),
-                "mouth_detect_chunk_size": ("INT", {"default": 10, "min": 0, "max": 4096, "step": 1, "tooltip": "Deprecated compatibility input. Ignored; hardcoded internally."}),
-                "mouth_mask_expand": ("INT",   {"default": 8,   "min": 0, "max": 100, "step": 1, "tooltip": "Expands the mouth mask before applying it to the depth guide so lip motion influence covers a larger area."}),
-                "mouth_mask_blur":   ("FLOAT", {"default": 8.0, "min": 0.0, "max": 100.0, "step": 0.5, "tooltip": "Softens the mouth mask edges to avoid harsh transitions in the depth guide."}),
+                # Inert positional slots retained only so workflows saved
+                # before their removal keep subsequent widget values aligned.
+                "legacy_compat_1": ("BOOLEAN", {"default": False, "tooltip": "Reserved compatibility value; ignored."}),
+                "legacy_compat_2": ("FLOAT", {"default": 0.25, "min": 0.25, "max": 0.25, "step": 0.01, "tooltip": "Reserved compatibility value; ignored."}),
+                "legacy_compat_3": ("BOOLEAN", {"default": True, "tooltip": "Reserved compatibility value; ignored."}),
+                "legacy_compat_4": ("INT", {"default": 10, "min": 10, "max": 10, "step": 1, "tooltip": "Reserved compatibility value; ignored."}),
+                "legacy_compat_5": ("INT", {"default": 8, "min": 8, "max": 8, "step": 1, "tooltip": "Reserved compatibility value; ignored."}),
+                "legacy_compat_6": ("FLOAT", {"default": 8.0, "min": 8.0, "max": 8.0, "step": 0.1, "tooltip": "Reserved compatibility value; ignored."}),
                 "depth_cache_mode": (
                     cls.DEPTH_CACHE_MODES,
                     {
@@ -851,64 +826,6 @@ class CRT_LTX23UnifiedSampler:
             for logger, level, propagate in tracked:
                 logger.setLevel(level)
                 logger.propagate = propagate
-
-    @classmethod
-    def _timed_log(cls, label, fn, level="info"):
-        _t0 = time.monotonic()
-        result = fn()
-        cls._log(f"{label} ({time.monotonic() - _t0:.1f}s)", level=level)
-        return result
-
-    @classmethod
-    def _detect_mouth_masks(cls, images, detect_megapixels=0.0, single_item=True, detect_chunk_size=10):
-        batch = int(images.shape[0]) if hasattr(images, "shape") else 0
-        pbar = comfy.utils.ProgressBar(max(1, batch))
-        detect_mp = float(detect_megapixels)
-        single_item = bool(single_item)
-        detect_chunk_size = int(max(0, detect_chunk_size))
-
-        try:
-            cls._log(f"[Mouth Mask] Loading SAM3.1 checkpoint: {SAM31_DEFAULT_CHECKPOINT}")
-            model, clip = _load_sam31(SAM31_DEFAULT_CHECKPOINT)
-            try:
-                cls._log(f"[Mouth Mask] Model loaded. Segmenting {batch} frames...")
-                detect_images = _scale_for_sam_detection(images, detect_mp)
-                masks = _segment_batch(
-                    model,
-                    clip,
-                    detect_images,
-                    "mouth",
-                    0.3,
-                    0,
-                    single_item=single_item,
-                    chunk_size_override=detect_chunk_size,
-                )
-                masks = _resize_batch_masks_to_shape(
-                    masks,
-                    int(images.shape[1]),
-                    int(images.shape[2]),
-                )
-            finally:
-                _release_sam31(model, clip)
-                _, unload_errors = cls._unload_patchers_from_vram(
-                    (model, getattr(clip, "patcher", None))
-                )
-                if unload_errors:
-                    cls._log(
-                        "[Mouth Mask] SAM cleanup warnings: "
-                        + " | ".join(unload_errors),
-                        level="warn",
-                    )
-
-            if masks is None:
-                return None
-
-            pbar.update_absolute(max(1, batch), max(1, batch), None)
-            cls._log(f"[Mouth Mask] loaded {masks.shape} nonzero={masks.sum():.0f}", level="ok")
-            return masks.cpu()
-        except Exception as e:
-            cls._log(f"[Mouth Mask] Detection failed: {e}", level="warn")
-            return None
 
     @staticmethod
     def _unload_patchers_from_vram(patchers):
@@ -1736,8 +1653,19 @@ class CRT_LTX23UnifiedSampler:
         )
         return torch.cat([images, last], dim=0)
 
+    @classmethod
+    def _normalize_frame_count(cls, frame_count, strategy="nearest", label="Frame count"):
+        requested = max(1, int(frame_count))
+        normalized = normalize_ltx_frame_count(requested, strategy=strategy)
+        if normalized != requested:
+            cls._log(
+                f"{label} normalized for LTX 8k+1 ({requested} -> {normalized})",
+                level="warn",
+            )
+        return normalized
+
     @staticmethod
-    def _dims_from_megapixels_aspect(megapixels, aspect_ratio, divisible_by=16):
+    def _dims_from_megapixels_aspect(megapixels, aspect_ratio, divisible_by=32):
         ratio_str = str(aspect_ratio).split(" ")[0]
         try:
             width_ratio, height_ratio = map(int, ratio_str.split(":"))
@@ -1750,8 +1678,8 @@ class CRT_LTX23UnifiedSampler:
         height = math.sqrt(total_pixels / max(ratio, 1e-8))
 
         divisible_by = int(max(1, divisible_by))
-        width = max(divisible_by, round(width / divisible_by) * divisible_by)
-        height = max(divisible_by, round(height / divisible_by) * divisible_by)
+        width = normalize_dimension(width, divisible_by)
+        height = normalize_dimension(height, divisible_by)
 
         return int(width), int(height)
 
@@ -1862,35 +1790,12 @@ class CRT_LTX23UnifiedSampler:
             0
         ]
 
-    @staticmethod
-    def _sigmas_to_text(values):
-        return ", ".join(f"{float(v):.6f}".rstrip("0").rstrip(".") for v in values)
-
     @classmethod
-    def _build_parametric_sigma_texts(cls, steps):
-        steps = int(max(4, steps))
-        if steps == 1:
-            return cls.SIGMAS_MAIN_DEFAULT, cls.SIGMAS_REFINE_DEFAULT
+    def _fixed_sigma_texts(cls):
+        return cls.SIGMAS_MAIN_DEFAULT, cls.SIGMAS_REFINE_DEFAULT
 
-        main_values = []
-        for idx in range(steps):
-            t = idx / float(steps - 1)
-            sigma = 1.0 - (t**3.0)
-            main_values.append(max(0.0, min(1.0, sigma)))
-        main_values[-1] = 0.0
-
-        refine_steps = max(4, min(steps, int(round(steps * 0.45))))
-        tail = main_values[-refine_steps:]
-        tail_first = max(tail[0], 1e-6)
-        scale = 0.85 / tail_first
-        refine_values = [max(0.0, min(0.999, v * scale)) for v in tail]
-        refine_values[-1] = 0.0
-
-        return cls._sigmas_to_text(main_values), cls._sigmas_to_text(refine_values)
-
-    @classmethod
     def _sample_latent(
-        cls,
+        self,
         model,
         positive,
         negative,
@@ -1906,12 +1811,12 @@ class CRT_LTX23UnifiedSampler:
         if preview_enabled:
             ensure_crt_previewer()
 
-        guider = cls._result_tuple(CFGGuider.execute(model, positive, negative, cfg))[0]
+        guider = self._result_tuple(CFGGuider.execute(model, positive, negative, cfg))[0]
         if preview_enabled:
             guider = _CRTPreviewFixGuider(guider, fps_override=frame_rate)
 
         sampled = SamplerCustomAdvanced.execute(noise, guider, sampler, sigmas, latent)
-        sampled = cls._result_tuple(sampled)
+        sampled = self._result_tuple(sampled)
         output_index = int(max(0, output_index))
         if len(sampled) > output_index:
             return sampled[output_index]
@@ -2401,7 +2306,7 @@ class CRT_LTX23UnifiedSampler:
     def _run_i2v_or_t2v(
         self,
         mode,
-        hq,
+        use_two_stage,
         model,
         vae,
         audio_vae,
@@ -2429,7 +2334,7 @@ class CRT_LTX23UnifiedSampler:
         t2v_height_override=None,
         low_vram=False,
     ):
-        total_steps = 5 if not hq else 7
+        total_steps = 5 if not use_two_stage else 7
         self._progress(1, total_steps, f"Preparing {mode} inputs")
 
         is_i2v = mode == "I2V"
@@ -2440,7 +2345,7 @@ class CRT_LTX23UnifiedSampler:
 
         if is_i2v:
             target_image = self._scale_total_pixels(image, megapixels_target)
-            target_image = self._scale_to_multiple_cover(target_image, 32 if hq else 16)
+            target_image = self._scale_to_multiple_cover(target_image, 64 if use_two_stage else 32)
             target_width = int(target_image.shape[2])
             target_height = int(target_image.shape[1])
             try:
@@ -2451,15 +2356,15 @@ class CRT_LTX23UnifiedSampler:
             target_width, target_height = self._dims_from_megapixels_aspect(
                 megapixels_target,
                 aspect_ratio,
-                divisible_by=32 if hq else 16,
+                divisible_by=64 if use_two_stage else 32,
             )
             if t2v_width_override is not None:
                 target_width = int(t2v_width_override)
             if t2v_height_override is not None:
                 target_height = int(t2v_height_override)
-            _div = 32 if hq else 16
-            target_width = max(_div, round(float(target_width) / _div) * _div)
-            target_height = max(_div, round(float(target_height) / _div) * _div)
+            _div = 64 if use_two_stage else 32
+            target_width = normalize_dimension(target_width, _div)
+            target_height = normalize_dimension(target_height, _div)
             target_image = None
             i2v_ref_batch_size = 0
 
@@ -2482,7 +2387,7 @@ class CRT_LTX23UnifiedSampler:
             self._offload_clip(clip)
             mm.soft_empty_cache()
 
-        if not hq:
+        if not use_two_stage:
             self._progress(3, total_steps, "Sampling main pass")
             video_latent, audio_latent, av_latent = self._build_initial_av_latent(
                 target_width,
@@ -2554,7 +2459,7 @@ class CRT_LTX23UnifiedSampler:
             self._progress(3, total_steps, "Sampling stage 1")
             if spatial_upscale_model is None:
                 raise ValueError(
-                    "HQ is enabled but spatial_upscale_model is missing in models_pipe."
+                    "Two-stage mode requires spatial_upscale_model in models_pipe."
                 )
 
             stage1_width = max(64, target_width // 2)
@@ -2700,7 +2605,7 @@ class CRT_LTX23UnifiedSampler:
 
     def _run_v2v(
         self,
-        hq,
+        use_two_stage,
         model,
         model_union_control,
         vae,
@@ -2734,22 +2639,16 @@ class CRT_LTX23UnifiedSampler:
         is_upscale_mode=False,
         v2v_aspect_ratio="16:9 (Landscape)",
         firstframe_strength=1.0,
-        depth_mouth_mask=False,
-        mouth_detect_megapixels=0.25,
-        mouth_single_item=True,
-        mouth_detect_chunk_size=10,
-        mouth_mask_expand=8,
-        mouth_mask_blur=8.0,
         low_vram=False,
     ):
-        if hq:
+        if use_two_stage:
             self._log(
-                "V2V HQ two-stage path is disabled; using single-pass IC-LoRA workflow.",
+                "V2V two-stage mode is unavailable; using the full-resolution HQ single-pass IC-LoRA workflow.",
                 level="warn",
             )
-            hq = False
+            use_two_stage = False
 
-        total_steps = 6 if not hq else 8
+        total_steps = 6 if not use_two_stage else 8
         self._progress(1, total_steps, "Preparing V2V inputs")
 
         # Outpaint and Upscale modes don't use depth or first frame
@@ -2777,18 +2676,29 @@ class CRT_LTX23UnifiedSampler:
             )
 
         if video is not None:
-            input_video_frames = int(video.shape[0])
-            frame_count = input_video_frames
+            available_frames = int(video.shape[0])
+            if available_frames < 1:
+                raise ValueError("V2V input video contains no frames.")
+            requested_frames = min(available_frames, int(frame_count_limit))
+            frame_count = self._normalize_frame_count(
+                requested_frames, strategy="floor", label="V2V input video"
+            )
             self._log(
-                f"V2V frame count from input video: {frame_count}",
+                f"V2V using {frame_count} of {available_frames} input frames",
                 level="ok",
             )
             video_frames = video[:frame_count]
         else:
-            # Depth override only: infer frame count from depth override
-            frame_count = int(v2v_depth_override.shape[0])
+            # Depth override only: infer and normalize its available length.
+            available_frames = int(v2v_depth_override.shape[0])
+            if available_frames < 1:
+                raise ValueError("V2V depth override contains no frames.")
+            requested_frames = min(available_frames, int(frame_count_limit))
+            frame_count = self._normalize_frame_count(
+                requested_frames, strategy="floor", label="V2V depth override"
+            )
             self._log(
-                f"V2V frame count from depth override: {frame_count}",
+                f"V2V using {frame_count} of {available_frames} depth frames",
                 level="ok",
             )
             video_frames = None
@@ -2811,7 +2721,7 @@ class CRT_LTX23UnifiedSampler:
         if is_upscale_mode:
             # Upscale mode: use input video as guide for upscaling
             return self._run_v2v_upscale(
-                hq=hq,
+                use_two_stage=use_two_stage,
                 model=model,
                 vae=vae,
                 audio_vae=audio_vae,
@@ -2841,7 +2751,7 @@ class CRT_LTX23UnifiedSampler:
         if is_outpaint_mode:
             # Outpaint mode: pad video to target aspect ratio
             return self._run_v2v_outpaint(
-                hq=hq,
+                use_two_stage=use_two_stage,
                 model=model,
                 vae=vae,
                 audio_vae=audio_vae,
@@ -2880,21 +2790,6 @@ class CRT_LTX23UnifiedSampler:
             target_image = v2v_depth_override
             depth_input = None
 
-        mouth_masks = None
-        if depth_mouth_mask and not is_outpaint_mode and video_frames is not None:
-            self._log("[Mouth Mask] Detecting mouth region via SAM3.1...")
-            _t0 = time.monotonic()
-            mouth_masks = self._detect_mouth_masks(
-                video_frames,
-                detect_megapixels=mouth_detect_megapixels,
-                single_item=mouth_single_item,
-                detect_chunk_size=mouth_detect_chunk_size,
-            )
-            if mouth_masks is not None:
-                self._log(f"[Mouth Mask] Done ({time.monotonic() - _t0:.1f}s)", level="ok")
-            else:
-                self._log(f"[Mouth Mask] Failed ({time.monotonic() - _t0:.1f}s), skipping", level="warn")
-
         if v2v_depth_override is not None:
             self._progress(2, total_steps, "Using connected V2V depth override")
             depth_image = v2v_depth_override
@@ -2926,42 +2821,6 @@ class CRT_LTX23UnifiedSampler:
             method="nearest-exact",
         )
 
-        if mouth_masks is not None:
-            import torch.nn.functional as _F
-
-            self._log("Applying mouth mask to depth guide...")
-            _mask_device = torch.device("cuda") if torch.cuda.is_available() else depth_resized.device
-
-            def _apply_depth_mouth_mask():
-                dh, dw = depth_resized.shape[1], depth_resized.shape[2]
-                batch = int(mouth_masks.shape[0])
-                chunk_size = 8 if _mask_device.type == "cuda" else 1
-                pbar = comfy.utils.ProgressBar(max(1, batch))
-                alpha_chunks = []
-                for start in range(0, batch, chunk_size):
-                    end = min(batch, start + chunk_size)
-                    m = mouth_masks[start:end].unsqueeze(1).float().to(_mask_device, non_blocking=True)
-                    if mouth_mask_expand > 0:
-                        m = _F.max_pool2d(m, kernel_size=2 * mouth_mask_expand + 1, stride=1, padding=mouth_mask_expand)
-                    if mouth_mask_blur > 0.0:
-                        _radius = max(1, int(math.ceil(mouth_mask_blur)))
-                        _sigma = max(0.1, mouth_mask_blur / 3.0)
-                        _k = 2 * _radius + 1
-                        _x = torch.arange(_k, dtype=torch.float32, device=m.device) - _radius
-                        _gauss = torch.exp(-_x.pow(2) / (2.0 * _sigma * _sigma))
-                        _gauss = _gauss / _gauss.sum()
-                        m = _F.conv2d(m, _gauss.view(1, 1, _k, 1), padding=(_radius, 0))
-                        m = _F.conv2d(m, _gauss.view(1, 1, 1, _k), padding=(0, _radius))
-                    masks_up = _F.interpolate(m, size=(dh, dw), mode="bilinear", align_corners=False).squeeze(1).clamp(0.0, 1.0)
-                    alpha_chunk = ((1.0 - masks_up) if mouth_mask_blur > 0.0 else (masks_up <= 0.5).float()).unsqueeze(-1)
-                    alpha_chunks.append(alpha_chunk.to(depth_resized.device))
-                    pbar.update_absolute(end, max(1, batch), None)
-                alpha = torch.cat(alpha_chunks, dim=0)
-                self._log(f"[Mouth Mask] depth_resized shape={depth_resized.shape} masked pixels={(alpha < 0.999).sum().item()}")
-                return depth_resized * alpha
-
-            depth_resized = self._timed_log("Mouth mask applied to depth guide", _apply_depth_mouth_mask, level="ok")
-
         multiple = max(1, int(round(float(latent_downscale_factor) * 32.0)))
         guide_full = self._scale_to_multiple_cover(depth_resized, multiple, "lanczos")
         guide_full = self._fit_image_batch_frames(
@@ -2983,7 +2842,7 @@ class CRT_LTX23UnifiedSampler:
 
         self._progress(3, total_steps, "Building IC-LoRA guide")
 
-        if not hq:
+        if not use_two_stage:
             self._progress(4, total_steps, "Running V2V main sampler")
             latent_video = self._result_tuple(
                 EmptyLTXVLatentVideo.execute(
@@ -3070,7 +2929,7 @@ class CRT_LTX23UnifiedSampler:
             self._progress(4, total_steps, "Running V2V stage 1")
             if spatial_upscale_model is None:
                 raise ValueError(
-                    "HQ is enabled but spatial_upscale_model is missing in models_pipe."
+                    "Two-stage mode requires spatial_upscale_model in models_pipe."
                 )
 
             stage1_width = max(64, int(guide_full.shape[2]) // 2)
@@ -3281,7 +3140,7 @@ class CRT_LTX23UnifiedSampler:
 
     def _run_v2v_upscale(
         self,
-        hq,
+        use_two_stage,
         model,
         vae,
         audio_vae,
@@ -3310,8 +3169,9 @@ class CRT_LTX23UnifiedSampler:
         """Upscale V2V workflow: use input video as guide for upscaling."""
         self._progress(1, total_steps, "Preparing Upscale inputs")
 
-        # Scale input video to megapixels target
+        # Scale and align the guide with ComfyUI's 32-pixel LTX latent grid.
         scaled_video = self._scale_total_pixels(video_frames, megapixels_target)
+        scaled_video = self._scale_to_multiple_cover(scaled_video, 32)
         target_height, target_width = scaled_video.shape[1], scaled_video.shape[2]
 
         self._log(
@@ -3426,7 +3286,7 @@ class CRT_LTX23UnifiedSampler:
 
     def _run_v2v_outpaint(
         self,
-        hq,
+        use_two_stage,
         model,
         vae,
         audio_vae,
@@ -3458,7 +3318,7 @@ class CRT_LTX23UnifiedSampler:
 
         # Calculate target dimensions based on aspect ratio
         target_width, target_height = self._dims_from_megapixels_aspect(
-            megapixels_target, v2v_aspect_ratio, divisible_by=16
+            megapixels_target, v2v_aspect_ratio, divisible_by=32
         )
 
         self._log(
@@ -3631,23 +3491,22 @@ class CRT_LTX23UnifiedSampler:
         v2v_guide_strength,
         depth_megapixels,
         v2v_aspect_ratio,
-        sampler_main,
-        sampler_refine,
+        legacy_sampler_main,
+        legacy_sampler_refine,
         steps,
         generated_audio_gain_db,
         firstframe_strength,
-        depth_mouth_mask,
-        mouth_detect_megapixels,
-        mouth_single_item,
-        mouth_detect_chunk_size,
-        mouth_mask_expand,
-        mouth_mask_blur,
+        legacy_compat_1,
+        legacy_compat_2,
+        legacy_compat_3,
+        legacy_compat_4,
+        legacy_compat_5,
+        legacy_compat_6,
     ):
         mode = str(workflow_mode)
         if mode not in ("I2V", "T2V", "V2V"):
             raise ValueError(f"Unknown workflow_mode: {mode}")
         mode_internal = mode
-
         self._log(f"Starting mode: {mode}")
         live_preview = bool(live_preview)
         if live_preview:
@@ -3656,22 +3515,22 @@ class CRT_LTX23UnifiedSampler:
         else:
             latent_preview.set_preview_method("none")
 
-        # UI semantics: HQ ON means single-pass (no spatial upscale).
-        # Internal pipeline uses hq=True for the two-stage upscale path,
-        # so invert once at entry to keep downstream logic unchanged.
-        hq = not bool(hq)
+        # Public semantics: HQ ON is a full-resolution single pass.
+        # The faster path generates at half resolution, then upscales/refines.
+        hq_enabled = bool(hq)
+        use_two_stage = not hq_enabled
         megapixels_target = round(float(megapixels_target) * 10.0) / 10.0
         frame_count = int(frame_count)
-        steps = int(steps)
 
         models = self._unpack_models_pipe(models_pipe)
         config = self._unpack_config_pipe(config_pipe)
 
         override_hq = config.get("override_hq", None)
         if override_hq is not None:
-            hq = not bool(override_hq)
+            hq_enabled = bool(override_hq)
+            use_two_stage = not hq_enabled
             self._log(
-                f"Overriding hq from US Config -> {bool(override_hq)}",
+                f"Overriding HQ from US Config -> {hq_enabled}",
                 level="ok",
             )
 
@@ -3780,20 +3639,36 @@ class CRT_LTX23UnifiedSampler:
                     level="ok",
                 )
 
-        if mode_internal == "V2V" and video is not None:
-            try:
-                target_output_frames = int(video.shape[0])
-            except Exception:
-                target_output_frames = int(max(1, frame_count))
+        if mode_internal in ("I2V", "T2V"):
+            frame_count = self._normalize_frame_count(
+                frame_count, strategy="nearest", label=f"{mode_internal} frame count"
+            )
+            target_output_frames = frame_count
         else:
-            target_output_frames = int(max(1, frame_count))
+            source_frames = None
+            if video is not None:
+                source_frames = int(video.shape[0])
+            elif v2v_depth_override is not None:
+                source_frames = int(v2v_depth_override.shape[0])
+            if source_frames is None:
+                source_frames = frame_count
+            target_output_frames = self._normalize_frame_count(
+                source_frames, strategy="floor", label="V2V input batch frame count"
+            )
 
-        sigmas_main, sigmas_refine = self._build_parametric_sigma_texts(steps)
+        sigmas_main, sigmas_refine = self._fixed_sigma_texts()
+        schedule_label = "8-step main"
+        if use_two_stage and mode_internal in ("I2V", "T2V"):
+            schedule_label += " + fixed refinement"
+        self._log(
+            f"Using fixed LTX 2.3 distilled schedule ({schedule_label})",
+            level="ok",
+        )
 
         if mode_internal in ("I2V", "T2V"):
             images, audio = self._run_i2v_or_t2v(
                 mode=mode_internal,
-                hq=hq,
+                use_two_stage=use_two_stage,
                 model=model,
                 vae=vae,
                 audio_vae=audio_vae,
@@ -3805,9 +3680,9 @@ class CRT_LTX23UnifiedSampler:
                 aspect_ratio=aspect_ratio,
                 frame_count=frame_count,
                 frame_rate=target_fps,
-                sampler_main=sampler_main,
+                sampler_main=self.SAMPLER_NAME,
                 sigmas_main=sigmas_main,
-                sampler_refine=sampler_refine,
+                sampler_refine=self.SAMPLER_NAME,
                 sigmas_refine=sigmas_refine,
                 generated_audio_gain_db=float(generated_audio_gain_db),
                 spatial_upscale_model=spatial_upscale_model,
@@ -3838,7 +3713,7 @@ class CRT_LTX23UnifiedSampler:
                     level="ok",
                 )
             images, audio = self._run_v2v(
-                hq=hq,
+                use_two_stage=use_two_stage,
                 model=model_for_v2v,
                 model_union_control=model_union_control,
                 vae=vae,
@@ -3847,11 +3722,11 @@ class CRT_LTX23UnifiedSampler:
                 prompt=prompt,
                 seed=seed,
                 cfg=cfg,
-                frame_count_limit=frame_count,
+                frame_count_limit=target_output_frames,
                 frame_rate=target_fps,
-                sampler_main=sampler_main,
+                sampler_main=self.SAMPLER_NAME,
                 sigmas_main=sigmas_main,
-                sampler_refine=sampler_refine,
+                sampler_refine=self.SAMPLER_NAME,
                 sigmas_refine=sigmas_refine,
                 megapixels_target=megapixels_target,
                 depth_megapixels=float(depth_megapixels),
@@ -3872,12 +3747,6 @@ class CRT_LTX23UnifiedSampler:
                 is_upscale_mode=is_upscale_mode,
                 v2v_aspect_ratio=v2v_aspect_ratio,
                 firstframe_strength=float(firstframe_strength),
-                depth_mouth_mask=bool(depth_mouth_mask),
-                mouth_detect_megapixels=float(mouth_detect_megapixels),
-                mouth_single_item=bool(mouth_single_item),
-                mouth_detect_chunk_size=int(mouth_detect_chunk_size),
-                mouth_mask_expand=int(mouth_mask_expand),
-                mouth_mask_blur=float(mouth_mask_blur),
                 low_vram=bool(low_vram),
             )
 

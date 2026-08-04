@@ -1,4 +1,5 @@
 import os
+import secrets
 
 
 class SaveTextWithPath:
@@ -24,6 +25,10 @@ class SaveTextWithPath:
                         "tooltip": "If enabled, existing files will be overwritten. If disabled, a numbered suffix like _001 is added.",
                     },
                 ),
+                "extension": (
+                    [".txt", ".md", ".json", ".csv", ".log", ".xml", ".yaml", ".html"],
+                    {"default": ".txt", "tooltip": "File extension for the saved text file."},
+                ),
             }
         }
 
@@ -31,22 +36,39 @@ class SaveTextWithPath:
     FUNCTION = "save_text"
     CATEGORY = "CRT/Save"
     OUTPUT_NODE = True
-    DESCRIPTION = "Saves a text string to a specified folder path with a subfolder as a .txt file."
+    DESCRIPTION = "Saves a text string to a specified folder path with a subfolder, with a selectable file extension."
 
-    def save_text(self, text, folder_path, subfolder_name, filename, suffix, overwrite=True):
+    def save_text(self, text, folder_path, subfolder_name, filename, suffix, overwrite=True, extension=".txt"):
         """
-        Saves the provided text to a .txt file with UTF-8 encoding.
+        Saves the provided text to a file with UTF-8 encoding.
         """
-        # Construct the full directory path
-        full_folder_path = os.path.join(folder_path, subfolder_name)
+        # Normalize the extension (accepts "md" or ".md")
+        extension_clean = extension.strip()
+        if not extension_clean:
+            extension_clean = ".txt"
+        if not extension_clean.startswith("."):
+            extension_clean = f".{extension_clean}"
+        # Empty subfolder: save directly into the base folder.
+        subfolder_clean = subfolder_name.strip().lstrip("/\\")
+        full_folder_path = (
+            os.path.join(folder_path, subfolder_clean)
+            if subfolder_clean
+            else folder_path
+        )
 
         # Create the directory structure if it doesn't exist
         if full_folder_path and not os.path.exists(full_folder_path):
             os.makedirs(full_folder_path, exist_ok=True)
 
-        # Keep the stem separate so numbered copies are always inserted before .txt.
-        filename_stem = f"{filename}{suffix.strip()}"
-        clean_filename = f"{filename_stem}.txt"
+        # Empty filename: auto-generate a unique name (never block the save).
+        filename_clean = filename.strip()
+        if not filename_clean:
+            filename_clean = f"text_{secrets.token_hex(16)}"
+            print(f"[INFO] No filename given. Using auto-generated name: {filename_clean}")
+
+        # Keep the stem separate so numbered copies are always inserted before the extension.
+        filename_stem = f"{filename_clean}{suffix.strip()}"
+        clean_filename = f"{filename_stem}{extension_clean}"
 
         # Construct the full file path
         full_path = os.path.join(full_folder_path, clean_filename)
@@ -54,7 +76,7 @@ class SaveTextWithPath:
         if not overwrite and os.path.exists(full_path):
             counter = 1
             while os.path.exists(full_path):
-                numbered_filename = f"{filename_stem}_{counter:03d}.txt"
+                numbered_filename = f"{filename_stem}_{counter:03d}{extension_clean}"
                 full_path = os.path.join(full_folder_path, numbered_filename)
                 counter += 1
 

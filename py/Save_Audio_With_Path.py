@@ -1,4 +1,5 @@
 import os
+import secrets
 import torch
 import numpy as np
 import folder_paths
@@ -43,11 +44,11 @@ class SaveAudioWithPath:
                 ),
                 "subfolder_name": (
                     "STRING",
-                    {"default": "audio", "tooltip": "Subfolder to create within the base folder."},
+                    {"default": "audio", "tooltip": "Subfolder to create within the base folder. Leave empty to save directly into the base folder."},
                 ),
                 "filename": (
                     "STRING",
-                    {"default": "output", "tooltip": "File name for the audio file (without extension)."},
+                    {"default": "output", "tooltip": "File name for the audio file (without extension). Leave empty for an auto-generated unique name."},
                 ),
                 "suffix": ("STRING", {"default": "", "tooltip": "Optional suffix to append to the filename."}),
                 "sample_rate": (
@@ -118,14 +119,20 @@ class SaveAudioWithPath:
             filename_clean = filename.strip().lstrip('/\\')
             suffix_clean = suffix.strip()
 
-            if not subfolder_clean or not filename_clean:
-                raise ValueError("Subfolder and Filename fields cannot be empty.")
+            # Empty filename: auto-generate a unique name (never block the save).
+            if not filename_clean:
+                filename_clean = f"audio_{secrets.token_hex(16)}"
+                print(f"[INFO] No filename given. Using auto-generated name: {filename_clean}")
 
             # Combine filename and the custom suffix
             filename_with_suffix = f"{filename_clean}{suffix_clean}"
 
-            # Construct the full directory path using the corrected base_path
-            final_dir = os.path.join(base_path, subfolder_clean)
+            # Empty subfolder: save directly into the base folder.
+            final_dir = (
+                os.path.join(base_path, subfolder_clean)
+                if subfolder_clean
+                else base_path
+            )
             os.makedirs(final_dir, exist_ok=True)
 
             # Handle file naming and overwriting

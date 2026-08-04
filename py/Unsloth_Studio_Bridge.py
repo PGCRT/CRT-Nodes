@@ -339,6 +339,33 @@ def _image_tensor_to_data_urls(image):
     return data_urls
 
 
+def _load_skills(skills_path):
+    raw = str(skills_path or "").strip()
+    if not raw:
+        return "", 0
+    if not os.path.isdir(raw):
+        raise RuntimeError(f"Skills path is not a directory: {raw}")
+    md_files = glob.glob(os.path.join(raw, "**", "*.md"), recursive=True)
+    md_files = sorted({os.path.normpath(p) for p in md_files if os.path.isfile(p)})
+    if not md_files:
+        return "", 0
+    parts = []
+    for path in md_files:
+        try:
+            with open(path, "r", encoding="utf-8", errors="replace") as f:
+                content = f.read().strip()
+        except Exception as exc:
+            print(f"[Unsloth Studio Bridge] WARNING: could not read skill file {path}: {exc}", file=sys.stderr)
+            continue
+        if not content:
+            continue
+        rel = os.path.relpath(path, raw)
+        parts.append(f"## Skill: {rel}\n\n{content}")
+    if not parts:
+        return "", 0
+    return "# Skills\n\n" + "\n\n".join(parts), len(parts)
+
+
 def _build_user_content(prompt, image):
     text = prompt.strip() if isinstance(prompt, str) else ""
     image_urls = _image_tensor_to_data_urls(image)
@@ -415,7 +442,7 @@ def _validate_context_budget(
     return available
 
 
-def _chat_completion(base_url, messages, seed, params, include_reasoning, disable_thinking, clear_prompt_cache=True):
+def _chat_completion(base_url, messages, seed, params, include_reasoning, disable_thinking, clear_prompt_cache=False, reuse_context=True):
     import time
     body = {
         "model": "default",
@@ -426,8 +453,10 @@ def _chat_completion(base_url, messages, seed, params, include_reasoning, disabl
         "top_k": params.get("top_k"),
         "min_p": params.get("min_p"),
         "stream": False,
-        "cache_prompt": False,
+        "cache_prompt": reuse_context,
     }
+    if reuse_context:
+        body["id_slot"] = 0
     if disable_thinking:
         body["chat_template_kwargs"] = {"enable_thinking": False}
     body = {k: v for k, v in body.items() if v is not None}
@@ -452,12 +481,20 @@ def _chat_completion(base_url, messages, seed, params, include_reasoning, disabl
     completion_tokens = usage.get("completion_tokens", 0)
     prompt_tokens = usage.get("prompt_tokens", 0)
     total_tokens = usage.get("total_tokens", 0)
+    tokens_cached = result.get("tokens_cached")
+    cached_note = f", cached={tokens_cached}" if tokens_cached is not None else ""
     tps = completion_tokens / elapsed if elapsed > 0 else 0.0
     print(
-        f"[Unsloth Studio Bridge] Tokens: prompt={prompt_tokens}, completion={completion_tokens}, total={total_tokens}, "
+        f"[Unsloth Studio Bridge] Tokens: prompt={prompt_tokens}, completion={completion_tokens}, total={total_tokens}{cached_note}, "
         f"time={elapsed:.2f}s, speed={tps:.2f} tok/s",
         file=sys.stderr,
     )
+    if reuse_context and clear_prompt_cache:
+        print(
+            "[Unsloth Studio Bridge] NOTE: clear_prompt_cache overrides reuse_context; "
+            "the next run will reprocess the full prompt.",
+            file=sys.stderr,
+        )
     if clear_prompt_cache:
         try:
             erased = _request_json(
@@ -503,6 +540,18 @@ class UnslothLLM:
                     },
                 ),
                 "system_prompt": ("STRING", {"default": "", "multiline": True}),
+                "skills_path": (
+                    "STRING",
+                    {
+                        "default": "",
+                        "multiline": False,
+                        "tooltip": (
+                            "Optional directory with skill files. Every .md file in the folder "
+                            "and its subfolders is loaded recursively and appended to the "
+                            "system prompt as extra context."
+                        ),
+                    },
+                ),
                 "disable_thinking": (
                     "BOOLEAN",
                     {
@@ -517,11 +566,24 @@ class UnslothLLM:
                         "tooltip": "Append reasoning_content returned by the server to the response output when the loaded model provides it.",
                     },
                 ),
-                "clear_prompt_cache": (
+                "reuse_context": (
                     "BOOLEAN",
                     {
                         "default": True,
-                        "tooltip": "Erase llama-server slot 0 after generation. This reduces prompt retention but prevents reuse of that prompt cache.",
+                        "tooltip": (
+                            "Keep the system prompt and skill files in the llama-server slot "
+                            "cache between runs: only the new user content (image + prompt) is "
+                            "evaluated, making repeated runs much faster. Editing the system "
+                            "prompt or a skill file changes the prefix and automatically "
+                            "rebuilds the cache once."
+                        ),
+                    },
+                ),
+                "clear_prompt_cache": (
+                    "BOOLEAN",
+                    {
+                        "default": False,
+                        "tooltip": "Erase llama-server slot 0 after generation, forcing the next run to reprocess the full prompt. Leave off to keep context reuse.",
                     },
                 ),
             },
@@ -536,7 +598,7 @@ class UnslothLLM:
         "Unsloth Studio must remain open; image input requires a vision model."
     )
 
-    def generate(self, prompt, seed, unsloth_server_url=DEFAULT_UNSLOTH_STUDIO_URL, system_prompt="", disable_thinking=True, include_reasoning=False, clear_prompt_cache=True, image=None):
+    def generate(self, prompt, seed, unsloth_server_url=DEFAULT_UNSLOTH_STUDIO_URL, system_prompt="", skills_path="", disable_thinking=True, include_reasoning=False, reuse_context=True, clear_prompt_cache=False, image=None):
         if (not prompt or not prompt.strip()) and image is None:
             print("[Unsloth Studio Bridge][WARN] Prompt is empty", file=sys.stderr)
         print(
@@ -561,8 +623,16 @@ class UnslothLLM:
             file=sys.stderr,
         )
         messages = []
+        skills_text, skills_count = _load_skills(skills_path)
+        if skills_count:
+            print(f"[Unsloth Studio Bridge] Loaded {skills_count} skill file(s) from {skills_path}", file=sys.stderr)
+        system_parts = []
         if system_prompt and system_prompt.strip():
-            messages.append({"role": "system", "content": system_prompt.strip()})
+            system_parts.append(system_prompt.strip())
+        if skills_text:
+            system_parts.append(skills_text)
+        if system_parts:
+            messages.append({"role": "system", "content": "\n\n".join(system_parts)})
         user_content, image_count = _build_user_content(prompt, image)
         if image_count:
             print(f"[Unsloth Studio Bridge] Attached {image_count} image(s) to request", file=sys.stderr)
@@ -589,7 +659,7 @@ class UnslothLLM:
         )
         print(
             f"[Unsloth Studio Bridge] Sending request (seed={seed}, max_tokens=omitted, "
-            f"disable_thinking={disable_thinking})",
+            f"disable_thinking={disable_thinking}, reuse_context={reuse_context})",
             file=sys.stderr,
         )
         response = _chat_completion(
@@ -600,6 +670,7 @@ class UnslothLLM:
             include_reasoning,
             disable_thinking,
             clear_prompt_cache,
+            reuse_context,
         )
         print(
             f"[Unsloth Studio Bridge][INFO] Response received: {len(response)} chars",

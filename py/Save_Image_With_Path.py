@@ -1,8 +1,9 @@
 import os
-import torch
+import secrets
+
+import folder_paths
 import numpy as np
 from PIL import Image
-import folder_paths
 
 
 class SaveImageWithPath:
@@ -16,86 +17,152 @@ class SaveImageWithPath:
                 "image": ("IMAGE",),
                 "folder_path": (
                     "STRING",
-                    {"default": output_dir, "tooltip": "Base folder path. Defaults to ComfyUI's output folder."},
+                    {
+                        "default": output_dir,
+                        "tooltip": "Base folder path. Defaults to ComfyUI's output folder.",
+                    },
                 ),
                 "subfolder_name": (
                     "STRING",
-                    {"default": "images", "tooltip": "Subfolder name to create within the base folder."},
+                    {
+                        "default": "images",
+                        "tooltip": "Optional subfolder within the base folder. Leave empty to save directly into the base folder.",
+                    },
                 ),
                 "filename": (
                     "STRING",
                     {
                         "default": "output",
-                        "tooltip": "Base file name without extension. A suffix will be added for each image in a batch.",
+                        "tooltip": "Base file name without extension. Leave empty to generate a random name. Existing files are never overwritten.",
                     },
                 ),
-                "suffix": ("STRING", {"default": "", "tooltip": "Optional suffix appended to filename."}),
-                "extension": (["png", "jpg"], {"default": "png", "tooltip": "Image file extension."}),
+                "suffix": (
+                    "STRING",
+                    {
+                        "default": "",
+                        "tooltip": "Optional suffix appended to filename.",
+                    },
+                ),
+                "extension": (
+                    ["png", "jpg"],
+                    {"default": "png", "tooltip": "Image file extension."},
+                ),
             }
         }
 
     RETURN_TYPES = ()
     FUNCTION = "save_images"
     CATEGORY = "CRT/Save"
-    DESCRIPTION = "Saves all images from a batch to a specified folder, adding a numerical suffix to each."
+    DESCRIPTION = (
+        "Saves every image in a batch to a specified folder without overwriting "
+        "existing files. An empty filename generates a random name."
+    )
 
-    def save_images(self, image, folder_path, subfolder_name, filename, suffix, extension):
+    @staticmethod
+    def _reserve_unique_file(directory, base_filename, extension):
+        """Atomically reserve a new path, adding a counter after collisions."""
+        counter = 0
+        while True:
+            numbered_suffix = "" if counter == 0 else f"_{counter}"
+            final_path = os.path.join(
+                directory,
+                f"{base_filename}{numbered_suffix}.{extension}",
+            )
+            try:
+                return final_path, open(final_path, "xb")
+            except FileExistsError:
+                counter += 1
+
+    def save_images(
+        self,
+        image,
+        folder_path,
+        subfolder_name,
+        filename,
+        suffix,
+        extension,
+    ):
         if image is None:
             return ()
 
         try:
-            # --- Initial Setup and Cleaning ---
-            subfolder_clean = subfolder_name.strip().lstrip('/\\')
-            filename_clean = filename.strip().lstrip('/\\')
+            subfolder_clean = subfolder_name.strip().lstrip("/\\")
+            filename_clean = filename.strip().lstrip("/\\")
             suffix_clean = suffix.strip()
+            extension_clean = extension.lower()
 
-            if not subfolder_clean or not filename_clean:
-                raise ValueError("Subfolder and Filename fields cannot be empty.")
-
-            final_dir = os.path.join(folder_path, subfolder_clean)
+            final_dir = (
+                os.path.join(folder_path, subfolder_clean)
+                if subfolder_clean
+                else folder_path
+            )
             os.makedirs(final_dir, exist_ok=True)
 
-            # --- BATCH PROCESSING LOGIC ---
+            random_filename = not filename_clean
+            filename_root = (
+                f"image_{secrets.token_hex(16)}"
+                if random_filename
+                else filename_clean
+            )
+            filename_root = f"{filename_root}{suffix_clean}"
             batch_size = image.shape[0]
 
-            for i in range(batch_size):
-                # Determine the base filename for this specific image in the batch
-                if batch_size > 1:
-                    # If it's a batch, append a suffix like _1, _2, _3
-                    base_filename = f"{filename_clean}{suffix_clean}_{i+1}"
-                else:
-                    # If it's a single image, just use the provided filename
-                    base_filename = f"{filename_clean}{suffix_clean}"
+            for index in range(batch_size):
+                base_filename = (
+                    f"{filename_root}_{index + 1}"
+                    if batch_size > 1
+                    else filename_root
+                )
+                image_array = np.clip(
+                    image[index].detach().cpu().numpy() * 255.0,
+                    0,
+                    255,
+                ).astype(np.uint8)
+                pil_image = Image.fromarray(image_array)
 
-                # --- Overwrite Prevention Logic ---
-                # Check if a file with this name already exists and add a counter if it does
-                filepath_to_check = os.path.join(final_dir, f"{base_filename}.{extension}")
-                final_filepath = filepath_to_check
-                counter = 1
-                while os.path.exists(final_filepath):
-                    # If "output_1.png" exists, the next one will be "output_1_1.png"
-                    final_filepath = os.path.join(final_dir, f"{base_filename}_{counter}.{extension}")
-                    counter += 1
+                final_filepath = None
+                file_handle = None
+                try:
+                    final_filepath, file_handle = self._reserve_unique_file(
+                        final_dir,
+                        base_filename,
+                        extension_clean,
+                    )
+                    with file_handle:
+                        if extension_clean == "jpg":
+                            pil_image.save(
+                                file_handle,
+                                format="JPEG",
+                                quality=98,
+                                subsampling="4:4:4",
+                            )
+                        else:
+                            pil_image.save(file_handle, format="PNG")
+                except Exception:
+                    if file_handle is not None and not file_handle.closed:
+                        file_handle.close()
+                    if final_filepath is not None:
+                        try:
+                            os.remove(final_filepath)
+                        except OSError:
+                            pass
+                    raise
 
-                # Convert the i-th tensor from the batch to a PIL Image
-                # image[i] selects the current image from the batch
-                pil_img = Image.fromarray((image[i].cpu().numpy() * 255).astype(np.uint8))
-
-                # Save the image
-                if extension == "jpg":
-                    pil_img.save(final_filepath, quality=98, subsampling="4:4:4")
-                else:
-                    pil_img.save(final_filepath)
-                print(f"[OK] Saved image to: {final_filepath}")
+                name_mode = "random name" if random_filename else "unique path"
+                print(
+                    f"[CRT Save Image With Path][OK] Saved using {name_mode}: "
+                    f"{final_filepath}"
+                )
 
             return ()
 
-        except Exception as e:
-            print(f"[ERROR] ERROR in SaveImageWithPath: {str(e)}")
-            raise e
+        except Exception as error:
+            print(f"[CRT Save Image With Path][ERROR] {error}")
+            raise
 
 
-# ComfyUI Node Mappings
 NODE_CLASS_MAPPINGS = {"SaveImageWithPath": SaveImageWithPath}
 
-NODE_DISPLAY_NAME_MAPPINGS = {"SaveImageWithPath": "Save Image With Path (CRT)"}
+NODE_DISPLAY_NAME_MAPPINGS = {
+    "SaveImageWithPath": "Save Image With Path (CRT)"
+}

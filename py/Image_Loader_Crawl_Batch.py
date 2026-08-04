@@ -54,6 +54,18 @@ class CRT_ImageLoaderCrawlBatch:
         return target_width, target_height
 
     @staticmethod
+    def _load_sidecar_txt(path, tag):
+        sidecar = path.with_suffix(".txt")
+        if not sidecar.is_file():
+            print(f"{tag} No sidecar .txt found for '{path.name}'.")
+            return ""
+        try:
+            return sidecar.read_text(encoding="utf-8", errors="replace").strip()
+        except Exception as exc:
+            print(f"{tag} ERROR reading sidecar '{sidecar}': {exc}")
+            return ""
+
+    @staticmethod
     def _decode_rgb(path):
         with Image.open(path) as opened:
             transposed = ImageOps.exif_transpose(opened)
@@ -345,13 +357,14 @@ class CRT_ImageLoaderCrawlBatch:
             }
         }
 
-    RETURN_TYPES = ("IMAGE", "STRING", "STRING", "INT", "INT")
+    RETURN_TYPES = ("IMAGE", "STRING", "STRING", "INT", "INT", "STRING")
     RETURN_NAMES = (
         "images",
         "file_names",
         "file_paths",
         "batch_count",
         "total_images",
+        "sidecar_txt_prompt",
     )
     FUNCTION = "load_batch"
     CATEGORY = "CRT/Load"
@@ -378,12 +391,12 @@ class CRT_ImageLoaderCrawlBatch:
             return torch.zeros(1, 64, 64, 3, dtype=torch.float32)
 
         if not folder_path or not folder_path.strip():
-            return (blank(), "Error: folder path is empty", "", 0, 0)
+            return (blank(), "Error: folder path is empty", "", 0, 0, "")
 
         folder = Path(folder_path.strip()).expanduser()
         if not folder.is_dir():
             print(f"{tag} ERROR: Folder '{folder}' not found.")
-            return (blank(), "Error: folder not found", "", 0, 0)
+            return (blank(), "Error: folder not found", "", 0, 0, "")
         folder = folder.resolve()
 
         # -- File-list cache ---------------------------------------------------
@@ -420,14 +433,14 @@ class CRT_ImageLoaderCrawlBatch:
                 print(f"{tag} ERROR scanning: {exc}")
                 self.cache.pop(cache_key, None)
                 self._cancel_prefetch()
-                return (blank(), f"Error: {exc}", "", 0, 0)
+                return (blank(), f"Error: {exc}", "", 0, 0, "")
 
         files = self.cache[cache_key]["files"]
         total = len(files)
 
         if total == 0:
             print(f"{tag} No images found in '{folder}'.")
-            return (blank(), "No images found", "", 0, 0)
+            return (blank(), "No images found", "", 0, 0, "")
 
         # -- Select and load batch ---------------------------------------------
         start = (seed * batch_count) % total
@@ -463,6 +476,7 @@ class CRT_ImageLoaderCrawlBatch:
 
         names = []
         paths = []
+        prompts = []
         for position, index in enumerate(selected_indices):
             path = files[index]
             error = errors[position]
@@ -475,7 +489,10 @@ class CRT_ImageLoaderCrawlBatch:
                 name = f"Error: {path.name}"
 
             names.append(name)
-            paths.append(str(path))
+            # file_paths is the containing directory. The filename is exposed
+            # separately through file_names.
+            paths.append(str(path.parent))
+            prompts.append(self._load_sidecar_txt(path, tag))
 
         batch = torch.cat(tensors, dim=0)
 
@@ -507,6 +524,7 @@ class CRT_ImageLoaderCrawlBatch:
             "\n".join(paths),
             len(tensors),
             total,
+            "\n".join(prompts),
         )
 
 

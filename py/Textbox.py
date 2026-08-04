@@ -1,7 +1,4 @@
 class CRT_Textbox:
-    def __init__(self):
-        pass
-
     @classmethod
     def INPUT_TYPES(cls):
         return {
@@ -13,13 +10,19 @@ class CRT_Textbox:
                         "multiline": True,
                         "forceInput": False,
                         "print_to_screen": True,
+                        "tooltip": "Displays and passes through the connected string. When passthrough is not connected, this editable text is returned.",
                     },
                 ),
             },
             "optional": {
                 "passthrough": (
                     "STRING",
-                    {"default": "", "multiline": True, "forceInput": True},
+                    {
+                        "default": "",
+                        "multiline": True,
+                        "forceInput": True,
+                        "tooltip": "Optional connected string to display and return unchanged.",
+                    },
                 )
             },
         }
@@ -30,11 +33,12 @@ class CRT_Textbox:
     FUNCTION = "textbox"
     CATEGORY = "CRT/Text"
 
-    def textbox(self, text="", passthrough=""):
-        if passthrough != "":
-            text = passthrough
-            return {"ui": {"text": text}, "result": (text,)}
-        return (text,)
+    def textbox(self, text="", **kwargs):
+        # Optional forceInput values are omitted when disconnected, so checking
+        # the key preserves a deliberately connected empty string.
+        value = kwargs["passthrough"] if "passthrough" in kwargs else text
+        value = "" if value is None else str(value)
+        return {"ui": {"text": [value]}, "result": (value,)}
 
 
 NODE_CLASS_MAPPINGS = {"CRT_Textbox": CRT_Textbox}
