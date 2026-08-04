@@ -84,12 +84,13 @@ Restart ComfyUI after installation or an update.
 - `Z-Image Turbo Model (CRT AutoDL)`
 - `Z-Image Turbo VAE (CRT AutoDL)`
 
-### CRT/Conditioning (6)
+### CRT/Conditioning (7)
 
 - `CLIP Text Encode + Unload (CRT)`
 - `CLIP Text Encode FLUX Merged (CRT)`
 - `Dynamic Prompt Scheduler (CRT)`
 - `File Batch Prompt Scheduler (CRT)`
+- `File Batch Prompt Scheduler KREA2 (CRT)`
 - `Smart ControlNet Apply (CRT)`
 - `Smart Style Model Apply DUAL (CRT)`
 
@@ -144,7 +145,7 @@ Restart ComfyUI after installation or an update.
 
 - `Unsloth Studio Bridge (CRT)`
 
-### CRT/Load (11)
+### CRT/Load (12)
 
 - `Audio Loader Crawl (CRT)`
 - `Image Loader Crawl (CRT)`
@@ -154,6 +155,7 @@ Restart ComfyUI after installation or an update.
 - `Load Last Image (CRT)`
 - `Load Last Latent (CRT)`
 - `Load Last Video (CRT)`
+- `Load Latents Conditioning (CRT)`
 - `Text Loader Crawl (CRT)`
 - `Text Loader Crawl Batch (CRT)`
 - `Video Loader Crawl (CRT)`
@@ -164,11 +166,12 @@ Restart ComfyUI after installation or an update.
 - `Boolean Invert (CRT)`
 - `Strength to Steps (CRT)`
 
-### CRT/LoRA (4)
+### CRT/LoRA (5)
 
 - `Flux LoRA Blocks Patcher (CRT)`
 - `Magic LoRA Loader (CRT)`
 - `Magic Save Merged LoRA (CRT)`
+- `Seeded Persona LoRA Loader (CRT)`
 - `Wan Video Multi-LoRA Select (CRT)`
 
 ### CRT/LTX2.3 (4)
@@ -198,13 +201,14 @@ Restart ComfyUI after installation or an update.
 - `WAN 2.2 Batch Sampler (CRT)`
 - `WAN 2.2 LoRA Compare Sampler (CRT)`
 
-### CRT/Save (7)
+### CRT/Save (8)
 
 - `Save Audio With Path (CRT)`
 - `Save Image Base64 (CRT)` (conditional)
 - `Save Image With Path (CRT)`
 - `Save JPEG Websocket (CRT)`
 - `Save Latent With Path (CRT)`
+- `Save Latents Conditioning (CRT)`
 - `Save Text With Path (CRT)`
 - `Save Video With Path (CRT)`
 
@@ -228,12 +232,13 @@ Restart ComfyUI after installation or an update.
 - `Isolate Input SAM3.1 (CRT)`
 - `Isolate Output (CRT)`
 
-### CRT/Utils/Logic & Values (9)
+### CRT/Utils/Logic & Values (10)
 
 - `Boolean Transform (CRT)`
 - `Int Value (CRT)`
 - `Mask Empty Float (CRT)`
 - `Mask Pass or Placeholder (CRT)`
+- `Minimax Length (CRT)`
 - `Resolution (CRT)`
 - `Resolution By Side (CRT)`
 - `Sampler & Scheduler Crawler (CRT)`

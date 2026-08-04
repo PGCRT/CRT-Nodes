@@ -1,7 +1,7 @@
 """
 @author: CRT
 @title: CRT-Nodes
-@version: 2.7.0
+@version: 2.7.1
 @project: "https://github.com/PGCRT/CRT-Nodes",
 @description: Set of nodes for ComfyUI
 https://discord.gg/8wYS9MBQqp
@@ -114,6 +114,7 @@ if True:
     from .py.Int_Value import CRT_IntValue
     from .py.Minimax_Length import CRT_MinimaxLength
     from .py.Mono_To_Stereo_Converter import MonoToStereoConverter
+    from .py.Seeded_Persona_Lora_Loader import SeededPersonaLoraLoader
     from .py.Any_Trigger import AnyTrigger
     from .py.Depth_Anything_Tensorrt_Format import DepthAnythingTensorrtFormat
     from .py.Audio_Frame_Adjuster import AudioFrameAdjuster
@@ -314,6 +315,7 @@ NODE_CLASS_MAPPINGS = {
     "CRT_IntValue": CRT_IntValue,
     "CRT_MinimaxLength": CRT_MinimaxLength,
     "MonoToStereoConverter": MonoToStereoConverter,
+    "PGC_SeededPersonaLoraLoader": SeededPersonaLoraLoader,
     "AnyTrigger": AnyTrigger,
     "DepthAnythingTensorrtFormat": DepthAnythingTensorrtFormat,
     "AudioFrameAdjuster": AudioFrameAdjuster,
@@ -432,6 +434,7 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "CRT_IntValue": "Int Value (CRT)",
     "CRT_MinimaxLength": "Minimax Length (CRT)",
     "MonoToStereoConverter": "Mono to Stereo Converter (CRT)",
+    "PGC_SeededPersonaLoraLoader": "Seeded Persona LoRA Loader (CRT)",
     "AnyTrigger": "Any Trigger (CRT)",
     "DepthAnythingTensorrtFormat": "Depth Anything Tensorrt Format (CRT)",
     "AudioFrameAdjuster": "Audio Frame Adjuster (CRT)",
