@@ -22,10 +22,13 @@ pip install -r requirements.txt
 
 Restart ComfyUI after installation or an update.
 
-### CRT/Audio (7)
+> **Note on updates:** Nodes that have changed inputs, outputs, or widget names may appear red or show `NaN` values in existing workflows. Right-click the node and select **Fix node (recreate)** to refresh its sockets.
+
+### CRT/Audio (8)
 
 - `Audio Frame Adjuster (CRT)`
 - `Audio Transcript Batch (CRT)` (conditional)
+- `Audio Transcript turbo (CRT ALT)`
 - `Frame Count (Audio or Manual) (CRT)`
 - `Mono to Stereo Converter (CRT)`
 - `Parametric EQ (CRT)`
@@ -63,19 +66,30 @@ Restart ComfyUI after installation or an update.
 - `Krea 2 Turbo Model (CRT AutoDL)`
 - `Krea 2 VAE (CRT AutoDL)`
 
-### CRT/AutoDL/LTX2.3 (11)
+### CRT/AutoDL/LTX2.5 (11)
 
-- `LTX2.3 AUDIO VAE (CRT AutoDL)`
-- `LTX2.3 CLIP (CRT AutoDL)`
-- `LTX2.3 IC Cnet LoRA (CRT AutoDL)`
-- `LTX2.3 IC Outpaint LoRA (CRT AutoDL)`
-- `LTX2.3 IC Upscale LoRA (CRT AutoDL)`
-- `LTX2.3 Latent Upscaler (CRT AutoDL)`
-- `LTX2.3 Model (CRT AutoDL)`
-- `LTX2.3 Model GGUF Q4_K_M (CRT AutoDL)`
-- `LTX2.3 Model GGUF Q5_K_M (CRT AutoDL)`
-- `LTX2.3 Model NVFP4 (CRT AutoDL)`
-- `LTX2.3 VIDEO VAE (CRT AutoDL)`
+- `LTX2.5 AUDIO VAE (CRT AutoDL)`
+- `LTX2.5 CLIP (CRT AutoDL)`
+- `LTX2.5 Duration Head (CRT AutoDL)`
+- `LTX2.5 IC Cnet LoRA (CRT AutoDL)`
+- `LTX2.5 IC Outpaint LoRA (CRT AutoDL)`
+- `LTX2.5 IC Pixel Spatial Upscale LoRA (CRT AutoDL)`
+- `LTX2.5 IC Upscale LoRA (CRT AutoDL)`
+- `LTX2.5 Model (CRT AutoDL)`
+- `LTX2.5 Spatial Upscaler (CRT AutoDL)`
+- `LTX2.5 Temporal Upscaler (CRT AutoDL)`
+- `LTX2.5 VIDEO VAE (CRT AutoDL)`
+
+### CRT/AutoDL/MINIMAXH3 (8)
+
+- `MiniMax H3 AUDIO VAE (CRT AutoDL)`
+- `MiniMax H3 CLIP INT8 (CRT AutoDL)`
+- `MiniMax H3 CLIP NVFP4 (CRT AutoDL)`
+- `MiniMax H3 FL2VA Light W4A8 (CRT AutoDL)`
+- `MiniMax H3 FL2VA Model (CRT AutoDL)`
+- `MiniMax H3 REF2VA Light W4A8 (CRT AutoDL)`
+- `MiniMax H3 REF2VA Model (CRT AutoDL)`
+- `MiniMax H3 VIDEO VAE (CRT AutoDL)`
 
 ### CRT/AutoDL/ZIMAGETURBO (3)
 
@@ -89,6 +103,10 @@ Restart ComfyUI after installation or an update.
 - `Dynamic Prompt Scheduler (CRT)`
 - `File Batch Prompt Scheduler (CRT)`
 - `File Batch Prompt Scheduler KREA2 (CRT)`
+
+### CRT/DepthAnything3 (1)
+
+- `DepthAnything3 (CRT)`
 
 ### CRT/FX (12)
 
@@ -129,8 +147,10 @@ Restart ComfyUI after installation or an update.
 - `Scale Latent To Megapixels (CRT)`
 - `VAE Decode Last Frame (CRT)`
 
-### CRT/LLM (1)
+### CRT/LLM (3)
 
+- `Kimi Inference Bridge (CRT)`
+- `LM Studio Bridge (CRT)`
 - `Unsloth Studio Bridge (CRT)`
 
 ### CRT/Load (13)
@@ -155,19 +175,20 @@ Restart ComfyUI after installation or an update.
 - `Boolean Invert (CRT)`
 - `Strength to Steps (CRT)`
 
-### CRT/LoRA (4)
+### CRT/LoRA (6)
 
 - `Flux LoRA Blocks Patcher (CRT)`
 - `Magic LoRA Loader (CRT)`
 - `Magic Save Merged LoRA (CRT)`
+- `Seeded Persona LoRA Crawl Batch (CRT)`
+- `Seeded Persona LoRA Loader (CRT)`
 - `Wan Video Multi-LoRA Select (CRT)`
 
-### CRT/LTX2.3 (4)
+### CRT/LTX2.5 (3)
 
-- `LTX 2.3 AutoDownload (CRT)` (conditional)
-- `LTX 2.3 Unified Sampler (CRT)`
-- `LTX 2.3 US Config (CRT)`
-- `LTX 2.3 US Models Pipe (CRT)`
+- `LTX US Models Pipe (CRT)`
+- `LTX Unified Sampler (CRT)`
+- `LTX US Config (CRT)`
 
 ### CRT/Mask (2)
 
@@ -196,10 +217,11 @@ Restart ComfyUI after installation or an update.
 - `Save Text With Path (CRT)`
 - `Save Video With Path (CRT)`
 
-### CRT/Text (13)
+### CRT/Text (14)
 
 - `Add Settings and Prompt (CRT)`
 - `AutopromptProcessor (CRT)`
+- `Extract Dialogues MiniMaxH3 (CRT)`
 - `Extract Q/A (CRT)`
 - `Join Strings (CRT)`
 - `Merge Q/A (CRT)`

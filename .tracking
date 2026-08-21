@@ -24,7 +24,6 @@ js/Extract_QA.js
 js/Fancy_Note_Node.js
 js/Fancy_Timer_Node.js
 js/Flux_Lora_Blocks_Patcher.js
-js/LTX23_AutoDownload.js
 js/LTX23_Unified_Sampler.js
 js/Magic_Lora_Loader.js
 js/Node_Black_Default.js
@@ -73,6 +72,7 @@ py/Color_Isolation_FX.py
 py/Colourfulness_FX.py
 py/Contour_FX.py
 py/Crop_By_Percent.py
+py/DepthAnything3_CRT.py
 py/Depth_Anything_Tensorrt_Format.py
 py/download_progress.py
 py/Dynamic_Prompt_Scheduler.py
@@ -108,7 +108,6 @@ py/Load_Image_Resize.py
 py/Load_Last_Image.py
 py/Load_Last_Latent.py
 py/Load_Last_Video.py
-py/LTX23_AutoDownload.py
 py/LTX23_Unified_Sampler.py
 py/Magic_Lora_Loader.py
 py/Mask_Censor.py
@@ -162,15 +161,10 @@ py/Wan_Video_Lora_Select_Multi_Improved.py
 pyproject.toml
 README.md
 requirements.txt
-workflows/Batch Processing/Batch AnyProcess VIDEO.png
-workflows/Batch Processing/Batch AnyProcess.png
-workflows/Batch Processing/Batch Caption.png
-workflows/Batch Processing/Batch DetectAndCrop.png
 workflows/ChronoEdit_Upscale.png
 workflows/FLUX2KLEIN.png
 workflows/KREA2.png
-workflows/LTX2.3 Unified Sampler I2V.png
-workflows/LTX2.3 Unified Sampler_V2V_EDIT.png
-workflows/LTX2.3 Unified Sampler_V2V_ISOLATE_TRANSLATE.png
-workflows/LTX2.3 Unified Sampler.png
-workflows/WAN 2.2 LORA COMPARE.png
+workflows/LTX2.5 Unified Sampler I2V.png
+workflows/LTX2.5 Unified Sampler.png
+workflows/LTX2.5 Unified Sampler_V2V_EDIT.png
+workflows/QA Pairs LLM Distillation Finetuning.png

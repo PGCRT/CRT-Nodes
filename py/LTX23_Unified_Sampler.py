@@ -341,7 +341,7 @@ class CRT_LTX23USModelsPipe:
     RETURN_TYPES = ("LTX23_US_MODELS_PIPE",)
     RETURN_NAMES = ("models_pipe",)
     FUNCTION = "build_pipe"
-    CATEGORY = "CRT/LTX2.3"
+    CATEGORY = "CRT/LTX2.5"
     DESCRIPTION = "Bundles the LTX 2.3 model, video/audio VAEs, CLIP, and optional mode-specific models for the unified sampler."
 
     def build_pipe(
@@ -438,7 +438,7 @@ class CRT_LTX23USConfig:
     RETURN_TYPES = ("LTX23_US_CONFIG_PIPE",)
     RETURN_NAMES = ("config_pipe",)
     FUNCTION = "build_pipe"
-    CATEGORY = "CRT/LTX2.3"
+    CATEGORY = "CRT/LTX2.5"
     DESCRIPTION = "Collects the prompt, seed, optional image/video/audio inputs, and per-workflow overrides for the unified sampler."
 
     def build_pipe(self, prompt, seed, source_audio=None, **kwargs):
@@ -754,7 +754,7 @@ class CRT_LTX23UnifiedSampler:
     RETURN_TYPES = ("IMAGE", "AUDIO")
     RETURN_NAMES = ("images", "audio")
     FUNCTION = "sample"
-    CATEGORY = "CRT/LTX2.3"
+    CATEGORY = "CRT/LTX2.5"
 
     @staticmethod
     def _result_tuple(result):

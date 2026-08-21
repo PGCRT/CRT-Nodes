@@ -10,15 +10,18 @@ import comfy.utils
 import folder_paths
 import torch
 from comfy.cli_args import args
-from comfy.ldm.modules.attention import attention_pytorch, wrap_attn
+from comfy.ldm.modules.attention import (
+    attention_pytorch,
+    wrap_attn,
+    get_attention_function,
+    COMFY_KITCHEN_INT8_ATTENTION_IS_AVAILABLE,
+)
 
 from .download_progress import download_url_with_progress
 
 
 TAG = "crt-autodl"
 SAGE_ATTENTION_MODES = [
-    "disabled",
-    "auto",
     "sageattn_qk_int8_pv_fp16_cuda",
     "sageattn_qk_int8_pv_fp16_triton",
     "sageattn_qk_int8_pv_fp8_cuda",
@@ -27,68 +30,13 @@ SAGE_ATTENTION_MODES = [
     "sageattn3_per_block_mean",
 ]
 
+_ATTENTION_METHODS = ["disabled", "pytorch attention"] + SAGE_ATTENTION_MODES
+if COMFY_KITCHEN_INT8_ATTENTION_IS_AVAILABLE:
+    _ATTENTION_METHODS.insert(0, "comfy kitchen attention")
+ATTENTION_METHODS = _ATTENTION_METHODS
+
 
 MODELS = {
-    "ltx23_model": {
-        "folder": "diffusion_models",
-        "filename": "ltx-2.3-22b-distilled-1.1_transformer_only_fp8_scaled.safetensors",
-        "url": "https://huggingface.co/Kijai/LTX2.3_comfy/resolve/main/diffusion_models/ltx-2.3-22b-distilled-1.1_transformer_only_fp8_scaled.safetensors",
-    },
-    "ltx23_audio_vae": {
-        "folder": "vae",
-        "filename": "LTX23_audio_vae_bf16.safetensors",
-        "url": "https://huggingface.co/Kijai/LTX2.3_comfy/resolve/main/vae/LTX23_audio_vae_bf16.safetensors",
-    },
-    "ltx23_video_vae": {
-        "folder": "vae",
-        "filename": "LTX23_video_vae_bf16.safetensors",
-        "url": "https://huggingface.co/Kijai/LTX2.3_comfy/resolve/main/vae/LTX23_video_vae_bf16.safetensors",
-    },
-    "ltx23_projection": {
-        "folder": "text_encoders",
-        "filename": "ltx-2.3_text_projection_bf16.safetensors",
-        "url": "https://huggingface.co/Kijai/LTX2.3_comfy/resolve/main/text_encoders/ltx-2.3_text_projection_bf16.safetensors",
-    },
-    "ltx23_gemma3": {
-        "folder": "text_encoders",
-        "filename": "gemma_3_12B_it_fp4_mixed.safetensors",
-        "url": "https://huggingface.co/Comfy-Org/ltx-2/resolve/main/split_files/text_encoders/gemma_3_12B_it_fp4_mixed.safetensors",
-    },
-    "ltx23_upscaler": {
-        "folder": "latent_upscale_models",
-        "filename": "ltx-2.3-spatial-upscaler-x2-1.0.safetensors",
-        "url": "https://huggingface.co/Lightricks/LTX-2.3/resolve/main/ltx-2.3-spatial-upscaler-x2-1.0.safetensors",
-    },
-    "ltx23_ic_lora": {
-        "folder": "loras",
-        "filename": "ltx-2.3-22b-ic-lora-union-control-ref0.5.safetensors",
-        "url": "https://huggingface.co/Lightricks/LTX-2.3-22b-IC-LoRA-Union-Control/resolve/main/ltx-2.3-22b-ic-lora-union-control-ref0.5.safetensors",
-    },
-    "ltx23_outpaint_lora": {
-        "folder": "loras",
-        "filename": "ltx-2.3-22b-ic-lora-outpaint.safetensors",
-        "url": "https://huggingface.co/oumoumad/LTX-2.3-22b-IC-LoRA-Outpaint/resolve/main/ltx-2.3-22b-ic-lora-outpaint.safetensors",
-    },
-    "ltx23_upscale_ic_lora": {
-        "folder": "loras",
-        "filename": "ltx2.3_upscale_ic-lora_06250.safetensors",
-        "url": "https://huggingface.co/Zlikwid/LTX_2.3_Upscale_IC_Lora/resolve/main/ltx2.3_upscale_ic-lora_06250.safetensors",
-    },
-    "ltx23_nvfp4": {
-        "folder": "diffusion_models",
-        "filename": "ltx-2.3-22b-distilled_transformer_only_NVFP4.safetensors",
-        "url": "https://huggingface.co/Winnougan/LTX-2.3-INT8/resolve/main/ltx-2.3-22b-distilled_transformer_only_NVFP4.safetensors",
-    },
-    "ltx23_gguf_q4": {
-        "folder": "unet_gguf",
-        "filename": "ltx-2.3-22b-distilled-1.1-UD-Q4_K_M.gguf",
-        "url": "https://huggingface.co/unsloth/LTX-2.3-GGUF/resolve/main/distilled-1.1/ltx-2.3-22b-distilled-1.1-UD-Q4_K_M.gguf",
-    },
-    "ltx23_gguf_q5": {
-        "folder": "unet_gguf",
-        "filename": "ltx-2.3-22b-distilled-1.1-UD-Q5_K_M.gguf",
-        "url": "https://huggingface.co/unsloth/LTX-2.3-GGUF/resolve/main/distilled-1.1/ltx-2.3-22b-distilled-1.1-UD-Q5_K_M.gguf",
-    },
     "zimage_model": {
         "folder": "diffusion_models",
         "filename": "z-image-turbo_fp8_scaled_e4m3fn_KJ.safetensors",
@@ -200,7 +148,107 @@ MODELS = {
         "filename": "clip_vision_h.safetensors",
         "url": "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/clip_vision/clip_vision_h.safetensors",
     },
+    # MiniMax H3
+    "minimax_h3_model_fl2va": {
+        "folder": "diffusion_models",
+        "filename": "minimax_h3_fl2va_pruned_int8_convrot.safetensors",
+        "url": "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/diffusion_models/minimax_h3_fl2va_pruned_int8_convrot.safetensors",
+    },
+    "minimax_h3_model_ref2va": {
+        "folder": "diffusion_models",
+        "filename": "minimax_h3_ref2va_pruned_int8_convrot.safetensors",
+        "url": "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/diffusion_models/minimax_h3_ref2va_pruned_int8_convrot.safetensors",
+    },
+    "minimax_h3_model_fl2va_w4a8": {
+        "folder": "diffusion_models",
+        "filename": "minimax_h3_fl2va_pruned_w4a8_mixed.safetensors",
+        "url": "https://huggingface.co/Kijai/MiniMax-H3-experimental/resolve/main/minimax_h3_fl2va_pruned_w4a8_mixed.safetensors",
+    },
+    "minimax_h3_model_ref2va_w4a8": {
+        "folder": "diffusion_models",
+        "filename": "minimax_h3_ref2va_pruned_w4a8_mixed.safetensors",
+        "url": "https://huggingface.co/Kijai/MiniMax-H3-experimental/resolve/main/minimax_h3_ref2va_pruned_w4a8_mixed.safetensors",
+    },
+    "minimax_h3_clip_int8": {
+        "folder": "text_encoders",
+        "filename": "qwen3vl_32b_minimax_h3_int8_convrot.safetensors",
+        "url": "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/text_encoders/qwen3vl_32b_minimax_h3_int8_convrot.safetensors",
+    },
+    "minimax_h3_clip_nvfp4": {
+        "folder": "text_encoders",
+        "filename": "qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+        "url": "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/text_encoders/qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+    },
+    "minimax_h3_audio_vae": {
+        "folder": "vae",
+        "filename": "minimax_h3_audio_vae_fp32.safetensors",
+        "url": "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/vae/minimax_h3_audio_vae_fp32.safetensors",
+    },
+    "minimax_h3_video_vae": {
+        "folder": "vae",
+        "filename": "minimax_h3_video_vae_fp16.safetensors",
+        "url": "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/vae/minimax_h3_video_vae_fp16.safetensors",
+    },
+    # LTX2.5
+    "ltx25_model": {
+        "folder": "diffusion_models",
+        "filename": "ltx-2.5-22b-distilled-transformer-comfy-int8-convrot.safetensors",
+        "url": "https://huggingface.co/Lightricks/LTX-2.5/resolve/main/diffusion_models/ltx-2.5-22b-distilled-transformer-comfy-int8-convrot.safetensors",
+    },
+    "ltx25_spatial_upscaler": {
+        "folder": "latent_upscale_models",
+        "filename": "ltx-2.5-latent-spatial-upscaler-x2-bf16-1.0.safetensors",
+        "url": "https://huggingface.co/Lightricks/LTX-2.5/resolve/main/latent_upscale_models/ltx-2.5-latent-spatial-upscaler-x2-bf16-1.0.safetensors",
+    },
+    "ltx25_temporal_upscaler": {
+        "folder": "latent_upscale_models",
+        "filename": "ltx-2.5-latent-temporal-upscaler-x2-bf16-1.0.safetensors",
+        "url": "https://huggingface.co/Lightricks/LTX-2.5/resolve/main/latent_upscale_models/ltx-2.5-latent-temporal-upscaler-x2-bf16-1.0.safetensors",
+    },
+    "ltx25_pixel_spatial_ic_lora": {
+        "folder": "loras",
+        "filename": "ltx-2.5-22b-ic-lora-pixel-spatial-upscaler-x2-1.0.safetensors",
+        "url": "https://huggingface.co/Lightricks/LTX-2.5-22b-IC-LoRA-Pixel-Spatial-Upscaler/resolve/main/ltx-2.5-22b-ic-lora-pixel-spatial-upscaler-x2-1.0.safetensors",
+    },
+    "ltx25_ic_cnet_lora": {
+        "folder": "loras",
+        "filename": "ltx-2.3-22b-ic-lora-union-control-ref0.5.safetensors",
+        "url": "https://huggingface.co/Lightricks/LTX-2.3-22b-IC-LoRA-Union-Control/resolve/main/ltx-2.3-22b-ic-lora-union-control-ref0.5.safetensors",
+    },
+    "ltx25_outpaint_lora": {
+        "folder": "loras",
+        "filename": "ltx-2.3-22b-ic-lora-outpaint.safetensors",
+        "url": "https://huggingface.co/oumoumad/LTX-2.3-22b-IC-LoRA-Outpaint/resolve/main/ltx-2.3-22b-ic-lora-outpaint.safetensors",
+    },
+    "ltx25_upscale_ic_lora": {
+        "folder": "loras",
+        "filename": "ltx2.3_upscale_ic-lora_06250.safetensors",
+        "url": "https://huggingface.co/Zlikwid/LTX_2.3_Upscale_IC_Lora/resolve/main/ltx2.3_upscale_ic-lora_06250.safetensors",
+    },
+    "ltx25_clip": {
+        "folder": "text_encoders",
+        "filename": "gemma4-12b-with-proj-ltx-2.5-comfy-int8-convrot.safetensors",
+        "url": "https://huggingface.co/Lightricks/LTX-2.5/resolve/main/text_encoders/gemma4-12b-with-proj-ltx-2.5-comfy-int8-convrot.safetensors",
+    },
+    "ltx25_audio_vae": {
+        "folder": "vae",
+        "filename": "ltx-2.5-audio-vae-bf16.safetensors",
+        "url": "https://huggingface.co/Lightricks/LTX-2.5/resolve/main/vae/ltx-2.5-audio-vae-bf16.safetensors",
+    },
+    "ltx25_video_vae": {
+        "folder": "vae",
+        "filename": "ltx-2.5-video-vae-bf16.safetensors",
+        "url": "https://huggingface.co/Lightricks/LTX-2.5/resolve/main/vae/ltx-2.5-video-vae-bf16.safetensors",
+    },
+    "ltx25_duration_head": {
+        "folder": "model_patches",
+        "filename": "ltx-2.5-duration-head-bf16.safetensors",
+        "url": "https://huggingface.co/Lightricks/LTX-2.5/resolve/main/model_patches/ltx-2.5-duration-head-bf16.safetensors",
+    },
 }
+
+
+from comfy_extras.nodes_model_patch import ModelPatchLoader
 
 
 def _model_dir(folder):
@@ -246,14 +294,36 @@ def _dtype_map(name):
     }.get(name)
 
 
-def _get_sage_attention(sage_attention):
-    if sage_attention == "auto":
-        from sageattention import sageattn
+def _get_sage_attention(mode):
+    if mode == "sageattn_qk_int8_pv_fp16_cuda":
+        from sageattention import sageattn_qk_int8_pv_fp16_cuda
 
         def sage_func(q, k, v, is_causal=False, attn_mask=None, tensor_layout="NHD"):
-            return sageattn(q, k, v, is_causal=is_causal, attn_mask=attn_mask, tensor_layout=tensor_layout)
+            return sageattn_qk_int8_pv_fp16_cuda(q, k, v, is_causal=is_causal, attn_mask=attn_mask, pv_accum_dtype="fp32", tensor_layout=tensor_layout)
+    elif mode == "sageattn_qk_int8_pv_fp16_triton":
+        from sageattention import sageattn_qk_int8_pv_fp16_triton
+
+        def sage_func(q, k, v, is_causal=False, attn_mask=None, tensor_layout="NHD"):
+            return sageattn_qk_int8_pv_fp16_triton(q, k, v, is_causal=is_causal, attn_mask=attn_mask, tensor_layout=tensor_layout)
+    elif mode == "sageattn_qk_int8_pv_fp8_cuda":
+        from sageattention import sageattn_qk_int8_pv_fp8_cuda
+
+        def sage_func(q, k, v, is_causal=False, attn_mask=None, tensor_layout="NHD"):
+            return sageattn_qk_int8_pv_fp8_cuda(q, k, v, is_causal=is_causal, attn_mask=attn_mask, pv_accum_dtype="fp32+fp32", tensor_layout=tensor_layout)
+    elif mode == "sageattn_qk_int8_pv_fp8_cuda++":
+        from sageattention import sageattn_qk_int8_pv_fp8_cuda
+
+        def sage_func(q, k, v, is_causal=False, attn_mask=None, tensor_layout="NHD"):
+            return sageattn_qk_int8_pv_fp8_cuda(q, k, v, is_causal=is_causal, attn_mask=attn_mask, pv_accum_dtype="fp32+fp16", tensor_layout=tensor_layout)
+    elif "sageattn3" in mode:
+        from sageattn3 import sageattn3_blackwell
+
+        def sage_func(q, k, v, is_causal=False, attn_mask=None, tensor_layout="NHD", **kwargs):
+            q, k, v = [x.transpose(1, 2) if tensor_layout == "NHD" else x for x in (q, k, v)]
+            out = sageattn3_blackwell(q, k, v, is_causal=is_causal, attn_mask=attn_mask, per_block_mean=(mode == "sageattn3_per_block_mean"))
+            return out.transpose(1, 2) if tensor_layout == "NHD" else out
     else:
-        raise RuntimeError(f"[{TAG}] Unsupported sage_attention mode: {sage_attention}")
+        raise RuntimeError(f"[{TAG}] Unsupported attention method: {mode}")
 
     sage_func = torch.compiler.disable()(sage_func)
 
@@ -277,6 +347,9 @@ def _get_sage_attention(sage_attention):
                 mask = mask.unsqueeze(0)
             if mask.ndim == 3:
                 mask = mask.unsqueeze(1)
+        seq_dim = 2 if tensor_layout == "HND" else 1
+        if any((t.shape[seq_dim] - 1) * t.stride(seq_dim) >= 2**31 for t in (q, k, v)):
+            q, k, v = q.contiguous(), k.contiguous(), v.contiguous()
         out = sage_func(q, k, v, attn_mask=mask, is_causal=False, tensor_layout=tensor_layout).to(in_dtype)
         if tensor_layout == "HND":
             if not skip_output_reshape:
@@ -288,6 +361,22 @@ def _get_sage_attention(sage_attention):
         return out
 
     return attention_sage
+
+
+def _apply_attention_method(model, attention_method):
+    if attention_method == "disabled":
+        return
+    if attention_method == "comfy kitchen attention":
+        attention_function = get_attention_function("comfy_kitchen_int8", None)
+        if attention_function is None:
+            logging.warning("[%s] Comfy Kitchen attention unavailable; falling back to PyTorch attention.", TAG)
+            attention_function = get_attention_function("pytorch")
+        model.set_model_optimized_attention(attention_function)
+        return
+    if attention_method == "pytorch attention":
+        model.set_model_optimized_attention(get_attention_function("pytorch"))
+        return
+    model.set_model_optimized_attention(_get_sage_attention(attention_method))
 
 
 def _load_diffusion_model(path, weight_dtype="bf16", compute_dtype="bf16"):
@@ -318,12 +407,12 @@ class _FixedDiffusionLoader:
         return {
             "required": {
                 "patch_cublaslinear": ("BOOLEAN", {"default": False}),
-                "sage_attention": (SAGE_ATTENTION_MODES, {"default": "auto"}),
+                "attention_method": (ATTENTION_METHODS, {"default": ATTENTION_METHODS[0]}),
                 "enable_fp16_accumulation": ("BOOLEAN", {"default": True}),
             }
         }
 
-    def load_model(self, patch_cublaslinear, sage_attention, enable_fp16_accumulation):
+    def load_model(self, patch_cublaslinear, attention_method, enable_fp16_accumulation):
         if patch_cublaslinear:
             args.fast.add("cublas_ops")
         else:
@@ -331,13 +420,7 @@ class _FixedDiffusionLoader:
         if hasattr(torch.backends.cuda.matmul, "allow_fp16_accumulation"):
             torch.backends.cuda.matmul.allow_fp16_accumulation = enable_fp16_accumulation
         model = _load_diffusion_model(ensure_model(self.MODEL_KEY))
-        if sage_attention == "auto":
-            attention_sage = _get_sage_attention(sage_attention)
-
-            def attention_override_sage(func, *args, **kwargs):
-                return attention_sage.__wrapped__(*args, **kwargs)
-
-            model.model_options.setdefault("transformer_options", {})["optimized_attention_override"] = attention_override_sage
+        _apply_attention_method(model, attention_method)
         return (model,)
 
 
@@ -424,24 +507,19 @@ class _FixedCLIPVisionLoader:
         return (clip_vision,)
 
 
-class LTX23CLIP:
-    RETURN_TYPES = ("CLIP",)
-    RETURN_NAMES = ("CLIP",)
-    FUNCTION = "load_clip"
-    CATEGORY = "CRT/AutoDL/LTX2.3"
+class _FixedModelPatchLoader:
+    RETURN_TYPES = ("MODEL_PATCH",)
+    RETURN_NAMES = ("model_patch",)
+    FUNCTION = "load_model_patch"
 
     @classmethod
     def INPUT_TYPES(cls):
         return {"required": {}}
 
-    def load_clip(self):
-        clip = comfy.sd.load_clip(
-            ckpt_paths=[ensure_model("ltx23_gemma3"), ensure_model("ltx23_projection")],
-            embedding_directory=folder_paths.get_folder_paths("embeddings"),
-            clip_type=comfy.sd.CLIPType.LTXV,
-            model_options={},
-        )
-        return (clip,)
+    def load_model_patch(self):
+        model_path = ensure_model(self.MODEL_KEY)
+        name = os.path.basename(model_path)
+        return ModelPatchLoader().load_model_patch(name)
 
 
 class _FixedLatentUpscaleModelLoader:
@@ -478,7 +556,7 @@ class _FixedLatentUpscaleModelLoader:
             model.load_sd(sd)
         elif "post_upsample_res_blocks.0.conv2.bias" in sd:
             config = json.loads(metadata["config"])
-            model = LatentUpsampler.from_config(config).to(dtype=model_management.vae_dtype(allowed_dtypes=[torch.bfloat16, torch.float32]))
+            model = LatentUpsampler.from_config(config, operations=comfy.ops.manual_cast).to(dtype=model_management.vae_dtype(allowed_dtypes=[torch.bfloat16, torch.float32]))
             model.load_state_dict(sd)
         else:
             raise RuntimeError(f"[{TAG}] Unsupported latent upscale model format: {self.MODEL_KEY}")
@@ -503,61 +581,6 @@ class _FixedLoRALoader:
         lora = comfy.utils.load_torch_file(ensure_model(self.MODEL_KEY), safe_load=True)
         model_lora, _ = comfy.sd.load_lora_for_models(model, None, lora, strength_model, 0)
         return (model_lora,)
-
-
-class LTX23Model(_FixedDiffusionLoader):
-    CATEGORY = "CRT/AutoDL/LTX2.3"
-    MODEL_KEY = "ltx23_model"
-
-
-class LTX23ModelNVFP4(_FixedDiffusionLoader):
-    CATEGORY = "CRT/AutoDL/LTX2.3"
-    MODEL_KEY = "ltx23_nvfp4"
-
-
-class LTX23AudioVAE(_FixedVAELoader):
-    CATEGORY = "CRT/AutoDL/LTX2.3"
-    MODEL_KEY = "ltx23_audio_vae"
-
-
-class LTX23VideoVAE(_FixedVAELoader):
-    CATEGORY = "CRT/AutoDL/LTX2.3"
-    MODEL_KEY = "ltx23_video_vae"
-
-
-class LTX23LatentUpscaler(_FixedLatentUpscaleModelLoader):
-    CATEGORY = "CRT/AutoDL/LTX2.3"
-    MODEL_KEY = "ltx23_upscaler"
-
-
-class LTX23ICLoRA(_FixedLoRALoader):
-    CATEGORY = "CRT/AutoDL/LTX2.3"
-    MODEL_KEY = "ltx23_ic_lora"
-    RETURN_TYPES = ("MODEL", "FLOAT")
-    RETURN_NAMES = ("MODEL", "latent_downscale_factor")
-
-    def load_lora(self, model, strength_model):
-        lora_path = ensure_model(self.MODEL_KEY)
-        lora, metadata = comfy.utils.load_torch_file(lora_path, safe_load=True, return_metadata=True)
-        try:
-            latent_downscale_factor = float(metadata["reference_downscale_factor"])
-        except (KeyError, ValueError, TypeError):
-            latent_downscale_factor = 1.0
-            logging.warning("[%s] Failed to extract reference_downscale_factor for %s", TAG, lora_path)
-        if strength_model == 0:
-            return (model, latent_downscale_factor)
-        model_lora, _ = comfy.sd.load_lora_for_models(model, None, lora, strength_model, 0)
-        return (model_lora, latent_downscale_factor)
-
-
-class LTX23ICOutpaintLoRA(_FixedLoRALoader):
-    CATEGORY = "CRT/AutoDL/LTX2.3"
-    MODEL_KEY = "ltx23_outpaint_lora"
-
-
-class LTX23ICUpscaleLoRA(_FixedLoRALoader):
-    CATEGORY = "CRT/AutoDL/LTX2.3"
-    MODEL_KEY = "ltx23_upscale_ic_lora"
 
 
 class _GGUFModelLoader:
@@ -589,7 +612,7 @@ class _GGUFModelLoader:
         return {
             "required": {
                 "patch_cublaslinear": ("BOOLEAN", {"default": False}),
-                "sage_attention": (SAGE_ATTENTION_MODES, {"default": "auto"}),
+                "attention_method": (ATTENTION_METHODS, {"default": ATTENTION_METHODS[0]}),
                 "enable_fp16_accumulation": ("BOOLEAN", {"default": True}),
                 "dequant_dtype": (["default", "target", "float32", "float16", "bfloat16"], {"default": "default"}),
                 "patch_dtype": (["default", "target", "float32", "float16", "bfloat16"], {"default": "default"}),
@@ -597,7 +620,7 @@ class _GGUFModelLoader:
             }
         }
 
-    def load_gguf_model(self, patch_cublaslinear, sage_attention, enable_fp16_accumulation, dequant_dtype, patch_dtype, patch_on_device):
+    def load_gguf_model(self, patch_cublaslinear, attention_method, enable_fp16_accumulation, dequant_dtype, patch_dtype, patch_on_device):
         if patch_cublaslinear:
             args.fast.add("cublas_ops")
         else:
@@ -635,59 +658,9 @@ class _GGUFModelLoader:
         model = gguf_nodes.nodes.GGUFModelPatcher.clone(model)
         model.patch_on_device = patch_on_device
 
-        if sage_attention == "auto":
-            from sageattention import sageattn
-
-            def sage_func(q, k, v, is_causal=False, attn_mask=None, tensor_layout="NHD"):
-                return sageattn(q, k, v, is_causal=is_causal, attn_mask=attn_mask, tensor_layout=tensor_layout)
-
-            sage_func = torch.compiler.disable()(sage_func)
-
-            def attention_sage(q, k, v, heads, mask=None, attn_precision=None, skip_reshape=False, skip_output_reshape=False, **kwargs):
-                if kwargs.get("low_precision_attention", True) is False:
-                    return attention_pytorch(q, k, v, heads, mask=mask, skip_reshape=skip_reshape, skip_output_reshape=skip_output_reshape, **kwargs)
-                in_dtype = v.dtype
-                if q.dtype == torch.float32 or k.dtype == torch.float32 or v.dtype == torch.float32:
-                    q, k, v = q.to(torch.float16), k.to(torch.float16), v.to(torch.float16)
-                if skip_reshape:
-                    b, _, _, dim_head = q.shape
-                    tensor_layout = "HND"
-                else:
-                    b, _, dim_head = q.shape
-                    dim_head //= heads
-                    q, k, v = map(lambda t: t.view(b, -1, heads, dim_head), (q, k, v))
-                    tensor_layout = "NHD"
-                if mask is not None:
-                    if mask.ndim == 2:
-                        mask = mask.unsqueeze(0)
-                    if mask.ndim == 3:
-                        mask = mask.unsqueeze(1)
-                out = sage_func(q, k, v, attn_mask=mask, is_causal=False, tensor_layout=tensor_layout).to(in_dtype)
-                if tensor_layout == "HND":
-                    if not skip_output_reshape:
-                        out = out.transpose(1, 2).reshape(b, -1, heads * dim_head)
-                elif skip_output_reshape:
-                    out = out.transpose(1, 2)
-                else:
-                    out = out.reshape(b, -1, heads * dim_head)
-                return out
-
-            def attention_override_sage(func, *args, **kwargs):
-                return attention_sage(*args, **kwargs)
-
-            model.model_options.setdefault("transformer_options", {})["optimized_attention_override"] = attention_override_sage
+        _apply_attention_method(model, attention_method)
 
         return (model,)
-
-
-class LTX23ModelGGUFQ4(_GGUFModelLoader):
-    CATEGORY = "CRT/AutoDL/LTX2.3"
-    MODEL_KEY = "ltx23_gguf_q4"
-
-
-class LTX23ModelGGUFQ5(_GGUFModelLoader):
-    CATEGORY = "CRT/AutoDL/LTX2.3"
-    MODEL_KEY = "ltx23_gguf_q5"
 
 
 class ZImageTurboModel(_FixedDiffusionLoader):
@@ -805,18 +778,122 @@ class ChronoEditCLIPVision(_FixedCLIPVisionLoader):
     MODEL_KEY = "chronoedit_clip_vision"
 
 
+# MiniMax H3
+class MiniMaxH3FL2VAModel(_FixedDiffusionLoader):
+    CATEGORY = "CRT/AutoDL/MINIMAXH3"
+    MODEL_KEY = "minimax_h3_model_fl2va"
+
+
+class MiniMaxH3REF2VAModel(_FixedDiffusionLoader):
+    CATEGORY = "CRT/AutoDL/MINIMAXH3"
+    MODEL_KEY = "minimax_h3_model_ref2va"
+
+
+class MiniMaxH3FL2VALightW4A8Model(_FixedDiffusionLoader):
+    CATEGORY = "CRT/AutoDL/MINIMAXH3"
+    MODEL_KEY = "minimax_h3_model_fl2va_w4a8"
+
+
+class MiniMaxH3REF2VALightW4A8Model(_FixedDiffusionLoader):
+    CATEGORY = "CRT/AutoDL/MINIMAXH3"
+    MODEL_KEY = "minimax_h3_model_ref2va_w4a8"
+
+
+class MiniMaxH3AudioVAE(_FixedVAELoader):
+    CATEGORY = "CRT/AutoDL/MINIMAXH3"
+    MODEL_KEY = "minimax_h3_audio_vae"
+
+
+class MiniMaxH3VideoVAE(_FixedVAELoader):
+    CATEGORY = "CRT/AutoDL/MINIMAXH3"
+    MODEL_KEY = "minimax_h3_video_vae"
+
+
+class MiniMaxH3CLIPInt8(_FixedCLIPLoader):
+    CATEGORY = "CRT/AutoDL/MINIMAXH3"
+    MODEL_KEY = "minimax_h3_clip_int8"
+    CLIP_TYPE = "minimax"
+
+
+class MiniMaxH3CLIPNVFP4(_FixedCLIPLoader):
+    CATEGORY = "CRT/AutoDL/MINIMAXH3"
+    MODEL_KEY = "minimax_h3_clip_nvfp4"
+    CLIP_TYPE = "minimax"
+
+
+# LTX2.5
+class LTX25Model(_FixedDiffusionLoader):
+    CATEGORY = "CRT/AutoDL/LTX2.5"
+    MODEL_KEY = "ltx25_model"
+
+
+class LTX25AudioVAE(_FixedVAELoader):
+    CATEGORY = "CRT/AutoDL/LTX2.5"
+    MODEL_KEY = "ltx25_audio_vae"
+
+
+class LTX25VideoVAE(_FixedVAELoader):
+    CATEGORY = "CRT/AutoDL/LTX2.5"
+    MODEL_KEY = "ltx25_video_vae"
+
+
+class LTX25CLIP(_FixedCLIPLoader):
+    CATEGORY = "CRT/AutoDL/LTX2.5"
+    MODEL_KEY = "ltx25_clip"
+    CLIP_TYPE = "ltxv"
+
+
+class LTX25SpatialUpscaler(_FixedLatentUpscaleModelLoader):
+    CATEGORY = "CRT/AutoDL/LTX2.5"
+    MODEL_KEY = "ltx25_spatial_upscaler"
+
+
+class LTX25TemporalUpscaler(_FixedLatentUpscaleModelLoader):
+    CATEGORY = "CRT/AutoDL/LTX2.5"
+    MODEL_KEY = "ltx25_temporal_upscaler"
+
+
+class LTX25ICPixelSpatialUpscaleLoRA(_FixedLoRALoader):
+    CATEGORY = "CRT/AutoDL/LTX2.5"
+    MODEL_KEY = "ltx25_pixel_spatial_ic_lora"
+
+
+class LTX25ICCnetLoRA(_FixedLoRALoader):
+    CATEGORY = "CRT/AutoDL/LTX2.5"
+    MODEL_KEY = "ltx25_ic_cnet_lora"
+    RETURN_TYPES = ("MODEL", "FLOAT")
+    RETURN_NAMES = ("MODEL", "latent_downscale_factor")
+
+    def load_lora(self, model, strength_model):
+        lora_path = ensure_model(self.MODEL_KEY)
+        lora, metadata = comfy.utils.load_torch_file(lora_path, safe_load=True, return_metadata=True)
+        try:
+            latent_downscale_factor = float(metadata["reference_downscale_factor"])
+        except (KeyError, ValueError, TypeError):
+            latent_downscale_factor = 1.0
+            logging.warning("[%s] Failed to extract reference_downscale_factor for %s", TAG, lora_path)
+        if strength_model == 0:
+            return (model, latent_downscale_factor)
+        model_lora, _ = comfy.sd.load_lora_for_models(model, None, lora, strength_model, 0)
+        return (model_lora, latent_downscale_factor)
+
+
+class LTX25OutpaintLoRA(_FixedLoRALoader):
+    CATEGORY = "CRT/AutoDL/LTX2.5"
+    MODEL_KEY = "ltx25_outpaint_lora"
+
+
+class LTX25UpscaleICLoRA(_FixedLoRALoader):
+    CATEGORY = "CRT/AutoDL/LTX2.5"
+    MODEL_KEY = "ltx25_upscale_ic_lora"
+
+
+class LTX25DurationHead(_FixedModelPatchLoader):
+    CATEGORY = "CRT/AutoDL/LTX2.5"
+    MODEL_KEY = "ltx25_duration_head"
+
+
 NODE_CLASS_MAPPINGS = {
-    "CRTAutoDLLTX23Model": LTX23Model,
-    "CRTAutoDLLTX23ModelNVFP4": LTX23ModelNVFP4,
-    "CRTAutoDLLTX23AudioVAE": LTX23AudioVAE,
-    "CRTAutoDLLTX23VideoVAE": LTX23VideoVAE,
-    "CRTAutoDLLTX23CLIP": LTX23CLIP,
-    "CRTAutoDLLTX23LatentUpscaler": LTX23LatentUpscaler,
-    "CRTAutoDLLTX23ICLoRA": LTX23ICLoRA,
-    "CRTAutoDLLTX23ICOutpaintLoRA": LTX23ICOutpaintLoRA,
-    "CRTAutoDLLTX23ICUpscaleLoRA": LTX23ICUpscaleLoRA,
-    "CRTAutoDLLTX23ModelGGUFQ4": LTX23ModelGGUFQ4,
-    "CRTAutoDLLTX23ModelGGUFQ5": LTX23ModelGGUFQ5,
     "CRTAutoDLZImageTurboModel": ZImageTurboModel,
     "CRTAutoDLZImageTurboVAE": ZImageTurboVAE,
     "CRTAutoDLZImageTurboCLIP": ZImageTurboCLIP,
@@ -839,20 +916,28 @@ NODE_CLASS_MAPPINGS = {
     "CRTAutoDLChronoEditVAE": ChronoEditVAE,
     "CRTAutoDLChronoEditCLIP": ChronoEditCLIP,
     "CRTAutoDLChronoEditCLIPVision": ChronoEditCLIPVision,
+    "CRTAutoDLMiniMaxH3FL2VAModel": MiniMaxH3FL2VAModel,
+    "CRTAutoDLMiniMaxH3REF2VAModel": MiniMaxH3REF2VAModel,
+    "CRTAutoDLMiniMaxH3FL2VALightW4A8Model": MiniMaxH3FL2VALightW4A8Model,
+    "CRTAutoDLMiniMaxH3REF2VALightW4A8Model": MiniMaxH3REF2VALightW4A8Model,
+    "CRTAutoDLMiniMaxH3AudioVAE": MiniMaxH3AudioVAE,
+    "CRTAutoDLMiniMaxH3VideoVAE": MiniMaxH3VideoVAE,
+    "CRTAutoDLMiniMaxH3CLIPInt8": MiniMaxH3CLIPInt8,
+    "CRTAutoDLMiniMaxH3CLIPNVFP4": MiniMaxH3CLIPNVFP4,
+    "CRTAutoDLLTX25Model": LTX25Model,
+    "CRTAutoDLLTX25AudioVAE": LTX25AudioVAE,
+    "CRTAutoDLLTX25VideoVAE": LTX25VideoVAE,
+    "CRTAutoDLLTX25CLIP": LTX25CLIP,
+    "CRTAutoDLLTX25SpatialUpscaler": LTX25SpatialUpscaler,
+    "CRTAutoDLLTX25TemporalUpscaler": LTX25TemporalUpscaler,
+    "CRTAutoDLLTX25ICPixelSpatialUpscaleLoRA": LTX25ICPixelSpatialUpscaleLoRA,
+    "CRTAutoDLLTX25ICCnetLoRA": LTX25ICCnetLoRA,
+    "CRTAutoDLLTX25OutpaintLoRA": LTX25OutpaintLoRA,
+    "CRTAutoDLLTX25UpscaleICLoRA": LTX25UpscaleICLoRA,
+    "CRTAutoDLLTX25DurationHead": LTX25DurationHead,
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
-    "CRTAutoDLLTX23Model": "LTX2.3 Model (CRT AutoDL)",
-    "CRTAutoDLLTX23ModelNVFP4": "LTX2.3 Model NVFP4 (CRT AutoDL)",
-    "CRTAutoDLLTX23AudioVAE": "LTX2.3 AUDIO VAE (CRT AutoDL)",
-    "CRTAutoDLLTX23VideoVAE": "LTX2.3 VIDEO VAE (CRT AutoDL)",
-    "CRTAutoDLLTX23CLIP": "LTX2.3 CLIP (CRT AutoDL)",
-    "CRTAutoDLLTX23LatentUpscaler": "LTX2.3 Latent Upscaler (CRT AutoDL)",
-    "CRTAutoDLLTX23ICLoRA": "LTX2.3 IC Cnet LoRA (CRT AutoDL)",
-    "CRTAutoDLLTX23ICOutpaintLoRA": "LTX2.3 IC Outpaint LoRA (CRT AutoDL)",
-    "CRTAutoDLLTX23ICUpscaleLoRA": "LTX2.3 IC Upscale LoRA (CRT AutoDL)",
-    "CRTAutoDLLTX23ModelGGUFQ4": "LTX2.3 Model GGUF Q4_K_M (CRT AutoDL)",
-    "CRTAutoDLLTX23ModelGGUFQ5": "LTX2.3 Model GGUF Q5_K_M (CRT AutoDL)",
     "CRTAutoDLZImageTurboModel": "Z-Image Turbo Model (CRT AutoDL)",
     "CRTAutoDLZImageTurboVAE": "Z-Image Turbo VAE (CRT AutoDL)",
     "CRTAutoDLZImageTurboCLIP": "Z-Image Turbo CLIP (CRT AutoDL)",
@@ -875,4 +960,23 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "CRTAutoDLChronoEditVAE": "ChronoEdit VAE (CRT AutoDL)",
     "CRTAutoDLChronoEditCLIP": "ChronoEdit CLIP - WAN (CRT AutoDL)",
     "CRTAutoDLChronoEditCLIPVision": "ChronoEdit CLIP Vision (CRT AutoDL)",
+    "CRTAutoDLMiniMaxH3FL2VAModel": "MiniMax H3 FL2VA Model (CRT AutoDL)",
+    "CRTAutoDLMiniMaxH3REF2VAModel": "MiniMax H3 REF2VA Model (CRT AutoDL)",
+    "CRTAutoDLMiniMaxH3FL2VALightW4A8Model": "MiniMax H3 FL2VA Light W4A8 (CRT AutoDL)",
+    "CRTAutoDLMiniMaxH3REF2VALightW4A8Model": "MiniMax H3 REF2VA Light W4A8 (CRT AutoDL)",
+    "CRTAutoDLMiniMaxH3AudioVAE": "MiniMax H3 AUDIO VAE (CRT AutoDL)",
+    "CRTAutoDLMiniMaxH3VideoVAE": "MiniMax H3 VIDEO VAE (CRT AutoDL)",
+    "CRTAutoDLMiniMaxH3CLIPInt8": "MiniMax H3 CLIP INT8 (CRT AutoDL)",
+    "CRTAutoDLMiniMaxH3CLIPNVFP4": "MiniMax H3 CLIP NVFP4 (CRT AutoDL)",
+    "CRTAutoDLLTX25Model": "LTX2.5 Model (CRT AutoDL)",
+    "CRTAutoDLLTX25AudioVAE": "LTX2.5 AUDIO VAE (CRT AutoDL)",
+    "CRTAutoDLLTX25VideoVAE": "LTX2.5 VIDEO VAE (CRT AutoDL)",
+    "CRTAutoDLLTX25CLIP": "LTX2.5 CLIP (CRT AutoDL)",
+    "CRTAutoDLLTX25SpatialUpscaler": "LTX2.5 Spatial Upscaler (CRT AutoDL)",
+    "CRTAutoDLLTX25TemporalUpscaler": "LTX2.5 Temporal Upscaler (CRT AutoDL)",
+    "CRTAutoDLLTX25ICPixelSpatialUpscaleLoRA": "LTX2.5 IC Pixel Spatial Upscale LoRA (CRT AutoDL)",
+    "CRTAutoDLLTX25ICCnetLoRA": "LTX2.5 IC Cnet LoRA (CRT AutoDL)",
+    "CRTAutoDLLTX25OutpaintLoRA": "LTX2.5 IC Outpaint LoRA (CRT AutoDL)",
+    "CRTAutoDLLTX25UpscaleICLoRA": "LTX2.5 IC Upscale LoRA (CRT AutoDL)",
+    "CRTAutoDLLTX25DurationHead": "LTX2.5 Duration Head (CRT AutoDL)",
 }

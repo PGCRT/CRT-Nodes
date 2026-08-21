@@ -73,11 +73,13 @@ app.registerExtension({
             boxSizing: "border-box",
           });
 
+          const esc = (s) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
           const paragraphs = textarea.value.split("\n");
           highlighter.innerHTML = paragraphs
             .map((para, i) => {
               const color = i % 2 === 0 ? "#00FF00" : "#FF00FF";
-              return `<div style="color: ${color}; width: 100%; min-height: ${comp.lineHeight};">${para || "&nbsp;"}</div>`;
+              const safe = para ? esc(para) : "&nbsp;";
+              return `<div style="color: ${color}; width: 100%; min-height: ${comp.lineHeight};">${safe}</div>`;
             })
             .join("");
 
@@ -85,10 +87,26 @@ app.registerExtension({
         };
 
         this._crtUpdate = update;
+        this._crtTextarea = textarea;
+        this._crtHighlighter = highlighter;
+        this._crtStickToBottom = true;
 
-        const onInput = () => update();
+        const isAtBottom = () =>
+          Math.abs(textarea.scrollHeight - textarea.clientHeight - textarea.scrollTop) < 4;
+
+        const snapToBottom = () => {
+          textarea.scrollTop = textarea.scrollHeight;
+          highlighter.scrollTop = textarea.scrollTop;
+        };
+
+        const onInput = () => {
+          update();
+          if (this._crtStickToBottom) snapToBottom();
+        };
         const onScroll = () => {
           highlighter.scrollTop = textarea.scrollTop;
+          // If user scrolls up, release stick; if back at bottom, re-stick
+          this._crtStickToBottom = isAtBottom();
         };
 
         textarea.addEventListener("input", onInput);
@@ -96,13 +114,32 @@ app.registerExtension({
         cleanup.push(() => textarea.removeEventListener("input", onInput));
         cleanup.push(() => textarea.removeEventListener("scroll", onScroll));
 
-        const ro = new ResizeObserver(() => update());
+        const ro = new ResizeObserver(() => {
+          update();
+          if (this._crtStickToBottom && textarea.scrollHeight > textarea.clientHeight) {
+            textarea.scrollTop = textarea.scrollHeight;
+            highlighter.scrollTop = textarea.scrollTop;
+          }
+        });
         ro.observe(textarea);
         cleanup.push(() => ro.disconnect());
 
+        // Only snap to bottom on run — listen for execution start
+        const onExecStart = () => { this._crtStickToBottom = true; };
+        if (app.api?.addEventListener) {
+          app.api.addEventListener("execution_start", onExecStart);
+          cleanup.push(() => app.api.removeEventListener("execution_start", onExecStart));
+        }
+
         ensureSelectionStyle();
 
-        this._crtLineSpotTimer = window.setTimeout(update, 100);
+        this._crtLineSpotTimer = window.setTimeout(() => {
+          update();
+          if (this._crtStickToBottom) {
+            textarea.scrollTop = textarea.scrollHeight;
+            highlighter.scrollTop = textarea.scrollTop;
+          }
+        }, 100);
         this._crtLineSpotCleanup = () => {
           cleanup.forEach((fn) => fn());
           cleanup.length = 0;
@@ -123,18 +160,25 @@ app.registerExtension({
       const onExecuted = nodeType.prototype.onExecuted;
       nodeType.prototype.onExecuted = function (message) {
         onExecuted?.apply(this, arguments);
-        if (!message?.text) return;
-        const val = Array.isArray(message.text) ? message.text[0] : message.text;
-        if (this._crtLineSpotFrame) {
-          cancelAnimationFrame(this._crtLineSpotFrame);
+        if (!message?.text && message?.text !== "") return;
+        const raw = message.text;
+        const val = Array.isArray(raw) ? (raw[0] ?? "") : (raw ?? "");
+        this._crtStickToBottom = true;
+        const widget = this.widgets?.find((w) => w.name === "text");
+        if (!widget?.inputEl) return;
+        // Keep widget.value and inputEl in sync for serialization
+        widget.value = val;
+        widget.inputEl.value = val;
+        // Instant update - no rAF wipe, rebuild highlighter synchronously
+        this._crtUpdate?.();
+        const ta = this._crtTextarea || widget.inputEl;
+        const hl = this._crtHighlighter;
+        if (ta) {
+          // Force layout before scroll to avoid jitter
+          void ta.offsetHeight;
+          ta.scrollTop = ta.scrollHeight;
+          if (hl) hl.scrollTop = ta.scrollTop;
         }
-        this._crtLineSpotFrame = requestAnimationFrame(() => {
-          const widget = this.widgets?.find((w) => w.name === "text");
-          if (!widget?.inputEl) return;
-          widget.inputEl.value = val;
-          this._crtUpdate?.();
-          this._crtLineSpotFrame = null;
-        });
       };
 
       nodeType.prototype.onRemoved = function () {

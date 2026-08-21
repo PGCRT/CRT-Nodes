@@ -139,6 +139,7 @@ if True:
         NODE_DISPLAY_NAME_MAPPINGS as CRT_AUTODL_NODE_DISPLAY_NAME_MAPPINGS,
     )
     from .py.VAE_Decode_Last_Frame import CRTVAEDecodeLastFrame
+    from .py.DepthAnything3_CRT import CRT_DepthAnything3
 
     # Add GGUF unet folder path if not already registered
     try:
@@ -153,13 +154,6 @@ if True:
 
     CRT_LTX23AutoDownload = None
     LTX23AutoDownloadAPI = None
-    try:
-        from .py.LTX23_AutoDownload import (
-            CRT_LTX23AutoDownload,
-            LTX23AutoDownloadAPI,
-        )
-    except Exception as e:
-        print(f"[CRT-Nodes] Warning: LTX23 AutoDownload node unavailable: {e}")
 
     SaveImageBase64 = None
     MagicLoraLoader = None
@@ -310,13 +304,13 @@ NODE_CLASS_MAPPINGS = {
     "CRT_LTX23USModelsPipe": CRT_LTX23USModelsPipe,
     "CRT_LTX23USConfig": CRT_LTX23USConfig,
     "CRT_LTX23UnifiedSampler": CRT_LTX23UnifiedSampler,
-    "CRT_LTX23AutoDownload": CRT_LTX23AutoDownload,
     "CRT_IsolateInput": CRT_IsolateInput,
     "CRT_IsolateOutput": CRT_IsolateOutput,
     "CRT_IsolateInputCLIPSeg": CRT_IsolateInputCLIPSeg,
     "ErnieImageAestheticScore": ErnieImageAestheticScore,
     "UnslothLLM": UnslothLLM,
     "CRTVAEDecodeLastFrame": CRTVAEDecodeLastFrame,
+    "CRT_DepthAnything3": CRT_DepthAnything3,
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
@@ -422,16 +416,16 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "ImageTileChecker": "Image Tile Checker (CRT)",
     "ScaleLatentToMegapixels": "Scale Latent To Megapixels (CRT)",
     "ResolutionBySide": "Resolution By Side (CRT)",
-    "CRT_LTX23USModelsPipe": "LTX 2.3 US Models Pipe (CRT)",
-    "CRT_LTX23USConfig": "LTX 2.3 US Config (CRT)",
-    "CRT_LTX23UnifiedSampler": "LTX 2.3 Unified Sampler (CRT)",
-    "CRT_LTX23AutoDownload": "LTX 2.3 AutoDownload (CRT)",
+    "CRT_LTX23USModelsPipe": "LTX US Models Pipe (CRT)",
+    "CRT_LTX23USConfig": "LTX US Config (CRT)",
+    "CRT_LTX23UnifiedSampler": "LTX Unified Sampler (CRT)",
     "CRT_IsolateInput": "Isolate Input SAM3.1 (CRT)",
     "CRT_IsolateOutput": "Isolate Output (CRT)",
     "CRT_IsolateInputCLIPSeg": "Isolate Input CLIPSeg (CRT)",
     "ErnieImageAestheticScore": "ERNIE Image Aesthetic Score (CRT)",
     "UnslothLLM": "Unsloth Studio Bridge (CRT)",
     "CRTVAEDecodeLastFrame": "VAE Decode Last Frame (CRT)",
+    "CRT_DepthAnything3": "DepthAnything3 (CRT)",
 }
 
 NODE_CLASS_MAPPINGS.update(CRT_AUTODL_NODE_CLASS_MAPPINGS)
@@ -462,48 +456,6 @@ NODE_CLASS_MAPPINGS = {k: v for k, v in NODE_CLASS_MAPPINGS.items() if v is not 
 NODE_DISPLAY_NAME_MAPPINGS = {
     k: v for k, v in NODE_DISPLAY_NAME_MAPPINGS.items() if v is not None
 }
-
-# Setup LTX23 AutoDownload API routes
-_LTX23_API_ROUTES_REGISTERED = globals().get("_LTX23_API_ROUTES_REGISTERED", False)
-if LTX23AutoDownloadAPI is not None and not _LTX23_API_ROUTES_REGISTERED:
-    try:
-        import server
-        from aiohttp import web
-
-        @server.PromptServer.instance.routes.post("/crt/ltx23/check_models")
-        async def api_check_models(request):
-            try:
-                result = LTX23AutoDownloadAPI.check_models()
-                return web.json_response(result)
-            except Exception as e:
-                return web.json_response({"error": str(e)}, status=500)
-
-        @server.PromptServer.instance.routes.post("/crt/ltx23/download_model")
-        async def api_download_model(request):
-            try:
-                data = await request.json()
-                model_type = data.get("model_type")
-                result = LTX23AutoDownloadAPI.download_model_endpoint(model_type)
-                return web.json_response(result)
-            except Exception as e:
-                return web.json_response({"error": str(e)}, status=500)
-
-        @server.PromptServer.instance.routes.post("/crt/ltx23/download_status")
-        async def api_download_status(request):
-            try:
-                data = await request.json()
-                model_type = data.get("model_type")
-                result = LTX23AutoDownloadAPI.get_download_status_endpoint(model_type)
-                return web.json_response(result)
-            except Exception as e:
-                return web.json_response({"error": str(e)}, status=500)
-
-        _LTX23_API_ROUTES_REGISTERED = True
-
-    except Exception as e:
-        print(
-            f"[CRT-Nodes] Warning: Could not setup LTX23 AutoDownload API routes: {e}"
-        )
 
 WEB_DIRECTORY = "./js"
 __all__ = ["NODE_CLASS_MAPPINGS", "NODE_DISPLAY_NAME_MAPPINGS", "WEB_DIRECTORY"]
