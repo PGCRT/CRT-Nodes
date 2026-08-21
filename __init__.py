@@ -1,7 +1,7 @@
 """
 @author: CRT
 @title: CRT-Nodes
-@version: 2.7.1
+@version: 2.8.0
 @project: "https://github.com/PGCRT/CRT-Nodes",
 @description: Set of nodes for ComfyUI
 https://discord.gg/8wYS9MBQqp
@@ -16,7 +16,6 @@ __package__ = "crt_nodes"
 
 if True:
 
-    from .py.Remove_Trailing_Comma_Node import RemoveTrailingCommaNode
     from .py.Boolean_Transform_Node import BooleanTransformNode
     from .py.Video_Duration_Calculator import VideoDurationCalculator
     from .py.Post_Process_Node import CRTPostProcessNode
@@ -26,6 +25,7 @@ if True:
     from .py.Image_Loader_Crawl import ImageLoaderCrawl
     from .py.Image_Loader_Crawl_Batch import CRT_ImageLoaderCrawlBatch
     from .py.Audio_Loader_Crawl import AudioLoaderCrawl
+    from .py.Audio_Loader_Crawl_Batch import CRT_AudioLoaderCrawlBatch
     from .py.Mask_Empty_Float_Node import MaskEmptyFloatNode
     from .py.Mask_Pass_Or_Placeholder import MaskPassOrPlaceholder
     from .py.Mask_Temporal_Enhancer import MaskTemporalEnhancer
@@ -44,19 +44,12 @@ if True:
     from .py.Solid_Color import SolidColor
     from .py.Simple_Knob import SimpleKnobNode
     from .py.Simple_Toggle import SimpleToggleNode
-    from .py.Upscale_Model_Adv import CRT_UpscaleModelAdv
-    from .py.Smart_Controlnet_Apply import SmartControlNetApply
-    from .py.Smart_Style_Model_Apply_Dual import SmartStyleModelApplyDual
-    from .py.CLIP_Text_Encode_Flux_Merged import CLIPTextEncodeFluxMerged
     from .py.CLIP_Text_Encode_Unload import CRTCLIPTextEncode
-    from .py.Ideogram4_Flash_Attention import CRTIdeogram4FlashAttention
     from .py.Load_Image_Resize import LoadImageResize
     from .py.Autoprompt_Processor import AutopromptProcessor
-    from .py.Smart_Preprocessor import SmartPreprocessor
     from .py.Chroma_Key_Overlay import CRTChromaKeyOverlay
     from .py.Get_First_Last_Frame import CRTFirstLastFrameSelector
     from .py.Even_Batch_Picker import CRTEvenBatchPicker
-    from .py.Advanced_String_Replace import AdvancedStringReplace
     from .py.Seamless_Loop_Blender import SeamlessLoopBlender
     from .py.Crop_By_Percent import CRTPctCropCalculator
     from .py.Audio_Previewer import AudioPreviewer
@@ -97,6 +90,10 @@ if True:
         CRT_FileBatchPromptSchedulerKREA2,
     )
     from .py.Text_Loader_Crawl_Batch import TextLoaderCrawlBatch
+    from .py.Text_Add_Rows import TextAddRows
+    from .py.Text_Rows_Crawl import TextRowsCrawl
+    from .py.Extract_QA import ExtractQA
+    from .py.Merge_QA import MergeQA
     from .py.Audio_Data_To_Frame_Count import AudioOrManualFrameCount
     from .py.Quantize_And_Crop import CRT_QuantizeAndCropImage
     from .py.String_Batcher import CRT_StringBatcher
@@ -114,7 +111,6 @@ if True:
     from .py.Int_Value import CRT_IntValue
     from .py.Minimax_Length import CRT_MinimaxLength
     from .py.Mono_To_Stereo_Converter import MonoToStereoConverter
-    from .py.Seeded_Persona_Lora_Loader import SeededPersonaLoraLoader
     from .py.Any_Trigger import AnyTrigger
     from .py.Depth_Anything_Tensorrt_Format import DepthAnythingTensorrtFormat
     from .py.Audio_Frame_Adjuster import AudioFrameAdjuster
@@ -123,7 +119,6 @@ if True:
     from .py.Load_Image_Base64 import LoadImageBase64
     from .py.Reference_Latent_Batch import ReferenceLatentBatch
     from .py.Save_Jpeg_Websocket import SaveJpegWebsocket
-    from .py.Seamless_Tile import Flux2KleinSeamlessTile
     from .py.Tile_Checker import ImageTileChecker
     from .py.Scale_Latent_To_Megapixels import ScaleLatentToMegapixels
     from .py.Resolution_By_Side import ResolutionBySide
@@ -143,6 +138,7 @@ if True:
         NODE_CLASS_MAPPINGS as CRT_AUTODL_NODE_CLASS_MAPPINGS,
         NODE_DISPLAY_NAME_MAPPINGS as CRT_AUTODL_NODE_DISPLAY_NAME_MAPPINGS,
     )
+    from .py.VAE_Decode_Last_Frame import CRTVAEDecodeLastFrame
 
     # Add GGUF unet folder path if not already registered
     try:
@@ -165,17 +161,6 @@ if True:
     except Exception as e:
         print(f"[CRT-Nodes] Warning: LTX23 AutoDownload node unavailable: {e}")
 
-    try:
-        from .py.Tiny_Flux2_VAE import (
-            TinyFlux2VAELoader,
-            TinyFlux2VAEEncode,
-            TinyFlux2VAEDecode,
-        )
-
-        _tiny_flux2_vae_available = True
-    except Exception as e:
-        _tiny_flux2_vae_available = False
-        print(f"[CRT-Nodes] Warning: Tiny Flux2 VAE nodes unavailable: {e}")
     SaveImageBase64 = None
     MagicLoraLoader = None
     SaveMergedLora = None
@@ -193,12 +178,11 @@ if True:
     except Exception as e:
         print(f"[CRT-Nodes] Warning: Magic LoRA Loader node unavailable: {e}")
 
-    CRT_AudioTranscript = None
-    CRT_AudioTranscriptPipeOut = None
+    CRT_AudioTranscriptBatch = None
     try:
-        from .py.Audio_Transcript import CRT_AudioTranscript, CRT_AudioTranscriptPipeOut
+        from .py.Audio_Transcript_Batch import CRT_AudioTranscriptBatch
     except Exception as e:
-        print(f"[CRT-Nodes] Warning: Audio Transcript node unavailable: {e}")
+        print(f"[CRT-Nodes] Warning: Audio Transcript Batch node unavailable: {e}")
 
     try:
         comfy_dir = os.path.dirname(folder_paths.__file__)
@@ -223,7 +207,6 @@ else:
     pass
 
 NODE_CLASS_MAPPINGS = {
-    "Remove Trailing Comma": RemoveTrailingCommaNode,
     "Boolean Transform": BooleanTransformNode,
     "Video Duration Calculator": VideoDurationCalculator,
     "CRT Post-Process Suite": CRTPostProcessNode,
@@ -233,6 +216,7 @@ NODE_CLASS_MAPPINGS = {
     "ImageLoaderCrawl": ImageLoaderCrawl,
     "CRT_ImageLoaderCrawlBatch": CRT_ImageLoaderCrawlBatch,
     "AudioLoaderCrawl": AudioLoaderCrawl,
+    "CRT_AudioLoaderCrawlBatch": CRT_AudioLoaderCrawlBatch,
     "MaskEmptyFloatNode": MaskEmptyFloatNode,
     "MaskPassOrPlaceholder": MaskPassOrPlaceholder,
     "MaskTemporalEnhancer": MaskTemporalEnhancer,
@@ -247,19 +231,12 @@ NODE_CLASS_MAPPINGS = {
     "SolidColor": SolidColor,
     "SimpleKnobNode": SimpleKnobNode,
     "SimpleToggleNode": SimpleToggleNode,
-    "CRT_UpscaleModelAdv": CRT_UpscaleModelAdv,
-    "SmartControlNetApply": SmartControlNetApply,
-    "SmartStyleModelApplyDual": SmartStyleModelApplyDual,
-    "CLIPTextEncodeFluxMerged": CLIPTextEncodeFluxMerged,
     "CRTCLIPTextEncode": CRTCLIPTextEncode,
-    "CRTIdeogram4FlashAttention": CRTIdeogram4FlashAttention,
     "LoadImageResize": LoadImageResize,
     "AutopromptProcessor": AutopromptProcessor,
-    "SmartPreprocessor": SmartPreprocessor,
     "CRTChromaKeyOverlay": CRTChromaKeyOverlay,
     "CRTFirstLastFrameSelector": CRTFirstLastFrameSelector,
     "CRTEvenBatchPicker": CRTEvenBatchPicker,
-    "AdvancedStringReplace": AdvancedStringReplace,
     "SeamlessLoopBlender": SeamlessLoopBlender,
     "CRTPctCropCalculator": CRTPctCropCalculator,
     "AudioPreviewer": AudioPreviewer,
@@ -312,10 +289,13 @@ NODE_CLASS_MAPPINGS = {
     "CRT_Textbox": CRT_Textbox,
     "CRT_JoinStrings": CRT_JoinStrings,
     "CRT_RemoveLines": CRT_RemoveLines,
+    "TextAddRows": TextAddRows,
+    "TextRowsCrawl": TextRowsCrawl,
+    "ExtractQA": ExtractQA,
+    "MergeQA": MergeQA,
     "CRT_IntValue": CRT_IntValue,
     "CRT_MinimaxLength": CRT_MinimaxLength,
     "MonoToStereoConverter": MonoToStereoConverter,
-    "PGC_SeededPersonaLoraLoader": SeededPersonaLoraLoader,
     "AnyTrigger": AnyTrigger,
     "DepthAnythingTensorrtFormat": DepthAnythingTensorrtFormat,
     "AudioFrameAdjuster": AudioFrameAdjuster,
@@ -324,7 +304,6 @@ NODE_CLASS_MAPPINGS = {
     "LoadImageBase64": LoadImageBase64,
     "ReferenceLatentBatch": ReferenceLatentBatch,
     "SaveJpegWebsocket": SaveJpegWebsocket,
-    "Flux2KleinSeamlessTile": Flux2KleinSeamlessTile,
     "ImageTileChecker": ImageTileChecker,
     "ScaleLatentToMegapixels": ScaleLatentToMegapixels,
     "ResolutionBySide": ResolutionBySide,
@@ -337,11 +316,11 @@ NODE_CLASS_MAPPINGS = {
     "CRT_IsolateInputCLIPSeg": CRT_IsolateInputCLIPSeg,
     "ErnieImageAestheticScore": ErnieImageAestheticScore,
     "UnslothLLM": UnslothLLM,
+    "CRTVAEDecodeLastFrame": CRTVAEDecodeLastFrame,
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
-    "Remove Trailing Comma": "Remove Trailing Comma (CRT)",
-    "Boolean Transform": "Boolean Transform (CRT)",
+    "Boolean Transform": "String to Boolean (CRT)",
     "Video Duration Calculator": "Video Duration Calculator (CRT)",
     "CRT Post-Process Suite": "Post-Process Suite (CRT)",
     "FluxLoraBlocksPatcher": "Flux LoRA Blocks Patcher (CRT)",
@@ -350,6 +329,7 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "ImageLoaderCrawl": "Image Loader Crawl (CRT)",
     "CRT_ImageLoaderCrawlBatch": "Image Loader Crawl Batch (CRT)",
     "AudioLoaderCrawl": "Audio Loader Crawl (CRT)",
+    "CRT_AudioLoaderCrawlBatch": "Audio Loader Crawl Batch (CRT)",
     "MaskEmptyFloatNode": "Mask Empty Float (CRT)",
     "MaskPassOrPlaceholder": "Mask Pass or Placeholder (CRT)",
     "MaskTemporalEnhancer": "Mask Temporal Enhancer (CRT)",
@@ -364,19 +344,12 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "SolidColor": "Solid Color (CRT)",
     "SimpleKnobNode": "K",
     "SimpleToggleNode": "T",
-    "CRT_UpscaleModelAdv": "Upscale Model Advanced (CRT)",
-    "SmartControlNetApply": "Smart ControlNet Apply (CRT)",
-    "SmartStyleModelApplyDual": "Smart Style Model Apply DUAL (CRT)",
-    "CLIPTextEncodeFluxMerged": "CLIP Text Encode FLUX Merged (CRT)",
     "CRTCLIPTextEncode": "CLIP Text Encode + Unload (CRT)",
-    "CRTIdeogram4FlashAttention": "Ideogram 4 FlashAttention (CRT)",
     "LoadImageResize": "Load Image Resize (CRT)",
     "AutopromptProcessor": "AutopromptProcessor (CRT)",
-    "SmartPreprocessor": "Smart Preprocessor (CRT)",
     "CRTChromaKeyOverlay": "Chroma Key Overlay (CRT)",
     "CRTFirstLastFrameSelector": "Get First & Last Frame (CRT)",
     "CRTEvenBatchPicker": "Even Batch Picker (CRT)",
-    "AdvancedStringReplace": "Advanced String Replace (CRT)",
     "SeamlessLoopBlender": "Seamless Loop Blender (CRT)",
     "CRTPctCropCalculator": "Percentage Crop Calculator (CRT)",
     "AudioPreviewer": "Preview Audio (CRT)",
@@ -427,14 +400,17 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "CRT_KSamplerBatch": "KSampler Batch (CRT)",
     "CRT_KSamplerBatchAdvanced": "KSampler Batch Advanced (CRT)",
     "CRT_StringLineCounter": "String Line Counter (CRT)",
-    "Text Box line spot": "Text Box line spot (CRT)",
+    "Text Box line spot": "TextBox line spot (CRT)",
     "CRT_Textbox": "Textbox (CRT)",
     "CRT_JoinStrings": "Join Strings (CRT)",
     "CRT_RemoveLines": "Remove Lines (CRT)",
+    "TextAddRows": "Text Add Rows (CRT)",
+    "TextRowsCrawl": "Text Rows Crawl (CRT)",
+    "ExtractQA": "Extract Q/A (CRT)",
+    "MergeQA": "Merge Q/A (CRT)",
     "CRT_IntValue": "Int Value (CRT)",
     "CRT_MinimaxLength": "Minimax Length (CRT)",
     "MonoToStereoConverter": "Mono to Stereo Converter (CRT)",
-    "PGC_SeededPersonaLoraLoader": "Seeded Persona LoRA Loader (CRT)",
     "AnyTrigger": "Any Trigger (CRT)",
     "DepthAnythingTensorrtFormat": "Depth Anything Tensorrt Format (CRT)",
     "AudioFrameAdjuster": "Audio Frame Adjuster (CRT)",
@@ -443,7 +419,6 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "LoadImageBase64": "Load Image Base64 (CRT)",
     "ReferenceLatentBatch": "Reference Latent Batch (CRT)",
     "SaveJpegWebsocket": "Save JPEG Websocket (CRT)",
-    "Flux2KleinSeamlessTile": "Flux2Klein Seamless Tile (CRT)",
     "ImageTileChecker": "Image Tile Checker (CRT)",
     "ScaleLatentToMegapixels": "Scale Latent To Megapixels (CRT)",
     "ResolutionBySide": "Resolution By Side (CRT)",
@@ -456,6 +431,7 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "CRT_IsolateInputCLIPSeg": "Isolate Input CLIPSeg (CRT)",
     "ErnieImageAestheticScore": "ERNIE Image Aesthetic Score (CRT)",
     "UnslothLLM": "Unsloth Studio Bridge (CRT)",
+    "CRTVAEDecodeLastFrame": "VAE Decode Last Frame (CRT)",
 }
 
 NODE_CLASS_MAPPINGS.update(CRT_AUTODL_NODE_CLASS_MAPPINGS)
@@ -475,30 +451,10 @@ if SaveMergedLora is not None:
         "Magic Save Merged LoRA (CRT)"
     )
 
-if CRT_AudioTranscript is not None:
-    NODE_CLASS_MAPPINGS["CRT_AudioTranscript"] = CRT_AudioTranscript
-    NODE_DISPLAY_NAME_MAPPINGS["CRT_AudioTranscript"] = "Audio Transcript (CRT)"
-
-if CRT_AudioTranscriptPipeOut is not None:
-    NODE_CLASS_MAPPINGS["CRT_AudioTranscriptPipeOut"] = CRT_AudioTranscriptPipeOut
-    NODE_DISPLAY_NAME_MAPPINGS["CRT_AudioTranscriptPipeOut"] = (
-        "Audio Transcript Pipe Out (CRT)"
-    )
-
-if globals().get("_tiny_flux2_vae_available", False):
-    NODE_CLASS_MAPPINGS.update(
-        {
-            "TinyFlux2VAELoader": TinyFlux2VAELoader,
-            "TinyFlux2VAEEncode": TinyFlux2VAEEncode,
-            "TinyFlux2VAEDecode": TinyFlux2VAEDecode,
-        }
-    )
-    NODE_DISPLAY_NAME_MAPPINGS.update(
-        {
-            "TinyFlux2VAELoader": "Tiny FLUX.2 VAE Loader (CRT)",
-            "TinyFlux2VAEEncode": "Tiny FLUX.2 VAE Encode (CRT)",
-            "TinyFlux2VAEDecode": "Tiny FLUX.2 VAE Decode (CRT)",
-        }
+if CRT_AudioTranscriptBatch is not None:
+    NODE_CLASS_MAPPINGS["CRT_AudioTranscriptBatch"] = CRT_AudioTranscriptBatch
+    NODE_DISPLAY_NAME_MAPPINGS["CRT_AudioTranscriptBatch"] = (
+        "Audio Transcript Batch (CRT)"
     )
 
 # Filter out None values from mappings

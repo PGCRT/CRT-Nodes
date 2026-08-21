@@ -437,6 +437,19 @@ const SIGMA_COLOR = "#a89aff";
 const CAP_COLOR   = "#ff9f6b";
 const CAP_DIM     = "rgba(255, 159, 107, 0.18)";
 const CAP_MED     = "rgba(255, 159, 107, 0.42)";
+// Refiner/Other widget: smooth zone color of the combined multiplier
+// (slider x sum of enabled stack strengths). green <= 1.0x, orange 1.0-1.5x, red > 1.5x.
+const NB_ZONES = { green: [63, 185, 80], orange: [255, 159, 107], red: [229, 83, 75] };
+function _nbZoneRGB(x) {
+  const smooth = (t) => { t = Math.max(0, Math.min(1, t)); return t * t * (3 - 2 * t); };
+  const mix = (a, b, t) => a.map((v, i) => Math.round(v + (b[i] - v) * smooth(t)));
+  if (x <= 1.0) return NB_ZONES.green;
+  if (x <= 1.5) return mix(NB_ZONES.green, NB_ZONES.orange, (x - 1.0) / 0.5);
+  if (x <= 2.0) return mix(NB_ZONES.orange, NB_ZONES.red, (x - 1.5) / 0.5);
+  return NB_ZONES.red;
+}
+function _nbZoneColor(x) { const c = _nbZoneRGB(x); return `rgb(${c[0]},${c[1]},${c[2]})`; }
+function _nbZoneAlpha(x, a) { const c = _nbZoneRGB(x); return `rgba(${c[0]},${c[1]},${c[2]},${a})`; }
 
 const _AW = 9;
 const _AH = 10;
@@ -445,7 +458,7 @@ const _NW = 38;
 const WET_WIDGET_TOTAL = _AW + _IM + _NW + _IM + _AW;
 
 // Supported model types and their block architectures
-const MODEL_TYPES = ["Flux2Klein", "LTX2.3", "ZImageTurbo", "WAN2.2", "ERNIEImage", "Ideogram4", "Krea2Turbo"];
+const MODEL_TYPES = ["Flux2Klein", "LTX2.3", "ZImageTurbo", "WAN2.2", "ERNIEImage", "Ideogram4", "Krea2Turbo", "MiniMaxH3"];
 const BLOCK_CONFIGS = {
   "Flux2Klein": [
     { key: "double",      label: "Double Blocks (0–7)",        count: 8  },
@@ -468,6 +481,9 @@ const BLOCK_CONFIGS = {
   ],
   "Krea2Turbo": [
     { key: "blocks", label: "Blocks (0–27)", count: 28 },
+  ],
+  "MiniMaxH3": [
+    { key: "blocks", label: "Blocks (0–49)", count: 50 },
   ],
 };
 
@@ -829,7 +845,7 @@ function _drawBlocksIcon(ctx, x, y, size, color) {
 // ---------------------------------------------------------------------------
 // Shared drag-by-header helper
 // ---------------------------------------------------------------------------
-function _makeDraggable(el, handleEl) {
+function _makeDraggable(el, handleEl, onMoveEnd) {
   let ox = 0, oy = 0, startX = 0, startY = 0, dragging = false;
   handleEl.classList.add("pgc-panel-draggable");
   handleEl.addEventListener("mousedown", (e) => {
@@ -845,7 +861,12 @@ function _makeDraggable(el, handleEl) {
       el.style.left = Math.max(0, ox + me.clientX - startX) + "px";
       el.style.top  = Math.max(0, oy + me.clientY - startY) + "px";
     };
-    const onUp = () => { dragging = false; document.removeEventListener("mousemove", onMove); document.removeEventListener("mouseup", onUp); };
+    const onUp = () => {
+      dragging = false;
+      document.removeEventListener("mousemove", onMove);
+      document.removeEventListener("mouseup", onUp);
+      if (onMoveEnd) onMoveEnd(parseFloat(el.style.left) || 0, parseFloat(el.style.top) || 0);
+    };
     document.addEventListener("mousemove", onMove);
     document.addEventListener("mouseup",   onUp);
   });
@@ -876,6 +897,12 @@ class BlockEditorPanel {
     this._fineTuneInput   = null;
     this._fineTuneValueEl = null;
     this._fineTuneValue   = 0;
+    this._emphasisInput   = null;
+    this._emphasisValueEl = null;
+    this._emphasisValue   = 0;
+    this._lastLeft        = null;
+    this._lastTop         = null;
+    this._hasMoved        = false;
   }
 
   _ensureBuilt() {
@@ -972,6 +999,35 @@ class BlockEditorPanel {
     this._fineTuneInput.addEventListener("mousedown", (e) => e.stopPropagation());
     fineRow.append(fineLabel, this._fineTuneInput, this._fineTuneValueEl);
 
+    const emphasisRow = document.createElement("div");
+    emphasisRow.className = "pgc-blocks-fine";
+    const emphasisLabel = document.createElement("span");
+    emphasisLabel.className = "pgc-blocks-fine-label";
+    emphasisLabel.textContent = "Emphasis";
+    this._emphasisInput = document.createElement("input");
+    this._emphasisInput.type = "range";
+    this._emphasisInput.min = "-0.5";
+    this._emphasisInput.max = "2.0";
+    this._emphasisInput.step = "0.01";
+    this._emphasisInput.value = "0";
+    this._emphasisInput.className = "pgc-blocks-fine-slider";
+    this._emphasisInput.title = "Relative block emphasis: drag right to stretch block weights away from their section average (more contrast), left to compress them toward the average.";
+    this._emphasisValueEl = document.createElement("span");
+    this._emphasisValueEl.className = "pgc-blocks-fine-value";
+    this._emphasisValueEl.textContent = "0.00";
+    this._emphasisInput.addEventListener("pointerdown", () => {
+      this._emphasisBaseBlocks = JSON.parse(JSON.stringify(this._blocks));
+    });
+    this._emphasisInput.addEventListener("input", () => this._applyEmphasis(parseFloat(this._emphasisInput.value) || 0));
+    const resetEmphasis = () => this._resetEmphasisControl();
+    this._emphasisInput.addEventListener("change", resetEmphasis);
+    this._emphasisInput.addEventListener("pointerup", resetEmphasis);
+    this._emphasisInput.addEventListener("mouseup", resetEmphasis);
+    this._emphasisInput.addEventListener("touchend", resetEmphasis);
+    this._emphasisInput.addEventListener("click", (e) => e.stopPropagation());
+    this._emphasisInput.addEventListener("mousedown", (e) => e.stopPropagation());
+    emphasisRow.append(emphasisLabel, this._emphasisInput, this._emphasisValueEl);
+
     const footerButtons = document.createElement("div");
     footerButtons.className = "pgc-blocks-footer-buttons";
 
@@ -1005,10 +1061,10 @@ class BlockEditorPanel {
     this._intensityBtn.addEventListener("click", () => this._applyIntensity());
 
     footerButtons.append(resetBtn, disableBtn, invertBtn, this._intensityBtn, this._useGlobBtn);
-    footer.append(fineRow, footerButtons);
+    footer.append(fineRow, emphasisRow, footerButtons);
     el.append(hdr, footer);
     document.body.appendChild(el);
-    _makeDraggable(el, hdr);
+    _makeDraggable(el, hdr, (l, t) => { this._lastLeft = l; this._lastTop = t; this._hasMoved = true; });
     this._el = el;
   }
 
@@ -1101,6 +1157,8 @@ class BlockEditorPanel {
       rowReset.addEventListener("mousedown", (e) => e.stopPropagation());
 
       this._inputs[type][i] = num;
+      num._track = track;
+      num._rowReset = rowReset;
       row.append(lbl, track, num, rowReset);
       grid.appendChild(row);
     }
@@ -1136,6 +1194,39 @@ class BlockEditorPanel {
         if (!num) return;
         const current = this._blocks[type]?.[i] ?? 1.0;
         const val = Math.round(Math.max(0, Math.min(2, current + delta)) * 100) / 100;
+        this._setOne(type, i, val, num, false);
+      });
+    }
+    this._onChange?.(this._blocks);
+  }
+
+  _resetEmphasisControl() {
+    this._emphasisValue = 0;
+    if (this._emphasisInput) this._emphasisInput.value = "0";
+    if (this._emphasisValueEl) this._emphasisValueEl.textContent = "0.00";
+    this._emphasisBaseBlocks = null;
+  }
+
+  _applyEmphasis(nextValue) {
+    const e = Math.max(-0.5, Math.min(2, nextValue));
+    this._emphasisValue = e;
+    if (this._emphasisValueEl) this._emphasisValueEl.textContent = e.toFixed(2);
+
+    if (!this._emphasisBaseBlocks) {
+      this._emphasisBaseBlocks = JSON.parse(JSON.stringify(this._blocks));
+    }
+
+    for (const [type, inputs] of Object.entries(this._inputs)) {
+      const baseArr = this._emphasisBaseBlocks[type] || [];
+      const baseValues = inputs.map((_, i) => baseArr[i] ?? 1.0);
+      if (baseValues.length === 0) continue;
+      const mean = baseValues.reduce((a, b) => a + b, 0) / baseValues.length;
+      const factor = 1 + e; // e=0 -> unchanged, e=1 -> double spread, e=-0.5 -> half spread
+      inputs.forEach((num, i) => {
+        if (!num) return;
+        const base = baseArr[i] ?? 1.0;
+        const spread = base - mean;
+        const val = Math.round(Math.max(0, Math.min(2, mean + spread * factor)) * 100) / 100;
         this._setOne(type, i, val, num, false);
       });
     }
@@ -1253,15 +1344,22 @@ class BlockEditorPanel {
     if (this._reductionInput) this._reductionInput.value = (reduction ?? 1.0).toFixed(1);
     this._refreshInputs();
     this._resetFineTuneControl();
+    this._resetEmphasisControl();
 
     this._el.style.display = "flex";
 
-    // Position near cursor, keeping panel inside viewport
+    // Position near cursor the first time; afterwards reuse the last dragged position
     const pw = 420, ph = Math.min(window.innerHeight * 0.78, 600);
-    let left = (clientX ?? window.innerWidth  / 2) + 12;
-    let top  = (clientY ?? window.innerHeight / 2) - 20;
-    if (left + pw > window.innerWidth  - 8) left = Math.max(8, window.innerWidth  - pw - 8);
-    if (top  + ph > window.innerHeight - 8) top  = Math.max(8, window.innerHeight - ph - 8);
+    let left, top;
+    if (this._hasMoved && this._lastLeft != null && this._lastTop != null) {
+      left = this._lastLeft;
+      top = this._lastTop;
+    } else {
+      left = (clientX ?? window.innerWidth  / 2) + 12;
+      top  = (clientY ?? window.innerHeight / 2) - 20;
+    }
+    left = Math.max(8, Math.min(left, window.innerWidth - pw - 8));
+    top = Math.max(8, Math.min(top, window.innerHeight - ph - 8));
     this._el.style.left = left + "px";
     this._el.style.top  = top  + "px";
     this._el.style.transform = "";
@@ -1334,6 +1432,9 @@ class PgcStackHeatmapPanel {
     this._locked         = false;
     this._lockBtn        = null;
     this._closeHandler   = null;
+    this._lastLeft       = null;
+    this._lastTop        = null;
+    this._hasMoved       = false;
   }
 
   _ensureBuilt() {
@@ -1375,7 +1476,7 @@ class PgcStackHeatmapPanel {
 
     el.append(hdr);
     document.body.appendChild(el);
-    _makeDraggable(el, hdr);
+    _makeDraggable(el, hdr, (l, t) => { this._lastLeft = l; this._lastTop = t; this._hasMoved = true; });
     this._el = el;
   }
 
@@ -1456,10 +1557,16 @@ class PgcStackHeatmapPanel {
     this._ensureContentForModelType(node._pllModelType || "Flux2Klein");
     this._el.style.display = "flex";
     const pw = 368, ph = 340;
-    let left = (clientX ?? window.innerWidth  / 2) + 16;
-    let top  = (clientY ?? window.innerHeight / 2) - 20;
-    if (left + pw > window.innerWidth  - 8) left = Math.max(8, window.innerWidth  - pw - 8);
-    if (top  + ph > window.innerHeight - 8) top  = Math.max(8, window.innerHeight - ph - 8);
+    let left, top;
+    if (this._hasMoved && this._lastLeft != null && this._lastTop != null) {
+      left = this._lastLeft;
+      top = this._lastTop;
+    } else {
+      left = (clientX ?? window.innerWidth  / 2) + 16;
+      top  = (clientY ?? window.innerHeight / 2) - 20;
+    }
+    left = Math.max(8, Math.min(left, window.innerWidth - pw - 8));
+    top = Math.max(8, Math.min(top, window.innerHeight - ph - 8));
     this._el.style.left = left + "px";
     this._el.style.top  = top  + "px";
     if (this._closeHandler) document.removeEventListener("mousedown", this._closeHandler);
@@ -1984,6 +2091,118 @@ class PgcCapWidget extends RgthreeBaseWidget {
 }
 
 // ---------------------------------------------------------------------------
+// PgcNonBlockWidget — per-node weight for LoRA keys not covered by the block
+// sliders (e.g. MiniMax token_refiner, embeddings, final layers, text encoders).
+// 100% = current behavior. Serialized as { __pgc_non_block: true, value: 0.0-2.0 }
+// The bar/value are colored by the live combined multiplier (slider x sum of
+// enabled stack strengths): green <= 1.0x, orange 1.0-1.5x, red > 1.5x.
+// ---------------------------------------------------------------------------
+class PgcNonBlockWidget extends RgthreeBaseWidget {
+  constructor(initialPct = 100) {
+    super("pgc_non_block");
+    this.type = "custom";
+    this._pct = Math.round(Math.max(0, Math.min(200, initialPct)));
+    this.haveMouseMoved = false;
+    this.hitAreas = {
+      dec: { bounds: [0, 0], onClick: this.onDecClick },
+      val: { bounds: [0, 0], onClick: this.onValClick },
+      inc: { bounds: [0, 0], onClick: this.onIncClick },
+      any: { bounds: [0, 0], onMove:  this.onAnyMove  },
+    };
+  }
+
+  get value()  { return { __pgc_non_block: true, value: this._pct / 100 }; }
+  set value(v) {
+    if (v != null && typeof v === "object" && v.__pgc_non_block === true) {
+      this._pct = Math.round(Math.max(0, Math.min(200, (v.value ?? 1) * 100)));
+    } else if (typeof v === "number") {
+      this._pct = Math.round(Math.max(0, Math.min(200, v * 100)));
+    }
+  }
+  serializeValue() { return { __pgc_non_block: true, value: this._pct / 100 }; }
+
+  // live combined multiplier on non-block keys: slider x wet x enabled strengths
+  _combined(node) {
+    let wet = 1.0, cap = 0.0, total = 0.0;
+    for (const w of node.widgets || []) {
+      if (w.value?.__pgc_wet === true) wet = w.value.value;
+      else if (w.value?.__pgc_cap === true) cap = w.value.value;
+    }
+    for (const w of node.widgets || []) {
+      if (!w.name?.startsWith("lora_") || w.value?.on !== true) continue;
+      let s = Number(w.value?.strength);
+      if (isNaN(s)) continue;
+      s *= wet;
+      if (cap > 0) s = Math.max(-cap, Math.min(cap, s));
+      total += s;
+    }
+    return (this._pct / 100) * total;
+  }
+
+  draw(ctx, node, w, posY, height) {
+    const margin = 10, innerMargin = margin * 0.33;
+    const lowQuality = isLowQuality();
+    const midY = posY + height * 0.5;
+    const combined = this._combined(node);
+    const zone = _nbZoneColor(combined);
+    ctx.save();
+    if (!lowQuality) {
+      const fillFrac = this._pct / 200;
+      const barLeft = margin, barW = node.size[0] - margin * 2;
+      const barH = height - 4, barY = posY + 2;
+      ctx.fillStyle = "rgba(0,0,0,0.25)";
+      ctx.beginPath(); ctx.roundRect(barLeft, barY, barW, barH, 3); ctx.fill();
+      if (this._pct > 0) {
+        const grad = ctx.createLinearGradient(barLeft, 0, barLeft + barW, 0);
+        grad.addColorStop(0, _nbZoneAlpha(combined, 0.18));
+        grad.addColorStop(Math.min(1, fillFrac + 0.01), _nbZoneAlpha(combined, 0.42));
+        grad.addColorStop(Math.min(1, fillFrac + 0.01), "transparent");
+        grad.addColorStop(1, "transparent");
+        ctx.fillStyle = grad;
+        ctx.beginPath(); ctx.roundRect(barLeft, barY, barW, barH, 3); ctx.fill();
+      }
+
+      ctx.globalAlpha = app.canvas.editor_alpha * 0.55;
+      ctx.fillStyle = LiteGraph.WIDGET_TEXT_COLOR;
+      ctx.textBaseline = "middle"; ctx.textAlign = "left";
+      ctx.fillText("Refiner/Other Wt", margin + 8, midY);
+
+      ctx.globalAlpha = app.canvas.editor_alpha;
+      ctx.fillStyle = zone;
+      ctx.fillText("= \u00d7" + combined.toFixed(2), margin + 8 + 98, midY);
+
+      let posX = node.size[0] - margin - innerMargin - innerMargin - WET_WIDGET_TOTAL;
+      ctx.fillStyle = LiteGraph.WIDGET_TEXT_COLOR;
+      ctx.fill(_arrowLeft(posX, midY));
+      this.hitAreas.dec.bounds = [posX, _AW]; posX += _AW + _IM;
+      ctx.textAlign = "center";
+      ctx.fillStyle = zone;
+      ctx.fillText(this._pct + "%", posX + _NW / 2, midY);
+      this.hitAreas.val.bounds = [posX, _NW]; posX += _NW + _IM;
+      ctx.fillStyle = LiteGraph.WIDGET_TEXT_COLOR;
+      ctx.fill(_arrowRight(posX, midY));
+      this.hitAreas.inc.bounds = [posX, _AW];
+      this.hitAreas.any.bounds = [this.hitAreas.dec.bounds[0], this.hitAreas.inc.bounds[0] + _AW - this.hitAreas.dec.bounds[0]];
+    }
+    ctx.restore();
+  }
+
+  onDecClick(event, pos, node) { this._pct = Math.max(0,   this._pct - 5); node.setDirtyCanvas(true, false); }
+  onIncClick(event, pos, node) { this._pct = Math.min(200, this._pct + 5); node.setDirtyCanvas(true, false); }
+  onValClick(event, pos, node) {
+    if (this.haveMouseMoved) return;
+    app.canvas.prompt("Refiner/Other weight % (non-block layers: refiner, embeddings, final)", this._pct, (v) => {
+      const n = Number(v);
+      if (!isNaN(n)) { this._pct = Math.round(Math.max(0, Math.min(200, n))); node.setDirtyCanvas(true, false); }
+    }, event);
+  }
+  onAnyMove(event, pos, node) {
+    if (event.deltaX) { this.haveMouseMoved = true; this._pct = Math.round(Math.max(0, Math.min(200, this._pct + event.deltaX))); node.setDirtyCanvas(true, false); }
+  }
+  onMouseUp(event, pos, node) { super.onMouseUp(event, pos, node); this.haveMouseMoved = false; }
+}
+
+// ---------------------------------------------------------------------------
 // PgcGlobalBlocksWidget — invisible zero-height widget that serializes global
 // per-block multipliers so they're saved with the workflow
 // ---------------------------------------------------------------------------
@@ -2399,6 +2618,7 @@ class CrtMagicLoraLoaderNode extends RgthreeBaseServerNode {
     let savedModelType = "Flux2Klein";
     let savedWetPct = 100;
     let savedCapPct = 0;
+    let savedNonBlockPct = 100;
     let savedGlobalBlocks = null;
     for (const v of info.widgets_values || []) {
       if (v?.__pgc_model_type === true) {
@@ -2407,6 +2627,8 @@ class CrtMagicLoraLoaderNode extends RgthreeBaseServerNode {
         savedWetPct = Math.round(Math.max(0, Math.min(200, (v.value ?? 1) * 100)));
       } else if (v?.__pgc_cap === true) {
         savedCapPct = Math.round(Math.max(0, Math.min(200, (v.value ?? 0) * 100)));
+      } else if (v?.__pgc_non_block === true) {
+        savedNonBlockPct = Math.round(Math.max(0, Math.min(200, (v.value ?? 1) * 100)));
       } else if (v?.__pgc_global_blocks === true) {
         const blocks = {};
         for (const key of ["double", "single", "transformer", "layers", "blocks"]) {
@@ -2424,7 +2646,7 @@ class CrtMagicLoraLoaderNode extends RgthreeBaseServerNode {
       }
     }
 
-    this.addNonLoraWidgets(savedWetPct, savedGlobalBlocks, savedCapPct, savedModelType);
+    this.addNonLoraWidgets(savedWetPct, savedGlobalBlocks, savedCapPct, savedModelType, savedNonBlockPct);
 
     this.size[0] = Math.max(this._tempWidth || 0, CRT_PLL_MIN_WIDTH);
     this.size[1] = Math.max(this._tempHeight, this.computeSize()[1]);
@@ -2467,7 +2689,7 @@ class CrtMagicLoraLoaderNode extends RgthreeBaseServerNode {
     return widget;
   }
 
-  addNonLoraWidgets(wetPct = 100, globalBlocks = null, capPct = 0, modelType = "Flux2Klein") {
+  addNonLoraWidgets(wetPct = 100, globalBlocks = null, capPct = 0, modelType = "Flux2Klein", nonBlockPct = 100) {
     // Cache model type on the node for easy access
     this._pllModelType = MODEL_TYPES.includes(modelType) ? modelType : "Flux2Klein";
 
@@ -2489,6 +2711,7 @@ class CrtMagicLoraLoaderNode extends RgthreeBaseServerNode {
     moveArrayItem(this.widgets, this.addCustomWidget(new MagicLoraLoaderHeaderWidget()), 5);
     moveArrayItem(this.widgets, this.addCustomWidget(new PgcWetWidget(wetPct)), 6);
     moveArrayItem(this.widgets, this.addCustomWidget(new PgcCapWidget(capPct)), 7);
+    moveArrayItem(this.widgets, this.addCustomWidget(new PgcNonBlockWidget(nonBlockPct)), 8);
 
     // Hidden serializable widget for model type
     const mtWidget = this.addCustomWidget(new PgcModelTypeWidget(this._pllModelType));

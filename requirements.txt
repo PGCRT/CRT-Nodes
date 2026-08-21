@@ -12,6 +12,7 @@ huggingface_hub>=0.27
 einops>=0.6
 rotary-embedding-torch
 openai-whisper
+faster-whisper>=1.1
 omnivoice>=0.1.0
 accelerate>=1.0
 sentencepiece>=0.1.99

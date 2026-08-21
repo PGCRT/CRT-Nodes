@@ -4,18 +4,171 @@ import json
 import sys
 import base64
 import io
+import time
+import hmac
+import hashlib
+import sqlite3
 import urllib.request
 import urllib.error
 import urllib.parse
 import glob
+import html
+import html.parser
 
 
 HTTP_TIMEOUT = 10
 CONTEXT_SAFETY_TOKENS = 32
 DEFAULT_UNSLOTH_STUDIO_URL = "http://127.0.0.1:8888"
+DEFAULT_STUDIO_API_URL = "http://127.0.0.1:8888/api"
+RECOVERY_WAIT_SECONDS = 20.0
+RECOVERY_MAX_CYCLES = 15
+STUDIO_ADMIN_USERNAME = "unsloth"
+_URL_PAIR = r"(?:\([^()\s<>\"']*\)|\[[^\[\]\s<>\"']*\])"
+URL_PATTERN = re.compile(rf"https?://(?:[^\s<>\"'()\[\]]|{_URL_PAIR})+", re.IGNORECASE)
+WEB_FETCH_TIMEOUT = 15
+MAX_WEB_CHARS_PER_URL = 12000
+MAX_WEB_URLS = 6
+
+MAX_RETAIN_ANSWERS = 16
+
+_WEB_GUARD_SYSTEM_PROMPT = (
+    "You are a helpful assistant. Any web content you need was already "
+    "fetched and is included in the user message under the heading "
+    "'Web content fetched for this request'. Read it and answer from it. "
+    "Never claim you cannot access a link, never say a URL is incomplete "
+    "or cut off, and never ask the user to paste a link again. If the "
+    "message contains a URL, treat it as already retrieved: the content "
+    "is embedded in the message itself."
+)
+
+_WEB_NOISE_TAGS = frozenset({
+    "script", "style", "noscript", "iframe", "object", "embed",
+    "head", "form", "nav", "footer", "aside",
+})
+_WEB_VOID_TAGS = frozenset({
+    "area", "base", "br", "col", "embed", "hr", "img", "input",
+    "link", "meta", "param", "source", "track", "wbr",
+})
+_WEB_BREAK_TAGS = frozenset({
+    "p", "div", "section", "article", "blockquote", "pre",
+    "ul", "ol", "table", "thead", "tbody", "h1", "h2", "h3", "h4", "h5", "h6", "br",
+})
 
 
-def _request_json(url, body=None, timeout=HTTP_TIMEOUT, retries=1):
+class _PageText(html.parser.HTMLParser):
+    """HTML -> clean text. Content region starts at <main>/<article>.
+    Blocks that are mostly links (nav, sidebar, TOC, share widgets) are
+    dropped by link-density; everything else is kept."""
+    CONTENT_TAGS = ("main", "article")
+    _LINK_HEAVY_RATIO = 0.65
+
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self._skip_stack = []
+        self._in_content = False
+        self._link_depth = 0
+        self._heading_depth = 0
+        self._blocks = []
+        self._cur = []
+        self._cur_link = 0
+        self._cur_total = 0
+        self._pending_break = False
+
+    def _flush(self):
+        if self._cur:
+            if self._cur_total == 0 or (self._cur_link / self._cur_total) <= self._LINK_HEAVY_RATIO or self._heading_depth > 0:
+                self._blocks.append("".join(self._cur))
+            self._cur = []
+            self._cur_link = 0
+            self._cur_total = 0
+
+    def handle_starttag(self, tag, attrs):
+        if not self._in_content and tag in self.CONTENT_TAGS:
+            self._skip_stack = []
+            self._in_content = True
+            self._blocks = []
+            self._cur = []
+            self._cur_link = 0
+            self._cur_total = 0
+            self._pending_break = False
+            return
+        if self._skip_stack:
+            if tag not in _WEB_VOID_TAGS:
+                self._skip_stack.append(tag)
+            return
+        if not self._in_content:
+            return
+        lower_attrs = {k.lower(): (v or "").lower() for k, v in attrs}
+        cls = lower_attrs.get("class", "")
+        if tag in _WEB_NOISE_TAGS or "nav" in cls or ("share" in cls and tag in ("div", "aside")):
+            self._skip_stack.append(tag)
+            return
+        if tag == "a":
+            self._link_depth += 1
+            return
+        if tag in ("h1", "h2", "h3", "h4", "h5", "h6"):
+            self._flush()
+            self._heading_depth += 1
+            self._cur.append("\n" + "# " * int(tag[1]))
+            self._cur_total += 1
+            self._pending_break = False
+        elif tag == "li":
+            self._flush()
+            self._cur.append("\n- ")
+            self._cur_total += 1
+            self._pending_break = False
+        elif tag in _WEB_BREAK_TAGS:
+            self._pending_break = True
+
+    def handle_endtag(self, tag):
+        if self._skip_stack:
+            if tag in _WEB_VOID_TAGS:
+                return
+            if self._skip_stack[-1] == tag:
+                self._skip_stack.pop()
+            return
+        if not self._in_content:
+            return
+        if tag == "a" and self._link_depth:
+            self._link_depth -= 1
+        if tag in ("h1", "h2", "h3", "h4", "h5", "h6") and self._heading_depth:
+            self._heading_depth -= 1
+        if tag in ("p", "div", "section", "article", "blockquote", "pre", "ul", "ol", "li", "tr", "h1", "h2", "h3", "h4", "h5", "h6"):
+            self._pending_break = True
+
+    def handle_data(self, data):
+        if not self._in_content or self._skip_stack:
+            return
+        text = re.sub(r"\s+", " ", data).strip()
+        if not text:
+            return
+        if self._pending_break and self._cur and not self._cur[-1].endswith("\n"):
+            self._cur.append("\n")
+        self._cur.append(text + " ")
+        n = len(text)
+        self._cur_total += n
+        if self._link_depth > 0 and self._heading_depth == 0:
+            self._cur_link += n
+        self._pending_break = False
+
+    def text(self):
+        self._flush()
+        text = "".join(self._blocks)
+        text = re.sub(r"[ \t]+", " ", text)
+        text = re.sub(r"\n[ \t]+", "\n", text)
+        text = re.sub(r"\n{3,}", "\n\n", text)
+        lines = []
+        for line in text.splitlines():
+            stripped = line.strip()
+            if not stripped:
+                continue
+            if re.fullmatch(r"\s*[-–—\s]*(Partager|Facebook|Twitter|X|LinkedIn|Copier le lien|WhatsApp|Envoyer|Imprimer|Courriel|E-mail|Lire plus tard|Lire la suite[^\n]*|Lecture\s*:\s*\d+\s*min\.?)\s*", stripped):
+                continue
+            lines.append(line)
+        return "\n".join(lines).strip()
+
+
+def _request_json(url, body=None, timeout=HTTP_TIMEOUT, retries=1, rediscover_url=None):
     data = None
     method = "GET"
     headers = {}
@@ -24,9 +177,10 @@ def _request_json(url, body=None, timeout=HTTP_TIMEOUT, retries=1):
         method = "POST"
         headers["Content-Type"] = "application/json"
     last_exc = None
+    current_url = url
     for attempt in range(retries + 1):
         req = urllib.request.Request(
-            url,
+            current_url,
             data=data,
             headers=headers,
             method=method,
@@ -38,24 +192,44 @@ def _request_json(url, body=None, timeout=HTTP_TIMEOUT, retries=1):
                 return json.loads(payload)
             except json.JSONDecodeError as exc:
                 raise RuntimeError(
-                    f"llama-server returned invalid JSON for {url}: {payload[:500]}"
+                    f"llama-server returned invalid JSON for {current_url}: {payload[:500]}"
                 ) from exc
         except urllib.error.HTTPError as exc:
             error_body = exc.read().decode("utf-8", errors="replace").strip()
             detail = error_body or exc.reason or "no response body"
             raise RuntimeError(
-                f"llama-server HTTP {exc.code} for {url}: {detail}"
+                f"llama-server HTTP {exc.code} for {current_url}: {detail}"
             ) from exc
         except urllib.error.URLError as exc:
-            raise RuntimeError(f"Could not reach llama-server at {url}: {exc.reason}") from exc
+            last_exc = exc
+            if attempt < retries:
+                # If a rediscover callback is provided, try to find the current active
+                # server URL (e.g. Unsloth Studio may have restarted llama-server on a
+                # different port). This is not retried on its own; it consumes one attempt.
+                if rediscover_url is not None:
+                    try:
+                        new_url = rediscover_url()
+                    except Exception:
+                        new_url = None
+                    if new_url and new_url != current_url:
+                        print(
+                            f"[Unsloth Studio Bridge] Retrying with rediscovered server: {new_url}",
+                            file=sys.stderr,
+                        )
+                        current_url = new_url
+                        continue
+                # Retry transient connection failures such as WinError 10061.
+                if isinstance(exc.reason, (ConnectionRefusedError, ConnectionAbortedError, ConnectionResetError, BrokenPipeError)):
+                    time.sleep(1.0)
+                    continue
+            raise RuntimeError(f"Could not reach llama-server at {current_url}: {exc.reason}") from exc
         except (ConnectionResetError, ConnectionAbortedError, BrokenPipeError) as exc:
             last_exc = exc
             if attempt < retries:
-                import time
                 time.sleep(1.0)
                 continue
             raise RuntimeError(
-                f"llama-server closed the connection for {url}. The server process may "
+                f"llama-server closed the connection for {current_url}. The server process may "
                 "have crashed or restarted; reload the model and retry."
             ) from exc
 
@@ -208,6 +382,513 @@ def _detect_llama_port():
     return None
 
 
+def _discover_studio_api_url():
+    server_log = _find_latest_server_log()
+    if server_log is not None:
+        try:
+            with open(server_log, "r", encoding="utf-8", errors="replace") as f:
+                content = f.read()
+        except Exception:
+            content = ""
+        m = re.search(r"Unsloth Studio running on\s+(https?://[^\s\[]+)", content)
+        if m:
+            return m.group(1).rstrip("/") + "/api"
+    return DEFAULT_STUDIO_API_URL
+
+
+def _read_auth_file(name):
+    auth_dir = os.path.join(os.environ.get("USERPROFILE", ""), ".unsloth", "studio", "auth")
+    try:
+        with open(os.path.join(auth_dir, name), "r", encoding="utf-8") as f:
+            value = f.read().strip()
+        return value or None
+    except Exception:
+        return None
+
+
+_STUDIO_TOKEN = None
+_LAST_MODEL_PATH = None
+
+
+def _mint_studio_token(username):
+    """Mint an HS256 JWT the same way Studio does, using the signing secret
+    stored in Studio's local auth.db. This mirrors Studio's own desktop auth
+    (same user, same machine), so no password input is required."""
+    db_path = os.path.join(
+        os.environ.get("USERPROFILE", ""), ".unsloth", "studio", "auth", "auth.db"
+    )
+    try:
+        conn = sqlite3.connect(f"file:{db_path}?mode=ro", uri=True, timeout=5)
+        try:
+            row = conn.execute(
+                "SELECT jwt_secret FROM auth_user WHERE username = ?", (username,)
+            ).fetchone()
+        finally:
+            conn.close()
+    except Exception:
+        return None
+    if not row:
+        return None
+
+    def b64url(raw):
+        return base64.urlsafe_b64encode(raw).rstrip(b"=").decode("ascii")
+
+    header = b64url(json.dumps({"alg": "HS256", "typ": "JWT"}).encode("utf-8"))
+    payload = b64url(
+        json.dumps({"sub": username, "exp": int(time.time()) + 3600}).encode("utf-8")
+    )
+    signing_input = f"{header}.{payload}".encode("ascii")
+    signature = b64url(hmac.new(row[0].encode("utf-8"), signing_input, hashlib.sha256).digest())
+    return f"{header}.{payload}.{signature}"
+
+
+def _get_studio_token(studio_api_url, username, password):
+    """Studio JWT: desktop secret file, bootstrap password file, node password
+    input, then a locally minted token from Studio's auth.db. Cached."""
+    global _STUDIO_TOKEN
+    if _STUDIO_TOKEN:
+        return _STUDIO_TOKEN
+    candidates = []
+    desktop_secret = _read_auth_file(".desktop_secret")
+    if desktop_secret:
+        candidates.append(("desktop-login", {"secret": desktop_secret}))
+    bootstrap = _read_auth_file(".bootstrap_password")
+    if bootstrap:
+        candidates.append(("login", {"username": username, "password": bootstrap}))
+    if password:
+        candidates.append(("login", {"username": username, "password": password}))
+    for endpoint, body in candidates:
+        try:
+            result = _studio_call(studio_api_url, None, f"/auth/{endpoint}", body, timeout=10)
+            token = result.get("access_token")
+            if token:
+                _STUDIO_TOKEN = token
+                return token
+        except Exception:
+            continue
+    token = _mint_studio_token(username)
+    if token:
+        _STUDIO_TOKEN = token
+    return token
+
+
+def _studio_call(api_url, token, path, body=None, timeout=60):
+    data = json.dumps(body).encode("utf-8") if body is not None else None
+    headers = {}
+    if body is not None:
+        headers["Content-Type"] = "application/json"
+    if token:
+        headers["Authorization"] = f"Bearer {token}"
+    req = urllib.request.Request(
+        f"{api_url.rstrip('/')}{path}",
+        data=data,
+        headers=headers,
+        method="POST" if body is not None else "GET",
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=timeout) as resp:
+            payload = resp.read().decode("utf-8", errors="replace")
+        return json.loads(payload) if payload else {}
+    except urllib.error.HTTPError as exc:
+        detail = exc.read().decode("utf-8", errors="replace").strip() or exc.reason
+        raise RuntimeError(f"Studio API HTTP {exc.code} for {path}: {detail}") from exc
+    except urllib.error.URLError as exc:
+        raise RuntimeError(f"Could not reach Studio API at {api_url}{path}: {exc.reason}") from exc
+
+
+def _parse_model_path_from_log(log_path):
+    if log_path is None:
+        return None
+    try:
+        with open(log_path, "r", encoding="utf-8", errors="replace") as f:
+            content = f.read()
+    except Exception:
+        return None
+    for line in content.splitlines():
+        try:
+            event = json.loads(line).get("event", "")
+        except Exception:
+            event = line
+        m = re.search(r"Detected local GGUF model:\s*(.+?\.gguf)", event)
+        if m:
+            return m.group(1).strip()
+    return None
+
+
+def _find_last_model_path():
+    """Last model loaded by Studio, found by scanning all server logs newest
+    first (a fresh log may not contain a load event yet)."""
+    log_dir = os.path.join(
+        os.environ.get("USERPROFILE", ""), ".unsloth", "studio", "logs", "server"
+    )
+    try:
+        logs = sorted(glob.glob(os.path.join(log_dir, "server-*.log")), key=os.path.getmtime, reverse=True)
+    except Exception:
+        logs = []
+    for log_path in logs:
+        model_path = _parse_model_path_from_log(log_path)
+        if model_path:
+            return model_path
+    return None
+
+
+def _split_launch_args(cmd):
+    """Tokenize a command line, keeping JSON groups such as
+    --chat-template-kwargs {"enable_thinking": true} together."""
+    protected = {}
+
+    def protect(match):
+        key = f"\x00{len(protected)}\x00"
+        protected[key] = match.group(0)
+        return key
+
+    cmd = re.sub(r"\{[^{}]*\}", protect, cmd)
+    return [protected.get(tok, tok) for tok in cmd.split()]
+
+
+def _parse_launch_args(tokens):
+    """(flag, value) pairs from a launch command; flags followed by a token
+    that does not start with '-' consume it as their value."""
+    pairs = []
+    i = 1
+    while i < len(tokens):
+        tok = tokens[i]
+        if not tok.startswith("-"):
+            i += 1
+            continue
+        if i + 1 < len(tokens) and not tokens[i + 1].startswith("-"):
+            pairs.append((tok.lstrip("-"), tokens[i + 1]))
+            i += 2
+        else:
+            pairs.append((tok.lstrip("-"), None))
+            i += 1
+    return pairs
+
+
+def _find_last_launch_command(model_path):
+    """Most recent 'Starting llama-server' command whose -m matches the model,
+    scanning all server logs newest first."""
+    log_dir = os.path.join(
+        os.environ.get("USERPROFILE", ""), ".unsloth", "studio", "logs", "server"
+    )
+    try:
+        logs = sorted(glob.glob(os.path.join(log_dir, "server-*.log")), key=os.path.getmtime, reverse=True)
+    except Exception:
+        logs = []
+    target = model_path.replace("/", "\\").lower()
+    for log_path in logs:
+        try:
+            with open(log_path, "r", encoding="utf-8", errors="replace") as f:
+                content = f.read()
+        except Exception:
+            continue
+        for line in reversed(content.splitlines()):
+            try:
+                event = json.loads(line).get("event", "")
+            except Exception:
+                event = line
+            if not event.startswith("Starting llama-server: "):
+                continue
+            cmd = event[len("Starting llama-server: "):]
+            pairs = _parse_launch_args(_split_launch_args(cmd))
+            seen = set()
+            duplicate = False
+            for flag, value in pairs:
+                if flag in seen:
+                    duplicate = True
+                    break
+                seen.add(flag)
+            if duplicate:
+                continue
+            for flag, value in pairs:
+                if flag in ("m", "model") and value and value.lower() == target:
+                    return cmd
+    return None
+
+
+def _load_request_from_launch(model_path, launch_cmd):
+    """Rebuild the Studio /inference/load request from the llama-server launch
+    command Studio used, so a reload restores context length, speculative
+    decoding, drafter, vision projector and GPU placement."""
+    body = {"model_path": model_path}
+    if not launch_cmd:
+        return body
+    flags = {}
+    for flag, value in _parse_launch_args(_split_launch_args(launch_cmd)):
+        flags.setdefault(flag, []).append(value)
+    ints = {}
+    for flag in ("c", "ctx-size", "parallel", "batch-size", "ubatch-size",
+                 "spec-draft-n-max", "gpu-layers", "ngl", "n-cpu-moe",
+                 "fit-ctx", "fit-target", "threads", "cache-ram", "ctx-checkpoints",
+                 "spec-ngram-mod-n-match", "spec-ngram-mod-n-min", "spec-ngram-mod-n-max"):
+        if flag in flags and flags[flag][0] is not None:
+            try:
+                ints[flag] = int(flags[flag][0])
+            except ValueError:
+                pass
+    if "c" in ints and ints["c"] > 0:
+        body["max_seq_length"] = ints["c"]
+    elif "fit-ctx" in ints:
+        body["max_seq_length"] = ints["fit-ctx"]
+    if "parallel" in ints:
+        body["n_parallel"] = ints["parallel"]
+    if "batch-size" in ints:
+        body["n_batch"] = ints["batch-size"]
+    if "ubatch-size" in ints:
+        body["n_ubatch"] = ints["ubatch-size"]
+    if ("cache-type-k" in flags and "cache-type-v" in flags
+            and flags["cache-type-k"][0] == flags["cache-type-v"][0]
+            and flags["cache-type-k"][0]):
+        body["cache_type_kv"] = flags["cache-type-k"][0]
+    if "spec-type" in flags and flags["spec-type"][0]:
+        spec = flags["spec-type"][0]
+        if spec == "spec-default":
+            pass
+        elif spec == "ngram-mod,draft-mtp":
+            body["speculative_type"] = "mtp+ngram"
+        else:
+            body["speculative_type"] = spec
+    if "spec-draft-n-max" in ints:
+        body["spec_draft_n_max"] = ints["spec-draft-n-max"]
+    if "fit" in flags and flags["fit"][0] == "off":
+        body["gpu_memory_mode"] = "manual"
+        if "gpu-layers" in ints:
+            body["gpu_layers"] = ints["gpu-layers"]
+        elif "ngl" in ints:
+            body["gpu_layers"] = ints["ngl"]
+    if "n-cpu-moe" in ints:
+        body["n_cpu_moe"] = ints["n-cpu-moe"]
+    if "tensor-split" in flags and flags["tensor-split"][0]:
+        body["tensor_split"] = [float(x) for x in flags["tensor-split"][0].split(",") if x.strip()]
+    if "split-mode" in flags and flags["split-mode"][0] == "tensor":
+        body["tensor_parallel"] = True
+    mapped = {
+        "m", "model", "port", "alias", "fit", "fit-ctx", "fit-target", "metrics",
+        "slot-save-path", "c", "ctx-size", "parallel", "batch-size", "ubatch-size",
+        "cache-type-k", "cache-type-v", "spec-type", "spec-draft-n-max",
+        "spec-draft-n-min", "spec-draft-p-min", "spec-draft-p-split",
+        "spec-draft-model", "spec-draft-hf", "hf-repo-draft",
+        "gpu-layers", "ngl", "n-cpu-moe", "tensor-split", "split-mode",
+    }
+    rejected = {
+        "mm", "mmproj", "mmu", "mmproj-url", "mu", "model-url", "dr", "docker-repo",
+        "hf", "hfr", "hf-repo", "hff", "hf-file", "hfv", "hfrv", "hf-repo-v",
+        "hffv", "hf-file-v", "hft", "hf-token", "host", "path", "api-prefix",
+        "reuse-port", "api-key", "api-key-file", "ssl-key-file", "ssl-cert-file",
+        "webui", "no-webui", "ui", "no-ui", "ui-config", "webui-config",
+        "ui-config-file", "webui-config-file", "ui-mcp-proxy", "webui-mcp-proxy",
+        "no-ui-mcp-proxy", "no-webui-mcp-proxy", "models-dir", "models-preset",
+        "models-max", "models-autoload", "no-models-autoload", "embedding",
+        "embeddings", "rerank", "reranking", "pooling", "tools", "ag", "agent",
+        "no-ag", "no-agent", "tools-runtime", "mcp-servers-config", "mcp-servers-json",
+        "cors-origins", "cors-headers", "cors-methods", "cors-credentials",
+        "no-cors-credentials", "media-path", "log-file", "log-disable",
+        "help", "usage", "version", "list-devices", "cache-list", "completion-bash",
+    }
+    extras = []
+    emitted = set(mapped)
+    for flag, value in _parse_launch_args(_split_launch_args(launch_cmd)):
+        if flag in mapped or flag in rejected or value is None or flag in emitted:
+            continue
+        emitted.add(flag)
+        extras.append("--" + flag)
+        extras.append(value)
+    if extras:
+        body["llama_extra_args"] = extras
+    return body
+
+
+def _find_launch_for_port(port):
+    """Launch command of the llama-server currently bound to the given port,
+    scanning all server logs newest first."""
+    log_dir = os.path.join(
+        os.environ.get("USERPROFILE", ""), ".unsloth", "studio", "logs", "server"
+    )
+    try:
+        logs = sorted(glob.glob(os.path.join(log_dir, "server-*.log")), key=os.path.getmtime, reverse=True)
+    except Exception:
+        logs = []
+    for log_path in logs:
+        try:
+            with open(log_path, "r", encoding="utf-8", errors="replace") as f:
+                content = f.read()
+        except Exception:
+            continue
+        for line in reversed(content.splitlines()):
+            try:
+                event = json.loads(line).get("event", "")
+            except Exception:
+                event = line
+            if not event.startswith("Starting llama-server: "):
+                continue
+            cmd = event[len("Starting llama-server: "):]
+            for flag, value in _parse_launch_args(_split_launch_args(cmd)):
+                if flag == "port":
+                    try:
+                        if int(value) == port:
+                            return cmd
+                    except (TypeError, ValueError):
+                        pass
+    return None
+
+
+def _remember_launch(base_url):
+    global _LAST_LAUNCH_CMD
+    try:
+        port = urllib.parse.urlparse(base_url).port
+    except Exception:
+        port = None
+    if port:
+        cmd = _find_launch_for_port(port)
+        if cmd:
+            _LAST_LAUNCH_CMD = cmd
+
+
+_LAST_LAUNCH_CMD = None
+
+
+def _reload_model_via_studio(studio_api_url, username, password, model_path):
+    if not model_path:
+        return False
+    token = _get_studio_token(studio_api_url, username, password)
+    if not token:
+        print(
+            "[Unsloth Studio Bridge] Cannot auto-reload: no Studio credentials available. "
+            "Set the studio_password input to enable automatic reload.",
+            file=sys.stderr,
+        )
+        return False
+    print(
+        f"[Unsloth Studio Bridge] Unloading + reloading model via Studio API: {model_path}",
+        file=sys.stderr,
+    )
+    load_body = _load_request_from_launch(
+        model_path, _LAST_LAUNCH_CMD or _find_last_launch_command(model_path)
+    )
+    load_body["force_cancel_active"] = True
+    print(
+        f"[Unsloth Studio Bridge] Restoring load settings: "
+        f"ctx={load_body.get('max_seq_length', 'auto')}, "
+        f"parallel={load_body.get('n_parallel', 'default')}, "
+        f"spec={load_body.get('speculative_type', 'auto')}, "
+        f"kv_cache={load_body.get('cache_type_kv', 'default')}, "
+        f"extra_args={len(load_body.get('llama_extra_args', [])) // 2}",
+        file=sys.stderr,
+    )
+    try:
+        try:
+            _studio_call(
+                studio_api_url,
+                token,
+                "/inference/unload",
+                {"model_path": model_path, "force_cancel_active": True},
+                timeout=60,
+            )
+        except Exception as exc:
+            print(f"[Unsloth Studio Bridge] Unload skipped: {exc}", file=sys.stderr)
+        try:
+            _studio_call(
+                studio_api_url,
+                token,
+                "/inference/load",
+                load_body,
+                timeout=300,
+            )
+        except RuntimeError as exc:
+            if "HTTP 401" in str(exc):
+                global _STUDIO_TOKEN
+                _STUDIO_TOKEN = None
+                token = _get_studio_token(studio_api_url, username, password)
+                if token:
+                    _studio_call(
+                        studio_api_url,
+                        token,
+                        "/inference/load",
+                        load_body,
+                        timeout=300,
+                    )
+            else:
+                raise
+        print("[Unsloth Studio Bridge] Model reloaded via Studio API", file=sys.stderr)
+        return True
+    except Exception as exc:
+        print(f"[Unsloth Studio Bridge] Reload failed: {exc}", file=sys.stderr)
+        return False
+
+
+def _unload_model_via_studio(studio_api_url, username, password, model_path):
+    global _STUDIO_TOKEN
+    if not model_path:
+        return False
+    token = _get_studio_token(studio_api_url, username, password)
+    if not token:
+        print(
+            "[Unsloth Studio Bridge] Cannot unload: no Studio credentials available. "
+            "Set the studio_password input to enable unload after run.",
+            file=sys.stderr,
+        )
+        return False
+    body = {"model_path": model_path, "force_cancel_active": True}
+    try:
+        _studio_call(studio_api_url, token, "/inference/unload", body, timeout=60)
+    except Exception as exc:
+        if "HTTP 401" not in str(exc):
+            print(f"[Unsloth Studio Bridge] WARNING: unload failed: {exc}", file=sys.stderr)
+            return False
+        _STUDIO_TOKEN = None
+        token = _get_studio_token(studio_api_url, username, password)
+        if not token:
+            return False
+        try:
+            _studio_call(studio_api_url, token, "/inference/unload", body, timeout=60)
+        except Exception as exc:
+            print(f"[Unsloth Studio Bridge] WARNING: unload failed: {exc}", file=sys.stderr)
+            return False
+    print(
+        f"[Unsloth Studio Bridge] Model unloaded from VRAM via Studio API: {model_path}",
+        file=sys.stderr,
+    )
+    return True
+
+
+def _recover_llama_server(configured_url, studio_api_url, username, password):
+    """Force unload+reload of the last loaded model via Studio to wipe the
+    crashed state, wait RECOVERY_WAIT_SECONDS, then re-check; repeat until the
+    llama-server answers. Returns a live base URL or None when exhausted."""
+    global _LAST_MODEL_PATH
+    model_path = _LAST_MODEL_PATH or _find_last_model_path()
+    for cycle in range(1, RECOVERY_MAX_CYCLES + 1):
+        try:
+            new_base, source = _resolve_llama_server(configured_url)
+            if _is_server_alive(new_base):
+                print(
+                    f"[Unsloth Studio Bridge] Server recovered: {new_base} ({source})",
+                    file=sys.stderr,
+                )
+                _remember_launch(new_base)
+                return new_base
+        except Exception:
+            pass
+        print(
+            f"[Unsloth Studio Bridge] llama-server down; force unloading + "
+            f"reloading the model via Studio (cycle {cycle}/{RECOVERY_MAX_CYCLES})...",
+            file=sys.stderr,
+        )
+        _reload_model_via_studio(studio_api_url, username, password, model_path)
+        print(
+            f"[Unsloth Studio Bridge] Waiting {RECOVERY_WAIT_SECONDS}s to verify "
+            f"llama-server...",
+            file=sys.stderr,
+        )
+        time.sleep(RECOVERY_WAIT_SECONDS)
+    print(
+        f"[Unsloth Studio Bridge] llama-server did not recover after "
+        f"{RECOVERY_MAX_CYCLES} cycles",
+        file=sys.stderr,
+    )
+    return None
+
+
 def _find_inference_defaults(log_path):
     if log_path:
         unsloth_home = os.path.dirname(os.path.dirname(os.path.dirname(log_path)))
@@ -339,6 +1020,214 @@ def _image_tensor_to_data_urls(image):
     return data_urls
 
 
+def _extract_urls(text):
+    if not text:
+        return []
+    urls = []
+    for match in URL_PATTERN.findall(str(text)):
+        url = match.rstrip(".,;:!?")
+        if url not in urls:
+            urls.append(url)
+    return urls
+
+
+def _html_to_text(raw):
+    parser = _PageText()
+    try:
+        parser.feed(raw)
+        parser.close()
+    except Exception:
+        parser = None
+    text = parser.text() if parser is not None else ""
+    if not text:
+        raw = re.sub(r"(?is)<(script|style)[^>]*>.*?</\1>", " ", raw)
+        raw = re.sub(r"(?s)<[^>]+>", " ", raw)
+        text = html.unescape(re.sub(r"\s+", " ", raw)).strip()
+    return re.sub(r"\s+", " ", text).strip() if len(text) < 200 else text
+
+
+def _http_response_bytes(resp, max_bytes):
+    chunks = []
+    total = 0
+    while True:
+        chunk = resp.read(min(65536, max_bytes - total))
+        if not chunk:
+            break
+        chunks.append(chunk)
+        total += len(chunk)
+        if total >= max_bytes:
+            break
+    return b"".join(chunks)
+
+
+def _decode_body(raw, encoding, content_type):
+    encoding = (encoding or "").lower().strip()
+    try:
+        if encoding == "gzip":
+            import gzip
+            return gzip.decompress(raw)
+        if encoding in ("deflate", "x-deflate"):
+            import zlib
+            try:
+                return zlib.decompress(raw)
+            except zlib.error:
+                return zlib.decompress(raw[2:])
+        if encoding == "br":
+            import brotli
+            return brotli.decompress(raw)
+    except (OSError, EOFError, zlib.error, ValueError, ImportError):
+        pass
+    return raw
+
+
+def _fetch_url_text(url, timeout=WEB_FETCH_TIMEOUT, max_chars=MAX_WEB_CHARS_PER_URL):
+    request_headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0 Safari/537.36",
+        "Accept": "text/html,application/xhtml+xml,text/plain;q=0.9,*/*;q=0.8",
+        "Accept-Encoding": "identity",
+        "Accept-Language": "en-US,en;q=0.9",
+        "Cache-Control": "no-cache",
+        "Pragma": "no-cache",
+        "Upgrade-Insecure-Requests": "1",
+        "Sec-Fetch-Dest": "document",
+        "Sec-Fetch-Mode": "navigate",
+        "Sec-Fetch-Site": "none",
+        "Referer": urllib.parse.urlparse(url).scheme + "://" + (urllib.parse.urlparse(url).netloc or "") + "/",
+    }
+    last_exc = None
+    for _attempt in range(2):
+        req = urllib.request.Request(url, headers=request_headers)
+        try:
+            with urllib.request.urlopen(req, timeout=timeout) as resp:
+                read_cap = MAX_WEB_CHARS_PER_URL * 32
+                raw = _decode_body(
+                    _http_response_bytes(resp, read_cap),
+                    resp.headers.get("Content-Encoding"),
+                    resp.headers.get("Content-Type", ""),
+                )
+                content_type = resp.headers.get("Content-Type", "")
+        except urllib.error.HTTPError as exc:
+            raise RuntimeError(f"HTTP {exc.code} for {url}") from exc
+        except urllib.error.URLError as exc:
+            raise RuntimeError(f"could not reach {url}: {exc.reason}") from exc
+        except TimeoutError as exc:
+            raise RuntimeError(f"timed out fetching {url} after {timeout}s") from exc
+        raw_str = raw.decode("utf-8", errors="replace") if isinstance(raw, bytes) else raw
+        is_html = "html" in content_type.lower()
+        text = _html_to_text(raw_str) if is_html else re.sub(r"\s+", " ", raw_str).strip()
+        if not is_html:
+            return text[:max_chars]
+        has_challenge = (
+            "client challenge" in raw_str.lower()
+            or "please enable javascript to proceed" in raw_str.lower()
+        )
+        if not has_challenge:
+            text = text[:max_chars]
+            if not text:
+                raise RuntimeError(f"no readable text at {url}")
+            return text
+        last_exc = RuntimeError(f"bot challenge page at {url}")
+        request_headers["User-Agent"] = (
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+        )
+        import time as _time
+        _time.sleep(1.0)
+    raise last_exc
+
+
+def _search_duckduckgo(query, max_results=5):
+    """DuckDuckGo HTML search. Returns [(title, url), ...], ads filtered."""
+    data = urllib.parse.urlencode({"q": query}).encode("utf-8")
+    req = urllib.request.Request(
+        "https://html.duckduckgo.com/html/",
+        data=data,
+        headers={
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0 Safari/537.36",
+            "Accept": "text/html,application/xhtml+xml,text/plain;q=0.9,*/*;q=0.8",
+            "Accept-Encoding": "identity",
+            "Accept-Language": "en-US,en;q=0.9",
+        },
+    )
+    with urllib.request.urlopen(req, timeout=WEB_FETCH_TIMEOUT) as resp:
+        raw = resp.read().decode("utf-8", errors="replace")
+    results = []
+    for href, title in re.findall(r'class="result__a"[^>]*href="([^"]+)"[^>]*>(.*?)</a>', raw, re.S):
+        target = None
+        if "uddg=" in href:
+            query_params = urllib.parse.parse_qs(urllib.parse.urlparse(href).query)
+            target = query_params.get("uddg", [None])[0]
+        elif href.startswith("//"):
+            target = "https:" + href
+        elif href.startswith("http"):
+            target = href
+        if not target or "y.js" in target or "duckduckgo.com" in target:
+            continue
+        title = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", "", title)).strip()
+        if title and (title, target) not in results:
+            results.append((title, target))
+    return results[:max_results]
+
+
+def _web_content_from_prompt(prompt, max_urls=MAX_WEB_URLS, max_chars=MAX_WEB_CHARS_PER_URL):
+    """Fetch pages for URLs in the prompt; when none are usable, search the
+    web for the prompt text and fetch the top results instead.
+    Returns (entries, failures, searched), entries are (title, url, text)."""
+    urls = _extract_urls(prompt)[:max_urls]
+    entries = []
+    failures = []
+    for url in urls:
+        try:
+            text = _fetch_url_text(url, max_chars=max_chars)
+        except Exception as exc:
+            failures.append(f"{url}: {exc}")
+            continue
+        entries.append((url, url, text))
+    if entries:
+        return entries, failures, False
+    query = re.sub(r"\s+", " ", prompt or "").strip()
+    if not query:
+        return [], failures, False
+    try:
+        results = _search_duckduckgo(query, max_urls)
+    except Exception as exc:
+        failures.append(f"web search failed: {exc}")
+        return [], failures, True
+    if not results:
+        failures.append("web search returned no results")
+        return [], failures, True
+    for title, url in results:
+        try:
+            text = _fetch_url_text(url, max_chars=max_chars)
+        except Exception as exc:
+            failures.append(f"{url}: {exc}")
+            continue
+        entries.append((title, url, text))
+    return entries, failures, True
+
+
+def _build_web_section(entries):
+    sections = ["## Web content fetched for this request", ""]
+    for title, url, text in entries:
+        sections.append(f"### Source: {title}\nURL: {url}\n\n{text}")
+    return "\n\n".join(sections)
+
+
+def _fetch_urls_from_prompt(prompt, max_urls=MAX_WEB_URLS):
+    urls = _extract_urls(prompt)[:max_urls]
+    if not urls:
+        return [], []
+    fetched = []
+    failures = []
+    for url in urls:
+        try:
+            text = _fetch_url_text(url)
+        except Exception as exc:
+            failures.append(f"{url}: {exc}")
+            continue
+        fetched.append((url, text))
+    return fetched, failures
+
+
 def _load_skills(skills_path):
     raw = str(skills_path or "").strip()
     if not raw:
@@ -442,8 +1331,7 @@ def _validate_context_budget(
     return available
 
 
-def _chat_completion(base_url, messages, seed, params, include_reasoning, disable_thinking, clear_prompt_cache=False, reuse_context=True):
-    import time
+def _chat_completion(base_url, messages, seed, params, include_reasoning, disable_thinking, cache_skills=True, configured_url=None, studio_api_url=None, studio_password=""):
     body = {
         "model": "default",
         "messages": messages,
@@ -453,18 +1341,29 @@ def _chat_completion(base_url, messages, seed, params, include_reasoning, disabl
         "top_k": params.get("top_k"),
         "min_p": params.get("min_p"),
         "stream": False,
-        "cache_prompt": reuse_context,
+        "cache_prompt": cache_skills,
     }
-    if reuse_context:
+    if cache_skills:
         body["id_slot"] = 0
     if disable_thinking:
         body["chat_template_kwargs"] = {"enable_thinking": False}
     body = {k: v for k, v in body.items() if v is not None}
     start = time.perf_counter()
+
+    def _recover_url():
+        return _recover_llama_server(
+            configured_url,
+            studio_api_url,
+            STUDIO_ADMIN_USERNAME,
+            studio_password,
+        )
+
     result = _request_json(
         f"{base_url}/v1/chat/completions",
         body,
         timeout=300,
+        retries=2,
+        rediscover_url=_recover_url,
     )
     elapsed = time.perf_counter() - start
     choices = result.get("choices")
@@ -489,21 +1388,6 @@ def _chat_completion(base_url, messages, seed, params, include_reasoning, disabl
         f"time={elapsed:.2f}s, speed={tps:.2f} tok/s",
         file=sys.stderr,
     )
-    if reuse_context and clear_prompt_cache:
-        print(
-            "[Unsloth Studio Bridge] NOTE: clear_prompt_cache overrides reuse_context; "
-            "the next run will reprocess the full prompt.",
-            file=sys.stderr,
-        )
-    if clear_prompt_cache:
-        try:
-            erased = _request_json(
-                f"{base_url}/slots/0?action=erase",
-                timeout=HTTP_TIMEOUT,
-            )
-            print(f"[Unsloth Studio Bridge] Cleared slot cache: {erased}", file=sys.stderr)
-        except Exception as exc:
-            print(f"[Unsloth Studio Bridge] WARNING: could not clear slot cache: {exc}", file=sys.stderr)
     if include_reasoning and reasoning:
         if content:
             return content + "\n\n[Reasoning]\n" + reasoning
@@ -512,6 +1396,38 @@ def _chat_completion(base_url, messages, seed, params, include_reasoning, disabl
 
 
 class UnslothLLM:
+    def __init__(self):
+        # Per-node conversation cache: ComfyUI reuses the class instance of each
+        # node across runs, so this history is scoped to this node's session.
+        self._answer_cache = []
+
+    @classmethod
+    def IS_CHANGED(cls, **kwargs):
+        # NaN != NaN, so every queue hits the server: required for
+        # retain_last_response history and the unload/reload cycle to advance.
+        return float("NaN")
+
+    def _retained_turns(self):
+        return list(self._answer_cache)
+
+    def _remember_turn(self, user_content, response, retain):
+        # Only the assistant answers are retained — the system prompt /
+        # instruction doesn't change, so keeping the questions would just
+        # fill the context with duplicates.
+        self._answer_cache.append({"role": "assistant", "content": response})
+        while len(self._answer_cache) > retain:
+            self._answer_cache.pop(0)
+
+    def _retain_history(self, retain, messages):
+        turns = self._retained_turns()
+        if retain > 0 and turns:
+            messages.extend(turns)
+            print(
+                f"[Unsloth Studio Bridge] Retaining last {len(turns)} answer(s)",
+                file=sys.stderr,
+            )
+        return turns
+
     @classmethod
     def INPUT_TYPES(cls):
         return {
@@ -524,6 +1440,47 @@ class UnslothLLM:
                     "IMAGE",
                     {
                         "tooltip": "Optional image batch. The model loaded in Unsloth Studio must support vision input.",
+                    },
+                ),
+                "temperature": (
+                    "FLOAT",
+                    {
+                        "default": -1.0,
+                        "min": -1.0,
+                        "max": 4.0,
+                        "step": 0.05,
+                        "tooltip": (
+                            "Sampling temperature sent in the request. -1 = use the "
+                            "server's active default. Set >= 0 to override per-run; "
+                            "this does NOT change Unsloth Studio or its UI."
+                        ),
+                    },
+                ),
+                "top_p": (
+                    "FLOAT",
+                    {
+                        "default": -1.0,
+                        "min": -1.0,
+                        "max": 1.0,
+                        "step": 0.01,
+                        "tooltip": (
+                            "Top-P (nucleus) sampling sent in the request. -1 = use the "
+                            "server's active default. Set >= 0 to override per-run; "
+                            "this does NOT change Unsloth Studio or its UI."
+                        ),
+                    },
+                ),
+                "top_k": (
+                    "INT",
+                    {
+                        "default": -1,
+                        "min": -1,
+                        "max": 10000,
+                        "step": 1,
+                        "tooltip": (
+                            "Top-K sampling sent in the request. -1 = use the server's "
+                            "active default. 0 = unlimited. Set >= 0 to override per run."
+                        ),
                     },
                 ),
                 "unsloth_server_url": (
@@ -539,7 +1496,6 @@ class UnslothLLM:
                         ),
                     },
                 ),
-                "system_prompt": ("STRING", {"default": "", "multiline": True}),
                 "skills_path": (
                     "STRING",
                     {
@@ -566,12 +1522,27 @@ class UnslothLLM:
                         "tooltip": "Append reasoning_content returned by the server to the response output when the loaded model provides it.",
                     },
                 ),
-                "reuse_context": (
+                "retain_last_response": (
+                    "INT",
+                    {
+                        "default": 0,
+                        "min": 0,
+                        "max": MAX_RETAIN_ANSWERS,
+                        "step": 1,
+                        "tooltip": (
+                            "Number of previous assistant answers to keep in context for the next run. "
+                            "Only the answers are retained — the instruction / system prompt is not "
+                            "duplicated. 0 is stateless. Set to N to keep the last N answers in "
+                            "history so the model can build on its previous outputs."
+                        ),
+                    },
+                ),
+                "cache_skills": (
                     "BOOLEAN",
                     {
                         "default": True,
                         "tooltip": (
-                            "Keep the system prompt and skill files in the llama-server slot "
+                            "Keep the skill files in the llama-server slot "
                             "cache between runs: only the new user content (image + prompt) is "
                             "evaluated, making repeated runs much faster. Editing the system "
                             "prompt or a skill file changes the prefix and automatically "
@@ -579,11 +1550,50 @@ class UnslothLLM:
                         ),
                     },
                 ),
-                "clear_prompt_cache": (
+                "disable_web_search": (
                     "BOOLEAN",
                     {
                         "default": False,
-                        "tooltip": "Erase llama-server slot 0 after generation, forcing the next run to reprocess the full prompt. Leave off to keep context reuse.",
+                        "tooltip": (
+                            "Disable automatic URL fetching and web search. When enabled, "
+                            "URLs in the prompt are ignored and no web content is fetched."
+                        ),
+                    },
+                ),
+                "studio_api_url": (
+                    "STRING",
+                    {
+                        "default": "",
+                        "multiline": False,
+                        "tooltip": (
+                            "Unsloth Studio backend API, e.g. http://127.0.0.1:8888/api. "
+                            "Empty = auto-discover from Studio logs. Used to force an "
+                            "unload + reload when llama-server dies so the run can recover."
+                        ),
+                    },
+                ),
+                "studio_password": (
+                    "STRING",
+                    {
+                        "default": "",
+                        "multiline": False,
+                        "tooltip": (
+                            "Unsloth Studio login password (username: unsloth). Only needed "
+                            "when auto-recovery must reload the model after llama-server "
+                            "crashes. Leave empty to only wait and retry without reloading."
+                        ),
+                    },
+                ),
+                "unload_model_after_run": (
+                    "BOOLEAN",
+                    {
+                        "default": False,
+                        "tooltip": (
+                            "Unload the model from Unsloth Studio after each completed run, "
+                            "freeing its VRAM for other tasks. The next run automatically "
+                            "reloads it via the Studio API with its previous settings "
+                            "(requires Studio auth: desktop session or studio_password)."
+                        ),
                     },
                 ),
             },
@@ -595,22 +1605,49 @@ class UnslothLLM:
     CATEGORY = "CRT/LLM"
     DESCRIPTION = (
         "Connects ComfyUI to the model currently loaded in Unsloth Studio. "
-        "Unsloth Studio must remain open; image input requires a vision model."
+        "Unsloth Studio must remain open; image input requires a vision model. "
+        "Detects http(s) URLs in the prompt and fetches their content. "
+        "Set retain_last_response above 0 to keep previous answers in context across runs. "
+        "Set temperature / top_p / top_k to -1 to use the server's active defaults, or to any value "
+        "to override per run. Enable unload_model_after_run to release the model's VRAM "
+        "after each run; the next run reloads it automatically."
     )
 
-    def generate(self, prompt, seed, unsloth_server_url=DEFAULT_UNSLOTH_STUDIO_URL, system_prompt="", skills_path="", disable_thinking=True, include_reasoning=False, reuse_context=True, clear_prompt_cache=False, image=None):
+    def generate(self, prompt, seed, unsloth_server_url=DEFAULT_UNSLOTH_STUDIO_URL, skills_path="", disable_thinking=True, include_reasoning=False, cache_skills=True, retain_last_response=0, image=None, temperature=-1.0, top_p=-1.0, top_k=-1, disable_web_search=False, studio_api_url="", studio_password="", unload_model_after_run=False):
         if (not prompt or not prompt.strip()) and image is None:
             print("[Unsloth Studio Bridge][WARN] Prompt is empty", file=sys.stderr)
         print(
             f"[Unsloth Studio Bridge][INFO] Request prepared: "
-            f"prompt_chars={len(prompt or '')}, image_connected={image is not None}",
+            f"prompt_chars={len(prompt or '')}, image_connected={image is not None}, retain={retain_last_response}",
             file=sys.stderr,
         )
-        llama_base, connection_source = _resolve_llama_server(unsloth_server_url)
+        if not studio_api_url:
+            studio_api_url = _discover_studio_api_url()
+        try:
+            llama_base, connection_source = _resolve_llama_server(unsloth_server_url)
+        except Exception:
+            llama_base = _recover_llama_server(
+                unsloth_server_url,
+                studio_api_url,
+                STUDIO_ADMIN_USERNAME,
+                studio_password,
+            )
+            if llama_base is None:
+                raise
+            connection_source = "recovered after crash"
+        _remember_launch(llama_base)
         server_log = _find_latest_server_log()
+        global _LAST_MODEL_PATH
+        _LAST_MODEL_PATH = _parse_model_path_from_log(server_log) or _LAST_MODEL_PATH
         fallback_params = _get_model_params(server_log)
         server_state = _get_server_state(llama_base)
         params = _merge_active_params(fallback_params, server_state)
+        if temperature is not None and temperature >= 0.0:
+            params["temperature"] = temperature
+        if top_p is not None and top_p >= 0.0:
+            params["top_p"] = top_p
+        if top_k is not None and top_k >= 0:
+            params["top_k"] = top_k
         print(
             f"[Unsloth Studio Bridge][INFO] Connected via {connection_source}: "
             f"{llama_base}, model={params['model_name']}, family={params['family']}",
@@ -619,7 +1656,10 @@ class UnslothLLM:
         print(
             f"[Unsloth Studio Bridge] Active server: context={server_state['context_length']}, "
             f"temp={params['temperature']}, top_p={params['top_p']}, "
-            f"top_k={params['top_k']}, min_p={params['min_p']}",
+            f"top_k={params['top_k']}, min_p={params['min_p']} (node overrides: "
+            f"temperature={temperature if temperature >= 0.0 else 'server'}, "
+            f"top_p={top_p if top_p >= 0.0 else 'server'}, "
+            f"top_k={top_k if top_k >= 0 else 'server'})",
             file=sys.stderr,
         )
         messages = []
@@ -627,16 +1667,48 @@ class UnslothLLM:
         if skills_count:
             print(f"[Unsloth Studio Bridge] Loaded {skills_count} skill file(s) from {skills_path}", file=sys.stderr)
         system_parts = []
-        if system_prompt and system_prompt.strip():
-            system_parts.append(system_prompt.strip())
         if skills_text:
             system_parts.append(skills_text)
+        if not disable_web_search:
+            system_parts.append(_WEB_GUARD_SYSTEM_PROMPT)
         if system_parts:
             messages.append({"role": "system", "content": "\n\n".join(system_parts)})
+        self._retain_history(retain_last_response, messages)
         user_content, image_count = _build_user_content(prompt, image)
         if image_count:
             print(f"[Unsloth Studio Bridge] Attached {image_count} image(s) to request", file=sys.stderr)
-        messages.append({"role": "user", "content": user_content})
+        if disable_web_search:
+            print("[Unsloth Studio Bridge] Web search disabled by node toggle", file=sys.stderr)
+        else:
+            fetched, failures, searched = _web_content_from_prompt(prompt)
+            for failure in failures:
+                print(f"[Unsloth Studio Bridge] WARNING: {failure}", file=sys.stderr)
+            if fetched:
+                web_text = _build_web_section(fetched)
+                if isinstance(user_content, list):
+                    user_content.insert(0, {"type": "text", "text": web_text})
+                else:
+                    user_content = f"{web_text}\n\n{user_content}"
+                if searched:
+                    print(
+                        f"[Unsloth Studio Bridge] No URL in prompt, searched the web and "
+                        f"fetched {len(fetched)} result(s)",
+                        file=sys.stderr,
+                    )
+                else:
+                    print(
+                        f"[Unsloth Studio Bridge] Fetched {len(fetched)} URL(s) from prompt: "
+                        + ", ".join(url for _, url, _ in fetched),
+                        file=sys.stderr,
+                    )
+            elif failures:
+                print(
+                    "[Unsloth Studio Bridge] WARNING: web fetch/search produced nothing usable "
+                    "(see failures above); sending the raw prompt",
+                    file=sys.stderr,
+                )
+        user_message = {"role": "user", "content": user_content}
+        messages.append(user_message)
         prompt_tokens = _count_chat_tokens(
             llama_base,
             _messages_for_token_count(messages),
@@ -659,7 +1731,7 @@ class UnslothLLM:
         )
         print(
             f"[Unsloth Studio Bridge] Sending request (seed={seed}, max_tokens=omitted, "
-            f"disable_thinking={disable_thinking}, reuse_context={reuse_context})",
+            f"disable_thinking={disable_thinking}, cache_skills={cache_skills})",
             file=sys.stderr,
         )
         response = _chat_completion(
@@ -669,13 +1741,28 @@ class UnslothLLM:
             params,
             include_reasoning,
             disable_thinking,
-            clear_prompt_cache,
-            reuse_context,
+            cache_skills,
+            configured_url=unsloth_server_url,
+            studio_api_url=studio_api_url,
+            studio_password=studio_password,
         )
         print(
             f"[Unsloth Studio Bridge][INFO] Response received: {len(response)} chars",
             file=sys.stderr,
         )
+        if retain_last_response > 0:
+            self._remember_turn(user_content, response, retain_last_response)
+            print(
+                f"[Unsloth Studio Bridge] Retained {retain_last_response} answer(s) in cache: {len(self._answer_cache) // 2} kept",
+                file=sys.stderr,
+            )
+        if unload_model_after_run:
+            _unload_model_via_studio(
+                studio_api_url,
+                STUDIO_ADMIN_USERNAME,
+                studio_password,
+                _LAST_MODEL_PATH or _find_last_model_path(),
+            )
         return (response,)
 
 

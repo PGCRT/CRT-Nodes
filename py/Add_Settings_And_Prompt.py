@@ -33,6 +33,8 @@ except Exception as e:
 
 
 class CRT_AddSettingsAndPrompt:
+    COLOR_LIST = ["white", "black", "red", "green", "blue", "yellow", "cyan", "magenta", "gray", "darkgray", "lightgray", "orange", "purple", "pink", "brown", "lime", "navy", "teal", "olive", "maroon", "silver", "gold"]
+
     @classmethod
     def INPUT_TYPES(s):
         return {
@@ -43,8 +45,8 @@ class CRT_AddSettingsAndPrompt:
                 "orientation": (["horizontal", "vertical"],),
                 "font": (FONT_LIST,),
                 "font_size": ("INT", {"default": 24, "min": 8, "max": 256, "step": 1}),
-                "font_color": ("STRING", {"default": "white"}),
-                "background_color": ("STRING", {"default": "black"}),
+                "font_color": (s.COLOR_LIST,),
+                "background_color": (s.COLOR_LIST,),
                 "margin": ("INT", {"default": 15, "min": 0, "max": 256, "step": 1}),
             }
         }

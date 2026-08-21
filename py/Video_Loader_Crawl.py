@@ -174,10 +174,10 @@ class VideoLoaderCrawl:
                     "FLOAT",
                     {
                         "default": 1.0,
-                        "min": 0.1,
+                        "min": 0.0,
                         "max": 16.0,
                         "step": 0.05,
-                        "tooltip": "After even-frame selection, resize only the retained frames to this target area with Lanczos while preserving aspect ratio.",
+                        "tooltip": "After even-frame selection, resize only the retained frames to this target area with Lanczos while preserving aspect ratio. Use 0 to keep the source resolution.",
                     },
                 ),
             }
@@ -224,7 +224,10 @@ class VideoLoaderCrawl:
     def _target_dimensions(width, height, megapixels, quantize=8):
         width = max(1, int(width))
         height = max(1, int(height))
-        megapixels = max(0.001, float(megapixels))
+        megapixels = float(megapixels)
+        if megapixels <= 0:
+            return width, height
+        megapixels = max(0.001, megapixels)
         scale = math.sqrt(megapixels * 1_000_000.0 / (width * height))
         target_width = max(quantize, round(width * scale / quantize) * quantize)
         target_height = max(quantize, round(height * scale / quantize) * quantize)
@@ -359,9 +362,12 @@ class VideoLoaderCrawl:
                 f"[CRT Video Loader] Stage 2/3 - Even batch picker: "
                 f"{selected_total}/{limited_count} frame(s) retained"
             )
+            if float(megapixels) > 0:
+                resize_label = f"{float(megapixels):.3f} MP"
+            else:
+                resize_label = "disabled (source resolution)"
             print(
-                f"[CRT Video Loader] Stage 3/3 - Lanczos resize target: "
-                f"{float(megapixels):.3f} MP"
+                f"[CRT Video Loader] Stage 3/3 - Lanczos resize target: {resize_label}"
             )
 
             frame_buffer = None

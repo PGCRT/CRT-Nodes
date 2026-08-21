@@ -33,6 +33,4 @@ class CRT_LineSpot:
     def execute(self, text="", passthrough=""):
         if passthrough != "":
             text = passthrough
-            return {"ui": {"text": [text]}, "result": (text,)}
-        else:
-            return (text,)
+        return {"ui": {"text": [text]}, "result": (text,)}

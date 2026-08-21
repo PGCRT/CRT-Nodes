@@ -143,6 +143,7 @@ _MODEL_TYPES = {
     "ERNIEImage",
     "Ideogram4",
     "Krea2Turbo",
+    "MiniMaxH3",
 }
 _DEFAULT_MT = "Flux2Klein"
 _ROUTES_REGISTERED = globals().get("_ROUTES_REGISTERED", False)
@@ -152,7 +153,11 @@ _BLOCK_KEYS = ("double", "single", "transformer", "layers", "blocks")
 def _is_all_ones(block_weights: dict) -> bool:
     if not block_weights:
         return True
-    for vals in block_weights.values():
+    for key, vals in block_weights.items():
+        if key == "non_block":
+            if float(vals) != 1.0:
+                return False
+            continue
         for w in vals:
             if float(w) != 1.0:
                 return False
@@ -227,22 +232,23 @@ def _key_block_weight(key: str, block_weights: dict) -> float:
         weights = block_weights.get("layers", [])
         return float(weights[idx]) if idx < len(weights) else 1.0
 
-    m = re.search(r"(?:^|[._])(?<!double_)(?<!single_)blocks[._](\d+)[._]", key)
+    m = re.search(r"(?:^|[._])(?<!double_)(?<!single_)(?<!refiner[._])blocks[._](\d+)[._]", key)
     if m:
         idx = int(m.group(1))
         weights = block_weights.get("blocks", [])
         return float(weights[idx]) if idx < len(weights) else 1.0
 
-    return 1.0
+    # keys not covered by any block list (MiniMax token_refiner, embeddings,
+    # final layers, text encoders, ...) get the global non-block weight
+    return float(block_weights.get("non_block", 1.0))
 
 
 def _compute_merged_lora(model, pre_patch_counts: dict) -> dict:
-    """Compute merged LoRA delta tensors from patches added since pre_patch_counts snapshot.
-    Returns {model_state_dict_key: 2D_delta_float32_tensor}.
-    Keys whose delta element count does not match the stored weight are silently skipped
-    (this happens with FP8-packed weights whose logical shape differs from the LoRA expectation)."""
-    import torch
-
+    """Collect the LoRA patches added since the pre_patch_counts snapshot.
+    Returns {model_state_dict_key: [(strength, patch), ...]} validated against the
+    stored weight shapes. The dense deltas are NOT materialized here: on large
+    models they can total tens of GB of RAM, so the consumer builds them one key
+    at a time via _materialize_delta."""
     # Collect actual weight shapes for validation (cheap - just metadata, no tensor copies).
     weight_numel = {}
     try:
@@ -258,7 +264,7 @@ def _compute_merged_lora(model, pre_patch_counts: dict) -> dict:
         new_patches = patch_list[pre:]
         if not new_patches:
             continue
-        delta = None
+        entries = []
         for p in new_patches:
             strength = float(p[0])
             v = p[1]
@@ -268,44 +274,62 @@ def _compute_merged_lora(model, pre_patch_counts: dict) -> dict:
                     if v.name != "lora":
                         log_node_warn(NODE_NAME, f"Unsupported adapter '{v.name}' on {key} - skipping (only standard LoRA supported).")
                         continue
-                    mat1 = w[0].float()
-                    mat2 = w[1].float()
-                    alpha_val = w[2]
-                    mid = w[3]
-                    dora_scale = w[4]
-                    if mid is not None:
+                    if w[3] is not None:
                         log_node_warn(NODE_NAME, f"Tucker/LoCon mid weight on {key} - skipping (not supported in merge).")
                         continue
-                    if dora_scale is not None:
+                    if w[4] is not None:
                         log_node_warn(NODE_NAME, f"DoRA scale on {key} - skipping (DoRA merge requires base weights, not supported).")
                         continue
-                    scale = float(alpha_val) / mat2.shape[0] if alpha_val is not None else 1.0
-                    d = strength * scale * torch.mm(
-                        mat1.flatten(start_dim=1), mat2.flatten(start_dim=1)
-                    )
+                    # delta = up.flatten(1) @ down.flatten(1); get its size without building it
+                    delta_numel = w[0].shape[0] * (w[1].numel() // w[1].shape[0])
                 elif isinstance(v, tuple) and len(v) >= 2 and v[0] == "diff":
-                    raw = v[1][0].float()
-                    d = strength * raw.reshape(raw.shape[0], -1)
+                    delta_numel = v[1][0].numel()
                 else:
                     log_node_warn(NODE_NAME, f"Unknown patch format on {key} - skipping.")
                     continue
-                delta = d if delta is None else delta + d
+                # Skip patches whose delta is incompatible with the stored weight shape.
+                # This occurs with FP8 quantized models that pack weights into a different layout.
+                if key in weight_numel and delta_numel != weight_numel[key]:
+                    log_node_warn(
+                        NODE_NAME,
+                        f"Skipping {key}: LoRA delta ({delta_numel} el) "
+                        f"does not match weight ({weight_numel[key]} el) - "
+                        f"LoRA was trained for a different shape and cannot be applied to this layer.",
+                    )
+                    continue
+                entries.append((strength, v))
             except Exception as e:
                 log_node_warn(NODE_NAME, f"merge skip {key}: {e}")
-        if delta is None:
-            continue
-        # Skip keys where the LoRA delta is incompatible with the stored weight shape.
-        # This occurs with FP8 quantized models that pack weights into a different layout.
-        if key in weight_numel and delta.numel() != weight_numel[key]:
-            log_node_warn(
-                NODE_NAME,
-                f"Skipping {key}: LoRA delta {list(delta.shape)} ({delta.numel()} el) "
-                f"does not match weight ({weight_numel[key]} el) - "
-                f"LoRA was trained for a different shape and cannot be applied to this layer.",
-            )
-            continue
-        merged[key] = delta.cpu()
+        if entries:
+            merged[key] = entries
     return merged
+
+
+def _materialize_delta(entries, device):
+    """Sum one key's collected patches into a dense fp32 delta on device.
+    Called per key so only a single dense delta exists at a time."""
+    import torch
+
+    delta = None
+    for strength, v in entries:
+        if hasattr(v, "name") and hasattr(v, "weights"):
+            w = v.weights
+            mat1 = w[0].to(device=device, dtype=torch.float32)
+            mat2 = w[1].to(device=device, dtype=torch.float32)
+            alpha_val = w[2]
+            scale = float(alpha_val) / mat2.shape[0] if alpha_val is not None else 1.0
+            d = torch.mm(mat1.flatten(start_dim=1), mat2.flatten(start_dim=1))
+            d *= strength * scale
+            del mat1, mat2
+        else:  # "diff" patch (validated at collect time)
+            raw = v[1][0].to(device=device, dtype=torch.float32)
+            d = strength * raw.reshape(raw.shape[0], -1)
+        if delta is None:
+            delta = d
+        else:
+            delta += d
+            del d
+    return delta
 
 
 def _scale_new_patches(patcher, block_weights: dict, pre_counts: dict):
@@ -331,7 +355,7 @@ def _extract_block_index(key: str) -> int | None:
         r"single_blocks\.(\d+)\.",
         r"(?:diffusion_model\.)?transformer_blocks\.(\d+)\.",
         r"(?:^|\.|\b)layers[._](\d+)[._]",
-        r"(?:^|[._])(?<!double_)(?<!single_)blocks[._](\d+)[._]",
+        r"(?:^|[._])(?<!double_)(?<!single_)(?<!refiner[._])blocks[._](\d+)[._]",
     ):
         m = re.search(pattern, key)
         if m:
@@ -362,6 +386,24 @@ def _parse_keep_blocks(value: str) -> set[int] | None:
             f"Invalid keep_blocks token '{token}'. Use comma-separated block numbers, e.g. 0,1,2,16-27."
         )
     return blocks
+
+
+def _dynamic_rank(S, total_sq: float, max_r: int, method: str, param: float) -> int:
+    """Pick the smallest rank meeting the retention target from the top-q
+    singular values. total_sq is the exact squared Frobenius norm of the
+    matrix, so sv_fro retention is exact even without the tail values."""
+    import torch
+
+    if S.numel() == 0 or float(S[0]) <= 1e-6:
+        return 1
+    if method == "sv_fro":
+        cum = torch.cumsum(S.pow(2), dim=0) / total_sq
+        idx = int(torch.searchsorted(cum, param**2)) + 1
+    elif method == "sv_ratio":
+        idx = int(torch.sum(S > S[0] / param).item())
+    else:
+        idx = max_r
+    return max(1, min(idx, max_r))
 
 
 def load_lora_with_blocks(
@@ -451,6 +493,13 @@ class MagicLoraLoader:
         elif isinstance(cap_raw, (int, float)):
             cap = max(0.0, float(cap_raw))
 
+        non_block = 1.0
+        nb_raw = kwargs.pop("pgc_non_block", None)
+        if isinstance(nb_raw, dict) and nb_raw.get("__pgc_non_block") is True:
+            non_block = max(0.0, min(2.0, float(nb_raw.get("value", 1.0))))
+        elif isinstance(nb_raw, (int, float)):
+            non_block = max(0.0, min(2.0, float(nb_raw)))
+
         model_type = _DEFAULT_MT
         model_type_raw = kwargs.pop("pgc_model_type", None)
         if isinstance(model_type_raw, dict) and model_type_raw.get("__pgc_model_type") is True:
@@ -485,6 +534,7 @@ class MagicLoraLoader:
                 "value": _json_number(cap),
             },
             "global_block_weights": _report_block_weights(configured_global_blocks),
+            "non_block_weight": _json_number(non_block),
             "used_lora_stacks": [],
             "skipped_loras": [],
         }
@@ -606,6 +656,9 @@ class MagicLoraLoader:
                 block_weights_mode = "global"
             else:
                 block_weights_mode = "default"
+
+            if non_block != 1.0:
+                blocks = {**(blocks or {}), "non_block": non_block}
 
             if blocks is not None:
                 model, clip = load_lora_with_blocks(
@@ -735,7 +788,34 @@ class SaveMergedLora:
                         "tooltip": (
                             "SVD rank for compression. "
                             "0 = lossless diff format (larger file). "
-                            ">0 = LoRA format with SVD at this rank."
+                            ">0 = LoRA format with SVD at this rank. "
+                            "Acts as max rank per layer when dynamic_method is enabled."
+                        ),
+                    },
+                ),
+                "dynamic_method": (
+                    ["disabled", "sv_fro", "sv_ratio"],
+                    {
+                        "default": "disabled",
+                        "tooltip": (
+                            "Dynamic per-layer rank selection. "
+                            "sv_fro: smallest rank keeping dynamic_param of the Frobenius norm. "
+                            "sv_ratio: keep singular values above max(S)/dynamic_param."
+                        ),
+                    },
+                ),
+                "dynamic_param": (
+                    "FLOAT",
+                    {
+                        "default": 0.99,
+                        "min": 0.0,
+                        "max": 1000.0,
+                        "step": 0.01,
+                        "tooltip": (
+                            "Target for dynamic_method. sv_fro: kept Frobenius norm ratio "
+                            "per layer, e.g. 0.99. sv_ratio: keep singular values above "
+                            "max(S)/dynamic_param, e.g. 10-100. Ignored when "
+                            "dynamic_method is disabled."
                         ),
                     },
                 ),
@@ -753,7 +833,7 @@ class SaveMergedLora:
         # of letting ComfyUI reuse a cached filepath/empty result.
         return float("nan")
 
-    def save(self, merged_lora, filename, keep_blocks, save_to, rank):
+    def save(self, merged_lora, filename, keep_blocks, save_to, rank, dynamic_method, dynamic_param):
         import torch
         import safetensors.torch
         from comfy.utils import ProgressBar
@@ -766,8 +846,8 @@ class SaveMergedLora:
         if keep is not None:
             before = len(merged_lora)
             merged_lora = {
-                key: delta
-                for key, delta in merged_lora.items()
+                key: entries
+                for key, entries in merged_lora.items()
                 if (idx := _extract_block_index(key)) is not None and idx in keep
             }
             print(
@@ -793,6 +873,8 @@ class SaveMergedLora:
 
         total = len(merged_lora)
         fmt = "diff" if rank == 0 else f"rank-{rank} LoRA"
+        if rank > 0 and dynamic_method != "disabled":
+            fmt = f"dynamic {dynamic_method} {dynamic_param} (max rank {rank}) LoRA"
         print(f"[crt-pll] Magic Save Merged LoRA: processing {total} keys ({fmt}) on {device}...")
         pbar = ProgressBar(total)
 
@@ -801,31 +883,46 @@ class SaveMergedLora:
         keys = list(merged_lora.keys())
         lora_sd = {}
         skipped = 0
+        rank_list = []
 
         if rank == 0:
             for i, model_key in enumerate(keys):
                 base_key = model_key[: -len(".weight")] if model_key.endswith(".weight") else model_key
                 print(f"[crt-pll]   [{i + 1}/{total}] {model_key}")
-                lora_sd[f"{base_key}.diff"] = merged_lora[model_key].to(torch.float16)
+                delta = _materialize_delta(merged_lora[model_key], device)
+                lora_sd[f"{base_key}.diff"] = delta.to(device="cpu", dtype=torch.float16)
+                del delta
                 pbar.update(1)
         else:
             print(f"[crt-pll]   Streaming SVD on {device} (CPU offload per tensor)...")
             for i, model_key in enumerate(keys):
                 base_key = model_key[: -len(".weight")] if model_key.endswith(".weight") else model_key
-                print(f"[crt-pll]   [{i + 1}/{total}] {model_key}")
                 try:
-                    delta = merged_lora[model_key]
-                    r = min(rank, min(delta.shape))
-                    d_gpu = delta.to(device=device, dtype=torch.float32)
-                    U, S, Vh = torch.linalg.svd(d_gpu, full_matrices=False)
+                    d_gpu = _materialize_delta(merged_lora[model_key], device)
+                    max_r = min(rank, min(d_gpu.shape))
+                    # Randomized low-rank SVD: only the top-r subspace is needed, a full
+                    # SVD of these large matrices is orders of magnitude slower.
+                    if dynamic_method != "disabled":
+                        # The exact squared Frobenius norm of the delta gives the total
+                        # spectral energy, so dynamic rank selection needs no full SVD.
+                        total_sq = float(d_gpu.pow(2).sum())
+                        U, S, V = torch.svd_lowrank(d_gpu, q=max_r, niter=7)
+                        r = _dynamic_rank(S, total_sq, max_r, dynamic_method, dynamic_param)
+                    else:
+                        # Slight oversampling improves accuracy of the truncated basis.
+                        r = max_r
+                        q = min(r + 16, min(d_gpu.shape))
+                        U, S, V = torch.svd_lowrank(d_gpu, q=q, niter=7)
                     lora_sd[f"{base_key}.lora_up.weight"] = (
                         U[:, :r] * S[:r]
                     ).contiguous().to(device="cpu", dtype=torch.float16)
-                    lora_sd[f"{base_key}.lora_down.weight"] = Vh[:r, :].contiguous().to(
+                    lora_sd[f"{base_key}.lora_down.weight"] = V[:, :r].t().contiguous().to(
                         device="cpu", dtype=torch.float16
                     )
                     lora_sd[f"{base_key}.alpha"] = torch.tensor(float(r))
-                    del d_gpu, U, S, Vh
+                    rank_list.append(r)
+                    print(f"[crt-pll]   [{i + 1}/{total}] {model_key} -> rank {r}")
+                    del d_gpu, U, S, V
                 except Exception as e:
                     log_node_warn(NODE_NAME, f"SVD failed for {model_key}: {e}")
                     skipped += 1
@@ -841,6 +938,9 @@ class SaveMergedLora:
         print(f"[crt-pll]   Writing {save_path} ...")
         safetensors.torch.save_file(lora_sd, save_path)
         keys_saved = total - skipped
+        if rank_list:
+            avg_rank = sum(rank_list) / len(rank_list)
+            print(f"[crt-pll]   Ranks: min {min(rank_list)}, max {max(rank_list)}, avg {avg_rank:.1f}")
         print(f"[crt-pll] Done - saved {keys_saved}/{total} keys -> {save_path}")
         return (save_path,)
 
@@ -928,6 +1028,15 @@ _ARCH = {
     "Krea2Turbo": {
         "block_types": [
             ("blocks", r"(?:^|[._])(?<!double_)(?<!single_)blocks[._](\d+)[._]", 28),
+        ],
+    },
+    "MiniMaxH3": {
+        "block_types": [
+            (
+                "blocks",
+                r"(?:^|[._])(?<!double_)(?<!single_)(?<!refiner[._])blocks[._](\d+)[._]",
+                50,
+            ),
         ],
     },
 }

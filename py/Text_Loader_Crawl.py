@@ -1,4 +1,5 @@
 import os
+from collections import OrderedDict
 from pathlib import Path
 
 
@@ -30,6 +31,7 @@ class TextLoaderCrawl:
                     {"default": 0, "min": 0, "tooltip": "Maximum number of words in output (0 for no limit)"},
                 ),
                 "crawl_subfolders": ("BOOLEAN", {"default": False, "tooltip": "If true, include files in subfolders"}),
+                "interleave_subfolders": ("BOOLEAN", {"default": False, "tooltip": "When crawling subfolders with incrementing seed: if ON, iterate through each folder's 1st file, then each folder's 2nd file, etc. If OFF (default), iterate through all files in folder 1, then folder 2, etc."}),
                 "remove_extension": ("BOOLEAN", {"default": False, "tooltip": "Output filename without extension"}),
             }
         }
@@ -46,7 +48,7 @@ class TextLoaderCrawl:
         words = text.split()
         return ' '.join(words[:max_words])
 
-    def load_text_file(self, folder_path, seed, file_extension, max_words, crawl_subfolders, remove_extension):
+    def load_text_file(self, folder_path, seed, file_extension, max_words, crawl_subfolders, interleave_subfolders, remove_extension):
         # Define a safe, empty return value for error cases
         safe_return = ("", "", "")
 
@@ -88,8 +90,31 @@ class TextLoaderCrawl:
 
             # --- Deterministic and Safe Selection ---
             num_files = len(files)
-            selected_index = seed % num_files
-            selected_file = files[selected_index]
+
+            if crawl_subfolders and interleave_subfolders:
+                # Group files by their parent folder, preserving sorted order
+                folders = OrderedDict()
+                for f in files:
+                    parent = str(f.parent.resolve())
+                    if parent not in folders:
+                        folders[parent] = []
+                    folders[parent].append(f)
+
+                folder_lists = list(folders.values())
+                max_files = max(len(fl) for fl in folder_lists) if folder_lists else 0
+
+                # Build interleaved index: folder1[0], folder2[0], folder3[0], folder1[1], folder2[1], ...
+                interleaved = []
+                for i in range(max_files):
+                    for fl in folder_lists:
+                        if i < len(fl):
+                            interleaved.append(fl[i])
+
+                selected_index = seed % len(interleaved)
+                selected_file = interleaved[selected_index]
+            else:
+                selected_index = seed % num_files
+                selected_file = files[selected_index]
             # --- End Selection ---
 
             print(f"[OK] Seed {seed} -> File {selected_index + 1}/{num_files}: '{selected_file.name}'")

@@ -22,11 +22,10 @@ pip install -r requirements.txt
 
 Restart ComfyUI after installation or an update.
 
-### CRT/Audio (8)
+### CRT/Audio (7)
 
 - `Audio Frame Adjuster (CRT)`
-- `Audio Transcript (CRT)` (conditional)
-- `Audio Transcript Pipe Out (CRT)` (conditional)
+- `Audio Transcript Batch (CRT)` (conditional)
 - `Frame Count (Audio or Manual) (CRT)`
 - `Mono to Stereo Converter (CRT)`
 - `Parametric EQ (CRT)`
@@ -84,22 +83,12 @@ Restart ComfyUI after installation or an update.
 - `Z-Image Turbo Model (CRT AutoDL)`
 - `Z-Image Turbo VAE (CRT AutoDL)`
 
-### CRT/Conditioning (7)
+### CRT/Conditioning (4)
 
 - `CLIP Text Encode + Unload (CRT)`
-- `CLIP Text Encode FLUX Merged (CRT)`
 - `Dynamic Prompt Scheduler (CRT)`
 - `File Batch Prompt Scheduler (CRT)`
 - `File Batch Prompt Scheduler KREA2 (CRT)`
-- `Smart ControlNet Apply (CRT)`
-- `Smart Style Model Apply DUAL (CRT)`
-
-### CRT/Flux2 (4)
-
-- `Flux2Klein Seamless Tile (CRT)`
-- `Tiny FLUX.2 VAE Decode (CRT)` (conditional)
-- `Tiny FLUX.2 VAE Encode (CRT)` (conditional)
-- `Tiny FLUX.2 VAE Loader (CRT)` (conditional)
 
 ### CRT/FX (12)
 
@@ -116,7 +105,7 @@ Restart ComfyUI after installation or an update.
 - `Smart DeNoise FX (CRT)`
 - `Technicolor 2 FX (CRT)`
 
-### CRT/Image (12)
+### CRT/Image (10)
 
 - `Batch Brightness Curve (U-Shape) (CRT)`
 - `Chroma Key Overlay (CRT)`
@@ -127,27 +116,27 @@ Restart ComfyUI after installation or an update.
 - `Image Tile Checker (CRT)`
 - `Percentage Crop Calculator (CRT)`
 - `Quantize and Crop Image (CRT)`
-- `Smart Preprocessor (CRT)`
 - `Solid Color (CRT)`
-- `Upscale Model Advanced (CRT)`
 
 ### CRT/Image Scorer (1)
 
 - `ERNIE Image Aesthetic Score (CRT)`
 
-### CRT/Latent (3)
+### CRT/Latent (4)
 
 - `Enable Latent (CRT)`
 - `Reference Latent Batch (CRT)`
 - `Scale Latent To Megapixels (CRT)`
+- `VAE Decode Last Frame (CRT)`
 
 ### CRT/LLM (1)
 
 - `Unsloth Studio Bridge (CRT)`
 
-### CRT/Load (12)
+### CRT/Load (13)
 
 - `Audio Loader Crawl (CRT)`
+- `Audio Loader Crawl Batch (CRT)`
 - `Image Loader Crawl (CRT)`
 - `Image Loader Crawl Batch (CRT)`
 - `Load Image Base64 (CRT)`
@@ -166,12 +155,11 @@ Restart ComfyUI after installation or an update.
 - `Boolean Invert (CRT)`
 - `Strength to Steps (CRT)`
 
-### CRT/LoRA (5)
+### CRT/LoRA (4)
 
 - `Flux LoRA Blocks Patcher (CRT)`
 - `Magic LoRA Loader (CRT)`
 - `Magic Save Merged LoRA (CRT)`
-- `Seeded Persona LoRA Loader (CRT)`
 - `Wan Video Multi-LoRA Select (CRT)`
 
 ### CRT/LTX2.3 (4)
@@ -185,10 +173,6 @@ Restart ComfyUI after installation or an update.
 
 - `Mask Censor (CRT)`
 - `Mask Temporal Enhancer (CRT)`
-
-### CRT/Model Patches (1)
-
-- `Ideogram 4 FlashAttention (CRT)`
 
 ### CRT/Sampling (8)
 
@@ -212,18 +196,20 @@ Restart ComfyUI after installation or an update.
 - `Save Text With Path (CRT)`
 - `Save Video With Path (CRT)`
 
-### CRT/Text (11)
+### CRT/Text (13)
 
 - `Add Settings and Prompt (CRT)`
-- `Advanced String Replace (CRT)`
 - `AutopromptProcessor (CRT)`
+- `Extract Q/A (CRT)`
 - `Join Strings (CRT)`
+- `Merge Q/A (CRT)`
 - `Remove Lines (CRT)`
-- `Remove Trailing Comma (CRT)`
 - `String Batcher (CRT)`
 - `String Line Counter (CRT)`
 - `String Splitter (CRT)`
-- `Text Box line spot (CRT)`
+- `Text Add Rows (CRT)`
+- `TextBox line spot (CRT)`
+- `Text Rows Crawl (CRT)`
 - `Textbox (CRT)`
 
 ### CRT/Utils/Isolate (3)
@@ -234,7 +220,7 @@ Restart ComfyUI after installation or an update.
 
 ### CRT/Utils/Logic & Values (10)
 
-- `Boolean Transform (CRT)`
+- `String to Boolean (CRT)`
 - `Int Value (CRT)`
 - `Mask Empty Float (CRT)`
 - `Mask Pass or Placeholder (CRT)`
