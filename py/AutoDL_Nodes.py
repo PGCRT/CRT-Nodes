@@ -503,42 +503,6 @@ class _FixedCLIPLoader:
         return (clip,)
 
 
-class _FixedDiffusionSelector(_FixedDiffusionLoader):
-    """Diffusion loader with a dropdown of model variants."""
-
-    OPTIONS: dict[str, str] = {}
-
-    @classmethod
-    def INPUT_TYPES(cls):
-        inputs = super().INPUT_TYPES()
-        names = list(cls.OPTIONS.keys())
-        inputs["required"]["model_name"] = (names, {"default": names[0]})
-        return inputs
-
-    def load_model(self, model_name, patch_cublaslinear, attention_method, enable_fp16_accumulation):
-        self.MODEL_KEY = self.OPTIONS[model_name]
-        return super().load_model(patch_cublaslinear, attention_method, enable_fp16_accumulation)
-
-
-class _FixedCLIPSelector(_FixedCLIPLoader):
-    """CLIP loader with a dropdown of variants."""
-
-    OPTIONS: dict[str, str] = {}
-
-    @classmethod
-    def INPUT_TYPES(cls):
-        names = list(cls.OPTIONS.keys())
-        return {
-            "required": {
-                "model_name": (names, {"default": names[0]}),
-            }
-        }
-
-    def load_clip(self, model_name):
-        self.MODEL_KEY = self.OPTIONS[model_name]
-        return super().load_clip()
-
-
 class _FixedCLIPVisionLoader:
     RETURN_TYPES = ("CLIP_VISION",)
     RETURN_NAMES = ("CLIP_VISION",)
@@ -772,12 +736,14 @@ class Flux2KleinHDRILoRA(_FixedLoRALoader):
     MODEL_KEY = "fluxklein_hdri_lora"
 
 
-class ErnieTurboModelSelector(_FixedDiffusionSelector):
+class ErnieTurboModel(_FixedDiffusionLoader):
     CATEGORY = "CRT/AutoDL/ERNIE"
-    OPTIONS = {
-        "Turbo": "ernie_turbo_model",
-        "Turbo NVFP4": "ernie_turbo_nvfp4_model",
-    }
+    MODEL_KEY = "ernie_turbo_model"
+
+
+class ErnieTurboNVFP4Model(_FixedDiffusionLoader):
+    CATEGORY = "CRT/AutoDL/ERNIE"
+    MODEL_KEY = "ernie_turbo_nvfp4_model"
 
 
 class ErnieModel(_FixedDiffusionLoader):
@@ -828,14 +794,24 @@ class ChronoEditCLIPVision(_FixedCLIPVisionLoader):
 
 
 # MiniMax H3
-class MiniMaxH3ModelSelector(_FixedDiffusionSelector):
+class MiniMaxH3FL2VAModel(_FixedDiffusionLoader):
     CATEGORY = "CRT/AutoDL/MINIMAXH3"
-    OPTIONS = {
-        "FL2VA": "minimax_h3_model_fl2va",
-        "FL2VA Light W4A8": "minimax_h3_model_fl2va_w4a8",
-        "REF2VA": "minimax_h3_model_ref2va",
-        "REF2VA Light W4A8": "minimax_h3_model_ref2va_w4a8",
-    }
+    MODEL_KEY = "minimax_h3_model_fl2va"
+
+
+class MiniMaxH3REF2VAModel(_FixedDiffusionLoader):
+    CATEGORY = "CRT/AutoDL/MINIMAXH3"
+    MODEL_KEY = "minimax_h3_model_ref2va"
+
+
+class MiniMaxH3FL2VALightW4A8Model(_FixedDiffusionLoader):
+    CATEGORY = "CRT/AutoDL/MINIMAXH3"
+    MODEL_KEY = "minimax_h3_model_fl2va_w4a8"
+
+
+class MiniMaxH3REF2VALightW4A8Model(_FixedDiffusionLoader):
+    CATEGORY = "CRT/AutoDL/MINIMAXH3"
+    MODEL_KEY = "minimax_h3_model_ref2va_w4a8"
 
 
 class MiniMaxH3AudioVAE(_FixedVAELoader):
@@ -848,24 +824,37 @@ class MiniMaxH3VideoVAE(_FixedVAELoader):
     MODEL_KEY = "minimax_h3_video_vae"
 
 
-class MiniMaxH3CLIPSelector(_FixedCLIPSelector):
+class MiniMaxH3CLIPInt8(_FixedCLIPLoader):
     CATEGORY = "CRT/AutoDL/MINIMAXH3"
+    MODEL_KEY = "minimax_h3_clip_int8"
     CLIP_TYPE = "minimax"
-    OPTIONS = {
-        "INT8": "minimax_h3_clip_int8",
-        "NVFP4": "minimax_h3_clip_nvfp4",
-    }
+
+
+class MiniMaxH3CLIPNVFP4(_FixedCLIPLoader):
+    CATEGORY = "CRT/AutoDL/MINIMAXH3"
+    MODEL_KEY = "minimax_h3_clip_nvfp4"
+    CLIP_TYPE = "minimax"
 
 
 # LTX2.5
-class LTX25ModelSelector(_FixedDiffusionSelector):
+class LTX25Model(_FixedDiffusionLoader):
     CATEGORY = "CRT/AutoDL/LTX2.5"
-    OPTIONS = {
-        "24gb": "ltx25_model_24gb",
-        "32gb": "ltx25_model_32gb",
-        "16gb 4x8mix": "ltx25_model_16gb_4x8mix",
-        "16gb NVFP4": "ltx25_model_16gb_nvfp4",
-    }
+    MODEL_KEY = "ltx25_model_32gb"
+
+
+class LTX25Model24GB(_FixedDiffusionLoader):
+    CATEGORY = "CRT/AutoDL/LTX2.5"
+    MODEL_KEY = "ltx25_model_24gb"
+
+
+class LTX25Model16GB4x8Mix(_FixedDiffusionLoader):
+    CATEGORY = "CRT/AutoDL/LTX2.5"
+    MODEL_KEY = "ltx25_model_16gb_4x8mix"
+
+
+class LTX25Model16GBNVFP4(_FixedDiffusionLoader):
+    CATEGORY = "CRT/AutoDL/LTX2.5"
+    MODEL_KEY = "ltx25_model_16gb_nvfp4"
 
 
 class LTX25AudioVAE(_FixedVAELoader):
@@ -946,7 +935,8 @@ NODE_CLASS_MAPPINGS = {
     "CRTAutoDLFlux2KleinVAE": Flux2KleinVAE,
     "CRTAutoDLFlux2KleinCLIP": Flux2KleinCLIP,
     "CRTAutoDLFlux2KleinHDRILoRA": Flux2KleinHDRILoRA,
-    "CRTAutoDLErnieTurboModelSelector": ErnieTurboModelSelector,
+    "CRTAutoDLErnieTurboModel": ErnieTurboModel,
+    "CRTAutoDLErnieTurboNVFP4Model": ErnieTurboNVFP4Model,
     "CRTAutoDLErnieModel": ErnieModel,
     "CRTAutoDLErnieVAE": ErnieVAE,
     "CRTAutoDLErnieCLIP": ErnieCLIP,
@@ -956,11 +946,18 @@ NODE_CLASS_MAPPINGS = {
     "CRTAutoDLChronoEditVAE": ChronoEditVAE,
     "CRTAutoDLChronoEditCLIP": ChronoEditCLIP,
     "CRTAutoDLChronoEditCLIPVision": ChronoEditCLIPVision,
-    "CRTAutoDLMiniMaxH3ModelSelector": MiniMaxH3ModelSelector,
+    "CRTAutoDLMiniMaxH3FL2VAModel": MiniMaxH3FL2VAModel,
+    "CRTAutoDLMiniMaxH3REF2VAModel": MiniMaxH3REF2VAModel,
+    "CRTAutoDLMiniMaxH3FL2VALightW4A8Model": MiniMaxH3FL2VALightW4A8Model,
+    "CRTAutoDLMiniMaxH3REF2VALightW4A8Model": MiniMaxH3REF2VALightW4A8Model,
     "CRTAutoDLMiniMaxH3AudioVAE": MiniMaxH3AudioVAE,
     "CRTAutoDLMiniMaxH3VideoVAE": MiniMaxH3VideoVAE,
-    "CRTAutoDLMiniMaxH3CLIPSelector": MiniMaxH3CLIPSelector,
-    "CRTAutoDLLTX25ModelSelector": LTX25ModelSelector,
+    "CRTAutoDLMiniMaxH3CLIPInt8": MiniMaxH3CLIPInt8,
+    "CRTAutoDLMiniMaxH3CLIPNVFP4": MiniMaxH3CLIPNVFP4,
+    "CRTAutoDLLTX25Model": LTX25Model,
+    "CRTAutoDLLTX25Model24GB": LTX25Model24GB,
+    "CRTAutoDLLTX25Model16GB4x8Mix": LTX25Model16GB4x8Mix,
+    "CRTAutoDLLTX25Model16GBNVFP4": LTX25Model16GBNVFP4,
     "CRTAutoDLLTX25AudioVAE": LTX25AudioVAE,
     "CRTAutoDLLTX25VideoVAE": LTX25VideoVAE,
     "CRTAutoDLLTX25CLIP": LTX25CLIP,
@@ -985,7 +982,8 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "CRTAutoDLFlux2KleinVAE": "Flux2Klein VAE (CRT AutoDL)",
     "CRTAutoDLFlux2KleinCLIP": "Flux2Klein CLIP (CRT AutoDL)",
     "CRTAutoDLFlux2KleinHDRILoRA": "Flux2Klein HDRI LoRA (CRT AutoDL)",
-    "CRTAutoDLErnieTurboModelSelector": "ERNIE Turbo Model (CRT AutoDL)",
+    "CRTAutoDLErnieTurboModel": "ERNIE Turbo Model (CRT AutoDL)",
+    "CRTAutoDLErnieTurboNVFP4Model": "ERNIE Turbo NVFP4 Model (CRT AutoDL)",
     "CRTAutoDLErnieModel": "ERNIE Model (CRT AutoDL)",
     "CRTAutoDLErnieVAE": "ERNIE VAE (CRT AutoDL)",
     "CRTAutoDLErnieCLIP": "ERNIE CLIP (CRT AutoDL)",
@@ -995,11 +993,18 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "CRTAutoDLChronoEditVAE": "ChronoEdit VAE (CRT AutoDL)",
     "CRTAutoDLChronoEditCLIP": "ChronoEdit CLIP - WAN (CRT AutoDL)",
     "CRTAutoDLChronoEditCLIPVision": "ChronoEdit CLIP Vision (CRT AutoDL)",
-    "CRTAutoDLMiniMaxH3ModelSelector": "MiniMax H3 Model (CRT AutoDL)",
+    "CRTAutoDLMiniMaxH3FL2VAModel": "MiniMax H3 FL2VA Model (CRT AutoDL)",
+    "CRTAutoDLMiniMaxH3REF2VAModel": "MiniMax H3 REF2VA Model (CRT AutoDL)",
+    "CRTAutoDLMiniMaxH3FL2VALightW4A8Model": "MiniMax H3 FL2VA Light W4A8 (CRT AutoDL)",
+    "CRTAutoDLMiniMaxH3REF2VALightW4A8Model": "MiniMax H3 REF2VA Light W4A8 (CRT AutoDL)",
     "CRTAutoDLMiniMaxH3AudioVAE": "MiniMax H3 AUDIO VAE (CRT AutoDL)",
     "CRTAutoDLMiniMaxH3VideoVAE": "MiniMax H3 VIDEO VAE (CRT AutoDL)",
-    "CRTAutoDLMiniMaxH3CLIPSelector": "MiniMax H3 CLIP (CRT AutoDL)",
-    "CRTAutoDLLTX25ModelSelector": "LTX2.5 Model (CRT AutoDL)",
+    "CRTAutoDLMiniMaxH3CLIPInt8": "MiniMax H3 CLIP INT8 (CRT AutoDL)",
+    "CRTAutoDLMiniMaxH3CLIPNVFP4": "MiniMax H3 CLIP NVFP4 (CRT AutoDL)",
+    "CRTAutoDLLTX25Model": "LTX2.5 Model 32gb (CRT AutoDL)",
+    "CRTAutoDLLTX25Model24GB": "LTX2.5 Model 24gb (CRT AutoDL)",
+    "CRTAutoDLLTX25Model16GB4x8Mix": "LTX2.5 Model 16gb 4x8mix (CRT AutoDL)",
+    "CRTAutoDLLTX25Model16GBNVFP4": "LTX2.5 Model 16gb NVFP4 (CRT AutoDL)",
     "CRTAutoDLLTX25AudioVAE": "LTX2.5 AUDIO VAE (CRT AutoDL)",
     "CRTAutoDLLTX25VideoVAE": "LTX2.5 VIDEO VAE (CRT AutoDL)",
     "CRTAutoDLLTX25CLIP": "LTX2.5 CLIP w4a8 Light (CRT AutoDL)",
