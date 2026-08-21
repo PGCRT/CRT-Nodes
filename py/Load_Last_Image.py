@@ -93,6 +93,9 @@ class LoadLastImage:
 
     @classmethod
     def VALIDATE_INPUTS(cls, folder_path):
+        # Allow connected inputs; runtime validation will catch bad paths.
+        if folder_path is None:
+            return True
         if not folder_path or not os.path.isdir(folder_path):
             return f"Invalid folder path: {folder_path}"
         return True
