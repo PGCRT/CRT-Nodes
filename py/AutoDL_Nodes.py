@@ -190,25 +190,40 @@ MODELS = {
         "url": "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/vae/minimax_h3_video_vae_fp16.safetensors",
     },
     # LTX2.5
-    "ltx25_model": {
+    "ltx25_model_32gb": {
         "folder": "diffusion_models",
-        "filename": "ltx-2.5-22b-distilled-transformer-comfy-int8-convrot.safetensors",
-        "url": "https://huggingface.co/Lightricks/LTX-2.5/resolve/main/diffusion_models/ltx-2.5-22b-distilled-transformer-comfy-int8-convrot.safetensors",
+        "filename": "LTX25-distilled-DiT-comfy-int8.safetensors",
+        "url": "https://huggingface.co/joeygambino/LTX-2.5-Quantized/resolve/main/LTX25-distilled-DiT-comfy-int8.safetensors",
+    },
+    "ltx25_model_24gb": {
+        "folder": "diffusion_models",
+        "filename": "LTX25-distilled-DiT-comfy-mix4x8-17GB.safetensors",
+        "url": "https://huggingface.co/joeygambino/LTX-2.5-Quantized/resolve/main/LTX25-distilled-DiT-comfy-mix4x8-17GB.safetensors",
+    },
+    "ltx25_model_16gb_4x8mix": {
+        "folder": "diffusion_models",
+        "filename": "LTX25-distilled-DiT-comfy-mix4x8-13.8GB.safetensors",
+        "url": "https://huggingface.co/joeygambino/LTX-2.5-Quantized/resolve/main/LTX25-distilled-DiT-comfy-mix4x8-13.8GB.safetensors",
+    },
+    "ltx25_model_16gb_nvfp4": {
+        "folder": "diffusion_models",
+        "filename": "LTX25-distilled-DiT-comfy-nvfp4.safetensors",
+        "url": "https://huggingface.co/joeygambino/LTX-2.5-Quantized/resolve/main/LTX25-distilled-DiT-comfy-nvfp4.safetensors",
     },
     "ltx25_spatial_upscaler": {
         "folder": "latent_upscale_models",
         "filename": "ltx-2.5-latent-spatial-upscaler-x2-bf16-1.0.safetensors",
-        "url": "https://huggingface.co/Lightricks/LTX-2.5/resolve/main/latent_upscale_models/ltx-2.5-latent-spatial-upscaler-x2-bf16-1.0.safetensors",
+        "url": "https://huggingface.co/UntMods/CRT_Nodes_25Gate/resolve/main/spatial_upscaler.safetensors",
     },
     "ltx25_temporal_upscaler": {
         "folder": "latent_upscale_models",
         "filename": "ltx-2.5-latent-temporal-upscaler-x2-bf16-1.0.safetensors",
-        "url": "https://huggingface.co/Lightricks/LTX-2.5/resolve/main/latent_upscale_models/ltx-2.5-latent-temporal-upscaler-x2-bf16-1.0.safetensors",
+        "url": "https://huggingface.co/UntMods/CRT_Nodes_25Gate/resolve/main/temporal_upscaler.safetensors",
     },
     "ltx25_pixel_spatial_ic_lora": {
         "folder": "loras",
         "filename": "ltx-2.5-22b-ic-lora-pixel-spatial-upscaler-x2-1.0.safetensors",
-        "url": "https://huggingface.co/Lightricks/LTX-2.5-22b-IC-LoRA-Pixel-Spatial-Upscaler/resolve/main/ltx-2.5-22b-ic-lora-pixel-spatial-upscaler-x2-1.0.safetensors",
+        "url": "https://huggingface.co/UntMods/CRT_Nodes_25Gate/resolve/main/pixel_spatial_upscaler.safetensors",
     },
     "ltx25_ic_cnet_lora": {
         "folder": "loras",
@@ -227,23 +242,23 @@ MODELS = {
     },
     "ltx25_clip": {
         "folder": "text_encoders",
-        "filename": "gemma4-12b-with-proj-ltx-2.5-comfy-int8-convrot.safetensors",
-        "url": "https://huggingface.co/Lightricks/LTX-2.5/resolve/main/text_encoders/gemma4-12b-with-proj-ltx-2.5-comfy-int8-convrot.safetensors",
+        "filename": "gemma4-12b-ltx25-comfy-w4a8.safetensors",
+        "url": "https://huggingface.co/joeygambino/LTX-2.5-Quantized/resolve/main/gemma4-12b-ltx25-comfy-w4a8.safetensors",
     },
     "ltx25_audio_vae": {
         "folder": "vae",
         "filename": "ltx-2.5-audio-vae-bf16.safetensors",
-        "url": "https://huggingface.co/Lightricks/LTX-2.5/resolve/main/vae/ltx-2.5-audio-vae-bf16.safetensors",
+        "url": "https://huggingface.co/UntMods/CRT_Nodes_25Gate/resolve/main/audio_vae.safetensors",
     },
     "ltx25_video_vae": {
         "folder": "vae",
         "filename": "ltx-2.5-video-vae-bf16.safetensors",
-        "url": "https://huggingface.co/Lightricks/LTX-2.5/resolve/main/vae/ltx-2.5-video-vae-bf16.safetensors",
+        "url": "https://huggingface.co/UntMods/CRT_Nodes_25Gate/resolve/main/video_vae.safetensors",
     },
     "ltx25_duration_head": {
         "folder": "model_patches",
         "filename": "ltx-2.5-duration-head-bf16.safetensors",
-        "url": "https://huggingface.co/Lightricks/LTX-2.5/resolve/main/model_patches/ltx-2.5-duration-head-bf16.safetensors",
+        "url": "https://huggingface.co/UntMods/CRT_Nodes_25Gate/resolve/main/duration_head.safetensors",
     },
 }
 
@@ -824,7 +839,22 @@ class MiniMaxH3CLIPNVFP4(_FixedCLIPLoader):
 # LTX2.5
 class LTX25Model(_FixedDiffusionLoader):
     CATEGORY = "CRT/AutoDL/LTX2.5"
-    MODEL_KEY = "ltx25_model"
+    MODEL_KEY = "ltx25_model_32gb"
+
+
+class LTX25Model24GB(_FixedDiffusionLoader):
+    CATEGORY = "CRT/AutoDL/LTX2.5"
+    MODEL_KEY = "ltx25_model_24gb"
+
+
+class LTX25Model16GB4x8Mix(_FixedDiffusionLoader):
+    CATEGORY = "CRT/AutoDL/LTX2.5"
+    MODEL_KEY = "ltx25_model_16gb_4x8mix"
+
+
+class LTX25Model16GBNVFP4(_FixedDiffusionLoader):
+    CATEGORY = "CRT/AutoDL/LTX2.5"
+    MODEL_KEY = "ltx25_model_16gb_nvfp4"
 
 
 class LTX25AudioVAE(_FixedVAELoader):
@@ -925,6 +955,9 @@ NODE_CLASS_MAPPINGS = {
     "CRTAutoDLMiniMaxH3CLIPInt8": MiniMaxH3CLIPInt8,
     "CRTAutoDLMiniMaxH3CLIPNVFP4": MiniMaxH3CLIPNVFP4,
     "CRTAutoDLLTX25Model": LTX25Model,
+    "CRTAutoDLLTX25Model24GB": LTX25Model24GB,
+    "CRTAutoDLLTX25Model16GB4x8Mix": LTX25Model16GB4x8Mix,
+    "CRTAutoDLLTX25Model16GBNVFP4": LTX25Model16GBNVFP4,
     "CRTAutoDLLTX25AudioVAE": LTX25AudioVAE,
     "CRTAutoDLLTX25VideoVAE": LTX25VideoVAE,
     "CRTAutoDLLTX25CLIP": LTX25CLIP,
@@ -968,10 +1001,13 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "CRTAutoDLMiniMaxH3VideoVAE": "MiniMax H3 VIDEO VAE (CRT AutoDL)",
     "CRTAutoDLMiniMaxH3CLIPInt8": "MiniMax H3 CLIP INT8 (CRT AutoDL)",
     "CRTAutoDLMiniMaxH3CLIPNVFP4": "MiniMax H3 CLIP NVFP4 (CRT AutoDL)",
-    "CRTAutoDLLTX25Model": "LTX2.5 Model (CRT AutoDL)",
+    "CRTAutoDLLTX25Model": "LTX2.5 Model 32gb (CRT AutoDL)",
+    "CRTAutoDLLTX25Model24GB": "LTX2.5 Model 24gb (CRT AutoDL)",
+    "CRTAutoDLLTX25Model16GB4x8Mix": "LTX2.5 Model 16gb 4x8mix (CRT AutoDL)",
+    "CRTAutoDLLTX25Model16GBNVFP4": "LTX2.5 Model 16gb NVFP4 (CRT AutoDL)",
     "CRTAutoDLLTX25AudioVAE": "LTX2.5 AUDIO VAE (CRT AutoDL)",
     "CRTAutoDLLTX25VideoVAE": "LTX2.5 VIDEO VAE (CRT AutoDL)",
-    "CRTAutoDLLTX25CLIP": "LTX2.5 CLIP (CRT AutoDL)",
+    "CRTAutoDLLTX25CLIP": "LTX2.5 CLIP w4a8 Light (CRT AutoDL)",
     "CRTAutoDLLTX25SpatialUpscaler": "LTX2.5 Spatial Upscaler (CRT AutoDL)",
     "CRTAutoDLLTX25TemporalUpscaler": "LTX2.5 Temporal Upscaler (CRT AutoDL)",
     "CRTAutoDLLTX25ICPixelSpatialUpscaleLoRA": "LTX2.5 IC Pixel Spatial Upscale LoRA (CRT AutoDL)",

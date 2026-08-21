@@ -58,6 +58,8 @@ def _hf_download_url(url: str, destination: str | os.PathLike, label: str | None
     from huggingface_hub import hf_hub_download
     from huggingface_hub.errors import GatedRepoError, HfHubHTTPError
 
+    url = url.split("?")[0]
+
     destination_path = Path(destination)
     destination_path.parent.mkdir(parents=True, exist_ok=True)
 

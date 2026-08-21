@@ -66,16 +66,19 @@ Restart ComfyUI after installation or an update.
 - `Krea 2 Turbo Model (CRT AutoDL)`
 - `Krea 2 VAE (CRT AutoDL)`
 
-### CRT/AutoDL/LTX2.5 (11)
+### CRT/AutoDL/LTX2.5 (14)
 
 - `LTX2.5 AUDIO VAE (CRT AutoDL)`
-- `LTX2.5 CLIP (CRT AutoDL)`
+- `LTX2.5 CLIP w4a8 Light (CRT AutoDL)`
 - `LTX2.5 Duration Head (CRT AutoDL)`
 - `LTX2.5 IC Cnet LoRA (CRT AutoDL)`
 - `LTX2.5 IC Outpaint LoRA (CRT AutoDL)`
 - `LTX2.5 IC Pixel Spatial Upscale LoRA (CRT AutoDL)`
 - `LTX2.5 IC Upscale LoRA (CRT AutoDL)`
-- `LTX2.5 Model (CRT AutoDL)`
+- `LTX2.5 Model 16gb 4x8mix (CRT AutoDL)`
+- `LTX2.5 Model 16gb NVFP4 (CRT AutoDL)`
+- `LTX2.5 Model 24gb (CRT AutoDL)`
+- `LTX2.5 Model 32gb (CRT AutoDL)`
 - `LTX2.5 Spatial Upscaler (CRT AutoDL)`
 - `LTX2.5 Temporal Upscaler (CRT AutoDL)`
 - `LTX2.5 VIDEO VAE (CRT AutoDL)`
