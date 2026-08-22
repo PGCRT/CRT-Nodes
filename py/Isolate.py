@@ -340,8 +340,10 @@ def _refine_mask(sam3, orig_hwc, coarse_mask, box_xyxy, H, W, device, dtype, ite
     pad = 0.1
     x1, y1, x2, y2 = box_xyxy.tolist()
     bw, bh = x2 - x1, y2 - y1
-    cx1 = max(0, int(x1 - bw * pad));  cy1 = max(0, int(y1 - bh * pad))
-    cx2 = min(W, int(x2 + bw * pad));  cy2 = min(H, int(y2 + bh * pad))
+    cx1 = max(0, int(x1 - bw * pad))
+    cy1 = max(0, int(y1 - bh * pad))
+    cx2 = min(W, int(x2 + bw * pad))
+    cy2 = min(H, int(y2 + bh * pad))
     if cx2 <= cx1 or cy2 <= cy1:
         return _fallback()
 
@@ -354,8 +356,10 @@ def _refine_mask(sam3, orig_hwc, coarse_mask, box_xyxy, H, W, device, dtype, ite
     ).to(device=device, dtype=dtype)
 
     mh, mw = coarse_mask.shape[-2:]
-    mx1 = max(0,      int(cx1 / W * mw));  my1 = max(0,      int(cy1 / H * mh))
-    mx2 = max(mx1+1,  int(cx2 / W * mw));  my2 = max(my1+1,  int(cy2 / H * mh))
+    mx1 = max(0,      int(cx1 / W * mw))
+    my1 = max(0,      int(cy1 / H * mh))
+    mx2 = max(mx1+1,  int(cx2 / W * mw))
+    my2 = max(my1+1,  int(cy2 / H * mh))
 
     logit = coarse_mask[..., my1:my2, mx1:mx2].unsqueeze(0).unsqueeze(0)
     for _ in range(iterations):
@@ -725,8 +729,10 @@ def _batch_crop(images, masks, crop_size_mult=1.0, smooth_alpha=1.0):
     else:
         ccx, ccy = (cx0+cx1)/2, (cy0+cy1)/2
         h = max_bb // 2
-        cx0 = max(0, round(ccx-h));  cx1 = min(W, round(ccx+h))
-        cy0 = max(0, round(ccy-h));  cy1 = min(H, round(ccy+h))
+        cx0 = max(0, round(ccx-h))
+        cx1 = min(W, round(ccx+h))
+        cy0 = max(0, round(ccy-h))
+        cy1 = min(H, round(ccy+h))
 
     bboxes, crops, crop_masks_list, cmb_masks_list = [], [], [], []
     prev_center = None
@@ -737,7 +743,8 @@ def _batch_crop(images, masks, crop_size_mult=1.0, smooth_alpha=1.0):
         nz = np.nonzero(mn)
 
         if len(nz[0]) > 0:
-            cx = float(np.mean(nz[1]));  cy = float(np.mean(nz[0]))
+            cx = float(np.mean(nz[1]))
+            cy = float(np.mean(nz[0]))
             curr = (round(cx), round(cy))
             if prev_center is None or i == 0:
                 center = curr
@@ -749,8 +756,10 @@ def _batch_crop(images, masks, crop_size_mult=1.0, smooth_alpha=1.0):
             prev_center = center
 
             h = max_bb // 2
-            x0 = max(0, center[0]-h);  x1 = min(W, center[0]+h)
-            y0 = max(0, center[1]-h);  y1 = min(H, center[1]+h)
+            x0 = max(0, center[0]-h)
+            x1 = min(W, center[0]+h)
+            y0 = max(0, center[1]-h)
+            y1 = min(H, center[1]+h)
             bboxes.append((x0, y0, x1-x0, y1-y0))
 
             cimg = img[y0:y1, x0:x1, :]
@@ -922,7 +931,8 @@ def _batch_uncrop(original, cropped, bboxes, border_blending=0.0):
         r = (max(0, bx), max(0, by), min(img.size[0], bx+bw), min(img.size[1], by+bh))
         pw, ph = r[2]-r[0], r[3]-r[1]
         if pw <= 0 or ph <= 0:
-            result.append(img);  continue
+            result.append(img)
+            continue
 
         crop_r      = crop.resize((pw, ph), Image.LANCZOS).convert("RGB")
         blend_ratio = (max(pw, ph) / 2) * float(border_blending)

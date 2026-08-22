@@ -718,7 +718,8 @@ class CRT_WAN_BatchSampler:
                 disable_noise=(switching_step >= steps),
                 callback=cb,
             )
-            _stop.set(); _thread.join(timeout=1.0)
+            _stop.set()
+            _thread.join(timeout=1.0)
             Log.vram("After High-Noise Sampling")
 
             del mh_clone
@@ -752,7 +753,8 @@ class CRT_WAN_BatchSampler:
                     last_step=steps,
                     callback=cb,
                 )
-                _stop.set(); _thread.join(timeout=1.0)
+                _stop.set()
+                _thread.join(timeout=1.0)
                 Log.vram("After Low-Noise Sampling (PEAK)")
 
                 del ml_clone
