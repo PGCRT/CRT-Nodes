@@ -20,6 +20,10 @@ DISTILLED_MAIN_SIGMAS = (
 # Lightricks' official ComfyUI two-stage distilled workflow starts the
 # refinement pass at 0.85 after latent upscaling.
 DISTILLED_REFINEMENT_SIGMAS = (0.85, 0.7250, 0.4219, 0.0)
+
+# Self-refinement pass on an already full-resolution latent (no upsampling):
+# matches the official inpaint/outpaint high-res schedule.
+DISTILLED_POLISH_SIGMAS = (0.7250, 0.4219, 0.0)
 MAX_LTX_FRAME_COUNT = 4089  # Largest 8k+1 value within the UI's 4096 limit.
 
 
@@ -29,6 +33,7 @@ def _sigma_text(values: tuple[float, ...]) -> str:
 
 DISTILLED_MAIN_SIGMAS_TEXT = _sigma_text(DISTILLED_MAIN_SIGMAS)
 DISTILLED_REFINEMENT_SIGMAS_TEXT = _sigma_text(DISTILLED_REFINEMENT_SIGMAS)
+DISTILLED_POLISH_SIGMAS_TEXT = _sigma_text(DISTILLED_POLISH_SIGMAS)
 
 
 def normalize_frame_count(frame_count: int, strategy: str = "nearest") -> int:

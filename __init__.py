@@ -1,7 +1,7 @@
 """
 @author: CRT
 @title: CRT-Nodes
-@version: 2.9.5
+@version: 2.10.0
 @project: "https://github.com/PGCRT/CRT-Nodes",
 @description: Set of nodes for ComfyUI
 https://discord.gg/8wYS9MBQqp
@@ -13,6 +13,33 @@ import sys
 
 sys.modules["crt_nodes"] = sys.modules[__name__]
 __package__ = "crt_nodes"
+
+if sys.platform == "win32":
+    # The Proactor event loop logs a raw ConnectionResetError whenever a client
+    # drops its TCP connection while the server is still flushing writes (e.g.
+    # browser websocket or batch-automation HTTP client at prompt completion).
+    # Wrap the transport callback so disconnect noise stays out of the console;
+    # every other exception keeps propagating unchanged.
+    try:
+        from asyncio import proactor_events
+
+        _crt_original_call_connection_lost = (
+            proactor_events._ProactorBasePipeTransport._call_connection_lost
+        )
+
+        if not getattr(_crt_original_call_connection_lost, "_crt_quiet_disconnect", False):
+            def _crt_quiet_call_connection_lost(self, exc):
+                try:
+                    return _crt_original_call_connection_lost(self, exc)
+                except (ConnectionResetError, ConnectionAbortedError, BrokenPipeError):
+                    pass
+
+            _crt_quiet_call_connection_lost._crt_quiet_disconnect = True
+            proactor_events._ProactorBasePipeTransport._call_connection_lost = (
+                _crt_quiet_call_connection_lost
+            )
+    except Exception:
+        pass
 
 if True:
 

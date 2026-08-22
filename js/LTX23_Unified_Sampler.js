@@ -3,12 +3,18 @@ import { api } from "../../scripts/api.js";
 
 const NODE_NAME = "CRT_LTX23UnifiedSampler";
 const NODE_ALIASES = new Set(["LTX 2.3 Unified Sampler (CRT)", "CRT_LTX23UnifiedSampler"]);
-const STYLE_ID = "crt-ltx23-unified-sampler-v12";
+const STYLE_ID = "crt-ltx23-unified-sampler-v14";
 const MIN_WIDTH = 450;
 const MIN_HEIGHT = 1;
 const DEBUG = false;
 const WORKFLOW_MODES = ["I2V", "T2V", "V2V"];
 const V2V_MODES = ["Depth Control", "Outpaint", "Upscale"];
+const QUALITY_MODES = ["Draft", "Standard", "Max"];
+const QUALITY_TOOLTIPS = {
+  Draft: "Draft - fastest: half-resolution pass, latent upscale, refinement.",
+  Standard: "Standard - full-resolution single pass.",
+  Max: "Max - full-resolution pass plus a short self-refinement pass.", 
+};
 
 const MODE_FIELDS = {
   I2V: ["firstframe_strength"],
@@ -249,41 +255,103 @@ function ensureStyles() {
       animation: preview-pulse 2.8s ease-in-out infinite;
     }
     
-    .crt-ltx23-hq {
-      width: 26px;
-      height: 26px;
-      padding: 0;
-      border-radius: 999px;
-      border: 1px solid var(--border-subtle);
-      background: var(--bg-base);
-      color: var(--text-tertiary);
-      font-size: 10px;
-      font-weight: 600;
-      letter-spacing: 0;
-      cursor: pointer;
-      transition: all 120ms ease;
-      text-transform: uppercase;
-      display: inline-flex;
+    .crt-ltx23-quality {
+      --q-color: var(--text-tertiary);
+      --q-glow: transparent;
+      display: flex;
+      flex-direction: column;
       align-items: center;
-      justify-content: center;
+      gap: 4px;
       grid-column: 3;
       justify-self: end;
     }
-    
-    .crt-ltx23-hq:hover {
-      border-color: var(--border-default);
-      color: var(--text-secondary);
-    }
-    
-    .crt-ltx23-hq:disabled {
-      cursor: not-allowed;
-      opacity: 0.85;
+
+    .crt-ltx23-quality[data-mode="Draft"] {
+      --q-color: #22c55e;
+      --q-glow: rgba(34, 197, 94, 0.45);
     }
 
-    .crt-ltx23-hq.on {
-      border-color: var(--success);
-      background: var(--success-soft);
-      color: var(--success);
+    .crt-ltx23-quality[data-mode="Standard"] {
+      --q-color: #eab308;
+      --q-glow: rgba(234, 179, 8, 0.45);
+    }
+
+    .crt-ltx23-quality[data-mode="Max"] {
+      --q-color: #f0561f;
+      --q-glow: rgba(240, 86, 31, 0.5);
+    }
+
+    .crt-ltx23-quality-slider {
+      position: relative;
+      display: flex;
+      width: 76px;
+      height: 22px;
+      padding: 3px;
+      border-radius: 999px;
+      background: var(--bg-base);
+      border: 1px solid var(--border-subtle);
+      box-sizing: border-box;
+    }
+
+    .crt-ltx23-quality-thumb {
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      width: calc((100% - 6px) / 3);
+      height: calc(100% - 6px);
+      border-radius: 999px;
+      background: var(--bg-elevated);
+      border: 1px solid var(--q-color);
+      box-shadow: 0 0 8px var(--q-glow);
+      transition:
+        transform 180ms cubic-bezier(0.4, 0, 0.2, 1),
+        border-color 180ms ease,
+        box-shadow 180ms ease;
+      pointer-events: none;
+    }
+
+    .crt-ltx23-quality-thumb::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      margin: auto;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--q-color);
+      box-shadow: 0 0 6px var(--q-glow);
+    }
+
+    .crt-ltx23-quality[data-mode="Draft"] .crt-ltx23-quality-thumb {
+      transform: translateX(0);
+    }
+
+    .crt-ltx23-quality[data-mode="Standard"] .crt-ltx23-quality-thumb {
+      transform: translateX(100%);
+    }
+
+    .crt-ltx23-quality[data-mode="Max"] .crt-ltx23-quality-thumb {
+      transform: translateX(200%);
+    }
+
+    .crt-ltx23-quality-hit {
+      position: relative;
+      z-index: 1;
+      flex: 1;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      padding: 0;
+    }
+
+    .crt-ltx23-quality-label {
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--q-color);
+      transition: color 180ms ease;
+      white-space: nowrap;
     }
 
     .crt-ltx23-preview-toggle {
@@ -353,7 +421,7 @@ function ensureStyles() {
         text-shadow: 0 0 14px rgba(34, 197, 94, 0.9);
       }
     }
-    
+
     @keyframes fade-in {
       from { opacity: 0; transform: translateY(2px); }
       to { opacity: 1; transform: translateY(0); }
@@ -744,6 +812,17 @@ function fieldLabel(name) {
   return FIELD_LABELS[name] || name;
 }
 
+function normalizeQualityValue(value) {
+  if (typeof value === "boolean") return value ? "Standard" : "Draft";
+  const text = String(value ?? "").trim().toLowerCase();
+  for (const mode of QUALITY_MODES) {
+    if (text.startsWith(mode.toLowerCase())) return mode;
+  }
+  if (text === "true" || text === "on" || text === "1") return "Standard";
+  if (text === "false" || text === "off" || text === "0") return "Draft";
+  return "Standard";
+}
+
 class LTX23UnifiedSamplerUI {
   constructor(node) {
     this.node = node;
@@ -881,11 +960,9 @@ class LTX23UnifiedSamplerUI {
     tabsWrap.appendChild(previewButton);
     this.tabs.set("PREVIEW", previewButton);
 
-    this.hqButton = document.createElement("button");
-    this.hqButton.type = "button";
-    this.hqButton.className = "crt-ltx23-hq";
-    this.hqButton.addEventListener("click", () => this.toggleHQ());
-    topbar.appendChild(this.hqButton);
+    this.qualityRoot = this.buildQualityControl();
+    topbar.appendChild(this.qualityRoot);
+    this.updateQualityControl();
 
     this.panelHost = document.createElement("div");
     shell.appendChild(this.panelHost);
@@ -1463,8 +1540,8 @@ class LTX23UnifiedSamplerUI {
     if (name === "v2v_mode") {
       this.rebuild();
     }
-    if (name === "hq") {
-      this.rebuild();
+    if (name === "quality") {
+      this.updateQualityControl();
     }
   }
 
@@ -1479,11 +1556,65 @@ class LTX23UnifiedSamplerUI {
     this.refresh();
   }
 
-  toggleHQ() {
-    if (this.mode === "V2V") return;
-    const widget = getWidget(this.node, "hq");
-    if (!widget) return;
-    this.writeWidget("hq", widget, !Boolean(widget.value));
+  normalizeQuality(value) {
+    return normalizeQualityValue(value);
+  }
+
+  buildQualityControl() {
+    const root = document.createElement("div");
+    root.className = "crt-ltx23-quality";
+    root.dataset.mode = "Standard";
+
+    const slider = document.createElement("div");
+    slider.className = "crt-ltx23-quality-slider";
+    slider.setAttribute("role", "radiogroup");
+
+    const thumb = document.createElement("div");
+    thumb.className = "crt-ltx23-quality-thumb";
+    slider.appendChild(thumb);
+
+    for (const mode of QUALITY_MODES) {
+      const hit = document.createElement("button");
+      hit.type = "button";
+      hit.className = "crt-ltx23-quality-hit";
+      hit.dataset.q = mode;
+      hit.title = QUALITY_TOOLTIPS[mode] || mode;
+      hit.setAttribute("aria-label", `${mode} quality`);
+      hit.addEventListener("click", () => this.setQuality(mode));
+      slider.appendChild(hit);
+    }
+
+    this.qualityLabel = document.createElement("div");
+    this.qualityLabel.className = "crt-ltx23-quality-label";
+
+    root.appendChild(slider);
+    root.appendChild(this.qualityLabel);
+    return root;
+  }
+
+  getQuality() {
+    return this.normalizeQuality(getWidget(this.node, "quality")?.value);
+  }
+
+  setQuality(mode) {
+    const widget = getWidget(this.node, "quality");
+    const next = this.normalizeQuality(mode);
+    if (widget && widget.value !== next) {
+      this.writeWidget("quality", widget, next);
+    } else {
+      this.updateQualityControl();
+    }
+  }
+
+  updateQualityControl() {
+    const active = this.getQuality();
+    if (this.qualityRoot) {
+      this.qualityRoot.dataset.mode = active;
+    }
+    if (this.qualityLabel) {
+      this.qualityLabel.textContent = active;
+      this.qualityLabel.title = QUALITY_TOOLTIPS[active] || active;
+    }
   }
 
   isLivePreviewEnabled() {
@@ -1572,20 +1703,6 @@ class LTX23UnifiedSamplerUI {
     }
   }
 
-  updateHQButton() {
-    const forcedForV2V = this.mode === "V2V";
-    const enabled = forcedForV2V || Boolean(getWidget(this.node, "hq")?.value);
-    this.hqButton.disabled = forcedForV2V;
-    this.hqButton.classList.toggle("on", enabled);
-    this.hqButton.setAttribute("aria-pressed", String(enabled));
-    this.hqButton.title = forcedForV2V
-      ? "V2V always uses the full-resolution HQ single-pass path."
-      : enabled
-        ? "HQ enabled: full-resolution single-pass inference."
-        : "HQ disabled: faster half-resolution generation followed by latent upscale and refinement.";
-    this.hqButton.textContent = "HQ";
-  }
-
   refresh() {
     this.syncFromWidgets();
     if (![
@@ -1607,7 +1724,7 @@ class LTX23UnifiedSamplerUI {
     for (const [key, panel] of this.panels.entries()) {
       panel.classList.toggle("active", key === this.activeView);
     }
-    this.updateHQButton();
+    this.updateQualityControl();
     this.updateLivePreviewButton();
     if (this.activeView === "PREVIEW") {
       this.updatePreviewStatus();
@@ -1959,12 +2076,21 @@ app.registerExtension({
       applyNodeVisuals(this);
       if (!this.ltx23UI) {
         this.ltx23UI = new LTX23UnifiedSamplerUI(this);
+      } else {
+        this.ltx23UI.updateQualityControl();
       }
       return result;
     };
 
     nodeType.prototype.onConfigure = function () {
       const result = originalOnConfigure?.apply(this, arguments);
+      const qualityWidget = getWidget(this, "quality");
+      if (qualityWidget) {
+        const normalized = normalizeQualityValue(qualityWidget.value);
+        if (qualityWidget.value !== normalized) {
+          qualityWidget.value = normalized;
+        }
+      }
       applyNodeVisuals(this);
       window.clearTimeout(this._ltx23RestoreTimer);
       this._ltx23RestoreTimer = window.setTimeout(() => {

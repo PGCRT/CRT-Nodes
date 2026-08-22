@@ -611,8 +611,15 @@ class _FixedLatentUpscaleModelLoader:
             model.load_sd(sd)
         elif "post_upsample_res_blocks.0.conv2.bias" in sd:
             config = json.loads(metadata["config"])
-            model = LatentUpsampler.from_config(config, operations=comfy.ops.manual_cast).to(dtype=model_management.vae_dtype(allowed_dtypes=[torch.bfloat16, torch.float32]))
-            model.load_state_dict(sd)
+            model = LatentUpsampler.from_config(config, operations=comfy.ops.disable_weight_init).to(dtype=model_management.vae_dtype(allowed_dtypes=[torch.bfloat16, torch.float32]))
+            model_management.archive_model_dtypes(model)
+            model_patcher = comfy.model_patcher.CoreModelPatcher(
+                model,
+                load_device=model_management.get_torch_device(),
+                offload_device=model_management.unet_offload_device(),
+            )
+            model.load_state_dict(sd, assign=model_patcher.is_dynamic())
+            return (model_patcher,)
         else:
             raise RuntimeError(f"[{TAG}] Unsupported latent upscale model format: {self.MODEL_KEY}")
         return (model,)
@@ -898,14 +905,9 @@ class LTX25TemporalUpscaler(_FixedLatentUpscaleModelLoader):
     MODEL_KEY = "ltx25_temporal_upscaler"
 
 
-class LTX25ICPixelSpatialUpscaleLoRA(_FixedLoRALoader):
-    CATEGORY = "CRT/AutoDL/LTX2.5"
-    MODEL_KEY = "ltx25_pixel_spatial_ic_lora"
+class _FixedMetadataLoRALoader(_FixedLoRALoader):
+    """LoRA loader that also reports reference_downscale_factor from file metadata."""
 
-
-class LTX25ICCnetLoRA(_FixedLoRALoader):
-    CATEGORY = "CRT/AutoDL/LTX2.5"
-    MODEL_KEY = "ltx25_ic_cnet_lora"
     RETURN_TYPES = ("MODEL", "FLOAT")
     RETURN_NAMES = ("MODEL", "latent_downscale_factor")
 
@@ -923,12 +925,22 @@ class LTX25ICCnetLoRA(_FixedLoRALoader):
         return (model_lora, latent_downscale_factor)
 
 
+class LTX25ICPixelSpatialUpscaleLoRA(_FixedMetadataLoRALoader):
+    CATEGORY = "CRT/AutoDL/LTX2.5"
+    MODEL_KEY = "ltx25_pixel_spatial_ic_lora"
+
+
+class LTX25ICCnetLoRA(_FixedMetadataLoRALoader):
+    CATEGORY = "CRT/AutoDL/LTX2.5"
+    MODEL_KEY = "ltx25_ic_cnet_lora"
+
+
 class LTX25OutpaintLoRA(_FixedLoRALoader):
     CATEGORY = "CRT/AutoDL/LTX2.5"
     MODEL_KEY = "ltx25_outpaint_lora"
 
 
-class LTX25UpscaleICLoRA(_FixedLoRALoader):
+class LTX25UpscaleICLoRA(_FixedMetadataLoRALoader):
     CATEGORY = "CRT/AutoDL/LTX2.5"
     MODEL_KEY = "ltx25_upscale_ic_lora"
 

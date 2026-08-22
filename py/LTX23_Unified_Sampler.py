@@ -2,6 +2,7 @@ import copy
 import gc
 import math
 import time
+import threading
 import builtins
 import logging
 import os
@@ -21,7 +22,6 @@ import node_helpers
 import folder_paths
 from PIL import Image
 from comfy.sd import VAE
-from comfy.taesd.taehv import TAEHV
 
 from comfy_extras.nodes_custom_sampler import (
     CFGGuider,
@@ -52,10 +52,20 @@ from comfy_extras.nodes_lt_upsampler import LTXVLatentUpsampler
 from ._cache_fingerprint import stable_fingerprint
 from ._ltx23_inference import (
     DISTILLED_MAIN_SIGMAS_TEXT,
+    DISTILLED_POLISH_SIGMAS_TEXT,
     DISTILLED_REFINEMENT_SIGMAS_TEXT,
     normalize_dimension,
     normalize_frame_count as normalize_ltx_frame_count,
 )
+from ._ltx23_preview import CRTLTXWrappedPreviewer, reset_all_timelines
+from .download_progress import download_url_with_progress
+
+_CRT_TAEHV_FILENAME = "taeltx2_3.safetensors"
+_CRT_TAEHV_URL = "https://huggingface.co/Kijai/LTX2.3_comfy/resolve/main/vae/taeltx2_3.safetensors"
+_CRT_TAEHV_DOWNLOAD_LOCK = threading.Lock()
+_CRT_TAEHV_DOWNLOAD_THREAD = None
+_CRT_TAEHV_LAST_FAIL = 0.0
+_CRT_TAEHV_RETRY_COOLDOWN = 600.0
 
 _LTX23_DEPTH_PREVIEW_ROUTE_REGISTERED = globals().get("_LTX23_DEPTH_PREVIEW_ROUTE_REGISTERED", False)
 
@@ -76,6 +86,16 @@ try:
             _ltx23_depth_preview.save(buf, format="PNG")
             buf.seek(0)
             return _aiohttp_web.Response(body=buf.read(), content_type="image/png")
+
+        @PromptServer.instance.routes.get("/crt/ltx23/ensure_preview_model")
+        async def _ltx23_ensure_preview_model_route(request):
+            if _crt_preview_model_present():
+                return _aiohttp_web.json_response({"status": "ready"})
+            path = await request.app.loop.run_in_executor(
+                None, _crt_download_preview_model
+            )
+            status = "ready" if path else "unavailable"
+            return _aiohttp_web.json_response({"status": status})
 
         _LTX23_DEPTH_PREVIEW_ROUTE_REGISTERED = True
 except Exception as _route_e:
@@ -113,78 +133,20 @@ class _CRTPreviewFixGuider:
             _CRT_PREVIEW_STATE.fps_override = None
 
 
-def _crt_build_taehv(model_path):
-    """Build standard TAEHV(latent_channels=128) and load state dict directly."""
-    taehv = TAEHV(latent_channels=128)
-    sd = comfy.utils.load_torch_file(model_path)
-    taehv.load_state_dict(sd, strict=True)
-    taehv.eval()
-    taehv.show_progress_bar = False
-    return taehv
+def _crt_get_previewer_instance(model_path):
+    """Wrap a preview model path in the ported KJ-style wrapped previewer.
 
-
-class _CRTLTXPreviewer(latent_preview.TAEHVPreviewerImpl):
-    _blank = Image.new("RGB", (256, 256), (8, 8, 8))
-
-    def __init__(self, wide_model):
-        # TAEHVPreviewerImpl just does self.taesd = taesd; we bypass VAE and use model directly
-        self.taesd = None
-        self._wide_model = wide_model
-
-    @staticmethod
-    def _ensure_video_latent_shape(x0):
-        if not hasattr(x0, "shape"):
-            return None
-        if getattr(x0, "is_nested", False):
-            try:
-                x0 = x0.unbind()[0]
-            except Exception:
-                return None
-
-        if x0.ndim == 5 and x0.shape[0] > 0:
-            return x0
-        if x0.ndim == 4 and x0.shape[0] > 0:
-            return x0.unsqueeze(2)
-
-        last_shapes = _CRT_PREVIEW_STATE.last_latent_shapes
-        if not last_shapes or not hasattr(comfy.utils, "unpack_latents"):
-            return None
-
-        try:
-            last_numel = sum(math.prod(shape) for shape in last_shapes)
-            if int(last_numel) != int(x0.numel()):
-                return None
-            unpacked = comfy.utils.unpack_latents(x0, last_shapes)
-            if not unpacked:
-                return None
-            target = unpacked[0]
-            if target.ndim == 4:
-                target = target.unsqueeze(2)
-            if target.ndim == 5 and target.shape[0] > 0:
-                return target
-        except Exception:
-            return None
-
-        return None
-
-    def decode_latent_to_preview(self, x0):
-        fixed = self._ensure_video_latent_shape(x0)
-        if fixed is None:
-            return self._blank
-        try:
-            inp = fixed[:1]  # (1, C, F, H, W)
-            # Decode the middle frame as a single representative preview
-            mid = inp.shape[2] // 2
-            with torch.no_grad():
-                out = self._wide_model.to(inp.device).decode(inp[:, :, mid : mid + 1])
-            frame = out[0, :, 0].float().cpu().movedim(0, -1)  # (H, W, 3)
-            return latent_preview.preview_to_image(frame, do_scale=False)
-        except Exception as e:
-            import traceback
-
-            print(f"[CRT-preview] decode error: {e}")
-            traceback.print_exc()
-            return self._blank
+    The taeltx weights are built lazily on first decode, so nothing loads
+    unless previews are actually active.
+    """
+    cached = _CRT_PREVIEWER_CACHE.get(("previewer", model_path))
+    if cached is None:
+        cached = CRTLTXWrappedPreviewer(
+            model_path=model_path,
+            preview_state=_CRT_PREVIEW_STATE,
+        )
+        _CRT_PREVIEWER_CACHE[("previewer", model_path)] = cached
+    return cached
 
 
 _CRT_PREVIEW_STATE = _CRTPreviewState()
@@ -231,24 +193,98 @@ def _crt_find_ltx_preview_models(latent_format):
     return result
 
 
-def _crt_get_previewer(device, latent_format, *args, **kwargs):
-    fallback = _CRT_ORIG_GET_PREVIEWER(device, latent_format, *args, **kwargs)
-    if not _crt_is_ltx_format(latent_format):
-        return fallback
+def _crt_preview_model_present():
+    files = folder_paths.get_filename_list("vae_approx")
+    return any(fn.lower().startswith(("taeltx2_3", "taeltx_2_3")) for fn in files)
 
-    for model_path in _crt_find_ltx_preview_models(latent_format):
-        cached = _CRT_PREVIEWER_CACHE.get(model_path)
-        if cached is not None:
-            return _CRTLTXPreviewer(cached)
+
+def _crt_download_preview_model():
+    """Blocking worker: fetch the taeltx2_3 TAEHV preview decoder if missing.
+
+    Offline users simply stay on the RGB-factors fallback; failures are retried
+    after a cooldown rather than permanently disabled.
+    """
+    global _CRT_TAEHV_LAST_FAIL
+    target = folder_paths.get_full_path("vae_approx", _CRT_TAEHV_FILENAME)
+    if target is not None:
+        return target
+    try:
+        target_dir = folder_paths.get_folder_paths("vae_approx")[0]
+        os.makedirs(target_dir, exist_ok=True)
+        target = os.path.join(target_dir, _CRT_TAEHV_FILENAME)
+        print(f"[CRT LTX23] Downloading live-preview model {_CRT_TAEHV_FILENAME} ...")
+        download_url_with_progress(
+            _CRT_TAEHV_URL,
+            target,
+            label=_CRT_TAEHV_FILENAME,
+            user_agent="CRT-Nodes",
+            console_prefix="CRT LTX23",
+        )
+        print(f"[CRT LTX23] Live-preview model ready: {target}")
+        return target
+    except Exception as e:
+        _CRT_TAEHV_LAST_FAIL = time.time()
+        print(
+            f"[CRT LTX23] Could not download {_CRT_TAEHV_FILENAME} ({e}); "
+            "live preview falls back to RGB factors until it succeeds."
+        )
+        return None
+
+
+def _crt_kickoff_preview_model_download():
+    """Start the taeltx download once, in the background, at first node use.
+
+    Runs regardless of the live-preview toggle so the model is ready before
+    previews are ever requested. Safe to call from every execution.
+    """
+    global _CRT_TAEHV_DOWNLOAD_THREAD
+    if _crt_preview_model_present():
+        return
+    if _CRT_TAEHV_DOWNLOAD_THREAD is not None and _CRT_TAEHV_DOWNLOAD_THREAD.is_alive():
+        return
+    if time.time() - _CRT_TAEHV_LAST_FAIL < _CRT_TAEHV_RETRY_COOLDOWN:
+        return
+
+    with _CRT_TAEHV_DOWNLOAD_LOCK:
+        if _crt_preview_model_present():
+            return
+        if _CRT_TAEHV_DOWNLOAD_THREAD is not None and _CRT_TAEHV_DOWNLOAD_THREAD.is_alive():
+            return
+        if time.time() - _CRT_TAEHV_LAST_FAIL < _CRT_TAEHV_RETRY_COOLDOWN:
+            return
+
+        thread = threading.Thread(
+            target=_crt_download_preview_model,
+            name="crt-ltx23-preview-download",
+            daemon=True,
+        )
+        _CRT_TAEHV_DOWNLOAD_THREAD = thread
+        thread.start()
+
+
+def _crt_get_previewer(device, latent_format, *args, **kwargs):
+    if not _crt_is_ltx_format(latent_format):
+        return _CRT_ORIG_GET_PREVIEWER(device, latent_format, *args, **kwargs)
+
+    # LTX formats have no core TAESD decoder; never invoke the core getter for
+    # them (it logs a spurious "vae_approx/None" warning) — use our chain.
+    model_paths = _crt_find_ltx_preview_models(latent_format)
+    if not model_paths:
+        if _crt_download_preview_model() is not None:
+            model_paths = _crt_find_ltx_preview_models(latent_format)
+
+    if not model_paths:
+        # Offline fallback: KJ-style RGB-factor projection, no model needed.
+        return _crt_get_previewer_instance(None)
+
+    for model_path in model_paths:
         try:
-            model = _crt_build_taehv(model_path)
-            _CRT_PREVIEWER_CACHE[model_path] = model
-            return _CRTLTXPreviewer(model)
+            return _crt_get_previewer_instance(model_path)
         except Exception as e:
             print(f"[CRT-preview] skipping {model_path}: {e}")
             continue
 
-    return fallback
+    return _crt_get_previewer_instance(None)
 
 
 def ensure_crt_previewer():
@@ -523,10 +559,14 @@ class CRT_LTX23UnifiedSampler:
 
     SIGMAS_MAIN_DEFAULT = DISTILLED_MAIN_SIGMAS_TEXT
     SIGMAS_REFINE_DEFAULT = DISTILLED_REFINEMENT_SIGMAS_TEXT
-    SAMPLER_NAME = "euler"
+    SIGMAS_POLISH_DEFAULT = DISTILLED_POLISH_SIGMAS_TEXT
+    # Matches the official LTX distilled graphs: euler_ancestral for the main
+    # pass, plain euler for the refinement pass after latent upsampling.
+    SAMPLER_MAIN_NAME = "euler_ancestral"
+    SAMPLER_REFINE_NAME = "euler"
+    QUALITY_MODES = ("Draft", "Standard", "Max")
     CFG_DEFAULT = 1.0
-    I2V_STRENGTH = 1.0
-    I2V_PREPROCESS_COMPRESSION = 25
+    I2V_PREPROCESS_COMPRESSION = 18
 
     # Conditioning caches to avoid re-encoding the same prompt
     _CLIP_TEXT_CACHE = {}
@@ -543,12 +583,27 @@ class CRT_LTX23UnifiedSampler:
     _DEPTH_DISK_CACHE_PATH = None
 
     @classmethod
+    def _normalize_quality(cls, quality):
+        """Map widget values (including legacy booleans) to a quality mode."""
+        if isinstance(quality, bool) or quality in (0, 1):
+            return "Standard" if bool(quality) else "Draft"
+        text = str(quality).strip().title()
+        for mode in cls.QUALITY_MODES:
+            if text.startswith(mode):
+                return mode
+        if text.lower() in ("true", "on", "yes"):
+            return "Standard"
+        if text.lower() in ("false", "off", "no"):
+            return "Draft"
+        return "Standard"
+
+    @classmethod
     def IS_CHANGED(
         cls,
         models_pipe,
         config_pipe,
         workflow_mode,
-        hq,
+        quality,
         live_preview,
         frame_count_from_audio,
         vae_decode_tiled,
@@ -578,7 +633,7 @@ class CRT_LTX23UnifiedSampler:
             models_pipe,
             config_pipe,
             workflow_mode,
-            bool(hq),
+            cls._normalize_quality(quality),
             bool(live_preview),
             bool(frame_count_from_audio),
             bool(vae_decode_tiled),
@@ -606,9 +661,12 @@ class CRT_LTX23UnifiedSampler:
                     ["I2V", "T2V", "V2V"],
                     {"default": "I2V", "tooltip": "Select image-to-video, text-to-video, or video-to-video execution. Required config inputs depend on this mode."},
                 ),
-                "hq": (
-                    "BOOLEAN",
-                    {"default": False, "tooltip": "Generate directly at full resolution in one sampling pass for maximum quality. Disable HQ to use the faster two-stage path: half-resolution generation followed by latent upscale and refinement."},
+                "quality": (
+                    cls.QUALITY_MODES,
+                    {
+                        "default": "Standard",
+                        "tooltip": "Draft: half-resolution pass + latent upscale + refinement (fastest). Standard: full-resolution single pass. Max: full-resolution pass plus a short self-refinement pass for extra detail.",
+                    },
                 ),
                 "live_preview": (
                     "BOOLEAN",
@@ -620,7 +678,7 @@ class CRT_LTX23UnifiedSampler:
                 ),
                 "vae_decode_tiled": (
                     "BOOLEAN",
-                    {"default": False, "tooltip": "Decode video latents in tiles to reduce peak VRAM at the cost of additional processing time."},
+                    {"default": True, "tooltip": "Decode video latents in tiles to reduce peak VRAM at the cost of additional processing time."},
                 ),
                 "unload_model_before_vae_decode": (
                     "BOOLEAN",
@@ -726,11 +784,11 @@ class CRT_LTX23UnifiedSampler:
                 "firstframe_strength": (
                     "FLOAT",
                     {
-                        "default": 1.0,
+                        "default": 0.7,
                         "min": 0.0,
                         "max": 1.0,
                         "step": 0.01,
-                        "tooltip": "Influence of the connected first-frame anchor. Zero disables anchoring; one applies full strength.",
+                        "tooltip": "Influence of the connected first-frame anchor during generation. Zero disables anchoring. The two-stage refinement pass always re-anchors the raw image at full strength.",
                     },
                 ),
                 # Inert positional slots retained only so workflows saved
@@ -1822,6 +1880,39 @@ class CRT_LTX23UnifiedSampler:
             return sampled[output_index]
         return sampled[0] if len(sampled) > 0 else latent
 
+    def _apply_refiner(
+        self,
+        model,
+        positive,
+        negative,
+        video_latent,
+        audio_latent,
+        cfg,
+        noise_obj,
+        frame_rate,
+        preview_enabled,
+    ):
+        """Short full-resolution self-refinement pass on a denoised AV latent."""
+        sampler = self._make_sampler(self.SAMPLER_REFINE_NAME)
+        sigmas = self._make_sigmas(self.SIGMAS_POLISH_DEFAULT)
+        av_latent = self._result_tuple(
+            LTXVConcatAVLatent.execute(video_latent, audio_latent)
+        )[0]
+        sampled = self._sample_latent(
+            model=model,
+            positive=positive,
+            negative=negative,
+            cfg=float(cfg),
+            noise=noise_obj,
+            sampler=sampler,
+            sigmas=sigmas,
+            latent=av_latent,
+            frame_rate=frame_rate,
+            preview_enabled=preview_enabled,
+        )
+        separated = self._result_tuple(LTXVSeparateAVLatent.execute(sampled))
+        return separated[0], separated[1]
+
     @staticmethod
     def _decode_video_latent(video_latent, vae, use_tiled_decode=False):
         if use_tiled_decode:
@@ -2278,9 +2369,7 @@ class CRT_LTX23UnifiedSampler:
         guide_image,
         guide_strength,
         latent_downscale_factor,
-        model_union_control=None,
     ):
-        _ = model_union_control
         effective_downscale = self._compatible_downscale_factor(
             latent,
             latent_downscale_factor,
@@ -2333,8 +2422,9 @@ class CRT_LTX23UnifiedSampler:
         t2v_width_override=None,
         t2v_height_override=None,
         low_vram=False,
+        enable_refiner=False,
     ):
-        total_steps = 5 if not use_two_stage else 7
+        total_steps = 7 if use_two_stage else (6 if enable_refiner else 5)
         self._progress(1, total_steps, f"Preparing {mode} inputs")
 
         is_i2v = mode == "I2V"
@@ -2450,11 +2540,25 @@ class CRT_LTX23UnifiedSampler:
             separated = self._result_tuple(LTXVSeparateAVLatent.execute(sampled))
             final_video_latent = separated[0]
             final_audio_latent = separated[1]
+            ref_positive, ref_negative = positive, negative
             if is_i2v and i2v_ref_batch_size > 1:
-                _, _, final_video_latent = self._result_tuple(
+                ref_positive, ref_negative, final_video_latent = self._result_tuple(
                     LTXVCropGuides.execute(positive, negative, final_video_latent)
                 )
-            self._progress(4, total_steps, "Decoding video/audio")
+            if enable_refiner:
+                self._progress(4, total_steps, "Self-refinement pass")
+                final_video_latent, final_audio_latent = self._apply_refiner(
+                    model=model,
+                    positive=ref_positive,
+                    negative=ref_negative,
+                    video_latent=final_video_latent,
+                    audio_latent=final_audio_latent,
+                    cfg=cfg,
+                    noise_obj=noise_obj,
+                    frame_rate=frame_rate,
+                    preview_enabled=preview_enabled,
+                )
+            self._progress(total_steps - 1, total_steps, "Decoding video/audio")
         else:
             self._progress(3, total_steps, "Sampling stage 1")
             if spatial_upscale_model is None:
@@ -2536,12 +2640,15 @@ class CRT_LTX23UnifiedSampler:
             )[0]
 
             if is_i2v:
+                # Official reference: re-anchor the raw full-resolution image at
+                # full strength after upsampling; no extra compression here.
                 upsampled_video = self._inject_i2v_inplace(
                     vae,
                     target_image[:1] if use_i2v_guides else target_image,
                     upsampled_video,
-                    firstframe_strength,
+                    1.0,
                     self.I2V_PREPROCESS_COMPRESSION,
+                    use_preprocess=False,
                 )
 
             refine_audio_latent = stage1_audio_out
@@ -2640,15 +2747,9 @@ class CRT_LTX23UnifiedSampler:
         v2v_aspect_ratio="16:9 (Landscape)",
         firstframe_strength=1.0,
         low_vram=False,
+        enable_refiner=False,
     ):
-        if use_two_stage:
-            self._log(
-                "V2V two-stage mode is unavailable; using the full-resolution HQ single-pass IC-LoRA workflow.",
-                level="warn",
-            )
-            use_two_stage = False
-
-        total_steps = 6 if not use_two_stage else 8
+        total_steps = 8 if use_two_stage else (7 if enable_refiner else 6)
         self._progress(1, total_steps, "Preparing V2V inputs")
 
         # Outpaint and Upscale modes don't use depth or first frame
@@ -2746,6 +2847,7 @@ class CRT_LTX23UnifiedSampler:
                 preview_enabled=preview_enabled,
                 total_steps=total_steps,
                 low_vram=low_vram,
+                enable_refiner=enable_refiner,
             )
 
         if is_outpaint_mode:
@@ -2777,6 +2879,7 @@ class CRT_LTX23UnifiedSampler:
                 v2v_aspect_ratio=v2v_aspect_ratio,
                 total_steps=total_steps,
                 low_vram=low_vram,
+                enable_refiner=enable_refiner,
             )
 
         # Original Depth Control mode
@@ -2877,7 +2980,6 @@ class CRT_LTX23UnifiedSampler:
                     guide_full,
                     v2v_guide_strength,
                     latent_downscale_factor,
-                    model_union_control,
                 )
             )
 
@@ -2924,7 +3026,20 @@ class CRT_LTX23UnifiedSampler:
             )
             final_video_latent = cropped[2]
             final_audio_latent = sampled_audio_latent
-            self._progress(5, total_steps, "Decoding video/audio")
+            if enable_refiner:
+                self._progress(5, total_steps, "Self-refinement pass")
+                final_video_latent, final_audio_latent = self._apply_refiner(
+                    model=model,
+                    positive=cropped[0],
+                    negative=cropped[1],
+                    video_latent=final_video_latent,
+                    audio_latent=final_audio_latent,
+                    cfg=cfg,
+                    noise_obj=noise_obj,
+                    frame_rate=frame_rate,
+                    preview_enabled=preview_enabled,
+                )
+            self._progress(total_steps - 1, total_steps, "Decoding video/audio")
         else:
             self._progress(4, total_steps, "Running V2V stage 1")
             if spatial_upscale_model is None:
@@ -2932,13 +3047,21 @@ class CRT_LTX23UnifiedSampler:
                     "Two-stage mode requires spatial_upscale_model in models_pipe."
                 )
 
-            stage1_width = max(64, int(guide_full.shape[2]) // 2)
-            stage1_height = max(64, int(guide_full.shape[1]) // 2)
+            # Snap stage 1 to the /32 latent grid; stage 2 then operates at
+            # exactly twice those dims so the upsampled latent and guide match.
+            stage1_width = max(64, normalize_dimension(int(guide_full.shape[2]) // 2, 32))
+            stage1_height = max(64, normalize_dimension(int(guide_full.shape[1]) // 2, 32))
 
             stage1_guide = self._resize_image(
                 guide_full,
                 stage1_width,
                 stage1_height,
+                method="lanczos",
+            )
+            guide_full = self._resize_image(
+                guide_full,
+                stage1_width * 2,
+                stage1_height * 2,
                 method="lanczos",
             )
             stage1_video_latent = self._result_tuple(
@@ -2977,7 +3100,6 @@ class CRT_LTX23UnifiedSampler:
                 stage1_guide,
                 v2v_guide_strength,
                 latent_downscale_factor,
-                model_union_control,
             )
 
             stage1_audio_latent = self._build_audio_latent(
@@ -3041,7 +3163,7 @@ class CRT_LTX23UnifiedSampler:
                     vae,
                     ff_s2,
                     upsampled_video,
-                    firstframe_strength,
+                    1.0,
                     self.I2V_PREPROCESS_COMPRESSION,
                     use_preprocess=False,
                 )
@@ -3058,7 +3180,6 @@ class CRT_LTX23UnifiedSampler:
                 guide_full,
                 v2v_guide_strength,
                 latent_downscale_factor,
-                model_union_control,
             )
 
             refine_audio_latent = stage1_audio_out
@@ -3165,17 +3286,38 @@ class CRT_LTX23UnifiedSampler:
         preview_enabled,
         total_steps,
         low_vram=False,
+        enable_refiner=False,
     ):
         """Upscale V2V workflow: use input video as guide for upscaling."""
+        if use_two_stage:
+            self._log(
+                "HQ two-stage refinement is not available for V2V Upscale mode; running the single-pass IC-LoRA workflow.",
+                level="warn",
+            )
         self._progress(1, total_steps, "Preparing Upscale inputs")
 
-        # Scale and align the guide with ComfyUI's 32-pixel LTX latent grid.
+        factor = max(1, int(round(float(latent_downscale_factor))))
+        multiple = max(32, factor * 32)
+
+        # Official pixel-upscaler recipe: snap the output to a multiple of the
+        # reference factor's latent grid so the small-grid guide stays exact.
         scaled_video = self._scale_total_pixels(video_frames, megapixels_target)
-        scaled_video = self._scale_to_multiple_cover(scaled_video, 32)
+        scaled_video = self._scale_to_multiple_cover(scaled_video, multiple)
         target_height, target_width = scaled_video.shape[1], scaled_video.shape[2]
 
+        _, src_h, src_w, _ = video_frames.shape
+        if src_w >= target_width and src_h >= target_height:
+            self._log(
+                (
+                    f"Upscale target {target_width}x{target_height} does not exceed the "
+                    f"source ({src_w}x{src_h}); raise MegaPixels so the x{factor} "
+                    "upscaler has resolution headroom."
+                ),
+                level="warn",
+            )
+
         self._log(
-            f"Upscale target dimensions: {target_width}x{target_height}",
+            f"Upscale target dimensions: {target_width}x{target_height} (reference factor x{factor})",
             level="ok",
         )
 
@@ -3202,7 +3344,6 @@ class CRT_LTX23UnifiedSampler:
             scaled_video,
             v2v_guide_strength,
             latent_downscale_factor,
-            model,
         )
 
         self._progress(3, total_steps, "Building audio latent")
@@ -3253,7 +3394,20 @@ class CRT_LTX23UnifiedSampler:
         final_video_latent = cropped[2]
         final_audio_latent = sampled_audio_latent
 
-        self._progress(5, total_steps, "Decoding video/audio")
+        if enable_refiner:
+            self._progress(5, total_steps, "Self-refinement pass")
+            final_video_latent, final_audio_latent = self._apply_refiner(
+                model=model,
+                positive=cropped[0],
+                negative=cropped[1],
+                video_latent=final_video_latent,
+                audio_latent=final_audio_latent,
+                cfg=self.CFG_DEFAULT,
+                noise_obj=noise_obj,
+                frame_rate=frame_rate,
+                preview_enabled=preview_enabled,
+            )
+        self._progress(total_steps - 1, total_steps, "Decoding video/audio")
 
         if unload_model_before_vae_decode:
             self._log("Unload-before-decode enabled: attempting model unload", level="ok")
@@ -3312,8 +3466,14 @@ class CRT_LTX23UnifiedSampler:
         v2v_aspect_ratio,
         total_steps,
         low_vram=False,
+        enable_refiner=False,
     ):
         """Outpaint V2V workflow: pad video to target aspect ratio instead of using depth."""
+        if use_two_stage:
+            self._log(
+                "HQ two-stage refinement is not available for V2V Outpaint mode; running the single-pass IC-LoRA workflow.",
+                level="warn",
+            )
         self._progress(1, total_steps, "Preparing Outpaint inputs")
 
         # Calculate target dimensions based on aspect ratio
@@ -3349,7 +3509,9 @@ class CRT_LTX23UnifiedSampler:
             method="lanczos",
         )
 
-        # Pad to target dimensions (centered)
+        # Pad to target dimensions (centered) with black bars. The IC-LoRA
+        # outpaint model generates into the empty regions; edge-replicate
+        # removes that signal and breaks generation.
         pad_left = (target_width - new_w) // 2
         pad_top = (target_height - new_h) // 2
         pad_right = target_width - new_w - pad_left
@@ -3390,7 +3552,6 @@ class CRT_LTX23UnifiedSampler:
             padded_video,
             v2v_guide_strength,
             latent_downscale_factor,
-            model,
         )
 
         self._progress(3, total_steps, "Building audio latent")
@@ -3441,7 +3602,20 @@ class CRT_LTX23UnifiedSampler:
         final_video_latent = cropped[2]
         final_audio_latent = sampled_audio_latent
 
-        self._progress(5, total_steps, "Decoding video/audio")
+        if enable_refiner:
+            self._progress(5, total_steps, "Self-refinement pass")
+            final_video_latent, final_audio_latent = self._apply_refiner(
+                model=model,
+                positive=cropped[0],
+                negative=cropped[1],
+                video_latent=final_video_latent,
+                audio_latent=final_audio_latent,
+                cfg=self.CFG_DEFAULT,
+                noise_obj=noise_obj,
+                frame_rate=frame_rate,
+                preview_enabled=preview_enabled,
+            )
+        self._progress(total_steps - 1, total_steps, "Decoding video/audio")
 
         if unload_model_before_vae_decode:
             self._log("Unload-before-decode enabled: attempting model unload", level="ok")
@@ -3477,7 +3651,7 @@ class CRT_LTX23UnifiedSampler:
         models_pipe,
         config_pipe,
         workflow_mode,
-        hq,
+        quality,
         live_preview,
         frame_count_from_audio,
         vae_decode_tiled,
@@ -3507,6 +3681,13 @@ class CRT_LTX23UnifiedSampler:
         if mode not in ("I2V", "T2V", "V2V"):
             raise ValueError(f"Unknown workflow_mode: {mode}")
         mode_internal = mode
+
+        # First node use: fetch the live-preview decoder once in the
+        # background, independent of the preview toggle. Every run also wipes
+        # any timeline left over from the previous run.
+        _crt_kickoff_preview_model_download()
+        reset_all_timelines()
+
         self._log(f"Starting mode: {mode}")
         live_preview = bool(live_preview)
         if live_preview:
@@ -3515,10 +3696,12 @@ class CRT_LTX23UnifiedSampler:
         else:
             latent_preview.set_preview_method("none")
 
-        # Public semantics: HQ ON is a full-resolution single pass.
-        # The faster path generates at half resolution, then upscales/refines.
-        hq_enabled = bool(hq)
-        use_two_stage = not hq_enabled
+        # Public semantics: Draft is the fast half-resolution + refinement path,
+        # Standard is a full-resolution single pass, Max adds a short
+        # self-refinement pass on top of the Standard result.
+        quality_mode = self._normalize_quality(quality)
+        enable_refiner = quality_mode == "Max"
+        use_two_stage = quality_mode == "Draft"
         megapixels_target = round(float(megapixels_target) * 10.0) / 10.0
         frame_count = int(frame_count)
 
@@ -3527,12 +3710,15 @@ class CRT_LTX23UnifiedSampler:
 
         override_hq = config.get("override_hq", None)
         if override_hq is not None:
-            hq_enabled = bool(override_hq)
-            use_two_stage = not hq_enabled
+            quality_mode = "Standard" if bool(override_hq) else "Draft"
+            enable_refiner = False
+            use_two_stage = not bool(override_hq)
             self._log(
-                f"Overriding HQ from US Config -> {hq_enabled}",
+                f"Overriding quality from US Config (HQ) -> {quality_mode}",
                 level="ok",
             )
+        else:
+            self._log(f"Quality mode: {quality_mode}", level="ok")
 
         model = models["model"]
         vae = models["vae"]
@@ -3658,8 +3844,10 @@ class CRT_LTX23UnifiedSampler:
 
         sigmas_main, sigmas_refine = self._fixed_sigma_texts()
         schedule_label = "8-step main"
-        if use_two_stage and mode_internal in ("I2V", "T2V"):
+        if use_two_stage:
             schedule_label += " + fixed refinement"
+        elif enable_refiner:
+            schedule_label += " + self-refinement"
         self._log(
             f"Using fixed LTX 2.3 distilled schedule ({schedule_label})",
             level="ok",
@@ -3680,9 +3868,9 @@ class CRT_LTX23UnifiedSampler:
                 aspect_ratio=aspect_ratio,
                 frame_count=frame_count,
                 frame_rate=target_fps,
-                sampler_main=self.SAMPLER_NAME,
+                sampler_main=self.SAMPLER_MAIN_NAME,
                 sigmas_main=sigmas_main,
-                sampler_refine=self.SAMPLER_NAME,
+                sampler_refine=self.SAMPLER_REFINE_NAME,
                 sigmas_refine=sigmas_refine,
                 generated_audio_gain_db=float(generated_audio_gain_db),
                 spatial_upscale_model=spatial_upscale_model,
@@ -3695,6 +3883,7 @@ class CRT_LTX23UnifiedSampler:
                 t2v_width_override=override_t2v_width,
                 t2v_height_override=override_t2v_height,
                 low_vram=bool(low_vram),
+                enable_refiner=enable_refiner,
             )
         else:
             if is_upscale_mode:
@@ -3724,9 +3913,9 @@ class CRT_LTX23UnifiedSampler:
                 cfg=cfg,
                 frame_count_limit=target_output_frames,
                 frame_rate=target_fps,
-                sampler_main=self.SAMPLER_NAME,
+                sampler_main=self.SAMPLER_MAIN_NAME,
                 sigmas_main=sigmas_main,
-                sampler_refine=self.SAMPLER_NAME,
+                sampler_refine=self.SAMPLER_REFINE_NAME,
                 sigmas_refine=sigmas_refine,
                 megapixels_target=megapixels_target,
                 depth_megapixels=float(depth_megapixels),
@@ -3748,6 +3937,7 @@ class CRT_LTX23UnifiedSampler:
                 v2v_aspect_ratio=v2v_aspect_ratio,
                 firstframe_strength=float(firstframe_strength),
                 low_vram=bool(low_vram),
+                enable_refiner=enable_refiner,
             )
 
         if effective_source_audio is not None:
