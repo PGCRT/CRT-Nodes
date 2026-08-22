@@ -5,6 +5,7 @@ import os
 import re
 import shutil
 import sys
+import urllib.error
 import urllib.request
 from pathlib import Path
 from typing import Callable
@@ -41,6 +42,18 @@ else:
 _HF_URL_RE = re.compile(
     r"^https?://huggingface\.co/([^/]+/[^/]+)/(?:resolve|blob)/([^/]+)/(.+)$"
 )
+
+
+def _hf_token() -> str | None:
+    """Return an explicit HF_TOKEN, or the cached huggingface-cli token."""
+    token = os.environ.get("HF_TOKEN")
+    if token:
+        return token
+    try:
+        from huggingface_hub.utils import get_token
+        return get_token()
+    except Exception:
+        return None
 
 
 def _content_length(response) -> int:
@@ -138,12 +151,7 @@ def download_url_with_progress(
     if destination_path.is_file():
         return str(destination_path)
 
-    if _HF_URL_RE.match(url):
-        try:
-            return _hf_download_url(url, destination_path, label, console_prefix)
-        except ImportError:
-            pass
-
+    is_hf = bool(_HF_URL_RE.match(url))
     destination_path.parent.mkdir(parents=True, exist_ok=True)
     partial_path = (
         Path(temp_path)
@@ -151,10 +159,14 @@ def download_url_with_progress(
         else destination_path.with_name(f"{destination_path.name}.part")
     )
     display_name = label or destination_path.name
-    request = urllib.request.Request(
-        url,
-        headers={"User-Agent": user_agent},
-    )
+
+    headers = {"User-Agent": user_agent}
+    if is_hf:
+        token = _hf_token()
+        if token:
+            headers["Authorization"] = f"Bearer {token}"
+
+    request = urllib.request.Request(url, headers=headers)
     open_kwargs = {} if timeout is None else {"timeout": timeout}
 
     print(f"[{console_prefix}] Starting: {display_name}", flush=True)
@@ -211,6 +223,22 @@ def download_url_with_progress(
             )
 
         os.replace(partial_path, destination_path)
+    except urllib.error.HTTPError as exc:
+        try:
+            partial_path.unlink()
+        except OSError:
+            pass
+        if is_hf and exc.code in (401, 403):
+            print(
+                f"[{console_prefix}] urllib got {exc.code}; falling back to huggingface_hub for {display_name}",
+                flush=True,
+            )
+            try:
+                return _hf_download_url(url, destination_path, label, console_prefix)
+            except ImportError:
+                pass
+        print(f"[{console_prefix}] Failed: {display_name}", flush=True)
+        raise
     except Exception:
         try:
             partial_path.unlink()

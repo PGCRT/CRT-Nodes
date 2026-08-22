@@ -44,12 +44,11 @@ Restart ComfyUI after installation or an update.
 - `ChronoEdit Upscaler LoRA (CRT AutoDL)`
 - `ChronoEdit VAE (CRT AutoDL)`
 
-### CRT/AutoDL/ERNIE (5)
+### CRT/AutoDL/ERNIE (4)
 
 - `ERNIE CLIP (CRT AutoDL)`
 - `ERNIE Model (CRT AutoDL)`
 - `ERNIE Turbo Model (CRT AutoDL)`
-- `ERNIE Turbo NVFP4 Model (CRT AutoDL)`
 - `ERNIE VAE (CRT AutoDL)`
 
 ### CRT/AutoDL/FLUXKLEIN (4)
@@ -66,7 +65,7 @@ Restart ComfyUI after installation or an update.
 - `Krea 2 Turbo Model (CRT AutoDL)`
 - `Krea 2 VAE (CRT AutoDL)`
 
-### CRT/AutoDL/LTX2.5 (14)
+### CRT/AutoDL/LTX2.5 (11)
 
 - `LTX2.5 AUDIO VAE (CRT AutoDL)`
 - `LTX2.5 CLIP w4a8 Light (CRT AutoDL)`
@@ -75,23 +74,16 @@ Restart ComfyUI after installation or an update.
 - `LTX2.5 IC Outpaint LoRA (CRT AutoDL)`
 - `LTX2.5 IC Pixel Spatial Upscale LoRA (CRT AutoDL)`
 - `LTX2.5 IC Upscale LoRA (CRT AutoDL)`
-- `LTX2.5 Model 16gb 4x8mix (CRT AutoDL)`
-- `LTX2.5 Model 16gb NVFP4 (CRT AutoDL)`
-- `LTX2.5 Model 24gb (CRT AutoDL)`
-- `LTX2.5 Model 32gb (CRT AutoDL)`
+- `LTX2.5 Model (CRT AutoDL)`
 - `LTX2.5 Spatial Upscaler (CRT AutoDL)`
 - `LTX2.5 Temporal Upscaler (CRT AutoDL)`
 - `LTX2.5 VIDEO VAE (CRT AutoDL)`
 
-### CRT/AutoDL/MINIMAXH3 (8)
+### CRT/AutoDL/MINIMAXH3 (4)
 
+- `MiniMax H3 CLIP (CRT AutoDL)`
+- `MiniMax H3 Model (CRT AutoDL)`
 - `MiniMax H3 AUDIO VAE (CRT AutoDL)`
-- `MiniMax H3 CLIP INT8 (CRT AutoDL)`
-- `MiniMax H3 CLIP NVFP4 (CRT AutoDL)`
-- `MiniMax H3 FL2VA Light W4A8 (CRT AutoDL)`
-- `MiniMax H3 FL2VA Model (CRT AutoDL)`
-- `MiniMax H3 REF2VA Light W4A8 (CRT AutoDL)`
-- `MiniMax H3 REF2VA Model (CRT AutoDL)`
 - `MiniMax H3 VIDEO VAE (CRT AutoDL)`
 
 ### CRT/AutoDL/ZIMAGETURBO (3)
