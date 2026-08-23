@@ -1,4 +1,4 @@
-import os
+﻿import os
 import re
 import json
 import sys
@@ -20,8 +20,16 @@ HTTP_TIMEOUT = 10
 CONTEXT_SAFETY_TOKENS = 32
 DEFAULT_UNSLOTH_STUDIO_URL = "http://127.0.0.1:8888"
 DEFAULT_STUDIO_API_URL = "http://127.0.0.1:8888/api"
-RECOVERY_WAIT_SECONDS = 20.0
-RECOVERY_MAX_CYCLES = 15
+RECOVERY_MAX_CYCLES = 3
+RELOAD_POLL_SECONDS = 5.0
+RELOAD_SETTLE_SECONDS = 300.0
+UNLOAD_SETTLE_SECONDS = 120.0
+# Port discovery probes dozens/hundreds of stale llama-server ports when old
+# logs pile up; a long per-probe timeout turns that into many frozen minutes.
+DISCOVERY_PROBE_TIMEOUT = 0.35
+DISCOVERY_MAX_PORTS = 4
+LLAMA_LOG_FRESH_SECONDS = 6 * 3600
+STUDIO_PROBE_TIMEOUT = 1.0
 STUDIO_ADMIN_USERNAME = "unsloth"
 _URL_PAIR = r"(?:\([^()\s<>\"']*\)|\[[^\[\]\s<>\"']*\])"
 URL_PATTERN = re.compile(rf"https?://(?:[^\s<>\"'()\[\]]|{_URL_PAIR})+", re.IGNORECASE)
@@ -162,7 +170,7 @@ class _PageText(html.parser.HTMLParser):
             stripped = line.strip()
             if not stripped:
                 continue
-            if re.fullmatch(r"\s*[-–—\s]*(Partager|Facebook|Twitter|X|LinkedIn|Copier le lien|WhatsApp|Envoyer|Imprimer|Courriel|E-mail|Lire plus tard|Lire la suite[^\n]*|Lecture\s*:\s*\d+\s*min\.?)\s*", stripped):
+            if re.fullmatch(r"\s*[-â€“â€”\s]*(Partager|Facebook|Twitter|X|LinkedIn|Copier le lien|WhatsApp|Envoyer|Imprimer|Courriel|E-mail|Lire plus tard|Lire la suite[^\n]*|Lecture\s*:\s*\d+\s*min\.?)\s*", stripped):
                 continue
             lines.append(line)
         return "\n".join(lines).strip()
@@ -362,18 +370,36 @@ def _resolve_llama_server(configured_url):
 
 def _detect_llama_port():
     unsloth_home = os.path.join(os.environ.get("USERPROFILE", ""), ".unsloth", "studio")
+    now = time.time()
 
-    # Strategy 1: check ports from latest server log in reverse chronological order
+    # Strategy 1: check ports from latest server log in reverse chronological order.
+    # Only the newest few: each dead port costs a probe timeout, and old logs
+    # can carry hundreds of stale ports from previous launches.
     server_log = _find_latest_server_log()
     server_ports = _parse_ports_from_server_log(server_log)
+    candidates = []
     for port in reversed(server_ports):
-        if _is_port_alive(port):
+        if port not in candidates:
+            candidates.append(port)
+        if len(candidates) >= DISCOVERY_MAX_PORTS:
+            break
+    for port in candidates:
+        if _is_port_alive(port, timeout=DISCOVERY_PROBE_TIMEOUT):
             return port
 
-    # Strategy 2: check recent llama-server log files by modification time
+    # Strategy 2: only llama-server logs from the last few hours; the list is
+    # sorted newest first, so the first stale file ends the scan.
+    fresh = list(candidates)
     for log_path in _find_llama_server_logs():
+        if now - os.path.getmtime(log_path) > LLAMA_LOG_FRESH_SECONDS:
+            break
         port = _parse_port_from_llama_log(log_path)
-        if port and _is_port_alive(port):
+        if not port or port in fresh:
+            continue
+        fresh.append(port)
+        if len(fresh) >= DISCOVERY_MAX_PORTS * 2:
+            break
+        if _is_port_alive(port, timeout=DISCOVERY_PROBE_TIMEOUT):
             return port
 
     # Strategy 3: fallback to last port from server log even if not alive
@@ -435,17 +461,22 @@ def _mint_studio_token(username):
 
     header = b64url(json.dumps({"alg": "HS256", "typ": "JWT"}).encode("utf-8"))
     payload = b64url(
-        json.dumps({"sub": username, "exp": int(time.time()) + 3600}).encode("utf-8")
+        json.dumps(
+            {"sub": username, "desktop": True, "exp": int(time.time()) + 3600}
+        ).encode("utf-8")
     )
     signing_input = f"{header}.{payload}".encode("ascii")
     signature = b64url(hmac.new(row[0].encode("utf-8"), signing_input, hashlib.sha256).digest())
     return f"{header}.{payload}.{signature}"
 
 
-def _get_studio_token(studio_api_url, username, password):
-    """Studio JWT: desktop secret file, bootstrap password file, node password
-    input, then a locally minted token from Studio's auth.db. Cached."""
+def _get_studio_token(studio_api_url, username, credential):
+    """Studio auth: an sk-unsloth API key passes straight through; otherwise a
+    desktop secret file, bootstrap password file, node credential login, then a
+    locally minted token from Studio's auth.db. Cached."""
     global _STUDIO_TOKEN
+    if credential and credential.strip().startswith("sk-"):
+        return credential.strip()
     if _STUDIO_TOKEN:
         return _STUDIO_TOKEN
     candidates = []
@@ -455,8 +486,8 @@ def _get_studio_token(studio_api_url, username, password):
     bootstrap = _read_auth_file(".bootstrap_password")
     if bootstrap:
         candidates.append(("login", {"username": username, "password": bootstrap}))
-    if password:
-        candidates.append(("login", {"username": username, "password": password}))
+    if credential:
+        candidates.append(("login", {"username": username, "password": credential}))
     for endpoint, body in candidates:
         try:
             result = _studio_call(studio_api_url, None, f"/auth/{endpoint}", body, timeout=10)
@@ -504,7 +535,9 @@ def _parse_model_path_from_log(log_path):
             content = f.read()
     except Exception:
         return None
-    for line in content.splitlines():
+    # Newest event wins: one Studio session can load several models, and the
+    # first match in the file is then a stale path unload/reload would miss.
+    for line in reversed(content.splitlines()):
         try:
             event = json.loads(line).get("event", "")
         except Exception:
@@ -747,14 +780,14 @@ def _remember_launch(base_url):
 _LAST_LAUNCH_CMD = None
 
 
-def _reload_model_via_studio(studio_api_url, username, password, model_path):
+def _reload_model_via_studio(studio_api_url, username, credential, model_path):
     if not model_path:
         return False
-    token = _get_studio_token(studio_api_url, username, password)
+    token = _get_studio_token(studio_api_url, username, credential)
     if not token:
         print(
             "[Unsloth Studio Bridge] Cannot auto-reload: no Studio credentials available. "
-            "Set the studio_password input to enable automatic reload.",
+            "Set the studio_api_key input to enable automatic reload.",
             file=sys.stderr,
         )
         return False
@@ -782,7 +815,7 @@ def _reload_model_via_studio(studio_api_url, username, password, model_path):
                 token,
                 "/inference/unload",
                 {"model_path": model_path, "force_cancel_active": True},
-                timeout=60,
+                timeout=600,
             )
         except Exception as exc:
             print(f"[Unsloth Studio Bridge] Unload skipped: {exc}", file=sys.stderr)
@@ -792,20 +825,20 @@ def _reload_model_via_studio(studio_api_url, username, password, model_path):
                 token,
                 "/inference/load",
                 load_body,
-                timeout=300,
+                timeout=900,
             )
         except RuntimeError as exc:
             if "HTTP 401" in str(exc):
                 global _STUDIO_TOKEN
                 _STUDIO_TOKEN = None
-                token = _get_studio_token(studio_api_url, username, password)
+                token = _get_studio_token(studio_api_url, username, credential)
                 if token:
                     _studio_call(
                         studio_api_url,
                         token,
                         "/inference/load",
                         load_body,
-                        timeout=300,
+                        timeout=900,
                     )
             else:
                 raise
@@ -816,31 +849,53 @@ def _reload_model_via_studio(studio_api_url, username, password, model_path):
         return False
 
 
-def _unload_model_via_studio(studio_api_url, username, password, model_path):
+def _active_model_identifier(studio_api_url, token):
+    """Model currently resident in Studio, straight from the API."""
+    try:
+        status = _studio_call(studio_api_url, token, "/inference/status")
+    except Exception:
+        return None
+    for key in ("model_identifier", "active_model"):
+        value = status.get(key)
+        if isinstance(value, str) and value.strip():
+            return value.strip()
+    return None
+
+
+def _unload_model_via_studio(studio_api_url, username, credential, model_path, base_url=None):
     global _STUDIO_TOKEN
-    if not model_path:
-        return False
-    token = _get_studio_token(studio_api_url, username, password)
+    token = _get_studio_token(studio_api_url, username, credential)
     if not token:
         print(
             "[Unsloth Studio Bridge] Cannot unload: no Studio credentials available. "
-            "Set the studio_password input to enable unload after run.",
+            "Set the studio_api_key input to enable unload after run.",
+            file=sys.stderr,
+        )
+        return False
+    # Prefer what the API reports as resident: a log-derived path can be stale
+    # after switching models, and Studio skips teardown on a mismatched name.
+    active = _active_model_identifier(studio_api_url, token)
+    if active:
+        model_path = active
+    elif not model_path:
+        print(
+            "[Unsloth Studio Bridge] Cannot unload: Studio reports no loaded model.",
             file=sys.stderr,
         )
         return False
     body = {"model_path": model_path, "force_cancel_active": True}
     try:
-        _studio_call(studio_api_url, token, "/inference/unload", body, timeout=60)
+        _studio_call(studio_api_url, token, "/inference/unload", body, timeout=600)
     except Exception as exc:
         if "HTTP 401" not in str(exc):
             print(f"[Unsloth Studio Bridge] WARNING: unload failed: {exc}", file=sys.stderr)
             return False
         _STUDIO_TOKEN = None
-        token = _get_studio_token(studio_api_url, username, password)
+        token = _get_studio_token(studio_api_url, username, credential)
         if not token:
             return False
         try:
-            _studio_call(studio_api_url, token, "/inference/unload", body, timeout=60)
+            _studio_call(studio_api_url, token, "/inference/unload", body, timeout=600)
         except Exception as exc:
             print(f"[Unsloth Studio Bridge] WARNING: unload failed: {exc}", file=sys.stderr)
             return False
@@ -848,15 +903,51 @@ def _unload_model_via_studio(studio_api_url, username, password, model_path):
         f"[Unsloth Studio Bridge] Model unloaded from VRAM via Studio API: {model_path}",
         file=sys.stderr,
     )
+    if base_url:
+        deadline = time.monotonic() + UNLOAD_SETTLE_SECONDS
+        while time.monotonic() < deadline and _is_server_alive(base_url):
+            time.sleep(2.0)
+        if _is_server_alive(base_url):
+            print(
+                "[Unsloth Studio Bridge] WARNING: llama-server still answers "
+                "after unload; VRAM may still be held.",
+                file=sys.stderr,
+            )
     return True
 
 
-def _recover_llama_server(configured_url, studio_api_url, username, password):
-    """Force unload+reload of the last loaded model via Studio to wipe the
-    crashed state, wait RECOVERY_WAIT_SECONDS, then re-check; repeat until the
-    llama-server answers. Returns a live base URL or None when exhausted."""
+def _studio_reachable(studio_api_url):
+    """True when the Studio backend answers at all; auth state irrelevant."""
+    try:
+        req = urllib.request.Request(
+            f"{studio_api_url.rstrip('/')}/inference/status", method="GET"
+        )
+        with urllib.request.urlopen(req, timeout=STUDIO_PROBE_TIMEOUT):
+            return True
+    except urllib.error.HTTPError:
+        return True
+    except Exception:
+        return False
+
+
+def _recover_llama_server(configured_url, studio_api_url, username, credential):
+    """Reload the last loaded model via Studio when llama-server is down
+    (e.g. unloaded after the previous run), then wait for it to answer.
+    The load is issued once per cycle and never force-cancelled by a newer
+    attempt; returns a live base URL or None when exhausted. Fails within
+    seconds when Unsloth Studio itself is not running."""
     global _LAST_MODEL_PATH
     model_path = _LAST_MODEL_PATH or _find_last_model_path()
+    if not _studio_reachable(studio_api_url):
+        print(
+            f"[Unsloth Studio Bridge] Unsloth Studio is not reachable at "
+            f"{studio_api_url}; cannot reload the model.",
+            file=sys.stderr,
+        )
+        raise RuntimeError(
+            f"llama-server is down and Unsloth Studio is not reachable at "
+            f"{studio_api_url}. Start Unsloth Studio and retry."
+        )
     for cycle in range(1, RECOVERY_MAX_CYCLES + 1):
         try:
             new_base, source = _resolve_llama_server(configured_url)
@@ -869,18 +960,45 @@ def _recover_llama_server(configured_url, studio_api_url, username, password):
                 return new_base
         except Exception:
             pass
+        if not _studio_reachable(studio_api_url):
+            print(
+                f"[Unsloth Studio Bridge] Unsloth Studio is not reachable at "
+                f"{studio_api_url}; cannot reload the model.",
+                file=sys.stderr,
+            )
+            raise RuntimeError(
+                f"llama-server is down and Unsloth Studio is not reachable at "
+                f"{studio_api_url}. Start Unsloth Studio and retry."
+            )
         print(
-            f"[Unsloth Studio Bridge] llama-server down; force unloading + "
-            f"reloading the model via Studio (cycle {cycle}/{RECOVERY_MAX_CYCLES})...",
+            f"[Unsloth Studio Bridge] llama-server down; loading "
+            f"{model_path or 'last model'} via Studio "
+            f"(cycle {cycle}/{RECOVERY_MAX_CYCLES})...",
             file=sys.stderr,
         )
-        _reload_model_via_studio(studio_api_url, username, password, model_path)
-        print(
-            f"[Unsloth Studio Bridge] Waiting {RECOVERY_WAIT_SECONDS}s to verify "
-            f"llama-server...",
-            file=sys.stderr,
-        )
-        time.sleep(RECOVERY_WAIT_SECONDS)
+        _reload_model_via_studio(studio_api_url, username, credential, model_path)
+        deadline = time.monotonic() + RELOAD_SETTLE_SECONDS
+        next_beat = 0.0
+        while time.monotonic() < deadline:
+            try:
+                new_base, source = _resolve_llama_server(configured_url)
+                if _is_server_alive(new_base):
+                    print(
+                        f"[Unsloth Studio Bridge] Server recovered: {new_base} ({source})",
+                        file=sys.stderr,
+                    )
+                    _remember_launch(new_base)
+                    return new_base
+            except Exception:
+                pass
+            waited = int(time.monotonic() - (deadline - RELOAD_SETTLE_SECONDS))
+            if waited >= next_beat:
+                print(
+                    f"[Unsloth Studio Bridge] Waiting for llama-server... {waited}s",
+                    file=sys.stderr,
+                )
+                next_beat = waited + 30
+            time.sleep(RELOAD_POLL_SECONDS)
     print(
         f"[Unsloth Studio Bridge] llama-server did not recover after "
         f"{RECOVERY_MAX_CYCLES} cycles",
@@ -1331,7 +1449,7 @@ def _validate_context_budget(
     return available
 
 
-def _chat_completion(base_url, messages, seed, params, include_reasoning, disable_thinking, cache_skills=True, configured_url=None, studio_api_url=None, studio_password=""):
+def _chat_completion(base_url, messages, seed, params, include_reasoning, disable_thinking, cache_skills=True, configured_url=None, studio_credential=""):
     body = {
         "model": "default",
         "messages": messages,
@@ -1353,9 +1471,9 @@ def _chat_completion(base_url, messages, seed, params, include_reasoning, disabl
     def _recover_url():
         return _recover_llama_server(
             configured_url,
-            studio_api_url,
+            _discover_studio_api_url(),
             STUDIO_ADMIN_USERNAME,
-            studio_password,
+            studio_credential,
         )
 
     result = _request_json(
@@ -1411,7 +1529,7 @@ class UnslothLLM:
         return list(self._answer_cache)
 
     def _remember_turn(self, user_content, response, retain):
-        # Only the assistant answers are retained — the system prompt /
+        # Only the assistant answers are retained â€” the system prompt /
         # instruction doesn't change, so keeping the questions would just
         # fill the context with duplicates.
         self._answer_cache.append({"role": "assistant", "content": response})
@@ -1531,7 +1649,7 @@ class UnslothLLM:
                         "step": 1,
                         "tooltip": (
                             "Number of previous assistant answers to keep in context for the next run. "
-                            "Only the answers are retained — the instruction / system prompt is not "
+                            "Only the answers are retained â€” the instruction / system prompt is not "
                             "duplicated. 0 is stateless. Set to N to keep the last N answers in "
                             "history so the model can build on its previous outputs."
                         ),
@@ -1560,27 +1678,16 @@ class UnslothLLM:
                         ),
                     },
                 ),
-                "studio_api_url": (
+                "studio_api_key": (
                     "STRING",
                     {
                         "default": "",
                         "multiline": False,
                         "tooltip": (
-                            "Unsloth Studio backend API, e.g. http://127.0.0.1:8888/api. "
-                            "Empty = auto-discover from Studio logs. Used to force an "
-                            "unload + reload when llama-server dies so the run can recover."
-                        ),
-                    },
-                ),
-                "studio_password": (
-                    "STRING",
-                    {
-                        "default": "",
-                        "multiline": False,
-                        "tooltip": (
-                            "Unsloth Studio login password (username: unsloth). Only needed "
-                            "when auto-recovery must reload the model after llama-server "
-                            "crashes. Leave empty to only wait and retry without reloading."
+                            "Optional. Paste your Unsloth Studio API key (sk-unsloth-...) "
+                            "or your Studio login password. Leave empty to authenticate "
+                            "automatically on this machine. Used for unload after run "
+                            "and auto-reload of the last model."
                         ),
                     },
                 ),
@@ -1592,7 +1699,8 @@ class UnslothLLM:
                             "Unload the model from Unsloth Studio after each completed run, "
                             "freeing its VRAM for other tasks. The next run automatically "
                             "reloads it via the Studio API with its previous settings "
-                            "(requires Studio auth: desktop session or studio_password)."
+                            "(requires Studio auth: leave studio_api_key empty for local "
+                            "auto-auth, or paste an sk-unsloth key)."
                         ),
                     },
                 ),
@@ -1613,7 +1721,7 @@ class UnslothLLM:
         "after each run; the next run reloads it automatically."
     )
 
-    def generate(self, prompt, seed, unsloth_server_url=DEFAULT_UNSLOTH_STUDIO_URL, skills_path="", disable_thinking=True, include_reasoning=False, cache_skills=True, retain_last_response=0, image=None, temperature=-1.0, top_p=-1.0, top_k=-1, disable_web_search=False, studio_api_url="", studio_password="", unload_model_after_run=False):
+    def generate(self, prompt, seed, unsloth_server_url=DEFAULT_UNSLOTH_STUDIO_URL, skills_path="", disable_thinking=True, include_reasoning=False, cache_skills=True, retain_last_response=0, image=None, temperature=-1.0, top_p=-1.0, top_k=-1, disable_web_search=False, studio_api_key="", unload_model_after_run=False):
         if (not prompt or not prompt.strip()) and image is None:
             print("[Unsloth Studio Bridge][WARN] Prompt is empty", file=sys.stderr)
         print(
@@ -1621,8 +1729,7 @@ class UnslothLLM:
             f"prompt_chars={len(prompt or '')}, image_connected={image is not None}, retain={retain_last_response}",
             file=sys.stderr,
         )
-        if not studio_api_url:
-            studio_api_url = _discover_studio_api_url()
+        studio_api_url = _discover_studio_api_url()
         try:
             llama_base, connection_source = _resolve_llama_server(unsloth_server_url)
         except Exception:
@@ -1630,7 +1737,7 @@ class UnslothLLM:
                 unsloth_server_url,
                 studio_api_url,
                 STUDIO_ADMIN_USERNAME,
-                studio_password,
+                studio_api_key,
             )
             if llama_base is None:
                 raise
@@ -1743,8 +1850,7 @@ class UnslothLLM:
             disable_thinking,
             cache_skills,
             configured_url=unsloth_server_url,
-            studio_api_url=studio_api_url,
-            studio_password=studio_password,
+            studio_credential=studio_api_key,
         )
         print(
             f"[Unsloth Studio Bridge][INFO] Response received: {len(response)} chars",
@@ -1760,8 +1866,9 @@ class UnslothLLM:
             _unload_model_via_studio(
                 studio_api_url,
                 STUDIO_ADMIN_USERNAME,
-                studio_password,
+                studio_api_key,
                 _LAST_MODEL_PATH or _find_last_model_path(),
+                base_url=llama_base,
             )
         return (response,)
 

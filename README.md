@@ -261,6 +261,16 @@ Restart ComfyUI after installation or an update.
 - `Get First & Last Frame (CRT)`
 - `Seamless Loop Blender (CRT)`
 
+## Notes
+
+### Unsloth Studio Bridge (CRT)
+
+Connects to the model currently loaded in [Unsloth Studio](https://github.com/unslothai/studio) and chats with it through its local llama-server.
+
+- `unload_model_after_run`: unloads the model from VRAM after the response is generated so the rest of the workflow gets the full GPU. The next run automatically reloads the same model via the Studio API with its previous settings (context, parallel slots, KV cache type, speculative decoding, GPU layers).
+- `studio_api_key`: single optional credential. Paste an `sk-unsloth-...` API key or your Studio password, or leave empty for automatic local authentication. Required only for unload/reload.
+- If llama-server is down when a run starts (e.g. unloaded after the previous run), the bridge reloads it and fails within seconds if Unsloth Studio itself is not running.
+
 ## Links
 
 - Repository: [PGCRT/CRT-Nodes](https://github.com/PGCRT/CRT-Nodes)
