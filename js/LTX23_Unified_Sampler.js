@@ -3,6 +3,108 @@ import { api } from "../../scripts/api.js";
 
 const NODE_NAME = "CRT_LTX23UnifiedSampler";
 const NODE_ALIASES = new Set(["LTX 2.3 Unified Sampler (CRT)", "CRT_LTX23UnifiedSampler"]);
+
+// --- KJNodes-style animated preview override transport --------------------
+// The backend encodes one true-pace animated WebP per sampling step and sends
+// it as base64 JSON; the browser loops it natively in an <img>, which reads as
+// a real video instead of the frontend's replace-per-message still previews.
+
+function ltx23FindNodeByQualifiedId(rootGraph, qid) {
+  if (!rootGraph || !qid) return null;
+  const parts = String(qid).split(":");
+  let graph = rootGraph;
+  for (let i = 0; i < parts.length - 1; i++) {
+    const parentId = parseInt(parts[i], 10);
+    if (!Number.isFinite(parentId)) return null;
+    const parentNode = graph?.getNodeById?.(parentId);
+    if (!parentNode?.subgraph) return null;
+    graph = parentNode.subgraph;
+  }
+  const leafId = parseInt(parts[parts.length - 1], 10);
+  if (!Number.isFinite(leafId)) return null;
+  return graph?.getNodeById?.(leafId) || null;
+}
+
+function ltx23B64ToBlob(b64, mime) {
+  const bin = atob(b64);
+  const arr = new Uint8Array(bin.length);
+  for (let i = 0; i < bin.length; i++) arr[i] = bin.charCodeAt(i);
+  return new Blob([arr], { type: mime });
+}
+
+function ltx23BuildPreviewWidget(node) {
+  const wrap = document.createElement("div");
+  wrap.style.cssText =
+    "position:relative;width:100%;min-height:140px;background:#070707;" +
+    "border-radius:6px;overflow:hidden;border:1px solid #1c1c1c;";
+  const img = document.createElement("img");
+  img.style.cssText =
+    "position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:none;";
+  img.draggable = false;
+  wrap.appendChild(img);
+  const placeholder = document.createElement("div");
+  placeholder.textContent = "live preview idle";
+  placeholder.style.cssText =
+    "position:absolute;inset:0;display:flex;align-items:center;justify-content:center;" +
+    "color:#5a5a5a;font-size:12px;";
+  wrap.appendChild(placeholder);
+
+  node.addDOMWidget("ltx23_live_preview", "preview", wrap, { serialize: false });
+
+  let currentUrl = null;
+
+  const handler = (data) => {
+    try {
+      if (!data) return;
+      if (Array.isArray(data.sigmas)) {
+        // New run: drop the previous run's animation immediately.
+        if (currentUrl) {
+          URL.revokeObjectURL(currentUrl);
+          currentUrl = null;
+        }
+        img.style.display = "none";
+        img.removeAttribute("src");
+        placeholder.style.display = "flex";
+      }
+      if (typeof data.image !== "string") return;
+      const blob = ltx23B64ToBlob(data.image, data.mime || "image/webp");
+      const url = URL.createObjectURL(blob);
+      if (Number.isFinite(data.w) && Number.isFinite(data.h) && data.w > 0 && data.h > 0) {
+        wrap.style.aspectRatio = `${data.w} / ${data.h}`;
+      }
+      img.src = url;
+      img.style.display = "block";
+      placeholder.style.display = "none";
+      const previous = currentUrl;
+      currentUrl = url;
+      if (previous && previous !== url) {
+        window.setTimeout(() => URL.revokeObjectURL(previous), 500);
+      }
+      // Mirror into the PREVIEW tab image when that view exists.
+      const tabImg = node.ltx23UI?.previewImage;
+      if (tabImg && tabImg !== img) {
+        tabImg.src = url;
+        tabImg.style.display = "block";
+      }
+    } catch (err) {
+      console.warn("[CRT LTX23] preview override decode failed:", err);
+    }
+  };
+
+  node._crtLtx23PreviewHandler = handler;
+  node._ltx23PovCleanup = () => {
+    if (currentUrl) URL.revokeObjectURL(currentUrl);
+    currentUrl = null;
+    node._crtLtx23PreviewHandler = null;
+  };
+}
+
+api.addEventListener("crt_ltx23_preview", (e) => {
+  const data = e.detail;
+  if (!data || data.node_id == null) return;
+  const node = ltx23FindNodeByQualifiedId(app.graph, data.node_id);
+  if (node?._crtLtx23PreviewHandler) node._crtLtx23PreviewHandler(data);
+});
 const STYLE_ID = "crt-ltx23-unified-sampler-v14";
 const MIN_WIDTH = 450;
 const MIN_HEIGHT = 1;
@@ -2074,6 +2176,10 @@ app.registerExtension({
         delete this.properties.ltx23_view;
       }
       applyNodeVisuals(this);
+      if (!this._ltx23PovBuilt) {
+        this._ltx23PovBuilt = true;
+        ltx23BuildPreviewWidget(this);
+      }
       if (!this.ltx23UI) {
         this.ltx23UI = new LTX23UnifiedSamplerUI(this);
       } else {
@@ -2106,6 +2212,8 @@ app.registerExtension({
     nodeType.prototype.onRemoved = function () {
       window.clearTimeout(this._ltx23RestoreTimer);
       this._ltx23RestoreTimer = null;
+      this._ltx23PovCleanup?.();
+      this._ltx23PovBuilt = false;
       this.ltx23UI?.destroy();
       this.ltx23UI = null;
       if (this._ltx23OriginalSetSize) {

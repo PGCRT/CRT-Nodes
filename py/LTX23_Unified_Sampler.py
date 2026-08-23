@@ -16,7 +16,6 @@ import torch.nn as nn
 
 import comfy.model_management as mm
 import comfy.utils
-import latent_preview
 import nodes
 import node_helpers
 import folder_paths
@@ -57,15 +56,12 @@ from ._ltx23_inference import (
     normalize_dimension,
     normalize_frame_count as normalize_ltx_frame_count,
 )
-from ._ltx23_preview import CRTLTXWrappedPreviewer, reset_all_timelines
-from .download_progress import download_url_with_progress
-
-_CRT_TAEHV_FILENAME = "taeltx2_3.safetensors"
-_CRT_TAEHV_URL = "https://huggingface.co/Kijai/LTX2.3_comfy/resolve/main/vae/taeltx2_3.safetensors"
-_CRT_TAEHV_DOWNLOAD_LOCK = threading.Lock()
-_CRT_TAEHV_DOWNLOAD_THREAD = None
-_CRT_TAEHV_LAST_FAIL = 0.0
-_CRT_TAEHV_RETRY_COOLDOWN = 600.0
+from ._ltx23_preview import (
+    _download_preview_model as _crt_download_preview_model,
+    _preview_model_present as _crt_preview_model_present,
+    apply_ltx23_preview_override,
+    kickoff_ltx23_preview_model_download,
+)
 
 _LTX23_DEPTH_PREVIEW_ROUTE_REGISTERED = globals().get("_LTX23_DEPTH_PREVIEW_ROUTE_REGISTERED", False)
 
@@ -100,200 +96,6 @@ try:
         _LTX23_DEPTH_PREVIEW_ROUTE_REGISTERED = True
 except Exception as _route_e:
     print(f"[CRT LTX23] depth_preview route not registered: {_route_e}")
-
-
-class _CRTPreviewState:
-    last_latent_shapes = None
-    fps_override = None
-
-
-class _CRTPreviewFixGuider:
-    def __init__(self, guider, fps_override=None):
-        self._guider = guider
-        self._fps_override = fps_override
-
-    def __getattr__(self, key):
-        return getattr(self._guider, key)
-
-    def sample(self, noise, latent_image, *args, **kwargs):
-        latent_shapes = (
-            (tuple(latent_image.shape),)
-            if not getattr(latent_image, "is_nested", False)
-            else tuple(tuple(t.shape) for t in latent_image.unbind())
-        )
-        _CRT_PREVIEW_STATE.last_latent_shapes = latent_shapes
-
-        if self._fps_override:
-            _CRT_PREVIEW_STATE.fps_override = float(self._fps_override)
-
-        try:
-            return self._guider.sample(noise, latent_image, *args, **kwargs)
-        finally:
-            _CRT_PREVIEW_STATE.last_latent_shapes = None
-            _CRT_PREVIEW_STATE.fps_override = None
-
-
-def _crt_get_previewer_instance(model_path):
-    """Wrap a preview model path in the ported KJ-style wrapped previewer.
-
-    The taeltx weights are built lazily on first decode, so nothing loads
-    unless previews are actually active.
-    """
-    cached = _CRT_PREVIEWER_CACHE.get(("previewer", model_path))
-    if cached is None:
-        cached = CRTLTXWrappedPreviewer(
-            model_path=model_path,
-            preview_state=_CRT_PREVIEW_STATE,
-        )
-        _CRT_PREVIEWER_CACHE[("previewer", model_path)] = cached
-    return cached
-
-
-_CRT_PREVIEW_STATE = _CRTPreviewState()
-_CRT_ORIG_GET_PREVIEWER = latent_preview.get_previewer
-_CRT_PREVIEW_PATCHED = False
-_CRT_PREVIEWER_CACHE = {}
-
-
-def _crt_is_ltx_format(latent_format):
-    format_name = latent_format.__class__.__name__.lower()
-    decoder_name = str(getattr(latent_format, "taesd_decoder_name", "") or "").lower()
-    return ("ltx" in format_name) or decoder_name.startswith("taeltx")
-
-
-def _crt_find_ltx_preview_models(latent_format):
-    """Return ordered list of candidate model paths to try. Standard arch before wide."""
-    files = folder_paths.get_filename_list("vae_approx")
-    lower_files = [(fn, fn.lower()) for fn in files]
-    decoder_name = str(getattr(latent_format, "taesd_decoder_name", "") or "").lower()
-
-    # Non-wide standard TAEHV first (loads with unmodified TAEHV class),
-    # wide/fallbacks after. Each prefix matches the first filename starting with it.
-    prefixes = [
-        "taeltx2_3",  # matches taeltx2_3.safetensors (alphabetically before _wide)
-        "taeltx_2_3",
-        "taeltx2_3_wide",
-        "taeltx_2_3_wide",
-        "taeltx2",
-        "taeltx_2",
-    ]
-    if decoder_name:
-        prefixes.insert(0, decoder_name)
-
-    seen_paths = set()
-    result = []
-    for prefix in prefixes:
-        for fn, lower in lower_files:
-            if lower.startswith(prefix.lower()):
-                full = folder_paths.get_full_path("vae_approx", fn)
-                if full and full not in seen_paths:
-                    seen_paths.add(full)
-                    result.append(full)
-                break
-    return result
-
-
-def _crt_preview_model_present():
-    files = folder_paths.get_filename_list("vae_approx")
-    return any(fn.lower().startswith(("taeltx2_3", "taeltx_2_3")) for fn in files)
-
-
-def _crt_download_preview_model():
-    """Blocking worker: fetch the taeltx2_3 TAEHV preview decoder if missing.
-
-    Offline users simply stay on the RGB-factors fallback; failures are retried
-    after a cooldown rather than permanently disabled.
-    """
-    global _CRT_TAEHV_LAST_FAIL
-    target = folder_paths.get_full_path("vae_approx", _CRT_TAEHV_FILENAME)
-    if target is not None:
-        return target
-    try:
-        target_dir = folder_paths.get_folder_paths("vae_approx")[0]
-        os.makedirs(target_dir, exist_ok=True)
-        target = os.path.join(target_dir, _CRT_TAEHV_FILENAME)
-        print(f"[CRT LTX23] Downloading live-preview model {_CRT_TAEHV_FILENAME} ...")
-        download_url_with_progress(
-            _CRT_TAEHV_URL,
-            target,
-            label=_CRT_TAEHV_FILENAME,
-            user_agent="CRT-Nodes",
-            console_prefix="CRT LTX23",
-        )
-        print(f"[CRT LTX23] Live-preview model ready: {target}")
-        return target
-    except Exception as e:
-        _CRT_TAEHV_LAST_FAIL = time.time()
-        print(
-            f"[CRT LTX23] Could not download {_CRT_TAEHV_FILENAME} ({e}); "
-            "live preview falls back to RGB factors until it succeeds."
-        )
-        return None
-
-
-def _crt_kickoff_preview_model_download():
-    """Start the taeltx download once, in the background, at first node use.
-
-    Runs regardless of the live-preview toggle so the model is ready before
-    previews are ever requested. Safe to call from every execution.
-    """
-    global _CRT_TAEHV_DOWNLOAD_THREAD
-    if _crt_preview_model_present():
-        return
-    if _CRT_TAEHV_DOWNLOAD_THREAD is not None and _CRT_TAEHV_DOWNLOAD_THREAD.is_alive():
-        return
-    if time.time() - _CRT_TAEHV_LAST_FAIL < _CRT_TAEHV_RETRY_COOLDOWN:
-        return
-
-    with _CRT_TAEHV_DOWNLOAD_LOCK:
-        if _crt_preview_model_present():
-            return
-        if _CRT_TAEHV_DOWNLOAD_THREAD is not None and _CRT_TAEHV_DOWNLOAD_THREAD.is_alive():
-            return
-        if time.time() - _CRT_TAEHV_LAST_FAIL < _CRT_TAEHV_RETRY_COOLDOWN:
-            return
-
-        thread = threading.Thread(
-            target=_crt_download_preview_model,
-            name="crt-ltx23-preview-download",
-            daemon=True,
-        )
-        _CRT_TAEHV_DOWNLOAD_THREAD = thread
-        thread.start()
-
-
-def _crt_get_previewer(device, latent_format, *args, **kwargs):
-    if not _crt_is_ltx_format(latent_format):
-        return _CRT_ORIG_GET_PREVIEWER(device, latent_format, *args, **kwargs)
-
-    # LTX formats have no core TAESD decoder; never invoke the core getter for
-    # them (it logs a spurious "vae_approx/None" warning) — use our chain.
-    model_paths = _crt_find_ltx_preview_models(latent_format)
-    if not model_paths:
-        if _crt_download_preview_model() is not None:
-            model_paths = _crt_find_ltx_preview_models(latent_format)
-
-    if not model_paths:
-        # Offline fallback: KJ-style RGB-factor projection, no model needed.
-        return _crt_get_previewer_instance(None)
-
-    for model_path in model_paths:
-        try:
-            return _crt_get_previewer_instance(model_path)
-        except Exception as e:
-            print(f"[CRT-preview] skipping {model_path}: {e}")
-            continue
-
-    return _crt_get_previewer_instance(None)
-
-
-def ensure_crt_previewer():
-    global _CRT_PREVIEW_PATCHED
-    if _CRT_PREVIEW_PATCHED:
-        return
-    latent_preview.get_previewer = _crt_get_previewer
-    _CRT_PREVIEW_PATCHED = True
-    print("[CRT-preview] patched latent_preview.get_previewer")
 
 
 def _append_guide_attention_entry(
@@ -605,8 +407,7 @@ class CRT_LTX23UnifiedSampler:
         workflow_mode,
         quality,
         live_preview,
-        frame_count_from_audio,
-        vae_decode_tiled,
+        frame_count_from_audio,        vae_decode_tiled,
         unload_model_before_vae_decode,
         low_vram,
         depth_cache_mode,
@@ -628,6 +429,7 @@ class CRT_LTX23UnifiedSampler:
         legacy_compat_4,
         legacy_compat_5,
         legacy_compat_6,
+        **_kwargs,
     ):
         return stable_fingerprint(
             models_pipe,
@@ -670,7 +472,7 @@ class CRT_LTX23UnifiedSampler:
                 ),
                 "live_preview": (
                     "BOOLEAN",
-                    {"default": False, "tooltip": "Decode intermediate previews during sampling. Useful for monitoring but adds decode overhead."},
+                    {"default": True, "tooltip": "Animated true-pace video preview during sampling via the auto-downloaded taeltx approximation. Adds a small decode overhead per step."},
                 ),
                 "frame_count_from_audio": (
                     "BOOLEAN",
@@ -806,7 +608,10 @@ class CRT_LTX23UnifiedSampler:
                         "tooltip": "V2V Depth Control only. Disable reuse, keep the latest DA3 depth frames in RAM, or store them in ComfyUI's session temp directory. Temp files are cleared by ComfyUI at startup and graceful shutdown.",
                     },
                 ),
-            }
+            },
+            "hidden": {
+                "unique_id": "UNIQUE_ID",
+            },
         }
 
     RETURN_TYPES = ("IMAGE", "AUDIO")
@@ -1867,11 +1672,19 @@ class CRT_LTX23UnifiedSampler:
         output_index=0,
     ):
         if preview_enabled:
-            ensure_crt_previewer()
+            # Animated-WebP override rides the model; core binary previews
+            # render as a still per step in the modern frontend.
+            model = apply_ltx23_preview_override(
+                model, getattr(self, "_preview_node_id", None), frame_rate
+            )
+            if not getattr(self, "_pov_logged", False):
+                self._pov_logged = True
+                print(
+                    f"[CRT-preview] LTX animated preview active "
+                    f"(node={getattr(self, '_preview_node_id', None)!r}, {frame_rate or 24:.0f} fps)"
+                )
 
         guider = self._result_tuple(CFGGuider.execute(model, positive, negative, cfg))[0]
-        if preview_enabled:
-            guider = _CRTPreviewFixGuider(guider, fps_override=frame_rate)
 
         sampled = SamplerCustomAdvanced.execute(noise, guider, sampler, sigmas, latent)
         sampled = self._result_tuple(sampled)
@@ -3676,6 +3489,7 @@ class CRT_LTX23UnifiedSampler:
         legacy_compat_4,
         legacy_compat_5,
         legacy_compat_6,
+        unique_id=None,
     ):
         mode = str(workflow_mode)
         if mode not in ("I2V", "T2V", "V2V"):
@@ -3683,18 +3497,14 @@ class CRT_LTX23UnifiedSampler:
         mode_internal = mode
 
         # First node use: fetch the live-preview decoder once in the
-        # background, independent of the preview toggle. Every run also wipes
-        # any timeline left over from the previous run.
-        _crt_kickoff_preview_model_download()
-        reset_all_timelines()
+        # background, independent of the preview toggle.
+        kickoff_ltx23_preview_model_download()
 
         self._log(f"Starting mode: {mode}")
         live_preview = bool(live_preview)
-        if live_preview:
-            ensure_crt_previewer()
-            latent_preview.set_preview_method("taesd")
-        else:
-            latent_preview.set_preview_method("none")
+        # Core binary previews are suppressed inside the override wrapper only,
+        # so the user's global preview method is left untouched.
+        self._preview_node_id = unique_id if live_preview else None
 
         # Public semantics: Draft is the fast half-resolution + refinement path,
         # Standard is a full-resolution single pass, Max adds a short

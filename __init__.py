@@ -154,6 +154,11 @@ if True:
         CRT_LTX23USModelsPipe,
         CRT_LTX23UnifiedSampler,
     )
+    from .py.MiniMaxH3_Unified_Sampler import (
+        CRT_MiniMaxH3USConfig,
+        CRT_MiniMaxH3USModelsPipe,
+        CRT_MiniMaxH3UnifiedSampler,
+    )
     from .py.Isolate import (
         CRT_IsolateInput,
         CRT_IsolateOutput,
@@ -331,6 +336,9 @@ NODE_CLASS_MAPPINGS = {
     "CRT_LTX23USModelsPipe": CRT_LTX23USModelsPipe,
     "CRT_LTX23USConfig": CRT_LTX23USConfig,
     "CRT_LTX23UnifiedSampler": CRT_LTX23UnifiedSampler,
+    "CRT_MiniMaxH3USModelsPipe": CRT_MiniMaxH3USModelsPipe,
+    "CRT_MiniMaxH3USConfig": CRT_MiniMaxH3USConfig,
+    "CRT_MiniMaxH3UnifiedSampler": CRT_MiniMaxH3UnifiedSampler,
     "CRT_IsolateInput": CRT_IsolateInput,
     "CRT_IsolateOutput": CRT_IsolateOutput,
     "CRT_IsolateInputCLIPSeg": CRT_IsolateInputCLIPSeg,
@@ -446,6 +454,9 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "CRT_LTX23USModelsPipe": "LTX US Models Pipe (CRT)",
     "CRT_LTX23USConfig": "LTX US Config (CRT)",
     "CRT_LTX23UnifiedSampler": "LTX Unified Sampler (CRT)",
+    "CRT_MiniMaxH3USModelsPipe": "MiniMax H3 US Models Pipe (CRT)",
+    "CRT_MiniMaxH3USConfig": "MiniMax H3 US Config (CRT)",
+    "CRT_MiniMaxH3UnifiedSampler": "MiniMax H3 Unified Sampler (CRT)",
     "CRT_IsolateInput": "Isolate Input SAM3.1 (CRT)",
     "CRT_IsolateOutput": "Isolate Output (CRT)",
     "CRT_IsolateInputCLIPSeg": "Isolate Input CLIPSeg (CRT)",

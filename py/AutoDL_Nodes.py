@@ -179,6 +179,22 @@ MODELS = {
         "filename": "qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
         "url": "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/text_encoders/qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
     },
+    "minimax_h3_fl2va_turbo_lora": {
+        "folder": "loras",
+        "filename": "minimax_h3_fl2v_turbo_4step_v1.1_768p_comfyui_bf16.safetensors",
+        "url": "https://huggingface.co/lightx2v/Minimax-h3-Turbo/resolve/main/minimax_h3_fl2v_turbo_4step_v1.1_768p_comfyui_bf16.safetensors",
+        "alternate_filenames": [
+            "MiniMaxH3/minimax_h3_fl2v_lightx2v_turbo_4step_v0.1_comfy.safetensors",
+        ],
+    },
+    "minimax_h3_ref2va_turbo_lora": {
+        "folder": "loras",
+        "filename": "minimax_h3_ref2v_turbo_4step_v0.1_comfyui_bf16.safetensors",
+        "url": "https://huggingface.co/lightx2v/Minimax-h3-Turbo/resolve/main/minimax_h3_ref2v_turbo_4step_v0.1_comfyui_bf16.safetensors",
+        "alternate_filenames": [
+            "MiniMaxH3/minimax_h3_ref2v_turbo_4step_v0.1_comfyui_bf16.safetensors",
+        ],
+    },
     "minimax_h3_audio_vae": {
         "folder": "vae",
         "filename": "minimax_h3_audio_vae_fp32.safetensors",
@@ -868,6 +884,16 @@ class MiniMaxH3CLIPSelector(_FixedCLIPSelector):
     }
 
 
+class MiniMaxH3FL2VATurboLoRA(_FixedLoRALoader):
+    CATEGORY = "CRT/AutoDL/MINIMAXH3"
+    MODEL_KEY = "minimax_h3_fl2va_turbo_lora"
+
+
+class MiniMaxH3REF2VATurboLoRA(_FixedLoRALoader):
+    CATEGORY = "CRT/AutoDL/MINIMAXH3"
+    MODEL_KEY = "minimax_h3_ref2va_turbo_lora"
+
+
 # LTX2.5
 class LTX25ModelSelector(_FixedDiffusionSelector):
     CATEGORY = "CRT/AutoDL/LTX2.5"
@@ -976,6 +1002,8 @@ NODE_CLASS_MAPPINGS = {
     "CRTAutoDLMiniMaxH3AudioVAE": MiniMaxH3AudioVAE,
     "CRTAutoDLMiniMaxH3VideoVAE": MiniMaxH3VideoVAE,
     "CRTAutoDLMiniMaxH3CLIPSelector": MiniMaxH3CLIPSelector,
+    "CRTAutoDLMiniMaxH3FL2VATurboLoRA": MiniMaxH3FL2VATurboLoRA,
+    "CRTAutoDLMiniMaxH3REF2VATurboLoRA": MiniMaxH3REF2VATurboLoRA,
     "CRTAutoDLLTX25ModelSelector": LTX25ModelSelector,
     "CRTAutoDLLTX25AudioVAE": LTX25AudioVAE,
     "CRTAutoDLLTX25VideoVAE": LTX25VideoVAE,
@@ -1015,6 +1043,8 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "CRTAutoDLMiniMaxH3AudioVAE": "MiniMax H3 AUDIO VAE (CRT AutoDL)",
     "CRTAutoDLMiniMaxH3VideoVAE": "MiniMax H3 VIDEO VAE (CRT AutoDL)",
     "CRTAutoDLMiniMaxH3CLIPSelector": "MiniMax H3 CLIP (CRT AutoDL)",
+    "CRTAutoDLMiniMaxH3FL2VATurboLoRA": "MiniMax H3 FL2VA Turbo LoRA (CRT AutoDL)",
+    "CRTAutoDLMiniMaxH3REF2VATurboLoRA": "MiniMax H3 REF2VA Turbo LoRA (CRT AutoDL)",
     "CRTAutoDLLTX25ModelSelector": "LTX2.5 Model (CRT AutoDL)",
     "CRTAutoDLLTX25AudioVAE": "LTX2.5 AUDIO VAE (CRT AutoDL)",
     "CRTAutoDLLTX25VideoVAE": "LTX2.5 VIDEO VAE (CRT AutoDL)",
