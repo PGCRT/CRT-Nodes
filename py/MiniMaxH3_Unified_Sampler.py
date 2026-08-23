@@ -1357,7 +1357,8 @@ class CRT_MiniMaxH3UnifiedSampler:
             self._offload_clip(models["clip"])
 
         noise_obj = self._result_tuple(RandomNoise.execute(config["seed"]))[0]
-        sampler_obj = self._result_tuple(KSamplerSelect.execute(SAMPLER_NAME))[0]
+        sampler_name = "euler" if use_turbo else SAMPLER_NAME
+        sampler_obj = self._result_tuple(KSamplerSelect.execute(sampler_name))[0]
         sigmas_obj = self._result_tuple(
             BasicScheduler.execute(model, SCHEDULER_NAME, step_count, 1.0)
         )[0]
@@ -1376,7 +1377,7 @@ class CRT_MiniMaxH3UnifiedSampler:
             self._offload_vae(models["audio_vae"])
             mm.soft_empty_cache()
 
-        self._progress(3, total_steps, f"Sampling ({SAMPLER_NAME}/{SCHEDULER_NAME}, {step_count} steps)")
+        self._progress(3, total_steps, f"Sampling ({sampler_name}/{SCHEDULER_NAME}, {step_count} steps)")
         sampled = self._result_tuple(
             SamplerCustomAdvanced.execute(noise_obj, guider_obj, sampler_obj, sigmas_obj, latent)
         )
