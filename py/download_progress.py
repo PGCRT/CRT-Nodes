@@ -1,5 +1,5 @@
-from __future__ import annotations
-
+import importlib
+import importlib.util
 import inspect
 import os
 import re
@@ -67,7 +67,14 @@ def _content_length(response) -> int:
 
 
 def _hf_download_url(url: str, destination: str | os.PathLike, label: str | None, console_prefix: str) -> str:
-    """Use huggingface_hub for gated/private Hugging Face files."""
+    """Use huggingface_hub for Hugging Face files (resume + fast transfer paths)."""
+    # Max throughput: Xet chunked downloads when hf_xet is present, plus the
+    # multi-connection Rust accelerator for classic CDN files. Some custom
+    # nodes set HF_HUB_DISABLE_XET process-wide; undo that so downloads always
+    # get the fast path.
+    os.environ.pop("HF_HUB_DISABLE_XET", None)
+    if importlib.util.find_spec("hf_transfer") is not None:
+        os.environ["HF_HUB_ENABLE_HF_TRANSFER"] = "1"
     from huggingface_hub import hf_hub_download
     from huggingface_hub.errors import GatedRepoError, HfHubHTTPError
 
@@ -82,6 +89,21 @@ def _hf_download_url(url: str, destination: str | os.PathLike, label: str | None
     repo_path = match.group(3)
 
     display_name = label or destination_path.name
+
+    # Best-effort: announce total size up front (hf_transfer gives no live bar).
+    try:
+        head_req = urllib.request.Request(url, method="HEAD")
+        with urllib.request.urlopen(head_req, timeout=15) as head:
+            total = int(head.headers.get("Content-Length") or 0)
+        if total:
+            print(
+                f"[{console_prefix}] Starting (HF Hub): {display_name} "
+                f"({total / (1024 * 1024):.1f} MiB)",
+                flush=True,
+            )
+    except Exception:
+        pass
+
     print(
         f"[{console_prefix}] Starting (HF Hub): {display_name} from {repo_id}",
         flush=True,
@@ -168,6 +190,24 @@ def download_url_with_progress(
 
     request = urllib.request.Request(url, headers=headers)
     open_kwargs = {} if timeout is None else {"timeout": timeout}
+
+    # Prefer huggingface_hub for HF files: resumable, CDN-correct, and uses the
+    # hf_transfer/Xet fast paths when installed. urllib single-stream gets
+    # throttled to dial-up speeds by the CDN on large LFS files.
+    if is_hf:
+        try:
+            return _hf_download_url(url, destination_path, display_name, console_prefix)
+        except ImportError:
+            print(
+                f"[{console_prefix}] huggingface_hub unavailable; using direct download for {display_name}",
+                flush=True,
+            )
+        except Exception as exc:
+            print(
+                f"[{console_prefix}] HF hub download failed ({exc.__class__.__name__}); "
+                f"falling back to direct download for {display_name}",
+                flush=True,
+            )
 
     print(f"[{console_prefix}] Starting: {display_name}", flush=True)
     downloaded = 0

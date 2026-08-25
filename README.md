@@ -86,6 +86,22 @@ Restart ComfyUI after installation or an update.
 - `MiniMax H3 AUDIO VAE (CRT AutoDL)`
 - `MiniMax H3 VIDEO VAE (CRT AutoDL)`
 
+### CRT/AutoDL/PIXAL3D (6)
+
+- `Pixal3D Model Selector (CRT AutoDL)` (BF16 / Int8)
+- `Pixal3D CLIP Vision (CRT AutoDL)`
+- `Pixal3D Shape VAE (CRT AutoDL)`
+- `Pixal3D Texture VAE (CRT AutoDL)`
+- `Pixal3D MoGe Model (CRT AutoDL)` (also `SAM3Body MoGe Model`)
+- `Pixal3D BiRefNet (CRT AutoDL)`
+
+### CRT/AutoDL/SAM3BODY (4)
+
+- `SAM3Body Model Selector (CRT AutoDL)` (BF16 / Int8)
+- `SAM3Body Checkpoint (CRT AutoDL)` (SAM3.1 multiplex)
+- `SAM3Body RT-DETR Detector (CRT AutoDL)`
+- `SAM3Body MoGe Model (CRT AutoDL)` (shared MoGe-2)
+
 ### CRT/AutoDL/ZIMAGETURBO (3)
 
 - `Z-Image Turbo CLIP (CRT AutoDL)`

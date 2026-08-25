@@ -276,6 +276,66 @@ MODELS = {
         "filename": "ltx-2.5-duration-head-bf16.safetensors",
         "url": "https://huggingface.co/UntMods/CRT_Nodes_25Gate/resolve/main/duration_head.safetensors",
     },
+    # Pixal3D
+    "pixal3d_model_bf16": {
+        "folder": "diffusion_models",
+        "filename": "pixal3d_bf16.safetensors",
+        "url": "https://huggingface.co/Comfy-Org/Pixal3D/resolve/main/diffusion_models/pixal3d_bf16.safetensors",
+    },
+    "pixal3d_model_int8": {
+        "folder": "diffusion_models",
+        "filename": "pixal3d_int8_convrot.safetensors",
+        "url": "https://huggingface.co/Comfy-Org/Pixal3D/resolve/main/diffusion_models/pixal3d_int8_convrot.safetensors",
+    },
+    "pixal3d_clip_vision": {
+        "folder": "clip_vision",
+        "filename": "dino_v3_L_naf_fp32.safetensors",
+        "url": "https://huggingface.co/Comfy-Org/Pixal3D/resolve/main/clip_vision/dino_v3_L_naf_fp32.safetensors",
+    },
+    "pixal3d_shape_vae": {
+        "folder": "vae",
+        "filename": "trellis_2_shape_vae_bf16.safetensors",
+        "url": "https://huggingface.co/Comfy-Org/Pixal3D/resolve/main/vae/trellis_2_shape_vae_bf16.safetensors",
+    },
+    "pixal3d_texture_vae": {
+        "folder": "vae",
+        "filename": "trellis_2_texture_vae_bf16.safetensors",
+        "url": "https://huggingface.co/Comfy-Org/Pixal3D/resolve/main/vae/trellis_2_texture_vae_bf16.safetensors",
+    },
+    # MoGe-2 (depth/FOV for Pixal3D and SAM3DBody pipelines)
+    "moge_model": {
+        "folder": "geometry_estimation",
+        "filename": "moge_2_vitl_normal_fp16.safetensors",
+        "url": "https://huggingface.co/Comfy-Org/MoGe/resolve/main/geometry_estimation/moge_2_vitl_normal_fp16.safetensors",
+    },
+    # Background removal (Pixal3D input prep)
+    "birefnet_model": {
+        "folder": "background_removal",
+        "filename": "birefnet.safetensors",
+        "url": "https://huggingface.co/Comfy-Org/BiRefNet/resolve/main/background_removal/birefnet.safetensors",
+    },
+    # SAM3DBody
+    "sam3dbody_model_bf16": {
+        "folder": "detection",
+        "filename": "sam_3d_body_dinov3_bf16.safetensors",
+        "url": "https://huggingface.co/Comfy-Org/sam-3d-body/resolve/main/detection/sam_3d_body_dinov3_bf16.safetensors",
+    },
+    "sam3dbody_model_int8": {
+        "folder": "detection",
+        "filename": "sam_3d_body_dinov3_int8_convrot.safetensors",
+        "url": "https://huggingface.co/Comfy-Org/sam-3d-body/resolve/main/detection/sam_3d_body_dinov3_int8_convrot.safetensors",
+    },
+    "sam3_checkpoint": {
+        "folder": "checkpoints",
+        "filename": "sam3.1_multiplex_fp16.safetensors",
+        "url": "https://huggingface.co/Comfy-Org/sam3.1/resolve/main/checkpoints/sam3.1_multiplex_fp16.safetensors",
+    },
+    # RT-DETR v4 person detector (loads through the diffusion-model path)
+    "rtdetr_model_fp16": {
+        "folder": "diffusion_models",
+        "filename": "rt_detr_v4-x-hgnet_fp16.safetensors",
+        "url": "https://huggingface.co/Comfy-Org/RT-DETR/resolve/main/diffusion_models/rt_detr_v4-x-hgnet_fp16.safetensors",
+    },
 }
 
 
@@ -976,6 +1036,126 @@ class LTX25DurationHead(_FixedModelPatchLoader):
     MODEL_KEY = "ltx25_duration_head"
 
 
+# Pixal3D
+class Pixal3DModelSelector(_FixedDiffusionSelector):
+    CATEGORY = "CRT/AutoDL/Pixal3D"
+    OPTIONS = {
+        "BF16": "pixal3d_model_bf16",
+        "INT8 ConvRot": "pixal3d_model_int8",
+    }
+
+
+class Pixal3DCLIPVision(_FixedCLIPVisionLoader):
+    CATEGORY = "CRT/AutoDL/Pixal3D"
+    MODEL_KEY = "pixal3d_clip_vision"
+
+
+class Pixal3DShapeVAE(_CoreVAELoader):
+    CATEGORY = "CRT/AutoDL/Pixal3D"
+    MODEL_KEY = "pixal3d_shape_vae"
+
+
+class Pixal3DTextureVAE(_CoreVAELoader):
+    CATEGORY = "CRT/AutoDL/Pixal3D"
+    MODEL_KEY = "pixal3d_texture_vae"
+
+
+def _call_core_node(core_cls, **kwargs):
+    """Download-free delegate: run a native V3 node's execute() and unwrap NodeOutput."""
+    result = core_cls.execute(**kwargs)
+    output = result.result
+    return tuple(output) if isinstance(output, (list, tuple)) else (output,)
+
+
+class _CoreComboDelegate:
+    """Base for nodes that download a model then delegate to its native loader node."""
+
+    FUNCTION = "load_model"
+    CORE_NODE = None
+    WIDGET = "model_name"
+
+    @classmethod
+    def INPUT_TYPES(cls):
+        return {"required": {}}
+
+    def load_model(self):
+        ensure_model(self.MODEL_KEY)
+        return _call_core_node(self.CORE_NODE, **{self.WIDGET: MODELS[self.MODEL_KEY]["filename"]})
+
+
+class Pixal3DMoGeModel(_CoreComboDelegate):
+    CATEGORY = "CRT/AutoDL/Pixal3D"
+    MODEL_KEY = "moge_model"
+    RETURN_TYPES = ("MOGE_MODEL",)
+    RETURN_NAMES = ("moge_model",)
+
+    def load_model(self):
+        from comfy_extras.nodes_moge import LoadMoGeModel
+
+        self.CORE_NODE = LoadMoGeModel
+        self.WIDGET = "model_name"
+        return super().load_model()
+
+
+class SAM3BodyMoGeModel(Pixal3DMoGeModel):
+    CATEGORY = "CRT/AutoDL/SAM3Body"
+
+
+class Pixal3DBiRefNet(_CoreComboDelegate):
+    CATEGORY = "CRT/AutoDL/Pixal3D"
+    MODEL_KEY = "birefnet_model"
+    RETURN_TYPES = ("BACKGROUND_REMOVAL",)
+    RETURN_NAMES = ("bg_model",)
+
+    def load_model(self):
+        from comfy_extras.nodes_bg_removal import LoadBackgroundRemovalModel
+
+        self.CORE_NODE = LoadBackgroundRemovalModel
+        self.WIDGET = "bg_removal_name"
+        return super().load_model()
+
+
+# SAM3DBody
+class SAM3BodyModelSelector(_CoreComboDelegate):
+    CATEGORY = "CRT/AutoDL/SAM3Body"
+    RETURN_TYPES = ("SAM3D_BODY_MODEL",)
+    RETURN_NAMES = ("sam3d_body_model",)
+    OPTIONS = {
+        "BF16": "sam3dbody_model_bf16",
+        "INT8 ConvRot": "sam3dbody_model_int8",
+    }
+
+    @classmethod
+    def INPUT_TYPES(cls):
+        names = list(cls.OPTIONS.keys())
+        return {"required": {"model_name": (names, {"default": names[0]})}}
+
+    def load_model(self, model_name):
+        from comfy_extras.nodes_sam3d_body import SAM3DBody_Loader
+
+        key = self.OPTIONS[model_name]
+        ensure_model(key)
+        return _call_core_node(SAM3DBody_Loader, model_file=MODELS[key]["filename"])
+
+
+class SAM3BodyCheckpoint(_CoreComboDelegate):
+    CATEGORY = "CRT/AutoDL/SAM3Body"
+    MODEL_KEY = "sam3_checkpoint"
+    RETURN_TYPES = ("MODEL", "CLIP", "VAE")
+    RETURN_NAMES = ("MODEL", "CLIP", "VAE")
+
+    def load_model(self):
+        from nodes import CheckpointLoaderSimple
+
+        ensure_model(self.MODEL_KEY)
+        return CheckpointLoaderSimple().load_checkpoint(MODELS[self.MODEL_KEY]["filename"])
+
+
+class SAM3BodyRTDETRDetector(_FixedDiffusionLoader):
+    CATEGORY = "CRT/AutoDL/SAM3Body"
+    MODEL_KEY = "rtdetr_model_fp16"
+
+
 NODE_CLASS_MAPPINGS = {
     "CRTAutoDLZImageTurboModel": ZImageTurboModel,
     "CRTAutoDLZImageTurboVAE": ZImageTurboVAE,
@@ -1015,6 +1195,16 @@ NODE_CLASS_MAPPINGS = {
     "CRTAutoDLLTX25OutpaintLoRA": LTX25OutpaintLoRA,
     "CRTAutoDLLTX25UpscaleICLoRA": LTX25UpscaleICLoRA,
     "CRTAutoDLLTX25DurationHead": LTX25DurationHead,
+    "CRTAutoDLPixal3DModel": Pixal3DModelSelector,
+    "CRTAutoDLPixal3DCLIPVision": Pixal3DCLIPVision,
+    "CRTAutoDLPixal3DShapeVAE": Pixal3DShapeVAE,
+    "CRTAutoDLPixal3DTextureVAE": Pixal3DTextureVAE,
+    "CRTAutoDLPixal3DMoGeModel": Pixal3DMoGeModel,
+    "CRTAutoDLPixal3DBiRefNet": Pixal3DBiRefNet,
+    "CRTAutoDLSAM3BodyModel": SAM3BodyModelSelector,
+    "CRTAutoDLSAM3BodyCheckpoint": SAM3BodyCheckpoint,
+    "CRTAutoDLSAM3BodyRTDETRDetector": SAM3BodyRTDETRDetector,
+    "CRTAutoDLSAM3BodyMoGeModel": SAM3BodyMoGeModel,
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
@@ -1056,4 +1246,14 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "CRTAutoDLLTX25OutpaintLoRA": "LTX2.5 IC Outpaint LoRA (CRT AutoDL)",
     "CRTAutoDLLTX25UpscaleICLoRA": "LTX2.5 IC Upscale LoRA (CRT AutoDL)",
     "CRTAutoDLLTX25DurationHead": "LTX2.5 Duration Head (CRT AutoDL)",
+    "CRTAutoDLPixal3DModel": "Pixal3D Model (CRT AutoDL)",
+    "CRTAutoDLPixal3DCLIPVision": "Pixal3D CLIP Vision DINOv3 (CRT AutoDL)",
+    "CRTAutoDLPixal3DShapeVAE": "Pixal3D Shape VAE (CRT AutoDL)",
+    "CRTAutoDLPixal3DTextureVAE": "Pixal3D Texture VAE (CRT AutoDL)",
+    "CRTAutoDLPixal3DMoGeModel": "MoGe-2 Model (CRT AutoDL)",
+    "CRTAutoDLPixal3DBiRefNet": "BiRefNet Background Removal (CRT AutoDL)",
+    "CRTAutoDLSAM3BodyModel": "SAM 3D Body Model (CRT AutoDL)",
+    "CRTAutoDLSAM3BodyCheckpoint": "SAM 3.1 Checkpoint (CRT AutoDL)",
+    "CRTAutoDLSAM3BodyRTDETRDetector": "SAM3DBody RT-DETR Detector (CRT AutoDL)",
+    "CRTAutoDLSAM3BodyMoGeModel": "MoGe-2 Model (CRT AutoDL)",
 }
