@@ -1,0 +1,1986 @@
+from __future__ import annotations
+
+import hashlib
+import math
+import threading
+import time
+from collections import OrderedDict
+from dataclasses import dataclass, field
+from typing import Any
+
+import torch
+
+_PROFILE_CACHE_LIMIT = 16
+_BASE_SAMPLE_ELEMENTS = 4096
+_EXACT_LORA_FACTOR_ELEMENTS = 4_000_000
+_EXACT_LORA_COMBINED_RANK = 512
+_CORRECTION_GAIN_LIMIT = 0.25
+
+
+@dataclass(frozen=True, slots=True)
+class ModelForecastabilityProfile:
+    cache_key: tuple[Any, ...]
+    base_model_identity: str
+    patch_identity: str
+    active_patch_count: int
+    active_patch_keys: int
+    recognized_lora_count: int
+    unknown_patch_count: int
+    sampled_base_tensors: int
+    profile_confidence: float
+    aggregate_sensitivity: float
+    patch_perturbation: float
+    final_block_perturbation: float
+    audio_sensitivity: float
+    video_sensitivity: float
+    audio_head_weight: torch.Tensor | None
+    video_head_weight: torch.Tensor | None
+    audio_head_gram_diagonal: torch.Tensor | None
+    video_head_gram_diagonal: torch.Tensor | None
+    forecast_risk_prior: float
+    build_seconds: float
+    estimated_bytes: int
+    transient_workspace_bytes: int
+
+
+@dataclass(frozen=True, slots=True)
+class ProfileLookup:
+    profile: ModelForecastabilityProfile
+    cache_hit: bool
+    lookup_seconds: float
+
+
+@dataclass(frozen=True, slots=True)
+class CorrectionGainTelemetry:
+    residual_projection: float = 0.0
+    diagonal_projection: float = 0.0
+    model_projection: float = 0.0
+    raw_generic_gain: float = 0.0
+    raw_diagonal_gain: float = 0.0
+    raw_model_gain: float = 0.0
+    generic_gain: float = 0.0
+    diagonal_candidate_gain: float = 0.0
+    model_candidate_gain: float = 0.0
+    model_gain: float = 0.0
+    model_trust: float = 0.0
+    generic_bound_active: bool = False
+    diagonal_bound_active: bool = False
+    model_bound_active: bool = False
+
+    @property
+    def pre_bound_delta(self) -> float:
+        return self.raw_model_gain - self.raw_generic_gain
+
+    @property
+    def post_bound_delta(self) -> float:
+        return self.model_candidate_gain - self.generic_gain
+
+    @property
+    def applied_delta(self) -> float:
+        return self.model_gain - self.generic_gain
+
+    @property
+    def exact_diagonal_pre_bound_delta(self) -> float:
+        return self.raw_model_gain - self.raw_diagonal_gain
+
+    @property
+    def exact_diagonal_post_bound_delta(self) -> float:
+        return self.model_candidate_gain - self.diagonal_candidate_gain
+
+
+@dataclass(frozen=True, slots=True)
+class SubspaceCorrectionTelemetry:
+    eligible: bool = False
+    used_scalar_fallback: bool = True
+    generic_condition: float = 0.0
+    exact_condition: float = 0.0
+    generic_rank: int = 0
+    exact_rank: int = 0
+    regularization: float = 0.0
+    raw_generic_coefficients: tuple[float, float] = (0.0, 0.0)
+    raw_exact_coefficients: tuple[float, float] = (0.0, 0.0)
+    generic_coefficients: tuple[float, float] = (0.0, 0.0)
+    exact_coefficients: tuple[float, float] = (0.0, 0.0)
+    applied_coefficients: tuple[float, float] = (0.0, 0.0)
+    generic_raw_norm_ratio: float = 0.0
+    exact_raw_norm_ratio: float = 0.0
+    applied_raw_norm_ratio: float = 0.0
+    generic_bound_scale: float = 1.0
+    exact_bound_scale: float = 1.0
+    applied_bound_scale: float = 1.0
+    generic_bounded_norm_ratio: float = 0.0
+    exact_bounded_norm_ratio: float = 0.0
+    applied_bounded_norm_ratio: float = 0.0
+    generic_bound_active: bool = False
+    exact_bound_active: bool = False
+    applied_bound_active: bool = False
+    model_trust: float = 0.0
+
+
+@dataclass(frozen=True, slots=True)
+class ModelAwareForecastDecision:
+    trajectory_risk: float
+    model_risk: float
+    patch_risk: float
+    combined_risk: float
+    confidence: float
+    ridge_lambda: float
+    degree: int
+    audio_blend_weight: float
+    video_blend_weight: float
+    audio_correction_gain: float
+    video_correction_gain: float
+    forecast_horizon: float
+    force_actual: bool
+    audio_correction_telemetry: CorrectionGainTelemetry = field(
+        default_factory=CorrectionGainTelemetry
+    )
+    video_correction_telemetry: CorrectionGainTelemetry = field(
+        default_factory=CorrectionGainTelemetry
+    )
+    audio_subspace_telemetry: SubspaceCorrectionTelemetry = field(
+        default_factory=SubspaceCorrectionTelemetry
+    )
+    video_subspace_telemetry: SubspaceCorrectionTelemetry = field(
+        default_factory=SubspaceCorrectionTelemetry
+    )
+    correction_anchor_ids: tuple[int, ...] = ()
+
+
+@dataclass(frozen=True, slots=True)
+class StreamAnchorEvidence:
+    forecast_ratio: float = 0.0
+    curvature_ratio: float = 0.0
+    residual_projection: float = 0.0
+    model_corrected_ratio: float = 0.0
+    generic_corrected_ratio: float = 0.0
+    diagonal_projection: float = 0.0
+    model_projection: float = 0.0
+    diagonal_candidate_ratio: float = 0.0
+    model_candidate_ratio: float = 0.0
+    model_corrected_head_ratio: float = 0.0
+    generic_corrected_head_ratio: float = 0.0
+    diagonal_candidate_head_ratio: float = 0.0
+    model_candidate_head_ratio: float = 0.0
+    generic_2d_ratio: float = 0.0
+    exact_2d_ratio: float = 0.0
+    applied_2d_ratio: float = 0.0
+    generic_2d_head_ratio: float = 0.0
+    exact_2d_head_ratio: float = 0.0
+    applied_2d_head_ratio: float = 0.0
+    generic_2d_coefficients: tuple[float, float] = (0.0, 0.0)
+    exact_2d_coefficients: tuple[float, float] = (0.0, 0.0)
+    generic_2d_condition: float = 0.0
+    exact_2d_condition: float = 0.0
+    generic_2d_rank: int = 0
+    exact_2d_rank: int = 0
+    generic_2d_eligible: bool = False
+    exact_2d_eligible: bool = False
+    subspace_regularization: float = 0.0
+    direction_gram: tuple[float, float, float] = (1.0, 0.0, 0.0)
+    application_direction_gram: tuple[float, float, float] = (1.0, 0.0, 0.0)
+
+
+@dataclass(frozen=True, slots=True)
+class AnchorEvidenceTiming:
+    weight_fit_seconds: float = 0.0
+    sample_index_seconds: float = 0.0
+    device_transfer_seconds: float = 0.0
+    sensitivity_transfer_seconds: float = 0.0
+    scalar_transfer_seconds: float = 0.0
+    reduction_seconds: float = 0.0
+    exact_head_projection_seconds: float = 0.0
+    fit_condition_seconds: float = 0.0
+    subspace_gram_seconds: float = 0.0
+    subspace_solve_seconds: float = 0.0
+
+
+@dataclass(frozen=True, slots=True)
+class AnchorEvidence:
+    forecast_ratio: float
+    curvature_ratio: float
+    fit_condition: float
+    audio_projection: float
+    video_projection: float
+    model_corrected_ratio: float
+    generic_corrected_ratio: float
+    audio: StreamAnchorEvidence = field(default_factory=StreamAnchorEvidence)
+    video: StreamAnchorEvidence = field(default_factory=StreamAnchorEvidence)
+    subspace_workspace_bytes: int = 0
+    timing: AnchorEvidenceTiming = field(default_factory=AnchorEvidenceTiming)
+
+
+@dataclass(frozen=True, slots=True)
+class _InjectionAdapter:
+    key: str
+    adapter: Any
+    strength: float
+    group: str | None = None
+
+
+_PROFILE_CACHE: OrderedDict[tuple[Any, ...], ModelForecastabilityProfile] = OrderedDict()
+_PROFILE_CACHE_LOCK = threading.RLock()
+
+
+def clear_model_profile_cache() -> None:
+    with _PROFILE_CACHE_LOCK:
+        _PROFILE_CACHE.clear()
+
+
+def _clamp(value: float, low: float = 0.0, high: float = 1.0) -> float:
+    if not math.isfinite(value):
+        return high
+    return max(low, min(high, float(value)))
+
+
+def _soft_limit(value: float, limit: float) -> float:
+    resolved = float(value)
+    bound = float(limit)
+    if not math.isfinite(resolved) or not math.isfinite(bound) or bound <= 0.0:
+        raise ValueError("soft limit requires a finite value and positive finite bound")
+    return resolved / (1.0 + abs(resolved) / bound)
+
+
+def radially_bound_coefficients(
+    coefficients: tuple[float, ...],
+    direction_gram: tuple[float, ...],
+    *,
+    limit: float = _CORRECTION_GAIN_LIMIT,
+) -> tuple[tuple[float, ...], float, float, float, bool]:
+    """Soft-bound a trajectory correction using the latest-delta norm as budget."""
+    values = tuple(float(value) for value in coefficients)
+    if len(values) not in {1, 2} or not all(math.isfinite(value) for value in values):
+        raise ValueError("correction coefficients must contain one or two finite values")
+    if len(values) == 1:
+        norm_ratio = abs(values[0])
+    else:
+        if len(direction_gram) != 3:
+            raise ValueError("K=2 radial bounding requires the normalized 2x2 Gram triangle")
+        g00, g01, g11 = (float(value) for value in direction_gram)
+        if not all(math.isfinite(value) for value in (g00, g01, g11)) or g00 <= 0.0:
+            raise ValueError("direction Gram must be finite with a positive latest-delta norm")
+        norm_squared = (
+            values[0] * values[0] * g00
+            + 2.0 * values[0] * values[1] * g01
+            + values[1] * values[1] * g11
+        )
+        norm_ratio = math.sqrt(max(0.0, norm_squared / g00))
+    bounded_ratio = abs(_soft_limit(norm_ratio, limit))
+    scale = bounded_ratio / norm_ratio if norm_ratio > 1e-12 else 1.0
+    bounded = tuple(value * scale for value in values)
+    return bounded, norm_ratio, scale, bounded_ratio, norm_ratio >= float(limit)
+
+
+def _locate_inner(model_patcher: Any) -> Any | None:
+    model = getattr(model_patcher, "model", None)
+    inner = getattr(model, "diffusion_model", None)
+    if inner is not None:
+        return inner
+    return getattr(model_patcher, "diffusion_model", None)
+
+
+def _architecture_signature(inner: Any) -> tuple[Any, ...]:
+    blocks = getattr(inner, "blocks", ())
+    return (
+        type(inner).__module__,
+        type(inner).__name__,
+        len(blocks),
+        int(getattr(inner, "hidden_size", 0)),
+        tuple(int(v) for v in getattr(inner, "patch_size", ())),
+        int(getattr(inner, "latents_dim", 0)),
+        int(getattr(inner, "audio_latents_dim", 0)),
+        bool(getattr(inner, "use_adaln_curves", False)),
+    )
+
+
+def _tensor_signature(value: Any) -> tuple[Any, ...]:
+    if not torch.is_tensor(value):
+        return (type(value).__module__, type(value).__name__)
+    return (
+        tuple(int(v) for v in value.shape),
+        str(value.dtype),
+        str(value.device),
+        int(value.data_ptr()) if value.device.type != "meta" else 0,
+    )
+
+
+def _adapter_signature(adapter: Any) -> tuple[Any, ...]:
+    weights = getattr(adapter, "weights", ())
+    if not isinstance(weights, (tuple, list)):
+        weights = (weights,)
+    return (
+        type(adapter).__module__,
+        type(adapter).__name__,
+        tuple(_tensor_signature(value) for value in weights),
+    )
+
+
+def _patch_payload_signature(payload: Any) -> tuple[Any, ...]:
+    if hasattr(payload, "weights"):
+        return _adapter_signature(payload)
+    if isinstance(payload, (tuple, list)):
+        values = []
+        for value in payload[:8]:
+            if torch.is_tensor(value):
+                values.append(_tensor_signature(value))
+            elif isinstance(value, (tuple, list)):
+                values.append(
+                    tuple(
+                        _tensor_signature(item)
+                        if torch.is_tensor(item)
+                        else (type(item).__module__, type(item).__name__, repr(item)[:96])
+                        for item in value[:8]
+                    )
+                )
+            else:
+                values.append((type(value).__module__, type(value).__name__, repr(value)[:96]))
+        return (type(payload).__name__, tuple(values))
+    return (type(payload).__module__, type(payload).__name__, repr(payload)[:96])
+
+
+def _patch_metadata_digest(model_patcher: Any) -> str:
+    digest = hashlib.sha256()
+    patches = getattr(model_patcher, "patches", {}) or {}
+    for key in sorted(patches, key=str):
+        digest.update(str(key).encode("utf-8", "backslashreplace"))
+        for patch in patches[key] or ():
+            if not isinstance(patch, (tuple, list)) or len(patch) < 5:
+                signature = (type(patch).__module__, type(patch).__name__, repr(patch)[:96])
+            else:
+                strength, payload, strength_model, offset, function = patch[:5]
+                signature = (
+                    repr(strength),
+                    repr(strength_model),
+                    _patch_payload_signature(payload),
+                    repr(offset)[:96],
+                    None
+                    if function is None
+                    else (type(function).__module__, type(function).__name__, id(function)),
+                )
+            digest.update(repr(signature).encode("utf-8", "backslashreplace"))
+    return digest.hexdigest()
+
+
+def _injection_metadata(
+    model_patcher: Any,
+    inner: Any,
+) -> tuple[tuple[Any, ...], list[_InjectionAdapter]]:
+    descriptors: list[tuple[Any, ...]] = []
+    adapters: list[_InjectionAdapter] = []
+    seen_managers: set[int] = set()
+    seen_hooks: set[int] = set()
+    module_labels: dict[int, str] = {}
+    selected_weights = [
+        (key, _get_base_weight(model_patcher, key))
+        for key in _selected_base_keys(inner)
+    ]
+
+    def hook_target(module: Any, injection_key: str) -> tuple[str, str]:
+        weight = getattr(module, "weight", None)
+        for key, selected in selected_weights:
+            if selected is weight and selected is not None:
+                return key, _key_group(
+                    key,
+                    max(0, len(getattr(inner, "blocks", ())) - 1),
+                )
+        module_identity = id(module)
+        label = module_labels.get(module_identity)
+        if label is None:
+            label = f"@bypass:{injection_key}:module:{len(module_labels)}"
+            module_labels[module_identity] = label
+        return label, "other"
+
+    def collect_hook(candidate: Any, injection_key: str) -> None:
+        adapter = getattr(candidate, "adapter", None)
+        module = getattr(candidate, "module", None)
+        if adapter is None or module is None:
+            return
+        hook_identity = id(candidate)
+        if hook_identity in seen_hooks:
+            return
+        seen_hooks.add(hook_identity)
+        try:
+            strength = float(getattr(candidate, "multiplier", 1.0))
+        except (TypeError, ValueError):
+            strength = 1.0
+        key, group = hook_target(module, injection_key)
+        base_weight = getattr(module, "weight", None)
+        adapters.append(
+            _InjectionAdapter(
+                key=key,
+                adapter=adapter,
+                strength=strength,
+                group=group,
+            )
+        )
+        descriptors.append(
+            (
+                str(injection_key),
+                key,
+                strength,
+                _adapter_signature(adapter),
+                _tensor_signature(base_weight),
+                group,
+            )
+        )
+
+    injections = getattr(model_patcher, "injections", {}) or {}
+    for injection_key in sorted(injections, key=str):
+        entries = injections[injection_key] or ()
+        descriptors.append((str(injection_key), len(entries)))
+        for entry in entries:
+            functions = (getattr(entry, "inject", None), getattr(entry, "eject", None))
+            for function in functions:
+                closure = getattr(function, "__closure__", None) or ()
+                for cell in closure:
+                    try:
+                        captured = cell.cell_contents
+                    except ValueError:
+                        continue
+                    registered = getattr(captured, "adapters", None)
+                    if isinstance(registered, dict):
+                        manager_identity = id(captured)
+                        if manager_identity not in seen_managers:
+                            seen_managers.add(manager_identity)
+                            for key, value in sorted(
+                                registered.items(),
+                                key=lambda item: str(item[0]),
+                            ):
+                                if not isinstance(value, tuple) or len(value) != 2:
+                                    continue
+                                adapter, strength = value
+                                try:
+                                    strength_value = float(strength)
+                                except (TypeError, ValueError):
+                                    strength_value = 1.0
+                                adapters.append(
+                                    _InjectionAdapter(str(key), adapter, strength_value)
+                                )
+                                descriptors.append(
+                                    (
+                                        str(injection_key),
+                                        str(key),
+                                        strength_value,
+                                        _adapter_signature(adapter),
+                                    )
+                                )
+                        continue
+                    if isinstance(captured, (tuple, list)):
+                        for candidate in captured:
+                            collect_hook(candidate, str(injection_key))
+                    else:
+                        collect_hook(captured, str(injection_key))
+    return tuple(descriptors), adapters
+
+
+def _profile_cache_key(model_patcher: Any, inner: Any) -> tuple[Any, ...]:
+    injection_signature, _ = _injection_metadata(model_patcher, inner)
+    return (
+        str(getattr(model_patcher, "clone_base_uuid", "unknown-base")),
+        str(getattr(model_patcher, "patches_uuid", "unknown-patches")),
+        _patch_metadata_digest(model_patcher),
+        _architecture_signature(inner),
+        hashlib.sha256(repr(injection_signature).encode("utf-8", "backslashreplace")).hexdigest(),
+    )
+
+
+def _sample_tensor_rms(value: Any, *, limit: int = _BASE_SAMPLE_ELEMENTS) -> tuple[float | None, int]:
+    if not torch.is_tensor(value) or not value.dtype.is_floating_point or value.device.type == "meta":
+        return None, 0
+    detached = value.detach()
+    if not detached.is_contiguous() or detached.numel() == 0:
+        return None, 0
+    flat = detached.view(-1)
+    stride = max(1, flat.numel() // max(1, int(limit)))
+    sample = flat[::stride][:limit]
+    try:
+        rms = float(torch.sqrt(torch.mean(sample.to(torch.float32).square())).item())
+    except (RuntimeError, TypeError):
+        return None, 0
+    if not math.isfinite(rms):
+        return None, 0
+    return rms, int(sample.numel())
+
+
+def _operator_gain(weight: Any) -> tuple[float | None, int]:
+    rms, samples = _sample_tensor_rms(weight)
+    if rms is None or not torch.is_tensor(weight) or weight.ndim < 2:
+        return None, samples
+    in_features = math.prod(int(v) for v in weight.shape[1:])
+    return rms * math.sqrt(max(1, in_features)), samples
+
+
+def _head_metric(
+    weight: Any,
+    hidden_size: int,
+) -> tuple[torch.Tensor | None, torch.Tensor | None, int]:
+    if (
+        not torch.is_tensor(weight)
+        or not weight.dtype.is_floating_point
+        or weight.device.type == "meta"
+        or weight.ndim != 2
+        or int(weight.shape[1]) != int(hidden_size)
+    ):
+        return None, None, 0
+    try:
+        operator = (
+            weight.detach()
+            .to(device="cpu", dtype=torch.float32, copy=True)
+            .contiguous()
+        )
+        diagonal = operator.square().sum(dim=0)
+        mean = diagonal.mean()
+        if not bool(torch.isfinite(diagonal).all().item()) or float(mean.item()) <= 0.0:
+            return None, None, operator.numel() * operator.element_size()
+        normalized = (diagonal / mean).contiguous()
+        return (
+            operator,
+            normalized,
+            operator.numel() * operator.element_size(),
+        )
+    except (RuntimeError, TypeError):
+        return None, None, 0
+
+
+def _get_base_weight(model_patcher: Any, key: str) -> Any | None:
+    backup = (getattr(model_patcher, "backup", {}) or {}).get(key)
+    if backup is not None:
+        return getattr(backup, "weight", None)
+    try:
+        return model_patcher.get_model_object(key)
+    except (AttributeError, KeyError, IndexError, RuntimeError, TypeError):
+        return None
+
+
+def _selected_base_keys(inner: Any) -> tuple[str, ...]:
+    last = max(0, len(getattr(inner, "blocks", ())) - 1)
+    prefix = f"diffusion_model.blocks.{last}"
+    return (
+        f"{prefix}.attn.qkv_proj.weight",
+        f"{prefix}.attn.out_proj.weight",
+        f"{prefix}.mlp.fc1.weight",
+        f"{prefix}.mlp.fc2.weight",
+        f"{prefix}.adaln_proj.linear.weight",
+        "diffusion_model.final_layer.adaln_proj.linear.weight",
+        "diffusion_model.final_layer.video_out.weight",
+        "diffusion_model.final_layer.audio_out.weight",
+    )
+
+
+def _key_group(key: str, last_block_index: int) -> str:
+    final_prefix = f"diffusion_model.blocks.{last_block_index}."
+    if key.startswith(final_prefix):
+        return "final_block"
+    if key.startswith("diffusion_model.final_layer."):
+        return "final_head"
+    if key.startswith("diffusion_model.blocks."):
+        return "transformer"
+    if "time_embed" in key or "adaln" in key:
+        return "conditioning"
+    return "other"
+
+
+def _classic_lora_factors(adapter: Any, strength: float) -> tuple[torch.Tensor, torch.Tensor] | None:
+    if str(getattr(adapter, "name", "")).lower() != "lora":
+        return None
+    weights = getattr(adapter, "weights", None)
+    if not isinstance(weights, (tuple, list)) or len(weights) < 6:
+        return None
+    up, down, alpha, mid, dora_scale, reshape = weights[:6]
+    if (
+        not torch.is_tensor(up)
+        or not torch.is_tensor(down)
+        or mid is not None
+        or dora_scale is not None
+        or reshape is not None
+    ):
+        return None
+    try:
+        up_2d = up.detach().flatten(start_dim=1)
+        down_2d = down.detach().flatten(start_dim=1)
+    except RuntimeError:
+        return None
+    if up_2d.ndim != 2 or down_2d.ndim != 2 or up_2d.shape[1] != down_2d.shape[0]:
+        return None
+    scale = float(strength)
+    if alpha is not None:
+        scale *= float(alpha) / max(1, int(down_2d.shape[0]))
+    return up_2d, down_2d * scale
+
+
+def _combined_low_rank_norm(
+    factors: list[tuple[torch.Tensor, torch.Tensor]],
+) -> tuple[float | None, int]:
+    if not factors:
+        return None, 0
+    device = factors[0][0].device
+    if any(up.device != device or down.device != device for up, down in factors):
+        return None, 0
+    factor_elements = sum(up.numel() + down.numel() for up, down in factors)
+    combined_rank = sum(int(up.shape[1]) for up, _ in factors)
+    if (
+        factor_elements > _EXACT_LORA_FACTOR_ELEMENTS
+        or combined_rank > _EXACT_LORA_COMBINED_RANK
+    ):
+        bound = 0.0
+        for up, down in factors:
+            up_rms, _ = _sample_tensor_rms(up)
+            down_rms, _ = _sample_tensor_rms(down)
+            if up_rms is None or down_rms is None:
+                return None, factor_elements
+            bound += (
+                up_rms
+                * math.sqrt(up.numel())
+                * down_rms
+                * math.sqrt(down.numel())
+            )
+        return bound, factor_elements
+    try:
+        up = torch.cat([value.to(torch.float32) for value, _ in factors], dim=1)
+        down = torch.cat([value.to(torch.float32) for _, value in factors], dim=0)
+        gram_up = up.transpose(0, 1) @ up
+        gram_down = down @ down.transpose(0, 1)
+        squared = torch.sum(gram_up * gram_down.transpose(0, 1)).clamp_min(0.0)
+        norm = float(torch.sqrt(squared).item())
+    except (RuntimeError, TypeError):
+        return None, factor_elements
+    return (norm if math.isfinite(norm) else None), factor_elements
+
+
+def _sample_diff_norm(value: Any) -> tuple[float | None, int]:
+    if not torch.is_tensor(value):
+        return None, 0
+    rms, samples = _sample_tensor_rms(value)
+    if rms is None:
+        return None, samples
+    return rms * math.sqrt(max(1, value.numel())), samples
+
+
+def _build_profile(model_patcher: Any, inner: Any, cache_key: tuple[Any, ...]) -> ModelForecastabilityProfile:
+    started = time.perf_counter()
+    base_gains: dict[str, float] = {}
+    sampled_base_tensors = 0
+    sampled_values = 0
+    for key in _selected_base_keys(inner):
+        weight = _get_base_weight(model_patcher, key)
+        gain, samples = _operator_gain(weight)
+        sampled_values += samples
+        if gain is not None:
+            base_gains[key] = gain
+            sampled_base_tensors += 1
+
+    gain_values = sorted(value for value in base_gains.values() if value > 0.0)
+    base_gain = gain_values[len(gain_values) // 2] if gain_values else 1.0
+    audio_gain = base_gains.get("diffusion_model.final_layer.audio_out.weight", base_gain)
+    video_gain = base_gains.get("diffusion_model.final_layer.video_out.weight", base_gain)
+    stream_mean = max((audio_gain + video_gain) * 0.5, 1e-12)
+    audio_sensitivity = _clamp(audio_gain / stream_mean, 0.25, 2.0)
+    video_sensitivity = _clamp(video_gain / stream_mean, 0.25, 2.0)
+    hidden_size = int(getattr(inner, "hidden_size", 0))
+    audio_head_weight, audio_head_gram, audio_head_workspace = _head_metric(
+        _get_base_weight(model_patcher, "diffusion_model.final_layer.audio_out.weight"),
+        hidden_size,
+    )
+    video_head_weight, video_head_gram, video_head_workspace = _head_metric(
+        _get_base_weight(model_patcher, "diffusion_model.final_layer.video_out.weight"),
+        hidden_size,
+    )
+
+    patches = getattr(model_patcher, "patches", {}) or {}
+    _, injection_adapters = _injection_metadata(model_patcher, inner)
+    last_block_index = max(0, len(getattr(inner, "blocks", ())) - 1)
+    active_patch_count = 0
+    active_patch_keys: set[str] = set()
+    recognized_lora_count = 0
+    unknown_patch_count = 0
+    patch_values: list[tuple[float, float]] = []
+    final_values: list[tuple[float, float]] = []
+    transient_workspace_bytes = max(
+        sampled_values * 4,
+        audio_head_workspace,
+        video_head_workspace,
+    )
+
+    for key in sorted(patches, key=str):
+        patch_list = patches[key] or ()
+        factors: list[tuple[torch.Tensor, torch.Tensor]] = []
+        fallback_norm = 0.0
+        fallback_known = False
+        for patch in patch_list:
+            if not isinstance(patch, (tuple, list)) or len(patch) < 5:
+                active_patch_count += 1
+                active_patch_keys.add(str(key))
+                unknown_patch_count += 1
+                continue
+            strength, payload, strength_model, offset, function = patch[:5]
+            numeric_strengths = True
+            try:
+                strength_value = float(strength)
+                strength_model_value = float(strength_model)
+            except (TypeError, ValueError):
+                strength_value = 1.0
+                strength_model_value = 1.0
+                numeric_strengths = False
+            if strength_value == 0.0:
+                continue
+            active_patch_count += 1
+            active_patch_keys.add(str(key))
+            precise = numeric_strengths
+            if offset is not None or function is not None or not math.isclose(strength_model_value, 1.0):
+                precise = False
+            lora = _classic_lora_factors(payload, strength_value)
+            if lora is not None and precise:
+                factors.append(lora)
+                recognized_lora_count += 1
+                transient_workspace_bytes = max(
+                    transient_workspace_bytes,
+                    int(lora[0].shape[1] ** 2) * 8,
+                )
+                continue
+            patch_type = payload[0] if isinstance(payload, tuple) and payload else None
+            patch_data = payload[1] if isinstance(payload, tuple) and len(payload) > 1 else None
+            if patch_type == "diff" and isinstance(patch_data, tuple) and patch_data:
+                norm, _ = _sample_diff_norm(patch_data[0])
+                if norm is not None:
+                    fallback_norm += abs(strength_value) * norm
+                    fallback_known = True
+                    continue
+            unknown_patch_count += 1
+
+        low_rank_norm, factor_elements = _combined_low_rank_norm(factors)
+        transient_workspace_bytes = max(
+            transient_workspace_bytes,
+            min(factor_elements, _EXACT_LORA_FACTOR_ELEMENTS) * 4,
+        )
+        patch_norm = (low_rank_norm or 0.0) + fallback_norm
+        if patch_norm <= 0.0 and not fallback_known and not factors:
+            continue
+        base_weight = _get_base_weight(model_patcher, str(key))
+        base_rms, samples = _sample_tensor_rms(base_weight)
+        sampled_values += samples
+        if base_rms is not None and torch.is_tensor(base_weight):
+            denominator = base_rms * math.sqrt(max(1, base_weight.numel()))
+        else:
+            shape_numel = math.prod(int(v) for v in factors[0][0].shape[:1] + factors[0][1].shape[1:]) if factors else 1
+            denominator = max(base_gain * math.sqrt(max(1, shape_numel)), 1e-12)
+        relative = patch_norm / max(denominator, 1e-12)
+        group = _key_group(str(key), last_block_index)
+        group_weight = {
+            "final_head": 1.20,
+            "final_block": 1.00,
+            "transformer": 0.45,
+            "conditioning": 0.35,
+            "other": 0.25,
+        }[group]
+        patch_values.append((relative, group_weight))
+        if group in {"final_head", "final_block"}:
+            final_values.append((relative, group_weight))
+
+    for injection_adapter in injection_adapters:
+        key = injection_adapter.key
+        adapter = injection_adapter.adapter
+        strength = injection_adapter.strength
+        if strength == 0.0:
+            continue
+        active_patch_count += 1
+        active_patch_keys.add(key)
+        lora = _classic_lora_factors(adapter, strength)
+        if lora is None:
+            unknown_patch_count += 1
+            continue
+        norm, factor_elements = _combined_low_rank_norm([lora])
+        if norm is None:
+            unknown_patch_count += 1
+            continue
+        recognized_lora_count += 1
+        group = injection_adapter.group or _key_group(key, last_block_index)
+        group_weight = 1.0 if group == "final_block" else 1.2 if group == "final_head" else 0.45
+        up, down = lora
+        denominator = max(
+            base_gain * math.sqrt(max(1, up.shape[0] * down.shape[1])),
+            1e-12,
+        )
+        relative = norm / denominator
+        patch_values.append((relative, group_weight))
+        if group in {"final_head", "final_block"}:
+            final_values.append((relative, group_weight))
+        transient_workspace_bytes = max(
+            transient_workspace_bytes,
+            min(factor_elements, _EXACT_LORA_FACTOR_ELEMENTS) * 4,
+        )
+
+    def aggregate(values: list[tuple[float, float]]) -> float:
+        if not values:
+            return 0.0
+        numerator = sum(weight * math.log1p(max(0.0, value)) for value, weight in values)
+        denominator = sum(weight for _, weight in values)
+        return math.expm1(numerator / max(denominator, 1e-12))
+
+    patch_perturbation = aggregate(patch_values)
+    final_perturbation = aggregate(final_values)
+    base_sensitivity = _clamp(math.log1p(max(base_gain, 0.0)) / math.log(8.0))
+    patch_risk = _clamp(math.log1p(8.0 * patch_perturbation) / math.log(9.0))
+    final_risk = _clamp(math.log1p(8.0 * final_perturbation) / math.log(9.0))
+    aggregate_sensitivity = _clamp(0.35 * base_sensitivity + 0.35 * patch_risk + 0.30 * final_risk)
+    coverage = recognized_lora_count / max(1, active_patch_count)
+    base_coverage = sampled_base_tensors / max(1, len(_selected_base_keys(inner)))
+    profile_confidence = _clamp(0.55 * base_coverage + 0.45 * coverage if active_patch_count else base_coverage)
+    unknown_risk = _clamp(unknown_patch_count / max(1, active_patch_count))
+    forecast_risk_prior = _clamp(
+        profile_confidence * aggregate_sensitivity
+        + (1.0 - profile_confidence) * (0.35 + 0.35 * unknown_risk)
+    )
+    patch_identity = str(getattr(model_patcher, "patches_uuid", "unknown-patches"))
+    base_identity = f"{_architecture_signature(inner)[0]}.{_architecture_signature(inner)[1]}:{getattr(model_patcher, 'clone_base_uuid', 'unknown-base')}"
+    elapsed = time.perf_counter() - started
+    return ModelForecastabilityProfile(
+        cache_key=cache_key,
+        base_model_identity=base_identity,
+        patch_identity=patch_identity,
+        active_patch_count=active_patch_count,
+        active_patch_keys=len(active_patch_keys),
+        recognized_lora_count=recognized_lora_count,
+        unknown_patch_count=unknown_patch_count,
+        sampled_base_tensors=sampled_base_tensors,
+        profile_confidence=profile_confidence,
+        aggregate_sensitivity=aggregate_sensitivity,
+        patch_perturbation=patch_perturbation,
+        final_block_perturbation=final_perturbation,
+        audio_sensitivity=audio_sensitivity,
+        video_sensitivity=video_sensitivity,
+        audio_head_weight=audio_head_weight,
+        video_head_weight=video_head_weight,
+        audio_head_gram_diagonal=audio_head_gram,
+        video_head_gram_diagonal=video_head_gram,
+        forecast_risk_prior=forecast_risk_prior,
+        build_seconds=elapsed,
+        estimated_bytes=(
+            max(512, min(4096, 512 + 16 * len(cache_key)))
+            + sum(
+                value.numel() * value.element_size()
+                for value in (
+                    audio_head_weight,
+                    video_head_weight,
+                    audio_head_gram,
+                    video_head_gram,
+                )
+                if value is not None
+            )
+        ),
+        transient_workspace_bytes=int(transient_workspace_bytes),
+    )
+
+
+def get_model_forecastability_profile(model_patcher: Any) -> ProfileLookup:
+    started = time.perf_counter()
+    inner = _locate_inner(model_patcher)
+    if inner is None:
+        raise TypeError("model patcher does not contain a diffusion model")
+    cache_key = _profile_cache_key(model_patcher, inner)
+    with _PROFILE_CACHE_LOCK:
+        cached = _PROFILE_CACHE.get(cache_key)
+        if cached is not None:
+            _PROFILE_CACHE.move_to_end(cache_key)
+            return ProfileLookup(cached, True, time.perf_counter() - started)
+        profile = _build_profile(model_patcher, inner, cache_key)
+        _PROFILE_CACHE[cache_key] = profile
+        _PROFILE_CACHE.move_to_end(cache_key)
+        while len(_PROFILE_CACHE) > _PROFILE_CACHE_LIMIT:
+            _PROFILE_CACHE.popitem(last=False)
+    return ProfileLookup(profile, False, time.perf_counter() - started)
+
+
+class ModelAwareController:
+    def __init__(self, mode: str, risk_threshold: float) -> None:
+        if mode not in {"off", "schedule", "schedule_confidence", "full"}:
+            raise ValueError("invalid model-aware mode")
+        self.mode = mode
+        self.risk_threshold = float(risk_threshold)
+        self.profile: ModelForecastabilityProfile | None = None
+        self.reset()
+
+    def reset(self) -> None:
+        self._head_device_cache: dict[
+            tuple[str, str],
+            tuple[torch.Tensor, torch.Tensor],
+        ] = {}
+        self.anchor_count = 0
+        self.forecast_ratio_ewma = 1.0
+        self.curvature_ratio_ewma = 0.0
+        self.fit_condition_ewma = 1.0
+        self.audio_projection_ewma = 0.0
+        self.video_projection_ewma = 0.0
+        self.model_corrected_ratio_sum = 0.0
+        self.generic_corrected_ratio_sum = 0.0
+        self.ablation_count = 0
+        self.stream_evidence_count = 0
+        for stream in ("audio", "video"):
+            setattr(self, f"{stream}_diagonal_projection_ewma", 0.0)
+            setattr(self, f"{stream}_model_projection_ewma", 0.0)
+            setattr(self, f"{stream}_model_trust", 0.5)
+            setattr(self, f"{stream}_subspace_model_trust", 0.5)
+            setattr(self, f"{stream}_diagonal_comparison_count", 0)
+            setattr(self, f"{stream}_diagonal_candidate_win_count", 0)
+            setattr(self, f"{stream}_diagonal_candidate_loss_count", 0)
+            setattr(self, f"{stream}_model_comparison_count", 0)
+            setattr(self, f"{stream}_model_candidate_win_count", 0)
+            setattr(self, f"{stream}_model_candidate_loss_count", 0)
+            setattr(self, f"{stream}_forecast_ratio_sum", 0.0)
+            setattr(self, f"{stream}_forecast_ratio_max", 0.0)
+            setattr(self, f"{stream}_model_corrected_ratio_sum", 0.0)
+            setattr(self, f"{stream}_generic_corrected_ratio_sum", 0.0)
+            setattr(self, f"{stream}_diagonal_candidate_ratio_sum", 0.0)
+            setattr(self, f"{stream}_model_candidate_ratio_sum", 0.0)
+            setattr(self, f"{stream}_model_corrected_head_ratio_sum", 0.0)
+            setattr(self, f"{stream}_generic_corrected_head_ratio_sum", 0.0)
+            setattr(self, f"{stream}_diagonal_candidate_head_ratio_sum", 0.0)
+            setattr(self, f"{stream}_model_candidate_head_ratio_sum", 0.0)
+            setattr(self, f"{stream}_diagonal_bound_active_count", 0)
+            setattr(self, f"{stream}_model_bound_active_count", 0)
+            setattr(self, f"{stream}_generic_bound_active_count", 0)
+            setattr(self, f"{stream}_gain_delta_pre_abs_sum", 0.0)
+            setattr(self, f"{stream}_gain_delta_pre_abs_max", 0.0)
+            setattr(self, f"{stream}_gain_delta_post_abs_sum", 0.0)
+            setattr(self, f"{stream}_gain_delta_post_abs_max", 0.0)
+            setattr(self, f"{stream}_gain_delta_applied_abs_sum", 0.0)
+            setattr(self, f"{stream}_gain_delta_applied_abs_max", 0.0)
+            setattr(self, f"{stream}_gain_delta_exact_diagonal_abs_sum", 0.0)
+            setattr(self, f"{stream}_gain_delta_exact_diagonal_abs_max", 0.0)
+            setattr(self, f"{stream}_subspace_evidence_count", 0)
+            setattr(self, f"{stream}_subspace_fallback_count", 0)
+            setattr(self, f"{stream}_subspace_condition_fallback_count", 0)
+            setattr(self, f"{stream}_generic_2d_g0_ewma", 0.0)
+            setattr(self, f"{stream}_generic_2d_g1_ewma", 0.0)
+            setattr(self, f"{stream}_exact_2d_g0_ewma", 0.0)
+            setattr(self, f"{stream}_exact_2d_g1_ewma", 0.0)
+            setattr(self, f"{stream}_direction_g01_ewma", 0.0)
+            setattr(self, f"{stream}_direction_g11_ewma", 0.0)
+            setattr(self, f"{stream}_generic_2d_condition_max", 0.0)
+            setattr(self, f"{stream}_exact_2d_condition_max", 0.0)
+            setattr(self, f"{stream}_subspace_regularization_max", 0.0)
+            setattr(self, f"{stream}_generic_2d_ratio_sum", 0.0)
+            setattr(self, f"{stream}_exact_2d_ratio_sum", 0.0)
+            setattr(self, f"{stream}_applied_2d_ratio_sum", 0.0)
+            setattr(self, f"{stream}_generic_2d_head_ratio_sum", 0.0)
+            setattr(self, f"{stream}_exact_2d_head_ratio_sum", 0.0)
+            setattr(self, f"{stream}_applied_2d_head_ratio_sum", 0.0)
+            for comparison in (
+                "generic_2d_vs_scalar",
+                "exact_2d_vs_exact_scalar",
+                "exact_2d_vs_generic_2d",
+                "exact_2d_vs_generic_scalar",
+            ):
+                setattr(self, f"{stream}_{comparison}_comparison_count", 0)
+                setattr(self, f"{stream}_{comparison}_win_count", 0)
+                setattr(self, f"{stream}_{comparison}_loss_count", 0)
+                setattr(self, f"{stream}_{comparison}_advantage_sum", 0.0)
+                setattr(self, f"{stream}_{comparison}_advantage_max", 0.0)
+
+    def set_profile(self, profile: ModelForecastabilityProfile | None) -> None:
+        self.profile = profile
+        self._head_device_cache.clear()
+
+    @property
+    def materialized_head_bytes(self) -> int:
+        return sum(
+            tensor.numel() * tensor.element_size()
+            for operator, diagonal in self._head_device_cache.values()
+            for tensor in (operator, diagonal)
+            if tensor.device.type != "cpu"
+        )
+
+    def head_metric_tensors(
+        self,
+        stream: str,
+        device: torch.device,
+    ) -> tuple[torch.Tensor | None, torch.Tensor | None, float]:
+        if stream not in {"audio", "video"}:
+            raise ValueError("stream must be 'audio' or 'video'")
+        if self.profile is None:
+            return None, None, 0.0
+        operator_source = getattr(self.profile, f"{stream}_head_weight")
+        diagonal_source = getattr(self.profile, f"{stream}_head_gram_diagonal")
+        if operator_source is None or diagonal_source is None:
+            return None, None, 0.0
+        key = (stream, str(device))
+        cached = self._head_device_cache.get(key)
+        if cached is not None:
+            return cached[0], cached[1], 0.0
+        started = time.perf_counter()
+        copy = device.type != "cpu"
+        operator = operator_source.to(
+            device=device,
+            dtype=torch.float32,
+            copy=copy,
+        ).contiguous()
+        diagonal = diagonal_source.to(
+            device=device,
+            dtype=torch.float32,
+            copy=copy,
+        ).contiguous()
+        elapsed = time.perf_counter() - started
+        self._head_device_cache[key] = (operator, diagonal)
+        return operator, diagonal, elapsed
+
+    def channel_sensitivity(
+        self,
+        stream: str,
+        device: torch.device,
+    ) -> tuple[torch.Tensor | None, float]:
+        _, diagonal, elapsed = self.head_metric_tensors(stream, device)
+        return diagonal, elapsed
+
+    def snapshot(self) -> dict[str, float | int]:
+        state = {
+            "anchor_count": self.anchor_count,
+            "forecast_ratio_ewma": self.forecast_ratio_ewma,
+            "curvature_ratio_ewma": self.curvature_ratio_ewma,
+            "fit_condition_ewma": self.fit_condition_ewma,
+            "audio_projection_ewma": self.audio_projection_ewma,
+            "video_projection_ewma": self.video_projection_ewma,
+            "model_corrected_ratio_sum": self.model_corrected_ratio_sum,
+            "generic_corrected_ratio_sum": self.generic_corrected_ratio_sum,
+            "ablation_count": self.ablation_count,
+            "stream_evidence_count": self.stream_evidence_count,
+        }
+        for stream in ("audio", "video"):
+            state[f"{stream}_diagonal_projection_ewma"] = getattr(
+                self, f"{stream}_diagonal_projection_ewma"
+            )
+            state[f"{stream}_model_projection_ewma"] = getattr(
+                self, f"{stream}_model_projection_ewma"
+            )
+            state[f"{stream}_model_trust"] = getattr(self, f"{stream}_model_trust")
+            state[f"{stream}_subspace_model_trust"] = getattr(
+                self, f"{stream}_subspace_model_trust"
+            )
+            for suffix in (
+                "forecast_ratio_sum",
+                "forecast_ratio_max",
+                "model_corrected_ratio_sum",
+                "generic_corrected_ratio_sum",
+                "diagonal_candidate_ratio_sum",
+                "model_candidate_ratio_sum",
+                "model_corrected_head_ratio_sum",
+                "generic_corrected_head_ratio_sum",
+                "diagonal_candidate_head_ratio_sum",
+                "model_candidate_head_ratio_sum",
+                "diagonal_bound_active_count",
+                "model_bound_active_count",
+                "generic_bound_active_count",
+                "gain_delta_pre_abs_sum",
+                "gain_delta_pre_abs_max",
+                "gain_delta_post_abs_sum",
+                "gain_delta_post_abs_max",
+                "gain_delta_applied_abs_sum",
+                "gain_delta_applied_abs_max",
+                "gain_delta_exact_diagonal_abs_sum",
+                "gain_delta_exact_diagonal_abs_max",
+                "generic_2d_g0_ewma",
+                "generic_2d_g1_ewma",
+                "exact_2d_g0_ewma",
+                "exact_2d_g1_ewma",
+                "direction_g01_ewma",
+                "direction_g11_ewma",
+                "generic_2d_condition_max",
+                "exact_2d_condition_max",
+                "subspace_regularization_max",
+                "generic_2d_ratio_sum",
+                "exact_2d_ratio_sum",
+                "applied_2d_ratio_sum",
+                "generic_2d_head_ratio_sum",
+                "exact_2d_head_ratio_sum",
+                "applied_2d_head_ratio_sum",
+            ):
+                key = f"{stream}_{suffix}"
+                state[key] = getattr(self, key)
+            for suffix in (
+                "diagonal_comparison_count",
+                "diagonal_candidate_win_count",
+                "diagonal_candidate_loss_count",
+                "model_comparison_count",
+                "model_candidate_win_count",
+                "model_candidate_loss_count",
+                "subspace_evidence_count",
+                "subspace_fallback_count",
+                "subspace_condition_fallback_count",
+            ):
+                key = f"{stream}_{suffix}"
+                state[key] = getattr(self, key)
+            for comparison in (
+                "generic_2d_vs_scalar",
+                "exact_2d_vs_exact_scalar",
+                "exact_2d_vs_generic_2d",
+                "exact_2d_vs_generic_scalar",
+            ):
+                for suffix in (
+                    "comparison_count",
+                    "win_count",
+                    "loss_count",
+                    "advantage_sum",
+                    "advantage_max",
+                ):
+                    key = f"{stream}_{comparison}_{suffix}"
+                    state[key] = getattr(self, key)
+        return state
+
+    def restore(self, state: dict[str, float | int]) -> None:
+        self.anchor_count = int(state["anchor_count"])
+        self.forecast_ratio_ewma = float(state["forecast_ratio_ewma"])
+        self.curvature_ratio_ewma = float(state["curvature_ratio_ewma"])
+        self.fit_condition_ewma = float(state["fit_condition_ewma"])
+        self.audio_projection_ewma = float(state["audio_projection_ewma"])
+        self.video_projection_ewma = float(state["video_projection_ewma"])
+        self.model_corrected_ratio_sum = float(state["model_corrected_ratio_sum"])
+        self.generic_corrected_ratio_sum = float(state["generic_corrected_ratio_sum"])
+        self.ablation_count = int(state["ablation_count"])
+        self.stream_evidence_count = int(state["stream_evidence_count"])
+        for stream in ("audio", "video"):
+            setattr(
+                self,
+                f"{stream}_diagonal_projection_ewma",
+                float(state[f"{stream}_diagonal_projection_ewma"]),
+            )
+            setattr(
+                self,
+                f"{stream}_model_projection_ewma",
+                float(state[f"{stream}_model_projection_ewma"]),
+            )
+            setattr(
+                self,
+                f"{stream}_model_trust",
+                float(state[f"{stream}_model_trust"]),
+            )
+            setattr(
+                self,
+                f"{stream}_subspace_model_trust",
+                float(state[f"{stream}_subspace_model_trust"]),
+            )
+            for suffix in (
+                "forecast_ratio_sum",
+                "forecast_ratio_max",
+                "model_corrected_ratio_sum",
+                "generic_corrected_ratio_sum",
+                "diagonal_candidate_ratio_sum",
+                "model_candidate_ratio_sum",
+                "model_corrected_head_ratio_sum",
+                "generic_corrected_head_ratio_sum",
+                "diagonal_candidate_head_ratio_sum",
+                "model_candidate_head_ratio_sum",
+                "gain_delta_pre_abs_sum",
+                "gain_delta_pre_abs_max",
+                "gain_delta_post_abs_sum",
+                "gain_delta_post_abs_max",
+                "gain_delta_applied_abs_sum",
+                "gain_delta_applied_abs_max",
+                "gain_delta_exact_diagonal_abs_sum",
+                "gain_delta_exact_diagonal_abs_max",
+                "generic_2d_g0_ewma",
+                "generic_2d_g1_ewma",
+                "exact_2d_g0_ewma",
+                "exact_2d_g1_ewma",
+                "direction_g01_ewma",
+                "direction_g11_ewma",
+                "generic_2d_condition_max",
+                "exact_2d_condition_max",
+                "subspace_regularization_max",
+                "generic_2d_ratio_sum",
+                "exact_2d_ratio_sum",
+                "applied_2d_ratio_sum",
+                "generic_2d_head_ratio_sum",
+                "exact_2d_head_ratio_sum",
+                "applied_2d_head_ratio_sum",
+            ):
+                key = f"{stream}_{suffix}"
+                setattr(self, key, float(state[key]))
+            for suffix in (
+                "diagonal_bound_active_count",
+                "model_bound_active_count",
+                "generic_bound_active_count",
+            ):
+                key = f"{stream}_{suffix}"
+                setattr(self, key, int(state[key]))
+            for suffix in (
+                "diagonal_comparison_count",
+                "diagonal_candidate_win_count",
+                "diagonal_candidate_loss_count",
+                "model_comparison_count",
+                "model_candidate_win_count",
+                "model_candidate_loss_count",
+                "subspace_evidence_count",
+                "subspace_fallback_count",
+                "subspace_condition_fallback_count",
+            ):
+                key = f"{stream}_{suffix}"
+                setattr(self, key, int(state[key]))
+            for comparison in (
+                "generic_2d_vs_scalar",
+                "exact_2d_vs_exact_scalar",
+                "exact_2d_vs_generic_2d",
+                "exact_2d_vs_generic_scalar",
+            ):
+                for suffix in ("comparison_count", "win_count", "loss_count"):
+                    key = f"{stream}_{comparison}_{suffix}"
+                    setattr(self, key, int(state[key]))
+                for suffix in ("advantage_sum", "advantage_max"):
+                    key = f"{stream}_{comparison}_{suffix}"
+                    setattr(self, key, float(state[key]))
+
+    def observe_anchor(
+        self,
+        evidence: AnchorEvidence,
+        decision: ModelAwareForecastDecision | None = None,
+    ) -> None:
+        def record_subspace_comparison(
+            stream: str,
+            comparison: str,
+            baseline: float,
+            candidate: float,
+        ) -> float | None:
+            if baseline <= 0.0 or candidate <= 0.0:
+                return None
+            relative_advantage = (baseline - candidate) / max(baseline, 1e-12)
+            prefix = f"{stream}_{comparison}"
+            setattr(
+                self,
+                f"{prefix}_comparison_count",
+                getattr(self, f"{prefix}_comparison_count") + 1,
+            )
+            setattr(
+                self,
+                f"{prefix}_advantage_sum",
+                getattr(self, f"{prefix}_advantage_sum") + relative_advantage,
+            )
+            setattr(
+                self,
+                f"{prefix}_advantage_max",
+                max(getattr(self, f"{prefix}_advantage_max"), abs(relative_advantage)),
+            )
+            if candidate < baseline:
+                setattr(
+                    self,
+                    f"{prefix}_win_count",
+                    getattr(self, f"{prefix}_win_count") + 1,
+                )
+            elif candidate > baseline:
+                setattr(
+                    self,
+                    f"{prefix}_loss_count",
+                    getattr(self, f"{prefix}_loss_count") + 1,
+                )
+            return relative_advantage
+
+        stream_records = (
+            (
+                "audio",
+                evidence.audio,
+                None if decision is None else decision.audio_correction_telemetry,
+                None if decision is None else decision.audio_subspace_telemetry,
+            ),
+            (
+                "video",
+                evidence.video,
+                None if decision is None else decision.video_correction_telemetry,
+                None if decision is None else decision.video_subspace_telemetry,
+            ),
+        )
+        for _, stream_evidence, correction, subspace in stream_records:
+            values = (
+                stream_evidence.forecast_ratio,
+                stream_evidence.curvature_ratio,
+                stream_evidence.residual_projection,
+                stream_evidence.diagonal_projection,
+                stream_evidence.model_projection,
+                stream_evidence.model_corrected_ratio,
+                stream_evidence.generic_corrected_ratio,
+                stream_evidence.diagonal_candidate_ratio,
+                stream_evidence.model_candidate_ratio,
+                stream_evidence.model_corrected_head_ratio,
+                stream_evidence.generic_corrected_head_ratio,
+                stream_evidence.diagonal_candidate_head_ratio,
+                stream_evidence.model_candidate_head_ratio,
+                stream_evidence.generic_2d_ratio,
+                stream_evidence.exact_2d_ratio,
+                stream_evidence.applied_2d_ratio,
+                stream_evidence.generic_2d_head_ratio,
+                stream_evidence.exact_2d_head_ratio,
+                stream_evidence.applied_2d_head_ratio,
+                *stream_evidence.generic_2d_coefficients,
+                *stream_evidence.exact_2d_coefficients,
+                stream_evidence.generic_2d_condition,
+                stream_evidence.exact_2d_condition,
+                stream_evidence.subspace_regularization,
+                *stream_evidence.direction_gram,
+                *stream_evidence.application_direction_gram,
+            )
+            if not all(math.isfinite(float(value)) for value in values):
+                raise ValueError("per-stream model-aware evidence is nonfinite")
+            if correction is not None and not all(
+                math.isfinite(value)
+                for value in (
+                    correction.residual_projection,
+                    correction.diagonal_projection,
+                    correction.model_projection,
+                    correction.raw_generic_gain,
+                    correction.raw_diagonal_gain,
+                    correction.raw_model_gain,
+                    correction.generic_gain,
+                    correction.diagonal_candidate_gain,
+                    correction.model_candidate_gain,
+                    correction.model_gain,
+                    correction.model_trust,
+                )
+            ):
+                raise ValueError("model-aware correction telemetry is nonfinite")
+            if subspace is not None and not all(
+                math.isfinite(value)
+                for value in (
+                    *subspace.raw_generic_coefficients,
+                    *subspace.raw_exact_coefficients,
+                    *subspace.generic_coefficients,
+                    *subspace.exact_coefficients,
+                    *subspace.applied_coefficients,
+                    subspace.generic_condition,
+                    subspace.exact_condition,
+                    subspace.regularization,
+                    subspace.generic_raw_norm_ratio,
+                    subspace.exact_raw_norm_ratio,
+                    subspace.applied_raw_norm_ratio,
+                    subspace.generic_bound_scale,
+                    subspace.exact_bound_scale,
+                    subspace.applied_bound_scale,
+                    subspace.generic_bounded_norm_ratio,
+                    subspace.exact_bounded_norm_ratio,
+                    subspace.applied_bounded_norm_ratio,
+                    subspace.model_trust,
+                )
+            ):
+                raise ValueError("model-aware subspace correction telemetry is nonfinite")
+        alpha = 0.5 if self.anchor_count < 2 else 0.3
+        self.forecast_ratio_ewma = (1.0 - alpha) * self.forecast_ratio_ewma + alpha * _clamp(
+            evidence.forecast_ratio, 0.0, 8.0
+        )
+        self.curvature_ratio_ewma = (1.0 - alpha) * self.curvature_ratio_ewma + alpha * _clamp(
+            evidence.curvature_ratio, 0.0, 8.0
+        )
+        self.fit_condition_ewma = (1.0 - alpha) * self.fit_condition_ewma + alpha * max(
+            1.0, min(float(evidence.fit_condition), 1e8)
+        )
+        self.audio_projection_ewma = (
+            (1.0 - alpha) * self.audio_projection_ewma
+            + alpha * _soft_limit(evidence.audio_projection, 2.0)
+        )
+        self.video_projection_ewma = (
+            (1.0 - alpha) * self.video_projection_ewma
+            + alpha * _soft_limit(evidence.video_projection, 2.0)
+        )
+        if math.isfinite(evidence.model_corrected_ratio) and math.isfinite(evidence.generic_corrected_ratio):
+            self.model_corrected_ratio_sum += evidence.model_corrected_ratio
+            self.generic_corrected_ratio_sum += evidence.generic_corrected_ratio
+            self.ablation_count += 1
+        for stream, stream_evidence, correction, subspace in stream_records:
+            forecast_ratio = float(stream_evidence.forecast_ratio)
+            model_ratio = float(stream_evidence.model_corrected_ratio)
+            generic_ratio = float(stream_evidence.generic_corrected_ratio)
+            diagonal_projection_name = f"{stream}_diagonal_projection_ewma"
+            setattr(
+                self,
+                diagonal_projection_name,
+                (1.0 - alpha) * getattr(self, diagonal_projection_name)
+                + alpha * _soft_limit(stream_evidence.diagonal_projection, 2.0),
+            )
+            model_projection_name = f"{stream}_model_projection_ewma"
+            setattr(
+                self,
+                model_projection_name,
+                (1.0 - alpha) * getattr(self, model_projection_name)
+                + alpha * _soft_limit(stream_evidence.model_projection, 2.0),
+            )
+            setattr(
+                self,
+                f"{stream}_forecast_ratio_sum",
+                getattr(self, f"{stream}_forecast_ratio_sum") + forecast_ratio,
+            )
+            setattr(
+                self,
+                f"{stream}_forecast_ratio_max",
+                max(getattr(self, f"{stream}_forecast_ratio_max"), forecast_ratio),
+            )
+            setattr(
+                self,
+                f"{stream}_model_corrected_ratio_sum",
+                getattr(self, f"{stream}_model_corrected_ratio_sum") + model_ratio,
+            )
+            setattr(
+                self,
+                f"{stream}_generic_corrected_ratio_sum",
+                getattr(self, f"{stream}_generic_corrected_ratio_sum") + generic_ratio,
+            )
+            for suffix, value in (
+                (
+                    "diagonal_candidate_ratio_sum",
+                    stream_evidence.diagonal_candidate_ratio,
+                ),
+                ("model_candidate_ratio_sum", stream_evidence.model_candidate_ratio),
+                ("model_corrected_head_ratio_sum", stream_evidence.model_corrected_head_ratio),
+                ("generic_corrected_head_ratio_sum", stream_evidence.generic_corrected_head_ratio),
+                (
+                    "diagonal_candidate_head_ratio_sum",
+                    stream_evidence.diagonal_candidate_head_ratio,
+                ),
+                ("model_candidate_head_ratio_sum", stream_evidence.model_candidate_head_ratio),
+                ("generic_2d_ratio_sum", stream_evidence.generic_2d_ratio),
+                ("exact_2d_ratio_sum", stream_evidence.exact_2d_ratio),
+                ("applied_2d_ratio_sum", stream_evidence.applied_2d_ratio),
+                ("generic_2d_head_ratio_sum", stream_evidence.generic_2d_head_ratio),
+                ("exact_2d_head_ratio_sum", stream_evidence.exact_2d_head_ratio),
+                ("applied_2d_head_ratio_sum", stream_evidence.applied_2d_head_ratio),
+            ):
+                name = f"{stream}_{suffix}"
+                setattr(self, name, getattr(self, name) + float(value))
+            subspace_eligible = bool(
+                stream_evidence.generic_2d_eligible
+                and stream_evidence.exact_2d_eligible
+            )
+            if subspace_eligible:
+                count_name = f"{stream}_subspace_evidence_count"
+                prior_count = getattr(self, count_name)
+                coefficient_alpha = 0.5 if prior_count < 2 else 0.3
+                for prefix, coefficients in (
+                    ("generic_2d", stream_evidence.generic_2d_coefficients),
+                    ("exact_2d", stream_evidence.exact_2d_coefficients),
+                ):
+                    for index, value in enumerate(coefficients):
+                        name = f"{stream}_{prefix}_g{index}_ewma"
+                        setattr(
+                            self,
+                            name,
+                            (1.0 - coefficient_alpha) * getattr(self, name)
+                            + coefficient_alpha * _soft_limit(float(value), 2.0),
+                        )
+                g00, g01, g11 = stream_evidence.application_direction_gram
+                normalized_g01 = float(g01) / max(float(g00), 1e-12)
+                normalized_g11 = float(g11) / max(float(g00), 1e-12)
+                for suffix, value in (
+                    ("direction_g01_ewma", normalized_g01),
+                    ("direction_g11_ewma", normalized_g11),
+                ):
+                    name = f"{stream}_{suffix}"
+                    if prior_count == 0:
+                        setattr(self, name, float(value))
+                    else:
+                        setattr(
+                            self,
+                            name,
+                            (1.0 - coefficient_alpha) * getattr(self, name)
+                            + coefficient_alpha * float(value),
+                        )
+                setattr(self, count_name, prior_count + 1)
+            else:
+                name = f"{stream}_subspace_fallback_count"
+                setattr(self, name, getattr(self, name) + 1)
+                if (
+                    stream_evidence.generic_2d_condition > 0.0
+                    or stream_evidence.exact_2d_condition > 0.0
+                ):
+                    name = f"{stream}_subspace_condition_fallback_count"
+                    setattr(self, name, getattr(self, name) + 1)
+            setattr(
+                self,
+                f"{stream}_generic_2d_condition_max",
+                max(
+                    getattr(self, f"{stream}_generic_2d_condition_max"),
+                    float(stream_evidence.generic_2d_condition),
+                ),
+            )
+            setattr(
+                self,
+                f"{stream}_exact_2d_condition_max",
+                max(
+                    getattr(self, f"{stream}_exact_2d_condition_max"),
+                    float(stream_evidence.exact_2d_condition),
+                ),
+            )
+            setattr(
+                self,
+                f"{stream}_subspace_regularization_max",
+                max(
+                    getattr(self, f"{stream}_subspace_regularization_max"),
+                    float(stream_evidence.subspace_regularization),
+                ),
+            )
+            if correction is not None:
+                if correction.diagonal_bound_active:
+                    setattr(
+                        self,
+                        f"{stream}_diagonal_bound_active_count",
+                        getattr(self, f"{stream}_diagonal_bound_active_count") + 1,
+                    )
+                if correction.model_bound_active:
+                    setattr(
+                        self,
+                        f"{stream}_model_bound_active_count",
+                        getattr(self, f"{stream}_model_bound_active_count") + 1,
+                    )
+                if correction.generic_bound_active:
+                    setattr(
+                        self,
+                        f"{stream}_generic_bound_active_count",
+                        getattr(self, f"{stream}_generic_bound_active_count") + 1,
+                    )
+                for stage, delta in (
+                    ("pre", abs(correction.pre_bound_delta)),
+                    ("post", abs(correction.post_bound_delta)),
+                    ("applied", abs(correction.applied_delta)),
+                ):
+                    sum_name = f"{stream}_gain_delta_{stage}_abs_sum"
+                    max_name = f"{stream}_gain_delta_{stage}_abs_max"
+                    setattr(self, sum_name, getattr(self, sum_name) + delta)
+                    setattr(self, max_name, max(getattr(self, max_name), delta))
+                exact_diagonal_delta = abs(
+                    correction.exact_diagonal_post_bound_delta
+                )
+                exact_diagonal_sum = f"{stream}_gain_delta_exact_diagonal_abs_sum"
+                exact_diagonal_max = f"{stream}_gain_delta_exact_diagonal_abs_max"
+                setattr(
+                    self,
+                    exact_diagonal_sum,
+                    getattr(self, exact_diagonal_sum) + exact_diagonal_delta,
+                )
+                setattr(
+                    self,
+                    exact_diagonal_max,
+                    max(getattr(self, exact_diagonal_max), exact_diagonal_delta),
+                )
+                diagonal_ratio = float(
+                    stream_evidence.diagonal_candidate_head_ratio
+                )
+                candidate_ratio = float(stream_evidence.model_candidate_head_ratio)
+                baseline_ratio = float(stream_evidence.generic_corrected_head_ratio)
+                if (
+                    abs(
+                        correction.diagonal_candidate_gain
+                        - correction.generic_gain
+                    )
+                    > 1e-9
+                    and diagonal_ratio > 0.0
+                    and baseline_ratio > 0.0
+                ):
+                    comparison_name = f"{stream}_diagonal_comparison_count"
+                    setattr(
+                        self,
+                        comparison_name,
+                        getattr(self, comparison_name) + 1,
+                    )
+                    if diagonal_ratio < baseline_ratio:
+                        win_name = f"{stream}_diagonal_candidate_win_count"
+                        setattr(self, win_name, getattr(self, win_name) + 1)
+                    elif diagonal_ratio > baseline_ratio:
+                        loss_name = f"{stream}_diagonal_candidate_loss_count"
+                        setattr(self, loss_name, getattr(self, loss_name) + 1)
+                if (
+                    abs(correction.model_candidate_gain - correction.generic_gain) > 1e-9
+                    and candidate_ratio > 0.0
+                    and baseline_ratio > 0.0
+                ):
+                    comparison_name = f"{stream}_model_comparison_count"
+                    setattr(self, comparison_name, getattr(self, comparison_name) + 1)
+                    relative_advantage = _clamp(
+                        (baseline_ratio - candidate_ratio) / max(baseline_ratio, 1e-12),
+                        -0.25,
+                        0.25,
+                    )
+                    target_trust = _clamp(0.5 + 2.0 * relative_advantage)
+                    trust_name = f"{stream}_model_trust"
+                    setattr(
+                        self,
+                        trust_name,
+                        0.65 * getattr(self, trust_name) + 0.35 * target_trust,
+                    )
+                    if candidate_ratio < baseline_ratio:
+                        win_name = f"{stream}_model_candidate_win_count"
+                        setattr(self, win_name, getattr(self, win_name) + 1)
+                    elif candidate_ratio > baseline_ratio:
+                        loss_name = f"{stream}_model_candidate_loss_count"
+                        setattr(self, loss_name, getattr(self, loss_name) + 1)
+            if subspace is not None and subspace.eligible and subspace_eligible:
+                record_subspace_comparison(
+                    stream,
+                    "generic_2d_vs_scalar",
+                    float(stream_evidence.generic_corrected_ratio),
+                    float(stream_evidence.generic_2d_ratio),
+                )
+                record_subspace_comparison(
+                    stream,
+                    "exact_2d_vs_exact_scalar",
+                    float(stream_evidence.model_candidate_head_ratio),
+                    float(stream_evidence.exact_2d_head_ratio),
+                )
+                relative_advantage = record_subspace_comparison(
+                    stream,
+                    "exact_2d_vs_generic_2d",
+                    float(stream_evidence.generic_2d_head_ratio),
+                    float(stream_evidence.exact_2d_head_ratio),
+                )
+                record_subspace_comparison(
+                    stream,
+                    "exact_2d_vs_generic_scalar",
+                    float(stream_evidence.generic_corrected_head_ratio),
+                    float(stream_evidence.exact_2d_head_ratio),
+                )
+                if relative_advantage is not None:
+                    target_trust = _clamp(
+                        0.5 + 2.0 * _clamp(relative_advantage, -0.25, 0.25)
+                    )
+                    trust_name = f"{stream}_subspace_model_trust"
+                    setattr(
+                        self,
+                        trust_name,
+                        0.65 * getattr(self, trust_name) + 0.35 * target_trust,
+                    )
+        self.stream_evidence_count += 1
+        self.anchor_count += 1
+
+    def _risks(self, forecast_horizon: float) -> tuple[float, float, float, float, float]:
+        profile = self.profile
+        model_risk = profile.forecast_risk_prior if profile is not None else 0.5
+        patch_risk = (
+            _clamp(math.log1p(8.0 * profile.patch_perturbation) / math.log(9.0))
+            if profile is not None
+            else 0.5
+        )
+        residual_risk = _clamp((self.forecast_ratio_ewma - 0.5) / 1.5)
+        curvature_risk = _clamp(self.curvature_ratio_ewma / 2.0)
+        condition_risk = _clamp(math.log10(max(1.0, self.fit_condition_ewma)) / 6.0)
+        horizon_risk = _clamp((max(1.0, forecast_horizon) - 1.0) / 2.0)
+        trajectory_risk = _clamp(
+            0.42 * residual_risk
+            + 0.28 * curvature_risk
+            + 0.18 * horizon_risk
+            + 0.12 * condition_risk
+        )
+        reliability = min(1.0, self.anchor_count / 3.0)
+        evidence_risk = max(residual_risk, 0.65 * curvature_risk)
+        calibrated_model = (1.0 - 0.70 * reliability) * model_risk + 0.70 * reliability * min(
+            1.0, 0.35 * model_risk + 0.65 * evidence_risk
+        )
+        combined = _clamp(
+            0.68 * trajectory_risk
+            + 0.22 * calibrated_model
+            + 0.10 * patch_risk
+            + 0.12 * trajectory_risk * calibrated_model
+        )
+        confidence = _clamp(1.0 - combined)
+        return trajectory_risk, calibrated_model, patch_risk, combined, confidence
+
+    @staticmethod
+    def _correction_telemetry(
+        projection: float,
+        diagonal_projection: float,
+        model_projection: float,
+        scale: float,
+        model_trust: float,
+    ) -> CorrectionGainTelemetry:
+        raw_generic = float(projection) * float(scale)
+        raw_diagonal = float(diagonal_projection) * float(scale)
+        raw_model = float(model_projection) * float(scale)
+
+        generic = _soft_limit(raw_generic, _CORRECTION_GAIN_LIMIT)
+        diagonal_candidate = _soft_limit(raw_diagonal, _CORRECTION_GAIN_LIMIT)
+        model_candidate = _soft_limit(raw_model, _CORRECTION_GAIN_LIMIT)
+        trust = _clamp(model_trust)
+        model = generic + trust * (model_candidate - generic)
+        return CorrectionGainTelemetry(
+            residual_projection=float(projection),
+            diagonal_projection=float(diagonal_projection),
+            model_projection=float(model_projection),
+            raw_generic_gain=raw_generic,
+            raw_diagonal_gain=raw_diagonal,
+            raw_model_gain=raw_model,
+            generic_gain=generic,
+            diagonal_candidate_gain=diagonal_candidate,
+            model_candidate_gain=model_candidate,
+            model_gain=model,
+            model_trust=trust,
+            generic_bound_active=abs(raw_generic) >= _CORRECTION_GAIN_LIMIT,
+            diagonal_bound_active=abs(raw_diagonal) >= _CORRECTION_GAIN_LIMIT,
+            model_bound_active=abs(raw_model) >= _CORRECTION_GAIN_LIMIT,
+        )
+
+    def _subspace_telemetry(
+        self,
+        stream: str,
+        scale: float,
+        scalar: CorrectionGainTelemetry,
+    ) -> SubspaceCorrectionTelemetry:
+        evidence_count = int(getattr(self, f"{stream}_subspace_evidence_count"))
+        trust = _clamp(getattr(self, f"{stream}_subspace_model_trust"))
+        if evidence_count == 0:
+            generic_scale = (
+                scalar.generic_gain / scalar.raw_generic_gain
+                if abs(scalar.raw_generic_gain) > 1e-12
+                else 1.0
+            )
+            exact_scale = (
+                scalar.model_candidate_gain / scalar.raw_model_gain
+                if abs(scalar.raw_model_gain) > 1e-12
+                else 1.0
+            )
+            return SubspaceCorrectionTelemetry(
+                raw_generic_coefficients=(scalar.raw_generic_gain, 0.0),
+                raw_exact_coefficients=(scalar.raw_model_gain, 0.0),
+                generic_coefficients=(scalar.generic_gain, 0.0),
+                exact_coefficients=(scalar.model_candidate_gain, 0.0),
+                applied_coefficients=(scalar.model_gain, 0.0),
+                generic_raw_norm_ratio=abs(scalar.raw_generic_gain),
+                exact_raw_norm_ratio=abs(scalar.raw_model_gain),
+                applied_raw_norm_ratio=abs(scalar.model_gain),
+                generic_bound_scale=generic_scale,
+                exact_bound_scale=exact_scale,
+                applied_bound_scale=1.0,
+                generic_bounded_norm_ratio=abs(scalar.generic_gain),
+                exact_bounded_norm_ratio=abs(scalar.model_candidate_gain),
+                applied_bounded_norm_ratio=abs(scalar.model_gain),
+                generic_bound_active=scalar.generic_bound_active,
+                exact_bound_active=scalar.model_bound_active,
+                applied_bound_active=False,
+                model_trust=trust,
+            )
+
+        direction_gram = (
+            1.0,
+            float(getattr(self, f"{stream}_direction_g01_ewma")),
+            max(0.0, float(getattr(self, f"{stream}_direction_g11_ewma"))),
+        )
+        raw_generic = (
+            float(getattr(self, f"{stream}_generic_2d_g0_ewma")) * float(scale),
+            float(getattr(self, f"{stream}_generic_2d_g1_ewma")) * float(scale),
+        )
+        raw_exact = (
+            float(getattr(self, f"{stream}_exact_2d_g0_ewma")) * float(scale),
+            float(getattr(self, f"{stream}_exact_2d_g1_ewma")) * float(scale),
+        )
+        (
+            generic,
+            generic_raw_ratio,
+            generic_scale,
+            generic_ratio,
+            generic_active,
+        ) = radially_bound_coefficients(raw_generic, direction_gram)
+        (
+            exact,
+            exact_raw_ratio,
+            exact_scale,
+            exact_ratio,
+            exact_active,
+        ) = radially_bound_coefficients(raw_exact, direction_gram)
+        interpolated = tuple(
+            generic[index] + trust * (exact[index] - generic[index])
+            for index in range(2)
+        )
+        (
+            radially_bounded_applied,
+            applied_raw_ratio,
+            radial_scale,
+            radial_ratio,
+            radial_active,
+        ) = radially_bound_coefficients(interpolated, direction_gram)
+        if not radial_active:
+            applied = interpolated
+            applied_scale = 1.0
+            applied_ratio = applied_raw_ratio
+        else:
+            applied = radially_bounded_applied
+            applied_scale = radial_scale
+            applied_ratio = radial_ratio
+        return SubspaceCorrectionTelemetry(
+            eligible=True,
+            used_scalar_fallback=False,
+            generic_condition=float(
+                getattr(self, f"{stream}_generic_2d_condition_max")
+            ),
+            exact_condition=float(
+                getattr(self, f"{stream}_exact_2d_condition_max")
+            ),
+            generic_rank=2,
+            exact_rank=2,
+            regularization=float(
+                getattr(self, f"{stream}_subspace_regularization_max")
+            ),
+            raw_generic_coefficients=raw_generic,
+            raw_exact_coefficients=raw_exact,
+            generic_coefficients=(float(generic[0]), float(generic[1])),
+            exact_coefficients=(float(exact[0]), float(exact[1])),
+            applied_coefficients=(float(applied[0]), float(applied[1])),
+            generic_raw_norm_ratio=generic_raw_ratio,
+            exact_raw_norm_ratio=exact_raw_ratio,
+            applied_raw_norm_ratio=applied_raw_ratio,
+            generic_bound_scale=generic_scale,
+            exact_bound_scale=exact_scale,
+            applied_bound_scale=applied_scale,
+            generic_bounded_norm_ratio=generic_ratio,
+            exact_bounded_norm_ratio=exact_ratio,
+            applied_bounded_norm_ratio=applied_ratio,
+            generic_bound_active=generic_active,
+            exact_bound_active=exact_active,
+            applied_bound_active=radial_active,
+            model_trust=trust,
+        )
+
+    def decision(
+        self,
+        *,
+        forecast_horizon: float,
+        history_length: int,
+        configured_degree: int,
+        configured_ridge_lambda: float,
+        configured_audio_blend: float,
+        configured_video_blend: float,
+    ) -> ModelAwareForecastDecision:
+        trajectory, model_risk, patch_risk, combined, confidence = self._risks(forecast_horizon)
+        adaptive = self.mode in {"schedule_confidence", "full"}
+        degree = max(1, min(int(configured_degree), max(1, int(history_length) - 1)))
+        ridge = float(configured_ridge_lambda)
+        audio_blend = float(configured_audio_blend)
+        video_blend = float(configured_video_blend)
+        if adaptive:
+            if combined >= 0.72:
+                degree = max(1, degree - 2)
+            elif combined >= 0.48:
+                degree = max(1, degree - 1)
+            base_ridge = max(ridge, 1e-5)
+            ridge = max(1e-6, min(10.0, base_ridge * (2.0 ** (4.0 * (combined - 0.35)))))
+            spectral_scale = math.sqrt(confidence)
+            audio_blend *= spectral_scale
+            video_blend *= spectral_scale
+
+        audio_correction = CorrectionGainTelemetry()
+        video_correction = CorrectionGainTelemetry()
+        audio_subspace = SubspaceCorrectionTelemetry()
+        video_subspace = SubspaceCorrectionTelemetry()
+        if self.mode == "full" and self.anchor_count > 0 and self.profile is not None:
+            horizon_scale = min(1.5, max(0.5, float(forecast_horizon)))
+            scale = confidence * horizon_scale
+            audio_correction = self._correction_telemetry(
+                self.audio_projection_ewma,
+                self.audio_diagonal_projection_ewma,
+                self.audio_model_projection_ewma,
+                scale,
+                self.audio_model_trust,
+            )
+            video_correction = self._correction_telemetry(
+                self.video_projection_ewma,
+                self.video_diagonal_projection_ewma,
+                self.video_model_projection_ewma,
+                scale,
+                self.video_model_trust,
+            )
+            audio_subspace = self._subspace_telemetry(
+                "audio", scale, audio_correction
+            )
+            video_subspace = self._subspace_telemetry(
+                "video", scale, video_correction
+            )
+        return ModelAwareForecastDecision(
+            trajectory_risk=trajectory,
+            model_risk=model_risk,
+            patch_risk=patch_risk,
+            combined_risk=combined,
+            confidence=confidence,
+            ridge_lambda=ridge,
+            degree=degree,
+            audio_blend_weight=audio_blend,
+            video_blend_weight=video_blend,
+            audio_correction_gain=audio_correction.model_gain,
+            video_correction_gain=video_correction.model_gain,
+            forecast_horizon=float(forecast_horizon),
+            force_actual=combined >= self.risk_threshold,
+            audio_correction_telemetry=audio_correction,
+            video_correction_telemetry=video_correction,
+            audio_subspace_telemetry=audio_subspace,
+            video_subspace_telemetry=video_subspace,
+        )
+
+    def generic_correction_gains(
+        self,
+        decision: ModelAwareForecastDecision,
+    ) -> tuple[float, float]:
+        if self.mode != "full" or self.anchor_count == 0:
+            return 0.0, 0.0
+        return (
+            decision.audio_correction_telemetry.generic_gain,
+            decision.video_correction_telemetry.generic_gain,
+        )
+
+    @property
+    def model_corrected_ratio_mean(self) -> float:
+        return self.model_corrected_ratio_sum / self.ablation_count if self.ablation_count else 0.0
+
+    @property
+    def generic_corrected_ratio_mean(self) -> float:
+        return self.generic_corrected_ratio_sum / self.ablation_count if self.ablation_count else 0.0
+
+    def stream_mean(self, stream: str, metric: str) -> float:
+        if stream not in {"audio", "video"}:
+            raise ValueError("stream must be 'audio' or 'video'")
+        if metric not in {
+            "forecast_ratio",
+            "model_corrected_ratio",
+            "generic_corrected_ratio",
+            "diagonal_candidate_ratio",
+            "model_candidate_ratio",
+            "model_corrected_head_ratio",
+            "generic_corrected_head_ratio",
+            "diagonal_candidate_head_ratio",
+            "model_candidate_head_ratio",
+            "generic_2d_ratio",
+            "exact_2d_ratio",
+            "applied_2d_ratio",
+            "generic_2d_head_ratio",
+            "exact_2d_head_ratio",
+            "applied_2d_head_ratio",
+            "gain_delta_pre_abs",
+            "gain_delta_post_abs",
+            "gain_delta_applied_abs",
+            "gain_delta_exact_diagonal_abs",
+        }:
+            raise ValueError("unknown model-aware stream metric")
+        if self.stream_evidence_count == 0:
+            return 0.0
+        return (
+            getattr(self, f"{stream}_{metric}_sum")
+            / self.stream_evidence_count
+        )
+
+    def subspace_advantage_mean(self, stream: str, comparison: str) -> float:
+        if stream not in {"audio", "video"}:
+            raise ValueError("stream must be 'audio' or 'video'")
+        if comparison not in {
+            "generic_2d_vs_scalar",
+            "exact_2d_vs_exact_scalar",
+            "exact_2d_vs_generic_2d",
+            "exact_2d_vs_generic_scalar",
+        }:
+            raise ValueError("unknown subspace comparison")
+        count = getattr(self, f"{stream}_{comparison}_comparison_count")
+        return (
+            getattr(self, f"{stream}_{comparison}_advantage_sum") / count
+            if count
+            else 0.0
+        )
+
+
+__all__ = [
+    "AnchorEvidence",
+    "AnchorEvidenceTiming",
+    "CorrectionGainTelemetry",
+    "ModelAwareController",
+    "ModelAwareForecastDecision",
+    "ModelForecastabilityProfile",
+    "ProfileLookup",
+    "StreamAnchorEvidence",
+    "SubspaceCorrectionTelemetry",
+    "clear_model_profile_cache",
+    "get_model_forecastability_profile",
+    "radially_bound_coefficients",
+]

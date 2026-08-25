@@ -35,7 +35,11 @@ import latent_preview
 # then starts at step 1 and loops at natural pace (8fps sample, native fps
 # for timing), matching LTX behaviour.
 try:
-    import comfyui_spectrum_h3.sampling as _spectrum_sampling
+    # Prefer the embedded Spectrum engine; fall back to an external install.
+    try:
+        from .usopt_spectrum_h3 import sampling as _spectrum_sampling
+    except Exception:
+        import comfyui_spectrum_h3.sampling as _spectrum_sampling
 
     _orig_offline_progress_callbacks = _spectrum_sampling._offline_progress_callbacks
 
@@ -867,13 +871,18 @@ class _H3PreviewOverrideWrapper:
 
 
 def apply_h3_preview_override(model, node_id):
-    """Attach the animated-WebP live preview wrapper to the sampling model."""
+    """Attach the animated-WebP live preview wrapper to the sampling model.
+
+    The wrapper key is 'kj_preview_override' so the (embedded) Spectrum engine
+    recognizes it as the observational preview and bypasses it during the
+    transformer-free offline replay pass.
+    """
     import comfy.patcher_extension
 
     m = model.clone()
     m.add_wrapper_with_key(
         comfy.patcher_extension.WrappersMP.OUTER_SAMPLE,
-        "crt_minimaxh3_preview",
+        "kj_preview_override",
         _H3PreviewOverrideWrapper(node_id),
     )
     return m

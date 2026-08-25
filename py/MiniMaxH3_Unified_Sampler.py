@@ -27,6 +27,7 @@ from comfy_extras.nodes_audio import vae_decode_audio
 
 from ._cache_fingerprint import stable_fingerprint
 from ._minimaxh3_preview import _PreviewFixGuider, _PREVIEW_STATE, apply_h3_preview_override, kickoff_taeh3_download, wipe_all_caches
+from . import MiniMaxUSOpt
 
 MODE_T2V = "T2V"
 MODE_FL2VA = "I2V"
@@ -993,38 +994,18 @@ class CRT_MiniMaxH3UnifiedSampler:
         model_sampling.percent_to_sigma at patch time. Sol and ChunkFF install
         object patches that adopt earlier patches as fallbacks, and Spectrum's
         sampler wrappers go on last so they run the fully patched model.
+        Everything is embedded (MiniMaxUSOpt) — no external custom nodes.
         """
-        order = []
-        if enable_sol_attn:
-            order.append(("Sol Attention", "MiniMaxH3ScheduledSolAttentionPatch", cls.SOL_DEFAULTS))
-        if enable_chunk_ff:
-            order.append(("Chunk FeedForward", "MiniMaxH3ChunkFeedForward", cls.CHUNK_FF_DEFAULTS))
-        if enable_spectrum:
-            order.append(("Spectrum forecast", "SpectrumApplyMiniMaxH3", cls.SPECTRUM_DEFAULTS))
-
-        for label, node_name, params in order:
-            node_cls = nodes.NODE_CLASS_MAPPINGS.get(node_name)
-            if node_cls is None:
-                cls._log(
-                    f"{label} requested but node '{node_name}' is not installed; skipping this optimization.",
-                    level="warn",
-                )
-                continue
-            fn_name = getattr(node_cls, "FUNCTION", "patch")
-            try:
-                outputs = cls._result_tuple(
-                    getattr(node_cls(), fn_name)(model=model, enabled=True, **params)
-                )
-            except Exception as exc:
-                cls._log(
-                    f"{label} failed to apply ({exc}); continuing without this optimization.",
-                    level="warn",
-                )
-                continue
-            if outputs and outputs[0] is not None:
-                model = outputs[0]
-            cls._log(f"Speed optimization active: {label}", level="ok")
-        return model
+        return MiniMaxUSOpt.apply_us_opt(
+            model,
+            enable_sol=bool(enable_sol_attn),
+            sol_params=dict(cls.SOL_DEFAULTS),
+            enable_chunk_ff=bool(enable_chunk_ff),
+            chunk_params=dict(cls.CHUNK_FF_DEFAULTS),
+            enable_spectrum=bool(enable_spectrum),
+            spectrum_params=dict(cls.SPECTRUM_DEFAULTS),
+            log_fn=cls._log,
+        )
 
     @staticmethod
     def _dims_from_megapixels_aspect(megapixels, aspect_ratio):
