@@ -472,7 +472,7 @@ class CRT_LTX23UnifiedSampler:
                 ),
                 "live_preview": (
                     "BOOLEAN",
-                    {"default": True, "tooltip": "Animated true-pace video preview during sampling via the auto-downloaded taeltx approximation. Adds a small decode overhead per step."},
+                    {"default": False, "tooltip": "Animated true-pace video preview during sampling via the auto-downloaded taeltx approximation. Adds per-step decode overhead - disabled by default."},
                 ),
                 "frame_count_from_audio": (
                     "BOOLEAN",

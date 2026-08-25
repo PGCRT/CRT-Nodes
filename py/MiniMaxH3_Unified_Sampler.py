@@ -177,6 +177,48 @@ class CRT_MiniMaxH3USModelsPipe:
             return fallback_needs
         return needs
 
+    _MODEL_INPUT_KEYS = ("fl2va_model", "fl2va_turbo_model", "ref2va_model", "ref2va_turbo_model")
+    # Bump when pipe-building semantics change: older cached outputs (which may
+    # have baked None into unevaluated sockets) must invalidate exactly once.
+    _PIPE_CACHE_VERSION = "v3-all-sockets"
+
+    @classmethod
+    def _connected_model_keys(cls, prompt, unique_id):
+        """Which of the four model sockets have links on THIS pipe node.
+
+        Reads the prompt graph: connected optional inputs appear as
+        [node_id, slot] link lists; unconnected ones are absent/None.
+        Matching is defensive because subgraph expansion mangles ids: exact
+        uid, then uid-suffix, then the single pipe, else the union across
+        every pipe node (over-requesting a connected loader is harmless).
+        """
+        connected = set()
+        pipe_nodes = []
+        for node_id, node in cls._iter_prompt_nodes(prompt):
+            if not isinstance(node, dict):
+                continue
+            ctype = str(node.get("class_type", ""))
+            if ctype != "CRT_MiniMaxH3USModelsPipe" and not ctype.endswith("CRT_MiniMaxH3USModelsPipe"):
+                continue
+            inputs = node.get("inputs", {})
+            pipe_nodes.append((str(node_id), inputs))
+            for k in cls._MODEL_INPUT_KEYS:
+                link = inputs.get(k)
+                if isinstance(link, (list, tuple)) and len(link) >= 1:
+                    connected.add(k)
+        if not pipe_nodes:
+            return set()
+        uid = str(unique_id)
+        for node_id, inputs in pipe_nodes:
+            if node_id == uid or node_id.endswith(":" + uid) or uid.endswith(":" + node_id):
+                connected = {
+                    k
+                    for k in cls._MODEL_INPUT_KEYS
+                    if isinstance(inputs.get(k), (list, tuple)) and len(inputs.get(k)) >= 1
+                }
+                break
+        return connected
+
     @classmethod
     def check_lazy_status(
         cls,
@@ -198,16 +240,16 @@ class CRT_MiniMaxH3USModelsPipe:
             "ref2va_turbo_model": ref2va_turbo_model,
         }
         needed = cls._required_model_keys(minimax_h3_us_prompt, minimax_h3_us_unique)
+        # Request EVERY connected loader, not just the active variant: the pipe
+        # must carry all four models so mode/turbo switches never see a stale
+        # None baked into an unevaluated socket.
+        connected = cls._connected_model_keys(minimax_h3_us_prompt, minimax_h3_us_unique)
+        needed = needed | connected
         sampler_ids = [
             nid
             for nid, node in cls._iter_prompt_nodes(minimax_h3_us_prompt)
             if isinstance(node, dict) and node.get("class_type") == cls.SAMPLER_CLASS
         ]
-        print(
-            f"[CRT MiniMaxH3][DIAG] lazy-check uid={minimax_h3_us_unique!r} "
-            f"prompt={type(minimax_h3_us_prompt).__name__} "
-            f"samplers={sampler_ids} needs={sorted(needed)}"
-        )
         if not needed:
             # No sampler matched this pipe's uid (common when the pipe lives
             # inside a subgraph and the sampler is outside, or vice versa).
@@ -227,12 +269,22 @@ class CRT_MiniMaxH3USModelsPipe:
 
     @classmethod
     def IS_CHANGED(cls, minimax_h3_us_prompt=None, minimax_h3_us_unique=None, **kwargs):
-        # Bust the cache when the sampler's workflow_mode/turbo changes,
-        # even if the pipe's four model sockets haven't. The prompt holds
-        # the sampler nodes' inputs, so hashing the required keys captures it.
+        # Bust the cache when the sampler's required variant changes OR when
+        # the evaluation state of any of the four model inputs changes (a
+        # newly-connected loader must never keep serving a stale pipe that
+        # baked None into that socket).
         try:
             needed = cls._required_model_keys(minimax_h3_us_prompt, minimax_h3_us_unique)
-            return hash(frozenset(needed)) ^ hash(str(minimax_h3_us_unique))
+            presence = tuple(
+                kwargs.get(k) is not None
+                for k in ("fl2va_model", "fl2va_turbo_model", "ref2va_model", "ref2va_turbo_model")
+            )
+            return (
+                hash(frozenset(needed))
+                ^ hash(presence)
+                ^ hash(str(minimax_h3_us_unique))
+                ^ hash(cls._PIPE_CACHE_VERSION)
+            )
         except Exception:
             return float("nan")
 
@@ -266,8 +318,7 @@ class CRT_MiniMaxH3USModelsPipe:
             raise ValueError(
                 "MiniMax H3 US Models Pipe: could not find a Unified Sampler for "
                 f"this run (pipe uid={_hidden.get('minimax_h3_us_unique')!r}). "
-                "Copy the '[CRT MiniMaxH3][DIAG]' console line above and check that "
-                "this pipe output feeds a MiniMax H3 Unified Sampler (CRT)."
+                "Check that this pipe output feeds a MiniMax H3 Unified Sampler (CRT)."
             )
         missing = sorted(key for key in needed if available[key] is None)
         if missing:
@@ -444,6 +495,132 @@ def _apply_sigma_shift(model, shift_video, shift_audio):
     to["minimax_h3_sigma_shift_video"] = shift_video
     to["minimax_h3_sigma_shift_audio"] = shift_audio
     return m
+
+
+# --- Per-token prompt weighting (Krea2PromptWeight port) --------------------
+# H3's Qwen3-VL presentation is NOT chat-templated (raw prompt tokens), and the
+# tokenizer runs with disable_weights=True, so ComfyUI's native (word:weight)
+# does nothing. Same trick as KJNodes Krea2PromptWeight: scale the weighted
+# tokens' attention VALUE (de-emphasis / removal at weight<1) and bias their
+# attention LOGIT (emphasis at weight>1), patched into every DiT block's attn.
+
+_PROMPT_WEIGHT_PATTERN = None
+
+
+def _h3_prompt_weight_pattern():
+    global _PROMPT_WEIGHT_PATTERN
+    if _PROMPT_WEIGHT_PATTERN is None:
+        import re
+        _PROMPT_WEIGHT_PATTERN = re.compile(r"\(([^():]+):(-?\d*\.?\d+)\)")
+    return _PROMPT_WEIGHT_PATTERN
+
+
+def _h3_token_ids(clip, text):
+    tok = clip.tokenize(text)
+    key = next(iter(tok))
+    return [t[0] for t in tok[key][0]]
+
+
+def _h3_find_subsequence(seq, sub):
+    n = len(sub)
+    out = []
+    if n == 0:
+        return out
+    for i in range(len(seq) - n + 1):
+        if seq[i:i + n] == sub:
+            out.append(i)
+    return out
+
+
+def _h3_parse_prompt_weights(clip, prompt, log):
+    """Return (weight_pairs, cleaned_prompt). pairs = (pos, v_factor, k_bias)."""
+    pattern = _h3_prompt_weight_pattern()
+    terms = [(m.group(1).strip(), float(m.group(2))) for m in pattern.finditer(prompt)]
+    if not terms:
+        return [], prompt
+    clean = pattern.sub(lambda m: m.group(1), prompt)
+    ids = _h3_token_ids(clip, clean)
+    pairs = []
+    for phrase, w in terms:
+        if w > 1.0:
+            v_factor, k_bias = 1.0, (w - 1.0) * 2.0   # emphasis via attention boost
+        else:
+            v_factor, k_bias = 1.0 + (w - 1.0), 0.0   # de-emphasis / removal via value scaling
+        positions = []
+        for variant in (" " + phrase, phrase):  # words usually carry a leading-space token
+            sub = _h3_token_ids(clip, variant)
+            matches = _h3_find_subsequence(ids, sub)
+            if matches:
+                for mi in matches:
+                    positions.extend(mi + off for off in range(len(sub)))
+                break
+        if not positions:
+            log(f"Prompt weight: phrase '{phrase}' not found in prompt; skipped.", level="warn")
+            continue
+        for cp in positions:
+            pairs.append((cp, v_factor, k_bias))
+    return pairs, clean
+
+
+class _H3WeightPatch:
+    """Descriptor binding the weighting attention forward onto H3's Attention."""
+
+    def __get__(self, obj, objtype=None):
+        import types
+        return types.MethodType(_h3_attn_forward_weight, obj)
+
+
+def _h3_attn_forward_weight(self, x, rope_freqs=None, transformer_options={}):
+    import comfy.model_management
+    from comfy.ldm.modules.attention import (
+        AttentionTensorContainer,
+        attention_pytorch,
+        optimized_attention,
+    )
+
+    s = x.shape[0]
+    q, k, v = self.qkv_proj(x).split(self.heads * self.head_dim, dim=-1)
+    v = v.view(s, self.heads, self.head_dim)
+    if rope_freqs is not None:
+        # fused per-head RMSNorm + partial split-half rope, in place on the qkv buffer
+        q = q.view(1, s, self.heads, self.head_dim)
+        k = k.view(1, s, self.heads, self.head_dim)
+        qw = comfy.model_management.cast_to(self.q_norm.weight, device=x.device)
+        kw = comfy.model_management.cast_to(self.k_norm.weight, device=x.device)
+        rot = rope_freqs.shape[-3] * 2
+        if comfy.model_management.in_training:
+            q, k = comfy.quant_ops.ck.rms_rope_split_half(
+                q, k, rope_freqs, qw, kw, epsilon=self.q_norm.eps, rot_dim=rot)
+        else:
+            comfy.quant_ops.ck.rms_rope_split_half_(
+                q, k, rope_freqs, qw, kw, epsilon=self.q_norm.eps, rot_dim=rot)
+        q = q[0]
+        k = k[0]
+    else:
+        q = self.q_norm(q.view(s, self.heads, self.head_dim))
+        k = self.k_norm(k.view(s, self.heads, self.head_dim))
+    v = v.clone()
+    weights = transformer_options.get("minimax_h3_token_weights")
+    if weights:
+        for pos, v_factor, _ in weights:
+            if v_factor != 1.0 and pos < s:
+                v[pos] = v[pos] * v_factor
+    bias = None
+    if weights and any(kb != 0.0 for _, _, kb in weights):
+        bias = q.new_zeros(1, s)
+        for pos, _, kb in weights:
+            if kb != 0.0 and pos < s:
+                bias[:, pos] = kb
+    q = AttentionTensorContainer(q.transpose(0, 1).unsqueeze(0))
+    k = AttentionTensorContainer(k.transpose(0, 1).unsqueeze(0))
+    v = AttentionTensorContainer(v.transpose(0, 1).unsqueeze(0))
+    if bias is not None:
+        # per-key logit bias needs the raw sdpa path; the optimized dispatcher
+        # only forwards its own mask conventions
+        out = attention_pytorch(q, k, v, self.heads, mask=bias, skip_reshape=True)
+    else:
+        out = optimized_attention(q, k, v, self.heads, mask=None, skip_reshape=True, transformer_options=transformer_options)
+    return self.out_proj(out.squeeze(0))
 
 
 class CRT_MiniMaxH3UnifiedSampler:
@@ -628,7 +805,7 @@ class CRT_MiniMaxH3UnifiedSampler:
                 ),
                 "live_preview": (
                     "BOOLEAN",
-                    {"default": True, "tooltip": "Decode intermediate video previews during sampling via the auto-downloaded taeh3 approximation (RGB-factor fallback when offline)."},
+                    {"default": False, "tooltip": "Decode intermediate video previews during sampling via the auto-downloaded taeh3 approximation (RGB-factor fallback when offline). Adds per-step decode overhead - disabled by default."},
                 ),
                 "vae_decode_tiled": (
                     "BOOLEAN",
@@ -675,11 +852,11 @@ class CRT_MiniMaxH3UnifiedSampler:
                 ),
                 "audio_frames_override": (
                     "BOOLEAN",
-                    {"default": True, "tooltip": "REF2VA only: derive the output frame count from the longest Ref Audio input (at 24 fps), snapped to the 17n+5 grid. Ignored when the video override applies."},
+                    {"default": False, "tooltip": "REF2VA only. OFF (default): Duration (frames) is a hard cap - the output length equals it and longer references are trimmed, never stretched. ON: the output length derives from the longest Ref Audio instead (no cap - long inputs risk OOM). Output is always snapped to the 17n+5 grid at 24 fps."},
                 ),
                 "video_frames_override": (
                     "BOOLEAN",
-                    {"default": True, "tooltip": "REF2VA only: derive the output frame count from the longest Ref Video input. Takes priority over the audio length override."},
+                    {"default": False, "tooltip": "REF2VA only. OFF (default): Duration (frames) is a hard cap - the output length equals it and longer references are trimmed, never stretched. ON: the output length derives from the longest Ref Video instead, taking priority over the audio override (no cap - long inputs risk OOM). Output is always snapped to the 17n+5 grid at 24 fps."},
                 ),
                 "generated_audio_gain_db": (
                     "FLOAT",
@@ -1042,22 +1219,104 @@ class CRT_MiniMaxH3UnifiedSampler:
             has_refs = bool(
                 config["ref_images"] or config["ref_videos"] or config["ref_audios"]
             )
-            outputs = cls._result_tuple(
-                MiniMaxH3ReferenceToVideo.execute(
-                    clip=clip,
-                    vae=vae,
-                    audio_vae=audio_vae,
-                    prompt=prompt,
-                    width=int(width),
-                    height=int(height),
-                    length=int(length),
-                    ref_image_size="match",
-                    ref_images=config["ref_images"],
-                    ref_videos=config["ref_videos"],
-                    ref_video_audios=config["ref_video_audios"],
-                    ref_audios=config["ref_audios"],
+            # AIToolkit ref-video treatment (always on): snap the ref's own
+            # duration DOWN to 17n+5 and trim the paired audio to the same
+            # real-time window. Matches ai-toolkit's minimax_h3_ref2va recipe.
+            def _snap_down(n):
+                return ((max(5, int(n)) - 5) // 17) * 17 + 5
+
+            for k in list((config.get("ref_videos") or {}).keys()):
+                vid = config["ref_videos"][k]
+                if vid is not None and hasattr(vid, "shape"):
+                    try:
+                        total = int(vid.shape[0])
+                        n = _snap_down(total)
+                        if n < total:
+                            config["ref_videos"][k] = vid[:n]
+                            audio_key = k.replace("ref_video_", "ref_video_audio_")
+                            if audio_key in (config.get("ref_video_audios") or {}):
+                                aud = config["ref_video_audios"][audio_key]
+                                if isinstance(aud, dict) and aud.get("waveform") is not None:
+                                    sr = int(aud.get("sample_rate", 44100))
+                                    keep = int(round(n / 24 * sr))
+                                    aud["waveform"] = aud["waveform"][..., :keep]
+                    except Exception:
+                        pass
+            # Resize REF2VA visuals to the target megapixel area, quantized to 32,
+            # aspect-preserving cover resize + center-crop (never stretch).
+            def _resize_ref_to_target(img_batch):
+                _, h, w, _ = img_batch.shape
+                ratio = float(w) / float(max(1, h))
+                total_pixels = int(width) * int(height)
+                tw = math.sqrt(total_pixels * ratio)
+                th = math.sqrt(total_pixels / max(ratio, 1e-8))
+                tw = max(32, int(round(tw / 32) * 32))
+                th = max(32, int(round(th / 32) * 32))
+                if tw == w and th == h:
+                    return img_batch
+                return cls._resize_crop_cover(img_batch, tw, th)
+
+            ref_images_resized = {}
+            for k, img in (config["ref_images"] or {}).items():
+                try:
+                    ref_images_resized[k] = _resize_ref_to_target(img[:1]) if img is not None else img
+                except Exception:
+                    ref_images_resized[k] = img
+            ref_videos_resized = {}
+            for k, vid in (config["ref_videos"] or {}).items():
+                try:
+                    ref_videos_resized[k] = _resize_ref_to_target(vid) if vid is not None else vid
+                except Exception:
+                    ref_videos_resized[k] = vid
+
+            # Patch adapt_canvas for this call so ref videos also respect the
+            # target MP area instead of the fixed 768 short edge. The native
+            # ref-video path resizes with crop="disabled" (stretch) when the
+            # aspect differs, so pre-cover-crop the frames to the patched
+            # canvas aspect and hand the native node an exact-aspect input.
+            import comfy_extras.nodes_minimax_h3 as _h3_nodes
+            _orig_adapt = _h3_nodes.adapt_canvas
+            def _patched_adapt(vw, vh):
+                ratio = float(vw) / float(max(1, vh))
+                total_pixels = int(width) * int(height)
+                cw = math.sqrt(total_pixels * ratio)
+                ch = math.sqrt(total_pixels / max(ratio, 1e-8))
+                cw = max(32, int(round(cw / 32) * 32))
+                ch = max(32, int(round(ch / 32) * 32))
+                return int(cw), int(ch)
+            _h3_nodes.adapt_canvas = _patched_adapt
+            # Pre-cover-crop each ref video to its patched canvas so the
+            # native resize never stretches (crop="disabled" on exact aspect
+            # is a no-op).
+            for k in list(ref_videos_resized.keys()):
+                vid = ref_videos_resized[k]
+                if vid is None or not hasattr(vid, "shape"):
+                    continue
+                try:
+                    cw, ch = _patched_adapt(int(vid.shape[2]), int(vid.shape[1]))
+                    if (int(vid.shape[2]), int(vid.shape[1])) != (cw, ch):
+                        ref_videos_resized[k] = cls._resize_crop_cover(vid, cw, ch)
+                except Exception:
+                    pass
+            try:
+                outputs = cls._result_tuple(
+                    MiniMaxH3ReferenceToVideo.execute(
+                        clip=clip,
+                        vae=vae,
+                        audio_vae=audio_vae,
+                        prompt=prompt,
+                        width=int(width),
+                        height=int(height),
+                        length=int(length),
+                        ref_image_size="match",
+                        ref_images=ref_images_resized,
+                        ref_videos=ref_videos_resized,
+                        ref_video_audios=config["ref_video_audios"],
+                        ref_audios=config["ref_audios"],
+                    )
                 )
-            )
+            finally:
+                _h3_nodes.adapt_canvas = _orig_adapt
             positive, latent = outputs[0], outputs[1]
             if has_refs:
                 cls._log(
@@ -1115,7 +1374,7 @@ class CRT_MiniMaxH3UnifiedSampler:
         length_frames,
         audio_frames_override,
         video_frames_override,
-        generated_audio_gain_db,
+        generated_audio_gain_db=0.0,
         **_other_inputs,
     ):
         mode = str(workflow_mode)
@@ -1184,7 +1443,7 @@ class CRT_MiniMaxH3UnifiedSampler:
         length_frames,
         audio_frames_override,
         video_frames_override,
-        generated_audio_gain_db,
+        generated_audio_gain_db=0.0,
         live_preview=False,
         unique_id=None,
     ):
@@ -1206,6 +1465,20 @@ class CRT_MiniMaxH3UnifiedSampler:
         else:
             step_count = int(steps)
         base_model = None
+        if models["base_model"] is None or models["turbo_model"] is None:
+            # Socket visibility: shows exactly which variants the pipe actually
+            # delivered. A ✓ on the active family's missing variant means the
+            # pipe served a stale cache — the IS_CHANGED presence hash now
+            # busts that, so this should only appear on genuine wiring gaps.
+            received = {
+                k: ("✓" if (models_pipe.get(k) if isinstance(models_pipe, dict) else None) is not None else "✗")
+                for k in ("fl2va_model", "fl2va_turbo_model", "ref2va_model", "ref2va_turbo_model")
+            }
+            self._log(
+                "Models Pipe sockets received: "
+                + " ".join(f"{k}={v}" for k, v in received.items()),
+                level="warn",
+            )
         if models["base_model"] is None and models["turbo_model"] is None:
             # Last resort: try any model wired to the pipe, even from the
             # other family, so a graph with only FL2VA wired can still run
@@ -1256,6 +1529,25 @@ class CRT_MiniMaxH3UnifiedSampler:
         model = self._apply_speed_patches(model, enable_sol_attn, enable_chunk_ff, enable_spectrum)
         if live_preview:
             model = apply_h3_preview_override(model, unique_id)
+
+        # Per-token prompt weighting: (word:1.5) emphasize, (word:-1) remove.
+        # The tokenizer runs with disable_weights=True so the syntax must be
+        # stripped from the prompt before conditioning and applied as an
+        # attention patch instead.
+        weight_pairs, clean_prompt = _h3_parse_prompt_weights(models["clip"], config["prompt"], self._log)
+        if weight_pairs:
+            config["prompt"] = clean_prompt
+            to = model.model_options.get("transformer_options", {}).copy()
+            to["minimax_h3_token_weights"] = weight_pairs
+            model.model_options["transformer_options"] = to
+            dm = model.get_model_object("diffusion_model")
+            patch = _H3WeightPatch()
+            for idx, block in enumerate(dm.blocks):
+                model.add_object_patch(
+                    f"diffusion_model.blocks.{idx}.attn.forward",
+                    patch.__get__(block.attn, block.attn.__class__),
+                )
+            self._log(f"Prompt weighting active on {len(weight_pairs)} token(s).", level="ok")
 
         override_megapixels = config["override_megapixels"]
         if override_megapixels is not None:
