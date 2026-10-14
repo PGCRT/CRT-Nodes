@@ -9,7 +9,7 @@ import numpy as np
 import torch
 from PIL import Image, ImageOps
 
-from ._crawl_common import scan_tree, to_int
+from ._crawl_common import scan_tree, to_int, folders_with_files
 
 
 VALID_EXTENSIONS = {
@@ -450,8 +450,11 @@ class CRT_ImageLoaderCrawlBatch:
                 folders, files_by_folder = scan_tree(folder, max_depth)
                 tree_files = [p for fl in files_by_folder.values() for p in fl]
                 if sub_seed is not None:
+                    # Only folders holding an image take part in the
+                    # subfolder-seed selection, so empty folders are skipped.
+                    folders = folders_with_files(folders, files_by_folder, lambda p: p.suffix.lower() in VALID_EXTENSIONS)
                     if not folders:
-                        raise ValueError("No folders found under the given path")
+                        raise ValueError("No image folders found under the given path")
                     sel_folder = folders[sub_seed % len(folders)]
                     tree_files = files_by_folder.get(os.path.normpath(str(sel_folder)), [])
                 files = sorted(

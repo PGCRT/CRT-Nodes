@@ -343,6 +343,27 @@ MODELS = {
         "filename": "rt_detr_v4-x-hgnet_fp16.safetensors",
         "url": "https://huggingface.co/Comfy-Org/RT-DETR/resolve/main/diffusion_models/rt_detr_v4-x-hgnet_fp16.safetensors",
     },
+    # Qwen-Image 2.1
+    "qwen21_model": {
+        "folder": "diffusion_models",
+        "filename": "qwen_image_2.1_int8_convrot.safetensors",
+        "url": "https://huggingface.co/Comfy-Org/Qwen-Image-2.1/resolve/main/diffusion_models/qwen_image_2.1_int8_convrot.safetensors",
+    },
+    "qwen21_clip": {
+        "folder": "text_encoders",
+        "filename": "qwen3vl_8b_int8_convrot.safetensors",
+        "url": "https://huggingface.co/Comfy-Org/Qwen-Image-2.1/resolve/main/text_encoders/qwen3vl_8b_int8_convrot.safetensors",
+    },
+    "qwen21_vae": {
+        "folder": "vae",
+        "filename": "qwen_image_2.1_vae_bf16.safetensors",
+        "url": "https://huggingface.co/Comfy-Org/Qwen-Image-2.1/resolve/main/vae/qwen_image_2.1_vae_bf16.safetensors",
+    },
+    "qwen21_turbo_lora": {
+        "folder": "loras",
+        "filename": "qwen_image_2.1_lightx2v_4step.safetensors",
+        "url": "https://huggingface.co/lightx2v/Qwen-Image-2.1-Lightning/resolve/main/pytorch_lora_weights.safetensors",
+    },
 }
 
 
@@ -1183,6 +1204,27 @@ class SAM3BodyRTDETRDetector(_FixedDiffusionLoader):
     MODEL_KEY = "rtdetr_model_fp16"
 
 
+class Qwen21Model(_FixedDiffusionLoader):
+    CATEGORY = "CRT/AutoDL/QWEN2.1"
+    MODEL_KEY = "qwen21_model"
+
+
+class Qwen21VAE(_CoreVAELoader):
+    CATEGORY = "CRT/AutoDL/QWEN2.1"
+    MODEL_KEY = "qwen21_vae"
+
+
+class Qwen21CLIP(_FixedCLIPLoader):
+    CATEGORY = "CRT/AutoDL/QWEN2.1"
+    MODEL_KEY = "qwen21_clip"
+    CLIP_TYPE = "qwen_image"
+
+
+class Qwen21TurboLoRA(_FixedLoRALoader):
+    CATEGORY = "CRT/AutoDL/QWEN2.1"
+    MODEL_KEY = "qwen21_turbo_lora"
+
+
 NODE_CLASS_MAPPINGS = {
     "CRTAutoDLZImageTurboModel": ZImageTurboModel,
     "CRTAutoDLZImageTurboVAE": ZImageTurboVAE,
@@ -1233,6 +1275,10 @@ NODE_CLASS_MAPPINGS = {
     "CRTAutoDLSAM3BodyCheckpoint": SAM3BodyCheckpoint,
     "CRTAutoDLSAM3BodyRTDETRDetector": SAM3BodyRTDETRDetector,
     "CRTAutoDLSAM3BodyMoGeModel": SAM3BodyMoGeModel,
+    "CRTAutoDLQwen21Model": Qwen21Model,
+    "CRTAutoDLQwen21VAE": Qwen21VAE,
+    "CRTAutoDLQwen21CLIP": Qwen21CLIP,
+    "CRTAutoDLQwen21TurboLoRA": Qwen21TurboLoRA,
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
@@ -1285,4 +1331,8 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "CRTAutoDLSAM3BodyCheckpoint": "SAM 3.1 Checkpoint (CRT AutoDL)",
     "CRTAutoDLSAM3BodyRTDETRDetector": "SAM3DBody RT-DETR Detector (CRT AutoDL)",
     "CRTAutoDLSAM3BodyMoGeModel": "MoGe-2 Model (CRT AutoDL)",
+    "CRTAutoDLQwen21Model": "Qwen-Image 2.1 Model (CRT AutoDL)",
+    "CRTAutoDLQwen21VAE": "Qwen-Image 2.1 VAE (CRT AutoDL)",
+    "CRTAutoDLQwen21CLIP": "Qwen-Image 2.1 CLIP Qwen3VL-8B (CRT AutoDL)",
+    "CRTAutoDLQwen21TurboLoRA": "Qwen-Image 2.1 Turbo LoRA 4-Step Lightx2v (CRT AutoDL)",
 }

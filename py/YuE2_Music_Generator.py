@@ -2,6 +2,7 @@ import os
 import gc
 import json
 import random
+import re
 import logging
 import threading
 import dataclasses
@@ -71,6 +72,59 @@ def _resolve_lora_weights(lora_path):
     return path, None
 
 
+_AITK_MODULE_RE = re.compile(
+    r"^(?P<expert>text_encoders|diffusion_model)\.model\.layers\.(?P<layer>\d+)\."
+    r"(?P<part>self_attn|mlp)\.(?P<proj>qkv_proj|o_proj|gate_up_proj|down_proj)$"
+)
+_AITK_MERGED_RE = re.compile(r"\.(qkv_proj|gate_up_proj)$")
+
+
+def _convert_aitk_state(state):
+    """Rewrite ostris/ai-toolkit YuE2 LoRA keys (merged qkv/gate_up projections,
+    text_encoders/diffusion_model prefixes) into the YuE2ForCausalLM layout
+    (split projections; self_attn/mlp = AR, nar_self_attn/nar_mlp = NAR)."""
+    names = {re.sub(r"\.lora_[AB]\.weight$", "", k) for k in state}
+    if not any(_AITK_MERGED_RE.search(n) for n in names):
+        return state, 0
+    out = {}
+    converted = 0
+    for key, value in state.items():
+        m = re.fullmatch(r"(.+)\.lora_([AB])\.weight", key)
+        mm = _AITK_MODULE_RE.match(m.group(1)) if m else None
+        if mm is None:
+            out[key] = value
+            continue
+        converted += 1
+        attn = "self_attn" if mm["expert"] == "text_encoders" else "nar_self_attn"
+        mlp = "mlp" if mm["expert"] == "text_encoders" else "nar_mlp"
+        base = f"model.layers.{mm['layer']}"
+        proj = mm["proj"]
+        ab = m.group(2)
+        rows = value.shape[0]
+        if proj == "qkv_proj":
+            if ab == "A":
+                for p in ("q_proj", "k_proj", "v_proj"):
+                    out[f"{base}.{attn}.{p}.lora_A.weight"] = value
+            else:
+                q, k, v = value.split((rows // 2, rows // 4, rows // 4), dim=0)
+                out[f"{base}.{attn}.q_proj.lora_B.weight"] = q
+                out[f"{base}.{attn}.k_proj.lora_B.weight"] = k
+                out[f"{base}.{attn}.v_proj.lora_B.weight"] = v
+        elif proj == "gate_up_proj":
+            if ab == "A":
+                for p in ("gate_proj", "up_proj"):
+                    out[f"{base}.{mlp}.{p}.lora_A.weight"] = value
+            else:
+                gate, up = value.split((rows // 2, rows // 2), dim=0)
+                out[f"{base}.{mlp}.gate_proj.lora_B.weight"] = gate
+                out[f"{base}.{mlp}.up_proj.lora_B.weight"] = up
+        elif proj == "o_proj":
+            out[f"{base}.{attn}.o_proj.lora_{ab}.weight"] = value
+        else:
+            out[f"{base}.{mlp}.down_proj.lora_{ab}.weight"] = value
+    return out, converted
+
+
 def load_lora_state(lora_path, scale=1.0):
     """Load a peft LoRA adapter (directory or .safetensors) into a mergeable dict.
 
@@ -93,23 +147,35 @@ def load_lora_state(lora_path, scale=1.0):
             scaling = alpha / r
 
     state = load_file(str(weights))
+    state, n_converted = _convert_aitk_state(state)
+    if n_converted:
+        logger.info(f"YuE: converted {n_converted} ai-toolkit LoRA tensors to the YuE2 layout")
     pairs = {}
+    direct = {}
     for key, value in state.items():
         if key.endswith(".lora_A.weight"):
             pairs.setdefault(key[: -len(".lora_A.weight")], {})["A"] = value
         elif key.endswith(".lora_B.weight"):
             pairs.setdefault(key[: -len(".lora_B.weight")], {})["B"] = value
+        elif key.endswith(".delta"):
+            direct[key[: -len(".delta")]] = value
 
     deltas = {}
     for name, ab in pairs.items():
         if "A" not in ab or "B" not in ab:
             continue
-        if name.startswith("base_model.model."):
-            name = name[len("base_model.model."):]
+        # AI-Toolkit saves LoRA keys with a comfy prefix
+        # (e.g. "diffusion_model.model.layers.0.nar_self_attn.q_proj") while
+        # peft directories use "base_model.model....". Strip it so the name
+        # resolves against the base YuE2ForCausalLM via get_submodule.
+        for prefix in ("diffusion_model.", "base_model.model.", "transformer."):
+            if name.startswith(prefix):
+                name = name[len(prefix):]
+                break
         deltas[name] = (ab["A"], ab["B"])
 
     logger.info(f"YuE: loaded LoRA {weights.name} ({len(deltas)} modules, scaling {scaling:.3f})")
-    return {"path": str(lora_path), "scale": float(scale), "scaling": scaling, "deltas": deltas}
+    return {"path": str(lora_path), "scale": float(scale), "scaling": scaling, "deltas": deltas, "direct": direct}
 
 
 def apply_lora(model, lora, sign):
@@ -126,7 +192,42 @@ def apply_lora(model, lora, sign):
         delta = (b.to(torch.float32) @ a.to(torch.float32)) * factor
         module.weight.data.add_(delta.to(module.weight))
         applied += 1
+    for param_path, delta in lora.get("direct", {}).items():
+        module_name, _, param_name = param_path.rpartition(".")
+        try:
+            module = model.get_submodule(module_name)
+        except AttributeError:
+            continue
+        param = getattr(module, param_name, None)
+        if param is None:
+            continue
+        param.data.add_(delta.to(device=param.device, dtype=param.dtype) * factor)
+        applied += 1
     return applied
+
+
+def _resolve_adapter_selection(value):
+    """Resolve the loader widget value to a real adapter path.
+
+    Dropdown selections are filenames relative to ComfyUI's ``loras`` folder;
+    anything else is treated as a raw path so peft directories and absolute
+    paths keep working.
+    """
+    value = (value or "").strip()
+    if not value:
+        raise ValueError("YuE LoRA: no LoRA selected")
+    try:
+        full = folder_paths.get_full_path("loras", value)
+    except Exception:
+        full = None
+    if full and os.path.exists(full):
+        return full
+    raw = Path(value).expanduser()
+    if raw.exists():
+        return str(raw)
+    raise FileNotFoundError(
+        f"YuE LoRA not found: '{value}' (not in the loras folder and not a valid path)"
+    )
 
 
 class YuELoraLoader:
@@ -138,7 +239,7 @@ class YuELoraLoader:
             "required": {
                 "lora_path": ("STRING", {
                     "default": "",
-                    "tooltip": "Path to a LoRA adapter directory (adapter_model.safetensors) or a .safetensors file.",
+                    "tooltip": "Pick a .safetensors from the loras folder with the Browse button, or paste an adapter directory / absolute path.",
                 }),
                 "scale": ("FLOAT", {"default": 1.0, "min": -4.0, "max": 4.0, "step": 0.05}),
             },
@@ -150,9 +251,7 @@ class YuELoraLoader:
     CATEGORY = "CRT/Audio"
 
     def load_lora(self, lora_path, scale=1.0):
-        if not lora_path or not lora_path.strip():
-            raise ValueError("YuE LoRA: lora_path is empty")
-        return (load_lora_state(lora_path.strip(), scale),)
+        return (load_lora_state(_resolve_adapter_selection(lora_path), scale),)
 
 
 @contextmanager
@@ -367,6 +466,11 @@ class YuEMusicGenerator:
                 "auto_download": ("BOOLEAN", {"default": True}),
             },
             "optional": {
+                "lora_name": ("STRING", {
+                    "default": "",
+                    "tooltip": "YuE LoRA .safetensors from the loras folder (use the Browse button) or an adapter directory / absolute path. Empty = no LoRA.",
+                }),
+                "lora_scale": ("FLOAT", {"default": 1.0, "min": -4.0, "max": 4.0, "step": 0.05, "tooltip": "LoRA strength."}),
                 "style_override": ("STRING", {"forceInput": True}),
                 "lyrics_override": ("STRING", {"forceInput": True}),
                 "seed_override": ("INT", {"forceInput": True}),
@@ -408,7 +512,7 @@ class YuEMusicGenerator:
         semantic_min_tokens=200, semantic_max_tokens=9000, abc_max_tokens=4096,
         attention="comfy", backend="torch", quantization="none", memory_budget_gib=24.0,
         offload_ar=False, unload_model_before_vae="cpu", save_output=False, save_path="",
-        lora=None,
+        lora_name="", lora_scale=1.0,
     ):
         active_style = style_override if style_override else style
         active_lyrics = lyrics_override if lyrics_override else lyrics
@@ -478,6 +582,10 @@ class YuEMusicGenerator:
             "abc": active_abc,
             "cfg_scale": active_cfg,
         }
+
+        lora = None
+        if (lora_name or "").strip():
+            lora = load_lora_state(_resolve_adapter_selection(lora_name), float(lora_scale))
 
         logger.info(f"YuE: generating (cot={cot}, seed={active_seed}, model={model_id}, vae={vae_id}, "
                     f"ode_steps={ode_steps}, attention={attention}, lora={bool(lora)})")
@@ -550,6 +658,8 @@ class YuEMusicGenerator:
                         "unload_model_before_vae": unload_model_before_vae,
                         "save_output": save_output,
                         "save_path": save_path,
+                        "lora_name": lora_name,
+                        "lora_scale": lora_scale,
                     },
                 })
 
@@ -611,7 +721,7 @@ class YuEMusicGenerator:
 
 NODE_CLASS_MAPPINGS = {"YuEMusicGenerator": YuEMusicGenerator, "YuELoraLoader": YuELoraLoader}
 NODE_DISPLAY_NAME_MAPPINGS = {
-    "YuEMusicGenerator": "YuE Music Generator",
+    "YuEMusicGenerator": "YuE2 (CRT)",
     "YuELoraLoader": "YuE LoRA Loader",
 }
 

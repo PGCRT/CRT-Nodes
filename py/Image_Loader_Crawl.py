@@ -4,7 +4,7 @@ import torch
 from PIL import Image
 import numpy as np
 
-from ._crawl_common import pick_folder, scan_tree, to_int
+from ._crawl_common import pick_folder, scan_tree, to_int, folders_with_files, warn
 
 
 class ImageLoaderCrawl:
@@ -70,15 +70,16 @@ class ImageLoaderCrawl:
     def load_image_incrementally(self, folder_path, seed, max_depth, remove_extension, subfolder_seed=None):
         # Create a blank image as fallback
         def create_blank_image():
-            blank = np.zeros((512, 512, 3), dtype=np.float32)
+            blank = np.zeros((64, 64, 3), dtype=np.float32)
             return torch.from_numpy(blank)[None,]
 
         if not folder_path or not folder_path.strip():
+            warn("Image Crawl: folder path is empty.")
             return (create_blank_image(), "Error: Folder path is empty", "", 0, "")
 
         folder = Path(folder_path.strip())
         if not folder.is_dir():
-            print(f"[ERROR] Error: Folder '{folder}' not found.")
+            warn(f"Image Crawl: folder '{folder}' not found.")
             return (create_blank_image(), "Error: Folder not found", "", 0, "")
 
         seed = to_int(seed)
@@ -103,18 +104,18 @@ class ImageLoaderCrawl:
                 del self.cache[cache_key]
             return (create_blank_image(), "Error accessing folder", "", 0, "")
 
-        selected_folder, inner_seed = pick_folder(folders, sub_seed, seed)
-        if selected_folder is None:
-            print("[ERROR] No folders found under the given path.")
-            return (create_blank_image(), "No folders found", "", 0, "")
-
+        # Only folders that actually hold images take part in seed selection, so
+        # empty folders are skipped rather than consuming a slot / leaving a gap.
         valid_extensions = {'.png', '.jpg', '.jpeg', '.bmp', '.tif', '.ti', '.gi', '.webp'}
+        folders = folders_with_files(folders, files_by_folder, lambda p: p.suffix.lower() in valid_extensions)
+        if not folders:
+            warn(f"Image Crawl: no image files found in '{folder}' or its subfolders (depth {max_depth}).")
+            return (create_blank_image(), "No images found", "", 0, "")
+
+        selected_folder, inner_seed = pick_folder(folders, sub_seed, seed)
+
         files = [p for p in files_by_folder.get(os.path.normpath(str(selected_folder)), []) if p.suffix.lower() in valid_extensions]
         files.sort()
-
-        if not files:
-            print(f"[ERROR] Warning: No valid image files found in '{selected_folder}'.")
-            return (create_blank_image(), "No images found", "", 0, "")
 
         num_files = len(files)
         selected_index = inner_seed % num_files

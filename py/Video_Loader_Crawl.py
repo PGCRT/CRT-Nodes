@@ -8,7 +8,7 @@ import cv2
 import numpy as np
 import torch
 
-from ._crawl_common import pick_folder, scan_tree, to_int
+from ._crawl_common import pick_folder, scan_tree, to_int, folders_with_files, warn
 
 
 VIDEO_EXTENSIONS = {".mp4", ".webm", ".mkv", ".avi", ".mov"}
@@ -295,12 +295,12 @@ class VideoLoaderCrawl:
         subfolder_seed=None,
     ):
         if not folder_path or not folder_path.strip():
-            print("[CRT Video Loader] Error: folder path is empty.")
+            warn("Video Crawl: folder path is empty.")
             return self._blank_output()
 
         folder = Path(folder_path.strip())
         if not folder.is_dir():
-            print(f"[CRT Video Loader] Error: folder '{folder}' was not found.")
+            warn(f"Video Crawl: folder '{folder}' was not found.")
             return self._blank_output()
 
         seed = to_int(seed)
@@ -323,16 +323,20 @@ class VideoLoaderCrawl:
             self.cache.pop(cache_key, None)
             return self._blank_output()
 
-        selected_folder, inner_seed = pick_folder(folders, sub_seed, seed)
+        selected_folder, inner_seed = pick_folder(
+            folders_with_files(folders, files_by_folder, lambda p: p.suffix.lower() in VIDEO_EXTENSIONS),
+            sub_seed,
+            seed,
+        )
         if selected_folder is None:
-            print("[CRT Video Loader] No folders found under the given path.")
+            warn(f"Video Crawl: no supported video files found in '{folder}' or its subfolders (depth {max_depth}).")
             return self._blank_output()
 
         files = [p for p in files_by_folder.get(os.path.normpath(str(selected_folder)), []) if p.suffix.lower() in VIDEO_EXTENSIONS]
         files.sort()
 
         if not files:
-            print(f"[CRT Video Loader] No supported video files found in '{selected_folder}'.")
+            warn(f"Video Crawl: no supported video files found in '{selected_folder}'.")
             return self._blank_output()
 
         selected_index = inner_seed % len(files)

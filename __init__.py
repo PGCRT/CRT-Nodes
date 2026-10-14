@@ -1,7 +1,7 @@
 """
 @author: CRT
 @title: CRT-Nodes
-@version: 2.20.0
+@version: 2.21.0
 @project: "https://github.com/PGCRT/CRT-Nodes",
 @description: Set of nodes for ComfyUI
 https://discord.gg/8wYS9MBQqp
@@ -131,6 +131,7 @@ if True:
     from .py.Wan_Video_Lora_Select_Multi_Improved import WanVideoLoraSelectMultiImproved
     from .py.Ksampler_Batch import CRT_KSamplerBatch
     from .py.Ksampler_Batch_Advanced import CRT_KSamplerBatchAdvanced
+    from .py.Ksampler_Lora_Batch import CRT_KSamplerLoraBatch
     from .py.String_Line_Counter import CRT_StringLineCounter
     from .py.Text_Box_Line_Spot import CRT_LineSpot
     from .py.Textbox import CRT_Textbox
@@ -180,6 +181,7 @@ if True:
     from .py.YuE2_Music_Generator import (
         YuEMusicGenerator,
     )
+    from .py.Image_Label import CRT_ImageLabel
 
     # Add GGUF unet folder path if not already registered
     try:
@@ -319,6 +321,7 @@ NODE_CLASS_MAPPINGS = {
     "WanVideoLoraSelectMultiImproved": WanVideoLoraSelectMultiImproved,
     "CRT_KSamplerBatch": CRT_KSamplerBatch,
     "CRT_KSamplerBatchAdvanced": CRT_KSamplerBatchAdvanced,
+    "CRT_KSamplerLoraBatch": CRT_KSamplerLoraBatch,
     "CRT_StringLineCounter": CRT_StringLineCounter,
     "Text Box line spot": CRT_LineSpot,
     "CRT_Textbox": CRT_Textbox,
@@ -360,6 +363,7 @@ NODE_CLASS_MAPPINGS = {
     "CRT_DepthAnything3": CRT_DepthAnything3,
     "CRT_MarigoldV2Depth": CRT_MarigoldV2Depth,
     "YuEMusicGenerator": YuEMusicGenerator,
+    "CRT_ImageLabel": CRT_ImageLabel,
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
@@ -443,6 +447,7 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "WanVideoLoraSelectMultiImproved": "Wan Video Multi-LoRA Select (CRT)",
     "CRT_KSamplerBatch": "KSampler Batch (CRT)",
     "CRT_KSamplerBatchAdvanced": "KSampler Batch Advanced (CRT)",
+    "CRT_KSamplerLoraBatch": "KSampler LoRA Batch (CRT)",
     "CRT_StringLineCounter": "String Line Counter (CRT)",
     "Text Box line spot": "TextBox line spot (CRT)",
     "CRT_Textbox": "Textbox (CRT)",
@@ -484,6 +489,7 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "CRT_DepthAnything3": "Fast Depth Anything v3 (CRT)",
     "CRT_MarigoldV2Depth": "Heavy Depth Marigold v2 (CRT)",
     "YuEMusicGenerator": "YuE Music Generator (CRT)",
+    "CRT_ImageLabel": "Image Label (CRT)",
 }
 
 NODE_CLASS_MAPPINGS.update(CRT_AUTODL_NODE_CLASS_MAPPINGS)

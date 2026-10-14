@@ -3,7 +3,7 @@ from pathlib import Path
 import random
 import re  # Required for natural sorting
 
-from ._crawl_common import scan_tree, to_int
+from ._crawl_common import scan_tree, to_int, folders_with_files, warn
 
 
 class TextLoaderCrawlBatch:
@@ -98,8 +98,11 @@ class TextLoaderCrawlBatch:
 
             folders, files_by_folder = scan_tree(folder, max_depth)
             if sub_seed is not None:
+                # Only folders holding a matching file take part in the
+                # subfolder-seed selection, so empty folders are skipped.
+                folders = folders_with_files(folders, files_by_folder, lambda p: p.suffix.lower() == file_ext)
                 if not folders:
-                    print("[ERROR] No folders found under the given path.")
+                    warn(f"Text Crawl Batch: no '{file_ext}' files found in '{folder}' or its subfolders (depth {max_depth}).")
                     return safe_return
                 sel_folder = folders[sub_seed % len(folders)]
                 file_list = files_by_folder.get(os.path.normpath(str(sel_folder)), [])

@@ -8,7 +8,7 @@ import torch
 import torchaudio.functional as TAF
 
 from .Audio_Loader_Crawl import _load_audio_file
-from ._crawl_common import scan_tree, to_int
+from ._crawl_common import scan_tree, to_int, folders_with_files
 
 
 VALID_EXTENSIONS = (".wav", ".mp3", ".flac", ".ogg")
@@ -344,6 +344,13 @@ class CRT_AudioLoaderCrawlBatch:
         def _tree_files():
             folders, files_by_folder = scan_tree(folder, max_depth)
             if sub_seed is not None:
+                # Only folders holding a matching file take part in the
+                # subfolder-seed selection, so empty folders are skipped.
+                folders = folders_with_files(
+                    folders,
+                    files_by_folder,
+                    (lambda p: p.suffix.lower() in VALID_EXTENSIONS) if is_all else (lambda p: p.suffix.lower() == extension),
+                )
                 if not folders:
                     return []
                 sel_folder = folders[sub_seed % len(folders)]

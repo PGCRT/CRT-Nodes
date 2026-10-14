@@ -144,6 +144,7 @@ _MODEL_TYPES = {
     "Ideogram4",
     "Krea2Turbo",
     "MiniMaxH3",
+    "Qwen2.1",
 }
 _DEFAULT_MT = "Flux2Klein"
 _ROUTES_REGISTERED = globals().get("_ROUTES_REGISTERED", False)
@@ -1057,6 +1058,15 @@ _ARCH = {
                 "blocks",
                 r"(?:^|[._])(?<!double_)(?<!single_)(?<!refiner[._])blocks[._](\d+)[._]",
                 50,
+            ),
+        ],
+    },
+    "Qwen2.1": {
+        "block_types": [
+            (
+                "transformer",
+                r"(?:diffusion_model[._])?transformer_blocks[._](\d+)[._]",
+                32,
             ),
         ],
     },

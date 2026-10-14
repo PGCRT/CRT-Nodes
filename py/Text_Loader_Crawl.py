@@ -1,7 +1,7 @@
 import os
 from pathlib import Path
 
-from ._crawl_common import pick_folder, scan_tree, to_int
+from ._crawl_common import pick_folder, scan_tree, to_int, folders_with_files, warn
 
 
 class TextLoaderCrawl:
@@ -72,12 +72,12 @@ class TextLoaderCrawl:
         safe_return = ("", "", "")
 
         if not folder_path or not folder_path.strip():
-            print("[ERROR] Error: Folder path is empty.")
+            warn("Text Crawl: folder path is empty.")
             return safe_return
 
         folder = Path(folder_path.strip())
         if not folder.is_dir():
-            print(f"[ERROR] Error: Folder '{folder}' not found or is not a directory.")
+            warn(f"Text Crawl: folder '{folder}' not found or is not a directory.")
             return safe_return
 
         ext = file_extension.strip().lower()
@@ -99,19 +99,19 @@ class TextLoaderCrawl:
             folders = self.cache[cache_key]['folders']
             files_by_folder = self.cache[cache_key]['files']
 
-            selected_folder, inner_seed = pick_folder(folders, sub_seed, seed)
-            if selected_folder is None:
-                print("[ERROR] No folders found under the given path.")
+            # Only folders that actually hold a matching file take part in seed
+            # selection, so empty folders are skipped instead of consuming a slot.
+            folders = folders_with_files(folders, files_by_folder, lambda p: (not ext) or p.suffix.lower() == ext)
+            if not folders:
+                warn(f"Text Crawl: no '{ext or 'any'}' files found in '{folder}' or its subfolders (depth {max_depth}).")
                 return safe_return
+
+            selected_folder, inner_seed = pick_folder(folders, sub_seed, seed)
 
             files = files_by_folder.get(os.path.normpath(str(selected_folder)), [])
             if ext:
                 files = [f for f in files if f.suffix.lower() == ext]
             files.sort()
-
-            if not files:
-                print(f"[ERROR] Warning: No files with extension '{ext}' found in '{selected_folder}'.")
-                return safe_return
 
             num_files = len(files)
             selected_index = inner_seed % num_files

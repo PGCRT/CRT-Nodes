@@ -458,7 +458,14 @@ const _NW = 38;
 const WET_WIDGET_TOTAL = _AW + _IM + _NW + _IM + _AW;
 
 // Supported model types and their block architectures
-const MODEL_TYPES = ["Flux2Klein", "LTX2.3", "ZImageTurbo", "WAN2.2", "ERNIEImage", "Ideogram4", "Krea2Turbo", "MiniMaxH3"];
+const MODEL_TYPES = ["Flux2Klein", "LTX2.3", "ZImageTurbo", "WAN2.2", "ERNIEImage", "Ideogram4", "Krea2Turbo", "MiniMaxH3", "Qwen2.1"];
+// Display-only labels. Internal keys are persisted in workflows, presets and the
+// API, so they stay stable; only the text shown in the UI differs. Krea2 and
+// Krea2Turbo share the same architecture, so both are covered by "Krea2Turbo".
+const MODEL_TYPE_LABELS = {
+  "Krea2Turbo": "Krea2",
+};
+function _modelTypeLabel(mt) { return MODEL_TYPE_LABELS[mt] || mt; }
 const BLOCK_CONFIGS = {
   "Flux2Klein": [
     { key: "double",      label: "Double Blocks (0–7)",        count: 8  },
@@ -484,6 +491,9 @@ const BLOCK_CONFIGS = {
   ],
   "MiniMaxH3": [
     { key: "blocks", label: "Blocks (0–49)", count: 50 },
+  ],
+  "Qwen2.1": [
+    { key: "transformer", label: "Transformer Blocks (0–31)", count: 32 },
   ],
 };
 
@@ -1923,12 +1933,21 @@ function _buildPresetDomWidget(node) {
 // ---------------------------------------------------------------------------
 // PgcWetWidget — Dry/Wet multiplier 0–200%
 // Serialized as { __pgc_wet: true, value: <float 0.0-2.0> }
+//
+// NOTE on persistence: the current ComfyUI frontend serializes the object
+// reachable at `this.value` (not serializeValue()) and keeps it in a
+// per-(graph,node,widget-name) store. After a workflow load that object can be
+// a store-owned object distinct from `_value`, so all state must be read and
+// mutated through `this.value`. addNonLoraWidgets() re-syncs the value right
+// after attaching the widget. The LoRA rows already work this way.
 // ---------------------------------------------------------------------------
 class PgcWetWidget extends RgthreeBaseWidget {
   constructor(initialPct = 100) {
     super("wet");
     this.type = "custom";
-    this._pct = Math.round(Math.max(0, Math.min(200, initialPct)));
+    // Backing object used before the widget is wrapped by the frontend.
+    this._value = { __pgc_wet: true, value: 1 };
+    this._pct = initialPct;
     this.haveMouseMoved = false;
     this.hitAreas = {
       dec: { bounds: [0, 0], onClick: this.onDecClick },
@@ -1938,15 +1957,18 @@ class PgcWetWidget extends RgthreeBaseWidget {
     };
   }
 
-  get value()  { return { __pgc_wet: true, value: this._pct / 100 }; }
+  get _pct() { return Math.round(this.value.value * 100); }
+  set _pct(p) { this.value.value = Math.round(Math.max(0, Math.min(200, p))) / 100; }
+
+  get value()  { return this._value; }
   set value(v) {
     if (v != null && typeof v === "object" && v.__pgc_wet === true) {
       this._pct = Math.round(Math.max(0, Math.min(200, (v.value ?? 1) * 100)));
     } else if (typeof v === "number") {
-      this._pct = Math.round(Math.max(0, Math.min(200, v * 100)));
+      this._pct = v * 100;
     }
   }
-  serializeValue() { return { __pgc_wet: true, value: this._pct / 100 }; }
+  serializeValue() { return this.value; }
 
   draw(ctx, node, w, posY, height) {
     const margin = 10, innerMargin = margin * 0.33;
@@ -2012,7 +2034,8 @@ class PgcCapWidget extends RgthreeBaseWidget {
   constructor(initialPct = 0) {
     super("pgc_cap");
     this.type = "custom";
-    this._pct = Math.round(Math.max(0, Math.min(200, initialPct)));
+    this._value = { __pgc_cap: true, value: 0 };
+    this._pct = initialPct;
     this.haveMouseMoved = false;
     this.hitAreas = {
       dec: { bounds: [0, 0], onClick: this.onDecClick },
@@ -2022,15 +2045,18 @@ class PgcCapWidget extends RgthreeBaseWidget {
     };
   }
 
-  get value()  { return { __pgc_cap: true, value: this._pct / 100 }; }
+  get _pct() { return Math.round(this.value.value * 100); }
+  set _pct(p) { this.value.value = Math.round(Math.max(0, Math.min(200, p))) / 100; }
+
+  get value()  { return this._value; }
   set value(v) {
     if (v != null && typeof v === "object" && v.__pgc_cap === true) {
       this._pct = Math.round(Math.max(0, Math.min(200, (v.value ?? 0) * 100)));
     } else if (typeof v === "number") {
-      this._pct = Math.round(Math.max(0, Math.min(200, v * 100)));
+      this._pct = v * 100;
     }
   }
-  serializeValue() { return { __pgc_cap: true, value: this._pct / 100 }; }
+  serializeValue() { return this.value; }
 
   draw(ctx, node, w, posY, height) {
     const margin = 10, innerMargin = margin * 0.33;
@@ -2101,7 +2127,8 @@ class PgcNonBlockWidget extends RgthreeBaseWidget {
   constructor(initialPct = 100) {
     super("pgc_non_block");
     this.type = "custom";
-    this._pct = Math.round(Math.max(0, Math.min(200, initialPct)));
+    this._value = { __pgc_non_block: true, value: 1 };
+    this._pct = initialPct;
     this.haveMouseMoved = false;
     this.hitAreas = {
       dec: { bounds: [0, 0], onClick: this.onDecClick },
@@ -2111,15 +2138,18 @@ class PgcNonBlockWidget extends RgthreeBaseWidget {
     };
   }
 
-  get value()  { return { __pgc_non_block: true, value: this._pct / 100 }; }
+  get _pct() { return Math.round(this.value.value * 100); }
+  set _pct(p) { this.value.value = Math.round(Math.max(0, Math.min(200, p))) / 100; }
+
+  get value()  { return this._value; }
   set value(v) {
     if (v != null && typeof v === "object" && v.__pgc_non_block === true) {
       this._pct = Math.round(Math.max(0, Math.min(200, (v.value ?? 1) * 100)));
     } else if (typeof v === "number") {
-      this._pct = Math.round(Math.max(0, Math.min(200, v * 100)));
+      this._pct = v * 100;
     }
   }
-  serializeValue() { return { __pgc_non_block: true, value: this._pct / 100 }; }
+  serializeValue() { return this.value; }
 
   // live combined multiplier on non-block keys: slider x wet x enabled strengths
   _combined(node) {
@@ -2210,13 +2240,18 @@ class PgcGlobalBlocksWidget extends RgthreeBaseWidget {
   constructor(modelType = "Flux2Klein") {
     super("pgc_global_blocks");
     this.type = "custom";
+    this._value = { __pgc_global_blocks: true };
     this._blocks = _defaultBlocks(modelType);
   }
-  get value() {
-    const result = { __pgc_global_blocks: true };
-    for (const [k, v] of Object.entries(this._blocks)) result[k] = [...v];
-    return result;
+  get _blocks() { return this._blocksStore; }
+  set _blocks(b) {
+    this._blocksStore = b || {};
+    for (const key of ["double", "single", "transformer", "layers", "blocks"]) {
+      if (b && b[key]) this.value[key] = b[key];
+      else delete this.value[key];
+    }
   }
+  get value() { return this._value; }
   set value(v) {
     if (v?.__pgc_global_blocks === true) {
       const blocks = {};
@@ -2238,12 +2273,15 @@ class PgcModelTypeWidget extends RgthreeBaseWidget {
   constructor(modelType = "Flux2Klein") {
     super("pgc_model_type");
     this.type = "custom";
+    this._value = { __pgc_model_type: true, value: "Flux2Klein" };
     this._modelType = MODEL_TYPES.includes(modelType) ? modelType : "Flux2Klein";
   }
-  get value()  { return { __pgc_model_type: true, value: this._modelType }; }
+  get _modelType() { return this.value.value; }
+  set _modelType(mt) { if (MODEL_TYPES.includes(mt)) this.value.value = mt; }
+  get value()  { return this._value; }
   set value(v) {
     if (v?.__pgc_model_type === true && MODEL_TYPES.includes(v.value)) this._modelType = v.value;
-    else if (typeof v === "string" && MODEL_TYPES.includes(v)) this._modelType = v;
+    else if (typeof v === "string") this._modelType = v;
   }
   serializeValue() { return this.value; }
   draw() {}
@@ -2266,7 +2304,7 @@ function _buildModelSelectDomWidget(node, initialModelType = "Flux2Klein") {
   select.className = "pgc-pll-select";
   for (const mt of MODEL_TYPES) {
     const opt = document.createElement("option");
-    opt.value = mt; opt.textContent = mt;
+    opt.value = mt; opt.textContent = _modelTypeLabel(mt);
     if (mt === initialModelType) opt.selected = true;
     select.appendChild(opt);
   }
@@ -2709,17 +2747,30 @@ class CrtMagicLoraLoaderNode extends RgthreeBaseServerNode {
 
     // Main rows under automix
     moveArrayItem(this.widgets, this.addCustomWidget(new MagicLoraLoaderHeaderWidget()), 5);
-    moveArrayItem(this.widgets, this.addCustomWidget(new PgcWetWidget(wetPct)), 6);
-    moveArrayItem(this.widgets, this.addCustomWidget(new PgcCapWidget(capPct)), 7);
-    moveArrayItem(this.widgets, this.addCustomWidget(new PgcNonBlockWidget(nonBlockPct)), 8);
+
+    // Re-assign each serializable sentinel's value AFTER it is attached: the
+    // frontend keeps widget state in a per-(graph,node,name) store, so a widget
+    // recreated during configure would otherwise keep the stale default value.
+    const wetWidget = this.addCustomWidget(new PgcWetWidget(wetPct));
+    wetWidget._pct = wetPct;
+    moveArrayItem(this.widgets, wetWidget, 6);
+
+    const capWidget = this.addCustomWidget(new PgcCapWidget(capPct));
+    capWidget._pct = capPct;
+    moveArrayItem(this.widgets, capWidget, 7);
+
+    const nbWidget = this.addCustomWidget(new PgcNonBlockWidget(nonBlockPct));
+    nbWidget._pct = nonBlockPct;
+    moveArrayItem(this.widgets, nbWidget, 8);
 
     // Hidden serializable widget for model type
     const mtWidget = this.addCustomWidget(new PgcModelTypeWidget(this._pllModelType));
+    mtWidget._modelType = this._pllModelType;
     this._pllModelTypeWidget = mtWidget;
 
     // Hidden serializable widget for global block multipliers
     const gbWidget = this.addCustomWidget(new PgcGlobalBlocksWidget(this._pllModelType));
-    if (globalBlocks) gbWidget.value = { __pgc_global_blocks: true, ...globalBlocks };
+    gbWidget._blocks = globalBlocks || _defaultBlocks(this._pllModelType);
     this._pllGlobalBlocksWidget = gbWidget;
 
     // Spacer before footer (lora widgets sit above this spacer)

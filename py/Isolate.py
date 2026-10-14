@@ -1361,6 +1361,22 @@ class CRT_IsolateOutput:
             target = len(bboxes)
             crop_edge_pads = crop_edge_pads[:target]
 
+        # Normalize channel count. Enhance/upscale models (or upstream nodes) can
+        # emit RGBA (4-channel) images while the pipe's crops are RGB (3-channel),
+        # which otherwise breaks color matching and compositing.
+        target_channels = int(original_crops.shape[-1])
+        if int(enhanced_images.shape[-1]) != target_channels:
+            src_channels = int(enhanced_images.shape[-1])
+            if src_channels > target_channels:
+                enhanced_images = enhanced_images[..., :target_channels]
+            else:
+                pad_n = target_channels - src_channels
+                last = enhanced_images[..., -1:]
+                enhanced_images = torch.cat(
+                    [enhanced_images, last.expand(*enhanced_images.shape[:-1], pad_n)],
+                    dim=-1,
+                )
+
         target_frame_count = int(enhanced_images.shape[0])
         if int(original_images.shape[0]) != target_frame_count:
             print(

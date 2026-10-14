@@ -1,7 +1,7 @@
 import os
 from pathlib import Path
 
-from ._crawl_common import pick_folder, scan_tree, to_int
+from ._crawl_common import pick_folder, scan_tree, to_int, folders_with_files, warn
 
 
 class FileSearchCrawl:
@@ -81,12 +81,12 @@ class FileSearchCrawl:
         safe_return = ("", "", "", "", "", "", 0, 0)
 
         if not folder_path or not folder_path.strip():
-            print("[ERROR] FileSearch Crawl (CRT): folder path is empty.")
+            warn("FileSearch Crawl (CRT): folder path is empty.")
             return safe_return
 
         root = Path(folder_path.strip())
         if not root.is_dir():
-            print(f"[ERROR] FileSearch Crawl (CRT): folder '{root}' not found or is not a directory.")
+            warn(f"FileSearch Crawl (CRT): folder '{root}' not found or is not a directory.")
             return safe_return
 
         search = search.strip().lower()
@@ -103,24 +103,27 @@ class FileSearchCrawl:
             folders = self.cache[key]["folders"]
             files_by_folder = self.cache[key]["files"]
 
+        def _matches(path):
+            if not search:
+                return True
+            if search.startswith('.'):
+                return path.suffix.lower() == search
+            return search in path.name.lower()
+
+        # Only folders that actually hold a match take part in seed selection, so
+        # empty folders are skipped instead of consuming a slot.
         folders = sorted(folders, key=self._sort_key(folder_sort))
-        folder, inner_seed = pick_folder(folders, sub_seed, file_seed)
-        if folder is None:
-            print(f"[ERROR] FileSearch Crawl (CRT): no folders found under '{root}'.")
+        folders = folders_with_files(folders, files_by_folder, _matches)
+        if not folders:
+            warn(f"FileSearch Crawl (CRT): no files matching '{search or '*'}' found in '{root}' or its subfolders (depth {max_depth}).")
             return safe_return
 
-        matching = list(files_by_folder.get(os.path.normpath(str(folder)), []))
-        if search:
-            if search.startswith('.'):
-                matching = [f for f in matching if f.suffix.lower() == search]
-            else:
-                matching = [f for f in matching if search in f.name.lower()]
+        folder, inner_seed = pick_folder(folders, sub_seed, file_seed)
+
+        matching = [f for f in files_by_folder.get(os.path.normpath(str(folder)), []) if _matches(f)]
         matching.sort(key=self._sort_key(file_sort))
 
         match_count = len(matching)
-        if match_count == 0:
-            print(f"[ERROR] FileSearch Crawl (CRT): no files matching '{search}' found in '{folder}'.")
-            return safe_return
 
         selected_index = inner_seed % match_count
         selected = matching[selected_index]

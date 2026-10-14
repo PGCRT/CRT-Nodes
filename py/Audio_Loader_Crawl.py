@@ -3,7 +3,7 @@ from pathlib import Path
 
 import torch
 
-from ._crawl_common import pick_folder, scan_tree, to_int
+from ._crawl_common import pick_folder, scan_tree, to_int, folders_with_files, warn
 
 
 def _load_audio_file(path):
@@ -137,12 +137,12 @@ class AudioLoaderCrawl:
         safe_return = (None, "", "")
 
         if not folder_path or not folder_path.strip():
-            print("[ERROR] Error: Folder path is empty.")
+            warn("Audio Crawl: folder path is empty.")
             return safe_return
 
         folder = Path(folder_path.strip())
         if not folder.is_dir():
-            print(f"[ERROR] Error: Folder '{folder}' not found or is not a directory.")
+            warn(f"Audio Crawl: folder '{folder}' not found or is not a directory.")
             return safe_return
 
         # Ensure file extension has a dot
@@ -166,17 +166,18 @@ class AudioLoaderCrawl:
             folders = self.cache[cache_key]['folders']
             files_by_folder = self.cache[cache_key]['files']
 
-            selected_folder, inner_seed = pick_folder(folders, sub_seed, seed)
-            if selected_folder is None:
-                print("[ERROR] No folders found under the given path.")
+            # Only folders that actually hold the requested extension take part
+            # in seed selection, so empty folders are skipped instead of
+            # consuming a slot / producing a placeholder.
+            folders = folders_with_files(folders, files_by_folder, lambda p: p.suffix.lower() == file_extension)
+            if not folders:
+                warn(f"Audio Crawl: no '{file_extension}' files found in '{folder}' or its subfolders (depth {max_depth}).")
                 return safe_return
+
+            selected_folder, inner_seed = pick_folder(folders, sub_seed, seed)
 
             files = [f for f in files_by_folder.get(os.path.normpath(str(selected_folder)), []) if f.suffix.lower() == file_extension]
             files.sort()
-
-            if not files:
-                print(f"[ERROR] Warning: No files with extension '{file_extension}' found in '{selected_folder}'.")
-                return safe_return
 
             # --- Deterministic and Safe Selection ---
             num_files = len(files)

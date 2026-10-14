@@ -143,9 +143,10 @@ const CSS_STYLES_YUE_UI = `
 .yue-sec-arrow { color: var(--yue-text-dim); font-size: 10px; width: 10px; flex: 0 0 10px; transition: transform 0.15s ease; }
 .yue-sec.open .yue-sec-arrow { transform: rotate(90deg); color: var(--yue-primary); }
 .yue-sec-title { font-family: var(--yue-font); font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--yue-text-dim); }
-.yue-sec.open .yue-sec-title { color: var(--yue-text); }
+.yue-sec.open .yue-sec-title { color: var(--yue-primary); }
 .yue-sec-body { display: none; flex-direction: column; gap: 10px; padding: 2px 10px 10px 10px; }
 .yue-sec.open .yue-sec-body { display: flex; }
+.yue-sec.open { border-color: var(--yue-primary); background: rgba(139, 92, 246, 0.07); box-shadow: 0 0 0 1px rgba(139, 92, 246, 0.25) inset; }
 .yue-gated { opacity: 0.35; pointer-events: none; }
 
 .yue-gen-btn {
@@ -408,7 +409,7 @@ class YuEPreviewUI {
         this.container.className = 'yue-preview-container';
 
         this.container.innerHTML = `
-            <div class="yue-title">YuE2</div>
+            <div class="yue-title">YuE2 (CRT)</div>
             <div class="yue-led"></div>
             <div class="yue-tabs">
                 <button class="yue-tab-btn active" data-tab="gen">Generation</button>
@@ -710,8 +711,12 @@ class YuEPreviewUI {
             const head = sec.querySelector('.yue-sec-head');
             if (!head) return;
             head.addEventListener('click', () => {
-                sec.classList.toggle('open');
+                const willOpen = !sec.classList.contains('open');
+                const tab = sec.closest('.yue-tab-content');
+                tab?.querySelectorAll('.yue-sec.open').forEach(s => s.classList.remove('open'));
+                sec.classList.toggle('open', willOpen);
                 this.updateSamplingGate();
+                this.snapToContentSoon();
             });
         });
 
@@ -1324,4 +1329,325 @@ app.registerExtension({
             return onRemoved?.apply(this, arguments);
         };
     }
+});
+
+// ---------------------------------------------------------------------------
+// YuE in-node LoRA picker: searchable dropdown for the lora_name widget in
+// the YuE2 node's own settings. Lists .safetensors files from ComfyUI's
+// loras folder (same source as the Magic LoRA Loader) with a type-to-filter
+// popup; raw paths and adapter directories can still be pasted directly.
+// ---------------------------------------------------------------------------
+const YUE_LORA_PICKER_CSS = `
+#yue-lora-picker {
+  position: fixed; z-index: 10000;
+  background: #17131f;
+  border: 1px solid rgba(139,92,246,0.55);
+  border-radius: 7px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.7);
+  display: flex; flex-direction: column;
+  overflow: hidden;
+  font-family: sans-serif;
+}
+.yue-lora-picker-search {
+  padding: 7px 10px; border: none;
+  border-bottom: 1px solid rgba(139,92,246,0.3);
+  background: rgba(0,0,0,0.5); color: #fff;
+  font-size: 12px; outline: none; flex-shrink: 0;
+}
+.yue-lora-picker-search::placeholder { color: rgba(255,255,255,0.3); }
+.yue-lora-picker-search:focus { border-bottom-color: #8b5cf6; }
+.yue-lora-picker-list {
+  list-style: none; margin: 0; padding: 4px 0;
+  overflow-y: auto; max-height: 320px;
+}
+.yue-lora-picker-item {
+  padding: 5px 10px; cursor: pointer;
+  font-size: 12px; color: #ccc;
+  white-space: nowrap;
+  outline: none;
+}
+.yue-lora-picker-item:hover,
+.yue-lora-picker-item:focus { background: rgba(139,92,246,0.3); color: #fff; }
+.yue-lora-picker-item.active { color: #a78bfa; font-weight: 600; }
+.yue-lora-picker-empty {
+  padding: 8px 10px; font-size: 11px;
+  color: rgba(255,255,255,0.3); font-style: italic;
+}
+.yue-lora-picker-folder { color: #4cff6e; }
+.yue-lora-browse-row {
+  display: flex; align-items: center; gap: 6px;
+  height: 30px; width: 100%; box-sizing: border-box;
+  padding: 2px 0;
+}
+.yue-lora-browse-label {
+  flex: 1 1 auto; min-width: 0;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  font-size: 12px; color: #a29bb5;
+}
+.yue-lora-browse-label.has-value { color: #fff; }
+.yue-lora-browse-btn {
+  flex: 0 0 auto;
+  background: rgba(139,92,246,0.25);
+  border: 1px solid rgba(139,92,246,0.6);
+  color: #fff; border-radius: 6px;
+  font-size: 12px; padding: 3px 10px; cursor: pointer;
+}
+.yue-lora-browse-btn:hover { background: rgba(139,92,246,0.45); }
+.yue-lora-pick-row { display: flex; gap: 6px; align-items: center; }
+.yue-lora-pick-row .yue-input { flex: 1 1 auto; min-width: 0; }
+.yue-lora-clear-btn {
+  flex: 0 0 auto;
+  background: transparent;
+  border: 1px solid var(--yue-border, #342c44);
+  color: #a29bb5; border-radius: 6px;
+  font-size: 12px; padding: 3px 9px; cursor: pointer;
+}
+.yue-lora-clear-btn:hover { color: #fff; border-color: #f472b6; }
+`;
+
+let _yueLoraCssInjected = false;
+function _yueInjectLoraCss() {
+    if (_yueLoraCssInjected) return;
+    _yueLoraCssInjected = true;
+    const s = document.createElement("style");
+    s.textContent = YUE_LORA_PICKER_CSS;
+    document.head.appendChild(s);
+}
+
+function yueShowLoraChooser(event, callback, currentValue, loras) {
+    const existing = document.getElementById("yue-lora-picker");
+    if (existing) existing.remove();
+
+    loras = loras.filter((n) => n.toLowerCase().endsWith(".safetensors"));
+
+    const originX = event?.clientX ?? 200;
+    const originY = event?.clientY ?? 200;
+
+    const overlay = document.createElement("div");
+    overlay.id = "yue-lora-picker";
+
+    const search = document.createElement("input");
+    search.type = "text";
+    search.className = "yue-lora-picker-search";
+    search.placeholder = "Search LoRAs…";
+
+    const ul = document.createElement("ul");
+    ul.className = "yue-lora-picker-list";
+
+    const esc = (s) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+    function renderList(filter) {
+        ul.innerHTML = "";
+        const q = filter.toLowerCase();
+        const filtered = q ? loras.filter((n) => n.toLowerCase().includes(q)) : loras;
+        for (const name of filtered) {
+            const li = document.createElement("li");
+            li.className = "yue-lora-picker-item" + (name === currentValue ? " active" : "");
+            li.tabIndex = -1;
+            const sep = name.search(/[/\\][^/\\]*$/);
+            li.innerHTML = sep === -1
+                ? esc(name)
+                : `<span class="yue-lora-picker-folder">${esc(name.slice(0, sep + 1))}</span>${esc(name.slice(sep + 1))}`;
+            li.title = name;
+            li.addEventListener("click", () => { overlay.remove(); callback(name); });
+            ul.appendChild(li);
+        }
+        if (!filtered.length) {
+            const li = document.createElement("li");
+            li.className = "yue-lora-picker-empty";
+            li.textContent = "No results";
+            ul.appendChild(li);
+        }
+    }
+
+    search.addEventListener("input", () => renderList(search.value));
+    search.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") { overlay.remove(); return; }
+        if (e.key === "ArrowDown") {
+            e.preventDefault();
+            ul.querySelector(".yue-lora-picker-item")?.focus();
+        }
+    });
+    ul.addEventListener("keydown", (e) => {
+        const items = [...ul.querySelectorAll(".yue-lora-picker-item")];
+        const idx = items.indexOf(document.activeElement);
+        if (e.key === "ArrowDown") { e.preventDefault(); items[Math.min(idx + 1, items.length - 1)]?.focus(); }
+        else if (e.key === "ArrowUp") { e.preventDefault(); idx <= 0 ? search.focus() : items[idx - 1]?.focus(); }
+        else if (e.key === "Enter" && idx >= 0) { items[idx].click(); }
+        else if (e.key === "Escape") { overlay.remove(); }
+    });
+
+    overlay.appendChild(search);
+    overlay.appendChild(ul);
+    document.body.appendChild(overlay);
+
+    const pickerMaxH = 340;
+    const vw = window.innerWidth, vh = window.innerHeight;
+    const measure = document.createElement("canvas").getContext("2d");
+    measure.font = "12px sans-serif";
+    const longestPx = loras.reduce((m, n) => Math.max(m, measure.measureText(n).width), 0);
+    const pickerW = Math.min(Math.max(300, Math.ceil(longestPx) + 24), vw - 16);
+    overlay.style.width = pickerW + "px";
+    let left = originX, top = originY + 6;
+    if (left + pickerW > vw - 8) left = vw - pickerW - 8;
+    if (top + pickerMaxH > vh - 8) top = Math.max(8, originY - pickerMaxH - 6);
+    overlay.style.left = left + "px";
+    overlay.style.top = top + "px";
+
+    renderList("");
+
+    const onOutside = (e) => {
+        if (!overlay.contains(e.target)) {
+            overlay.remove();
+            document.removeEventListener("pointerdown", onOutside, true);
+            document.removeEventListener("mousedown", onOutside, true);
+        }
+    };
+    setTimeout(() => {
+        document.addEventListener("pointerdown", onOutside, true);
+        document.addEventListener("mousedown", onOutside, true);
+    }, 0);
+    search.focus();
+}
+
+async function setupYueLoraSection(node) {
+        if (node.yueLoraSection) return;
+
+        // The preview UI builds synchronously in its own nodeCreated, which
+        // is registered earlier in this file — but retry briefly in case the
+        // panel is not ready yet (e.g. node pasted while hidden).
+        const ui = node.yueUI;
+        if (!ui?.container) {
+            const tries = (node._yueLoraTries ?? 0) + 1;
+            node._yueLoraTries = tries;
+            if (tries < 6) setTimeout(() => setupYueLoraSection(node), 500);
+            return;
+        }
+        node._yueLoraTries = 0;
+
+        const nameWidget = node.widgets?.find((w) => w.name === "lora_name");
+        const scaleWidget = node.widgets?.find((w) => w.name === "lora_scale");
+        if (!nameWidget || !scaleWidget) return;
+
+        _yueInjectLoraCss();
+
+        // Insert a LoRA collapsible section into the Settings tab, right
+        // after "Model & Runtime", using the panel's own markup and classes.
+        const settingsSection = ui.container.querySelector("#tab-settings .yue-section");
+        const anchor = settingsSection?.querySelector(".yue-sec");
+        if (!settingsSection || !anchor) return;
+
+        const sec = document.createElement("div");
+        sec.className = "yue-sec";
+        sec.id = "yue-sec-lora";
+        sec.innerHTML = `
+            <button class="yue-sec-head" type="button"><span class="yue-sec-arrow">▸</span><span class="yue-sec-title">LoRA</span></button>
+            <div class="yue-sec-body">
+                <div class="yue-input-group full">
+                    <label class="yue-label">Adapter</label>
+                    <div class="yue-lora-pick-row">
+                        <input type="text" class="yue-input" id="in-lora-name" readonly placeholder="No LoRA selected">
+                        <button class="yue-lora-browse-btn" id="btn-lora-browse" type="button" title="Browse loras folder">🔍</button>
+                        <button class="yue-lora-clear-btn" id="btn-lora-clear" type="button" title="Clear LoRA">✕</button>
+                    </div>
+                </div>
+                <div class="yue-input-group full">
+                    <label class="yue-label">Strength</label>
+                    <div class="yue-slider-row">
+                        <input type="range" class="yue-slider" id="in-lora-scale" min="-4" max="4" step="0.05">
+                        <span class="yue-val" id="val-lora-scale">--</span>
+                    </div>
+                </div>
+            </div>`;
+        anchor.after(sec);
+
+        const nameInput = sec.querySelector("#in-lora-name");
+        const browseBtn = sec.querySelector("#btn-lora-browse");
+        const clearBtn = sec.querySelector("#btn-lora-clear");
+        const scaleSlider = sec.querySelector("#in-lora-scale");
+        const scaleVal = sec.querySelector("#val-lora-scale");
+
+        const syncLoraUI = () => {
+            if (document.activeElement !== nameInput) nameInput.value = nameWidget.value || "";
+            if (scaleSlider.value != scaleWidget.value) {
+                scaleSlider.value = scaleWidget.value;
+                scaleVal.textContent = scaleWidget.value;
+            } else if (scaleVal.textContent === "--") {
+                scaleVal.textContent = scaleWidget.value;
+            }
+        };
+
+        sec.querySelector(".yue-sec-head").addEventListener("click", () => {
+            const willOpen = !sec.classList.contains("open");
+            const tab = sec.closest(".yue-tab-content");
+            tab?.querySelectorAll(".yue-sec.open").forEach((s) => s.classList.remove("open"));
+            sec.classList.toggle("open", willOpen);
+            ui.updateSamplingGate?.();
+            ui.snapToContentSoon?.();
+        });
+
+        [nameInput, scaleSlider, browseBtn, clearBtn].forEach((el) => {
+            el?.addEventListener("mousedown", (e) => e.stopPropagation());
+        });
+
+        scaleSlider.addEventListener("input", (e) => {
+            scaleVal.textContent = e.target.value;
+            scaleWidget.value = parseFloat(e.target.value);
+        });
+
+        browseBtn.addEventListener("click", async (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            browseBtn.disabled = true;
+            try {
+                const res = await api.fetchApi("/crt-pll/api/loras");
+                const data = await res.json();
+                const loras = (Array.isArray(data) ? data : []).map((d) => d.file).filter(Boolean);
+                if (!loras.length) return;
+                yueShowLoraChooser(e, (picked) => {
+                    nameWidget.value = picked;
+                    syncLoraUI();
+                    node.setDirtyCanvas(true, true);
+                }, (nameWidget.value || "").trim(), loras);
+            } catch (err) {
+                console.warn("[YuE LoRA] could not fetch LoRA list:", err);
+            } finally {
+                browseBtn.disabled = false;
+            }
+        });
+
+        clearBtn.addEventListener("click", (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            nameWidget.value = "";
+            syncLoraUI();
+            node.setDirtyCanvas(true, true);
+        });
+
+        // Fold LoRA into the panel's existing sync + run-preset flows.
+        const origSync = ui.syncInputsFromWidgets.bind(ui);
+        ui.syncInputsFromWidgets = () => { origSync(); syncLoraUI(); };
+        const origPreset = ui.applyPreset.bind(ui);
+        ui.applyPreset = (settings) => {
+            origPreset(settings);
+            if (!settings) return;
+            if (settings.lora_name !== undefined && settings.lora_name !== null) {
+                nameWidget.value = settings.lora_name;
+            }
+            if (settings.lora_scale !== undefined && settings.lora_scale !== null) {
+                scaleWidget.value = settings.lora_scale;
+            }
+            syncLoraUI();
+        };
+
+        syncLoraUI();
+        node.yueLoraSection = true;
+        node.setDirtyCanvas(true, true);
+}
+
+app.registerExtension({
+    name: "Comfy.YuE.LoRAWidget",
+    async nodeCreated(node) {
+        if (node.comfyClass !== "YuEMusicGenerator") return;
+        setupYueLoraSection(node);
+    },
 });
