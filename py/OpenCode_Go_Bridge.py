@@ -18,7 +18,7 @@ import uuid
 GO_ROOT = "https://opencode.ai/inference/go"
 DEFAULT_MODEL = "glm-5.3-flash"
 THINKING_EVENT = "crt_opencode_go_thinking"
-USER_AGENT = "CRT-Nodes/2.23 (ComfyUI; opencode-go-bridge)"
+USER_AGENT = "CRT-Nodes/2.24 (ComfyUI; opencode-go-bridge)"
 STREAM_BROADCAST_MIN_INTERVAL = 0.08
 DEFAULT_TIMEOUT = 600
 MAX_IMAGES = 8
@@ -301,8 +301,21 @@ def _skills_text(skills_path):
     return text, len(parts)
 
 
+def _pick_even_indices(batch_size, count):
+    """Evenly spaced indices including the first and last frame."""
+    if batch_size <= 1 or count >= batch_size:
+        return list(range(batch_size))
+    if count <= 1:
+        return [0]
+    return [int((i * (batch_size - 1)) / (count - 1)) for i in range(count)]
+
+
 def _image_payloads(image):
-    """Convert a ComfyUI IMAGE tensor into base64 PNG parts (max 8)."""
+    """Convert a ComfyUI IMAGE tensor into base64 PNG parts (max 8).
+
+    Batches larger than 8 frames (for example a short video clip) are evenly
+    sampled down to 8 frames, keeping the first and last frame.
+    """
     if image is None:
         return []
     try:
@@ -318,8 +331,12 @@ def _image_payloads(image):
     if tensor.ndim != 4:
         raise RuntimeError(f"Expected IMAGE tensor [B,H,W,C] or [H,W,C], got {tensor.shape}.")
     if tensor.shape[0] > MAX_IMAGES:
-        _log(f"WARNING: {tensor.shape[0]} images supplied, only the first {MAX_IMAGES} are sent.")
-        tensor = tensor[:MAX_IMAGES]
+        indices = _pick_even_indices(tensor.shape[0], MAX_IMAGES)
+        _log(
+            f"WARNING: {tensor.shape[0]} images supplied, evenly sampled "
+            f"{len(indices)} frames."
+        )
+        tensor = tensor[indices]
 
     images = []
     for frame in tensor:
@@ -859,8 +876,9 @@ class CRT_OpenCodeGoBridge:
                     "IMAGE",
                     {
                         "tooltip": (
-                            "Optional image batch (first 8 frames are sent). The chosen "
-                            "model must support vision input."
+                            "Optional image batch. Batches larger than 8 frames are "
+                            "evenly sampled down to 8 (first and last included). The "
+                            "chosen model must support vision input."
                         ),
                     },
                 ),

@@ -1,7 +1,7 @@
 """
 @author: CRT
 @title: CRT-Nodes
-@version: 2.23.0
+@version: 2.24.0
 @project: "https://github.com/PGCRT/CRT-Nodes",
 @description: Set of nodes for ComfyUI
 https://discord.gg/8wYS9MBQqp
@@ -127,7 +127,6 @@ if True:
     from .py.String_Splitter import CRT_StringSplitter
     from .py.Image_Dimensions_From_MP import ImageDimensionsFromMegaPixels
     from .py.Image_Dimensions_From_MP_Alt import ImageDimensionsFromMegaPixelsAlt
-    from .py.Wan_Video_Lora_Select_Multi_Improved import WanVideoLoraSelectMultiImproved
     from .py.Ksampler_Batch import CRT_KSamplerBatch
     from .py.Ksampler_Batch_Advanced import CRT_KSamplerBatchAdvanced
     from .py.Ksampler_Lora_Batch import CRT_KSamplerLoraBatch
@@ -328,7 +327,6 @@ NODE_CLASS_MAPPINGS = {
     "CRT_StringSplitter": CRT_StringSplitter,
     "ImageDimensionsFromMegaPixels": ImageDimensionsFromMegaPixels,
     "ImageDimensionsFromMegaPixelsAlt": ImageDimensionsFromMegaPixelsAlt,
-    "WanVideoLoraSelectMultiImproved": WanVideoLoraSelectMultiImproved,
     "CRT_KSamplerBatch": CRT_KSamplerBatch,
     "CRT_KSamplerBatchAdvanced": CRT_KSamplerBatchAdvanced,
     "CRT_KSamplerLoraBatch": CRT_KSamplerLoraBatch,
@@ -455,7 +453,6 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "CRT_StringSplitter": "String Splitter (CRT)",
     "ImageDimensionsFromMegaPixels": "Image Dimensions From Megapixels (CRT)",
     "ImageDimensionsFromMegaPixelsAlt": "Image Dimensions From MP alt (CRT)",
-    "WanVideoLoraSelectMultiImproved": "Wan Video Multi-LoRA Select (CRT)",
     "CRT_KSamplerBatch": "KSampler Batch (CRT)",
     "CRT_KSamplerBatchAdvanced": "KSampler Batch Advanced (CRT)",
     "CRT_KSamplerLoraBatch": "KSampler LoRA Batch (CRT)",

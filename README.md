@@ -204,11 +204,10 @@ Restart ComfyUI after installation or an update.
 - `Boolean Invert (CRT)`
 - `Strength to Steps (CRT)`
 
-### CRT/LoRA (3)
+### CRT/LoRA (2)
 
 - `Magic LoRA Loader (CRT)`
 - `Magic Save Merged LoRA (CRT)`
-- `Wan Video Multi-LoRA Select (CRT)`
 
 ### CRT/LTX2.5 (3)
 
