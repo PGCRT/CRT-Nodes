@@ -1,7 +1,7 @@
 """
 @author: CRT
 @title: CRT-Nodes
-@version: 2.21.0
+@version: 2.22.0
 @project: "https://github.com/PGCRT/CRT-Nodes",
 @description: Set of nodes for ComfyUI
 https://discord.gg/8wYS9MBQqp
@@ -46,7 +46,6 @@ if True:
     from .py.Boolean_Transform_Node import BooleanTransformNode
     from .py.Video_Duration_Calculator import VideoDurationCalculator
     from .py.Post_Process_Node import CRTPostProcessNode
-    from .py.Flux_Lora_Blocks_Patcher import FluxLoraBlocksPatcher
     from .py.Fancy_Note_Node import FancyNoteNode
     from .py.Text_Loader_Crawl import TextLoaderCrawl
     from .py.Image_Loader_Crawl import ImageLoaderCrawl
@@ -246,7 +245,6 @@ NODE_CLASS_MAPPINGS = {
     "Boolean Transform": BooleanTransformNode,
     "Video Duration Calculator": VideoDurationCalculator,
     "CRT Post-Process Suite": CRTPostProcessNode,
-    "FluxLoraBlocksPatcher": FluxLoraBlocksPatcher,
     "FancyNoteNode": FancyNoteNode,
     "TextLoaderCrawl": TextLoaderCrawl,
     "ImageLoaderCrawl": ImageLoaderCrawl,
@@ -370,7 +368,6 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "Boolean Transform": "String to Boolean (CRT)",
     "Video Duration Calculator": "Video Duration Calculator (CRT)",
     "CRT Post-Process Suite": "Post-Process Suite (CRT)",
-    "FluxLoraBlocksPatcher": "Flux LoRA Blocks Patcher (CRT)",
     "FancyNoteNode": "Fancy Note (CRT)",
     "TextLoaderCrawl": "Text Loader Crawl (CRT)",
     "ImageLoaderCrawl": "Image Loader Crawl (CRT)",

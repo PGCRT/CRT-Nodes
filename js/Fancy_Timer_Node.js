@@ -75,7 +75,6 @@ const FancyTimerNodeExtension = {
         if (nodeData.name === "FancyTimerNode") {
             const originalOnNodeCreated = nodeType.prototype.onNodeCreated;
             const originalOnRemoved = nodeType.prototype.onRemoved;
-            const originalOnSerialize = nodeType.prototype.onSerialize;
             const originalOnConfigure = nodeType.prototype.onConfigure;
             
             nodeType.prototype.onNodeCreated = function () {
@@ -89,32 +88,39 @@ const FancyTimerNodeExtension = {
                 const container = document.createElement("div");
                 container.style.cssText = `width: 100%; height: 100%; position: relative; --text-color: #7300ff; --glow-color: #7300ff;`;
 
-                this.timerDisplay = document.createElement("div");
-                this.timerDisplay.className = "fancy-timer-display";
+                const timerDisplay = document.createElement("div");
+                timerDisplay.className = "fancy-timer-display";
 
                 // Fixed-width segments so colons never shift
-                this._segMin   = document.createElement("span");
-                this._segMin.className = "fancy-timer-seg";
+                const segMin   = document.createElement("span");
+                segMin.className = "fancy-timer-seg";
                 const _col1    = document.createElement("span");
                 _col1.className = "fancy-timer-sep";
                 _col1.textContent = ":";
-                this._segSec   = document.createElement("span");
-                this._segSec.className = "fancy-timer-seg";
+                const segSec   = document.createElement("span");
+                segSec.className = "fancy-timer-seg";
                 const _col2    = document.createElement("span");
                 _col2.className = "fancy-timer-sep";
                 _col2.textContent = ":";
-                this._segMs    = document.createElement("span");
-                this._segMs.className = "fancy-timer-seg fancy-timer-seg-ms";
-                this.timerDisplay.append(this._segMin, _col1, this._segSec, _col2, this._segMs);
+                const segMs    = document.createElement("span");
+                segMs.className = "fancy-timer-seg fancy-timer-seg-ms";
+                timerDisplay.append(segMin, _col1, segSec, _col2, segMs);
 
                 const saved = (this.properties.elapsed_time_str || "00:00:000").split(":");
-                this._segMin.textContent = saved[0] || "00";
-                this._segSec.textContent = saved[1] || "00";
-                this._segMs.textContent  = saved[2] || "000";
-                
-                container.appendChild(this.timerDisplay);
+                segMin.textContent = saved[0] || "00";
+                segSec.textContent = saved[1] || "00";
+                segMs.textContent  = saved[2] || "000";
+
+                container.appendChild(timerDisplay);
                 this.addDOMWidget("fancyTimer", "Fancy Timer", container, { serialize: false });
-                
+
+                Object.defineProperties(this, {
+                    timerDisplay: { value: timerDisplay, writable: true, configurable: true, enumerable: false },
+                    _segMin:      { value: segMin,       writable: true, configurable: true, enumerable: false },
+                    _segSec:      { value: segSec,       writable: true, configurable: true, enumerable: false },
+                    _segMs:       { value: segMs,        writable: true, configurable: true, enumerable: false },
+                });
+
                 GlobalTimer.registerNode(this);
             };
             
@@ -122,10 +128,6 @@ const FancyTimerNodeExtension = {
                 GlobalTimer.unregisterNode(this);
                 this.timerDisplay = null;
                 originalOnRemoved?.apply(this, arguments);
-            };
-            nodeType.prototype.onSerialize = function(o) {
-                originalOnSerialize?.apply(this, arguments);
-                o.properties = this.properties;
             };
             nodeType.prototype.onConfigure = function(info) {
                 originalOnConfigure?.apply(this, arguments);

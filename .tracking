@@ -23,7 +23,6 @@ js/Dynamic_Prompt_Scheduler.js
 js/Extract_QA.js
 js/Fancy_Note_Node.js
 js/Fancy_Timer_Node.js
-js/Flux_Lora_Blocks_Patcher.js
 js/LTX23_Unified_Sampler.js
 js/Magic_Lora_Loader.js
 js/Node_Black_Default.js
@@ -87,7 +86,6 @@ py/Fancy_Note_Node.py
 py/Fancy_Timer_Node.py
 py/File_Batch_Prompt_Scheduler.py
 py/Film_Grain_FX.py
-py/Flux_Lora_Blocks_Patcher.py
 py/Get_First_Last_Frame.py
 py/Image_Dimensions_From_MP_Alt.py
 py/Image_Dimensions_From_MP.py

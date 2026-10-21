@@ -633,8 +633,20 @@ class CRT_KSamplerBatchAdvanced:
                         step    = _state["step"]
                         total   = _state["total"]
                     if preview is not None:
+                        # The global progress hook consumes the interrupt flag when
+                        # it raises, so the preview thread must not swallow it: bail
+                        # out before the hook if already interrupted, and put the
+                        # flag back if the hook did consume it, so the sampling
+                        # (main) thread still aborts the run on Cancel.
+                        if comfy.model_management.processing_interrupted():
+                            _stop.set()
+                            return
                         try:
                             pbar.update_absolute(step, total, preview)
+                        except comfy.model_management.InterruptProcessingException:
+                            comfy.model_management.interrupt_current_processing(True)
+                            _stop.set()
+                            return
                         except Exception:
                             pass
                     idx = (idx + 1) % target_batch
@@ -644,6 +656,9 @@ class CRT_KSamplerBatchAdvanced:
             _thread.start()
 
             def batch_callback(step, x0, x, total_steps):
+                # Checked on the sampling (main) thread so Cancel aborts the run;
+                # the preview thread must never be what raises the interrupt.
+                comfy.model_management.throw_exception_if_processing_interrupted()
                 if previewer and x0 is not None:
                     n       = min(target_batch, x0.shape[0])
                     decoded = []

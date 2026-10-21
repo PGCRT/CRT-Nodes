@@ -185,9 +185,8 @@ Restart ComfyUI after installation or an update.
 - `Boolean Invert (CRT)`
 - `Strength to Steps (CRT)`
 
-### CRT/LoRA (6)
+### CRT/LoRA (5)
 
-- `Flux LoRA Blocks Patcher (CRT)`
 - `Magic LoRA Loader (CRT)`
 - `Magic Save Merged LoRA (CRT)`
 - `Seeded Persona LoRA Crawl Batch (CRT)`

@@ -364,6 +364,27 @@ MODELS = {
         "filename": "qwen_image_2.1_lightx2v_4step.safetensors",
         "url": "https://huggingface.co/lightx2v/Qwen-Image-2.1-Lightning/resolve/main/pytorch_lora_weights.safetensors",
     },
+    # MOSS-Image
+    "moss_image_base": {
+        "folder": "diffusion_models",
+        "filename": "moss_image_base_int8_convrot.safetensors",
+        "url": "https://huggingface.co/Comfy-Org/MOSS-Image/resolve/main/diffusion_models/moss_image_base_int8_convrot.safetensors",
+    },
+    "moss_image_sft": {
+        "folder": "diffusion_models",
+        "filename": "moss_image_sft_int8_convrot.safetensors",
+        "url": "https://huggingface.co/Comfy-Org/MOSS-Image/resolve/main/diffusion_models/moss_image_sft_int8_convrot.safetensors",
+    },
+    "moss_image_clip": {
+        "folder": "text_encoders",
+        "filename": "qwen3.5_9b_int8_convrot.safetensors",
+        "url": "https://huggingface.co/Comfy-Org/MOSS-Image/resolve/main/text_encoders/qwen3.5_9b_int8_convrot.safetensors",
+    },
+    "moss_image_vae": {
+        "folder": "vae",
+        "filename": "flux2-vae.safetensors",
+        "url": "https://huggingface.co/Comfy-Org/flux2-dev/resolve/main/split_files/vae/flux2-vae.safetensors",
+    },
 }
 
 
@@ -1225,6 +1246,25 @@ class Qwen21TurboLoRA(_FixedLoRALoader):
     MODEL_KEY = "qwen21_turbo_lora"
 
 
+class MossImageModel(_FixedDiffusionSelector):
+    CATEGORY = "CRT/AutoDL/MOSSIMAGE"
+    OPTIONS = {
+        "Base": "moss_image_base",
+        "SFT": "moss_image_sft",
+    }
+
+
+class MossImageVAE(_CoreVAELoader):
+    CATEGORY = "CRT/AutoDL/MOSSIMAGE"
+    MODEL_KEY = "moss_image_vae"
+
+
+class MossImageCLIP(_FixedCLIPLoader):
+    CATEGORY = "CRT/AutoDL/MOSSIMAGE"
+    MODEL_KEY = "moss_image_clip"
+    CLIP_TYPE = "moss_image"
+
+
 NODE_CLASS_MAPPINGS = {
     "CRTAutoDLZImageTurboModel": ZImageTurboModel,
     "CRTAutoDLZImageTurboVAE": ZImageTurboVAE,
@@ -1279,6 +1319,9 @@ NODE_CLASS_MAPPINGS = {
     "CRTAutoDLQwen21VAE": Qwen21VAE,
     "CRTAutoDLQwen21CLIP": Qwen21CLIP,
     "CRTAutoDLQwen21TurboLoRA": Qwen21TurboLoRA,
+    "CRTAutoDLMossImageModel": MossImageModel,
+    "CRTAutoDLMossImageVAE": MossImageVAE,
+    "CRTAutoDLMossImageCLIP": MossImageCLIP,
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
@@ -1335,4 +1378,7 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "CRTAutoDLQwen21VAE": "Qwen-Image 2.1 VAE (CRT AutoDL)",
     "CRTAutoDLQwen21CLIP": "Qwen-Image 2.1 CLIP Qwen3VL-8B (CRT AutoDL)",
     "CRTAutoDLQwen21TurboLoRA": "Qwen-Image 2.1 Turbo LoRA 4-Step Lightx2v (CRT AutoDL)",
+    "CRTAutoDLMossImageModel": "MOSS-Image Model (CRT AutoDL)",
+    "CRTAutoDLMossImageVAE": "MOSS-Image VAE (CRT AutoDL)",
+    "CRTAutoDLMossImageCLIP": "MOSS-Image CLIP Qwen3.5-9B (CRT AutoDL)",
 }
