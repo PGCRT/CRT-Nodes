@@ -1,7 +1,7 @@
 """
 @author: CRT
 @title: CRT-Nodes
-@version: 2.22.0
+@version: 2.23.0
 @project: "https://github.com/PGCRT/CRT-Nodes",
 @description: Set of nodes for ComfyUI
 https://discord.gg/8wYS9MBQqp
@@ -181,6 +181,18 @@ if True:
         YuEMusicGenerator,
     )
     from .py.Image_Label import CRT_ImageLabel
+
+    OpenCodeGoBridge = None
+    CRT_OpenCodeGoThinkingDisplay = None
+    try:
+        from .py.OpenCode_Go_Bridge import (
+            CRT_OpenCodeGoBridge as OpenCodeGoBridge,
+        )
+        from .py.OpenCode_Go_Thinking_Display import (
+            CRT_OpenCodeGoThinkingDisplay,
+        )
+    except Exception as e:
+        print(f"[CRT-Nodes] Warning: OpenCode Go nodes unavailable: {e}")
 
     # Add GGUF unet folder path if not already registered
     try:
@@ -362,6 +374,8 @@ NODE_CLASS_MAPPINGS = {
     "CRT_MarigoldV2Depth": CRT_MarigoldV2Depth,
     "YuEMusicGenerator": YuEMusicGenerator,
     "CRT_ImageLabel": CRT_ImageLabel,
+    "CRT_OpenCodeGoBridge": OpenCodeGoBridge,
+    "CRT_OpenCodeGoThinkingDisplay": CRT_OpenCodeGoThinkingDisplay,
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
@@ -487,6 +501,8 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "CRT_MarigoldV2Depth": "Heavy Depth Marigold v2 (CRT)",
     "YuEMusicGenerator": "YuE Music Generator (CRT)",
     "CRT_ImageLabel": "Image Label (CRT)",
+    "CRT_OpenCodeGoBridge": "OpenCode Go Bridge (CRT)",
+    "CRT_OpenCodeGoThinkingDisplay": "OpenCode Go Thinking Display (CRT)",
 }
 
 NODE_CLASS_MAPPINGS.update(CRT_AUTODL_NODE_CLASS_MAPPINGS)

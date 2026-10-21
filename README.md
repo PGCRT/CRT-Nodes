@@ -27,13 +27,13 @@ Restart ComfyUI after installation or an update.
 ### CRT/Audio (8)
 
 - `Audio Frame Adjuster (CRT)`
-- `Audio Transcript Batch (CRT)` (conditional)
-- `Audio Transcript turbo (CRT ALT)`
+- `Audio Transcript Batch (CRT)`
 - `Frame Count (Audio or Manual) (CRT)`
 - `Mono to Stereo Converter (CRT)`
 - `Parametric EQ (CRT)`
 - `Preview Audio (CRT)`
 - `Tube Compressor (CRT)`
+- `YuE Music Generator (CRT)`
 
 ### CRT/AutoDL/ChronoEdit (6)
 
@@ -79,28 +79,44 @@ Restart ComfyUI after installation or an update.
 - `LTX2.5 Temporal Upscaler (CRT AutoDL)`
 - `LTX2.5 VIDEO VAE (CRT AutoDL)`
 
-### CRT/AutoDL/MINIMAXH3 (4)
+### CRT/AutoDL/MINIMAXH3 (7)
 
-- `MiniMax H3 CLIP (CRT AutoDL)`
-- `MiniMax H3 Model (CRT AutoDL)`
 - `MiniMax H3 AUDIO VAE (CRT AutoDL)`
+- `MiniMax H3 CLIP (CRT AutoDL)`
+- `MiniMax H3 FL2VA Turbo LoRA (CRT AutoDL)`
+- `MiniMax H3 Fun ControlNet (CRT AutoDL)`
+- `MiniMax H3 Model (CRT AutoDL)`
+- `MiniMax H3 REF2VA Turbo LoRA (CRT AutoDL)`
 - `MiniMax H3 VIDEO VAE (CRT AutoDL)`
 
-### CRT/AutoDL/PIXAL3D (6)
+### CRT/AutoDL/MOSSIMAGE (3)
 
-- `Pixal3D Model Selector (CRT AutoDL)` (BF16 / Int8)
-- `Pixal3D CLIP Vision (CRT AutoDL)`
+- `MOSS-Image CLIP Qwen3.5-9B (CRT AutoDL)`
+- `MOSS-Image Model (CRT AutoDL)`
+- `MOSS-Image VAE (CRT AutoDL)`
+
+### CRT/AutoDL/Pixal3D (6)
+
+- `BiRefNet Background Removal (CRT AutoDL)`
+- `MoGe-2 Model (CRT AutoDL)`
+- `Pixal3D CLIP Vision DINOv3 (CRT AutoDL)`
+- `Pixal3D Model (CRT AutoDL)`
 - `Pixal3D Shape VAE (CRT AutoDL)`
 - `Pixal3D Texture VAE (CRT AutoDL)`
-- `Pixal3D MoGe Model (CRT AutoDL)` (also `SAM3Body MoGe Model`)
-- `Pixal3D BiRefNet (CRT AutoDL)`
 
-### CRT/AutoDL/SAM3BODY (4)
+### CRT/AutoDL/QWEN2.1 (4)
 
-- `SAM3Body Model Selector (CRT AutoDL)` (BF16 / Int8)
-- `SAM3Body Checkpoint (CRT AutoDL)` (SAM3.1 multiplex)
-- `SAM3Body RT-DETR Detector (CRT AutoDL)`
-- `SAM3Body MoGe Model (CRT AutoDL)` (shared MoGe-2)
+- `Qwen-Image 2.1 CLIP Qwen3VL-8B (CRT AutoDL)`
+- `Qwen-Image 2.1 Model (CRT AutoDL)`
+- `Qwen-Image 2.1 Turbo LoRA 4-Step Lightx2v (CRT AutoDL)`
+- `Qwen-Image 2.1 VAE (CRT AutoDL)`
+
+### CRT/AutoDL/SAM3Body (4)
+
+- `MoGe-2 Model (CRT AutoDL)`
+- `SAM 3.1 Checkpoint (CRT AutoDL)`
+- `SAM 3D Body Model (CRT AutoDL)`
+- `SAM3DBody RT-DETR Detector (CRT AutoDL)`
 
 ### CRT/AutoDL/ZIMAGETURBO (3)
 
@@ -115,9 +131,10 @@ Restart ComfyUI after installation or an update.
 - `File Batch Prompt Scheduler (CRT)`
 - `File Batch Prompt Scheduler KREA2 (CRT)`
 
-### CRT/DepthAnything3 (1)
+### CRT/Depth (2)
 
-- `DepthAnything3 (CRT)`
+- `Fast Depth Anything v3 (CRT)`
+- `Heavy Depth Marigold v2 (CRT)`
 
 ### CRT/FX (12)
 
@@ -134,7 +151,7 @@ Restart ComfyUI after installation or an update.
 - `Smart DeNoise FX (CRT)`
 - `Technicolor 2 FX (CRT)`
 
-### CRT/Image (10)
+### CRT/Image (11)
 
 - `Batch Brightness Curve (U-Shape) (CRT)`
 - `Chroma Key Overlay (CRT)`
@@ -143,6 +160,7 @@ Restart ComfyUI after installation or an update.
 - `Image Dimensions From MP alt (CRT)`
 - `Image Scale Range From MP (CRT)`
 - `Image Tile Checker (CRT)`
+- `Image Unbatch (CRT)`
 - `Percentage Crop Calculator (CRT)`
 - `Quantize and Crop Image (CRT)`
 - `Solid Color (CRT)`
@@ -160,13 +178,14 @@ Restart ComfyUI after installation or an update.
 
 ### CRT/LLM (2)
 
-- `Kimi Inference Bridge (CRT)`
-- `LM Studio Bridge (CRT)`
+- `OpenCode Go Bridge (CRT)`
+- `OpenCode Go Thinking Display (CRT)`
 
-### CRT/Load (13)
+### CRT/Load (14)
 
 - `Audio Loader Crawl (CRT)`
 - `Audio Loader Crawl Batch (CRT)`
+- `FileSearch Crawl (CRT)`
 - `Image Loader Crawl (CRT)`
 - `Image Loader Crawl Batch (CRT)`
 - `Load Image Base64 (CRT)`
@@ -185,30 +204,37 @@ Restart ComfyUI after installation or an update.
 - `Boolean Invert (CRT)`
 - `Strength to Steps (CRT)`
 
-### CRT/LoRA (5)
+### CRT/LoRA (3)
 
 - `Magic LoRA Loader (CRT)`
 - `Magic Save Merged LoRA (CRT)`
-- `Seeded Persona LoRA Crawl Batch (CRT)`
-- `Seeded Persona LoRA Loader (CRT)`
 - `Wan Video Multi-LoRA Select (CRT)`
 
 ### CRT/LTX2.5 (3)
 
-- `LTX US Models Pipe (CRT)`
 - `LTX Unified Sampler (CRT)`
 - `LTX US Config (CRT)`
+- `LTX US Models Pipe (CRT)`
 
 ### CRT/Mask (2)
 
 - `Mask Censor (CRT)`
 - `Mask Temporal Enhancer (CRT)`
 
-### CRT/Sampling (8)
+### CRT/MiniMaxH3 (5)
+
+- `MiniMax H3 Fun Control Apply (CRT)`
+- `MiniMax H3 Unified Sampler (CRT)`
+- `MiniMax H3 US Config (CRT)`
+- `MiniMax H3 US Models Pipe (CRT)`
+- `MiniMax H3 US Models Pipe CNET (CRT)`
+
+### CRT/Sampling (9)
 
 - `Image Upscale Sampler (CRT)`
 - `KSampler Batch (CRT)`
 - `KSampler Batch Advanced (CRT)`
+- `KSampler LoRA Batch (CRT)`
 - `Latent Noise Injection Sampler (CRT)`
 - `SEGS Enhancer Multi (CRT)`
 - `Ultralytics Enhancer (CRT)`
@@ -218,7 +244,7 @@ Restart ComfyUI after installation or an update.
 ### CRT/Save (8)
 
 - `Save Audio With Path (CRT)`
-- `Save Image Base64 (CRT)` (conditional)
+- `Save Image Base64 (CRT)`
 - `Save Image With Path (CRT)`
 - `Save JPEG Websocket (CRT)`
 - `Save Latent With Path (CRT)`
@@ -230,8 +256,8 @@ Restart ComfyUI after installation or an update.
 
 - `Add Settings and Prompt (CRT)`
 - `AutopromptProcessor (CRT)`
-- `Extract Dialogues MiniMaxH3 (CRT)`
 - `Extract Q/A (CRT)`
+- `Image Label (CRT)`
 - `Join Strings (CRT)`
 - `Merge Q/A (CRT)`
 - `Remove Lines (CRT)`
@@ -239,9 +265,9 @@ Restart ComfyUI after installation or an update.
 - `String Line Counter (CRT)`
 - `String Splitter (CRT)`
 - `Text Add Rows (CRT)`
-- `TextBox line spot (CRT)`
 - `Text Rows Crawl (CRT)`
 - `Textbox (CRT)`
+- `TextBox line spot (CRT)`
 
 ### CRT/Utils/Isolate (3)
 
@@ -249,9 +275,9 @@ Restart ComfyUI after installation or an update.
 - `Isolate Input SAM3.1 (CRT)`
 - `Isolate Output (CRT)`
 
-### CRT/Utils/Logic & Values (10)
+### CRT/Utils/Logic & Values (11)
 
-- `String to Boolean (CRT)`
+- `Int to String (CRT)`
 - `Int Value (CRT)`
 - `Mask Empty Float (CRT)`
 - `Mask Pass or Placeholder (CRT)`
@@ -260,6 +286,7 @@ Restart ComfyUI after installation or an update.
 - `Resolution By Side (CRT)`
 - `Sampler & Scheduler Crawler (CRT)`
 - `Sampler & Scheduler Selector (CRT)`
+- `String to Boolean (CRT)`
 - `Video Duration Calculator (CRT)`
 
 ### CRT/Utils/UI (4)
